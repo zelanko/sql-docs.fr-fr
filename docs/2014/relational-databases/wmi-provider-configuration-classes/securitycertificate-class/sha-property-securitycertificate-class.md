@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: af3ecc685ab9b6bc9e608d9d9ecec4aefb5d53d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714467"
 ---
 # <a name="sha-property-securitycertificate-class"></a>Propriété SHA (classe SecurityCertificate)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *dessin*  
+ *objet*  
  Objet [SecurityCertificate Class] SecurityCertificate-class.md) qui représente un certificat de sécurité.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

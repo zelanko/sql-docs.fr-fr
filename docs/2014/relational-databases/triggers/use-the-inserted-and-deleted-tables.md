@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524375"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utiliser les tables inserted et deleted
@@ -49,8 +49,7 @@ ms.locfileid: "62524375"
 > [!NOTE]  
 >  Si les actions du déclencheur dépendent du nombre de lignes affectées par une modification de données, utilisez les tests (comme l’examen de @@ROWCOUNT) pour les modifications de données multilignes (une instruction INSERT, DELETE ou UPDATE basée sur une instruction SELECT), puis effectuez les opérations appropriées.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] n'autorise pas les références aux colonnes de type `text`, `ntext` ou `image` dans les tables inserted et deleted pour les déclencheurs AFTER. Cependant, ces types de données sont inclus à des fins de compatibilité ascendante uniquement. La méthode de stockage conseillée des données de grandes dimensions consiste à utiliser les types de données `varchar(max)`, `nvarchar(max)` et `varbinary(max)`. Les déclencheurs AFTER et INSTEAD OF prennent en charge les données `varchar(max)`, `nvarchar(max)` et `varbinary(max)` dans les tables inserted et deleted. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] n'autorise pas les références aux colonnes de type `text`, `ntext` ou `image` dans les tables inserted et deleted pour les déclencheurs AFTER. Cependant, ces types de données sont inclus à des fins de compatibilité ascendante uniquement. La méthode de stockage conseillée des données de grandes dimensions consiste à utiliser les types de données `varchar(max)`, `nvarchar(max)` et `varbinary(max)`. Les déclencheurs AFTER et INSTEAD OF prennent en charge les données `varchar(max)`, `nvarchar(max)` et `varbinary(max)` dans les tables inserted et deleted. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
  **Exemple de l'utilisation de la table insérée dans un déclencheur pour imposer des règles d'entreprise**  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982308"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982308"
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|ID du pool de ressources. N'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|  
-|statistics_start_time|**DATETIME**|Heure à laquelle les statistiques ont été réinitialisées pour ce pool. N'accepte pas la valeur NULL.|  
+|statistics_start_time|**datetime**|Heure à laquelle les statistiques ont été réinitialisées pour ce pool. N'accepte pas la valeur NULL.|  
 |total_cpu_usage_ms|**bigint**|L'utilisation cumulative de l'UC, en millisecondes, depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |cache_memory_kb|**bigint**|Utilisation de la mémoire cache totale actuelle en kilo-octets. N'accepte pas la valeur NULL.|  
 |compile_memory_kb|**bigint**|Utilisation de la mémoire occultée totale actuelle en kilo-octets (Ko). Cette utilisation est essentiellement destinée à la compilation et l'optimisation, mais d'autres utilisations de la mémoire peuvent exister. N'accepte pas la valeur NULL.|  
@@ -87,7 +87,7 @@ ms.locfileid: "73982308"
  Requiert l'autorisation VIEW SERVER STATE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys. resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

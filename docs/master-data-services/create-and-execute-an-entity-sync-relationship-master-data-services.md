@@ -11,10 +11,10 @@ ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729525"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Créer et exécuter une relation de synchronisation d’entités (Master Data Services)
@@ -23,20 +23,20 @@ ms.locfileid: "73729525"
 
   La synchronisation d'entités est une synchronisation unidirectionnelle et reproductible entre des versions d'entités. Elle fournit un moyen de partager des données d’entités entre différents modèles.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Conditions préalables pour créer une relation de synchronisation d’entités :  
   
--   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Vous devez être administrateur du modèle cible. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur du modèle cible. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Vous devez disposer au minimum de l’accès en lecture pour l’entité source et l’ensemble de ses attributs et de ses membres.  
   
  Conditions préalables pour exécuter une relation de synchronisation d’entités :  
   
--   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle Administration de système. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Vous devez être administrateur du modèle cible. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur du modèle cible. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  Considérez les éléments suivants lorsque vous créez une relation de synchronisation d’entités.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73729525"
   
 10. Sélectionnez **Synchronisation à la demande**, ou sélectionnez **Synchronisation automatique** et définissez une fréquence.  
   
-11. Cliquez sur **Enregistrer**.  
+11. Cliquez sur **Save**.  
   
  **Pour exécuter une relation de synchronisation d’entités**  
   
@@ -93,11 +93,11 @@ ms.locfileid: "73729525"
 4.  Cliquez sur **Exécuter**.  
   
 ## <a name="sync-relationship-information"></a>Informations sur les relations de synchronisation  
- Pour chaque relation de synchronisation créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau suivant décrit les colonnes.  
+ Pour chaque relation de synchronisation créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau suivant décrit ces colonnes.  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|Statut|Le statut de la relation de synchronisation.<br /><br /> Lorsque vous cliquez sur **Enregistrer** ou exécuter une relation de synchronisation, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que la relation de synchronisation est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création, de la modification ou de l’exécution d’une relation de synchronisation, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
+|État|Le statut de la relation de synchronisation.<br /><br /> Lorsque vous cliquez sur **Enregistrer** ou exécuter une relation de synchronisation, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que la relation de synchronisation est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création, de la modification ou de l’exécution d’une relation de synchronisation, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Modèle source|Nom du modèle source.|  
 |Version source|Nom de la version source.|  
 |Entité source|Nom de l'entité source.|  
@@ -108,17 +108,17 @@ ms.locfileid: "73729525"
 |Heure de la dernière tentative|Affiche l’heure de la dernière tentative de synchronisation.|  
 |Heure de la dernière tentative réussie|Affiche l’heure de la dernière tentative de synchronisation réussie.|  
   
- Lorsque vous cliquez sur un index, les informations suivantes s'affichent.  
+ Lorsque vous cliquez sur un index, les informations suivantes s’affichent.  
   
--   **Erreur de la dernière tentative**: affiche les informations relatives à l’erreur de la dernière tentative de synchronisation.  
+-   **Erreur de la dernière tentative**: affiche les informations d'erreur de la dernière tentative de synchronisation.  
   
--   **Créé par**: nom de l’utilisateur qui a créé la synchronisation.  
+-   **Créée par**: nom de l’utilisateur qui a créé la synchronisation.  
   
--   Le : date et heure **de**création de la synchronisation.  
+-   **Le**: date et heure de création de la synchronisation.  
   
--   **Mise à jour par**: nom de l’utilisateur qui a effectué la dernière mise à jour de la synchronisation.  
+-   **Mise à jour par**: nom de l’utilisateur qui a mis à jour la synchronisation en dernier.  
   
--   Le : date et heure **de**la dernière mise à jour de la synchronisation.  
+-   **Le**: date et heure de la dernière mise à jour de la synchronisation.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  [Modifier et supprimer une relation de synchronisation d’entités &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

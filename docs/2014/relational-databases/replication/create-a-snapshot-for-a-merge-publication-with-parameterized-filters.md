@@ -15,25 +15,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a28bf1fc8960c9e34c4acdcbae5ae863d4595a3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882363"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Créer un instantané d'une publication de fusion avec des filtres paramétrés
   Cette rubrique explique comment créer un instantané pour une publication de fusion avec des filtres paramétrables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
   
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Lors de la génération d'un instantané pour une publication de fusion à l'aide de filtres paramétrables, vous devez commencer par générer un instantané standard (schéma) qui contient l'ensemble des données publiées, ainsi que les métadonnées de l'Abonné pour l'abonnement. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md). Après avoir créé l'instantané de schéma, vous pouvez générer l'instantané qui contient la partition des données publiées spécifique à l'Abonné.  
   
 -   Si le filtrage d'un ou plusieurs articles de la publication donne des partitions qui ne se chevauchent pas et sont uniques pour chaque abonnement, les métadonnées sont nettoyées à chaque exécution de l'Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à initialiser la génération et la remise d'instantané. Pour plus d’informations sur les options de filtrage, consultez la section « Définition des options de partition » dans [Instantanés des publications de fusion avec des filtres paramétrés](snapshots-for-merge-publications-with-parameterized-filters.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Générez des instantanés pour des partitions dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication\< - **Publication>. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](publish/view-and-modify-publication-properties.md). Vous pouvez permettre à des Abonnés de lancer la génération et la livraison d'instantanés et/ou de générer des instantanés.  
   
  Pour générer des instantanés pour une ou plusieurs partitions, vous devez préalablement :  
@@ -62,7 +62,7 @@ ms.locfileid: "73882363"
   
 #### <a name="to-generate-and-refresh-snapshots"></a>Pour générer et actualiser des instantanés  
   
-1.  Dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **Ajouter**.  
+1.  Dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **Ajouter**.  
   
 2.  Entrez une valeur pour la valeur **HOST_NAME()** et/ou **SUSER_SNAME()** associée à la partition pour laquelle vous voulez créer un instantané.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "73882363"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les procédures stockées et l'Agent d'instantané permettent d'effectuer les tâches suivantes :  
   
 -   Vous pouvez autoriser les Abonnés à demander la génération et l'application d'un instantané lors de leur première synchronisation.  
@@ -100,29 +100,29 @@ ms.locfileid: "73882363"
   
     -   Facultatif Nombre de processus d’instantané dynamique qui peuvent s’exécuter simultanément pour ** \@max_concurrent_dynamic_snapshots**. Si le nombre maximal de processus en cours d'exécution est atteint et si un Abonné essaie de générer un instantané, le processus est placé en file d'attente. Par défaut, le nombre de processus simultanés est illimité.  
   
-2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à ** \@** l’étape 1 [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour la publication et les informations d’identification Windows sous lesquelles la [réplication agent d’instantané](agents/replication-snapshot-agent.md) l’authentification lors de la connexion au serveur de publication, vous [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devez également spécifier la valeur **0** pour ** \@publisher_security_mode** et les informations de connexion pour ** \@publisher_login** et ** \@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](create-and-apply-the-initial-snapshot.md).  
+2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à ** \@** l’étape 1 [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour la publication et les informations d’identification Windows sous lesquelles la [réplication agent d’instantané](agents/replication-snapshot-agent.md) l’authentification lors de la connexion au serveur de publication, vous [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devez également spécifier la valeur **0** pour ** \@publisher_security_mode** et les informations de connexion pour ** \@publisher_login** et ** \@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) pour ajouter des articles à la publication. Cette procédure stockée doit être exécutée une fois pour chaque article de la publication. Lorsque vous utilisez des filtres paramétrés, vous devez spécifier un filtre de lignes paramétrable pour un ou plusieurs ** \@** Articles à l’aide du paramètre subset_filterclause. Pour plus d'informations, voir [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d'informations, voir [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d'informations, voir [Définir et modifier un filtre de jointure entre des articles de fusion](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  Lorsque l'Agent de fusion demande à l'instantané d'initialiser l'Abonné, l'instantané de la partition de l'abonnement demandeur est généré automatiquement.  
   
 #### <a name="to-create-a-publication-and-pre-generate-or-automatically-refresh-snapshots"></a>Pour créer une publication et prégénérer ou actualiser automatiquement des instantanés  
   
-1.  Exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) pour créer la publication. Pour plus d’informations, voir [Create a Publication](publish/create-a-publication.md).  
+1.  Exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) pour créer la publication. Pour plus d’informations, consultez [créer une publication](publish/create-a-publication.md).  
   
-2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à ** \@** l’étape 1 pour la publication et les informations d’identification Windows sous lesquelles l’agent d’instantané s’exécute pour ** \@job_login** et ** \@le mot de passe**. Si l’agent doit utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **\@publisher_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **\@publisher_login** et **\@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](create-and-apply-the-initial-snapshot.md).  
+2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à ** \@** l’étape 1 pour la publication et les informations d’identification Windows sous lesquelles l’agent d’instantané s’exécute pour ** \@job_login** et ** \@le mot de passe**. Si l’agent doit utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **\@publisher_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **\@publisher_login** et **\@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) pour ajouter des articles à la publication. Cette procédure stockée doit être exécutée une fois pour chaque article de la publication. Lorsque vous utilisez des filtres paramétrés, vous devez spécifier un filtre de lignes paramétrable pour un ** \@** article à l’aide du paramètre subset_filterclause. Pour plus d'informations, voir [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d'informations, voir [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d'informations, voir [Définir et modifier un filtre de jointure entre des articles de fusion](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), en spécifiant la valeur de **\@publication** créée à l’étape 1. Notez la valeur du **snapshot_jobid** dans le jeu de résultats.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "73882363"
   
 8.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Spécifiez le nom de la publication de l’étape ** \@** 1 pour la publication et la valeur utilisée pour définir la partition pour ** \@SUSER_SNAME** si [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) est utilisé dans la clause de filtre ou pour ** \@HOST_NAME** si [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql) est utilisé dans la clause de filtre.  
   
-9. Dans la base de données de publication sur le serveur de publication, exécutez [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql). Spécifiez le nom de la publication de l’étape ** \@** 1 pour la publication, la valeur de ** \@SUSER_SNAME** ou ** \@HOST_NAME** de l’étape 8, et une planification pour le travail. Le travail qui génère l'instantané paramétrable pour la partition spécifiée est ainsi créé. Pour plus d’informations, consultez [spécifier des planifications de synchronisation](specify-synchronization-schedules.md).  
+9. Dans la base de données de publication sur le serveur de publication, exécutez [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql). Spécifiez le nom de la publication de l’étape ** \@** 1 pour la publication, la valeur de ** \@SUSER_SNAME** ou ** \@HOST_NAME** de l’étape 8, et une planification pour le travail. Le travail qui génère l'instantané paramétrable pour la partition spécifiée est ainsi créé. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](specify-synchronization-schedules.md).  
   
     > [!NOTE]  
     >  Ce travail s'exécute à l'aide du même compte Windows que le travail d'instantané initial défini à l'étape 2. Pour supprimer le travail d’instantané paramétrable et sa partition de données associée, exécutez [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql).  
@@ -145,37 +145,37 @@ ms.locfileid: "73882363"
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>Pour créer une publication et créer manuellement des instantanés pour chaque partition  
   
-1.  Exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) pour créer la publication. Pour plus d’informations, voir [Create a Publication](publish/create-a-publication.md).  
+1.  Exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) pour créer la publication. Pour plus d’informations, consultez [créer une publication](publish/create-a-publication.md).  
   
-2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à ** \@** l’étape 1 pour la publication et les informations d’identification Windows sous lesquelles l’agent d’instantané s’exécute pour ** \@job_login** et ** \@le mot de passe**. Si l’agent doit utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **\@publisher_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **\@publisher_login** et **\@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](create-and-apply-the-initial-snapshot.md).  
+2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Spécifiez le nom de la publication utilisé à ** \@** l’étape 1 pour la publication et les informations d’identification Windows sous lesquelles l’agent d’instantané s’exécute pour ** \@job_login** et ** \@le mot de passe**. Si l’agent doit utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **\@publisher_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **\@publisher_login** et **\@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) pour ajouter des articles à la publication. Cette procédure stockée doit être exécutée une fois pour chaque article de la publication. Lorsque vous utilisez des filtres paramétrés, vous devez spécifier un filtre de lignes paramétrable pour au moins un ** \@** article à l’aide du paramètre subset_filterclause. Pour plus d'informations, voir [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d'informations, voir [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d'informations, voir [Définir et modifier un filtre de jointure entre des articles de fusion](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  Démarrez le travail d'instantané ou exécutez l'Agent d'instantané des réplications à partir de l'invite de commandes pour générer le schéma d'instantané standard et d'autres fichiers. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 6.  Exécutez de nouveau l'Agent d'instantané des réplications à partir de l'invite de commandes pour générer des fichiers de copie en bloc (.bcp), en spécifiant l'emplacement de l'instantané partitionné pour **- DynamicSnapshotLocation** et une des propriétés suivantes ou les deux qui définissent la partition :  
   
-    -   **-DynamicFilterHostName** : valeur si [HOST_NAME &#40;&#41;Transact-SQL](/sql/t-sql/functions/host-name-transact-sql) est utilisé.  
+    -   **-DynamicFilterHostName** - valeur si [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql) est utilisé.  
   
-    -   **-DynamicFilterLogin** : valeur si [SUSER_SNAME &#40;&#41;Transact-SQL](/sql/t-sql/functions/suser-sname-transact-sql) est utilisé.  
+    -   **-DynamicFilterLogin** - valeur si [HOST_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) est utilisé.  
   
 7.  Répétez l'étape 6 pour générer un instantané partitionné pour chaque abonnement.  
   
 8.  Exécutez l'Agent de fusion pour chaque abonnement afin d'appliquer l'instantané partitionné initial aux Abonnés, en spécifiant les propriétés suivantes :  
   
-    -   **-Hostname** -la valeur utilisée pour définir la partition si la valeur réelle de HOST_NAME est remplacée.  
+    -   **-Hostname** - la valeur utilisée pour définir la partition si la valeur réelle de HOST_NAME est remplacée.  
   
-    -   **-DynamicSnapshotLocation** : emplacement de l’instantané dynamique pour cette partition.  
+    -   **- DynamicSnapshotLocation** - l'emplacement de l'instantané dynamique pour cette partition.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur la programmation des agents de réplication, consultez [Concepts des exécutables de l’Agent de réplication](concepts/replication-agent-executables-concepts.md).  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemples (Transact-SQL)  
  Cet exemple crée une publication de fusion avec des filtres paramétrables dans laquelle les Abonnés initialisent le processus de génération d'instantané. Les valeurs des ** \@job_login** et ** \@job_password** sont transmises à l’aide de variables de script.  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
@@ -243,7 +243,7 @@ PAUSE
 ```
   
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez utiliser les Replication Management Objects pour générer par programme des instantanés partitionnés des manières suivantes :  
   
 -   Vous pouvez autoriser les Abonnés à demander la génération et l'application d'un instantané lors de leur première synchronisation.  
@@ -256,7 +256,7 @@ PAUSE
 >  Lorsque le filtrage d'un article génère des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement (en spécifiant une valeur de <xref:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription> pour <xref:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption%2A> lors de la création d'un article de fusion), les métadonnées sont nettoyées à chaque exécution de l'Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à demander la génération d'instantanés. Pour plus d'informations, consultez la section Utilisation des options de filtrage appropriées, dans la rubrique [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d’identification, utilisez les [services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Windows.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Pour créer une publication qui permet aux Abonnés d'initialiser la génération et la remise d'instantanés  
   
@@ -268,7 +268,7 @@ PAUSE
   
 4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> et définissez les propriétés suivantes pour cet objet :  
   
-    -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
     -   Le nom de la base de données publiée pour <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>.  
   
@@ -286,13 +286,13 @@ PAUSE
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> pour créer la publication.  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 6.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable. (Facultatif) Créez des objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent des filtres de jointure entre les articles. Pour plus d’informations, consultez [définir un Article](publish/define-an-article.md).  
   
 7.  Si <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> a la valeur `false`, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l'Agent d'instantané initial pour cette publication.  
   
-8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> de l'objet <xref:Microsoft.SqlServer.Replication.MergePublication> créé à l'étape 4. Cela démarre le travail de l'agent qui génère l'instantané initial. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](create-and-apply-the-initial-snapshot.md).  
+8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> de l'objet <xref:Microsoft.SqlServer.Replication.MergePublication> créé à l'étape 4. Cela démarre le travail de l'agent qui génère l'instantané initial. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 9. (Facultatif) Cherchez une valeur `true` pour la propriété <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> afin de déterminer quand l'instantané initial est prêt à être utilisé.  
   
@@ -300,7 +300,7 @@ PAUSE
   
 #### <a name="to-create-a-publication-and-pregenerate-or-automatically-refresh-snapshots"></a>Pour créer une publication et prégénérer ou actualiser automatiquement des instantanés  
   
-1.  Utilisez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> pour définir une publication de fusion. Pour plus d’informations, voir [Create a Publication](publish/create-a-publication.md).  
+1.  Utilisez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> pour définir une publication de fusion. Pour plus d’informations, consultez [créer une publication](publish/create-a-publication.md).  
   
 2.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable et créez tous les objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent les filtres de jointure entre les articles. Pour plus d’informations, consultez [définir un Article](publish/define-an-article.md).  
   
@@ -340,7 +340,7 @@ PAUSE
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>Pour créer une publication et créer manuellement des instantanés pour chaque partition  
   
-1.  Utilisez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> pour définir une publication de fusion. Pour plus d’informations, voir [Create a Publication](publish/create-a-publication.md).  
+1.  Utilisez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> pour définir une publication de fusion. Pour plus d’informations, consultez [créer une publication](publish/create-a-publication.md).  
   
 2.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable et créez tous les objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent les filtres de jointure entre les articles. Pour plus d’informations, consultez [définir un Article](publish/define-an-article.md).  
   
@@ -348,23 +348,17 @@ PAUSE
   
 4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> et définissez les propriétés requises suivantes :  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – nom du serveur de publication  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – nom du serveur de publication  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – nom de la base de données de publication  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – nom de la base de données de publication  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> – nom de la publication  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> – nom de la publication  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> – nom du serveur de distribution  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> – nom du serveur de distribution  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification intégrée de Windows ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour utiliser l'authentification SQL Server.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification intégrée de Windows ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour utiliser l'authentification SQL Server.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification intégrée de Windows ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour utiliser l'authentification SQL Server.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification intégrée de Windows ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour utiliser l'authentification SQL Server.  
   
 5.  Spécifiez la valeur <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
@@ -378,7 +372,7 @@ PAUSE
   
 8.  Répétez les étapes 4 à 7 pour chaque Abonné.  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple crée une publication de fusion qui permet aux Abonnés de demander la génération d'instantanés.  
   
  [!code-csharp[HowTo#rmo_CreateMergePub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepub)]  
@@ -398,9 +392,9 @@ PAUSE
  [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtres de lignes paramétrés](merge/parameterized-filters-parameterized-row-filters.md)   
- [Concepts liés aux procédures stockées système de réplication](concepts/replication-system-stored-procedures-concepts.md)   
+ [Filtres de lignes paramétrables](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Concepts des procédures stockées système de réplication](concepts/replication-system-stored-procedures-concepts.md)   
  [Instantanés pour les publications de fusion avec des filtres paramétrés](snapshots-for-merge-publications-with-parameterized-filters.md)   
- [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md)  
+ [Méthodes préconisées en matière de sécurité de réplication](security/replication-security-best-practices.md)  
   
   

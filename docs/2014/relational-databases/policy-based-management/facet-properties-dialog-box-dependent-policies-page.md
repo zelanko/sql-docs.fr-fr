@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704914"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes
@@ -29,10 +29,10 @@ ms.locfileid: "62704914"
  **Activé**  
  Une coche indique que la stratégie est actuellement activée. Vierge si la stratégie n'est pas activée.  
   
- **History**  
- Cliquez sur le lien hypertexte **Afficher l’historique** pour afficher le rapport d’historique d’exécution.  
+ **Historique**  
+ Cliquez sur le lien hypertexte **afficher l’historique** pour afficher le rapport d’historique d’exécution.  
   
- **Créé le**  
+ **Créer**  
  Date de création de la stratégie  
   
 ## <a name="see-also"></a>Voir aussi  

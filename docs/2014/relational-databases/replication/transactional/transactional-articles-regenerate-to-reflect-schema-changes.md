@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655504"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Régénérer des procédures transactionnelles personnalisées pour refléter des modifications de schéma
@@ -43,7 +43,7 @@ ms.locfileid: "62655504"
      La prochaine fois qu'une modification de schéma pertinente est effectuée, ce script s'exécutera sur chaque Abonné au sein de la même transaction que la commande DDL. Quand la modification de schéma est effectuée, le script est désinscrit. Vous devez réinscrire le script pour qu'il soit exécuté après une modification de schéma ultérieure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier le mode de propagation des modifications des articles transactionnels](transactional-articles-specify-how-changes-are-propagated.md)   
+ [Spécifier la façon dont les modifications sont propagées pour les articles transactionnels](transactional-articles-specify-how-changes-are-propagated.md)   
  [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md)  
   
   

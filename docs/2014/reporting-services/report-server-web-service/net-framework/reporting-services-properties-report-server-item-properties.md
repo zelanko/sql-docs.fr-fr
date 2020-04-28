@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519139"
 ---
 # <a name="report-server-item-properties"></a>Propriétés d'élément du serveur de rapports
@@ -35,10 +35,10 @@ ms.locfileid: "62519139"
 |**CreatedBy**|Nom de l'utilisateur ayant initialement ajouté l'élément à la base de données du serveur de rapports.|  
 |**CreationDate**|Date et heure auxquelles l'élément a été ajouté à la base de données du serveur de rapports.|  
 |**Description**|Description de l'élément.|  
-|**Hidden**|Valeur qui indique si l'élément est visible et accessible aux utilisateurs.|  
+|**Masquer**|Valeur qui indique si l'élément est visible et accessible aux utilisateurs.|  
 |**Identifiant**|ID d'un élément dans la base de données du serveur de rapports.|  
 |**ModifiedBy**|Nom du dernier utilisateur ayant modifié l'élément dans la base de données du serveur de rapports.|  
-|**ModifiedDate**|Date et heure auxquelles le dernier utilisateur a modifié l'élément.|  
+|**DateModification**|Date et heure auxquelles le dernier utilisateur a modifié l'élément.|  
 |**Nom**|Nom d'un élément dans la base de données du serveur de rapports.|  
 |**Chemin d’accès**|Nom de chemin d'accès complet de l'élément. Le chemin d'accès à un élément quelconque dans la base de données du serveur de rapports peut comprendre 260 caractères au maximum.|  
 |**Taille**|Taille, en octets, d'un élément dans la base de données du serveur de rapports.|  
@@ -50,7 +50,7 @@ ms.locfileid: "62519139"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Reserved**|Valeur retournée par la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> pour les dossiers réservés par le serveur de rapports. Les dossiers réservés comprennent Users, My Reports et /. Les dossiers réservés ne peuvent être ni modifiés ni supprimés.|  
+|**Réservé**|Valeur retournée par la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> pour les dossiers réservés par le serveur de rapports. Les dossiers réservés comprennent Users, My Reports et /. Les dossiers réservés ne peuvent être ni modifiés ni supprimés.|  
   
 ## <a name="report-properties"></a>Propriétés des états  
  Outre les propriétés d'élément répertoriées précédemment, les propriétés suivantes s'appliquent aux rapports dans la base de données du serveur de rapports.  

@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056163"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -50,9 +50,9 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ||||  
 |-|-|-|  
 |Nom de la colonne|Type de données|Description|  
-|**paramName**|**nvarchar (256)**|Nom du paramètre de configuration.|  
-|**valeur paramValue**|**nvarchar (256)**|Valeur du paramètre de configuration.|  
-|**description**|**nvarchar (256)**|Description du paramètre de configuration.|  
+|**paramName**|**nvarchar(256)**|Nom du paramètre de configuration.|  
+|**valeur paramValue**|**nvarchar(256)**|Valeur du paramètre de configuration.|  
+|**descriptive**|**nvarchar(256)**|Description du paramètre de configuration.|  
   
 ## <a name="remarks"></a>Notes  
  La procédure stockée **sysmail_help_configure_sp** répertorie les paramètres de configuration de Database mail actuels pour l’instance.  
@@ -87,7 +87,7 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

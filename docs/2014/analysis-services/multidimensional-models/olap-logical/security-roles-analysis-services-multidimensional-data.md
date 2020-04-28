@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725253"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Rôles de sécurité (Analysis Services - Données multidimensionnelles)
@@ -41,7 +41,7 @@ ms.locfileid: "62725253"
   
  Un objet <xref:Microsoft.AnalysisServices.Role> est composé des paramètres Name, Id et Members. Le paramètre Members est une collection de chaînes. Chaque membre contient le nom d'utilisateur sous la forme « domaine\nom d'utilisateur ». Le nom est une chaîne qui contient le nom du rôle. L'ID est une chaîne qui contient l'identificateur unique du rôle.  
   
-### <a name="server-role"></a>Rôle serveur  
+### <a name="server-role"></a>Rôle de serveur  
  Le rôle de serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] définit l'accès d'administrateur des utilisateurs et des groupes Windows à une instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les membres de ce rôle ont accès à toutes les bases de données et tous les objets [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sur une instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]et ils peuvent effectuer les tâches suivantes :  
   
 -   effectuer des fonctions d'administration de niveau serveur à l'aide de SQL Server Management Studio ou de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], notamment créer des bases de données et définir des propriétés de niveau serveur ;  
@@ -77,26 +77,13 @@ ms.locfileid: "62725253"
   
 |Action|Valeurs|Explication|  
 |------------|------------|-----------------|  
-|Procédure|{`true`, `false`}<br /><br /> Valeur par défaut=`false`|Si `true`, les membres peuvent traiter l'objet et tout objet contenu dans l'objet.<br /><br /> Les autorisations de processus ne s'appliquent pas aux modèles d'exploration de données. Les autorisations <xref:Microsoft.AnalysisServices.MiningModel> sont toujours héritées de l'objet <xref:Microsoft.AnalysisServices.MiningStructure>.|  
-|ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Valeur par défaut=`None`|Spécifie si les membres peuvent lire les définitions de données (ASSL) associées à l'objet.<br /><br /> Si `Allowed`, les membres peuvent lire les définitions ASSL associées à l'objet.<br /><br /> 
-  `Basic` et `Allowed` sont hérités par les objets contenus dans l'objet. 
-  `Allowed` remplace `Basic` et `None`.<br /><br /> 
-  `Allowed` est requis pour DISCOVER_XML_METADATA sur un objet. 
-  `Basic` est requis pour créer des objets liés et des cubes locaux.|  
-|Lire|{`None`, `Allowed`}<br /><br /> Valeur par défaut =`None` (sauf pour DimensionPermission, où la valeur par défaut est `Allowed`)|Spécifie si les membres ont l'accès en lecture aux ensembles de lignes et au contenu des données du schéma.<br /><br /> `Allowed`octroie l’accès en lecture à une base de données, ce qui vous permet de découvrir une base de données.<br /><br /> 
-  `Allowed` sur un cube, donne l'accès en lecture aux ensembles de lignes du schéma et l'accès au contenu du cube (sauf si contraint par <xref:Microsoft.AnalysisServices.CellPermission> et <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> 
-  `Allowed` sur une dimension, accorde une autorisation de lecture sur tous les attributs dans la dimension (sauf si contraint par <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). L'autorisation de lecture est utilisée uniquement pour l'héritage statique à l'objet <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. 
-  `None` sur une dimension masque la dimension et donne uniquement l'accès au membre par défaut pour les attributs pouvant faire l'objet d'une agrégation ; une erreur est levée si la dimension contient un attribut ne pouvant pas faire l'objet d'une agrégation.<br /><br /> 
-  `Allowed` sur un objet <xref:Microsoft.AnalysisServices.MiningModelPermission> accorde des autorisations pour consulter des objets dans les ensembles de lignes de schéma et effectuer des jointures de prédiction.<br /><br /> **NoteAllowed** est requis pour lire ou écrire dans n’importe quel objet de la base de données.|  
-|Write|{`None`, `Allowed`}<br /><br /> Valeur par défaut=`None`|Spécifie si les membres ont un accès en écriture aux données de l'objet parent.<br /><br /> L'accès s'applique aux sous-classes <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, et <xref:Microsoft.AnalysisServices.MiningModel>. Il ne s'applique pas aux sous-classes <xref:Microsoft.AnalysisServices.MiningStructure> de base de données, qui génèrent une erreur de validation.<br /><br /> 
-  `Allowed` sur un objet <xref:Microsoft.AnalysisServices.Dimension> accorde une autorisation d'écriture sur tous les attributs dans une dimension.<br /><br /> 
-  `Allowed` sur un objet <xref:Microsoft.AnalysisServices.Cube> accorde l'autorisation d'écriture sur les cellules du cube pour les partitions définies comme Type=writeback.<br /><br /> 
-  `Allowed` sur un objet <xref:Microsoft.AnalysisServices.MiningModel> accorde l'autorisation de modifier le contenu du modèle.<br /><br /> 
-  `Allowed` sur un objet <xref:Microsoft.AnalysisServices.MiningStructure> n'a aucune signification spécifique dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. **Remarque :**  Impossible d’affecter la valeur `Allowed` Write à, sauf si Read a également la valeur`Allowed`|  
-|Remarque de l’administration **:** uniquement dans les autorisations de base de données|{`true`, `false`}<br /><br /> Valeur par défaut=`false`|Spécifie si les membres peuvent administrer une base de données.<br /><br /> 
-  `true` accorde aux membres l'accès à tous les objets dans une base de données.<br /><br /> Un membre peut avoir des autorisations d'administrateur pour une base de données spécifique, mais pas pour les autres.|  
+|Process|{`true`, `false`}<br /><br /> Valeur par défaut=`false`|Si `true`, les membres peuvent traiter l'objet et tout objet contenu dans l'objet.<br /><br /> Les autorisations de processus ne s'appliquent pas aux modèles d'exploration de données. Les autorisations <xref:Microsoft.AnalysisServices.MiningModel> sont toujours héritées de l'objet <xref:Microsoft.AnalysisServices.MiningStructure>.|  
+|ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Valeur par défaut=`None`|Spécifie si les membres peuvent lire les définitions de données (ASSL) associées à l'objet.<br /><br /> Si `Allowed`, les membres peuvent lire les définitions ASSL associées à l'objet.<br /><br /> `Basic` et `Allowed` sont hérités par les objets contenus dans l'objet. `Allowed` remplace `Basic` et `None`.<br /><br /> `Allowed` est requis pour DISCOVER_XML_METADATA sur un objet. `Basic` est requis pour créer des objets liés et des cubes locaux.|  
+|Lire|{`None`, `Allowed`}<br /><br /> Valeur par défaut =`None` (sauf pour DimensionPermission, où la valeur par défaut est `Allowed`)|Spécifie si les membres ont l'accès en lecture aux ensembles de lignes et au contenu des données du schéma.<br /><br /> `Allowed`octroie l’accès en lecture à une base de données, ce qui vous permet de découvrir une base de données.<br /><br /> `Allowed` sur un cube, donne l'accès en lecture aux ensembles de lignes du schéma et l'accès au contenu du cube (sauf si contraint par <xref:Microsoft.AnalysisServices.CellPermission> et <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> `Allowed` sur une dimension, accorde une autorisation de lecture sur tous les attributs dans la dimension (sauf si contraint par <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). L'autorisation de lecture est utilisée uniquement pour l'héritage statique à l'objet <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. `None` sur une dimension masque la dimension et donne uniquement l'accès au membre par défaut pour les attributs pouvant faire l'objet d'une agrégation ; une erreur est levée si la dimension contient un attribut ne pouvant pas faire l'objet d'une agrégation.<br /><br /> `Allowed` sur un objet <xref:Microsoft.AnalysisServices.MiningModelPermission> accorde des autorisations pour consulter des objets dans les ensembles de lignes de schéma et effectuer des jointures de prédiction.<br /><br /> **NoteAllowed** est requis pour lire ou écrire dans n’importe quel objet de la base de données.|  
+|Write|{`None`, `Allowed`}<br /><br /> Valeur par défaut=`None`|Spécifie si les membres ont un accès en écriture aux données de l'objet parent.<br /><br /> L'accès s'applique aux sous-classes <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, et <xref:Microsoft.AnalysisServices.MiningModel>. Il ne s'applique pas aux sous-classes <xref:Microsoft.AnalysisServices.MiningStructure> de base de données, qui génèrent une erreur de validation.<br /><br /> `Allowed` sur un objet <xref:Microsoft.AnalysisServices.Dimension> accorde une autorisation d'écriture sur tous les attributs dans une dimension.<br /><br /> `Allowed` sur un objet <xref:Microsoft.AnalysisServices.Cube> accorde l'autorisation d'écriture sur les cellules du cube pour les partitions définies comme Type=writeback.<br /><br /> `Allowed` sur un objet <xref:Microsoft.AnalysisServices.MiningModel> accorde l'autorisation de modifier le contenu du modèle.<br /><br /> `Allowed` sur un objet <xref:Microsoft.AnalysisServices.MiningStructure> n'a aucune signification spécifique dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. **Remarque :**  Impossible d’affecter la valeur `Allowed` Write à, sauf si Read a également la valeur`Allowed`|  
+|Remarque de l’administration **:** uniquement dans les autorisations de base de données|{`true`, `false`}<br /><br /> Valeur par défaut=`false`|Spécifie si les membres peuvent administrer une base de données.<br /><br /> `true` accorde aux membres l'accès à tous les objets dans une base de données.<br /><br /> Un membre peut avoir des autorisations d'administrateur pour une base de données spécifique, mais pas pour les autres.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autorisation de l’accès aux objets et opérations &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
+ [Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

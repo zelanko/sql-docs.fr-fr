@@ -10,20 +10,20 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400337"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Définir le mot de passe d’administrateur pour la connexion aux nœuds AD en mode de restauration des services d’annuaire (DSRM)-Analytics Platform System
 Le mode de restauration des services d’annuaire (DSRM) est un mode de démarrage pour la réparation ou la récupération de Active Directory Domain Services (AD DS). Il est utilisé pour se connecter aux nœuds AD de l’appliance après l’échec de AD DS ou lorsque AD DS doit être restauré. Le mot de passe pour DSRM a été initialisé lors de la configuration de l’appliance sur le site du fournisseur de matériel et doit être modifié par l’administrateur de l’appliance. Analytics Platform System a deux AD DS (contrôleurs de domaine); ** _appliance_domain_-ad01** et ** _appliance_domain_-AD02**. Pour chaque nœud AD d’appliance, modifiez le mot de passe DSRM en procédant comme suit.  
   
-## <a name="HowToDSRM"></a>Pour réinitialiser le mot de passe de l’administrateur  
+## <a name="to-reset-the-administrator-password"></a><a name="HowToDSRM"></a>Pour réinitialiser le mot de passe de l’administrateur  
   
 1.  Ouvrez une fenêtre d’invite de commandes sur un nœud AD d’appliance <strong> _appliance_domain_AD_xx_</strong>machine virtuelle.  
   
-2.  Dans l’invite de commandes, tapez `ntdsutil`.  
+2.  À l’invite de commandes, tapez `ntdsutil`.  
   
 3.  À l’invite **Ntdsutil** , tapez `set dsrm password`.  
   

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782397"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -43,7 +43,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  Descripteur de connexion ODBC compatible avec la copie en bloc.  
   
- *propriété*  
+ *property*  
  Constante de type BYTE. Consultez le tableau dans la section Notes pour obtenir une liste des constantes.  
   
  *pField*  
@@ -81,7 +81,7 @@ RETCODE bcp_setbulkmode (
   
  Si vous tentez d’appeler bcp_setbulkmode avec une séquence d’appels de fonction qui comprend bcp_setcolfmt, bcp_control et bcp_readfmt, l’un des appels de fonction retourne un échec de séquence. Si vous choisissez de corriger l’échec, appelez bcp_init pour réinitialiser tous les paramètres et recommencer.  
   
- Voici quelques exemples d’appels de fonction qui génèrent une erreur de séquence de fonction :  
+ Vous trouverez ci-dessous quelques exemples d'appels de fonction qui provoquent une erreur de séquence de fonction :  
   
 ```  
 bcp_init("table", DB_IN);  

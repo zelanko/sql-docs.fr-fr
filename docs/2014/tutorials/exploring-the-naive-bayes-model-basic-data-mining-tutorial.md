@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472883"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Exploration du modèle Naive Bayes (Didacticiel sur l'exploration de données de base)
@@ -24,7 +24,7 @@ ms.locfileid: "62472883"
   
  
   
-##  <a name="DependencyNetwork"></a>Réseau de dépendances  
+##  <a name="dependency-network"></a><a name="DependencyNetwork"></a>Réseau de dépendances  
  L’onglet **réseau de dépendances** fonctionne de la même façon que l’onglet réseau de [!INCLUDE[msCoName](../includes/msconame-md.md)] **dépendances** de la visionneuse de l’arborescence. Chaque nœud dans la visionneuse représente un attribut et les lignes entre les nœuds représentent des relations. Dans la visionneuse, vous pouvez voir tous les attributs qui ont une incidence sur l'état de l'attribut prédictible Bike Buyer.  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Pour explorer le modèle sous l'onglet Réseau de dépendances  
@@ -42,7 +42,7 @@ ms.locfileid: "62472883"
      Si vous faites glisser le curseur vers le bas, seuls les attributs qui ont la plus grande incidence sur la colonne [Bike Buyer] restent affichés. En ajustant le curseur, vous pouvez constater que les attributs les plus influents sont : le nombre de voitures possédées, la distance domicile-travail, et le nombre total d'enfants.  
  
   
-##  <a name="AttributeProfiles"></a>Profils d’attribut  
+##  <a name="attribute-profiles"></a><a name="AttributeProfiles"></a>Profils d’attribut  
  L’onglet **profils d’attribut** décrit comment les différents États des attributs d’entrée affectent le résultat de l’attribut prévisible.  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>Pour explorer le modèle sous l'onglet Profils d'attribut  
@@ -64,7 +64,7 @@ ms.locfileid: "62472883"
      La **légende d’exploration de données** affiche une vue plus détaillée.  
   
   
-##  <a name="AttributeCharacteristics"></a>Caractéristiques d’attribut  
+##  <a name="attribute-characteristics"></a><a name="AttributeCharacteristics"></a> Caractéristiques d'attribut  
  Avec l’onglet **caractéristiques d’attribut** , vous pouvez sélectionner un attribut et une valeur pour voir la fréquence à laquelle les valeurs d’autres attributs apparaissent dans les cas de valeur sélectionnés.  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>Pour explorer le modèle sous l'onglet Caractéristiques d'attribut  
@@ -76,7 +76,7 @@ ms.locfileid: "62472883"
      Dans la visionneuse, vous constaterez que les clients qui n'ont pas d'enfants, font des trajets courts entre leur domicile et bureau, et habitent dans la région North America sont plus susceptibles d'acheter un vélo.  
   
   
-##  <a name="AttributeDiscrimination"></a>Discrimination d’attribut  
+##  <a name="attribute-discrimination"></a><a name="AttributeDiscrimination"></a> Discrimination d'attribut  
  Avec l’onglet **discrimination d’attribut** , vous pouvez examiner la relation entre deux valeurs discrètes de l’achat de vélos et d’autres valeurs d’attribut. Étant donné `TM_NaiveBayes` que le modèle n’a que deux États, 1 et 0, il n’est pas nécessaire d’apporter des modifications à la visionneuse.  
   
  Dans la visionneuse, vous constatez que les personnes qui ne sont pas propriétaires de voitures achètent généralement des vélos et que les personnes propriétaires de deux voitures n'en achètent généralement pas.  

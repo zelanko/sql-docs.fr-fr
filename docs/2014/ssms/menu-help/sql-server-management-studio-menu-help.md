@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510342"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Aide de SQL Server Management Studio
-  Cette section contient l’aide accessible via la touche F1 pour les boîtes de dialogue et les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]pages disponibles à partir de la barre de menus dans.  
+  Cette section contient l’aide accessible par le biais de la touche F1 pour les boîtes de dialogue et les pages disponibles dans la barre de menus de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  [À propos de SQL Server Management Studio](about-sql-server-management-studio.md)  
   

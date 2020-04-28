@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400621"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Mettre l’appliance sous tension ou hors tension pour Analytics Platform System
@@ -25,7 +25,7 @@ Lorsque ces instructions spécifient la connexion à un nœud de SQL Server PDW,
   
 Vous pouvez établir des connexions à des nœuds de SQL Server PDW à l’aide des adresses IP attribuées aux nœuds, ou à partir de l’ordinateur **HST01** à l’aide des applications **Gestionnaire du cluster de basculement** (**Cluadmin. msc**) ou du **Gestionnaire Hyper-V** (**virtmgmt. msc**) et en cliquant avec le bouton droit sur le nom du nœud.  
   
-## <a name="PowerOff"></a>Mettre l’appareil hors tension  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Mettre l’appareil hors tension  
   
 ### <a name="before-you-begin"></a>Avant de commencer  
 Avant de mettre l’appareil hors tension, vous devez mettre fin à toutes les activités de l’appliance. Pour mettre fin à toutes les activités :  
@@ -61,7 +61,7 @@ Avant de mettre l’appareil hors tension, vous devez mettre fin à toutes les a
   
 9. Arrêtez les unités de distribution de l’alimentation (PDU).  
   
-## <a name="PowerOn"></a>Mise sous tension de l’appareil  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>Mise sous tension de l’appareil  
   
 ### <a name="to-power-on-the-appliance"></a>Pour mettre l’appareil sous tension  
   

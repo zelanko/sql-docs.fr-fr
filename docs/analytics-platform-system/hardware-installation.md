@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401122"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Installation matérielle pour l’appliance Analytics Platform System (APS)
 Cet article explique comment déplacer, décompresser et installer le matériel de votre appareil SQL Server PDW. Cet article est purement informatif et est destiné à vous aider à comprendre le processus. Votre appliance doit être décompressée, installée et vérifiée avant d’être retournée. La participation des clients est requise pour les éléments tels que l’accès au centre de données, l’alimentation électrique et les connexions Ethernet.  
   
-## <a name="BeforeMoving"></a>Avant de déplacer des composants à partir du Dock de chargement  
+## <a name="before-you-move-any-components-from-the-loading-dock"></a><a name="BeforeMoving"></a>Avant de déplacer des composants à partir du Dock de chargement  
 Effectuez les tâches suivantes avant de déplacer, décompresser ou monter en rack les composants de l’appliance.  
   
 |Tâche|Description|  
@@ -32,7 +32,7 @@ Effectuez les tâches suivantes avant de déplacer, décompresser ou monter en r
 |Sécuriser le rack de centre de données|Sécurisez le rack de centre de données en place à l’aide d’équipements supplémentaires selon les besoins de votre centre de données, tels que les bandes de tremblements de terres dans des zones géographiques sujettes à des tremblements de tremblement.|  
 |Préparer l’assistance au transport des composants|Déterminez à l’avance l’assistance, l’équipement et les outils dont vous aurez besoin pour gérer chaque composant en toute sécurité et sans causer de dommages.|  
   
-## <a name="Moving"></a>Déplacez les racks du quai de chargement vers le centre de données.  
+## <a name="move-the-racks-from-the-loading-dock-into-the-data-center"></a><a name="Moving"></a>Déplacez les racks du quai de chargement vers le centre de données.  
 Chaque palette contient tous les composants d’un rack d’appliances, y compris les nœuds, les câbles, les cordons, etc.  
   
 Utilisez la liste de vérification suivante pour déplacer chaque rack d’appliance de la palette au quai de chargement vers son emplacement de rack dans le centre de données. Déplacez d’abord le rack de contrôle, puis déplacez les autres racks de données de l’appliance.  
@@ -51,7 +51,7 @@ Utilisez la liste de vérification suivante pour déplacer chaque rack d’appli
 |Sécuriser le nœud dans le rack de centre de données|Sécurisez le nœud sur place dans le rack du centre de données.|  
 |Répétez ces étapes pour le nœud ou le composant suivant|Répétez ces étapes pour déplacer le nœud suivant ou un autre composant d’appliance dans le centre de données.|  
   
-## <a name="AfterMoving"></a>Installer des composants supplémentaires  
+## <a name="install-additional-components"></a><a name="AfterMoving"></a>Installer des composants supplémentaires  
 Utilisez la liste de vérification suivante pour installer les composants supplémentaires.  
   
 |Tâche|Description||  

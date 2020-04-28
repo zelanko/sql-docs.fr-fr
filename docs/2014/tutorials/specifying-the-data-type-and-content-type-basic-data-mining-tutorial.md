@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720047"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Spécification du type de données et du type de contenu (Didacticiel sur l'exploration de données de base)
@@ -32,7 +32,7 @@ ms.locfileid: "62720047"
     |------------|------------------|---------------|  
     |**Adresse ligne1**|**Discret**|**Text**|  
     |**Adresse-ligne2**|**Discret**|**Text**|  
-    |**Vieillissement**|**Continue**|**Long**|  
+    |**Age**|**Continue**|**Long**|  
     |**Bike Buyer**|**Discret**|**Long**|  
     |**Commute Distance**|**Discret**|**Text**|  
     |**CustomerKey**|**Clé**|**Long**|  
@@ -43,14 +43,14 @@ ms.locfileid: "62720047"
     |**FirstName**|**Discret**|**Text**|  
     |**Sexe**|**Discret**|**Text**|  
     |**Geography Key**|**Discret**|**Text**|  
-    |**Indicateur de propriétaire de la maison**|**Discret**|**Text**|  
+    |**House Owner Flag**|**Discret**|**Text**|  
     |**Nom**|**Discret**|**Text**|  
     |**Marital Status**|**Discret**|**Text**|  
-    |**Nombre de voitures appartenant**|**Discret**|**Long**|  
-    |**Nombre d’enfants à la résidence**|**Discret**|**Long**|  
+    |**Number Cars Owned**|**Discret**|**Long**|  
+    |**Number Children At Home**|**Discret**|**Long**|  
     |**Région**|**Discret**|**Text**|  
-    |**Nombre total d’enfants**|**Discret**|**Long**|  
-    |**Revenu annuel**|**Continue**|**Double**|  
+    |**Total Children**|**Discret**|**Long**|  
+    |**Yearly Income**|**Continue**|**Double**|  
   
 3.  Cliquez sur **Suivant**.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "62720047"
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de contenu &#40;l’exploration de données&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [Types de données &#40;&#41;d’exploration de données](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [Types de données &#40;Exploration de données&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

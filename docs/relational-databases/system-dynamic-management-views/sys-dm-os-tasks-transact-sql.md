@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74164899"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74164899"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary (8)**|Adresse mémoire de l'objet.|  
-|**task_state**|**nvarchar (60)**|État de la tâche. Il peut s’agir de l’une des propriétés suivantes :<br /><br /> PENDING : En attente d'un thread de travail.<br /><br /> RUNNABLE : Exécutable, mais en attente d'un quantum.<br /><br /> RUNNING : En cours d'exécution sur le planificateur.<br /><br /> SUSPENDED : Doté d'un processus de travail, mais en attente d'un événement.<br /><br /> DONE : Terminé.<br /><br /> SPINLOOP : Bloqué dans une boucle.|  
+|**task_state**|**nvarchar(60)**|État de la tâche. Il peut s'agir de l'une des ressources suivantes :<br /><br /> PENDING : En attente d'un thread de travail.<br /><br /> RUNNABLE : Exécutable, mais en attente d'un quantum.<br /><br /> RUNNING : En cours d'exécution sur le planificateur.<br /><br /> SUSPENDED : Doté d'un processus de travail, mais en attente d'un événement.<br /><br /> DONE : Terminé.<br /><br /> SPINLOOP : Bloqué dans une boucle.|  
 |**context_switches_count**|**int**|Nombre de commutateurs de contexte de planificateur exécutés par cette tâche.|  
 |**pending_io_count**|**int**|Nombre d'E/S physiques qui sont effectuées par cette tâche.|  
 |**pending_io_byte_count**|**bigint**|Nombre total d'octets d'E/S qui sont traités par cette tâche.|  

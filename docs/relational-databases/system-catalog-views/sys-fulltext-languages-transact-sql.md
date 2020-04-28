@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981773"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "73981773"
    
 |Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
-|**nomme**|**sysname**|Valeur de l’alias dans [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) qui correspond à la valeur de **LCID** ou à la représentation sous forme de chaîne du LCID numérique.|  
+|**lcid**|**int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
+|**name**|**sysname**|Valeur de l’alias dans [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) qui correspond à la valeur de **LCID** ou à la représentation sous forme de chaîne du LCID numérique.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valeurs retournées pour les langues par défaut  
  Le tableau suivant présente uniquement les valeurs des langues dont les analyseurs lexicaux sont inscrits par défaut.  
@@ -94,7 +94,7 @@ ms.locfileid: "73981773"
 |Chinois traditionnel|1028|  
 |**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Turc|1055|  
 |Ukrainien|1058|  
-|Ourdou|1 056|  
+|Ourdou|1056|  
 |Vietnamien|1066|  
   
 ## <a name="remarks"></a>Notes  
@@ -108,7 +108,7 @@ ms.locfileid: "73981773"
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurer et gérer les analyseurs lexicaux et les générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Configurer et gérer mots vides et mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

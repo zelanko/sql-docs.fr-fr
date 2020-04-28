@@ -21,35 +21,35 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520466"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instances de cluster de basculement Always On (SQL Server)
-  Dans le cadre de l’offre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, les instances de cluster de basculement AlwaysOn exploitent la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
+  Dans le cadre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’offre Always On, Always on instances de cluster de basculement tirent parti de la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
   
  Une instance FCI peut tirer parti des [groupes de disponibilité Always On](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) pour permettre la récupération d’urgence à distance au niveau de la base de données. Pour plus d’informations, consultez [Clustering de basculement et groupes de disponibilité Always On (;SQL Server);](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
 >  À compter de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], les instances de cluster de basculement Always On prennent en charge les volumes partagés de cluster dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] et [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Pour plus d'informations sur les volumes partagés de cluster, consultez [Présentation des volumes partagés de cluster dans un cluster de basculement](https://technet.microsoft.com/library/dd759255.aspx).  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Avantages](#Benefits)  
   
 -   [Recommandations](#Recommendations)  
   
--   [Présentation de l’instance de cluster de basculement](#Overview)  
+-   [Vue d'ensemble d'une instance de cluster de basculement](#Overview)  
   
--   [Éléments d’une instance de cluster de basculement](#FCIelements)  
+-   [Éléments d'une instance de cluster de basculement](#FCIelements)  
   
 -   [Concepts et tâches de basculement SQL Server](#ConceptsAndTasks)  
   
 -   [Rubriques connexes](#RelatedTopics)  
   
-##  <a name="Benefits"></a>Avantages d’une instance de cluster de basculement  
+##  <a name="benefits-of-a-failover-cluster-instance"></a><a name="Benefits"></a>Avantages d’une instance de cluster de basculement  
  En cas de défaillance matérielle ou logicielle d'un serveur, les applications ou les clients qui se connectent au serveur font face à un temps mort. Lorsqu'une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configurée pour être une instance FCI (au lieu d'une instance autonome), la haute disponibilité de cette instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est protégée par la présence de nœuds redondants dans l'instance FCI. Un seul des nœuds de l'instance FCI possède le groupe de ressources WSFC à la fois. En cas de défaillances (défaillances matérielles, défaillances du système d'exploitation, d'une application ou d'un service) ou lors d'une mise à niveau planifiée, la propriété du groupe de ressources est transférée vers un autre nœud WSFC. Ce processus est transparent pour un client ou une application se connectant à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ce qui permet de réduire les temps morts auxquels font face l'application ou les clients lors d'une défaillance. Les listes suivantes répertorient certains des avantages clés des instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   Protection au niveau de l'instance par redondance  
@@ -73,10 +73,10 @@ ms.locfileid: "62520466"
   
 -   Utilisation des ressources limitée au cours des basculements  
   
-##  <a name="Recommendations"></a> Recommandations  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
  Dans un environnement de production, nous recommandons d'utiliser des adresses IP statiques en association avec l'adresse IP virtuelle d'une instance de cluster de basculement.  Nous déconseillons d'utiliser DHCP dans un environnement de production. En cas d'arrêt du système, si le bail IP DHCP expire, il faudra consacrer du temps supplémentaire pour réinscrire la nouvelle adresse IP DHCP associée au nom DNS.  
   
-##  <a name="Overview"></a>Présentation de l’instance de cluster de basculement  
+##  <a name="failover-cluster-instance-overview"></a><a name="Overview"></a>Présentation de l’instance de cluster de basculement  
  Une instance FCI s'exécute dans un groupe de ressources WSFC avec un ou plusieurs nœuds WSFC. Au démarrage de l'instance FCI, l'un des nœuds suppose la propriété du groupe de ressources et met son instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ligne. Les ressources détenues par ce nœud sont les suivantes :  
   
 -   Nom du réseau  
@@ -85,13 +85,11 @@ ms.locfileid: "62520466"
   
 -   Disques partagés  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Moteur de base de données  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Moteur de base de données  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Service agent  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Agent  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Services, s'il est installé  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Services, s'il est installé  
   
 -   Une ressource de partage de fichiers, si la fonctionnalité FILESTREAM est installée  
   
@@ -123,7 +121,7 @@ ms.locfileid: "62520466"
   
  Pour plus d’informations, consultez [stratégie de basculement pour les instances de cluster de basculement](failover-policy-for-failover-cluster-instances.md)  
   
-##  <a name="FCIelements"></a>Éléments d’une instance de cluster de basculement  
+##  <a name="elements-of-a-failover-cluster-instance"></a><a name="FCIelements"></a>Éléments d’une instance de cluster de basculement  
  Une instance FCI se compose d'un ensemble de serveurs physiques (nœuds) qui présentent une configuration matérielle similaire, ainsi qu'une configuration logicielle identique qui inclut la version du système d'exploitation et le niveau de correctif, la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le niveau de correctif, les composants et le nom de l'instance. Une configuration logicielle identique est nécessaire pour garantir le fonctionnement intégral de l'instance FCI au moment du basculement entre les nœuds.  
   
  Groupe de ressources WSFC  
@@ -141,15 +139,15 @@ ms.locfileid: "62520466"
  Adresses IP virtuelles  
  Dans le cas d'une instance FCI à plusieurs sous-réseaux, une adresse IP virtuelle est affectée à chaque sous-réseau au sein de l'instance FCI. Durant un basculement, le VNN sur le serveur DNS est mis à jour pour indiquer l'adresse IP virtuelle du sous-réseau respectif. Les applications et les clients peuvent ensuite se connecter à l'instance FCI à l'aide du même nom VNN après un basculement de plusieurs sous-réseaux.  
   
-##  <a name="ConceptsAndTasks"></a>Concepts et tâches de basculement SQL Server  
+##  <a name="sql-server-failover-concepts-and-tasks"></a><a name="ConceptsAndTasks"></a>Concepts et tâches de basculement SQL Server  
   
 |Concepts et tâches|Rubrique|  
 |------------------------|-----------|  
 |Décrit le mécanisme de détection de pannes et la stratégie flexible de basculement.|[Stratégie de basculement pour les instances de cluster de basculement](failover-policy-for-failover-cluster-instances.md)|  
-|Décrit les concepts dans l'administration et la maintenance de l'instance FCI.|[Administration et maintenance de l’instance de cluster de basculement](failover-cluster-instance-administration-and-maintenance.md)|  
+|Décrit les concepts dans l'administration et la maintenance de l'instance FCI.|[Administration et maintenance de l'instance de cluster de basculement](failover-cluster-instance-administration-and-maintenance.md)|  
 |Décrit la configuration de sous-réseaux multiples et les concepts associés|[SQL Server le clustering de sous-réseaux multiples (; SQL Server);](sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a>Rubriques connexes  
+##  <a name="related-topics"></a><a name="RelatedTopics"></a>Rubriques connexes  
   
 |**Descriptions des rubriques**|**Rubrique**|  
 |----------------------------|---------------|  

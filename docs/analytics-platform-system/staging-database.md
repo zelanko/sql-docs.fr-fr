@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400284"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Utilisation d’une base de données intermédiaire en parallèle Data Warehouse (PDW)
 SQL Server Parallel Data Warehouse (PDW) utilise une base de données de mise en lots pour stocker temporairement les données pendant le processus de chargement. Par défaut, SQL Server PDW utilise la base de données de destination en tant que base de données de mise en lots, ce qui peut entraîner une fragmentation de la table. Pour réduire la fragmentation des tables, vous pouvez créer une base de données intermédiaire définie par l’utilisateur. Ou, lorsque la restauration à partir d’un échec de chargement n’est pas un problème, vous pouvez utiliser le mode de chargement fastappend pour améliorer les performances en ignorant la table temporaire et en chargeant directement dans la table de destination.  
   
-## <a name="StagingDatabase"></a>Notions de base des bases de données intermédiaires  
+## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>Notions de base des bases de données intermédiaires  
 Une *base de données intermédiaire* est une base de données PDW créée par l’utilisateur, qui stocke temporairement les données pendant leur chargement dans l’appliance. Lorsqu’une base de données de mise en lots est spécifiée pour une charge, l’appliance copie d’abord les données dans la base de données intermédiaire, puis copie les données des tables temporaires dans la base de données de mise en lots vers des tables permanentes dans la base de données de destination.  
   
 Lorsqu’une base de données de mise en lots n’est pas spécifiée pour une charge, SQL ServerPDW crée les tables temporaires dans la base de données de destination et les utilise pour stocker les données chargées avant d’insérer les données chargées dans les tables de destination permanentes.  
@@ -38,7 +38,7 @@ La structure de stockage pour chaque table de base de données dépend de la tab
   
 -   Pour les chargements dans un index cluster rowstore, la table de mise en lots est un index cluster rowstore.  
   
-## <a name="Permissions"></a>Autorisations  
+## <a name="permissions"></a><a name="Permissions"></a>Autorisations  
 Nécessite l’autorisation CREATe (pour créer une table temporaire) sur la base de données de mise en lots. 
 
 <!-- MISSING LINKS
@@ -47,7 +47,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>Meilleures pratiques pour la création d’une base de données de mise en lots  
+## <a name="best-practices-for-creating-a-staging-database"></a><a name="CreatingStagingDatabase"></a>Meilleures pratiques pour la création d’une base de données de mise en lots  
   
 1.  Il ne doit y avoir qu’une seule base de données intermédiaire par appliance. La base de données intermédiaire peut être partagée par toutes les tâches de chargement de toutes les bases de données de destination.  
   
@@ -61,9 +61,9 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   La taille du journal est généralement similaire à la taille de la table répliquée.  
   
-## <a name="Examples"></a>Exemples  
+## <a name="examples"></a><a name="Examples"></a>Exemples  
   
-### <a name="a-create-a-staging-database"></a>R. Créer une base de données de mise en lots 
+### <a name="a-create-a-staging-database"></a>A. Créer une base de données de mise en lots 
 L’exemple suivant crée une base de données de mise en lots, Stagedb, à utiliser avec toutes les charges sur l’appliance. Supposons que vous estimez que cinq tables répliquées d’une taille de 5 Go chacune sera chargée simultanément. Cette concurrence entraîne l’allocation d’au moins 25 Go pour la taille répliquée. Supposons que vous estimez que six tables distribuées de tailles 100, 200, 400, 500, 500 et 550 Go se chargent simultanément. Cette concurrence entraîne l’allocation d’au moins 2250 Go pour la taille de la table distribuée.  
   
 ```sql  

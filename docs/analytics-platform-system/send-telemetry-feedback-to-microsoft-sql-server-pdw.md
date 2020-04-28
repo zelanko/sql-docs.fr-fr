@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400365"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Envoyer des commentaires de télémétrie à Microsoft pour Analytics Platform System
@@ -22,10 +22,10 @@ Analytics Platform System possède une fonctionnalité de télémétrie facultat
 > [!NOTE]  
 > Dans cette version, Microsoft n’analyse pas activement les données de télémétrie. Les données sont collectées à des fins d’analyse uniquement.  
   
-## <a name="privacy"></a>Nominative  
+## <a name="privacy"></a><a name="privacy"></a>Confidentialité  
 Pour fournir la protection maximale de la confidentialité, APS est fourni sans activer la télémétrie. Avant d’activer cette fonctionnalité, consultez tout d’abord la [déclaration de confidentialité Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=400902). Pour vous abonner, exécutez le script PowerShell décrit ci-dessous.  
   
-## <a name="enable"></a>Activer la télémétrie  
+## <a name="enable-telemetry"></a><a name="enable"></a>Activer la télémétrie  
 **Transfert DNS :** L’envoi de données de télémétrie à Microsoft requiert Analytics Platform System pour se connecter à Internet via un redirecteur DNS. Pour activer cette fonctionnalité, vous devez activer le transfert DNS sur tous les ordinateurs hôtes et les machines virtuelles de charge de travail. Appelez la `Enable-RemoteMonitoring` commande avec l' `SetupDnsForwarder` option permettant de configurer correctement le transfert DNS et d’activer la télémétrie. Appelez la `Enable-RemoteMonitoring` commande sans l' `SetupDnsForwarder` option lorsque le transfert DNS est déjà configuré et que vous souhaitez uniquement activer la surveillance des pulsations.  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ Pour fournir la protection maximale de la confidentialité, APS est fourni sans 
     > [!NOTE]  
     > Pour importer, vous devez utiliser deux points dans la commande.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -75,7 +75,7 @@ Si vous avez entré **n**, aucune commande n’est exécutée et la fonctionnali
   
 Il n’y a aucun effet sur `Enable-RemoteMonitoring` l’exécution de la commande plusieurs fois. Si le redirecteur DNS est déjà défini, vous obtiendrez un message d’avertissement indiquant que c’est le cas.  
   
-## <a name="disable"></a>Désactiver la télémétrie  
+## <a name="disable-telemetry"></a><a name="disable"></a>Désactiver la télémétrie  
 La désactivation de la télémétrie entraînera l’arrêt de toutes les opérations qui communiquent les informations relatives à l’état de l’appliance au service d’analyse APS dans le Cloud.  
   
 > [!IMPORTANT]  
@@ -92,7 +92,7 @@ La désactivation de la télémétrie entraînera l’arrêt de toutes les opér
     > [!NOTE]  
     > Pour importer, vous devez utiliser deux points dans la commande.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ La désactivation de la télémétrie entraînera l’arrêt de toutes les opér
   
 4.  Appelle la `Disable-RemoteMonitoring` commande sans paramètres. Cette commande arrête d’envoyer des commentaires. (Cela n’affecte pas l’analyse locale.) Toutefois, la commande ne désactive pas le redirecteur DNS et/ou ne désactive aucune connectivité Internet. Cette opération doit être effectuée manuellement après la désactivation réussie des commentaires.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

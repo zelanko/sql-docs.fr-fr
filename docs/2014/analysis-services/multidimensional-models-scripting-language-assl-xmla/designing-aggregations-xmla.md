@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702119"
 ---
 # <a name="designing-aggregations-xmla"></a>Conception d'agrégations (XMLA)
@@ -55,12 +55,12 @@ ms.locfileid: "62702119"
   
  L'élément `Query` contient une valeur délimitée par des virgules qui renferme les arguments suivants :  
   
- *Fréquence*,*jeu de données*[,*jeu de données*...]  
+ *Frequency*,*Dataset*[,*Dataset*...]  
   
- *Argument*  
+ *Fréquence*  
  Un facteur de pondération qui correspond au nombre de fois que la requête a été exécutée antérieurement. Si l' `Query` élément représente une nouvelle requête, la valeur *Frequency* représente le facteur de pondération utilisé par le processus de conception pour évaluer la requête. À mesure que la valeur de la fréquence s'accroît, le poids associé à la requête pendant le processus de conception augmente.  
   
- *Ensemble*  
+ *Dataset*  
  Une chaîne numérique qui spécifie quels attributs d'une dimension doivent être inclus dans la requête. Cette chaîne doit comporter autant de caractères que la dimension compte d'attributs. Zéro (0) indique que l'attribut à la position ordinale spécifiée n'est pas inclus dans la requête pour la dimension spécifiée, alors qu'un (1) indique que l'attribut à la position ordinale spécifiée est inclus dans la requête pour la dimension spécifiée.  
   
  Par exemple, la chaîne  « 011 » se rapporte à une requête concernant une dimension à trois attributs, dont le deuxième et le troisième sont inclus dans la requête.  
@@ -104,7 +104,7 @@ ms.locfileid: "62702119"
 |Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
 |Étapes|Integer|Nombre d'étapes parcourues par la commande avant de restituer le contrôle à l'application cliente.|  
-|Temps|Entier long|Temps en millisecondes nécessaire à la commande pour restituer le contrôle à l'application cliente.|  
+|Heure|Entier long|Temps en millisecondes nécessaire à la commande pour restituer le contrôle à l'application cliente.|  
 |Optimisation|Double|Estimation du pourcentage d'amélioration des performances atteint par la commande avant de restituer le contrôle à l'application cliente.|  
 |Stockage|Entier long|Estimation du nombre d'octets nécessaires à la commande pour restituer le contrôle à l'application cliente.|  
 |Agrégations|Entier long|Nombre d'agrégations définies par la commande avant de restituer le contrôle à l'application cliente.|  

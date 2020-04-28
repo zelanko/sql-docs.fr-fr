@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518649"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Transmission de paramètres d'informations de périphérique aux extensions de rendu
@@ -55,7 +55,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
- [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Génération d’applications à l’aide du service web et de .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Personnaliser les paramètres d’extension de rendu dans RSReportServer. config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Création d’applications à l’aide du service web et du .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

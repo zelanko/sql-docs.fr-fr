@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691593"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle (Management Studio)
@@ -50,7 +50,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 
     Pour plus d’informations sur les autorisations requises par le compte du serveur lié, consultez la section **Abonnements mis à jour en attente** de [saisissez la description de lien ici](../security/secure-the-subscriber.md).
 
-8. Terminez l'Assistant.
+8. Effectuez toutes les étapes de l'Assistant.
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configurer un abonnement pouvant être mis à jour à partir de l’Abonné
 
@@ -62,22 +62,22 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 5. Connectez-vous au serveur de publication dans la boîte de dialogue **Se connecter au serveur** .
 6. Sélectionnez une publication transactionnelle activée pour la mise à jour d’abonnements dans la page **Publication**.
 7. Suivez les pages de l'Assistant pour spécifier les options de l'abonnement, par exemple où l'Agent de distribution doit s'exécuter.
-8. Dans la page **Abonnements pouvant être mis à jour** de l’Assistant Nouvel abonnement, vérifiez que **Répliquer** est sélectionné.
+8. Dans la page **abonnements pouvant être mis à jour** de l’Assistant nouvel abonnement, vérifiez que **répliquer** est sélectionné.
 9. Sélectionnez une option dans la liste déroulante **Valider sur le serveur de publication** :
 
     * Pour utiliser des abonnements mis à jour immédiatement, sélectionnez **Enregistrer les modifications simultanément**. Si vous sélectionnez cette option et que la publication autorise les abonnements mis à jour en attente (l’option par défaut pour les publications créées avec l’Assistant Nouvelle publication), la propriété d’abonnement **update_mode** a la valeur **failover**. Ce mode vous permet de passer ultérieurement en mise à jour en attente si nécessaire.
-    * Pour utiliser des abonnements mis à jour en attente, sélectionnez **Mettre les modifications en file d’attente et valider dès que possible**. Si vous sélectionnez cette option et que la publication autorise les abonnements mis à jour immédiatement (l’option par défaut pour les publications créées avec l’Assistant Nouvelle publication), et si l’abonné exécute SQL Server 2005 ou une version ultérieure, la propriété d’abonnement **update_mode** a la valeur queued **failover**. Ce mode vous permet de passer ultérieurement en mise à jour immédiate si nécessaire.
+    * Pour utiliser des abonnements mis à jour en attente, sélectionnez **Mettre les modifications en file d’attente et valider dès que possible**. Si vous sélectionnez cette option et que la publication autorise les abonnements mis à jour immédiatement (valeur par défaut pour les publications créées avec l’Assistant Nouvelle publication), et si l’abonné exécute SQL Server 2005 ou une version ultérieure, la propriété d’abonnement **update_mode** est définie sur **basculement**en file d’attente. Ce mode vous permet de passer ultérieurement en mise à jour immédiate si nécessaire.
 
     Pour plus d’informations sur le basculement entre les modes de mise à jour, consultez [Basculer entre les modes de mise à jour d’un abonnement transactionnel pouvant être mis à jour](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
-10. La page **Nom d’accès aux abonnements pouvant être mis à jour** est affichée pour les abonnements qui utilisent la mise à jour immédiate ou dont la propriété **update_mode** a la valeur queued **failover**. Dans la page **Nom d’accès aux abonnements pouvant être mis à jour**, spécifiez un serveur lié via lequel sont effectuées les connexions au serveur de publication pour les abonnements mis à jour immédiatement. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Sélectionnez l’une des options suivantes :
+10. La page **connexion pour les abonnements pouvant être mis** à jour s’affiche pour les abonnements qui utilisent la mise à jour immédiate ou qui ont **update_mode** défini sur **basculement**en attente. Dans la page **Nom d’accès aux abonnements pouvant être mis à jour**, spécifiez un serveur lié via lequel sont effectuées les connexions au serveur de publication pour les abonnements mis à jour immédiatement. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Sélectionnez l’une des options suivantes :
 
     * **Créer un serveur lié qui se connecte par Authentification SQL Server**. Sélectionnez cette option si vous n'avez pas défini un serveur distant ou un serveur lié entre l'Abonné et le serveur de publication. La réplication crée un serveur lié pour vous. Le compte que vous spécifiez doit déjà exister sur le serveur de publication.
     * **Utiliser un serveur lié ou un serveur distant que vous avez déjà défini.** Sélectionnez cette option si vous avez défini un serveur distant ou un serveur lié entre l’abonné et le serveur de publication à l’aide de [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio ou d’une autre méthode.
 
     Pour plus d’informations sur les autorisations requises par le compte du serveur lié, consultez la section **Abonnements mis à jour en attente** de [saisissez la description de lien ici](../security/secure-the-subscriber.md).
 
-11. Terminez l'Assistant.
+11. Effectuez toutes les étapes de l'Assistant.
 
 ## <a name="create-an-immediate-updating-pull-subscription"></a>Créer un abonnement par extraction avec mise à jour immédiate
 
@@ -116,7 +116,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
     * `1` - Utiliser le contexte de sécurité de l’utilisateur qui apporte des modifications à l’Abonné lors de la connexion au serveur de publication. Consultez [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) pour connaître les restrictions en rapport avec ce mode de sécurité.
     * `2` - Utiliser une connexion de serveur lié existante, définie par l’utilisateur, créée à l’aide de [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
-6. Sur le serveur de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) en spécifiant `@publication`, `@subscriber`, `@destination_db`, une valeur d’extraction pour `@subscription_type`, et la valeur spécifiée à l’étape 3 pour `@update_mode`.
+6. Sur le serveur de publication [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) , exécutez `@publication`sp_addsubscription `@subscriber`spécifiant,, `@destination_db`, la valeur `@subscription_type`pull pour et la même valeur spécifiée à l’étape `@update_mode`3 pour.
 
 L'abonnement par extraction est alors inscrit sur le serveur de publication. 
 
@@ -190,7 +190,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
     * (Facultatif) Une valeur de `0` pour `@distributor_security_mode` et les informations de connexion SQL Server pour `@distributor_login` et `@distributor_password`, si vous devez utiliser l’authentification SQL Server lors de la connexion du distributeur. 
     * Planification du travail de l'Agent de distribution pour cet abonnement.
 
-5. Sur le serveur de publication, exécutez [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) pour enregistrer l’abonné sur le serveur de publication en spécifiant `@publication`, `@subscriber`, `@destination_db`, une valeur d’extraction pour `@subscription_type`, et la valeur spécifiée à l’étape 3 pour `@update_mode`.
+5. Sur le serveur de publication, exécutez [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) pour inscrire l’abonné sur le serveur `@publication`de `@subscriber`publication `@destination_db`, en spécifiant,, `@subscription_type`, la valeur pull pour et la même valeur spécifiée `@update_mode`à l’étape 3 pour.
 
 L'abonnement par extraction est alors inscrit sur le serveur de publication. 
 
@@ -299,11 +299,11 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>définir des options de résolution des conflits de mise à jour en attente (SQL Server Management Studio)
-  Définissez les options de résolution des conflits pour les publications qui prennent en charge les abonnements avec mise à jour en attente, sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
+  Définissez les options de résolution des conflits pour les publications qui prennent en charge les abonnements avec mise à jour en attente, sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>Pour définir les options de résolution des conflits de mise à jour en attente  
   
-1.  Sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez l’une des valeurs ci-après pour l’option **Stratégie de résolution de conflit** :    
+1.  Sur la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez l’une des valeurs ci-après pour l’option **Stratégie de résolution de conflit** :    
     -   **Conserver la modification apportée au serveur de publication**    
     -   **Conserver la modification apportée à l'abonné**    
     -   **Réinitialiser l'abonnement**    

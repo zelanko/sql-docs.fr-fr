@@ -11,22 +11,21 @@ ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6d8c277796f743b31dfb5df349352bb6c7470421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728622"
 ---
 # <a name="changesets-master-data-services"></a>Ensembles de modifications (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] prend désormais en charge la possibilité d’enregistrer les modifications en attente dans une entité comme ensembles de modifications. Cette fonctionnalité peut être utilisée dans deux scénarios.  
   
 -   **Change quand « approbation requise » est activé par l’administrateur d’entité**  
   
-     Si un administrateur d’entité indique que les modifications apportées à une entité donnée doivent être approuvées avant leur validation, les modifications apportées à l’entité doivent être enregistrées dans un ensemble de modifications nouveau ou existant avant d’être soumises pour approbation.  Pour plus d’informations, consultez [Approbation requise &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md)  
+     Si un administrateur d’entité indique que les modifications apportées à une entité donnée doivent être approuvées avant leur validation, les modifications apportées à l’entité doivent être enregistrées dans un ensemble de modifications nouveau ou existant avant d’être soumises pour approbation.  Pour plus d’informations, consultez [Approbation requise &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md).  
   
      Vous devez suivre ce flux de travail.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "73728622"
   
     5.  L’ensemble de modifications approuvé est validé automatiquement. Si la modification est validée avec succès, l’ensemble de modifications est dans l’état Validé.  
   
--   **Modifications de l’utilisateur local**  
+-   **Modifications utilisateur locales**  
   
      Si vous souhaitez simplement enregistrer vos modifications locales afin de pouvoir les utiliser ou les récupérer plus tard, vous pouvez pour cela utiliser des ensembles de modifications.  
   

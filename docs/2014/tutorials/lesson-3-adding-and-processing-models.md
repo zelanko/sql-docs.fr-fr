@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653707"
 ---
-# <a name="lesson-3-adding-and-processing-models"></a>Leçon 3 : ajout et traitement des modèles
+# <a name="lesson-3-adding-and-processing-models"></a>Leçon 3 : Ajout et traitement des modèles
   La structure d'exploration de données initiale que vous avez créée au cours de la leçon précédente contient un modèle d'exploration de données unique qui est basé sur l'algorithme MDT ([!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees). Vous pouvez utiliser ce modèle pour identifier les clients pour la campagne de publipostage ciblée. Cependant, pour garantir que votre analyse est complète, il est recommandé de créer des modèles associés à l'aide de différents algorithmes et de comparer leurs résultats. De cette façon vous pouvez également obtenir différentes analyses. Par conséquent, vous allez créer deux modèles, puis les traiter et les déployer.  
   
  Dans cette leçon, vous allez créer un ensemble de modèles d'exploration de données qui aideront à trouver les clients probables parmi la liste des clients potentiels.  
@@ -40,6 +40,6 @@ ms.locfileid: "62653707"
  [Leçon 4 : exploration des modèles de publipostage ciblés &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des modèles d’exploration de données à une structure &#40;Analysis Services d’exploration de données&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+ [Ajouter des modèles d’exploration de données à une structure &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

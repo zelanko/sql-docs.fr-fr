@@ -11,10 +11,10 @@ ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9b2421d38401b3d0ff6b1e33a7b07bd86a1ab22e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728877"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Zone fonctionnelle Gestion des versions (Master Data Manager)
@@ -26,7 +26,7 @@ ms.locfileid: "73728877"
 ## <a name="versions"></a>Versions  
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
- [Valider une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)  
+ [Activer une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)  
   
  [Verrouiller une version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73728877"
  [Modifier le nom d’un indicateur de version &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
 ## <a name="validation"></a>Validation  
- [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
  [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   

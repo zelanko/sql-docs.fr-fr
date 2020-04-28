@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721791"
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
@@ -154,7 +154,7 @@ ms.locfileid: "62721791"
   
 -   Toutes les informations d'authentification nécessaires pour l'établissement de la connexion et l'ouverture d'une session sur le serveur sont fournies dans l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
--   La méthode par défaut est l'authentification Windows. Si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la propriété <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> doit avoir la valeur `false`, et un nom de connexion et un mot de passe <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> valides doivent être définis pour les propriétés <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les informations d'identification de sécurité doivent toujours être stockées et gérées de manière sécurisée, et elles doivent être fournies au moment de l'exécution chaque fois que cela est possible.  
+-   La méthode par défaut est l'authentification Windows. Si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la propriété <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> doit avoir la valeur `false`, et un nom de connexion et un mot de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valides doivent être définis pour les propriétés <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> et <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A>. Les informations d'identification de sécurité doivent toujours être stockées et gérées de manière sécurisée, et elles doivent être fournies au moment de l'exécution chaque fois que cela est possible.  
   
 -   Pour les applications multithread, un objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> distinct doit être utilisé dans chaque thread.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "62721791"
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts liés aux procédures stockées système de réplication](replication-system-stored-procedures-concepts.md)   
+ [Concepts des procédures stockées système de réplication](replication-system-stored-procedures-concepts.md)   
  [Concepts de programmation en matière de réplication](replication-programming-concepts.md)  
   
   

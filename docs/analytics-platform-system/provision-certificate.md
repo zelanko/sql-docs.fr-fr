@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400512"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Approvisionnement de certificats dans Analytics Platform System
@@ -21,7 +21,7 @@ La page de **provisionnement de certificats PDW** du système Analytics Platform
 
 À l’aide de, un certificat pour chiffrer les connexions peut aider à sécuriser la communication avec le nœud de contrôle via des clients SQL Server, des outils qui utilisent les pilotes SQL Server PDW, la [console d’administration](monitor-the-appliance-by-using-the-admin-console.md)et les charges de Integration Services. 
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Avant d’installer le certificat, procédez comme suit :  
   
 1.  Obtenez un certificat sécurisé. Si vous avez besoin de plus d’informations sur la façon d’obtenir un certificat sécurisé, contactez Support Microsoft.  

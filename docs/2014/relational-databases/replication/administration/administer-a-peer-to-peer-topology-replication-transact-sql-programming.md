@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629721"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrer une topologie d'égal à égal (programmation Transact-SQL de la réplication)
@@ -64,6 +64,6 @@ ms.locfileid: "62629721"
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](frequently-asked-questions-for-replication-administrators.md)   
  [Sauvegarder et restaurer des bases de données SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
+ [Réplication transactionnelle d’égal à égal](../transactional/peer-to-peer-transactional-replication.md)  
   
   

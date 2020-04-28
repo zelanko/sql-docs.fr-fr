@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400543"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacité de traitement et de stockage dans Analytics Platform System
 Les besoins de votre entreprise déterminent le nombre d’unités d’échelle de données et la taille des disques de nœuds de calcul dont vous avez besoin dans votre appliance d’analyse de système de plateforme d’analyse (APS). Utilisez ces calculs de traitement et de stockage pour guider vos décisions d’achat et de planification de la capacité.  
   
   
-## <a name="section1"></a>Planification de la capacité de traitement  
+## <a name="planning-for-processing-capacity"></a><a name="section1"></a>Planification de la capacité de traitement  
 Les performances de requête pour SQL Server Parallel Data Warehouse (PDW) dépendent en grande partie du nombre de cœurs de processeur qui travaillent sur vos données en parallèle. Dans les limites, l’augmentation du parallélisme améliore les performances des requêtes de traitement massivement parallèle (MPP). Même si la taille de vos données est relativement faible, la puissance du moteur de requête MPP est améliorée grâce à un plus grand parallélisme.  
   
 Par exemple, une appliance avec 12 nœuds de calcul a des cœurs de processeur 192 qui traitent vos données en parallèle. C’est la parallélisation 192 ! Une appliance avec des nœuds de calcul 56 a 896 cœurs qui fonctionnent en parallèle. Cette magnitude de parallélisme n’est pas réalisable sans l’informatique MPP.  
@@ -36,7 +36,7 @@ La majoration est le gain de capacité en ce qui concerne l’augmentation des U
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|2|32|512|-|  
 |2|4|64|1 024|100 %|  
-|3|6|96|1536|50%|  
+|3|6|96|1536|50|  
 |4|8|128|2 048|33 %|  
 |5|10|160|2560|25 %|  
 |6|12|192|3 072|20%|  
@@ -67,28 +67,28 @@ La majoration est le gain de capacité en ce qui concerne l’augmentation des U
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|3|48|768|-|  
 |2|6|96|1536|100 %|  
-|3|9|144|2 304|50%|  
+|3|9|144|2 304|50|  
 |4|12|192|3 072|33 %|  
 |5|15|240|3 840|25 %|  
-|6|18|288|4 608|20%|  
+|6|18|288|4 608|20%|  
 |7|21|336|5 376|17 %|  
-|8|24|384|6 144|14,5|  
+|8|24|384|6 144|14 %|  
 |9|27|432|6 912|13%|  
-|12|36|576|9 216|33 %|  
+|12|36|576|9 216|33 %|  
 |15|45|720|11 520|25 %|  
-|18|54|864|13 824|20%|  
+|18|54|864|13 824|20%|  
   
-## <a name="section2"></a>Planification de la capacité de stockage  
+## <a name="planning-for-storage-capacity"></a><a name="section2"></a>Planification de la capacité de stockage  
 Ce tableau estime que vous pouvez charger et stocker jusqu’à 6 pétaoctets de données non compressées sur un appareil système de plateforme d’analyse entièrement construit. 
   
-|Console|Taille du lecteur|Stockage physique des données par nœud de calcul|Nombre maximal de nœuds de calcul par rack|Stockage de données maximal physique par rack|Estimation du stockage de données utilisateur maximal par rack|Racks maximum|Estimation du stockage de données utilisateur maximal par Appliance|  
+|Fournisseur|Taille du lecteur|Stockage physique des données par nœud de calcul|Nombre maximal de nœuds de calcul par rack|Stockage de données maximal physique par rack|Estimation du stockage de données utilisateur maximal par rack|Racks maximum|Estimation du stockage de données utilisateur maximal par Appliance|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
-|HPE|1 To|16 TO|8|128 TO|320 TO|7|2 240 TO|  
-|HPE|2 To|32 TO|8|256 To|640 TO|7|4 480 TO|  
-|HPE|4 To|64 To|8|512 TO|1280 TO|7|8 960 TO|  
-|ORDINATEURS|1 To|16 TO|9|144 TO|360 TO|6|2 160 TO|  
-|ORDINATEURS|2 To|32 TO|9|288 TO|720 TO|6|4 320 TO|  
-|ORDINATEURS|4 To|64 To|9|576 TO|1440 TO|6|8 640 TO|   
+|HPE|1 To|16 To|8|128 To|320 TO|7|2 240 TO|  
+|HPE|2 To|32 To|8|256 To|640 TO|7|4 480 TO|  
+|HPE|4 To|64 To|8|512 TO|1280 TO|7|8 960 TO|  
+|DELL|1 To|16 To|9|144 TO|360 TO|6|2 160 TO|  
+|DELL|2 To|32 To|9|288 TO|720 TO|6|4 320 TO|  
+|DELL|4 To|64 To|9|576 TO|1440 TO|6|8 640 TO|   
   
 Explication :  
   

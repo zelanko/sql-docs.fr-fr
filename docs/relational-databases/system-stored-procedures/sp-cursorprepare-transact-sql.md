@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165913"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -58,7 +58,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  Les règles de spécification de la valeur *stmt* sont les mêmes que celles de sp_cursoropen, à l’exception près que le type de données chaîne *stmt* doit être **ntext**.  
   
- *Options*  
+ *options*  
  Paramètre optionnel qui retourne une description des colonnes du jeu de résultats du curseur. les *options* requièrent la valeur d’entrée **int** suivante.  
   
 |Valeur|Description|  
@@ -111,7 +111,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Succès|  
+|0|Opération réussie|  
 |0x0001|Échec|  
 |1FF6|Impossible de retourner des métadonnées.<br /><br /> Remarque : Ceci est dû au fait que l’instruction ne produit pas un jeu de résultats ; par exemple, il s’agit d’une instruction INSERT ou DDL.|  
   

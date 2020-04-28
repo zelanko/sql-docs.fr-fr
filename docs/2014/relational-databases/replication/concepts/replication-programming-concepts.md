@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721805"
 ---
 # <a name="replication-programming-concepts"></a>Concepts de programmation en matière de réplication
@@ -120,7 +120,7 @@ ms.locfileid: "62721805"
   
 2.  Cette application doit non seulement garantir l'accès aux données classique requis pour une application de vente, mais également permettre à un vendeur de synchroniser l'abonnement par extraction de données à la demande en cliquant sur un bouton. Étant donné qu'un représentant installera et exécutera l'application, l'application doit également être en mesure de configurer un abonnement et d'appliquer l'instantané initial au client. L'application utilisera éventuellement l'infrastructure fournie par Windows pour détecter la connectivité sans fil et synchroniser automatiquement l'abonnement lors de la détection d'une connexion.  
   
-3.  Respectez toutes les consignes de sécurité pour la réplication, notamment le recours à l'authentification Windows et à un réseau privé virtuel (VPN) lors de la connexion au serveur de publication. Si vous mettez en œuvre la synchronisation Web, utilisez une connexion SSL (Secure Sockets Layer). Pour plus d'informations, voir [Configurer la synchronisation web](../configure-web-synchronization.md).  
+3.  Respectez toutes les consignes de sécurité pour la réplication, notamment le recours à l'authentification Windows et à un réseau privé virtuel (VPN) lors de la connexion au serveur de publication. Si vous mettez en œuvre la synchronisation Web, utilisez une connexion SSL (Secure Sockets Layer). Pour plus d’informations, consultez [Configurer la synchronisation Web](../configure-web-synchronization.md).  
   
 4.  Pour que l'application puisse exploiter les fonctionnalités du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], elle est développée à l'aide d'un langage de code managé.  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655674"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Spécifier le mode de propagation des modifications des articles transactionnels
@@ -37,13 +37,13 @@ ms.locfileid: "62655674"
 ## <a name="default-and-custom-stored-procedures"></a>Procédures stockées par défaut et personnalisées  
  Trois procédures sont créées par défaut par la réplication pour chaque article de table :  
   
--   **sp_MSins_\<** *nomdetable* **>** , qui gère les insertions.  
+-   **sp_MSins_\<** *nomdetable* **>**, qui gère les insertions.  
   
--   **sp_MSupd_\<** *nomdetable* **>** , qui gère les mises à jour.  
+-   **sp_MSupd_\<** *nomdetable* **>**, qui gère les mises à jour.  
   
--   **sp_MSdel_\<** *nomdetable* **>** , qui gère les suppressions.  
+-   **sp_MSdel_\<** *nomdetable* **>**, qui gère les suppressions.  
   
- Le **\< ***nomdetable ***>** employé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
+ Le ** \< ***tablename*** TableName> ** utilisé dans la procédure dépend de la façon dont l’article a été ajouté à la publication et si la base de données d’abonnement contient une table du même nom avec un propriétaire différent.  
   
  N'importe laquelle de ces procédures peut être remplacée par une procédure personnalisée que vous spécifiez lors de l'ajout d'un article à une publication. Les procédures personnalisées sont utilisées dans le cas où l'application exige une logique personnalisée, par exemple l'insertion de données dans une table d'audit lors de la mise à jour d'une ligne sur l'Abonné. Pour plus d'informations sur la définition de procédures stockées personnalisées, reportez-vous à la liste des rubriques ci-dessus.  
   
@@ -146,7 +146,7 @@ old-c1, old-c2, old-c3,... old-cn
 ```  
   
 > [!NOTE]  
->  Lorsque la syntaxe XCALL est utilisée, les valeurs de l'image avant des colonnes **text** et **image** sont censées être NULL.  
+>   Lorsque la syntaxe XCALL est utilisée, les valeurs de l'image avant des colonnes **text** et **image** sont censées être NULL.  
   
 ## <a name="examples"></a>Exemples  
  Les procédures suivantes représentent les procédures par défaut créées pour la `Vendor Table` dans la base de données exemple de [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] .  

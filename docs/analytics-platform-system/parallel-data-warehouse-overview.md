@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400933"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Composants de Data Warehouse parallèles-système de plateforme d’analyse
@@ -40,11 +40,11 @@ To learn more about Analytics Platform System, see:
   
 ![Logiciel Data Warehouse parallèles](media/parallel-data-warehouse-software.png "Logiciel Data Warehouse parallèles")  
   
-## <a name="sec1"></a>Logiciel d’appliance-traitement des requêtes et stockage des données utilisateur  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>Logiciel d’appliance-traitement des requêtes et stockage des données utilisateur  
   
 ### <a name="control-node"></a>nœud de contrôle  
 Moteur MPP  
-Le moteur MPP est le cerveau du système de traitement massivement parallèle (MPP). Il effectue les opérations suivantes :  
+Le moteur MPP est le cerveau du système de traitement massivement parallèle (MPP). Elle effectue les opérations suivantes :  
   
 -   Crée des plans de requête parallèles et coordonne l’exécution des requêtes parallèles sur les nœuds de calcul.  
   
@@ -55,7 +55,7 @@ Le moteur MPP est le cerveau du système de traitement massivement parallèle (M
 -   Effectue le suivi de l’état du matériel et des logiciels.  
   
 ### <a name="data-movement-service-dms"></a>Service de déplacement des données (DMS)  
-Le service de déplacement des données (DMS) fait partie du « sauce secrète » des PDW. Il effectue les opérations suivantes :  
+Le service de déplacement des données (DMS) fait partie du « sauce secrète » des PDW. Elle effectue les opérations suivantes :  
   
 -   Transfère les données vers et depuis les nœuds de SQL Server PDW.  
   
@@ -127,7 +127,7 @@ Les espaces de stockage Windows gèrent les données utilisateur en tant que poo
 ### <a name="hyper-v"></a>Hyper-V  
 Microsoft Hyper-V Server fournit une solution de virtualisation simple et fiable. Analytics Platform System utilise des virtualisations pour équilibrer les ressources du processeur et fournir une haute disponibilité pour les nœuds PDW et les composants d’infrastructure d’appareil.  
   
-## <a name="sec2"></a>Données non relationnelles
+## <a name="non-relational-data"></a><a name="sec2"></a>Données non relationnelles
 La technologie Polybase intègre des données SQL Server PDW avec des données Hadoop externes. Les données Hadoop peuvent être stockées sur l’une de ces sources de données Hadoop :  
   
 -   Distribution Hadoop Hortonworks  

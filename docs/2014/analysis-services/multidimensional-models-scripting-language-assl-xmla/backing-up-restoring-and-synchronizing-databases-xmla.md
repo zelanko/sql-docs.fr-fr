@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702275"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sauvegarde, restauration et synchronisation de bases de données (XMLA)
@@ -32,20 +32,20 @@ ms.locfileid: "62702275"
   
 -   La commande [Synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) synchronise une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données avec les données et les métadonnées d’une autre base de données, comme décrit dans la section synchronisation des [bases de](#synchronizing_databases)données.  
   
-##  <a name="backing_up_databases"></a>Sauvegarde des bases de données  
+##  <a name="backing-up-databases"></a><a name="backing_up_databases"></a>Sauvegarde des bases de données  
  Comme nous l'avons mentionné précédemment, la commande `Backup` permet de sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier de sauvegarde. La commande `Backup` possède plusieurs propriétés qui permettent de spécifier la base de données à sauvegarder, le fichier de sauvegarde à utiliser, le mode de sauvegarde des définitions de sécurité, ainsi que les partitions distantes à sauvegarder.  
   
 > [!IMPORTANT]  
 >  Le compte de service Analysis Services doit avoir l'autorisation d'écrire dans l'emplacement de sauvegarde spécifié pour chaque fichier. Par ailleurs, l'utilisateur doit avoir l'un des rôles suivants : rôle d'administrateur sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membre d'un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à sauvegarder.  
   
 ### <a name="specifying-the-database-and-backup-file"></a>Spécification de la base de données et du fichier de sauvegarde  
- Pour spécifier la base de données à sauvegarder, vous devez définir la [](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propriété de l’objet `Backup` de la commande. La propriété `Object` doit contenir un identificateur d'objet pour une base de données. Sinon, une erreur se produit.  
+ Pour spécifier la base de données à sauvegarder, vous devez définir la [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propriété de l’objet `Backup` de la commande. La propriété `Object` doit contenir un identificateur d'objet pour une base de données. Sinon, une erreur se produit.  
   
  Pour spécifier le fichier qui doit être créé et utilisé par le processus de sauvegarde, vous devez définir la propriété [file](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/file-element-xmla) de `Backup` la commande. La propriété `File` doit indiquer le chemin d'accès UNC et le nom du fichier de sauvegarde à créer.  
   
  En plus de spécifier le fichier à utiliser pour la sauvegarde, vous pouvez définir les options suivantes pour ce même fichier :  
   
--   Si vous affectez [](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/allowoverwrite-element-xmla) la valeur true à la propriété `Backup` AllowOverwrite, la commande remplace le fichier de sauvegarde si le fichier spécifié existe déjà. Si vous définissez la propriété `AllowOverwrite` à false, une erreur se produit si le fichier de sauvegarde spécifié existe déjà.  
+-   Si vous affectez [AllowOverwrite](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/allowoverwrite-element-xmla) la valeur true à la propriété `Backup` AllowOverwrite, la commande remplace le fichier de sauvegarde si le fichier spécifié existe déjà. Si vous définissez la propriété `AllowOverwrite` à false, une erreur se produit si le fichier de sauvegarde spécifié existe déjà.  
   
 -   Si vous affectez la valeur true à la propriété [ApplyCompression](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/applycompression-element-xmla) , le fichier de sauvegarde est compressé après la création du fichier.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62702275"
   
  La valeur de la propriété `Security` est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclut les définitions de sécurité dans le fichier de sauvegarde mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans le fichier de sauvegarde.|  
@@ -70,7 +70,7 @@ ms.locfileid: "62702275"
   
  Pour chaque source de données distante à sauvegarder, vous pouvez spécifier son fichier de sauvegarde correspondant en incluant un élément [location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) dans la propriété [locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) de `Backup` la commande. La `Location` `File` propriété de l’élément doit être définie sur le chemin d’accès UNC et le nom de fichier du fichier de sauvegarde distant, et sa propriété [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) définie sur l’identificateur de la source de données distante définie dans la base de données.  
   
-##  <a name="restoring_databases"></a>Restauration de bases de données  
+##  <a name="restoring-databases"></a><a name="restoring_databases"></a>Restauration de bases de données  
  La commande `Restore` permet de restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spécifiée à partir d'un fichier de sauvegarde. La commande `Restore` comporte plusieurs propriétés qui permettent de spécifier la base de données à restaurer, le fichier de sauvegarde à utiliser, le mode de restauration des définitions de sécurité, les partitions distantes à stocker, ainsi que le déplacement d'objets ROLAP (Relational OLAP).  
   
 > [!IMPORTANT]  
@@ -89,7 +89,7 @@ ms.locfileid: "62702275"
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclut les définitions de sécurité dans la base de données mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans la base de données.|  
@@ -109,7 +109,7 @@ ms.locfileid: "62702275"
   
  Vous pouvez utiliser l'élément `Location` dans une commande `Restore` pour déplacer des objets ROLAP. Pour chaque `Location` élément utilisé pour déplacer une source de données, la `DataSourceType` propriété doit être définie explicitement sur *local*. Vous devez également définir la chaîne de connexion du nouvel emplacement dans la propriété `ConnectionString` de l'élément `Location`. Au cours de la restauration, la commande `Restore` remplace la chaîne de connexion de la source de données identifiée par la propriété `DataSourceID` de l'élément `Location` par la valeur de la propriété `ConnectionString` de l'élément `Location`.  
   
-##  <a name="synchronizing_databases"></a>Synchronisation des bases de données  
+##  <a name="synchronizing-databases"></a><a name="synchronizing_databases"></a>Synchronisation des bases de données  
  La commande `Synchronize` permet de synchroniser les données et les métadonnées d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spécifiée avec une autre base de données. La commande `Synchronize` possède plusieurs propriétés qui vous permettent de spécifier la base de données source, le mode de synchronisation des définitions de sécurité, les partitions distantes à synchroniser, ainsi que la synchronisation des objets ROLAP.  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "62702275"
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclut les définitions de sécurité dans la base de données de destination mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans la base de données de destination.|  

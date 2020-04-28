@@ -14,16 +14,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511642"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Type de données (API de procédure stockée étendue)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Pour utiliser les types de données de l'API de procédure stockée étendue, incluez le fichier d'en-tête Srv.h dans votre programme.  
   
@@ -39,20 +39,20 @@ ms.locfileid: "62511642"
 |SRVCHAR|`char`|`character`type de données.|  
 |SRVDATETIME|`datetime`|Type de données `datetime` de 8 octets.|  
 |SRVDATETIM4|`smalldatetime`|type de données `smalldatetime` sur 4 octets.|  
-|SRVDATETIMN|**DateTime null**|Type de données `smalldatetime` ou `datetime` autorisant les valeurs NULL.|  
+|SRVDATETIMN|**datetime null**|Type de données `smalldatetime` ou `datetime` autorisant les valeurs NULL.|  
 |SRVDECIMAL|`decimal`|`decimal`type de données.|  
 |SRVDECIMALN|`decimal null`|Type de données `decimal` autorisant les valeurs NULL.|  
 |SRVFLT4|`real`|type de données `real` sur 4 octets.|  
 |SRVFLT8|`float`|Type de données `float` de 8 octets.|  
-|SRVFLTN|`real`&#124;`float null`|Type de données `real` ou `float` autorisant les valeurs NULL.|  
+|SRVFLTN|`real` &#124; `float null`|Type de données `real` ou `float` autorisant les valeurs NULL.|  
 |SRVIMAGE|`image`|`image`type de données.|  
 |SRVINT1|`tinyint`|type de données `tinyint` sur 1 octet.|  
 |SRVINT2|`smallint`|type de données `smallint` sur 2 octets.|  
 |SRVINT4|`int`|type de données `int` sur 4 octets.|  
-|SRVINTN|`tinyint`&#124; `smallint` &#124;`int null`|Type de données `tinyint`, `smallint` ou `int` autorisant les valeurs NULL.|  
+|SRVINTN|`tinyint` &#124; `smallint` &#124; `int null`|Type de données `tinyint`, `smallint` ou `int` autorisant les valeurs NULL.|  
 |SRVMONEY4|`smallmoney`|type de données `smallmoney` sur 4 octets.|  
 |SRVMONEY|`money`|Type de données `money` de 8 octets.|  
-|SRVMONEYN|`money`&#124;`smallmoney null`|Type de données `smallmoney` ou `money` autorisant les valeurs NULL.|  
+|SRVMONEYN|`money` &#124; `smallmoney null`|Type de données `smallmoney` ou `money` autorisant les valeurs NULL.|  
 |SRVNCHAR|**nchar**|Type de données `character` Unicode.|  
 |SRVNTEXT|`ntext`|Type de données `text` Unicode.|  
 |SRVNUMERIC|`numeric`|`numeric`type de données.|  

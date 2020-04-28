@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882290"
 ---
 # <a name="delete-a-publication"></a>Supprimer une publication
@@ -35,7 +35,7 @@ ms.locfileid: "73882290"
   
      [Objets RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Supprimer les publications dans le dossier **Publications locales** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-delete-a-publication"></a>Pour supprimer une publication  
@@ -46,7 +46,7 @@ ms.locfileid: "73882290"
   
 3.  Cliquez avec le bouton droit sur la publication à supprimer, puis cliquez sur **Supprimer**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Il est possible de supprimer des publications par programme en utilisant les procédures stockées de réplication. Les procédures stockées à utiliser dépendent du type de publication à supprimer.  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "73882290"
   
 3.  (Facultatif) Exécutez [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql) sur la base de données d’abonnement de l’Abonné pour supprimer toutes les métadonnées de réplication restantes dans la base de données d’abonnement.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple montre comment supprimer une publication transactionnelle et désactiver la publication transactionnelle d'une base de données. Cet exemple suppose que tous les abonnements ont été supprimés précédemment. Pour plus d'informations, consultez [Delete a Pull Subscription](../delete-a-pull-subscription.md) ou [Delete a Push Subscription](../delete-a-push-subscription.md).  
   
  [!code-sql[HowTo#sp_droppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
@@ -91,7 +91,7 @@ ms.locfileid: "73882290"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez supprimer des publications par programme à l'aide d'objets RMO (Replication Management Objects). Les classes RMO que vous utilisez pour supprimer une publication dépendent du type de publication que vous supprimez.  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>Pour supprimer une publication transactionnelle ou d'instantané  
@@ -142,7 +142,7 @@ ms.locfileid: "73882290"
   
 7.  Fermez les connexions.  
   
-###  <a name="PShellExample"></a> Exemples (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemples (RMO)  
  L'exemple suivant supprime une publication transactionnelle. Si aucune autre publication transactionnelle n'existe pour cette base de données, la publication transactionnelle est également désactivée.  
   
  [!code-csharp[HowTo#rmo_DropTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  

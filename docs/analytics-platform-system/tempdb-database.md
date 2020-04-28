@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400142"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>base de données tempdb en parallèle Data Warehouse
@@ -21,7 +21,7 @@ ms.locfileid: "74400142"
   
 Pour plus d’informations sur les bases de données système, voir [bases de données système](system-databases.md).  
   
-## <a name="Basics"></a>Termes et concepts clés  
+## <a name="key-terms-and-concepts"></a><a name="Basics"></a>Termes et concepts clés  
 *table temporaire locale*  
 Une *table temporaire locale* utilise le préfixe # avant le nom de la table et est une table temporaire créée par une session utilisateur locale. Chaque session peut uniquement accéder aux données des tables temporaires locales pour sa propre session.  
   
@@ -51,7 +51,7 @@ SQL Server PDW supprime les tables de **tempdb** dans les cas suivants :
 ## <a name="general-remarks"></a>Remarques d'ordre général  
 SQL Server PDW effectue les mêmes opérations sur les tables temporaires et les tables permanentes, sauf indication contraire. Par exemple, les données des tables temporaires locales, tout comme les tables permanentes, sont distribuées ou répliquées sur les nœuds de calcul.  
   
-## <a name="LimitationsRestrictions"></a>Limitations et restrictions  
+## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>Limitations et restrictions  
 Limitations et restrictions relatives à la base de données**tempdb** SQL Server PDW. Vous *ne pouvez pas :*  
   
 -   Créez une table temporaire globale qui commence par # #.  
@@ -82,7 +82,7 @@ Limitations et restrictions sur les tables temporaires locales. Vous *ne pouvez 
 ## <a name="permissions"></a>Autorisations  
 Tous les utilisateurs peuvent créer des objets temporaires dans tempdb. Les utilisateurs n'ont accès qu'aux objets qu'ils possèdent, sauf s'ils ont reçu des autorisations supplémentaires. Il est possible de révoquer l’autorisation de connexion à tempdb pour empêcher un utilisateur d’utiliser tempdb. Cependant, cela n’est pas recommandé, car certaines opérations courantes nécessitent l’utilisation de tempdb.  
   
-## <a name="RelatedTasks"></a>Tâches associées  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Tâches associées  
   
 |Tâches|Description|  
 |---------|---------------|  

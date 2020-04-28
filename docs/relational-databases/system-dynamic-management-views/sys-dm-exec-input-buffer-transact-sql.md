@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74097874"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
@@ -53,8 +53,8 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 |Nom de la colonne|Type de données|Description|
 |-----------------|---------------|-----------------|
-|**event_type**|**nvarchar (256)**|Type d’événement dans la mémoire tampon d’entrée pour le SPID donné.|
-|**paramètres**|**smallint**|Tous les paramètres fournis pour l’instruction.|
+|**event_type**|**nvarchar(256)**|Type d’événement dans la mémoire tampon d’entrée pour le SPID donné.|
+|**parameters**|**smallint**|Tous les paramètres fournis pour l’instruction.|
 |**event_info**|**nvarchar(max)**|Texte de l’instruction dans la mémoire tampon d’entrée pour le SPID donné.|
 
 ## <a name="permissions"></a>Autorisations
@@ -98,7 +98,7 @@ GO
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)

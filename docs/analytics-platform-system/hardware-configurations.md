@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401131"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Configurations matérielles-système d’analyse-plateforme
@@ -26,7 +26,7 @@ Le matériel d’Analytics Platform System (APS) est conçu avec des unités év
 -   [Configurations à plusieurs racks](#section2)  
 
   
-## <a name="section1"></a>Configurations à un seul rack  
+## <a name="one-rack-configurations"></a><a name="section1"></a>Configurations à un seul rack  
 Le premier rack de l’appliance contient les composants requis pour exécuter PDW. La configuration d’appliance minimale est un rack et un réseau, ainsi qu’une unité d’échelle de base. Ces diagrammes montrent comment configurer le premier rack de l’appliance. Vous pouvez avoir entre 2 et 9 nœuds de calcul dans le premier rack, en fonction du fabricant du matériel.  
   
 ### <a name="first-rack-configurations---dell"></a>Premières configurations de rack-DELL  
@@ -39,7 +39,7 @@ La configuration minimale pour une appliance HPE comprend 2 nœuds de calcul. Vo
   
 ![Configurations du premier rack HPE pour HPE](media/first-rack-configurations-hpe.png "Configurations du premier rack HPE")  
   
-## <a name="section2"></a>Configurations à plusieurs racks  
+## <a name="multi-rack-configurations"></a><a name="section2"></a>Configurations à plusieurs racks  
 Pour ajouter de la capacité à PDW, vous pouvez ajouter des unités d’échelle de données, ainsi que des composants de réseau de & de rack supplémentaires, le cas échéant, afin de fournir l’infrastructure appropriée, mise en réseau et rack. Chaque réseau & de rack supplémentaire nécessite un hôte passif.  
   
 Chaque fournisseur de matériel spécifie le nombre d’unités d’échelle de données que vous pouvez ajouter en fonction de la capacité de votre appliance. Nous vous recommandons d’ajouter suffisamment d’unités d’échelle de données pour voir au moins une majoration de 20% des performances. Par exemple, l’ajout d’une unité d’échelle de données à un appareil qui possède déjà 20 unités d’échelle de données peut entraîner un gain de performances négligeable. Le gain net ne devrait pas justifier le coût et l’effort.  

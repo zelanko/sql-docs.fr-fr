@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62677019"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Afficher ou modifier les propriétés d'une condition de gestion basée sur des stratégies
@@ -35,14 +35,14 @@ ms.locfileid: "62677019"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-or-modify-a-conditions-properties"></a>Pour afficher ou modifier les propriétés d'une condition  
   
@@ -54,11 +54,11 @@ ms.locfileid: "62677019"
   
 4.  Cliquez sur le signe plus (+) pour développer le dossier **Conditions** .  
   
-5.  Cliquez avec le bouton droit sur la condition à afficher ou supprimer, puis sélectionnez **Propriétés**. Pour plus d’informations sur les options disponibles dans la boîte de dialogue **Ouvrir une condition -** _nom_condition_ consultez [Boîte de dialogue Créer une nouvelle condition ou Ouvrir une condition, page Général](../../integration-services/general-page-of-integration-services-designers-options.md), [Boîte de dialogue Ouvrir une condition, page Stratégies dépendantes](open-condition-dialog-box-dependent-policies-page.md), [Boîte de dialogue Créer une nouvelle condition ou Ouvrir une condition, page Description](create-new-condition-or-open-condition-dialog-box-description-page.md) et [Boîte de dialogue Modification avancée &#40;Condition&#41;](advanced-edit-condition-dialog-box.md).  
+5.  Cliquez avec le bouton droit sur la condition à afficher ou supprimer, puis sélectionnez **Propriétés**. Pour plus d’informations sur les options disponibles dans la boîte de dialogue **ouvrir un**_condition_name_ de condition, consultez boîte de dialogue [créer une nouvelle condition ou ouvrir une condition, page général](../../integration-services/general-page-of-integration-services-designers-options.md), [boîte de dialogue Ouvrir une condition, page stratégies dépendantes](open-condition-dialog-box-dependent-policies-page.md), boîte de dialogue créer une [nouvelle condition ou ouvrir](create-new-condition-or-open-condition-dialog-box-description-page.md)une condition, page Description et boîte de dialogue [modification avancée des &#40;des conditions&#41;](advanced-edit-condition-dialog-box.md).  
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-a-conditions-properties"></a>Pour afficher les propriétés d'une condition  
   

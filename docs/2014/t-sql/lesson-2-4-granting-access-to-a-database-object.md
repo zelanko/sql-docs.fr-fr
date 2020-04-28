@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643445"
 ---
 # <a name="granting-access-to-a-database-object"></a>Octroi de l'accès à un objet de base de données
-  En tant qu’administrateur, vous pouvez exécuter l’instruction SELECT dans la table **Products** et la vue **vw_Names** , et exécuter la procédure **pr_Names** . Toutefois, Mary ne peut pas le faire. Pour lui octroyer les autorisations nécessaires, utilisez l'instruction GRANT.  
+   En tant qu’administrateur, vous pouvez exécuter l’instruction SELECT à partir de la table **Products** et de la vue **vw_Names**, puis vous pouvez exécuter la procédure **pr_Names**. Toutefois, Mary ne peut pas le faire. Pour lui octroyer les autorisations nécessaires, utilisez l'instruction GRANT.  
   
 ### <a name="procedure-title"></a>Titre de la procédure  
   
@@ -40,10 +40,10 @@ ms.locfileid: "62643445"
  Vous devez avoir l'autorisation EXECUTE pour exécuter une procédure stockée. Vous devez avoir les autorisations SELECT, INSERT, UPDATE, et DELETE pour accéder et modifier des données. L'instruction GRANT sert également à d'autres autorisations, telles que les autorisations de créer des tables.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : configuration des autorisations sur des objets de base de données](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+ [Résumé : Configuration des autorisations sur des objets de base de données](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [GRANT &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-transact-sql)   
- [REVOKE &#40;&#41;Transact-SQL](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

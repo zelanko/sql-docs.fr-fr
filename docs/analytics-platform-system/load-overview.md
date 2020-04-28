@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401040"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Chargement de données dans des Data Warehouse parallèles
@@ -25,7 +25,7 @@ Pour charger des données, vous avez besoin d’un ou de plusieurs serveurs de c
 ## <a name="load-with-dwloader"></a>Charger avec dwloader  
 L’utilisation du [chargeur de ligne de commande dwloader](dwloader.md) est le moyen le plus rapide de charger des données dans PDW.  
   
-![Chargement du processus](media/loading-process.png "Chargement du processus")  
+![Processus de chargement](media/loading-process.png "Chargement du processus")  
   
 dwloader charge les données directement sur les nœuds de calcul sans passer les données via le nœud de contrôle. Pour charger des données, dwloader communique tout d’abord avec le nœud de contrôle pour obtenir des informations de contact pour les nœuds de calcul. dwloader configure un canal de communication avec chaque nœud de calcul, puis envoie des blocs de données de 256 Ko aux nœuds de calcul de manière alternée.  
   

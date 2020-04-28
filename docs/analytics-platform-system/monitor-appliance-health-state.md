@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400993"
 ---
 # <a name="monitor-appliance-health-state"></a>Surveiller l’état d’intégrité de l’appliance
@@ -22,7 +22,7 @@ Cet article explique comment surveiller l’état d’une appliance système Ana
 ## <a name="to-monitor-the-appliance-state"></a>Pour surveiller l’état de l’appliance  
 Un administrateur système peut utiliser la console d’administration ou les SQL Server PDW vues de gestion dynamique (DMV) pour récupérer la hiérarchie complète des nœuds, des composants et des logiciels. Le diagramme suivant offre une compréhension générale des composants analysés par SQL Server PDW.  
   
-![Vue d’ensemble de la surveillance](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Vue d'ensemble de la surveillance](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
 ### <a name="monitor-component-status-by-using-the-admin-console"></a>Surveiller l’état des composants à l’aide de la console d’administration  
 Pour récupérer l’état d’un composant à l’aide de la console d’administration :  

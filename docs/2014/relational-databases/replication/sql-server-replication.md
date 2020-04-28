@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626148"
 ---
 # <a name="sql-server-replication"></a>Réplication SQL Server
@@ -54,8 +54,8 @@ Pour obtenir des informations sur la compatibilité descendante, consultez [Comp
 -   [Afficher et modifier les propriétés d’un article](publish/view-and-modify-article-properties.md)    
 -   [Supprimer une publication](publish/delete-a-publication.md)   
 -   [Supprimer un article](publish/delete-an-article.md)    
--   [Créer une publication à partir d’une Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
--   [Définir la période d'expiration des abonnements](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [Créer une publication à partir d’une base de données Oracle](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Définir la période d’expiration des abonnements](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [Spécifier les options de schéma](publish/specify-schema-options.md)  
 -   [Répliquer les modifications de schéma](publish/replicate-schema-changes.md)    
 -   [Gérer les colonnes d’identité](publish/manage-identity-columns.md)   
@@ -69,7 +69,7 @@ Pour obtenir des informations sur la compatibilité descendante, consultez [Comp
 ### <a name="filter-data"></a>Filtrer les données  
   
 -   [Définir et modifier un filtre de colonne](publish/define-and-modify-a-column-filter.md)    
--   [Définir et modifier un filtre de lignes statique](publish/define-and-modify-a-static-row-filter.md)    
+-   [Définir et modifier un filtre de lignes statiques](publish/define-and-modify-a-static-row-filter.md)    
 -   [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Optimiser les filtres de lignes paramétrables](publish/optimize-parameterized-row-filters.md)    
 -   [Définir et modifier un filtre de jointure entre des articles de fusion](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
@@ -77,22 +77,22 @@ Pour obtenir des informations sur la compatibilité descendante, consultez [Comp
 ### <a name="transactional-replication-options"></a>Options de la réplication transactionnelle  
   
 -   [Définir la méthode de propagation des modifications de données des articles transactionnels](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [Activer les abonnements pouvant être mis à jour pour les publications transactionnelles](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [Activer les abonnements de mise à jour pour les publications transactionnelles](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>Options de la réplication de fusion  
   
--   [Définir une relation d'enregistrement logique entre des articles de table de fusion](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [Définir une relation d’enregistrement logique entre des articles de table de fusion](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
 -   [Spécifier les propriétés de réplication de fusion](publish/specify-merge-replication-properties.md)    
--   [Spécifier un programme de résolution d'articles de fusion](publish/specify-a-merge-article-resolver.md)    
+-   [Spécifier un programme de résolution d’articles de fusion](publish/specify-a-merge-article-resolver.md)    
 
   
 ## <a name="manage-subscriptions"></a>Gérer les abonnements  
   
 -   [Créer un abonnement par extraction de données (pull)](create-a-pull-subscription.md)    
--   [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md)    
--   [Supprimer un abonnement par extraction (pull)](delete-a-pull-subscription.md)    
+-   [Afficher et modifier les propriétés d’un abonnement par extraction](view-and-modify-pull-subscription-properties.md)    
+-   [Supprimer un abonnement par extraction](delete-a-pull-subscription.md)    
 -   [Créer un abonnement par émission de données](create-a-push-subscription.md)   
--   [Afficher et modifier les propriétés d’un abonnement par émission (push)](view-and-modify-push-subscription-properties.md)   
+-   [Afficher et modifier les propriétés d'un abonnement par émission (push)](view-and-modify-push-subscription-properties.md)   
 -   [Supprimer un abonnement par émission (push)](delete-a-push-subscription.md)   
 -   [Spécifier des planifications de synchronisation](specify-synchronization-schedules.md)    
 -   [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
@@ -100,12 +100,12 @@ Pour obtenir des informations sur la compatibilité descendante, consultez [Comp
   
 ## <a name="synchronize-subscriptions"></a>Synchroniser des abonnements  
   
--   [Créer et appliquer l’instantané initial](create-and-apply-the-initial-snapshot.md)   
--   [Créer un instantané d'une publication de fusion avec des filtres paramétrés](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Créer et appliquer l'instantané initial](create-and-apply-the-initial-snapshot.md)   
+-   [Créer un instantané d’une publication de fusion avec des filtres paramétrés](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
 -   [Initialiser un abonnement transactionnel à partir d’une sauvegarde](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [Initialiser manuellement un abonnement](initialize-a-subscription-manually.md)    
 -   [Synchroniser un abonnement par extraction](synchronize-a-pull-subscription.md)    
--   [Synchroniser un abonnement par envoi de notification](synchronize-a-push-subscription.md)   
+-   [Synchroniser un abonnement par émission de données](synchronize-a-push-subscription.md)   
 -   [Réinitialiser un abonnement](reinitialize-a-subscription.md)    
 -   [Exécuter des scripts pendant la synchronisation](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
 -   [Implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md)  
@@ -128,9 +128,9 @@ Pour obtenir des informations sur la compatibilité descendante, consultez [Comp
 -   [Configurer le travail d’un jeu de transactions pour un serveur de publication Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [Mettre à niveau les scripts de réplication](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>Moniteur
+## <a name="monitor"></a>Superviser
   
--   [Autoriser des non-administrateurs à utiliser le moniteur de réplication](monitor/allow-non-administrators-to-use-replication-monitor.md)    
+-   [Autoriser des non-administrateurs à utiliser le Moniteur de réplication](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Surveiller la réplication par programmation](monitor/programmatically-monitor-replication.md)    
 -   [Afficher les commandes répliquées et d’autres informations dans la base de données de distribution](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [Afficher les informations relatives aux conflits pour les publications de fusion](view-conflict-information-for-merge-publications.md) 

@@ -11,10 +11,10 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729246"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importer des données à partir de tables (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73729246"
 
   Vous pouvez ajouter des données et apporter des modifications de données à un modèle en bloc dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
- **Prérequis**  
+ **Conditions préalables**  
   
 -   Vous devez avoir l’autorisation d’insérer des données dans la table stg.\<nom>_Leaf, the stg.\<nom>_Consolidated ou stg.\<nom>_Relationship de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   

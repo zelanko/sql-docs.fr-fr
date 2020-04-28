@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399431"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Utiliser un redirecteur DNS pour résoudre les noms DNS non-Appliance dans Analytics Platform System
 Un redirecteur DNS peut être configuré sur les nœuds Active Directory Domain Services (**_domaine d’appliance\__-ad01** et domaine d' ** _Appliance\__-AD02**) de votre appliance Analytics Platform System pour permettre aux scripts et aux applications logicielles d’accéder aux serveurs externes.  
   
-## <a name="ResolveDNS"></a>Utilisation d’un redirecteur DNS  
+## <a name="using-a-dns-forwarder"></a><a name="ResolveDNS"></a>Utilisation d’un redirecteur DNS  
 L’appliance Analytics Platform System est configurée pour empêcher la résolution des noms DNS des serveurs qui ne sont pas dans l’appliance. Certains processus, tels que Windows Software Update Services (WSUS), devront accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation, le système DNS de la plateforme d’analyse peut être configuré pour prendre en charge un redirecteur de nom externe qui permet aux ordinateurs hôtes du système de plateforme d’analyse et aux machines virtuelles d’utiliser des serveurs DNS externes pour résoudre les noms en dehors de l’appliance. La configuration personnalisée des suffixes DNS n’est pas prise en charge, ce qui signifie que vous devez utiliser des noms de domaine complets pour résoudre le nom d’un serveur non-appareil.  
   
 **Pour créer un redirecteur DNS avec l’interface utilisateur graphique DNS**  

@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 792fd974d4f6d326265d06ef51f5a5fdaaf61399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473058"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>Nœud Alertes — Aide (F1) de l'Agent SQL Server
-  Cette section contient l'aide (accessible à l'aide de la touche F1) relative au nœud **Alertes** de l'Explorateur d'objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+   Cette section contient l’aide (accessible à l’aide de la touche F1) relative au nœud **Alertes** de l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
   

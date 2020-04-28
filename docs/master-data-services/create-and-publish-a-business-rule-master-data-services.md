@@ -14,10 +14,10 @@ ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729442"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Créer et publier une règle d'entreprise (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73729442"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une règle d'entreprise pour garantir l'exactitude de vos données de référence. Après avoir créé une règle, vous devez la publier avant de pouvoir l'appliquer aux données.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>Pour créer et publier une règle d'entreprise  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73729442"
   
 19. Complétez tous les champs obligatoires.  
   
-20. Cliquez sur **Enregistrer**. Une nouvelle ligne est ajoutée à la grille **Then** .  
+20. Cliquez sur **Save**. Une nouvelle ligne est ajoutée à la grille **Then** .  
   
 21. Si vous souhaitez ajouter une action **Else** , procédez comme suit.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "73729442"
   
     4.  Complétez tous les champs obligatoires.  
   
-    5.  Cliquez sur **Enregistrer**. Une nouvelle ligne est ajoutée à la grille **Else** .  
+    5.  Cliquez sur **Save**. Une nouvelle ligne est ajoutée à la grille **Else** .  
   
-22. Cliquez sur **Enregistrer**. Une nouvelle ligne est ajoutée à la grille des règles d’entreprise.  
+22. Cliquez sur **Save**. Une nouvelle ligne est ajoutée à la grille des règles d’entreprise.  
   
 23. Cliquez sur **Tout publier**.  
   
@@ -102,10 +102,10 @@ ms.locfileid: "73729442"
 ## <a name="grid-columns"></a>Colonnes de la grille  
  Pour chaque règle d’entreprise créée, une ligne comportant six colonnes est ajoutée dans la grille. Les différentes colonnes sont décrites ci-après.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|Statut|Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que la règle d’entreprise est en cours de mise à jour.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> En cas d’erreur lors de la création ou de la modification d’une règle d’entreprise, l’image suivante apparaît.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Name|Le nom de la règle d’entreprise.|  
+|État|Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que la règle d’entreprise est en cours de mise à jour.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> En cas d’erreur lors de la création ou de la modification d’une règle d’entreprise, l’image suivante apparaît.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|Nom|Le nom de la règle d’entreprise.|  
 |Description|La description de la règle d’entreprise.|  
 |État de la règle d’entreprise|L’un des états de règle d’entreprise suivants : Règle non définie, Active, Exclue, Modifications en attente, Exclusion en attente et Suppression en attente.|  
 |Exclu|Indique si la règle d’entreprise est exclue.|  

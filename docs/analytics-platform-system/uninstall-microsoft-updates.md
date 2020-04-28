@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399464"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Désinstaller les mises à jour Microsoft dans Analytics Platform System
@@ -21,14 +21,14 @@ Cet article explique comment désinstaller une mise à jour Microsoft précédem
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
 Pour effectuer ces étapes, vous aurez besoin des éléments suivants :  
   
 -   Une connexion Analytics Platform System avec des autorisations pour accéder à la console d’administration afin de surveiller l’appliance.  
   
 -   Connaissance du compte d’administrateur de domaine de l’infrastructure pour la <em> <Fabric Domain> </em>connexion au nœud **-HST01** .  
   
-## <a name="HowToUninstallMSFT"></a>Pour désinstaller les mises à jour Microsoft  
+## <a name="to-uninstall-microsoft-updates"></a><a name="HowToUninstallMSFT"></a>Pour désinstaller les mises à jour Microsoft  
   
 1.  Connectez-vous au <em> <Fabric Domain> </em>nœud **-HST01** en tant qu’administrateur de domaine de l’infrastructure.  
   

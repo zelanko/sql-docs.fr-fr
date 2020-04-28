@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400913"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Surveillance des requêtes actives-Data Warehouse parallèles
 Cet article explique comment utiliser la console d’administration et les vues système SQL Server PDW pour surveiller les requêtes actives. Pour plus d’informations sur ces outils, consultez [surveiller l’appliance à l’aide de la console d’administration](monitor-the-appliance-by-using-the-admin-console.md) et des [vues système](tsql-system-views.md) .  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Quelle que soit la méthode utilisée pour surveiller les requêtes actives, la connexion doit avoir les autorisations décrites dans « utiliser l’ensemble de la console d’administration » dans [accorder des autorisations pour utiliser la console d’administration](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
-## <a name="PermsAdminConsole"></a>Surveiller les requêtes actives  
+## <a name="monitor-active-queries"></a><a name="PermsAdminConsole"></a>Surveiller les requêtes actives  
 Vous pouvez utiliser la console d’administration et les vues système SQL Server PDW pour surveiller les requêtes actives. Procédez comme suit.  
   
 ### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Pour surveiller les requêtes actives à l’aide de la console d’administration  

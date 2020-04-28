@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714760"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul par l'édition de SQL Server
@@ -80,13 +80,13 @@ ms.locfileid: "62714760"
   
  Le tableau suivant présente les limites de capacité de calcul pour une instance unique de chaque édition de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Édition|Capacité maximale de calcul utilisée par une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul utilisée par une instance unique (AS, RS)|  
+|Édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Capacité maximale de calcul utilisée par une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul utilisée par une instance unique (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition : licence basée sur le cœur<sup>1</sup>|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Développeur|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Évaluation|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Business Intelligence|Limité inférieure à 4 sockets ou 16 noyaux|Maximum du système d'exploitation|  
-|standard|Limité inférieure à 4 sockets ou 16 noyaux|Limité inférieure à 4 sockets ou 16 noyaux|  
+|Standard|Limité inférieure à 4 sockets ou 16 noyaux|Limité inférieure à 4 sockets ou 16 noyaux|  
 |Web|Limité inférieure à 4 sockets ou 16 noyaux|Limité inférieure à 4 sockets ou 16 noyaux|  
 |Express|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|  
 |Express with Tools|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|  

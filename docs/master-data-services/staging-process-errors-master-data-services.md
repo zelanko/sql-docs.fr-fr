@@ -13,10 +13,10 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e719a0a96545bdc69134e42facca9bb4ad79069c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728923"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erreurs du processus de site (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "73728923"
 |210032|Le nom de hiérarchie est manquant ou n'est pas valide.|La hiérarchie explicite est introuvable ou la valeur de **HierarchyName** est vide.|Consolidé<br /><br /> Relation|  
 |210035|Comme il n’existe pas de règle d’entreprise de génération de code, le **MemberCode** est obligatoire.|Lors de la création ou de la mise à jour des membres, un **MemberCode** est toujours obligatoire, à moins d’utiliser la génération de code automatique. Pour plus d’informations, consultez [création automatique de Code &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Feuille<br /><br /> Consolidé|  
 |210036|Comme il existe une règle d’entreprise de génération de code, le **MemberCode** n’est pas obligatoire.|Lors de la création ou de la mise à jour des membres, un **MemberCode** n’est pas obligatoire quand vous utilisez la génération de code automatique. Toutefois, vous pouvez spécifier le code si vous le choisissez. Pour plus d’informations, consultez [création automatique de Code &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Feuille<br /><br /> Consolidé|  
-|210041|« ROOT » n’est pas un code de membre valide.|La valeur **MemberCode** contient le mot « ROOT ».|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
+|210041|« ROOT » n’est pas un code de membre valide.|La valeur **MemberCode** contient le mot « root ».|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |210042|« MDMUNUSED » n’est pas un code de membre valide.|La valeur **MemberCode** contient le mot « MDMUNUSED ».|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |210052|MemberCode ne peut pas être désactivé, car il est utilisé comme valeur d'attribut basée sur un domaine.|Lorsque **ImportType** = **3** ou **4**, la mise en lots échoue si le membre est utilisé comme valeur d’attribut pour d’autres membres. Utilisez **ImportType5** ou **6** pour définir la valeur sur NULL ou modifiez les valeurs avant d’exécuter le processus de mise en lots.|Feuille<br /><br /> Consolidé|  
 |300002|Le code de membre n'est pas valide.|Relations - Le code de membre parent ou enfant n'existe pas.<br /><br /> Feuille ou consolidé : **ImportType** = **3** ou **4** et le code de membre n’existe pas.|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
@@ -47,6 +47,6 @@ ms.locfileid: "73728923"
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher les erreurs qui se produisent lors de la &#40;de la mise en lots Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ [Présentation : Importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

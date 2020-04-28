@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721039"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
@@ -37,9 +37,9 @@ ms.locfileid: "62721039"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Quand une procédure est compilée pour la première fois ou recompilée, son plan de requête est optimisé pour l’état actuel de la base de données et de ses objets. Si une base de données subit des modifications significatives au niveau de ses données ou de sa structure, la recompilation de la procédure a pour effet de mettre à jour et d’optimiser son plan de requête en fonction de ces modifications. Les performances de traitement de la procédure peuvent s’en trouver améliorées.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62721039"
   
 -   Si certaines requêtes d'une procédure utilisent régulièrement des valeurs atypiques ou temporaires, les performances des procédures peuvent être améliorées en utilisant l'indicateur de requête RECOMPILE à l'intérieur de ces requêtes. Étant donné que seules les requêtes utilisant l'indicateur de requête seront recompilées au lieu de la procédure complète, le comportement de recompilation de l'instruction de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est reproduit. Cependant, en plus d'utiliser les valeurs des paramètres actuels de la procédure, l'indicateur de requête RECOMPILE utilise également les valeurs des variables locales à l'intérieur de la procédure stockée lorsque vous compilez l'instruction. Pour plus d’informations, consultez [Indicateur de requête (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  `WITH RECOMPILE`Option  
  Si cette option est utilisée lorsque la définition de la procédure est créée, elle nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62721039"
  `sp_recompile`Procédure stockée système  
  Nécessite l'autorisation ALTER pour la procédure spécifiée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Pour recompiler une procédure stockée à l'aide de l'option WITH RECOMPILE  
   
@@ -135,7 +135,7 @@ GO
  [Créer une procédure stockée](../stored-procedures/create-a-stored-procedure.md)   
  [Modifier une procédure stockée](../stored-procedures/modify-a-stored-procedure.md)   
  [Renommer une procédure stockée](rename-a-stored-procedure.md)   
- [Afficher la définition d'une procédure stockée](view-the-definition-of-a-stored-procedure.md)   
+ [Afficher la définition d’une procédure stockée](view-the-definition-of-a-stored-procedure.md)   
  [Afficher les dépendances d’une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   

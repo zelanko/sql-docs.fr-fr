@@ -21,19 +21,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520342"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Génération d'applications à l'aide du service Web et du .NET Framework
-  Avec le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous pouvez utiliser des constructions de programmation familières, telles que les méthodes, les types primitifs et les types complexes définis par l’utilisateur pour utiliser des services Web. 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contient une infrastructure et des outils qui vous permettent de créer des clients de service Web qui peuvent appeler des services Web conformes aux normes du World Wide Web Consortium (W3C).  
+  Avec le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous pouvez utiliser des constructions de programmation familières, telles que les méthodes, les types primitifs et les types complexes définis par l’utilisateur pour utiliser des services Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contient une infrastructure et des outils qui vous permettent de créer des clients de service Web qui peuvent appeler des services Web conformes aux normes du World Wide Web Consortium (W3C).  
   
  Un client de service Web Report Server est un composant ou une application qui communique avec un serveur de rapports à l'aide des messages SOAP.  
   
- **Pour créer un client de service Web Report Server à l’aide de la .NET Framework, suivez ces étapes de base :**  
+ **Pour créer un client de service web Report Server à l’aide du .NET Framework, suivez les étapes de base suivantes :**  
   
 1.  Créez une classe proxy pour le service Web.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62520342"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Création du proxy de service Web](creating-the-web-service-proxy.md)|Décrit les manières d’ajouter une classe proxy à votre projet à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]l’aide de.|  
-|[Authentification du service web](web-service-authentication.md)|Explique comment les appels vers le service Web Report Server sont authentifiés.|  
+|[Authentification du service Web](web-service-authentication.md)|Explique comment les appels vers le service Web Report Server sont authentifiés.|  
 |[Appel des méthodes de service Web](calling-web-service-methods.md)|Décrit comment utiliser l’API SOAP pour appeler des méthodes de service Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]dans.|  
 |[Définition de la propriété Url du service Web](setting-the-url-property-of-the-web-service.md)|Explique comment diriger par programme votre proxy de service Web vers une nouvelle URL du serveur après avoir créé votre référence Web.|  
 |[Spécification d'arguments de méthode de service Web](supplying-web-service-method-arguments.md)|Décrit comment appeler une méthode de service Web et fournir des arguments de méthode.|  
@@ -60,7 +59,7 @@ ms.locfileid: "62520342"
 |[Utilisation des méthodes de service Web sécurisées](using-secure-web-service-methods.md)|Décrit le paramètre **SecureConnectionLevel** et la façon dont il affecte l’utilisation de l’API SOAP de Reporting Services.|  
 |[Transmission de paramètres d'informations de périphérique aux extensions de rendu](passing-device-information-settings-to-rendering-extensions.md)|Décrit les paramètres d'informations de périphérique utilisés pour effectuer un rendu des rapports dans des formats différents.|  
 |[Paramètres des extensions de remise de Reporting Services](reporting-services-delivery-extension-settings.md)|Décrit les paramètres utilisés pour remettre des rapports à l'aide de la messagerie électronique du serveur de rapports.|  
-|[Utilisation d’en-têtes SOAP Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explique l'utilisation des en-têtes SOAP dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Utilisation des en-têtes SOAP de Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explique l'utilisation des en-têtes SOAP dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Présentation de la gestion des exceptions dans Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Fournit des informations sur la gestion des erreurs dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  

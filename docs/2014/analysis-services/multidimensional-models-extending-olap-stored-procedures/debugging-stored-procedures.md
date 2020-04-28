@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727745"
 ---
 # <a name="debugging-stored-procedures"></a>Débogage des procédures stockées
@@ -45,7 +45,7 @@ ms.locfileid: "62727745"
   
     4.  Dans la zone de texte **attacher à** , assurez-vous que le type de programme approprié est sélectionné. Pour une DLL CLR, cliquez sur **Sélectionner**, puis sur **Déboguer ces types de codes**, sur **géré**, puis sur **OK**. Pour une DLL COM, cliquez sur **Sélectionner**, puis sur **Déboguer ces types de codes**, sur **natif**, puis sur **OK**.  
   
-    5.  Cliquez sur **attacher**.  
+    5.  Cliquez sur **Attacher**.  
   
 7.  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], appelez le programme ou le script MDX qui appelle la procédure stockée. Le débogueur s'interrompt lorsqu'il atteint une ligne contenant un point d'arrêt. Vous pouvez évaluer des variables dans la fenêtre Espion, afficher des variables locales et exécuter le code en pas à pas.  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401017"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Charger des données avec des Integration Services à des Data Warehouse parallèles
@@ -33,7 +33,7 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="Basics"></a>Fondamentaux  
+## <a name="basics"></a><a name="Basics"></a>Concepts de base  
 Integration Services est le composant de SQL Server pour l’extraction, la transformation et le chargement (ETL) des données à hautes performances, et est couramment utilisé pour remplir et mettre à jour un entrepôt de données.  
   
 L’adaptateur de destination PDW est un composant Integration Services qui vous permet de charger des données dans PDW à l’aide de Integration Services packages dtsx. Dans un flux de travail de package pour SQL ServerPDW, vous pouvez charger et fusionner des données à partir de plusieurs sources et charger des données vers plusieurs destinations. Les charges se produisent en parallèle, toutes les deux dans un package et entre plusieurs packages s'exécutant simultanément, avec un maximum de 10 charges s'exécutant en parallèle sur la même appliance.  
@@ -42,7 +42,7 @@ Outre les tâches décrites dans cette rubrique, vous pouvez utiliser d’autres
   
 Pour obtenir une documentation complète sur Integration Services, consultez [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).  
   
-## <a name="HowToDeployPackage"></a>Méthodes d’exécution d’un package Integration Services  
+## <a name="methods-for-running-an-integration-services-package"></a><a name="HowToDeployPackage"></a>Méthodes d’exécution d’un package Integration Services  
 Utilisez l’une des méthodes suivantes pour exécuter un package de Integration Services.  
   
 ### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>Exécuter à partir de SQL Server 2008 R2 Business Intelligence Development Studio (BIDS)  
@@ -61,9 +61,9 @@ Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`
 ### <a name="run-from-a-windows-command-prompt"></a>Exécuter à partir d’une invite de commandes Windows 
 Pour exécuter le package à partir d’une invite de commandes Windows, à l’aide de l’utilitaire **dtexec** :`dtexec /FILE <packagePath>`  
   
-Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-## <a name="DataTypes"></a>Types de données  
+## <a name="data-types"></a><a name="DataTypes"></a>Type de données  
 Lorsque vous utilisez Integration Services pour charger des données à partir d’une source de données dans une base de données SQL Server PDW, les données sont d’abord mappées à partir des données sources vers des types de données Integration Services. Cela permet à des données provenant de plusieurs sources de données d'être mappées à un ensemble commun de types de données.  
   
 Ensuite, les données sont mappées à partir de Integration Services à des types de données SQL Server PDW. Pour chaque type de données SQL Server PDW, le tableau suivant répertorie les types de données Integration Services qui peuvent être convertis en SQL Server PDW type de données.  
@@ -71,7 +71,7 @@ Ensuite, les données sont mappées à partir de Integration Services à des typ
 |Type de données PDW|Integration Services le ou les types de données mappés au type de données PDW|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|BIGINT|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
+|bigint|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
@@ -126,10 +126,10 @@ Pour exécuter un package de charge Integration Services, vous avez besoin des �
   
 -   Si aucune base de données de mise en lots n’est utilisée, créez l’autorisation sur la base de données de destination. Il s’agit de la création d’une table temporaire.  
   
-## <a name="GenRemarks"></a>Remarques générales  
+## <a name="general-remarks"></a><a name="GenRemarks"></a>Remarques générales  
 Lorsqu’un package de Integration Services a plusieurs destinations SQL Server PDW en cours d’exécution et que l’une des connexions est terminée, Integration Services arrête de pousser les données vers toutes les destinations de SQL Server PDW.  
   
-## <a name="Limits"></a>Limitations et restrictions  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>Limitations et restrictions  
 Pour un package Integration Services, le nombre de destinations de SQL Server PDW pour la même source de données est limité par le nombre maximal de charges actives. Le maximum est préconfiguré et n'est pas configurable par l'utilisateur. 
 
 <!-- MISSING LINKS
@@ -146,12 +146,12 @@ Si le nombre de charges présentes dans la file d'attente des charges dépasse l
 > L’utilisation d’une source de données OLE DB dans SSIS avec l’adaptateur de destination PDW peut endommager les données si la table source contient des colonnes char et varchar avec des classements SQL. Nous vous recommandons d’utiliser une source ADO.NET si la table source contient des colonnes char ou varchar avec des classements SQL. 
 
   
-## <a name="Locks"></a>Comportement de verrouillage  
+## <a name="locking-behavior"></a><a name="Locks"></a>Comportement de verrouillage  
 Lors du chargement de données avec Integration Services, SQL ServerPDW utilise des verrous de niveau ligne pour mettre à jour les données dans la table de destination. Cela signifie que chaque ligne est verrouillée en lecture et en écriture pendant sa mise à jour. Les lignes de la table de destination ne sont pas verrouillées pendant le chargement des données dans la table de mise en lots.  
   
-## <a name="Examples"></a>Exemples  
+## <a name="examples"></a><a name="Examples"></a>Illustre  
   
-### <a name="Walkthrough"></a>R. Chargement simple à partir d’un fichier plat  
+### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. Chargement simple à partir d’un fichier plat  
 La procédure pas à pas suivante illustre un chargement de données simple à l’aide de Integration Services pour charger des données de fichier plat sur un appareil SQL Server PDW.  Cet exemple suppose que Integration Services a déjà été installé sur l’ordinateur client et que la destination de SQL Server PDW a été installée, comme décrit ci-dessus.  
   
 Dans cet exemple, nous allons charger dans `Orders` la table, qui a la DDL suivante. La `Orders` table fait partie de la `LoadExampleDB` base de données.  
@@ -216,7 +216,7 @@ Spécifiez la destination du Workflow.
   
 4.  Sélectionnez **créer une nouvelle connexion**.  
   
-5.  Renseignez les informations du serveur, de l’utilisateur, du mot de passe et de la base de données de destination avec des informations spécifiques à votre appliance. (Des exemples sont illustrés ci-dessous). Cliquez ensuite sur **OK**.  
+5.  Renseignez les informations du serveur, de l’utilisateur, du mot de passe et de la base de données de destination avec des informations spécifiques à votre appliance. (Des exemples sont illustrés ci-dessous). Cliquez sur **OK**.  
   
     Pour les connexions InfiniBand, **nom du serveur**: entrez <Appliance-Name>-SQLCTL01, 17001.  
   

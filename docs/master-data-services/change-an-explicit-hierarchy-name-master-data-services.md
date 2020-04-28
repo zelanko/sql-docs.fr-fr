@@ -13,10 +13,10 @@ ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 3604fe0fa1a2b15385ebea9d31550fc984c14a42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728634"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Modifier le nom d'une hiérarchie explicite (Master Data Services)
@@ -25,12 +25,12 @@ ms.locfileid: "73728634"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d'une hiérarchie explicite.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>Pour modifier le nom d'une hiérarchie explicite  
   
@@ -40,13 +40,13 @@ ms.locfileid: "73728634"
   
 3.  Dans la grille de la page **Gérer l’entité** , sélectionnez la ligne de l’entité qui contient la hiérarchie explicite à modifier.  
   
-4.  Cliquez sur **Hiérarchies explicites**.  
+4.  Cliquez sur **hiérarchies explicites**.  
   
 5.  Sur la page **Gérer la hiérarchie explicite** , sélectionnez la hiérarchie explicite à renommer et cliquez sur **Modifier**.  
   
 6.  Dans la zone **Nom** , saisissez le nouveau nom de la hiérarchie.  
   
-7.  Cliquez sur **Enregistrer**.  
+7.  Cliquez sur **Save**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hiérarchies explicites &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   

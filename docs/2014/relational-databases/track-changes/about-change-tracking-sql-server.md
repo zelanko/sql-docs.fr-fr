@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670919"
 ---
 # <a name="about-change-tracking-sql-server"></a>À propos du suivi des modifications (SQL Server)
@@ -68,9 +68,9 @@ ms.locfileid: "62670919"
  Les informations sur la modification apportée à chaque ligne peuvent également être obtenues en utilisant le suivi des modifications. Il peut s'agir du type d'opération DML qui a provoqué la modification (insertion, mise à jour ou suppression) ou des colonnes modifiées dans le cadre d'une opération de mise à jour.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Activer et désactiver le suivi des modifications &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [Utiliser le suivi des modifications &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [Gérer le suivi des modifications &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Activer et désactiver les Change Tracking &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [Travailler avec Change Tracking &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
+ [Gérer Change Tracking &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [Suivi des modifications de données &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   
   

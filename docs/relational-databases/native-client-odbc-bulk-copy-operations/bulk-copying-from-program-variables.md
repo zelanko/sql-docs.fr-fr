@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73785223"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copie en bloc à partir de variables de programme
@@ -58,30 +58,30 @@ ms.locfileid: "73785223"
 |Type de données ODBC SQL|Type de données ODBC C|paramètre de *type* bcp_bind|Type de données SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**symbole**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **caractère variable**<br /><br /> **caractère variable**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **character varying**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
-|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**sépar**<br /><br /> **decembre**<br /><br /> **money**<br /><br /> **SMALLMONEY**|  
-|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**chiffre**|  
+|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **decembre**<br /><br /> **money**<br /><br /> **smallmoney**|  
+|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (signé)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (non signé)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (signé)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_SMALL_INT (non signé)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **entier**|  
 |SQL_INTEGER (signé)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **entier**|  
-|SQL_INTEGER (non signé)|SQL_C_CHAR|SQLCHARACTER|**sépar**<br /><br /> **decembre**|  
+|SQL_INTEGER (non signé)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **decembre**|  
 |SQL_BIGINT (signé et non signé)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
 |SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
-|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **confirmé**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variables binaires**|  
+|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
-|SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**DATETIME**<br /><br /> **smalldatetime**|  
-|SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**DATETIME**<br /><br /> **smalldatetime**|  
-|SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**DATETIME**<br /><br /> **smalldatetime**|  
+|SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
+|SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
+|SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
@@ -105,8 +105,7 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge directement les types de données interval. Toutefois, une application peut stocker des séquences d'échappement d'intervalle sous la forme de chaînes de caractères dans une colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type character. L'application peut les lire pour une utilisation ultérieure, mais elles ne peuvent pas être utilisées dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge directement les types de données interval. Toutefois, une application peut stocker des séquences d'échappement d'intervalle sous la forme de chaînes de caractères dans une colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type character. L'application peut les lire pour une utilisation ultérieure, mais elles ne peuvent pas être utilisées dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  Les fonctions de copie en bloc peuvent être utilisées pour charger rapidement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des données qui ont été lues à partir d'une source de données ODBC. Utilisez [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) pour lier les colonnes d’un jeu de résultats à des variables de programme, puis utilisez **bcp_bind** pour lier les mêmes variables de programme à une opération de copie en bloc. L’appel de [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ou **SQLFetch** récupère ensuite une ligne de données de la source de données ODBC dans les variables de programme, et l’appel de [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) copie en bloc les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données à partir des variables de programme vers.  
   

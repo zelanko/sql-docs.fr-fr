@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702694"
 ---
 # <a name="calculations"></a>Calculs
@@ -31,8 +31,7 @@ ms.locfileid: "62702694"
   
  Les membres calculés peuvent être définis pour n'importe quelle dimension, y compris la dimension de mesures. Les membres calculés créés sur la dimension de mesures sont appelés mesures calculées.  
   
- Bien que les membres calculés reposent généralement sur les données qui existent déjà dans le cube, vous pouvez créer des expressions complexes en combinant les données avec des opérateurs arithmétiques, des nombres et des fonctions. Vous pouvez également utiliser des fonctions MDX, telles que LookupCube, pour accéder aux données d'autres cubes de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut des bibliothèques de fonctions Visual Studio standardisées et vous permet d'utiliser des procédures stockées pour récupérer des données à partir d'autres sources que la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] active. Pour plus d’informations sur les procédures stockées, consultez [définition des procédures stockées](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
+ Bien que les membres calculés reposent généralement sur les données qui existent déjà dans le cube, vous pouvez créer des expressions complexes en combinant les données avec des opérateurs arithmétiques, des nombres et des fonctions. Vous pouvez également utiliser des fonctions MDX, telles que LookupCube, pour accéder aux données d'autres cubes de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut des bibliothèques de fonctions Visual Studio standardisées et vous permet d'utiliser des procédures stockées pour récupérer des données à partir d'autres sources que la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] active. Pour plus d’informations sur les procédures stockées, consultez [définition des procédures stockées](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
   
  Supposons, par exemple, que les cadres d'une société de transport veuillent déterminer les types de cargaisons les plus rentables à transporter, en fonction du bénéfice par unité de volume. Ils utilisent un cube Shipments qui contient les dimensions Cargo, Fleet et Time et les mesures Price_to_Ship, Cost_to_Ship et Volume_in_Cubic_Meters ; cependant, ce cube ne contient pas de mesure de rentabilité. Vous pouvez créer un membre calculé correspondant à une mesure appelée Profit_per_Cubic_Meter dans le cube en combinant les mesures existantes dans l'expression suivante :  
   

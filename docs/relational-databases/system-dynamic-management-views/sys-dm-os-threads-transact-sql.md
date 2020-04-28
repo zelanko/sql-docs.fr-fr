@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982543"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73982543"
 |os_thread_id|**int**|ID du thread qui est attribué par le système d'exploitation.|  
 |status|**int**|Indicateur d'état interne.|  
 |instruction_address|**varbinary (8)**|Adresse de l'instruction qui est en cours d'exécution.|  
-|creation_time|**DATETIME**|Heure de création du thread.|  
+|creation_time|**datetime**|Heure de création du thread.|  
 |kernel_time|**bigint**|Temps du noyau utilisé par ce thread.|  
 |usermode_time|**bigint**|Temps utilisateur utilisé par ce thread.|  
 |stack_base_address|**varbinary (8)**|Adresse mémoire haute de la pile de ce thread.|  
@@ -75,8 +75,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
 En raison du fonctionnement du moteur SQL dans Linux, certaines de ces informations ne correspondent pas aux données de diagnostic Linux. Par exemple, `os_thread_id` ne correspond pas au résultat d’outils comme `ps`,`top` ou procfs (/Proc/`pid`).  Cela est dû à la couche d’abstraction de la plateforme (SQLPAL), une couche entre les composants SQL Server et le système d’exploitation.
 
 ## <a name="examples"></a>Exemples  
- Au démarrage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre des threads puis leur associe des threads de travail. Cependant, des composants externes (par exemple, une procédure stockée étendue) peuvent démarrer des threads sous le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne contrôle pas ces threads. sys. dm_os_threads peut fournir des informations sur les threads non autorisés qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consomment des ressources dans le processus.  
+ Au démarrage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre des threads puis leur associe des threads de travail. Cependant, des composants externes (par exemple, une procédure stockée étendue) peuvent démarrer des threads sous le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne contrôle pas ces threads. sys. dm_os_threads peut fournir des informations sur les threads non autorisés qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consomment des ressources dans le processus.  
   
  La requête suivante permet de rechercher des threads de travail (ainsi que la durée utilisée pour l'exécution) qui exécutent des threads non démarrés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

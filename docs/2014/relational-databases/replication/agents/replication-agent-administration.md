@@ -23,14 +23,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721804"
 ---
 # <a name="replication-agent-administration"></a>Administration de l'Agent de réplication
-  Les agents de réplication accomplissent de nombreuses tâches associées à la réplication, notamment la création de copies du schéma et des données, la détection des mises à jour sur le serveur de publication ou sur l'Abonné, et la propagation des modifications entre les serveurs. Par défaut, les agents de réplication s’exécutent sous [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] étapes de travail de l’agent. Les agents sont simplement des exécutables et peuvent donc être appelés directement à partir de la ligne de commande et de scripts de commande par lot. Chaque agent de réplication prend en charge un ensemble de paramètres d'exécution utilisés pour contrôler comment il s'exécute ; ces paramètres sont spécifiés dans un profil d'agent ou sur la ligne de commande.  
+  Les agents de réplication accomplissent de nombreuses tâches associées à la réplication, notamment la création de copies du schéma et des données, la détection des mises à jour sur le serveur de publication ou sur l'Abonné, et la propagation des modifications entre les serveurs. Par défaut, les agents de réplication s’exécutent au titre des étapes de travail [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Les agents sont simplement des exécutables et peuvent donc être appelés directement à partir de la ligne de commande et de scripts de commande par lot. Chaque agent de réplication prend en charge un ensemble de paramètres d'exécution utilisés pour contrôler comment il s'exécute ; ces paramètres sont spécifiés dans un profil d'agent ou sur la ligne de commande.  
   
 > [!IMPORTANT]  
 >  Par défaut, le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent est désactivé lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sauf si vous choisissez explicitement de démarrer automatiquement le service au cours de l'installation.  
@@ -47,11 +47,11 @@ ms.locfileid: "62721804"
   
  En plus des agents de réplication, la réplication a plusieurs travaux qui effectuent de la maintenance planifiée et à la demande.  
   
- **Pour exécuter des agents et des travaux de maintenance**  
+ **Pour exécuter les travaux des agents et de maintenance**  
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]et moniteur de réplication : [Démarrer et arrêter un agent de réplication &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   Programmation de la réplication : [Concepts des exécutables de l’agent de réplication](../concepts/replication-agent-executables-concepts.md)  
+-   Programmation de la réplication : [Concepts des exécutables de l'agent de réplication](../concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>Profils de l'Agent  
  Quand la réplication est configurée, un ensemble de profils d'agent est installé sur le serveur de distribution. Un profil d'agent contient un ensemble de paramètres qui sont utilisés chaque fois qu'un agent s'exécute : pendant le processus de démarrage, chaque agent se connecte au service de distribution et interroge les paramètres situés dans son profil. La réplication fournit un profil par défaut pour chaque agent et des profils supplémentaires prédéfinis pour l'Agent de lecture du journal, l'Agent de distribution et l'Agent de fusion. En plus des profils fournis, vous pouvez créer des profils adaptés aux besoins de vos applications. Pour plus d'informations, voir [Replication Agent Profiles](replication-agent-profiles.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "62721804"
   
     -   Agent de fusion  
   
-     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Liste de suivi des abonnements** (disponible pour chaque serveur de publication) ou **Tous les abonnements** (disponible pour chaque abonnement). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Accédez aux informations et aux tâches associées à ces agents par le biais des onglets suivants : **Liste de suivi des abonnements** (disponible pour chaque serveur de publication) ou **Tous les abonnements** (disponible pour chaque publication). Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="independent-and-shared-agents"></a>Agents indépendants et partagés  
  Un Agent indépendant est un Agent qui sert un seul abonnement. Un agent partagé fournit des services à plusieurs abonnements ; si plusieurs abonnements utilisant le même agent partagé doivent se synchroniser, ils attendent par défaut dans une file d'attente, et l'agent partagé leur fournit ce service l'un après l'autre. Le temps de latence est réduit lors de l'utilisation d'agents indépendants car ceux-ci sont disponibles dès que l'abonnement doit être synchronisé. La réplication de fusion utilise toujours des agents indépendants, et la réplication transactionnelle utilise par défaut des agents indépendants pour les publications créées dans l'Assistant Nouvelle publication (dans les versions précédentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la réplication transactionnelle utilisait par défaut des agents partagés).  
@@ -87,8 +87,8 @@ ms.locfileid: "62721804"
   
 |Travail de nettoyage|Description|Planification par défaut|  
 |------------------|-----------------|----------------------|  
-|Nettoyage de l'historique de l'agent : distribution|Supprime les enregistrements historiques des agents de réplication dans la base de données de distribution.|S'exécute toutes les dix minutes|  
-|Nettoyage de la distribution : distribution|Suppression des transactions répliquées de la base de données de distribution. Désactive les abonnements qui n’ont été pas été synchronisés au cours de la période maximale de rétention de distribution.|S'exécute toutes les dix minutes|  
+|Nettoyage de l’historique de l’agent : Distribution|Supprime les enregistrements historiques des agents de réplication dans la base de données de distribution.|S'exécute toutes les dix minutes|  
+|Nettoyage de la distribution : Distribution|Suppression des transactions répliquées de la base de données de distribution. Désactive les abonnements qui n’ont été pas été synchronisés au cours de la période maximale de rétention de distribution.|S'exécute toutes les dix minutes|  
 |Nettoyage de l'abonnement expiré|Détecte les abonnements expirés et les retire des bases de données de publication.|S'exécute chaque jour à 1 heure du matin.|  
 |Réinitialiser les abonnements présentant des erreurs lors de la validation de données|Détecte tous les abonnements qui ont des échecs de validation des données et les marque pour réinitialisation. Lors de l'exécution suivante de l'Agent de fusion ou de l'Agent de distribution, un nouvel instantané sera appliqué aux Abonnés.|Pas de planification par défaut (non activé par défaut).|  
 |Contrôle des Agents de réplication|Détecte les Agents de réplication n'ayant pas d'enregistrement historique actif. Il écrit dans le journal des événements de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows si l'étape d'un travail échoue.|S'exécute toutes les dix minutes.|  

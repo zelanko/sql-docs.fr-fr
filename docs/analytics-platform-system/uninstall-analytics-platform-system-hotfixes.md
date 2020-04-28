@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399763"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Désinstaller les correctifs logiciels d’Analytics Platform System 
@@ -21,7 +21,7 @@ Les étapes suivantes décrivent comment désinstaller un correctif logiciel d�
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
 Pour effectuer ces étapes, vous aurez besoin des éléments suivants :  
   
 -   Une connexion Analytics Platform System avec des autorisations pour accéder à la console d’administration afin de surveiller l’appliance.  
@@ -30,7 +30,7 @@ Pour effectuer ces étapes, vous aurez besoin des éléments suivants :
   
 -   Numéro d’article de la base de connaissances pour le correctif logiciel à désinstaller.  
   
-## <a name="HowToUninstallPDW"></a>Pour désinstaller un correctif logiciel SQL Server PDW  
+## <a name="to-uninstall-a-sql-server-pdw-hotfix"></a><a name="HowToUninstallPDW"></a>Pour désinstaller un correctif logiciel SQL Server PDW  
   
 1.  Connectez-vous au nœud <em><appliance_domain></em> **-HST01** en tant qu’administrateur de domaine de l’infrastructure.  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689409"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
@@ -53,7 +53,7 @@ szFormatFile
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Le fichier de format spécifie le format de données d'un fichier de données créé par le biais d'une copie en bloc. Les appels aux méthodes [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md) définissent le format du fichier de données. **bcp_writefmt** enregistre cette définition dans le fichier référencé par *l’argument szFormatFile*. Pour plus d'informations, consultez [bcp_init](bcp-init.md).  
+ Le fichier de format spécifie le format de données d'un fichier de données créé par le biais d'une copie en bloc. Les appels aux méthodes [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md) définissent le format du fichier de données. **bcp_writefmt** enregistre cette définition dans le fichier référencé par l'argument *szFormatFile*. Pour plus d'informations, consultez [bcp_init](bcp-init.md).  
   
  Pour plus d’informations sur la structure des fichiers de format de données **BCP** , consultez [Importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   

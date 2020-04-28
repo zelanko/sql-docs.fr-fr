@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982263"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
@@ -58,7 +58,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 |insert row lock|N'est plus pris en charge.<br /><br /> Cette option n'a aucun effet sur le comportement de verrouillage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et elle n'est incluse qu'à des fins de compatibilité des scripts et des procédures existants.|  
 |text in row|Si la valeur est OFF ou 0 (désactivé, valeur par défaut), le comportement en cours n'est pas modifié, et la ligne ne contient pas d'objet BLOB.<br /><br /> Quand elle est @OptionValue spécifiée et que est activé (Enabled) ou une valeur entière comprise entre 24 et 7000, les nouvelles chaînes **Text**, **ntext**ou **image** sont stockées directement dans la ligne de données. Toutes les données d’objet BLOB (Binary Large Object : **Text**, **ntext**ou **image** ) existantes seront remplacées par le format Text in Row lorsque la valeur de l’objet blob est mise à jour. Pour plus d'informations, consultez la section Notes.|  
 |large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** et les colonnes de type défini par l’utilisateur (UDT) volumineuses de la table sont stockées hors ligne, avec un pointeur de 16 octets vers la racine.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** et les valeurs UDT volumineuses sont stockées directement dans la ligne de données, jusqu’à une limite de 8000 octets et tant que la valeur peut être contenue dans l’enregistrement. Si la valeur ne tient pas dans l'enregistrement, un pointeur est stocké dans la ligne et le reste est stocké hors de la ligne dans l'espace de stockage LOB. La valeur par défaut est 0.<br /><br /> Le type défini par l’utilisateur (UDT) volumineux s' [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] applique à : et versions ultérieures. <br /><br /> Utilisez l’option TEXTIMAGE_ON de [Create table](../../t-sql/statements/create-table-transact-sql.md) pour spécifier un emplacement pour le stockage des types de données volumineux. |  
-|format de stockage vardecimal|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> Lorsque la valeur est TRUE, ON ou 1, la table désignée est activée pour le format de stockage vardecimal. Lorsque la valeur est FALSE, OFF ou 0, la table n'est pas activée pour le format de stockage vardecimal. Le format de stockage vardecimal ne peut être activé que si la base de données a été activée pour le format de stockage vardecimal à l’aide de [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, le format de stockage **vardecimal** est déconseillé. Utilisez plutôt la compression ROW. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md). La valeur par défaut est 0.|  
+|format de stockage vardecimal|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> Lorsque la valeur est TRUE, ON ou 1, la table désignée est activée pour le format de stockage vardecimal. Lorsque la valeur est FALSE, OFF ou 0, la table n'est pas activée pour le format de stockage vardecimal. Le format de stockage vardecimal ne peut être activé que si la base de données a été activée pour le format de stockage vardecimal à l’aide de [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, le format de stockage **vardecimal** est déconseillé. Utilisez plutôt la compression ROW. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md). La valeur par défaut est 0.|  
   
  [ @OptionValue =] '*valeur*'  
  Indique si le *option_name* est activé (true, on ou 1) ou désactivé (false, OFF ou 0). la *valeur* est de type **varchar (12)**, sans valeur par défaut. la *valeur* ne respecte pas la casse.  
@@ -83,13 +83,11 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   l'espace disque disponible s'avère suffisant dans la ligne de données.  
   
- Lorsque les chaînes d’objets BLOB sont stockées dans la ligne de données, la lecture et l’écriture des chaînes **Text**, **ntext**ou **image** peuvent être aussi rapides que la lecture ou l’écriture de chaînes de caractères et binaires. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas besoin d'accéder à des pages séparées pour lire ou écrire la chaîne BLOB.  
+ Lorsque les chaînes d’objets BLOB sont stockées dans la ligne de données, la lecture et l’écriture des chaînes **Text**, **ntext**ou **image** peuvent être aussi rapides que la lecture ou l’écriture de chaînes de caractères et binaires. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas besoin d'accéder à des pages séparées pour lire ou écrire la chaîne BLOB.  
   
  Si une chaîne **Text**, **ntext**ou **image** est supérieure à la limite spécifiée ou à l’espace disponible dans la ligne, les pointeurs sont stockés à la place dans la ligne. Les conditions concernant le stockage des chaînes BLOB dans la ligne sont toujours applicables : la ligne de données doit disposer d'un espace suffisant pour contenir les pointeurs.  
   
- Les chaînes d'objets BLOB et les pointeurs stockés dans la ligne d'une table sont considérés comme des chaînes de longueur variable. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'utilise que le nombre d'octets nécessaires au stockage de la chaîne ou du pointeur.  
+ Les chaînes d'objets BLOB et les pointeurs stockés dans la ligne d'une table sont considérés comme des chaînes de longueur variable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'utilise que le nombre d'octets nécessaires au stockage de la chaîne ou du pointeur.  
   
  Les chaînes d'objets BLOB existantes ne sont pas converties immédiatement lorsque l'option text in row est activée pour la première fois. Ces chaînes ne sont converties que lors de leur mise à jour. De même, lorsque la limite de l’option text in Row est augmentée, les chaînes **Text**, **ntext**ou **image** déjà présentes dans la ligne de données ne sont pas converties pour respecter la nouvelle limite jusqu’au moment où elles sont mises à jour.  
   
@@ -138,7 +136,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ## <a name="see-also"></a>Voir aussi  
  [sys. tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

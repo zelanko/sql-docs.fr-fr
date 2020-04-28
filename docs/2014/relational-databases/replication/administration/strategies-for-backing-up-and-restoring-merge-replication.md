@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688902"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Stratégies de sauvegarde et de restauration de la réplication de fusion
@@ -56,7 +56,7 @@ ms.locfileid: "62688902"
 > [!IMPORTANT]  
 >  La synchronisation d'une base de données de publication avec une base de données d'abonnement peut aboutir à des tables publiées restaurées à un point dans le temps plus récent que celui d'autres tables non publiées restaurées à partir de la sauvegarde.  
   
- Si la synchronisation se fait avec un Abonné exécutant une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme. Il doit s'agir d'un abonnement client ou d'un abonnement serveur (appelées abonnement local et abonnement global dans les versions précédentes).  
+ Si vous synchronisez avec un abonné qui exécute une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l’abonnement ne peut pas être anonyme. il doit s’agir d’un abonnement client ou d’un abonnement serveur (appelés abonnements locaux et abonnements globaux dans les versions précédentes).  
   
  Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   

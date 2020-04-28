@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721015"
 ---
 # <a name="rename-a-stored-procedure"></a>Renommer une procédure stockée
@@ -37,26 +37,26 @@ ms.locfileid: "62721015"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Les noms des procédures doivent respecter les conventions concernant les [identificateurs](../databases/database-identifiers.md).  
   
 -   Le fait de renommer une procédure stockée ne modifie pas le nom de l’objet correspondant dans la colonne de définition de l’affichage catalogue **sys.sql_modules** . Par conséquent, nous vous recommandons de ne pas renommer ce type d'objet. À la place, supprimez, puis recréez la procédure stockée avec son nouveau nom.  
   
--   La modification du nom ou de la définition d'une procédure peut entraîner l'échec de ses objets dépendants si ceux-ci n'ont pas été mis à jour pour refléter les modifications apportées à la procédure. Pour plus d’informations, consultez [Afficher les dépendances d’une procédure stockée](view-the-dependencies-of-a-stored-procedure.md).  
+-   La modification du nom ou de la définition d'une procédure peut entraîner l'échec de ses objets dépendants si ceux-ci n'ont pas été mis à jour pour refléter les modifications apportées à la procédure. Pour plus d’informations, consultez [afficher les dépendances d’une procédure stockée](view-the-dependencies-of-a-stored-procedure.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  CREATE PROCEDURE  
- Nécessite l’autorisation CREATE PROCEDURE dans la base de données et l’autorisation ALTER sur le schéma dans lequel la procédure est créée, ou nécessite l’appartenance au rôle de base de données fixe **db_ddladmin** .  
+ Nécessite l’autorisation CREATE PROCEDURE dans la base de données et l’autorisation ALTER sur le schéma dans lequel la procédure est créée, ou nécessite l’appartenance au rôle de base de données fixe **db_ddladmin**.  
   
  ALTER PROCEDURE  
  Nécessite l’autorisation ALTER sur la procédure ou l’appartenance au rôle de base de données fixe **db_ddladmin**.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>Pour renommer une procédure stockée  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62721015"
   
 6.  Modifiez le nom de la procédure référencé dans tous les objets ou scripts dépendants.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-rename-a-stored-procedure"></a>Pour renommer une procédure stockée  
   
@@ -112,11 +112,11 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [CRÉER une procédure &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Créer une procédure stockée](../stored-procedures/create-a-stored-procedure.md)   
  [Modifier une procédure stockée](../stored-procedures/modify-a-stored-procedure.md)   
  [Supprimer une procédure stockée](../stored-procedures/delete-a-stored-procedure.md)   
- [Afficher la définition d'une procédure stockée](view-the-definition-of-a-stored-procedure.md)   
- [Afficher les dépendances d’une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)  
+ [Afficher la définition d’une procédure stockée](view-the-definition-of-a-stored-procedure.md)   
+ [Afficher les dépendances d'une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)  
   
   

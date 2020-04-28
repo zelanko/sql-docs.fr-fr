@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f68524b2713b9d662c9e9ed0950334ea0a94ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983133"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
@@ -45,9 +45,9 @@ ms.locfileid: "73983133"
 |**virtual_address_space_reserved_kb**|**bigint**|Indique le nombre de réservations d'adresses virtuelles, en kilo-octets (Ko), qui ne sont ni validées ni mappées à des pages physiques. N'accepte pas la valeur NULL.|  
 |**virtual_address_space_committed_kb**|**bigint**|Spécifie la quantité d'adresse virtuelle, en Ko, qui a été validée ou mappée à des pages physiques. N'accepte pas la valeur NULL.|  
 |**locked_page_allocations_kb**|**bigint**|Spécifie la quantité de mémoire physique, en Ko, qui a été verrouillée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. N'accepte pas la valeur NULL.|  
-|**single_pages_kb**|**bigint**|**S’applique à** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]jusqu’à.<br /><br /> Quantité de mémoire allouée, en Ko, en utilisant l'allocateur de page unique par les threads en cours d'exécution sur ce nœud. Cette mémoire est allouée à partir du pool de mémoires tampons. Cette valeur indique le nœud où la demande d'allocation s'est produite, et non l'emplacement physique où la demande d'allocation a été satisfaite.|  
+|**single_pages_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Quantité de mémoire allouée, en Ko, en utilisant l'allocateur de page unique par les threads en cours d'exécution sur ce nœud. Cette mémoire est allouée à partir du pool de mémoires tampons. Cette valeur indique le nœud où la demande d'allocation s'est produite, et non l'emplacement physique où la demande d'allocation a été satisfaite.|  
 |**pages_kb**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Spécifie la quantité de mémoire validée, en Ko, allouée de ce nœud NUMA par l'allocateur de pages du gestionnaire de mémoire. N'accepte pas la valeur NULL.|  
-|**multi_pages_kb**|**bigint**|**S’applique à** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]jusqu’à.<br /><br /> Quantité de mémoire allouée, en Ko, en utilisant l'allocateur de plusieurs pages par les threads en cours d'exécution sur ce nœud. Cette mémoire provient de l'extérieur du pool de mémoires tampons. Cette valeur indique le nœud où les demandes d'allocations se sont produites, et non l'emplacement physique où la demande d'allocation a été satisfaite.|  
+|**multi_pages_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Quantité de mémoire allouée, en Ko, en utilisant l'allocateur de plusieurs pages par les threads en cours d'exécution sur ce nœud. Cette mémoire provient de l'extérieur du pool de mémoires tampons. Cette valeur indique le nœud où les demandes d'allocations se sont produites, et non l'emplacement physique où la demande d'allocation a été satisfaite.|  
 |**shared_memory_reserved_kb**|**bigint**|Spécifie la quantité de mémoire partagée, en Ko, qui a été réservée à partir de ce nœud. N'accepte pas la valeur NULL.|  
 |**shared_memory_committed_kb**|**bigint**|Spécifie la quantité de mémoire partagée, en Ko, qui a été validée sur ce nœud. N'accepte pas la valeur NULL.|  
 |**cpu_affinity_mask**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> À usage interne uniquement N'accepte pas la valeur NULL.|  

@@ -11,14 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638845"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Nouveautés de&#39;dans SQL Server Native Client
-  
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] installe [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Il n'y a pas de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  
   
  Il n'y aura plus de mises à jour vers le pilote ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Le successeur du pilote ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, appelé Pilote [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 11 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows, est installé avec [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Pour plus d’informations sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows, consultez [Microsoft ODBC Driver 11 for SQL Server-Windows](https://www.microsoft.com/download/details.aspx?id=36434).  
@@ -51,8 +50,7 @@ ms.locfileid: "62638845"
   
 -   Lors de `ICommandWithParameters::SetParameterInfo`l’appel de, la valeur passée au paramètre *pwszName* doit être un identificateur valide. Pour plus d’informations, consultez [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
   
--   
-  `SQLDescribeParam` retourne maintenant de manière cohérente une valeur qui se conforme à la spécification ODBC. Pour plus d’informations, consultez [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
+-   `SQLDescribeParam` retourne maintenant de manière cohérente une valeur qui se conforme à la spécification ODBC. Pour plus d’informations, consultez [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
   
 -   [Changement de comportement du pilote ODBC lors de la gestion des conversions de caractères](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   

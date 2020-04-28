@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983141"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
@@ -81,7 +81,7 @@ Indique, en octets, la position de fin de la requête que la ligne décrit dans 
   
 *statement_start_offset* est de **type int**.  
   
-La valeur -1 indique la fin du traitement. La valeur par défaut est-1.  
+La valeur -1 indique la fin du traitement. La valeur par défaut est -1.  
   
 ## <a name="table-returned"></a>Table retournée  
   

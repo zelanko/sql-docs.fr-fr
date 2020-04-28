@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655625"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Métadonnées de paramètre et d'ensemble de lignes
@@ -37,10 +37,10 @@ ms.locfileid: "62655625"
   
 |Type de paramètre|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Clear|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Définissez|  
   
@@ -78,15 +78,14 @@ ms.locfileid: "62655625"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- 
-  `IColumnsRowset::GetColumnsRowset` retourne les colonnes suivantes :  
+ `IColumnsRowset::GetColumnsRowset` retourne les colonnes suivantes :  
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Clear|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Définissez|  
   
@@ -117,10 +116,10 @@ ms.locfileid: "62655625"
   
 |Type de paramètre|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Clear|  
+|Date|DBTYPE_DBDATE|6|10|0|Désactiver|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Définissez|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Définissez|  
   
@@ -140,7 +139,7 @@ ms.locfileid: "62655625"
   
  Les indicateurs restants (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE et DBCOLUMNFLAGS_WRITEUNKNOWN) peuvent être définis.  
   
- Un nouvel indicateur, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, est fourni dans *dwFlags* pour permettre à une application de déterminer le type de serveur des colonnes, où *wType* est DBTYPE_DBTIMESTAMP. *bScale* doit également être utilisé pour identifier le type de serveur.  
+ Un nouvel indicateur, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, est fourni dans *dwFlags* pour permettre à une application de déterminer le type de serveur des colonnes, où *wType* est DBTYPE_DBTIMESTAMP. *bScale* doit aussi être utilisé pour identifier le type de serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Métadonnées &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  

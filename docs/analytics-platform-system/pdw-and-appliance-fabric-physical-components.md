@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400919"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Composants physiques d’appliance-système de plateforme d’analyse
@@ -21,7 +21,7 @@ Noms et descriptions des composants physiques PDW et appliance fabric.
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>Diagrammes de composants  
+## <a name="component-diagrams"></a><a name="diagrams"></a>Diagrammes de composants  
 Cela indique les noms des composants physiques et leur emplacement dans le premier rack d’une appliance à 6 nœuds de calcul.  
   
 ![Noms des composants de région PDW - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
@@ -34,7 +34,7 @@ Voici une vue consolidée d’une région PDW avec 6 nœuds de calcul.
   
 ![Noms des composants PDW](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
-## <a name="pdw"></a>Composants PDW  
+## <a name="pdw-components"></a><a name="pdw"></a>Composants PDW  
 Les machines virtuelles PDW font partie de la région PDW.  
   
 *PDW_region*CTL01  
@@ -46,7 +46,7 @@ Un ordinateur virtuel qui exécute le nœud de contrôle. Cette opération s’e
 *PDW_region*-CMP01 via *PDW_Region*-CMP06  
 Un ordinateur virtuel qui exécute le nœud de calcul. Dans ce diagramme de nœud de calcul 6, les hôtes HSA01 via HSA06 exécutent les machines virtuelles de nœud de calcul CMP01 via CMP06, respectivement.  
   
-## <a name="fabric"></a>Composants de l’infrastructure d’appliances  
+## <a name="appliance-fabric-components"></a><a name="fabric"></a>Composants de l’infrastructure d’appliances  
 Ces composants font partie de l’infrastructure de l’appliance.  
   
 ### <a name="virtual-machines"></a>Virtual Machines  

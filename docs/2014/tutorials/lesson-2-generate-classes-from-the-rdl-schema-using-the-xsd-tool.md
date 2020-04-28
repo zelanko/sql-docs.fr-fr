@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653753"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Leçon 2 : génération de classes à partir du schéma RDL à l'aide de l'outil xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Leçon 2 : Générer des classes à partir du schéma RDL à l’aide de l’outil xsd
   Une fois que vous avez créé votre projet [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], l'étape suivante consiste à extraire une copie locale du schéma de la définition du rapport et à exécuter l'outil de définition du schéma XML (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Pour générer les classes RDL  
@@ -56,6 +56,6 @@ ms.locfileid: "62653753"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise à jour des rapports à l’aide de classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

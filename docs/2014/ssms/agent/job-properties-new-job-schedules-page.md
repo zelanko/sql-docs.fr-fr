@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695675"
 ---
 # <a name="job-properties-new-job-schedules-page"></a>Propriétés du travail : Nouveau travail (page Planifications)
@@ -26,10 +26,10 @@ ms.locfileid: "62695675"
  **Liste des planifications**  
  Affiche la liste des planifications pour ce travail.  
   
- **Nouveau**  
+ **Nouvelle**  
  Créez une nouvelle planification. Une fois que vous avez créé la planification, celle-ci est ajoutée au travail.  
   
- **Reprend**  
+ **Choisir**  
  Sélectionnez une planification parmi les planifications existantes. Étant donné qu'un travail et une planification doivent appartenir à la même personne, cette option vous permet uniquement d'accéder aux planifications dont vous êtes le propriétaire.  
   
  **Modifier**  

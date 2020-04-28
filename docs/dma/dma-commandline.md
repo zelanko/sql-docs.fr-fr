@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056624"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécuter Assistant Migration de données à partir de la ligne de commande
@@ -259,7 +259,7 @@ Ces commandes prennent en charge des recommandations pour les deux Azure SQL Dat
 |`/SkuRecommendationCurrencyCode` | Devise dans laquelle afficher les prix (par exemple, « USD ») | O <br> (Pour les prix les plus récents)
 |`/SkuRecommendationOfferName` | Nom de l’offre (par exemple, « MS-AZR-0003P »). Pour plus d’informations, consultez la page Détails de l' [offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | O <br> (Pour les prix les plus récents)
 |`/SkuRecommendationRegionName` | Nom de la région (par exemple, « Ouest ») | O <br> (Pour les prix les plus récents)
-|`/SkuRecommendationSubscriptionId` | ID de l’abonnement. | O <br> (Pour les prix les plus récents)
+|`/SkuRecommendationSubscriptionId` | L'ID de l'abonnement. | O <br> (Pour les prix les plus récents)
 |`/SkuRecommendationDatabasesToRecommend` | Liste des bases de données à recommander, séparées par des espaces (par exemple « Database1 », « Database2 » « Database3 »). Les noms respectent la casse et doivent être placés entre guillemets doubles. En cas d’omission, des recommandations sont fournies pour toutes les bases de données. | N
 |`/AzureAuthenticationTenantId` | Locataire d’authentification. | O <br> (Pour les prix les plus récents)
 |`/AzureAuthenticationClientId` | ID client de l’application AAD utilisée pour l’authentification. | O <br> (Pour les prix les plus récents)

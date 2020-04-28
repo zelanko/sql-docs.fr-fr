@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676066"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>Leçon 1 : création du projet client du service Web
+# <a name="lesson-1-creating-the-web-service-client-project"></a>Leçon 1 : Création du projet client du service web
   Dans cette procédure pas à pas, vous allez créer une application console simple qui accède au service Web Report Server. Il est supposé que vous utilisez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour le développement.  
   
 ### <a name="to-create-a-console-application"></a>Pour créer une application console  

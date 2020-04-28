@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982116"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982116"
 
 Capture des données de diagnostics et des informations d'intégrité à propos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour détecter des échecs potentiels. La procédure fonctionne en mode de répétition et envoie régulièrement des résultats. Elle peut être appelée depuis une connexion DAC ou ordinaire.  
   
-**S’applique à** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (et versions ultérieures).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures).  
   
 ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,12 +58,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
-|**creation_time**|**DATETIME**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
+|**creation_time**|**datetime**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
 |**component_type**|**sysname**|Indique si la ligne contient des informations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le composant au niveau de l’instance ou pour un groupe de disponibilité Always On :<br /><br /> instance<br /><br /> Always On : AvailabilityGroup|  
 |**component_name**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> événements<br /><br /> *\<nom du groupe de disponibilité>*|  
-|**Département**|**int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : AVERTISSEMENT<br /><br /> 3 : erreur|  
-|**métadonnée**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
+|**state**|**int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : Inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : AVERTISSEMENT<br /><br /> 3 : erreur|  
+|**data**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
   
  Voici les descriptions des cinq composants :  
   

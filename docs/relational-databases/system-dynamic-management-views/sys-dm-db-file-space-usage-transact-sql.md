@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a160909901b265a6d07af18f6373554b036fe894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983046"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "73983046"
 |user_object_reserved_page_count|**bigint**|Nombre total de pages allouées à partir d'étendues uniformes pour les objets utilisateur de la base de données. Ce nombre inclut les pages non utilisées provenant d'une étendue allouée.<br /><br /> Les pages IAM ne sont pas incluses parce qu'elles sont toujours allouées à partir d'étendues mixtes. Les pages PFS sont incluses si elles sont allouées à partir d'une étendue uniforme.<br /><br /> Vous pouvez utiliser la total_pages colonne dans l’affichage catalogue [sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) pour retourner le nombre de pages réservées de chaque unité d’allocation dans l’objet utilisateur. Notez toutefois que la colonne total_pages inclut les pages IAM.|  
 |internal_object_reserved_page_count|**bigint**|Nombre total de pages d'étendues uniformes allouées pour des objets internes dans le fichier. Ce nombre inclut les pages non utilisées provenant d'une étendue allouée.<br /><br /> Les pages IAM ne sont pas incluses parce qu'elles sont toujours allouées à partir d'étendues mixtes. Les pages PFS sont incluses si elles sont allouées à partir d'une étendue uniforme.<br /><br /> Il n'existe pas d'affichage catalogue ni d'objet de gestion dynamique qui retourne le nombre de pages de chaque objet interne.|  
 |mixed_extent_page_count|**bigint**|Nombre total de pages allouées et non allouées dans les étendues mixtes allouées du fichier. Les étendues mixtes contiennent des pages allouées à différents objets. Ce nombre comprend toutes les pages IAM du fichier.|
-|modified_extent_page_count|**bigint**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.<br /><br />Nombre total de pages modifiées dans les étendues allouées du fichier depuis la dernière sauvegarde complète de la base de données. Le nombre de pages modifiées peut être utilisé pour effectuer le suivi de la quantité de modifications différentielles dans la base de données depuis la dernière sauvegarde complète, afin de déterminer si une sauvegarde différentielle est nécessaire.|
+|modified_extent_page_count|**bigint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et versions ultérieures.<br /><br />Nombre total de pages modifiées dans les étendues allouées du fichier depuis la dernière sauvegarde complète de la base de données. Le nombre de pages modifiées peut être utilisé pour effectuer le suivi de la quantité de modifications différentielles dans la base de données depuis la dernière sauvegarde complète, afin de déterminer si une sauvegarde différentielle est nécessaire.|
 |pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
 |distribution_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numérique unique associé à la distribution.|  
   
@@ -84,9 +84,9 @@ ms.locfileid: "73983046"
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|À|Relation|  
+|À partir|À|Relation|  
 |----------|--------|------------------|  
-|sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|Un-à-un|  
+|sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|Un à un|  
   
 ## <a name="permissions"></a>Autorisations
 
@@ -118,7 +118,7 @@ FROM sys.dm_db_file_space_usage;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
- [sys. dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+ [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

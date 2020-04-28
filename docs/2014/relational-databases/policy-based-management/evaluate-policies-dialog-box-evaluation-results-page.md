@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705142"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Boîte de dialogue Évaluer les stratégies, page Résultats d'évaluation
@@ -26,7 +26,7 @@ ms.locfileid: "62705142"
  **Résultats : Stratégie**  
  Nom de la stratégie évaluée. Cette zone est en lecture seule.  
   
- **Résultats : Message**  
+ **Résultats : message**  
  Lien vers des informations si une erreur se produit.  
   
  **Détails sur les cibles : Serveur**  
@@ -42,8 +42,8 @@ ms.locfileid: "62705142"
  Lien vers des informations si une erreur se produit.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)   
- [Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie](evaluate-policies-dialog-box-policy-selection-page.md)   
- [Vue détaillée des résultats, boîte de dialogue](results-detailed-view-dialog-box.md)  
+ [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)   
+ [Boîte de dialogue évaluer les stratégies, page sélection de la stratégie](evaluate-policies-dialog-box-policy-selection-page.md)   
+ [Boîte de dialogue Vue détaillée des résultats](results-detailed-view-dialog-box.md)  
   
   

@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721651"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
@@ -101,8 +101,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
  Si vous utilisez un serveur de publication pour la première fois, vous devez également configurer un serveur de distribution et un partage de fichiers d'instantanés. L'Agent de fusion de chaque Abonné doit disposer d'autorisations de lecture sur le partage d'instantanés. Pour plus d’informations, consultez [Configurer la distribution](configure-distribution.md) et [Sécuriser le dossier d’instantanés](security/secure-the-snapshot-folder.md).  
   
- 
-  `gen` est un mot réservé dans les fichiers XML de websync. Ne pas tentez de publier des tables contenant des colonnes nommées `gen`.  
+ `gen` est un mot réservé dans les fichiers XML de websync. Ne pas tentez de publier des tables contenant des colonnes nommées `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Configuration de l'abonnement  
  Après avoir activé une publication et configuré IIS, créez un abonnement par extraction et spécifiez que cet abonnement doit être synchronisé à l'aide d'IIS. (La synchronisation Web est prise en charge uniquement pour les abonnements par extraction de données.)  

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b577fd9a78dbb5f12af79e190709065931ec463a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520557"
 ---
 # <a name="report-server-web-service"></a>service Web Report Server
@@ -37,11 +37,11 @@ ms.locfileid: "62520557"
 -   Développer des applications à l'aide de n'importe quel jeu SOAP d'outils de développement. Pour plus d’informations, consultez [Rôle de SOAP dans Reporting Services](../report-server-web-service/the-role-of-soap-in-reporting-services.md).  
   
 ## <a name="programming-diagram"></a>Diagramme de programmation  
- ![Options de développement du service Web Report Server](../../../2014/reporting-services/media/reportserviceswebserviceprog-01.gif "Options de développement du service Web Report Server")  
+ ![Options de développement du service web Report Server](../../../2014/reporting-services/media/reportserviceswebserviceprog-01.gif "Options de développement du service web Report Server")  
 Options de développement de service Web disponibles dans Reporting Services  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Méthodes des services Web Report Server](../report-server-web-service/methods/report-server-web-service-methods.md)  
+ [Méthodes du service web Report Server](../report-server-web-service/methods/report-server-web-service-methods.md)  
  Décrit les fonctionnalités et les méthodes de chaque service Web Report Server.  
   
  [Rôle de SOAP dans Reporting Services](../report-server-web-service/the-role-of-soap-in-reporting-services.md)  
@@ -50,7 +50,7 @@ Options de développement de service Web disponibles dans Reporting Services
  [Accès à l'API  SOAP](../report-server-web-service/accessing-the-soap-api.md)  
  Décrit le langage WSDL (Web Service Description Language) et fournit des URL pour accéder à un fichier WSDL Reporting Services.  
   
- [Génération d’applications à l’aide du service web et de .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Création d’applications à l’aide du service web et du .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
  Contient des informations sur le développement d'applications et de services Web qui appellent l'API SOAP Reporting Services.  
   
  [Écrire des scripts avec l'utilitaire rs.exe et le service Web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
@@ -62,12 +62,11 @@ Options de développement de service Web disponibles dans Reporting Services
 ## <a name="user-requirements-for-web-service-development"></a>Conditions requises liées à l'utilisateur pour le développement du service Web  
  Pour développer des applications à l'aide du service Web Report Server, vous devez posséder :  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 ou version ultérieure, installé sur un ordinateur doté d’une connexion Internet et ayant accès au serveur de rapports ;  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 ou version ultérieure, installé sur un ordinateur doté d’une connexion Internet et ayant accès au serveur de rapports ;  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Kit de développement logiciel (SDK) installé sur un ordinateur si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vous souhaitez développer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]et déployer des applications à l’aide de.  
   
--   des connaissances approfondies des fonctionnalités et des capacités de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ;  
+-   Une compréhension approfondie des fonctionnalités et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] des fonctionnalités.  
   
 -   de solides acquis concernant SOAP et les [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)];  
   

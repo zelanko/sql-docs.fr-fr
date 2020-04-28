@@ -14,10 +14,10 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729238"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorisations des membres de la hiérarchie (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "73729238"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lire**|Les membres sont affichés.<br /><br /> <br /><br /> Remarque : si vous affectez uniquement l’autorisation **Lire** à **Racine**, les membres sous **Racine** sont en lecture seule. Toutefois, dans les collections et hiérarchies explicites, l’utilisateur peut déplacer des membres vers **Racine** et ajouter de nouveaux membres à **Racine**.|  
-|**Créés**|L’autorisation Créer n’est pas disponible dans les autorisations des membres de la hiérarchie.|  
+|**Créer**|L’autorisation Créer n’est pas disponible dans les autorisations des membres de la hiérarchie.|  
 |**Mise à jour**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
 |**Supprimer**|Les membres sont affichés, et l’utilisateur peut les modifier.|  
 |**Deny**|Les membres ne sont pas affichés.|  
@@ -60,7 +60,7 @@ ms.locfileid: "73729238"
   
 -   Si les autorisations **Mettre à jour** et **Créer** sont affectées à un nœud de hiérarchie, et que les autorisations **Mettre à jour** et **Supprimer** sont attribuées à un autre nœud, les membres du nœud peuvent être mis à jour.  
   
--   Si un nœud de hiérarchie est affecté à n’importe quelle combinaison****/d’autorisations **Create**/**Update Update**/**Delete** et qu’un autre nœud reçoit les autorisations **Deny** , l’accès aux membres du nœud est refusé.  
+-   Si un nœud de hiérarchie est affecté à n’importe quelle combinaison**Read**/d’autorisations **Create**/**Update Update**/**Delete** et qu’un autre nœud reçoit les autorisations **Deny** , l’accès aux membres du nœud est refusé.  
   
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog, [Améliorations de sécurité](https://go.microsoft.com/fwlink/p/?LinkId=615376), sur msdn.com.  

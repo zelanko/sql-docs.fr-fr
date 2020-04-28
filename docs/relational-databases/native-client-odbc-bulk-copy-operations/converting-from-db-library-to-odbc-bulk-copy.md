@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73785190"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
@@ -46,7 +46,7 @@ ms.locfileid: "73785190"
     |-------------------------|--------------------------------|-------------------------|  
     |Valeurs NULL fournies|0|-1 (SQL_NULL_DATA)|  
     |Données de variables fournies|-1|-10 (SQL_VARLEN_DATA)|  
-    |Caractère de longueur nulle ou chaîne binaire|N/D|0|  
+    |Caractère de longueur nulle ou chaîne binaire|NA|0|  
   
      Dans DB-Library, une valeur *varlen* de-1 indique que les données de longueur variable sont fournies, ce qui, dans le *cbData* ODBC, est interprété comme signifiant que seules les valeurs NULL sont fournies. Modifiez les spécifications *VARLEN* DB-Library de-1 en SQL_VARLEN_DATA et toutes les spécifications *varlen* de 0 à SQL_NULL_DATA.  
   

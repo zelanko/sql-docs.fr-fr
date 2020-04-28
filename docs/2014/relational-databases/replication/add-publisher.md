@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676918"
 ---
 # <a name="sql-server-replication-add-publisher-dialog-box"></a>Réplication SQL Server boîte de dialogue « Ajouter un serveur de publication » 
-  La boîte de dialogue Ajouter un serveur de **publication** permet d’ajouter à un ou plusieurs serveurs de publication dans le volet gauche du moniteur de réplication. Après avoir ajouté un serveur de publication, sélectionnez le serveur de publication dans le volet de gauche pour afficher les informations sur ce dernier dans le volet de droite.  
+  La boîte de dialogue **Ajouter un serveur de publication** permet d'ajouter des serveurs de publication dans le volet de gauche du Moniteur de réplication. Après avoir ajouté un serveur de publication, sélectionnez le serveur de publication dans le volet de gauche pour afficher les informations sur ce dernier dans le volet de droite.  
   
 ## <a name="options"></a>Options  
  **Ajouter**  
@@ -34,7 +34,7 @@ ms.locfileid: "62676918"
   
 -   **Ajouter un serveur de publication Oracle...**  
   
-     Connectez-vous au serveur de distribution [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associé au serveur de publication Oracle à l'aide de la boîte de dialogue **Se connecter au serveur** .  
+     Connectez-vous au serveur de distribution [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associé au serveur de publication Oracle à l’aide de la boîte de dialogue **Se connecter au serveur**.  
   
 -   **Spécifier un serveur de distribution et ajouter ses serveurs de publication...**  
   

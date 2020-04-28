@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97805251e309132892fb94db63a308b10657daff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983100"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
@@ -38,12 +38,12 @@ ms.locfileid: "73983100"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary (8)**|Spécifie l'adresse mémoire unique du régisseur de mémoire. Il s'agit de la colonne clé primaire. N'accepte pas la valeur NULL.|  
-|**entrer**|**nvarchar (60)**|Spécifie le type de régisseur de mémoire. Chaque régisseur de mémoire a un type spécifique, par exemple les régisseurs de mémoire CLR MEMORYCLERK_SQLCLR. N'accepte pas la valeur NULL.|  
-|**nomme**|**nvarchar (256)**|Spécifie le nom affecté en interne au régisseur de mémoire. Un composant peut avoir plusieurs régisseurs de mémoire d'un type particulier. Un composant peut choisir d'utiliser des noms spécifiques pour identifier les régisseurs de mémoire du même type. N'accepte pas la valeur NULL.|  
+|**type**|**nvarchar(60)**|Spécifie le type de régisseur de mémoire. Chaque régisseur de mémoire a un type spécifique, par exemple les régisseurs de mémoire CLR MEMORYCLERK_SQLCLR. N'accepte pas la valeur NULL.|  
+|**name**|**nvarchar(256)**|Spécifie le nom affecté en interne au régisseur de mémoire. Un composant peut avoir plusieurs régisseurs de mémoire d'un type particulier. Un composant peut choisir d'utiliser des noms spécifiques pour identifier les régisseurs de mémoire du même type. N'accepte pas la valeur NULL.|  
 |**memory_node_id**|**smallint**|Spécifie l'identificateur du nœud de mémoire. N'accepte pas la valeur NULL.|  
-|**single_pages_kb**|**bigint**|**S’applique à** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]jusqu’à.|  
+|**single_pages_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
 |**pages_kb**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Spécifie la quantité de mémoire de page allouée, en kilo-octets (Ko), pour ce régisseur de mémoire. N'accepte pas la valeur NULL.|  
-|**multi_pages_kb**|**bigint**|**S’applique à** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]jusqu’à.<br /><br /> Quantité de mémoire multipage allouée, en Ko. Il s'agit de la quantité de mémoire allouée à l'aide de l'allocateur de pages multiples des nœuds de mémoire. Cette mémoire est allouée en dehors du pool de mémoires tampons ; elle tire parti de l'allocateur virtuel des nœuds mémoire. N'accepte pas la valeur NULL.|  
+|**multi_pages_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Quantité de mémoire multipage allouée, en Ko. Il s'agit de la quantité de mémoire allouée à l'aide de l'allocateur de pages multiples des nœuds de mémoire. Cette mémoire est allouée en dehors du pool de mémoires tampons ; elle tire parti de l'allocateur virtuel des nœuds mémoire. N'accepte pas la valeur NULL.|  
 |**virtual_memory_reserved_kb**|**bigint**|Spécifie la quantité de mémoire virtuelle qui est réservée par un régisseur de mémoire. N'accepte pas la valeur NULL.|  
 |**virtual_memory_committed_kb**|**bigint**|Spécifie la quantité de mémoire virtuelle qui est validée par un régisseur de mémoire. La quantité de mémoire validée doit toujours être inférieure à la quantité de mémoire réservée. N'accepte pas la valeur NULL.|  
 |**awe_allocated_kb**|**bigint**|Spécifie la quantité de mémoire, en kilo-octets (Ko), verrouillée en mémoire physique et non paginée par le système d'exploitation. N'accepte pas la valeur NULL.|  
@@ -67,9 +67,9 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
 ## <a name="see-also"></a>Voir aussi  
 
  [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys. dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   

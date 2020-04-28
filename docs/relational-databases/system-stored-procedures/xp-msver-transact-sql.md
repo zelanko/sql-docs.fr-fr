@@ -18,10 +18,10 @@ ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 85552daa2dda14c6a7516c96f0f9fe6566f31111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843901"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
@@ -63,7 +63,7 @@ xp_msver [ optname ]
 |**ProcessorActiveMask**|Indique les processeurs installés dans l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et qui sont activés et utilisables par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |**ProcessorType**|Type de processeur. Similaire à la **plateforme**.|  
 |**PhysicalMemory**|Quantité en mégaoctets (Mo) de mémoire vive (RAM) installée sur l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Product ID**|PID (ID de produit). Ce numéro est spécifié au cours de l'installation. Il se trouve sur l'étiquette figurant sur un autocollant placé sur la pochette du CD original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**ID produit**|PID (ID de produit). Ce numéro est spécifié au cours de l'installation. Il se trouve sur l'étiquette figurant sur un autocollant placé sur la pochette du CD original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  1 (réussite)  
@@ -76,7 +76,7 @@ xp_msver [ optname ]
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procédures stockées étendues générales &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

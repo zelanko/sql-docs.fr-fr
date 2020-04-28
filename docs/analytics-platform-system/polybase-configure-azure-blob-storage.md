@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400725"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurer Polybase pour accéder à des données externes dans le stockage d’objets BLOB Azure
@@ -23,7 +23,7 @@ L’article explique comment utiliser Polybase sur une instance de SQL Server po
 > [!NOTE]
 > Actuellement, les APS prennent uniquement en charge le stockage d’objets BLOB Azure à usage général v1 localement redondant (LRS).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
  - Stockage d’objets BLOB Azure dans votre abonnement.
  - Conteneur créé dans le stockage d’objets BLOB Azure.
@@ -66,7 +66,7 @@ Pour interroger les données dans votre stockage d’objets BLOB Azure, vous dev
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Créez une source de données externe avec [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Créer une source de données externe avec [Create external data source](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  

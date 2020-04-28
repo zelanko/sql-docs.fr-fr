@@ -11,10 +11,10 @@ ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728700"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Exemples de règles d’entreprise (Master Data Services)
@@ -76,7 +76,7 @@ Else
   
 Exemple de modèle  |Entité  |Nom de la règle d’entreprise|Description    
 ---------|---------|---------|-------------  
-Produit     |Produit         |Required fields| Spécifie les attributs obligatoires pour les membres de l’entité Product.           
+Produit     |Produit         |Champs obligatoires| Spécifie les attributs obligatoires pour les membres de l’entité Product.           
 Dans la règle d’entreprise suivante, si toutes les conditions sont réunies, `is required` [l’action de validation](../master-data-services/business-rule-actions-master-data-services.md) est effectuée pour les attributs spécifiés. Les valeurs de l’attribut ne peuvent pas être Null ni vides.  
 ```  
 If  
@@ -135,7 +135,7 @@ Else
   
 Exemple de modèle  |Entité  |Nom de la règle d’entreprise|Description    
 ---------|---------|---------|------------  
-Produit     | Produit        |  Nom par défaut| Spécifie le nom de produit par défaut sur la base des valeurs des attributs Color et Class. Lorsque la valeur de l’attribut Color n’est pas YLO et que la valeur de l’attribut Class n’est pas NA, le nom par défaut est Yellow NA.         
+Produit     | Produit        |  Default Name| Spécifie le nom de produit par défaut sur la base des valeurs des attributs Color et Class. Lorsque la valeur de l’attribut Color n’est pas YLO et que la valeur de l’attribut Class n’est pas NA, le nom par défaut est Yellow NA.         
 Dans la règle d’entreprise suivante, si la valeur des attributs Class et Color ne répondent pas à la condition de règle `is equal` , `defaults to` [l’action de règle](../master-data-services/business-rule-actions-master-data-services.md) est appliquée à l’attribut Name.  
 ```  
 If  

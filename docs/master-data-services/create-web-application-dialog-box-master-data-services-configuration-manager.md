@@ -13,10 +13,10 @@ ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b35c47704915ec9e85f0c4f2ac083bfb7a6017ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729508"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Boîte de dialogue Créer une application Web (Gestionnaire de configuration des services de données de référence)
@@ -25,7 +25,7 @@ ms.locfileid: "73729508"
 
   Utilisez la boîte de dialogue **Créer une application web** pour créer l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Cette application web est créée sur le site que vous avez sélectionné dans la page **Configuration web** .  
   
-## <a name="web-application"></a>Application web  
+## <a name="web-application"></a>Application Web  
  Le serveur web sert le contenu pour cette application web à partir du dossier [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** folder in the file system. Cet emplacement est spécifié pendant l’installation et, par défaut, le chemin d’accès est *lecteur*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication.  
   
 |Nom du contrôle|Description|  
@@ -44,7 +44,7 @@ ms.locfileid: "73729508"
   
 ## <a name="see-also"></a>Voir aussi  
  [Page de configuration Web &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
-Master Data Services Configuration requise pour l’application Web d' [installation et de Configuration](../master-data-services/master-data-services-installation-and-configuration.md) [&#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
- [Créer une application Web Data Manager principale &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+[Installation et configuration de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md) [Configuration requise pour l’application web &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
+ [Créer une application web Master Data Manager &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

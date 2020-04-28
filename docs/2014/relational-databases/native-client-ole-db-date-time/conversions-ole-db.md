@@ -1,5 +1,5 @@
 ---
-title: Liaisons et conversions (OLE DB) | Microsoft Docs
+title: Liaisons et conversions (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638206"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Liaisons et conversions (OLE DB)
@@ -28,15 +28,15 @@ ms.locfileid: "62638206"
   
 -   Le format des chaînes `datetime` et `datetimeoffset` est le suivant :  
   
-     *aaaa*-** mm-*JJ*[ *hh*:*mm*:*SS*[.* 9999999*] [ ?? *hh*:*mm*]]  
+     *aaaa*-*mm*mm-*JJ*[ *hh*:*mm*:*SS*[.* 9999999*] [ ?? *hh*:*mm*]]  
   
 -   Le format des chaînes `time` est le suivant :  
   
-     *hh*:*mm*:*SS*[.* 9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   Le format des chaînes `date` est le suivant :  
   
-     *aaaa*-** mm-*JJ*  
+     *aaaa*-*mm*-*jj*  
   
 > [!NOTE]  
 >  Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. C'est pourquoi certaines conversions réalisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 et versions ultérieures diffèrent de la spécification OLE DB.  
@@ -69,6 +69,6 @@ ms.locfileid: "62638206"
  Décrit les conversions date/heure effectuées entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) et une application cliente écrite avec le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations de la date et de l’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

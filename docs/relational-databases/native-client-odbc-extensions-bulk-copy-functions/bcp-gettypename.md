@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782659"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -40,7 +40,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *lexical*  
+ *token*  
  Valeur indiquant un jeton de type BCP.  
   
  *case*  
@@ -56,14 +56,14 @@ RETCODE bcp_gettypename (
   
 |Nom du type BCP|MaxType|Output|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|Vous pouvez soit utiliser|**sépar**|  
-|**SQLNUMERIC**|Vous pouvez soit utiliser|**chiffre**|  
+|**SQLDECIMAL**|Vous pouvez soit utiliser|**decimal**|  
+|**SQLNUMERIC**|Vous pouvez soit utiliser|**numeric**|  
 |**SQLINT1**|Vous pouvez soit utiliser|**tinyint**|  
 |**SQLINT2**|Vous pouvez soit utiliser|**smallint**|  
 |**SQLINT4**|Vous pouvez soit utiliser|**int**|  
 |**SQLMONEY**|Vous pouvez soit utiliser|**money**|  
 |**SQLFLT8**|Vous pouvez soit utiliser|**float**|  
-|**SQLDATETIME**|Vous pouvez soit utiliser|**DATETIME**|  
+|**SQLDATETIME**|Vous pouvez soit utiliser|**datetime**|  
 |**SQLBITN**|Vous pouvez soit utiliser|**bit-null**|  
 |**SQLBIT**|Vous pouvez soit utiliser|**bit**|  
 |**SQLBIGCHAR**|Non|**char**|  
@@ -82,7 +82,7 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|Vous pouvez soit utiliser|**float-null**|  
 |**SQLAOPSUM**|Vous pouvez soit utiliser|**Checksum**|  
 |**SQLAOPAVG**|Vous pouvez soit utiliser|**AVG**|  
-|**SQLAOPCNT**|Vous pouvez soit utiliser|**Saut**|  
+|**SQLAOPCNT**|Vous pouvez soit utiliser|**Count**|  
 |**SQLAOPMIN**|Vous pouvez soit utiliser|**Min**|  
 |**SQLAOPMAX**|Vous pouvez soit utiliser|**Max**|  
 |**SQLDATETIM4**|Vous pouvez soit utiliser|**smalldatetime**|  

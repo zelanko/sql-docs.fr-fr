@@ -19,10 +19,10 @@ ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 601a584a315eba7013c086dc59c9fb5bfeff8693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783221"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -164,7 +164,7 @@ Le tableau suivant répertorie les types de données énumérées valides et les
 |SQLIMAGE|unsigned char *|  
 |SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|*Tout type de données à l’exception de :*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLVARIANT|*Tout type de données sauf :*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
 |SQLXML|*Types de données C pris en charge :*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
 
 *idxServerCol* Position ordinale de la colonne dans la table de base de données dans laquelle les données sont copiées. La première colonne d'une table est la colonne 1. La position ordinale d'une colonne est indiquée par [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
@@ -177,7 +177,7 @@ Le tableau suivant répertorie les types de données énumérées valides et les
 
 Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans une table dans.  
 
-Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L' **** appel de bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit la table cible pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, a la valeur null ; le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
+Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. L' **bcp_init** appel de bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit la table cible pour la copie en bloc. Lors de l’appel de **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le paramètre **bcp_init** _szDataFile_ , qui indique le fichier de données, a la valeur null ; le paramètre **bcp_init**_eDirection_ est défini sur DB_IN.  
 
 Effectuez un appel de **bcp_bind** distinct pour chaque colonne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table dans laquelle vous souhaitez effectuer la copie. Une fois les appels de **bcp_bind** nécessaires effectués, appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programme vers. La reliaison des colonnes n'est pas prise en charge.
 

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729346"
 ---
 # <a name="deprecated-master-data-services-features"></a>Fonctionnalités Master Data Services déconseillées
@@ -49,13 +49,13 @@ ms.locfileid: "73729346"
   
 ## <a name="attribute-entity-transaction-log-type"></a>Type de journal des transactions d’entité Attribut  
 Le type de journal des transactions d’entité « Attribut » est déconseillé. Migrez vers le type de journal des transactions d’entité « Membre ». Pour plus d’informations sur les types de journaux des transactions d’entité, consultez la rubrique suivante :
-* [Modifier le type de journal des transactions de l’entité (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
+* [Modifier le type du journal des transactions de l’entité (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [Historique de révision de membre](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)sur msdn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités de Master Data Services abandonnées](../master-data-services/discontinued-master-data-services-features.md)  
+ [Fonctionnalités Master Data Services éliminées](../master-data-services/discontinued-master-data-services-features.md)  
   
   

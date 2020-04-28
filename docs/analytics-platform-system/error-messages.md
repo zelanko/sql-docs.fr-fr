@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401164"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Messages d’erreur en parallèle Data Warehouse
 
 Les messages d’erreur des Data Warehouse parallèles signalent les erreurs et les problèmes rencontrés par les composants PDW et peuvent également inclure des erreurs de SQL Server dans les PDW. Ces messages d’erreur utilisent une syntaxe cohérente pour présenter des informations. La compréhension de cette syntaxe vous permettra d’identifier et de corriger les problèmes sur SQL Server PDW.  
   
-## <a name="Basics"></a>Notions de base des messages d’erreur  
+## <a name="error-message-basics"></a><a name="Basics"></a>Notions de base des messages d’erreur  
 Les messages d’erreur retournés suivent la même syntaxe.  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  

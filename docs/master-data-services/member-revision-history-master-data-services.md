@@ -11,10 +11,10 @@ ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729109"
 ---
 # <a name="member-revision-history-master-data-services"></a>Historique de révision de membre (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "73729109"
 ## <a name="view-and-manage-revision-history-by-entity"></a>Affichage et gestion de l’historique de révision par entité  
  Dans la zone fonctionnelle Explorateur, vous pouvez afficher les révisions pour tous les membres de l’entité. Si vous disposez des autorisations de mise à jour, vous pouvez restaurer le membre à une révision précédente.  
   
- **Pour afficher et gérer l’historique des révisions**  
+ **Afficher et gérer l’historique de révision**  
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], sélectionnez le modèle et la version, puis cliquez sur **Explorateur**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73729109"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Rétablissement de l’historique de révision de membre|[Restaurer l’historique de révision de membre &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
+|Rétablissement de l’historique de révision de membre|[Rétablissement de l’historique de révision de membre &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   

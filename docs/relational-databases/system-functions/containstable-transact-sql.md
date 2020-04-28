@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983209"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
@@ -113,16 +113,16 @@ CONTAINSTABLE
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Tableau*  
+ *table*  
  Nom d'une table qui a été indexée en texte intégral. la *table* peut être un nom d’objet de base de données en un, deux, trois ou quatre parties. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
   
  la *table* ne peut pas spécifier un nom de serveur et ne peut pas être utilisée dans des requêtes sur des serveurs liés.  
   
  *column_name*  
- Nom d'une ou de plusieurs colonnes indexées pour la recherche en texte intégral. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
+ Nom d'une ou de plusieurs colonnes indexées pour la recherche en texte intégral. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
   
  *column_list*  
- Indique que plusieurs colonnes, délimitées par des virgules, peuvent être spécifiées. *column_list* doit être placé entre parenthèses. Une seule et même langue doit être utilisée dans toutes les colonnes de *column_list*, sauf si *language_term* est spécifié.  
+ Indique que plusieurs colonnes, délimitées par des virgules, peuvent être spécifiées. *column_list* doit être mis entre parenthèses. Une seule et même langue doit être utilisée dans toutes les colonnes de *column_list*, sauf si *language_term* est spécifié.  
   
  \*  
  Spécifie que toutes les colonnes indexées en texte intégral de la *table* doivent être utilisées pour rechercher la condition de recherche donnée. Une seule et même langue doit être utilisée dans toutes les colonnes de la table, sauf si *language_term* est spécifié.  
@@ -132,9 +132,9 @@ CONTAINSTABLE
   
  Si des documents de langues différentes sont stockés ensemble en tant qu'objets blob dans une colonne unique, l'identificateur de paramètres régionaux (LCID) d'un document donné détermine la langue utilisée pour l'indexation de son contenu. Quand une requête est effectuée sur la colonne, la spécification de *LANGUAGE**language_term* augmente la probabilité d’une meilleure correspondance.  
   
- Lorsqu’il est spécifié sous forme de chaîne, *language_term* correspond à la valeur de la colonne **alias** dans la vue de compatibilité [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  La chaîne doit être placée entre guillemets simples, comme dans '*language_term*'. Quand il est spécifié sous la forme d’un entier, *language_term* est le LCID réel qui identifie la langue. Quand il est spécifié sous la forme d’une valeur hexadécimale, *language_term* est 0x suivi de la valeur hexadécimale du LCID. La valeur hexadécimale ne doit pas dépasser huit caractères, y compris les zéros non significatifs.  
+ Lorsqu’il est spécifié sous forme de chaîne, *language_term* correspond à la valeur de la colonne **alias** dans la vue de compatibilité [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  La chaîne doit être placée entre guillemets simples, comme dans '*language_term*'. Quand il est spécifié sous la forme d’un entier, *language_term* est le LCID qui identifie la langue. Quand il est spécifié sous la forme d’une valeur hexadécimale, *language_term* est 0x suivi de la valeur hexadécimale du LCID. La valeur hexadécimale ne doit pas dépasser huit caractères, y compris les zéros non significatifs.  
   
- Si la valeur est au format DBCS (jeu de caractères codés sur deux octets), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la convertit en Unicode.  
+ Si la valeur est au format de jeu de caractères codés sur deux octets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DBCS), le convertit au format Unicode.  
   
  Si la langue spécifiée n'est pas valide ou si aucune ressource correspondant à cette langue n'est installée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. Pour utiliser des ressources linguistiques neutres, indiquez 0x0 pour *language_term*.  
   
@@ -282,10 +282,10 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Limiter les résultats de recherche avec le rang](../../relational-databases/search/limit-search-results-with-rank.md)   
- [Interroger avec la recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
+ [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
  [Créer des requêtes de recherche en texte intégral &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
- [Interroger avec la recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
+ [CONTIENT &#40;&#41;Transact-SQL](../../t-sql/queries/contains-transact-sql.md)   
+ [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

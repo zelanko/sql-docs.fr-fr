@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728555"
 ---
 # <a name="dimension-types"></a>Types de dimensions
@@ -44,14 +44,14 @@ ms.locfileid: "62728555"
   
 |Type de dimension|Description|  
 |--------------------|-----------------|  
-|Standard |Une dimension dont le type n'a pas été défini avec un type de dimension spécial.|  
-|Temps|Une dimension dont les attributs représentent des périodes de temps, telles que des années, des semestres, des trimestres, des mois et des jours.|  
+|Normal|Une dimension dont le type n'a pas été défini avec un type de dimension spécial.|  
+|Heure|Une dimension dont les attributs représentent des périodes de temps, telles que des années, des semestres, des trimestres, des mois et des jours.|  
 |Organisation|Une dimension dont les attributs représentent des informations organisationnelles, telles que des employés ou des filiales.|  
 |Geography|Une dimension dont les attributs représentent des informations géographiques, telles que des villes ou des codes postaux.|  
 |BillOfMaterials|Une dimension dont les attributs représentent des informations d'inventaire ou de fabrication, telles que des listes de composants pour des produits.|  
 |Comptes|Une dimension dont les attributs représentent un graphique de comptes utilisé à des fins de génération de rapports financiers.|  
 |Clients|Une dimension dont les attributs représentent des informations relatives à des clients ou des contacts.|  
-|Produits|Une dimension dont les attributs représentent des informations relatives à des produits.|  
+|Products|Une dimension dont les attributs représentent des informations relatives à des produits.|  
 |Scénario|Une dimension dont les attributs représentent des informations de planification ou d'analyse stratégique.|  
 |Quantitative|Une dimension dont les attributs représentent des informations quantitatives.|  
 |Utilitaire|Une dimension dont les attributs représentent des informations diverses.|  
@@ -62,6 +62,6 @@ ms.locfileid: "62728555"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une dimension à l’aide d’une table existante](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

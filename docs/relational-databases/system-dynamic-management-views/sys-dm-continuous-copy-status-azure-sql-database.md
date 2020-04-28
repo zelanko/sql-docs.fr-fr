@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844499"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
@@ -43,7 +43,7 @@ Si vous utilisez SQL Database V12, vous devez utiliser [sys. dm_geo_replication_
 |**last_replication**|**datetimeoffset**|Horodateur de la dernière transaction dupliquée appliquée.|  
 |**replication_lag_sec**|**int**|Décalage horaire en secondes entre l'heure actuelle et l'horodateur de la dernière transaction validée dans la base de données primaire qui n'a pas été acceptée par la base de données secondaire active.|  
 |**replication_state**|**tinyint**|État de la réplication de copie continue pour cette base de données. Voici les valeurs possibles et leurs descriptions.<br /><br /> 1 : amorçage. La cible de réplication est amorcée et est dans un état incohérent d'un point de vue transactionnel. Tant que l'amorçage n'est pas terminé, vous ne pouvez pas vous connecter à la base de données secondaire active. <br />2 : rattrapage. La base de données secondaire active rattrape la base de données primaire et est dans un état cohérent d'un point de vue transactionnel.<br />3 : réamorçage. La base de données secondaire active est automatiquement réamorcée, en raison d'une erreur irrécupérable de réplication.<br />4 : suspendu. Il ne s'agit pas d'une relation de copie continue active. Cet état indique généralement que la bande passante disponible pour l'interlien est insuffisante pour le niveau d'activité de transaction dans la base de données primaire. Toutefois, la relation de copie continue est toujours intacte.|  
-|**replication_state_desc**|**nvarchar (256)**|Description de replication_state :<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
+|**replication_state_desc**|**nvarchar(256)**|Description de replication_state :<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|A toujours pour valeur 0.|  
 |**is_target_role**|**bit**|0 = Source de la relation de copie<br /><br /> 1 = Cible de la relation de copie|  
 |**is_interlink_connected**|**bit**|1 = L'interlien est connecté.<br /><br /> 0 = L'interlien est déconnecté.|  
@@ -52,7 +52,7 @@ Si vous utilisez SQL Database V12, vous devez utiliser [sys. dm_geo_replication_
  Pour récupérer des données, nécessite l’appartenance au rôle de base de données **db_owner** . L’utilisateur dbo, les membres du rôle de base de données **dbmanager** et la connexion sa peuvent également interroger cette vue.  
   
 ## <a name="remarks"></a>Notes  
- La vue **sys. dm_continuous_copy_status** est créée dans la base de données **Resource** et est visible dans toutes les bases de données, y compris la base de données Master logique. Toutefois, l’interrogation de cette vue dans la logique principale renvoie un jeu vide.  
+ La vue **sys. dm_continuous_copy_status** est créée dans la base de données **Resource** et est visible dans toutes les bases de données, y compris la base de données Master logique. Cependant, l'interrogation de cette vue dans la base de données master logique retourne un ensemble vide.  
   
  Si la relation de copie continue est terminée sur une base de données, la ligne de cette base de données dans la vue **sys. dm_continuous_copy_status** disparaît.  
   

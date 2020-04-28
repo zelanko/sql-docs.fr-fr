@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882354"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
@@ -69,17 +69,16 @@ ms.locfileid: "73882354"
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Paramètres de l'Agent de distribution et de l'Agent de lecture du journal  
   
--   Pour résoudre les goulots d’étranglement accidentels et occasionnels, utilisez le paramètre **-MaxCmdsInTran** pour l’Agent de lecture du journal.  
+-   Pour résoudre les goulets d’étranglement accidentels, utilisez le paramètre **-MaxCmdsInTran** pour l’agent de lecture du journal.  
   
-     Le paramètre **-MaxCmdsInTran** indique le nombre maximal d’instructions groupées dans une transaction quand l’Agent de lecture du journal enregistre des commandes dans la base de données de distribution. L'utilisation de ce paramètre permet à l'Agent de lecture du journal et à l'Agent de distribution de scinder les transactions importantes (constituées de plusieurs commandes) sur le serveur de publication en plusieurs transactions plus petites, lors de l'application des commandes sur l'Abonné. La spécification de ce paramètre permet de réduire les contentions sur le serveur de distribution et de réduire la latence entre le serveur de publication et l'Abonné. Du fait que la transaction d'origine est appliquée en plusieurs morceaux, l'Abonné peut accéder aux lignes d'une importante transaction logique du serveur de publication avant la fin de la transaction d'origine, ce qui rompt la stricte atomicité transactionnelle. La valeur par défaut est **0**, ce qui permet de conserver les limites de la transaction du serveur de publication. Ce paramètre ne s'applique pas aux serveurs de publication Oracle.  
+     Le paramètre **-MaxCmdsInTran** spécifie le nombre maximal d’instructions regroupées dans une transaction lorsque le lecteur du journal écrit des commandes dans la base de données de distribution. L'utilisation de ce paramètre permet à l'Agent de lecture du journal et à l'Agent de distribution de scinder les transactions importantes (constituées de plusieurs commandes) sur le serveur de publication en plusieurs transactions plus petites, lors de l'application des commandes sur l'Abonné. La spécification de ce paramètre permet de réduire les contentions sur le serveur de distribution et de réduire la latence entre le serveur de publication et l'Abonné. Du fait que la transaction d'origine est appliquée en plusieurs morceaux, l'Abonné peut accéder aux lignes d'une importante transaction logique du serveur de publication avant la fin de la transaction d'origine, ce qui rompt la stricte atomicité transactionnelle. La valeur par défaut est **0**, ce qui permet de conserver les limites de la transaction du serveur de publication. Ce paramètre ne s'applique pas aux serveurs de publication Oracle.  
   
     > [!WARNING]  
-    >  
-  `MaxCmdsInTran` n'a pas été conçu pour rester toujours activé. Il permet de contourner le problème lorsqu'un utilisateur a accidentellement exécuté un grand nombre d'opérations DML dans une seule transaction (provoquant un retard dans la distribution des commandes jusqu'à ce que la transaction entière soit dans la base de données de distribution, le maintien de verrous, etc.). Si vous rencontrez régulièrement ce problème, vous devriez vérifier vos applications et trouver un moyen de réduire la taille des transactions.  
+    >  `MaxCmdsInTran` n'a pas été conçu pour rester toujours activé. Il permet de contourner le problème lorsqu'un utilisateur a accidentellement exécuté un grand nombre d'opérations DML dans une seule transaction (provoquant un retard dans la distribution des commandes jusqu'à ce que la transaction entière soit dans la base de données de distribution, le maintien de verrous, etc.). Si vous rencontrez régulièrement ce problème, vous devriez vérifier vos applications et trouver un moyen de réduire la taille des transactions.  
   
 -   Utilisez le paramètre **-SubscriptionStreams** pour l’agent de distribution.  
   
-     Le paramètre **-SubscriptionStreams** permet d’améliorer sensiblement le débit de la réplication d’agrégation. Il autorise plusieurs connexions à l'Abonné pour appliquer des traitements de modifications en parallèle, tout en conservant la plupart des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. Si l'une des connexions ne réussit pas à s'exécuter ou n'est pas validée, toutes les connexions abandonneront le lot actuel, et l'Agent utilisera un flux unique pour une nouvelle tentative sur les lots ayant échoué. Avant que cette phase de nouvelle tentative ne se termine, il peut se produire des incohérences transactionnelles temporaires sur l'Abonné. Une fois que les lots ayant échoué sont validés avec succès, l'Abonné retrouve un état de cohérence transactionnelle.  
+     Le paramètre **-SubscriptionStreams** peut améliorer le débit de la réplication globale. Il autorise plusieurs connexions à l'Abonné pour appliquer des traitements de modifications en parallèle, tout en conservant la plupart des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. Si l'une des connexions ne réussit pas à s'exécuter ou n'est pas validée, toutes les connexions abandonneront le lot actuel, et l'Agent utilisera un flux unique pour une nouvelle tentative sur les lots ayant échoué. Avant que cette phase de nouvelle tentative ne se termine, il peut se produire des incohérences transactionnelles temporaires sur l'Abonné. Une fois que les lots ayant échoué sont validés avec succès, l'Abonné retrouve un état de cohérence transactionnelle.  
   
      Vous pouvez spécifier une valeur pour ce paramètre d’agent à l’aide de l' ** \@SubscriptionStreams** de [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
@@ -93,7 +92,7 @@ ms.locfileid: "73882354"
   
 -   Réduisez la valeur du paramètre **-PollingInterval** pour l’Agent de lecture du journal.  
   
-     Le paramètre **-PollingInterval** indique la fréquence d’interrogation du journal des transactions d’une base de données publiée pour que les transactions soient répliquées. La valeur par défaut est 5 secondes. Si vous réduisez cette valeur, le journal est interrogé plus fréquemment, ce qui peut entraîner une latence plus faible pour la remise des transactions de la base de données de publication sur la base de données de distribution. Cependant, vous devriez équilibrer les besoins d'une latence plus faible en fonction de l'augmentation de la charge sur le serveur causée par une interrogation plus fréquente.  
+     Le paramètre **-PollingInterval** indique la fréquence d’interrogation du journal des transactions d’une base de données publiée pour que les transactions soient répliquées. La valeur par défaut est 5 secondes. Si vous réduisez cette valeur, le journal est interrogé plus fréquemment, ce qui peut entraîner une latence plus faible pour la remise des transactions de la base de données de publication sur la base de données de distribution. Cependant, vous devriez équilibrer les besoins d'une latence plus faible en fonction de l'augmentation de la charge sur le serveur causée par une interrogation plus fréquente.  
   
  Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez les pages suivantes :  
   

@@ -14,10 +14,10 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728968"
 ---
 # <a name="model-permissions-master-data-services"></a>Autorisations de modèle (Master Data Services)
@@ -27,12 +27,12 @@ ms.locfileid: "73728968"
   Les autorisations de modèle s'appliquent à l'ensemble des entités, attributs, groupes d'attributs, hiérarchies dérivées, hiérarchies explicites et collections qui existent dans le modèle. Les autorisations affectées au modèle peuvent être remplacées pour tout objet individuel.  
   
 > [!NOTE]  
->  Si l'utilisateur est administrateur de modèle, le modèle est affiché dans toutes les zones fonctionnelles de l'interface utilisateur. Sinon, le modèle est affiché uniquement dans la zone fonctionnelle **Explorateur** . Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+>  Si l'utilisateur est administrateur de modèle, le modèle est affiché dans toutes les zones fonctionnelles de l'interface utilisateur. Sinon, le modèle est affiché uniquement dans la zone fonctionnelle **Explorateur** . Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lire**|L’utilisateur peut lire des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
-|**Créés**|L’utilisateur peut créer des membres et affecter des valeurs d’attribut lors de la création.|  
+|**Créer**|L’utilisateur peut créer des membres et affecter des valeurs d’attribut lors de la création.|  
 |**Mise à jour**|L’utilisateur peut mettre à jour des membres, des attributs, des appartenances hiérarchiques ou des appartenances aux collections.|  
 |**Supprimer**|L’utilisateur peut supprimer des membres.|  
 |**Deny**|Tous les accès au modèle sont refusés.|  

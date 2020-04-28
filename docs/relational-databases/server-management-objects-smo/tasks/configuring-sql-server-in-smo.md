@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f973b47d4b55624e0f78658f7dfa13ec1aebd80c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095951"
 ---
 # <a name="configuring-sql-server-in-smo"></a>Configuration de SQL Server dans SMO
@@ -26,8 +26,7 @@ ms.locfileid: "74095951"
 
   Dans SMO, l' <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> objet, l’objet, l' <xref:Microsoft.SqlServer.Management.Smo.UserOptions> objet et l' <xref:Microsoft.SqlServer.Management.Smo.Configuration> objet contiennent des paramètres et des informations pour l’instance [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possède de nombreuses propriétés qui décrivent le comportement de l'instance installée. Les propriétés décrivent les options de démarrage, les valeurs par défaut du serveur, les fichiers et répertoires, les informations sur le processeur et le système, le produit et les versions, les informations sur la connexion, les options de mémoire, les sélections de langue et de classement et le mode d'authentification.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possède de nombreuses propriétés qui décrivent le comportement de l'instance installée. Les propriétés décrivent les options de démarrage, les valeurs par défaut du serveur, les fichiers et répertoires, les informations sur le processeur et le système, le produit et les versions, les informations sur la connexion, les options de mémoire, les sélections de langue et de classement et le mode d'authentification.  
   
 ## <a name="sql-server-configuration"></a>Configuration de SQL Server  
  Les propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Information> contiennent des informations sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], par exemple le processeur et la plateforme.  

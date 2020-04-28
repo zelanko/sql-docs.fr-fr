@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983078"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
@@ -36,15 +36,15 @@ ms.locfileid: "73983078"
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary (8)**|Adresse de l'objet mémoire. N'accepte pas la valeur NULL.|  
 |**parent_address**|**varbinary (8)**|Adresse de l'objet mémoire parent. Autorise la valeur NULL.|  
-|**pages_allocated_count**|**int**|**S’applique à** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]jusqu’à.<br /><br /> Nombre de pages allouées par cet objet. N'accepte pas la valeur NULL.|  
+|**pages_allocated_count**|**int**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Nombre de pages allouées par cet objet. N'accepte pas la valeur NULL.|  
 |**pages_in_bytes**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Quantité de mémoire, en octets, allouée par cette instance de l'objet mémoire. N'accepte pas la valeur NULL.|  
 |**creation_options**|**int**|À usage interne uniquement Autorise la valeur NULL.|  
 |**bytes_used**|**bigint**|À usage interne uniquement Autorise la valeur NULL.|  
-|**entrer**|**nvarchar (60)**|Type d'objet mémoire.<br /><br /> Indique le composant auquel cet objet mémoire appartient ou la fonction de l'objet mémoire. Autorise la valeur NULL.|  
-|**nomme**|**varchar(128)**|À usage interne uniquement Autorise la valeur Null.|  
+|**type**|**nvarchar(60)**|Type d'objet mémoire.<br /><br /> Indique le composant auquel cet objet mémoire appartient ou la fonction de l'objet mémoire. Autorise la valeur NULL.|  
+|**name**|**varchar(128)**|À usage interne uniquement Autorise la valeur Null.|  
 |**memory_node_id**|**smallint**|ID d'un nœud de mémoire utilisé par cet objet mémoire. N'accepte pas la valeur NULL.|  
-|**creation_time**|**DATETIME**|À usage interne uniquement Autorise la valeur NULL.|  
-|**max_pages_allocated_count**|**int**|**S’applique à** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]jusqu’à.<br /><br /> Nombre maximum de pages allouées par cet objet mémoire. N'accepte pas la valeur NULL.|  
+|**creation_time**|**datetime**|À usage interne uniquement Autorise la valeur NULL.|  
+|**max_pages_allocated_count**|**int**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Nombre maximum de pages allouées par cet objet mémoire. N'accepte pas la valeur NULL.|  
 |**page_size_in_bytes**|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Taille des pages, en octets, allouée par cet objet. N'accepte pas la valeur NULL.|  
 |**max_pages_in_bytes**|**bigint**|Quantité de mémoire maximale utilisée par cet objet mémoire. N'accepte pas la valeur NULL.|  
 |**page_allocator_address**|**varbinary (8)**|Adresse mémoire de l'allocateur de page. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
@@ -84,7 +84,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
   [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

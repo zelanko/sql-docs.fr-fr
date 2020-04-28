@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982232"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
@@ -60,7 +60,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Un déclencheur peut être désigné comme **premier** ou **dernier** déclencheur pour un type d’instruction uniquement après que ce déclencheur a été défini en tant que déclencheur pour ce type d’instruction. Par exemple, le déclencheur **TR1** peut être désigné en **premier** pour l’insertion sur la table **T1** si **TR1** est défini en tant que déclencheur INSERT. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne une erreur si **TR1**, qui a été défini uniquement comme déclencheur d’insertion, est défini en tant que déclencheur **First**ou **Last**pour une instruction Update. Pour plus d'informations, consultez la section Notes.  
   
- espace de |  **noms = {'base de données' 'serveur \@** **'** | **** NUL  
+ espace de |  **noms = {'base de données' 'serveur \@** **'** | **'DATABASE'** NUL  
  Quand *triggername* est un déclencheur DDL ** \@** , l’espace de noms spécifie si *triggername* a été créé avec une étendue de base de données ou de serveur. Si *triggername* est un déclencheur LOGON, le serveur doit être spécifié. Pour plus d’informations sur la portée du déclencheur DDL, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md). S’il n’est pas spécifié, ou si NULL est spécifié, *triggername* est un déclencheur DML.  
   
 ||  
@@ -127,7 +127,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   

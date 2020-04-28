@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400942"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Surveiller l’appliance à l’aide de la console d’administration-analyse système de plateforme
 La console d’administration est une application Web SQL Server PDW qui couvre les informations relatives à l’État, à l’intégrité et aux performances de l’appliance. Les utilisateurs se connectent à la console d’administration via Internet Explorer.  
   
-## <a name="About"></a>À propos de la console d’administration  
+## <a name="about-the-admin-console"></a><a name="About"></a>À propos de la console d’administration  
 ![Accueil de la console des appliances](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Appliance**  
@@ -67,7 +67,7 @@ Affiche les graphiques de l’analyseur de performances PDW.
 > [!NOTE]  
 > La console d’administration a une résolution d’écran 1024x768. La console d’administration s’affiche mieux avec une résolution d’écran de 1280 X 1024 ou supérieure.  
   
-## <a name="Connect"></a>Connexion à la console d’administration  
+## <a name="connect-to-the-admin-console"></a><a name="Connect"></a>Connexion à la console d’administration  
 Pour vous connecter à la console d’administration, requiert :  
   
 -   Au moins Internet Explorer version 10.  
@@ -78,7 +78,7 @@ Pour vous connecter à la console d’administration, requiert :
   
 Pour vous connecter à la console d’administration, utilisez Internet Explorer et HTTPS pour accéder à l’adresse IP du cluster de nœuds de contrôle. Par exemple, si l’adresse IP du cluster de nœuds de `10.192.63.102`contrôle est `https://10.192.63.102` , entrez dans la barre d’adresse de votre navigateur. Le premier écran vous demande votre **connexion** et votre **mot de passe**. Fournissez une connexion d’authentification SQL Server et un mot de passe, ou bien une connexion d’authentification Windows et un mot de passe Windows. Si vous utilisez une connexion d’authentification Windows, la console d’administration utilise l’emprunt d’identité.  
   
-## <a name="RelatedTasks"></a>Tâches de la console d’administration  
+## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>Tâches de la console d’administration  
 La console d’administration vous permet d’analyser les éléments suivants :  
   
 |||  

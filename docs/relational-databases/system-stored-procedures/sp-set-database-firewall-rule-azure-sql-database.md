@@ -22,16 +22,16 @@ ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74055090"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Crée ou met à jour les règles de pare-feu au niveau [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]de la base de données pour votre. Les règles de pare-feu de base **** de données peuvent être configurées pour la base [!INCLUDE[ssSDS](../../includes/sssds-md.md)]de données master et les bases de données utilisateur sur. Les règles de pare-feu de base de données sont particulièrement utiles lors de l’utilisation des utilisateurs de base de données Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Crée ou met à jour les règles de pare-feu au niveau [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]de la base de données pour votre. Les règles de pare-feu de base **master** de données peuvent être configurées pour la base [!INCLUDE[ssSDS](../../includes/sssds-md.md)]de données master et les bases de données utilisateur sur. Les règles de pare-feu de base de données sont particulièrement utiles lors de l’utilisation des utilisateurs de base de données Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   

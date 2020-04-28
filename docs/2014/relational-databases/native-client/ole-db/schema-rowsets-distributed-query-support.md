@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667595"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Prise en charge des requêtes distribuées dans les ensembles de lignes de schéma
@@ -47,6 +47,6 @@ ms.locfileid: "62667595"
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge des ensembles de lignes de schéma &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)   
- [&#40;de l’ensemble de lignes LINKEDSERVERS OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [Ensemble de lignes LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
   

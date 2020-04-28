@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bcd980bb7fe77e2d207e568802dfd7e69e9a1484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882117"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Spécifier les types d'articles (programmation Transact-SQL de la réplication)
@@ -34,7 +34,7 @@ ms.locfileid: "73882117"
   
 1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez l’une des valeurs suivantes pour ** \@type** pour définir le type d’article :  
   
-    -   **logbased** : article de table basé sur un journal, qui est la valeur par défaut pour la réplication transactionnelle et d’instantané. La réplication génère automatiquement la procédure stockée utilisée pour le filtrage horizontal et la vue qui définit un article filtré verticalement.  
+    -   **logbased** – article de table basé sur le journal, utilisé par défaut pour la réplication transactionnelle et d'instantané. La réplication génère automatiquement la procédure stockée utilisée pour le filtrage horizontal et la vue qui définit un article filtré verticalement.  
   
     -   **logbased manualfilter** – article basé sur un journal, filtré horizontalement, dans lequel la procédure stockée utilisée pour le filtrage horizontal est créée et définie manuellement par l’utilisateur ** \@** et spécifiée pour le filtre. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](define-and-modify-a-static-row-filter.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882117"
      Cela définit un nouvel article pour la publication. Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts liés aux procédures stockées système de réplication](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Concepts des procédures stockées système de réplication](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)  
   
   

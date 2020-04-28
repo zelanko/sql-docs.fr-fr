@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64b4d3e1eb464481b076af86dbc018be72e93a6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981963"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -74,7 +74,7 @@ ms.locfileid: "73981963"
 |is_sparse|**bit**|1 = La colonne est éparse. Pour plus d’informations, consultez [Utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = La colonne est un jeu de colonnes. Pour plus d’informations, consultez [Utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|  
 |generated_always_type|**tinyint**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ultérieures.<br /><br /> Identifie le moment où la valeur de colonne est générée (est toujours 0 pour les colonnes dans les tables système) :<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Pour plus d’informations, consultez [tables temporelles &#40;bases de données relationnelles&#41;](../../relational-databases/tables/temporal-tables.md).|  
-|generated_always_type_desc|**nvarchar (60)**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ultérieures.<br /><br /> Description textuelle de `generated_always_type`la valeur de (toujours NOT_APPLICABLE pour les colonnes des tables système) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|generated_always_type_desc|**nvarchar(60)**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ultérieures.<br /><br /> Description textuelle de `generated_always_type`la valeur de (toujours NOT_APPLICABLE pour les colonnes des tables système) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
 |encryption_type|**int**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ultérieures.<br /><br /> Type de chiffrement :<br /><br /> 1 = chiffrement déterministe<br /><br /> 2 = chiffrement aléatoire|  
 |encryption_type_desc|**nvarchar (64)**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ultérieures.<br /><br /> Description du type de chiffrement :<br /><br /> ALÉATOIRE<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ultérieures.<br /><br /> Nom de l’algorithme de chiffrement.<br /><br /> Seul AEAD_AES_256_CBC_HMAC_SHA_512 est pris en charge.|  
@@ -91,7 +91,7 @@ ms.locfileid: "73981963"
 ## <a name="see-also"></a>Voir aussi  
  [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. system_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676521"
 ---
 # <a name="snapshot-folder"></a>Dossier d'instantanés
@@ -29,14 +29,13 @@ ms.locfileid: "62676521"
  Entrez le chemin d'accès au dossier où vous souhaitez stocker les fichiers d'instantanés.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser un partage réseau comme emplacement pour le dossier d'instantanés. Les chemins locaux (ceux qui commencent par une lettre de lecteur, tel que C:\\) ne sont pas accessibles aux agents sur les autres ordinateurs.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser un partage réseau comme emplacement pour le dossier d'instantanés. Les chemins locaux (ceux qui commencent par une lettre de lecteur, tel que C:\\) ne sont pas accessibles aux agents sur les autres ordinateurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Autres emplacements de dossier d’instantanés](alternate-snapshot-folder-locations.md)   
  [Configurer la distribution](configure-distribution.md)   
  [Configurer la publication et la distribution](configure-publishing-and-distribution.md)   
- [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés du serveur de distribution et du serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   
  [Initialiser un abonnement avec un instantané](initialize-a-subscription-with-a-snapshot.md)  
   
   

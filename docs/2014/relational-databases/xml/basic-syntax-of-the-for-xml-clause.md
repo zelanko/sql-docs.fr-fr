@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637866"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Syntaxe de base de la clause FOR XML
@@ -88,7 +88,7 @@ XML
  TYPE  
  Spécifie que la requête retourne des résultats de type **xml** . Pour plus d’informations, consultez [Directive TYPE dans les requêtes FOR XML](type-directive-in-for-xml-queries.md).  
   
- ROOT [('*rootName*')]  
+ ROOT [('*RootName*')]  
  Spécifie qu'un et un seul élément de premier niveau doit être ajouté au code XML résultant. Vous pouvez, si vous le souhaitez, spécifier le nom d'élément racine à générer. La valeur par défaut est « root ».  
   
 ## <a name="see-also"></a>Voir aussi  

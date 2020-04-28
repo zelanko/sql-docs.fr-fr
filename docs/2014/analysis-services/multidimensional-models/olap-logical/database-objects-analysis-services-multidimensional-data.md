@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725654"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Objets de bases de données (Analysis Services - Données multidimensionnelles)
@@ -61,9 +61,9 @@ ms.locfileid: "62725654"
 |[Sources de données dans des modèles multidimensionnels](../data-sources-in-multidimensional-models.md)|Décrit les sources de données dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Vues de sources de données dans les modèles multidimensionnels](../data-source-views-in-multidimensional-models.md)|Décrit un modèle de données logique basé sur une ou plusieurs sources de données dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Cubes dans les modèles multidimensionnels](../cubes-in-multidimensional-models.md)|Décrit les cubes et les objets de cube, y compris les mesures, les groupes de mesures, les relations d'utilisation de dimension, les calculs, les indicateurs de performance clés (KPI), les actions, les traductions, les partitions et les perspectives.|  
-|[Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Décrit les dimensions et les objets de dimension, y compris les attributs, les relations d'attributs, les hiérarchies, les niveaux et les membres.|  
-|[Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|Décrit les structures d'exploration de données et les objets d'exploration de données, y compris les modèles d'exploration de données.|  
-|[Rôles de sécurité &#40;Analysis Services-données multidimensionnelles&#41;](security-roles-analysis-services-multidimensional-data.md)|Décrit les rôles, le mécanisme de sécurité utilisé pour contrôler l'accès aux objets dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Décrit les dimensions et les objets de dimension, y compris les attributs, les relations d'attributs, les hiérarchies, les niveaux et les membres.|  
+|[Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|Décrit les structures d'exploration de données et les objets d'exploration de données, y compris les modèles d'exploration de données.|  
+|[Rôles de sécurité &#40;Analysis Services - Données multidimensionnelles&#41;](security-roles-analysis-services-multidimensional-data.md)|Décrit les rôles, le mécanisme de sécurité utilisé pour contrôler l'accès aux objets dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Gestion des assemblys de modèles multidimensionnels](../multidimensional-model-assemblies-management.md)|Décrit les assemblys, des collections de fonctions définies par l'utilisateur qui sont utilisées pour étendre les langages MDX et DMX dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  

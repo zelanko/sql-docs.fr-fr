@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4e4ecf91491a88e002c92a82d321e5712d48ef76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399820"
 ---
 # <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-SQL)
@@ -30,8 +30,8 @@ ms.locfileid: "74399820"
 |**hobt_id**|**bigint**|ID de l’index de segment de mémoire ou arbre B (B-tree) (HoBT) pour la table qui contient cet index ColumnStore.|  
 |**column_id**|**int**|ID de la colonne columnstore.|  
 |**dictionary_id**|**int**|ID du dictionnaire.|  
-|**Version**|**int**|Version du format de dictionnaire.|  
-|**entrer**|**int**|Type de dictionnaire :<br /><br /> 1-dictionnaire de hachage contenant des valeurs **int**<br /><br /> 2-non utilisé<br /><br /> 3-dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4-dictionnaire de hachage contenant des valeurs **float**|  
+|**version**|**int**|Version du format de dictionnaire.|  
+|**type**|**int**|Type de dictionnaire :<br /><br /> 1-dictionnaire de hachage contenant des valeurs **int**<br /><br /> 2-non utilisé<br /><br /> 3-dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4-dictionnaire de hachage contenant des valeurs **float**|  
 |**last_id**|**int**|Dernier ID de données dans le dictionnaire.|  
 |**entry_count**|**bigint**|Nombre d'entrées dans le dictionnaire.|  
 |**on_disc_size**|**bigint**|Taille du dictionnaire en octets.|  
@@ -41,7 +41,7 @@ ms.locfileid: "74399820"
  Nécessite l'autorisation `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue de la SQL Data Warehouse et des Data Warehouse parallèles](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CRÉER un INDEX COLUMNSTORE &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys. pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  

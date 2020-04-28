@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702425"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensions (Analysis Services - Données multidimensionnelles)
@@ -28,7 +28,7 @@ ms.locfileid: "62702425"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Présentation des dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)|Présente les concepts des dimensions.|  
+|[Présentation des dimensions &#40;Analysis Services – Données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)|Présente les concepts des dimensions.|  
 |[Attributs et hiérarchies d'attributs](attributes-and-attribute-hierarchies.md)|Décrit les attributs et les hiérarchies d'attributs.|  
 |[Hiérarchies utilisateur](user-hierarchies.md)|Décrit les hiérarchies d'attributs définies par l'utilisateur.|  
 |[Dimensions activées en écriture](write-enabled-dimensions.md)|Décrit les dimensions activées en écriture.|  

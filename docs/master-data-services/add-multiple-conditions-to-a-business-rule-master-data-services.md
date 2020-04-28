@@ -13,10 +13,10 @@ ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728798"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Ajouter plusieurs conditions à une règle d'entreprise (Master Data Services)
@@ -28,12 +28,12 @@ ms.locfileid: "73728798"
 > [!NOTE]  
 >  Si vous créez une règle d'entreprise qui utilise l'opérateur **OR** , créez une règle distincte pour chaque instruction conditionnelle qui peut être évaluée indépendamment. Vous pouvez alors exclure des règles si nécessaire, ce qui offre plus de souplesse et facilite la résolution des problèmes.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Une règle d'entreprise doit exister. Pour plus d’informations, consultez [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73728798"
   
 2.  Dans la barre de menus, pointez sur **Gérer** et cliquez sur **Règles d'entreprise**.  
   
-3.  Dans la page **règles d’entreprise/** , dans la liste déroulante **modèle** , sélectionnez un modèle.  
+3.  Dans la page **Règles d’entreprise/** , sélectionnez un modèle dans la liste déroulante **Modèle** .  
   
 4.  Dans la liste déroulante **Entité** , sélectionnez une entité.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728798"
   
 12. Complétez tous les champs obligatoires.  
   
-13. Cliquez sur **Enregistrer**. Une nouvelle ligne est ajoutée à la grille **If** .  
+13. Cliquez sur **Save**. Une nouvelle ligne est ajoutée à la grille **If** .  
   
 14. Si vous le souhaitez, suivez les étapes 8 à 13 pour ajouter d’autres conditions.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "73728798"
 ## <a name="see-also"></a>Voir aussi  
  [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Modifier le nom d’une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configurez des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

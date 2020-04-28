@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688842"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -65,7 +65,7 @@ pData
   
  Si vous utilisez **bcp_moretext** pour envoyer une colonne de type de données prise en charge dans une ligne, vous devez également l’utiliser pour envoyer toutes les autres colonnes de type de données prises en charge dans la ligne. Aucune colonne ne peut être ignorée. Les types de données pris en charge sont SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT et SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY et SQLVARBINARY appartiennent également à cette catégorie si la colonne est un varchar (max), nvarchar (max) ou varbinary (max), respectivement.  
   
- L’appel de **bcp_bind** ou [bcp_collen](bcp-collen.md) définit la longueur totale de toutes les parties de données à copier dans la colonne SQL Server. Une tentative d’envoi d’SQL Server plus d’octets que ce qui est **** spécifié dans `bcp_collen` l’appel à bcp_bind ou génère une erreur. Cette erreur se produit, par exemple, dans une application qui a `bcp_collen` utilisé pour définir la longueur des données disponibles pour une `text` colonne SQL Server sur 4500, puis appelée **bcp_moretext** cinq fois en indiquant à chaque appel que la longueur de la mémoire tampon de données était de 1000 octets.  
+ L’appel de **bcp_bind** ou [bcp_collen](bcp-collen.md) définit la longueur totale de toutes les parties de données à copier dans la colonne SQL Server. Une tentative d’envoi d’SQL Server plus d’octets que ce qui est **bcp_bind** spécifié dans `bcp_collen` l’appel à bcp_bind ou génère une erreur. Cette erreur se produit, par exemple, dans une application qui a `bcp_collen` utilisé pour définir la longueur des données disponibles pour une `text` colonne SQL Server sur 4500, puis appelée **bcp_moretext** cinq fois en indiquant à chaque appel que la longueur de la mémoire tampon de données était de 1000 octets.  
   
  Si une ligne copiée contient plus d’une colonne de longueur variable, **bcp_moretext** envoie tout d’abord ses données à la colonne à numérotation ordinale la plus basse, suivie de la colonne numérotée ordinale suivante, et ainsi de suite. Il est important de définir correctement la longueur totale des données attendues. Il n'existe aucun moyen de signaler, en dehors du paramètre de longueur, que toutes les données pour une colonne ont été reçues par copie en bloc.  
   

@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727645"
 ---
 # <a name="cube-properties"></a>Propriétés de cube
@@ -58,9 +58,9 @@ ms.locfileid: "62727645"
 |`Language`|Spécifie l'identificateur de langue par défaut du cube.|  
 |`Name`|Spécifie le nom convivial du cube.|  
 |`ProactiveCaching`|Définit les paramètres de mise en cache proactive pour le cube.|  
-|`ProcessingMode`|Indique si l'indexation et l'agrégation doivent avoir lieu lors du traitement ou après celui-ci. Les options **** sont Regular `lazy`ou.|  
+|`ProcessingMode`|Indique si l'indexation et l'agrégation doivent avoir lieu lors du traitement ou après celui-ci. Les options **regular** sont Regular `lazy`ou.|  
 |`ProcessingPriority`|Détermine la priorité de traitement du cube pendant les opérations d'arrière-plan, telles que les agrégations et les indexations différées (Lazy). La valeur par défaut est **0**.|  
-|`ScriptCacheProcessingMode`|Indique si le cache des scripts doit être généré durant le traitement ou après celui-ci. Les options **** sont Regular `lazy`et.|  
+|`ScriptCacheProcessingMode`|Indique si le cache des scripts doit être généré durant le traitement ou après celui-ci. Les options **regular** sont Regular `lazy`et.|  
 |`ScriptErrorHandlingMode`|Détermine la gestion des erreurs. Les options `IgnoreNone` sont ou`IgnoreAll`|  
 |`Source`|Affiche la vue de source de données utilisée pour le cube.|  
 |`StorageLocation`|Spécifie l'emplacement de stockage du système de fichiers pour le cube. Si aucun n'est spécifié, l'emplacement est hérité de la base de données qui contient l'objet du cube.|  

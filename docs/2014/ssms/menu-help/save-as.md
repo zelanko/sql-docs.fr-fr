@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510318"
 ---
 # <a name="save-as"></a>Enregistrer sous
@@ -34,7 +34,7 @@ ms.locfileid: "62510318"
 > [!TIP]
 >  Pour afficher des fichiers qui se trouvent sur le web ou sur un réseau, entrez une URL ou un chemin réseau dans la zone **Nom de fichier** . Par exemple, « <http://mywebsite> » affiche les fichiers disponibles à l’emplacement « monsiteweb », tandis que «\\\monserveur\partage » affiche les fichiers disponibles à l’emplacement « partage » sur « monserveur ».  
   
- **Type de fichier**  
+ **Enregistrer en tant que**  
  Utilisez cette option pour choisir un nouveau type de fichier pour l'élément sélectionné. Les types de fichiers proposés représentent tous les types de fichiers disponibles dans lesquels l'élément sélectionné peut être converti.  
   
  **Options d’enregistrement avancées**  

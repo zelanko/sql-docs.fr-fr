@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659577"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation, élément (Assistant Paramétrage de base de données)
@@ -50,7 +50,7 @@ ms.locfileid: "62659577"
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|[Table, élément pour les schémas &#40;Assistant Paramétrage de base de données&#41;](table-element-for-schema-dta.md)|  
-|**Éléments enfants**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](create-element-dta.md)<br /><br /> `Drop`appartient. Pour plus d'informations, consultez l'article [Database Engine Tuning Advisor XML schema](https://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Éléments enfants**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](create-element-dta.md)<br /><br /> Élément `Drop`. Pour plus d'informations, consultez l'article [Database Engine Tuning Advisor XML schema](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Notes  
  Cet élément porte le nom **RecommendationTypecomplexType** dans le schéma XML de l’Assistant Paramétrage du moteur de base de données. Il est utilisé pour spécifier des index dans une configuration hypothétique. Ne confondez pas cet élément `Recommendation` avec les autres types d'éléments qui peuvent être utilisés pour spécifier le partitionnement (`RecommendationPType`) ou les vues (`RecommendationViewType`). Pour plus d’informations sur `Recommendation` ces autres types d’éléments, consultez la [Assistant Paramétrage du moteur de base de données schéma XML](https://go.microsoft.com/fwlink/?linkid=43100).  

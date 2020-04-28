@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691661"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Définir une relation d'enregistrement logique entre des articles de table de fusion
@@ -41,22 +41,22 @@ ms.locfileid: "62691661"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [Objets RMO (Replication Management Objects)](#RMOProcedure)  
+     [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Si vous ajoutez, modifiez ou supprimez un enregistrement logique après que les abonnements à la publication aient été initialisés, vous devez générer un nouvel instantané et réinitialiser tous les abonnements après avoir effectué la modification. Pour plus d’informations sur les exigences relatives aux changements de propriétés, consultez [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Définissez des enregistrements logiques dans la boîte de dialogue **Ajouter une jointure**, disponible dans l’Assistant Nouvelle publication, ainsi que dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+ Définissez des enregistrements logiques dans la boîte de dialogue **Ajouter une jointure**, disponible dans l’Assistant Nouvelle publication, ainsi que dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
  Les enregistrements logiques peuvent être définis dans la boîte de dialogue **Ajouter une jointure** seulement s'ils sont appliqués à un filtre de jointure dans une publication de fusion, et si la publication satisfait aux conditions requises pour l'utilisation de partitions précalculées. Pour définir des enregistrements logiques qui ne sont pas appliqués à des filtres de jointure et pour définir la détection et la résolution des conflits au niveau des enregistrements logiques, vous devez utiliser des procédures stockées.  
   
 #### <a name="to-define-a-logical-record-relationship"></a>Pour définir une relation d'enregistrement logique  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre de lignes dans le volet **Tables filtrées**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre de lignes dans le volet **Tables filtrées**.  
   
      Une relation d'enregistrement logique est associée à un filtre de jointure, qui étend un filtre de lignes. Vous devez donc définir un filtre de lignes avant de pouvoir étendre le filtre avec une jointure et appliquer une relation d'enregistrement logique. Après avoir défini un filtre de jointure, vous pouvez l'étendre avec un autre filtre de jointure. Pour plus d'informations sur la définition de filtres de jointure, consultez [Définir et modifier un filtre de jointure entre des articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62691661"
   
      Pour supprimer seulement la relation d'enregistrement logique :  
   
-    1.  Dans la page **Filtrer les lignes** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez le filtre de jointure associé à la relation d’enregistrements logiques dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
+    1.  Dans la page **Filtrer les lignes** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez le filtre de jointure associé à la relation d’enregistrements logiques dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
   
     2.  Dans la boîte de dialogue **Modifier une jointure** , désactivez la case à cocher **Enregistrement logique**.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "62691661"
   
      Pour supprimer la relation d'enregistrement logique et le filtre de jointure qui y est associé :  
   
-    -   Dans la page **Filtrer les lignes** de l’Assistant Nouvelle publication ou dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**. Si le filtre de jointure que vous supprimez est lui-même étendu par d'autres jointures, ces jointures seront aussi supprimées.  
+    -   Dans la page **Filtrer les lignes** de l’Assistant Nouvelle publication ou dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**. Si le filtre de jointure que vous supprimez est lui-même étendu par d'autres jointures, ces jointures seront aussi supprimées.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez spécifier par programme des relations d'enregistrements logiques entre des articles en utilisant des procédures stockées de réplication.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Pour définir une relation d'enregistrement logique sans filtre de jointure associé  
@@ -127,9 +127,9 @@ ms.locfileid: "62691661"
   
 2.  Pour utiliser la détection et la résolution standard des conflits au niveau des lignes ou des colonnes :  
   
-    -   Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez une valeur **** de logical_record_level_conflict_detection **@property** pour et une valeur `false` pour **@value**. Affectez la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription**.  
+    -   Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez une valeur **logical_record_level_conflict_detection** de logical_record_level_conflict_detection **@property** pour et une valeur `false` pour **@value**. Affectez la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription**.  
   
-    -   Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez une valeur **** de logical_record_level_conflict_resolution **@property** pour et une valeur `false` pour **@value**. Affectez la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription**.  
+    -   Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez une valeur **logical_record_level_conflict_resolution** de logical_record_level_conflict_resolution **@property** pour et une valeur `false` pour **@value**. Affectez la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription**.  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>Pour supprimer une relation d'enregistrements logiques  
   
@@ -144,12 +144,12 @@ ms.locfileid: "62691661"
   
 2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql). Spécifiez **@publication**, le nom de l’un des Articles de la relation **@article**pour et le nom de la relation de l’étape 1 **@filtername**pour.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemple (Transact-SQL)  
  Cet exemple active les partitions précalculées sur une publication existante et crée un enregistrement logique qui comprend les deux nouveaux articles des tables `SalesOrderHeader` et `SalesOrderDetail` .  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
   
 > [!NOTE]  
 >  La réplication de fusion vous permet de spécifier que les conflits soient suivis et résolus au niveau des enregistrements logiques, mais ces options ne peuvent pas être définies à l'aide des objets RMO.  
@@ -194,7 +194,7 @@ ms.locfileid: "62691661"
   
 10. Répétez les étapes 8 et 9 pour chaque relation d'enregistrement logique restante dans la publication.  
   
-###  <a name="PShellExample"></a> Exemple (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Exemple (RMO)  
  Cet exemple crée un enregistrement logique qui comprend les deux nouveaux articles pour les tables `SalesOrderHeader` et `SalesOrderDetail` .  
   
  [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
@@ -202,11 +202,11 @@ ms.locfileid: "62691661"
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir et modifier un filtre de jointure entre des articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Définir et modifier un filtre de jointure entre des Articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md)   
  [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Définir et modifier un filtre de lignes statique](define-and-modify-a-static-row-filter.md)   
- [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md)   
+ [Définir et modifier un filtre de lignes statiques](define-and-modify-a-static-row-filter.md)   
+ [Regrouper les modifications apportées aux lignes associées avec des enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md)   
  [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)   
- [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md)  
+ [Regrouper les modifications apportées aux lignes associées avec des enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md)  
   
   

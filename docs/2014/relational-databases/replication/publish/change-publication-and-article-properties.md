@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882348"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
@@ -36,7 +36,7 @@ ms.locfileid: "73882348"
 |Modifier la compression de l'instantané.|**sp_changepublication**|**compress_snapshot**|Nouvel instantané.|  
 |Modifier des options de l'instantané FTP (File Transfer Protocol).|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Nouvel instantané.|  
 |Modifier l'emplacement du script de pré- ou de post-instantané.|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nouvel instantané (également requis si vous modifiez le contenu du script).<br /><br /> La réinitialisation est requise pour appliquer le nouveau script à l'Abonné.|  
-|Activez ou désactivez la prise[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en charge des abonnés non-.|**sp_changepublication**|**is_enabled_for_het_sub**|Nouvel instantané.|  
+|Activer ou désactiver la prise en charge pour les Abonnés non [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|**sp_changepublication**|**is_enabled_for_het_sub**|Nouvel instantané.|  
 |Modifier les rapports sur les conflits pour les abonnements mis à jour en attente|**sp_changepublication**|**centralized_conflicts**|Ne peut être modifiée qu'en l'absence d'abonnements actifs.|  
 |Modifier la stratégie de résolution des conflits pour les abonnements mis à jour en attente.|**sp_changepublication**|**conflict_policy**|Ne peut être modifiée qu'en l'absence d'abonnements actifs.|  
   
@@ -49,14 +49,14 @@ ms.locfileid: "73882348"
 |Ajouter un filtre de lignes.|**sp_articlefilter**|Tous les paramètres.|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Supprimer un filtre de lignes.|**sp_articlefilter**|**\@-**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier un filtre de lignes.|**sp_articlefilter**|**\@filter_clause**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Modifier un filtre de lignes.|**sp_changearticle**|**filtres**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Modifier un filtre de lignes.|**sp_changearticle**|**filter**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier des options de schéma.|**sp_changearticle**|**schema_option**|Nouvel instantané.|  
 |Modifier comment les tables sont gérées sur l'Abonné avant d'appliquer l'instantané.|**sp_changearticle**|**pre_creation_cmd**|Nouvel instantané.|  
-|Modifier l'état de l'article|**sp_changearticle**|**statu**|Nouvel instantané.|  
+|Modifier l'état de l'article|**sp_changearticle**|**statut**|Nouvel instantané.|  
 |Modifier des commandes INSERT, UPDATE ou DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier le nom de la table de destination|**sp_changearticle**|**dest_table**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier le propriétaire de la table de destination (schéma).|**sp_changearticle**|**destination_owner**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Modifier les mappages des types de données (s'applique seulement à la publication Oracle).|**sp_changearticlecolumndatatype**|**\@entrer**<br /><br /> **\@base**<br /><br /> **\@precision**<br /><br /> **\@scale**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Modifier les mappages des types de données (s'applique seulement à la publication Oracle).|**sp_changearticlecolumndatatype**|**\@entrer**<br /><br /> **\@base**<br /><br /> **\@precision**<br /><br /> **\@échelle**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Propriétés de la publication pour la réplication de fusion  
   
@@ -95,7 +95,7 @@ ms.locfileid: "73882348"
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Créer et appliquer l’instantané](../create-and-apply-the-snapshot.md)   
- [Réinitialiser des abonnements](../reinitialize-subscriptions.md)   
+ [Réinitialiser les abonnements](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)   
  [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)   

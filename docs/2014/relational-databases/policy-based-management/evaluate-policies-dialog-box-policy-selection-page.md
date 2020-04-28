@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705123"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie
@@ -32,13 +32,13 @@ ms.locfileid: "62705123"
  **Serveur**  
  Sélectionnez cette option pour vous connecter à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui contient la stratégie souhaitée.  
   
- **Stratégies : stratégie**  
+ **Stratégies : Stratégie**  
  Cliquez sur cette option pour ouvrir la boîte de dialogue de la stratégie spécifiée.  
   
- **Stratégies : catégorie**  
+ **Stratégies : Catégorie**  
  Indique la catégorie de la stratégie. Cette zone est en lecture seule.  
   
- **Stratégies : facette**  
+ **Stratégies : Facette**  
  Indique la facette implémentée par la stratégie. Cette zone est en lecture seule.  
   
  **Évaluer**  
@@ -46,7 +46,7 @@ ms.locfileid: "62705123"
   
 ## <a name="possible-errors"></a>Erreurs possibles  
   
--   **Aucune cible n’a été trouvée**  
+-   **Aucune cible n'a été trouvée**  
   
      Le jeu de cibles peut être vide pour l'une des raisons suivantes :  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62705123"
     -   Le type du serveur cible est différent du type du serveur sur lequel la stratégie est évaluée. Par exemple, dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)], si vous essayez d'évaluer une stratégie qui a été créée pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous recevez un jeu de cibles vide.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)   
+ [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md)   
  [Boîte de dialogue Évaluer les stratégies, page Résultats d'évaluation](evaluate-policies-dialog-box-evaluation-results-page.md)  
   
   

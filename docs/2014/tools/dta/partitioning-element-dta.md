@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657234"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning, élément (Assistant Paramétrage de base de données)
@@ -38,8 +38,7 @@ ms.locfileid: "62657234"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|
-  `string`, aucune longueur maximale.|  
+|**Type de données et longueur**|`string`, aucune longueur maximale.|  
 |**Valeurs autorisées**|**NONE**<br /> Aucun partitionnement.<br /><br /> **FULL**<br /> Partitionnement complet. (Améliore les performances.)<br /><br /> **ALIGNED**<br /> Partitionnement aligné uniquement. (Améliore la gestion.)<br /><br /> Utilisez une seule de ces valeurs avec cet élément.<br /><br /> La valeur**ALIGNED** signifie que dans la recommandation générée par l’Assistant Paramétrage du moteur de base de données chaque index proposé est partitionné de la même façon que la table sous-jacente pour laquelle l’index est défini. Les index non-cluster sur une vue indexée sont alignés avec la vue indexée.|  
 |**Valeur par défaut**|**NONE**|  
 |**Occurrence**|Obligatoire une fois pour l'élément `TuningOptions`, excepté si l'élément `DropOnlyMode` est utilisé. Si l'élément `DropOnlyMode` est utilisé, vous ne pouvez pas utiliser l'élément `Partitioning`. Ces éléments s'excluent mutuellement.|  

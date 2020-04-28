@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637607"
 ---
 # <a name="create-instances-of-xml-data"></a>Créer des instances de données XML
@@ -67,8 +67,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Par défaut, l'analyseur XML rejette les espaces blancs non significatifs lors de la conversion des données chaîne en XML si l'une des conditions suivantes est vraie :  
   
--   
-  `The xml:space` L’attribut n’est pas défini sur un élément ni sur ses éléments ancêtres.  
+-   `The xml:space` L’attribut n’est pas défini sur un élément ni sur ses éléments ancêtres.  
   
 -   L'attribut `xml:space` en vigueur sur un élément, ou sur l'un de ses éléments ancêtres, a la valeur par défaut.  
   
@@ -181,8 +180,7 @@ go
  Pour plus d’informations sur FOR XML, consultez [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie des instances du type de données `xml` au client comme résultat des différentes constructions serveur, telles que les requêtes FOR XML qui utilisent la directive TYPE, ou dans lesquelles le type de données `xml` est utilisé pour renvoyer du code XML d'après des colonnes, des variables et des paramètres de sortie SQL. Dans un code d'application cliente, le fournisseur ADO.NET demande que les informations de type de données `xml` soient transmises en code binaire depuis le serveur. Toutefois, si vous utilisez FOR XML sans la directive TYPE, les données XML reviennent en tant que type chaîne. Dans tous les cas, le fournisseur client est toujours en mesure de gérer toute forme XML.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie des instances du type de données `xml` au client comme résultat des différentes constructions serveur, telles que les requêtes FOR XML qui utilisent la directive TYPE, ou dans lesquelles le type de données `xml` est utilisé pour renvoyer du code XML d'après des colonnes, des variables et des paramètres de sortie SQL. Dans un code d'application cliente, le fournisseur ADO.NET demande que les informations de type de données `xml` soient transmises en code binaire depuis le serveur. Toutefois, si vous utilisez FOR XML sans la directive TYPE, les données XML reviennent en tant que type chaîne. Dans tous les cas, le fournisseur client est toujours en mesure de gérer toute forme XML.  
   
 ## <a name="using-constant-assignments"></a>Utilisation des affectations de constante  
  Une constante de chaîne peut être utilisée lorsqu’une instance du `xml` type de données est attendue. Cela revient à convertir implicitement (via CAST) une chaîne en XML. Par exemple :  

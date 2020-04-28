@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401175"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Chargeur de ligne de commande dwloader pour les Data Warehouse parallèles
@@ -209,7 +209,7 @@ Exemples :
 En cas d’échec de chargement, **dwloader** stocke la ligne qui n’a pas pu être chargée et la description de l’erreur les informations d’échec dans un fichier nommé *load_failure_file_name*. Si ce fichier existe déjà, dwloader remplacera le fichier existant. *load_failure_file_name* est créé lorsque le premier échec se produit. Si toutes les lignes sont chargées avec succès, *load_failure_file_name* n’est pas créé.  
   
 **-fh** *number_header_rows*  
-Nombre de lignes (lignes) à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
+Nombre de lignes (lignes) à ignorer au début de *source_data_file_name*. La valeur par défaut est 0.  
   
 <variable_length_column_options>  
 Les options d’une *source_data_file_name* qui contient des colonnes de longueur variable délimitées par des caractères. Par défaut, *source_data_file_name* contient des caractères ASCII dans des colonnes de longueur variable.  
@@ -222,7 +222,7 @@ Spécifie un type d’encodage de caractères pour les données à charger à pa
 **-t** *field_delimiter*  
 Délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ est un ou plusieurs de ces caractères d’échappement ASCII ou des valeurs hexadécimales ASCII.  
   
-|Name|Caractère d'échappement|Caractère hexadécimal|  
+|Nom|Caractère d'échappement|Caractère hexadécimal|  
 |--------|--------------------|-----------------|  
 |Onglet|\t|0x09|  
 |Retour chariot (CR)|\r|0x0D|  
@@ -349,7 +349,7 @@ ydm et DMY autorisent les mêmes formats d’entrée. Tous deux autorisent l’a
 ydm  
 Vous pouvez uniquement charger l’entrée mise en forme en tant que ydm dans les colonnes de type de données DateTime et smalldatetime. Vous ne pouvez pas charger les valeurs ydm dans une colonne du type de données datetime2, date ou DateTimeOffset.  
   
-mdy  
+mja  
 <month> <space> <day>mja autorise <comma>. <year>  
   
 Exemples de données d’entrée mja pour le 1er janvier 1975 :  
@@ -554,10 +554,10 @@ Le mode Append charge les données en deux phases. La phase 1 charge simultaném
   
 |Type de table|Plusieurs transactions<br />Mode (-m)|La table est vide|Accès concurrentiel pris en charge|Journalisation|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Segment de mémoire|Oui|Oui|Oui|Minimales|  
-|Segment de mémoire|Oui|Non|Oui|Minimales|  
-|Segment de mémoire|Non|Oui|Non|Minimales|  
-|Segment de mémoire|Non|Non|Non|Minimales|  
+|Segment de mémoire (heap)|Oui|Oui|Oui|Minimales|  
+|Segment de mémoire (heap)|Oui|Non|Oui|Minimales|  
+|Segment de mémoire (heap)|Non|Oui|Non|Minimales|  
+|Segment de mémoire (heap)|Non|Non|Non|Minimales|  
 |CL|Oui|Oui|Non|Minimales|  
 |CL|Oui|Non|Oui|Complète|  
 |CL|Non|Oui|Non|Minimales|  

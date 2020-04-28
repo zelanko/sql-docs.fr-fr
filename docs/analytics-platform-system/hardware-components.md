@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401142"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Composants matériels pour Analytics Platform System
@@ -21,13 +21,13 @@ ms.locfileid: "74401142"
 Analytics Platform System (APS) utilise des composants évolutifs afin que vous puissiez acheter le volume de traitement et de stockage adéquat en fonction des besoins de votre entreprise. Lorsque vous commandez des points d’accès, vous aurez besoin d’une combinaison de ces composants matériels de base. Des fournisseurs de matériel spécifiques peuvent utiliser des conventions d’affectation de noms différentes ou des composants supplémentaires.  
  
   
-## <a name="rackandnetwork"></a>Rack et réseau 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>Rack et réseau 
  
 Les composants APS sont tous stockés dans un ou plusieurs racks qui s’adaptent à votre centre de données. Chaque rack est fourni avec des unités de distribution de l’alimentation (PDU), deux commutateurs InfiniBand et deux commutateurs Ethernet.  
   
 ![Rack et réseau](media/rack-and-network.png "Rack et réseau APS")  
   
-## <a name="datascaleunit"></a>Unité d’échelle des données
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>Unité d’échelle des données
  
 Une unité d’échelle de données contient les hôtes de données et le stockage en attachement direct (DAS) pour le traitement et le stockage des données utilisateur. Pour ajouter de la capacité, vous ajoutez des unités d’échelle de données en fonction des configurations prises en charge par votre fournisseur de matériel. Au fur et à mesure que le nombre d’unités d’échelle de données augmente, vous devez ajouter des composants de réseau & de rack supplémentaires, si nécessaire, pour fournir davantage d’énergie, de réseau et d’infrastructure en rack.  
   
@@ -65,7 +65,7 @@ Le nombre total de disques pour les nœuds de calcul :
   
 **Pour les tailles de disque**, le stockage en attachement direct peut avoir 1, 2 ou 3 téraoctets de disques. Toutes les unités d’échelle de données doivent avoir des disques de la même taille.  
   
-## <a name="basescaleunit"></a>Unité d’échelle de base 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>Unité d’échelle de base 
  
 L’unité d’échelle de base contient le nombre minimal d’hôtes de l’alimentation au cerveau, les hôtes de données et le stockage en attachement direct requis pour l’appliance. Il comprend les composants suivants. 
   

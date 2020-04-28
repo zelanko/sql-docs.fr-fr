@@ -20,10 +20,10 @@ ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 785062784aa465c438ab842a642d09cad03c799b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982973"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982973"
 |request_max_cpu_time_sec|**int**|Limite maximale d'utilisation de l'UC, en secondes, pour une demande unique. La valeur par défaut 0 spécifie qu'il n'y a pas de limite. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** Pour plus d’informations, consultez [classe d’événements CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |request_memory_grant_timeout_sec|**int**|Délai d'allocation de mémoire, en secondes, pour une demande unique. La valeur par défaut 0 utilise un calcul interne basé sur le coût de requête. N'accepte pas la valeur NULL.|  
 |max_dop|**int**|Degré maximal de parallélisme pour le groupe de charges de travail. La valeur par défaut 0 utilise des paramètres globaux. N'accepte pas la valeur NULL.<br /><br /> **Nœud :** Ce paramètre remplace l’option de requête **MAXDOP**.|  
-|group_max_requests|**int**|Nombre maximal de demandes simultanées La valeur par défaut 0 spécifie qu'il n'y a pas de limite. N'accepte pas la valeur NULL.|  
+|group_max_requests|**int**|Nombre maximal de demandes simultanées. La valeur par défaut 0 spécifie qu'il n'y a pas de limite. N'accepte pas la valeur NULL.|  
 |pool_id|**int**|ID du pool de ressources utilisé par ce groupe de charges de travail.|  
 |external_pool_id|**int**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.<br /><br /> ID du pool de ressources externe utilisé par ce groupe de charges de travail.|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73982973"
   
 ## <a name="see-also"></a>Voir aussi  
  [sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

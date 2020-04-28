@@ -10,33 +10,33 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401082"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importer le pack d’administration SCOM-Analytics Platform System
 Procédez comme suit pour importer les packs d’administration System Center Operations Manager (SCOM) pour Analytics Platform System (APS). Les packs d’administration sont requis pour analyser les Data Warehouse parallèles à partir de SCOM. 
   
-## <a name="BeforeBegin"></a>Avant de commencer  
-**Prérequis**  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Avant de commencer  
+**Conditions préalables**  
   
 System Center Operations Manager 2007 R2 doit être installé et en cours d’exécution.  
   
 Les packs d’administration doivent être installés. Consultez [installer les packs d’administration SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md).  
   
-## <a name="Step1"></a>Étape 1 : importer le pack d’administration de base de l’appliance SQL Server  
+## <a name="step-1-import-the-sql-server-appliance-base-management-pack"></a><a name="Step1"></a>Étape 1 : importer le pack d’administration de base de l’appliance SQL Server  
   
-1.  Connectez-vous à l'ordinateur avec un compte membre du rôle Administrateurs Operations Manager, pour le groupe d'administration Operations Manager 2007.  
+1.  Ouvrez une session sur l’ordinateur disposant d’un compte appartenant au rôle Administrateurs Operations Manager pour le groupe de gestion Operations Manager 2007.  
   
 2.  Dans la console Opérateur, cliquez sur **Administration**.  
   
-3.  Cliquez avec le bouton droit sur le nœud **packs d’administration** , puis cliquez sur **Importer les packs d’administration**.  
+3.  Cliquez avec le bouton droit sur le nœud **Packs d'administration** , puis cliquez sur **Importer les packs d'administration**.  
   
     ![Cliquez sur Importer les packs d'administration](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM_IMP")  
   
-4.  Dans la liste des packs d’administration, sélectionnez le pack d’administration que vous souhaitez importer, cliquez sur **Sélectionner**, puis sur **Ajouter**.  
+4.  Dans la liste des packs d’administration, sélectionnez celui que vous voulez importer, cliquez sur **Sélectionner**, puis sur **Ajouter**.  
   
     ![Liste des packs d’administration](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP2.png "SCOM_IMP2")  
   
@@ -56,9 +56,9 @@ Les packs d’administration doivent être installés. Consultez [installer les 
   
     ![Une fois l'opération terminée, cliquez sur Fermer](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP6.png "SCOM_IMP6")  
   
-## <a name="Step2"></a>Importer le Pack de surveillance pour l’appliance Data Warehouse parallèle Microsoft SQL Server 2008 R2  
+## <a name="import-the-monitoring-pack-for-microsoft-sql-server-2008-r2-parallel-data-warehouse-appliance"></a><a name="Step2"></a>Importer le Pack de surveillance pour l’appliance Data Warehouse parallèle Microsoft SQL Server 2008 R2  
   
-1.  Cliquez avec le bouton droit sur le nœud **packs d’administration** , puis cliquez sur **Importer les packs d’administration**.  
+1.  Cliquez avec le bouton droit sur le nœud **Packs d'administration** , puis cliquez sur **Importer les packs d'administration**.  
   
 2.  Choisissez **Ajouter à partir du disque**....  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726115"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensions de personnalisation Analysis Services
@@ -78,14 +78,11 @@ ms.locfileid: "62726115"
   
  **Propriétés**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, une valeur de chaîne en lecture seule qui représente l'ID de session de la connexion actuelle.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, une valeur de chaîne en lecture seule qui représente l'ID de session de la connexion actuelle.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, une référence en lecture seule à la culture du client associée à la session active.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, une référence en lecture seule à la culture du client associée à la session active.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, une référence en lecture seule à l'interface d'identité représentant l'utilisateur actuel.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, une référence en lecture seule à l'interface d'identité représentant l'utilisateur actuel.  
   
  **Événements**  
   
@@ -96,22 +93,18 @@ ms.locfileid: "62726115"
 #### <a name="new-properties-in-the-context-class"></a>Nouvelles propriétés de la classe Context  
  La classe <xref:Microsoft.AnalysisServices.AdomdServer.Context> dispose de deux nouvelles propriétés :  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, une référence en lecture seule au nouvel objet de serveur.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, une référence en lecture seule au nouvel objet de serveur.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, une référence en lecture seule au nouvel objet <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, une référence en lecture seule au nouvel objet <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
   
 #### <a name="new-server-class"></a>Nouvelle classe Server  
  La nouvelle classe <xref:Microsoft.AnalysisServices.AdomdServer.Server> expose plusieurs extensions de personnalisation par le biais d'événements et de propriétés de classe.  
   
  **Propriétés**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, une valeur de chaîne en lecture seule représentant le nom du serveur.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, une valeur de chaîne en lecture seule représentant le nom du serveur.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, une référence en lecture seule à la culture globale associée au serveur.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, une référence en lecture seule à la culture globale associée au serveur.  
   
  **Événements**  
   
@@ -122,13 +115,13 @@ ms.locfileid: "62726115"
 #### <a name="adomdcommand-class"></a>Classe AdomdCommand  
  La classe <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> prend maintenant en charge les commandes MDX suivantes :  
   
--   [Instruction CREATe MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [Instruction UPDATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [Instruction DROP MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [Instruction CREATe SET &#40;&#41;MDX](/sql/mdx/mdx-data-definition-create-set)  
+-   [Instruction CREATE SET &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [Instruction DROP SET &#40;&#41;MDX](/sql/mdx/mdx-data-definition-drop-set)  
   

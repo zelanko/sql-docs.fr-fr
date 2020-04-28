@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983113"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
@@ -39,20 +39,20 @@ ms.locfileid: "73983113"
 |**table_id**|**int**|ID de la table pour laquelle l'index de recherche en texte intégral est rempli.|  
 |**memory_address**|**varbinary (8)**|Adresse mémoire de la structure des données internes utilisées pour représenter un remplissage actif.|  
 |**population_type**|**int**|Type de remplissage. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 1 = Remplissage complet<br /><br /> 2 = Remplissage incrémentiel avec cachet temporel<br /><br /> 3 = Mise à jour manuelle des modifications suivies<br /><br /> 4 = Mise à jour en arrière-plan des modifications suivies|  
-|**population_type_description**|**nvarchar (120)**|Description du type de remplissage.|  
+|**population_type_description**|**nvarchar(120)**|Description du type de remplissage.|  
 |**is_clustered_index_scan**|**bit**|Indique si le remplissage implique une analyse sur l'index cluster.|  
 |**range_count**|**int**|Nombre de sous-plages dans lesquelles ce remplissage a été mis en parallèle.|  
 |**completed_range_count**|**int**|Nombre de plages pour lesquelles le traitement est terminé.|  
 |**outstanding_batch_count**|**int**|Nombre actuel de lots en attente pour ce remplissage. Pour plus d’informations, consultez [sys. dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
-|**statu**|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> État de ce remplissage. Remarque : certains états sont transitoires. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> Par exemple, cet état se produit lorsqu'une fusion automatique est en cours.<br /><br /> 11 = Remplissage abandonné<br /><br /> 12 = Traiter une extraction de ressemblance sémantique|  
-|**status_description**|**nvarchar (120)**|Description de l'état du remplissage.|  
+|**statut**|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> État de ce remplissage. Remarque : certains états sont transitoires. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> Par exemple, cet état se produit lorsqu'une fusion automatique est en cours.<br /><br /> 11 = Remplissage abandonné<br /><br /> 12 = Traiter une extraction de ressemblance sémantique|  
+|**status_description**|**nvarchar(120)**|Description de l'état du remplissage.|  
 |**completion_type**|**int**|État de la manière dont ce remplissage s'est terminé.|  
-|**completion_type_description**|**nvarchar (120)**|Description du type d'achèvement.|  
+|**completion_type_description**|**nvarchar(120)**|Description du type d'achèvement.|  
 |**worker_count**|**int**|Cette valeur est toujours 0.|  
 |**queued_population_type**|**int**|Type du remplissage, d'après les modifications suivies, que suivra l'éventuel remplissage en cours.|  
-|**queued_population_type_description**|**nvarchar (120)**|Description du remplissage à suivre, le cas échéant. Par exemple, lorsque CHANGE TRACKING = AUTO et que le remplissage complet initial est en cours, cette colonne affiche « Remplissage automatique ».|  
-|**start_time**|**DATETIME**|Heure de début du remplissage.|  
-|**incremental_timestamp**|**confirmé**|Représente le cachet temporel de départ d'un remplissage complet. Pour tous les autres types de remplissage, cette valeur est le dernier point de contrôle validé représentant la progression des remplissages.|  
+|**queued_population_type_description**|**nvarchar(120)**|Description du remplissage à suivre, le cas échéant. Par exemple, lorsque CHANGE TRACKING = AUTO et que le remplissage complet initial est en cours, cette colonne affiche « Remplissage automatique ».|  
+|**start_time**|**datetime**|Heure de début du remplissage.|  
+|**incremental_timestamp**|**timestamp**|Représente le cachet temporel de départ d'un remplissage complet. Pour tous les autres types de remplissage, cette valeur est le dernier point de contrôle validé représentant la progression des remplissages.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque l'indexation sémantique statistique est activée en plus de l'indexation de texte intégral, l'extraction et le remplissage sémantique d'expressions clés et l'extraction de données de ressemblance du document se produisent simultanément avec l'indexation de texte intégral. Le remplissage de l'index de ressemblance du document se produit ultérieurement dans une deuxième phase. Pour plus d’informations, consultez [gérer et surveiller la recherche sémantique](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
@@ -67,14 +67,14 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|À|Relation|  
+|À partir|À|Relation|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Un-à-un|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Un-à-un|  
+|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Un à un|  
+|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Un à un|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique de la recherche en texte intégral et de la recherche sémantique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056794"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**thisdate**|**varchar (22)**|Heure de la modification|  
 |**nextdate**|**varchar (22)**|Date de la prochaine exécution du travail.|  
 |**broken**|**varchar(1)**|Indicateur signalant si le travail est interrompu.|  
-|**défini**|**varchar (200)**|Intervalle du travail.|  
+|**interval**|**varchar (200)**|Intervalle du travail.|  
 |**enregistrées**|**int**|Nombre d'échecs du travail.|  
 |**xactsetjobwhat**|**varchar (200)**|Nom de la procédure exécutée par le travail.|  
 |**xactsetjob**|**varchar(1)**|État du travail, qui peut être l'un des suivants :<br /><br /> **1** -la tâche est activée.<br /><br /> **0** -la tâche est désactivée.|  

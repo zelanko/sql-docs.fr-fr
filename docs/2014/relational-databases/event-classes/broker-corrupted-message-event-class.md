@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664084"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message, classe d'événements
@@ -46,13 +46,13 @@ ms.locfileid: "62664084"
 |**NTUserName**|**nvarchar**|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  
 |**ObjectName**|**nvarchar**|Nom de service de l'autre partie de la conversation et chaîne de connexion que la base de données distante a utilisée pour se connecter à cette base de données.|34|Non|  
 |**RoleName**|**nvarchar**|Rôle du point de terminaison qui reçoit ce message. Une des valeurs ci-dessous.<br /><br /> **initiateur**:<br />                  Le point de terminaison récepteur est l'initiateur de la conversation.<br /><br /> **cible**:<br />                  Le point de terminaison récepteur est la cible de la conversation.|38|Non|  
-|**Nom du serveur**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
-|**severity**|**int**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a supprimé le message en raison d'une erreur, il s'agit de la gravité de l'erreur.|29|Non|  
+|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
+|**Gravité**|**int**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a supprimé le message en raison d'une erreur, il s'agit de la gravité de l'erreur.|29|Non|  
 |**SPID**|**int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
-|**StartTime**|**DATETIME**|Heure de début de l'événement, le cas échéant.|14|Oui|  
+|**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
 |**State**|**int**|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|Non|  
 |**TextData**|**ntext**|Description de l'endommagement détecté.|1|Oui|  
-|**ID de la transaction**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
+|**ID de transaction**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   
  La colonne **TextData** de cet événement contient un message qui décrit le problème lié au message.  
   

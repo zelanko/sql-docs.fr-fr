@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12013ae253680621d154d7a6af87005aedbd92a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511449"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -65,9 +65,9 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_POPULATION : l'objet est dans une phase de remplissage. Bien que l'ensemble de lignes soit entièrement initialisé et que la plage complète d'interfaces soit disponible sur l'objet, d'autres lignes peuvent ne pas être encore remplies dans l'ensemble de lignes. Même si *pulProgress* et *pulProgressMax* peuvent être basés sur le nombre de lignes remplies, ils sont en général basés sur la durée ou l'effort requis pour remplir l'ensemble de lignes. Un appelant doit par conséquent utiliser ces informations comme une estimation approximative de la durée du processus, et non comme le nombre de lignes éventuel. Cette phase est uniquement retournée lors du remplissage d'un ensemble de lignes ; elle n'est jamais retournée lors de l'initialisation d'un objet source de données ou par l'exécution d'une commande qui met à jour, supprime ou insère des lignes.  
   
- DBASYNCHPHASE_COMPLETE : l'ensemble du traitement asynchrone ayant été réalisé par l'objet. **ISSAsynchStatus :: GetStatus** retourne un HRESULT qui indique le résultat de l’opération. En général, il s'agit du HRESULT qui aurait été retourné si l'opération avait été appelée de manière synchrone. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, *pulProgress* et *pulProgressMax* sont égaux au nombre total de lignes affectées par la commande. Si *cParamSets* est supérieur à 1, il s'agit du nombre total de lignes affectées par tous les jeux de paramètres spécifiés dans l'exécution. Si *peAsynchPhase* est un pointeur null, aucun code d'état n'est retourné.  
+ DBASYNCHPHASE_COMPLETE : l'ensemble du traitement asynchrone ayant été réalisé par l'objet. **ISSAsynchStatus::GetStatus** retourne un HRESULT qui indique le résultat de l'opération. En général, il s'agit du HRESULT qui aurait été retourné si l'opération avait été appelée de manière synchrone. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, *pulProgress* et *pulProgressMax* sont égaux au nombre total de lignes affectées par la commande. Si *cParamSets* est supérieur à 1, il s'agit du nombre total de lignes affectées par tous les jeux de paramètres spécifiés dans l'exécution. Si *peAsynchPhase* est un pointeur null, aucun code d'état n'est retourné.  
   
- DBASYNCHPHASE_CANCELED : le traitement asynchrone de l'objet a été abandonné. **ISSAsynchStatus :: GetStatus** retourne DB_E_CANCELED. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, *pulProgress* est égal au nombre total de lignes, pour tous les paramètres définis, affectées par la commande avant l'annulation.  
+ DBASYNCHPHASE_CANCELED : le traitement asynchrone de l'objet a été abandonné. **ISSAsynchStatus::GetStatus** retourne DB_E_CANCELED. Si l'opération asynchrone est le résultat de l'appel à **ICommand::Execute** pour une commande qui met à jour, supprime ou insère des lignes, *pulProgress* est égal au nombre total de lignes, pour tous les paramètres définis, affectées par la commande avant l'annulation.  
   
  *ppwszStatusText*[in/out]  
  Pointeur vers la mémoire contenant des informations supplémentaires sur l'opération. Un fournisseur peut utiliser cette valeur pour faire la différence entre des éléments d'une opération, par exemple les différentes ressources en cours d'accès. Cette chaîne est localisée selon la propriété DBPROP_INIT_LCID sur l'objet source de données.  
@@ -97,11 +97,11 @@ HRESULT GetStatus(
  Le paramètre *hChapter* est incorrect.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus :: GetStatus** a été appelé sur un objet source de données, et **IDBInitialize :: Initialize** n’a pas été appelé sur l’objet source de données.  
+ **ISSAsynchStatus::GetStatus** a été appelé sur un objet source de données, et **IDBInitialize::Initialize** n'a pas été appelé sur l'objet source de données.  
   
- **ISSAsynchStatus :: GetStatus** a été appelé sur un ensemble de lignes, **ITransaction :: Commit** ou **ITransaction :: Abort** a été appelé, et l’objet est à l’État Zombie.  
+ **ISSAsynchStatus::GetStatus** a été appelé sur un ensemble de lignes, **ITransaction::Commit** ou **ITransaction::Abort** a été appelé, et l'objet se trouve dans un état zombie.  
   
- **ISSAsynchStatus :: GetStatus** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d’initialisation. L'ensemble de lignes se trouve dans un état zombie.  
+ **ISSAsynchStatus::GetStatus** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d'initialisation. L'ensemble de lignes se trouve dans un état zombie.  
   
  E_FAIL  
  Une erreur spécifique au fournisseur s'est produite.  

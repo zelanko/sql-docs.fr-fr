@@ -11,10 +11,10 @@ ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729625"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Créer un ensemble de modifications (Master Data Services)
@@ -23,9 +23,9 @@ ms.locfileid: "73729625"
 
   Un ensemble de modifications regroupe des modifications en attente, qui portent sur les données de référence. Si l’entité requiert l’approbation des modifications, les modifications en attente doivent être enregistrées dans un ensemble de modifications, puis soumises à l’administrateur à des fins d’approbation.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
--   Vous devez être autorisé à accéder à la zone fonctionnelle Explorateur. Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Vous devez être autorisé à accéder à la zone fonctionnelle Explorateur. Pour plus d’informations, consultez [autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
 -   Vous devez disposer au minimum d’un accès en lecture à l’entité ou à l’un de ses attributs.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729625"
   
 3.  Apportez des modifications à l’entité, puis cliquez sur**OK**.  
   
-4.  La boîte **de dialogue Choisir un ensemble de modifications** s’affiche.  
+4.  **Choisir un ensemble de modifications** s’affiche.  
   
 5.  Cliquez sur **Nouveau**, donnez un nom à l’ensemble de modifications et cliquez sur **Enregistrer**. Le nom de l’ensemble de modifications doit être unique dans le modèle.  
   

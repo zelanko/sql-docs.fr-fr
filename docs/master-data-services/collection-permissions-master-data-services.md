@@ -14,10 +14,10 @@ ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729636"
 ---
 # <a name="collection-permissions-master-data-services"></a>Autorisations de collection (services de données de référence)
@@ -32,7 +32,7 @@ ms.locfileid: "73729636"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lire**|L’utilisateur peut lire les membres de collection et les attributs de membre.|  
-|**Créés**|L’utilisateur peut créer des membres de collection et affecter des valeurs d’attribut.|  
+|**Créer**|L’utilisateur peut créer des membres de collection et affecter des valeurs d’attribut.|  
 |**Mise à jour**|L’utilisateur peut mettre à jour les membres de collection, les attributs et les relations.|  
 |**Supprimer**|L’utilisateur peut supprimer les membres de collection.|  
 |**Deny**|Tous les accès aux membres de collection sont refusés.|  

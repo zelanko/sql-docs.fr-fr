@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190351"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
@@ -37,7 +37,7 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nom du type d’attente. Pour plus d'informations, consultez [Types d'attentes](#WaitTypes), plus loin dans cette rubrique.|  
+|wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d'informations, consultez [Types d'attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  
 |wait_time_ms|**bigint**|Temps d'attente total en millisecondes pour ce type d'attente. Ce temps comprend signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
@@ -49,7 +49,7 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
-##  <a name="WaitTypes"></a>Types d’attente  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Types d’attente  
  **Attentes des ressources** Les attentes de ressource se produisent lorsqu’un Worker demande l’accès à une ressource qui n’est pas disponible parce que la ressource est utilisée par un autre travail ou qu’elle n’est pas encore disponible. Ces attentes sont par exemple des attentes de verrous, de verrous internes, de réseau et d'E/S de disque. Les attentes de verrous et de verrous internes sont des attentes sur des objets de synchronisation.  
   
 **Queue waits**  
@@ -58,8 +58,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
  **External waits**  
  Les attentes externes se produisent lorsqu'un thread de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attend un événement externe, par exemple un appel de procédure stockée étendue ou une requête de serveur lié, pour se terminer. Lorsque vous diagnostiquez des problèmes de blocage, souvenez-vous que les attentes externes n'impliquent pas forcément que le thread de travail est inactif, parce qu'il est peut être en train d'exécuter du code externe.  
   
- 
-  `sys.dm_os_wait_stats` indique la durée des attentes qui se sont achevées. Cette vue de gestion dynamique n'affiche pas les attentes actuelles.  
+ `sys.dm_os_wait_stats` indique la durée des attentes qui se sont achevées. Cette vue de gestion dynamique n'affiche pas les attentes actuelles.  
   
  Un thread de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas considéré comme étant en train d'attendre si l'une de ces conditions est vraie :  
   
@@ -669,7 +668,7 @@ Cette commande remet tous les compteurs à 0.
 |PREEMPTIVE_OS_SETFILEVALIDDATA |À usage interne uniquement| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |À usage interne uniquement| 
 |PREEMPTIVE_OS_SQLCLROPS |À usage interne uniquement| 
-|PREEMPTIVE_OS_SQMLAUNCH |À usage interne uniquement <br /> **S’applique à** [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]jusqu’à. |  
+|PREEMPTIVE_OS_SQMLAUNCH |À usage interne uniquement <br /> **S'applique à**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] jusqu'à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |À usage interne uniquement| 
 |PREEMPTIVE_OS_VERIFYTRUST |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures.| 
 |PREEMPTIVE_OS_VSSOPS |À usage interne uniquement| 
@@ -936,7 +935,7 @@ Cette commande remet tous les compteurs à 0.
 |VIA_ACCEPT |Se produit lorsqu'une connexion du fournisseur VIA (Virtual Interface Adapter) est terminée au cours du démarrage.| 
 |VIEW_DEFINITION_MUTEX |Se produit durant la synchronisation d'accès aux définitions des vues mises en cache.| 
 |WAIT_FOR_RESULTS |Se produit durant l'attente du déclenchement d'une notification de requête.| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |Se produit lors de l’attente de la fin de la mise à jour des statistiques synchrones avant que la compilation et l’exécution des requêtes puissent reprendre.<br /> **S’applique à : à**partir de[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Se produit lors de l’attente de la fin de la mise à jour des statistiques synchrones avant que la compilation et l’exécution des requêtes puissent reprendre.<br /> **S’applique à** : À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
 |WAIT_XLOGREAD_SIGNAL |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et versions ultérieures.| 

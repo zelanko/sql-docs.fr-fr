@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524059"
 ---
 # <a name="create-clr-functions"></a>Créer des fonctions CLR
-  Vous pouvez créer un objet de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une instance de qui est programmée dans un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly créé dans le Common Language Runtime (CLR). Les objets de base de données peuvent exploiter le modèle de programmation élaboré fourni par les fonctions agrégées, les fonctions, les procédures stockées, les déclencheurs et les types du CLR.  
+  Vous pouvez créer un objet de base de données dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmée dans un assembly créé dans le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Les objets de base de données peuvent exploiter le modèle de programmation élaboré fourni par les fonctions agrégées, les fonctions, les procédures stockées, les déclencheurs et les types du CLR.  
   
  La création d'une fonction CLR dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprend les étapes suivantes :  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62524059"
   
 -   [DROP ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
- **Pour créer une fonction CLR**  
+ **Pour créer une fonction clr**  
   
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
@@ -56,10 +56,10 @@ ms.locfileid: "62524059"
  Les fonctions CLR permettent d’accéder au code natif (non managé), tel que le code écrit en C ou C++, via l’utilisation de PInvoke à partir du code managé (pour plus d’informations, consultez [Appel à des fonctions natives à partir de code managé](https://go.microsoft.com/fwlink/?LinkID=181929) ). Vous pouvez ainsi réutiliser du code hérité en tant que fonctions CLR définies par l'utilisateur ou écrire des fonctions définies par l'utilisateur ayant un impact sur les performances en code natif. L'utilisation d'un assembly UNSAFE est obligatoire. Pour connaître les précautions à prendre lors de l’utilisation des assemblys UNSAFE, consultez [Sécurité d’accès du code de l’intégration du CLR](../clr-integration/security/clr-integration-code-access-security.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer des fonctions définies par l’utilisateur &#40;Moteur de base de données&#41;](create-user-defined-functions-database-engine.md)   
- [Créer des agrégats définis par l’utilisateur](create-user-defined-aggregates.md)   
- [Exécuter des fonctions définies par l’utilisateur](execute-user-defined-functions.md)   
- [Afficher les fonctions définies par l’utilisateur](view-user-defined-functions.md)   
+ [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](create-user-defined-functions-database-engine.md)   
+ [Créer des agrégats définis par l'utilisateur](create-user-defined-aggregates.md)   
+ [Exécuter les fonctions définies par l'utilisateur](execute-user-defined-functions.md)   
+ [Afficher les fonctions définies par l'utilisateur](view-user-defined-functions.md)   
  [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

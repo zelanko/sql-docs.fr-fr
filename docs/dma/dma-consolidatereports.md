@@ -15,20 +15,20 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056650"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation à l’aide de DMA
 
 Les instructions pas à pas suivantes vous aident à utiliser le Assistant Migration de données pour effectuer une évaluation à l’échelle réussie pour la mise à niveau d’un SQL Server local ou d’un SQL Server s’exécutant sur des machines virtuelles Azure, ou pour la migration vers Azure SQL Database.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Désignez un ordinateur d’outils sur votre réseau à partir duquel le transfert DMA sera initié. Assurez-vous que cet ordinateur dispose d’une connectivité à vos cibles de SQL Server.
-- Télécharger et installer :
+- Téléchargez et installez :
   - [Assistant Migration de données](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 ou version ultérieure.
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 ou version ultérieure.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 ou version ultérieure.
@@ -64,7 +64,7 @@ Pour charger les modules, procédez comme suit :
 
     PowerShell doit maintenant charger ces modules automatiquement lors du démarrage d’une nouvelle session PowerShell.
 
-## <a name="create-inventory"></a>Créer un inventaire des serveurs SQL
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Créer un inventaire des serveurs SQL
 
 Avant d’exécuter le script PowerShell pour évaluer vos serveurs SQL, vous devez créer un inventaire des serveurs SQL que vous souhaitez évaluer.
 
@@ -117,11 +117,11 @@ Les paramètres associés à la fonction dmaDataCollector sont décrits dans le 
 |---------|---------|
 |**getServerListFrom** | Votre inventaire. Les valeurs possibles sont **SqlServer** et **CSV**.<br/>Pour plus d’informations, consultez [créer un inventaire des serveurs SQL](#create-inventory). |
 |**csvPath** | Chemin d’accès à votre fichier d’inventaire CSV.  Utilisé uniquement lorsque **getServerListFrom** a la valeur **CSV**. |
-|**serverName** | Nom de l’instance de SQL Server de l’inventaire lors de l’utilisation de **SqlServer** dans le paramètre **getServerListFrom** . |
+|**Nom du serveur** | Nom de l’instance de SQL Server de l’inventaire lors de l’utilisation de **SqlServer** dans le paramètre **getServerListFrom** . |
 |**databaseName** | Base de données hébergeant la table d’inventaire. |
 |**AssessmentName** | Nom de l’évaluation DMA. |
 |**TargetPlatform** | Type de cible d’évaluation que vous souhaitez effectuer.  Les valeurs possibles sont **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**et **ManagedSqlServer**. |
-|**AuthenticationMethod** | La méthode d’authentification pour la connexion aux cibles de SQL Server que vous souhaitez évaluer. Les valeurs possibles **** sont SQLAuth **et l'** interversion. |
+|**AuthenticationMethod** | La méthode d’authentification pour la connexion aux cibles de SQL Server que vous souhaitez évaluer. Les valeurs possibles **SQLAuth** sont SQLAuth **et l'** interversion. |
 |**OutputLocation** | Répertoire dans lequel stocker le fichier de sortie de l’évaluation JSON. En fonction du nombre de bases de données en cours d’évaluation et du nombre d’objets dans les bases de données, les évaluations peuvent prendre beaucoup de temps. Le fichier sera écrit une fois toutes les évaluations terminées. |
 
 S’il y a une erreur inattendue, la fenêtre de commande qui est lancée par ce processus va être arrêtée.  Examinez le journal des erreurs pour déterminer la raison de l’échec.
@@ -139,11 +139,11 @@ Les paramètres associés à la fonction dmaProcessor sont décrits dans le tabl
 |Paramètre  |Description |
 |---------|---------|
 |**processTo** | Emplacement dans lequel le fichier JSON sera traité. Les valeurs possibles sont **SqlServer** et **AzureSQLDatabase**. |
-|**serverName** | Instance SQL Server vers laquelle les données seront traitées.  Si vous spécifiez **AzureSQLDatabase** pour le paramètre **processTo** , ajoutez uniquement le nom du SQL Server (n’incluez pas. Database.Windows.net). Vous serez invité à entrer deux connexions quand vous ciblez Azure SQL Database ; la première est celle de vos informations d’identification de locataire Azure, tandis que la seconde est votre connexion d’administrateur pour le SQL Server Azure. |
+|**Nom du serveur** | Instance SQL Server vers laquelle les données seront traitées.  Si vous spécifiez **AzureSQLDatabase** pour le paramètre **processTo** , ajoutez uniquement le nom du SQL Server (n’incluez pas. Database.Windows.net). Vous serez invité à entrer deux connexions quand vous ciblez Azure SQL Database ; la première est celle de vos informations d’identification de locataire Azure, tandis que la seconde est votre connexion d’administrateur pour le SQL Server Azure. |
 |**CreateDMAReporting** | Base de données de mise en lots à créer pour traiter le fichier JSON.  Si la base de données que vous spécifiez existe déjà et que vous définissez ce paramètre sur un, les objets ne sont pas créés.  Ce paramètre est utile pour recréer un objet unique qui a été supprimé. |
 |**CreateDataWarehouse** | Crée l’entrepôt de données qui sera utilisé par le rapport Power BI. |
 |**databaseName** | Nom de la base de données DMAReporting. |
-|**warehouseName** | Nom de la base de données de l’entrepôt de données. |
+|**warehouseName** | nom de la base de données de l'entrepôt de données. |
 |**jsonDirectory** | Répertoire contenant le fichier d’évaluation JSON.  S’il y a plusieurs fichiers JSON dans le répertoire, ils sont traités un par un. |
 
 La fonction dmaProcessor ne doit prendre que quelques secondes pour traiter un fichier unique.
@@ -263,7 +263,7 @@ Cette section est la partie principale du rapport, qui indique la disponibilité
 
 - InstanceDatabase
 - ChangeCategory
-- Intitulé
+- Titre
 - ObjectType
 - ImpactedObjectName
 

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056535"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Mettre à niveau SQL Server à l’aide de la Assistant Migration de données
@@ -41,7 +41,7 @@ Cet article fournit des instructions pas à pas pour la mise à niveau de SQL Se
 
 1. Pour la source, entrez le nom de l’instance SQL Server dans le champ **nom du serveur** dans la section **Détails du serveur source** . 
 
-2. Sélectionnez le **type d’authentification** pris en charge par l’instance de SQL Server source.
+2. Sélectionnez le **Type d’authentification** pris en charge par l’instance SQL Server source.
 
 3. Pour la cible, entrez le nom de l’instance SQL Server dans le champ **nom du serveur** dans la section **Détails du serveur cible** . 
 

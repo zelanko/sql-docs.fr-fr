@@ -16,10 +16,10 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73962414"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
@@ -66,12 +66,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0** (par défaut)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonné|  
+|**0** (valeur par défaut)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonné|  
 |**1**|Serveur de la source de données ODBC.|  
 |**2**|Base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
-|**1,3**|Fournisseur OLE DB|  
+|**3**|Fournisseur OLE DB|  
   
-`[ @login = ] 'login'`ID de connexion pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *login* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @login = ] 'login'`ID de connexion pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
@@ -105,12 +105,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
-|**16**|Mensuelle|  
+|**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64** (valeur par défaut)|Démarrage automatique|  
-|**128**|Récurrent|  
+|**128**|Périodique|  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
@@ -128,7 +128,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**version8**|Quatrième|  
-|**16**|Dernier|  
+|**16bits**|Dernier|  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
@@ -203,7 +203,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_addsubscriber**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Créer un abonnement par émission de notification](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   

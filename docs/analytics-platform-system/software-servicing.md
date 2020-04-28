@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400313"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Maintenance des logiciels dans Analytics Platform System
 Cette section résume les exigences de maintenance logicielle pour les appliances Analytics Platform System, y compris les correctifs logiciels WSUS et Analytics Platform System.  
   
-## <a name="Basics"></a>Notions de base de la maintenance des logiciels  
+## <a name="software-servicing-basics"></a><a name="Basics"></a>Notions de base de la maintenance des logiciels  
 **WSUS :** Votre appliance Analytics Platform System doit être configurée pour recevoir des mises à jour de Windows Server Update Services (WSUS). Ces mises à jour incluent des modifications importantes apportées au logiciel de l’appliance. Une fois configurés, de nombreuses mises à jour sont installées automatiquement et ne nécessitent pas de gestion manuelle. En règle générale, les mises à jour WSUS sont configurées lors de la configuration de l' [Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md) effectuées pendant la configuration de l’appliance. Si ce n’est pas le cas, cette étape de configuration peut être effectuée ultérieurement. Pour plus d’informations sur WSUS, consultez le [Guide du site Web WSUS](https://go.microsoft.com/fwlink/?LinkId=202417).  
   
 **Correctifs logiciels :** En outre, vous devrez peut-être appliquer des correctifs logiciels Analytics Platform System. Un *correctif* logiciel est une mise à jour logicielle créée pour un client spécifique afin de résoudre un problème lié au logiciel système de la plateforme d’analyse. Chaque correctif est un fichier exécutable qui installe le correctif pour le problème spécifique au client. Chaque correctif contient également une accumulation de toutes les mises à jour logicielles précédemment publiées pour Windows, SQL Server et Analytics Platform System. Si vous devez installer un correctif, le support technique Microsoft vous fournira le correctif et les instructions.  

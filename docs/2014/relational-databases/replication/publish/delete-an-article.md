@@ -20,42 +20,42 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882272"
 ---
 # <a name="delete-an-article"></a>Supprimer un article
   Cette rubrique explique comment supprimer un article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou des objets RMO (Replication Management Objects). Pour plus d’informations sur les conditions dans lesquelles un article peut être supprimé et pour savoir si la suppression d’un article requiert un nouvel instantané ou la réinitialisation des abonnements, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les articles peuvent être supprimés par programme en utilisant des procédures stockées de réplication. Les procédures stockées utilisées dépendent du type de publication auquel l'article appartient.  
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Pour supprimer un article d'une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) pour supprimer un article spécifié par **\@article** d’une publication spécifiée par **\@publication**. Affectez la valeur **1** à **\@force_invalidate_snapshot**.  
+1.  Exécutez [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) pour supprimer un article spécifié par **\@article** d’une publication spécifiée par **\@publication**. Spécifiez une valeur de **1** pour ** \@force_invalidate_snapshot**.  
   
 2.  (Facultatif) Pour supprimer entièrement l'objet publié de la base de données, exécutez la commande `DROP <objectname>` au niveau du serveur de publication dans la base de données de publication.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Pour supprimer un article d'une publication de fusion  
   
-1.  Exécutez [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) pour supprimer un article spécifié par **\@article** d’une publication spécifiée par **\@publication**. Si nécessaire, affectez la valeur **1** à **\@force_invalidate_snapshot** et la valeur **1** à **\@force_reinit_subscription**.  
+1.  Exécutez [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) pour supprimer un article spécifié par **\@article** d’une publication spécifiée par **\@publication**. Si nécessaire, affectez la valeur **1** à ** \@force_invalidate_snapshot** et la valeur **1** à ** \@force_reinit_subscription**.  
   
 2.  (Facultatif) Pour supprimer entièrement l'objet publié de la base de données, exécutez la commande `DROP <objectname>` au niveau du serveur de publication dans la base de données de publication.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
- L'exemple suivant supprime un article d'une publication transactionnelle. Dans la mesure où cette modification invalide l’instantané existant, la valeur **1** est affectée au paramètre **\@force_invalidate_snapshot**.  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemples (Transact-SQL)  
+ L'exemple suivant supprime un article d'une publication transactionnelle. Étant donné que cette modification invalide l’instantané existant, la valeur **1** est spécifiée pour le ** \@paramètre force_invalidate_snapshot** .  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- L'exemple suivant supprime deux articles d'une publication de fusion. Dans la mesure où ces modifications invalident l’instantané existant, la valeur **1** est affectée au paramètre **\@force_invalidate_snapshot** spécifié.  
+ L'exemple suivant supprime deux articles d'une publication de fusion. Étant donné que ces modifications invalident l’instantané existant, la valeur **1** est spécifiée pour ** \@** le paramètre force_invalidate_snapshot.  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
   
-##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez supprimer des articles par programme à l'aide des objets RMO (Replication Management Objects). Les classes RMO à utiliser pour supprimer un article dépendent du type de publication auquel l'article appartient.  
   
 #### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Pour supprimer un article qui appartient à une publication transactionnelle ou d'instantané.  
@@ -91,7 +91,7 @@ ms.locfileid: "73882272"
 7.  Fermez toutes les connexions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Ajouter et supprimer des Articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [Concepts liés aux procédures stockées système de réplication](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

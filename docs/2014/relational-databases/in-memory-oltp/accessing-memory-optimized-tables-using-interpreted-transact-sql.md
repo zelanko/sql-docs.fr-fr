@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468606"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accès aux tables optimisées en mémoire à l’aide du Transact-SQL interprété
@@ -42,7 +42,7 @@ ms.locfileid: "62468606"
 |Bases de données croisées|Requêtes de bases de données croisées<br /><br /> Transactions de bases de données croisées<br /><br /> Serveurs liés|  
   
 ## <a name="table-hints"></a>Indicateurs de table  
- Pour plus d'informations sur les indicateurs de table, consultez. [Indicateurs de table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). L’isolement d’instantané a été [!INCLUDE[hek_2](../../includes/hek-2-md.md)]ajouté pour prendre en charge.  
+ Pour plus d'informations sur les indicateurs de table, consultez. [Indicateurs de Table &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table). L’isolement d’instantané a été [!INCLUDE[hek_2](../../includes/hek-2-md.md)]ajouté pour prendre en charge.  
   
  Les indicateurs de table suivants ne sont pas pris en charge lors de l'accès à une table de mémoire optimisée à l'aide du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62468606"
 >  Un indicateur de table de niveau d'isolation n'est pas obligatoire pour les tables mémoire optimisées accessibles par des requêtes qui s'exécutent en mode de validation automatique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge d'OLTP en mémoire par Transact-SQL](transact-sql-support-for-in-memory-oltp.md)   
+ [Prise en charge de Transact-SQL pour l’OLTP en mémoire](transact-sql-support-for-in-memory-oltp.md)   
  [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

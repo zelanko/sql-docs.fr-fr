@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720099"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Spécification d'un jeu de données de test pour la structure (Didacticiel sur l'exploration de données de base)
@@ -52,7 +52,7 @@ ms.locfileid: "62720099"
  [Spécification du type de données et du type de contenu &#40;didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Activer l’extraction pour un modèle d’exploration de données](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   

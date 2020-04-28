@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b286ba7bde145a9a3676f38f329a8efbd932a4cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667640"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Prise en charge des colonnes éparses (OLE DB)
   Cette rubrique fournit des informations sur la prise en charge des colonnes éparses par le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses dans SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md). Pour consulter un exemple, voir [Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
   
 ## <a name="ole-db-statement-metadata"></a>Métadonnées d'instruction OLE DB  
- À partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], une nouvelle valeur d'indicateur DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, est disponible. Cette valeur doit être définie pour les colonnes qui sont des valeurs `column_set`. L’indicateur DBCOLUMNFLAGS peut être récupéré par le biais du paramètre *dwFlags* de IColumnsInfo :: GetColumnsInfo et de la colonne DBCOLUMN_FLAGS de l’ensemble de lignes retourné par IColumnsRowset :: GetColumnsRowset.  
+ À partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], une nouvelle valeur d'indicateur DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, est disponible. Cette valeur doit être définie pour les colonnes qui sont des valeurs `column_set`. L’indicateur DBCOLUMNFLAGS peut être récupéré via le paramètre *dwFlags* de IColumnsInfo::GetColumnsInfo et la colonne DBCOLUMN_FLAGS de l’ensemble de lignes retourné par IColumnsRowset::GetColumnsRowset.  
   
 ## <a name="ole-db-catalog-metadata"></a>Métadonnées de catalogue OLE DB  
  Deux colonnes supplémentaires spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ont été ajoutées à DBSCHEMA_COLUMNS.  
@@ -54,7 +54,7 @@ ms.locfileid: "62667640"
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS retourne deux nouvelles colonnes : SS_IS_COLUMN_SET et SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS retourne uniquement les colonnes qui ne sont pas membres de `column_set`.<br /><br /> Deux nouveaux ensembles de lignes de schéma ont été ajoutés : DBSCHEMA_COLUMNS_EXTENDED retourne toutes les colonnes indépendamment du caractère éparse de l'appartenance à `column_set`. DBSCHEMA_SPARSE_COLUMN_SET retourne uniquement les colonnes qui sont membres de `column_set`. Ces nouveaux ensembles de lignes ont les mêmes colonnes et restrictions que DBSCHEMA_COLUMNS.|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas inclut les GUID des nouveaux ensembles de lignes DBSCHEMA_COLUMNS_EXTENDED et DBSCHEMA_SPARSE_COLUMN_SET dans la liste des ensembles de lignes de schéma disponibles.|  
 |ICommand::Execute|Si **Select \* from** *table* est utilisé, elle retourne toutes les colonnes qui ne sont pas membres de `column_set`l’Sparse, plus une colonne XML qui contient des valeurs de toutes les colonnes non null qui sont `column_set`des membres de l’épars, le cas échéant.|  
-|IOpenRowset::OpenRowset|IOpenRowset :: OpenRowset retourne un ensemble de lignes avec les mêmes colonnes que ICommand :: Execute, avec une requête **Select \* ** sur la même table.|  
+|IOpenRowset::OpenRowset|IOpenRowset::OpenRowset retourne un ensemble de lignes avec les mêmes colonnes que ICommand::Execute, avec une requête **select \*** sur la même table.|  
 |ITableDefinition|Il n'y a aucune modification de cette interface pour les colonnes éparses ou les colonnes `column_set`. Les applications qui doivent effectuer des modifications de schéma doivent exécuter le [!INCLUDE[tsql](../../../includes/tsql-md.md)] approprié directement.|  
   
 ## <a name="see-also"></a>Voir aussi  

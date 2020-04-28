@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056613"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrer des SQL Server locaux ou des SQL Server sur des machines virtuelles Azure vers Azure SQL Database à l’aide de la Assistant Migration de données
@@ -37,11 +37,11 @@ Cet article fournit des instructions pas à pas pour migrer SQL Server site loca
 
    ![Créer un projet de migration](../dma/media/NewCreate1.png)
 
-## <a name="specify-the-source-server-and-database"></a>Spécifier le serveur source et la base de données
+## <a name="specify-the-source-server-and-database"></a>Spécifier la base de données et le serveur sources
 
 1. Pour la source, sous **se connecter au serveur source**, dans la zone de texte **nom du serveur** , entrez le nom de l’instance de SQL Server source.
 
-2. Sélectionnez le **type d’authentification** pris en charge par l’instance de SQL Server source.
+2. Sélectionnez le **Type d’authentification** pris en charge par l’instance SQL Server source.
 
    > [!NOTE]
    > Il est recommandé de chiffrer la connexion en activant la case à cocher **chiffrer la connexion** sous **connexion poperties**.
@@ -59,7 +59,7 @@ Cet article fournit des instructions pas à pas pour migrer SQL Server site loca
 
 5. Sélectionnez **Suivant**.
 
-## <a name="specify-the-target-server-and-database"></a>Spécifier le serveur cible et la base de données
+## <a name="specify-the-target-server-and-database"></a>Spécifier la base de données et le serveur cibles
 
 1. Pour la cible, sous **se connecter au serveur cible**, dans la zone de texte **nom du serveur** , entrez le nom de l’instance de Azure SQL Database. 
 
@@ -81,11 +81,11 @@ Cet article fournit des instructions pas à pas pour migrer SQL Server site loca
 
 5. Sélectionnez **Suivant**.
 
-## <a name="select-schema-objects"></a>Sélectionner des objets de schéma
+## <a name="select-schema-objects"></a>Sélectionner les objets de schéma
 
-1. Sélectionnez les objets de schéma de la base de données source que vous souhaitez migrer vers Azure SQL Database.
+1. Sélectionnez dans la base de données source les objets de schéma que vous souhaitez migrer vers Azure SQL Database.
 
-    ![Sélectionner des objets de schéma](../dma/media/select-schema-objects.png)
+    ![Sélectionner les objets de schéma](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
        > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
@@ -114,7 +114,7 @@ Cet article fournit des instructions pas à pas pour migrer SQL Server site loca
 
 5. Sélectionnez **Démarrer la migration des données**.
 
-L’écran final indique l’état global.
+Le dernier écran montre l’état global.
 
    ![état de la migration](../dma/media/migration-status.png) 
 

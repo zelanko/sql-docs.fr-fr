@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725493"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Caractéristiques de capacité maximale (Analysis Services)
@@ -31,12 +31,12 @@ ms.locfileid: "62725493"
   
  [Tabulaire (DeploymentMode=2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>Multidimensionnel et exploration de données (DeploymentMode = 0)  
+##  <a name="multidimensional-and-data-mining-deploymentmode0"></a><a name="bkmk_OLAP"></a>Multidimensionnel et exploration de données (DeploymentMode = 0)  
  Le mode de stockage MOLAP, qui stocke des données et des métadonnées, a des limites physiques supplémentaires concernant les tailles de fichier. Les fichiers du magasin de chaînes ont par défaut une taille maximale de 4 Go. Si vous avez besoin de fichiers de plus grande taille pour les magasins de chaînes, vous pouvez spécifier une architecture de stockage de chaînes différente. Pour plus d’informations, consultez [configurer le stockage de chaînes pour les dimensions et les partitions](../configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Object|Tailles/Nombres max.|  
+|Object|Tailles maximales/nombres maximaux|  
 |------------|----------------------------|  
-|Bases de données d’une instance|2^31-1 = 2 147 483 647|  
+|Bases de données dans une instance|2^31-1 = 2 147 483 647|  
 |Dimensions dans une base de données|2^31-1 = 2 147 483 647|  
 |Attributs dans une dimension|2^31-1 = 2 147 483 647|  
 |Membres dans un attribut de dimension|2^31-1 = 2 147 483 647|  
@@ -51,7 +51,7 @@ ms.locfileid: "62725493"
 |Partitions dans un cube|2^31-1 = 2 147 483 647|  
 |Traductions dans un cube|2^31-1 = 2 147 483 647|  
 |Agrégations dans une partition|2^31-1 = 2 147 483 647|  
-|Cellules retournées par une requête|2^31-1 = 2 147 483 647|  
+|Cellules renvoyées par une requête|2^31-1 = 2 147 483 647|  
 |Taille d’enregistrement de la requête source|64 Ko|  
 |Longueur des noms d’objet|100 caractères|  
 |Nombre maximal d'états distincts dans une colonne d'attribut de modèle d'exploration de données|2^31-1 = 2 147 483 647|  
@@ -61,39 +61,39 @@ ms.locfileid: "62725493"
   
  Pour plus d’informations sur les limitations de source de données pour le traitement analytique en ligne (OLAP) et l’exploration de données, consultez [sources de données prises en charge &#40;&#41;multidimensionnels SSAS ](../supported-data-sources-ssas-multidimensional.md), [sources de données prises en charge &#40;&#41;multidimensionnels SSAS ](../supported-data-sources-ssas-multidimensional.md), [objets ASSL et caractéristiques de l’objet](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="sharepoint-deploymentmode1"></a><a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|Object|Tailles/Nombres max.|  
+|Object|Tailles maximales/nombres maximaux|  
 |------------|----------------------------|  
-|Bases de données d’une instance|2^31-1 = 2 147 483 647|  
+|Bases de données dans une instance|2^31-1 = 2 147 483 647|  
 |Tables dans une base de données|2^31-1 = 2 147 483 647|  
 |Colonnes dans une table|2 ^ 31-1 = 2 147 483 647 **Avertissement :** le nombre total de colonnes dans une table dépend du nombre total de mesures et de colonnes calculées associées à la même table. Le nombre maximal de « Colonnes + Mesures + Colonnes calculées » pour une table est 2^31-1 = 2 147 483 647|  
-|Lignes d’une table|**Avertissement illimité :** avec une restriction, aucune colonne ne peut contenir plus de 1 999 999 997 valeurs distinctes.|  
-|Hiérarchies d’une table|2^31-1 = 2 147 483 647|  
-|Niveaux d’une hiérarchie|2^31-1 = 2 147 483 647|  
+|Lignes dans une table|**Avertissement illimité :** avec une restriction, aucune colonne ne peut contenir plus de 1 999 999 997 valeurs distinctes.|  
+|Hiérarchies dans une table|2^31-1 = 2 147 483 647|  
+|Niveaux dans une hiérarchie|2^31-1 = 2 147 483 647|  
 |Relations|2^31-1 = 2 147 483 647|  
 |Colonnes clés dans une table|2^31-1 = 2 147 483 647|  
 |Mesures dans une table|2 ^ 31-1 = 2 147 483 647 **Avertissement :** le nombre total de mesures dans une table dépend du nombre total de colonnes et de colonnes calculées associées à la même table. Le nombre maximal de « Colonnes + Mesures + Colonnes calculées » pour une table est 2^31-1 = 2 147 483 647|  
 |Colonnes calculées dans une table|2 ^ 31-1 = 2 147 483 647 **Avertissement :** le nombre total de colonnes calculées dans une table dépend du nombre total de colonnes et de mesures associées à la même table. Le nombre maximal de « Colonnes + Mesures + Colonnes calculées » pour une table est 2^31-1 = 2 147 483 647|  
-|Cellules retournées par une requête|2^31-1 = 2 147 483 647|  
+|Cellules renvoyées par une requête|2^31-1 = 2 147 483 647|  
 |Taille d’enregistrement de la requête source|64 Ko|  
 |Longueur des noms d’objet|100 caractères|  
   
-##  <a name="bkmk_vertipaq"></a>Tabulaire (DeploymentMode = 2)  
+##  <a name="tabular-deploymentmode2"></a><a name="bkmk_vertipaq"></a>Tabulaire (DeploymentMode = 2)  
   
-|Object|Tailles/Nombres max.|  
+|Object|Tailles maximales/nombres maximaux|  
 |------------|----------------------------|  
-|Bases de données d’une instance|2^31-1 = 2 147 483 647|  
+|Bases de données dans une instance|2^31-1 = 2 147 483 647|  
 |Tables dans une base de données|2^31-1 = 2 147 483 647|  
 |Colonnes dans une table|2 ^ 31-1 = 2 147 483 647 **Avertissement :** le nombre total de colonnes dans une table dépend du nombre total de mesures et de colonnes calculées associées à la même table. Le nombre maximal de « Colonnes + Mesures + Colonnes calculées » pour une table est 2^31-1 = 2 147 483 647|  
-|Lignes d’une table|**Avertissement illimité :** avec la restriction, aucune colonne unique de la table ne peut avoir plus de 1 999 999 997 valeurs distinctes.|  
-|Hiérarchies d’une table|2^31-1 = 2 147 483 647|  
-|Niveaux d’une hiérarchie|2^31-1 = 2 147 483 647|  
+|Lignes dans une table|**Avertissement illimité :** avec la restriction, aucune colonne unique de la table ne peut avoir plus de 1 999 999 997 valeurs distinctes.|  
+|Hiérarchies dans une table|2^31-1 = 2 147 483 647|  
+|Niveaux dans une hiérarchie|2^31-1 = 2 147 483 647|  
 |Relations|2^31-1 = 2 147 483 647|  
 |Colonnes clés dans une table|2^31-1 = 2 147 483 647|  
 |Mesures dans une table|2 ^ 31-1 = 2 147 483 647 **Avertissement :** le nombre total de mesures dans une table dépend du nombre total de colonnes et de colonnes calculées associées à la même table. Le nombre maximal de « Colonnes + Mesures + Colonnes calculées » pour une table est 2^31-1 = 2 147 483 647|  
 |Colonnes calculées dans une table|2 ^ 31-1 = 2 147 483 647 **Avertissement :** le nombre total de colonnes calculées dans une table dépend du nombre total de colonnes et de mesures associées à la même table. Le nombre maximal de « Colonnes + Mesures + Colonnes calculées » pour une table est 2^31-1 = 2 147 483 647|  
-|Cellules retournées par une requête|2^31-1 = 2 147 483 647|  
+|Cellules renvoyées par une requête|2^31-1 = 2 147 483 647|  
 |Taille d’enregistrement de la requête source|64 Ko|  
 |Longueur des noms d’objet|100 caractères|  
   

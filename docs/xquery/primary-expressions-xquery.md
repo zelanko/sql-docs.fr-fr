@@ -20,10 +20,10 @@ ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74200512"
 ---
 # <a name="primary-expressions-xquery"></a>Expressions primaires (XQuery)
@@ -45,8 +45,7 @@ ms.locfileid: "74200512"
  Un littéral chaîne peut également comprendre une référence de caractère (référence de style XML à un caractère Unicode) qui est identifiée par un point de code décimal ou hexadécimal. Par exemple, le symbole euro peut être représenté par la référence de caractère « &\#8364 ; ».  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'appuie sur XML version 1.0 pour l'analyse.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'appuie sur XML version 1.0 pour l'analyse.  
   
 ### <a name="examples"></a>Exemples  
  Les exemples suivants expliquent comment utiliser des littéraux, ainsi que des références d'entité et de caractère.  

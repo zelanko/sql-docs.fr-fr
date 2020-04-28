@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689026"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -43,7 +43,7 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *lexical*  
+ *token*  
  Valeur indiquant un jeton de type BCP.  
   
  *case*  
@@ -59,14 +59,14 @@ fIsMaxType
   
 |Nom du type BCP|MaxType|Output|  
 |-------------------|-------------|------------|  
-|`SQLDECIMAL`|Vous pouvez soit utiliser|**sépar**|  
-|`SQLNUMERIC`|Vous pouvez soit utiliser|**chiffre**|  
+|`SQLDECIMAL`|Vous pouvez soit utiliser|**decimal**|  
+|`SQLNUMERIC`|Vous pouvez soit utiliser|**numeric**|  
 |`SQLINT1`|Vous pouvez soit utiliser|**tinyint**|  
 |`SQLINT2`|Vous pouvez soit utiliser|**smallint**|  
 |`SQLINT4`|Vous pouvez soit utiliser|**int**|  
 |`SQLMONEY`|Vous pouvez soit utiliser|**money**|  
 |`SQLFLT8`|Vous pouvez soit utiliser|**float**|  
-|`SQLDATETIME`|Vous pouvez soit utiliser|**DATETIME**|  
+|`SQLDATETIME`|Vous pouvez soit utiliser|**datetime**|  
 |`SQLBITN`|Vous pouvez soit utiliser|**bit-null**|  
 |`SQLBIT`|Vous pouvez soit utiliser|**bit**|  
 |`SQLBIGCHAR`|Non|**char**|  
@@ -83,9 +83,9 @@ fIsMaxType
 |`SQLDATETIMN`|Vous pouvez soit utiliser|**datetime-null**|  
 |`SQLMONEYN`|Vous pouvez soit utiliser|**money-null**|  
 |`SQLFLTN`|Vous pouvez soit utiliser|**float-null**|  
-|`SQLAOPSUM`|Vous pouvez soit utiliser|**Checksum**|  
+|`SQLAOPSUM`|Vous pouvez soit utiliser|**SUM**|  
 |`SQLAOPAVG`|Vous pouvez soit utiliser|**AVG**|  
-|`SQLAOPCNT`|Vous pouvez soit utiliser|**Saut**|  
+|`SQLAOPCNT`|Vous pouvez soit utiliser|**Count**|  
 |`SQLAOPMIN`|Vous pouvez soit utiliser|**Min**|  
 |`SQLAOPMAX`|Vous pouvez soit utiliser|**Max**|  
 |`SQLDATETIM4`|Vous pouvez soit utiliser|**smalldatetime**|  

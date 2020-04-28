@@ -17,25 +17,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cbfad718850df4c66572999735fbee58fb530424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882294"
 ---
 # <a name="manage-identity-columns"></a>Gérer des colonnes d'identité
   Cette rubrique explique comment gérer des colonnes d'identité dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Lorsque les insertions de l'Abonné sont répliquées sur le serveur de publication, les colonnes d'identité doivent être gérées afin d'éviter d'affecter la même valeur d'identité sur l'Abonné et sur le serveur de publication. La réplication peut gérer automatiquement les plages d'identité ou vous pouvez choisir de les gérer manuellement.  Pour plus d’informations sur les options de gestion des plages d’identité fournies par la réplication, consultez [Répliquer des colonnes d’identité](replicate-identity-columns.md).  
   
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Lors de la publication d'une table dans plusieurs publications, vous devez spécifier les mêmes options de gestion des plages d'identité pour les différentes publications. Pour plus d’informations, consultez « Publication de tables dans plusieurs publications » dans la rubrique [Publier des données et des objets de base de données](publish-data-and-database-objects.md).  
   
 -   Pour créer un numéro à incrémentation automatique qui peut être utilisé dans plusieurs tables ou être appelé par des applications sans faire référence à une table, consultez [Numéros de séquence](../../sequence-numbers/sequence-numbers.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Spécifiez une option de gestion des colonnes d’identité sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** de l’Assistant Nouvelle publication. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Créer une publication](create-a-publication.md). Dans l'Assistant Nouvelle publication :  
   
 -   Si vous sélectionnez **Publication de fusion** ou **Publication transactionnelle avec abonnements pouvant être mis à jour** dans la page **Type de publication** , sélectionnez une gestion des plages d'identité automatique ou manuelle (l'option par défaut, automatique, est recommandée). Après la publication de la table, la propriété ne peut plus être modifiée mais d'autres propriétés liées peuvent l'être.  
@@ -58,11 +58,11 @@ ms.locfileid: "73882294"
   
     |Option|Valeur|Description|  
     |------------|-----------|-----------------|  
-    |**Taille de la plage du serveur de publication**|Valeur entière représentant la taille de la plage (par exemple, 20000).|Consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](replicate-identity-columns.md).|  
-    |**Taille de la plage de l’abonné**|Valeur entière représentant la taille de la plage (par exemple, 10000).|Consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](replicate-identity-columns.md).|  
+    |**Taille de la plage sur le serveur de publication**|Valeur entière représentant la taille de la plage (par exemple, 20000).|Consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](replicate-identity-columns.md).|  
+    |**Taille de la plage sur l'Abonné**|Valeur entière représentant la taille de la plage (par exemple, 10000).|Consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](replicate-identity-columns.md).|  
     |**Pourcentage du seuil de plage**|Valeur entière représentant le pourcentage du seuil (par exemple, 90 signifie 90 %)|Pourcentage représentant le nombre total de valeurs d'identité utilisées sur un nœud avant d'affecter une nouvelle plage d'identité.<br /><br /> Remarque : cette valeur doit être spécifiée, mais n’est utilisée que par les Abonnés utilisant des abonnements mis à jour en attente et les Abonnés aux publications de fusion qui exécutent [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou des versions antérieures d’autres éditions de SQL Server. Pour plus d’informations, consultez la section « Affectation de plages d’identité » de [Répliquer des colonnes d’identité](replicate-identity-columns.md).|  
-    |**Valeur de début de la prochaine plage**|Valeur de type entier. Lecture seule.|Valeur de départ de la prochaine plage. Si, par exemple, la plage actuelle va de 5001 à 6000, il s'agira de la valeur 6001.|  
-    |**Valeur d’identité maximale**|Valeur de type entier. Lecture seule.|Valeur maximale de la colonne identité. Déterminée par le type de données de base de la colonne.|  
+    |**Valeur de départ de la prochaine plage**|Valeur de type entier. Lecture seule.|Valeur de départ de la prochaine plage. Si, par exemple, la plage actuelle va de 5001 à 6000, il s'agira de la valeur 6001.|  
+    |**Valeur d'identité maximale**|Valeur de type entier. Lecture seule.|Valeur maximale de la colonne identité. Déterminée par le type de données de base de la colonne.|  
     |**Lier**|Valeur de type entier. Lecture seule.|Valeur utilisée pour augmenter ou diminuer le nombre de la colonne d'identité à chaque insertion : en règle générale définie à 1.|  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
@@ -77,27 +77,27 @@ ms.locfileid: "73882294"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Dans la boîte de dialogue **Propriétés de la publication - **Publication>**, cliquez sur \<OK**.  
+5.  Dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Vous pouvez utiliser des procédures stockées de réplication pour spécifier les options de gestion des plages d'identité lors de la création d'un article.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Pour activer la gestion automatique des plages d'identité lors de la définition d'articles pour une publication transactionnelle  
   
-1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Si la table source qui est publiée contient une colonne d’identité, affectez la valeur **auto** à **\@identityrangemanagementoption**, spécifiez la plage de valeurs d’identité affectée au serveur de publication pour **\@pub_identity_range**, la plage de valeurs d’identité affectée à chaque Abonné pour **\@identity_range** et le pourcentage des valeurs d’identité totales utilisé avant qu’une nouvelle plage d’identité soit affectée pour **\@threshold**. Pour plus d’informations sur la définition d’articles, consultez [Définir un article](define-an-article.md).  
+1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Si la table source en cours de publication a une colonne d’identité, affectez la valeur **auto** à ** \@identityrangemanagementoption**, la plage de valeurs d’identité affectée au serveur de publication pour ** \@pub_identity_range**, la plage de valeurs d’identité affectée à chaque abonné pour ** \@identity_range**et le pourcentage du nombre total de valeurs d’identité utilisées avant qu’une nouvelle plage d' ** \@** identité soit affectée au seuil. Pour plus d’informations sur la définition d’articles, consultez [Définir un article](define-an-article.md).  
   
     > [!NOTE]  
     >  Vérifiez que le type de données de la colonne d'identité est suffisamment grand pour prendre en charge la plage totale des identités affectées à l'ensemble des Abonnés.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Pour désactiver la gestion automatique des plages d'identité lors de la définition d'articles pour une publication transactionnelle  
   
-1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Affectez la valeur **manual** à **\@identityrangemanagementoption**. Pour plus d’informations sur la définition d’articles, consultez [Définir un article](define-an-article.md).  
+1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Affectez la valeur **Manual** à ** \@identityrangemanagementoption**. Pour plus d’informations sur la définition d’articles, consultez [Définir un article](define-an-article.md).  
   
 2.  Affectez des plages aux colonnes d'identité d'article sur l'Abonné pour éviter de générer des conflits lors de la mise à jour des Abonnés. Pour plus d’informations, consultez la section relative à l’affectation de plages pour la gestion manuelle de plages d’identité dans la rubrique [Répliquer des colonnes d’identité](replicate-identity-columns.md).  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>Pour activer la gestion automatique des plages d'identité lors de la définition d'articles pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Si la table source qui est publiée contient une colonne d’identité, affectez la valeur **auto** à **\@identityrangemanagementoption**, spécifiez la plage de valeurs d’identité affectée à un abonnement serveur pour **\@pub_identity_range**, la plage de valeurs d’identité affectée au serveur de publication et à chaque abonnement client pour **\@identity_range** et le pourcentage des valeurs d’identité totales utilisé avant qu’une nouvelle plage d’identité soit affectée pour **\@threshold**. Pour plus d’informations sur l’affectation de nouvelles plages d’identité, consultez la section « Attribution de plages d’identité » de la rubrique [Répliquer des colonnes d’identité](replicate-identity-columns.md). Pour plus d’informations sur la définition d’articles, consultez [Définir un article](define-an-article.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Si la table source en cours de publication comporte une colonne d’identité, spécifiez la valeur **auto** pour ** \@identityrangemanagementoption**, la plage de valeurs d’identité affectée à un abonnement serveur pour ** \@pub_identity_range**, la plage de valeurs d’identité affectée au serveur de publication et chaque abonnement client pour ** \@identity_range**et le pourcentage du nombre total de valeurs d’identité utilisées avant qu’une nouvelle plage d' ** \@** identité soit affectée au seuil. Pour plus d’informations sur l’affectation de nouvelles plages d’identité, consultez la section « Attribution de plages d’identité » de la rubrique [Répliquer des colonnes d’identité](replicate-identity-columns.md). Pour plus d’informations sur la définition d’articles, consultez [Définir un article](define-an-article.md).  
   
     > [!NOTE]  
     >  Vérifiez que le type de données de la colonne d'identité est suffisamment grand pour prendre en charge la plage totale des identités qui sont assignées à l'ensemble des Abonnés, en particulier pour les Abonnés avec des abonnements serveur.  
@@ -106,9 +106,9 @@ ms.locfileid: "73882294"
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez l’une des valeurs suivantes pour ** \@identityrangemanagementoption**:  
   
-    -   **Manuel** : les plages d’identité doivent être affectées manuellement pour la mise à jour des abonnés.  
+    -   **manuel** - les plages d'identité doivent être affectées manuellement pour la mise à jour des Abonnés.  
   
-    -   **aucune** -les colonnes d’identité sur le serveur de publication ne seront pas définies en tant que colonnes d’identité sur l’abonné.  
+    -   **none** - les colonnes d'identité sur le serveur de publication ne seront pas définies en tant que colonnes d'identité sur l'Abonné.  
   
      Pour plus d’informations sur la définition d’articles, consultez [Définir un article](define-an-article.md).  
   
@@ -120,9 +120,9 @@ ms.locfileid: "73882294"
   
 2.  Si la valeur de **identityrangemanagementoption** dans le jeu de résultats est **1**, modifiez les paramètres suivants :  
   
-    -   Pour modifier les plages d'identité affectées, exécutez [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **identity_range** ou **pub_identity_range** à **\@property** et spécifiez la nouvelle valeur de la plage pour **\@value**.  
+    -   Pour modifier les plages d'identité affectées, exécutez [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Spécifiez une valeur de **identity_range** ou **pub_identity_range** pour ** \@propriété** et la nouvelle valeur de plage pour ** \@valeur**.  
   
-    -   Pour modifier le seuil d'affectation de nouvelles plages, exécutez [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **threshold** à **\@property** et spécifiez la nouvelle valeur de seuil pour **\@value**.  
+    -   Pour modifier le seuil d'affectation de nouvelles plages, exécutez [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Spécifiez une valeur de **seuil** pour ** \@la propriété** et la nouvelle valeur de seuil pour ** \@la valeur**.  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>Pour modifier les paramètres de gestion automatique des plages d'identité pour un article existant dans une publication de fusion  
   
@@ -130,15 +130,15 @@ ms.locfileid: "73882294"
   
 2.  Si la valeur de **identity_support** dans le jeu de résultats est **1**, modifiez les paramètres suivants :  
   
-    -   Pour modifier les plages d'identité affectées, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **identity_range** ou **pub_identity_range** à **\@property** et spécifiez la nouvelle valeur de la plage pour **\@value**.  
+    -   Pour modifier les plages d'identité affectées, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Spécifiez une valeur de **identity_range** ou **pub_identity_range** pour ** \@propriété** et la nouvelle valeur de plage pour ** \@valeur**.  
   
-    -   Pour modifier le seuil d'affectation de nouvelles plages, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **threshold** à **\@property** et spécifiez la nouvelle valeur de seuil pour **\@value**. Pour plus d’informations sur l’affectation de nouvelles plages d’identité, consultez la section « Attribution de plages d’identité » de la rubrique [Répliquer des colonnes d’identité](replicate-identity-columns.md).  
+    -   Pour modifier le seuil d'affectation de nouvelles plages, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Spécifiez une valeur de **seuil** pour ** \@la propriété** et la nouvelle valeur de seuil pour ** \@la valeur**. Pour plus d’informations sur l’affectation de nouvelles plages d’identité, consultez la section « Attribution de plages d’identité » de la rubrique [Répliquer des colonnes d’identité](replicate-identity-columns.md).  
   
-    -   Pour désactiver la gestion automatique des plages d'identité, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **identityrangemanagementoption** à **\@property** et la valeur **manual** ou **none** à **\@value**.  
+    -   Pour désactiver la gestion automatique des plages d'identité, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **identityrangemanagementoption** à ** \@la propriété** et la valeur **Manual** ou ** \@** **None** à la valeur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
- [Concepts liés aux procédures stockées système de réplication](../concepts/replication-system-stored-procedures-concepts.md)   
- [Répliquer des colonnes d’identité](replicate-identity-columns.md)  
+ [Réplication transactionnelle d’égal à égal](../transactional/peer-to-peer-transactional-replication.md)   
+ [Concepts des procédures stockées système de réplication](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Répliquer les colonnes d’identité](replicate-identity-columns.md)  
   
   

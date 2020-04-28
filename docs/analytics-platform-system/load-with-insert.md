@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401021"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Charger des données avec INSERT dans Parallel Data Warehouse
@@ -21,14 +21,14 @@ ms.locfileid: "74401021"
 Vous pouvez utiliser l’instruction TSQL INSERT pour charger des données dans une table SQL Server parallèle Data Warehouse (PDW) distribuée ou répliquée. Pour plus d’informations sur INSERT, consultez [Insert](../t-sql/statements/insert-transact-sql.md). Pour les tables répliquées et toutes les colonnes de non-distribution dans une table distribuée, PDW utilise SQL Server pour convertir implicitement les valeurs de données spécifiées dans l’instruction dans le type de données de la colonne de destination. Pour plus d’informations sur SQL Server règles de conversion de données, consultez [conversion de types de données pour SQL](../t-sql/data-types/data-type-conversion-database-engine.md). Toutefois, pour les colonnes de distribution, PDW ne prend en charge qu’un sous-ensemble de conversions implicites prises en charge par SQL Server. Par conséquent, lorsque vous utilisez l’instruction INSERT pour charger des données dans une colonne de distribution, les données sources doivent être spécifiées dans l’un des formats définis dans les tableaux suivants.  
   
   
-## <a name="InsertingLiteralsBinary"></a>Insérer des littéraux dans des types binaires  
+## <a name="insert-literals-into-binary-types"></a><a name="InsertingLiteralsBinary"></a>Insérer des littéraux dans des types binaires  
 Le tableau suivant définit les types de littéraux, le format et les règles de conversion acceptés pour l’insertion d’une valeur littérale dans une colonne de distribution de type **Binary** (*n*) ou **varbinary**(*n*).  
   
 |Type littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
 |Littéral binaire|0x*hexidecimal_string*<br /><br />Exemple : 0x12Ef|Les littéraux binaires doivent être précédés de 0x.<br /><br />La longueur de la source de données ne peut pas dépasser le nombre d’octets spécifié pour le type de données.<br /><br />Si la longueur de la source de données est inférieure à la taille du type de données **Binary** , les données sont complétées à droite avec des zéros pour atteindre la taille du type de données.|  
   
-## <a name="InsertingLiteralsDateTime"></a>Insérer des littéraux dans des types de date et d’heure  
+## <a name="insert-literals-into-date-and-time-types"></a><a name="InsertingLiteralsDateTime"></a>Insérer des littéraux dans des types de date et d’heure  
 Les littéraux de date et d’heure sont représentés à l’aide de valeurs de caractères dans des formats spécifiques, placés entre guillemets simples. Les tableaux suivants définissent les types de littéraux, le format et les règles de conversion autorisés pour l’insertion d’un littéral de date ou d’heure dans une colonne de distribution SQL Server PDW de type **DateTime**, **smalldatetime**, **Date**, **Time**, **DateTimeOffset**ou **datetime2**.  
   
 ### <a name="datetime-data-type"></a>datetime (type de données)  
@@ -84,7 +84,7 @@ Le tableau suivant définit les formats et les règles acceptés pour l’insert
 |Littéral de chaîne dans le format de **Date**|'AAAA-MM-JJ'<br /><br />Exemple : « 2007-05-08 »|Les valeurs d’heure (heure, minutes, secondes et fractions) sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral « 2007-05-08 » est inséré en tant que « 2007-05-08 12:00:00.0000000 ».|  
 |Littéral de chaîne au format **datetime2**|'AAAA-MM-JJ hh : mm : SS : nnnnnnn'<br /><br />Exemple : « 2007-05-08 12:35:29.1234567 »|Si la source de données contient des composants de données et d’heure qui sont inférieurs ou égaux à la valeur spécifiée dans **datetime2**(*n*), les données sont insérées. dans le cas contraire, une erreur est générée.|  
   
-## <a name="InsertLiteralsNumeric"></a>Insérer des littéraux dans des types numériques  
+## <a name="insert-literals-into-numeric-types"></a><a name="InsertLiteralsNumeric"></a>Insérer des littéraux dans des types numériques  
 Les tableaux suivants définissent les formats et les règles de conversion acceptés pour l’insertion d’une valeur littérale dans une colonne de distribution SQL Server PDW qui utilise un type numérique.  
   
 ### <a name="bit-data-type"></a>type de données bit  
@@ -140,7 +140,7 @@ Les valeurs littérales monétaires sont représentées sous forme de nombres av
 |Littéral décimal|nnnnnn. nnnnn<br /><br />Exemple : 123344,34455|Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123344,34455 est insérée sous la forme 123344,3446.|  
 |Littéral Money|$nnnnnn. nnnn<br /><br />Exemple : $123456,7890|Le symbole monétaire facultatif n’est pas inséré avec la valeur.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche.|  
   
-## <a name="InsertLiteralsString"></a>Insertion de littéraux dans des types String  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertLiteralsString"></a>Insertion de littéraux dans des types String  
 Les tableaux suivants définissent les formats et les règles de conversion acceptés pour l’insertion d’une valeur littérale dans une colonne SQL Server PDW qui utilise un type chaîne.  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>types de données char, varchar, nchar et nvarchar  

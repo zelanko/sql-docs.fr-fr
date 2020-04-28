@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637597"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Créer, modifier ou supprimer des index XML sélectifs
@@ -22,7 +22,7 @@ ms.locfileid: "62637597"
   
  Pour plus d’informations sur les index XML sélectifs, consultez [Index XML sélectifs &#40;SXI&#41;](selective-xml-indexes-sxi.md).  
   
-##  <a name="create"></a> Création d'un index XML sélectif  
+##  <a name="creating-a-selective-xml-index"></a><a name="create"></a> Création d'un index XML sélectif  
   
 ### <a name="how-to-create-a-selective-xml-index"></a>Procédure : créer un index XML sélectif  
  **Créer un index XML sélectif à l'aide de Transact-SQL**  
@@ -46,7 +46,7 @@ FOR(
   
   
   
-##  <a name="alter"></a> Modification d'un index XML sélectif  
+##  <a name="altering-a-selective-xml-index"></a><a name="alter"></a> Modification d'un index XML sélectif  
   
 ### <a name="how-to-alter-a-selective-xml-index"></a>Procédure : modifier un index XML sélectif  
  **Modifier un index XML sélectif à l'aide de Transact-SQL**  
@@ -68,7 +68,7 @@ FOR
   
   
   
-##  <a name="drop"></a> Suppression d'un index XML sélectif  
+##  <a name="dropping-a-selective-xml-index"></a><a name="drop"></a> Suppression d'un index XML sélectif  
   
 ### <a name="how-to-drop-a-selective-xml-index"></a>Procédure : supprimer un index XML sélectif  
  **Supprimer un index XML sélectif à l'aide de Transact-SQL**  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702298"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Création et modification d'objets (XMLA)
@@ -52,8 +52,8 @@ ms.locfileid: "62702298"
   
  Vous utilisez la [commande CREATE](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) pour créer un objet principal sur une instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de, et la commande [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) pour modifier un objet principal existant sur une instance. Les deux commandes sont exécutées à l’aide de la méthode [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
   
-## <a name="creating-objects"></a>Création d’objets  
- Lorsque vous créez des objets à l'aide de la méthode `Create`, vous devez tout d'abord identifier l'objet parent qui contient l'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à créer. Vous identifiez l’objet parent en fournissant une référence d’objet [](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) dans la propriété ParentObject `Create` de la commande. Chaque référence d'objet contient les identificateurs d'objet nécessaires pour identifier de manière unique l'objet parent pour la commande `Create`. Pour plus d’informations sur les références d’objets, consultez [définition et identification d’objets &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
+## <a name="creating-objects"></a>Création d'objets  
+ Lorsque vous créez des objets à l'aide de la méthode `Create`, vous devez tout d'abord identifier l'objet parent qui contient l'objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à créer. Vous identifiez l’objet parent en fournissant une référence d’objet [ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) dans la propriété ParentObject `Create` de la commande. Chaque référence d'objet contient les identificateurs d'objet nécessaires pour identifier de manière unique l'objet parent pour la commande `Create`. Pour plus d’informations sur les références d’objets, consultez [définition et identification d’objets &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
   
  Par exemple, vous devez fournir une référence d'objet à un cube pour créer un groupe de mesures pour le cube. La référence d'objet pour le cube dans la propriété `ParentObject` contient à la fois un identificateur de base de données et un identificateur de cube, car le même identificateur de cube peut très bien être utilisé dans une autre base de données.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62702298"
  Les objets de session sont des objets temporaires disponibles uniquement pour la session explicite ou implicite utilisée par une application cliente et qui sont supprimés à la fin de la session. Vous pouvez créer des objets de session en `Scope` affectant à `Create` l’attribut de la commande la valeur *session*.  
   
 > [!NOTE]  
->  Lors de l' ** utilisation du paramètre de `ObjectDefinition` session, l’élément peut contenir uniquement des éléments [dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)ou [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL.  
+>  Lors de l' *Session* utilisation du paramètre de `ObjectDefinition` session, l’élément peut contenir uniquement des éléments [dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)ou [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL.  
   
 ## <a name="altering-objects"></a>Modification d'objets  
  Lorsque vous modifiez des objets à l' `Alter` aide de la méthode, vous devez d’abord identifier l’objet à modifier en fournissant une référence d’objet dans la `Alter` propriété d' [objet](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) de la commande. Chaque référence d'objet contient les identificateurs d'objet nécessaires pour identifier de manière unique l'objet pour la commande `Alter`. Pour plus d’informations sur les références d’objets, consultez [définition et identification d’objets &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
@@ -87,7 +87,7 @@ ms.locfileid: "62702298"
  Pour modifier les objets de session créés `Create` par la commande, `Scope` affectez à `Alter` l’attribut de la commande la valeur *session*.  
   
 > [!NOTE]  
->  Lors de l' ** utilisation du paramètre de `ObjectDefinition` session, l’élément peut contenir uniquement des éléments [dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)ou [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL.  
+>  Lors de l' *Session* utilisation du paramètre de `ObjectDefinition` session, l’élément peut contenir uniquement des éléments [dimension](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cube](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)ou [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL.  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>Création ou modification d'objets subordonnés  
  Bien qu'une commande `Create` ou `Alter` ne crée ou ne modifie qu'un seul objet principal de niveau supérieur, l'objet principal ainsi créé ou modifié peut contenir des définitions dans la propriété `ObjectDefinition` englobante pour les autres objets principaux ou secondaires qui lui sont subordonnés. Par exemple, si vous définissez un cube, vous spécifiez la base de données parente dans `ParentObject`. Ensuite, dans la propriété de la définition du cube `ObjectDefinition`, vous pouvez définir des groupes de mesures pour le cube et, dans chaque groupe de mesures, vous pouvez définir des partitions. Un objet secondaire ne peut être défini que sous l'objet principal qui le contient. Pour plus d’informations sur les objets principaux et secondaires, consultez [objets de base de données &#40;Analysis Services-&#41;de données multidimensionnelles ](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  

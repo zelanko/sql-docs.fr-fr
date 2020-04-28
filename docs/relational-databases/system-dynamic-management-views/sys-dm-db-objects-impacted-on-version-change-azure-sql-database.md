@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843860"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
@@ -34,11 +34,11 @@ ms.locfileid: "73843860"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|classe|**entier** NON NULL|Classe de l'objet qui sera affecté :<br /><br /> **1** = contrainte<br /><br /> **7** = index et segments de mémoire|  
+|class|**entier** NON NULL|Classe de l'objet qui sera affecté :<br /><br /> **1** = contrainte<br /><br /> **7** = index et segments de mémoire|  
 |class_desc|**nvarchar (60)** NON NULL|Description de la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**entier** NON NULL|ID d'objet de la contrainte, ou ID d'objet de la table contenant l'index ou le segment de mémoire.|  
-|minor_id|**entier** NUL|**Null** pour les contraintes<br /><br /> Index_id pour les index et les segments|  
-|dependency|**nvarchar (60)** NON NULL|Description de la dépendance qui provoque l'impact sur une contrainte ou un index. La valeur est également utilisée pour les avertissements générés pendant la mise à niveau.<br /><br /> Exemples :<br /><br /> **espace** (pour intrinsèque)<br /><br /> **Geometry** (pour système UDT)<br /><br /> **geography ::P** faible (pour la méthode UDT système)|  
+|minor_id|**entier** NUL|**NULL** pour les contraintes<br /><br /> Index_id pour les index et les segments|  
+|dependency|**nvarchar (60)** NON NULL|Description de la dépendance qui provoque l'impact sur une contrainte ou un index. La valeur est également utilisée pour les avertissements générés pendant la mise à niveau.<br /><br /> Exemples :<br /><br /> **espace** (pour intrinsèque)<br /><br /> **geometry** (pour UDT système)<br /><br /> **geography::Parse** (pour méthode UDT système)|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE.  

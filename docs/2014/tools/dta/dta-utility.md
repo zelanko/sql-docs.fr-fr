@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670690"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
@@ -78,7 +78,7 @@ ms.locfileid: "62670690"
  Affiche des informations sur l’utilisation.  
   
  **-A** _time_for_tuning_in_minutes_  
- Spécifie la limite de durée de réglage en minutes. **DTA** utilise la durée spécifiée pour régler la charge de travail et générer un script avec les modifications de conception physique recommandées. Par défaut, **dta** utilise une durée de réglage de 8 heures. Si la valeur 0 est spécifiée, la durée de réglage est illimitée. **DTA** peut finir de régler l’intégralité de la charge de travail avant l’expiration du délai. Cependant, pour vous assurer que toute la charge de travail est réglée, nous vous recommandons de spécifier une durée de réglage illimitée (-A 0).  
+ Spécifie la limite de durée de réglage en minutes. **dta** utilise la limite de temps spécifiée pour régler la charge de travail et générer un script avec les modifications de conception physique recommandées. Par défaut, **dta** utilise une durée de réglage de 8 heures. Si la valeur 0 est spécifiée, la durée de réglage est illimitée. **dta** pourra éventuellement achever le réglage de toute la charge de travail avant l'expiration de la limite de durée. Cependant, pour vous assurer que toute la charge de travail est réglée, nous vous recommandons de spécifier une durée de réglage illimitée (-A 0).  
   
  **-a**  
  Règle la charge de travail et applique la recommandation sans vous demander de confirmation.  
@@ -96,7 +96,7 @@ ms.locfileid: "62670690"
  Spécifie le nombre maximal de colonnes dans les index proposés par **dta** . La valeur maximale est 1024. Par défaut, cet argument a la valeur 16.  
   
  **-c** _max_key_columns_in_index_  
- Spécifie le nombre maximal de colonnes clés dans les index proposés par **dta** . La valeur par défaut est 16 (valeur maximale autorisée). **DTA** prend également en compte la création d’index avec des colonnes incluses. Les index recommandés avec des colonnes incluses peuvent dépasser le nombre de colonnes spécifiées dans cet argument.  
+ Spécifie le nombre maximal de colonnes clés dans les index proposés par **dta** . La valeur par défaut est 16 (valeur maximale autorisée). **dta** peut également créer des index avec des colonnes incluses. Les index recommandés avec des colonnes incluses peuvent dépasser le nombre de colonnes spécifiées dans cet argument.  
   
  **-D** _database_name_  
  Spécifie le nom de chaque base de données à paramétrer. La première base de données est la base de données par défaut. Vous pouvez spécifier plusieurs bases de données en séparant les noms de bases de données avec des virgules, par exemple :  
@@ -163,7 +163,7 @@ dta -d AdventureWorks2012 ...
  **-fa** _physical_design_structures_to_add_  
  Spécifie les types de PDS (Physical Design Structures) que **dta** doit inclure dans la recommandation. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument. Si aucune valeur n’est spécifiée, **DTA** utilise la valeur par défaut **-FA**`IDX`.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |IDX_IV|Index et vues indexées.|  
 |IDX|Index uniquement.|  
@@ -176,7 +176,7 @@ dta -d AdventureWorks2012 ...
  **-fk** _keep_existing_option_  
  Spécifie les structures PDS (Physical Design Structures) que **dta** doit conserver lors de la génération de sa recommandation. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Aucune|Aucune structure existante|  
 |ALL|Toutes les structures existantes|  
@@ -184,10 +184,10 @@ dta -d AdventureWorks2012 ...
 |CL_IDX|Tous les index cluster sur les tables|  
 |IDX|Tous les index cluster et non-cluster sur les tables|  
   
- **-** _partitioning_strategy_ FP  
+ **-fp** _partitioning_strategy_  
  Spécifie si les nouvelles PDS (Physical Design Structures) (index et vues indexées) que **dta** propose doivent être partitionnées et de quelle manière. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Aucune|Aucun partitionnement|  
 |FULL|Partitionnement complet (choisissez cette option pour améliorer les performances)|  
@@ -195,23 +195,23 @@ dta -d AdventureWorks2012 ...
   
  ALIGNED signifie que dans la recommandation générée par **dta** , chaque index proposé est partitionné exactement de la même manière que la table sous-jacente pour laquelle l'index est défini. Les index non-cluster sur une vue indexée sont alignés avec la vue indexée. Une seule valeur peut être spécifiée pour cet argument. La valeur par défaut est **-FP**`NONE`.  
   
- _drop_only_mode_ **-FX**  
+ **-fx** _drop_only_mode_  
  Spécifie que **dta** considère uniquement la suppression des PDS (Physical Design Structures) existantes. Aucune nouvelle PDS n'est considérée. Lorsque cette option est spécifiée, **dta** évalue l'utilité des PDS (Physical Design Structures) existantes et recommande la suppression des structures rarement utilisées. Cet argument ne prend aucune valeur. Il ne peut pas être utilisé avec les arguments **-fa**, **-fp**ou **-fk ALL** .  
   
- **-ID** _session_id_  
+ **-ID** _session_ID_  
  Spécifie un identificateur numérique pour la session de réglage. Si ce paramètre n'est pas spécifié, **dta** génère un numéro d'identification. Vous pouvez utiliser cet identificateur pour afficher des informations pour des sessions de réglage existantes. Si vous ne spécifiez pas de valeur pour **-ID**, un nom de session doit être spécifié avec **-s**.  
   
  **-IP**  
- Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  
+ Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l’aide de l’option **-n** .  
   
  **-ipf**  
- Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour toutes les bases de données sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  
+ Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour toutes les bases de données sont analysés. Cette valeur peut être modifiée à l’aide de l’option **-n** .  
   
- **-si** _workload_file_  
+ **-if** _workload_file_  
  Spécifie le chemin d'accès et le nom du fichier de charge de travail à utiliser comme entrée pour le réglage. Le fichier doit être dans l'un de ces formats : .trc (fichier trace du Générateur de profils SQL Server), .sql (fichier SQL) ou .log (fichier de trace de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Un fichier de charge de travail ou une table de charge travail doit être spécifié.  
   
  **-it** _workload_trace_table_name_  
- Spécifie le nom de la table contenant la trace de charge de travail pour le réglage. Le nom est spécifié selon le format : [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Spécifie le nom de la table contenant la trace de charge de travail pour le réglage. Le nom est spécifié au format : [*database_name*]**.** [*owner_name*] **.** _table_name_.  
   
  Le tableau suivant indique les valeurs par défaut de chaque paramètre :  
   
@@ -219,10 +219,10 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|  
 |*database_name*|*database_name* spécifiée avec l’option **-D** .|  
 |*owner_name*|**dbo**.|  
-|*table_name*|Aucun.|  
+|*table_name*|Aucune.|  
   
 > [!NOTE]  
->  *owner_name* doit être **dbo**. Si toute autre valeur est spécifiée, l'exécution de **dta** échoue et une erreur est retournée. Notez également qu'une table de charge de travail ou un fichier de charge de travail doit être spécifié.  
+>  *owner_name* doit avoir la valeur **dbo**. Si toute autre valeur est spécifiée, l'exécution de **dta** échoue et une erreur est retournée. Notez également qu'une table de charge de travail ou un fichier de charge de travail doit être spécifié.  
   
  **-ix** _input_XML_file_name_  
  Spécifie le nom du fichier XML contenant les informations d’entrée **dta** . Ce doit être un document XML valide, conforme à DTASchema.xsd. Les arguments conflictuels spécifiés à partir de l'invite de commandes pour les options de réglage remplacent la valeur correspondante dans ce fichier XML. Une seule exception : configuration spécifiée par l'utilisateur entrée dans le mode évaluation dans le fichier d'entrée XML. Par exemple, si une configuration est entrée dans l'élément **Configuration** du fichier d'entrée XML et si un élément **EvaluateConfiguration** est également spécifié comme l'une des options de réglage, les options de réglage spécifiées dans le fichier d'entrée XML sont prioritaires par rapport à toute option de réglage entrée à partir de l'invite de commandes.  
@@ -233,7 +233,7 @@ dta -d AdventureWorks2012 ...
  **-N** _online_option_  
  Spécifie si des PDS (Physical Design Structures) sont créées en ligne. Le tableau suivant répertorie et décrit les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |OFF|Aucune PDS ne peut être créée en ligne.|  
 |ACTIVÉ|Toutes les PDS recommandées peuvent être créées en ligne.|  
@@ -250,12 +250,12 @@ dta -n number_of_events -A 0
   
  Dans ce cas, il est important de spécifier une durée de réglage illimitée (`-A 0`). Sinon, l'Assistant Paramétrage du moteur de base de données utilise par défaut une durée de réglage de 8 heures.  
   
- **-de** _output_script_file_name_  
+ **-of** _output_script_file_name_  
  Spécifie que **dta** écrit la recommandation sous forme de script [!INCLUDE[tsql](../../includes/tsql-md.md)] sous le nom de fichier et à la destination spécifiés.  
   
  Vous pouvez utiliser **-F** avec cette option. Vérifiez que le nom de fichier est unique, surtout si vous utilisez aussi **-or** et **-ox**.  
   
- **-ou** _output_xml_report_file_name_  
+ **-or** _output_xml_report_file_name_  
  Spécifie que **dta** écrit la recommandation dans un rapport de sortie XML. Si un nom de fichier est fourni, les recommandations sont écrites dans cette destination. Sinon, **dta** utilise le nom de session pour générer le nom de fichier et l'écrit dans le répertoire en cours.  
   
  Vous pouvez utiliser **-F** avec cette option. Vérifiez que le nom de fichier est unique, surtout si vous utilisez aussi **-of** et **-ox**.  
@@ -274,7 +274,7 @@ dta -n number_of_events -A 0
  **-rl** _analysis_report_list_  
  Spécifie la liste des rapports d'analyse à générer. Le tableau suivant répertorie les valeurs pouvant être spécifiées pour cet argument :  
   
-|Valeur|Rapport|  
+|Value|Rapport|  
 |-----------|------------|  
 |ALL|Tous les rapports d'analyse|  
 |STMT_COST|Rapport de coût d'instruction|  
@@ -299,7 +299,7 @@ dta -n number_of_events -A 0
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** _SERVER_NAME_[ *\Instance*]  
+ **-S** _server_name_[ *\instance*]  
  Spécifie le nom de l'ordinateur et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auxquels la connexion doit être établie. Si la valeur de *server_name* n’est pas spécifiée, **dta** se connecte à l’instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur local. Cette option est requise lors de la connexion à une instance nommée ou de l'exécution de **dta** à partir d'un ordinateur distant sur le réseau.  
   
  **-s** _session_name_  
@@ -310,11 +310,11 @@ dta -n number_of_events -A 0
   
  Il s’agit du format de fichier pour *table_list_file*:  
   
- *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
  Cet argument peut remplacer l’entrée d’une liste de tables à l’invite de commandes (**-TI**). N’utilisez pas un fichier de liste de tables (**-Tf**) si vous employez **-TI**. Si les deux arguments sont employés, **dta** échoue et retourne une erreur.  
   
@@ -340,7 +340,7 @@ dta -n number_of_events -A 0
 ## <a name="examples"></a>Exemples  
  **A. Réglage d'une charge de travail incluant des index et des vues indexées dans sa recommandation**  
   
- Cet exemple utilise une connexion sécurisée (`-E`) pour se connecter à la base de données **tpcd1G** sur MyServer afin d’analyser une charge de travail et créer des recommandations. Il écrit la sortie dans un fichier de script nommé script.sql. Si script.sql existe déjà, **dta** remplace le fichier, car l'argument `-F` a été spécifié. La session de réglage se poursuit pendant une durée illimitée pour garantir l'analyse complète de la charge de travail (`-A 0`). La recommandation doit fournir une amélioration minimale de 5 % (`-m 5`). **DTA** doit inclure des index et des vues indexées dans sa recommandation finale`-fa IDX_IV`().  
+ Cet exemple utilise une connexion sécurisée (`-E`) pour se connecter à la base de données **tpcd1G** sur MyServer afin d’analyser une charge de travail et créer des recommandations. Il écrit la sortie dans un fichier de script nommé script.sql. Si script.sql existe déjà, **dta** remplace le fichier, car l'argument `-F` a été spécifié. La session de réglage se poursuit pendant une durée illimitée pour garantir l'analyse complète de la charge de travail (`-A 0`). La recommandation doit fournir une amélioration minimale de 5 % (`-m 5`). **dta** doit inclure des index et des vues indexées dans sa recommandation finale (`-fa IDX_IV`).  
   
 ```  
 dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  

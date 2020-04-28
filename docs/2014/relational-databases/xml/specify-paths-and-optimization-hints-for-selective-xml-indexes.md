@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679797"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Spécifier les chemins d'accès et les indicateurs d'optimisation des index XML sélectifs
@@ -28,7 +28,7 @@ ms.locfileid: "62679797"
   
  Pour plus d’informations sur les index XML sélectifs, consultez [Index XML sélectifs &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md).  
   
-##  <a name="untyped"></a> Présentation des types XQuery et SQL Server en XML non typé  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> Présentation des types XQuery et SQL Server en XML non typé  
  Les index XML sélectifs prennent en charge deux systèmes de types : les types XQuery et les types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le chemin d'accès indexé peut être utilisé pour correspondre à une expression XQuery, ou pour correspondre au type de retour de la méthode value() de type de données XML.  
   
 -   Lorsqu'un chemin d'accès à indexer n'est pas annoté, ou est annoté avec le mot clé XQUERY, il correspond à une expression XQuery. Il existe deux variantes des chemins d'accès de nœud annotés XQUERY :  
@@ -135,7 +135,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 
   
-##  <a name="typed"></a> Présentation de la prise en charge des index XML sélectifs pour le XML typé  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> Présentation de la prise en charge des index XML sélectifs pour le XML typé  
  Le XML typé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un schéma associé à un document XML donné. Ce schéma définit la structure globale du document et les types de nœuds. S'il existe un schéma, l'index XML sélectif applique la structure de schéma lorsque l'utilisateur promeut les chemins d'accès. Il est donc inutile de spécifier les types XQUERY pour les chemins d'accès.  
   
  Les index XML sélectifs prennent en charge les types XSD suivants :  
@@ -209,7 +209,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Pour plus d’informations sur les indicateurs d’optimisation, consultez [Spécification des indicateurs d’optimisation](#hints).  
   
-##  <a name="paths"></a> Spécification des chemins d'accès  
+##  <a name="specifying-paths"></a><a name="paths"></a> Spécification des chemins d'accès  
  Un index XML sélectif vous permet d'indexer uniquement un sous-ensemble de nœuds de données XML stockées en rapport avec les requêtes que vous comptez exécuter. Lorsque le sous-ensemble de nœuds appropriés est beaucoup plus petit que le nombre total de nœuds dans le document XML, l'index XML sélectif stocke uniquement les nœuds appropriés. Pour bénéficier d'un index XML sélectif, identifiez le sous-ensemble correct de nœuds à indexer.  
   
 ### <a name="choosing-the-nodes-to-index"></a>Sélection des nœuds à indexer  
@@ -346,7 +346,7 @@ WHERE T.xmldata.exist('
   
 
   
-##  <a name="hints"></a> Spécification des indicateurs d’optimisation  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> Spécification des indicateurs d’optimisation  
  Vous pouvez utiliser des indicateurs facultatifs d'optimisation pour spécifier des détails supplémentaires de mappage pour un nœud indexé par un index XML sélectif. Par exemple, vous pouvez spécifier le type de données et la cardinalité du nœud, ainsi que certaines informations sur la structure des données. Ces informations permettent un meilleur mappage. Elles entraînent également des améliorations des performances ou des économies en termes de stockage, ou les deux.  
   
  L'utilisation des indicateurs d'optimisation est facultative. Vous pouvez toujours accepter les mappages par défaut, qui sont fiables mais ne permettent pas des performances et un stockage optimaux.  
@@ -418,7 +418,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-##  <a name="sample"></a> Document XML des exemples  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> Document XML des exemples  
  Le document XML suivant est référencé dans les exemples de cette rubrique :  
   
 ```xml  

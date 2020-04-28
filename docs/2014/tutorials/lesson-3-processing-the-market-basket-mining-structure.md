@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653852"
 ---
-# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Leçon 3 : traitement de la structure d'exploration de données Market Basket
+# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Leçon 3 : Traitement de la structure d'exploration de données Market Basket
   Dans cette leçon, vous allez utiliser l’instruction [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) et VAssocSeqLineItems et vAssocSeqOrders de l' [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] exemple de base de données pour traiter les structures d’exploration de données et les modèles d’exploration de données que vous avez créés au cours de la [leçon 1 : création de la structure d’exploration](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) de données de panier d’exploitation et [leçon 2 : ajout de modèles d’exploration de données à la structure d’exploration de](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
  Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Lorsque vous traitez un modèle d’exploration de données, les données définies par la structure d’exploration de données sont transmises via l’algorithme d’exploration de données que vous avez choisi. L'algorithme recherche des tendances et des modèles, puis stocke les informations recueillies dans le modèle d'exploration de données. Par conséquent, le modèle d'exploration de données ne contient pas les données source réelles mais plutôt les informations recueillies par l'algorithme. Pour plus d’informations sur le traitement des modèles d’exploration de données, consultez [exigences et considérations relatives au traitement &#40;&#41;d’exploration de données ](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
@@ -128,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     Dans l'instruction, `Products` fait référence à la table Products définie par l'instruction SHAPE. 
-  `SKIP` est utilisé pour ignorer la colonne du modèle, qui existe dans les données sources comme clé, mais n'est pas utilisée par la structure d'exploration de données.  
+     Dans l'instruction, `Products` fait référence à la table Products définie par l'instruction SHAPE. `SKIP` est utilisé pour ignorer la colonne du modèle, qui existe dans les données sources comme clé, mais n'est pas utilisée par la structure d'exploration de données.  
   
 5.  Remplacez le code suivant :  
   

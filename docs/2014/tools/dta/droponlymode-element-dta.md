@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659573"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode, élément (Assistant Paramétrage de base de données)
@@ -38,16 +38,16 @@ ms.locfileid: "62659573"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|Aucun.|  
-|**Valeur par défaut**|Aucun.|  
-|**Occurrence**|facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément `TuningOptions`. Ne peut pas être utilisé si les éléments suivants sont spécifiés dans l'élément `TuningOptions` :<br /><br /> [Élément FeatureSet, &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Élément de partitionnement &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> L' [élément keepexisting, &#40;DTA&#41;](keepexisting-element-dta.md) a la valeur **All**|  
+|**Type de données et longueur**|Aucune.|  
+|**Valeur par défaut**|Aucune.|  
+|**Occurrence**|Facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément `TuningOptions`. Ne peut pas être utilisé si les éléments suivants sont spécifiés dans l'élément `TuningOptions` :<br /><br /> [FeatureSet, élément &#40;Assistant Paramétrage de base de données&#41;](featureset-element-dta.md)<br /><br /> [Partitioning, élément &#40;Assistant Paramétrage de base de données&#41;](partitioning-element-dta.md)<br /><br /> [L’élément KeepExisting &#40;Assistant Paramétrage de base de données&#41;](keepexisting-element-dta.md) est défini sur **ALL**|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Éléments enfants**|Aucun.|  
+|**Éléments enfants**|Aucune.|  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre la section `TuningOptions` d'un fichier d'entrée XML de l'Assistant Paramétrage du moteur de base de données dans lequel l'élément `DropOnlyMode` est spécifié. Dans cet exemple, la durée de paramétrage est limitée à 24 heures (1440 minutes) et tous les index cluster et non cluster existants sont pris en compte en vue de leur suppression :  

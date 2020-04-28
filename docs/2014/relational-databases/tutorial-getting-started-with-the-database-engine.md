@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524329"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Didacticiel : mise en route du moteur de base de données
@@ -42,7 +42,7 @@ ms.locfileid: "62524329"
   
  Les éléments suivants doivent cependant être installés sur votre système :  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]peut être installé en exécutant [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le programme d’installation de ou en téléchargeant et en installant à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] peut être installé en exécutant le programme d'installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou en le téléchargeant et en l'installant à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

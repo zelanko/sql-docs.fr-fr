@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401002"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportement de verrouillage en parallèle Data Warehouse
 Découvrez comment le Data Warehouse parallèle utilise le verrouillage pour garantir l’intégrité des transactions et maintenir la cohérence des bases de données lorsque plusieurs utilisateurs accèdent aux données en même temps.  
   
-## <a name="Basics"></a>Notions de base du verrouillage  
-**Façons**  
+## <a name="locking-basics"></a><a name="Basics"></a>Notions de base du verrouillage  
+**Modes**  
   
 SQL Server PDW prend en charge quatre modes de verrouillage :  
   
 Exclusif  
 Le verrou exclusif interdit l’écriture ou la lecture de l’objet verrouillé jusqu’à ce que la transaction qui maintient le verrou exclusif se termine. Aucun autre verrou de n’importe quel mode n’est autorisé tant que le verrou exclusif est en vigueur. Par exemple, DROP TABLE et CREATe DATABASE utilisent un verrou exclusif.  
   
-Partagé  
+Shared  
 Le verrou partagé interdit l’initiation d’un verrou exclusif sur l’objet affecté, mais autorise tous les autres modes de verrouillage. Par exemple, l’instruction SELECT initie un verrou partagé et, par conséquent, permet à plusieurs requêtes d’accéder simultanément aux données sélectionnées, mais empêche les mises à jour des enregistrements en cours de lecture, jusqu’à ce que l’instruction SELECT soit terminée.  
   
 ExclusiveUpdate  
@@ -38,9 +38,9 @@ Le verrou SharedUpdate interdit les modes de verrouillage exclusif et ExclusiveU
   
 **Classes de ressources**  
   
-Les verrous sont conservés sur les classes d’objets suivantes : base de données, schéma, objet (table, vue ou procédure), APPLICATION (utilisée en interne), EXTERNALDATASOURCE, EXTERNALFILEFORMAT et SCHEMARESOLUTION (verrou de niveau base de données pris lors de la création, de la modification ou suppression des objets de schéma ou des utilisateurs de base de données). Ces classes d’objets peuvent apparaître dans la colonne object_type de [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
+Les verrous sont conservés sur les classes d’objets suivantes : base de données, schéma, objet (table, vue ou procédure), APPLICATION (utilisée en interne), EXTERNALDATASOURCE, EXTERNALFILEFORMAT et SCHEMARESOLUTION (verrou de niveau base de données pris lors de la création, de la modification ou de la suppression d’objets de schéma ou d’utilisateurs de base de données). Ces classes d’objets peuvent apparaître dans la colonne object_type de [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
   
-## <a name="Remarks"></a>Remarques d'ordre général  
+## <a name="general-remarks"></a><a name="Remarks"></a>Remarques d'ordre général  
 Les verrous peuvent être appliqués aux bases de données, aux tables ou aux vues.  
   
 SQL Server PDW n’implémente aucun niveau d’isolement configurable. Il prend en charge le niveau d’isolation READ_UNCOMMITTED, tel que défini par la norme ANSI. Toutefois, étant donné que les opérations de lecture sont exécutées sous READ_UNCOMMITTED, très peu d’opérations de blocage se produisent ou conduisent à une contention dans le système.  

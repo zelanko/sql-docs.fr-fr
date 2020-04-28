@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702061"
 ---
 # <a name="performing-batch-operations-xmla"></a>Exécution d'opérations de traitement par lot (XMLA)
@@ -59,8 +59,7 @@ ms.locfileid: "62702061"
   
  Pour exécuter des commandes en parallèle, vous ajoutez les commandes à exécuter en parallèle à la propriété [Parallel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/parallel-element-xmla) de la `Batch` commande. Actuellement, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut exécuter uniquement des commandes de [processus](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) séquentielles contiguës en parallèle. Toutes les autres commandes XMLA, telles que [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) ou [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla), incluses `Parallel` dans la propriété sont exécutées en série.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] essaie d'exécuter en parallèle toutes les commandes `Process` incluses dans la propriété `Parallel`, mais ne peut pas garantir que toutes les commandes `Process` incluses puissent être exécutées en parallèle. L'instance analyse chaque commande `Process`. Si elle détermine qu'une commande `Process` ne peut pas être exécutée en parallèle, elle est exécutée en série.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] essaie d'exécuter en parallèle toutes les commandes `Process` incluses dans la propriété `Parallel`, mais ne peut pas garantir que toutes les commandes `Process` incluses puissent être exécutées en parallèle. L'instance analyse chaque commande `Process`. Si elle détermine qu'une commande `Process` ne peut pas être exécutée en parallèle, elle est exécutée en série.  
   
 > [!NOTE]  
 >  Pour exécuter des commandes en parallèle, l'attribut `Transaction` de la commande `Batch` doit être défini à true, car [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend en charge qu'une seule transaction active par connexion et les lots non transactionnels exécutent chaque commande dans une transaction distincte. Si vous incluez la propriété `Parallel` dans un lot non transactionnel, une erreur se produit.  

@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056400"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -85,7 +85,7 @@ La fonction STRING_AGG prend une expression et un séparateur comme entrée et r
 ### <a name="last_value"></a>LAST_VALUE
 Pour projeter les attributs du dernier nœud du chemin parcouru, LAST_VALUE fonction d’agrégation peut être utilisée. Le fait de fournir un alias de table Edge comme entrée à cette fonction est une erreur, seuls les noms de tables de nœuds ou les alias peuvent être utilisés.
 
-**Dernier nœud**: le dernier nœud fait référence au nœud qui apparaît en dernier dans le chemin parcouru, quelle que soit la direction de la flèche dans le PRÉDICAT de correspondance. Par exemple : `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Ici, le dernier nœud du chemin d’accès est le dernier nœud P visité. 
+**Dernier nœud**: le dernier nœud fait référence au nœud qui apparaît en dernier dans le chemin parcouru, quelle que soit la direction de la flèche dans le PRÉDICAT de correspondance. Par exemple : `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Ici, le dernier nœud du chemin d’accès est le dernier nœud P visité. 
 
 Tandis que le dernier nœud est le dernier nième nœud dans le chemin d’accès du graphique de sortie pour ce modèle :`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -117,7 +117,7 @@ Dans certains cas, des plans incorrects peuvent être générés pour les requê
 ## <a name="examples"></a>Exemples 
 Pour les exemples de requêtes indiqués ici, nous allons utiliser les tables node et Edge créées dans l' [exemple SQL Graph](./sql-graph-sample.md) .
 
-### <a name="a--find-shortest-path-between-2-people"></a>R.  Rechercher le chemin le plus rapide entre 2 personnes
+### <a name="a--find-shortest-path-between-2-people"></a>A.  Rechercher le chemin le plus rapide entre 2 personnes
  Dans l’exemple suivant, nous trouvons le chemin le plus rapide entre Jacob et Alice. Nous aurons besoin du nœud Person et du Edge FriendOf créé à partir de l’exemple de script Graph. 
 
  ```

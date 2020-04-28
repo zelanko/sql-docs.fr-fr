@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ecbbdced731e940de46dbde4a65adc486f602c2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400481"
 ---
 # <a name="remote-table-copy"></a>Copie de table distante
 Décrit comment utiliser la fonctionnalité de copie de table distante pour copier des tables à partir de SQL Server PDW bases de données vers des bases de données SMP à distance (sans Appliance) SQL Server. Utilisez la copie de table distante pour activer les scénarios Hub et spoke pour SQL Server PDW.  
   
-## <a name="BasicsPDE"></a>Comprendre la copie de table distante pour SQL Server PDW  
+## <a name="understand-remote-table-copy-for-sql-server-pdw"></a><a name="BasicsPDE"></a>Comprendre la copie de table distante pour SQL Server PDW  
 La copie de table distante est une fonctionnalité de SQL Server PDW qui active des scénarios Hub et spoke en copiant les résultats d’une instruction SQL SELECT dans une table d’une base de données SMP. La copie de la table distante est lancée avec l’instruction [Create Remote table As Select](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) .  
   
-## <a name="BasicsPrerequisites"></a>Conditions requises pour l’utilisation de la copie de table distante  
+## <a name="requirements-for-using-remote-table-copy"></a><a name="BasicsPrerequisites"></a>Conditions requises pour l’utilisation de la copie de table distante  
 Vous pouvez utiliser la copie de table distante pour copier des tables d’SQL Server PDW vers une base de données SQL Server lorsque ces conditions sont remplies :  
   
 -   La base de données de destination doit être une instance de Microsoft® SQL Server® qui s’exécute sur un système Microsoft Windows® capable de se connecter à l’appareil SQL Server PDW, mais qui ne réside pas sur un serveur au sein de l’appliance. La SQL Server distante peut être connectée au SQL Server PDW à l’aide du réseau InfiniBand ou via le réseau Ethernet.  
@@ -33,7 +33,7 @@ Vous pouvez utiliser la copie de table distante pour copier des tables d’SQL S
   
 -   Le serveur de destination doit être accessible à tous les nœuds sur le réseau InfiniBand de l’appliance.  
   
-## <a name="ConfigureRemote"></a>Configurer la copie de table distante  
+## <a name="configure-remote-table-copy"></a><a name="ConfigureRemote"></a>Configurer la copie de table distante  
 Pour utiliser la copie de table distante, vous devez acheter et configurer un serveur Windows Server, configurer SQL Server sur Windows Server et configurer SQL Server PDW. Utilisez les liens suivants pour effectuer ces trois étapes de configuration.  
   
 1.  [Configurer un système Windows externe pour recevoir des copies de tables distantes à l’aide de InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
@@ -42,7 +42,7 @@ Pour utiliser la copie de table distante, vous devez acheter et configurer un se
   
 3.  [Configurer SQL Server PDW pour les copies de tables distantes](configure-sql-server-pdw-for-remote-table-copies.md)  
   
-## <a name="PerformRemote"></a>Effectuer une copie de table distante  
+## <a name="perform-a-remote-table-copy"></a><a name="PerformRemote"></a>Effectuer une copie de table distante  
 Pour effectuer une copie de table distante, utilisez l’instruction [Create Remote table As Select](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) SQL. Des exemples sont fournis avec la rubrique créer une TABLE distante.  
   
 <!-- MISSING LINKS 
