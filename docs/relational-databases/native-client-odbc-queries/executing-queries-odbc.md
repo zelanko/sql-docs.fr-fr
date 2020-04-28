@@ -1,5 +1,5 @@
 ---
-title: Exécution des requêtes (ODBC) Microsoft Docs
+title: Exécution de requêtes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 93984308c9b661af8e7263ed1c3c0a54e1b35eab
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297996"
 ---
 # <a name="executing-queries-odbc"></a>Exécution de requêtes (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Après qu'une application ODBC a initialisé un handle de connexion et s'est connectée avec une source de données, elle alloue un ou plusieurs descripteurs d'instruction sur le handle de connexion. L’application peut [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensuite exécuter des instructions sur la poignée de déclaration. La séquence générale des événements lors de l'exécution d'une instruction SQL est :  
+  Après qu'une application ODBC a initialisé un handle de connexion et s'est connectée avec une source de données, elle alloue un ou plusieurs descripteurs d'instruction sur le handle de connexion. L’application peut ensuite exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des instructions sur le descripteur d’instruction. La séquence générale des événements lors de l'exécution d'une instruction SQL est :  
   
 1.  Définition des attributs de l'instruction requis.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "81297996"
   
 4.  Extraction des jeux de résultats éventuels.  
   
- Après qu'une application a extrait toutes les lignes dans tous les jeux de résultats retournés par l'instruction SQL, elle peut exécuter une autre requête sur le même descripteur d'instruction. Si une application détermine qu’il n’est pas nécessaire de récupérer toutes les lignes dans un ensemble de résultats particulier, elle peut annuler le reste du résultat défini en appelant [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
+ Après qu'une application a extrait toutes les lignes dans tous les jeux de résultats retournés par l'instruction SQL, elle peut exécuter une autre requête sur le même descripteur d'instruction. Si une application détermine qu’il n’est pas nécessaire d’extraire toutes les lignes d’un jeu de résultats particulier, elle peut annuler le reste du jeu de résultats en appelant [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
  Si, dans une application ODBC, vous devez exécuter plusieurs fois la même instruction SQL avec des données différentes, utilisez un marqueur de paramètre dénoté par un point d'interrogation (?) dans la construction d'une instruction SQL :  
   
@@ -45,23 +45,23 @@ ms.locfileid: "81297996"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- Chaque marqueur de paramètre peut alors être lié à une variable de programme en appelant [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md).  
+ Chaque marqueur de paramètre peut ensuite être lié à une variable de programme en appelant [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md).  
   
  Après l'exécution de toutes les instructions SQL et le traitement de leurs jeux de résultats, l'application libère le descripteur d'instruction.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conducteur de Native Client ODBC prend en charge plusieurs poignées de relevé par poignée de connexion. Les transactions sont gérées au niveau de la connexion, afin que tout le travail effectué sur tous les descripteurs d'instruction sur un handle de connexion unique soit géré dans le cadre de la même transaction.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge plusieurs descripteurs d’instruction par handle de connexion. Les transactions sont gérées au niveau de la connexion, afin que tout le travail effectué sur tous les descripteurs d'instruction sur un handle de connexion unique soit géré dans le cadre de la même transaction.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
 -   [Allocation d'un descripteur d'instruction](../../relational-databases/native-client-odbc-queries/allocating-a-statement-handle.md)  
   
--   [Construction d’une déclaration SQL &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md)  
+-   [Construction d’une instruction SQL &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md)  
   
 -   [Construction d'instructions SQL pour les curseurs](../../relational-databases/native-client-odbc-queries/constructing-sql-statements-for-cursors.md)  
   
 -   [Utilisation de paramètres d'instruction](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
--   [Exécution des déclarations &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+-   [Exécution d’instructions &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
 -   [Libération d'un descripteur d'instruction](../../relational-databases/native-client-odbc-queries/freeing-a-statement-handle.md)  
   

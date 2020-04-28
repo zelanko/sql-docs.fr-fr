@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c790ccc8e57a3df3bb7ddcdeee06a5c4e0805496
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295803"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
@@ -32,7 +32,7 @@ ms.locfileid: "81295803"
 -   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et que **cbMaxLen** est défini sur 0, l’appel à **IRow**-**>GetColumns()** retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler **IRow->GetColumns()** sur la même colonne pour extraire les données réelles.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez poursuivre vos informations d’identification, vous devez les chiffrer avec [l’API Win32 crypto](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Pour extraire des colonnes avec IRow::GetColumns  
   
@@ -520,6 +520,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Rubriques "Comment" relatives aux OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

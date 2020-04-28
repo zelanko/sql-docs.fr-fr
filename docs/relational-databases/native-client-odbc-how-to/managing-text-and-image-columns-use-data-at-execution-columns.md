@@ -1,5 +1,5 @@
 ---
-title: Utiliser des colonnes de données à l’exécution (ODBC) Microsoft Docs
+title: Utiliser des colonnes de données en cours d’exécution (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78bfa4cd343fd13be121b660de700ef670f24adb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293729"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gestion des colonnes texte et image - Utiliser des colonnes de données à l’exécution
@@ -45,15 +45,15 @@ ms.locfileid: "81293729"
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment lire des données de type caractères SQL_LONG variables à l'aide de SQLGetData. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger la base de données de l’échantillon AdventureWorks à partir de la page d’accueil [Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Cette source de données doit être basée sur le conducteur ODBC qui est fourni par le système d’exploitation (le nom du conducteur est "SQL Server"). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la [!INCLUDE[tsql](../../includes/tsql-md.md)]première liste de code pour créer la table utilisée par l’échantillon.  
+ Exécutez la première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour créer la table utilisée par l’exemple.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Exécutez ensuite le programme.  
   
- Exécutez la [!INCLUDE[tsql](../../includes/tsql-md.md)]troisième liste de code pour supprimer la table utilisée par l’échantillon.  
+ Exécutez la troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () pour supprimer la table utilisée par l’exemple.  
   
 ```  
 use AdventureWorks  
@@ -187,6 +187,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des colonnes de texte et d’image How-to Topics &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Rubriques de procédures relatives à la gestion des colonnes de texte et d’image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Attributs qui affectent les paramètres de valeur de table
+title: Attributs qui affectent les paramètres table
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3344b0738b0b831240405fad50c4d055f0f9a9d5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297770"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Attributs d'instruction qui affectent des paramètres table
@@ -28,11 +28,11 @@ ms.locfileid: "81297770"
   
 |Nom de l’attribut|Type|Description|  
 |--------------------|----------|-----------------|  
-|SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Pour plus d’informations sur SQL_SS_PARAM_FOCUS, voir [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).|  
-|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Pour plus d’informations sur SQL_SS_NAME_SCOPE, voir [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).|  
+|SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Pour plus d’informations sur SQL_SS_PARAM_FOCUS, consultez [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).|  
+|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Pour plus d’informations sur SQL_SS_NAME_SCOPE, consultez [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).|  
 ||||
 
 ## <a name="see-also"></a>Voir aussi  
- [Paramètres évalués par la table &#40;&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

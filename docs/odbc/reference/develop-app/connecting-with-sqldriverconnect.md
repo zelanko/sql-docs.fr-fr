@@ -1,5 +1,5 @@
 ---
-title: Connexion avec SQLDriverConnect (fr) Microsoft Docs
+title: Connexion à SQLDriverConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299069"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Connexion avec SQLDriverConnect
-**SQLDriverConnect** est utilisé pour se connecter à une source de données à l’aide d’une chaîne de connexion. **SQLDriverConnect** est utilisé à la place de **SQLConnect** pour les raisons suivantes :  
+**SQLDriverConnect** est utilisé pour se connecter à une source de données à l’aide d’une chaîne de connexion. **SQLDriverConnect** est utilisé à la place de **SQLConnect** pour les raisons suivantes :  
   
--   Pour laisser l’application utiliser des informations de connexion spécifiques au conducteur.  
+-   Pour permettre à l’application d’utiliser des informations de connexion spécifiques au pilote.  
   
 -   Pour demander que le pilote invite l'utilisateur à fournir des informations sur la connexion.  
   
--   Pour se connecter sans spécifier une source de données.  
+-   Pour se connecter sans spécifier de source de données.  
   
  Cette section contient les rubriques suivantes :  
   

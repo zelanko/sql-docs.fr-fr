@@ -1,5 +1,5 @@
 ---
-title: Mise en place du pilote Visual FoxPro ODBC (fr) Microsoft Docs
+title: Configuration du pilote ODBC Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 26c73cb42e9adb9d46218983ade143450ff5d73a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300729"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Configuration du pilote ODBC Visual FoxPro
-Pour plus d’informations sur le téléchargement et l’installation du pilote Visual FoxPro ODBC, voir [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318) sur MSDN Downloads.  
+Pour plus d’informations sur le téléchargement et l’installation du pilote ODBC Visual FoxPro, voir [pilote ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318) sur MSDN downloads (en anglais).  
   
- Vous utilisez le programme Microsoft Visual FoxPro ODBC Driver Setup pour faire ce qui suit :  
+ Vous utilisez le programme d’installation du pilote ODBC de Microsoft Visual FoxPro pour effectuer les opérations suivantes :  
   
--   Ajouter de nouveaux composants.  
+-   Ajoutez de nouveaux composants.  
   
--   Enlever les composants installés.  
+-   Supprimer les composants installés.  
   
--   Réinstaller pour restaurer les fichiers et les paramètres manquants.  
+-   Réinstallez pour restaurer les fichiers et les paramètres manquants.  
   
 -   Supprimer tous les composants précédemment installés.  
   
- Après avoir installé le pilote sur votre système, le programme Setup reconnaît les composants du conducteur installé et présente des boîtes de dialogue supplémentaires qui vous permettent de modifier la configuration de votre pilote.
+ Une fois que vous avez installé le pilote sur votre système, le programme d’installation reconnaît les composants du pilote installés et présente des boîtes de dialogue supplémentaires qui vous permettent de modifier la configuration de votre pilote.

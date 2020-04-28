@@ -1,5 +1,5 @@
 ---
-title: ODBC Driver pour Oracle (fr) Microsoft Docs
+title: Pilote ODBC pour Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,44 +15,44 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298129"
 ---
 # <a name="odbc-driver-for-oracle"></a>Pilote ODBC pour Oracle
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le pilote Microsoft® ODBC pour Oracle vous permet de connecter votre application conforme à l’ODBC à une base de données Oracle. Le pilote ODBC pour Oracle est conforme aux spécifications de connectivité open Database (ODBC) décrites dans la *référence du programmeur ODBC*. Il permet l’accès aux forfaits PL/SQL, à l’intégration XA/DTC et à l’accès Oracle à partir des services d’information Internet (IIS).  
+ Le pilote ODBC Microsoft® pour Oracle vous permet de connecter votre application compatible ODBC à une base de données Oracle. Le pilote ODBC pour Oracle est conforme à la spécification Open Database Connectivity (ODBC) décrite dans le *Guide de référence du programmeur ODBC*. Il permet d’accéder aux packages PL/SQL, à l’intégration XA/DTC et à l’accès Oracle à partir de Internet Information Services (IIS).  
   
- Oracle RDBMS est un système de gestion de base de données relationnel multiusique qui fonctionne avec divers systèmes d’exploitation de poste de travail et de mini-ordinateurs. Les ordinateurs compatibles AVEC IBM exécutant Microsoft Windows peuvent communiquer avec les serveurs de base de données Oracle sur un réseau. Les réseaux pris en charge comprennent Microsoft LAN Manager, NetWare, VINES, DECnet, et tout réseau qui prend en charge TCP / IP.  
+ Oracle RDBMS est un système de gestion de base de données relationnelle multi-utilisateur qui s’exécute avec différents systèmes d’exploitation de station de travail et de mini-ordinateurs. Les ordinateurs compatibles IBM exécutant Microsoft Windows peuvent communiquer avec les serveurs de base de données Oracle sur un réseau. Les réseaux pris en charge incluent Microsoft LAN Manager, NetWare, VINEs, DECnet et tout réseau qui prend en charge TCP/IP.  
   
- Le pilote ODBC pour Oracle permet à une application d’accéder aux données dans une base de données Oracle via l’interface ODBC. Le conducteur peut accéder aux bases de données Oracle locales ou il peut communiquer avec le réseau via SQL-Net. Le diagramme suivant détaille cette application et l’architecture du conducteur.  
+ Le pilote ODBC pour Oracle permet à une application d’accéder aux données d’une base de données Oracle par le biais de l’interface ODBC. Le pilote peut accéder aux bases de données Oracle locales ou peut communiquer avec le réseau par le biais de SQL * Net. Le diagramme suivant détaille cette architecture d’application et de pilote.  
   
- ![ODBC Driver pour l’application Oracle&#47;l’architecture du conducteur](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![Architecture du pilote ODBC Driver for Oracle app&#47;](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Le pilote ODBC pour Oracle est conforme au niveau de conformité 1 et au noyau de niveau de conformité SQL de l’API. Il prend également en charge certaines fonctions dans le niveau de conformité API 2 et la plupart de la grammaire dans les niveaux de conformité sqL de base et étendus. Le conducteur est conforme à la conformité ODBC 2.5 et prend en charge les systèmes 32 bits. Oracle 7.3x est entièrement pris en charge; Oracle8 a un soutien limité. Le pilote ODBC pour Oracle ne prend en charge aucun des nouveaux types de données Oracle8 - types de données Unicode, BLOBs, CLOB, etc . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Pour plus d’informations sur les types de données pris en charge, consultez [les types de données pris](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) en charge dans ce guide.  
+ Le pilote ODBC pour Oracle est conforme au niveau de conformité de l’API 1 et au niveau de conformité SQL. Il prend également en charge certaines fonctions du niveau de conformité de l’API 2 et la plus grande partie de la grammaire dans les niveaux de conformité SQL de base et étendu. Le pilote est compatible ODBC 2,5 et prend en charge les systèmes 32 bits. Oracle 7.3 x est entièrement pris en charge ; Oracle8 a une prise en charge limitée. Le pilote ODBC pour Oracle ne prend pas en charge les nouveaux types de données Oracle8 (types de données Unicode, objets BLOB, objets CLOB, etc.). il ne prend pas non plus en charge le nouveau modèle d’objet relationnel d’Oracle. Pour plus d’informations sur les types de données pris en charge, consultez [types de données pris en charge](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) dans ce guide.  
   
- Pour accéder aux données Oracle, les composants suivants sont nécessaires :  
+ Pour accéder aux données Oracle, les composants suivants sont requis :  
   
--   Le pilote ODBC pour Oracle  
+-   Pilote ODBC pour Oracle  
   
--   Une base de données Oracle RDBMS  
+-   Une base de données de SGBDR Oracle  
   
--   Logiciel Client Oracle  
+-   Logiciel client Oracle  
   
- En outre, pour les connexions à distance:  
+ En outre, pour les connexions distantes :  
   
--   Un réseau qui connecte les ordinateurs qui exécutent le pilote et la base de données. Le réseau doit prendre en charge les connexions SQL-Net.  
+-   Un réseau qui connecte les ordinateurs qui exécutent le pilote et la base de données. Le réseau doit prendre en charge les connexions SQL * Net.  
   
-## <a name="component-documentation"></a>Documentation des composants  
- Ce guide contient des informations détaillées sur la mise en place et la configuration du pilote Microsoft ODBC pour Oracle et l’ajout de fonctionnalités programmatiques. Il contient également du matériel de référence technique.  
+## <a name="component-documentation"></a>Documentation du composant  
+ Ce guide contient des informations détaillées sur la configuration et la configuration du pilote Microsoft ODBC pour Oracle et sur l’ajout de fonctionnalités de programmation. Il contient également des documents de référence techniques.  
   
- Pour plus d’informations sur le comportement spécifique du produit Oracle, consultez la documentation qui accompagne le produit Oracle.  
+ Pour plus d’informations sur le comportement spécifique d’un produit Oracle, consultez la documentation qui accompagne le produit Oracle.  
   
- Pour plus d’informations sur la configuration ou la configuration du pilote Microsoft ODBC pour Oracle à l’aide de l’administrateur de source de données ODBC, consultez la documentation [de l’administrateur de source de données ODBC.](../../odbc/admin/odbc-data-source-administrator.md)  
+ Pour plus d’informations sur la configuration ou la configuration du pilote Microsoft ODBC pour Oracle à l’aide de l’administrateur de la source de données ODBC, consultez la documentation de l' [administrateur de sources de données ODBC](../../odbc/admin/odbc-data-source-administrator.md) .  
   
  Cette section contient les rubriques suivantes :  
   

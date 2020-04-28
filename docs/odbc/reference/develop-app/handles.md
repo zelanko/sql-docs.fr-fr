@@ -1,5 +1,5 @@
 ---
-title: Poignées Microsoft Docs
+title: Handles | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 713c2a71ec195b75d682b97239413e98d07b5861
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300209"
 ---
 # <a name="handles"></a>Poignées
-Les poignées sont opaques, des valeurs 32 bits qui identifient un élément particulier; dans ODBC, cet article peut être un environnement, une connexion, une déclaration ou un descripteur. Lorsque l’application appelle **SQLAllocHandle**, le gestionnaire de conducteur ou le pilote crée un nouvel élément du type spécifié et renvoie sa poignée à l’application. L’application utilise plus tard la poignée pour identifier cet élément lors de l’appel des fonctions ODBC. Le gestionnaire du conducteur et le conducteur utilisent la poignée pour trouver des informations sur l’article.  
+Les handles sont des valeurs 32 bits opaques qui identifient un élément particulier ; dans ODBC, cet élément peut être un environnement, une connexion, une instruction ou un descripteur. Lorsque l’application appelle **SQLAllocHandle**, le gestionnaire de pilotes ou le pilote crée un nouvel élément du type spécifié et retourne son descripteur à l’application. L’application utilise ensuite le descripteur pour identifier cet élément lors de l’appel de fonctions ODBC. Le gestionnaire de pilotes et le pilote utilisent le descripteur pour rechercher des informations sur l’élément.  
   
- Par exemple, le code suivant utilise deux poignées de relevés (*hstmtOrder* et *hstmtLine*) pour identifier les énoncés sur lesquels créer des ensembles de résultats des ordres de vente et des numéros de ligne de commande de vente. Il utilise plus tard ces poignées pour identifier les résultats définis pour obtenir des données.  
+ Par exemple, le code suivant utilise deux descripteurs d’instruction (*hstmtOrder* et *hstmtLine*) pour identifier les instructions sur lesquelles créer des jeux de résultats de commandes client et de numéros de ligne de commande client. Il utilise ensuite ces descripteurs pour identifier le jeu de résultats à partir duquel extraire les données.  
   
 ```  
 SQLHSTMT      hstmtOrder, hstmtLine; // Statement handles.  
@@ -71,15 +71,15 @@ while ((rc = SQLFetch(hstmtOrder)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmtOrder);  
 ```  
   
- Les poignées ne sont significatives que pour le composant ODBC qui les a créés; c’est-à-dire que seul le Gestionnaire de conducteur peut interpréter les poignées driver Manager et seul un conducteur peut interpréter ses propres poignées.  
+ Les handles sont significatifs uniquement pour le composant ODBC qui les a créés. autrement dit, seul le gestionnaire de pilotes peut interpréter les handles du gestionnaire de pilotes et seul un pilote peut interpréter ses propres handles.  
   
- Supposons, par exemple, que le conducteur attribue dans l’exemple précédent une structure pour stocker des informations sur une déclaration et retourne le pointeur à cette structure au fur et à mesure que la poignée de l’instruction. Lorsque l’application appelle **SQLPrepare**, elle passe une déclaration SQL et la poignée de l’instruction utilisée pour les numéros de ligne de commande de vente. Le conducteur envoie la déclaration SQL à la source de données, qui la prépare et renvoie un identifiant de plan d’accès. Le conducteur utilise la poignée pour trouver la structure dans laquelle stocker cet identifiant.  
+ Par exemple, supposons que le pilote de l’exemple précédent alloue une structure pour stocker des informations sur une instruction et retourne le pointeur vers cette structure en tant que descripteur d’instruction. Lorsque l’application appelle **SQLPrepare**, elle passe une instruction SQL et le descripteur de l’instruction utilisée pour les numéros de ligne de commande client. Le pilote envoie l’instruction SQL à la source de données, qui la prépare et retourne un identificateur de plan d’accès. Le pilote utilise le descripteur pour rechercher la structure dans laquelle stocker cet identificateur.  
   
- Plus tard, lorsque l’application appelle **SQLExecute** pour générer l’ensemble de résultats de numéros de ligne pour un ordre de vente particulier, il passe la même poignée. Le conducteur utilise la poignée pour récupérer l’identifiant du plan d’accès de la structure. Il envoie l’identifiant à la source de données pour lui indiquer quel plan exécuter.  
+ Plus tard, quand l’application appelle **SQLExecute** pour générer le jeu de résultats de numéros de ligne pour une commande client particulière, elle passe le même handle. Le pilote utilise le descripteur pour récupérer l’identificateur de plan d’accès à partir de la structure. Elle envoie l’identificateur à la source de données pour lui indiquer le plan à exécuter.  
   
- ODBC a deux niveaux de poignées : les poignées de gestionnaire de conducteur et les poignées de conducteur. L’application utilise Driver Manager poignées lors de l’appel ODBC fonctions parce qu’il appelle ces fonctions dans le gestionnaire de conducteur. Le gestionnaire de conducteur utilise cette poignée pour trouver la poignée correspondante du conducteur et utilise la poignée du conducteur lorsqu’il appelle la fonction dans le conducteur. Pour un exemple de la façon dont les poignées du conducteur et du gestionnaire de conducteur sont utilisées, consultez [le rôle du gestionnaire de conducteur dans le processus de connexion](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
+ ODBC dispose de deux niveaux de handles : les handles du gestionnaire de pilotes et les handles de pilote. L’application utilise des handles du gestionnaire de pilotes lors de l’appel de fonctions ODBC, car elle appelle ces fonctions dans le gestionnaire de pilotes. Le gestionnaire de pilotes utilise ce handle pour trouver le handle de pilote correspondant et utilise le handle de pilote lors de l’appel de la fonction dans le pilote. Pour obtenir un exemple d’utilisation des gestionnaires de pilote et de pilote, consultez [rôle du gestionnaire de pilotes dans le processus de connexion](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
   
- Qu’il y ait deux niveaux de poignées est un artefact de l’architecture ODBC; dans la plupart des cas, il n’est pertinent ni pour l’application ni pour le conducteur. Bien qu’il n’y ait généralement aucune raison de le faire, il est possible pour l’application de déterminer les poignées du conducteur en appelant **SQLGetInfo**.  
+ Le fait qu’il existe deux niveaux de descripteurs est un artefact de l’architecture ODBC ; dans la plupart des cas, il ne s’applique pas à l’application ou au pilote. Bien qu’il n’y ait généralement aucune raison de le faire, il est possible pour l’application de déterminer les handles de pilote en appelant **SQLGetInfo**.  
   
  Cette section contient les rubriques suivantes :  
   

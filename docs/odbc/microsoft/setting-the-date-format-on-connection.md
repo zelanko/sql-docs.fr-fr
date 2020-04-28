@@ -1,5 +1,5 @@
 ---
-title: Définir le format de date sur la connexion (fr) Microsoft Docs
+title: Définition du format de date sur la connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9da75702275959b48d4965189c9ef5cd856491ff
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300739"
 ---
 # <a name="setting-the-date-format-on-connection"></a>Définition du format de date avec la connexion
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- La nouvelle version du pilote Microsoft ODBC pour Oracle ne fixe pas automatiquement le format de date pour les champs de date Oracle. Auparavant, lorsque le conducteur `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`connecté, il a utilisé .  
+ La nouvelle version du pilote Microsoft ODBC pour Oracle ne définit pas automatiquement le format de date pour les champs de date Oracle. Auparavant, lorsque le pilote était connecté, `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`il utilisait.  
   
- Pour définir le format de date, appelez ALTER SESSION SET et effectuez ensuite l’insert. Par exemple :  
+ Pour définir le format de date, appelez ALTER SESSION SET, puis effectuez l’insertion. Par exemple :  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

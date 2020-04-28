@@ -1,5 +1,5 @@
 ---
-title: Récupérer l’information sur les ensembles de résultats (ODBC) Microsoft Docs
+title: Récupérer les informations du jeu de résultats (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1c65841db0fdfd386891cfbd03bdee483ce25f6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300369"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>Traitement des résultats - Récupérer les informations du jeu de résultats
@@ -27,19 +27,19 @@ ms.locfileid: "81300369"
     
 ### <a name="to-get-information-about-a-result-set"></a>Pour obtenir des informations sur un jeu de résultats  
   
-1.  Appelez [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) pour obtenir le nombre de colonnes dans l’ensemble de résultats.  
+1.  Appelez [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) pour obtenir le nombre de colonnes dans le jeu de résultats.  
   
 2.  Pour chaque colonne de l'ensemble de résultats :  
   
-    -   Appelez [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) pour obtenir des informations sur la colonne de résultat.  
+    -   Appelez [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) pour obtenir des informations sur la colonne de résultats.  
   
      ou  
   
-    -   Appelez [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) pour obtenir des informations spécifiques sur le descripteur sur la colonne de résultat.  
+    -   Appelez [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) pour obtenir des informations de descripteur spécifiques sur la colonne de résultats.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Résultats du processus &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
+[Traiter les résultats &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
-[Déterminer les caractéristiques d’un ensemble de résultats &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+[Détermination des caractéristiques d’un jeu de résultats &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLSTATES - France Microsoft Docs
+title: SQLSTATEs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,37 +14,37 @@ ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: be4bca929b8d48c301c6e71917503387004a6ec5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299726"
 ---
 # <a name="sqlstates"></a>Codes SQLSTATE
-Les SQLSTATEs fournissent des renseignements détaillés sur la cause d’un avertissement ou d’une erreur. Les SQLSTATEs de ce manuel sont basés sur ceux trouvés dans la spécification CLI ISO/IEF, bien que les SQLSTATes qui commencent par le GI sont spécifiques à ODBC.  
+SQLSTATEs fournit des informations détaillées sur la cause d’un avertissement ou d’une erreur. Les SQLSTATEs de ce manuel sont basées sur celles figurant dans la spécification de l’interface CLI ISO/IEF, bien que celles qui commencent par la messagerie instantanée soient spécifiques à ODBC.  
   
- Contrairement aux codes de retour, les SQLSTATes dans ce manuel sont des lignes directrices, et les conducteurs ne sont pas tenus de les retourner. Par conséquent, alors que les conducteurs doivent retourner le SQLSTATE approprié pour toute erreur ou avertissement qu’ils sont capables de détecter, les applications ne devraient pas compter sur ce qui se produit toujours. Les raisons de cette situation sont doubles :  
+ Contrairement aux codes de retour, les SQLSTATEs de ce manuel sont des recommandations et les pilotes ne sont pas requis pour les retourner. Par conséquent, alors que les pilotes doivent retourner le SQLSTATE approprié pour toute erreur ou avertissement qu’ils sont en charge de détecter, les applications ne doivent pas compter sur ce qui se produit toujours. Les raisons de cette situation sont double :  
   
--   **Incomplétude** Bien que ce manuel énumère un grand nombre d’erreurs et d’avertissements et les causes possibles de ces erreurs et avertissements, il n’est pas complet et ne sera probablement jamais; les implémentations des pilotes varient tout simplement trop. Tout conducteur donné ne retournera probablement pas toutes les SQLSTATes énumérées dans ce manuel et pourrait retourner SQLSTATes non répertoriés dans ce manuel.  
+-   **Incomplet** Bien que ce manuel répertorie un grand nombre d’erreurs et d’avertissements et les causes possibles de ces erreurs et avertissements, il n’est pas complet et probablement jamais. les implémentations de pilotes font tout simplement trop de choses. Un pilote donné ne retournera probablement pas toutes les SQLSTATE listés dans ce manuel et peut renvoyer des SQLSTATE non listés dans ce manuel.  
   
--   **Complexité** Certains moteurs de base de données - en particulier les moteurs de base de données relationnels - renvoient littéralement des milliers d’erreurs et d’avertissements. Il est peu probable que les conducteurs de ces moteurs cartographient toutes ces erreurs et avertissements aux SQLSTATEs en raison de l’effort en cause, de l’inexactitude des cartes, de la grande taille du code résultant et de la faible valeur du code résultant, qui renvoie souvent des erreurs de programmation qui ne devraient jamais être rencontrées au moment de l’exécution. Par conséquent, les conducteurs doivent cartographier autant d’erreurs et d’avertissements que cela semble raisonnable et être sûr de cartographier les erreurs et les avertissements sur la logique d’application sur laquelle la logique d’application pourrait être basée, comme SQLSTATE 01004 (Données tronquées).  
+-   **Complexité** Certains moteurs de base de données, en particulier les moteurs de base de données relationnelle, retournent littéralement des milliers d’erreurs et d’avertissements. Il est peu probable que les pilotes de ces moteurs mappent l’ensemble de ces erreurs et avertissements aux valeurs SQLSTATE, en raison de l’effort nécessaire, de l’inexactitude des mappages, de la taille importante du code résultant et de la faible valeur du code résultant, qui retourne souvent des erreurs de programmation qui ne doivent jamais être rencontrées au moment de l’exécution. Par conséquent, les pilotes doivent mapper autant d’erreurs et d’avertissements que cela semble raisonnable et s’assurer de mapper les erreurs et avertissements sur la logique d’application, tels que SQLSTATE 01004 (données tronquées).  
   
- Étant donné que les SQLSTATEs ne sont pas retournés de façon fiable, la plupart des applications les affichent simplement à l’utilisateur avec leur message diagnostique associé, qui est souvent adapté à l’erreur ou à l’avertissement spécifique qui s’est produit, et au code d’erreur natif. Il ya rarement une perte de fonctionnalité dans ce faisant, parce que les applications ne peuvent pas base logique de programmation sur la plupart des SQLSTATes de toute façon. Supposons, par exemple, **que SQLExecDirect** retourne SQLSTATE 42000 (erreur syntaxe ou violation d’accès). Si la déclaration SQL qui a causé cette erreur est codée par code dur ou construite par l’application, il s’agit d’une erreur de programmation et le code doit être corrigé. Si la déclaration SQL est saisie par l’utilisateur, il s’agit d’une erreur de l’utilisateur et l’application a fait tout ce qui est possible en informant l’utilisateur du problème.  
+ Étant donné que les SQLSTATEs ne sont pas retournées de manière fiable, la plupart des applications les affichent simplement à l’utilisateur, ainsi que le message de diagnostic qui lui est associé, qui est souvent adapté à l’erreur ou à l’avertissement qui s’est produit, ainsi qu’au code d’erreur natif. Il n’y a rarement aucune perte de fonctionnalité dans ce cas, car les applications ne peuvent quand même pas baser la logique de programmation sur la plupart des SQLSTATEs. Par exemple, supposons que **SQLExecDirect** retourne SQLState 42000 (erreur de syntaxe ou violation d’accès). Si l’instruction SQL à l’origine de cette erreur est codée en dur ou générée par l’application, il s’agit d’une erreur de programmation et le code doit être corrigé. Si l’instruction SQL est entrée par l’utilisateur, il s’agit d’une erreur de l’utilisateur et l’application a effectué tout cela possible en informant l’utilisateur du problème.  
   
- Lorsque les applications font la logique de programmation de base sur SQLSTATEs, ils doivent être préparés pour que le SQLSTATE ne soit pas retourné ou pour qu’un autre SQLSTATE soit retourné. Exactement quels SQLSTATEs sont retournés de façon fiable peuvent être basés uniquement sur l’expérience avec de nombreux conducteurs. Toutefois, une directive générale est que les SQLSTATEs pour les erreurs qui se produisent chez le conducteur ou le gestionnaire de conducteur, par opposition à la source de données, sont plus susceptibles d’être retournés de façon fiable. Par exemple, la plupart des conducteurs retournent probablement SQLSTATE HYC00 (fonction facultative non mise en œuvre), tandis que moins de conducteurs retournent probablement SQLSTATE 42021 (Colonne existe déjà).  
+ Lorsque les applications effectuent la logique de programmation de base sur les SQLSTATEs, elles doivent être préparées pour que la valeur SQLSTATE ne soit pas retournée ou qu’une valeur SQLSTATE différente soit retournée. Les SQLSTATEs retournés de façon fiable peuvent être basés uniquement sur l’expérience avec de nombreux pilotes. Toutefois, il est généralement recommandé que les SQLSTATEs pour les erreurs qui se produisent dans le pilote ou le gestionnaire de pilotes, par opposition à la source de données, soient plus susceptibles d’être retournées de manière fiable. Par exemple, la plupart des pilotes retournent probablement SQLSTATE HYC00 (fonctionnalité facultative non implémentée), tandis que moins de pilotes retournent SQLSTATE 42021 (la colonne existe déjà).  
   
- Les SQLSTATEs suivants indiquent des erreurs ou des avertissements en temps de course et sont de bons candidats sur lesquels fonder la logique de programmation. Cependant, il n’y a aucune garantie que tous les conducteurs les retournent.  
+ Les valeurs SQLSTATE suivantes indiquent des erreurs d’exécution ou des avertissements et sont de bons candidats sur lesquels baser la logique de programmation. Toutefois, il n’y a aucune garantie que tous les pilotes les retournent.  
   
--   01004 (Données tronquées)  
+-   01004 (données tronquées)  
   
--   01S02 (Valeur d’option modifiée)  
+-   01S02 ne (valeur d’option modifiée)  
   
--   HY008 (Opération annulée)  
+-   HY008 (opération annulée)  
   
--   HYC00 (fonction facultative non implémentée)  
+-   HYC00 (fonctionnalité facultative non implémentée)  
   
--   HYT00 (Expiration du délai)  
+-   HYT00 (délai d’expiration dépassé)  
   
- SQLSTATE HYC00 (fonction facultative non mise en œuvre) est particulièrement importante parce que c’est la seule façon pour une application de déterminer si un conducteur prend en charge un relevé ou un attribut de connexion particulier.  
+ SQLSTATE HYC00 (fonctionnalité facultative non implémentée) est particulièrement importante, car il s’agit de la seule façon dont une application peut déterminer si un pilote prend en charge une instruction ou un attribut de connexion particulier.  
   
- Pour une liste complète des SQLSTATEs et quelles fonctions les retournent, voir [Annexe A: ODBC Error Codes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Pour une explication détaillée des conditions dans lesquelles chaque fonction peut renvoyer un SQLSTATE particulier, voir cette fonction.
+ Pour obtenir une liste complète des SQLSTATEs et des fonctions qui les retournent, consultez [annexe a : codes d’erreur ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Pour obtenir une explication détaillée des conditions dans lesquelles chaque fonction peut retourner une SQLSTATE particulière, consultez cette fonction.

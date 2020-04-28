@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (Text File Driver) Microsoft Docs
+title: SQLGetInfo (pilote de fichier texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 09ca2e42e20a6f314de3b68fe5d5b143f41269c3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298500"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (pilote de fichier texte)
 > [!NOTE]  
->  Ce sujet fournit des informations spécifiques au fichier texte. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote de fichier texte. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** prend en charge le type d’information SQL_FILE_USAGE. La valeur retournée est un intégré 16 bits qui indique comment le conducteur traite directement les fichiers dans une source de données :  
+ **SQLGetInfo** prend en charge le type d’informations SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
   
--   SQL_FILE_NOT_SUPPORTED - Le conducteur n’est pas un pilote à un seul niveau.  
+-   SQL_FILE_NOT_SUPPORTED-le pilote n’est pas un pilote à un seul niveau.  
   
--   SQL_FILE_TABLE - Un pilote à un seul niveau traite les fichiers dans une source de données comme des tableaux.  
+-   SQL_FILE_TABLE : un pilote à niveau unique traite les fichiers d’une source de données en tant que tables.  
   
--   SQL_FILE_QUALIFIER - Un pilote à un seul niveau traite les fichiers d’une source de données comme un qualificatif.  
+-   SQL_FILE_QUALIFIER : un pilote à niveau unique traite les fichiers d’une source de données en tant que qualificateur.  
   
- Le conducteur de l’ODBC renvoie SQL_FILE_TABLE pour le Textdriver, car chaque fichier est une table.  
+ Le pilote ODBC retourne SQL_FILE_TABLE pour TextDriver, car chaque fichier est une table.  
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|Isam|Version|Format des numéros de version|  
+|SÉQUENTIEL|Version|Format des numéros de version|  
 |----------|-------------|-------------------------------|  
 |Texte|1.0|01.00.0000|  
   

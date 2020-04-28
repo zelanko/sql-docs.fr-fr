@@ -1,5 +1,5 @@
 ---
-title: Copie en vrac sans fichier format (ODBC) Microsoft Docs
+title: Copie en bloc sans fichier de format (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f2f1115971df37fe12177ec805898eea79744e8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299590"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Effectuer une copie en bloc sans fichier de format (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "81299590"
   Cet exemple illustre la façon d'utiliser des fonctions de copie en bloc pour créer un fichier de données en mode natif sans fichier de format. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez poursuivre vos informations d’identification, vous devez les chiffrer avec [l’API Win32 crypto](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-without-a-format-file"></a>Pour effectuer une copie en bloc sans fichier de format  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81299590"
   
 3.  Connectez-vous à SQL Server.  
   
-4.  Appelez [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour définir les informations suivantes :  
+4.  Appelez [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour définir les informations suivantes :  
   
     -   Nom de la table ou de la vue à partir de laquelle ou vers laquelle effectuer la copie en bloc.  
   
@@ -49,14 +49,14 @@ ms.locfileid: "81299590"
   
     -   la direction de la copie : DB_IN du fichier vers la vue ou la table, ou DB_OUT vers le fichier à partir de la table ou de la vue.  
   
-5.  Appelez [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en vrac.  
+5.  Appelez [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en bloc.  
   
  Lorsque DB_OUT est défini avec ces étapes, le fichier est créé dans le format natif. Le fichier peut ensuite être copié en bloc dans un serveur en suivant ces mêmes étapes, à la différence près que DB_OUT est défini à la place de DB_IN. Cela ne fonctionne que si les tables source et cible ont exactement la même structure.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger la base de données de l’échantillon AdventureWorks à partir de la page d’accueil [Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Cette source de données doit être basée sur le conducteur ODBC qui est fourni par le système d’exploitation (le nom du conducteur est "SQL Server"). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
@@ -158,6 +158,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copie en vrac avec le serveur SQL ODBC Driver How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Rubriques de procédures relatives à la copie en bloc avec le SQL Server ODBC Driver &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

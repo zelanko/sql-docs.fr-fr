@@ -1,5 +1,5 @@
 ---
-title: ODBC Driver pour Oracle User&#39;s Guide (fr) Microsoft Docs
+title: Guide ODBC Driver for Oracle User&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293150"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver pour Oracle User&#39;s Guide
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Guide ODBC Driver for Oracle User&#39;s
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Le pilote ODBC pour le guide de l’utilisateur Oracle est destiné à compléter l’aide à la configuration qui peut être consultée par l’intermédiaire [de l’administrateur de source de données ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+ Le Guide de l’utilisateur du pilote ODBC pour Oracle est destiné à compléter l’aide du programme d’installation accessible via l’administrateur de la [source de données ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
   
  Cette section contient les rubriques suivantes :  
   

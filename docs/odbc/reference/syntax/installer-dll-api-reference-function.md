@@ -1,5 +1,5 @@
 ---
-title: Fonction de référence installateur DLL API (fr) Microsoft Docs
+title: Fonction de référence de l’API DLL du programme d’installation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3502dfe6cdf54214041e3654d20e1b6dd2ff6f21
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298779"
 ---
 # <a name="installer-dll-api-reference-function"></a>Informations de référence sur les fonctions de l’API de la DLL d’installation
-Cette section décrit la syntaxe des fonctions dans l’installateur DLL API. L’installateur DLL API se compose de 20 fonctions. Trois de ces fonctions, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, et **SQLWriteDSNToIni**, sont appelées uniquement par la configuration DLL. Les autres fonctions sont appelées par les programmes d’installation et d’administration.  
+Cette section décrit la syntaxe des fonctions dans l’API DLL du programme d’installation. L’API DLL du programme d’installation se compose de 20 fonctions. Trois de ces fonctions, **SQLGetTranslator**, **SQLRemoveDSNFromIni**et **SQLWriteDSNToIni**, sont appelées uniquement par les dll d’installation. Les autres fonctions sont appelées par les programmes d’installation et d’administration.  
   
- Chaque fonction est étiquetée avec la version d’ODBC dans laquelle elle a été introduite.  
+ Chaque fonction est étiquetée avec la version ODBC dans laquelle elle a été introduite.  
   
  Cette section contient les rubriques suivantes :  
   
@@ -50,7 +50,7 @@ Cette section décrit la syntaxe des fonctions dans l’installateur DLL API. L�
   
 -   [SQLInstallTranslatorEx, fonction](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)  
   
--   [Fonction SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
+-   [SQLManageDataSources fonction)](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
   
 -   [SQLPostInstallerError, fonction](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)  
   

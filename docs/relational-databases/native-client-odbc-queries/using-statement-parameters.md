@@ -1,5 +1,5 @@
 ---
-title: Utilisation des paramètres de l’énoncé ( Microsoft Docs
+title: Utilisation des paramètres d’instruction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297895"
 ---
 # <a name="using-statement-parameters"></a>Utilisation de paramètres d'instruction
@@ -35,9 +35,9 @@ ms.locfileid: "81297895"
   
 -   améliorer l'interaction de l'utilisateur lors de la construction de critères de requête ;  
   
--   Gérer le **texte,** **le ntext**, et les données **d’image** et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les types spécifiques de données C.  
+-   Gérer les données **Text**, **ntext**et **image** et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les types de données C spécifiques.  
   
- Par exemple, un tableau **De pièces** a des colonnes nommées **PartID**, **Description**, et **Prix**. L'ajout d'un article sans paramètres requiert la construction d'une instruction SQL telle que :  
+ Par exemple, une table de **pièces** contient des colonnes nommées **partid**, **Description**et **Price**. L'ajout d'un article sans paramètres requiert la construction d'une instruction SQL telle que :  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [Liaison de paramètres](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution des requêtes &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Exécution de requêtes &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

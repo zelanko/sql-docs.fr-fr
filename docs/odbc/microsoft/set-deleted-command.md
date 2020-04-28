@@ -1,5 +1,5 @@
 ---
-title: SET DELETED Commande (fr) Microsoft Docs
+title: DÉFINIR la commande DELETEd | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3b3302dc7eecca7135dab9dff5afa376169be0f1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300879"
 ---
 # <a name="set-deleted-command"></a>SET DELETED, commande
-Précise si les enregistrements marqués pour la suppression sont traités et s’ils sont disponibles pour une utilisation dans d’autres commandes.  
+Spécifie si les enregistrements marqués pour la suppression sont traités et s’ils peuvent être utilisés dans d’autres commandes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,16 +31,16 @@ SET DELETED ON | OFF
   
 ## <a name="arguments"></a>Arguments  
  ACTIVÉ  
- (Par défaut pour le pilote; la valeur par défaut pour Visual FoxPro est OFF.) Précise que les commandes qui fonctionnent sur les dossiers (y compris les enregistrements dans les tableaux connexes) à l’aide d’une portée ignorent les enregistrements marqués pour la suppression.  
+ (Valeur par défaut pour le pilote ; la valeur par défaut de Visual FoxPro est OFF.) Spécifie que les commandes qui opèrent sur des enregistrements (y compris les enregistrements dans les tables associées) à l’aide d’une étendue ignorent les enregistrements marqués pour suppression.  
   
  OFF  
- Précise que les enregistrements marqués pour la suppression peuvent être consultés par des commandes qui fonctionnent sur des dossiers (y compris des enregistrements dans des tableaux connexes) à l’aide d’une portée.  
+ Spécifie que les enregistrements marqués pour suppression sont accessibles par les commandes qui opèrent sur les enregistrements (y compris les enregistrements dans les tables associées) à l’aide d’une étendue.  
   
 ## <a name="remarks"></a>Notes  
- Les requêtes qui utilisent DELETED( ) pour tester l’état des enregistrements peuvent être optimisées à l’aide de la technologie Visual FoxPro Rushmore si le tableau est indexé sur DELETED ( ).  
+ Les requêtes qui utilisent DELETEd () pour tester l’état des enregistrements peuvent être optimisées à l’aide de la technologie Visual FoxPro Rushmore si la table est indexée sur DELETEd ().  
   
 > [!IMPORTANT]  
->  SET DELETED est ignoré si la portée par défaut de la commande est l’enregistrement actuel ou si vous incluez une portée d’un seul enregistrement. INDEX ignore toujours SET DELETED et indexe tous les enregistrements du tableau.  
+>  L’option SET DELETEd est ignorée si l’étendue par défaut de la commande est l’enregistrement en cours ou si vous incluez une étendue d’un seul enregistrement. INDEX ignore toujours SET DELETEd et indexe tous les enregistrements de la table.  
   
 ## <a name="see-also"></a>Voir aussi  
  [DELETE, commande SQL](../../odbc/microsoft/delete-sql-command.md)

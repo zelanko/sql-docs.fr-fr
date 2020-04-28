@@ -1,5 +1,5 @@
 ---
-title: Référence de l’ODBC API (fr) Microsoft Docs
+title: Informations de référence sur l’API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298933"
 ---
 # <a name="odbc-api-reference"></a>Informations de référence sur l’API ODBC
-Les sujets de cette section décrivent chaque fonction ODBC par ordre alphabétique. Chaque fonction est définie comme une fonction linguistique de programmation C. Les descriptions comprennent ce qui suit:  
+Les rubriques de cette section décrivent chaque fonction ODBC par ordre alphabétique. Chaque fonction est définie en tant que fonction de langage de programmation C. Les descriptions sont les suivantes :  
   
 -   Objectif  
   
 -   Version ODBC  
   
--   Niveau standard de conformité CLI  
+-   Niveau de conformité de l’interface de commande standard  
   
 -   Syntaxe  
   
@@ -35,20 +35,20 @@ Les sujets de cette section décrivent chaque fonction ODBC par ordre alphabéti
   
 -   Diagnostics  
   
--   Commentaires sur l’utilisation et la mise en œuvre  
+-   Commentaires sur l’utilisation et l’implémentation  
   
 -   Exemple de code  
   
 -   Références aux fonctions connexes  
   
- Le niveau standard de conformité CLI peut être l’un des suivants: ISO 92, Open Group, ODBC, ou Déprémédé. Une fonction étiquetée comme ISO 92-conformant apparaît également dans la version 1 du Groupe Ouvert, parce que Open Group est un superset pur d’ISO 92. Une fonction étiquetée comme conforme au groupe ouvert apparaît également dans ODBC 3. *x*, parce que ODBC 3. *x* est un superset pur de la version 1 open Group. Une fonction étiquetée comme conforme à l’ODBC n’apparaît dans aucune des deux normes. Une fonction étiquetée comme dépréciée a été dépréciée dans ODBC 3. *x*.  
+ Le niveau de conformité de l’interface CLI standard peut être l’un des suivants : ISO 92, Open Group, ODBC ou Deprecated. Une fonction marquée comme ISO 92-conforme figure également dans Open Group version 1, car Open Group est un sur-ensemble pur de ISO 92. Une fonction marquée comme Open Group-compatible s’affiche également dans ODBC 3. *x*, car ODBC 3. *x* est un sur-ensemble pur de Open Group version 1. Une fonction marquée comme compatible ODBC n’apparaît ni dans le standard. Une fonction marquée comme déconseillée a été dépréciée dans ODBC 3. *x*.  
   
- Le traitement de l’information diagnostique est décrit dans la description de fonction [SQLGetDiagField.](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) Le texte associé aux valeurs SQLSTATE est inclus pour fournir une description de la condition, mais n’est pas destiné à prescrire un texte spécifique.  
+ La gestion des informations de diagnostic est décrite dans la description de la fonction [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) . Le texte associé aux valeurs SQLSTATE est inclus pour fournir une description de la condition, mais n’est pas destiné à prescrire un texte spécifique.  
   
 > [!NOTE]  
->  Pour obtenir des renseignements spécifiques au conducteur sur les fonctions de l’ODBC, consultez la section pour le conducteur.  
+>  Pour obtenir des informations spécifiques au pilote sur les fonctions ODBC, consultez la section relative au pilote.  
   
- Cette section contient des sujets pour les fonctions suivantes :  
+ Cette section contient les rubriques relatives aux fonctions suivantes :  
   
 -   [SQLAllocConnect, fonction](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

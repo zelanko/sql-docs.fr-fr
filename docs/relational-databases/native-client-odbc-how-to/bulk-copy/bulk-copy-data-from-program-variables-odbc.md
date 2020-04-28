@@ -1,5 +1,5 @@
 ---
-title: Données de copie en vrac provenant de variables du programme (ODBC) Microsoft Docs
+title: Copier des données en bloc à partir de variables de programme (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ebabedb2c801881a4dc908ead93515dc9119fc3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299605"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copier en bloc des données à partir de variables de programme (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Cet exemple montre comment utiliser les fonctions de copie en vrac pour copier en vrac les données des variables du programme à SQL Server en utilisant **bcp_bind** et **bcp_sendrow**. (Le code de contrôle d'erreurs est supprimé afin de simplifier cet exemple.)  
+  Cet exemple montre comment utiliser des fonctions de copie en bloc pour copier en bloc des données à partir de variables de programme vers SQL Server à l’aide de **bcp_bind** et de **bcp_sendrow**. (Le code de contrôle d'erreurs est supprimé afin de simplifier cet exemple.)  
   
  Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
- **Note de sécurité** Dans la mesure du possible, utilisez Windows Authentication. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d’identification persistantes, chiffrez-les avec [l’API de chiffrement Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504).  
+ **Note de sécurité** Dans la mesure du possible, utilisez l’authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d’identification persistantes, chiffrez-les avec [l’API de chiffrement Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>Pour utiliser des fonctions de copie en bloc directement sur des variables de programme  
   
@@ -38,38 +38,38 @@ ms.locfileid: "81299605"
   
 3.  Connectez-vous à SQL Server.  
   
-4.  Appelez [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour définir les informations suivantes :  
+4.  Appelez [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour définir les informations suivantes :  
   
     -   Nom de la table ou de la vue à partir de laquelle ou vers laquelle effectuer la copie en bloc.  
   
     -   Spécifiez NULL pour le nom du fichier de données.  
   
-    -   Le nom d’un fichier de données pour recevoir des messages d’erreur de copie en vrac (spécifiez NULL si vous ne voulez pas d’un fichier de message).  
+    -   Nom d’un fichier de données devant recevoir les messages d’erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas de fichier de message).  
   
     -   Direction de la copie : DB_IN de l'application vers la vue ou table ou DB_OUT vers l'application à partir de la table ou vue.  
   
-5.  Appelez [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour chaque colonne dans la copie en vrac pour lier la colonne à une variable de programme.  
+5.  Appelez [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour chaque colonne de la copie en bloc pour lier la colonne à une variable de programme.  
   
-6.  Remplissez les variables du programme avec des données et appelez [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour envoyer une rangée de données.  
+6.  Remplissez les variables de programme avec des données et appelez [bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour envoyer une ligne de données.  
   
-7.  Après l’envoi de plusieurs rangées, appelez [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) pour contrôler les rangées déjà envoyées. Il est bon d’appeler [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) au moins une fois par 1000 rangées.  
+7.  Après l’envoi de plusieurs lignes, appelez [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) pour effectuer un point de contrôle sur les lignes déjà envoyées. Il est conseillé d’appeler [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) au moins une fois par 1000 lignes.  
   
-8.  Après que toutes les rangées ont été envoyées, appelez [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) pour terminer l’opération.  
+8.  Une fois que toutes les lignes ont été envoyées, appelez [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) pour terminer l’opération.  
 
- Vous pouvez varier l’emplacement et la longueur des variables du programme au cours d’une opération de copie en vrac en appelant [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) et [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Utilisez [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) pour définir diverses options de copie en vrac. Utilisez [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) pour envoyer **du texte,** **du ntext**et des données **d’image** en segments vers le serveur.  
+ Vous pouvez faire varier l’emplacement et la longueur des variables de programme lors d’une opération de copie en bloc en appelant [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) et [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Utilisez [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) pour définir différentes options de copie en bloc. Utilisez [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) pour envoyer des données **Text**, **ntext**et **image** en segments au serveur.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger la base de données de l’échantillon AdventureWorks à partir de la page d’accueil [Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Cette source de données doit être basée sur le conducteur ODBC qui est fourni par le système d’exploitation (le nom du conducteur est "SQL Server"). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la [!INCLUDE[tsql](../../../includes/tsql-md.md)]première liste de code pour créer des tableaux que l’échantillon utilisera.  
+ Exécutez la première liste [!INCLUDE[tsql](../../../includes/tsql-md.md)]de code () pour créer les tables que l’exemple utilisera.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et odbcbcp.lib. Si vous avez effectué la génération avec MSBuild.exe, copiez Bcpfmt.fmt et Bcpodbc.bcp à partir du répertoire de projet dans le répertoire avec le fichier .exe, puis appelez le fichier .exe.  
   
- Exécutez la [!INCLUDE[tsql](../../../includes/tsql-md.md)]troisième liste de code pour supprimer les tableaux utilisés par l’échantillon.  
+ Exécutez la troisième liste [!INCLUDE[tsql](../../../includes/tsql-md.md)]de code () pour supprimer les tables utilisées par l’exemple.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
@@ -304,7 +304,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copie en vrac avec le serveur SQL ODBC Driver How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Rubriques de procédures relatives à la copie en bloc avec le SQL Server ODBC Driver &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Copie en bloc à partir de variables de programme](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

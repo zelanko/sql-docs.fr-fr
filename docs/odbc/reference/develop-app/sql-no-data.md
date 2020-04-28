@@ -1,5 +1,5 @@
 ---
-title: SQL_NO_DATA Microsoft Docs
+title: SQL_NO_DATA | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9a399a270eb1cd2f3daf9449c53b1f577a6b9545
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299789"
 ---
 # <a name="sql_no_data"></a>SQL_NO_DATA
-Quand un ODBC 3. *x* application appelle **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** dans un ODBC 2. *x* pilote pour exécuter une mise à jour recherchée ou supprimer l’instruction qui n’affecte pas les lignes à la source de données, le pilote doit retourner SQL_SUCCESS, pas SQL_NO_DATA. Quand un ODBC 2. *x* ou ODBC 3. *x* application fonctionnant avec un ODBC 3. *x* conducteur appelle **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** avec le même résultat, l’ODBC 3. *x* le conducteur doit retourner SQL_NO_DATA.
+Quand ODBC 3. l’application *x* appelle **SQLExecDirect**, **SQLExecute**ou **SQLParamData** dans ODBC 2. *x* pour exécuter une instruction UPDATE ou DELETE recherchée qui n’affecte aucune ligne de la source de données, le pilote doit retourner SQL_SUCCESS, et non SQL_NO_DATA. Quand ODBC 2. *x* ou ODBC 3. *x* qui fonctionne avec une application ODBC 3. le pilote *x* appelle **SQLExecDirect**, **SQLExecute**ou **SQLParamData** avec le même résultat, ODBC 3. le pilote *x* doit retourner SQL_NO_DATA.

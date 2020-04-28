@@ -1,5 +1,5 @@
 ---
-title: Transactions ODBC (fr) Microsoft Docs
+title: ODBC de transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a40c34b2abeb346c7a718994ba2484bfc728e2b1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297954"
 ---
 # <a name="transactions-odbc"></a>Transactions dans ODBC
-Une *transaction* est une unité de travail qui se fait comme une seule opération atomique; c’est-à-dire que l’opération réussit ou échoue dans son ensemble. Par exemple, envisagez de transférer de l’argent d’un compte bancaire à un autre. Cela implique deux étapes: retirer l’argent du premier compte et le déposer dans le second. Il est important que les deux étapes réussissent; il n’est pas acceptable qu’une étape réussisse et que l’autre échoue. Une base de données qui prend en charge les transactions est en mesure de garantir cela.  
+Une *transaction* est une unité de travail qui s’effectue comme une opération atomique unique ; autrement dit, l’opération réussit ou échoue dans son ensemble. Par exemple, envisagez de transférer de l’argent d’un compte bancaire vers un autre. Cela implique deux étapes : le retrait de l’argent du premier compte et sa remise dans la seconde. Il est important que les deux étapes se déroulent correctement. Il n’est pas acceptable qu’une étape réussisse et que l’autre échoue. Une base de données qui prend en charge les transactions est en mesure de le garantir.  
   
- Les transactions peuvent être effectuées en étant *commis ou* en *étant annulées.* Lorsqu’une transaction est engagée, les modifications apportées à cette transaction sont permanentes. Lorsqu’une transaction est annulée, les lignes touchées sont retournées à l’état où elles se trouvaient avant le début de la transaction. Pour prolonger l’exemple de transfert de compte, une application exécute une déclaration SQL pour débiter le premier compte et un relevé SQL différent pour créditer le deuxième compte. Si les deux énoncés aboutissent, l’application engage alors la transaction. Mais si l’une ou l’autre déclaration échoue pour une raison quelconque, l’application annule la transaction. Dans les deux cas, la demande garantit un état cohérent à la fin de la transaction.  
+ Les transactions peuvent être effectuées en cours de *validation* ou de *restauration*. Lorsqu’une transaction est validée, les modifications apportées à cette transaction sont rendues permanentes. Lorsqu’une transaction est restaurée, les lignes affectées sont retournées à l’État dans lequel elles se trouvaient avant le démarrage de la transaction. Pour étendre l’exemple de transfert de compte, une application exécute une instruction SQL pour débiter le premier compte et une instruction SQL différente pour créditer le deuxième compte. Si les deux instructions sont correctement exécutées, l’application valide la transaction. Toutefois, si l’une des instructions échoue pour une raison quelconque, l’application restaure la transaction. Dans les deux cas, l’application garantit un état cohérent à la fin de la transaction.  
   
- Une seule transaction peut englober plusieurs opérations de base de données qui se produisent à des moments différents. Si d’autres transactions avaient un accès complet aux résultats intermédiaires, les transactions pourraient interférer les unes avec les autres. Supposons, par exemple, qu’une transaction insère une ligne, qu’une deuxième transaction indique cette ligne et que la première transaction est annulée. La deuxième transaction a maintenant des données pour une rangée qui n’existe pas.  
+ Une transaction unique peut englober plusieurs opérations de base de données qui se produisent à des moments différents. Si d’autres transactions ont un accès complet aux résultats intermédiaires, les transactions peuvent interférer les unes avec les autres. Par exemple, si une transaction insère une ligne, une deuxième transaction lit cette ligne et la première transaction est restaurée. La deuxième transaction contient maintenant des données pour une ligne qui n’existe pas.  
   
- Pour résoudre ce problème, il existe divers schémas pour isoler les transactions les uns des autres. *L’isolement des transactions* est généralement mis en œuvre par des lignes de verrouillage, ce qui empêche plus d’une transaction d’utiliser la même ligne en même temps. Dans certaines bases de données, le verrouillage d’une rangée peut également verrouiller d’autres rangées.  
+ Pour résoudre ce problème, il existe différents schémas pour isoler les transactions les unes des autres. L' *isolation des transactions* est généralement implémentée par le verrouillage des lignes, ce qui empêche plusieurs transactions d’utiliser la même ligne en même temps. Dans certaines bases de données, le verrouillage d’une ligne peut également verrouiller d’autres lignes.  
   
- Avec l’isolement accru des transactions vient la *concurrence réduite,* ou la capacité de deux transactions d’utiliser les mêmes données en même temps. Pour plus d’informations, voir [Définir le niveau d’isolement des transactions](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md).  
+ L’isolation des transactions augmente la *concurrence,* ou la capacité de deux transactions à utiliser les mêmes données en même temps. Pour plus d’informations, consultez [définition du niveau d’isolation de la transaction](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md).  
   
  Cette section contient les rubriques suivantes :  
   
@@ -37,4 +37,4 @@ Une *transaction* est une unité de travail qui se fait comme une seule opérati
   
 -   [Isolation des transactions](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
--   [Contrôle de la concordance](../../../odbc/reference/develop-app/concurrency-control.md)
+-   [Contrôle d’accès concurrentiel](../../../odbc/reference/develop-app/concurrency-control.md)

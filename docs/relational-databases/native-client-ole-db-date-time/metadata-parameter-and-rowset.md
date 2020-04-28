@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301016"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Métadonnées - Paramètres et ensembles de lignes
@@ -44,8 +44,8 @@ ms.locfileid: "81301016"
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Définissez|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Désactiver|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Désactiver|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Définissez|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Définissez|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Définissez|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Définissez|  
   
  Notez que, dans certains cas, les plages de valeurs ne sont pas continues. Cela est dû à l'ajout d'une virgule décimale lorsque la précision fractionnaire est supérieure à zéro.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "81301016"
   
  Le paramètre *bPrecision* est ignoré.  
   
- « DBPARAMFLAGS_SS_ISVARIABLESCALE » est ignoré lors de l'envoi de données au serveur. Les applications peuvent forcer l’utilisation de types TDS (Tabular Data Stream) hérités en utilisant les noms de types spécifiques au fournisseur « **datetime** » et « **smalldatetime** ». En cas de connexion à des serveurs [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou ultérieur), le format « **datetime2** » est utilisé et une conversion serveur implicite se produit si nécessaire, quand le nom de type est « **datetime2** » ou « DBTYPE_DBTIMESTAMP ». *bScale* est ignoré si les noms de types spécifiques au fournisseur « **DateTime** » ou « **smalldatetime** » sont utilisés. Dans le cas contraire, les appications doivent s’assurer que *bScale* est défini correctement. Les applications mises à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] niveau [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] à partir de MDAC et Native Client à partir de cette utilisation "DBTYPE_DBTIMESTAMP" échoueront si elles ne sont pas mis *bScale* correctement. En cas de connexion à instances de serveur antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], une valeur *bScale* autre que 0 ou 3 avec « DBTYPE_DBTIMESTAMP » est une erreur, et E_FAIL est retourné.  
+ « DBPARAMFLAGS_SS_ISVARIABLESCALE » est ignoré lors de l'envoi de données au serveur. Les applications peuvent forcer l’utilisation de types TDS (Tabular Data Stream) hérités en utilisant les noms de types spécifiques au fournisseur « **datetime** » et « **smalldatetime** ». En cas de connexion à des serveurs [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou ultérieur), le format « **datetime2** » est utilisé et une conversion serveur implicite se produit si nécessaire, quand le nom de type est « **datetime2** » ou « DBTYPE_DBTIMESTAMP ». *bScale* est ignoré si les noms de types spécifiques au fournisseur « **DateTime** » ou « **smalldatetime** » sont utilisés. Dans le cas contraire, appications doit s’assurer que *bScale* est défini correctement. Les applications mises à niveau à partir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de MDAC et [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Native Client à partir de qui utilisent « DBTYPE_DBTIMESTAMP » échouent si elles ne définissent pas correctement *bScale* . En cas de connexion à instances de serveur antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], une valeur *bScale* autre que 0 ou 3 avec « DBTYPE_DBTIMESTAMP » est une erreur, et E_FAIL est retourné.  
   
- Lorsque ICommandWithParameters::SetParameterInfo n’est pas appelé, le fournisseur imples le type de serveur à partir du type de liaison comme spécifié dans IAccessor::CréerAccessor comme suit:  
+ Quand ICommandWithParameters :: SetParameterInfo n’est pas appelé, le fournisseur implique le type de serveur à partir du type de liaison comme indiqué dans IAccessor :: CreateAccessor comme suit :  
   
 |Type de liaison|*pwszDataSourceType*<br /><br /> (spécifique au fournisseur)|  
 |------------------|----------------------------------------------------|  

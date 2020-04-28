@@ -1,5 +1,5 @@
 ---
-title: Créer un fichier de format de copie en vrac (ODBC) Microsoft Docs
+title: Créer un fichier de format de copie en bloc (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298339"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Créer un fichier de format de copie en bloc (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "81298339"
   Cet exemple illustre comment utiliser des fonctions de copie en bloc pour créer un fichier de données et un fichier de format. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez poursuivre vos informations d’identification, vous devez les chiffrer avec [l’API Win32 crypto](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-create-a-bulk-copy-format-file"></a>Pour créer un fichier de format de copie en bloc  
   
@@ -37,7 +37,7 @@ ms.locfileid: "81298339"
   
 3.  Connectez-vous à SQL Server.  
   
-4.  Appelez [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour définir les informations suivantes :  
+4.  Appelez [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour définir les informations suivantes :  
   
     -   Nom de la table ou de la vue à partir de laquelle ou vers laquelle effectuer la copie en bloc.  
   
@@ -51,22 +51,22 @@ ms.locfileid: "81298339"
   
 6.  Appelez [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) pour chaque colonne pour définir ses caractéristiques dans le fichier de données.  
   
-7.  Appelez [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) pour créer un fichier format décrivant le fichier de données qui sera créé par l’opération de copie en vrac.  
+7.  Appelez [bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) pour créer un fichier de format décrivant le fichier de données à créer par l’opération de copie en bloc.  
   
-8.  Appelez [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en vrac.  
+8.  Appelez [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en bloc.  
   
  Une opération de copie en bloc exécutée de cette manière crée à la fois un fichier de données contenant les données copiées en bloc et un fichier de format décrivant la mise en page du fichier de données.  
   
 ## <a name="example"></a>Exemple  
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger la base de données de l’échantillon AdventureWorks à partir de la page d’accueil [Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Cette source de données doit être basée sur le conducteur ODBC qui est fourni par le système d’exploitation (le nom du conducteur est "SQL Server"). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’hébergement [exemples et projets de la communauté Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .) Cette source de données doit être basée sur le pilote ODBC fourni par le système d’exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la [!INCLUDE[tsql](../../../includes/tsql-md.md)]première liste de code ( ) pour créer la table que l’échantillon utilisera.  
+ Exécutez la première liste [!INCLUDE[tsql](../../../includes/tsql-md.md)]de code () pour créer la table que l’exemple utilisera.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et odbcbcp.lib.  
   
- Exécutez la [!INCLUDE[tsql](../../../includes/tsql-md.md)]troisième liste de code pour supprimer la table utilisée par l’échantillon.  
+ Exécutez la troisième liste [!INCLUDE[tsql](../../../includes/tsql-md.md)]de code () pour supprimer la table utilisée par l’exemple.  
   
 ```  
 use AdventureWorks  
@@ -215,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copie en vrac avec le serveur SQL ODBC Driver How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Rubriques de procédures relatives à la copie en bloc avec le SQL Server ODBC Driver &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Utilisation de fichiers de données et de format](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

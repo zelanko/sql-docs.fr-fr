@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt (Visual FoxPro ODBC Driver) Microsoft Docs
+title: SQLFreeStmt (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31276137735c6934ae6940c038e3cdaada3241b0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298639"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Ce sujet contient des informations visuelles spécifiques à FoxPro ODBC Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soutien: Complet  
+ Prise en charge : complète  
   
- Conformité API ODBC : Niveau de base  
+ Conformité de l’API ODBC : niveau principal  
   
- Arrête le traitement associé à un *hstmt*spécifique , ferme tous les curseurs ouverts associés à la *hstmt*, rejette les résultats en attente, et libère d’option toutes les ressources associées à la poignée de déclaration.  
+ Arrête le traitement associé à un *HSTMT*spécifique, ferme tous les curseurs ouverts associés à *HSTMT*, ignore les résultats en attente et libère éventuellement toutes les ressources associées au descripteur d’instruction.  
   
- Pour plus d’informations, voir [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) dans la *référence du programmeur ODBC*.
+ Pour plus d’informations, consultez [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) dans le *Guide de référence du programmeur ODBC*.

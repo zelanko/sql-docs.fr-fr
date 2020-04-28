@@ -1,5 +1,5 @@
 ---
-title: SQLSetScrollOptions (Visual FoxPro ODBC Driver) Microsoft Docs
+title: SQLSetScrollOptions (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 19051fc83466bc40d72c029089cfe6ec45c20a08
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299419"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Ce sujet contient des informations visuelles spécifiques à FoxPro ODBC Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soutien: Partielle  
+ Prise en charge : partielle  
   
- Conformité API ODBC: Niveau 2  
+ Conformité de l’API ODBC : niveau 2  
   
- Définit les options qui contrôlent le comportement des curseurs associés à une poignée de déclaration, *hstmt*.  
+ Définit des options qui contrôlent le comportement des curseurs associés à un descripteur d’instruction, *HSTMT*.  
   
- Le visual FoxPro ODBC Driver ne prend en charge que SQL_CONCUR_READ_ONLY; il ne prend pas en charge la valeur *fConcurrency* SQL_CONCUR_ROWVER. Le conducteur convertit SQL_KEYSET_SIZE, SQL_CURSOR_DYNAMIC et SQL_CURSOR_KEYSET_DRIVEN pour SQL_SCROLL_STATIC avec des ODBC_01S02 d’avertissement.  
+ Le pilote ODBC Visual FoxPro prend en charge uniquement SQL_CONCUR_READ_ONLY ; elle ne prend pas en charge la valeur *fConcurrency* SQL_CONCUR_ROWVER. Le pilote convertit SQL_KEYSET_SIZE, SQL_CURSOR_DYNAMIC et SQL_CURSOR_KEYSET_DRIVEN en SQL_SCROLL_STATIC avec un avertissement ODBC_01S02.  
   
- Pour plus d’informations, voir [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) dans la *référence du programmeur ODBC*.
+ Pour plus d’informations, consultez [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) dans le *Guide de référence du programmeur ODBC*.

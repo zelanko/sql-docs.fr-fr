@@ -1,5 +1,5 @@
 ---
-title: Séquence d’évasion d’appel de procédure (en anglais seulement) Microsoft Docs
+title: Séquence d’échappement d’appel de procédure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,57 +15,57 @@ ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1194efe6a21c456a722ccd4352661c998f0316d9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298219"
 ---
 # <a name="procedure-call-escape-sequence"></a>Séquence d’échappement d’appel de procédure
-ODBC utilise des séquences d’évasion pour les appels de procédure. La syntaxe de cette séquence d’évasion est la suivante :  
+ODBC utilise des séquences d’échappement pour les appels de procédure. La syntaxe de cette séquence d’échappement est la suivante :  
   
- **Nom**de la procédure**d’appel** *procedure-name***[[?] [[,]...***parameter**parameter* **)**]**}**  
+ **{**[ ? =]**Call** *procedure-Name*[**(**[*paramètre*] [, [*paramètre*]]... **)**]**}**  
   
- Dans la notation BNF, la syntaxe est la suivante :  
+ Dans la notation BNF, la syntaxe est la suivante :  
   
- *ODBC-procédure-évasion* ::  
+ *ODBC-procédure-Escape* :: =  
   
- &#124; *ODBC-esc-initiateur* [?] procédure d’appel *ODBC-esc-terminator*  
+ &#124; *ODBC-Échap-Initiator* [ ? =] appeler la *procédure ODBC-ESC-terminateur*  
   
- *procédure* :: nom *de procédure* &#124; nom *de procédure* *(procédure-paramètre-liste*)  
+ *procédure* :: = *procédure-nom* &#124; *procédure-nom* (*procédure-paramètre-liste*)  
   
- *procédure-identifiant* ::- *nom défini par l’utilisateur*  
+ *procedure-identifier* :: = *nom défini par l’utilisateur*  
   
- *nom de procédure* ::-procédure-identifiant *procedure-identifier*  
+ *procedure-Name* :: = *procédure-identifier*  
   
- &#124; nom *du propriétaire*. *procédure-identifiant*  
+ &#124; *owner-name*. *identificateur de procédure*  
   
- &#124; *catalogue-nom catalogue-séparation* *de la procédure-identifiant*  
+ Catalogue de &#124; nom-procédure de *séparateur* - *identificateur*  
   
- &#124; *catalogue-nom catalogue-séparateur* *[nom du propriétaire*]. *procédure-identifiant*  
+ Catalogue-nom du catalogue *de* &#124; [*owner-name*]. *identificateur de procédure*  
   
- (La troisième syntaxe n’est valide que si la source de données ne prend pas en charge les propriétaires.)  
+ (La troisième syntaxe est valide uniquement si la source de données ne prend pas en charge les propriétaires.)  
   
- *nom du propriétaire* ::md nom *défini par l’utilisateur*  
+ *owner-name* :: = *nom défini par l’utilisateur*  
   
- *nom du catalogue* ::md nom *défini par l’utilisateur*  
+ *Catalog-Name* :: = *nom défini par l’utilisateur*  
   
- *catalogue-séparateur* *::''''''' 'implémenté-défini'*  
+ *catalogue-Separator* :: = {*Implementation-defined*}  
   
- (Le séparateur du catalogue est retourné par **SQLGetInfo** avec l’option d’information SQL_CATALOG_NAME_SEPARATOR.)  
+ (Le séparateur de catalogue est retourné via **SQLGetInfo** avec l’option d’informations SQL_CATALOG_NAME_SEPARATOR.)  
   
- *procédure-paramètre-liste* ::md *procédure-paramètre*  
+ *procédure-parameter-list* :: = *procédure-paramètre*  
   
- &#124; de *la procédure-paramètre*, *procédure-paramètre-liste*  
+ *Paramètre de procédure*&#124;, *procédure-paramètre-list*  
   
- *procédure-paramètre* :: *dynamic-parameter* &#124; *littéral* &#124; *empty-string*  
+ *procédure-paramètre* :: = *paramètre dynamique* &#124; *littéral* &#124; *chaîne vide*  
   
- *corde vide* ::MD  
+ *Empty-String* :: =  
   
- *ODBC-esc-initiateur* ::  
+ *ODBC-Echap-Initiator* :: = {  
   
- *ODBC-esc-terminator* ::  
+ *ODBC-ESC-terminateur* :: =}  
   
  (Si un paramètre de procédure est une chaîne vide, la procédure utilise la valeur par défaut pour ce paramètre.)  
   
- Pour déterminer si la source de données prend en charge les procédures et le conducteur prend en charge la syntaxe d’invocation de la procédure ODBC, une application peut appeler **SQLGetInfo** avec le type d’information SQL_PROCEDURES.
+ Pour déterminer si la source de données prend en charge les procédures et que le pilote prend en charge la syntaxe d’appel de procédure ODBC, une application peut appeler **SQLGetInfo** avec le type d’informations SQL_PROCEDURES.

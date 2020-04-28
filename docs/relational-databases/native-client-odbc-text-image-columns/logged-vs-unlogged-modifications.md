@@ -1,5 +1,5 @@
 ---
-title: Modifications enregistrées par rapport à l’enroulement Microsoft Docs
+title: Modifications journalisées et non journalisées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc7fb913bef4083b045a0c1c010bdedbc43135c5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297652"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>Modifications enregistrées ou non enregistrées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Une application peut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demander au conducteur native d’ODBC de ne pas enregistrer **de texte,** **de ntext**et de modifications **d’image.** Il convient toutefois d'être prudent lors de l'utilisation de cette option. Il ne doit être utilisé que pour les situations où le **texte,** **le ntext**, ou les données **d’image** n’est pas critique et les propriétaires de données sont prêts à échanger la capacité de récupérer des données pour des performances plus élevées.  
+  Une application peut demander que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’enregistre pas les modifications **Text**, **ntext**et **image** . Il convient toutefois d'être prudent lors de l'utilisation de cette option. Elle ne doit être utilisée que dans les cas où les données **Text**, **ntext**ou **image** ne sont pas critiques et que les propriétaires de données sont prêts à échanger la possibilité de récupérer les données pour des performances supérieures.  
   
- L’enregistrement du **texte,** **du ntext**, et des modifications **d’image** est contrôlé en appelant [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) avec le paramètre *d’attribut* réglé pour SQL_SOPT_SS_ TEXTPTR_LOGGING et *ValuePtr* réglé à SQL_TL_ON ou SQL_TL_OFF.  
+ La journalisation des modifications de **texte**, **ntext**et **image** est contrôlée en appelant [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) avec le paramètre d' *attribut* défini sur SQL_SOPT_SS_ TEXTPTR_LOGGING et *ValuePtr* défini sur SQL_TL_ON ou SQL_TL_OFF.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des colonnes texte et image](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

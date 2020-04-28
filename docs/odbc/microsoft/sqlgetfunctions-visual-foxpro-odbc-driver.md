@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions (Visual FoxPro ODBC Driver) Microsoft Docs
+title: SQLGetFunctions (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,25 +13,25 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: af7ad2368847ff271dcf81759d6fa06b8a79fb0a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298609"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Ce sujet contient des informations visuelles spécifiques à FoxPro ODBC Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soutien: Complet  
+ Prise en charge : complète  
   
- Conformité API ODBC: Niveau 1  
+ Conformité de l’API ODBC : niveau 1  
   
- Retourne TRUE pour toutes les fonctions prises en charge.  
+ Retourne la valeur TRUE pour toutes les fonctions prises en charge.  
   
- Le Visual FoxPro ODBC Driver prend en charge toutes les fonctions ODBC API Core et Level 1. Le tableau suivant indique si le conducteur prend en charge une fonction spécifique de niveau 2.  
+ Le pilote ODBC Visual FoxPro prend en charge toutes les fonctions de base de l’API ODBC et de niveau 1. Le tableau suivant indique si le pilote prend en charge une fonction spécifique de niveau 2.  
   
-|*Fonction*|Prise en charge|  
+|*Fonction*|Pris en charge|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|Non|  
 |SQL_API_SQLCOLUMNPRIVELEGES|Non|  
@@ -51,4 +51,4 @@ ms.locfileid: "81298609"
 |SQL_API_SQLSETSCROLLOPTIONS|Oui|  
 |SQL_API_SQLTABLEPRIVILEGES|Non|  
   
- Pour plus d’informations, voir [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) dans la *référence du programmeur ODBC*.
+ Pour plus d’informations, consultez [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) dans le *Guide de référence du programmeur ODBC*.

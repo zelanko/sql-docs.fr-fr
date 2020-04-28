@@ -1,5 +1,5 @@
 ---
-title: Allouer les poignées et se connecter au serveur SQL (ODBC) Microsoft Docs
+title: Allouer des descripteurs et se connecter à SQL Server (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d26af711c07c4ea296d5351d0fcb0d1f9710706
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294481"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allouer des handles et se connecter à SQL Server (ODBC)
@@ -32,21 +32,21 @@ ms.locfileid: "81294481"
   
 2.  Incluez le fichier d'en-tête spécifique au pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Odbcss.h.  
   
-3.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec un **HandleType** de SQL_HANDLE_ENV pour initialiser ODBC et allouer une poignée d’environnement.  
+3.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec un **comme HandleType** de SQL_HANDLE_ENV pour initialiser ODBC et allouer un handle d’environnement.  
   
-4.  Appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) avec **l’ensemble d’attributs** à SQL_ATTR_ODBC_VERSION et **ValuePtr** réglé pour SQL_OV_ODBC3 pour indiquer que l’application utilisera des appels de fonction ODBC 3.x-format.  
+4.  Appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) avec l' **attribut** défini sur SQL_ATTR_ODBC_VERSION et **ValuePtr** défini sur SQL_OV_ODBC3 pour indiquer que l’application utilisera les appels de fonction ODBC 3. x-format.  
   
-5.  En option, appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) pour définir d’autres options en environnement, ou appelez [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) pour obtenir des options en environnement.  
+5.  Si vous le souhaitez, appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) pour définir d’autres options d’environnement, ou appelez [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) pour accéder aux options d’environnement.  
   
-6.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec un **HandleType** de SQL_HANDLE_DBC pour allouer une poignée de connexion.  
+6.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec un **comme HandleType** de SQL_HANDLE_DBC pour allouer un handle de connexion.  
   
-7.  En option, appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) pour définir les options de connexion, ou appelez [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) pour obtenir des options de connexion.  
+7.  Vous pouvez également appeler [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) pour définir les options de connexion ou appeler [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) pour accéder aux options de connexion.  
   
-8.  Appelez SQLConnect pour utiliser une source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de données existante pour vous connecter à .  
+8.  Appelez SQLConnect pour utiliser une source de données existante à laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se connecter.  
   
      ou  
   
-     Appelez [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) pour utiliser une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]chaîne de connexion pour vous connecter à .  
+     Appelez [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) pour utiliser une chaîne de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Une chaîne de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minimale complète revêt l'une des deux formes :  
   
@@ -55,27 +55,27 @@ ms.locfileid: "81294481"
     DRIVER={SQL Server Native Client 10.0};SERVER=server;Trusted_connection=yes;  
     ```  
   
-     Si la chaîne de connexion n’est pas complète, **SQLDriverConnect** peut demander les informations requises. Ceci est contrôlé par la valeur spécifiée pour le *paramètre DriverCompletion.*  
+     Si la chaîne de connexion n’est pas complète, **SQLDriverConnect** peut demander les informations requises. Cela est contrôlé par la valeur spécifiée pour le paramètre *DriverCompletion* .  
   
      \- ou -  
   
-     Appelez [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) plusieurs fois d’une manière itérative [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour construire la chaîne de connexion et se connecter à .  
+     Appelez plusieurs fois [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) de manière itérative pour créer la chaîne de connexion et vous connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à.  
   
-9. Optionnellement, appelez [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) pour obtenir des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attributs et un comportement du conducteur pour la source de données.  
+9. Vous pouvez également appeler [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) pour obtenir les attributs de pilote et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement de la source de données.  
   
 10. Allouez et utilisez les instructions.  
   
-11. Appelez SQLDisconnect pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous déconnecter et rendre la poignée de connexion disponible pour une nouvelle connexion.  
+11. Appelez SQLDisconnect pour vous déconnecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et rendre le descripteur de connexion disponible pour une nouvelle connexion.  
   
-12. Appelez [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) avec un **HandleType** de SQL_HANDLE_DBC pour libérer la poignée de connexion.  
+12. Appelez [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) avec un **comme HandleType** de SQL_HANDLE_DBC pour libérer le handle de connexion.  
   
-13. Appelez **SQLFreeHandle** avec un **HandleType** de SQL_HANDLE_ENV pour libérer la poignée de l’environnement.  
+13. Appelez **SQLFreeHandle** avec un **comme HandleType** de SQL_HANDLE_ENV pour libérer le handle d’environnement.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez poursuivre vos informations d’identification, vous devez les chiffrer avec [l’API Win32 crypto](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Exemple  
- Cet exemple montre un appel à **SQLDriverConnect** pour se connecter à une instance de sans avoir besoin d’une source de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données ODBC existante. En passant une chaîne de connexion incomplète à **SQLDriverConnect**, il provoque le pilote ODBC d’inviter l’utilisateur à entrer les informations manquantes.  
+ Cet exemple montre un appel à **SQLDriverConnect** pour se connecter à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sans nécessiter de source de données ODBC existante. En passant une chaîne de connexion incomplète à **SQLDriverConnect**, le pilote ODBC invite l’utilisateur à entrer les informations manquantes.  
   
 ```  
 #define MAXBUFLEN   255  

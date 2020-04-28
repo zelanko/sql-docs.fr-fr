@@ -1,5 +1,5 @@
 ---
-title: Configuration DLL ( Microsoft Docs
+title: DLL d’installation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.assetid: 7e036b66-2fbe-4ce2-815c-2fd03b6fce4d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 560acbd2227fa7cc0069829319524cae54fd4df1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300719"
 ---
 # <a name="setup-dll"></a>DLL d’installation
-L’administrateur ODBC appelle la fonction **ConfigDSN** lorsque les utilisateurs configurent des sources de données.
+L’administrateur ODBC appelle la fonction **ConfigDSN** quand les utilisateurs configurent des sources de données.

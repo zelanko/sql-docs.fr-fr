@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (pilote dBASE) Microsoft Docs
+title: SQLSetConnectOption (pilote dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 32bfb4755d308706372c0d863f8246631c122f21
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301520"
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (pilote dBASE)
 > [!NOTE]  
->  Ce sujet fournit dBASE Des informations spécifiques au conducteur. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote dBASE. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|fOption|Commentaire|  
+|fOption|Comment|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Le SQL_ACCESS_MODE fOption peut être réglé à SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le conducteur n’empêche pas les mises à jour si SQL_ACCESS_MODE est configuré pour SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|Le pilote dBASE ne prend en charge que SQL_AUTOCOMMIT étant réglé sur ON (l’état par défaut), parce qu’il ne prend pas en charge les transactions.|  
+|SQL_ACCESS_MODE|Le SQL_ACCESS_MODE fOption peut être défini sur SQL_MODE_READ_ONLY ou SQL_MODE_READ_WRITE. Toutefois, le pilote n’empêche pas les mises à jour si SQL_ACCESS_MODE est défini sur SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|Le pilote dBASE prend uniquement en charge les SQL_AUTOCOMMIT ayant la valeur ON (État par défaut), car il ne prend pas en charge les transactions.|  
 |SQL_CURRENT_QUALIFIER|Pris en charge.|  
 |SQL_LOGIN_TIMEOUT|Non pris en charge.|  
 |SQL_OPT_TRACE|Pris en charge.|  

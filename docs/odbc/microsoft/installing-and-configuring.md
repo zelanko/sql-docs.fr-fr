@@ -1,5 +1,5 @@
 ---
-title: Installation et configuration Microsoft Docs
+title: Installation et configuration de | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0184bc84a2a633b5c5b702a8f445615113a0614b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299989"
 ---
 # <a name="installing-and-configuring"></a>Installation et configuration
-Pour télécharger le visual FoxPro ODBC Driver, consultez [le site de téléchargement Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318).  
+Pour télécharger le pilote ODBC Visual FoxPro, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
- Cette section contient les sujets suivants pour vous aider à installer et configurer le pilote Microsoft Visual FoxPro ODBC :  
+ Cette section contient les rubriques suivantes pour vous aider à installer et à configurer le pilote ODBC Microsoft Visual FoxPro :  
   
--   [Exigences du système](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)  
+-   [Configuration requise](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)  
   
 -   [Versions de FoxPro prises en charge](../../odbc/microsoft/supported-versions-of-foxpro.md)  
   
@@ -37,4 +37,4 @@ Pour télécharger le visual FoxPro ODBC Driver, consultez [le site de télécha
   
 -   [Configuration d’ODBC pour Visual FoxPro, boîte de dialogue](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- Pour télécharger le pilote, consultez [le site de téléchargement Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318).
+ Pour télécharger le pilote, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).

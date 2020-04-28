@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 33ec9e1dd6d2898261eb541d746e4ccece9d5591
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299052"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -57,7 +57,7 @@ HRESULT WaitForAsynchCompletion(
 >  Outre les valeurs de code de retour répertoriées ci-dessus, la méthode **ISSAsynchStatus::WaitForAsynchCompletion** prend également en charge les valeurs de code de retour retournées par les méthodes OLEDB **ICommand::Execute** et **IDBInitialize::Initialize** principales.  
   
 ## <a name="remarks"></a>Notes  
- La méthode **ISSAsynchStatus::WaitForAsynchCompletion** n'est pas retournée tant que la valeur du délai d'attente (en millisecondes) n'est pas passée ou que l'opération en attente n'est pas terminée. **L’objet command a** une propriété **CommandTimeout** qui contrôle le nombre de secondes qu’une requête s’exécute avant de le chronométrer. La propriété **CommandTimeout** sera ignorée si elle est utilisée en conjonction avec **ISSAsynchStatus::WaitForAsynchCompletion** méthode.  
+ La méthode **ISSAsynchStatus::WaitForAsynchCompletion** n'est pas retournée tant que la valeur du délai d'attente (en millisecondes) n'est pas passée ou que l'opération en attente n'est pas terminée. L’objet **Command** a une propriété **CommandTimeout** qui contrôle le nombre de secondes pendant lesquelles une requête doit s’exécuter avant l’expiration du délai d’attente. La propriété **CommandTimeout** est ignorée si elle est utilisée conjointement avec la méthode **ISSAsynchStatus :: WaitForAsynchCompletion** .  
   
  La propriété relative au délai d'expiration est ignorée pour les opérations asynchrones. Le paramètre de délai d'expiration de **ISSAsynchStatus::WaitForAsynchCompletion** spécifie la durée maximale qui doit s'écouler avant que le contrôle ne soit retourné à l'appelant. Si ce délai expire, DB_S_ASYNCHRONOUS est retourné. L'expiration des délais d'attente n'annule jamais les opérations asynchrones. Si l'application doit annuler une opération asynchrone qui ne se termine pas dans un délai imparti, elle doit attendre l'expiration du délai, puis annuler explicitement l'opération si DB_S_ASYNCHRONOUS est retourné.  
   
@@ -71,7 +71,7 @@ HRESULT WaitForAsynchCompletion(
  De plus, la propriété SSPROP_ISSAsynchStatus a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERROWSET. Les fournisseurs qui prennent en charge l’interface [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) doivent implémenter cette propriété avec la valeur VARIANT_TRUE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution des opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
+ [Exécution d’opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

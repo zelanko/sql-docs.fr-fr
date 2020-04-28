@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ab4d4956f4a5c54807afd316242cd95ddf6ee7e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300994"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Prise en charge des API OLE DB pour les améliorations de date et d’heure
@@ -26,7 +26,7 @@ ms.locfileid: "81300994"
 |Fonction|Description|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|Un indicateur est ajouté dans la structure DBBINDING pour permettre aux applications de distinguer les valeurs **datetime**, **datetime2** et **smalldatetime**. Pour plus d’informations, consultez [Métadonnées de paramètre et d'ensemble de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IBCPSession::BCPColFmt|Pour plus d’informations, voir [modifications de copie en vrac pour les types de date et d’heure améliorés &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).|  
+|IBCPSession::BCPColFmt|Pour plus d’informations, consultez [modifications de copie en bloc pour les types de date et d’heure améliorés &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).|  
 |ICommandWithParameters::GetParameterInfo|Pour plus d’informations, consultez [Métadonnées de paramètre et d'ensemble de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |ICommandWithParameters::SetParameterinfo|Pour plus d’informations, consultez [Métadonnées de paramètre et d'ensemble de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |IColumnsRowset::GetColumnsRowset|Pour plus d’informations, consultez [Métadonnées de paramètre et d'ensemble de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  

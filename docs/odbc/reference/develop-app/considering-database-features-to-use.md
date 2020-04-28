@@ -1,5 +1,5 @@
 ---
-title: Considérant les fonctionnalités de base de données à utiliser Microsoft Docs
+title: Prise en compte des fonctionnalités de base de données à utiliser | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,37 +13,37 @@ ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299009"
 ---
 # <a name="considering-database-features-to-use"></a>Considérations sur les fonctionnalités de base de données à utiliser
-Une fois le niveau de base d’interopérabilité connu, les fonctionnalités de base utilisées par l’application doivent être prises en considération. Par exemple, quelles déclarations SQL l’application exécutera-t-elle? L’application utilisera-t-elle des curseurs défilementables ? Transactions? Procédures? De longues données ? Pour des idées sur les caractéristiques qui pourraient ne pas être pris en charge par tous les DBMS, voir le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), et [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) descriptions de la fonction, et [Annexe C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Les caractéristiques requises par une application pourraient éliminer certains DBMS de la liste des DBMS cibles. Ils peuvent également montrer que l’application peut facilement cibler de nombreux DBMS.  
+Une fois le niveau d’interopérabilité de base connu, les fonctionnalités de base de données utilisées par l’application doivent être prises en compte. Par exemple, quelles sont les instructions SQL exécutées par l’application ? L’application utilisera-t-elle des curseurs à défilement ? Mouvements? Opératoire? Données de type long ? Pour obtenir des idées sur les fonctionnalités qui peuvent ne pas être prises en charge par tous les SGBD, consultez les descriptions des fonctions [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)et [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) , ainsi que l' [annexe C : syntaxe SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Les fonctionnalités requises par une application peuvent éliminer certains SGBD de la liste des SGBD cibles. Ils peuvent également indiquer que l’application peut facilement cibler de nombreux SGBD.  
   
- Par exemple, si les fonctionnalités requises sont simples, elles peuvent généralement être implémentées avec un degré élevé d’interopérabilité. Une application qui exécute une simple instruction **SELECT** et récupère les résultats avec un curseur avant-seulement est susceptible d’être hautement interopérable en raison de sa simplicité: Presque tous les pilotes et DBMS prennent en charge la fonctionnalité dont il a besoin.  
+ Par exemple, si les fonctionnalités requises sont simples, elles peuvent généralement être implémentées avec un degré élevé d’interopérabilité. Une application qui exécute une instruction **Select** simple et récupère les résultats avec un curseur avant uniquement est susceptible d’être très interopérable en raison de sa simplicité : presque tous les pilotes et SGBD prennent en charge les fonctionnalités dont ils ont besoin.  
   
- Toutefois, si les fonctionnalités requises sont plus complexes, telles que les curseurs défilementables, les instructions de mise à jour et de suppression positionnées et les procédures, les compromis doivent souvent être effectués. Il existe plusieurs possibilités :  
+ Toutefois, si les fonctionnalités requises sont plus complexes, telles que les curseurs de défilement, les instructions Update et DELETE positionnées et les procédures, il faut souvent faire des compromis. Il existe plusieurs possibilités :  
   
--   **Moins d’interopérabilité, plus de fonctionnalités.** L’application comprend les fonctionnalités, mais ne fonctionne qu’avec DBMS qui les prennent en charge.  
+-   **Interopérabilité inférieure, plus de fonctionnalités.** L’application comprend les fonctionnalités, mais fonctionne uniquement avec les SGBD qui les prennent en charge.  
   
--   **Une interopérabilité plus élevée, moins de fonctionnalités.** L’application laisse tomber les fonctionnalités, mais fonctionne avec plus de DBMS.  
+-   **Interopérabilité plus élevée, moins de fonctionnalités.** L’application dépose les fonctionnalités mais fonctionne avec davantage de SGBD.  
   
--   **Une interopérabilité plus élevée, des caractéristiques facultatives.** L’application comprend les fonctionnalités, mais les rend disponibles uniquement avec les DBMS qui les prennent en charge.  
+-   **Interopérabilité supérieure, fonctionnalités facultatives.** L’application comprend les fonctionnalités, mais les met à disposition uniquement avec les SGBD qui les prennent en charge.  
   
--   **Une interopérabilité plus élevée, plus de fonctionnalités.** L’application utilise les fonctionnalités avec DBMS qui les prennent en charge et les imite pour les DBMS qui ne le font pas.  
+-   **Interopérabilité supérieure, plus de fonctionnalités.** L’application utilise les fonctionnalités avec des SGBD qui les prennent en charge et les émule pour les SGBD qui ne le sont pas.  
   
- Les deux premiers cas sont relativement simples à implémenter, car les fonctionnalités sont utilisées soit avec tous les DBMS pris en charge ou avec aucun. Les deux derniers cas, en revanche, sont plus complexes. Il est nécessaire dans les deux cas de vérifier si le DBMS prend en charge les fonctionnalités et dans le dernier cas d’écrire une quantité potentiellement importante de code pour émuler ces fonctionnalités. Par conséquent, ces régimes sont susceptibles de nécessiter plus de temps de développement et peuvent être plus lents au moment de l’exécution.  
+ Les deux premiers cas sont relativement simples à implémenter, car les fonctionnalités sont utilisées avec tous les SGBD pris en charge ou avec aucun. Les deux derniers cas, en revanche, sont plus complexes. Dans les deux cas, il est nécessaire de vérifier si le SGBD prend en charge les fonctionnalités et, dans le dernier cas, d’écrire un nombre potentiellement important de code pour émuler ces fonctionnalités. Par conséquent, ces schémas sont susceptibles de nécessiter plus de temps de développement et peuvent être plus lents au moment de l’exécution.  
   
- Considérez une application de requête générique qui peut se connecter à une seule source de données. L’application accepte une requête de l’utilisateur et affiche les résultats dans une fenêtre. Supposons maintenant que cette application dispose d’une fonctionnalité qui permet aux utilisateurs d’afficher simultanément les résultats de plusieurs requêtes. C’est-à-dire qu’ils peuvent exécuter une requête et regarder certains des résultats, exécuter une requête différente et regarder certains de ses résultats, puis revenir à la première requête. Cela présente un problème d’interopérabilité parce que certains conducteurs ne prennent en charge qu’une seule déclaration active.  
+ Prenons l’exemple d’une application de requête générique qui peut se connecter à une source de données unique. L’application accepte une requête de l’utilisateur et affiche les résultats dans une fenêtre. Supposons maintenant que cette application dispose d’une fonctionnalité qui permet aux utilisateurs d’afficher simultanément les résultats de plusieurs requêtes. Autrement dit, ils peuvent exécuter une requête et examiner certains résultats, exécuter une requête différente et examiner certains de ses résultats, puis revenir à la première requête. Cela présente un problème d’interopérabilité, car certains pilotes ne prennent en charge qu’une seule instruction active.  
   
- L’application a un certain nombre de choix, en fonction de ce que le conducteur retourne pour l’option SQL_MAX_CONCURRENT_ACTIVITIES dans **SQLGetInfo**:  
+ L’application a un certain nombre de choix, en fonction de ce que le pilote retourne pour l’option SQL_MAX_CONCURRENT_ACTIVITIES dans **SQLGetInfo**:  
   
--   **Soutenez toujours plusieurs requêtes.** Après s’être connecté à un conducteur, l’application vérifie le nombre d’instructions actives. Si le conducteur ne prend en charge qu’une seule déclaration active, l’application ferme la connexion et informe l’utilisateur que le pilote ne prend pas en charge les fonctionnalités requises. L’application est facile à implémenter et a une fonctionnalité complète, mais a une interopérabilité plus faible.  
+-   **Prend toujours en charge plusieurs requêtes.** Une fois connecté à un pilote, l’application vérifie le nombre d’instructions actives. Si le pilote ne prend en charge qu’une seule instruction active, l’application ferme la connexion et informe l’utilisateur que le pilote ne prend pas en charge les fonctionnalités requises. L’application est facile à implémenter et dispose d’une fonctionnalité complète, mais elle a une interopérabilité plus faible.  
   
--   **Ne jamais prendre en charge plusieurs requêtes.** L’application laisse tomber la fonctionnalité tout à fait. Il est facile à implémenter et a une interopérabilité élevée, mais a moins de fonctionnalités.  
+-   **Ne jamais prendre en charge plusieurs requêtes.** L’application dépose la fonctionnalité entièrement. Il est facile à implémenter et a une interopérabilité élevée, mais il a moins de fonctionnalités.  
   
--   **Prendre en charge plusieurs requêtes uniquement si le conducteur le fait.** Après s’être connecté à un conducteur, l’application vérifie le nombre d’instructions actives. L’application permet à l’utilisateur de démarrer une nouvelle déclaration lorsque celle-ci n’est déjà active que si le pilote prend en charge plusieurs instructions actives. L’application a une fonctionnalité et une interopérabilité plus élevées, mais est plus difficile à implémenter.  
+-   **Prend en charge plusieurs requêtes uniquement si le pilote le fait.** Une fois connecté à un pilote, l’application vérifie le nombre d’instructions actives. L’application permet à l’utilisateur de démarrer une nouvelle instruction lorsque celle-ci est déjà active uniquement si le pilote prend en charge plusieurs instructions actives. L’application dispose d’une plus grande fonctionnalité et d’une meilleure interopérabilité, mais elle est plus difficile à implémenter.  
   
--   **Soutenez toujours plusieurs requêtes et les émulez si nécessaire.** Après s’être connecté à un conducteur, l’application vérifie le nombre d’instructions actives. L’application permet toujours à l’utilisateur de démarrer une nouvelle déclaration lorsqu’elle est déjà active. Si le conducteur ne prend en charge qu’une seule déclaration active, l’application ouvre une connexion supplémentaire à ce pilote et exécute la nouvelle déclaration sur cette connexion. L’application a la pleine fonctionnalité et l’interopérabilité élevée, mais est plus difficile à implémenter.
+-   **Prenez toujours en charge plusieurs requêtes et émulez-les si nécessaire.** Une fois connecté à un pilote, l’application vérifie le nombre d’instructions actives. L’application permet toujours à l’utilisateur de démarrer une nouvelle instruction lorsque celle-ci est déjà active. Si le pilote ne prend en charge qu’une seule instruction active, l’application ouvre une connexion supplémentaire à ce pilote et exécute la nouvelle instruction sur cette connexion. L’application dispose de toutes les fonctionnalités et d’une grande interopérabilité, mais elle est plus difficile à implémenter.

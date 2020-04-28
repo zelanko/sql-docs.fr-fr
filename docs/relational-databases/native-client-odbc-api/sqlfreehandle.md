@@ -1,5 +1,5 @@
 ---
-title: SQLFreeHandle - France Microsoft Docs
+title: SQLFreeHandle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc8a8cac364c9226d32ed2ebadbc2702e13031ab
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298447"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
@@ -27,7 +27,7 @@ ms.locfileid: "81298447"
   En mode de validation manuelle, l'appel de **SQLFreeHandle** sur un descripteur d'instruction avec une transaction ouverte provoque une restauration des modifications en attente de la base de données. L'appel de **SQLFreeHandle** sur un descripteur d'instruction ferme toujours tous les curseurs ouverts et ignore les résultats en attente, libérant toutes les ressources associées au descripteur d'instruction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLFreeHandle](https://go.microsoft.com/fwlink/?LinkId=59345)   
+ [SQLFreeHandle, fonction](https://go.microsoft.com/fwlink/?LinkId=59345)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLParamData (Visual FoxPro ODBC Driver) Microsoft Docs
+title: SQLParamData (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2fa7e91fe32ae1d8068a2115144cab89ebd0312d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301576"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Ce sujet contient des informations visuelles spécifiques à FoxPro ODBC Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soutien: Complet  
+ Prise en charge : complète  
   
- Conformité API ODBC: Niveau 1  
+ Conformité de l’API ODBC : niveau 1  
   
- Utilisé en conjonction avec [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) pour spécifier les données de paramètres au moment de l’exécution des relevés.  
+ Utilisé conjointement avec [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) pour spécifier des données de paramètre au moment de l’exécution de l’instruction.  
   
- Pour plus d’informations, voir [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) dans la *référence du programmeur ODBC*.
+ Pour plus d’informations, consultez [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) dans le *Guide de référence du programmeur ODBC*.

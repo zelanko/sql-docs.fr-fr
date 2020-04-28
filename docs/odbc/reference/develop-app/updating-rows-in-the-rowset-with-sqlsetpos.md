@@ -1,5 +1,5 @@
 ---
-title: Mise à jour des lignes dans le Rowset avec SQLSetPos (fr) Microsoft Docs
+title: Mise à jour de lignes dans l’ensemble de lignes avec SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,32 +15,32 @@ ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298969"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Mise à jour de lignes dans l’ensemble de lignes avec SQLSetPos
-L’opération de mise à jour de **SQLSetPos** rend la source de données mettre à jour une ou plusieurs lignes sélectionnées d’un tableau, en utilisant les données dans les tampons d’application pour chaque colonne liée (à moins que la valeur dans le tampon longueur/indicateur ne soit SQL_COLUMN_IGNORE). Les colonnes qui ne sont pas liées ne seront pas mises à jour.  
+L’opération de mise à jour de **SQLSetPos** permet à la source de données de mettre à jour une ou plusieurs lignes sélectionnées d’une table, à l’aide des données des mémoires tampons de l’application pour chaque colonne liée (sauf si la valeur de la mémoire tampon de longueur/indicateur est SQL_COLUMN_IGNORE). Les colonnes qui ne sont pas liées ne seront pas mises à jour.  
   
- Pour mettre à jour les lignes avec **SQLSetPos**, l’application fait ce qui suit :  
+ Pour mettre à jour des lignes avec **SQLSetPos**, l’application effectue les opérations suivantes :  
   
-1.  Place les nouvelles valeurs de données dans les tampons rowset. Pour plus d’informations sur la façon d’envoyer de longues données avec **SQLSetPos**, voir [Long Data et SQLSetPos et SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
+1.  Place les nouvelles valeurs de données dans les mémoires tampons de l’ensemble de lignes. Pour plus d’informations sur l’envoi de données de type long avec **SQLSetPos**, consultez [long Data et SQLSetPos et SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-2.  Définit la valeur dans le tampon longueur/indicateur de chaque colonne au besoin. Il s’agit de la longueur d’entrée des données ou SQL_NTS pour les colonnes liées aux tampons de chaîne, la longueur d’or des données pour les colonnes liées aux tampons binaires, et SQL_NULL_DATA pour toutes les colonnes à définir à NULL.  
+2.  Définit la valeur de la mémoire tampon de longueur/d’indicateur de chaque colonne si nécessaire. Il s’agit de la longueur en octets des données ou SQL_NTS pour les colonnes liées aux mémoires tampons de chaîne, la longueur en octets des données pour les colonnes liées aux mémoires tampons binaires, et SQL_NULL_DATA pour toutes les colonnes dont la valeur est NULL.  
   
-3.  Définit la valeur dans le tampon longueur/indicateur des colonnes qui ne doivent pas être mises à jour pour SQL_COLUMN_IGNORE. Bien que l’application puisse sauter cette étape et renvoyer les données existantes, elle est inefficace et risque d’envoyer des valeurs à la source de données qui ont été tronquées lors de leur lecture.  
+3.  Définit la valeur dans la mémoire tampon de longueur/d’indicateur des colonnes qui ne doivent pas être mises à jour pour SQL_COLUMN_IGNORE. Bien que l’application puisse ignorer cette étape et renvoyer les données existantes, cela est inefficace et risque d’envoyer des valeurs à la source de données qui ont été tronquées lors de leur lecture.  
   
-4.  Appels **SQLSetPos** avec *Opération* réglée à SQL_UPDATE et *RowNumber* réglé au nombre de la rangée à mettre à jour. Si *RowNumber* est 0, toutes les rangées dans le ram ensemble sont mises à jour.  
+4.  Appelle **SQLSetPos** avec l' *opération* définie sur SQL_UPDATE et *RowNumber* défini sur le numéro de la ligne à mettre à jour. Si *RowNumber* a la valeur 0, toutes les lignes de l’ensemble de lignes sont mises à jour.  
   
- Après le retour **de SQLSetPos,** la ligne actuelle est réglée sur la ligne mise à jour.  
+ Une fois **SQLSetPos** retourné, la ligne actuelle est définie sur la ligne mise à jour.  
   
- Lors de la mise à jour de toutes les lignes de l’acart *(RowNumber* est égal à 0), une application peut désactiver la mise à jour de certaines lignes en définissant les éléments correspondants du tableau d’opération de la ligne (indiqué par l’attribut de l’SQL_ATTR_ROW_OPERATION_PTR déclaration) à SQL_ROW_IGNORE. Le tableau d’opération de la ligne correspond en taille et en nombre d’éléments au tableau d’état de la ligne (indiqué par l’attribut de l’SQL_ATTR_ROW_STATUS_PTR). Pour mettre à jour uniquement les lignes dans l’ensemble de résultat qui ont été récupérés avec succès et n’ont pas été supprimés de la rangée, l’application utilise le tableau d’état de la ligne de la fonction qui a récupéré le rowset que le tableau d’opération de ligne à **SQLSetPos**.  
+ Lors de la mise à jour de toutes les lignes de l’ensemble de lignes (*NombLigne* est égal à 0), une application peut désactiver la mise à jour de certaines lignes en définissant les éléments correspondants du tableau d’opérations de ligne (vers lequel pointe l’attribut d’instruction SQL_ATTR_ROW_OPERATION_PTR) pour SQL_ROW_IGNORE. Le tableau d’opérations de ligne correspond à la taille et au nombre d’éléments du tableau d’état de ligne (pointé par l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR). Pour mettre à jour uniquement les lignes du jeu de résultats qui ont été récupérées avec succès et qui n’ont pas été supprimées de l’ensemble de lignes, l’application utilise le tableau d’état de ligne de la fonction qui a extrait l’ensemble de lignes en tant que tableau d’opérations de ligne en **SQLSetPos**.  
   
- Pour chaque ligne qui est envoyée à la source de données comme une mise à jour, les tampons d’application doivent avoir des données de ligne valides. Si les tampons d’application ont été remplis par aller chercher et si un tableau d’état de ligne a été maintenu, ses valeurs à chacune de ces positions de rangée ne devraient pas être SQL_ROW_DELETED, SQL_ROW_ERROR, ou SQL_ROW_NOROW.  
+ Pour chaque ligne envoyée à la source de données sous forme de mise à jour, les mémoires tampons de l’application doivent avoir des données de ligne valides. Si les mémoires tampons de l’application ont été remplies par l’extraction et si un tableau d’état de ligne a été conservé, ses valeurs à chacune de ces positions de ligne ne doivent pas être SQL_ROW_DELETED, SQL_ROW_ERROR ou SQL_ROW_NOROW.  
   
- Par exemple, le code suivant permet à un utilisateur de faire défiler la table des clients et de mettre à jour, supprimer ou ajouter de nouvelles lignes. Il place les nouvelles données dans les tampons rowset avant d’appeler **SQLSetPos** pour mettre à jour ou ajouter de nouvelles lignes. Une rangée supplémentaire est allouée à la fin des tampons en rangée pour contenir de nouvelles rangées; cela empêche les données existantes d’être écrasées lorsque les données d’une nouvelle rangée sont placées dans les tampons.  
+ Par exemple, le code suivant permet à un utilisateur de faire défiler la table Customers et de mettre à jour, supprimer ou ajouter de nouvelles lignes. Il place les nouvelles données dans les mémoires tampons de l’ensemble de lignes avant d’appeler **SQLSetPos** pour mettre à jour ou ajouter de nouvelles lignes. Une ligne supplémentaire est allouée à la fin des mémoires tampons de l’ensemble de lignes pour contenir les nouvelles lignes ; Cela empêche le remplacement des données existantes lorsque les données d’une nouvelle ligne sont placées dans les mémoires tampons.  
   
 ```  
 #define UPDATE_ROW   100  

@@ -1,5 +1,5 @@
 ---
-title: Métadonnées pour colonnes clairsemées (OLE DB)
+title: Métadonnées pour les colonnes éparses (OLE DB)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3bad30dbe0257d341ad91e2ed60bf698ca52dc8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295789"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81295789"
 
   Cet exemple crée une table à trois colonnes : une colonne éparse, une colonne non éparse et une colonne de jeu de colonnes. L'exemple affiche ensuite les indicateurs OLE DB indiquant la colonne et les métadonnées de catalogue de la colonne non éparse et de la colonne de jeu de colonnes.  
   
- Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure. Pour plus d’informations sur les colonnes clairsemées, voir [Sparse Columns Support dans SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses dans SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Exemple  
  Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  

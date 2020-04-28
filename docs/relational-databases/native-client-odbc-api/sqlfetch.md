@@ -1,5 +1,5 @@
 ---
-title: SQLFetch - France Microsoft Docs
+title: SQLFetch | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 20aa5cf9e5b157324336db4a6ebb200a6fd151ae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300262"
 ---
 # <a name="sqlfetch"></a>SQLFetch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  SQLFetch prend en charge les caractéristiques améliorées de la date et de l’heure.  
+  SQLFetch prend en charge les fonctionnalités de date et d’heure améliorées.  
   
- Pour plus d’informations sur la façon dont les valeurs de la colonne de résultat des types de date/heure sont converties, voir [Conversions de SQL à C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
+ Pour plus d’informations sur la conversion des valeurs de colonnes de résultats de types date/heure, consultez [conversions de SQL en C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>Prise en charge par SQLFetch des grands types CLR définis par l'utilisateur  
- **SQLFetch** prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, voir [Grands types définis par l’utilisateur CLR &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLFetch** prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
+ [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

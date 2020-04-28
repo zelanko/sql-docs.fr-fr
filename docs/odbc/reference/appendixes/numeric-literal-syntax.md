@@ -1,5 +1,5 @@
 ---
-title: Syntaxe littérale numérique (fr) Microsoft Docs
+title: Syntaxe des littéraux numériques | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,39 @@ ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299859"
 ---
 # <a name="numeric-literal-syntax"></a>Syntaxe des littéraux numériques
-La syntaxe suivante est utilisée pour les littérals numériques dans ODBC:  
+La syntaxe suivante est utilisée pour les littéraux numériques dans ODBC :  
   
- *numérique-littérale* ::- *signé-numérique-littérale &#124; non signé-numérique-littérale*  
+ *Numeric-Literal* :: = *signed-numeric-Literal &#124; non signé-Numeric-Literal*  
   
- *signé-numérique-littérale* ::' [*signe*] *non signé-numérique-littérale*  
+ Signed *-Numeric-Literal* :: = [*Sign*] non *signé-Numeric-Literal*  
   
- *non signé-numérique-littérale* ::' *exact-numérique-littérale &#124; approximative-numérique-littérale*  
+ *unsigned-Numeric-littéral* :: = *exact-numeric-Literal &#124; littéral approximatif-Numeric*  
   
- *exact-numérique-littérale* ::' *non signé-integer* [*période**[non signé-integer*]] *&#124;période non signée-integer*  
+ *exact-Numeric-littéral* :: = *unsigned-Integer* [*point*[*unsigned-Integer*]] *&#124;point unsigned-Integer*  
   
- *signe* :: *plus-signe &#124; moins-signe*  
+ *Sign* :: = signe *plus &#124; signe moins (-)*  
   
- *approximative-numérique-littérale* ::mantissa *E exposant*  
+ *approximatif-Numeric-Literal* :: = *mantisse E Exponent*  
   
- *mantissa* ::' *exact-numeric-littérale*  
+ *mantisse* :: = *expression-littérale exacte*  
   
- *exposant* ::- *signé-integer*  
+ *Exponent* :: = *signed-integer*  
   
- *signé-integer* ::' [*signe*] *non signé-integer*  
+ Signed *-Integer* :: = [*Sign*] non *signé-Integer*  
   
- *non signé-integer* ::' *chiffre ...*  
+ *unsigned-entier* :: = *digit...*  
   
- *plus-signe* ::MD*+*  
+ signe *plus* :: =*+*  
   
- *moins-signe* ::- -  
+ signe *moins* :: =-  
   
- *chiffre* :: 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *chiffre* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *période* ::MD .
+ *période* :: =.

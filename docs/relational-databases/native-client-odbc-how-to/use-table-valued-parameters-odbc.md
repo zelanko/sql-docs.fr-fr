@@ -1,5 +1,5 @@
 ---
-title: Utiliser des paramètres de valeur de table (ODBC) Microsoft Docs
+title: Utiliser des paramètres table (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1572330ee537976f32e4cca082f46d9e451189d4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298039"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Utiliser des paramètres table (ODBC)
@@ -23,7 +23,7 @@ ms.locfileid: "81298039"
 
   Cet exemple indique comment utiliser les paramètres table pour insérer plusieurs lignes à plusieurs colonnes, avec un seul appel au serveur.  
   
- Pour plus d’informations sur les paramètres de valeur de table, voir [Paramètres de valeur de la table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Pour obtenir des exemples supplémentaires sur les paramètres table, consultez [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
+ Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Pour obtenir des exemples supplémentaires sur les paramètres table, consultez [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
   
 ## <a name="example"></a>Exemple  
  Vous aurez besoin d'une source de données ODBC appelée TVPDemo. La base de données par défaut pour TVPDemo peut être n'importe quelle base de données de test sur votre ordinateur. Cette source de données doit être basée sur le pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

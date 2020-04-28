@@ -1,5 +1,5 @@
 ---
-title: ODBC Driver pour Oracle Programmeur&#39;s Reference (fr) Microsoft Docs
+title: Guide ODBC Driver for Oracle Programmer’s Reference&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298119"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver pour Oracle Programmeur&#39;s Reference
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Guide ODBC Driver for Oracle Programmer’s Reference&#39;
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "81298119"
   
 -   [Niveaux de conformité ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
--   [Fonctions API](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
+-   [Fonctions d’API](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   
 -   [Types de données pris en charge](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   

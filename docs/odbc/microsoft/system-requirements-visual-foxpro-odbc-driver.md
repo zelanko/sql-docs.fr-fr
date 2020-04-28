@@ -1,5 +1,5 @@
 ---
-title: Exigences du système (Visual FoxPro ODBC Driver) Microsoft Docs
+title: Configuration système requise (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,39 +19,39 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301440"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Configuration système requise (pilote ODBC Visual FoxPro)
-Les exigences du système d’installation fournissent le système d’exploitation minimum et l’espace de disque nécessaires pour installer avec succès le conducteur. Une fois que vous avez installé le pilote, vous pouvez sélectionner le logiciel d’application spécifique que vous souhaitez utiliser pour accéder aux données Visual FoxPro.  
+La configuration système requise pour l’installation fournit le système d’exploitation et l’espace disque minimum nécessaires à l’installation correcte du pilote. Une fois que vous avez installé le pilote, vous pouvez sélectionner le logiciel d’application spécifique que vous souhaitez utiliser pour accéder aux données Visual FoxPro.  
   
 ## <a name="installation-requirements"></a>Conditions requises pour l'installation  
- Pour les exigences d’installation et d’autres informations, consultez [le site de téléchargement Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Pour connaître la configuration requise pour l’installation et d’autres informations, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
-## <a name="accessing-visual-foxpro-data"></a>Accès aux données visuelles FoxPro  
- Pour accéder à Microsoft Visual FoxPro ou FoxPro 2. *x* données, vous devez avoir ce qui suit :  
+## <a name="accessing-visual-foxpro-data"></a>Accès aux données Visual FoxPro  
+ Pour accéder à Microsoft Visual FoxPro ou FoxPro 2. *x* , vous devez disposer des éléments suivants :  
   
 -   Logiciel client ODBC (installé automatiquement avec le pilote)  
   
--   Pilote Microsoft Visual FoxPro ODBC  
+-   Pilote ODBC Microsoft Visual FoxPro  
   
--   N’importe lequel des types suivants de logiciel d’application :  
+-   L’un des types de logiciels d’application suivants :  
   
-    -   Application Microsoft Office comme Microsoft Excel ou Microsoft Word  
+    -   Microsoft Office application telle que Microsoft Excel ou Microsoft Word  
   
-    -   Application ODBC en langue C ou CMD  
+    -   Application ODBC en langage C ou C++  
   
     -   Application Microsoft Visual Basic ODBC  
   
--   N’importe lequel des types de données suivants :  
+-   L’un des types de données suivants :  
   
-    -   Base [de données](../../odbc/microsoft/visual-foxpro-terminology.md) Visuelle FoxPro ou répertoire de [tables gratuites](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   [Base de données](../../odbc/microsoft/visual-foxpro-terminology.md) Visual FoxPro ou répertoire de [tables libres](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   FoxPro 2.0, 2.5, 2.6 [tableau](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   [Table](../../odbc/microsoft/visual-foxpro-terminology.md) FoxPro 2,0, 2,5, 2,6  
   
- Le Visual FoxPro ODBC Driver prend en charge les ensembles de caractères double-byte (DBCS). Pour plus d’informations, voir [International Support](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
+ Le pilote ODBC Visual FoxPro prend en charge les jeux de caractères codés sur deux octets (DBCS). Pour plus d’informations, consultez [prise en charge internationale](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
- Le pilote ne prend pas en charge les applications Microsoft Windows 3.1 1 16 bits.
+ Le pilote ne prend pas en charge les applications Microsoft Windows 3,1 16 bits.

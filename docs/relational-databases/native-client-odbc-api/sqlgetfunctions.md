@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions - France Microsoft Docs
+title: SQLGetFunctions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba11e930640c87c25fe5b2d300fdd3a857534e30
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299649"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
@@ -27,7 +27,7 @@ ms.locfileid: "81299649"
   L'interface du pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est conforme aux trois niveaux de conformité définis pour ODBC (ISO, Open Group et ODBC niveau 2). **SQLGetFunctions** signale que toutes les fonctions ODBC sont prises en charge pour le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLGetFunctions](https://go.microsoft.com/fwlink/?LinkId=59353)   
+ [SQLGetFunctions fonction)](https://go.microsoft.com/fwlink/?LinkId=59353)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

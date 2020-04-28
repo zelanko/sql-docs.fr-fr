@@ -15,24 +15,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 27df569ba94cd5acb22ba2ee974751bd5d80d1b6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296997"
 ---
 # <a name="sessions"></a>Sessions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session de fournisseur de DB OLE de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]client autochtone représente une connexion unique à une instance de .  
+  Une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session de fournisseur OLE DB Native Client représente une connexion unique à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de DB OLE de client autochtone exige que les sessions délimitent l’espace de transaction pour une source de données. Tous les objets de commande créés à partir d'un objet session spécifique participent à la transaction locale ou distribuée de l'objet session.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client requiert que les sessions délimitent l’espace de transaction pour une source de données. Tous les objets de commande créés à partir d'un objet session spécifique participent à la transaction locale ou distribuée de l'objet session.  
   
  Le premier objet session créé sur la source de données initialisée reçoit la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] établie au moment de l'initialisation. Lorsque toutes les références sur les interfaces de l'objet session sont libérées, la connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est accessible à un autre objet session créé sur la source de données.  
   
  Un objet session supplémentaire créé sur la source de données établit sa propre connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comme spécifié par la source de données. La connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est abandonnée lorsque l'application libère toutes les références aux objets créés au cours de cette session.  
   
- L’exemple suivant montre comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliser le fournisseur de DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE de client autochtone pour se connecter à une base de données :  
+ L’exemple suivant montre comment utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une base de données :  
   
 ```  
 int main()  
@@ -181,7 +181,7 @@ EXIT:
 }  
 ```  
   
- Connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les objets de session du fournisseur OLE DB de Native Client à une instance de peut générer des frais généraux importants pour des applications qui créent et libèrent continuellement des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de session. Les frais généraux peuvent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] être réduits au minimum en gérant efficacement les objets de session du fournisseur de fournisseurs OLE DB de Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les applications fournisseurs de fournisseurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseurs OLE DB de Native Client peuvent maintenir la connexion d’un objet de session active en maintenant une référence sur au moins une interface de l’objet.  
+ La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion des objets Native Client OLE DB session fournisseur à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance de peut générer une surcharge importante pour les applications qui créent et libèrent continuellement des objets session. La surcharge peut être réduite en gérant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efficacement les objets Native Client OLE DB session fournisseur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les applications de fournisseur OLE DB Native Client peuvent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintenir la connexion d’un objet de session active en conservant une référence sur au moins une interface de l’objet.  
   
  Par exemple, la gestion d'un pool de références d'objet de création de commande maintient des connexions actives pour ces objets session dans le pool. Les objets session étant obligatoires, le code de gestion du pool passe un pointeur d’interface **IDBCreateCommand** valide à la méthode d’application nécessitant la session. Lorsque la méthode d'application ne requiert plus la session, la méthode retourne le pointeur d'interface au code de gestion du pool plutôt que de libérer la référence de l'application à l'objet de création de commande.  
   

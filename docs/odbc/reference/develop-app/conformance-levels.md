@@ -1,5 +1,5 @@
 ---
-title: Niveaux de conformité Microsoft Docs
+title: Niveaux de conformité | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 7c986cb6ce407a44798869c722b9b62dc8b1052d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299089"
 ---
 # <a name="conformance-levels"></a>Niveaux de conformité
-Les conducteurs d’ODBC donnent à l’application accès à diverses sources de données. Chaque conducteur permet à l’application de déterminer au moment de l’exécution quelles capacités ODBC et quelle grammaire SQL le conducteur et chaque source de données prend en charge. Il ne s’agit pas d’une exigence d’applications conçues pour fonctionner avec un seul conducteur ou un petit ensemble connu de pilotes, parce que ces applications peuvent simplement être écrites aux capacités de ce conducteur ou des conducteurs. Pour aider les applications à découvrir les capacités de conducteur et de source de données, deux domaines de conformité sont disponibles : l’interface ODBC et la grammaire SQL.  
+Les pilotes ODBC permettent à l’application d’accéder à diverses sources de données. Chaque pilote permet à l’application de déterminer, au moment de l’exécution, les fonctionnalités ODBC et la syntaxe SQL que le pilote et chaque source de données prennent en charge. Cela n’est pas obligatoire pour les applications conçues pour fonctionner avec un seul pilote ou un petit ensemble connu de pilotes, car ces applications peuvent simplement être écrites dans les fonctionnalités de ce pilote ou de ces pilotes. Pour aider les applications à découvrir les fonctionnalités des pilotes et des sources de données, deux zones de conformité sont disponibles : l’interface ODBC et la grammaire SQL.  
   
  Cette section contient les rubriques suivantes :  
   
