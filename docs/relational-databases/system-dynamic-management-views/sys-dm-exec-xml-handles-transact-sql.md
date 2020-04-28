@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936788"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
@@ -52,10 +52,10 @@ dm_exec_xml_handles (session_id | 0 )
 |**session_id**|**int**|ID de session de la session qui détient ce handle de document XML.|  
 |**document_id**|**int**|ID de handle de document XML retourné par **sp_xml_preparedocument**.|  
 |**namespace_document_id**|**int**|ID de handle interne utilisé pour le document d’espace de noms associé qui a été passé comme troisième paramètre à **sp_xml_preparedocument**. NULL s'il n'y a pas de document d'espace de noms.|  
-|**sql_handle**|**varbinary (64)**|Handle du texte du code SQL où le handle a été défini.|  
+|**sql_handle**|**varbinary(64)**|Handle du texte du code SQL où le handle a été défini.|  
 |**statement_start_offset**|**int**|Nombre de caractères dans le lot en cours d’exécution ou la procédure stockée à laquelle l’appel de **sp_xml_preparedocument** se produit. Peut être utilisé avec l' **sql_handle**, le **statement_end_offset**et la fonction de gestion dynamique **sys. dm_exec_sql_text** pour récupérer l’instruction en cours d’exécution pour la demande.|  
 |**statement_end_offset**|**int**|Nombre de caractères dans le lot en cours d’exécution ou la procédure stockée à laquelle l’appel de **sp_xml_preparedocument** se produit. Peut être utilisé avec l' **sql_handle**, le **statement_start_offset**et la fonction de gestion dynamique **sys. dm_exec_sql_text** pour récupérer l’instruction en cours d’exécution pour la demande.|  
-|**creation_time**|**DATETIME**|Horodateur lors de l’appel de **sp_xml_preparedocument** .|  
+|**creation_time**|**datetime**|Horodateur lors de l’appel de **sp_xml_preparedocument** .|  
 |**original_document_size_bytes**|**bigint**|Taille du document XML non analysé, en octets.|  
 |**original_namespace_document_size_bytes**|**bigint**|Taille du document d'espace de noms XML non analysé, en octets. NULL s'il n'y a pas de document d'espace de noms.|  
 |**num_openxml_calls**|**bigint**|Nombre d'appels OPENXML avec ce handle de document.|  

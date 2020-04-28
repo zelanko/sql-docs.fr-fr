@@ -10,10 +10,10 @@ ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989747"
 ---
 # <a name="data-migration-report-db2tosql"></a>Rapport de migration des données (DB2ToSQL)
@@ -23,10 +23,10 @@ La boîte de dialogue **rapport de migration des données** s’affiche après [
 **État**  
 Affiche l’état de la migration des données de la source vers la base de données cible.  
   
-**De**  
+**From**  
 Table source.  
   
-**À**  
+**To**  
 Table cible.  
   
 **Nombre total de lignes**  
@@ -41,6 +41,6 @@ Pourcentage de lignes correctement migrées.
 **Détails**  
 En cas d’échec de la migration des données, cliquez sur cette option pour afficher les détails de la migration de la ligne sélectionnée dans le rapport. SSMA affiche la raison de l’échec.  
   
-**Enregistrer le rapport**  
+**Enregistrer le rapport sous**  
 Enregistre le rapport dans un. Fichier CSV (valeurs séparées par des virgules), qui peut être examiné à l’aide de Microsoft Excel.  
   

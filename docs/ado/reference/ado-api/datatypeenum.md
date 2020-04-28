@@ -16,10 +16,10 @@ ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933223"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
@@ -62,7 +62,7 @@ Spécifie le type de données d’un [champ](../../../ado/reference/ado-api/fiel
 |**adUnsignedTinyInt**|17|Indique un entier non signé de 1 octet (DBTYPE_UI1).|  
 |**adUserDefined**|132|Indique une variable définie par l’utilisateur (DBTYPE_UDT).|  
 |**adVarBinary**|204|Indique une valeur binaire.|  
-|**Varchar**|200|Indique une valeur de chaîne.|  
+|**adVarChar**|200|Indique une valeur de chaîne.|  
 |**adVariant**|12|Indique une **variante** Automation (DBTYPE_VARIANT).<br /><br /> **Remarque** Ce type de données n’est actuellement pas pris en charge par ADO. L’utilisation peut entraîner des résultats imprévisibles.|  
 |**adVarNumeric**|139|Indique une valeur numérique.|  
 |**adVarWChar**|202|Indique une chaîne de caractères Unicode se terminant par un caractère null.|  

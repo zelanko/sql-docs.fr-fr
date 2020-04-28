@@ -16,10 +16,10 @@ ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949600"
 ---
 # <a name="level-object-ado-md"></a>Level, objet (ADO MD)
@@ -42,7 +42,7 @@ Contient un ensemble de membres, chacun ayant le même rang dans une hiérarchie
   
  La collection **Properties** contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Pour obtenir une liste plus complète des propriétés disponibles, consultez la documentation de votre fournisseur.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |CatalogName|Nom du catalogue auquel appartient ce cube.|  
 |CubeName|Nom du cube.|  

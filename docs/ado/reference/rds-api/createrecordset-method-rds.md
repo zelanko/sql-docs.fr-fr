@@ -20,10 +20,10 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964516"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset, méthode (RDS)
@@ -48,9 +48,9 @@ object.CreateRecordset(ColumnInfos)
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|Name|Nom de l’en-tête de colonne.|  
+|Nom|Nom de l’en-tête de colonne.|  
 |Type|Entier du type de données.|  
-|Size|Entier de la largeur en caractères, quel que soit le type de données.|  
+|Taille|Entier de la largeur en caractères, quel que soit le type de données.|  
 |Possibilité de valeurs nulles|Valeur booléenne.|  
 |Scale (facultatif)|Cet attribut facultatif définit l’échelle pour les champs numériques. Si cette valeur n’est pas spécifiée, les valeurs numériques sont tronquées à une échelle de trois. La précision n’est pas affectée, mais le nombre de chiffres après la virgule décimale est tronqué à trois.|  
   
@@ -89,7 +89,7 @@ object.CreateRecordset(ColumnInfos)
 |Résolution|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
 |Variable|**adChar**|129|200|  
-|Variable|**Varchar**|200||  
+|Variable|**adVarChar**|200||  
 |Variable|**adLongVarChar**|201|200|  
 |Variable|**adWChar**|130||  
 |Variable|**adVarWChar**|202|130|  

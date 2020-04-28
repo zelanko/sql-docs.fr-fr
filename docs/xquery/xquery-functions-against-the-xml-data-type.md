@@ -17,10 +17,10 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945996"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Fonctions XQuery impliquant le type de données xml
@@ -37,29 +37,29 @@ ms.locfileid: "67945996"
 |[Fonctions sur des valeurs numériques](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[plafond](../xquery/numeric-values-functions-ceiling.md)|  
 ||[Floor](../xquery/numeric-values-functions-floor.md)|  
 ||[Round](../xquery/numeric-values-functions-round.md)|  
-|[Fonctions XQuery sur des valeurs de chaîne](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[Concat](../xquery/functions-on-string-values-concat.md)|  
-||[comprend](../xquery/functions-on-string-values-contains.md)|  
-||[sous-chaîne](../xquery/functions-on-string-values-substring.md)|  
+|[Fonctions XQuery sur des valeurs de chaîne](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
+||[contains](../xquery/functions-on-string-values-contains.md)|  
+||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[Fonction en minuscules &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[chaîne-longueur](../xquery/functions-on-string-values-string-length.md)|  
 ||[Fonction majuscule &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
-|Fonctions sur les valeurs booléennes|[pas](../xquery/functions-on-boolean-values-not-function.md)|  
+|Fonctions sur les valeurs booléennes|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[Fonctions sur les nœuds](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
 ||[Fonction local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[Fonction namespace-uri (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[Fonctions de contexte](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[famille](../xquery/context-functions-last-xquery.md)|  
+|[Fonctions de contexte](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
 ||[endroit](../xquery/context-functions-position-xquery.md)|  
-|[Fonctions sur les séquences](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[vidé](../xquery/functions-on-sequences-empty.md)|  
+|[Fonctions sur les séquences](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[Fonction id (XQuery)](../xquery/functions-on-sequences-id.md)|  
-|[Fonctions d’agrégation &#40;XQuery&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[saut](../xquery/aggregate-functions-count.md)|  
+|[Fonctions d’agrégation &#40;XQuery&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
 ||[AVG](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
-||[Max](../xquery/aggregate-functions-max.md)|  
+||[max](../xquery/aggregate-functions-max.md)|  
 ||[checksum](../xquery/aggregate-functions-sum.md)|  
 |[Fonctions de constructeur &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[Fonctions constructeur](../xquery/constructor-functions-xquery.md)|  
-|[Fonctions d'accesseurs de données](../xquery/data-accessor-functions.md)|[chaîne](../xquery/data-accessor-functions-string-xquery.md)|  
-||[métadonnée](../xquery/data-accessor-functions-data-xquery.md)|  
+|[Fonctions d'accesseurs de données](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
+||[data](../xquery/data-accessor-functions-data-xquery.md)|  
 |[Fonctions de constructeur booléen &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[Fonction true (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[Fonction false (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[Fonctions liées à QNames &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
@@ -69,8 +69,8 @@ ms.locfileid: "67945996"
 ||[Fonction sql:variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [méthodes de type de données xml](../t-sql/xml/xml-data-type-methods.md)   
- [Références relatives au langage Xquery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [Méthodes de type de données XML](../t-sql/xml/xml-data-type-methods.md)   
+ [Référence du langage XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Données XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   

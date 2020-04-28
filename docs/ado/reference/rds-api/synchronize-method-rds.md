@@ -14,10 +14,10 @@ ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963263"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize, méthode (RDS)
@@ -57,7 +57,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pStatusArray*  
  Variant utilisé pour retourner un tableau sécurisé des États de ligne pour les lignes affectées par Synchronize. Non défini si aucune des options de synchronisation suivantes n’est définie : *RefreshWithUpdate*, *Refresh* et *RefreshConflicts*.  
   
- *LCID*  
+ *lcid*  
  LCID utilisé pour générer les erreurs retournées dans *pInformation*.  
   
  *pInformation*  

@@ -16,10 +16,10 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963471"
 ---
 # <a name="server-property-rds"></a>Server, propriété (RDS)
@@ -70,7 +70,7 @@ awebsrvr:port
 DataControl.Server="https://awebsrvr:port"  
 ```  
   
- **Roger**  
+ **DCOM**  
   
  Syntaxe au moment du design  
   
@@ -89,7 +89,7 @@ computername
 DataControl.Server="computername"  
 ```  
   
- **En cours**  
+ **In-process**  
   
  Syntaxe au moment du design  
   
@@ -110,8 +110,8 @@ DataControl.Server=""
  *awebsrvr*ou *ComputerName*  
  Valeur de **chaîne** qui contient un chemin d’accès Internet ou intranet, ou un nom d’ordinateur, si le serveur se trouve sur un ordinateur distant ; ou une chaîne vide si le serveur se trouve sur l’ordinateur local.  
   
- *importer*  
- facultatif. Port utilisé pour se connecter à un serveur exécutant IIS. Le numéro de port est défini dans Internet Explorer (dans le menu **affichage** , cliquez sur **options**, puis sélectionnez l’onglet **connexion** ) ou IIS.  
+ *port*  
+ Facultatif. Port utilisé pour se connecter à un serveur exécutant IIS. Le numéro de port est défini dans Internet Explorer (dans le menu **affichage** , cliquez sur **options**, puis sélectionnez l’onglet **connexion** ) ou IIS.  
   
  *DataControl*  
  Variable objet qui représente un objet **RDS. DataControl** .  

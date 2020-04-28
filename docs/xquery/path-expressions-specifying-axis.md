@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946482"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expressions de chemin : spécification de l’axe
@@ -45,7 +45,7 @@ ms.locfileid: "67946482"
   
 |Axe|Description|  
 |----------|-----------------|  
-|**Division**|Retourne l'enfant du nœud du contexte.|  
+|**child**|Retourne l'enfant du nœud du contexte.|  
 |**descendant**|Retourne tous les descendants du nœud du contexte.|  
 |**parent**|Retourne le parent du nœud du contexte.|  
 |**attribut**|Retourne les attributs du nœud du contexte.|  
@@ -59,7 +59,7 @@ ms.locfileid: "67946482"
 ## <a name="examples"></a>Exemples  
  Les exemples de requête de cette rubrique sont spécifiés par rapport aux colonnes de type **XML** dans la base de données **AdventureWorks** .  
   
-### <a name="a-specifying-a-child-axis"></a>R. Spécification de l'axe enfant  
+### <a name="a-specifying-a-child-axis"></a>A. Spécification de l'axe enfant  
  Pour un modèle de produit spécifique, la requête suivante récupère les \<fonctionnalités> enfants du nœud d’élément \<du nœud d’élément ProductDescription> à partir de la description du `Production.ProductModel` catalogue de produits stockée dans la table.  
   
 ```  

@@ -20,10 +20,10 @@ ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945912"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove et MoveComplete, événements (ADO)
@@ -44,7 +44,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pError*  
  Objet d' [erreur](../../../ado/reference/ado-api/error-object.md) . Il décrit l’erreur qui s’est produite si la valeur de *adStatus* est **adStatusErrorsOccurred**; dans le cas contraire, le paramètre n’est pas défini.  
   
- *Statu*  
+ *adStatus*  
  Valeur d’état [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
  Lorsque **WillMove** est appelé, ce paramètre a la valeur **adStatusOK** si l’opération à l’origine de l’événement a réussi. Elle a la valeur **adStatusCantDeny** si cet événement ne peut pas demander l’annulation de l’opération en attente.  
@@ -55,7 +55,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
  Avant que **MoveComplete** retourne, définissez ce paramètre sur **adStatusUnwantedEvent** pour empêcher les notifications suivantes.  
   
- *jeu d’enregistrements*  
+ *pRecordset*  
  Objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . **Jeu d’enregistrements** pour lequel cet événement s’est produit.  
   
 ## <a name="remarks"></a>Notes  

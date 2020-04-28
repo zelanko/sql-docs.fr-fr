@@ -18,10 +18,10 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950527"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
@@ -66,7 +66,7 @@ OUTPUT
  Document XML initial. L'analyseur MSXML analyse ce document XML. *XmlText* est un paramètre de texte **: char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** ou **XML**. Lorsque la valeur est NULL (valeur par défaut), une représentation interne d'un document XML vide est créée.  
   
 > [!NOTE]  
->  **sp_xml_preparedocument** peut uniquement traiter du texte ou du XML non typé. Si une valeur d'instance à utiliser en entrée est déjà du XML typé, commencez par la convertir en une nouvelle instance XML non typée ou en une chaîne, puis passez cette valeur en entrée. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+>  **sp_xml_preparedocument** peut uniquement traiter du texte ou du XML non typé. Si une valeur d'instance à utiliser en entrée est déjà du XML typé, commencez par la convertir en une nouvelle instance XML non typée ou en une chaîne, puis passez cette valeur en entrée. Pour plus d’informations, consultez [comparer du XML typé et du XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)non typé.  
   
  [ *xpath_namespaces* ]  
  Spécifie les déclarations d'espaces de noms utilisées dans les expressions XPath de ligne et de colonne sous OPENXML. *xpath_namespaces* est un paramètre de texte **: char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** ou **XML**.  

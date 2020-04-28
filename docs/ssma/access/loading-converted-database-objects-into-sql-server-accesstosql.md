@@ -30,10 +30,10 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7effaa973b7a39df6fc0b9385a5cfde4fdad18d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986314"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Chargement des objets de base de données convertis dans SQL Server (AccessToSQL)
@@ -83,7 +83,7 @@ Si vous souhaitez enregistrer [!INCLUDE[tsql](../../includes/tsql-md.md)] les d�
   
 1.  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Explorateur de métadonnées, développez le nœud supérieur (nom du serveur), puis développez **bases de données**.  
   
-2.  Effectuez une ou plusieurs des opérations suivantes :  
+2.  Effectuez une ou plusieurs des actions suivantes :  
   
     -   Pour générer un script d’une base de données complète, activez la case à cocher en regard du nom de la base de données.  
   
@@ -131,7 +131,7 @@ Vous pouvez exécuter un script ou des instructions individuelles dans [!INCLUDE
   
 Pour plus d’informations sur l’utilisation de l’éditeur de requête pour exécuter des scripts [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requête » dans la documentation en ligne de.  
   
-Vous pouvez également exécuter des scripts à partir de la ligne de **** commande à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’utilitaire sqlcmd et à partir de l’agent. Pour plus d’informations sur **sqlcmd**, consultez « utilitaire sqlcmd » [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la documentation en ligne de. Pour plus d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’agent, consultez « automatisation des tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’administration (agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) » dans la documentation en ligne de.  
+Vous pouvez également exécuter des scripts à partir de la ligne de **sqlcmd** commande à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’utilitaire sqlcmd et à partir de l’agent. Pour plus d’informations sur **sqlcmd**, consultez « utilitaire sqlcmd » [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la documentation en ligne de. Pour plus d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’agent, consultez « automatisation des tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’administration (agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) » dans la documentation en ligne de.  
   
 ## <a name="securing-objects-in-sql-server"></a>Sécurisation des objets dans SQL Server  
 Une fois que vous avez chargé les objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base de données convertis dans, vous pouvez accorder et refuser des autorisations sur ces objets. Il est judicieux de le faire avant de migrer des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vers. Pour plus d’informations sur la sécurisation des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]objets dans, consultez « Considérations sur la sécurité pour les bases de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données et les applications de base de données » dans la documentation en ligne de.  

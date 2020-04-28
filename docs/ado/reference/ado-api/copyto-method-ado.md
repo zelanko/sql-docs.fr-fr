@@ -17,10 +17,10 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933371"
 ---
 # <a name="copyto-method-ado"></a>CopyTo, méthode (ADO)
@@ -41,7 +41,7 @@ Stream.CopyTo DestStream, NumChars
 >  Le paramètre *DestStream* ne peut pas être un proxy d’objet de **flux** , car cela nécessite l’accès à une interface privée sur l’objet de **flux** qui ne peut pas être à distance au client.  
   
  *NumChars*  
- facultatif. Valeur **entière** qui spécifie le nombre d’octets ou de caractères à copier à partir de la position actuelle dans le **flux** source dans le **flux**de destination. La valeur par défaut est-1, qui spécifie que tous les caractères ou octets sont copiés de la position actuelle vers [EOS](../../../ado/reference/ado-api/eos-property.md).  
+ Facultatif. Valeur **entière** qui spécifie le nombre d’octets ou de caractères à copier à partir de la position actuelle dans le **flux** source dans le **flux**de destination. La valeur par défaut est-1, qui spécifie que tous les caractères ou octets sont copiés de la position actuelle vers [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Notes  
  Cette méthode copie le nombre spécifié de caractères ou d’octets, en commençant à la position actuelle spécifiée par la propriété [position](../../../ado/reference/ado-api/position-property-ado.md) . Si le nombre spécifié est supérieur au nombre d’octets disponibles jusqu’à **EOS**, seuls les caractères ou octets de la position actuelle vers **EOS** sont copiés. Si la valeur de *NUMCHARS* est-1, ou si elle est omise, tous les caractères ou octets à partir de la position actuelle sont copiés.  

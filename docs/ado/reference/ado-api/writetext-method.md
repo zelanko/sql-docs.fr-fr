@@ -17,10 +17,10 @@ ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947497"
 ---
 # <a name="writetext-method"></a>WriteText, méthode
@@ -38,7 +38,7 @@ Stream.WriteText Data, Options
  Valeur de **chaîne** qui contient le texte en caractères à écrire.  
   
  *Options*  
- facultatif. Valeur de [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) qui spécifie si un caractère de séparation de ligne doit être écrit à la fin de la chaîne spécifiée.  
+ Facultatif. Valeur de [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) qui spécifie si un caractère de séparation de ligne doit être écrit à la fin de la chaîne spécifiée.  
   
 ## <a name="remarks"></a>Notes  
  Les chaînes spécifiées sont écrites dans l’objet de **flux** sans aucun espace ou caractère intermédiaire entre chaque chaîne.  

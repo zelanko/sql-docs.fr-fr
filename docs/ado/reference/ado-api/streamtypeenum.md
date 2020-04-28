@@ -16,10 +16,10 @@ ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09f917f326db197fa42aedf9a668134c257af4a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936721"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
@@ -28,7 +28,7 @@ Spécifie le type de données stockées dans un objet de [flux](../../../ado/ref
 |Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Indique des données binaires.|  
-|**adTypeText**|2|valeur par défaut. Indique des données texte, qui se trouvent dans le jeu de caractères spécifié par [charset](../../../ado/reference/ado-api/charset-property-ado.md).|  
+|**adTypeText**|2|Par défaut. Indique des données texte, qui se trouvent dans le jeu de caractères spécifié par [charset](../../../ado/reference/ado-api/charset-property-ado.md).|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Ces constantes n’ont pas d’équivalents ADO/WFC.  

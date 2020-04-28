@@ -12,10 +12,10 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944689"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Définition des options du projet (MySQLToSQL)
@@ -38,13 +38,13 @@ SSMA comporte cinq jeux de paramètres de projet :
   
 Les paramètres du projet peuvent être configurés de quatre façons :  
   
--   Default  
+-   Par défaut  
   
 -   Optimistic  
   
 -   Complète  
   
--   Custom  
+-   Personnalisé  
   
 Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode optimiste conserve la syntaxe MySQL actuelle et est plus facile à lire. Toutefois, il se peut que la conservation de la syntaxe actuelle ne soit pas exacte. Si la syntaxe MySQL doit être convertie en SQL Server ou SQL Azure syntaxe équivalente, le mode complet effectue la conversion la plus complète. Toutefois, le code résultant peut être plus difficile à lire. Dans le mode personnalisé, vous pouvez définir les options.  
   

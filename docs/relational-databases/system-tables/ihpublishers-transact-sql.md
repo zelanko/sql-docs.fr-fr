@@ -18,10 +18,10 @@ ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 92f0c507b15e5a582fbcc1a12b1bccd77d08f7de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990168"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "67990168"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Identifie un serveur de publication non SQL Server.|  
-|**hétérogène**|**sysname**|Nom du fournisseur de la base de données non SQL Server.|  
+|**vendor**|**sysname**|Nom du fournisseur de la base de données non SQL Server.|  
 |**publisher_guid**|**uniqueidentifier**|GUID qui identifie le serveur de publication non SQL Server.|  
-|**flush_request_time**|**DATETIME**|Indique les date et heure auxquelles a eu lieu la dernière modification des métadonnées d'article ayant amené l'Agent de lecture du journal à mettre à jour son cache de métadonnées.|  
-|**Version**|**sysname**|Chaîne de texte qui caractérise la version du serveur de publication non SQL Server.|  
+|**flush_request_time**|**datetime**|Indique les date et heure auxquelles a eu lieu la dernière modification des métadonnées d'article ayant amené l'Agent de lecture du journal à mettre à jour son cache de métadonnées.|  
+|**version**|**sysname**|Chaîne de texte qui caractérise la version du serveur de publication non SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication de base de données hétérogène](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Réplication de bases de données hétérogènes](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   

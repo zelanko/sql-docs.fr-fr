@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946433"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expressions de chemin : spécification d’un test de nœud
@@ -71,7 +71,7 @@ child::ProductDescription
   
  Par conséquent, lorsque cette expression est exécutée sur des documents XML du catalogue de produits dans la table **ProductModel** , elle récupère tous les enfants du nœud \<d’élément des fonctionnalités> enfant du \<nœud d’élément de l’élément ProductDescription>.  
   
- L’expression de chemin `/child::PD:ProductDescription/attribute::ProductModelID`d’accès,, est constituée de deux étapes. Ces deux étapes indiquent un nom de nœud comme test de nœud. La deuxième étape utilise également un axe attribute. Ainsi, chaque étape sélectionne des nœuds du type de nœud principal de son axe portant le nom spécifié comme test de nœud. Ainsi, l’expression retourne **** le nœud d’attribut ProductModelID \<du nœud de l’élément ProductDescription>.  
+ L’expression de chemin `/child::PD:ProductDescription/attribute::ProductModelID`d’accès,, est constituée de deux étapes. Ces deux étapes indiquent un nom de nœud comme test de nœud. La deuxième étape utilise également un axe attribute. Ainsi, chaque étape sélectionne des nœuds du type de nœud principal de son axe portant le nom spécifié comme test de nœud. Ainsi, l’expression retourne **ProductModelID** le nœud d’attribut ProductModelID \<du nœud de l’élément ProductDescription>.  
   
  En spécifiant les noms des nœuds comme tests de nœud, vous pouvez également utiliser le caractère générique (*) dans le nom local d'un nœud ou dans le préfixe de son espace de noms, comme illustré dans l'exemple suivant :  
   
@@ -94,14 +94,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |Type de nœud|Retours|Exemple|  
 |---------------|-------------|-------------|  
-|`comment()`|Vrai (valeur True) dans le cas d'un nœud de commentaire.|
-  `following::comment()` sélectionne tous les nœuds de commentaire apparaissant après le nœud de contexte.|  
-|`node()`|Vrai (valeur True) dans le cas d'un nœud de type quelconque.|
-  `preceding::node()` sélectionne tous les nœuds apparaissant avant le nœud de contexte.|  
-|`processing-instruction()`|Vrai (valeur True) dans le cas d'un nœud d'instructions de traitement.|
-  `self::processing instruction()` sélectionne tous les nœuds d'instructions de traitement apparaissant dans le nœud de contexte.|  
-|`text()`|Vrai (valeur True) dans le cas d'un nœud de texte.|
-  `child::text()` sélectionne tous les nœuds de texte enfants du nœud de contexte.|  
+|`comment()`|Vrai (valeur True) dans le cas d'un nœud de commentaire.|`following::comment()` sélectionne tous les nœuds de commentaire apparaissant après le nœud de contexte.|  
+|`node()`|Vrai (valeur True) dans le cas d'un nœud de type quelconque.|`preceding::node()` sélectionne tous les nœuds apparaissant avant le nœud de contexte.|  
+|`processing-instruction()`|Vrai (valeur True) dans le cas d'un nœud d'instructions de traitement.|`self::processing instruction()` sélectionne tous les nœuds d'instructions de traitement apparaissant dans le nœud de contexte.|  
+|`text()`|Vrai (valeur True) dans le cas d'un nœud de texte.|`child::text()` sélectionne tous les nœuds de texte enfants du nœud de contexte.|  
   
  Si le type de nœud, tel que text() ou comment(), est spécifié comme test de nœud, l'étape ne renvoie que les nœuds du type spécifié indépendamment du type de nœud principal de l'axe. Par exemple, l'expression de chemin d'accès suivant ne renvoie que les enfants du nœud de commentaire du nœud de contexte :  
   
@@ -114,7 +110,7 @@ child::comment()
 ## <a name="examples"></a>Exemples  
  Les exemples suivants comparent nom de nœud et type de nœud.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>R. Résultats de la spécification du nom de nœud et du type de nœud en tant que tests de nœuds dans une expression de chemin d'accès  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Résultats de la spécification du nom de nœud et du type de nœud en tant que tests de nœuds dans une expression de chemin d'accès  
  Dans l’exemple suivant, un document XML simple est assigné à une variable de type **XML** . Le document est interrogé à l'aide de plusieurs expressions de chemin d'accès. Les résultats sont ensuite comparés.  
   
 ```  

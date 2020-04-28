@@ -14,10 +14,10 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964126"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions, propriété (RDS)
@@ -33,7 +33,7 @@ Indique le type d’extraction asynchrone.
 |--------------|-----------------|  
 |**adcFetchUpFront**|Tous les enregistrements du [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont récupérés avant que le contrôle soit retourné à l’application. L’intégralité du **Recordset** est extraite pour que l’application soit autorisée à faire quoi que ce soit.|  
 |**adcFetchBackground**|Le contrôle peut retourner à l’application dès que le premier lot d’enregistrements a été extrait. Une lecture ultérieure du **Recordset** qui tente d’accéder à un enregistrement qui n’est pas récupéré dans le premier lot est retardée jusqu’à ce que l’enregistrement recherché soit réellement extrait, à partir duquel le contrôle retourne à l’application.|  
-|**adcFetchAsync**|valeur par défaut. Le contrôle retourne immédiatement à l’application tandis que les enregistrements sont extraits en arrière-plan. Si l’application tente de lire un enregistrement qui n’a pas encore été extrait, l’enregistrement le plus proche de l’enregistrement recherché est lu et le contrôle est retourné immédiatement, ce qui indique que la fin actuelle du **Recordset** a été atteinte. Par exemple, un appel à [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) déplace la position de l’enregistrement actuel vers le dernier enregistrement effectivement extrait, même si un plus grand nombre d’enregistrements continueront à remplir le **Recordset**.|  
+|**adcFetchAsync**|Par défaut. Le contrôle retourne immédiatement à l’application tandis que les enregistrements sont extraits en arrière-plan. Si l’application tente de lire un enregistrement qui n’a pas encore été extrait, l’enregistrement le plus proche de l’enregistrement recherché est lu et le contrôle est retourné immédiatement, ce qui indique que la fin actuelle du **Recordset** a été atteinte. Par exemple, un appel à [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) déplace la position de l’enregistrement actuel vers le dernier enregistrement effectivement extrait, même si un plus grand nombre d’enregistrements continueront à remplir le **Recordset**.|  
   
 > [!NOTE]
 >  Chaque fichier exécutable côté client qui utilise ces constantes doit fournir des déclarations pour ceux-ci. Vous pouvez couper et coller les déclarations de constantes de votre choix à partir du fichier Adcvbs. Inc, situé dans le dossier d’installation par défaut de la bibliothèque RDS.  

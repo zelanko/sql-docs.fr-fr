@@ -14,10 +14,10 @@ ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964184"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions, propriété (RDS)
@@ -32,7 +32,7 @@ Indique si l’exécution asynchrone est activée.
 |Constant|Description|  
 |--------------|-----------------|  
 |**adcExecSync**|Exécute la prochaine actualisation de l’ensemble d' [enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) de façon synchrone.|  
-|**adcExecAsync**|valeur par défaut. Exécute de façon asynchrone la prochaine actualisation du **jeu d’enregistrements** .|  
+|**adcExecAsync**|Par défaut. Exécute de façon asynchrone la prochaine actualisation du **jeu d’enregistrements** .|  
   
 > [!NOTE]
 >  Chaque fichier exécutable qui utilise ces constantes doit fournir des déclarations pour eux. Vous pouvez couper et coller les déclarations de constantes que vous souhaitez à partir du fichier Adcvbs. Inc, situé dans le dossier d’installation par défaut de la bibliothèque RDS.  

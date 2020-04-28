@@ -18,10 +18,10 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984893"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
@@ -33,10 +33,10 @@ ms.locfileid: "67984893"
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Numéro de publication, qui est stocké dans **sysmergepublications**.|  
 |**tablenick**|**int**|Surnom de la table publiée.|  
-|**GuidLigne**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
 |**partition_id**|**int**|ID de la partition à laquelle la ligne appartient. La valeur est-1 si la modification de ligne s’applique à tous les abonnés.|  
 |**toute**|**bigint**|Valeur de la génération dans laquelle la modification de partition s'est produite.|  
-|**donc**|**tinyint**|À usage interne uniquement.|  
+|**reason**|**tinyint**|À usage interne uniquement.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

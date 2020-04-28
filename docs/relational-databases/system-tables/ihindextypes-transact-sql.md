@@ -18,10 +18,10 @@ ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4c7c1bca0f400085ad55ac69b692e5a5fc1ec4c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990372"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)
@@ -31,10 +31,10 @@ ms.locfileid: "67990372"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**entrer**|**nvarchar(255)**|Nom d'un type d'index non-SQL Server pris en charge.|  
+|**type**|**nvarchar(255)**|Nom d'un type d'index non-SQL Server pris en charge.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication de base de données hétérogène](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Réplication de bases de données hétérogènes](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

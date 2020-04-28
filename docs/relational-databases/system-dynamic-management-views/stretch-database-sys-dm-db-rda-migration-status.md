@@ -19,10 +19,10 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937061"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
@@ -39,8 +39,8 @@ ms.locfileid: "67937061"
 |**table_id**|**int**|ID de la table à partir de laquelle les lignes ont été migrées.|  
 |**database_id**|**int**|ID de la base de données à partir de laquelle les lignes ont été migrées.|  
 |**migrated_rows**|**bigint**|Nombre de lignes migrées dans ce lot.|  
-|**start_time_utc**|**DATETIME**|Heure UTC à laquelle le lot a démarré.|  
-|**end_time_utc**|**DATETIME**|Heure UTC à laquelle le lot s’est terminé.|  
+|**start_time_utc**|**datetime**|Heure UTC à laquelle le lot a démarré.|  
+|**end_time_utc**|**datetime**|Heure UTC à laquelle le lot s’est terminé.|  
 |**error_number**|**int**|Si le lot échoue, numéro d’erreur de l’erreur qui s’est produite ; Sinon, null.|  
 |**error_severity**|**int**|Si le lot échoue, gravité de l’erreur qui s’est produite ; Sinon, null.|  
 |**error_state**|**int**|Si le lot échoue, état de l’erreur qui s’est produite ; Sinon, null.<br /><br /> Le **ERROR_STATE** indique la condition ou l’emplacement où l’erreur s’est produite.|  

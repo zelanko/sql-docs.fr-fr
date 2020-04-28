@@ -18,10 +18,10 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937914"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
@@ -57,7 +57,7 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|Répertoire où les fichiers de sauvegarde des journaux de transactions du serveur principal sont stockés.|  
 |**backup_share**|Réseau ou chemin d'accès UNC au répertoire de sauvegarde.|  
 |**backup_retention_period**|Durée de conservation (en minutes) avant la suppression d'un fichier de sauvegarde de journal dans le répertoire de sauvegarde.|  
-|**backup_compression**|Indique si la configuration de la copie des journaux de sauvegarde utilise la [compression de sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = désactivé. Ne jamais compresser des sauvegardes de journal.<br /><br /> **1** = activé. Toujours compresser des sauvegardes de journal.<br /><br /> **2** = utiliser le paramètre de la [vue ou configurer l’option de configuration de serveur compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s’agit de la valeur par défaut.<br /><br /> La compression de la sauvegarde est prise en charge uniquement dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou les versions ultérieures). Dans les autres éditions, la valeur est toujours 2.|  
+|**backup_compression**|Indique si la configuration de la copie des journaux de sauvegarde utilise la [compression de sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = désactivé. Ne jamais compresser des sauvegardes de journal.<br /><br /> **1** = activé. Toujours compresser des sauvegardes de journal.<br /><br /> **2** = utiliser le paramètre de la [vue ou configurer l’option de configuration de serveur compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s'agit de la valeur par défaut.<br /><br /> La compression de la sauvegarde est prise en charge uniquement dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou les versions ultérieures). Dans les autres éditions, la valeur est toujours 2.|  
 |**backup_job_id**|ID de travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associé au travail de sauvegarde sur le serveur principal.|  
 |**monitor_server**|Nom de l’instance du utilisé comme [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serveur moniteur dans la configuration de la copie des journaux de session.|  
 |**monitor_server_security_mode**|Mode de sécurité utilisé pour la connexion au serveur moniteur.<br /><br /> 1 = Authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.|  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

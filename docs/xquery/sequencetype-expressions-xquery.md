@@ -18,10 +18,10 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946281"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expressions  SequenceType (XQuery)
@@ -109,7 +109,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Pour plus d’informations, consultez [comparer du XML typé et du XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)non typé.  
   
  L’expression usetheBoolean `instance of` suivante permet de déterminer si l’attribut LocationID est de type xs : integer :  
   

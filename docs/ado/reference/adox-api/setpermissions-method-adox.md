@@ -19,10 +19,10 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965226"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions, méthode (ADOX)
@@ -45,14 +45,14 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *Action*  
  Valeur de type **long** qui peut être l’une des constantes [ActionEnum](../../../ado/reference/adox-api/actionenum.md) qui spécifient le type d’action à effectuer lors de la définition des autorisations.  
   
- *Autorisations*  
+ *Droits*  
  Valeur de **type long** qui peut être un masque de caractères d’une ou plusieurs des constantes [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) , qui indique les droits à définir.  
   
  *Être*  
- facultatif. Valeur de **type long** qui peut être l’une des constantes [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) , qui spécifie comment les objets hériteront de ces autorisations. La valeur par défaut est **adInheritNone**.  
+ Facultatif. Valeur de **type long** qui peut être l’une des constantes [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) , qui spécifie comment les objets hériteront de ces autorisations. La valeur par défaut est **adInheritNone**.  
   
  *ObjectTypeId*  
- facultatif. Valeur de **type Variant** qui spécifie le GUID pour un type d’objet fournisseur qui n’est pas défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; dans le cas contraire, il n’est pas utilisé.  
+ Facultatif. Valeur de **type Variant** qui spécifie le GUID pour un type d’objet fournisseur qui n’est pas défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; dans le cas contraire, il n’est pas utilisé.  
   
 ## <a name="remarks"></a>Notes  
  Une erreur se produit si le fournisseur ne prend pas en charge la définition des droits d’accès pour les groupes ou les utilisateurs.  

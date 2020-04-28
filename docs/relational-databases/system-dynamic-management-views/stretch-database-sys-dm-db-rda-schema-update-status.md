@@ -17,10 +17,10 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937016"
 ---
 # <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
@@ -39,8 +39,8 @@ ms.locfileid: "67937016"
 |**task_type_desc**|**nvarchar**|Description du type de la tâche de mise à jour du schéma d’archive de données distante.|  
 |**task_state**|**int**|État de la tâche de mise à jour du schéma d’archive de données distante.|  
 |**task_state_des**|**nvarchar**|Description de l’état de la tâche de mise à jour du schéma d’archive de données distante.|  
-|**start_time_utc**|**DATETIME**|Heure UTC à laquelle la mise à jour du schéma d’archive de données distante a démarré.|  
-|**end_time_utc**|**DATETIME**|Heure UTC à laquelle la mise à jour du schéma d’archive de données distante s’est terminée.|  
+|**start_time_utc**|**datetime**|Heure UTC à laquelle la mise à jour du schéma d’archive de données distante a démarré.|  
+|**end_time_utc**|**datetime**|Heure UTC à laquelle la mise à jour du schéma d’archive de données distante s’est terminée.|  
 |**error_number**|**int**|En cas d’échec de la mise à jour du schéma d’archive de données distante, numéro d’erreur de l’erreur qui s’est produite ; Sinon, null.|  
 |**error_severity**|**int**|En cas d’échec de la mise à jour du schéma d’archive de données distante, gravité de l’erreur qui s’est produite ; Sinon, null.|  
 |**error_state**|**int**|En cas d’échec de la mise à jour du schéma d’archive de données distante, état de l’erreur qui s’est produite ; Sinon, null. Le error_state indique la condition ou l’emplacement où l’erreur s’est produite.|  

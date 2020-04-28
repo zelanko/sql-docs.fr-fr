@@ -10,10 +10,10 @@ ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 945b7e86641c796e79bfb87b8b7b5de25949e4c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989770"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Création de fichiers de valeurs de variables (DB2ToSQL)
@@ -26,7 +26,7 @@ Le fichier de valeurs de variable est un fichier XML comprenant les valeurs de p
   
 **Exemples :**  
   
-**Exemple 1 :**  
+**Exemple 1 :**  
   
 ```  
 <!--Sample of variable value file commands-->  
@@ -47,7 +47,7 @@ Le fichier de valeurs de variable est un fichier XML comprenant les valeurs de p
   
 </variables>  
 ```  
-**Exemple 2 :**  
+**Exemple 2 :**  
   
 ```  
 <!--Sample of variable value file commands-->  

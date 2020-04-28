@@ -14,17 +14,17 @@ ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9aa722813994ec950516c513c7e0e673b83b0c73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67939987"
 ---
 # <a name="ado-md-methods"></a>Méthodes ADO MD
 
 |||  
 |-|-|  
-|[Plus](../../../ado/reference/ado-md-api/close-method-ado-md.md)|Ferme un CellSet ouvert.|  
+|[Fermer](../../../ado/reference/ado-md-api/close-method-ado-md.md)|Ferme un CellSet ouvert.|  
 |[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)|Récupère un objet de schéma ADO MD (dimension, hiérarchie, niveau ou membre) à l’aide de son nom unique.|  
 |[Ouvrir](../../../ado/reference/ado-md-api/open-method-ado-md.md)|Récupère les résultats d’une requête multidimensionnelle et retourne les résultats à un CellSet.|  
   

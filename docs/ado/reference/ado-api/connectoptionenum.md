@@ -16,10 +16,10 @@ ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933448"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
@@ -28,7 +28,7 @@ Spécifie si la méthode [Open](../../../ado/reference/ado-api/open-method-ado-c
 |Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncConnect**|16|Ouvre la connexion de manière asynchrone. L’événement [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) peut être utilisé pour déterminer quand la connexion est disponible.|  
-|**adConnectUnspecified**|-1|valeur par défaut. Ouvre la connexion de façon synchrone.|  
+|**adConnectUnspecified**|-1|Par défaut. Ouvre la connexion de façon synchrone.|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  

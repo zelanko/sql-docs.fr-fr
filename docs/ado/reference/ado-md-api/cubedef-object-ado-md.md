@@ -16,10 +16,10 @@ ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949786"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef, objet (ADO MD)
@@ -38,7 +38,7 @@ Représente un cube à partir d’un schéma multidimensionnel, contenant un ens
   
  La collection **Properties** contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Pour obtenir une liste plus complète des propriétés disponibles, consultez la documentation de votre fournisseur.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |CatalogName|Nom du catalogue auquel appartient ce cube.|  
 |Created|Date et heure de création du cube.|  

@@ -14,10 +14,10 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984539"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Bien démarrer avec SSMA pour MySQL (MySQLToSQL)
@@ -37,7 +37,7 @@ Une fois SSMA installé et concédé sous licence, vous pouvez utiliser SSMA pou
   
 Pour démarrer une migration, vous devez effectuer les opérations suivantes :  
   
-1.  Créer un projet  
+1.  Créez un projet.  
   
 2.  Connectez-vous à une base de données MySQL.  
   
@@ -96,7 +96,7 @@ Le tableau suivant présente les commandes de la barre d’outils migration :
   
 |||  
 |-|-|  
-|**Bouton**|**Fonctionnalités**|  
+|**Bouton**|**Fonction**|  
 |**Créer un rapport**|Convertit les objets MySQL sélectionnés en objets SQL Server ou Azure SQL DB, puis crée un rapport qui indique la réussite de la conversion.<br /><br />Cette commande est désactivée, à moins que les objets ne soient sélectionnés dans l’Explorateur de métadonnées MySQL.|  
 |**Convertir le schéma**|Convertit les objets MySQL sélectionnés en objets SQL Server ou Azure SQL DB.<br /><br />Cette commande est désactivée, à moins que les objets ne soient sélectionnés dans l’Explorateur de métadonnées MySQL.|  
 |**Migrer des données**|Migre les données de la base de données MySQL vers SQL Server ou Azure SQL DB. Avant d’exécuter cette commande, vous devez convertir les schémas MySQL en schémas SQL Server ou Azure SQL DB, puis charger les objets dans SQL Server ou Azure SQL DB.<br /><br />Cette commande est désactivée, à moins que les objets ne soient sélectionnés dans l’Explorateur de métadonnées MySQL.|  
@@ -107,11 +107,11 @@ Le tableau suivant présente les menus SSMA.
   
 |||  
 |-|-|  
-|**Menus**|**Description**|  
-|**Fichier**|Contient des commandes pour travailler avec des projets, se connecter à MySQL et se connecter à SQL Server ou à Azure SQL DB.|  
+|**Menu**|**Description**|  
+|**File**|Contient des commandes pour travailler avec des projets, se connecter à MySQL et se connecter à SQL Server ou à Azure SQL DB.|  
 |**Modifier**|Contient des commandes pour rechercher et utiliser du texte dans les pages de détails. Pour ouvrir la boîte de dialogue **gérer les signets** , dans le menu Edition, cliquez sur gérer les signets. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Afficher**|Contient la commande **synchroniser les explorateurs de métadonnées** . Cela synchronise les objets entre l’Explorateur de métadonnées MySQL et SQL Server ou l’Explorateur de métadonnées Azure SQL DB. Contient également des commandes permettant d’afficher et de masquer les volets de **sortie** et de **liste d’erreurs** , ainsi que les **mises en page** d’options à gérer avec les dispositions.|  
-|**Outils**|Contient des commandes pour créer des rapports, convertir un schéma, actualiser à partir de la base de données, migrer des objets et des données, et enregistrer en tant que script. Permet également d’accéder aux boîtes de dialogue paramètres **globaux, paramètres du projet par défaut** et **paramètres du projet** .|  
+|**Affichage**|Contient la commande **synchroniser les explorateurs de métadonnées** . Cela synchronise les objets entre l’Explorateur de métadonnées MySQL et SQL Server ou l’Explorateur de métadonnées Azure SQL DB. Contient également des commandes permettant d’afficher et de masquer les volets de **sortie** et de **liste d’erreurs** , ainsi que les **mises en page** d’options à gérer avec les dispositions.|  
+|**outils**|Contient des commandes pour créer des rapports, convertir un schéma, actualiser à partir de la base de données, migrer des objets et des données, et enregistrer en tant que script. Permet également d’accéder aux boîtes de dialogue paramètres **globaux, paramètres du projet par défaut** et **paramètres du projet** .|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et à la boîte de dialogue **à propos** de.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Volet de sortie et volet de Liste d’erreurs  

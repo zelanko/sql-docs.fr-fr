@@ -10,10 +10,10 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989866"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversion de schémas DB2 (DB2ToSQL)
@@ -42,10 +42,10 @@ Le tableau suivant indique les objets DB2 qui sont convertis et les objets [!INC
 |Séquences|Sont mappés.|  
 |Instruction SELECT|**Les mappages SSMA SELECT avec les exceptions suivantes :**<br /><br />Clause Data-change-table-Reference : partiellement mappée, mais les tables finales ne sont pas prises en charge<br /><br />Clause de référence de table-mappée partiellement, mais uniquement-table-Reference, externe-table-Reference, analyze_table-expression, collection-Derived-table, XMLTable-expression ne sont pas mappées à la sémantique SQL Server<br /><br />Period-clause de spécification-non mappée.<br /><br />Continue-clause Handler-non mappée.<br /><br />Clause de corrélation typée-non mappée.<br /><br />Clause de résolution d’accès simultanée-non mappée.|  
 |Instruction VALUEs|Est mappé.|  
-|INSERT, instruction|Est mappé.|  
-|UPDATE, instruction|**La mise à jour des mappages SMA est mise à jour avec les exceptions suivantes :**<br /><br />Table-Reference clause-only-la référence de table n’est pas mappée à la sémantique SQL Server<br /><br />La clause period-n’est pas mappée.|  
+|Instruction INSERT|Est mappé.|  
+|Instruction UPDATE|**La mise à jour des mappages SMA est mise à jour avec les exceptions suivantes :**<br /><br />Table-Reference clause-only-la référence de table n’est pas mappée à la sémantique SQL Server<br /><br />La clause period-n’est pas mappée.|  
 |Instruction MERGE|**Les mappages SSMA sont FUSIONNés avec les exceptions suivantes :**<br /><br />Une seule ou plusieurs occurrences de chaque clause-est mappée à la sémantique SQL Server pour les occurrences limitées de chaque clause.<br /><br />SIGNAL, clause-n’est pas mappé à la sémantique SQL Server<br /><br />Clauses de mise à jour et de suppression mixtes-ne mappe pas à la sémantique SQL Server<br /><br />Period-clause-n’est pas mappé à la sémantique SQL Server|  
-|DELETE, instruction|**SSMA mappe DELETE avec les exceptions suivantes :**<br /><br />Table-Reference clause-only-la référence de table n’est pas mappée à la sémantique SQL Server<br /><br />Clause period-n’est pas mappé à la sémantique SQL Server|  
+|DELETE (instruction)|**SSMA mappe DELETE avec les exceptions suivantes :**<br /><br />Table-Reference clause-only-la référence de table n’est pas mappée à la sémantique SQL Server<br /><br />Clause period-n’est pas mappé à la sémantique SQL Server|  
 |Niveau d’isolation et type de verrou|Est mappé.|  
 |Procédures (SQL)|Sont mappés.|  
 |Procédures (externes)|Nécessite une mise à jour manuelle.|  
@@ -73,9 +73,9 @@ Le tableau suivant indique les objets DB2 qui sont convertis et les objets [!INC
 |Surnoms|Mappage partiel. Le traitement manuel est requis pour l’objet sous-jacent|  
 |Synonymes|Sont mappés.|  
 |Fonctions standard dans DB2|SSMA mappe les fonctions DB2 standard quand une fonction équivalente est disponible dans SQL Server :|  
-|Authorization|Non mappé.|  
+|Autorisation|Non mappé.|  
 |Prédicats|Sont mappés.|  
-|Instruction SELECT INTO|Non mappé.|  
+|SELECT INTO, instruction|Non mappé.|  
 |VALEURS dans l’instruction|Non mappé.|  
 |Contrôle de transaction|Non mappé.|  
   

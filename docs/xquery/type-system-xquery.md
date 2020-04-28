@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946203"
 ---
 # <a name="type-system-xquery"></a>Système de types (XQuery)
@@ -50,7 +50,7 @@ ms.locfileid: "67946203"
 ## <a name="built-in-types-of-xml-schema"></a>Types intégrés de schéma XML  
  Les types intégrés de schéma XML possèdent un préfixe d'espace de noms prédéfini, xs. Parmi ces types, citons **XS : Integer** et **XS : String**. Tous ces types intégrés sont pris en charge. Vous pouvez utiliser ces types lorsque vous créez une collection de schémas XML.  
   
- Lorsque vous interrogez des données XML typées, le type statique et dynamique des nœuds est déterminé par la collection de schémas XML associée à la colonne ou à la variable sur laquelle porte la requête. Pour plus d’informations sur les types statiques et dynamiques, consultez [contexte d’expression et évaluation de requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Par exemple, la requête suivante est spécifiée par rapport à **** une colonne XML`Instructions`typée (). L'expression utilise `instance of` pour vérifier que la valeur typée de l'attribut `LotSize` retourné est de type `xs:decimal`.  
+ Lorsque vous interrogez des données XML typées, le type statique et dynamique des nœuds est déterminé par la collection de schémas XML associée à la colonne ou à la variable sur laquelle porte la requête. Pour plus d’informations sur les types statiques et dynamiques, consultez [contexte d’expression et évaluation de requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Par exemple, la requête suivante est spécifiée par rapport à **xml** une colonne XML`Instructions`typée (). L'expression utilise `instance of` pour vérifier que la valeur typée de l'attribut `LotSize` retourné est de type `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -149,7 +149,7 @@ WHERE ProductModelID=7
 >  L’utilisation explicite de la fonction **Data ()** dans cet exemple est à titre d’illustration uniquement. Si elle n’est pas spécifiée, **Sum ()** applique implicitement la fonction **Data ()** pour extraire les valeurs typées des nœuds.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Concepts de base de XQuery](../xquery/xquery-basics.md)  
   
   

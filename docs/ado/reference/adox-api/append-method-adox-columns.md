@@ -17,10 +17,10 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967322"
 ---
 # <a name="append-method-adox-columns"></a>Append, méthode (colonnes ADOX)
@@ -38,10 +38,10 @@ Columns.Append Column [,Type] [,DefinedSize]
  Objet de **colonne** à ajouter ou nom de la colonne à créer et à ajouter.  
   
  *Type*  
- facultatif. Valeur de type **long** qui spécifie le type de données de la colonne. Le paramètre de *type* correspond à la propriété de [type](../../../ado/reference/adox-api/type-property-column-adox.md) d’un objet de **colonne** .  
+ Facultatif. Valeur de type **long** qui spécifie le type de données de la colonne. Le paramètre de *type* correspond à la propriété de [type](../../../ado/reference/adox-api/type-property-column-adox.md) d’un objet de **colonne** .  
   
  *DefinedSize*  
- facultatif. Valeur de **type long** qui spécifie la taille de la colonne. Le paramètre *DefinedSize* correspond à la propriété [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) d’un objet **Column** .  
+ Facultatif. Valeur de **type long** qui spécifie la taille de la colonne. Le paramètre *DefinedSize* correspond à la propriété [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) d’un objet **Column** .  
   
 > [!NOTE]
 >  Une erreur se produit lors de l’ajout d’une **colonne** à la collection **Columns** d’un [index](../../../ado/reference/adox-api/index-object-adox.md) si la **colonne** n’existe pas dans une [table](../../../ado/reference/adox-api/table-object-adox.md) qui est déjà ajoutée à la collection [tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  

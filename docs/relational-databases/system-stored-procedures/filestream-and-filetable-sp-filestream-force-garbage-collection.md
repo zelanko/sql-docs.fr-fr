@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942284"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
@@ -46,11 +46,10 @@ sp_filestream_force_garbage_collection
  Représente le nom de la base de données dans laquelle exécuter le garbage collector.  
   
 > [!NOTE]  
-> `@dbname`est de **type sysname**. En l'absence de spécification, c'est la base de données actuelle qui est utilisée.  
+> `@dbname` est de type **sysname**. En l'absence de spécification, c'est la base de données actuelle qui est utilisée.  
   
  `[ @filename = ] 'logical_file_name'`  
- Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. 
-  `@filename` est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifiée.  
+ Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. `@filename` est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifiée.  
   
 ## <a name="return-code-values"></a>Codet de retour  
   
@@ -89,7 +88,7 @@ Le garbage collection (GC) s’appuie sur la troncation du journal. Par conséqu
 ## <a name="examples"></a>Exemples  
  Les exemples suivants exécutent le garbage collector pour les conteneurs FILESTREAM dans la base de données `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>R. Absence de spécification d'un conteneur  
+### <a name="a-specifying-no-container"></a>A. Absence de spécification d'un conteneur  
   
 ```sql  
 USE FSDB;  
@@ -107,10 +106,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
-<br>[Vues de gestion dynamiques Filestream et FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
-<br>[Vues de catalogue Filestream et FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Vues de gestion dynamique liées à Filestream et FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Affichages catalogue FILESTREAM et FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

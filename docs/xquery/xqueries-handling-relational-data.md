@@ -16,10 +16,10 @@ ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946165"
 ---
 # <a name="xqueries-handling-relational-data"></a>Requêtes XQuery pour la gestion des données relationnelles
@@ -40,8 +40,8 @@ ms.locfileid: "67946165"
  Pour plus d’informations, consultez [SQL : Column (), fonction (XQuery)](../xquery/xquery-extension-functions-sql-column.md) et [fonction SQL : variable () (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Données XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Références relatives au langage Xquery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [SQL Server de &#40;de données XML&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Référence du langage XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Construction XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

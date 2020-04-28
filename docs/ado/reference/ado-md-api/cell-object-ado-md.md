@@ -16,10 +16,10 @@ ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947746"
 ---
 # <a name="cell-object-ado-md"></a>Cell, objet (ADO MD)
@@ -42,7 +42,7 @@ Représente les données à l’intersection des coordonnées d’axe contenues 
   
  La collection **Properties** contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Pour obtenir une liste plus complète des propriétés disponibles, consultez la documentation de votre fournisseur.  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |CouleurFond|Couleur d’arrière-plan utilisée lors de l’affichage de la cellule.|  
 |FontFlags|Masque de masque détaillant les effets sur la police.|  

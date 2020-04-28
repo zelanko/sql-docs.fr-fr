@@ -18,10 +18,10 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946644"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
@@ -68,9 +68,9 @@ sp_update_schedule
 |Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
-|**16**|Mensuelle|  
+|**16bits**|Mensuelle|  
 |**32**|Tous les mois, par rapport à l' *intervalle FREQ*|  
 |**64**|Lancé au démarrage du service SQLServerAgent|  
 |**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
@@ -92,7 +92,7 @@ sp_update_schedule
 |Valeur|Description (unité)|  
 |-----------|--------------------------|  
 |**0x1**|À une heure spécifiée|  
-|**0x2**|Secondes|  
+|**0X2**|Secondes|  
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
@@ -106,7 +106,7 @@ sp_update_schedule
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**version8**|Quatrième|  
-|**16**|Dernier|  
+|**16bits**|Dernier|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Nombre de semaines ou de mois entre l’exécution planifiée d’un travail. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**ou **32**. *freq_recurrence_factor*est de **type int**, avec **0**comme valeur par défaut.  
   
@@ -139,7 +139,7 @@ sp_update_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Seuls les membres de **sysadmin** peuvent modifier une planification appartenant à un autre utilisateur.  
   

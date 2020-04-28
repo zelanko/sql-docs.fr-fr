@@ -16,10 +16,10 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967300"
 ---
 # <a name="append-method-adox-indexes"></a>Append, méthode (index ADOX)
@@ -37,7 +37,7 @@ Indexes.Append Index [,Columns]
  Objet d' **index** à ajouter ou nom de l’index à créer et à ajouter.  
   
  *Colonnes*  
- facultatif. Valeur de **type Variant** qui spécifie le ou les noms de la ou des colonnes à indexer. Le paramètre *Columns* correspond à la ou aux valeurs de la propriété [Name](../../../ado/reference/adox-api/name-property-adox.md) d’un ou plusieurs objets [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
+ Facultatif. Valeur de **type Variant** qui spécifie le ou les noms de la ou des colonnes à indexer. Le paramètre *Columns* correspond à la ou aux valeurs de la propriété [Name](../../../ado/reference/adox-api/name-property-adox.md) d’un ou plusieurs objets [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
   
 ## <a name="remarks"></a>Notes  
  Le paramètre *Columns* peut prendre soit le nom d’une colonne, soit un tableau de noms de colonnes.  

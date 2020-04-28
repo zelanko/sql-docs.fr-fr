@@ -17,10 +17,10 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933418"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord, méthode (ADO)
@@ -35,22 +35,22 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- facultatif. Valeur de **chaîne** qui contient une URL spécifiant l’entité à copier (par exemple, un fichier ou un répertoire). Si la *source* est omise ou qu’elle spécifie une chaîne vide, le fichier ou le répertoire représenté par l' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) actif sera copié.  
+ Facultatif. Valeur de **chaîne** qui contient une URL spécifiant l’entité à copier (par exemple, un fichier ou un répertoire). Si la *source* est omise ou qu’elle spécifie une chaîne vide, le fichier ou le répertoire représenté par l' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) actif sera copié.  
   
  *Destination*  
- facultatif. Valeur de **chaîne** qui contient une URL spécifiant l’emplacement où la *source* sera copiée.  
+ Facultatif. Valeur de **chaîne** qui contient une URL spécifiant l’emplacement où la *source* sera copiée.  
   
  *Nom d’utilisateur*  
- facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, le cas échéant, autorise l’accès à la *destination*.  
+ Facultatif. Valeur de **chaîne** qui contient l’ID d’utilisateur qui, le cas échéant, autorise l’accès à la *destination*.  
   
  *Mot de passe*  
- facultatif. Valeur de **chaîne** qui contient le mot de passe qui, le cas échéant, vérifie le *nom d’utilisateur*.  
+ Facultatif. Valeur de **chaîne** qui contient le mot de passe qui, le cas échéant, vérifie le *nom d’utilisateur*.  
   
  *Options*  
- facultatif. Valeur [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) qui a une valeur par défaut de **adCopyUnspecified**. Spécifie le comportement de cette méthode.  
+ Facultatif. Valeur [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) qui a une valeur par défaut de **adCopyUnspecified**. Spécifie le comportement de cette méthode.  
   
- *Suppr*  
- facultatif. Valeur **booléenne** qui, lorsqu’elle a la **valeur true**, spécifie que cette opération doit être asynchrone.  
+ *Async*  
+ Facultatif. Valeur **booléenne** qui, lorsqu’elle a la **valeur true**, spécifie que cette opération doit être asynchrone.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Valeur de **chaîne** qui retourne généralement la valeur de *destination*. Toutefois, la valeur exacte retournée est dépendante du fournisseur.  

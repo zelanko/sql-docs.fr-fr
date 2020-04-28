@@ -18,10 +18,10 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946084"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery et le typage statique
@@ -86,8 +86,7 @@ ms.locfileid: "67946084"
  Dans le contexte XQuery, la fonction `fn:avg (//r)` « Average » retourne une erreur statique, car le compilateur XQuery ne peut pas ajouter des valeurs de différents types (**XS : int**, **XS : float** ou **xs : double**) pour le <`r`> éléments dans l’argument de **FN : AVG ()**. Pour résoudre ce problème, réécrivez l'appel de fonction sous la forme `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
 ### <a name="example-operator-over-union-type"></a>Exemple : opérateur sur un type union  
- L'opération addition (« + ») requiert les types exacts des opérandes. Par conséquent, l’expression `(//r)[1] + 1` retourne une erreur statique qui a la définition de type décrite précédemment pour l’élément `r` <>. Une solution consiste à la réécrire sous la forme `(//r)[1] cast as xs:int? +1`, où « ?  » indique 0 ou 1 occurrence. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiert « cast as » avec « ? », parce qu'une conversion peut générer la séquence vide comme résultat des erreurs d'exécution.  
+ L'opération addition (« + ») requiert les types exacts des opérandes. Par conséquent, l’expression `(//r)[1] + 1` retourne une erreur statique qui a la définition de type décrite précédemment pour l’élément `r` <>. Une solution consiste à la réécrire sous la forme `(//r)[1] cast as xs:int? +1`, où « ?  » indique 0 ou 1 occurrence. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiert « cast as » avec « ? », parce qu'une conversion peut générer la séquence vide comme résultat des erreurs d'exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

@@ -16,10 +16,10 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946228"
 ---
 # <a name="type-system---sequence-type-matching"></a>Système de types : mise en correspondance du type de séquence
@@ -102,8 +102,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:decimal')
 GO  
 ```  
   
- À présent, changez la valeur de l'attribut `a` en type chaîne. 
-  `instance of xs:string` retournera True.  
+ À présent, changez la valeur de l'attribut `a` en type chaîne. `instance of xs:string` retournera True.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -161,7 +160,7 @@ GO
  Si les deux conditions sont remplies, l'expression `instance of` retourne True.  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>Exemple : interrogation d'une colonne de type xml  
- Dans l’exemple suivant, une requête est spécifiée par rapport à une colonne **** instructions de type XML [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] dans la base de données. Il s'agit d'une colonne XML typée car un schéma lui est associé. Le schéma XML définit l'attribut `LocationID` du type entier. Par conséquent, dans l’expression de séquence `instance of xs:integer?` , retourne la valeur true.  
+ Dans l’exemple suivant, une requête est spécifiée par rapport à une colonne **xml** instructions de type XML [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] dans la base de données. Il s'agit d'une colonne XML typée car un schéma lui est associé. Le schéma XML définit l'attribut `LocationID` du type entier. Par conséquent, dans l’expression de séquence `instance of xs:integer?` , retourne la valeur true.  
   
 ```  
 SELECT Instructions.query('   

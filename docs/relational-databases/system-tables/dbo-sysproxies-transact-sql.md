@@ -20,10 +20,10 @@ ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dd486757a912d8f0364f55570a368292cf39ab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984894"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
@@ -34,12 +34,12 @@ ms.locfileid: "67984894"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|ID du compte proxy.|  
-|**nomme**|**sysname**|Nom du compte proxy.|  
+|**name**|**sysname**|Nom du compte proxy.|  
 |**credential_id**|**int**|ID des informations d'identification utilisées par le compte proxy.|  
 |**désactivé**|**tinyint**|État du compte proxy :<br /><br /> **0** = désactivé. **1** = activé.|  
-|**description**|**nvarchar(512)**|Description entrée par l'utilisateur lors de la création du compte proxy.|  
-|**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* de l’utilisateur ou du groupe associé aux informations d’identification du proxy.|  
-|**credential_date_created**|**DATETIME**|Date et heure de création des informations d'identification.|  
+|**descriptive**|**nvarchar(512)**|Description entrée par l'utilisateur lors de la création du compte proxy.|  
+|**user_sid**|**varbinary (85)**|Microsoft Windows *security_identifier* de l’utilisateur ou du groupe associé aux informations d’identification du proxy.|  
+|**credential_date_created**|**datetime**|Date et heure de création des informations d'identification.|  
   
 ## <a name="remarks"></a>Notes  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent accéder à la table **sysproxies** .  
