@@ -18,10 +18,10 @@ ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 980ecd00a07e1119a64552a3f4c903434fd09029
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106444"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "68106444"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|ID de l'Agent de fusion|  
-|**nomme**|**nvarchar(100**|Nom de l'Agent de fusion.|  
+|**id**|**int**|ID de l'Agent de fusion|  
+|**name**|**nvarchar(100**|Nom de l'Agent de fusion.|  
 |**publisher_id**|**smallint**|ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**édition**|**sysname**|Nom de la publication.|  
@@ -43,14 +43,14 @@ ms.locfileid: "68106444"
 |**profile_id**|**int**|ID de configuration de la table **MSagent_profiles** .|  
 |**anonymous_subid**|**uniqueidentifier**|ID d'un agent anonyme.|  
 |**subscriber_name**|**sysname**|Nom de l'Abonné.|  
-|**creation_date**|**DATETIME**|Date et heure de création de l'Agent de distribution ou de fusion.|  
+|**creation_date**|**datetime**|Date et heure de création de l'Agent de distribution ou de fusion.|  
 |**offload_enabled**|**bit**|Indique si l'Agent peut être activé à distance.<br /><br /> **0** indique que l’agent ne peut pas être activé à distance.<br /><br /> **1** indique que l’agent sera activé à distance et sur l’ordinateur distant spécifié dans la propriété offload_server.|  
 |**offload_server**|**sysname**|Indique le nom de réseau du serveur utilisé pour l'activation de l'Agent distant.|  
-|**sid**|**varbinary(85)**|Numéro d'identification de sécurité (SID) de l'Agent de distribution ou de fusion lors de sa première exécution.|  
-|**subscriber_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion à l'Abonné. Les valeurs possibles sont les suivantes :<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
+|**sid**|**varbinary (85)**|Numéro d'identification de sécurité (SID) de l'Agent de distribution ou de fusion lors de sa première exécution.|  
+|**subscriber_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion à l'Abonné. Les valeurs possibles sont les suivantes :<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
 |**subscriber_login**|**sysname**|Nom de connexion utilisé lors de la connexion à l'Abonné.|  
 |**subscriber_password**|**nvarchar (524)**|Valeur chiffrée du mot de passe utilisé lors de la connexion à l'Abonné.|  
-|**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'agent lors de la connexion au serveur de publication et pouvant prendre la valeur suivante :<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
+|**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'agent lors de la connexion au serveur de publication et pouvant prendre la valeur suivante :<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
 |**publisher_login**|**sysname**|Connexion utilisée lors de la connexion au serveur de publication.|  
 |**publisher_password**|**nvarchar (524)**|Valeur chiffrée du mot de passe utilisée lors de la connexion au serveur de publication.|  
 |**job_step_uid**|**uniqueidentifier**|ID unique de l'étape de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle l'Agent est démarré.|  

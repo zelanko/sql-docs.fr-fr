@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133850"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68133850"
 |-----------------|---------------|-----------------|  
 |**document_type**|**sysname**|Extension de fichier du type de document pris en charge.<br /><br /> Cette valeur peut être utilisée pour identifier le filtre qui sera utilisé pendant l’indexation de texte intégral des colonnes de type **varbinary (max)** ou **image**.|  
 |**class_id**|**uniqueidentifier**|GUID de la classe IFilter qui prend en charge l'extension de fichier.|  
-|**d**|**nvarchar(260)**|Chemin d'accès de la DLL IFilter. Le chemin d'accès n'est visible que pour les membres du rôle de serveur fixe **serveradmin** .|  
-|**Version**|**sysname**|Version de la DLL IFilter.|  
+|**path**|**nvarchar(260)**|Chemin d'accès de la DLL IFilter. Le chemin d'accès n'est visible que pour les membres du rôle de serveur fixe **serveradmin** .|  
+|**version**|**sysname**|Version de la DLL IFilter.|  
 |**manufacturer**|**sysname**|Nom du fabricant de IFilter.<br /><br /> Remarque : seuls les documents avec le fabricant [!INCLUDE[msCoName](../../includes/msconame-md.md)] sont pris en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]charge sur.|  
   
 ## <a name="permissions"></a>Autorisations  

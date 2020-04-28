@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122511"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
@@ -54,13 +54,13 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**DateFormat**|**nchar(3)**|Format de la date.|  
 |**DATEFIRST**|**tinyint**|Premier jour de la semaine : 1 pour lundi, 2 pour mardi, etc., jusqu'à 7 pour dimanche.|  
 |**installation**|**int**|Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la dernière mise à niveau pour cette langue.|  
-|**nomme**|**sysname**|Nom de la langue.|  
+|**name**|**sysname**|Nom de la langue.|  
 |**affecté**|**sysname**|Nom de remplacement de la langue.|  
-|**suivent**|**nvarchar (372)**|Noms des mois.|  
-|**mois courts**|**nvarchar (132)**|Abréviations des noms des mois.|  
-|**précédant**|**nvarchar (217)**|Noms des jours.|  
-|**LCID**|**int**|ID de paramètres régionaux Windows pour la langue.|  
-|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ID du groupe de messages.|  
+|**months**|**nvarchar(372)**|Noms des mois.|  
+|**mois courts**|**nvarchar(132)**|Abréviations des noms des mois.|  
+|**days**|**nvarchar(217)**|Noms des jours.|  
+|**lcid**|**int**|ID de paramètres régionaux Windows pour la langue.|  
+|**msglangid**|**smallint**|ID du groupe de messages du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -84,7 +84,7 @@ sp_helplanguage;
 ## <a name="see-also"></a>Voir aussi  
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [DÉFINIR la langue &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

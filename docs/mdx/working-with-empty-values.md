@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125848"
 ---
 # <a name="working-with-empty-values"></a>Manipulation de valeurs vides
@@ -123,7 +123,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**EMPTY**|FALSE|EMPTY|FALSE|  
+|**VIDÉ**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  Ce tableau représente les résultats de l'application d'un opérateur OR à deux opérandes booléens.  
@@ -131,8 +131,8 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |OR|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**EMPTY**|TRUE|TRUE|  
-|**FAUSSES**|TRUE|FALSE|  
+|**VIDÉ**|TRUE|TRUE|  
+|**FALSE**|TRUE|FALSE|  
   
  Ce tableau illustre la manière dont l'opérateur NOT négocie ou annule le résultat d'un opérateur booléen.  
   

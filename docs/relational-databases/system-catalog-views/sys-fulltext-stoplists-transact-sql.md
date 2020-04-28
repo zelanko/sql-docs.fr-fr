@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 88f4354a343e9748e1111d26c3ce8c248431b1be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133771"
 ---
 # <a name="sysfulltext_stoplists-transact-sql"></a>sys.fulltext_stoplists (Transact-SQL)
@@ -38,21 +38,21 @@ ms.locfileid: "68133771"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID de la liste de mots vides ; il est unique dans la base de données.|  
-|**nomme**|**sysname**|Nom de la liste de mots vides.|  
-|**create_date**|**DATETIME**|Date de création de la liste de mots vides.|  
-|**modify_date**|**DATETIME**|Date de dernière modification de la liste de mots vides au moyen d'une instruction ALTER.|  
+|**name**|**sysname**|Nom de la liste de mots vides.|  
+|**create_date**|**datetime**|Date de création de la liste de mots vides.|  
+|**modify_date**|**datetime**|Date de dernière modification de la liste de mots vides au moyen d'une instruction ALTER.|  
 |**Principal_id**|**int**|ID du principal de la base de données propriétaire de la liste de mots vides.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys. fulltext_system_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-system-stopwords-transact-sql.md)   
- [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
- [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [sys. fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [Configurer et gérer mots vides et mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [CRÉER une STOPLIST de texte intégral &#40;&#41;Transact-SQL](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)  
   

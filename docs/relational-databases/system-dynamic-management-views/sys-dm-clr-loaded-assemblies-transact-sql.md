@@ -19,10 +19,10 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138658"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68138658"
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|ID de l'assembly chargé. La **assembly_id** peut être utilisée pour rechercher plus d’informations sur l’assembly dans la vue de catalogue [sys. Assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Notez que le [!INCLUDE[tsql](../../includes/tsql-md.md)] catalogue [sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) affiche uniquement les assemblys dans la base de données active. La vue **SQS. dm_clr_loaded_assemblies** affiche tous les assemblys chargés sur le serveur.|  
 |**appdomain_address**|**int**|Adresse du domaine d’application (**AppDomain**) dans lequel l’assembly est chargé. Tous les assemblys appartenant à un seul utilisateur sont toujours chargés dans le même **AppDomain**. La **appdomain_address** peut être utilisée pour rechercher plus d’informations sur le domaine d’application **AppDomain** dans la vue [sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  
-|**load_time**|**DATETIME**|Heure à laquelle l'assembly a été chargé. Notez que l’assembly reste chargé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu’à ce que soit soumis à une sollicitation de la mémoire et décharge l' **AppDomain**. Vous pouvez surveiller **load_time** pour comprendre la fréquence [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la sollicitation de la mémoire et décharger l' **AppDomain**.|  
+|**load_time**|**datetime**|Heure à laquelle l'assembly a été chargé. Notez que l’assembly reste chargé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu’à ce que soit soumis à une sollicitation de la mémoire et décharge l' **AppDomain**. Vous pouvez surveiller **load_time** pour comprendre la fréquence [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la sollicitation de la mémoire et décharger l' **AppDomain**.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  

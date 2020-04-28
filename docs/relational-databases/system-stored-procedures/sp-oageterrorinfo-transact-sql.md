@@ -18,10 +18,10 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107915"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
@@ -46,16 +46,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *jeton_d'*  
  Est le jeton d’objet d’un objet OLE créé précédemment à l’aide de **sp_OACreate** ou il a la valeur null. Si *jeton_don* est spécifié, les informations d’erreur pour cet objet sont retournées. Si NULL est spécifié, les informations d'erreur sont renvoyées pour l'ensemble du traitement.  
   
- __ **sortie** source  
+ _source_ **sortie** source  
  Source des informations d'erreur. S’il est spécifié, il doit s’agir d’une variable locale **char**, **nchar**, **varchar**ou **nvarchar** . Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- __ **sortie** de la description  
+ _description_ **sortie** de la description  
  Description de l’erreur. S’il est spécifié, il doit s’agir d’une variable locale **char**, **nchar**, **varchar**ou **nvarchar** . Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- __ **sortie** HelpFile  
+ _helpfile_ **sortie** HelpFile  
  Fichier d'aide de l'objet OLE. S’il est spécifié, il doit s’agir d’une variable locale **char**, **nchar**, **varchar**ou **nvarchar** . Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- __ **sortie** HelpID  
+ _helpid_ **sortie** HelpID  
  ID de contexte du fichier d'aide. S’il est spécifié, il doit s’agir d’une variable **int** locale.  
   
 > [!NOTE]  
@@ -73,7 +73,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |------------------|---------------|-----------------|  
 |**Error**|**binaire (4)**|Représentation binaire du numéro d'erreur.|  
 |**Source**|**nvarchar (NN)**|Source de l'erreur.|  
-|**Description**|**nvarchar (NN)**|Description de l’erreur.|  
+|**Description**|**nvarchar (NN)**|Description de l'erreur.|  
 |**HelpFile**|**nvarchar (NN)**|Fichier d'aide pour la source.|  
 |**HelpID**|**int**|ID du contexte de l'aide dans le fichier source d'aide.|  
   

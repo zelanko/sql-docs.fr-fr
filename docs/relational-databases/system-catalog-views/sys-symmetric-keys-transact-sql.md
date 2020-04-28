@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108933"
 ---
 # <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
@@ -34,17 +34,17 @@ ms.locfileid: "68108933"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom de la clé. Unique dans la base de données.|  
+|**name**|**sysname**|Nom de la clé. Unique dans la base de données.|  
 |**principal_id**|**int**|ID du principal de la base de données propriétaire de la clé.|  
 |**symmetric_key_id**|**int**|ID de la clé. Unique dans la base de données.|  
 |**key_length**|**int**|Longueur de la clé en bits.|  
-|**key_algorithm**|**Char (2)**|Algorithme utilisé avec la clé :<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM Key|  
-|**algorithm_desc**|**nvarchar (60)**|Description de l'algorithme utilisé avec la clé :<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (algorithmes de gestion de clés extensible uniquement)|  
-|**create_date**|**DATETIME**|Date de création de la clé.|  
-|**modify_date**|**DATETIME**|Date de modification de la clé.|  
+|**key_algorithm**|**char(2)**|Algorithme utilisé avec la clé :<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM Key|  
+|**algorithm_desc**|**nvarchar(60)**|Description de l'algorithme utilisé avec la clé :<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (algorithmes de gestion de clés extensible uniquement)|  
+|**create_date**|**datetime**|Date de création de la clé.|  
+|**modify_date**|**datetime**|Date de modification de la clé.|  
 |**key_guid**|**uniqueidentifier**|GUID (Globally Unique Identifier) associé à la clé. Il est créé automatiquement pour les clés persistantes. Les GUID des clés provisoires sont dérivées de la phrase secrète fournie par l'utilisateur.|  
 |**key_thumbprint**|**sql_variant**|Hachage SHA-1 de la clé. Hachage globalement unique. Pour les clés non-EKM (Gestion de clés extensible), cette valeur sera NULL.|  
-|**provider_type**|**nvarchar (120)**|Type du fournisseur de chiffrement.<br /><br /> CRYPTOGRAPHIC PROVIDER = Clés EKM (Gestion de clés extensible)<br /><br /> NULL = Clés non-EKM (Gestion de clés extensible)|  
+|**provider_type**|**nvarchar(120)**|Type du fournisseur de chiffrement.<br /><br /> CRYPTOGRAPHIC PROVIDER = Clés EKM (Gestion de clés extensible)<br /><br /> NULL = Clés non-EKM (Gestion de clés extensible)|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|GUID du fournisseur de chiffrement. Pour les clés non-EKM (Gestion de clés extensible), cette valeur sera NULL.|  
 |**cryptographic_provider_algid**|**sql_variant**|ID d'algorithme pour le fournisseur de chiffrement. Pour les clés non-EKM (Gestion de clés extensible), cette valeur sera NULL.|  
   
@@ -66,8 +66,8 @@ ms.locfileid: "68108933"
 -   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES utilisent TRIPLE DES avec une clé de 128 bits.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Gestion de clés extensible &#40;&#41;EKM](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  

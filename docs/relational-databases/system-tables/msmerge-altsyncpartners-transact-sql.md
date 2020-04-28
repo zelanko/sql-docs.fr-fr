@@ -18,10 +18,10 @@ ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d3bddc4642d13fe84d35782849a80d2737601763
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106406"
 ---
 # <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68106406"
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|Identificateur du serveur de publication d'origine.|  
 |**alternate_subid**|**uniqueidentifier**|Identificateur de l'Abonné qui est le partenaire de synchronisation alternatif.|  
-|**description**|**nvarchar(255)**|Description du partenaire de synchronisation alternatif.|  
+|**descriptive**|**nvarchar(255)**|Description du partenaire de synchronisation alternatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

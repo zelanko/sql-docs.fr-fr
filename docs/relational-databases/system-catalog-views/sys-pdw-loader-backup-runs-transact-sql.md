@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127468"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-SQL)
@@ -28,17 +28,17 @@ ms.locfileid: "68127468"
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Identificateur unique d’une sauvegarde, d’une restauration ou d’une exécution de charge spécifique.<br /><br /> Clé pour cette vue.||  
 |name|**nvarchar(255)**|NULL pour le chargement. Nom facultatif pour la sauvegarde ou la restauration.||  
-|submit_time|**DATETIME**|Heure à laquelle la demande a été soumise.||  
-|start_time|**DATETIME**|Heure à laquelle l'opération a commencé.||  
-|end_time|**DATETIME**|Heure à laquelle l’opération s’est terminée, a échoué ou a été annulée.||  
+|submit_time|**datetime**|Heure à laquelle la demande a été soumise.||  
+|start_time|**datetime**|Heure à laquelle l'opération a commencé.||  
+|end_time|**datetime**|Heure à laquelle l’opération s’est terminée, a échoué ou a été annulée.||  
 |total_elapsed_time|**int**|Temps total écoulé entre start_time et l’heure actuelle, ou entre start_time et end_time pour les exécutions terminées, annulées ou ayant échoué.|Si total_elapsed_time dépasse la valeur maximale d’un entier (24,8 jours en millisecondes), cela entraînera un échec de matérialisation en raison d’un dépassement de capacité.<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
 |operation_type|**nvarchar (16)**|Type de charge.|« BACKUP », « LOAD », « RESTORE »|  
-|le mode|**nvarchar (16)**|Mode dans le type d’exécution.|Pour operation_type = **sauvegarde**<br />**DIFFÉRENTIELLE**<br />**SAUVEGARDE**<br /><br /> Pour operation_type = **Load**<br />**PARENTHÈSE**<br />**RECHARGER**<br />**UPSERT**<br /><br /> Pour operation_type = **Restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
+|mode|**nvarchar (16)**|Mode dans le type d’exécution.|Pour operation_type = **sauvegarde**<br />**DIFFERENTIAL**<br />**SAUVEGARDE**<br /><br /> Pour operation_type = **Load**<br />**PARENTHÈSE**<br />**RECHARGER**<br />**UPSERT**<br /><br /> Pour operation_type = **Restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|Nom de la base de données qui est le contexte de cette opération||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID de l’utilisateur qui demande l’opération.||  
-|session_id|**nvarchar (32)**|ID de la session effectuant l’opération.|Consultez session_id dans [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|request_id|**nvarchar (32)**|ID de la demande effectuant l’opération. Pour les chargements, il s’agit de la requête actuelle ou de la dernière demande associée à cette charge..|Consultez request_id dans [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|session_id|**nvarchar(32)**|ID de la session effectuant l’opération.|Consultez session_id dans [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|request_id|**nvarchar(32)**|ID de la demande effectuant l’opération. Pour les chargements, il s’agit de la requête actuelle ou de la dernière demande associée à cette charge..|Consultez request_id dans [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar (16)**|État de l’exécution.|« CANCELLED », « COMPLETED », « FAILED », « QUEUED », « RUNNING »|  
 |progress|**int**|Pourcentage effectué.|0 à 100|  
 |command|**nvarchar(4000)**|Texte complet de la commande envoyée par l’utilisateur.|Sera tronqué si plus de 4000 caractères (compter les espaces).|  
@@ -47,6 +47,6 @@ ms.locfileid: "68127468"
 |rows_inserted|**bigint**|Nombre de lignes insérées dans la ou les tables de base de données dans le cadre de cette opération.||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue de la SQL Data Warehouse et des Data Warehouse parallèles](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

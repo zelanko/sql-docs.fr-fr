@@ -18,10 +18,10 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130449"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
@@ -39,12 +39,12 @@ ms.locfileid: "68130449"
 |**plan_name**|**sysname**|Nom du plan de maintenance de base de données.|  
 |**database_name**|**sysname**|Nom de la base de données associée au plan de maintenance de base de données.|  
 |**server_name**|**sysname**|Nom système.|  
-|**bas**|**nvarchar(128)**|Activité réalisée par le plan de maintenance de la base de données (par exemple, sauvegarde du journal des transactions).|  
-|**succeeded**|**bit**|**0** = succès **1** = échec|  
-|**end_time**|**DATETIME**|Heure de la fin de l'exécution de l'action.|  
-|**Macauley**|**int**|Durée nécessaire à l'exécution de l'action du plan de maintenance de la base de données.|  
-|**start_time**|**DATETIME**|Heure de début de l'action.|  
+|**activity**|**nvarchar(128)**|Activité réalisée par le plan de maintenance de la base de données (par exemple, sauvegarde du journal des transactions).|  
+|**a réussi**|**bit**|**0** = succès **1** = échec|  
+|**end_time**|**datetime**|Heure de la fin de l'exécution de l'action.|  
+|**duration**|**int**|Durée nécessaire à l'exécution de l'action du plan de maintenance de la base de données.|  
+|**start_time**|**datetime**|Heure de début de l'action.|  
 |**error_number**|**int**|Numéro d'erreur indiqué lors d'un échec.|  
-|**Message**|**nvarchar(512)**|Message généré par **sqlmaint**.|  
+|**message**|**nvarchar(512)**|Message généré par **sqlmaint**.|  
   
   

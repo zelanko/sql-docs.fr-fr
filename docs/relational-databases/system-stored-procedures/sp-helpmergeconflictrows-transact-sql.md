@@ -16,10 +16,10 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137773"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
@@ -56,12 +56,12 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar(255**|Origine du conflit.|  
+|**origin_datasource**|**varchar(255)**|Origine du conflit.|  
 |**conflict_type**|**int**|Code indiquant le type de conflit :<br /><br /> **1** = conflit de mise à jour : le conflit est détecté au niveau de la ligne.<br /><br /> **2** = conflit de mise à jour de colonne : conflit détecté au niveau de la colonne.<br /><br /> **3** = conflit de suppression de la mise à jour : la suppression gagne le conflit.<br /><br /> **4** = mise à jour du conflit de suppression WINS : le rowguid supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **5** = échec de l’insertion du téléchargement : l’insertion à partir de l’abonné n’a pas pu être appliquée au serveur de publication.<br /><br /> **6** = échec du téléchargement de l’insertion : l’insertion à partir du serveur de publication n’a pas pu être appliquée au niveau de l’abonné.<br /><br /> **7** = échec du chargement de la suppression : la suppression sur l’abonné n’a pas pu être téléchargée sur le serveur de publication.<br /><br /> **8** = échec de la suppression du téléchargement : la suppression sur le serveur de publication n’a pas pu être téléchargée sur l’abonné.<br /><br /> **9** = échec de la mise à jour du téléchargement : la mise à jour sur l’abonné n’a pas pu être appliquée au serveur de publication.<br /><br /> **10** = échec de la mise à jour du téléchargement : la mise à jour sur le serveur de publication n’a pas pu être appliquée à l’abonné.<br /><br /> **12** = suppression WINS des enregistrements logiques : l’enregistrement logique supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **13** = conflit d’enregistrements logiques insertion d’une mise à jour : l’insertion sur un enregistrement logique est en conflit avec une mise à jour.<br /><br /> **14** = conflit de suppression de la mise à jour WINS de l’enregistrement logique : l’enregistrement logique mis à jour qui perd le conflit est enregistré dans cette table.|  
 |**reason_code**|**int**|Code d'erreur pouvant dépendre du contexte.|  
 |**reason_text**|**varchar (720)**|Description de l'erreur qui peut dépendre du contexte.|  
 |**pubid**|**uniqueidentifier**|Identificateur de publication.|  
-|**MSrepl_create_time**|**DATETIME**|Moment où l'information sur les conflits a été ajoutée.|  
+|**MSrepl_create_time**|**datetime**|Moment où l'information sur les conflits a été ajoutée.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

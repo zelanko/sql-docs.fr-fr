@@ -1,1 +1,1 @@
-Windows Server 2019 Standard
+Windows Server 2019 Standard

@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138328"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Paramètres du projet (Mappage de type) (MySQLToSQL)
@@ -65,7 +65,7 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |bit [49.. 56]|binaire [7]|  
 |bit [57.. 64]|binaire [8]|  
 |bit [9.. 16]|binaire [2]|  
-|objet blob|varbinary(max)|  
+|objet BLOB|varbinary(max)|  
 |objet blob [0.. 1]|varbinary [1]|  
 |objet blob [2.. 8000]|varbinary [*]|  
 |objet blob [8001.. *]|varbinary(max)|  

@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123820"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -49,17 +49,17 @@ sp_grant_proxy_to_subsystem
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Script ActiveX<br /><br /> ** \* Important \* \* ** Le sous-système de script ActiveX sera supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent dans une version future [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
-|**1,3**|Système d’exploitation (**CmdExec**)|  
+|**2**|Script [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* Important \* \* ** Le sous-système de script ActiveX sera supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent dans une version future [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
+|**3**|Système d’exploitation (**CmdExec**)|  
 |**4**|Agent d'instantané de réplication|  
-|**5,5**|Agent de lecture du journal des réplications|  
+|**5**|Agent de lecture du journal des réplications|  
 |**6**|Agent de distribution de réplication|  
 |**7**|Replication Merge Agent|  
 |**version8**|Agent de lecture de la file d'attente de réplication|  
-|**0,9**|Requête Analysis Services|  
+|**9**|Requête Analysis Services|  
 |**10**|Commandes Analysis Services|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]exécution du package|  
-|**12**|Script PowerShell|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] Exécution du package|  
+|**12**|script PowerShell|  
 | &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`Nom du sous-système auquel accorder l’accès. **Subsystem_name** est de **type sysname**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
@@ -69,14 +69,14 @@ sp_grant_proxy_to_subsystem
 |**ActiveScripting**|Script ActiveX|  
 |**CmdExec**|Système d’exploitation (**CmdExec**)|  
 |**Instantané**|Agent d'instantané de réplication|  
-|**Lecteur**|Agent de lecture du journal des réplications|  
+|**LogReader**|Agent de lecture du journal des réplications|  
 |**Distribution**|Agent de distribution de réplication|  
-|**Fusionner**|Replication Merge Agent|  
+|**Fusion**|Replication Merge Agent|  
 |**QueueReader**|Agent de lecture de la file d'attente de réplication|  
 |**ANALYSISQUERY**|Requête Analysis Services|  
 |**ANALYSISCOMMAND**|Commandes Analysis Services|  
-|**DTS**|Exécution des packages SSIS|  
-|**PowerShell**|Script PowerShell|  
+|**DTS**|Exécution de package SSIS|  
+|**PowerShell**|script PowerShell|  
 | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Notes  

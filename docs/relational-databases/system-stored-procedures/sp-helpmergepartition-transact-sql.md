@@ -16,10 +16,10 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137661"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
@@ -59,7 +59,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
 |**host_name**|**sysname**|Valeur utilisée lors de la création de la partition pour un abonnement filtré par la valeur de la fonction [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) sur l’abonné.|  
 |**suser_sname**|**sysname**|Valeur utilisée lors de la création de la partition pour un abonnement filtré par la valeur de la fonction [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) sur l’abonné.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Emplacement de l'instantané des données filtrées pour la partition de l'Abonné.|  
-|**date_refreshed**|**DATETIME**|Date de la dernière exécution du travail d'instantané visant à générer l'instantané de données filtrées pour la partition.|  
+|**date_refreshed**|**datetime**|Date de la dernière exécution du travail d'instantané visant à générer l'instantané de données filtrées pour la partition.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifie le travail qui crée l'instantané de données filtrées pour une partition.|  
   
 ## <a name="return-code-values"></a>Codet de retour  

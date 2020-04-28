@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124240"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
@@ -48,14 +48,14 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  *ID*  
  Identificateur de document (DocId) interne qui correspond à la valeur de la clé. Une valeur *docid* non valide ne retourne pas de résultat.  
   
- *essentiel*  
+ *key*  
  Valeur de la clé de texte intégral pour une table spécifiée. Une valeur *key* non valide ne retourne pas de résultat. Pour plus d’informations sur les valeurs de clés de texte intégral, consultez [gérer les index de recherche en texte intégral](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
 >  Pour plus d'informations sur l'utilisation d'un, de deux ou de trois paramètres, consultez « Remarques » plus loin dans cette rubrique.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- Aucun.  
+ Aucune.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -91,7 +91,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 > [!NOTE]  
 >  Les exemples de cette section utilisent la table `Production.ProductReview` de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Vous pouvez créer cet index en exécutant l’exemple fourni pour la `ProductReview` table dans [CREATE FULLTEXT index &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>R. Obtention de toutes les valeurs de clés et valeurs DocId  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtention de toutes les valeurs de clés et valeurs DocId  
  L’exemple suivant utilise une instruction [Declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) pour créer une variable locale `@table_id` et assigner l’ID de la `ProductReview` table en tant que valeur. L’exemple exécute **sp_fulltext_keymappings** en spécifiant `@table_id` pour le paramètre *table_id* .  
   
 > [!NOTE]  

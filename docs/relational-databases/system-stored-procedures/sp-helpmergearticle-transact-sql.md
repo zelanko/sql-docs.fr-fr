@@ -16,10 +16,10 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122346"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
@@ -46,21 +46,21 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|Identificateur de l'article|  
-|**nomme**|**sysname**|Nom de l'article.|  
+|**id**|**int**|Identificateur de l'article|  
+|**name**|**sysname**|Nom de l'article.|  
 |**source_owner**|**sysname**|Nom du propriétaire de l'objet source|  
 |**source_object**|**sysname**|Nom de l'objet source à partir duquel l'article doit être ajouté.|  
 |**sync_object_owner**|**sysname**|Nom du propriétaire de la vue qui définit l'article publié.|  
 |**sync_object**|**sysname**|Nom de l'objet personnalisé utilisé pour établir les données initiales pour la partition.|  
-|**description**|**nvarchar(255)**|Description de l'article|  
-|**statu**|**tinyint**|État de l'article, qui peut être l'un des suivants :<br /><br /> **1** = inactif<br /><br /> **2** = actif<br /><br /> **5** = opération DDL (Data Definition Language) en attente<br /><br /> **6** = opération DDL avec un instantané nouvellement généré<br /><br /> Remarque : lorsqu’un article est réinitialisé, les valeurs **5** et **6** sont remplacées par **2**.|  
+|**descriptive**|**nvarchar(255)**|Description de l'article|  
+|**statut**|**tinyint**|État de l'article, qui peut être l'un des suivants :<br /><br /> **1** = inactif<br /><br /> **2** = actif<br /><br /> **5** = opération DDL (Data Definition Language) en attente<br /><br /> **6** = opération DDL avec un instantané nouvellement généré<br /><br /> Remarque : lorsqu’un article est réinitialisé, les valeurs **5** et **6** sont remplacées par **2**.|  
 |**creation_script**|**nvarchar(255)**|Chemin d'accès et nom d'un script de schéma d'article facultatif utilisé pour créer l'article dans la base de données d'abonnement.|  
 |**conflict_table**|**nvarchar (270)**|Nom de la table stockant les conflits d'insertion ou de mise à jour.|  
 |**article_resolver**|**nvarchar(255)**|Outil de résolution personnalisé pour l'article|  
-|**subset_filterclause**|**nvarchar (1000)**|Clause WHERE spécifiant le filtrage horizontal.|  
+|**subset_filterclause**|**nvarchar(1000)**|Clause WHERE spécifiant le filtrage horizontal.|  
 |**pre_creation_command**|**tinyint**|Méthode de précréation, qui peut être l'une des suivantes :<br /><br /> **0** = aucun<br /><br /> **1** = supprimer<br /><br /> **2** = supprimer<br /><br /> **3** = tronquer|  
 |**schema_option**|**Binary(8**|Bitmap de l'option de génération de schéma pour l'article. Pour plus d’informations sur cette option de bitmap, consultez [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) ou [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
-|**entrer**|**smallint**|Type de l'article, qui peut être l'un des suivants :<br /><br /> **10** = table<br /><br /> **32** = procédure stockée<br /><br /> **64** = vue ou vue indexée<br /><br /> **128** = fonction définie par l’utilisateur<br /><br /> **160** = schéma de synonyme uniquement|  
+|**type**|**smallint**|Type de l'article, qui peut être l'un des suivants :<br /><br /> **10** = table<br /><br /> **32** = procédure stockée<br /><br /> **64** = vue ou vue indexée<br /><br /> **128** = fonction définie par l’utilisateur<br /><br /> **160** = schéma de synonyme uniquement|  
 |**column_tracking**|**int**|Définition pour le suivi au niveau des colonnes ; où **1** signifie que le suivi au niveau des colonnes est activé, et **0** signifie que le suivi au niveau des colonnes est désactivé.|  
 |**resolver_info**|**nvarchar(255)**|Nom de l'outil de résolution de l'article|  
 |**vertical_partition**|**bit**|Si l’article est partitionné verticalement ; où **1** signifie que l’article est partitionné verticalement, et **0** qu’il ne l’est pas.|  

@@ -16,10 +16,10 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123941"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
@@ -67,7 +67,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  **sp_getqueuedrows** nécessite des autorisations SELECT sur la table spécifiée dans *TableName*.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Abonnements pouvant être mis à jour pour la réplication transactionnelle](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Détection et résolution des conflits de mise à jour en attente](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

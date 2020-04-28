@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124399"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
@@ -84,10 +84,8 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |KEY_SEQ|**smallint**|Numéro de séquence de la colonne dans une clé primaire multicolonne. Ce champ retourne toujours une valeur.|  
 |UPDATE_RULE|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une mise à jour.  Valeurs possibles :<br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br />   2 = définir null <br /> 3 = définir la valeur par défaut |  
 |DELETE_RULE|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une suppression. Valeurs possibles :<br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br />   2 = définir null <br /> 3 = définir la valeur par défaut |  
-|FK_NAME|**sysname**|Identificateur de clé étrangère. NULL si non applicable à la source de données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte FOREIGN KEY.|  
-|PK_NAME|**sysname**|Identificateur de clé primaire. NULL si non applicable à la source de données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte PRIMARY KEY.|  
+|FK_NAME|**sysname**|Identificateur de clé étrangère. NULL si non applicable à la source de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte FOREIGN KEY.|  
+|PK_NAME|**sysname**|Identificateur de clé primaire. NULL si non applicable à la source de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte PRIMARY KEY.|  
   
  Les résultats obtenus sont triés par FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME et KEY_SEQ.  
   
@@ -115,7 +113,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant extrait une liste de clés étrangères pour la table `DimDate` dans la base de données `AdventureWorksPDW2012`. Aucune ligne n’est retournée, car [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ne prend pas en charge les clés étrangères.  
   
 ```sql  
@@ -124,7 +122,7 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   

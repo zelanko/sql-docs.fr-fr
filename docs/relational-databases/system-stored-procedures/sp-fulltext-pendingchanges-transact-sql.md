@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124215"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
@@ -55,7 +55,7 @@ sp_fulltext_pendingchanges table_id
  <sup>* Le type de données de la clé est identique à celui de la colonne clé de texte intégral dans la table de base.</sup>  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="remarks"></a>Notes  
  S'il n'y a pas de modification à traiter, un ensemble de lignes vide est renvoyé.  

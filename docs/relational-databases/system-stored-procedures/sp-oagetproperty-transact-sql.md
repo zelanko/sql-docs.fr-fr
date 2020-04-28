@@ -18,10 +18,10 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107881"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
@@ -44,10 +44,10 @@ sp_OAGetProperty objecttoken , propertyname
  *jeton_d'*  
  Est le jeton d’objet d’un objet OLE créé précédemment à l’aide de **sp_OACreate**.  
   
- *PropertyName*  
+ *propertyname*  
  Nom de la propriété de l'objet OLE à renvoyer.  
   
- ** **sortie** PropertyValue  
+ *propertyvalue* **sortie** PropertyValue  
  Valeur de la propriété renvoyée. Si elle est spécifiée, il doit s'agir d'une variable locale du type de données approprié.  
   
  Si la propriété retourne un objet OLE, *PropertyValue* doit être une variable locale de type de données **int**. Un jeton d’objet est stocké dans la variable locale, et ce jeton d’objet peut être utilisé avec d’autres procédures stockées OLE Automation.  
@@ -87,7 +87,7 @@ sp_OAGetProperty objecttoken , propertyname
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
-|**DATETIME**|**varchar**|**varchar**|**varchar**|**DATETIME**|**varchar**|**nvarchar**|  
+|**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   

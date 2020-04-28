@@ -18,10 +18,10 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108511"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
@@ -40,13 +40,13 @@ sp_cursorfetch cursor
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *mire*  
- Valeur de *handle* générée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et retournée par sp_cursoropen. *Cursor* est un paramètre obligatoire qui requiert une valeur d’entrée **int** . Pour plus d’informations, consultez la section Notes, plus loin dans cette rubrique.  
+ *cursor*  
+ Valeur de *handle* générée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et retournée par sp_cursoropen. *Cursor* est un paramètre obligatoire qui requiert une valeur d’entrée **int** . Pour plus d'informations, consultez la section « Notes » plus loin dans cette rubrique.  
   
  *FetchType*  
  Spécifie la mémoire tampon de curseur à extraire. *FetchType* est un paramètre facultatif qui requiert l’une des valeurs d’entrée entières suivantes.  
   
-|Valeur|Name|Description|  
+|Valeur|Nom|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Extrait la première mémoire tampon de lignes *nrows* . Si *nrows* est égal à 0, le curseur est positionné avant le jeu de résultats et aucune ligne n’est retournée.|  
 |0x0002|NEXT|Extrait la mémoire tampon suivante de lignes *nrows* .|  
@@ -62,10 +62,10 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  Il n'existe aucune prise en charge de la valeur 0x40.  
   
- Pour plus d’informations, consultez la section Notes, plus loin dans cette rubrique.  
+ Pour plus d'informations, consultez la section « Notes » plus loin dans cette rubrique.  
   
  *rownum*  
- Paramètre facultatif utilisé pour spécifier la position de ligne des valeurs ABSOLUEs et *FetchType* en utilisant uniquement des valeurs entières pour l’entrée ou la sortie, ou les deux. *rowNum* sert d’offset de ligne pour la valeur de bit *FetchType* relative. *rowNum* est ignoré pour toutes les autres valeurs. Pour plus d’informations, consultez la section Notes, plus loin dans cette rubrique.  
+ Paramètre facultatif utilisé pour spécifier la position de ligne des valeurs ABSOLUEs et *FetchType* en utilisant uniquement des valeurs entières pour l’entrée ou la sortie, ou les deux. *rowNum* sert d’offset de ligne pour la valeur de bit *FetchType* relative. *rowNum* est ignoré pour toutes les autres valeurs. Pour plus d'informations, consultez la section « Notes » plus loin dans cette rubrique.  
   
  *nrows*  
  Paramètre optionnel utilisé pour spécifier le nombre de lignes à extraire. Si *nrows* n’est pas spécifié, la valeur par défaut est 20 lignes. Pour définir la position sans retourner de données, spécifiez la valeur 0. Quand *nrows* est appliqué à la requête *FetchType* info, elle retourne le nombre total de lignes de cette requête.  
@@ -73,7 +73,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  *nrows* est ignoré par la valeur de bit Refresh *FetchType* .  
 >   
->  Pour plus d’informations, consultez la section Notes, plus loin dans cette rubrique.  
+>  Pour plus d'informations, consultez la section « Notes » plus loin dans cette rubrique.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  Lorsque vous spécifiez la valeur de bit INFO, les valeurs qui peuvent être retournées sont affichées dans les tableaux suivants.  
@@ -81,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  :   Si aucune ligne n'est retournée, le contenu de la mémoire tampon reste inchangé.  
   
-|*\<>rowNum*|Définir sur|  
+|*\<>rowNum*|Paramètre à définir sur |  
 |------------------|------------|  
 |Si le curseur n'est pas ouvert|0|  
 |Si le curseur est positionné avant le jeu de résultats|0|  
@@ -90,7 +90,7 @@ sp_cursorfetch cursor
 |Pour les curseurs DYNAMIC|1|  
 |Pour ABSOLUTE|-1 retourne la dernière ligne dans un jeu.<br /><br /> -2 retourne la deuxième à la dernière ligne dans un jeu, et ainsi de suite.<br /><br /> Remarque : si plusieurs lignes sont demandées pour extraction dans ce cas, les deux dernières lignes du jeu de résultats sont retournées.|  
   
-|*\<nrows>*|Définir sur|  
+|*\<nrows>*|Paramètre à définir sur |  
 |-----------------|------------|  
 |Si le curseur n'est pas ouvert|0|  
 |Pour les curseurs KEYSET et STATIC|En général, taille du jeu de clés actuel.<br /><br /> **-m** si le curseur est en création asynchrone avec *m* lignes trouvées à ce point.|  

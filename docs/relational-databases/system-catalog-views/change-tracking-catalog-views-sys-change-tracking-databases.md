@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68136541"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Affichages catalogue Change Tracking-sys. change_tracking_databases
@@ -36,9 +36,9 @@ ms.locfileid: "68136541"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID de la base de données. Cet ID est unique dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|is_auto_cleanup_on|**bit**|Indique si les données de suivi des modifications sont nettoyées automatiquement à l'issue de la période de rétention configurée :<br /><br /> 0 = Désactivé<br /><br /> 1 = Activé|  
+|is_auto_cleanup_on|**bit**|Indique si les données de suivi des modifications sont nettoyées automatiquement à l'issue de la période de rétention configurée :<br /><br /> 0 = Off<br /><br /> 1 = Activé|  
 |retention_period|**int**|Si le nettoyage automatique est utilisé, la période de rétention spécifie la durée pendant laquelle les données de suivi des modifications sont conservées dans la base de données.|  
-|retention_period_units_desc|**nvarchar (60)**|Spécifie la description de la période de rétention :<br /><br /> Minutes<br /><br /> Heures<br /><br /> Jours|  
+|retention_period_units_desc|**nvarchar(60)**|Spécifie la description de la période de rétention :<br /><br /> Minutes<br /><br /> Heures<br /><br /> Jours|  
 |retention_period_units|**tinyint**|Unité de temps de la période de rétention :<br /><br /> 1 = Minutes<br /><br /> 2 = Heures<br /><br /> 3 = Jours|  
   
 ## <a name="permissions"></a>Autorisations  

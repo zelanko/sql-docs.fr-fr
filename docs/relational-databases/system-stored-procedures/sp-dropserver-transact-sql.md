@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124827"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68124827"
 
   Supprime un serveur dans la liste des serveurs liés et distants connus sur l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +41,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>Arguments  
  *serveurs*  
- Serveur à supprimer. *Server* est de **type sysname**, sans valeur par défaut. le *serveur* doit exister.  
+ Serveur à supprimer. *server* est de type **sysname**et n'a pas de valeur par défaut. le *serveur* doit exister.  
   
  *DropLogins*  
  Indique que les connexions de serveur lié et distant associées au *serveur* doivent également être supprimées si **DropLogins** est spécifié. **`@droplogins`** est de **type char (10)**, avec NULL comme valeur par défaut.  
@@ -65,7 +65,7 @@ sp_dropserver 'ACCOUNTS', 'droplogins';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   

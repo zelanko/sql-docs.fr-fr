@@ -16,10 +16,10 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137631"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
@@ -46,10 +46,10 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|Identifie une demande.|  
+|**id**|**int**|Identifie une demande.|  
 |**édition**|**sysname**|Nom de la publication pour laquelle la demande d'état a été envoyée.|  
-|**sent_date**|**DATETIME**|Date et heure d'envoi de la demande d'état.|  
-|**description**|**nvarchar(4000)**|Informations définies par l'utilisateur que vous pouvez utiliser pour identifier les demandes d'état.|  
+|**sent_date**|**datetime**|Date et heure d'envoi de la demande d'état.|  
+|**descriptive**|**nvarchar(4000)**|Informations définies par l'utilisateur que vous pouvez utiliser pour identifier les demandes d'état.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

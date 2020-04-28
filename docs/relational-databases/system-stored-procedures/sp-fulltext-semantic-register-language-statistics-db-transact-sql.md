@@ -18,10 +18,10 @@ ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124210"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
@@ -41,7 +41,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db
 GO  
 ```  
   
-##  <a name="Arguments"></a> Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  [ @dbname = ] '*database_name*'  
  Nom de la base de données de statistiques linguistiques de sémantique à inscrire pour l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La base de données doit déjà être attachée. *database_name* est de **type sysname**et ne peut pas être null.  
   
@@ -49,7 +49,7 @@ GO
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-set"></a>Jeu de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  La base de données de statistiques linguistiques de sémantique contient des statistiques propres à une langue qui sont obligatoires pour le traitement sémantique d'un contenu textuel.  

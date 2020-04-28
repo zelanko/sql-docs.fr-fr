@@ -18,10 +18,10 @@ ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45065f7cde525d65997df2c97c972d684cadd90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139820"
 ---
 # <a name="mssubscriber_info-transact-sql"></a>MSsubscriber_info (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "68139820"
 |-----------------|---------------|-----------------|  
 |**publication**|**sysname**|Nom du serveur de publication.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
-|**entrer**|**tinyint**|Type d'abonné :<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné.<br /><br /> **1** = source de données ODBC.|  
+|**type**|**tinyint**|Type d'abonné :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné.<br /><br /> **1** = source de données ODBC.|  
 |**connexion**|**sysname**|Connexion pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stocké sous forme chiffrée si l'Abonné est ajouté à l'aide du mode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**de**|**nvarchar (524)**|Mot de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stocké sous forme chiffrée si l'Abonné est ajouté à l'aide du mode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**description**|**nvarchar(255)**|Description de l'abonné.|  
-|**security_mode**|**int**|Mode de sécurité implémenté :<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
+|**mot de passe**|**nvarchar (524)**|Mot de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Stocké sous forme chiffrée si l'Abonné est ajouté à l'aide du mode d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**descriptive**|**nvarchar(255)**|Description de l'abonné.|  
+|**security_mode**|**int**|Mode de sécurité implémenté :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

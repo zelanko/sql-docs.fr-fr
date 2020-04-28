@@ -19,10 +19,10 @@ ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108151"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
@@ -61,7 +61,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  Si vous exécutez **sp_dbmmonitoraddmonitoring** avant de configurer la mise en miroir de bases de données, le travail de surveillance s’exécute mais ne met pas à jour la table d’État dans laquelle l’historique du moniteur de mise en miroir de bases de données est stocké.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant démarre la surveillance avec une période de mise à jour de `3` minutes.  

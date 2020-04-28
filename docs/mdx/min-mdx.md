@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83061ff3e9923e65f231675c1bc5b1913a5156fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68114377"
 ---
 # <a name="min-mdx"></a>Min (MDX)
@@ -38,8 +38,7 @@ Min( Set_Expression [ , Numeric_Expression ] )
  Si une expression numérique est spécifiée, cette expression est évaluée sur le jeu, puis retourne la valeur minimale produite par cette évaluation. Si aucune expression numérique n'est précisée, le jeu spécifié est évalué dans le contexte actuel des membres du jeu, puis retourne la valeur minimale de l'évaluation.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignore les valeurs NULL lors du calcul de la valeur minimale dans un jeu de nombres.  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignore les valeurs NULL lors du calcul de la valeur minimale dans un jeu de nombres.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne les ventes trimestrielles minimales de chaque sous-catégorie et chaque pays inscrit dans le cube Adventure Works.  
@@ -59,6 +58,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

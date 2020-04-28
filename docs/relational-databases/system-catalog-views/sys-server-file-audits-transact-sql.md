@@ -20,10 +20,10 @@ ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133131"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
@@ -36,16 +36,16 @@ ms.locfileid: "68133131"
 |audit_id|**int**|ID de l'audit.|  
 |name|**sysname**|Nom de l’audit.|  
 |audit_guid|**uniqueidentifier**|GUID de l'audit.|  
-|create_date|**DATETIME**|Date UTC de création de l'audit de fichier.|  
-|modify_date|**DataTime**|Date UTC de la dernière modification de l'audit de fichier.|  
+|create_date|**datetime**|Date UTC de création de l'audit de fichier.|  
+|modify_date|**datatime**|Date UTC de la dernière modification de l'audit de fichier.|  
 |principal_id|**int**|ID du propriétaire de l'audit, tel qu'enregistré sur le serveur.|  
-|type|**Char (2)**|Type d'audit :<br /><br /> 0 = Journal des événements de sécurité NT<br /><br /> 1 = Journal des événements d'applications NT<br /><br /> 2 = Fichier du système de fichiers|  
-|type_desc|**nvarchar (60)**|Description du type d'audit.|  
+|type|**char(2)**|Type d'audit :<br /><br /> 0 = Journal des événements de sécurité NT<br /><br /> 1 = Journal des événements d'applications NT<br /><br /> 2 = Fichier du système de fichiers|  
+|type_desc|**nvarchar(60)**|Description du type d'audit.|  
 |on_failure|**tinyint**|En cas d'échec :<br /><br /> 0 = Continuer<br /><br /> 1 = Arrêter l'instance de serveur<br /><br /> 2 = Faire échouer l'opération|  
-|on_failure_desc|**nvarchar (60)**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
+|on_failure_desc|**nvarchar(60)**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
 |is_state_enabled|**tinyint**|0 = Désactivé<br /><br /> 1 = Activé|  
 |queue_delay|**int**|Temps d'attente maximal suggéré, en millisecondes, avant d'écrire sur le disque. Si la valeur est 0, l'audit garantit une écriture avant la poursuite de l'événement.|  
-|predicate|**nvarchar (8000)**|Expression de prédicat qui est appliquée à l'événement.|  
+|prédicat|**nvarchar (8000)**|Expression de prédicat qui est appliquée à l'événement.|  
 |max_file_size|**bigint**|Taille maximale de l'audit en mégaoctets :<br /><br /> 0 = Illimitée/non applicable au type d'audit sélectionné.|  
 |max_rollover_files|**int**|Nombre maximal de fichiers à utiliser avec l'option de substitution.|  
 |max_files|**int**|Nombre maximal de fichiers à utiliser sans l'option de substitution.|  
@@ -59,25 +59,25 @@ ms.locfileid: "68133131"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [CRÉER un AUDIT de serveur &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;&#41;Transact-SQL](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CRÉER une spécification de l’AUDIT du serveur &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [SUPPRIMER la spécification de l’AUDIT du serveur &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CRÉER une spécification d’AUDIT de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [SUPPRIMER la spécification de l’AUDIT de la base de données &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZation &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys. fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys. server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
  [sys. server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
- [Créer un audit du serveur et une spécification d’audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [sys. server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys. database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys. database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys. dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys. dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [Créer un audit du serveur et une spécification d'audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

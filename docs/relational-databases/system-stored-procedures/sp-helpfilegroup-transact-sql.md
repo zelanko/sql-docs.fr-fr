@@ -18,10 +18,10 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122536"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
@@ -59,7 +59,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**file_in_group**|**sysname**|Nom logique du fichier dans le groupe de fichiers.|  
 |**combinaison**|**smallint**|Identificateur numérique du fichier.|  
 |**extension**|**nchar (260)**|Nom physique du fichier, y compris le chemin d'accès du répertoire.|  
-|**corps**|**nvarchar(15**|Taille du fichier en kilo-octets.|  
+|**size**|**nvarchar(15**|Taille du fichier en kilo-octets.|  
 |**MaxSize**|**nvarchar(15**|Taille maximale du fichier.<br /><br /> Taille maximale que peut atteindre le fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
 |**future**|**nvarchar(15**|Incrément de croissance du fichier. Quantité d'espace ajoutée au fichier chaque fois que de l'espace supplémentaire est nécessaire.<br /><br /> 0 = La taille du fichier est fixe et n'augmente pas.|  
   
@@ -91,10 +91,10 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys. FileGroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

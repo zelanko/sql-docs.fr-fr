@@ -20,10 +20,10 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109557"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
@@ -34,12 +34,12 @@ ms.locfileid: "68109557"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|ID unique pour la valeur de configuration.|  
-|**nomme**|**nvarchar (35)**|Nom de l'option de configuration.|  
-|**ajoutée**|**sql_variant**|Valeur configurée pour cette option.|  
+|**name**|**nvarchar(35)**|Nom de l'option de configuration.|  
+|**value**|**sql_variant**|Valeur configurée pour cette option.|  
 |**minimale**|**sql_variant**|Valeur minimale pour l'option de configuration.|  
 |**valeurs**|**sql_variant**|Valeur maximale pour l'option de configuration.|  
 |**value_in_use**|**sql_variant**|Valeur en cours d'exécution actuellement en effet pour cette option.|  
-|**description**|**nvarchar(255)**|Description de l'option de configuration.|  
+|**descriptive**|**nvarchar(255)**|Description de l'option de configuration.|  
 |**is_dynamic**|**bit**|1 = Variable qui prend effet lorsque l'instruction RECONFIGURE est exécutée.|  
 |**is_advanced**|**bit**|1 = la variable s’affiche uniquement lorsque l' **affichage advancedoption** est défini.|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68109557"
 >  Pour les options de configuration au niveau de la base de données, consultez [ALTER DATABASE scoped configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer soft-NUMA, consultez [Soft-numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Nécessite l'appartenance au rôle **public** .  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue de configurations à l’ensemble du serveur &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   

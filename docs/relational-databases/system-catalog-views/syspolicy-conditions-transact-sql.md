@@ -18,10 +18,10 @@ ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121167"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
@@ -33,11 +33,11 @@ ms.locfileid: "68121167"
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|Identificateur de cette condition. Chaque condition représente une collection d'une ou de plusieurs expressions de condition.|  
 |name|**sysname**|Nom de la condition.|  
-|date_created|**DATETIME**|Date et heure de création de la condition.|  
+|date_created|**datetime**|Date et heure de création de la condition.|  
 |description|**nvarchar(max)**|Description de la condition. La colonne de description est facultative et peut être NULL.|  
 |created_by|**sysname**|Connexion qui a créé la condition.|  
 |modified_by|**sysname**|Connexion qui a récemment modifié la condition. Est NULL si jamais modifiée.|  
-|date_modified|**DATETIME**|Date et heure de création de la condition. Est NULL si jamais modifiée.|  
+|date_modified|**datetime**|Date et heure de création de la condition. Est NULL si jamais modifiée.|  
 |is_name_condition|**smallint**|Spécifie si la condition est une condition d'affectation de noms.<br /><br /> 0 = l'expression de condition ne contient pas la variable @Name.<br /><br /> 1 = l'expression de condition contient la variable @Name.|  
 |facette|**nvarchar(max)**|Nom de la facette sur laquelle est basée la condition.|  
 |Expression|**nvarchar(max)**|Expression des états de la facette.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68121167"
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Vues de la gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

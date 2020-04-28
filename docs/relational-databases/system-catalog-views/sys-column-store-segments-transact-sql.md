@@ -20,10 +20,10 @@ ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140003"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
@@ -37,7 +37,7 @@ Retourne une ligne pour chaque segment de colonne dans un index ColumnStore. Il 
 |**hobt_id**|**bigint**|ID du segment ou de l'index d'arbre B (B-tree) pour la table ayant cet index columnstore.|  
 |**column_id**|**int**|ID de la colonne columnstore.|  
 |**segment_id**|**int**|ID du rowgroup. Pour la compatibilité descendante, le nom de colonne continue d’être appelé segment_id même s’il s’agit de l’ID rowgroup. Vous pouvez identifier un segment de manière unique \<à l’aide de hobt_id, partition_id, column_id>, <segment_id>.|  
-|**Version**|**int**|Version du format de segment de colonne.|  
+|**version**|**int**|Version du format de segment de colonne.|  
 |**encoding_type**|**int**|Type d’encodage utilisé pour ce segment :<br /><br /> 1 = VALUE_BASED non chaîne/binaire sans dictionnaire (très similaire à 4 avec certaines variations internes)<br /><br /> 2 = VALUE_HASH_BASED-colonne non chaîne/binaire avec des valeurs communes dans le dictionnaire<br /><br /> 3 = STRING_HASH_BASED-chaîne/colonne binaire avec des valeurs communes dans le dictionnaire<br /><br /> 4 = STORE_BY_VALUE_BASED-non-chaîne/binaire sans dictionnaire<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED chaîne/binaire sans dictionnaire<br /><br /> Tous les encodages tirent parti de l’encodage de bits et de la longueur d’exécution lorsque cela est possible.|  
 |**row_count**|**int**|Nombre de lignes dans le groupe de lignes.|  
 |**has_nulls**|**int**|1 si le segment de colonne a des valeurs NULL.|  
@@ -73,13 +73,13 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guide des index ColumnStore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
- [sys. column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
+ [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
   
 

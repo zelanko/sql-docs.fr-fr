@@ -18,10 +18,10 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106313"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68106313"
 |**subscriber_db**|**sysname**|Nom de la base de données d’abonnement.|  
 |**subscription_type**|**int**|Type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
 |**sync_type**|**tinyint**|Type de synchronisation :<br /><br /> 1 = Automatique.<br /><br /> 2 = Pas de synchronisation.|  
-|**statu**|**tinyint**|État de l’abonnement.|  
-|**subscription_time**|**DATETIME**|Heure de création de l'abonnement.|  
+|**statut**|**tinyint**|État de l’abonnement.|  
+|**subscription_time**|**datetime**|Heure de création de l'abonnement.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

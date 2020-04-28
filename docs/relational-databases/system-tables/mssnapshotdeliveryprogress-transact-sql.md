@@ -18,10 +18,10 @@ ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139810"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68139810"
 |**session_token**|**nvarchar(260)**|Identifie le chemin d'accès du dossier d'instantané à partir duquel le fichier a été remis. Pour les publications qui utilisent des filtres paramétrés, la chaîne **dynsnap** sera ajoutée à la valeur.|  
 |**progress_token_hash**|**int**|Valeur de hachage générée en fonction de la valeur de *progress_token* qui est utilisée pour améliorer l’efficacité de la recherche pour une valeur de *progress_token* donnée.|  
 |**progress_token**|**nvarchar (500)**|Identifie un fichier remis, sous la forme d'une combinaison du nom du fichier et de son chemin d'accès.|  
-|**progress_timestamp**|**DATETIME**|Valeur **DateTime** qui indique quand un fichier d’instantané a été remis avec succès.|  
+|**progress_timestamp**|**datetime**|Valeur **DateTime** qui indique quand un fichier d’instantané a été remis avec succès.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

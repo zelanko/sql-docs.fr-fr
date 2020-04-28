@@ -16,10 +16,10 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137745"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
@@ -53,13 +53,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386**|Objet source du conflit de suppression.|  
-|**GuidLigne**|**uniqueidentifier**|Identificateur de ligne associé au conflit de suppression.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne associé au conflit de suppression.|  
 |**conflict_type**|**int**|Code indiquant le type de conflit :<br /><br /> **1** = UpdateConflict : un conflit est détecté au niveau de la ligne.<br /><br /> **2** = ColumnUpdateConflict : conflit détecté au niveau de la colonne.<br /><br /> **3** = UpdateDeleteWinsConflict : la suppression gagne le conflit.<br /><br /> **4** = UpdateWinsDeleteConflict : le rowguid supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **5** = UploadInsertFailed : l’insertion à partir de l’abonné n’a pas pu être appliquée sur le serveur de publication.<br /><br /> **6** = DownloadInsertFailed : l’insertion à partir du serveur de publication n’a pas pu être appliquée sur l’abonné.<br /><br /> **7** = UploadDeleteFailed : la suppression sur l’abonné n’a pas pu être téléchargée sur le serveur de publication.<br /><br /> **8** = DownloadDeleteFailed : la suppression sur le serveur de publication n’a pas pu être téléchargée sur l’abonné.<br /><br /> **9** = UploadUpdateFailed : la mise à jour sur l’abonné n’a pas pu être appliquée sur le serveur de publication.<br /><br /> **10** = DownloadUpdateFailed : la mise à jour sur le serveur de publication n’a pas pu être appliquée à l’abonné.|  
-|**reason_code**|**Tiers**|Code d'erreur pouvant dépendre du contexte.|  
+|**reason_code**|**Int**|Code d'erreur pouvant dépendre du contexte.|  
 |**reason_text**|**varchar (720)**|Description de l'erreur qui peut dépendre du contexte.|  
-|**origin_datasource**|**varchar(255**|Origine du conflit.|  
+|**origin_datasource**|**varchar(255)**|Origine du conflit.|  
 |**pubid**|**uniqueidentifier**|Identificateur de publication.|  
-|**MSrepl_create_time**|**DATETIME**|Moment où l'information sur les conflits a été ajoutée.|  
+|**MSrepl_create_time**|**datetime**|Moment où l'information sur les conflits a été ajoutée.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

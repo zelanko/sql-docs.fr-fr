@@ -16,10 +16,10 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137651"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Spécifie si la possibilité de copier les bases de données d'abonnement qui s'abonnent à cette publication a été activée. La valeur **0** signifie que la copie n’est pas autorisée.|  
 |allow_synctoalternate|**int**|Spécifie si un partenaire de synchronisation différent est autorisé pour se synchroniser avec le serveur de publication. La valeur **0** signifie qu’un partenaire de synchronisation n’est pas autorisé.|  
 |validate_subscriber_info|**nvarchar (500)**|Donne la liste des fonctions utilisées pour extraire les informations d'Abonné et valider les critères de filtre de lignes paramétrable sur l'Abonné. Permet de vérifier la cohérence du partitionnement des informations avec chaque fusion.|  
-|backward_comp_level|**int**|Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Spécifie si les informations de publication sont publiées dans Active Directory. La valeur **0** signifie que les informations de publication ne sont pas disponibles à partir de Active Directory.<br /><br /> Ce paramètre est déconseillé et il n'est pris en charge que pour la compatibilité descendante des scripts. Vous ne pouvez plus ajouter d'informations de publication dans Active Directory.|  
 |max_concurrent_merge|**int**|Nombre de processus de fusion simultanés. Si la **valeur est 0**, il n’y a aucune limite au nombre de processus de fusion simultanés en cours d’exécution à un moment donné.|  
 |max_concurrent_dynamic_snapshots|**int**|Nombre maximal de sessions d'instantané filtrée pouvant être exécutées simultanément par rapport à la publication de fusion. Si la **valeur est 0**, le nombre maximal de sessions d’instantanés de données filtrées simultanées pouvant être exécutées simultanément sur la publication n’est pas limité à un moment donné.|  

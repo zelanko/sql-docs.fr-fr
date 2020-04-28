@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133820"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68133820"
 |table_id|**int**|ID d'objet de la table qui contient le fragment de l'index de recherche en texte intégral.|  
 |fragment_object_id|**int**|ID d'objet de la table interne associée au fragment.|  
 |fragment_id|**int**|ID logique du fragment d'index de recherche en texte intégral. Celui-ci est unique dans l'ensemble des fragments de cette table.|  
-|timestamp|**confirmé**|Horodateur associé à la création de fragment. Les horodateurs de fragments plus récents sont plus grands que les horodateurs de fragments plus anciens.|  
+|timestamp|**timestamp**|Horodateur associé à la création de fragment. Les horodateurs de fragments plus récents sont plus grands que les horodateurs de fragments plus anciens.|  
 |data_size|**int**|Taille logique du fragment en octets.|  
 |row_count|**int**|Nombre de lignes individuelles dans le fragment.|  
 |status|**int**|Statut du fragment, une des valeurs suivantes :<br /><br /> 0 = Récemment créé mais pas encore utilisé<br /><br /> 1 = Utilisé pour l'insertion pendant l'alimentation ou la fusion d'index de recherche en texte intégral<br /><br /> 4 = Fermé. Prêt à être interrogé<br /><br /> 6 = Utilisé pour l'entrée de fusion et prêt à être interrogé<br /><br /> 8 = Marqué pour la suppression. Ne sera pas utilisé pour interroger et fusionner la source.<br /><br /> L’État 4 ou 6 signifie que le fragment fait partie de l’index de recherche en texte intégral logique et peut être interrogé ; autrement dit, il s’agit d’un fragment *interrogeable* .|  

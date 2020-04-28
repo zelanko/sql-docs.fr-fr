@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cf464370c5c2ca3f5075205c6783e9332309f12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135224"
 ---
 # <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-SQL)
@@ -40,19 +40,19 @@ ms.locfileid: "68135224"
 |target_object_id|**int**|ID de l'objet sur lequel le prédicat de la sécurité est lié.|  
 |predicate_definition|**nvarchar(max)**|Nom qualifié complet de la fonction qui sera utilisée comme prédicat de sécurité, y compris les arguments. Notez que le nom `schema.function` peut être normalisé (autrement dit, placé dans une séquence d'échappement), ainsi que tout autre élément dans le texte à des fins de cohérence. Par exemple :<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Type de prédicat utilisé par la stratégie de sécurité :<br /><br /> 0 = PRÉDICAT DE FILTRE<br /><br /> 1 = PRÉDICAT DE BLOC|  
-|predicate_type_desc|**nvarchar (60)**|Type de prédicat utilisé par la stratégie de sécurité :<br /><br /> FILTER<br /><br /> BLOQUER|  
-|operation|**int**|Type d’opération spécifié pour le prédicat :<br /><br /> NULL = toutes les opérations applicables<br /><br /> 1 = APRÈS INSERTION<br /><br /> 2 = APRÈS LA MISE À JOUR<br /><br /> 3 = AVANT MISE À JOUR<br /><br /> 4 = AVANT SUPPRESSION|  
-|operation_desc|**nvarchar (60)**|Type d’opération spécifié pour le prédicat :<br /><br /> NULL<br /><br /> APRÈS INSERTION<br /><br /> AFTER UPDATE<br /><br /> AVANT MISE À JOUR<br /><br /> AVANT SUPPRESSION|  
+|predicate_type_desc|**nvarchar(60)**|Type de prédicat utilisé par la stratégie de sécurité :<br /><br /> FILTER<br /><br /> BLOQUER|  
+|opération|**int**|Type d’opération spécifié pour le prédicat :<br /><br /> NULL = toutes les opérations applicables<br /><br /> 1 = APRÈS INSERTION<br /><br /> 2 = APRÈS LA MISE À JOUR<br /><br /> 3 = AVANT MISE À JOUR<br /><br /> 4 = AVANT SUPPRESSION|  
+|operation_desc|**nvarchar(60)**|Type d’opération spécifié pour le prédicat :<br /><br /> NULL<br /><br /> APRÈS INSERTION<br /><br /> AFTER UPDATE<br /><br /> AVANT MISE À JOUR<br /><br /> AVANT SUPPRESSION|  
   
 ## <a name="permissions"></a>Autorisations  
  Les principaux avec l’autorisation **modifier une stratégie de sécurité** ont accès à tous les objets de cet affichage catalogue, ainsi qu’à toute personne avec la **définition de vue** sur l’objet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   
- [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [sys. security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
+ [CRÉER une stratégie de sécurité &#40;&#41;Transact-SQL](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

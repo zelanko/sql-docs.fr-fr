@@ -18,10 +18,10 @@ ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108335"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
@@ -47,7 +47,7 @@ sp_databases
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|Nom de la base de données. Dans [!INCLUDE[ssDE](../../includes/ssde-md.md)], cette colonne représente le nom de la base de données tel qu’il est stocké dans l’affichage catalogue **sys. databases** .|  
 |**DATABASE_SIZE**|**int**|Taille de la base de données, exprimée en kilo-octets.|  
-|**CONCERNANT**|**varchar (254)**|Pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)], ce champ retourne toujours la valeur null.|  
+|**NOTES**|**varchar (254)**|Pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)], ce champ retourne toujours la valeur null.|  
   
 ## <a name="remarks"></a>Notes  
  Les noms de bases de données qui sont renvoyés peuvent être utilisés comme paramètres dans l'instruction USE pour changer de contexte de base de données active.  
@@ -67,7 +67,7 @@ EXEC sp_databases;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40;Transact-SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

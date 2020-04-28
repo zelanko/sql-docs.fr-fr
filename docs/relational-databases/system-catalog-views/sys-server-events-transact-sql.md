@@ -20,10 +20,10 @@ ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133151"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
@@ -35,10 +35,10 @@ ms.locfileid: "68133151"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID de la notification d'événements de niveau serveur ou du déclencheur DDL de niveau serveur à activer.|  
-|**entrer**|**int**|Type de l'événement à l'origine de l'activation de la notification d'événement ou du déclencheur DDL.|  
-|**type_desc**|**nvarchar (60)**|Description de l'événement à l'origine de l'activation du déclencheur DDL ou de la notification d'événement.|  
+|**type**|**int**|Type de l'événement à l'origine de l'activation de la notification d'événement ou du déclencheur DDL.|  
+|**type_desc**|**nvarchar(60)**|Description de l'événement à l'origine de l'activation du déclencheur DDL ou de la notification d'événement.|  
 |**event_group_type**|**int**|Groupe d'événements sur lequel le déclencheur ou la notification d'événements est créé(e), ou null si le déclencheur n'est pas créé sur un groupe d'événements.|  
-|**event_group_type_desc**|**nvarchar (60)**|Description du groupe d’événements sur lequel le déclencheur ou la notification d’événements est créé, ou null s’il n’est pas créé sur un groupe d’événements|  
+|**event_group_type_desc**|**nvarchar(60)**|Description du groupe d’événements sur lequel le déclencheur ou la notification d’événements est créé, ou null s’il n’est pas créé sur un groupe d’événements|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

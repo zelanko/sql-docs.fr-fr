@@ -18,10 +18,10 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139921"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -77,16 +77,14 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_NAME|**sysname**|Nom de la table distante.|  
 |NON_UNIQUE|**smallint**|Indique si l'index est unique ou non :<br /><br /> 0 = Unique<br /><br /> 1 = Non unique|  
 |INDEX_QUALIFIER|**sysname**|Nom du propriétaire de l'index. Certains produits SGBD acceptent que des utilisateurs autres que le propriétaire de la table créent des index. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne est toujours identique à **table_name**.|  
-|INDEX_NAME|**sysname**|Nom de l’index.|  
+|INDEX_NAME|**sysname**|Nom de l'index.|  
 |TYPE|**smallint**|Type de l'index :<br /><br /> 0 = Statistiques pour une table<br /><br /> 1 = Clustered<br /><br /> 2 = Haché<br /><br /> 3 = autre|  
 |ORDINAL_POSITION|**int**|Numéro d'ordre de la colonne dans l'index. La première colonne dans l'index est 1. Cette colonne renvoie toujours une valeur.|  
 |COLUMN_NAME|**sysname**|Nom correspondant de chaque colonne de la table TABLE_NAME renvoyée.|  
-|ASC_OR_DESC|**varchar**|Ordre utilisé dans les classements :<br /><br /> A = Croissant<br /><br /> D = Décroissant<br /><br /> NULL = Non applicable<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours A.|  
+|ASC_OR_DESC|**varchar**|Ordre utilisé dans les classements :<br /><br /> A = Croissant<br /><br /> D = Décroissant<br /><br /> NULL = Non applicable<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours A.|  
 |CARDINALITY|**int**|Nombre de lignes dans la table ou de valeurs uniques dans l’index.|  
 |PAGES|**int**|Nombre de pages pour le stockage de l'index ou de la table.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  

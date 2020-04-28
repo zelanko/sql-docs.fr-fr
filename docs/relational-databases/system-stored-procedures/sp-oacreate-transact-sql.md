@@ -18,10 +18,10 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107931"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -51,10 +51,10 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Par exemple, {00026BA1-0000-0000-C000-000000000046} est le CLSID de l’objet SQL-DMO **SqlServer** .  
   
- __ **sortie** jeton_d'  
+ _objecttoken_ **sortie** jeton_d'  
  Est le jeton d’objet retourné, et doit être une variable locale de type de données **int**. Ce jeton d’objet identifie l’objet OLE créé et est utilisé dans les appels aux autres procédures stockées OLE Automation.  
   
- *contexte*  
+ *context*  
  Spécifie le contexte d'exécution dans lequel l'objet OLE nouvellement créé s'exécute. Si cet argument est spécifié, il doit avoir une des valeurs suivantes :  
   
  **1** = serveur OLE in-process (. dll) uniquement.  

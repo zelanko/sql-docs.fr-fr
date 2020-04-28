@@ -10,10 +10,10 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141090"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Se connecter à DB2 (DB2ToSQL)
@@ -59,7 +59,7 @@ Il s’agit d’une option de mode standard.
 Entrez le nom d’utilisateur que SSMA utilisera pour se connecter à la base de données DB2.  
   
 **Mot de passe**  
-Entrez le mot de passe correspondant au nom d’utilisateur.  
+Entrez le mot de passe correspondant au nom d'utilisateur indiqué.  
   
 **Chaîne de connexion**  
 > [!IMPORTANT]  

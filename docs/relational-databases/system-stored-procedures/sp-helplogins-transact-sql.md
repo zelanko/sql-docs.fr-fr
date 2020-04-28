@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122450"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @LoginNamePattern = ] 'login'`Nom de connexion. *login* est de **type sysname**, avec NULL comme valeur par défaut. la *connexion* doit exister si elle est spécifiée. Si la *connexion* n’est pas spécifiée, des informations sur toutes les connexions sont retournées.  
+`[ @LoginNamePattern = ] 'login'`Nom de connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. la *connexion* doit exister si elle est spécifiée. Si la *connexion* n’est pas spécifiée, des informations sur toutes les connexions sont retournées.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -50,7 +50,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nom de connexion.|  
-|**SID**|**varbinary(85)**|ID de sécurité de la connexion (SID).|  
+|**SID**|**varbinary (85)**|ID de sécurité de la connexion (SID).|  
 |**DefDBName**|**sysname**|Base de données par défaut utilisée par **LoginName** lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connexion à une instance de.|  
 |**DefLangName**|**sysname**|Langue par défaut utilisée par **LoginName**.|  
 |**Auser**|**Char (5)**|Oui = **LoginName** a un nom d’utilisateur associé dans une base de données.<br /><br /> Non = **LoginName** n’a pas de nom d’utilisateur associé.|  
@@ -100,7 +100,7 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

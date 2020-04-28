@@ -18,10 +18,10 @@ ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139785"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68139785"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|ID de la ligne.|  
+|**id**|**int**|ID de la ligne.|  
 |**publication**|**sysname**|Nom du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données de publication.|  
 |**édition**|**sysname**|Nom de la publication.|  
@@ -39,14 +39,14 @@ ms.locfileid: "68139785"
 |**queue_id**|**sysname**|ID de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] file d’attente de messages sur le serveur de publication. *queue_id* est défini sur **SQL** pour la mise à jour en file d’attente basée sur SQL.|  
 |**update_mode**|**tinyint**|Type de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = mise à jour immédiate.<br /><br /> **2** = mise à jour en file d’attente à l’aide de Message Queuing.<br /><br /> **3** = mise à jour immédiate avec mise à jour en file d’attente comme basculement à l’aide de Message Queuing.<br /><br /> **4** = mise à jour en file d’attente à l’aide de SQL Server file d’attente.<br /><br /> **5** = mise à jour immédiate avec basculement de mise à jour en file d’attente à l’aide de SQL Server file d’attente.|  
 |**failover_mode**|**bit**|Si un type de basculement de mise à jour a été sélectionné, ce paramètre représente le type de basculement choisi :<br /><br /> **0** = mise à jour immédiate en cours d’utilisation. Le basculement n'est pas activé.<br /><br /> **1** = mise à jour en file d’attente utilisée. Le basculement est activé. La file d’attente utilisée pour le basculement est spécifiée dans la valeur *update_mode* .|  
-|**spid**|**int**|ID de processus système de la connexion utilisée par l'Agent de distribution en cours d'exécution ou récemment exécuté.|  
-|**login_time**|**DATETIME**|Date et heure de la connexion de l'Agent de distribution en cours d'exécution ou récemment exécutée.|  
+|**SPID**|**int**|ID de processus système de la connexion utilisée par l'Agent de distribution en cours d'exécution ou récemment exécuté.|  
+|**login_time**|**datetime**|Date et heure de la connexion de l'Agent de distribution en cours d'exécution ou récemment exécutée.|  
 |**allow_subscription_copy**|**bit**|Indique si la possibilité de copier la base de données d'abonnement est autorisée.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**attach_version**|**Binary(16**|Identificateur unique représentant la version d'un abonnement attaché.|  
-|**last_sync_status**|**int**|État de la dernière exécution de l'Agent de distribution en cours d'exécution ou récemment exécuté. L’état peut être :<br /><br /> **1** = démarré.<br /><br /> **2** = réussite.<br /><br /> **3** = en cours.<br /><br /> **4** = inactif.<br /><br /> **5** = nouvelle tentative.<br /><br /> **6** = échec.|  
-|**last_sync_summary**|**sysname**|Dernier message de l'Agent de distribution en cours d'exécution ou récemment exécuté. L’état peut être :<br /><br /> **Cours.**<br /><br /> **A réussi.**<br /><br /> **En cours.**<br /><br /> **Périodes.**<br /><br /> **Réessayez.**<br /><br /> **Incident.**|  
-|**last_sync_time**|**DATETIME**|Date et heure auxquelles les colonnes *last_sync_summary* et *last_sync_status* ont été mises à jour. Les Agents de distribution anonyme ou par extraction de données exécutés en tant que travaux du service SqlServer Agent ne mettent pas à jour ces colonnes. Dans ce cas, les informations d'historique sont consignées dans la table de l'historique des travaux.|  
+|**last_sync_status**|**int**|État de la dernière exécution de l'Agent de distribution en cours d'exécution ou récemment exécuté. L'état peut prendre l'une des valeurs suivantes :<br /><br /> **1** = démarré.<br /><br /> **2** = réussite.<br /><br /> **3** = en cours.<br /><br /> **4** = inactif.<br /><br /> **5** = nouvelle tentative.<br /><br /> **6** = échec.|  
+|**last_sync_summary**|**sysname**|Dernier message de l'Agent de distribution en cours d'exécution ou récemment exécuté. L'état peut prendre l'une des valeurs suivantes :<br /><br /> **Cours.**<br /><br /> **A réussi.**<br /><br /> **En cours.**<br /><br /> **Périodes.**<br /><br /> **Réessayez.**<br /><br /> **Incident.**|  
+|**last_sync_time**|**datetime**|Date et heure auxquelles les colonnes *last_sync_summary* et *last_sync_status* ont été mises à jour. Les Agents de distribution anonyme ou par extraction de données exécutés en tant que travaux du service SqlServer Agent ne mettent pas à jour ces colonnes. Dans ce cas, les informations d'historique sont consignées dans la table de l'historique des travaux.|  
 |**queue_server**|**sysname**|À usage interne uniquement|  
   
 ## <a name="see-also"></a>Voir aussi  

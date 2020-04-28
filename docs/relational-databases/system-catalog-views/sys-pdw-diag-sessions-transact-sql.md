@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fa06005679e31381f723b30b9f68e5ce0d89ae1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127689"
 ---
 # <a name="syspdw_diag_sessions-transact-sql"></a>sys. pdw_diag_sessions (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68127689"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|**nomme**|**nvarchar(255)**|Nom de la session de diagnostic.<br /><br /> Clé pour cette vue.||  
+|**name**|**nvarchar(255)**|Nom de la session de diagnostic.<br /><br /> Clé pour cette vue.||  
 |**xml_data**|**nvarchar(4000)**|Charge utile XML décrivant la session.||  
 |**is_active**|**bit**|Indicateur qui spécifie si l’indicateur est actif.||  
 |**host_address**|**nvarchar(255)**|Adresse de l’ordinateur hébergeant la définition de session (nœud de contrôle).||  
@@ -33,6 +33,6 @@ ms.locfileid: "68127689"
 |**database_id**|**int**|ID de la base de données qui est l’étendue de la session de diagnostic.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue de la SQL Data Warehouse et des Data Warehouse parallèles](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132097"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68132097"
 |**destination_object**|**sysname**|Nom de la table créée sur l'Abonné.|  
 |**source_owner**|**sysname**|Nom du schéma de la table source hébergée sur le serveur de publication.|  
 |**source_object**|**sysname**|Nom de l'objet source à partir duquel ajouter l'article.|  
-|**description**|**nvarchar(255)**|Description de l'article.|  
+|**descriptive**|**nvarchar(255)**|Description de l'article.|  
 |**destination_owner**|**sysname**|Nom du schéma de la table créée sur l'Abonné.|  
   
 ## <a name="see-also"></a>Voir aussi  

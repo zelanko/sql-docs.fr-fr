@@ -16,10 +16,10 @@ ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124591"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
@@ -44,9 +44,9 @@ sp_enumdsn
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Nom de la source de données**|**sysname**|Nom de la source de données.|  
-|**Description**|**varchar(255**|Description de la source de données.|  
+|**Description**|**varchar(255)**|Description de la source de données.|  
 |**Type**|**int**|Type de la source de données :<br /><br /> **1** = DSN ODBC<br /><br /> **3** = OLE DB source de données|  
-|**Nom du fournisseur**|**varchar(255**|Nom du fournisseur OLE DB. La valeur est NULL pour un DSN ODBC.|  
+|**Nom du fournisseur**|**varchar(255)**|Nom du fournisseur OLE DB. La valeur est NULL pour un DSN ODBC.|  
   
 ## <a name="remarks"></a>Notes  
  Chaque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service dispose d’un contexte utilisateur. Par contexte utilisateur, on entend un ensemble d'entrées du Registre qui comprend les définitions des sources de données ODBC pour cet utilisateur. Le contexte utilisateur est fourni par le nom d'utilisateur sous lequel s'exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

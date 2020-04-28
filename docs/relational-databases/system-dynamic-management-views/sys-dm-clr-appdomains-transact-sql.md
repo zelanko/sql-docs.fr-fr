@@ -19,10 +19,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138411"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
@@ -39,14 +39,14 @@ ms.locfileid: "68138411"
 |**appdomain_address**|**varbinary (8)**|Adresse de l' **AppDomain**. Tous les objets de base de données gérés appartenant à un utilisateur sont toujours chargés dans le même **AppDomain**. Vous pouvez utiliser cette colonne pour rechercher tous les assemblys actuellement chargés dans cet **AppDomain** dans **sys. dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|ID de l' **AppDomain**. Chaque **AppDomain** a un ID unique.|  
 |**appdomain_name**|**varchar (386)**|Nom de l' **AppDomain** comme assigné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**creation_time**|**DATETIME**|Heure de création de l' **AppDomain** . Étant donné que les **AppDomains** sont mis en cache et réutilisés pour de meilleures performances, **creation_time** n’est pas nécessairement l’heure à laquelle le code a été exécuté.|  
+|**creation_time**|**datetime**|Heure de création de l' **AppDomain** . Étant donné que les **AppDomains** sont mis en cache et réutilisés pour de meilleures performances, **creation_time** n’est pas nécessairement l’heure à laquelle le code a été exécuté.|  
 |**db_id**|**int**|ID de la base de données dans laquelle cet **AppDomain** a été créé. Le code stocké dans deux bases de données différentes ne peut pas partager un **AppDomain**.|  
 |**user_id**|**int**|ID de l’utilisateur dont les objets peuvent s’exécuter dans cet **AppDomain**.|  
-|**Département**|**nvarchar(128)**|Descripteur pour l’état actuel de l' **AppDomain**. Un domaine d'application AppDomain peut être dans différents états de sa création à sa suppression. Pour plus d'informations, consultez la section « Remarques » de cette rubrique.|  
+|**state**|**nvarchar(128)**|Descripteur pour l’état actuel de l' **AppDomain**. Un domaine d'application AppDomain peut être dans différents états de sa création à sa suppression. Pour plus d'informations, consultez la section « Remarques » de cette rubrique.|  
 |**strong_refcount**|**int**|Nombre de références fortes à ce **AppDomain**. Cela reflète le nombre de lots en cours d’exécution qui utilisent cet **AppDomain**. Notez que l’exécution de cette vue créera un **refcount fort**; même si n’est pas un code en cours d’exécution, **strong_refcount** aura la valeur 1.|  
 |**weak_refcount**|**int**|Nombre de références faibles à cet **AppDomain**. Cela indique combien d’objets à l’intérieur de l' **AppDomain** sont mis en cache. Lorsque vous exécutez un objet de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données managé, le met en cache à l’intérieur de l' **AppDomain** pour une réutilisation ultérieure. Les performances en sont alors améliorées.|  
-|**coûts**|**int**|Coût de l' **AppDomain**. Plus le coût est élevé, plus il est probable que ce **AppDomain** soit déchargé sous sollicitation de la mémoire. Le coût dépend généralement de la quantité de mémoire requise pour recréer cet **AppDomain**.|  
-|**ajoutée**|**int**|Valeur de l' **AppDomain**. Plus la valeur est faible, plus il est probable que ce **AppDomain** soit déchargé sous sollicitation de la mémoire. La valeur dépend généralement du nombre de connexions ou de lots qui utilisent cet **AppDomain**.|  
+|**cost**|**int**|Coût de l' **AppDomain**. Plus le coût est élevé, plus il est probable que ce **AppDomain** soit déchargé sous sollicitation de la mémoire. Le coût dépend généralement de la quantité de mémoire requise pour recréer cet **AppDomain**.|  
+|**value**|**int**|Valeur de l' **AppDomain**. Plus la valeur est faible, plus il est probable que ce **AppDomain** soit déchargé sous sollicitation de la mémoire. La valeur dépend généralement du nombre de connexions ou de lots qui utilisent cet **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Temps processeur total, en millisecondes, utilisé par tous les threads lors de l'exécution dans le domaine d'application actuel depuis le démarrage du processus. Cela équivaut à **System. AppDomain. MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Taille totale, en kilo-octets, de toutes les allocations mémoire faites par le domaine d'application depuis sa création, sans soustraction de la mémoire recueillie. Cela équivaut à **System. AppDomain. MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Nombre de kilo-octets qui ont survécu à la dernière collection bloquante complète et connus pour être référencés par le domaine d'application actuel. Cela équivaut à **System. AppDomain. MonitoringSurvivedMemorySize**.|  

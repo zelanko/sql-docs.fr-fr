@@ -19,16 +19,15 @@ ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dd242370cc3d2c200e4d8b3983d47e396be3004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106647"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>Procédures stockées du Générateur de profils SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures stockées ci-après utilisées par [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour contrôler l'activité et les performances.  
   
 |||  
@@ -40,7 +39,7 @@ ms.locfileid: "68106647"
  Pour obtenir un exemple d’utilisation de procédures stockées de trace, consultez [Créer une trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur la classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [Référence de la classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Trace SQL](../../relational-databases/sql-trace/sql-trace.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

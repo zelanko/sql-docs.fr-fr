@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135312"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-SQL)
@@ -41,9 +41,9 @@ ms.locfileid: "68135312"
 |schema_id|**int**|ID du schéma où réside l'objet.|  
 |parent_object_id|**int**|Identificateur de l'objet auquel appartient la stratégie. Doit être égal à 0.|  
 |type|**vachar (2)**|Doit être **SP**.|  
-|type_desc|**nvarchar (60)**|**SECURITY_POLICY**.|  
-|create_date|**DATETIME**|Date UTC de création de la stratégie de sécurité.|  
-|modify_date|**DATETIME**|Date UTC de dernière modification de la stratégie de sécurité.|  
+|type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
+|create_date|**datetime**|Date UTC de création de la stratégie de sécurité.|  
+|modify_date|**datetime**|Date UTC de dernière modification de la stratégie de sécurité.|  
 |is_ms_shipped|**bit**|Toujours false.|  
 |is_enabled|**bit**|État de spécification de stratégie de sécurité :<br /><br /> 0 = désactivé<br /><br /> 1 = activé|  
 |is_not_for_replication|**bit**|La stratégie a été créée avec l'option NOT FOR REPLICATION.|  
@@ -56,9 +56,9 @@ ms.locfileid: "68135312"
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   
  [sys. security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
- [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [CRÉER une stratégie de sécurité &#40;&#41;Transact-SQL](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

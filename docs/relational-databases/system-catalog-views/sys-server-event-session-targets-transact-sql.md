@@ -21,10 +21,10 @@ ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133192"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
@@ -48,11 +48,11 @@ ms.locfileid: "68133192"
   
 ||||  
 |-|-|-|  
-|De|À|Relation|  
+|À partir|À|Relation|  
 |sys.server_event_session_targets.event_session_id|sys. server_event_sessions. event_session_id|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue des événements étendus &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   

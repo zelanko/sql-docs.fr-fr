@@ -21,10 +21,10 @@ ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133231"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68133231"
 |name|**sysname**|Nom de l’événement. N'accepte pas la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient l'événement. N'accepte pas la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient l'événement. N'accepte pas la valeur NULL.|  
-|predicate|**nvarchar (3000)**|Expression de prédicat qui est appliquée à l’événement. Autorise la valeur NULL.|  
+|prédicat|**nvarchar (3000)**|Expression de prédicat qui est appliquée à l’événement. Autorise la valeur NULL.|  
 |predicate_xml|**nvarchar (3000)**|Expression de prédicat XML qui est appliquée à l'événement. Autorise la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -50,11 +50,11 @@ ms.locfileid: "68133231"
   
 ||||  
 |-|-|-|  
-|De|À|Relation|  
+|À partir|À|Relation|  
 |sys.server_event_session_events.event_session_id|sys. server_event_sessions. event_session_id|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue des événements étendus &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   

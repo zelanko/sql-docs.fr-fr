@@ -18,10 +18,10 @@ ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124674"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
@@ -48,13 +48,13 @@ sp_enum_sqlagent_subsystems
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**sous-système**|**nvarchar (40)**|Nom du sous-système.|  
-|**description**|**nvarchar(512)**|Description du sous-système.|  
+|**sous-système**|**nvarchar(40)**|Nom du sous-système.|  
+|**descriptive**|**nvarchar(512)**|Description du sous-système.|  
 |**subsystem_dll**|**nvarchar (510)**|Module DLL qui contient le sous-système.|  
 |**agent_exe**|**nvarchar (510)**|Module exécutable utilisé par le sous-système.|  
-|**start_entry_point**|**nvarchar(30**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
-|**event_entry_point**|**nvarchar(30**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
-|**stop_entry_point**|**nvarchar(30**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
+|**start_entry_point**|**nvarchar(30)**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
+|**event_entry_point**|**nvarchar(30)**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
+|**stop_entry_point**|**nvarchar(30)**|Procédure appelée par l'Agent SQL Server pendant l'exécution d'une étape du travail.|  
 |**max_worker_threads**|**int**|Nombre maximal de threads que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] va démarrer pour ce sous-système.|  
 |**subsystem_id**|**int**|Identificateur du sous-système.|  
   

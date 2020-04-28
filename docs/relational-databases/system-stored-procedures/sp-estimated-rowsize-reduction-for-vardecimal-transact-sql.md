@@ -22,10 +22,10 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90de7b95febdf2f1a25a5e584b2ca77bb67f93d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124513"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
@@ -34,8 +34,7 @@ ms.locfileid: "68124513"
   Estime la réduction de la taille moyenne des lignes si vous activez le format de stockage vardecimal sur une table. Utilisez ce nombre pour estimer la réduction globale de la taille de la table. Dans la mesure où l'échantillonnage statistique permet de calculer la réduction moyenne de la taille de ligne, considérez-le simplement comme une estimation. La taille de ligne peut augmenter après l'activation du format de stockage vardecimal, mais cela reste rare.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt la compression ROW et PAGE. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md). Pour obtenir des effets de compression sur la taille des tables et des index, consultez [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt la compression ROW et PAGE. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md). Pour obtenir des effets de compression sur la taille des tables et des index, consultez [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

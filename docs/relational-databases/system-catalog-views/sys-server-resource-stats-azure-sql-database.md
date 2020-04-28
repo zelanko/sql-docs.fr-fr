@@ -20,16 +20,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133070"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Retourne l’utilisation de l’UC, les e/s et les données de stockage pour un Managed Instance Azure SQL. Les données sont collectées et agrégées par intervalles de cinq minutes. Il y a une ligne pour chaque rapport de 15 secondes. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation des e/s et la référence SKU d’instance gérée. Les données historiques sont conservées pendant environ 14 jours.
+Retourne l’utilisation de l’UC, les e/s et les données de stockage pour un Managed Instance Azure SQL. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Il y a une ligne pour chaque rapport de 15 secondes. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation des e/s et la référence SKU d’instance gérée. Les données historiques sont conservées pendant environ 14 jours.
 
 La vue **sys. server_resource_stats** a des définitions différentes selon la version de l’instance Azure SQL gérée à laquelle la base de données est associée. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.
  
@@ -39,8 +39,8 @@ La vue **sys. server_resource_stats** a des définitions différentes selon la v
 |Colonnes|Type de données|Description|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Heure UTC indiquant le début de l’intervalle de création de rapports de quinze secondes|  
-|end_time|**DATETIME**|Heure UTC indiquant la fin de l’intervalle de création de rapports de 15 secondes|
-|resource_type|Nvarchar (128)|Type de la ressource pour laquelle des métriques sont fournies|
+|end_time|**datetime**|Heure UTC indiquant la fin de l’intervalle de création de rapports de 15 secondes|
+|resource_type|Nvarchar(128)|Type de la ressource pour laquelle des métriques sont fournies|
 |resource_name|nvarchar(128)|Nom de la ressource.|
 |sku|nvarchar(128)|Managed Instance niveau de service de l’instance. Les valeurs possibles sont les suivantes : <br><ul><li>Usage général</li></ul><ul><li>Critique pour l’entreprise</li></ul>|
 |hardware_generation|nvarchar(128)|Identificateur de génération de matériel : par exemple, Gen 4 ou Gen 5|

@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108575"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -44,13 +44,13 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *mire*  
+ *cursor*  
  Handle de curseur. *Cursor* est un paramètre obligatoire qui requiert une valeur d’entrée **int** . *Cursor* est la valeur de *handle* générée par SQL Server et retournée par la procédure sp_cursoropen.  
   
  *optype*  
  Paramètre obligatoire qui désigne quelle opération le curseur effectuera. *optype* requiert l’une des valeurs d’entrée **int** suivantes.  
   
-|Valeur|Name|Description|  
+|Valeur|Nom|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Utilisée pour mettre à jour une ou plusieurs lignes dans le tampon d'extraction.  Les lignes spécifiées dans *rowNum* sont à nouveau accessibles et mises à jour.|  
 |0x0002|Suppression|Utilisée pour supprimer une ou plusieurs lignes dans le tampon d'extraction. Les lignes spécifiées dans *rowNum* sont réutilisées et supprimées.|  
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  Est uniquement valide pour une utilisation avec des valeurs de mise à jour, de suppression, d’actualisation ou de verrouillage *optype* .  
   
- *Tableau*  
+ *table*  
  Nom de la table qui identifie la table à laquelle s’applique *optype* quand la définition de curseur implique une jointure ou si des noms de colonnes ambigus sont retournés par le paramètre *value* . Si aucune table spécifique n'est désignée, la valeur par défaut est la première table dans la clause FROM. *table* est un paramètre facultatif qui requiert une valeur d’entrée de chaîne. La chaîne peut être spécifiée comme tout caractère ou type de données UNICODE. la *table* peut être un nom de table en plusieurs parties.  
   
- *ajoutée*  
+ *value*  
  Permet d'insérer ou de mettre à jour des valeurs. Le paramètre de chaîne de *valeur* est utilisé uniquement avec les valeurs *OPTYPE* Update et insert. La chaîne peut être spécifiée comme tout caractère ou type de données UNICODE.  
   
 > [!NOTE]  

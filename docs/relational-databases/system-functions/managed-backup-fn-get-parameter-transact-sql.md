@@ -21,10 +21,10 @@ ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140653"
 ---
 # <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68140653"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="Arguments"></a> Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  parameter_name  
  Nom du paramètre. parameter_name est **de type nvarchar (128)**. Si la valeur NULL ou une chaîne vide est fournie comme un argument à la fonction, les paires nom-valeur de tous les paramètres Smart Admin configurés sont retournées.  
   
@@ -82,6 +82,6 @@ FROM managed_backup.fn_get_parameter ('SSMBackup2WANotficationEmailIds')
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server de la sauvegarde managée sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

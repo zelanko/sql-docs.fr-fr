@@ -20,10 +20,10 @@ ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106660"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events (Transact-SQL)
@@ -31,8 +31,7 @@ ms.locfileid: "68106660"
 
   L’affichage catalogue **sys. trace_events** contient une liste de tous les événements trace SQL. Ces événements de trace demeurent inchangés pour une version spécifique du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-> **PRÉCIEUSE!** 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
+> **IMPORTANT !** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
   
  Pour plus d’informations sur ces événements de trace, consultez [SQL Server référence](../../relational-databases/event-classes/sql-server-event-class-reference.md)de la classe d’événements.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "68106660"
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|Identificateur unique de l'événement. Cette colonne se trouve également dans les affichages catalogue **sys. trace_event_bindings** et **sys. trace_subclass_values** .|  
 |**category_id**|**smallint**|Identificateur de la catégorie de l'événement. Cette colonne se trouve également dans l’affichage catalogue **sys. trace_categories** .|  
-|**nomme**|**nvarchar(128)**|Nom unique de cet événement. Ce paramètre n'est pas localisé.|  
+|**name**|**nvarchar(128)**|Nom unique de cet événement. Ce paramètre n'est pas localisé.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

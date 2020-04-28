@@ -18,10 +18,10 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124378"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
@@ -76,14 +76,10 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**FKTABLE_NAME**|**sysname**|Nom de la table (contenant une clé étrangère). Ce champ retourne toujours une valeur.|  
 |**FKCOLUMN_NAME**|**sysname**|Nom des colonnes de clé étrangère, pour chacune des colonnes de la table TABLE_NAME retournées. Ce champ retourne toujours une valeur.|  
 |**KEY_SEQ**|**smallint**|Numéro de séquence de la colonne dans une clé primaire multicolonne. Ce champ retourne toujours une valeur.|  
-|**UPDATE_RULE**|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une mise à jour. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne 0, 1 ou 2 pour ces colonnes :<br /><br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /><br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br /><br /> 2=SET_NULL ; affectation de NULL à la clé étrangère.|  
-|**DELETE_RULE**|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une suppression. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne 0, 1 ou 2 pour ces colonnes :<br /><br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /><br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br /><br /> 2=SET_NULL ; affectation de NULL à la clé étrangère.|  
-|**FK_NAME**|**sysname**|Identificateur de clé étrangère. NULL si non applicable à la source de données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte FOREIGN KEY.|  
-|**PK_NAME**|**sysname**|Identificateur de clé primaire. NULL si non applicable à la source de données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte PRIMARY KEY.|  
+|**UPDATE_RULE**|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une mise à jour. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne 0, 1 ou 2 pour ces colonnes :<br /><br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /><br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br /><br /> 2=SET_NULL ; affectation de NULL à la clé étrangère.|  
+|**DELETE_RULE**|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une suppression. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne 0, 1 ou 2 pour ces colonnes :<br /><br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /><br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br /><br /> 2=SET_NULL ; affectation de NULL à la clé étrangère.|  
+|**FK_NAME**|**sysname**|Identificateur de clé étrangère. NULL si non applicable à la source de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte FOREIGN KEY.|  
+|**PK_NAME**|**sysname**|Identificateur de clé primaire. NULL si non applicable à la source de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte PRIMARY KEY.|  
 |**DEFERRABILITY**|**smallint**|Indique si la vérification des contraintes peut être différée.|  
   
  Dans le jeu de résultats, les colonnes FK_NAME et PK_NAME retournent toujours une valeur NULL.  

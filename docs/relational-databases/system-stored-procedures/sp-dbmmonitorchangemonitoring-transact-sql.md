@@ -19,10 +19,10 @@ ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108113"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
@@ -48,7 +48,7 @@ sp_dbmmonitorchangemonitoring parameter
   
  Nombre de minutes qui s'écoulent entre les mises à jour de la table de l'état des mises en miroir de base de données. L'intervalle par défaut est de 1 minute.  
   
- *ajoutée*  
+ *value*  
  Spécifie la nouvelle valeur du paramètre en cours de modification.  
   
 |Paramètre|Description de la valeur|  
@@ -62,7 +62,7 @@ sp_dbmmonitorchangemonitoring parameter
  None  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant attribue à la période de mise à jour l'intervalle de 5 minutes.  

@@ -23,10 +23,10 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108223"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
@@ -51,8 +51,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Nom de la base de données dont le format de stockage doit être modifié. *database_name* est de **type sysname**, sans valeur par défaut. Si le nom de la base de données est omis, l'état du format de stockage vardecimal de toutes les bases de données dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est retourné.  
   
  [ @vardecimal_storage_format= ] {'SUR' | ' OFF'}  
- Spécifie si le format de stockage vardecimal est activé. 
-  @vardecimal_storage_format peut prendre la valeur ON ou OFF (activé ou désactivé). Le paramètre est de type **varchar (3)**, sans valeur par défaut. Si un nom de base de données est indiqué mais que @vardecimal_storage_format est omis, le paramètre actuel de la base de données spécifiée est retourné. Cet argument n'a aucun effet sur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures.  
+ Spécifie si le format de stockage vardecimal est activé. @vardecimal_storage_format peut prendre la valeur ON ou OFF (activé ou désactivé). Le paramètre est de type **varchar (3)**, sans valeur par défaut. Si un nom de base de données est indiqué mais que @vardecimal_storage_format est omis, le paramètre actuel de la base de données spécifiée est retourné. Cet argument n'a aucun effet sur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

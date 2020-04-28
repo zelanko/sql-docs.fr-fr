@@ -16,10 +16,10 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124868"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68124868"
   Modifie les propriétés sélectionnées d'un abonnement de fusion par envoi de données (push). Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!IMPORTANT]  
->  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 |Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**description**||Description de cet abonnement de fusion.|  
+|**descriptive**||Description de cet abonnement de fusion.|  
 |**importance**||Priorité de l’abonnement. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés.|  
 |**merge_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
 |**merge_job_password**||Mot de passe du compte Windows sous lequel l’agent s’exécute.|  
@@ -67,9 +67,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_login**||Nom de la connexion du côté Abonné.|  
 |**subscriber_password**||Mot de passe renforcé pour la connexion de l'Abonné.|  
 |**sync_type**|**Automatique**|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
-||**None**|L'Abonné dispose déjà du schéma et des données initiales pour les tables publiées ; les données et les tables système sont toujours transférées.|  
-|**use_interactive_resolver**|**:**|Autorise la résolution interactive des conflits pour tous les articles autorisant la résolution interactive.|  
-||**fausses**|Les conflits sont automatiquement résolus au moyen d'un programme de résolution par défaut ou personnalisé.|  
+||**Aucune**|L'Abonné dispose déjà du schéma et des données initiales pour les tables publiées ; les données et les tables système sont toujours transférées.|  
+|**use_interactive_resolver**|**true**|Autorise la résolution interactive des conflits pour tous les articles autorisant la résolution interactive.|  
+||**false**|Les conflits sont automatiquement résolus au moyen d'un programme de résolution par défaut ou personnalisé.|  
 |NULL (par défaut)|NULL (par défaut)||  
   
 ## <a name="return-code-values"></a>Codet de retour  

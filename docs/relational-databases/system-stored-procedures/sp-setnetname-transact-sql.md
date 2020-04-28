@@ -18,10 +18,10 @@ ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104401"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Arguments  
- ** ** @server = '** serveur **'**  
- Nom du serveur distant tel qu'il est référencé dans la syntaxe RPC codée par l'utilisateur. Une seule ligne dans **sys. Servers** doit déjà exister pour utiliser ce *serveur*. *Server* est de **type sysname**, sans valeur par défaut.  
+ *server* ** @server = '** serveur **'**  
+ Nom du serveur distant tel qu'il est référencé dans la syntaxe RPC codée par l'utilisateur. Une seule ligne dans **sys. Servers** doit déjà exister pour utiliser ce *serveur*. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
- ** ** @netname = '** network_name **'**  
+ *network_name* ** @netname = '** network_name **'**  
  Nom réseau de l'ordinateur auquel les appels de procédures stockées distantes sont effectuées. *network_name* est de **type sysname**, sans valeur par défaut.  
   
  Ce nom doit correspondre au nom d'ordinateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et peut comprendre des caractères non autorisés dans les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

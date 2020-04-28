@@ -18,10 +18,10 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81df88f6e451d71dc5778e49162db97def7ed27d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68113194"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
@@ -45,8 +45,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'utiliser jusqu'à 1 024 pointeurs de texte dans la ligne actifs valides par transaction et par base de données. Toutefois, une transaction qui couvre plusieurs bases de données peut avoir 1 024 pointeurs de texte par ligne dans chaque base de données. **sp_invalidate_textptr** peut être utilisé pour invalider des pointeurs de texte dans la ligne et, par conséquent, pour libérer de l’espace pour d’autres pointeurs de texte dans la ligne.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'utiliser jusqu'à 1 024 pointeurs de texte dans la ligne actifs valides par transaction et par base de données. Toutefois, une transaction qui couvre plusieurs bases de données peut avoir 1 024 pointeurs de texte par ligne dans chaque base de données. **sp_invalidate_textptr** peut être utilisé pour invalider des pointeurs de texte dans la ligne et, par conséquent, pour libérer de l’espace pour d’autres pointeurs de texte dans la ligne.  
   
  Pour plus d’informations sur l’option text in row, consultez [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  
   
@@ -55,7 +54,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
   
 ## <a name="see-also"></a>Voir aussi  
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [TEXTPTR &#40;&#41;Transact-SQL](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  

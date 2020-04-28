@@ -18,10 +18,10 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106353"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "68106353"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID de la session de travail de l'Agent de fusion|  
 |**agent_id**|**int**|ID de l'Agent de fusion|  
-|**start_time**|**DATETIME**|Heure de début de l'exécution du travail|  
-|**end_time**|**DATETIME**|Heure de fin de l'exécution du travail|  
-|**Macauley**|**int**|Durée cumulée (en secondes) de cette session de travail|  
+|**start_time**|**datetime**|Heure de début de l'exécution du travail|  
+|**end_time**|**datetime**|Heure de fin de l'exécution du travail|  
+|**duration**|**int**|Durée cumulée (en secondes) de cette session de travail|  
 |**delivery_time**|**int**|Durée (en secondes) de l'application d'un traitement de modifications|  
 |**upload_time**|**int**|Durée (en secondes) du téléchargement des modifications sur le serveur de publication|  
 |**download_time**|**int**|Durée (en secondes) du téléchargement des modifications sur l'Abonné|  
 |**delivery_rate**|**float**|Nombre moyen des commandes transmises par seconde|  
 |**time_remaining**|**int**|Estimation du nombre de secondes restant dans une session active|  
-|**percent_complete**|**sépar**|Estimation du nombre total de modifications ayant déjà été transmises dans une session active|  
+|**percent_complete**|**decimal**|Estimation du nombre total de modifications ayant déjà été transmises dans une session active|  
 |**upload_inserts**|**int**|Nombre d'insertions appliquées sur le serveur de publication|  
 |**upload_updates**|**int**|Nombre de mises à jour appliquées sur le serveur de publication|  
 |**upload_deletes**|**int**|Nombre de suppressions appliquées sur le serveur de publication|  
@@ -60,7 +60,7 @@ ms.locfileid: "68106353"
 |**estimated_upload_changes**|**int**|Estimation du nombre de modifications devant être appliquées sur le serveur de publication|  
 |**estimated_download_changes**|**int**|Estimation du nombre de modifications devant être appliquées sur l'Abonné|  
 |**connection_type**|**int**|Connexion utilisée au cours du téléchargement :<br /><br /> **1** = réseau local (LAN).<br /><br /> **2** = connexion d’accès réseau à distance.<br /><br /> **3** = synchronisation Web.|  
-|**confirmé**|**confirmé**|Colonne timestamp de cette table|  
+|**timestamp**|**timestamp**|Colonne timestamp de cette table|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

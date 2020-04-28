@@ -18,10 +18,10 @@ ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 543e8c0b41000ec2afe9ab07aef08aa86967c2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108558"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
@@ -39,7 +39,7 @@ sp_cursorclose cursor
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *mire*  
+ *cursor*  
  Valeur de *handle* de curseur générée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et retournée par la procédure sp_cursoropen. *Cursor* est un paramètre obligatoire qui requiert une valeur d’entrée **int** .  
   
 > [!NOTE]  

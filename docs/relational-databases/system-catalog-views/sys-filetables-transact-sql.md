@@ -20,10 +20,10 @@ ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68134000"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68134000"
 |-----------------|---------------|-----------------|  
 |**object_id**||Numéro d'identification de l'objet. Unique dans une base de données.<br /><br /> Pour plus d’informations, [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_enabled**|**bit**|1 = FileTable se trouve dans l'état 'activé'.|  
-|**directory_name**|**varchar(255**|Nom du répertoire racine pour un FileTable.|  
+|**directory_name**|**varchar(255)**|Nom du répertoire racine pour un FileTable.|  
 |**filename_collation_id**||Identificateur de classement défini pour le FileTable|  
 |**filename_collation_name**||Nom de classement défini pour le FileTable.|  
   

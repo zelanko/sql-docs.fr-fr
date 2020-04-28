@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127645"
 ---
 # <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-SQL)
@@ -29,12 +29,12 @@ ms.locfileid: "68127645"
 |run_id|**int**|Identificateur unique pour une exécution de sauvegarde ou de restauration spécifique.<br /><br /> run_id et pdw_node_id forment la clé de cette vue.||  
 |pdw_node_id|**int**|Identificateur unique d’un nœud d’appliance pour lequel cet enregistrement contient des détails.<br /><br /> run_id et pdw_node_id forment la clé de cette vue.|Consultez node_id dans [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |status|**nvarchar (16)**|État actuel de l’exécution.|« CANCELLED », « COMPLETED », « FAILED », « QUEUED », « RUNNING »|  
-|start_time|**DATETIME**|Heure à laquelle l’opération a démarré sur ce nœud particulier.||  
-|end_time|**DATETIME**|Heure à laquelle l’opération se termine sur ce nœud particulier, le cas échéant.||  
+|start_time|**datetime**|Heure à laquelle l’opération a démarré sur ce nœud particulier.||  
+|end_time|**datetime**|Heure à laquelle l’opération se termine sur ce nœud particulier, le cas échéant.||  
 |total_elapsed_time|**int**|Durée totale d’exécution de l’opération sur ce nœud particulier.|Si total_elapsed_time dépasse la valeur maximale d’un entier (24,8 jours en millisecondes), cela entraînera un échec de matérialisation en raison d’un dépassement de capacité.<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
 |progress|**int**|Progression de l’opération exprimée sous la forme d’un pourcentage.|0 à 100|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue de la SQL Data Warehouse et des Data Warehouse parallèles](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139896"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68139896"
   Définit les informations de configuration et de sécurité utilisées par les déclencheurs de synchronisation des abonnements avec mise à jour immédiate lors de la connexion au serveur de publication. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
 > [!IMPORTANT]
->  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
 >  Dans certaines conditions, cette procédure stockée peut échouer si l’abonné [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] exécute Service Pack 1 ou version ultérieure, et que le serveur de publication exécute une version antérieure. Si la procédure stockée échoue dans ce scénario, mettez à niveau l'Éditeur vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou version ultérieure.  
@@ -63,7 +63,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Utilise le contexte de sécurité (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows) de l'utilisateur apportant la modification sur l'Abonné.<br /><br /> Remarque : ce compte doit également exister sur le serveur de publication avec des privilèges suffisants. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.|  
 |**2**|Utilise une connexion de serveur lié existante, définie par l’utilisateur et créée à l’aide de **sp_link_publication**.|  
   
-`[ @login = ] 'login'`Nom de la connexion. *login* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* a la **valeur 0**.  
+`[ @login = ] 'login'`Nom de la connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* a la **valeur 0**.  
   
 `[ @password = ] 'password'`Est le mot de passe. *Password* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* a la **valeur 0**.  
   

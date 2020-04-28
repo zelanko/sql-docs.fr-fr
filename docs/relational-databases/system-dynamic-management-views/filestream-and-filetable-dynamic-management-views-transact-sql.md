@@ -14,10 +14,10 @@ ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bbe626428e0b7ffcf8c3fe4153c8b7c4938a4246
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130800"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Vues de gestion dynamique liées à Filestream et FileTable (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68130800"
  Affiche les descripteurs de fichiers non transactionnels actuellement ouverts aux données FileTable.  
 
 ## <a name="see-also"></a>Voir aussi
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
-<br>[Vues de catalogue Filestream et FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Affichages catalogue FILESTREAM et FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[Procédures stockées Filestream et FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
   

@@ -16,10 +16,10 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105077"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
@@ -94,9 +94,9 @@ sp_articlecolumn [ @publication = ] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_articlecolumn**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Définir un article](../../relational-databases/replication/publish/define-an-article.md)   
  [Définir et modifier un filtre de colonne](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
+ [Filtrer les données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   

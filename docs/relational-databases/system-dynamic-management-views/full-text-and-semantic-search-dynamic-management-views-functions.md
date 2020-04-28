@@ -15,10 +15,10 @@ ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130770"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Vues de gestion dynamique de recherche en texte intégral et sémantique-fonctions
@@ -68,7 +68,7 @@ ms.locfileid: "68130770"
  Retourne une ligne d'informations d'état à propos du remplissage de l'index de ressemblance de document pour chaque index de ressemblance de chaque table associée à un index sémantique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

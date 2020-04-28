@@ -18,10 +18,10 @@ ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121112"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "68121112"
 |-----------------|---------------|-----------------|  
 |history_id|**bigint**|Identificateur de cet enregistrement. Chaque enregistrement indique une stratégie et l'heure de son initialisation.|  
 |policy_id|**int**|Identificateur de la stratégie.|  
-|start_date|**DATETIME**|Date et heure de la tentative d'exécution de cette stratégie.|  
-|end_date|**DATETIME**|Heure de fin d'exécution de cette stratégie.|  
+|start_date|**datetime**|Date et heure de la tentative d'exécution de cette stratégie.|  
+|end_date|**datetime**|Heure de fin d'exécution de cette stratégie.|  
 |result|**bit**|Succès ou échec de la stratégie. 0 = succès, 1 = échec.|  
 |exception_message|**nvarchar(max)**|Message généré par l'exception si celle-ci se produit.|  
 |exception|**nvarchar(max)**|Description de l'exception si celle-ci se produit.|  
@@ -46,7 +46,7 @@ ms.locfileid: "68121112"
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Vues de la gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

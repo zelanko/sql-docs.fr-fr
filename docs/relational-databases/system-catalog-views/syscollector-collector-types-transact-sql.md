@@ -19,10 +19,10 @@ ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124921"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "68124921"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|GUID pour un type de collecte. N'accepte pas la valeur NULL.|  
-|**nomme**|**sysname**|Nom du type de collecte. N'accepte pas la valeur NULL.|  
-|**parameter_schema**|**langage**|Schéma XML qui décrit l'aspect de la configuration pour le type de collecteur spécifié. Ce schéma XML est utilisé pour valider la configuration XML réelle associée à l'instance d'un élément de collecte particulier. Autorise la valeur NULL.|  
-|**parameter_formatter**|**langage**|Détermine le modèle à utiliser pour transformer le XML utilisé dans la page de propriétés du jeu d'éléments de collecte. Autorise la valeur NULL.|  
+|**name**|**sysname**|Nom du type de collecte. N'accepte pas la valeur NULL.|  
+|**parameter_schema**|**xml**|Schéma XML qui décrit l'aspect de la configuration pour le type de collecteur spécifié. Ce schéma XML est utilisé pour valider la configuration XML réelle associée à l'instance d'un élément de collecte particulier. Autorise la valeur NULL.|  
+|**parameter_formatter**|**xml**|Détermine le modèle à utiliser pour transformer le XML utilisé dans la page de propriétés du jeu d'éléments de collecte. Autorise la valeur NULL.|  
 |**collection_package_id**|**uniqueidentifer**|GUID pour un package de collecte. N'accepte pas la valeur NULL.|  
 |**collection_package_path**|**nvarchar(4000)**|Fournit le chemin d'accès au package de collecte. Autorise la valeur NULL.|  
 |**collection_package_name**|**sysname**|Nom du package de collecte. N'accepte pas la valeur NULL.|  

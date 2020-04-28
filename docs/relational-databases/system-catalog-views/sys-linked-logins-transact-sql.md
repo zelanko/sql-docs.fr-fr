@@ -20,10 +20,10 @@ ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dfde20205de71a302c7ba8151fc6171cecc05a08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140679"
 ---
 # <a name="syslinked_logins-transact-sql"></a>sys.linked_logins (Transact-SQL)
@@ -37,13 +37,13 @@ ms.locfileid: "68140679"
 |**local_principal_id**|**int**|Serveur principal auquel s'applique le mappage.<br /><br /> 0 = générique ou public.|  
 |**uses_self_credential**|**bit**|Si la valeur de la colonne est égale à 1, le mappage indique que la session doit utiliser ses propres informations d'identification ; la valeur 0 indique que la session utilise les nom et mot de passe fournis.|  
 |**remote_name**|**sysname**|Nom utilisateur distant servant à la connexion. Le mot de passe est également stocké mais n'est pas exposé dans les interfaces des vues de catalogue.|  
-|**modify_date**|**DATETIME**|Date de la dernière modification de la connexion liée.|  
+|**modify_date**|**datetime**|Date de la dernière modification de la connexion liée.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue des serveurs liés &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)  
   
   

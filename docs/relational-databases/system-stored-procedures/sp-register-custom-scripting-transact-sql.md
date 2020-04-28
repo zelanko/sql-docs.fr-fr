@@ -16,10 +16,10 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075747"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
@@ -46,7 +46,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |-----------|-----------------|  
 |**Insérer**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction INSERT est répliquée.|  
 |**mise à jour**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction UPDATE est répliquée.|  
-|**supprimer**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction DELETE est répliquée.|  
+|**delete**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction DELETE est répliquée.|  
 |**custom_script**|Le script est exécuté à la fin du déclencheur DDL (Data Definition Language).|  
   
 `[ @value = ] 'value'`Nom d’une procédure stockée ou d’un nom et d’un chemin [!INCLUDE[tsql](../../includes/tsql-md.md)] d’accès complet au fichier de script en cours d’inscription. la *valeur* est de type **nvarchar (1024)**, sans valeur par défaut.  

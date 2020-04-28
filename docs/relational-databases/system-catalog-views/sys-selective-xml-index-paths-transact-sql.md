@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135191"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
@@ -48,8 +48,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|ID de table avec une colonne XML.|  
 |**index_id**|**int**|ID unique de l'index XML sélectif.|  
 |**path_id**|**int**|ID du chemin d'accès XML promu.|  
-|**d**|**nvarchar(4000)**|Chemin d'accès promu. Par exemple, '/a/b/c/d/e'.|  
-|**nomme**|**sysname**|Chemin d'accès.|  
+|**path**|**nvarchar(4000)**|Chemin d'accès promu. Par exemple, '/a/b/c/d/e'.|  
+|**name**|**sysname**|Chemin d'accès.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|Basé sur **path_type** valeur’XQuery’ou’SQL'.|  
 |**xml_component_id**|**int**|ID unique du composant de schéma XML dans la base de données.|  
@@ -70,7 +70,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Schémas XML &#40;les affichages catalogue du système de type XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

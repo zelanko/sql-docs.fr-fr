@@ -19,10 +19,10 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135175"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
@@ -64,7 +64,7 @@ Le *plan_handle* peut être obtenu à partir des objets de gestion dynamique sui
 |**arguments**|**int**|ID de l'objet (par exemple, procédure stockée ou fonction définie par l'utilisateur) pour ce plan de requête. Pour les traitements ad hoc et préparés, cette colonne est **null**.<br /><br /> Colonne acceptant la valeur NULL.|  
 |**number**|**smallint**|Entier servant à la numérotation des procédures stockées. Par exemple, un groupe de procédures pour l'application **orders** peuvent être appelées **orderproc;1**, **orderproc;2**, etc. Pour les traitements ad hoc et préparés, cette colonne est **null**.<br /><br /> Colonne acceptant la valeur NULL.|  
 |**chiffrées**|**bit**|Indique si la procédure stockée correspondante est chiffrée.<br /><br /> 0 = Non chiffrée.<br /><br /> 1 = Chiffrée.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
-|**query_plan**|**langage**|Contient la représentation Showplan au moment de la compilation du plan d’exécution de requête spécifié avec *plan_handle*. Le plan d'exécution de requêtes est au format XML. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur.<br /><br /> Colonne acceptant la valeur NULL.|  
+|**query_plan**|**xml**|Contient la représentation Showplan au moment de la compilation du plan d’exécution de requête spécifié avec *plan_handle*. Le plan d'exécution de requêtes est au format XML. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur.<br /><br /> Colonne acceptant la valeur NULL.|  
   
 ## <a name="remarks"></a>Notes  
  Aucune sortie du plan d'exécution de requêtes n'est retournée dans la colonne **query_plan** de la table retournée pour l'objet pour **sys.dm_exec_query_plan** dans les conditions suivantes :  
@@ -89,7 +89,7 @@ Le *plan_handle* peut être obtenu à partir des objets de gestion dynamique sui
   
  Pour afficher des plans d'exécution de requêtes XML, exécutez les requêtes suivantes dans l'éditeur de requêtes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis cliquez sur **ShowPlanXML** dans la colonne **query_plan** de la table retournée par l'objet **sys.dm_exec_query_plan**. Le plan d'exécution de requêtes XML s'affiche dans le volet de résumé de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour enregistrer le Showplan XML dans un fichier, cliquez avec le bouton droit sur **ShowplanXml** dans la colonne **query_plan** , cliquez sur **enregistrer les résultats sous**, puis \<nommez le fichier au format *file_name*>. sqlplan ; par exemple, MyXMLShowplan. sqlplan.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>R. Récupération du plan de requête mis en mémoire cache pour un traitement ou une requête Transact-SQL à exécution lente  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Récupération du plan de requête mis en mémoire cache pour un traitement ou une requête Transact-SQL à exécution lente  
  Les plans de requête pour divers types de lots [!INCLUDE[tsql](../../includes/tsql-md.md)], par exemple les procédures stockées, les fonctions définies par l'utilisateur et les lots appropriés, sont mis en cache dans une zone de la mémoire appelée le cache de plan. Chaque plan de requête mis dans cette mémoire cache est différencié par un identificateur unique appelé descripteur de plan. Il est possible d'utiliser ce descripteur avec la vue de gestion dynamique **sys.dm_exec_query_plan** pour récupérer le plan d'exécution d'une requête ou d'un traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] particulier.  
   
  Si une requête ou un traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] s'exécute longtemps sur une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifique, récupérez le plan d'exécution de cette requête ou de ce traitement pour trouver la raison de ce retard. L'exemple suivant montre la récupération du plan d'exécution de requêtes XML pour une requête ou un traitement s'exécutant lentement.  
@@ -163,12 +163,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
- [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
+ [Informations de référence sur les opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
  [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   

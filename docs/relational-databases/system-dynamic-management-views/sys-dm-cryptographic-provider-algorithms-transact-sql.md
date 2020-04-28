@@ -19,10 +19,10 @@ ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121013"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
@@ -48,7 +48,7 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|Numéro d'identification de l'algorithme.|  
-|algorithm_tag|**nvarchar (60)**|Balise d'identification de l'algorithme.|  
+|algorithm_tag|**nvarchar(60)**|Balise d'identification de l'algorithme.|  
 |key_type|**nvarchar(128)**|Indique le type de clé. Retourne ASYMMETRIC KEY ou SYMMETRIC KEY.|  
 |key_length|**int**|Indique la longueur de la clé en bits.|  
   
@@ -64,7 +64,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [Gestion de clés extensible &#40;&#41;EKM](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Fonctions et vues de gestion dynamique relatives à la sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

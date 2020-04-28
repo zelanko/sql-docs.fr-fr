@@ -18,10 +18,10 @@ ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119444"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
@@ -39,13 +39,13 @@ sp_upgrade_log_shipping
 ```  
   
 ## <a name="arguments"></a>Arguments  
- Aucun.  
+ Aucune.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (autre)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure stockée est appelée automatiquement lors de la mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour mettre à niveau les métadonnées pour la copie des journaux de transaction. Vous n'avez pas besoin d'exécuter cette procédure explicitement, à moins qu'un problème survienne avec les métadonnées au cours de la mise à niveau.  
@@ -53,10 +53,10 @@ sp_upgrade_log_shipping
  La procédure sp_upgrade_log_shipping doit s'exécuter à partir de la base de données master sur le serveur principal, secondaire ou moniteur.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

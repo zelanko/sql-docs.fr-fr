@@ -18,10 +18,10 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108456"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
@@ -39,13 +39,13 @@ sp_cursoroption cursor, code, value
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *mire*  
+ *cursor*  
  Est une valeur de *handle* qui est générée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par et retournée par la procédure stockée sp_cursoropen. le *curseur* requiert une valeur d’entrée **int** pour l’exécution.  
   
  *code*  
  Permet de stipuler différents facteurs des valeurs de retour de curseur. le *code* requiert l’une des valeurs d’entrée **int** suivantes :  
   
-|Valeur|Name|Description|  
+|Valeur|Nom|Description|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Retourne le pointeur de texte, et non les données réelles, pour certaines colonnes text ou image désignées.<br /><br /> TEXTPTR_ONLY permet d’utiliser des pointeurs de texte comme *Handles* d’objets BLOB qui peuvent être récupérés ou mis à [!INCLUDE[tsql](../../includes/tsql-md.md)] jour ultérieurement à l’aide des [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions ou de DBLIB (par exemple READTEXT ou DBLIB dbwritetext).<br /><br /> Si une valeur « 0 » est affectée, toutes les colonnes text et image dans la liste de sélection retourneront des pointeurs de texte plutôt que des données.|  
 |0x0002|CURSOR_NAME|Attribue le nom spécifié dans *valeur* au curseur. Cela permet à ODBC d’utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] des instructions UPDATE/DELETE positionnées sur les curseurs ouverts via sp_cursoropen.<br /><br /> La chaîne peut être spécifiée comme tout caractère ou type de données Unicode.<br /><br /> Étant [!INCLUDE[tsql](../../includes/tsql-md.md)] donné que les instructions UPDATE/DELETE positionnées fonctionnent, par défaut, sur la première ligne d’un curseur fat, sp_cursor SetPosition doit être utilisé pour positionner le curseur avant d’émettre l’instruction Update/Delete positionnée.|  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|Option de contrôle en matière d'accès concurrentiel. Pour plus d'informations, consultez « Valeurs des codes de retour » plus loin dans cette rubrique.|  
 |0x0006|ROWCOUNT|Nombre de lignes actuellement dans le jeu de résultats.<br /><br /> Remarque : le nombre de lignes peut avoir changé depuis la valeur retournée par sp_cursoropen si le remplissage asynchrone est utilisé. La valeur-1 est retournée si le nombre de lignes est inconnu.|  
   
- *ajoutée*  
+ *value*  
  Désigne la valeur retournée par le *code*. la *valeur* est un paramètre obligatoire qui requiert une valeur d’entrée de *code* 0x0001, 0x0002 ou 0x0003.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ sp_cursoroption cursor, code, value
 |0x0004 ou 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

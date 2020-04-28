@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4aa83c4931e1cce4b4b813baa489ae43798db594
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127561"
 ---
 # <a name="syspdw_diag_events-transact-sql"></a>sys. pdw_diag_events (Transact-SQL)
@@ -26,11 +26,11 @@ ms.locfileid: "68127561"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|**nomme**|**nvarchar(255)**|Nom de l’événement de diagnostic spécifique.||  
+|**name**|**nvarchar(255)**|Nom de l’événement de diagnostic spécifique.||  
 |**code**|**nvarchar(255)**|Source de l’événement (moteur, général, DMS, etc.)||  
 |**is_enabled**|**bit**|Indique si l’événement est publié.||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue de la SQL Data Warehouse et des Data Warehouse parallèles](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

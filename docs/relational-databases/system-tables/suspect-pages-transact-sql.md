@@ -19,10 +19,10 @@ ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130548"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
@@ -39,13 +39,13 @@ ms.locfileid: "68130548"
 |**page_id**|**bigint**|ID de la page suspecte. Chaque page possède un ID de page qui est une valeur de 32 bits identifiant l'emplacement de la page dans la base de données. Le **page_id** est le décalage dans le fichier de données de la page de 8 Ko. Chaque ID de page est unique dans un fichier.|  
 |**event_type**|**int**|Type d'erreur :<br /><br /> 1 = Une erreur 823 à l'origine d'une page suspecte (par exemple, une erreur disque) ou une erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, un ID de page erroné).<br /><br /> 2 = Somme de contrôle incorrecte.<br /><br /> 3 = Page endommagée.<br /><br /> 4 = Restaurée (la page a été restaurée après avoir été signalée comme étant incorrecte).<br /><br /> 5 = Réparée (DBCC a réparé la page).<br /><br /> 7 = Libérée par DBCC.|  
 |**error_count**|**int**|Nombre d'occurrences de l'erreur.|  
-|**last_update_date**|**DATETIME**|Horodatage de la dernière mise à jour.|  
+|**last_update_date**|**datetime**|Horodatage de la dernière mise à jour.|  
   
 ## <a name="permissions"></a>Autorisations  
  Toute personne ayant accès à **msdb** peut lire les données de la table **suspect_pages** . Toute personne ayant l'autorisation UPDATE sur la table suspect_pages peut mettre à jour ses enregistrements. Les membres du rôle de base de données fixe **db_owner** sur **msdb** ou du rôle serveur fixe **sysadmin** peuvent insérer, mettre à jour et supprimer des enregistrements.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Restaurer des pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
+ [Restaurer les pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Classe d’événements Database suspect Data page](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
  [Tables système &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

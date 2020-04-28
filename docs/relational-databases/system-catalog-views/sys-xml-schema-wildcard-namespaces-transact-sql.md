@@ -20,10 +20,10 @@ ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d1085968e76771539c0fa439bc35ed86540dcbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109465"
 ---
 # <a name="sysxml_schema_wildcard_namespaces-transact-sql"></a>sys.xml_schema_wildcard_namespaces (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "68109465"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|ID du composant de schéma XML (générique) auquel cela s'applique.|  
-|**joint**|**nvarchar(4000)**|Nom ou URI de l'espace de noms utilisé par le schéma XML générique.|  
+|**namespace**|**nvarchar(4000)**|Nom ou URI de l'espace de noms utilisé par le schéma XML générique.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Schémas XML &#40;les affichages catalogue du système de type XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

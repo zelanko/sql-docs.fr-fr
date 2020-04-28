@@ -16,10 +16,10 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137710"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
@@ -40,7 +40,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argument  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **%** **type sysname**, avec la valeur par défaut. Si ** la publication **%** est, les informations sur toutes les publications de fusion et tous les abonnements de la base de données actuelle sont retournées.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **%** **type sysname**, avec la valeur par défaut. Si *publication* la publication **%** est, les informations sur toutes les publications de fusion et tous les abonnements de la base de données actuelle sont retournées.  
   
 `[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher*est de **%** **type sysname**, avec la valeur par défaut.  
   
@@ -52,28 +52,28 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**nvarchar (1000)**|Nom de l’abonnement.|  
+|**subscription_name**|**nvarchar(1000)**|Nom de l'abonnement.|  
 |**édition**|**sysname**|Nom de la publication.|  
 |**publication**|**sysname**|Nom du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**subscription_db**|**sysname**|Nom de la base de données d'abonnement.|  
-|**statu**|**int**|État de l'abonnement :<br /><br /> **0** = abonnement inactif<br /><br /> **1** = abonnement actif<br /><br /> **2** = abonnement supprimé<br /><br /> **3** = abonnement détaché<br /><br /> **4** = abonnement attaché<br /><br /> **5** = abonnement marqué pour réinitialisation avec chargement<br /><br /> **6** = échec de l’attachement de l’abonnement<br /><br /> **7** = abonnement restauré à partir d’une sauvegarde|  
+|**statut**|**int**|État de l'abonnement :<br /><br /> **0** = abonnement inactif<br /><br /> **1** = abonnement actif<br /><br /> **2** = abonnement supprimé<br /><br /> **3** = abonnement détaché<br /><br /> **4** = abonnement attaché<br /><br /> **5** = abonnement marqué pour réinitialisation avec chargement<br /><br /> **6** = échec de l’attachement de l’abonnement<br /><br /> **7** = abonnement restauré à partir d’une sauvegarde|  
 |**subscriber_type**|**int**|Type d'Abonné :<br /><br /> **1** = global<br /><br /> **2** = local<br /><br /> **3** = anonyme|  
 |**subscription_type**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
 |**importance**|**float (8)**|Priorité de l'abonnement. La valeur doit être inférieure à **100,00**.|  
 |**sync_type**|**tinyint**|Type de synchronisation d'abonnement :<br /><br /> **1** = automatique<br /><br /> **2** = la capture instantanée n’est pas utilisée.|  
-|**description**|**nvarchar(255)**|Brève description de l’abonnement par extraction.|  
+|**descriptive**|**nvarchar(255)**|Brève description de l’abonnement par extraction.|  
 |**merge_jobid**|**Binary(16**|ID de travail de l'Agent de fusion.|  
 |**enabled_for_syncmgr**|**int**|Indique si l'abonnement peut être synchronisé à l'aide du gestionnaire de synchronisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**last_updated**|**nvarchar (26)**|Date et heure de la dernière synchronisation de l'abonnement effectuée par l'Agent de fusion.|  
 |**publisher_login**|**sysname**|Nom de connexion de l’éditeur.|  
 |**publisher_password**|**sysname**|Mot de passe de l’éditeur.|  
-|**publisher_security_mode**|**int**|Spécifie le mode de sécurité du serveur de publication :<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
+|**publisher_security_mode**|**int**|Spécifie le mode de sécurité du serveur de publication :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
 |**conseiller**|**sysname**|Nom du serveur de distribution.|  
 |**distributor_login**|**sysname**|Nom de connexion du serveur de distribution.|  
 |**distributor_password**|**sysname**|Mot de passe du serveur de distribution.|  
-|**distributor_security_mode**|**int**|Spécifie le mode de sécurité du serveur de distribution :<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
+|**distributor_security_mode**|**int**|Spécifie le mode de sécurité du serveur de distribution :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
 |**ftp_address**|**sysname**|Disponible pour compatibilité descendante uniquement. Adresse réseau du service FTP (File Transfer Protocol) pour le serveur de distribution.|  
 |**ftp_port**|**int**|Disponible pour compatibilité descendante uniquement. Numéro de port du service FTP du serveur de distribution.|  
 |**ftp_login**|**sysname**|Disponible pour compatibilité descendante uniquement. Nom d’utilisateur utilisé pour la connexion au service FTP.|  
@@ -94,7 +94,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**nvarchar (524)**|Mot de passe de la connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_security_mode**|**int**|Mode d'authentification utilisé pour se connecter au serveur Web hôte de la synchronisation Web. La valeur **1** signifie l’authentification Windows et la valeur **0** signifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
 |**internet_timeout**|**int**|Délai en secondes avant l'expiration d'une demande de synchronisation Web.|  
-|**nom d’hôte**|**nvarchar(128)**|Spécifie une valeur surchargée pour [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) lorsque cette fonction est utilisée dans la clause WHERE d’un filtre de lignes paramétrable.|  
+|**hostname**|**nvarchar(128)**|Spécifie une valeur surchargée pour [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) lorsque cette fonction est utilisée dans la clause WHERE d’un filtre de lignes paramétrable.|  
 |**job_login**|**nvarchar(512)**|Compte Windows sous lequel l’agent de fusion s’exécute, qui est retourné au format *domaine*\\*nom d’utilisateur*.|  
 |**job_password**|**sysname**|Pour des raisons de sécurité, la valeur**\*\*\*\*\*\*\*\*\***«» est toujours retournée.|  
   

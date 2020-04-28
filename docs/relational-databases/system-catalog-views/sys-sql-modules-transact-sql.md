@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108987"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
@@ -44,8 +44,8 @@ ms.locfileid: "68108987"
 |**uses_database_collation**|**bit**|1 = La définition d'un module lié au schéma dépend du classement par défaut de la base de données pour une évaluation correcte ; dans tous les autres cas, 0. Une telle dépendance empêche la modification du classement par défaut de la base de données.|  
 |**is_recompiled**|**bit**|Procédure créée avec l'option WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Le module a été déclaré pour produire une sortie NULL sur n'importe quelle entrée NULL.|  
-|**execute_as_principal_id**|**Tiers**|ID du principal de base de données EXECUTE AS.<br /><br /> Valeur NULL par défaut ou dans le cas de l'instruction EXECUTE AS CALLER.<br /><br /> ID du principal spécifié si EXECUTe AS SELF ou EXECUTe \<as principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
-|**uses_native_compilation**|**bit**|**S’applique à** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]jusqu’à.<br /><br /> 0 = Non compilé en mode natif<br /><br /> 1 = Compilé en mode natif<br /><br /> La valeur par défaut est 0.|  
+|**execute_as_principal_id**|**Int**|ID du principal de base de données EXECUTE AS.<br /><br /> Valeur NULL par défaut ou dans le cas de l'instruction EXECUTE AS CALLER.<br /><br /> ID du principal spécifié si EXECUTe AS SELF ou EXECUTe \<as principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**uses_native_compilation**|**bit**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = Non compilé en mode natif<br /><br /> 1 = Compilé en mode natif<br /><br /> La valeur par défaut est 0.|  
 |**is_inlineable**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] et versions ultérieures.<br/><br />Indique si le module est inlineable ou non. L’inlineabilité est basée sur les conditions spécifiées [ici](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = non inlineable<br /><br /> 1 = est inlineable. <br /><br /> Pour les fonctions définies par l’utilisateur scalaire, la valeur sera égale à 1 si la fonction définie par l’utilisateur est Inline, et 0 dans le cas contraire. Elle contient toujours la valeur 1 pour Inline TVF, et 0 pour tous les autres types de modules.<br />|  
 |**inline_type**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] et versions ultérieures.<br /><br />Indique si l’incorporation est activée pour le module actuellement. <br /><br />0 = l’incorporation est désactivée<br /><br /> 1 = l’incorporation est activée.<br /><br /> Pour les fonctions définies par l’utilisateur scalaire, la valeur est 1 si l’incorporation est activée (explicitement ou implicitement). La valeur sera toujours 1 pour Inline TVF, et 0 pour les autres types de modules.<br />|  
 
@@ -70,9 +70,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

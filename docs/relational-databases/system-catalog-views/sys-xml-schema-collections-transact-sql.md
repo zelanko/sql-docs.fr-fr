@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68115051"
 ---
 # <a name="sysxml_schema_collections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
@@ -38,14 +38,14 @@ ms.locfileid: "68115051"
 |schema_id|**int**|ID du schéma relationnel qui contient cette collection de schémas XML.|  
 |principal_id|**int**|ID du propriétaire individuel, s’il est différent du propriétaire du schéma. Par défaut, le propriétaire du schéma détient les objets contenus dans le schéma. Toutefois, un autre propriétaire peut être spécifié à l’aide de l’instruction ALTER AUTHORIZation pour modifier la propriété.<br /><br /> NULL = Pas d'autre propriétaire individuel.|  
 |name|**sysname**|Nom de la collection de schémas XML.|  
-|create_date|**DATETIME**|Date de création de la collection de schémas XML.|  
-|modify_date|**DATETIME**|Date de dernière modification de la collection de schémas XML.|  
+|create_date|**datetime**|Date de création de la collection de schémas XML.|  
+|modify_date|**datetime**|Date de dernière modification de la collection de schémas XML.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Schémas XML &#40;les affichages catalogue du système de type XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   
  [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

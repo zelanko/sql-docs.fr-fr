@@ -19,10 +19,10 @@ ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108140"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
@@ -84,7 +84,7 @@ sp_dbmmonitorchangealert database_name
  None  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant définit les seuils pour chaque métrique de performance et la période de rétention pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Le tableau ci-dessous montre les valeurs utilisées dans l'exemple.  
@@ -95,7 +95,7 @@ sp_dbmmonitorchangealert database_name
 |2|Journal non envoyé|10 000 Ko|Oui|  
 |3|Journal non restauré|10 000 Ko|Oui|  
 |4|Charge de validation par le serveur miroir|1 000 millisecondes|Non|  
-|5|Période de rétention|8 heures|Oui|  
+|5|Période de rétention|8 heures|Oui|  
   
 ```  
 EXEC sp_dbmmonitorchangealert AdventureWorks2012, 1, 30, 1 ;  

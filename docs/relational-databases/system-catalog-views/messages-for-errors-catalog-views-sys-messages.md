@@ -22,10 +22,10 @@ ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127933"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Affichages catalogue des messages (d’erreur) - sys.messages
@@ -37,16 +37,16 @@ ms.locfileid: "68127933"
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|ID du message. Unique sur le serveur. Les ID de message inférieurs à 50 000 sont des messages système.|  
 |**language_id**|**smallint**|ID de langue pour lequel le texte du **texte** est utilisé, tel que défini dans **syslanguages**. Il est unique pour un **message_id**spécifié.|  
-|**va**|**tinyint**|Niveau de gravité du message, entre 1 et 25. Cela est identique pour toutes les langues de message dans un **message_id**.|  
+|**severity**|**tinyint**|Niveau de gravité du message, entre 1 et 25. Cela est identique pour toutes les langues de message dans un **message_id**.|  
 |**is_event_logged**|**bit**|1 = le message est consigné dans le journal des événements lorsqu'une erreur est déclenchée. Cela est identique pour toutes les langues de message dans un **message_id**.|  
-|**text**|**nvarchar (2048)**|Texte du message utilisé lorsque la **language_id** correspondante est active.|  
+|**text**|**nvarchar(2048)**|Texte du message utilisé lorsque la **language_id** correspondante est active.|  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Nécessite l'appartenance au rôle **public** .  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Messages &#40;pour les erreurs&#41; les affichages catalogue &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
  [Programmation de la boîte de message d’exception](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [Messages d’erreur](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
