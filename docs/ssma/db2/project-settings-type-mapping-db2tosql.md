@@ -10,10 +10,10 @@ ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060162"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Paramètres du projet (mappage de type) (DB2ToSQL)
@@ -62,7 +62,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
-|objet blob|varbinary(max)|  
+|objet BLOB|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
@@ -117,7 +117,7 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|objet blob|varbinary(max)|  
+|objet BLOB|varbinary(max)|  
 |char|char|  
 |char varying\*[.. \*]|VARCHAR [\*]|  
 |Char [\*.. \*]|Char [\*]|  

@@ -10,10 +10,10 @@ ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060030"
 ---
 # <a name="setting-project-options-db2tosql"></a>Définition des options du projet (DB2ToSQL)
@@ -36,13 +36,13 @@ SSMA comporte cinq jeux de paramètres de projet :
   
 Il comporte également quatre modes de configuration de ces paramètres :  
   
--   Default  
+-   Par défaut  
   
 -   Optimistic  
   
 -   Complète  
   
--   Custom  
+-   Personnalisé  
   
 Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode optimiste conserve la syntaxe DB2 actuelle et est plus facile à lire. Toutefois, il se peut que la conservation de la syntaxe actuelle ne soit pas exacte. Si la syntaxe DB2 doit être convertie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en syntaxe équivalente, le mode complet effectue la conversion la plus complète, mais le code obtenu peut être plus difficile à lire. Dans le mode personnalisé, vous définissez les options.  
   

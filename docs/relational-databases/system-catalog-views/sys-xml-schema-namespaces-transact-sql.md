@@ -20,10 +20,10 @@ ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060439"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
@@ -34,14 +34,14 @@ ms.locfileid: "68060439"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|ID de la collection de schémas XML contenant cet espace de noms.|  
-|**nomme**|**nvarchar(4000)**|Nom de l'espace de noms XML. Un **nom** vide indique qu’il n’y a pas d’espace de noms cible.|  
+|**name**|**nvarchar(4000)**|Nom de l'espace de noms XML. Un **nom** vide indique qu’il n’y a pas d’espace de noms cible.|  
 |**xml_namespace_id**|**int**|Valeur ordinale comptée à partir de 1 qui identifie de manière unique l'espace de noms XML dans la base de données.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Schémas XML &#40;les affichages catalogue du système de type XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8742ebefab7a4b826eac0088a2d57f022a27715b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68073179"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68073179"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**type**|**tinyint**|Identifie la classe de l'entité référencée :<br /><br /> 0 = objet ou colonne (références non liées au schéma uniquement)<br /><br /> 1 = Objet ou colonne (uniquement les références liées au schéma)<br /><br /> 2 = Types (uniquement les références liées au schéma)<br /><br /> 3 = Collections de schémas XML (uniquement les références liées au schéma)<br /><br /> 4 = Fonction de partition (uniquement les références liées au schéma)|  
-|**class_desc**|**nvarchar (60)**|Description de la classe de l'entité référencée :<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
+|**class**|**tinyint**|Identifie la classe de l'entité référencée :<br /><br /> 0 = objet ou colonne (références non liées au schéma uniquement)<br /><br /> 1 = Objet ou colonne (uniquement les références liées au schéma)<br /><br /> 2 = Types (uniquement les références liées au schéma)<br /><br /> 3 = Collections de schémas XML (uniquement les références liées au schéma)<br /><br /> 4 = Fonction de partition (uniquement les références liées au schéma)|  
+|**class_desc**|**nvarchar(60)**|Description de la classe de l'entité référencée :<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
 |**object_id**|**int**|ID de l'objet de référence.|  
 |**column_id**|**int**|Si l'ID de référence est une colonne, ID de la colonne de référence ; sinon, 0.|  
 |**referenced_major_id**|**int**|ID de l'entité référencée, interprété par la valeur de la classe, en fonction de :<br /><br /> 0, 1 = ID d'objet de l'objet ou de la colonne.<br /><br /> 2 = ID de type.<br /><br /> 3 = ID de collection de schémas XML.|  
@@ -48,10 +48,10 @@ ms.locfileid: "68073179"
 |**is_select_all**|**bit**|L'objet est utilisé dans la clause SELECT *(au niveau de l'objet uniquement).|  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Nécessite l'appartenance au rôle **public** .  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

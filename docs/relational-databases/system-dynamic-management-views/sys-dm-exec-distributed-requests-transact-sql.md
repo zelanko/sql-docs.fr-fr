@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097804"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-SQL)
@@ -38,17 +38,17 @@ ms.locfileid: "68097804"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**varbinary (64)**|Clé pour cette vue. ID numérique unique associé à la demande.|Unique pour toutes les demandes dans le système.|  
+|sql_handle|**varbinary(64)**|Clé pour cette vue. ID numérique unique associé à la demande.|Unique pour toutes les demandes dans le système.|  
 |execution_id|**nvarchar (32**|ID numérique unique associé à la session dans laquelle cette requête a été exécutée.||  
 |status|**nvarchar (32**|État actuel de la demande.|« Pending », « Authorization », « AcquireSystemResources », « Initialize », « plan », « Analysis », « AquireResources », « Running », « Canceling », « Completed », « failed », « Cancelled ».|  
 |error_id|**nvarchar (36)**|ID unique de l’erreur associée à la demande, le cas échéant.|Affectez la valeur NULL si aucune erreur ne s’est produite.|  
-|start_time|**DATETIME**|Heure à laquelle l’exécution de la requête a été démarrée.|0 pour les demandes mises en file d’attente ; dans le cas contraire, la valeur DateTime valide est inférieure ou égale à l’heure actuelle.|  
-|end_time|**DATETIME**|Heure à laquelle le moteur a terminé la compilation de la requête.|NULL pour les demandes en file d’attente ou actives ; dans le cas contraire, un DateTime valide est plus petit ou égal à l’heure actuelle.|  
+|start_time|**datetime**|Heure à laquelle l’exécution de la requête a été démarrée.|0 pour les demandes mises en file d’attente ; dans le cas contraire, la valeur DateTime valide est inférieure ou égale à l’heure actuelle.|  
+|end_time|**datetime**|Heure à laquelle le moteur a terminé la compilation de la requête.|NULL pour les demandes en file d’attente ou actives ; dans le cas contraire, un DateTime valide est plus petit ou égal à l’heure actuelle.|  
 |total_elapsed_time|**int**|Temps écoulé durant l’exécution depuis le début de la demande, en millisecondes.|Entre 0 et la différence entre start_time et end_time. Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time sera toujours la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée ». La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résolution des problèmes de Polybase avec les vues de gestion dynamique](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

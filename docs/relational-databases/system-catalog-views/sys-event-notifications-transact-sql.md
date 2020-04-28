@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 736083db5043dd8bcb9dce9f828a9191c582c872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048422"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
@@ -34,17 +34,17 @@ ms.locfileid: "68048422"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom de la notification d'événement|  
+|**name**|**sysname**|Nom de la notification d'événement|  
 |**object_id**|**int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
 |**parent_class**|**tinyint**|Classe du parent.<br /><br /> 0 = Base de données<br /><br /> 1 = objet ou colonne|  
-|**parent_class_desc**|**nvarchar (60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
+|**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|ID non NULL de l'objet parent<br /><br /> 0 = La classe parent est la base de données.|  
-|**create_date**|**DATETIME**|Date de création.|  
-|**modify_date**|**DATETIME**|Est toujours égal à **create_date**.|  
-|**service_name**|**nvarchar (256)**|Nom du service cible auquel la notification est envoyée.|  
+|**create_date**|**datetime**|Date de création.|  
+|**modify_date**|**datetime**|Est toujours égal à **create_date**.|  
+|**service_name**|**nvarchar(256)**|Nom du service cible auquel la notification est envoyée.|  
 |**broker_instance**|**nvarchar(128)**|Instance du broker auquel la notification est envoyée.|  
 |**principal_id**|**int**|ID du principal de base de données propriétaire de cette notification d'événement|  
-|**creator_sid**|**varbinary(85)**|SID de la connexion qui a créé la notification d'événement.<br /><br /> A la valeur NULL si l'option FAN_IN n'est pas spécifiée.|  
+|**creator_sid**|**varbinary (85)**|SID de la connexion qui a créé la notification d'événement.<br /><br /> A la valeur NULL si l'option FAN_IN n'est pas spécifiée.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

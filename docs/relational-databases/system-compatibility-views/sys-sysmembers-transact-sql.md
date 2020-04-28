@@ -21,10 +21,10 @@ ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 776c253b85f26e4808da7b3b1990be862546cbfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076558"
 ---
 # <a name="syssysmembers-transact-sql"></a>sys.sysmembers (Transact-SQL)
@@ -42,6 +42,6 @@ ms.locfileid: "68076558"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

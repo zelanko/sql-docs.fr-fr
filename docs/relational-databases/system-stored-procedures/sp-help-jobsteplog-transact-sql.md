@@ -18,10 +18,10 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090043"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
@@ -65,8 +65,8 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|Identificateur de l'étape du travail. Par exemple, si l’étape est la première étape du travail, son *step_id* est 1.|  
 |**step_name**|**sysname**|Nom de l’étape du travail.|  
 |**step_uid**|**uniqueidentifier**|Identificateur unique de l'étape du travail (généré par le système).|  
-|**date_created**|**DATETIME**|Date de création de l'étape.|  
-|**date_modified**|**DATETIME**|Date de la dernière modification de l'étape.|  
+|**date_created**|**datetime**|Date de création de l'étape.|  
+|**date_modified**|**datetime**|Date de la dernière modification de l'étape.|  
 |**log_size**|**float**|Taille du journal d'étapes du travail, en mégaoctets (Mo).|  
 |**Sign**|**nvarchar(max)**|Sortie du journal d'étapes du travail.|  
   
@@ -82,7 +82,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres de **SQLAgentUserRole** peuvent uniquement afficher les métadonnées du journal d’étapes de travail pour les étapes de travail dont ils sont propriétaires.  
   

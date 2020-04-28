@@ -18,10 +18,10 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091902"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
@@ -39,7 +39,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **chaîne**  
+ **string**  
  La chaîne de caractères dont il faut lire la valeur des arguments.  
   
  OUTPUT  
@@ -83,7 +83,7 @@ products10.tmp        random
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procédures stockées étendues générales &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sprintf &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   

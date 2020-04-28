@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053338"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68053338"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar (32)**|Description textuelle d’une ressource de verrou. Contient une partie du nom de la ressource.|  
+|**rsc_text**|**nchar(32)**|Description textuelle d’une ressource de verrou. Contient une partie du nom de la ressource.|  
 |**rsc_bin**|**Binary(16**|Ressource de verrouillage binaire. Contient la ressource de verrouillage réelle contenue dans le gestionnaire de verrouillage. Cette colonne est incluse pour les outils qui connaissent le format des ressources de verrou pour générer leur propre ressource de verrouillage mise en forme et pour effectuer des jointures réflexives sur **syslockinfo**.|  
 |**rsc_valblk**|**Binary(16**|Bloc de valeur de verrouillage. Certains types de ressources peuvent inclure des données supplémentaires dans la ressource de verrouillage qui n'est pas hachée par le gestionnaire de verrouillage, afin de déterminer le propriétaire d'une ressource de verrouillage particulière. Par exemple, les verrous de page ne sont pas détenus par un ID d'objet particulier. Pour l'escalade de verrous et d'autres utilisations. Toutefois, l'ID d'objet d'un verrou de page peut être inclus dans le bloc de valeurs de verrouillage.|  
 |**rsc_dbid**|**smallint**|ID de la base de données associé à la ressource.|  
@@ -64,6 +64,6 @@ ms.locfileid: "68053338"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

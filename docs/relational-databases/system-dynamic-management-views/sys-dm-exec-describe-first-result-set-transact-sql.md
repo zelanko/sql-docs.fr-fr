@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097814"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
@@ -61,10 +61,10 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Spécifie que la colonne est une colonne supplémentaire ajoutée pour la navigation et à des fins d'informations qui ne s'affiche pas réellement dans le jeu de résultats.|  
 |**column_ordinal**|**int**|Contient la position ordinale de la colonne dans le jeu de résultats. La position de la première colonne sera spécifiée comme 1.|  
-|**nomme**|**sysname**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, la valeur est NULL.|  
+|**name**|**sysname**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, la valeur est NULL.|  
 |**is_nullable**|**bit**|Contient les valeurs suivantes :<br /><br /> Valeur 1 si la colonne autorise des valeurs NULL.<br /><br /> Valeur 0 si la colonne n'autorise pas de valeurs NULL.<br /><br /> Valeur 1 s'il est impossible de déterminer que la colonne autorise des valeurs NULL.|  
 |**system_type_id**|**int**|Contient le system_type_id du type de données de la colonne tel que spécifié dans sys. types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
-|**system_type_name**|**nvarchar (256)**|Contient le nom et les arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne.<br /><br /> Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici.<br /><br /> Si le type de données est un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
+|**system_type_name**|**nvarchar(256)**|Contient le nom et les arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne.<br /><br /> Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici.<br /><br /> Si le type de données est un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
 |**max_length**|**smallint**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = le type de données de la colonne est **varchar (max)**, **nvarchar (max)**, **varbinary (max)** ou **XML**.<br /><br /> Pour les colonnes de **texte** , la valeur **max_length** sera 16 ou la valeur définie par **sp_tableoption’texte dans la ligne'**.|  
 |**precision**|**tinyint**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**scale**|**tinyint**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
@@ -99,7 +99,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_state**|**int**|Contient le message d'état. retourné par la fonction. Si aucune erreur ne s'est produite, la colonne contiendra NULL.|  
 |**error_message**|**nvarchar (4096)**|Contient le message retourné par la fonction. Si aucune erreur ne s'est produite, la colonne contiendra NULL.|  
 |**error_type**|**int**|Contient un entier qui représente l'erreur retournée. Mappé à error_type_desc. Consultez la liste sous les notes.|  
-|**error_type_desc**|**nvarchar (60)**|Contient une chaîne majuscule courte qui représente l'erreur retournée. Mappé à error_type. Consultez la liste sous les notes.|  
+|**error_type_desc**|**nvarchar(60)**|Contient une chaîne majuscule courte qui représente l'erreur retournée. Mappé à error_type. Consultez la liste sous les notes.|  
   
 ## <a name="remarks"></a>Notes  
  Cette fonction utilise le même algorithme que **sp_describe_first_result_set**. Pour plus d’informations, consultez [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
@@ -109,7 +109,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |error_type|error_type|Description|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Toutes les erreurs qui ne font pas l'objet d'une description.|  
-|2|SYNTAXE|Une erreur de syntaxe s'est produite dans le lot.|  
+|2|SYNTAX|Une erreur de syntaxe s'est produite dans le lot.|  
 |3|CONFLICTING_RESULTS|Le résultat n'a pas pu être déterminé en raison d'un conflit entre deux premières instructions possibles.|  
 |4|DYNAMIC_SQL|Le résultat n'a pas pu être déterminé en raison du SQL dynamique qui pourrait éventuellement retourner le premier résultat.|  
 |5|CLR_PROCEDURE|Le résultat n'a pas pu être déterminé parce qu'une procédure stockée clr pourrait éventuellement retourner le premier résultat.|  
@@ -128,7 +128,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="examples"></a>Exemples  
  Des exemples supplémentaires de la rubrique [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) peuvent être adaptés pour utiliser **sys. dm_exec_describe_first_result_set**.  
   
-### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>R. Retour d'informations sur une instruction Transact-SQL unique  
+### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Retour d'informations sur une instruction Transact-SQL unique  
  Le code suivant retourne des informations sur les résultats d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  

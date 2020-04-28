@@ -10,10 +10,10 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083391"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Se connecter à Sybase (SybaseToSQL)
@@ -38,7 +38,7 @@ Si vous utilisez un port autre que celui par défaut pour les connexions à l’
 Entrez le nom d’utilisateur utilisé pour se connecter à l’ASE. Il s’agit d’une option de mode standard.  
   
 **Mot de passe**  
-Entrez le mot de passe correspondant au nom d’utilisateur. Il s’agit d’une option de mode standard.  
+Entrez le mot de passe correspondant au nom d'utilisateur indiqué. Il s’agit d’une option de mode standard.  
   
 **Chaîne de connexion**  
 Entrez la chaîne de connexion complète pour la connexion à l’ASE.  
@@ -51,7 +51,7 @@ Les chaînes de connexion se composent de paires nom de paramètre/valeur. Les n
   
     |Paramètre|Paramètre Sybase 12,5|Paramètre Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nom du serveur|Nom du serveur|Serveur|  
+    |Nom du serveur|Nom du serveur|Server (Serveur)|  
     |Port|Adresse du port du serveur|Port|  
     |Nom d'utilisateur|ID d'utilisateur|ID d'utilisateur|  
     |Mot de passe|Mot de passe|Mot de passe|  
@@ -70,7 +70,7 @@ Les chaînes de connexion se composent de paires nom de paramètre/valeur. Les n
     |Paramètre|Paramètre Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nom du pilote|pilote|  
-    |Nom du serveur|Serveur|  
+    |Nom du serveur|Server (Serveur)|  
     |User Name|Codé|  
     |Mot de passe|Pwd|  
     |Numéro de port|Port|  
@@ -83,7 +83,7 @@ Les chaînes de connexion se composent de paires nom de paramètre/valeur. Les n
   
     |Paramètre|Paramètre Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Nom du serveur|Serveur|  
+    |Nom du serveur|Server (Serveur)|  
     |User Name|Codé|  
     |Mot de passe|Pwd|  
     |Numéro de port|Port|  

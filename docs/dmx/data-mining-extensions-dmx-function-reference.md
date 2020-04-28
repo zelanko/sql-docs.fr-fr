@@ -9,16 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 68d57ac2db4149178a61424affef5e8948de0063
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070953"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Fonctions DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge plusieurs fonctions du langage DMX (Data Mining Extensions). Les fonctions étendent les résultats d'une requête de prévision afin d'inclure les informations qui décrivent en détail la prévision. Les fonctions permettent aussi de mieux contrôler la présentation des résultats de la prévision. Le tableau suivant fournit des liens vers des ressources vous permettant de comprendre l'utilisation des fonctions dans DMX.  
   
 |Fonction|Description|  
@@ -34,26 +33,26 @@ ms.locfileid: "68070953"
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|Retourne une table qui contient les n dernières lignes d'éléments de l'expression de table, triées par ordre croissant selon une expression de classement.|  
 |[BottomPercent&#41;DMX &#40;](../dmx/bottompercent-dmx.md)|Retourne une table qui contient le plus petit nombre de lignes de niveau inférieur qui représentent un pourcentage spécifié, triée en ordre croissant d'après une expression de classement.|  
 |[BottomSum&#41;DMX &#40;](../dmx/bottomsum-dmx.md)|Retourne une table qui contient le plus petit nombre de lignes de niveau inférieur qui représentent une somme spécifiée, triée en ordre croissant en fonction d'une expression de classement.|  
-|[&#41;DMX &#40;cluster](../dmx/cluster-dmx.md)|Retourne le cluster qui est le plus susceptible de contenir le cas d'entrée.|  
-|[ClusterProbability&#41;DMX &#40;](../dmx/clusterprobability-dmx.md)|Retourne la probabilité d'appartenance du cas d'entrée au cluster.|  
+|[Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)|Retourne le cluster qui est le plus susceptible de contenir le cas d'entrée.|  
+|[ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)|Retourne la probabilité d'appartenance du cas d'entrée au cluster.|  
 |[Existe &#40;DMX&#41;](../dmx/exists-dmx.md)|Retourne la valeur true si le jeu de résultats retourné par l'instruction SELECT spécifiée contient au moins une ligne.|  
-|[IsDescendant&#41;DMX &#40;](../dmx/isdescendant-dmx.md)|Indique si le nœud actuel provient du nœud spécifié.|  
-|[IsInNode&#41;DMX &#40;](../dmx/isinnode-dmx.md)|Indique si le nœud spécifié contient le cas.|  
+|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Indique si le nœud actuel provient du nœud spécifié.|  
+|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Indique si le nœud spécifié contient le cas.|  
 |[IsTestCase&#41;DMX &#40;](../dmx/istestcase-dmx.md)|Indique si un cas appartient ou non au jeu de scénarios de test.|  
 |[IsTrainingCase&#41;DMX &#40;](../dmx/istrainingcase-dmx.md)|Indique si un cas appartient ou non au jeu de cas d'apprentissage.|  
-|[Retard &#40;&#41;DMX](../dmx/lag-dmx.md)|Retourne la tranche de temps qui sépare la date du cas actuel de la dernière date des données.|  
-|[Prédire &#40;&#41;DMX](../dmx/predict-dmx.md)|Réalise une prévision sur une colonne donnée.|  
-|[PredictAdjustedProbability&#41;DMX &#40;](../dmx/predictadjustedprobability-dmx.md)|Retourne la valeur de probabilité ajustée pour la colonne prédictible spécifiée.|  
-|[PredictAssociation&#41;DMX &#40;](../dmx/predictassociation-dmx.md)|Prévoit l'appartenances associative dans une colonne.|  
-|[PredictCaseLikelihood&#41;DMX &#40;](../dmx/predictcaselikelihood-dmx.md)|Retourne le degré de vraisemblance de l'intégration du cas d'entrée dans le modèle existant. Cette fonction ne peut être utilisée qu'avec des modèles de clustering.|  
-|[&#41;&#40;DMX de PredictHistogram](../dmx/predicthistogram-dmx.md)|Retourne une table qui représente l'histogramme relatif à une colonne spécifiée.|  
-|[PredictNodeId&#41;DMX &#40;](../dmx/predictnodeid-dmx.md)|Retourne l'ID de nœud pour un cas sélectionné.|  
-|[PredictProbability&#41;DMX &#40;](../dmx/predictprobability-dmx.md)|Retourne la probabilité de la colonne spécifiée.|  
-|[PredictSequence&#41;DMX &#40;](../dmx/predictsequence-dmx.md)|Prévoit les valeurs suivantes d'une séquence.|  
-|[PredictStdev&#41;DMX &#40;](../dmx/predictstdev-dmx.md)|Récupère la valeur d'écart-type de la colonne spécifiée.|  
-|[PredictSupport&#41;DMX &#40;](../dmx/predictsupport-dmx.md)|Retourne la valeur de support de la colonne.|  
-|[PredictTimeSeries&#41;DMX &#40;](../dmx/predicttimeseries-dmx.md)|Prévoit les valeurs suivantes d'une série chronologique.|  
-|[PredictVariance&#41;DMX &#40;](../dmx/predictvariance-dmx.md)|Retourne la valeur de variance de la colonne spécifiée.|  
+|[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|Retourne la tranche de temps qui sépare la date du cas actuel de la dernière date des données.|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|Réalise une prévision sur une colonne donnée.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Retourne la valeur de probabilité ajustée pour la colonne prédictible spécifiée.|  
+|[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Prévoit l'appartenances associative dans une colonne.|  
+|[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Retourne le degré de vraisemblance de l'intégration du cas d'entrée dans le modèle existant. Cette fonction ne peut être utilisée qu'avec des modèles de clustering.|  
+|[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)|Retourne une table qui représente l'histogramme relatif à une colonne spécifiée.|  
+|[PredictNodeId &#40;DMX&#41;](../dmx/predictnodeid-dmx.md)|Retourne l'ID de nœud pour un cas sélectionné.|  
+|[PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)|Retourne la probabilité de la colonne spécifiée.|  
+|[PredictSequence &#40;DMX&#41;](../dmx/predictsequence-dmx.md)|Prévoit les valeurs suivantes d'une séquence.|  
+|[PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)|Récupère la valeur d'écart-type de la colonne spécifiée.|  
+|[PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)|Retourne la valeur de support de la colonne.|  
+|[PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md)|Prévoit les valeurs suivantes d'une série chronologique.|  
+|[PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)|Retourne la valeur de variance de la colonne spécifiée.|  
 |[RangeMax&#41;DMX &#40;](../dmx/rangemax-dmx.md)|Retourne la valeur supérieure du compartiment de prévision découverte pour une colonne discrétisée spécifiée.|  
 |[RangeMid&#41;DMX &#40;](../dmx/rangemid-dmx.md)|Retourne la valeur intermédiaire du compartiment de prévision découverte pour une colonne discrétisée spécifiée.|  
 |[RangeMin&#41;DMX &#40;](../dmx/rangemin-dmx.md)|Retourne la valeur inférieure du compartiment de prévision découverte pour une colonne discrétisée spécifiée.|  
@@ -69,6 +68,6 @@ ms.locfileid: "68070953"
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Présentation de l'instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

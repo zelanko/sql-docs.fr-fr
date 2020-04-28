@@ -16,10 +16,10 @@ ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099828"
 ---
 # <a name="functions-on-string-values---concat"></a>Fonctions sur les valeurs de chaîne : oncat
@@ -49,7 +49,7 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** de l’exemple de base de données AdventureWorks.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>R. Utilisation de la fonction XQuery concat() pour concaténer des chaînes  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Utilisation de la fonction XQuery concat() pour concaténer des chaînes  
  Pour un modèle de produit spécifique, cette requête renvoie une chaîne obtenue d'après la concaténation de la période et de la description de la garantie. Dans le document de description du catalogue, `Warranty` l’élément <> est constitué de `WarrantyPeriod` <> et `Description` <éléments enfants.  
   
 ```  

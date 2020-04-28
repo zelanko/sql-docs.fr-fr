@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054313"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "68054313"
 |reject_value|**float**|Pour les tables externes sur une source de données externe HADOOP :<br /><br /> Pour *reject_type =* value, il s’agit du nombre de rejets de ligne à autoriser avant l’échec de la requête.<br /><br /> Pour *reject_type* = Percentage, il s’agit du pourcentage de rejets de ligne à autoriser avant l’échec de la requête.||  
 |reject_sample_value|**int**|Pour *reject_type* = Percentage, il s’agit du nombre de lignes à charger, soit avec succès, soit sans succès, avant le calcul du pourcentage de lignes rejetées.|NULL si reject_type = VALUE.|  
 |distribution_type|**int**|Pour les tables externes sur une source de données externe SHARD_MAP_MANAGER, il s’agit de la distribution des données des lignes sur les tables de base sous-jacentes.|0-partitionnée<br /><br /> 1-répliqué<br /><br /> 2-tourniquet (Round Robin)|  
-|distribution_desc|**nvarchar (120)**|Pour les tables externes sur une source de données externe SHARD_MAP_MANAGER, il s’agit du type de distribution affiché sous forme de chaîne.||  
+|distribution_desc|**nvarchar(120)**|Pour les tables externes sur une source de données externe SHARD_MAP_MANAGER, il s’agit du type de distribution affiché sous forme de chaîne.||  
 |sharding_column_id|**int**|Pour les tables externes sur une source de données externe SHARD_MAP_MANAGER et une distribution partitionnée, il s’agit de l’ID de colonne de la colonne qui contient les valeurs de clé partitionnement.||  
 |remote_schema_name|**sysname**|Pour les tables externes sur une source de données externe SHARD_MAP_MANAGER, il s’agit du schéma dans lequel se trouve la table de base sur les bases de données distantes (si elles diffèrent du schéma dans lequel la table externe est définie).||  
 |remote_object_name|**sysname**|Pour les tables externes sur une source de données externe SHARD_MAP_MANAGER, il s’agit du nom de la table de base sur les bases de données distantes (s’il est différent du nom de la table externe).||  
   
 ## <a name="permissions"></a>Autorisations  
- La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées.  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys. external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   

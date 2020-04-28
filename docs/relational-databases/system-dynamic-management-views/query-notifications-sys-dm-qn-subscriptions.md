@@ -19,10 +19,10 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061919"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notifications de requêtes-sys. dm_qn_subscriptions
@@ -32,17 +32,17 @@ ms.locfileid: "68061919"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|ID d'un abonnement.|  
+|**id**|**int**|ID d'un abonnement.|  
 |**database_id**|**int**|ID de la base de données dans laquelle la requête de notification a été exécutée. Cette base de données stocke les informations relatives à cet abonnement.|  
-|**sid**|**varbinary(85)**|ID de sécurité du principal du serveur qui a créé cet abonnement et qui en est propriétaire.|  
+|**sid**|**varbinary (85)**|ID de sécurité du principal du serveur qui a créé cet abonnement et qui en est propriétaire.|  
 |**object_id**|**int**|ID de la table interne qui stocke les informations sur les paramètres de l'abonnement.|  
-|**créer**|**DATETIME**|Date et heure de création de l’abonnement.|  
-|**expiré**|**int**|Délai d'expiration de l'abonnement, en secondes. La notification est marquée pour se déclencher après ce délai.<br /><br /> Remarque : l’heure de déclenchement réelle peut être supérieure au délai d’attente spécifié. Toutefois, si une modification qui invalide l’abonnement se produit après le délai d’attente spécifié, mais avant le déclenchement de l’abonnement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantit que le déclenchement se produit au moment où la modification a été apportée.|  
-|**statu**|**int**|Indique l'état de l'abonnement. Consultez le tableau sous la section Remarques pour obtenir la liste de codes.|  
+|**created**|**datetime**|Date et heure de création de l’abonnement.|  
+|**timeout**|**int**|Délai d'expiration de l'abonnement, en secondes. La notification est marquée pour se déclencher après ce délai.<br /><br /> Remarque : l’heure de déclenchement réelle peut être supérieure au délai d’attente spécifié. Toutefois, si une modification qui invalide l’abonnement se produit après le délai d’attente spécifié, mais avant le déclenchement de l’abonnement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantit que le déclenchement se produit au moment où la modification a été apportée.|  
+|**statut**|**int**|Indique l'état de l'abonnement. Consultez le tableau sous la section Remarques pour obtenir la liste de codes.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|À|Il en va|Type|  
+|À partir|À|Activé|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Plusieurs-à-un|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Plusieurs-à-un|  
@@ -52,13 +52,13 @@ ms.locfileid: "68061919"
   
  Les codes d'état suivants indiquent qu'un abonnement a été déclenché à cause d'une modification :  
   
-|Code|État secondaire|info|  
+|Code|État secondaire|Info|  
 |----------|------------------|----------|  
 |65798|L'abonnement a été déclenché parce que les données ont été modifiées|Abonnement déclenché par insertion|  
 |65799|L'abonnement a été déclenché parce que les données ont été modifiées|DELETE|  
 |65800|L'abonnement a été déclenché parce que les données ont été modifiées|Update|  
 |65801|L'abonnement a été déclenché parce que les données ont été modifiées|Fusionner|  
-|65802|L'abonnement a été déclenché parce que les données ont été modifiées|Tronquer la table|  
+|65802|L'abonnement a été déclenché parce que les données ont été modifiées|Troncation de la table|  
 |66048|L'abonnement a été déclenché parce que le délai d'attente a expiré|Mode d'information indéfini|  
 |66315|L'abonnement a été déclenché parce que l'objet a été modifié|L'objet ou l'utilisateur a été supprimé|  
 |66316|L'abonnement a été déclenché parce que l'objet a été modifié|L'objet a été modifié|  
@@ -69,7 +69,7 @@ ms.locfileid: "68061919"
   
  Les codes d'état suivants indiquent que la création d'un abonnement a échoué :  
   
-|Code|État secondaire|info|  
+|Code|État secondaire|Info|  
 |----------|------------------|----------|  
 |132609|La création d'un abonnement a échoué parce que l'instruction n'est pas prise en charge|La requête est trop complexe|  
 |132610|La création d'un abonnement a échoué parce que l'instruction n'est pas prise en charge|Instruction non valide pour l'abonnement|  
@@ -80,7 +80,7 @@ ms.locfileid: "68061919"
   
  Les codes d'état suivants sont utilisés en interne et classés comme fin de contrôle et modes d'initialisation :  
   
-|Code|État secondaire|info|  
+|Code|État secondaire|Info|  
 |----------|------------------|----------|  
 |198656|Utilisation en interne : fin de contrôle et modes d'initialisation|Mode d'information indéfini|  
 |198928|L'abonnement a été détruit|L'abonnement a été déclenché parce que db a été attaché|  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées aux notifications de requête &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   

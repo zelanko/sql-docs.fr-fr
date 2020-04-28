@@ -18,10 +18,10 @@ ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebdaa23db8602b608498b4012ffd71367bb99a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084902"
 ---
 # <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68084902"
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Seuls les membres de **sysadmin** peuvent utiliser cette procédure stockée pour mettre à jour les planifications de travaux appartenant à d’autres utilisateurs.  
   

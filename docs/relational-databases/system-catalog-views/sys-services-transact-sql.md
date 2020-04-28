@@ -20,10 +20,10 @@ ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19e65117a03de6b473eced3c7c1379943c851a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078659"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68078659"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom du service qui respecte la casse, unique au sein de la base de données. Cette colonne n'accepte pas la valeur NULL.|  
+|**name**|**sysname**|Nom du service qui respecte la casse, unique au sein de la base de données. Cette colonne n'accepte pas la valeur NULL.|  
 |**service_id**|**int**|ID du service. Cette colonne n'accepte pas la valeur NULL.|  
 |**principal_id**|**int**|Identificateur du principal de base de données qui est propriétaire du service. Accepte la valeur NULL.|  
 |**service_queue_id**|**int**|Identificateur d'objet associé à la file d'attente utilisée par le service. Cette colonne n'accepte pas la valeur NULL.|  

@@ -10,10 +10,10 @@ ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086790"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>Affichage des rapports de cas de test (OracleToSQL)
@@ -33,7 +33,7 @@ Le reste du rapport affiche des informations dans quatre catégories :
 **Erreurs de configuration requise**  
 Affiche toutes les erreurs qui se sont produites à l' **étape conditions préalables.** Normalement, elle est ignorée.  
   
-**D’initialisation**  
+**Initialisation**  
 Affiche l’état de **réussite** ou d' **échec**de l’exécution.  
   
 **Résultat des objets de test**  

@@ -18,10 +18,10 @@ ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067738"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
@@ -46,8 +46,8 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="Arguments"></a> Arguments  
- **Tableau**  
+##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
+ **table**  
  Nom d'une table dont l'indexation sémantique et de texte intégral est activée.  
   
  Ce nom peut être en une à quatre parties, mais un nom de serveur distant n'est pas autorisé.  
@@ -74,7 +74,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 |Column_name|Type|Description|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|Expression clé qui contribue à la similarité entre le document source et le document correspondant.|  
-|**enjeu**|**NON**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés qui sont semblables dans les deux documents.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
+|**enjeu**|**real**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés qui sont semblables dans les deux documents.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Pour plus d’informations, consultez [Rechercher des documents similaires et connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

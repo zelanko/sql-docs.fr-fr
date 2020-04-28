@@ -18,10 +18,10 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096072"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
@@ -78,8 +78,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de la base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_TYPE**|**varchar(32)**|Table, table système ou vue.|  
-|**CONCERNANT**|**varchar (254)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
+|**NOTES**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_tables_ex** est exécuté en interrogeant l’ensemble de lignes tables de l’interface **IDBSchemaRowset** du fournisseur OLE DB correspondant à *table_server*. Les paramètres *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*et *Column* sont passés à cette interface pour limiter les lignes retournées.  

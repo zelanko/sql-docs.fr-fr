@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085075"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -51,14 +51,14 @@ sp_help_targetserver
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Numéro d’identification du serveur.|  
-|**server_name**|**nvarchar(30**|Nom du serveur.|  
-|**emplacement**|**nvarchar(200)**|Emplacement du serveur spécifié.|  
+|**server_name**|**nvarchar(30)**|Nom du serveur.|  
+|**location**|**nvarchar(200)**|Emplacement du serveur spécifié.|  
 |**time_zone_adjustment**|**int**|Définition du fuseau horaire, en heures, par rapport à l'heure de Greenwich (GMT).|  
-|**enlist_date**|**DATETIME**|Date d'inscription du serveur spécifié.|  
-|**last_poll_date**|**DATETIME**|Date à laquelle le serveur a été interrogé pour la dernière fois pour des travaux.|  
-|**statu**|**int**|État du serveur spécifié.|  
+|**enlist_date**|**datetime**|Date d'inscription du serveur spécifié.|  
+|**last_poll_date**|**datetime**|Date à laquelle le serveur a été interrogé pour la dernière fois pour des travaux.|  
+|**statut**|**int**|État du serveur spécifié.|  
 |**unread_instructions**|**int**|Indique si le serveur a des instructions non lues. Si toutes les lignes ont été téléchargées, cette colonne a la **valeur 0**.|  
-|**local_time**|**DATETIME**|Heure et date locales sur le serveur cible, qui sont fonction de l'heure locale du serveur cible lors de la dernière interrogation du serveur maître.|  
+|**local_time**|**datetime**|Heure et date locales sur le serveur cible, qui sont fonction de l'heure locale du serveur cible lors de la dernière interrogation du serveur maître.|  
 |**enlisted_by_nt_user**|**nvarchar(100**|Utilisateur Microsoft Windows ayant inscrit le serveur cible.|  
 |**poll_interval**|**int**|Fréquence (en secondes) à laquelle le serveur cible interroge le service SQLServerAgent principal afin de télécharger des travaux et charger des états de travaux.|  
   

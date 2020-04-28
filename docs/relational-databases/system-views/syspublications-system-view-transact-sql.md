@@ -18,10 +18,10 @@ ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094768"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (vue système) (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68094768"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**description**|**nvarchar(255)**|Entrée descriptive de la publication.|  
-|**nomme**|**sysname**|Nom unique associé à la publication.|  
+|**descriptive**|**nvarchar(255)**|Entrée descriptive de la publication.|  
+|**name**|**sysname**|Nom unique associé à la publication.|  
 |**pubid**|**int**|Colonne d'identité fournissant un ID unique pour la publication.|  
 |**repl_freq**|**tinyint**|Fréquence de réplication :<br /><br /> **0** = basé sur la transaction (transactionnel).<br /><br /> **1** = actualisation planifiée de la table (instantané).|  
-|**statu**|**tinyint**|État de la publication :<br /><br /> **0** = inactif.<br /><br /> **1** = actif.|  
+|**statut**|**tinyint**|État de la publication :<br /><br /> **0** = inactif.<br /><br /> **1** = actif.|  
 |**sync_method**|**tinyint**|Méthode de synchronisation :<br /><br /> **0** = utilitaire de copie en bloc natif (BCP).<br /><br /> **1** = BCP de caractère.<br /><br /> **3** = simultané, ce qui signifie que le BCP natif est utilisé, mais que les tables ne sont pas verrouillées au cours de l’instantané.<br /><br /> **4** = concurrent_c, ce qui signifie que le caractère BCP est utilisé, mais que les tables ne sont pas verrouillées au cours de l’instantané.|  
 |**snapshot_jobid**|**Binary(16**|Identifie le travail d'agent planifié pour créer l'instantané initial.|  
 |**independent_agent**|**bit**|Spécifie s’il existe un Agent de distribution autonome pour cette publication.<br /><br /> **0** = la publication utilise un agent de distribution partagé, et chaque paire base de données du serveur de publication/base de données de l’abonné possède un seul agent partagé.<br /><br /> **1** = il existe un agent de distribution autonome pour cette publication.|  
@@ -57,7 +57,7 @@ ms.locfileid: "68094768"
 |**ftp_address**|**sysname**|Adresse réseau du service FTP du serveur de distribution. Spécifie l'emplacement d'où l'Agent de distribution peut extraire les fichiers d'instantané de la publication.|  
 |**ftp_port**|**int**|Numéro de port du service FTP du serveur de distribution. Spécifie l’emplacement des fichiers d’instantané de la publication pour le Agent de distribution à récupérer.|  
 |**ftp_subdirectory**|**nvarchar (510)**|Spécifie l'emplacement d'où l'Agent de distribution peut extraire les fichiers d'instantané si la publication prend en charge la propagation d'instantanés via FTP.|  
-|**ftp_login**|**nvarchar (256)**|Nom d'utilisateur, utilisé pour la connexion au service FTP.|  
+|**ftp_login**|**nvarchar(256)**|Nom d'utilisateur, utilisé pour la connexion au service FTP.|  
 |**ftp_password**|**nvarchar (1048)**|Mot de passe de l’utilisateur utilisé pour se connecter au service FTP.|  
 |**allow_dts**|**bit**|Spécifie si la publication autorise les transformations DTS (Data Transformation Services) [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. **1** spécifie que les transformations DTS sont autorisées.|  
 |**allow_subscription_copy**|**bit**|Spécifie si la possibilité de copier les bases de données d'abonnement qui s'abonnent à cette publication a été activée. **1** signifie que la copie est autorisée.|  
@@ -66,16 +66,16 @@ ms.locfileid: "68094768"
 |**conflict_policy**|**int**|Spécifie la stratégie de résolution de conflits à suivre lorsque l'option d'abonné avec mise à jour en attente est utilisée. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = le serveur de publication gagne le conflit.<br /><br /> **2** = l’abonné gagne le conflit.<br /><br /> **3** = l’abonnement est réinitialisé.|  
 |**queue_type**|**int**|Spécifie le type de file d'attente utilisé. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** =. MSMQ, qui utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing pour stocker les transactions.<br /><br /> **2** =. SQL, qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.<br /><br /> Remarque : l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilisation de Message Queuing est dépréciée et n’est plus prise en charge.|  
 |**ad_guidname**|**sysname**|Spécifie si la publication est publiée dans l'annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificateur global unique (GUID) valide indique que la publication est publiée dans l'annuaire Active Directory ; le GUID correspond alors à l'objet de publication Active Directory objectGUID. Si la valeur est NULL, la publication n'est pas publiée dans l'annuaire Active Directory.<br /><br /> Remarque : la publication sur Active Directory n’est plus prise en charge.|  
-|**backward_comp_level**|**int**|Le niveau de compatibilité des bases de données peut avoir une des valeurs suivantes :<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Le niveau de compatibilité des bases de données peut avoir une des valeurs suivantes :<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Indique si les Abonnés peuvent initialiser un abonnement à cette publication à partir d'une sauvegarde plutôt que d'un instantané initial. **1** signifie que les abonnements peuvent être initialisés à partir d’une sauvegarde, et **0** signifie qu’ils ne le peuvent pas. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binaire (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Indique si la réplication de schéma est prise en charge pour la publication.<br /><br /> **1** = les instructions DDL exécutées sur le serveur de publication sont répliquées.<br /><br /> **0** = indique que les instructions DDL ne sont pas répliquées. Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**Options**|**int**|Bitmap qui spécifie d'autres options de publication. Les valeurs des options au niveau des bits sont les suivantes :<br /><br /> **0x1** -activé pour la réplication d’égal à égal.<br /><br /> **0X2** -publie uniquement les modifications locales pour la réplication d’égal à égal.<br /><br /> **0x4** -activée pour les abonnés[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non-.<br /><br /> **0x8** -activé pour la détection de conflit d’égal à égal.|  
+|**options**|**int**|Bitmap qui spécifie d'autres options de publication. Les valeurs des options au niveau des bits sont les suivantes :<br /><br /> **0x1** -activé pour la réplication d’égal à égal.<br /><br /> **0X2** -publie uniquement les modifications locales pour la réplication d’égal à égal.<br /><br /> **0x4** -activée pour les abonnés[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non-.<br /><br /> **0x8** -activé pour la détection de conflit d’égal à égal.|  
 |**originator_id**|**smallint**|Identifie chaque nœud dans la topologie de réplication d'égal à égal pour les besoins de la détection de conflit. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Procédures stockées de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  

@@ -19,10 +19,10 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056274"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>Tables d’événements étendus - trace_xe_action_map
@@ -34,8 +34,8 @@ ms.locfileid: "68056274"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|ID de la colonne Trace SQL en cours de mappage.|  
-|package_name|**nvarchar (60)**|Nom du package Événements étendus où réside l'action mappée.|  
-|xe_action_name|**nvarchar (60)**|Nom de l'action Événements étendus mappée à la colonne Trace SQL.|  
+|package_name|**nvarchar(60)**|Nom du package Événements étendus où réside l'action mappée.|  
+|xe_action_name|**nvarchar(60)**|Nom de l'action Événements étendus mappée à la colonne Trace SQL.|  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la requête suivante pour identifier les actions Événements étendus qui sont équivalentes aux colonnes Trace SQL :  

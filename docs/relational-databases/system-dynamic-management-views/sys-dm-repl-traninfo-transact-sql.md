@@ -19,10 +19,10 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067833"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
@@ -40,12 +40,12 @@ ms.locfileid: "68067833"
 |**begin_lsn**|**nvarchar (64)**|Numéro séquentiel dans le journal (NSE) de l'enregistrement du début pour la transaction.|  
 |**commit_lsn**|**nvarchar (64)**|Numéro de séquence de l'enregistrement du journal de validation pour la transaction.|  
 |**dbid**|**smallint**|ID de la base de données.|  
-|**rows**|**int**|ID de la commande répliquée à l'intérieur de la transaction.|  
+|**lignes**|**int**|ID de la commande répliquée à l'intérieur de la transaction.|  
 |**xdesid auquel appartient**|**nvarchar (64)**|ID de la transaction.|  
 |**artcache_table_address**|**varbinary (8)**|Adresse en mémoire de la dernière structure de table d'article mis en cache utilisée pour cette transaction.|  
 |**serveurs**|**nvarchar (514)**|Nom du serveur.|  
 |**server_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du nom du serveur.|  
-|**Database**|**nvarchar (514)**|Nom de la base de données.|  
+|**database**|**nvarchar (514)**|Nom de la base de données.|  
 |**db_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du nom de la base de données.|  
 |**Emetteur**|**nvarchar (514)**|Nom du serveur sur lequel la transaction a débuté.|  
 |**originator_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du serveur sur lequel la transaction a débuté.|  
@@ -60,8 +60,8 @@ ms.locfileid: "68067833"
 |**fcompensated**|**tinyint**|Spécifie si la transaction est impliquée dans une restauration partielle.|  
 |**fprocessingtext**|**tinyint**|Spécifie si la transaction inclut une colonne avec un type de données binary large.|  
 |**max_cmds_in_tran**|**int**|Nombre maximum de commandes dans une transaction logique, comme le spécifie l'Agent de lecture du journal.|  
-|**begin_time**|**DATETIME**|Heure de démarrage de la transaction.|  
-|**commit_time**|**DATETIME**|Heure à laquelle la transaction a été validée.|  
+|**begin_time**|**datetime**|Heure de démarrage de la transaction.|  
+|**commit_time**|**datetime**|Heure à laquelle la transaction a été validée.|  
 |**session_id**|**int**|ID de la session d'analyse du journal des captures de données modifiées. Cette colonne est mappée à la colonne **session_id** dans [sys. dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
 |**session_phase**|**int**|Nombre qui indique la phase de la session au moment où l'erreur s'est produite. Cette colonne est mappée à la colonne **phase_number** dans [sys. dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
 |**is_known_cdc_tran**|**bit**|Indique que la transaction est suivie par la capture de données modifiées.<br /><br /> 0 = Transaction de réplication de transactions.<br /><br /> 1 = Transaction de capture de données modifiées.|  
@@ -74,7 +74,7 @@ ms.locfileid: "68067833"
  Les informations ne sont retournées que pour les objets de base de données répliqués ou les tables activées pour la capture de données modifiées actuellement chargés dans le cache des articles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la réplication &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Vues de gestion dynamique liées à la capture des données modifiées &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

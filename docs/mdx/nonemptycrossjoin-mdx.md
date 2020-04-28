@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2d152b51e0c1c996e0bb3309e554a70683937493
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088350"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
@@ -34,7 +34,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Saut*  
+ *Count*  
  Expression numérique valide qui précise le nombre de jeux à retourner.  
   
 ## <a name="remarks"></a>Notes  
@@ -46,6 +46,6 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
 >  Cette fonction est déconseillée et vous ne devez pas l'utiliser ; elle est conservée uniquement pour maintenir la compatibilité descendante. Au lieu de cela, vous devez utiliser la fonction [Exists (MDX)](../mdx/exists-mdx.md) avec l’argument Nom du groupe de mesures ou la fonction non [vide (MDX)](../mdx/nonempty-mdx.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

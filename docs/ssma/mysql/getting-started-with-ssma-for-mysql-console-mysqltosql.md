@@ -13,10 +13,10 @@ ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075424"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Bien démarrer avec la console SSMA pour MySQL (MySQLToSQL)
@@ -59,7 +59,7 @@ Interprétation des couleurs de la sortie de la console dans le tableau suivant�
 |---------|---------------|  
 |Rouge|Erreur irrécupérable lors de l’exécution|  
 |Gris|Date et heure, message à l’utilisateur|  
-|Blanc|Commandes de fichier de script, type de message|  
+|White|Commandes de fichier de script, type de message|  
 |Jaune|Avertissement|  
 |Vert|Demander une entrée utilisateur|  
 |Cyan|Début, fin et résultat d’une opération|  

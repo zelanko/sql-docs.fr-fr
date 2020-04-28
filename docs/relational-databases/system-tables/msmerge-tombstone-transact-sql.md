@@ -18,10 +18,10 @@ ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 12caefe8b764090d46051912c876272c9efe86bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68092657"
 ---
 # <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "68092657"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**GuidLigne**|**uniqueidentifier**|Identificateur de ligne.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne.|  
 |**tablenick**|**int**|Surnom de la table.|  
-|**entrer**|**tinyint**|Type de suppression :<br /><br /> 1 = suppression de l'utilisateur<br /><br /> 5 = exclusion de la ligne de la partition filtrée<br /><br /> 6 = suppression par le système|  
+|**type**|**tinyint**|Type de suppression :<br /><br /> 1 = suppression de l'utilisateur<br /><br /> 5 = exclusion de la ligne de la partition filtrée<br /><br /> 6 = suppression par le système|  
 |**lignage**|**varbinary (249)**|Indique la version de l'enregistrement objet de la suppression, ainsi que les mises à jour connues lors de la suppression. Permet d'obtenir la résolution cohérente d'un conflit lorsqu'un abonné modifie une ligne alors qu'un autre abonné est en train de la supprimer.|  
 |**toute**|**int**|Est affecté lors de la suppression d'une ligne. Si un abonné demande la génération N, seuls les objets tombstone avec la génération >= N sont envoyés.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifie l'enregistrement logique auquel une ligne supprimée appartient.|  

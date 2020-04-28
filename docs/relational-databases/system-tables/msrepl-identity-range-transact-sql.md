@@ -18,10 +18,10 @@ ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38f5037598e240585333d246a99c29c5fd8f40fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079159"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68079159"
 |**identity_support**|**int**|Indique si la gestion automatique des plages d'identité est activée. La valeur 0 indique que la gestion automatique des plages d'identité n'est pas activée.|  
 |**next_seed**|**bigint**|Si la gestion automatique des plages d'identité est activée, indique le point de départ de la plage suivante.|  
 |**pub_range**|**bigint**|Taille de la plage d'identité du serveur de publication.|  
-|**vont**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
+|**range**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
 |**max_identity**|**bigint**|Limite maximale de la plage d'identité.|  
 |**durée**|**int**|Seuil de la plage d'identité exprimé en pourcentage.|  
 |**current_max**|**bigint**|Maximum actuel qui est susceptible d'être attribué.|  

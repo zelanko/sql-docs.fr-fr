@@ -10,10 +10,10 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086178"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Utilisation de projets SSMA (DB2ToSQL)
@@ -59,9 +59,9 @@ Pour migrer des données de bases de [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 **Pour créer un projet**  
   
-1.  Dans le menu **fichier** , cliquez sur **nouveau projet**.  
+1.  Dans le menu **Fichier**, cliquez sur **Nouveau projet**.  
   
-    La boîte de dialogue **Nouveau projet** s'affiche.  
+    La boîte de dialogue **Nouveau projet** apparaît.  
   
 2.  Dans la zone **Nom** , tapez le nom de votre projet.  
   
@@ -69,7 +69,7 @@ Pour migrer des données de bases de [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 4.  Dans la liste déroulante **migration vers** , sélectionnez la version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la cible utilisée pour la migration. Voici les options disponibles :  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -95,7 +95,7 @@ Lorsque vous enregistrez un projet, SSMA conserve les paramètres du projet et �
   
         L’enregistrement des métadonnées peut prendre plusieurs minutes. Si vous ne souhaitez pas enregistrer les métadonnées, n’activez pas les cases à cocher.  
   
-    2.  Cliquez sur le bouton **Enregistrer**.  
+    2.  Cliquez sur le bouton **Enregistrer** .  
   
         SSMA analyse les schémas DB2 et enregistre les métadonnées dans le fichier projet.  
   

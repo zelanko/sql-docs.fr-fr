@@ -14,10 +14,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054843"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
@@ -25,7 +25,7 @@ ms.locfileid: "68054843"
 
   Retourne le jeu optimal de colonnes qui identifie de façon unique une ligne d'une table. Retourne également les colonnes automatiquement mises à jour lorsqu'une transaction met à jour une valeur dans la ligne.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,11 +77,10 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|Nom de colonne de chaque colonne de la *table*retournée. Ce champ retourne toujours une valeur.|  
 |DATA_TYPE|**smallint**|Type de données ODBC SQL.|  
 |TYPE_NAME|**sysname**|Nom du type de données dépendant de la source de données ; par exemple, **char**, **varchar**, **Money**ou **Text**.|  
-|PRECISION|**Tiers**|Précision de la colonne dans la source de données. Ce champ retourne toujours une valeur.|  
-|LENGTH|**Tiers**|Longueur, en octets, requise pour le type de données sous sa forme binaire dans la source de données, par exemple 10 pour **char (** 10 **)**, 4 pour **Integer**et 2 pour **smallint**.|  
+|PRECISION|**Int**|Précision de la colonne dans la source de données. Ce champ retourne toujours une valeur.|  
+|LENGTH|**Int**|Longueur, en octets, requise pour le type de données sous sa forme binaire dans la source de données, par exemple 10 pour **char (** 10 **)**, 4 pour **Integer**et 2 pour **smallint**.|  
 |SCALE|**smallint**|Échelle de la colonne dans la source de données. La valeur NULL est retournée pour les types de données pour lesquels l'échelle n'est pas applicable.|  
-|PSEUDO_COLUMN|**smallint**|Indique si la colonne est un pseudocolonne. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 1 :<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|Indique si la colonne est un pseudocolonne. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 1 :<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
 ## <a name="remarks"></a>Notes  
  La procédure stockée sp_special_columns est équivalente à SQLSpecialColumns dans ODBC. Les résultats obtenus sont triés par SCOPE.  
@@ -89,7 +88,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Cet exemple retourne des informations sur la colonne qui identifie les lignes de manière unique dans la table `FactFinance`.  
   
 ```  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068066"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68068066"
 |**language_id**|**smallint**|ID de la langue. Pour plus d’informations, consultez [sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|Format de date. Pour plus d’informations, consultez [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|Première valeur de date. Pour plus d’informations, consultez [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**statu**|**varbinary (2)**|Champ de masque de masque qui indique le type de requête ou de contexte dans lequel la requête a été exécutée. <br />La valeur de colonne peut être une combinaison de plusieurs indicateurs (exprimée en hexadécimal) :<br /><br /> 0x0-requête régulière (aucun indicateur spécifique)<br /><br /> 0x1-requête exécutée par le biais de l’une des procédures stockées API de curseur<br /><br /> 0X2-requête de notification<br /><br /> 0x4-requête interne<br /><br /> 0x8-requête paramétrée automatiquement sans paramétrage universel<br /><br /> 0x10-requête d’actualisation de l’extraction de curseur<br /><br /> 0x20-requête en cours d’utilisation dans les demandes de mise à jour de curseur<br /><br /> 0x40-le jeu de résultats initial est retourné lorsqu’un curseur est ouvert (récupération automatique de curseur)<br /><br /> 0x80-requête chiffrée<br /><br /> 0x100-requête dans le contexte du prédicat de sécurité au niveau des lignes|  
+|**statut**|**varbinary (2)**|Champ de masque de masque qui indique le type de requête ou de contexte dans lequel la requête a été exécutée. <br />La valeur de colonne peut être une combinaison de plusieurs indicateurs (exprimée en hexadécimal) :<br /><br /> 0x0-requête régulière (aucun indicateur spécifique)<br /><br /> 0x1-requête exécutée par le biais de l’une des procédures stockées API de curseur<br /><br /> 0X2-requête de notification<br /><br /> 0x4-requête interne<br /><br /> 0x8-requête paramétrée automatiquement sans paramétrage universel<br /><br /> 0x10-requête d’actualisation de l’extraction de curseur<br /><br /> 0x20-requête en cours d’utilisation dans les demandes de mise à jour de curseur<br /><br /> 0x40-le jeu de résultats initial est retourné lorsqu’un curseur est ouvert (récupération automatique de curseur)<br /><br /> 0x80-requête chiffrée<br /><br /> 0x100-requête dans le contexte du prédicat de sécurité au niveau des lignes|  
 |**required_cursor_options**|**int**|Options de curseur spécifiées par l'utilisateur (type de curseur par exemple).|  
 |**acceptable_cursor_options**|**int**|Options de curseur dans lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut convertir implicitement afin de prendre en charge l'exécution de l'instruction.|  
 |**merge_action_type**|**smallint**|Type de plan d’exécution de déclencheur utilisé à la suite d’une instruction **Merge** .<br /><br /> 0 indique un plan de non-déclenchement, un plan de déclencheur qui ne s’exécute pas à la suite d’une instruction **Merge** ou un plan de déclencheur qui s’exécute à la suite d’une instruction **Merge** qui spécifie uniquement une action **Delete** .<br /><br /> 1 indique un plan de déclencheur **Insert** qui s’exécute à la suite d’une instruction **Merge** .<br /><br /> 2 indique un plan de déclencheur **Update** qui s’exécute à la suite d’une instruction **Merge** .<br /><br /> 3 indique un plan de déclencheur **Delete** qui s’exécute à la suite d’une instruction **Merge** contenant une action **Insert** ou **Update** correspondante.<br /><br /> <br /><br /> Pour les déclencheurs imbriqués exécutés par des actions en cascade, cette valeur est l’action de l’instruction **Merge** qui a provoqué la cascade.|  
@@ -58,9 +58,9 @@ ms.locfileid: "68068066"
  [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [Analyse des performances à l’aide de l’Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Magasin des requêtes des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

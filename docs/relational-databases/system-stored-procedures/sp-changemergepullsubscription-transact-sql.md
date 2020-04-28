@@ -16,10 +16,10 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090850"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
@@ -54,7 +54,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Emplacement de stockage du dossier d'instantanés, si cet emplacement est différent ou en complément de l'emplacement par défaut.|  
-|**description**||Description de cet abonnement extrait.|  
+|**descriptive**||Description de cet abonnement extrait.|  
 |**conseiller**||Nom du serveur de distribution.|  
 |**distributor_login**||ID de connexion utilisé sur le serveur de distribution pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Mot de passe (chiffré) utilisé sur le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de distribution pour l’authentification.|  
@@ -65,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Disponible pour compatibilité descendante uniquement. Nom d’utilisateur utilisé pour la connexion au service FTP.|  
 |**ftp_password**||Disponible pour compatibilité descendante uniquement. Mot de passe de l'utilisateur utilisé pour la connexion au service FTP.|  
 |**ftp_port**||Disponible pour compatibilité descendante uniquement. Numéro de port du service FTP du serveur de distribution.|  
-|**nom d’hôte**||Spécifie la valeur de la fonction HOST_NAME() lorsqu'elle est utilisée dans la clause WHERE d'un filtre de jointure ou d'une relation logique.|  
+|**hostname**||Spécifie la valeur de la fonction HOST_NAME() lorsqu'elle est utilisée dans la clause WHERE d'un filtre de jointure ou d'une relation logique.|  
 |**internet_login**||Connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_password**||Mot de passe de la connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_security_mode**|**1**|Utilise l'authentification Windows pour se connecter au serveur Web qui héberge la synchronisation Web.|  
@@ -81,13 +81,13 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication.|  
 ||**2**|Les déclencheurs de synchronisation utilisent une entrée **sysservers** statique pour effectuer un appel de procédure distante (RPC), et le serveur de publication doit être défini dans la table **sysservers** en tant que serveur distant ou serveur lié.|  
 |**sync_type**|**Automatique**|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
-||**None**|L'Abonné dispose déjà du schéma et des données initiales pour les tables publiées ; les données et les tables système sont toujours transférées.|  
-|**use_ftp**|**:**|Utilise FTP au lieu du protocole usuel pour extraire les instantanés.|  
-||**fausses**|Utilise le protocole usuel pour extraire les instantanés.|  
-|**use_web_sync**|**:**|L'abonnement peut être synchronisé sur HTTP.|  
-||**fausses**|L'abonnement ne peut pas être synchronisé sur HTTP.|  
-|**use_interactive_resolver**|**:**|Le résolveur interactif est utilisé lors de la résolution des conflits.|  
-||**fausses**|Le résolveur interactif n'est pas utilisé.|  
+||**Aucune**|L'Abonné dispose déjà du schéma et des données initiales pour les tables publiées ; les données et les tables système sont toujours transférées.|  
+|**use_ftp**|**true**|Utilise FTP au lieu du protocole usuel pour extraire les instantanés.|  
+||**false**|Utilise le protocole usuel pour extraire les instantanés.|  
+|**use_web_sync**|**true**|L'abonnement peut être synchronisé sur HTTP.|  
+||**false**|L'abonnement ne peut pas être synchronisé sur HTTP.|  
+|**use_interactive_resolver**|**true**|Le résolveur interactif est utilisé lors de la résolution des conflits.|  
+||**false**|Le résolveur interactif n'est pas utilisé.|  
 |**working_directory**||Chemin complet du répertoire dans lequel les fichiers d'instantané sont transférés via FTP lorsque cette option est spécifiée.|  
 |NULL (par défaut)||Retourne la liste des valeurs prises en charge pour la *propriété*.|  
   

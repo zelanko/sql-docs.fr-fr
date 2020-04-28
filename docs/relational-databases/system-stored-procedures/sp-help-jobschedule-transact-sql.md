@@ -18,10 +18,10 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054911"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
@@ -76,7 +76,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_end_date**|**int**|Date de fin de la planification.|  
 |**active_start_time**|**int**|Heure de début de la planification.|  
 |**active_end_time**|**int**|Heure de fin de la planification.|  
-|**date_created**|**DATETIME**|Date de création de la planification.|  
+|**date_created**|**datetime**|Date de création de la planification.|  
 |**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification qui est dérivée des valeurs dans **msdb. dbo. sysschedules**. Lorsque *include_description* a la **valeur 0**, cette colonne contient du texte indiquant que la description n’a pas été demandée.|  
 |**next_run_date**|**int**|Date à laquelle la planification va lancer l'exécution du travail.|  
 |**next_run_time**|**int**|Heure à laquelle la planification va lancer l'exécution du travail.|  
@@ -89,7 +89,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Les paramètres de **sp_help_jobschedule** peuvent être utilisés uniquement dans certaines combinaisons. Si *schedule_id* est spécifié, ni *job_id* ni *job_name* ne peuvent être spécifiés. Dans le cas contraire, les paramètres *job_id* ou *job_name* peuvent être utilisés avec *schedule_name*.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** . Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** . Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -97,7 +97,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres de **SQLAgentUserRole** peuvent uniquement afficher les propriétés des planifications de travaux dont ils sont propriétaires.  
   

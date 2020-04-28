@@ -20,10 +20,10 @@ ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061415"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "68061415"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom du point de terminaison, unique dans le serveur. N'accepte pas la valeur NULL.|  
+|**name**|**sysname**|Nom du point de terminaison, unique dans le serveur. N'accepte pas la valeur NULL.|  
 |**endpoint_id**|**int**|ID du point de terminaison, unique dans le serveur. Un point de terminaison doté d'un ID inférieur à 65 536 est un point de terminaison système. N'accepte pas la valeur NULL.|  
 |**principal_id**|**int**|Identificateur du principal qui a créé ce point de terminaison et qui en est propriétaire. Autorise la valeur NULL.|  
-|**No**|**tinyint**|Protocole du point de terminaison.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Canaux nommés<br /><br /> 4 = Mémoire partagée<br /><br /> 5 = VIA (Virtual Interface Architecture)<br /><br /> N'accepte pas la valeur NULL.|  
-|**protocol_desc**|**nvarchar (60)**|Description du protocole du point de terminaison. Accepte la valeur NULL. L’une des valeurs suivantes :<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **Via** Remarque : le protocole VIA est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
-|**entrer**|**tinyint**|Type de charge utile du point de terminaison.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> N'accepte pas la valeur NULL.|  
-|**type_desc**|**nvarchar (60)**|Description du type de charge utile du point de terminaison. Autorise la valeur NULL. L’une des valeurs suivantes :<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
-|**Département**|**tinyint**|État du point de terminaison.<br /><br /> 0 = DÉMARRÉ : à l'écoute et en cours de traitement des demandes.<br /><br /> 1 = ARRÊTÉ : à l'écoute mais pas en cours de traitement des demandes.<br /><br /> 2 = DÉSACTIVÉ : pas à l'écoute.<br /><br /> L'état par défaut est 1. Autorise la valeur NULL.|  
-|**state_desc**|**nvarchar (60)**|Description de l'état du point de terminaison.<br /><br /> DÉMARRÉ : à l'écoute et en cours de traitement des demandes.<br /><br /> ARRÊTÉ : à l'écoute mais pas en cours de traitement des demandes.<br /><br /> DÉSACTIVÉ : pas à l'écoute.<br /><br /> L'état par défaut est ARRÊTÉ.<br /><br /> Autorise la valeur NULL.|  
+|**protocol**|**tinyint**|Protocole du point de terminaison.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Canaux nommés<br /><br /> 4 = Mémoire partagée<br /><br /> 5 = VIA (Virtual Interface Architecture)<br /><br /> N'accepte pas la valeur NULL.|  
+|**protocol_desc**|**nvarchar(60)**|Description du protocole du point de terminaison. Accepte la valeur NULL. Une des valeurs suivantes :<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **Via** Remarque : le protocole VIA est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**type**|**tinyint**|Type de charge utile du point de terminaison.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> N'accepte pas la valeur NULL.|  
+|**type_desc**|**nvarchar(60)**|Description du type de charge utile du point de terminaison. Autorise la valeur NULL. Une des valeurs suivantes :<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
+|**state**|**tinyint**|État du point de terminaison.<br /><br /> 0 = DÉMARRÉ : à l'écoute et en cours de traitement des demandes.<br /><br /> 1 = ARRÊTÉ : à l'écoute mais pas en cours de traitement des demandes.<br /><br /> 2 = DÉSACTIVÉ : pas à l'écoute.<br /><br /> L'état par défaut est 1. Autorise la valeur NULL.|  
+|**state_desc**|**nvarchar(60)**|Description de l'état du point de terminaison.<br /><br /> DÉMARRÉ : à l'écoute et en cours de traitement des demandes.<br /><br /> ARRÊTÉ : à l'écoute mais pas en cours de traitement des demandes.<br /><br /> DÉSACTIVÉ : pas à l'écoute.<br /><br /> L'état par défaut est ARRÊTÉ.<br /><br /> Autorise la valeur NULL.|  
 |**is_admin_endpoint**|**bit**|Indique si le point de terminaison est destiné à des tâches d'administration.<br /><br /> 0 = Point de terminaison destiné à l'administration.<br /><br /> 1 = Le point de terminaison n'est pas destiné à l'administration.<br /><br /> N'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

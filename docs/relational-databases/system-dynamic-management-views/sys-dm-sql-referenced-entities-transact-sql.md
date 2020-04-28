@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090675"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
@@ -88,7 +88,7 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|ID de l'entité référencée. Lorsque referenced_minor_id n'est pas égal à 0, referenced_id est l'entité dans laquelle la colonne est définie.<br /><br /> Toujours NULL pour les références entre serveurs.<br /><br /> NULL pour les références des bases de données croisées lorsque l'ID ne peut pas être déterminé, car la base de données est hors connexion ou l'entité ne peut pas être liée.<br /><br /> NULL pour les références dans la base de données si l'ID ne peut pas être déterminé. Pour les références non liées au schéma, l’ID ne peut pas être résolu lorsque l’entité référencée n’existe pas dans la base de données ou lorsque la résolution de noms est dépendante de l’appelant.  Dans ce dernier cas, is_caller_dependent a la valeur 1.<br /><br /> Jamais NULL pour les références liées au schéma.|  
 |referenced_minor_id|**int**|ID de colonne lorsque l'entité référencée est une colonne ; sinon 0. Par exemple, referenced_minor_name est 0 dans la ligne qui répertorie l'entité référencée elle-même.<br /><br /> Pour les références non liées au schéma, les dépendances de colonnes sont signalées uniquement lorsque toutes les entités référencées peuvent être liées. Si une entité référencée ne peut pas être liée, aucune dépendance au niveau des colonnes n'est signalée et referenced_minor_id est égal à 0. Voir l'exemple D.|  
 |referenced_class|**tinyint**|Classe de l'entité référencée.<br /><br /> 1 = Objet ou colonne<br /><br /> 6 = Type<br /><br /> 10 = Collection du schéma XML<br /><br /> 21 = Fonction de partition|  
-|referenced_class_desc|**nvarchar (60)**|Description de la classe de l'entité référencée.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|Description de la classe de l'entité référencée.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indique que la liaison de schéma pour l'entité référencée se produit au moment de l'exécution ; par conséquent, la résolution de l'ID d'entité dépend du schéma de l'appelant. Cela se produit lorsque l'entité référencée est une procédure stockée, procédure stockée étendue ou fonction définie par l'utilisateur appelée dans une instruction EXECUTE.<br /><br /> 1 = l'entité référencée dépend de l'appelant et est résolue au moment de l'exécution. Dans ce cas, referenced_id a la valeur NULL.<br /><br /> 0 = l'ID de l'entité référencée ne dépend pas de l'appelant. Toujours 0 pour les références liées au schéma et pour les références des bases de données croisées et entre serveurs qui spécifient explicitement un nom de schéma. Par exemple, une référence à une entité au format `EXEC MyDatabase.MySchema.MyProc` ne dépend pas de l'appelant. Toutefois, une référence au format `EXEC MyDatabase..MyProc` dépend de l'appelant.|  
 |is_ambiguous|**bit**|Indique que la référence est ambiguë et peut être résolue au moment de l’exécution en une fonction définie par l’utilisateur, un type défini par l’utilisateur (UDT) ou une référence XQuery à une colonne de type **XML**. Par exemple, supposez que l'instruction `SELECT Sales.GetOrder() FROM Sales.MySales` est définie dans une procédure stockée. Jusqu'à ce que la procédure stockée soit exécutée, il n'est pas possible de savoir si `Sales.GetOrder()` est une fonction définie par l'utilisateur dans le schéma `Sales` ou une colonne nommée `Sales` de type défini par l'utilisateur avec une méthode nommée `GetOrder()`.<br /><br /> 1 = la référence à une fonction définie par l'utilisateur ou méthode de type défini par l'utilisateur de colonne est ambiguë.<br /><br /> 0 = la référence n'est pas équivoque ou l'entité peut être liée avec succès lorsque la fonction est appelée.<br /><br /> Toujours 0 pour les références liées au schéma.|  
 |is_selected|**bit**|1 = L'objet ou la colonne est sélectionné.|  
@@ -119,13 +119,13 @@ sys.dm_sql_referenced_entities (
   
  Le tableau suivant répertorie les types des entités pour lesquelles les informations de dépendance sont créées et gérées. Les informations de dépendance ne sont pas créées ni gérées pour les règles, les valeurs par défaut, les tables temporaires, les procédures stockées temporaires ou les objets système.  
   
-|Type d’entité|Entité de référence|Entité référencée|  
+|Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
 |Table de charge de travail|Oui*|Oui|  
 |Affichage|Oui|Oui|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]procédure stockée * *|Oui|Oui|  
+|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
 |Procédure stockée CLR|Non|Oui|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]fonction définie par l’utilisateur|Oui|Oui|  
+|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
 |Fonction CLR définie par l'utilisateur|Non|Oui|  
 |Déclencheur CLR (DML et DDL)|Non|Non|  
 |Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
@@ -335,7 +335,7 @@ SELECT
  ```
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

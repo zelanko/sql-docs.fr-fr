@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098399"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Définition de données MDX - CREATE KPI
@@ -80,15 +80,15 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |Utilisation du graphique|Nom du graphique d'indicateur de performance clé|Nombre d'états|  
 |--------------------|-------------------------|----------------------|  
-|Statut|Formes|3|  
-|Statut|Feu de circulation|3|  
-|Statut|Panneaux de signalisation|3|  
-|Statut|Jauge|3|  
-|Statut|Jauge inversée|5|  
-|Statut|Thermomètre|3|  
-|Statut|Cylindre|3|  
-|Statut|Visages|3|  
-|Statut|Flèche de variance|3|  
+|État|Formes|3|  
+|État|Feu de circulation|3|  
+|État|Panneaux de signalisation|3|  
+|État|Jauge|3|  
+|État|Jauge inversée|5|  
+|État|Thermomètre|3|  
+|État|Cylindre|3|  
+|État|Visages|3|  
+|État|Flèche de variance|3|  
 |Tendance|Flèche standard|3|  
 |Tendance|Flèche d'état|3|  
 |Tendance|Flèche d'état inversée|5|  

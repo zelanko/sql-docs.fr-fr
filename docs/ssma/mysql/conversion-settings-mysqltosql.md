@@ -10,10 +10,10 @@ ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103125"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Paramètres de conversion (MySQLToSQL)
@@ -23,7 +23,7 @@ L’onglet **« paramètres »** permet à l’utilisateur de définir des par
   
 -   Catégorie des fonctions  
   
--   Nœud de fonction  
+-   Nœud Function  
   
 -   Catégorie de tables  
   

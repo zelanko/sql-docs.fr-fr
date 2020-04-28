@@ -18,10 +18,10 @@ ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084741"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tables d’applications de la couche Données - sysdac_instances_internal
@@ -37,7 +37,7 @@ ms.locfileid: "68084741"
 |type_version|**nvarchar (64)**|Version de la DAC spécifiée quand le package DAC a été créé.|  
 |description|**nvarchar(4000)**|Description de la DAC écrite quand le package DAC a été créé.|  
 |type_stream|**varbinary(max)**|Flux de données qui contient la représentation encodée des objets logiques, tels que les tables et vues, contenus dans la DAC.|  
-|date_created|**DATETIME**|Date et heure de création de l'instance DAC.|  
+|date_created|**datetime**|Date et heure de création de l'instance DAC.|  
 |created_by|**sysname**|Connexion qui a créé l'instance DAC|  
   
 ## <a name="remarks"></a>Notes  

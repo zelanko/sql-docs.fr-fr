@@ -22,16 +22,16 @@ ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083734"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne l'historique des modifications de langage de définition de données (DDL) associé à l'instance de capture spécifiée depuis que la capture de données modifiées a été activée pour cette instance de capture. La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Retourne l'historique des modifications de langage de définition de données (DDL) associé à l'instance de capture spécifiée depuis que la capture de données modifiées a été activée pour cette instance de capture. La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,8 +58,8 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |capture_instance|**sysname**|Nom de l'instance de capture.|  
 |required_column_update|**bit**|Indique que la modification DDL a nécessité la modification d'une colonne dans la table de modifications pour refléter une modification de type de données effectuée sur la colonne source.|  
 |ddl_command|**nvarchar(max)**|Instruction DDL appliquée à la table source.|  
-|ddl_lsn|**binaire (10)**|Numéro séquentiel dans le journal associé à la modification DDL.|  
-|ddl_time|**DATETIME**|Heure associée à la modification DDL.|  
+|ddl_lsn|**binary(10)**|Numéro séquentiel dans le journal associé à la modification DDL.|  
+|ddl_time|**datetime**|Heure associée à la modification DDL.|  
   
 ## <a name="remarks"></a>Notes  
  Les modifications DDL de la table source qui modifient la structure de colonne de la table source, telles que l’ajout ou la suppression d’une colonne ou la modification du type de données d’une colonne existante, sont conservées dans la table [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Ces modifications peuvent être signalées en utilisant cette procédure stockée. Les entrées dans cdc.ddl_history sont effectuées au moment où le processus de capture lit la transaction DDL dans le journal.  
@@ -85,6 +85,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

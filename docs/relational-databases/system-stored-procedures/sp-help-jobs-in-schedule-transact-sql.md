@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054898"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
@@ -54,12 +54,12 @@ sp_help_jobs_in_schedule
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID unique du travail.|  
-|**originating_server**|**nvarchar(30**|Nom du serveur d'origine du travail|  
-|**nomme**|**sysname**|Nom du travail.|  
+|**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
+|**name**|**sysname**|Nom du travail.|  
 |**désactivé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
-|**description**|**nvarchar(512)**|Description du travail.|  
+|**descriptive**|**nvarchar(512)**|Description du travail.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
-|**catégorie**|**sysname**|Catégorie de travail.|  
+|**category**|**sysname**|Catégorie de travail.|  
 |**du**|**sysname**|Propriétaire du travail.|  
 |**notify_level_eventlog**|**int**|Masque binaire indiquant les circonstances entraînant la consignation d'une notification d'événement dans le journal des applications Microsoft Windows. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = jamais<br /><br /> **1** = lors de la tentative d’exécution d’un travail<br /><br /> **2** = en cas d’échec du travail<br /><br /> **3** = à chaque achèvement du travail (quel que soit le résultat du travail)|  
 |**notify_level_email**|**int**|Masque de bits indiquant les conditions d'envoi d'un message électronique en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
@@ -69,9 +69,9 @@ sp_help_jobs_in_schedule
 |**notify_netsend_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer les messages sur le réseau.|  
 |**notify_page_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer une page.|  
 |**delete_level**|**int**|Masque de bits indiquant les conditions de suppression du travail en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
-|**date_created**|**DATETIME**|Date de création du travail.|  
-|**date_modified**|**DATETIME**|Date de dernière modification du travail.|  
-|**version_number**|**int**|Version du travail (automatiquement mise à jour chaque fois que le travail est modifié).|  
+|**date_created**|**datetime**|Date de création du travail.|  
+|**date_modified**|**datetime**|Date de dernière modification du travail.|  
+|**version_number**|**int**|Version du travail (mise à jour automatique à chaque modification).|  
 |**last_run_date**|**int**|Date du début de la dernière exécution du travail.|  
 |**last_run_time**|**int**|Heure du début de la dernière exécution du travail.|  
 |**last_run_outcome**|**int**|Résultat du travail lors de sa dernière exécution :<br /><br /> **0** = échec<br /><br /> **1** = réussite<br /><br /> **3** = annulé<br /><br /> **5** = inconnu|  
@@ -84,7 +84,7 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Nombre d'étapes du travail.|  
 |**has_schedule**|**int**|Nombre de planifications d'un travail.|  
 |**has_target**|**int**|Nombre de serveurs cibles d'un travail.|  
-|**entrer**|**int**|Type du travail :<br /><br /> **1** = travail local.<br /><br /> **2** = travail multiserveur.<br /><br /> **0** = le travail n’a pas de serveurs cibles.|  
+|**type**|**int**|Type du travail :<br /><br /> **1** = travail local.<br /><br /> **2** = travail multiserveur.<br /><br /> **0** = le travail n’a pas de serveurs cibles.|  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure affiche des informations sur les travaux attachés à la planification spécifiée.  
@@ -98,7 +98,7 @@ sp_help_jobs_in_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres de **SQLAgentUserRole** peuvent uniquement afficher l’état des travaux dont ils sont propriétaires.  
   

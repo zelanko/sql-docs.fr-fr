@@ -10,10 +10,10 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103231"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Se connecter à MySQL (MySQLToSQL)
@@ -44,7 +44,7 @@ Entrez le nom d’utilisateur que SSMA utilisera pour se connecter à la base de
   
 **Mot de passe**  
   
-Entrez le mot de passe correspondant au nom d’utilisateur.  
+Entrez le mot de passe correspondant au nom d'utilisateur indiqué.  
   
 **Socket**  
   

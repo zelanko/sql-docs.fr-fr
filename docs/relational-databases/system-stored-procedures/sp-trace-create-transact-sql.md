@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096030"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
@@ -82,8 +82,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  Si *stop_time* et *max_file_size* sont spécifiés et que TRACE_FILE_ROLLOVER n’est pas spécifié, la trace est dépendante lorsque l’heure d’arrêt spécifiée ou la taille de fichier maximale est atteinte. Si *stop_time*, *max_file_size*et TRACE_FILE_ROLLOVER sont spécifiés, la trace s’arrête à l’heure d’arrêt spécifiée, en supposant que la trace ne remplit pas le lecteur.  
   
-`[ @filecount = ] 'max_rollover_files'`Spécifie le nombre maximal de fichiers de trace à conserver avec le même nom de fichier de base. *MAX_ROLLOVER_FILES* est de **type int**, supérieur à un. Ce paramètre est valide uniquement si l'option TRACE_FILE_ROLLOVER est spécifiée. Lorsque *MAX_ROLLOVER_FILES* est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de ne pas gérer plus de *MAX_ROLLOVER_FILES* fichiers de suivi en supprimant le fichier de trace le plus ancien avant d’ouvrir un nouveau fichier de trace. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure le suivi de l'ancienneté des fichiers de trace en ajoutant un numéro au nom de fichier de base.  
+`[ @filecount = ] 'max_rollover_files'`Spécifie le nombre maximal de fichiers de trace à conserver avec le même nom de fichier de base. *MAX_ROLLOVER_FILES* est de **type int**, supérieur à un. Ce paramètre est valide uniquement si l'option TRACE_FILE_ROLLOVER est spécifiée. Lorsque *MAX_ROLLOVER_FILES* est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de ne pas gérer plus de *MAX_ROLLOVER_FILES* fichiers de suivi en supprimant le fichier de trace le plus ancien avant d’ouvrir un nouveau fichier de trace. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure le suivi de l'ancienneté des fichiers de trace en ajoutant un numéro au nom de fichier de base.  
   
  Par exemple, lorsque le paramètre *trace_file* est spécifié en tant que « c:\mytrace », un fichier portant le nom « c:\ mytrace_123. trc » est plus ancien qu’un fichier portant le nom « c:\ mytrace_124. trc ». Si *MAX_ROLLOVER_FILES* a la valeur 2, SQL Server supprime le fichier « c:\ mytrace_123. trc » avant de créer le fichier de trace « c:\ mytrace_125. trc ».  
   

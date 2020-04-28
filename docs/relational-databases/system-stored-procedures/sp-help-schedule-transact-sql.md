@@ -18,10 +18,10 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085215"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
@@ -73,7 +73,7 @@ sp_help_schedule
 |**active_end_date**|**int**|Date de fin de la planification.|  
 |**active_start_time**|**int**|Heure de début de la planification.|  
 |**active_end_time**|**int**|Heure de fin de la planification.|  
-|**date_created**|**DATETIME**|Date de création de la planification.|  
+|**date_created**|**datetime**|Date de création de la planification.|  
 |**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification (sur demande).|  
 |**job_count**|**int**|Renvoie le nombre de travaux auxquels la planification fait référence.|  
   
@@ -89,7 +89,7 @@ sp_help_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres de **SQLAgentUserRole** peuvent uniquement afficher les planifications dont ils sont propriétaires.  
   

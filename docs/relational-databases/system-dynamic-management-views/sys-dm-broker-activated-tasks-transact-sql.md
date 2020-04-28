@@ -19,10 +19,10 @@ ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f80ec78e37707058a354a03bb2605a38abdfa803
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099187"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68099187"
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**spid**|**int**|ID de la session de la procédure stockée activée. Accepte la valeur NULL.|  
+|**SPID**|**int**|ID de la session de la procédure stockée activée. Accepte la valeur NULL.|  
 |**database_id**|**smallint**|ID de la base de données dans laquelle la file d'attente est définie. Accepte la valeur NULL.|  
 |**queue_id**|**int**|ID de l'objet de la file d'attente pour lequel la procédure stockée a été activée. Accepte la valeur NULL.|  
 |**procedure_name**|**nvarchar (650)**|Nom de la procédure stockée activée. Accepte la valeur NULL.|  
@@ -47,13 +47,13 @@ ms.locfileid: "68099187"
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|À|Relation|  
+|À partir|À|Relation|  
 |----------|--------|------------------|  
-|dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|Un-à-un|  
+|dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|Un à un|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker vues de gestion dynamique associées &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues de gestion dynamique liées à Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

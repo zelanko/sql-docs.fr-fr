@@ -21,10 +21,10 @@ ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e6ce86e7be7d54e95c2336691b53ea12ff0d8575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076504"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "68076504"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar (128)**|Nom de l’objet de performance, tel que **SqlServer : LockManager** ou **SqlServer : BufferManager**.|  
-|**counter_name**|**nchar (128)**|Nom du compteur de performance dans l’objet, par exemple **demandes de page** ou **verrous demandés**.|  
-|**instance_name**|**nchar (128)**|Instance nommée du compteur. Par exemple, il existe des compteurs gérés pour chaque type de verrou, tels que **table**, **page**, **clé**, etc. Le nom de l'instance permet de distinguer des compteurs similaires.|  
+|**object_name**|**nchar(128)**|Nom de l’objet de performance, tel que **SqlServer : LockManager** ou **SqlServer : BufferManager**.|  
+|**counter_name**|**nchar(128)**|Nom du compteur de performance dans l’objet, par exemple **demandes de page** ou **verrous demandés**.|  
+|**instance_name**|**nchar(128)**|Instance nommée du compteur. Par exemple, il existe des compteurs gérés pour chaque type de verrou, tels que **table**, **page**, **clé**, etc. Le nom de l'instance permet de distinguer des compteurs similaires.|  
 |**cntr_value**|**bigint**|Valeur réelle du compteur. Souvent, il s'agit d'un compteur croissant de niveau ou monotone qui compte les occurrences de l'événement d'instance.|  
 |**cntr_type**|**int**|Type de compteur défini par l'architecture de performances Windows.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055712"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -42,10 +42,10 @@ Expression1 OR Expression2
   
 |*Expression1*|*Expression2*|Valeur de retour|  
 |-------------------|-------------------|------------------|  
-|**:**|**:**|**:**|  
-|**:**|**fausses**|**:**|  
-|**fausses**|**:**|**:**|  
-|**fausses**|**fausses**|**fausses**|  
+|**true**|**true**|**true**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>Exemple  
  La requête suivante contient une mesure calculée qui retourne la chaîne « marié ou mâle » si le membre actuel dans la hiérarchie de sexe de la dimension Customer est mâle ou si le membre actuel dans la hiérarchie d’état matrimoniale de la dimension Customer est marié ; Sinon, elle retourne la chaîne « célibataire ou féminin ».  

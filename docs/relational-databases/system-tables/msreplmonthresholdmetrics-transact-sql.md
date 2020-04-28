@@ -18,10 +18,10 @@ ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b3e8b9c2443a6fa74e113dc1a3f25880ac753dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079943"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68079943"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|Identifie une mesure de performance de réplication, et peut avoir l'une des valeurs ci-dessous.<br /><br /> **1** = expiration<br /><br /> **2** = latence<br /><br /> **4** = mergeexpiration<br /><br /> **5** = mergeslowrunduration<br /><br /> **6** = mergefastrunduration<br /><br /> **7** = mergefastrunspeed<br /><br /> **8** = mergeslowrunspeed|  
-|**bonhomme**|**sysname**|Nom de la mesure de performance de réplication|  
+|**title**|**sysname**|Nom de la mesure de performance de réplication|  
 |**warningbitstatus**|**int**|Identificateur au niveau du bit utilisé pour générer un avertissement de violation de seuil pour l'une des mesures suivantes :<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle a dépassé la période de rétention au-delà du seuil autorisé, en pourcentage de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration : un abonnement à une publication de fusion a dépassé la période de rétention au-delà du seuil autorisé, en pourcentage de la période de rétention.<br /><br /> **8** = mergefastrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
 |**alertmessageid**|**int**|ID du message d'erreur qui s'affiche lorsque la condition générant un avertissement de seuil se produit.|  
-|**description**|**nvarchar (3000)**|Description de la mesure de performance de réplication|  
+|**descriptive**|**nvarchar (3000)**|Description de la mesure de performance de réplication|  
 |**default_value**|**sql_variant**|Valeur par défaut pour la mesure de performance de réplication|  
 |**min_value**|**sql_variant**|Valeur minimale pour une mesure de performance de réplication limitée|  
 |**max_value**|**sql_variant**|Valeur maximale pour une mesure de performance de la réplication limitée|  

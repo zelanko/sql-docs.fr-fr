@@ -18,10 +18,10 @@ ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060217"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
@@ -33,12 +33,12 @@ ms.locfileid: "68060217"
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|Identificateur d'éléments du journal.|  
 |**event_type**|**varchar (11)**|Type d'avis inséré dans le journal. Les valeurs possibles sont les suivantes : erreurs, avertissements, messages d'information, messages de succès et messages internes supplémentaires.|  
-|**log_date**|**DATETIME**|Date et l'heure de création de l'entrée du journal.|  
-|**description**|**nvarchar(max)**|Texte du message en cours d'enregistrement.|  
+|**log_date**|**datetime**|Date et l'heure de création de l'entrée du journal.|  
+|**descriptive**|**nvarchar(max)**|Texte du message en cours d'enregistrement.|  
 |**process_id**|**int**|L'ID de processus du programme externe de messagerie de base de données. Cette valeur change en principe à chaque démarrage du programme externe de messagerie de base de données.|  
 |**mailitem_id**|**int**|Identificateur de l'élément de messagerie dans la file d'attente des messages. La valeur est NULL si le message n'est pas associé à un élément de courrier électronique spécifique.|  
 |**account_id**|**int**|**Account_id** du compte associé à l’événement. La valeur est NULL si le message n'est pas associé à un compte spécifique.|  
-|**last_mod_date**|**DATETIME**|Date et heure de la dernière modification de la ligne.|  
+|**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne. Pour les messages électroniques, il s'agit de l'utilisateur qui a envoyé le message. Pour les messages générés par le programme externe de messagerie de base de données, il s'agit du contexte utilisateur du programme.|  
   
 ## <a name="remarks"></a>Notes  

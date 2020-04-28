@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097706"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
@@ -43,8 +43,8 @@ ms.locfileid: "68097706"
 |**request_id**|**int**|ID de la demande. Unique dans le contexte de la session.|  
 |**scheduler_id**|**int**|ID du planificateur qui planifie cette requête.|  
 |**dop**|**smallint**|Degré de parallélisme de cette requête.|  
-|**request_time**|**DATETIME**|Date et heure auxquelles cette requête a demandé l'allocation de mémoire.|  
-|**grant_time**|**DATETIME**|Date et heure auxquelles la mémoire a été allouée pour cette requête. NULL si la mémoire n'a pas encore été allouée.|  
+|**request_time**|**datetime**|Date et heure auxquelles cette requête a demandé l'allocation de mémoire.|  
+|**grant_time**|**datetime**|Date et heure auxquelles la mémoire a été allouée pour cette requête. NULL si la mémoire n'a pas encore été allouée.|  
 |**requested_memory_kb**|**bigint**|Quantité totale de mémoire demandée, en kilo-octets.|  
 |**granted_memory_kb**|**bigint**|Quantité totale de mémoire actuellement allouée, en kilo-octets. Peut être NULL si la mémoire n'a pas encore été allouée. Dans une situation type, cette valeur doit être la même que **requested_memory_kb**. Pour la création d'index, le serveur peut autoriser de la mémoire à la demande supplémentaire au-delà de la mémoire allouée initialement.|  
 |**required_memory_kb**|**bigint**|Mémoire minimale requise pour exécuter cette requête, en kilo-octets. **requested_memory_kb** est supérieure ou égale à cette valeur.|  
@@ -57,8 +57,8 @@ ms.locfileid: "68097706"
 |**wait_order**|**int**|Ordre séquentiel des requêtes en attente dans le **queue_id** spécifié. Cette valeur peut changer pour une requête donnée si d’autres requêtes obtiennent des allocations de mémoire ou expirent. NULL si la mémoire est déjà allouée.|  
 |**is_next_candidate**|**bit**|Candidat pour l'allocation mémoire suivante.<br /><br /> 1 = Oui<br /><br /> 0 = Non<br /><br /> NULL = La mémoire est déjà allouée.|  
 |**wait_time_ms**|**bigint**|Temps d'attente en millisecondes. NULL si la mémoire est déjà allouée.|  
-|**plan_handle**|**varbinary (64)**|Identificateur de ce plan de requête. Utilisez **sys.dm_exec_query_plan** pour extraire le plan XML réel.|  
-|**sql_handle**|**varbinary (64)**|Identificateur de texte [!INCLUDE[tsql](../../includes/tsql-md.md)] pour cette requête. Utilisez **sys.dm_exec_sql_text** pour obtenir le texte [!INCLUDE[tsql](../../includes/tsql-md.md)] réel.|  
+|**plan_handle**|**varbinary(64)**|Identificateur de ce plan de requête. Utilisez **sys.dm_exec_query_plan** pour extraire le plan XML réel.|  
+|**sql_handle**|**varbinary(64)**|Identificateur de texte [!INCLUDE[tsql](../../includes/tsql-md.md)] pour cette requête. Utilisez **sys.dm_exec_sql_text** pour obtenir le texte [!INCLUDE[tsql](../../includes/tsql-md.md)] réel.|  
 |**group_id**|**int**|ID du groupe de charge de travail dans lequel cette requête est exécutée.|  
 |**pool_id**|**int**|ID du pool de ressources auquel appartient ce groupe de charge de travail.|  
 |**is_small**|**tinyint**|Si la valeur est définie sur 1, cette allocation utilise le sémaphore de ressource le plus petit. Si la valeur est définie sur 0, c'est que le sémaphore de ressource ordinaire est utilisé.|  
@@ -84,7 +84,7 @@ Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiert l’autorisa
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup> dans ce scénario, le type d’attente est généralement RESOURCE_SEMAPHORE. Pour plus d’informations, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
+    <sup>1</sup> Dans ce scénario, le type d’attente est généralement RESOURCE_SEMAPHORE. Pour plus d’informations, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
 -   Cache de recherche pour les requêtes avec des allocations de mémoire à l’aide de [sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) et [sys. dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
@@ -117,6 +117,6 @@ Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiert l’autorisa
 ## <a name="see-also"></a>Voir aussi  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094828"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
@@ -31,18 +31,18 @@ ms.locfileid: "68094828"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom de l’article.|  
-|**entrer**|**tinyint**|Indique le type d'article, qui peut être l'un des suivants :<br /><br /> **0x0A** = table.<br /><br /> **0x20** = schéma de procédure uniquement.<br /><br /> **0x40** = schéma de vue uniquement ou schéma de vue indexée uniquement.<br /><br /> **0x80** = schéma de fonction uniquement.|  
-|**ID**|**int**|Identificateur de l'objet publié.|  
+|**name**|**sysname**|Nom de l’article.|  
+|**type**|**tinyint**|Indique le type d'article, qui peut être l'un des suivants :<br /><br /> **0x0A** = table.<br /><br /> **0x20** = schéma de procédure uniquement.<br /><br /> **0x40** = schéma de vue uniquement ou schéma de vue indexée uniquement.<br /><br /> **0x80** = schéma de fonction uniquement.|  
+|**objid**|**int**|Identificateur de l'objet publié.|  
 |**sync_objid**|**int**|ID d'objet de la vue représentant l'ensemble de données synchronisées.|  
 |**view_type**|**tinyint**|Type de vue :<br /><br /> **0** = n’est pas une vue ; Utilisez l’ensemble de l’objet de base.<br /><br /> **1** = affichage permanent.<br /><br /> **2** = affichage temporaire.|  
 |**artid**|**uniqueidentifier**|Numéro d'identification unique de l'article donné.|  
-|**description**|**nvarchar(255)**|Brève description de l'article.|  
+|**descriptive**|**nvarchar(255)**|Brève description de l'article.|  
 |**pre_creation_command**|**tinyint**|Action par défaut à effectuer lors de la création de l’article dans la base de données d’abonnement :<br /><br /> **0** = aucun-si la table existe déjà sur l’abonné, aucune action n’est effectuée.<br /><br /> **1** = drop-supprime la table avant de la recréer.<br /><br /> **2** = DELETE : émet une suppression basée sur la clause WHERE dans le filtre de sous-ensemble.<br /><br /> **3** = tronquer-identique à 2, mais supprime les pages au lieu des lignes. Toutefois, n'accepte pas la clause WHERE.|  
 |**pubid**|**uniqueidentifier**|ID de la publication à laquelle appartient l'article actif.|  
-|**mon**|**int**|Le mappage de surnom pour l'identification de l'article.|  
+|**nickname**|**int**|Le mappage de surnom pour l'identification de l'article.|  
 |**column_tracking**|**int**|Indique si le suivi des colonnes est implémenté pour l’article.|  
-|**statu**|**tinyint**|Indique l'état de l'article, qui peut être l'un des suivants :<br /><br /> **1** = non synchronisé : le script de traitement initial permettant de publier la table sera exécuté lors de la prochaine exécution du agent d’instantané.<br /><br /> **2** = actif : le script de traitement initial pour la publication de la table a été exécuté.|  
+|**statut**|**tinyint**|Indique l'état de l'article, qui peut être l'un des suivants :<br /><br /> **1** = non synchronisé : le script de traitement initial permettant de publier la table sera exécuté lors de la prochaine exécution du agent d’instantané.<br /><br /> **2** = actif : le script de traitement initial pour la publication de la table a été exécuté.|  
 |**conflict_table**|**sysname**|Nom de la table locale qui contient les enregistrements en conflit pour l'article actif. Cette table est fournie à titre d'information uniquement et son contenu peut être modifié ou supprimé à l'aide des routines personnalisées de résolution de conflits ou directement par l'administrateur.|  
 |**creation_script**|**nvarchar(255)**|Script de création de l'article.|  
 |**conflict_script**|**nvarchar(255)**|Script de conflit de l'article.|  
@@ -57,13 +57,13 @@ ms.locfileid: "68094828"
 |**destination_object**|**sysname**|Nom de la table créée sur l'Abonné.|  
 |**destination_owner**|**sysname**|Nom du propriétaire de l’objet de destination.|  
 |**resolver_clsid**|**nvarchar(50)**|ID de l'outil personnalisé de résolution des conflits Cette valeur est NULL dans le cas d'un gestionnaire de logique métier.|  
-|**subset_filterclause**|**nvarchar (1000)**|Clause de filtre de l'article.|  
+|**subset_filterclause**|**nvarchar(1000)**|Clause de filtre de l'article.|  
 |**missing_col_count**|**int**|Nombre de colonnes publiées manquantes dans l'article.|  
-|**missing_cols**|**varbinary (128)**|Bitmap décrivant les colonnes manquant dans l'article.|  
-|**excluded_cols**|**varbinary (128)**|Bitmap des colonnes exclues de l'article.|  
+|**missing_cols**|**varbinary(128)**|Bitmap décrivant les colonnes manquant dans l'article.|  
+|**excluded_cols**|**varbinary(128)**|Bitmap des colonnes exclues de l'article.|  
 |**excluded_col_count**|**int**|Nombre de colonnes exclues de l'article.|  
-|**colonnes**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deleted_cols**|**varbinary (128)**|Bitmap décrivant les colonnes supprimées de l'article.|  
+|**colonnes**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**deleted_cols**|**varbinary(128)**|Bitmap décrivant les colonnes supprimées de l'article.|  
 |**resolver_info**|**nvarchar(255)**|Espace de stockage réservé aux informations complémentaires nécessaires aux outils personnalisés de résolution des conflits.|  
 |**view_sel_proc**|**nvarchar (290)**|Nom de la procédure stockée utilisée par l'Agent de fusion pour effectuer le remplissage initial d'un article dans une publication filtrée dynamiquement et pour énumérer les lignes modifiées dans une publication filtrée.|  
 |**gen_cur**|**bigint**|Génère le nombre de modifications locales apportées à la table de base d'un article.|  
@@ -80,13 +80,13 @@ ms.locfileid: "68094828"
 |**upload_options**|**tinyint**|Indique si des modifications peuvent être effectuées sur l'Abonné ou téléchargés à partir de l'Abonné ; peut prendre l'une des valeurs suivantes :<br /><br /> **0** = il n’existe aucune restriction sur les mises à jour effectuées sur l’abonné ; toutes les modifications sont téléchargées sur le serveur de publication.<br /><br /> **1** = les modifications sont autorisées sur l’abonné, mais elles ne sont pas téléchargées sur le serveur de publication.<br /><br /> **2** = les modifications ne sont pas autorisées sur l’abonné.|  
 |**published_in_tran_pub**|**bit**|Indique qu'un article d'une publication de fusion est également publié dans une publication transactionnelle.<br /><br /> **0** = l’article n’est pas publié dans un article transactionnel.<br /><br /> **1** = l’article est également publié dans un article transactionnel.|  
 |**léger**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**procname_postfix**|**nchar (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|ID de la vue de la table avant les mises à jour.|  
 |**delete_tracking**|**bit**|Indique si les suppressions sont répliquées.<br /><br /> **0** = les suppressions ne sont pas répliquées.<br /><br /> **1** = les suppressions sont répliquées, ce qui correspond au comportement par défaut de la réplication de fusion.<br /><br /> Lorsque la valeur de *delete_tracking* est **0**, les lignes supprimées sur l’abonné doivent être supprimées manuellement sur le serveur de publication, et les lignes supprimées sur le serveur de publication doivent être supprimées manuellement sur l’abonné.<br /><br /> Remarque : la valeur **0** aboutit à une non-convergence.|  
 |**compensate_for_errors**|**bit**|Indique si des actions de compensation interviennent lorsque des erreurs se produisent pendant la synchronisation.<br /><br /> **0** = les actions de compensation sont désactivées.<br /><br /> **1** = les modifications qui ne peuvent pas être appliquées sur un abonné ou un serveur de publication entraînent toujours des actions de compensation pour annuler ces modifications, ce qui constitue le comportement par défaut de la réplication de fusion.<br /><br /> Remarque : la valeur **0** aboutit à une non-convergence.|  
 |**pub_range**|**bigint**|Taille de la plage d'identité du serveur de publication.|  
-|**vont**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
+|**range**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
 |**durée**|**int**|Seuil de la plage d'identité exprimé en pourcentage.|  
 |**stream_blob_columns**|**bit**|Indique si la fonction d'optimisation de diffusion est utilisée pour les colonnes d'objets binaires volumineux. **1** signifie que l’optimisation est tentée.|  
 |**preserve_rowguidcol**|**bit**|Indique si la réplication utilise une colonne rowguid existante. La valeur **1** signifie qu’une colonne rowguidcol existante est utilisée. **0** signifie que la réplication a ajouté la colonne rowguidcol.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68094828"
 |**logical_record_level_conflict_detection**|**bit**|Indique si les conflits doivent être détectés au niveau des enregistrements logiques ou au niveau des lignes ou des colonnes.<br /><br /> **0** = la détection de conflit au niveau des lignes ou des colonnes est utilisée.<br /><br /> **1** = la détection de conflit d’enregistrement logique est utilisée, où une modification d’une ligne sur le serveur de publication et la modification d’une ligne distincte le même enregistrement logique sur l’abonné sont gérées en tant que conflit.<br /><br /> Lorsque cette valeur est égale à 1, seule la résolution de conflits au niveau de l'enregistrement logique peut être utilisée.|  
 |**logical_record_level_conflict_resolution**|**bit**|Indique si les conflits doivent être résolus au niveau de l'enregistrement logique ou au niveau de la ligne ou de la colonne.<br /><br /> **0** = la résolution au niveau des lignes ou des colonnes est utilisée.<br /><br /> **1** = en cas de conflit, la totalité de l’enregistrement logique du gagnant remplace l’ensemble de l’enregistrement logique du côté perdant.<br /><br /> La valeur 1 peut-être utilisée aussi bien pour la détection au niveau de l'enregistrement logique que pour la détection au niveau de la ligne ou de la colonne.|  
 |**partition_options**|**tinyint**|Définit le mode de partitionnement des données de l'article, ce qui permet l'optimisation des performances lorsque toutes les lignes appartiennent à une seule partition ou à un seul abonnement. L' *partition_options* peut prendre l’une des valeurs suivantes.<br /><br /> **0** = le filtrage de l’article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition, c’est-à-dire une partition « qui se chevauche ».<br /><br /> **1** = les partitions se chevauchent, et les mises à jour DML effectuées sur l’abonné ne peuvent pas modifier la partition à laquelle une ligne appartient.<br /><br /> **2** = le filtrage de l’article génère des partitions qui ne se chevauchent pas, mais plusieurs abonnés peuvent recevoir la même partition.<br /><br /> **3** = le filtrage de l’article génère des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement.|  
-|**nomme**|**sysname**|Nom d'une partition.|  
+|**name**|**sysname**|Nom d'une partition.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les partitions d’une publication de fusion avec des filtres paramétrés](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

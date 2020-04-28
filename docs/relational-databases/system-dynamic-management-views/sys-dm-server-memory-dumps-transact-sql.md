@@ -19,10 +19,10 @@ ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090802"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68090802"
  
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**extension**|**nvarchar (256)**|Chemin d'accès et nom du fichier de vidage de mémoire. Ne peut pas avoir la valeur null.|  
+|**extension**|**nvarchar(256)**|Chemin d'accès et nom du fichier de vidage de mémoire. Ne peut pas avoir la valeur null.|  
 |**creation_time**|**datetimeoffset(7)**|Date et heure de création du fichier. Ne peut pas avoir la valeur null.|  
 |**size_in_bytes**|**bigint**|Taille (en octets) du fichier. Autorise la valeur NULL.|  
   

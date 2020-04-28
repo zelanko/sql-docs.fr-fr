@@ -17,10 +17,10 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066657"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de type) (AccessToSQL)
@@ -44,19 +44,19 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |Type de données Access|Type de données de SQL Server|  
 |--------------------|------------------------|  
 |**binaire [\*.. \*]**|**varbinary [\*]**|  
-|**expression**|**bit**|  
-|**poids**|**tinyint**|  
-|**currency**|**money**|  
-|**Date**|**DATETIME**|  
-|**sépar**|**float**|  
-|**Cliquer**|**float**|  
+|**boolean**|**bit**|  
+|**byte**|**tinyint**|  
+|**accès**|**money**|  
+|**date**|**datetime**|  
+|**decimal**|**float**|  
+|**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**entier**|**smallint**|  
 |**long**|**int**|  
 |**autorise**|**varbinary(max)**|  
 |**mémo**|**nvarchar(max)**|  
 |**MEMO** -pour Access 97|**varchar(max)**|  
-|**Single**|**real**|  
+|**single**|**real**|  
 |**texte [\*.. \*]**|**nvarchar [\*]**|  
 |**texte [\*.. ] \*** -pour Access 97|**VARCHAR [\*]**|  
   

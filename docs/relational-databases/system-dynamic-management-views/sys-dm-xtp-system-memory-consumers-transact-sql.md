@@ -19,10 +19,10 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090093"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
@@ -42,7 +42,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |memory_consumer_id|**bigint**|ID interne du consommateur de mémoire.|  
 |memory_consumer_type|**int**|Entier qui représente le type de consommateur de mémoire avec l’une des valeurs suivantes :<br /><br /> 0-il ne doit pas être affiché. Regroupe l'utilisation de la mémoire de deux consommateurs ou plus.<br /><br /> 1-a : effectue le suivi de la consommation de mémoire pour un système.<br /><br /> 2-VARHEAP : effectue le suivi de la consommation de mémoire pour un segment de longueur variable.<br /><br /> 4-pool de pages d’e/s : effectue le suivi de la consommation de mémoire pour un pool de pages système utilisé pour les opérations d’e/s.|  
 |memory_consumer_type_desc|**nvarchar (16)**|Description du type de consommateur de mémoire :<br /><br /> 0-il ne doit pas être affiché.<br /><br /> 1-EN PARALLÈLE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP <br />Segment du système. Usage général. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />OU<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : pour les pools de systèmes d’e/s, il existe trois tailles différentes : le pool de pages du système 4K, le pool de pages du système 64 K et le pool de pages système 256 K.|  
+|memory_consumer_desc|**nvarchar (64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP <br />Segment du système. Usage universel. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />OU<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : pour les pools de systèmes d’e/s, il existe trois tailles différentes : le pool de pages du système 4K, le pool de pages du système 64 K et le pool de pages système 256 K.|  
 |lookaside_id|**bigint**|ID du fournisseur de mémoire lookaside, ThreadLocal.|  
 |pagepool_id|**bigint**|ID du fournisseur de mémoire de pool de pages, ThreadLocal.|  
 |allocated_bytes|**bigint**|Nombre d'octets réservés pour ce consommateur.|  
@@ -105,6 +105,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables à mémoire optimisée &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

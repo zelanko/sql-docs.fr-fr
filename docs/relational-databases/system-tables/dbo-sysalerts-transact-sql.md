@@ -20,10 +20,10 @@ ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084684"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68084684"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|Identification de l'alerte|  
-|**nomme**|**sysname**|Nom de l’alerte.|  
+|**id**|**int**|Identification de l'alerte|  
+|**name**|**sysname**|Nom de l’alerte.|  
 |**event_source**|**nvarchar(100**|Source de l'événement : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**event_category_id**|**int**|réservé à une utilisation future.|  
-|**event_id**|**int**|réservé à une utilisation future.|  
+|**event_category_id**|**int**|Réservé pour un usage futur.|  
+|**event_id**|**int**|Réservé pour un usage futur.|  
 |**message_id**|**int**|ID de message défini par l’utilisateur ou référence à un message de **sysmessages** qui déclenche cette alerte.|  
-|**va**|**int**|Gravité de l'erreur qui déclenche cette alerte.|  
+|**severity**|**int**|Gravité de l'erreur qui déclenche cette alerte.|  
 |**désactivé**|**tinyint**|État de l'alerte :<br /><br /> **0** = désactivé.<br /><br /> **1** = activé.|  
 |**delay_between_responses**|**int**|Délai d'attente, en secondes, entre les notifications de cette alerte.|  
 |**last_occurrence_date**|**int**|Dernière occurrence (date) de l'alerte.|  
@@ -55,7 +55,7 @@ ms.locfileid: "68084684"
 |**count_reset_time**|**int**|L’heure du nombre de jours sera réinitialisée à **0**.|  
 |**job_id**|**uniqueidentifier**|Identificateur du travail exécuté lorsque l'alerte se produit.|  
 |**has_notification**|**int**|Nombre d'opérateurs avertis par courrier électronique lorsque l'alerte a lieu.|  
-|**père**|**int**|Réservé.|  
+|**flags**|**int**|Réservé.|  
 |**performance_condition**|**nvarchar(512)**|Réservé.|  
 |**category_id**|**int**|Réservé.|  
   

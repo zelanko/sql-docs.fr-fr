@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070353"
 ---
 # <a name="sp_columns-transact-sql"></a>MSdbms (Transact-SQL)
@@ -72,11 +72,11 @@ sp_columns [ @table_name = ] object
 |**DATA_TYPE**|**smallint**|Code d’entier pour le type de données ODBC. S’il s’agit d’un type de données qui ne peut pas être mappé à un type ODBC, il a la valeur NULL. Le nom du type de données natif est retourné dans la colonne **type_name** .|  
 |**TYPE_NAME**|**sysname**|Chaîne représentant un type de données. Le SGBD sous-jacent dispose de ce nom de type de données.|  
 |**PRÉCISION**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
-|**BASE**|**int**|Taille de transfert des données. <sup>1</sup>|  
+|**LENGTH**|**int**|Taille de transfert des données. <sup>1</sup>|  
 |**ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
 |**RADIX**|**smallint**|Base pour les types de données numériques.|  
 |**NULLABLE**|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = les valeurs NULL sont autorisées.<br /><br /> 0 = pas de valeur NULL.|  
-|**CONCERNANT**|**varchar (254)**|Ce champ renvoie toujours la valeur NULL.|  
+|**NOTES**|**varchar (254)**|Ce champ renvoie toujours la valeur NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valeur par défaut de la colonne.|  
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL tel qu'il apparaît dans le champ TYPE du descripteur. Cette colonne est la même que la colonne **data_type** , à l’exception des types de données **DateTime** et SQL-92 **Interval** . Cette colonne renvoie toujours une valeur.|  
 |**SQL_DATETIME_SUB**|**smallint**|Code de sous-type pour les types de données **DateTime** et SQL-92 **Interval** . Pour les autres types de données, cette colonne renvoie la valeur NULL.|  
@@ -103,7 +103,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant retourne les informations de colonne pour une table spécifique.  
   
 ```  

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060556"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68060556"
 |-----------------|---------------|-----------------|  
 |\<colonnes héritées>||Hérite de toutes les colonnes de [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant pas NULL**|Valeur de départ pour l'objet séquence. Si l'objet séquence est redémarré à l'aide d'ALTER SEQUENCE, il redémarrera à cette valeur. Lorsque l’objet séquence se poursuit, il passe à la **minimum_value** ou **maximum_value**, et non à la **start_value**.|  
-|**incrément**|**sql_variant pas NULL**|Valeur utilisée pour incrémenter l'objet séquence après chaque valeur générée.|  
+|**increment**|**sql_variant pas NULL**|Valeur utilisée pour incrémenter l'objet séquence après chaque valeur générée.|  
 |**minimum_value**|**sql_variant NULL**|Valeur minimale qui peut être générée par l'objet séquence. Une fois cette valeur atteinte, l’objet séquence retourne une erreur lors de la tentative de génération d’autres valeurs ou le redémarrage si l’option CYCLE est spécifiée. Si aucun MINVALUE n’a été spécifié, cette colonne retourne la valeur minimale prise en charge par le type de données du générateur de séquence.|  
 |**maximum_value**|**sql_variant NULL**|Valeur maximale qui peut être générée par l'objet séquence. Une fois cette valeur atteinte, l'objet séquence retourne une erreur lors de la tentative de génération de plus de valeurs ou redémarre si l'option CYCLE est spécifiée. Si aucun MAXVALUE n'a été spécifié, cette colonne retourne la valeur maximale prise en charge par le type de données de l'objet séquence.|  
 |**is_cycling**|**bit NOT NULL**|Retourne 0 si NO CYCLE a été spécifié pour l'objet séquence et 1 si CYCLE a été spécifié.|  
@@ -52,14 +52,14 @@ ms.locfileid: "68060556"
 |**last_used_value**|**sql_variant NULL**|Retourne la dernière valeur générée par la fonction [Next value for](../../t-sql/functions/next-value-for-transact-sql.md) . S’applique à SQL Server 2017 et versions ultérieures.|  
   
 ## <a name="permissions"></a>Autorisations  
- Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, la visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, la visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées.  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Numéros séquentiels](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md)   
+ [CRÉER une séquence &#40;&#41;Transact-SQL](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [Instruction ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [SUPPRIMER la séquence &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [VALEUR suivante pour &#40;&#41;Transact-SQL](../../t-sql/functions/next-value-for-transact-sql.md)   
  [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

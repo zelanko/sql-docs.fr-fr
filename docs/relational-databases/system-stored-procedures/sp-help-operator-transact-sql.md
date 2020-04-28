@@ -18,10 +18,10 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085297"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
@@ -56,8 +56,8 @@ sp_help_operator
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|Numéro d'identification de l'opérateur.|  
-|**nomme**|**sysname**|Nom de l’opérateur.|  
+|**id**|**int**|Numéro d'identification de l'opérateur.|  
+|**name**|**sysname**|Nom de l’opérateur.|  
 |**désactivé**|**tinyint**|L'opérateur est disponible pour recevoir des notifications :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
 |**email_address**|**nvarchar(100**|Adresse de messagerie de l'opérateur.|  
 |**last_email_date**|**int**|Date de la dernière notification envoyée par courrier électronique à l'opérateur.|  
@@ -89,7 +89,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple vous renseigne sur l'opérateur `François Ajenstat`.  

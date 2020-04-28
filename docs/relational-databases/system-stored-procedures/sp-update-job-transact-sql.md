@@ -18,10 +18,10 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084894"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
@@ -81,7 +81,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**0**|Jamais|  
 |**1**|Si succès|  
 |**2**|Si échec|  
-|**1,3**|Toujours|  
+|**3**|Toujours|  
   
 `[ @notify_level_email = ] email_level`Spécifie à quel moment envoyer un message électronique à la fin de ce travail. *email_level*est de **type int**. *email_level*utilise les mêmes valeurs que *eventlog_level*.  
   
@@ -116,7 +116,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Seuls les membres de **sysadmin** peuvent utiliser cette procédure stockée pour modifier les attributs des tâches appartenant à d’autres utilisateurs.  
   

@@ -20,10 +20,10 @@ ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f7081d96d996d33bbabedd13201d7b0fa2547563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078676"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68078676"
 |**default_database**|**sysname**|Nom de la base de données par défaut indiqué dans l'option DATABASE =.<br /><br /> NULL = DEFAULT a été spécifié.|  
 |**default_namespace**|**nvarchar(384**|Espace de noms par défaut spécifié dans l’option espace de `https://tempuri.org` noms = ou si la valeur par défaut a été spécifiée à la place.|  
 |**default_result_schema**|**tinyint**|Valeur par défaut de l'option SCHEMA =.<br /><br /> 0 = AUCUN<br /><br /> 1 = STANDARD|  
-|**default_result_schema_desc**|**nvarchar (60)**|Description de la valeur par défaut de l'option SCHEMA =.<br /><br /> Aucune<br /><br /> STANDARD|  
+|**default_result_schema_desc**|**nvarchar(60)**|Description de la valeur par défaut de l'option SCHEMA =.<br /><br /> Aucune<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = CHARACTER_SET = L'option SQL a été spécifiée.<br /><br /> 1 = CHARACTER_SET = L'option XML a été spécifiée.|  
 |**is_session_enabled**|**bit**|0 = SESSION = L'option DISABLE a été spécifiée.<br /><br /> 1 = SESSION = L'option ENABLED a été spécifiée.|  
 |**session_timeout**|**int**|Valeur spécifiée dans l'option SESSION_TIMEOUT =.|  
-|**login_type**|**nvarchar (60)**|Type d'authentification autorisé sur ce point de terminaison.<br /><br /> WINDOWS<br /><br /> MIXED|  
+|**login_type**|**nvarchar(60)**|Type d'authentification autorisé sur ce point de terminaison.<br /><br /> WINDOWS<br /><br /> MIXED|  
 |**header_limit**|**int**|Taille maximale pouvant être autorisée pour l'en-tête SOAP.|  
   
 ## <a name="permissions"></a>Autorisations  

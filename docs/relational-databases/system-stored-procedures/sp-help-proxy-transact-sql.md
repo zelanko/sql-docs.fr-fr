@@ -18,10 +18,10 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085279"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
@@ -62,8 +62,8 @@ sp_help_proxy
 |QueueReader|Agent de lecture de la file d'attente de réplication|  
 |ANALYSISQUERY|Commandes Analysis Services|  
 |ANALYSISCOMMAND|Requête Analysis Services|  
-|Dts|Exécution des packages SSIS|  
-|PowerShell|Script PowerShell|  
+|Dts|Exécution de package SSIS|  
+|PowerShell|script PowerShell|  
   
 `[ @name = ] 'name'`Nom d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour laquelle répertorier les proxies. Le nom est de type **nvarchar (256)**, avec NULL comme valeur par défaut. Quand *Name* est spécifié, *subsystem_name* doit également être spécifié.  
   
@@ -75,11 +75,11 @@ sp_help_proxy
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Numéro d'identification du proxy.|  
-|**nomme**|**sysname**|Nom du proxy.|  
+|**name**|**sysname**|Nom du proxy.|  
 |**credential_identity**|**sysname**|Nom du domaine Microsoft Windows et nom d'utilisateur pour les informations d'identification associées au serveur proxy.|  
 |**désactivé**|**tinyint**|Indique si ce serveur proxy est activé. { **0** = non activé, **1** = activé}|  
-|**description**|**nvarchar(1024)**|Description de ce serveur proxy.|  
-|**user_sid**|**varbinary(85)**|Numéro d'identification de sécurité (SID) Windows de l'utilisateur Windows pour ce serveur proxy.|  
+|**descriptive**|**nvarchar(1024)**|Description de ce serveur proxy.|  
+|**user_sid**|**varbinary (85)**|Numéro d'identification de sécurité (SID) Windows de l'utilisateur Windows pour ce serveur proxy.|  
 |**credential_id**|**int**|Identifiant des informations d'identification associées à ce serveur proxy.|  
 |**credential_identity_exists**|**int**|Indique si l'identifiant des informations d'identification existe. { 0 = inexistant, 1 = existant }|  
   

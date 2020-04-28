@@ -19,10 +19,10 @@ ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091866"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
@@ -41,20 +41,20 @@ ms.locfileid: "68091866"
 |**backed_up_page_count**|**numérique (10, 0)**|Nombre de pages sauvegardées. Sa valeur peut être NULL.|  
 |**file_type**|**Char(1**|Fichier sauvegardé, avec une des valeurs suivantes :<br /><br /> D = Fichier de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catalogue de texte intégral.<br /><br /> Sa valeur peut être NULL.|  
 |**source_file_block_size**|**numérique (10, 0)**|Unité sur laquelle le fichier de données ou le fichier journal d'origine se trouvaient au moment de la sauvegarde. Sa valeur peut être NULL.|  
-|**file_size**|**numérique (20, 0)**|Longueur en octets du fichier sauvegardé. Sa valeur peut être NULL.|  
+|**file_size**|**numeric(20,0)**|Longueur en octets du fichier sauvegardé. Sa valeur peut être NULL.|  
 |**logical_name**|**nvarchar(128)**|Nom logique du fichier sauvegardé. Sa valeur peut être NULL.|  
 |**physical_drive**|**nvarchar(260)**|Nom de l'unité physique ou de la partition. Sa valeur peut être NULL.|  
 |**physical_name**|**nvarchar(260)**|Suite du nom physique du fichier (système d'exploitation). Sa valeur peut être NULL.|  
-|**Département**|**tinyint**|État du fichier, avec une des valeurs suivantes :<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = SUPPRIMÉ<br /><br /> Remarque : la valeur 5 est ignorée afin que ces valeurs correspondent aux valeurs des États de base de données.|  
+|**state**|**tinyint**|État du fichier, avec une des valeurs suivantes :<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = SUPPRIMÉ<br /><br /> Remarque : la valeur 5 est ignorée afin que ces valeurs correspondent aux valeurs des États de base de données.|  
 |**state_desc**|**nvarchar (64)**|Description de l'état du fichier, avec une des valeurs suivantes :<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
-|**create_lsn**|**numérique (25, 0)**|Numéro séquentiel dans le journal auquel le fichier a été créé.|  
-|**drop_lsn**|**numérique (25, 0)**|Numéro séquentiel dans le journal auquel le fichier a été supprimé. Sa valeur peut être NULL.<br /><br /> Si le fichier n'a pas été supprimé, cette valeur est NULL.|  
+|**create_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal auquel le fichier a été créé.|  
+|**drop_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal auquel le fichier a été supprimé. Sa valeur peut être NULL.<br /><br /> Si le fichier n'a pas été supprimé, cette valeur est NULL.|  
 |**file_guid**|**uniqueidentifier**|Identificateur unique du fichier.|  
-|**read_only_lsn**|**numérique (25, 0)**|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture-écriture à lecture seule (modification la plus récente). Sa valeur peut être NULL.|  
-|**read_write_lsn**|**numérique (25, 0)**|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture seule à lecture-écriture (modification la plus récente). Sa valeur peut être NULL.|  
-|**differential_base_lsn**|**numérique (25, 0)**|Numéro de séquence d'enregistrement de base pour les sauvegardes différentielles. Une sauvegarde différentielle comprend uniquement des étendues de données dont le numéro séquentiel dans le journal est supérieur ou égal à **differential_base_lsn**.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
+|**read_only_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture-écriture à lecture seule (modification la plus récente). Sa valeur peut être NULL.|  
+|**read_write_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture seule à lecture-écriture (modification la plus récente). Sa valeur peut être NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|Numéro de séquence d'enregistrement de base pour les sauvegardes différentielles. Une sauvegarde différentielle comprend uniquement des étendues de données dont le numéro séquentiel dans le journal est supérieur ou égal à **differential_base_lsn**.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Pour une sauvegarde différentielle, il s'agit de l'identificateur unique de la sauvegarde de données la plus récente qui compose la base différentielle du fichier ; si la valeur est NULL, le fichier a été inclus dans la sauvegarde différentielle, mais il a été ajouté après la création de la base.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
-|**backup_size**|**numérique (20, 0)**|Taille de la sauvegarde en octets pour ce fichier.|  
+|**backup_size**|**numeric(20,0)**|Taille de la sauvegarde en octets pour ce fichier.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificateur du groupe de fichiers. Pour rechercher des informations de groupe de fichiers dans la table backupfilegroup, utilisez **filegroup_guid** avec **backup_set_id**.|  
 |**is_readonly**|**bit**|1 = Le fichier est en lecture seule.|  
 |**is_present**|**bit**|1 = Le fichier est contenu dans le jeu de sauvegarde.|  
@@ -69,7 +69,7 @@ ms.locfileid: "68091866"
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tables système &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

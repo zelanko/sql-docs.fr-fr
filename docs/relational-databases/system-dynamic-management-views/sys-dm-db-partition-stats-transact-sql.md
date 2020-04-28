@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096285"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "68096285"
 |**distribution_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numérique unique associé à la distribution.|  
   
 ## <a name="remarks"></a>Notes  
- **sys. dm_db_partition_stats** affiche des informations sur l’espace utilisé pour stocker et gérer les données LOB des données dans la ligne, ainsi que des données de dépassement de ligne pour toutes les partitions d’une base de données. Une seule ligne est affichée par partition.  
+ **sys.dm_db_partition_stats** affiche des informations sur l'espace utilisé pour stocker et gérer les données LOB des données dans la ligne et les données en dépassement de capacité des lignes de toutes les partitions d'une base de données. Une seule ligne est affichée par partition.  
   
  Les nombres sur lesquels le résultat est basé sont placés en mémoire cache ou stockés sur disque dans diverses tables système.  
   
@@ -105,7 +105,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

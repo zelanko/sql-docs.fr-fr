@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5b0ed500b1217ae70dca72ab6eab64ab661c22ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078536"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68078536"
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la fonction table.<br /><br /> <strong> \* Important \* \* </strong> N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nom de la fonction table|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nom de la colonne.|  
-|**ORDINAL_POSITION**|**int**|Numéro d’identification de la colonne.|  
+|**ORDINAL_POSITION**|**int**|Numéro d'identification de colonne.|  
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|Valeur par défaut de la colonne.|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|Si cette colonne accepte la valeur NULL, elle retourne la valeur YES. Dans le cas contraire, la valeur retournée est NO.|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|Type de données fourni par le système.|  
@@ -63,6 +63,6 @@ ms.locfileid: "68078536"
  [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Vues de schémas d’informations &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

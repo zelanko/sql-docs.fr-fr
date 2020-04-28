@@ -19,10 +19,10 @@ ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097843"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
@@ -49,13 +49,13 @@ dm_exec_cursors (session_id | 0 )
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID de la session propriétaire de ce curseur.|  
 |**cursor_id**|**int**|ID de l'objet curseur.|  
-|**nomme**|**nvarchar (256)**|Nom du curseur, défini par l'utilisateur.|  
-|**sous**|**nvarchar (256)**|Spécifie les propriétés du curseur. Les valeurs des propriétés suivantes sont concaténées pour former la valeur de cette colonne :<br />Interface déclaration<br />Type de curseur <br />Accès simultané au curseur<br />Étendue du curseur<br />Niveau d'imbrication du curseur<br /><br /> Par exemple, la valeur retournée dans cette colonne peut être « TSQL &#124; Dynamic &#124; OPTIMISTIC &#124; global (0) ».|  
-|**sql_handle**|**varbinary (64)**|Descripteur du texte du traitement qui a déclaré le curseur.|  
+|**name**|**nvarchar(256)**|Nom du curseur, défini par l'utilisateur.|  
+|**properties**|**nvarchar(256)**|Spécifie les propriétés du curseur. Les valeurs des propriétés suivantes sont concaténées pour former la valeur de cette colonne :<br />Interface déclaration<br />Type de curseur <br />Accès simultané au curseur<br />Étendue du curseur<br />Niveau d'imbrication du curseur<br /><br /> Par exemple, la valeur retournée dans cette colonne peut être « TSQL &#124; Dynamic &#124; OPTIMISTIC &#124; global (0) ».|  
+|**sql_handle**|**varbinary(64)**|Descripteur du texte du traitement qui a déclaré le curseur.|  
 |**statement_start_offset**|**int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution commencent. Peut être utilisé avec l' **sql_handle**, le **statement_end_offset**et la fonction de gestion dynamique [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) pour récupérer l’instruction en cours d’exécution pour la demande.|  
 |**statement_end_offset**|**int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution se terminent. Peut être utilisé avec l' **sql_handle**, le **statement_start_offset**et la fonction de gestion dynamique **sys. dm_exec_sql_text** pour récupérer l’instruction en cours d’exécution pour la demande.|  
 |**plan_generation_num**|**bigint**|Numéro de séquence permettant de distinguer les instances de plans après une recompilation.|  
-|**creation_time**|**DATETIME**|Heure de création du curseur.|  
+|**creation_time**|**datetime**|Heure de création du curseur.|  
 |**is_open**|**bit**|Indique si le curseur est ouvert.|  
 |**is_async_population**|**bit**|Spécifie si le thread d'arrière-plan remplit toujours de manière asynchrone un curseur KEYSET ou STATIC.|  
 |**is_close_on_commit**|**bit**|Spécifie si le curseur a été déclaré à l'aide de CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = Le curseur est fermé à la fin de la transaction.|  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   

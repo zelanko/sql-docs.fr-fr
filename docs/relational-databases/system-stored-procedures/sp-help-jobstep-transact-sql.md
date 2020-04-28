@@ -18,10 +18,10 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090053"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
@@ -64,9 +64,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificateur unique de l'étape.|  
 |**step_name**|**sysname**|Nom de l’étape du travail.|  
-|**sous-système**|**nvarchar (40)**|Sous-système dans lequel la commande d'étape doit être exécutée.|  
+|**sous-système**|**nvarchar(40)**|Sous-système dans lequel la commande d'étape doit être exécutée.|  
 |**commande**|**nvarchar(max)**|Commande exécutée dans l'étape.|  
-|**père**|**int**|Masque de bits des valeurs qui contrôle le comportement de l'étape.|  
+|**flags**|**int**|Masque de bits des valeurs qui contrôle le comportement de l'étape.|  
 |**cmdexec_success_code**|**int**|Pour une étape **CmdExec** , il s’agit du code de sortie du processus d’une commande réussie.|  
 |**on_success_action**|**tinyint**|Action à effectuer si l'étape est exécutée correctement :<br /><br /> **1** = quitter le travail signalant la réussite.<br /><br /> **2** = quitter le travail signalant une défaillance.<br /><br /> **3** = passer à l’étape suivante.<br /><br /> **4** = passer à l’étape.|  
 |**on_success_step_id**|**int**|Si **on_success_action** a la valeur 4, cela indique l’étape suivante à exécuter.|  
@@ -98,7 +98,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres de **SQLAgentUserRole** peuvent uniquement afficher les étapes de travail des travaux dont ils sont propriétaires.  
   

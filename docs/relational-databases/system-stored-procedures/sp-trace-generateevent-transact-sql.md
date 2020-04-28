@@ -18,10 +18,10 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096021"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
@@ -57,14 +57,13 @@ sp_trace_generateevent [ @eventid = ] event_id
 |-----------------|-----------------|  
 |**0**|Aucune erreur.|  
 |**1**|Erreur inconnue.|  
-|**1,3**|L'événement spécifié n'est pas valide. L'événement peut ne pas exister ou être inapproprié pour la procédure stockée.|  
-|**12**|Mémoire insuffisante. Renvoyé lorsqu'il n'y a pas assez de mémoire pour exécuter l'action spécifiée.|  
+|**3**|L'événement spécifié n'est pas valide. L'événement peut ne pas exister ou être inapproprié pour la procédure stockée.|  
+|**13**|Mémoire insuffisante. Renvoyé lorsqu'il n'y a pas assez de mémoire pour exécuter l'action spécifiée.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_trace_generateevent** effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues **xp_trace_\* ** . Utilisez **sp_trace_generateevent** au lieu de **xp_trace_generate_event**.  
   
- Seuls les numéros d’identification des événements définis par l’utilisateur peuvent être utilisés avec **sp_trace_generateevent**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur si d'autres numéros d'identification des événements sont utilisés.  
+ Seuls les numéros d’identification des événements définis par l’utilisateur peuvent être utilisés avec **sp_trace_generateevent**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur si d'autres numéros d'identification des événements sont utilisés.  
   
  Les paramètres de toutes les procédures stockées trace SQL (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   

@@ -18,10 +18,10 @@ ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4e5d98606d14e660b0dcbad43eecf97ce6446767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079180"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "68079180"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|Identifie l'Abonné associé à la mise à jour|  
+|**id**|**int**|Identifie l'Abonné associé à la mise à jour|  
 |**publisher_database_id**|**int**|Identifie la base de données de publication.|  
-|**SRVNAME**|**sysname**|Nom du serveur de mise à jour.|  
+|**srvname**|**sysname**|Nom du serveur de mise à jour.|  
 |**@**|**sysname**|Nom de la base de données de mise à jour.|  
 |**publication_id**|**int**|Identifie la publication.|  
 |**DBVERSION**|**int**|Identifie la version de base de données.|  

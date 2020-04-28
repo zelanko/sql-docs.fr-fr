@@ -19,10 +19,10 @@ ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 78e8211c10d019c3b2a8c2435c5ddde8f8182a14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060411"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "68060411"
 |**collection_set_id**|**int**|Identifie le jeu d'éléments de collecte. N'accepte pas la valeur NULL.|  
 |**collection_item_id**|**int**|Identifie un élément dans le jeu d'éléments de collecte. N'accepte pas la valeur NULL.|  
 |**collector_type_uid**|**uniqueidentifier**|GUID utilisé pour identifier le type de collecteur. N'accepte pas la valeur NULL.|  
-|**nomme**|**nvarchar(4000)**|Nom du jeu d'éléments de collecte. Autorise la valeur NULL.|  
-|**argument**|**int**|Fréquence à laquelle les données sont recueillies par un élément de collecte. N'accepte pas la valeur NULL.|  
-|**paramètres**|**langage**|Décrit le paramétrage du type de collecteur associé à l'élément de collecte. Le schéma XML de cet élément de collecte est validé avec le schéma XML (XSD) stocké dans le **parameter_schema** pour un type de collecteur particulier. Autorise la valeur NULL. Pour plus d’informations, consultez [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
+|**name**|**nvarchar(4000)**|Nom du jeu d'éléments de collecte. Autorise la valeur NULL.|  
+|**frequency**|**int**|Fréquence à laquelle les données sont recueillies par un élément de collecte. N'accepte pas la valeur NULL.|  
+|**parameters**|**xml**|Décrit le paramétrage du type de collecteur associé à l'élément de collecte. Le schéma XML de cet élément de collecte est validé avec le schéma XML (XSD) stocké dans le **parameter_schema** pour un type de collecteur particulier. Autorise la valeur NULL. Pour plus d’informations, consultez [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert SELECT pour **dc_operator**, **dc_proxy**.  

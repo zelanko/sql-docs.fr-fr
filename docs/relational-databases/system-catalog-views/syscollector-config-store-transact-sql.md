@@ -19,10 +19,10 @@ ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060374"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)

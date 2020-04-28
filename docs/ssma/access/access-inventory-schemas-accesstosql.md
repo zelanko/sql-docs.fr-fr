@@ -37,10 +37,10 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068954"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Accéder aux schémas d’inventaire (AccessToSQL)
@@ -53,12 +53,12 @@ Les métadonnées de base de données sont exportées vers la table **SSMA_Acces
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|GUID qui identifie de façon unique chaque base de données. Cette colonne est également la clé primaire de la table.|  
 |**DatabaseName**|**nvarchar(4000)**|Nom de la base de données Access.|  
-|**ExportTime**|**DATETIME**|Date et heure auxquelles ces métadonnées ont été créées par SSMA.|  
+|**ExportTime**|**datetime**|Date et heure auxquelles ces métadonnées ont été créées par SSMA.|  
 |**FilePath**|**nvarchar(4000)**|Chemin d’accès complet et nom de fichier de la base de données Access.|  
-|**FileSize**|**bigint**|Taille de la base de données Access, en Ko.|  
+|**Taille**|**bigint**|Taille de la base de données Access, en Ko.|  
 |**FileOwner**|**nvarchar(4000)**|Compte Windows qui est spécifié en tant que propriétaire de la base de données Access.|  
-|**DateCreated**|**DATETIME**|Date et heure de création de la base de données Access.|  
-|**DateModified**|**DATETIME**|Date et heure de la dernière modification de la base de données Access.|  
+|**DateCreated**|**datetime**|Date et heure de création de la base de données Access.|  
+|**DateModified**|**datetime**|Date et heure de la dernière modification de la base de données Access.|  
 |**TablesCount**|**int**|Nombre de tables dans la base de données Access.|  
 |**QueriesCount**|**int**|Nombre de requêtes dans la base de données Access.|  
 |**FormsCount**|**int**|Nombre de formulaires dans la base de données Access.|  
@@ -92,11 +92,11 @@ Les métadonnées de colonne sont exportées vers la table **SSMA_Access_Invento
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient cette colonne.|  
 |**TableId**|**uniqueidentifier**|Identifie la table qui contient cette colonne.|  
 |**ColumnId**|**int**|Entier incrémentiel qui identifie la colonne. **ColumnID** est la clé primaire de la table.|  
-|**NomColonne**|**nvarchar(4000)**|Nom de la colonne.|  
+|**ColumnName**|**nvarchar(4000)**|Nom de la colonne.|  
 |**IsNullable**|**bit**|Spécifie si la colonne peut contenir des valeurs NULL. Si la valeur est 1, la colonne peut contenir des valeurs NULL. Si la valeur est égale à 0, la colonne ne peut pas contenir de valeurs NULL. Notez que la règle de validation peut également être utilisée pour empêcher les valeurs NULL.|  
-|**Décimal**|**nvarchar(4000)**|Type de données Access de la colonne, tel que **Text** ou **long**.|  
+|**DataType**|**nvarchar(4000)**|Type de données Access de la colonne, tel que **Text** ou **long**.|  
 |**IsAutoIncrement**|**bit**|Spécifie si la colonne incrémente automatiquement les valeurs entières. Si la valeur est 1, les entiers s’incrémentent automatiquement.|  
-|**Ordinal**|**smallint**|Ordre de la colonne dans la table, en commençant à zéro.|  
+|**Formations**|**smallint**|Ordre de la colonne dans la table, en commençant à zéro.|  
 |**DefaultValue**|**nvarchar(4000)**|Valeur par défaut de la colonne.|  
 |**ValideSi**|**nvarchar(4000)**|Règle utilisée pour valider les données ajoutées ou mises à jour dans la colonne.|  
   
@@ -107,7 +107,7 @@ Les métadonnées d’index sont exportées vers la table **SSMA_Access_Inventor
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient cet index.|  
 |**TableId**|**uniqueidentifier**|Identifie la table qui contient cet index.|  
-|**IndexID contient**|**int**|Entier incrémentiel qui identifie l’index. Cette colonne est la clé primaire de la table.|  
+|**IndexId**|**int**|Entier incrémentiel qui identifie l’index. Cette colonne est la clé primaire de la table.|  
 |**IndexName**|**nvarchar(4000)**|Nom de l’index.|  
 |**ColumnsIncluded**|**nvarchar(4000)**|Répertorie les colonnes incluses dans l’index. Les noms de colonnes sont séparés par un point-virgule.|  
 |**IsUnique**|**bit**|Spécifie si chaque élément de l’index doit être unique. Sur un index à plusieurs colonnes, la combinaison des valeurs doit être unique. Si la valeur est 1, l’index applique des valeurs uniques.|  
@@ -140,10 +140,10 @@ Les métadonnées de requête sont exportées vers la table **SSMA_Access_Invent
 |**NomRequête**|**nvarchar(4000)**|Nom de la requête.|  
 |**QueryText**|**nvarchar(4000)**|Code de requête SQL, par exemple une instruction SELECT.|  
 |**IsUpdateable**|**bit**|Spécifie si la requête peut être mise à jour ou en lecture seule.|  
-|**Affectée**|**nvarchar(4000)**|Spécifie le type de requête, par exemple **Select** ou **SetOperation**.|  
+|**QueryType**|**nvarchar(4000)**|Spécifie le type de requête, par exemple **Select** ou **SetOperation**.|  
 |**ExternalSource**|**nvarchar(4000)**|Si la requête fait référence à une source de données externe, il s’agit de la chaîne de connexion utilisée par la requête.|  
   
-## <a name="forms"></a>Forms  
+## <a name="forms"></a>Formulaires  
 Les métadonnées de formulaire sont exportées vers la table **SSMA_Access_InventoryForms** . Ce tableau contient les colonnes suivantes :  
   
 |Nom de la colonne|Type de données|Description|  
@@ -177,7 +177,7 @@ Les métadonnées de module sont exportées vers la table **SSMA_Access_Inventor
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient le module.|  
 |**ModuleId**|**int**|Entier incrémentiel qui identifie le module. Cette colonne est la clé primaire de la table.|  
-|**NomModule**|**nvarchar(4000)**|Nom du module.|  
+|**ModuleName**|**nvarchar(4000)**|Nom du module.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exportation d’un inventaire Access](exporting-an-access-inventory-accesstosql.md)  

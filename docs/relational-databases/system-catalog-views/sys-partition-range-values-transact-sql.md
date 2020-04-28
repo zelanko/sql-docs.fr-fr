@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c071a09f7b70499b8d869f4763448572b20cfcd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102214"
 ---
 # <a name="syspartition_range_values-transact-sql"></a>sys.partition_range_values (Transact-SQL)
@@ -37,15 +37,15 @@ ms.locfileid: "68102214"
 |**function_id**|**int**|ID de la fonction de partition pour cette valeur limite de plage.|  
 |**boundary_id**|**int**|ID (ordinal à partir de 1) du tuple de valeur limite, dont la limite située la plus à gauche démarre à un ID de 1.|  
 |**parameter_id**|**int**|ID du paramètre de la fonction auquel cette valeur correspond. Les valeurs de cette colonne correspondent à celles de la colonne **parameter_id** de la vue de catalogue **sys. partition_parameters** pour une **function_id**particulière.|  
-|**ajoutée**|**sql_variant**|Valeur limite réelle.|  
+|**value**|**sql_variant**|Valeur limite réelle.|  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Nécessite l'appartenance au rôle **public** .  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue des fonctions de partition &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys. partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
+ [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
   
   

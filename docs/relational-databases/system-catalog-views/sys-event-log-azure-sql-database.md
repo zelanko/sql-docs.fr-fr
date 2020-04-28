@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061386"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
@@ -47,12 +47,12 @@ ms.locfileid: "68061386"
 |**event_type**|**nvarchar (64)**|Type de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**event_subtype**|**int**|Sous-type de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**event_subtype_desc**|**nvarchar (64)**|Description du sous-type d'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
-|**va**|**int**|Gravité de l'erreur. Les valeurs possibles sont :<br /><br /> 0 = Information<br />1 = Avertissement<br />2 = Erreur|  
+|**severity**|**int**|Gravité de l'erreur. Les valeurs possibles sont les suivantes :<br /><br /> 0 = Information<br />1 = Avertissement<br />2 = Erreur|  
 |**event_count**|**int**|Nombre de fois où cet événement s’est produit pour la base de données spécifiée dans l’intervalle de temps spécifié (**start_time** et **end_time**).|  
-|**description**|**nvarchar(max)**|Description détaillée de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
+|**descriptive**|**nvarchar(max)**|Description détaillée de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**additional_data**|**XML**|*Remarque : cette valeur est toujours NULL pour Azure SQL Database v12. Consultez la section [exemples](#Deadlock) pour savoir comment récupérer des événements de blocage pour v12.*<br /><br /> Pour les événements **Deadlock** , cette colonne contient le graphique de blocage. Pour les autres types d'événements, cette colonne renvoie la valeur NULL. |  
   
-##  <a name="EventTypes"></a>Types d’événements
+##  <a name="event-types"></a><a name="EventTypes"></a>Types d’événements
 
  Les événements enregistrés par chaque ligne de cette vue sont identifiés par une catégorie (**event_category**), un type d’événement (**event_type**) et un sous-type (**event_subtype**). Le tableau suivant répertorie les types d'événements regroupés dans cette vue.  
   
@@ -61,11 +61,11 @@ ms.locfileid: "68061386"
 > [!NOTE]  
 > Cette vue ne contient pas tous les événements possibles de base de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)] qui peuvent se produire, uniquement ceux qui sont répertoriés ici. Des catégories, types d'événements et sous-types supplémentaires peuvent être ajoutés dans les versions ultérieures de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**va**|**description**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**descriptive**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**connectivité**|**connection_successful**|0|**connection_successful**|0|Connexion à la base de données réussie.|  
 |**connectivité**|**connection_failed**|0|**invalid_login_name**|2|Le nom de connexion n'est pas valide dans cette version de SQL Server.|  
-|**connectivité**|**connection_failed**|1|**windows_auth_not_supported**|2|Les connexions Windows ne sont pas prises en charge dans cette version de SQL Server.|  
+|**connectivité**|**connection_failed**|1|**windows_auth_not_supported**|2|Les identifiants de connexion Windows ne sont pas pris en charge dans cette version de SQL Server.|  
 |**connectivité**|**connection_failed**|2|**attach_db_not_supported**|2|L'utilisateur a tenté de joindre un fichier de base de données non pris en charge.|  
 |**connectivité**|**connection_failed**|3|**change_password_not_supported**|2|L'utilisateur a demandé la modification du passe de connexion qui n'est pas prise en charge.|  
 |**connectivité**|**connection_failed**|4|**login_failed_for_user**|2|Échec de la connexion pour l'utilisateur.|  
@@ -77,12 +77,12 @@ ms.locfileid: "68061386"
 |**connectivité**|**connection_terminated**|0|**idle_connection_timeout**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La connexion est restée inactive plus longtemps que ne l'autorise le seuil défini pour le système.|  
 |**connectivité**|**connection_terminated**|1|**reconfiguration**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été interrompue en raison d'une reconfiguration de la base de données.|  
 |**connectivité**|**limitation**|*\<Code de raison>*|**reason_code**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La demande est limitée.  Code de raison de la limitation : * \<code motif>*. Pour plus d’informations, consultez [limitation du moteur](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40549|**long_transaction**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session est arrêtée, car l’une des transactions est de longue durée. Essayez de la raccourcir. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée, car elle a acquis trop de verrous. Essayez de lire ou de modifier moins de lignes dans une transaction unique. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée en raison d’une utilisation excessive de TEMPDB. Essayez de modifier votre requête pour réduire l’espace utilisé par la table temporaire. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée en raison de l’utilisation excessive de l’espace réservé au journal des transactions. Essayez de modifier moins de lignes dans une transaction unique. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée en raison d’une utilisation excessive de la mémoire. Essayez de modifier votre requête pour traiter moins de lignes. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**rotation**|**Fatal**|0|**Fatal**|2|Un blocage s'est produit.|  
+|**connectivité**|**throttling_long_transaction**|40549|**long_transaction**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin, car elle contient une transaction à long terme. Essayez de diminuer la durée de la transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivité**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin car elle a acquis trop de verrous. Essayez de lire ou de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivité**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée en raison d’une utilisation excessive de TEMPDB. Essayez de modifier votre requête afin de réduire l'utilisation de l'espace de table temporaire. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivité**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin en raison d'une utilisation de l'espace pour le journal de transactions excessive. Essayez de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivité**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin en raison d'une utilisation de mémoire excessive. Essayez de modifier votre requête afin que le nombre de lignes à traiter soit moins important. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**rotation**|**deadlock**|0|**deadlock**|2|Un blocage s'est produit.|  
   
 ## <a name="permissions"></a>Autorisations
 
@@ -99,7 +99,7 @@ ms.locfileid: "68061386"
   
  Par exemple, si un utilisateur n'arrive pas à se connecter à la base de données Database1, en raison d'un nom de connexion non valide, sept fois entre 11h00 et 11h05 le 5/2/2012 (UTC), ces informations sont disponibles dans une seule ligne de cette vue :  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**va**|**event_count**|**description**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**descriptive**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   

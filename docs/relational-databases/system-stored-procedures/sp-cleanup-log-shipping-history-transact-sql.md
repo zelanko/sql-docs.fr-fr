@@ -18,10 +18,10 @@ ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7470baabb9a35a923995d8306b314f9272de0b5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070371"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
@@ -49,7 +49,7 @@ sp_cleanup_log_shipping_history
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  **sp_cleanup_log_shipping_history** doit être exécuté à partir de la base de données **Master** sur un serveur de copie des journaux de données. Cette procédure stockée nettoie les copies locales et distantes des **log_shipping_monitor_history_detail** et des **log_shipping_monitor_error_detail** en fonction de la période de rétention de l’historique.  
@@ -58,7 +58,7 @@ sp_cleanup_log_shipping_history
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

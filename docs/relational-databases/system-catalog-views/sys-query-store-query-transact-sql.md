@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067963"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys. query_store_query (Transact-SQL)
@@ -39,15 +39,15 @@ ms.locfileid: "68067963"
 |**query_text_id**|**bigint**|Clé étrangère. Jointures à [sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
 |**context_settings_id**|**bigint**|Clé étrangère. Jointures à [sys. query_context_settings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**object_id**|**bigint**|ID de l’objet de base de données qui fait partie de la requête (procédure stockée, déclencheur, UDF CLR/UDAgg, etc.). 0 si la requête n’est pas exécutée dans le cadre d’un objet de base de données (requête ad hoc).<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**batch_sql_handle**|**varbinary (64)**|ID du lot d’instructions dont fait partie la requête. Renseigné uniquement si la requête fait référence à des tables temporaires ou des variables de table.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours la *valeur null*.|  
+|**batch_sql_handle**|**varbinary(64)**|ID du lot d’instructions dont fait partie la requête. Renseigné uniquement si la requête fait référence à des tables temporaires ou des variables de table.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours la *valeur null*.|  
 |**query_hash**|**Binary(8**|Hachage MD5 de la requête individuelle, basé sur l’arborescence de requêtes logique. Comprend des indicateurs d’optimiseur.|  
 |**is_internal_query**|**bit**|La requête a été générée en interne.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**query_parameterization_type**|**tinyint**|Genre de paramétrage :<br /><br /> 0 - Aucun<br /><br /> 1-utilisateur<br /><br /> 2-simple<br /><br /> 3-forcé<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**query_parameterization_type_desc**|**nvarchar (60)**|Description textuelle pour le type de paramétrage.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours *None*.|  
+|**query_parameterization_type_desc**|**nvarchar(60)**|Description textuelle pour le type de paramétrage.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours *None*.|  
 |**initial_compile_start_time**|**datetimeoffset**|Heure de début de la compilation.|  
 |**last_compile_start_time**|**datetimeoffset**|Heure de début de la compilation.|  
 |**last_execution_time**|**datetimeoffset**|La dernière heure d’exécution fait référence à la dernière heure de fin de la requête ou du plan.|  
-|**last_compile_batch_sql_handle**|**varbinary (64)**|Handle du dernier traitement SQL dans lequel la requête a été utilisée pour la dernière fois. Il peut être fourni comme entrée à [sys. dm_exec_sql_text &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) pour obtenir le texte complet du lot.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours la *valeur null*.|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|Handle du dernier traitement SQL dans lequel la requête a été utilisée pour la dernière fois. Il peut être fourni comme entrée à [sys. dm_exec_sql_text &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) pour obtenir le texte complet du lot.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours la *valeur null*.|  
 |**last_compile_batch_offset_start**|**bigint**|Informations qui peuvent être fournies à sys. dm_exec_sql_text avec last_compile_batch_sql_handle.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
 |**last_compile_batch_offset_end**|**bigint**|Informations qui peuvent être fournies à sys. dm_exec_sql_text avec last_compile_batch_sql_handle.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**count_compiles**|**bigint**|Statistiques de compilation.<br/>**Remarque :** Azure SQL Data Warehouse retournera toujours un (1).|  
@@ -74,12 +74,12 @@ ms.locfileid: "68067963"
  [sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [Analyse des performances à l’aide de l’Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Magasin des requêtes des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

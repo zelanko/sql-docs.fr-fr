@@ -20,10 +20,10 @@ ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e78b5a8640918291fc68e5b4882448b94a1b9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079526"
 ---
 # <a name="sysdatabase_recovery_status-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
@@ -44,16 +44,16 @@ ms.locfileid: "68079526"
 |**database_id**|**int**|ID de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**database_guid**|**uniqueidentifier**|Utilisé pour associer ensemble tous les fichiers de base de données d'une base de données. Tous les fichiers possèdent ce GUID dans leur page d'en-tête afin que la base de données démarre comme prévu. Une seule base de données doit posséder ce GUID, mais des doublons peuvent être créés en copiant et en joignant des bases de données. RESTORE génère toujours un nouveau GUID lorsque vous restaurez une base de données qui n'existe pas encore.<br /><br /> NULL= Base de données hors connexion, ou la base de données ne démarrera pas.|  
 |**family_guid**|**uniqueidentifier**|Identificateur de la « famille de sauvegarde » de la base de données pour détecter les états de restauration correspondants.<br /><br /> NULL = la base de données est hors connexion ou la base de données ne démarre pas.|  
-|**last_log_backup_lsn**|**numérique (25, 0)**|Numéro séquentiel dans le journal de début de la prochaine sauvegarde de journal.<br /><br /> Si la valeur est NULL, la sauvegarde du journal des transactions ne peut pas être effectuée parce que la base de données est en récupération SIMPLE ou qu’il n’existe aucune sauvegarde de base de données actuelle.|  
+|**last_log_backup_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal de début de la prochaine sauvegarde de journal.<br /><br /> Si la valeur est NULL, la sauvegarde du journal des transactions ne peut pas être effectuée parce que la base de données est en récupération SIMPLE ou qu’il n’existe aucune sauvegarde de base de données actuelle.|  
 |**recovery_fork_guid**|**uniqueidentifier**|Identifie la fourchette de récupération en cours sur laquelle la base de données est actuellement active.<br /><br /> NULL= Base de données hors connexion, ou la base de données ne démarrera pas.|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Identificateur de la fourchette de récupération de début.<br /><br /> NULL= Base de données hors connexion, ou la base de données ne démarrera pas.|  
-|**fork_point_lsn**|**numérique (25, 0)**|Si **first_recovery_fork_guid** n’est pas égal à ( ! =) pour **recovery_fork_guid**, **fork_point_lsn** est le numéro séquentiel dans le journal du point de branchement actuel. Dans le cas contraire, la valeur est NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal à ( ! =) pour **recovery_fork_guid**, **fork_point_lsn** est le numéro séquentiel dans le journal du point de branchement actuel. Dans le cas contraire, la valeur est NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue de bases de données et de fichiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

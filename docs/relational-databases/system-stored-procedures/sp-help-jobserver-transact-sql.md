@@ -18,10 +18,10 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054879"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
@@ -59,9 +59,9 @@ sp_help_jobserver
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Numéro d'identification du serveur cible.|  
-|**server_name**|**nvarchar(30**|Nom de l'ordinateur du serveur cible.|  
-|**enlist_date**|**DATETIME**|Date d'inscription du serveur cible sur le serveur maître.|  
-|**last_poll_date**|**DATETIME**|Date à laquelle le serveur cible a interrogé pour la dernière fois le serveur maître.|  
+|**server_name**|**nvarchar(30)**|Nom de l'ordinateur du serveur cible.|  
+|**enlist_date**|**datetime**|Date d'inscription du serveur cible sur le serveur maître.|  
+|**last_poll_date**|**datetime**|Date à laquelle le serveur cible a interrogé pour la dernière fois le serveur maître.|  
   
  Si **sp_help_jobserver** est exécutée avec *show_last_run_details* défini sur **1**, le jeu de résultats contient ces colonnes supplémentaires.  
   
@@ -82,7 +82,7 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres de **SQLAgentUserRole** peuvent uniquement afficher des informations sur les travaux dont ils sont propriétaires.  
   

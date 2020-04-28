@@ -21,10 +21,10 @@ ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53f7abe7603430950f14ecad039419f8435cba28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076549"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "68076549"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Erreurs**|**int**|Numéro unique de l'erreur.|  
-|**va**|**tinyint**|Niveau de gravité de l'erreur.|  
+|**error**|**int**|Numéro unique de l'erreur.|  
+|**severity**|**tinyint**|Niveau de gravité de l'erreur.|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**description**|**nvarchar(255)**|Explication de l'erreur avec des espaces réservés pour les paramètres.|  
+|**descriptive**|**nvarchar(255)**|Explication de l'erreur avec des espaces réservés pour les paramètres.|  
 |**msglangid**|**smallint**|ID du groupe de messages système.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084768"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>table&lt;&gt; conflict_&gt;Schema&lt;_ (Transact-SQL)
@@ -39,11 +39,11 @@ ms.locfileid: "68084768"
 |__$conflict_type|**int**|Type de conflit qui s'est produit, qui peut être l'une des valeurs suivantes :<br /><br /> 1 : Une mise à jour a échoué parce que la ligne locale a été modifiée par une autre mise à jour ou elle a été supprimée puis réinsérée.<br /><br /> 2 : Une mise à jour a échoué parce que la ligne locale a déjà été supprimée.<br /><br /> 3 : Une suppression a échoué parce que la ligne locale a été modifiée par une autre mise à jour ou elle a été supprimée puis réinsérée.<br /><br /> 4 : Une suppression a échoué parce que la ligne locale a déjà été supprimée.<br /><br /> 5 : Une insertion a échoué parce que la ligne locale a déjà été insérée ou a été insérée puis mise à jour.|  
 |__$is_winner|**bit**|Indique si la ligne dans cette table était le vainqueur du conflit, ce qui signifie qu'elle a été appliquée au nœud local.|  
 |__$pre_version|**varbinary (32)**|Version de la base de données d'où provient la modification conflictuelle.|  
-|__$reason_code|**int**|Code de résolution du conflit. Peut être l’une des valeurs suivantes :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Pour plus d’informations, consultez **_ _ $ reason_text**.|  
-|__$reason_text|**nvarchar (720)**|Résolution du conflit. Peut être l’une des valeurs suivantes :<br /><br /> Résolu (1)<br /><br /> Non résolu (2)<br /><br /> Inconnu (0)|  
+|__$reason_code|**int**|Code de résolution du conflit. Peut avoir l’une des valeurs suivantes :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Pour plus d’informations, consultez **_ _ $ reason_text**.|  
+|__$reason_text|**nvarchar (720)**|Résolution du conflit. Peut avoir l’une des valeurs suivantes :<br /><br /> Résolu (1)<br /><br /> Non résolu (2)<br /><br /> Inconnu (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**. La taille varie en fonction du contenu.|Bitmap qui indique quelles colonnes ont été mises à jour en cas de conflit mise à jour-mise à jour.|  
-|__$inserted_date|**DATETIME**|Date et heure d'insertion de la ligne en conflit dans cette table.|  
-|__$row_id|**confirmé**|Valeur de version associée à la ligne source du conflit.|  
+|__$inserted_date|**datetime**|Date et heure d'insertion de la ligne en conflit dans cette table.|  
+|__$row_id|**timestamp**|Valeur de version associée à la ligne source du conflit.|  
 |__$change_id|**binaire (8)**|Pour une ligne locale, cette valeur est égale au __$row_id de la ligne entrante qui a été en conflit avec la ligne locale. Cette valeur est NULL pour une ligne entrante.|  
 |\<noms des colonnes de la table de base>|\<types de colonnes de la table de base>|La table en conflit contient une colonne pour chaque colonne dans la table de base.|  
   

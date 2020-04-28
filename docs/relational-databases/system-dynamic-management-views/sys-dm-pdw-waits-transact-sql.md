@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 476b2f251bd41480962eb9925af6e3619507e791
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088761"
 ---
 # <a name="sysdm_pdw_waits-transact-sql"></a>sys. dm_pdw_waits (Transact-SQL)
@@ -27,13 +27,13 @@ ms.locfileid: "68088761"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|ID numérique unique associé à l’état d’attente.<br /><br /> Clé pour cette vue.|Unique dans toutes les attentes du système.|  
-|session_id|**nvarchar (32)**|ID de la session sur laquelle l’état d’attente s’est produit.|Consultez session_id dans [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|session_id|**nvarchar(32)**|ID de la session sur laquelle l’état d’attente s’est produit.|Consultez session_id dans [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |type|**nvarchar(255)**|Type d’attente représenté par cette entrée.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|Type d’objet affecté par l’attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar(386**|Nom ou GUID de l’objet spécifié qui a été affecté par l’attente.||  
-|request_id|**nvarchar (32)**|ID de la demande sur laquelle l’état d’attente s’est produit.|Consultez request_id dans [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|request_time|**DATETIME**|Heure à laquelle l’état d’attente a été demandé.||  
-|acquire_time|**DATETIME**|Heure à laquelle le verrou ou la ressource a été acquis (e).||  
+|request_id|**nvarchar(32)**|ID de la demande sur laquelle l’état d’attente s’est produit.|Consultez request_id dans [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_time|**datetime**|Heure à laquelle l’état d’attente a été demandé.||  
+|acquire_time|**datetime**|Heure à laquelle le verrou ou la ressource a été acquis (e).||  
 |state|**nvarchar(50)**|État de l’état d’attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|Priorité de l’élément en attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089239"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
@@ -38,12 +38,12 @@ ms.locfileid: "68089239"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom de la colonne ou du paramètre de la procédure|  
-|**identifi**|**int**|Identificateur d'objet de la table à laquelle cette colonne appartient, ou ID de la procédure stockée à laquelle ce paramètre est associé|  
+|**name**|**sysname**|Nom de la colonne ou du paramètre de la procédure|  
+|**id**|**int**|Identificateur d'objet de la table à laquelle cette colonne appartient, ou ID de la procédure stockée à laquelle ce paramètre est associé|  
 |**xtype**|**tinyint**|Type de stockage physique de **sys. types**.|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Identificateur de type de données étendu défini par l'utilisateur Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
-|**base**|**smallint**|Longueur maximale de stockage physique de **sys**. **types**.|  
+|**length**|**smallint**|Longueur maximale de stockage physique de **sys**. **types**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**smallint**|Identificateur de colonne ou de paramètre|  
@@ -52,16 +52,16 @@ ms.locfileid: "68089239"
 |**réservé**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Identificateur de la valeur par défaut pour cette colonne|  
-|**Domain**|**int**|Identificateur de la règle ou de la contrainte CHECK pour cette colonne|  
+|**domaine**|**int**|Identificateur de la règle ou de la contrainte CHECK pour cette colonne|  
 |**number**|**smallint**|Numéro de sous-procédure pour les procédures groupées.<br /><br /> 0 = entrées qui ne décrivent pas une procédure|  
-|**coseigneur**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**autoval**|**varbinary (8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|Décalage dans la ligne où apparaît cette colonne.|  
 |**CollationID**|**int**|ID du classement de la colonne. NULL pour les colonnes de type non caractère.|  
-|**statu**|**tinyint**|Bitmap servant à décrire une propriété de la colonne ou du paramètre :<br /><br /> 0x08 = La colonne autorise les valeurs NULL.<br /><br /> 0x10 = le remplissage ANSI était en vigueur lorsque des colonnes **varchar** ou **varbinary** étaient ajoutées. Les espaces à droite sont conservés pour les colonnes **varchar** et les zéros à droite sont conservés pour les colonnes **varbinary** .<br /><br /> 0x40 = Le paramètre est un paramètre de sortie (OUTPUT).<br /><br /> 0x80 = La colonne est une colonne d'identité.|  
-|**entrer**|**tinyint**|Type de stockage physique de **sys**. **types**.|  
-|**Type d’utilisateur**|**smallint**|ID du type de données défini par l’utilisateur à partir de **sys. types**. Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
-|**printfmt**|**varchar(255**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**statut**|**tinyint**|Bitmap servant à décrire une propriété de la colonne ou du paramètre :<br /><br /> 0x08 = La colonne autorise les valeurs NULL.<br /><br /> 0x10 = le remplissage ANSI était en vigueur lorsque des colonnes **varchar** ou **varbinary** étaient ajoutées. Les espaces à droite sont conservés pour les colonnes **varchar** et les zéros à droite sont conservés pour les colonnes **varbinary** .<br /><br /> 0x40 = Le paramètre est un paramètre de sortie (OUTPUT).<br /><br /> 0x80 = La colonne est une colonne d'identité.|  
+|**type**|**tinyint**|Type de stockage physique de **sys**. **types**.|  
+|**UserType**|**smallint**|ID du type de données défini par l’utilisateur à partir de **sys. types**. Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
+|**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Niveau de précision de cette colonne<br /><br /> -1 = **XML** ou type de valeur élevée.|  
 |**scale**|**int**|Échelle de cette colonne<br /><br /> NULL = le type de données est non numérique.|  
 |**IsComputed**|**int**|Indicateur signalant si la colonne est calculée :<br /><br /> 0 = Non calculée<br /><br /> 1 = Calculée|  
@@ -71,6 +71,6 @@ ms.locfileid: "68089239"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

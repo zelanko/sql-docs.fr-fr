@@ -10,10 +10,10 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084550"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Paramètres du projet (conversion) (DB2ToSQL)
@@ -167,7 +167,7 @@ Le tableau suivant montre comment SSMA convertit les modes de verrouillage DB2 
 |PARTAGE DE LIGNES|ROWLOCK, HOLDLOCK|  
 |LIGNE EXCLUSIVE|ROWLOCK, XLOCK, HOLDLOCK|  
 |PARTAGE DE MISE À JOUR = PARTAGE DE LIGNES|ROWLOCK, HOLDLOCK|  
-|Partager|TABLOCK, HOLDLOCK|  
+|PARTAGER|TABLOCK, HOLDLOCK|  
 |PARTAGER UNE LIGNE EXCLUSIVE|TABLOCK, XLOCK, HOLDLOCK|  
 |Or|TABLOCKX, HOLDLOCK|  
   
@@ -371,9 +371,9 @@ Lorsque vous sélectionnez un mode de conversion dans la zone **mode** , SSMA ap
 ### <a name="use-isnull-in-replace-function-calls"></a>Utilisation de ISNULL dans les appels de fonction Replace  
 L’instruction ISNULL est utilisée dans les appels de fonction Replace pour émuler le comportement DB2. Les options suivantes sont disponibles pour ce paramètre :  
   
--   OUI  
+-   YES  
   
--   NON  
+-   Non  
   
 Lorsque vous sélectionnez un mode de conversion dans la zone **mode** , SSMA applique le paramètre suivant :  
   
@@ -384,9 +384,9 @@ Lorsque vous sélectionnez un mode de conversion dans la zone **mode** , SSMA ap
 ### <a name="use-isnull-in-concat-function-calls"></a>Utiliser ISNULL dans les appels de fonction CONCAt  
 L’instruction ISNULL est utilisée dans les appels de fonction CONCAt pour émuler le comportement DB2. Les options suivantes sont disponibles pour ce paramètre :  
   
--   OUI  
+-   YES  
   
--   NON  
+-   Non  
   
 Lorsque vous sélectionnez un mode de conversion dans la zone **mode** , SSMA applique le paramètre suivant :  
   

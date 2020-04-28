@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090876"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
@@ -35,7 +35,7 @@ ms.locfileid: "68090876"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nom du type d’attente. Pour plus d'informations, consultez [Types d'attentes](#WaitTypes), plus loin dans cette rubrique.|  
+|wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d'informations, consultez [Types d'attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  
 |wait_time_ms|**bigint**|Temps d'attente total en millisecondes pour ce type d'attente. Ce temps comprend signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68090876"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
-##  <a name="WaitTypes"></a>Types d’attente  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Types d’attente  
  Resource waits  
  Les attentes de ressource se produisent lorsque des demandes de travail accèdent à une ressource qui n'est pas disponible parce qu'elle est en cours d'utilisation par un autre travail ou qu'elle n'est pas encore disponible. Ces attentes sont par exemple des attentes de verrous, de verrous internes, de réseau et d'E/S de disque. Les attentes de verrou (interne ou externe) sont des attentes sur des objets de synchronisation.  
   
@@ -224,8 +224,7 @@ ms.locfileid: "68090876"
 |MSQL_DQ|Se produit lorsqu'une tâche attend la fin d'une opération de requête distribuée. Permet de détecter d'éventuels interblocages d'application MARS (Multiple Active Result Set). L'attente se termine à la fin de l'appel de requête distribuée.|  
 |MSQL_XACT_MGR_MUTEX|Se produit lorsqu'une tâche attend d'avoir obtenu la propriété du gestionnaire de transactions de la session pour effectuer une opération de transaction au niveau de la session.|  
 |MSQL_XACT_MUTEX|Se produit durant la synchronisation de l'utilisation de la transaction. Une demande doit d'abord obtenir l'exclusion mutuelle pour pouvoir utiliser la transaction.|  
-|MSQL_XP|Se produit lorsqu'une tâche attend la fin d'une procédure stockée étendue. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise cet état d'attente pour détecter d'éventuels blocages d'application MARS. L'attente se termine à la fin de l'appel de procédure stockée étendue.|  
+|MSQL_XP|Se produit lorsqu'une tâche attend la fin d'une procédure stockée étendue. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise cet état d'attente pour détecter d'éventuels blocages d'application MARS. L'attente se termine à la fin de l'appel de procédure stockée étendue.|  
 |MSSEARCH|Se produit durant des appels de recherche en texte intégral. Cette attente se termine lorsque l'opération de texte intégral prend fin. Ces informations n'indiquent pas des contentions, mais plutôt la durée des opérations de texte intégral.|  
 |NET_WAITFOR_PACKET|Se produit lorsqu'une connexion attend un paquet réseau durant une lecture sur le réseau.|  
 |OLEDB|Se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ce type d'attente n'est pas utilisé pour la synchronisation. Par contre, il indique la durée des appels émis vers le fournisseur OLE DB.|  

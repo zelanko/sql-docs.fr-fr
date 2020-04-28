@@ -20,10 +20,10 @@ ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090286"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
@@ -36,16 +36,16 @@ ms.locfileid: "68090286"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar (256)**|Nom de la colonne. le nom est unique au sein de l’objet. N'accepte pas la valeur NULL.|  
+|name|**nvarchar(256)**|Nom de la colonne. le nom est unique au sein de l’objet. N'accepte pas la valeur NULL.|  
 |column_id|**int**|Identificateur de la colonne. column_id est unique dans l’objet lorsqu’il est utilisé avec column_type. N'accepte pas la valeur NULL.|  
-|object_name|**nvarchar (256)**|Nom de l'objet auquel appartient cette colonne. Il existe une relation plusieurs-à-un avec sys. dm_xe_objects. ID. N’accepte pas la valeur null.|  
+|object_name|**nvarchar(256)**|Nom de l'objet auquel appartient cette colonne. Il existe une relation plusieurs-à-un avec sys. dm_xe_objects. ID. N’accepte pas la valeur null.|  
 |object_package_guid|**uniqueidentifier**|GUID du package qui contient l'objet. N'accepte pas la valeur NULL.|  
-|type_name|**nvarchar (256)**|Nom du type pour cette colonne. N'accepte pas la valeur NULL.|  
+|type_name|**nvarchar(256)**|Nom du type pour cette colonne. N'accepte pas la valeur NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID du package qui contient le type de données de la colonne. N'accepte pas la valeur NULL.|  
-|column_type|**nvarchar (60)**|Indique comment cette colonne est utilisée. N'accepte pas la valeur NULL. column_type peut prendre l’une des valeurs suivantes :<br /><br /> readonly. La colonne contient une valeur statique qui ne peut pas être modifiée.<br /><br /> données. La colonne contient des données d'exécution exposées par l'objet.<br /><br /> customizable. La colonne contient une valeur qui peut être modifiée.<br /><br /> Remarque : la modification de cette valeur peut modifier le comportement de l’objet.|  
-|column_value|**nvarchar (256)**|Affiche des valeurs statiques associées à la colonne d'objets. Autorise la valeur NULL.|  
+|column_type|**nvarchar(60)**|Indique comment cette colonne est utilisée. N'accepte pas la valeur NULL. column_type peut prendre l’une des valeurs suivantes :<br /><br /> readonly. La colonne contient une valeur statique qui ne peut pas être modifiée.<br /><br /> data. La colonne contient des données d'exécution exposées par l'objet.<br /><br /> customizable. La colonne contient une valeur qui peut être modifiée.<br /><br /> Remarque : la modification de cette valeur peut modifier le comportement de l’objet.|  
+|column_value|**nvarchar(256)**|Affiche des valeurs statiques associées à la colonne d'objets. Autorise la valeur NULL.|  
 |capabilities|**int**|Bitmap décrivant les fonctionnalités de la colonne. Autorise la valeur NULL.|  
-|capabilities_desc|**nvarchar (256)**|Description des fonctionnalités de cette colonne d'objets. Cette valeur peut être l'une des suivantes :<br /><br /> Obligatoire. La valeur doit être affectée lors de la liaison de l'objet parent à une session d'événements.<br /><br /> Autorise la valeur NULL.|  
+|capabilities_desc|**nvarchar(256)**|Description des fonctionnalités de cette colonne d'objets. Cette valeur peut être l'une des suivantes :<br /><br /> Mandatory. La valeur doit être affectée lors de la liaison de l'objet parent à une session d'événements.<br /><br /> Autorise la valeur NULL.|  
 |description|**nvarchar (3072)**|Description de cette colonne d'objets. Autorise la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -53,7 +53,7 @@ ms.locfileid: "68090286"
   
 ### <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|De|À|Relation|  
+|À partir|À|Relation|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Plusieurs-à-un|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Plusieurs-à-un|  

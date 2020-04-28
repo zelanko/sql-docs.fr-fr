@@ -18,10 +18,10 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095858"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
@@ -43,8 +43,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'object_name'`Nom de la table et de la colonne ou du type de données alias à partir duquel la règle est détachée. *object_name* est de type **nvarchar (776)**, sans valeur par défaut. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essaie d'abord de résoudre en noms de colonnes les identificateurs en deux parties, puis en types de données alias. Lorsque vous dissociez une règle d'un type de données alias, les colonnes de ce type de données ayant la même règle sont également dissociées. Les colonnes de ce type de données auxquelles des règles sont directement liées ne sont pas affectées.  
+`[ @objname = ] 'object_name'`Nom de la table et de la colonne ou du type de données alias à partir duquel la règle est détachée. *object_name* est de type **nvarchar (776)**, sans valeur par défaut. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essaie d'abord de résoudre en noms de colonnes les identificateurs en deux parties, puis en types de données alias. Lorsque vous dissociez une règle d'un type de données alias, les colonnes de ce type de données ayant la même règle sont également dissociées. Les colonnes de ce type de données auxquelles des règles sont directement liées ne sont pas affectées.  
   
 > [!NOTE]  
 >  les *object_name* peuvent contenir des crochets **[]** comme des caractères d’identificateur délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -104,9 +103,9 @@ EXEC sp_unbindrule '[t.4].c1';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CRÉER une règle &#40;&#41;Transact-SQL](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [SUPPRIMER la règle &#40;&#41;Transact-SQL](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   

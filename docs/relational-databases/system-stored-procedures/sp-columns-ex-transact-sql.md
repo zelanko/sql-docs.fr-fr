@@ -18,10 +18,10 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070345"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
@@ -74,14 +74,14 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
 |**NUM_PREC_RADIX**|**smallint**|Est la base des types de données numériques.|  
 |**NULLABLE**|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = les valeurs NULL sont autorisées.<br /><br /> 0 = pas de valeur NULL.|  
-|**CONCERNANT**|**varchar (** 254 **)**|Ce champ renvoie toujours la valeur NULL.|  
+|**NOTES**|**varchar (** 254 **)**|Ce champ renvoie toujours la valeur NULL.|  
 |**COLUMN_DEF**|**varchar (** 254 **)**|Valeur par défaut de la colonne.|  
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL tel qu'il apparaît dans le champ TYPE du descripteur. Cette colonne est la même que la colonne **data_type** , à l’exception des types de données **DateTime** et SQL-92 **Interval** . Cette colonne renvoie toujours une valeur.|  
 |**SQL_DATETIME_SUB**|**smallint**|Code de sous-type pour les types de données **DateTime** et SQL-92 **Interval** . Pour les autres types de données, cette colonne renvoie la valeur NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longueur maximale, en octets, d'une colonne de type de données caractère ou entier. Pour tous les autres types de données, cette colonne renvoie une valeur NULL.|  
 |**ORDINAL_POSITION**|**int**|Numéro d'ordre de la colonne dans la table. La première colonne de la table est la colonne 1. Cette colonne renvoie toujours une valeur.|  
 |**IS_NULLABLE**|**varchar (** 254 **)**|Possibilité de valeurs NULL dans la colonne de la table. Les règles ISO sont utilisées pour déterminer la possibilité de valeur Null. Un SGBD compatible avec la norme ISO SQL ne peut pas renvoyer de chaîne vide.<br /><br /> YES = la colonne peut inclure des valeurs NULL.<br /><br /> NO = la colonne ne peut pas inclure de valeurs NULL.<br /><br /> Cette colonne renvoie une chaîne de longueur zéro si la possibilité de valeurs Null n'est pas connue.<br /><br /> La valeur retournée pour cette colonne est différente de la valeur renvoyée pour la colonne **Nullable** .|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de données utilisé par les procédures stockées étendues.|  
+|**SS_DATA_TYPE**|**tinyint**|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisé par les procédures stockées étendues.|  
   
  Pour plus d'informations, consultez la documentation de Microsoft ODBC.  
   

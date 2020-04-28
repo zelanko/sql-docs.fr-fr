@@ -18,10 +18,10 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060202"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "68060202"
 |**mailitem_id**|**int**|Identificateur de l'élément de messagerie qui contenait la pièce jointe.|  
 |**extension**|**nvarchar (520)**|Nom de fichier de la pièce jointe. Lorsque **attach_query_result** a la valeur 1 et que **query_attachment_filename** a la valeur null, Database mail crée un nom de fichier arbitraire.|  
 |**taille**|**int**|Taille de la pièce jointe en octets.|  
-|**attachment**|**varbinary(max)**|Contenu de la pièce jointe.|  
-|**last_mod_date**|**DATETIME**|Date et heure de la dernière modification de la ligne.|  
+|**position**|**varbinary(max)**|Contenu de la pièce jointe.|  
+|**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  
   
 ## <a name="remarks"></a>Notes  

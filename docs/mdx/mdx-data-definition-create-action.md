@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098551"
 ---
 # <a name="mdx-data-definition---create-action"></a>Définition de données MDX - CREATE ACTION
@@ -80,10 +80,10 @@ FOR
 ## <a name="action-types"></a>Types d’actions  
  Le tableau suivant décrit les différents types d’actions disponibles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Type d’action|Description|  
+|Type d'action|Description|  
 |-----------------|-----------------|  
 |**URL**|La chaîne d'action retournée est une URL qui doit être ouverte dans un navigateur Internet.<br /><br /> Remarque : si cette action ne commence pas par `https://` ou `https://`, l’action n’est pas disponible pour le navigateur, sauf si **SafetyOptions** a la valeur **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
-|**PAGE**|La chaîne d'action retournée est un script HTML. Cette chaîne doit être enregistrée dans un fichier, qui devra être rendu à l'aide d'un navigateur Internet. Dans ce cas, un script entier peut être exécuté en tant que partie du fichier HTML généré.|  
+|**HTML**|La chaîne d'action retournée est un script HTML. Cette chaîne doit être enregistrée dans un fichier, qui devra être rendu à l'aide d'un navigateur Internet. Dans ce cas, un script entier peut être exécuté en tant que partie du fichier HTML généré.|  
 |**GESTION**|La chaîne d’action retournée est une instruction qui doit être exécutée en affectant à la méthode **ICommand :: SetText** d’un objet Command la valeur String et en appelant la méthode **ICommand :: Execute**. Si la commande échoue, un message d'erreur est retourné.|  
 |**ENSEMBLE**|La chaîne d’action retournée est une instruction MDX qui doit être exécutée en affectant à la méthode **ICommand :: SetText** d’un objet Command la valeur String et en appelant la méthode **ICommand :: Execute** . L’ID d’interface (IID) demandé doit être **IDataset**. Cette commande réussit si un dataset a été créé. L'application cliente doit autoriser l'utilisateur à parcourir le dataset retourné.|  
 |**OpenXml**|Semblable au **DataSet**, mais au lieu de demander un IID de **IDataset**, l’application cliente doit demander un IID de **IRowset**. Cette commande réussit si un ensemble de lignes a été créé. L'application cliente doit autoriser l'utilisateur à parcourir l'ensemble de lignes retourné.|  

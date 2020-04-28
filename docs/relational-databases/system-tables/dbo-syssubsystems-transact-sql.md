@@ -20,10 +20,10 @@ ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68069082"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "68069082"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|ID du sous-système.|  
-|**sous-système**|**nvarchar (40)**|Nom du sous-système.|  
+|**sous-système**|**nvarchar(40)**|Nom du sous-système.|  
 |**description_id**|**int**|ID de message de la ligne dans l’affichage catalogue **sys. messages** qui contient la description du sous-système.|  
 |**subsystem_dll**|**nvarchar(255)**|Emplacement de la DLL du sous-système.|  
 |**agent_exe**|**nvarchar(255)**|Chemin d'accès complet à l'exécutable qui utilise le sous-système.|  
-|**start_entry_point**|**nvarchar(30**|Fonction appelée lors de l'initialisation du sous-système.|  
-|**event_entry_point**|**nvarchar(30**|Fonction appelée lors de l'exécution d'une étape du sous-système.|  
-|**stop_entry_point**|**nvarchar(30**|Fonction appelée au terme de l'exécution du sous-système.|  
+|**start_entry_point**|**nvarchar(30)**|Fonction appelée lors de l'initialisation du sous-système.|  
+|**event_entry_point**|**nvarchar(30)**|Fonction appelée lors de l'exécution d'une étape du sous-système.|  
+|**stop_entry_point**|**nvarchar(30)**|Fonction appelée au terme de l'exécution du sous-système.|  
 |**max_worker_threads**|**int**|Nombre maximal d'étapes simultanées pour un sous-système donné.|  
   
 ## <a name="remarks"></a>Notes  

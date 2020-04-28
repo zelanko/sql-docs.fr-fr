@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070853"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Éléments de syntaxe DMX (Data Mining Extensions)
@@ -24,7 +24,7 @@ ms.locfileid: "68070853"
  [Identificateurs &#40;&#41;DMX](../dmx/identifiers-dmx.md)  
  Nommez les objets tels que les modèles d'exploration de données, les structures d'exploration de données et les colonnes.  
   
- [Types de données &#40;&#41;DMX](../dmx/data-types-dmx.md)  
+ [Types de données &#40;DMX&#41;](../dmx/data-types-dmx.md)  
  Définissez le type de données qu'une colonne de modèle d'exploration de données contient.  
   
  [Expressions &#40;DMX&#41;](../dmx/expressions-dmx.md)  
@@ -42,16 +42,16 @@ ms.locfileid: "68070853"
  [Mots clés réservés &#40;&#41;DMX](../dmx/reserved-keywords-dmx.md)  
  Mots réservés à l'utilisation de DMX qui ne doivent pas être employés pour nommer des objets dans une base de données.  
   
- [Types de contenu &#40;&#41;DMX](../dmx/content-types-dmx.md)  
+ [Types de contenu &#40;DMX&#41;](../dmx/content-types-dmx.md)  
  Définissez le contenu qu'une colonne de structure d'exploration de données contient.  
   
- [Distributions &#40;&#41;DMX](../dmx/distributions-dmx.md)  
+ [Distributions &#40;DMX&#41;](../dmx/distributions-dmx.md)  
  Définit la distribution des données au sein d'une colonne.  
   
  [&#41;DMX &#40;d’utilisation](../dmx/usage-dmx.md)  
  Définissez de quelle manière un modèle utilise les colonnes qu'il contient.  
   
- [Indicateurs de modélisation &#40;&#41;DMX](../dmx/modeling-flags-dmx.md)  
+ [Indicateurs de modélisation &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
  Définissez les indicateurs supplémentaires utilisés par l'algorithme pour traiter un modèle d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -62,6 +62,6 @@ ms.locfileid: "68070853"
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Présentation de l'instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

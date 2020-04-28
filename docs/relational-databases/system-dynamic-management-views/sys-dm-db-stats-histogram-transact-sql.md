@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096254"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
@@ -43,10 +43,10 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>Arguments  
  *object_id*  
- ID de l'objet dans la base de données active dont les propriétés d'une de ses statistiques sont demandées. *object_id* est de **type int**.  
+ ID de l'objet dans la base de données active dont les propriétés d'une de ses statistiques sont demandées. *l’object_id* est **int**.  
   
  *stats_id*  
- ID des statistiques pour *l’object_id*. spécifié. L’ID des statistiques peut être obtenu à partir de la vue de gestion dynamique [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* est de **type int**.  
+ ID des statistiques pour *l’object_id*. spécifié. L’ID des statistiques peut être obtenu à partir de la vue de gestion dynamique [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* correspond à **int**.  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -83,7 +83,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   La zone pleine située à gauche de *range_high_key* représente la plage de valeurs de colonnes et le nombre moyen d’occurrences de chacune des valeurs de colonnes (*average_range_rows*). Pour la première étape de l’histogramme, la valeur de *average_range_rows* est toujours égale à 0.  
   
--   Les lignes pointillées représentent les valeurs échantillonnées utilisées pour estimer le nombre total de valeurs distinctes dans la plage (*distinct_range_rows*) et le nombre total de valeurs dans la plage (*range_rows*). L’optimiseur de requête utilise *range_rows* et *distinct_range_rows* pour calculer *average_range_rows*, et ne stocke pas les valeurs échantillonnées.  
+-   Les traits en pointillés représentent les valeurs échantillonnées utilisées pour estimer le nombre total de valeurs distinctes dans la plage (*DISTINCT_RANGE_ROWS*) et le nombre total de valeurs dans la plage (*RANGE_ROWS*). L’optimiseur de requête utilise *range_rows* et *distinct_range_rows* pour calculer *average_range_rows*, et ne stocke pas les valeurs échantillonnées.  
   
  L'optimiseur de requête définit les étapes d'histogramme en fonction de leur importance statistique. Il utilise un algorithme de nombre maximal de différences pour réduire le nombre d'étapes dans l'histogramme tout en augmentant la différence entre les valeurs limites. Le nombre maximal d'étapes est 200. Le nombre d'étapes d'histogramme peut être inférieur au nombre de valeurs distinctes, même pour les colonnes comportant moins de 200 points de limite. Par exemple, une colonne avec 100 valeurs distinctes peut avoir un histogramme comportant moins de 100 points de limite.  
   

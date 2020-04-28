@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6b113044f46a09b54ed8c9d6f0fafdab2ec5b06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061389"
 ---
 # <a name="sysevent_notification_event_types-transact-sql"></a>sys.event_notification_event_types (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68061389"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**entrer**|**int**|Type d'événement ou groupe d'événements qui active une notification d'événement.|  
+|**type**|**int**|Type d'événement ou groupe d'événements qui active une notification d'événement.|  
 |**type_name**|**nvarchar(128)**|Nom d'un événement ou groupe d'événements. Cela peut être spécifié dans la clause FOR d’une instruction [Create Event notification](../../t-sql/statements/create-event-notification-transact-sql.md) .|  
 |**parent_type**|**int**|Type de groupe d'événements qui est le parent de l'événement ou du groupe d'événements.|  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83dc56056e6000a789c8944b38326c23d7632bb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049286"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
@@ -30,17 +30,17 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Set_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Saut*  
+ *Count*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
  *Numeric_Expression*  
- facultatif. Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
+ Facultatif. Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *Include_Calc_Members*  
- facultatif. Mot clé qui ajoute des membres calculés aux résultats d’exploration.  
+ Facultatif. Mot clé qui ajoute des membres calculés aux résultats d’exploration.  
   
 ## <a name="remarks"></a>Notes  
  Si une expression numérique est spécifiée, la fonction **DrilldownLevelBottom** trie, par ordre croissant, les enfants de chaque membre dans le jeu spécifié, en fonction de la valeur spécifiée, évaluée sur le jeu de membres enfants. Si une expression numérique n'est pas spécifiée, la fonction trie, dans l'ordre croissant, les enfants de chaque membre dans le jeu spécifié, d'après les valeurs des cellules représentées par le jeu de membres enfants, comme déterminé par le contexte de requête ; ce comportement est semblable aux fonctions BottomCount et Tail (MDX) qui retournent un jeu de membres dans l'ordre naturel, sans tri.  
@@ -82,6 +82,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Voir aussi  
  [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

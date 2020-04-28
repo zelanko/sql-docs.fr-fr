@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053051"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
@@ -66,7 +66,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|Indique que la colonne est une colonne supplémentaire ajoutée à titre d'informations de navigation et qu'elle ne s'affiche pas réellement dans le jeu de résultats.|  
 |**column_ordinal**|**int NOT NULL**|Contient la position ordinale de la colonne dans le jeu de résultats. La position de la première colonne sera spécifiée comme 1.|  
-|**nomme**|**sysname NULL**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, il contiendra NULL.|  
+|**name**|**sysname NULL**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, il contiendra NULL.|  
 |**is_nullable**|**bit NOT NULL**|Contient la valeur 1 si la colonne autorise des valeurs NULL, 0 si la colonne n'autorise pas de valeurs NULL, et 1 s'il n'est pas possible de déterminer si la colonne autorise des valeurs NULL.|  
 |**system_type_id**|**int NOT NULL**|Contient le system_type_id du type de données de la colonne tel que spécifié dans sys. types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
 |**system_type_name**|**nvarchar (256) NULL**|Contient le nom et les arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
@@ -99,10 +99,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**ordinal_in_order_by_list**|**smallint NULL**|Position de cette colonne dans la liste ORDER BY. Retourne NULL si la colonne n’apparaît pas dans la liste ORDER BY ou si la liste ORDER BY ne peut pas être déterminée de manière unique.|  
 |**order_by_list_length**|**smallint NULL**|Longueur de la liste ORDER BY. Retourne NULL s'il n'existe aucune liste ORDER BY ou si la liste ORDER BY ne peut pas être déterminée de manière unique. Notez que cette valeur sera la même pour toutes les lignes retournées par **sp_describe_first_result_set.**|  
 |**order_by_is_descending**|**smallint NULL**|Si la valeur ordinal_in_order_by_list n'est pas NULL, la colonne **order_by_is_descending** indique la direction de la clause ORDER BY pour cette colonne. Sinon, elle indique NULL.|  
-|**tds_type_id**|**int NOT NULL**|À usage interne.|  
-|**tds_length**|**int NOT NULL**|À usage interne.|  
-|**tds_collation_id**|**int NULL**|À usage interne.|  
-|**tds_collation_sort_id**|**tinyint NULL**|À usage interne.|  
+|**tds_type_id**|**int NOT NULL**|À usage interne uniquement.|  
+|**tds_length**|**int NOT NULL**|À usage interne uniquement.|  
+|**tds_collation_id**|**int NULL**|À usage interne uniquement.|  
+|**tds_collation_sort_id**|**tinyint NULL**|À usage interne uniquement.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_describe_first_result_set** garantit que si la procédure retourne les premières métadonnées du jeu de résultats pour (un hypothétique) lot a et si ce lot (a) est exécuté par la suite, le traitement (1) génère une erreur de temps d’optimisation. (2) déclenche une erreur d’exécution, (3) ne retourne aucun jeu de résultats, ou (4) retourne un premier jeu de résultats avec les mêmes métadonnées que celles décrites par **sp_describe_first_result_set**.  
@@ -158,7 +158,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ### <a name="typical-examples"></a>Exemples types  
   
-#### <a name="a-simple-example"></a>R. Exemple simple  
+#### <a name="a-simple-example"></a>A. Exemple simple  
  L'exemple suivant décrit le jeu de résultats retourné par une requête unique.  
   
 ```  

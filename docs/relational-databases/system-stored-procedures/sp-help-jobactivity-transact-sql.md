@@ -18,10 +18,10 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054979"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
@@ -60,16 +60,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**session_id**|**int**|Numéro d'identification de la session de l'Agent.|  
 |**job_id**|**uniqueidentifier**|Identificateur du travail.|  
 |**job_name**|**sysname**|Nom du travail.|  
-|**run_requested_date**|**DATETIME**|Moment auquel le travail devait s'exécuter.|  
+|**run_requested_date**|**datetime**|Moment auquel le travail devait s'exécuter.|  
 |**run_requested_source**|**sysname**|Source de la requête pour exécuter le travail. Valeurs possibles :<br /><br /> **1** = exécuter selon une planification<br /><br /> **2** = exécution en réponse à une alerte<br /><br /> **3** = exécution au démarrage<br /><br /> **4** = exécution par l’utilisateur<br /><br /> **6** = exécution sur la planification d’inactivité de l’UC|  
-|**queued_date**|**DATETIME**|Moment où la requête a intégré une file d'attente. NULL si le travail a été exécuté directement.|  
-|**start_execution_date**|**DATETIME**|Moment où le travail a été attribué à un thread exécutable.|  
+|**queued_date**|**datetime**|Moment où la requête a intégré une file d'attente. NULL si le travail a été exécuté directement.|  
+|**start_execution_date**|**datetime**|Moment où le travail a été attribué à un thread exécutable.|  
 |**last_executed_step_id**|**int**|ID de l'étape du travail exécutée en dernier lieu.|  
-|**last_exectued_step_date**|**DATETIME**|Heure à laquelle l'étape du travail exécutée en dernier lieu a démarré son exécution.|  
-|**stop_execution_date**|**DATETIME**|Heure à laquelle l'exécution du travail s'est terminée.|  
-|**next_scheduled_run_date**|**DATETIME**|Date et heure prévues pour la prochaine exécution du travail.|  
+|**last_exectued_step_date**|**datetime**|Heure à laquelle l'étape du travail exécutée en dernier lieu a démarré son exécution.|  
+|**stop_execution_date**|**datetime**|Heure à laquelle l'exécution du travail s'est terminée.|  
+|**next_scheduled_run_date**|**datetime**|Date et heure prévues pour la prochaine exécution du travail.|  
 |**job_history_id**|**int**|Identificateur de l'historique des travaux dans la table d'historique des travaux.|  
-|**Message**|**nvarchar(1024)**|Message produit lors de la dernière exécution du travail.|  
+|**message**|**nvarchar(1024)**|Message produit lors de la dernière exécution du travail.|  
 |**run_status**|**int**|État retourné de la dernière exécution du travail :<br /><br /> **0** = échec de l’erreur<br /><br /> **1** = réussite<br /><br /> **3** = annulé<br /><br /> **5** = état inconnu|  
 |**operator_id_emailed**|**int**|Numéro d'identification de l'opérateur notifié par courrier électronique en fin de travail.|  
 |**operator_id_netsent**|**int**|Numéro d’identification de l’opérateur notifié via **net send** à la fin du travail.|  
@@ -93,7 +93,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Seuls les membres de **sysadmin** peuvent afficher l’activité des travaux appartenant à d’autres utilisateurs.  
   

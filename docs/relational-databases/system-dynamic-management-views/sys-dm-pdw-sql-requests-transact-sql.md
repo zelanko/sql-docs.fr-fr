@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089156"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-SQL)
@@ -26,14 +26,14 @@ ms.locfileid: "68089156"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|Identificateur unique de la requête à laquelle appartient cette distribution de requêtes SQL.<br /><br /> request_id, step_index et distribution_id forment la clé de cette vue.|Consultez request_id dans [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Identificateur unique de la requête à laquelle appartient cette distribution de requêtes SQL.<br /><br /> request_id, step_index et distribution_id forment la clé de cette vue.|Consultez request_id dans [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Index de l’étape de requête dont cette distribution fait partie.<br /><br /> request_id, step_index et distribution_id forment la clé de cette vue.|Consultez step_index dans [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |pdw_node_id|**int**|Identificateur unique du nœud sur lequel cette distribution de requêtes est exécutée.|Consultez node_id dans [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**int**|Identificateur unique de la distribution sur laquelle cette distribution de requêtes est exécutée.<br /><br /> request_id, step_index et distribution_id forment la clé de cette vue.|Consultez distribution_id dans [sys. pdw_distributions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md). Affectez la valeur-1 pour les requêtes qui s’exécutent au niveau de l’étendue du nœud, et non dans l’étendue de la distribution.|  
-|status|**nvarchar (32)**|État actuel de la distribution de la requête.|En attente, en cours d’exécution, en échec, annulé, terminé, abandonné, CancelSubmitted|  
+|status|**nvarchar(32)**|État actuel de la distribution de la requête.|En attente, en cours d’exécution, en échec, annulé, terminé, abandonné, CancelSubmitted|  
 |error_id|**nvarchar (36)**|Identificateur unique de l’erreur associée à cette distribution de requête, le cas échéant.|Consultez error_id dans [sys. dm_pdw_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Affectez la valeur NULL si aucune erreur ne s’est produite.|  
-|start_time|**DATETIME**|Heure à laquelle la distribution des requêtes a commencé l’exécution.|Inférieure ou égale à l’heure actuelle et supérieure ou égale à start_time de l’étape de requête à laquelle cette distribution de requête appartient|  
-|end_time|**DATETIME**|Heure à laquelle cette distribution de requête s’est terminée, a été annulée ou a échoué.|Supérieur ou égal à l’heure de début, ou valeur NULL si la distribution de la requête est en cours ou en file d’attente.|  
+|start_time|**datetime**|Heure à laquelle la distribution des requêtes a commencé l’exécution.|Inférieure ou égale à l’heure actuelle et supérieure ou égale à start_time de l’étape de requête à laquelle cette distribution de requête appartient|  
+|end_time|**datetime**|Heure à laquelle cette distribution de requête s’est terminée, a été annulée ou a échoué.|Supérieur ou égal à l’heure de début, ou valeur NULL si la distribution de la requête est en cours ou en file d’attente.|  
 |total_elapsed_time|**int**|Représente l’heure d’exécution de la distribution de requêtes, en millisecondes.|Supérieur ou égal à 0. Égal au Delta de start_time et end_time pour les distributions de requêtes terminées, ayant échoué ou annulées.<br /><br /> Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time sera toujours la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée ».<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
 |row_count|**bigint**|Nombre de lignes modifiées ou lues par cette distribution de requête.|-1 pour les opérations qui ne modifient pas ou ne retournent pas de données, telles que CREATE TABLE et DROP TABLE.|  
 |spid|**int**|ID de session sur l’instance de SQL Server exécutant la distribution de la requête.||  

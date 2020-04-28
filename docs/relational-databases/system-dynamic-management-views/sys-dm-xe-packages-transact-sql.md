@@ -20,10 +20,10 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090258"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
@@ -34,12 +34,12 @@ ms.locfileid: "68090258"
  
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar (256)**|Nom du package. La description est exposée à partir du package lui-même. N'accepte pas la valeur NULL.|  
+|name|**nvarchar(256)**|Nom du package. La description est exposée à partir du package lui-même. N'accepte pas la valeur NULL.|  
 |guid|**uniqueidentifier**|GUID qui identifie le package. N'accepte pas la valeur NULL.|  
 |description|**nvarchar (3072)**|Description du package. Description définie par l’auteur du package et n’accepte pas la valeur null.|  
 |capabilities|**int**|Bitmap décrivant les fonctionnalités de ce package. Autorise la valeur NULL.|  
-|capabilities_desc|**nvarchar (256)**|Liste de toutes les fonctionnalités disponibles pour ce package. Autorise la valeur NULL.|  
-|module_guid|**nvarchar (60)**|GUID du module qui expose ce package. N'accepte pas la valeur NULL.|  
+|capabilities_desc|**nvarchar(256)**|Liste de toutes les fonctionnalités disponibles pour ce package. Autorise la valeur NULL.|  
+|module_guid|**nvarchar(60)**|GUID du module qui expose ce package. N'accepte pas la valeur NULL.|  
 |module_address|**varbinary (8)**|Adresse de base où le module contenant le package est chargé. Un module peut exposer plusieurs packages. N'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -54,7 +54,7 @@ ms.locfileid: "68090258"
   
 ||||  
 |-|-|-|  
-|De|À|Relation|  
+|À partir|À|Relation|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Plusieurs-à-un|  
   
 ## <a name="see-also"></a>Voir aussi  

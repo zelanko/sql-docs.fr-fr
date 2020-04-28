@@ -10,10 +10,10 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074150"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Commandes de menu et autres touches de raccourci (DB2ToSQL)
@@ -54,7 +54,7 @@ Pour accéder au menu Edition, le raccourci clavier utilisé est ALT + E. Le tab
 |Rechercher précédent.|ALT + E + F + P ou CTRL + Maj + F3|  
 |Suivant|ALT + E + F + N ou CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Commandes du menu Affichage  
+## <a name="view-menu-commands"></a>commandes du menu Affichage  
 Pour accéder au menu Affichage, le raccourci clavier utilisé est ALT + V. Le tableau suivant décrit les raccourcis clavier utilisés pour accéder aux éléments de menu du menu Affichage.  
   
 |POUR EFFECTUER CETTE OPÉRATION|COMPRESSION|  
@@ -87,7 +87,7 @@ Pour accéder au menu Outils, le raccourci clavier utilisé est ALT + T. Le tabl
 |Affiche la boîte de dialogue Paramètres du projet.|ALT + T + P|  
 |Affiche la boîte de dialogue Paramètres du projet par défaut.|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>Commandes du menu aide  
+## <a name="help-menu-commands"></a>commandes du menu Aide  
 Pour accéder au menu aide, le raccourci clavier utilisé est ALT + H. Le tableau suivant décrit les raccourcis clavier utilisés pour accéder aux éléments de menu dans le menu aide.  
   
 |POUR EFFECTUER CETTE OPÉRATION|COMPRESSION|  

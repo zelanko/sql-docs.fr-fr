@@ -18,10 +18,10 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095939"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
@@ -59,9 +59,9 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**0**|= (Égal à)|  
 |**1**|<>  (différent de)|  
 |**2**|> (Supérieur à)|  
-|**1,3**|< (Inférieur à)|  
+|**3**|< (Inférieur à)|  
 |**4**|>= (supérieur ou égal à)|  
-|**5,5**|<= (inférieur ou égal à)|  
+|**5**|<= (inférieur ou égal à)|  
 |**6**|LIKE|  
 |**7**|Ne correspond pas à|  
   
@@ -94,8 +94,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="remarks"></a>Notes  
  **sp_trace_setfilter** est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée qui effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibles dans les versions antérieures de. Utilisez **sp_trace_setfilter** au lieu des procédures stockées étendues du **filtre xp_trace_set\*** pour créer, appliquer, supprimer ou manipuler des filtres sur des traces. Pour plus d’informations, consultez [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- Tous les filtres d’une colonne particulière doivent être activés ensemble au cours d’une exécution de **sp_trace_setfilter**. Par exemple, si un utilisateur décide d'appliquer deux filtres sur la colonne Nom d'application et un filtre sur la colonne Nom d'utilisateur, il doit spécifier les filtres sur le nom d'application de manière séquentielle. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur si l'utilisateur tente de spécifier un filtre sur le nom d'application dans un appel de procédure stockée, suivi d'un filtre sur le nom d'utilisateur, puis d'un autre filtre sur le nom d'application.  
+ Tous les filtres d’une colonne particulière doivent être activés ensemble au cours d’une exécution de **sp_trace_setfilter**. Par exemple, si un utilisateur décide d'appliquer deux filtres sur la colonne Nom d'application et un filtre sur la colonne Nom d'utilisateur, il doit spécifier les filtres sur le nom d'application de manière séquentielle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur si l'utilisateur tente de spécifier un filtre sur le nom d'application dans un appel de procédure stockée, suivi d'un filtre sur le nom d'utilisateur, puis d'un autre filtre sur le nom d'application.  
   
  Les paramètres de toutes les procédures stockées trace SQL (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
@@ -112,8 +111,8 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Trace SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d6d87ee8b2aa05c3156acb2db9c6604380db887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68082682"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>Tables de capture des données modifiées (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68082682"
   La capture de données modifiées active le suivi des modifications sur les tables afin que les modifications du langage de manipulation de données (DML) et du langage de définition de données (DDL) apportées aux tables puissent être chargées de façon incrémentielle dans un entrepôt de données. Les rubriques de cette section décrivent les tables système qui stockent les informations utilisées par les opérations de capture de données modifiées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [CDC. <capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
+ [cdc.<capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
  Retourne une ligne pour chaque modification apportée à une colonne capturée dans la table source associée.  
   
  [cdc.captured_columns](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "68082682"
  Retourne les paramètres de configuration pour les travaux de l'agent de capture des données modifiées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [Procédures stockées de capture de données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Fonctions de capture de données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

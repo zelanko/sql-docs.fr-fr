@@ -18,10 +18,10 @@ ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085774"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "68085774"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|Identifie un numéro de séquence d'enregistrement d'égal à égal.|  
-|**last_updated**|**DATETIME**|**Date et heure** de la dernière mise à jour de la ligne.|  
+|**id**|**int**|Identifie un numéro de séquence d'enregistrement d'égal à égal.|  
+|**last_updated**|**datetime**|**Date et heure** de la dernière mise à jour de la ligne.|  
 |**Emetteur**|**sysname**|Nom du serveur de publication à l'origine de la transaction|  
 |**originator_db**|**sysname**|Nom de la base de données d'où provient la transaction|  
 |**originator_publication**|**sysname**|Nom de la publication d'où provient la transaction|  

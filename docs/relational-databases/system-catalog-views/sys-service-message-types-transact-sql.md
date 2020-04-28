@@ -20,10 +20,10 @@ ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560ee8a4ccc03f747df2b475394af092db589e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078737"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
@@ -33,11 +33,11 @@ ms.locfileid: "68078737"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom du type de message, unique dans la base de données. Cette colonne n'accepte pas la valeur NULL.|  
+|**name**|**sysname**|Nom du type de message, unique dans la base de données. Cette colonne n'accepte pas la valeur NULL.|  
 |**message_type_id**|**int**|Identificateur du type de message, unique dans la base de données. Cette colonne n'accepte pas la valeur NULL.|  
 |**principal_id**|**int**|Identificateur du principal de base de données propriétaire de ce type de message. Accepte la valeur NULL.|  
-|**métrage**|**Char (2)**|Validation effectuée par Service Broker avant l'envoi de messages de ce type. Cette colonne n'accepte pas la valeur NULL. Valeurs possibles :<br /><br /> N = aucun<br /><br /> X = XML<br /><br /> E = vide|  
-|**validation_desc**|**nvarchar (60)**|Description de la validation effectuée par Service Broker avant l'envoi de messages de ce type. Accepte la valeur NULL. Valeurs possibles :<br /><br /> Aucune<br /><br /> XML<br /><br /> EMPTY|  
+|**métrage**|**char(2)**|Validation effectuée par Service Broker avant l'envoi de messages de ce type. Cette colonne n'accepte pas la valeur NULL. Valeurs possibles :<br /><br /> N = aucun<br /><br /> X = XML<br /><br /> E = vide|  
+|**validation_desc**|**nvarchar(60)**|Description de la validation effectuée par Service Broker avant l'envoi de messages de ce type. Accepte la valeur NULL. Valeurs possibles :<br /><br /> Aucune<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|Pour une validation qui utilise un schéma XML, l'identificateur de la collection de schéma utilisée.<br /><br /> Sinon, NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

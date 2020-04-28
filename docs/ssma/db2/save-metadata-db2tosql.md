@@ -10,10 +10,10 @@ ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060093"
 ---
 # <a name="save-metadata-db2tosql"></a>Enregistrer les métadonnées (DB2ToSQL)
@@ -33,10 +33,10 @@ SSMA charge les métadonnées dans le projet, si nécessaire. Les métadonnées 
 **Sélectionner tout**  
 Sélectionne toutes les bases de données listées.  
   
-**Clear**  
+**Effacé**  
 Désactive la case à cocher de toutes les bases de données avec des métadonnées manquantes. Vous ne pouvez pas désactiver la case à cocher si des métadonnées ont été chargées.  
   
-**Été**  
+**Save**  
 Enregistre le projet, en chargeant les métadonnées des bases de données sélectionnées qui ont des métadonnées manquantes.  
   
 **Annuler**  

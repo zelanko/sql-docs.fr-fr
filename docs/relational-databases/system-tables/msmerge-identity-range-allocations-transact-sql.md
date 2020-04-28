@@ -18,10 +18,10 @@ ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072650"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68072650"
 |**next_range_begin**|**numérique (38)**|Valeur de début de la plage suivante à affecter.|  
 |**next_range_end**|**numérique (38)**|Valeur de fin de la plage suivante à affecter.|  
 |**max_used**|**numérique (38)**|Valeur d'identité la plus élevée utilisée.|  
-|**time_of_allocation**|**DATETIME**|Heure à laquelle l'affectation a été faite.|  
+|**time_of_allocation**|**datetime**|Heure à laquelle l'affectation a été faite.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

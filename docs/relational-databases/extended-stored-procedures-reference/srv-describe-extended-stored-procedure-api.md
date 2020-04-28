@@ -20,17 +20,17 @@ ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064122"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Définit le nom de colonne et les types de données sources et de destination pour une colonne spécifique.  
   
@@ -108,7 +108,7 @@ srcdata
   
  Pour une description des types de données et des conversions de types de données d’API de procédure stockée étendue, consultez [Types de données &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md).  
   
- Si le nom de colonne dans votre application est en Unicode, vous devez le convertir en page de codes multioctets du serveur avant d’appeler **srv_describe**. Pour plus d’informations, consultez [Données Unicode et pages de codes du serveur](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
+ Si le nom de colonne dans votre application est en Unicode, vous devez le convertir en page de codes multioctets du serveur avant d’appeler **srv_describe**. Pour plus d’informations, consultez [données Unicode et pages de codes du serveur](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://msdn.microsoft.com/security/).  

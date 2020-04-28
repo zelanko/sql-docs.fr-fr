@@ -10,10 +10,10 @@ ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102998"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Modifier le mappage de type (MySQLToSQL)
@@ -34,7 +34,7 @@ Sélectionnez le type de données source à mapper à un type de données SQL Se
   
 Si le type de données est de longueur variable, les champs suivants s’affichent sous **SourceType**:  
   
-##### <a name="from"></a>De  
+##### <a name="from"></a>À partir  
 Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le type de données **nchar** , vous pouvez entrer 10 pour spécifier que ce mappage s’adresse à une plage commençant par **nchar (10).**  
   
 ##### <a name="to"></a>À  

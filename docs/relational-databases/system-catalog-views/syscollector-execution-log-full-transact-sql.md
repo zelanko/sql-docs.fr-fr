@@ -19,10 +19,10 @@ ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4bcbbf3d4e0e0b77156b7adceedbdc5aad97afdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060366"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "68060366"
 |name|**nvarchar(4000)**|Nom du jeu d'éléments de collecte ou du package que cette entrée de journal représente. Autorise la valeur NULL.|  
 |status|**smallint**|Indique l'état actuel du jeu d'éléments de collecte ou package. Autorise la valeur NULL.<br /><br /> Les valeurs sont les suivantes :<br /><br /> 0 = En cours d'exécution<br /><br /> 1 = Terminé<br /><br /> 2 = échec|  
 |runtime_execution_mode|**smallint**|Indique si l'activité du jeu d'éléments de collecte consistait à collecter ou à télécharger des données. Autorise la valeur NULL.|  
-|start_time|**DATETIME**|Heure de démarrage du jeu d'éléments de collecte ou package. Autorise la valeur NULL.|  
-|last_iteration_time|**DATETIME**|Pour des packages exécutés en permanence, dernière fois où le package a effectué un instantané. Autorise la valeur NULL.|  
-|finish_time|**DATETIME**|Heure de fin de l'exécution pour les packages et jeux d'éléments de collecte terminés. Autorise la valeur NULL.|  
+|start_time|**datetime**|Heure de démarrage du jeu d'éléments de collecte ou package. Autorise la valeur NULL.|  
+|last_iteration_time|**datetime**|Pour des packages exécutés en permanence, dernière fois où le package a effectué un instantané. Autorise la valeur NULL.|  
+|finish_time|**datetime**|Heure de fin de l'exécution pour les packages et jeux d'éléments de collecte terminés. Autorise la valeur NULL.|  
 |duration|**int**|Durée d'exécution, en secondes, du package ou jeu d'éléments de collecte. Autorise la valeur NULL.|  
-|failure_message|**nvarchar (2048)**|En cas d'échec du jeu d'éléments de collecte ou du package, message d'erreur le plus récent pour ce composant. Autorise la valeur NULL. Pour obtenir des informations d’erreur plus détaillées, utilisez la fonction [Transact-SQL&#41;fn_syscollector_get_execution_details &#40;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
+|failure_message|**nvarchar(2048)**|En cas d'échec du jeu d'éléments de collecte ou du package, message d'erreur le plus récent pour ce composant. Autorise la valeur NULL. Pour obtenir des informations d’erreur plus détaillées, utilisez la fonction [Transact-SQL&#41;fn_syscollector_get_execution_details &#40;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
 |operator|**nvarchar(128)**|Identifie la personne qui a démarré le jeu d'éléments de collecte ou package. Autorise la valeur NULL.|  
 |package_execution_id|**uniqueidentifier**|Fournit un lien vers la table de journal [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Autorise la valeur NULL.|  
 |collection_set_id|**int**|Fournit un lien vers la table de configuration de collecte de données dans msdb. Autorise la valeur NULL.|  

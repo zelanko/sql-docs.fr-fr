@@ -10,10 +10,10 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086174"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Utilisation des exemples de fichiers de script de console (DB2ToSQL)
@@ -52,7 +52,7 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     Pour plus d’informations sur la génération de rapports, consultez [génération de rapports &#40;&#41;DB2ToSQL ](../../ssma/db2/generating-reports-db2tosql.md).  
   
-    **Notes**  
+    **Remarques :**  
   
     Assurez-vous que l’argument de ligne de commande du fichier de valeur de variable est passé à l’application console et que VariableValueFileSample. xml est mis à jour avec les valeurs spécifiées par l’utilisateur.  
   

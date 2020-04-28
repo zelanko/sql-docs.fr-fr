@@ -18,10 +18,10 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094833"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68094833"
 |detail_id|**bigint**|Identificateur de cet enregistrement. Chaque enregistrement représente la tentative pour évaluer ou appliquer une expression de condition dans une stratégie. Si elle est appliquée à plusieurs cibles, chaque condition contient un enregistrement de détail pour chaque cible.|  
 |history_id|**bigint**|Identificateur de l'événement d'historique. Chaque événement d'historique représente une tentative d'exécution d'une stratégie. Comme une condition peut avoir plusieurs expressions de condition et plusieurs cibles, un history_id peut créer plusieurs enregistrements de détail. Utilisez la colonne history_id pour joindre cette vue à la vue [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) .|  
 |target_query_expression|**nvarchar(max)**|Cible de la stratégie et vue syspolicy_policy_execution_history.|  
-|execution_date|**DATETIME**|Date et heure de création de cet enregistrement de détail.|  
+|execution_date|**datetime**|Date et heure de création de cet enregistrement de détail.|  
 |result|**bit**|Succès ou échec de cette cible et évaluation d'expression de condition :<br /><br /> 0 (succès) ou 1 (échec).|  
 |result_detail|**nvarchar(max)**|Message de résultat. Disponible uniquement s'il est fourni par la facette.|  
 |exception_message|**nvarchar(max)**|Message généré par l'exception si celle-ci se produit.|  
@@ -69,7 +69,7 @@ WHERE PolHistDet.result = 0 ;
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Vues de la gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Vues de la Gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

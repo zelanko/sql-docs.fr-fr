@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074816"
 ---
 # <a name="identifiers-dmx"></a>Identificateurs (DMX)
@@ -28,7 +28,7 @@ ms.locfileid: "68074816"
   
  L'identificateur d'un objet se crée lorsque vous définissez l'objet. Vous utilisez ensuite l’identificateur pour référencer l’objet. Les identificateurs doivent avoir un maximum de 100 caractères.  
   
-##  <a name="RegularIdentifiers"></a>Identificateurs réguliers  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Identificateurs réguliers  
  Les identificateurs réguliers dans DMX respectent les règles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] relatives au format des identificateurs. Ils ne nécessitent pas de délimiteurs. Voici un exemple d’instruction DMX qui utilise un identificateur normal, non délimité :  
   
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM Clustering.CONTENT;
   
  Vous devez placer entre crochets les identificateurs qui ne respectent pas ces règles lorsque vous les utilisez dans des instructions DMX.  
   
-##  <a name="DelimitedIdentifiers"></a>Identificateurs délimités  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Identificateurs délimités  
  Les identificateurs délimités sont placés entre crochets ([ ]).  Voici l'exemple d'une instruction DMX avec un identificateur délimité qui respecte ces règles.  
   
 ```  
@@ -79,8 +79,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Lorsque vous utilisez des caractères non répertoriés comme identificateurs qualifiés.  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet d'utiliser tout caractère de la page de codes en cours dans un identificateur délimité ; cependant, l'utilisation intempestive de caractères spéciaux dans un nom d'objet peut rendre difficile la lecture et la maintenance des instructions DMX.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet d'utiliser tout caractère de la page de codes en cours dans un identificateur délimité ; cependant, l'utilisation intempestive de caractères spéciaux dans un nom d'objet peut rendre difficile la lecture et la maintenance des instructions DMX.  
   
 ### <a name="rules-for-delimited-identifiers"></a>Règles pour identificateurs délimités  
  Voici les règles relatives au format des identificateurs délimités :  
@@ -105,6 +104,6 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Présentation de l'instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
+ [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

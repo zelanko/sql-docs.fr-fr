@@ -19,10 +19,10 @@ ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bca1d879c0988ffb48eb5ae2fd080b1133e24339
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060329"
 ---
 # <a name="syscollector_execution_stats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68060329"
 |**execution_row_count_out**|**int**|Nombre de lignes traitées à la fin du flux de données. Autorise la valeur NULL.|  
 |**execution_row_count_errors**|**int**|Nombre de lignes qui ont échoué pendant le flux de données. Autorise la valeur NULL.|  
 |**execution_time_ms**|**int**|Intervalle de temps, en millisecondes, requis pour que la tâche se termine. Autorise la valeur NULL.|  
-|**log_time**|**DATETIME**|Heure d'enregistrement de ces informations. N'accepte pas la valeur NULL.|  
+|**log_time**|**datetime**|Heure d'enregistrement de ces informations. N'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation SELECT pour **dc_operator**.  

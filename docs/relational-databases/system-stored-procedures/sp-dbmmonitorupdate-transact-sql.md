@@ -19,10 +19,10 @@ ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061262"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
@@ -62,7 +62,7 @@ sp_dbmmonitorupdate [ database_name ]
  Lors de la mise à jour de l’état de la mise en miroir d’une base de données, **sp_dbmmonitorupdate** inspecte la valeur la plus récente de toutes les métriques de performances de mise en miroir pour lesquelles un seuil d’avertissement a été spécifié. Si la valeur dépasse le seuil, la procédure ajoute un événement d'informations au journal des événements. Tous les taux sont des moyennes établies depuis la dernière mise à jour. Pour plus d’informations, consultez [Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant met à jour l'état de mise en miroir uniquement pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  

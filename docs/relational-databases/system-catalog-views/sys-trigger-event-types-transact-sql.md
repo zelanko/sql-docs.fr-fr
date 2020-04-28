@@ -20,10 +20,10 @@ ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb845732f3766e715df0e92d751a18b1aa8f2969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091950"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68091950"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**entrer**|**int**|Type d'événement ou groupe d'événements qui active un déclencheur.|  
+|**type**|**int**|Type d'événement ou groupe d'événements qui active un déclencheur.|  
 |**type_name**|**nvarchar (64)**|Nom d'un événement ou groupe d'événements. Cela peut être spécifié dans la clause FOR d’une instruction [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) .|  
 |**parent_type**|**int**|Type de groupe d'événements qui est le parent de l'événement ou du groupe d'événements.|  
   

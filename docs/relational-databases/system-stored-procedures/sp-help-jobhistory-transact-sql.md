@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054929"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
@@ -78,11 +78,11 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Failed|  
-|**1**|Succeeded|  
+|**1**|Opération réussie|  
 |**2**|Reprise (étape uniquement)|  
-|**1,3**|Opération annulée|  
+|**3**|Opération annulée|  
 |**4**|Message en cours|  
-|**5,5**|Unknown|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries`Nombre minimal de tentatives d’exécution d’un travail. *minimum_retries* est de **type int**, avec NULL comme valeur par défaut.  
   
@@ -107,7 +107,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|Nom de l'étape (NULL pour un historique des travaux).|  
 |**sql_message_id**|**int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le numéro d'erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus récent affiché pendant l'exécution de la commande.|  
 |**sql_severity**|**int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le degré de gravité [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus élevé obtenu pendant l'exécution de la commande.|  
-|**Message**|**nvarchar(1024)**|Message d’historique d’étape ou de travail.|  
+|**message**|**nvarchar(1024)**|Message d'historique d'étape ou de travail.|  
 |**run_status**|**int**|Résultat du travail ou de l'étape.|  
 |**run_date**|**int**|Date de début d'exécution du travail ou de l'étape.|  
 |**run_time**|**int**|Heure de début d'exécution du travail ou de l'étape.|  
@@ -116,7 +116,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar(20**|Opérateur qui a reçu un message réseau concernant ce travail (NULL pour un historique d'étape).|  
 |**operator_paged**|**nvarchar(20**|Opérateur qui a reçu un message par radiomessagerie concernant ce travail (NULL pour un historique d'étape).|  
 |**retries_attempted**|**int**|Nombre de reprises de l'étape (0 pour un historique d'étape).|  
-|**serveurs**|**nvarchar(30**|Serveur sur lequel est exécutée l'étape ou le travail. Est toujours (**local**).|  
+|**serveurs**|**nvarchar(30)**|Serveur sur lequel est exécutée l'étape ou le travail. Est toujours (**local**).|  
   
 ## <a name="remarks"></a>Notes  
  **sp_help_jobhistory** retourne un rapport avec l’historique des tâches planifiées spécifiées. Si aucun paramètre n'est précisé, le rapport contient l'historique de tous les travaux planifiés.  
@@ -130,7 +130,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres du rôle de base de données **SQLAgentUserRole** peuvent uniquement afficher l’historique des travaux dont ils sont propriétaires.  
   

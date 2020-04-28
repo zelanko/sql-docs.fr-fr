@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 819b38bce871bd1a43b3d259d23b2c95fb6dfdd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086213"
 ---
 # <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "68086213"
 |event_id|**int**|ID de l’événement. Non unique.||  
 |event_type|**nvarchar(255)**|Type de l’événement, identifiant la gravité.|« Information », « Warning », « Error »|  
 |event_message|**nvarchar(4000)**|Détails de l’événement.||  
-|generate_time|**DATETIME**|Heure de création de l’événement.||  
-|write_time|**DATETIME**|Heure à laquelle l’événement a été écrit dans le journal.||  
+|generate_time|**datetime**|Heure de création de l’événement.||  
+|write_time|**datetime**|Heure à laquelle l’événement a été écrit dans le journal.||  
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section métadonnées dans la rubrique [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) . 
   

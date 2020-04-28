@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a260598d62a3c5fc1304e8b71b8631546731ed07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070870"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Conventions de syntaxe DMX (Data Mining Extensions)
@@ -28,11 +28,10 @@ ms.locfileid: "68070870"
 |`[ ]` (crochets)|Contiennent des éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |{} (accolades)|Contiennent des éléments de syntaxe obligatoires. Ne tapez pas les accolades.|  
 |, ...|Indique que l'élément précédent la virgule peut se répéter de façon illimitée. Les éléments sont séparés par des virgules.|  
-|
-  \<étiquette> ::=|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est indiqué par l’étiquette placée entre chevrons, par exemple \<étiquette>.|  
+|\<étiquette> ::=|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est indiqué par l’étiquette placée entre chevrons, par exemple \<étiquette>.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

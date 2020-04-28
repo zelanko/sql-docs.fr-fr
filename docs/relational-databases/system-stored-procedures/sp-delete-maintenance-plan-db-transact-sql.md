@@ -21,10 +21,10 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056519"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
@@ -50,7 +50,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>Arguments  
 `[ @plan_id = ] 'plan\_id'`Spécifie l’ID du plan de maintenance. *plan_id* est de type **uniqueidentifier**.  
   
-`[ @db_name = ] 'database\_name'`Spécifie le nom de la base de données à supprimer du plan de maintenance. *database_name* est de **type sysname**.  
+`[ @db_name = ] 'database\_name'`Spécifie le nom de la base de données à supprimer du plan de maintenance. *database_name* est de type **sysname**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

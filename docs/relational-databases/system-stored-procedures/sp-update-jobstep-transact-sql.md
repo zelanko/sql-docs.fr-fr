@@ -18,10 +18,10 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084877"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
@@ -83,7 +83,7 @@ sp_update_jobstep
 |-----------|----------------------------|  
 |**1**|Quittez avec succès.|  
 |**2**|Sortie avec échec|  
-|**1,3**|Passage à l'étape suivante|  
+|**3**|Passage à l'étape suivante|  
 |**4**|Passez à l’étape *success_step_id.*|  
   
 `[ @on_success_step_id = ] success_step_id`Numéro d’identification de l’étape de ce travail à exécuter si l’étape se déroule correctement et que *success_action* a la valeur **4**. *success_step_id* est de **type int**, avec NULL comme valeur par défaut.  
@@ -94,7 +94,7 @@ sp_update_jobstep
 |-----------|----------------------------|  
 |**1**|Quittez avec succès.|  
 |**2**|Sortie avec échec|  
-|**1,3**|Passage à l'étape suivante|  
+|**3**|Passage à l'étape suivante|  
 |**4**|Passez à l’étape *fail_step_id * *.*|  
   
 `[ @on_fail_step_id = ] fail_step_id`Numéro d’identification de l’étape à exécuter dans ce travail si l’étape échoue et si *fail_action* a la valeur **4**. *fail_step_id* est de **type int**, avec NULL comme valeur par défaut.  
@@ -121,11 +121,11 @@ sp_update_jobstep
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0** (par défaut)|Écrasement du fichier de sortie.|  
+|**0** (valeur par défaut)|Écrasement du fichier de sortie.|  
 |**2**|Ajout au fichier de sortie|  
 |**4**|Écriture de la sortie de l'étape d'un travail Transact-SQL dans l'historique des étapes.|  
 |**version8**|Écriture du journal dans la table (remplace l'historique existant)|  
-|**16**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
+|**16bits**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
   
 `[ @proxy_id = ] proxy_id`Numéro d’identification du proxy sous lequel l’étape de travail s’exécute. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
   
@@ -148,7 +148,7 @@ sp_update_jobstep
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Seuls les membres de **sysadmin** peuvent mettre à jour une étape de travail appartenant à un autre utilisateur.  
   

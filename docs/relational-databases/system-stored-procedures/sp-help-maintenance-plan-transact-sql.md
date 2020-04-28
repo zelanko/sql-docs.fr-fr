@@ -18,10 +18,10 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096206"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
@@ -58,21 +58,21 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|Identificateur du plan de maintenance.|  
 |**plan_name**|**sysname**|Nom du plan de maintenance.|  
-|**date_created**|**DATETIME**|Date de création du plan de maintenance.|  
+|**date_created**|**datetime**|Date de création du plan de maintenance.|  
 |**du**|**sysname**|Propriétaire du plan de maintenance.|  
 |**max_history_rows**|**int**|Nombre maximal de lignes allouées pour l'enregistrement de l'historique du plan de maintenance dans la table système.|  
 |**remote_history_server**|**int**|Nom du serveur distant sur lequel le rapport d’historique a pu être écrit.|  
 |**max_remote_history_rows**|**int**|Nombre maximal de lignes allouées dans la table système d'un serveur distant sur lequel le rapport de l'historique peut être écrit.|  
 |**user_defined_1**|**int**|La valeur par défaut est NULL.|  
 |**user_defined_2**|**nvarchar(100**|La valeur par défaut est NULL.|  
-|**user_defined_3**|**DATETIME**|La valeur par défaut est NULL.|  
+|**user_defined_3**|**datetime**|La valeur par défaut est NULL.|  
 |**user_defined_4**|**uniqueidentifier**|La valeur par défaut est NULL.|  
   
 ### <a name="database-table"></a>Table Database  
   
 |Nom de la colonne|Description|  
 |-----------------|-----------------|  
-|**database_name**|Nom de toutes les bases de données associées au plan de maintenance. *database_name* est de **type sysname**.|  
+|**database_name**|Nom de toutes les bases de données associées au plan de maintenance. *database_name* est de type **sysname**.|  
   
 ### <a name="job-table"></a>Table Job  
   

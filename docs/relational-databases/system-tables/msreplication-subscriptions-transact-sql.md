@@ -18,10 +18,10 @@ ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079991"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68079991"
 |**subscription_type**|**int**|Type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
 |**distribution_agent**|**sysname**|Nom de l'Agent de distribution.|  
 |**Time**|**smalldatetime**|Heure de la dernière mise à jour effectuée par l'Agent de distribution.|  
-|**description**|**nvarchar(255)**|Description de l'abonnement.|  
+|**descriptive**|**nvarchar(255)**|Description de l'abonnement.|  
 |**transaction_timestamp**|**varbinary(16)**|À usage interne uniquement.|  
 |**update_mode**|**tinyint**|Type de mise à jour.|  
 |**agent_id**|**Binary(16**|ID de l'Agent.|  

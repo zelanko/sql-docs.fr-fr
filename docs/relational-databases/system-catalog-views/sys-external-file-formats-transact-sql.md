@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048391"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68048391"
 |data_compression|**nvarchar(255)**|Méthode de compression des données pour les données externes.|Pour format_type = DELIMITEDTEXT :<br /><br /> -'org. Apache. Hadoop. IO. compress. DefaultCodec'<br />-'org. Apache. Hadoop. IO. compress. GzipCodec'<br /><br /> Pour format_type = RCFILE :<br /><br /> -'org. Apache. Hadoop. IO. compress. DefaultCodec'<br /><br /> Pour format_type = ORC :<br /><br /> -'org. Apache. Hadoop. IO. compress. DefaultCodec'<br />-'org. Apache. Hadoop. IO. compress. SnappyCodec'<br /><br /> Pour format_type = PARQUET :<br /><br /> -'org. Apache. Hadoop. IO. compress. GzipCodec'<br />-'org. Apache. Hadoop. IO. compress. SnappyCodec'|  
   
 ## <a name="permissions"></a>Autorisations  
- La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées.  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys. external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   

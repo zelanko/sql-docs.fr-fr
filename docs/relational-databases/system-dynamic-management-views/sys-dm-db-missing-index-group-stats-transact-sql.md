@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051558"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
@@ -41,14 +41,14 @@ ms.locfileid: "68051558"
 |**unique_compiles**|**bigint**|Nombre de compilations et de recompilations qui pourraient tirer parti de ce groupe d'index manquants. Les compilations et les recompilations de nombreuses requêtes peuvent contribuer à la valeur de cette colonne.|  
 |**user_seeks**|**bigint**|Nombre de recherches résultant de requêtes utilisateur pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
 |**user_scans**|**bigint**|Nombre d'analyses résultant de requêtes utilisateur pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
-|**last_user_seek**|**DATETIME**|Date et heure de la dernière recherche résultant de requêtes utilisateur pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
-|**last_user_scan**|**DATETIME**|Date et heure de la dernière analyse résultant de requêtes utilisateur pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
+|**last_user_seek**|**datetime**|Date et heure de la dernière recherche résultant de requêtes utilisateur pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
+|**last_user_scan**|**datetime**|Date et heure de la dernière analyse résultant de requêtes utilisateur pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
 |**avg_total_user_cost**|**float**|Coût moyen des requêtes utilisateur qui pourrait être réduit grâce à l'index du groupe.|  
 |**avg_user_impact**|**float**|Bénéfice moyen (en pourcentage) dont les requêtes utilisateur pourraient tirer parti si ce groupe d'index manquants était implémenté. Cela signifie que le coût des requêtes diminuerait, en moyenne, de la valeur de ce pourcentage si ce groupe d'index manquants était implémenté.|  
 |**system_seeks**|**bigint**|Nombre de recherches résultant de requêtes système (telles que les requêtes de statistiques automatiques) pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé. Pour plus d’informations, consultez [classe d’événements auto stats](../../relational-databases/event-classes/auto-stats-event-class.md).|  
 |**system_scans**|**bigint**|Nombre d'analyses résultant de requêtes système pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
-|**last_system_seek**|**DATETIME**|Date et heure de la dernière recherche système résultant de requêtes système pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
-|**last_system_scan**|**DATETIME**|Date et heure de la dernière analyse système résultant de requêtes système pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
+|**last_system_seek**|**datetime**|Date et heure de la dernière recherche système résultant de requêtes système pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
+|**last_system_scan**|**datetime**|Date et heure de la dernière analyse système résultant de requêtes système pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
 |**avg_total_system_cost**|**float**|Coût moyen des requêtes système qui pourrait être réduit grâce à l'index du groupe.|  
 |**avg_system_impact**|**float**|Bénéfice moyen (en pourcentage) dont les requêtes système pourraient tirer parti si ce groupe d'index manquants était implémenté. Cela signifie que le coût des requêtes diminuerait, en moyenne, de la valeur de ce pourcentage si ce groupe d'index manquants était implémenté.|  
   
@@ -64,8 +64,8 @@ ms.locfileid: "68051558"
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent l'utilisation de la vue de gestion dynamique **sys.dm_db_missing_index_group_stats**.  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>R. Trouvez les 10 index manquants qui devraient générer l'amélioration la plus importante pour les requêtes utilisateur  
- La requête suivante détermine les 10 index manquants qui produiraient l’amélioration cumulée anticipée la plus élevée, par ordre décroissant, pour les requêtes utilisateur.  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Trouvez les 10 index manquants qui devraient générer l'amélioration la plus importante pour les requêtes utilisateur  
+ La requête suivante détermine les 10 index manquants qui génèreraient l'amélioration cumulée la plus importante, par ordre décroissant, pour les requêtes utilisateur.  
   
 ```  
 SELECT TOP 10 *  

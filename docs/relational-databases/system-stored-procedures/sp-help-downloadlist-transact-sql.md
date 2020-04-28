@@ -18,10 +18,10 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055191"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -87,15 +87,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Numéro d'identification entier unique de l'instruction.|  
-|**source_server**|**nvarchar(30**|Nom de l'ordinateur du serveur qui émet l'instruction. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la version 7,0, il s’agit toujours du nom d’ordinateur du serveur maître (MSX).|  
+|**source_server**|**nvarchar(30)**|Nom de l'ordinateur du serveur qui émet l'instruction. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la version 7,0, il s’agit toujours du nom d’ordinateur du serveur maître (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Code d'opération pour l'instruction.|  
 |**object_name**|**sysname**|Objet affecté par l'instruction.|  
 |**object_id**|**uniqueidentifier**|Numéro d’identification de l’objet affecté par l’instruction (**job_id** pour un objet de traitement, ou 0x00 pour un objet serveur) ou une valeur de données spécifique à l' **operation_code**.|  
-|**target_server**|**nvarchar(30**|Serveur cible devant télécharger cette instruction.|  
+|**target_server**|**nvarchar(30)**|Serveur cible devant télécharger cette instruction.|  
 |**error_message**|**nvarchar(1024)**|Message d'erreur (le cas échéant) émis par le serveur cible s'il y a eu un problème lors du traitement de l'instruction.<br /><br /> Remarque : tout message d’erreur bloque tous les téléchargements supplémentaires par le serveur cible.|  
-|**date_posted**|**DATETIME**|Date à laquelle l'instruction a été envoyée à la table.|  
-|**date_downloaded**|**DATETIME**|Date à laquelle l'instruction a été téléchargée par le serveur cible.|  
-|**statu**|**tinyint**|État du travail :<br /><br /> **0** = pas encore téléchargé<br /><br /> **1** = téléchargé avec succès.|  
+|**date_posted**|**datetime**|Date à laquelle l'instruction a été envoyée à la table.|  
+|**date_downloaded**|**datetime**|Date à laquelle l'instruction a été téléchargée par le serveur cible.|  
+|**statut**|**tinyint**|État du travail :<br /><br /> **0** = pas encore téléchargé<br /><br /> **1** = téléchargé avec succès.|  
   
 ## <a name="permissions"></a>Autorisations  
  Les autorisations d’exécution de cette procédure sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** .  

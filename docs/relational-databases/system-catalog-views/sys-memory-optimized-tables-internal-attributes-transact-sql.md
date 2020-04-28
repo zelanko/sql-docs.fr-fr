@@ -21,10 +21,10 @@ author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102385"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
@@ -37,7 +37,7 @@ Contient une ligne pour chaque table optimisée en mémoire interne utilisé pou
 |object_id  |**int**|       Identifiant de la table utilisateur. Les tables optimisées en mémoire internes destinées à la prise en charge d’une table utilisateur (par exemple, le stockage hors ligne ou les lignes supprimées dans le cas de combinaisons Hk/Columnstore) ont le même object_id que leurs parents. |
 |xtp_object_id  |**bigint**|    ID de l’objet In-Memory OLTP correspondant à la table optimisée en mémoire interne utilisée pour prendre en charge la table utilisateur. Il est unique dans la base de données, et peut évoluer au fil de la durée de vie de l’objet. 
 |type|  **int** |   Type de la table interne.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar (60)**|   Description du type<br/><br/>DELETED_ROWS_TABLE -> Lignes supprimées de suivi de table interne pour un index columnstore<br/>USER_TABLE -> Table contenant les données de ligne utilisateur<br/>DICTIONARIES_TABLE -> Dictionnaires pour un index columnstore<br/>SEGMENTS_TABLE -> Segments compressés pour un index columnstore<br/>ROW_GROUPS_INFO_TABLE -> Métadonnées à propos des groupes de lignes compressés d’un index columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Table interne utilisée pour le stockage d’une colonne hors ligne. Dans ce cas, minor_id reflète column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Fin à chaud de la table d’historique basée sur le disque. Tout d’abord, les lignes insérées dans l’historique sont insérées dans cette table optimisée en mémoire interne. Il existe une tâche en arrière-plan qui déplace de manière asynchrone les lignes de cette table interne vers la table d’historique sur disque. |
+|type_desc| **nvarchar(60)**|   Description du type<br/><br/>DELETED_ROWS_TABLE -> Lignes supprimées de suivi de table interne pour un index columnstore<br/>USER_TABLE -> Table contenant les données de ligne utilisateur<br/>DICTIONARIES_TABLE -> Dictionnaires pour un index columnstore<br/>SEGMENTS_TABLE -> Segments compressés pour un index columnstore<br/>ROW_GROUPS_INFO_TABLE -> Métadonnées à propos des groupes de lignes compressés d’un index columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Table interne utilisée pour le stockage d’une colonne hors ligne. Dans ce cas, minor_id reflète column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Fin à chaud de la table d’historique basée sur le disque. Tout d’abord, les lignes insérées dans l’historique sont insérées dans cette table optimisée en mémoire interne. Il existe une tâche en arrière-plan qui déplace de manière asynchrone les lignes de cette table interne vers la table d’historique sur disque. |
 |minor_id|  **int**|    0 indique une table utilisateur ou interne<br/><br/>Non-0 indique l’ID d’une colonne stockée hors ligne. Se joint à column_id dans sys.columns.<br/><br/>Chaque colonne stockée hors ligne a une ligne correspondante dans cette vue système.|
 
 ## <a name="permissions"></a>Autorisations  
