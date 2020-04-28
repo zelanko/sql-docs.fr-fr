@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9858638287876d31733035d1a6bb6d95705708f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228719"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>Création et configuration des groupes de disponibilité (SQL Server)
@@ -34,8 +34,8 @@ ms.locfileid: "75228719"
   
  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour configurer une instance de serveur pour[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
+ **Pour configurer une instance de serveur pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
   
 -   [Activer et désactiver les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75228719"
   
 -   [Prise en main groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
- **Pour créer et configurer un nouveau groupe de disponibilité**  
+ **Pour créer et configurer un groupe de disponibilité**  
   
 -   [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75228719"
   
 -   [Résoudre les problèmes liés à l’échec d’une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "75228719"
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Vidéos :**  
+-   **Vidéos**  
   
      [Microsoft SQL Server, nom de code « Denali », série AlwaysOn, Partie 1 : Présentation de la solution haute disponibilité de la prochaine génération](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

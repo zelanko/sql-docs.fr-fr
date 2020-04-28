@@ -10,10 +10,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75238649"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termes du contrat de licence SQL Server Shared Management Objects (SMO)
@@ -40,7 +40,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 &nbsp;&nbsp;Vous pouvez installer et utiliser un nombre quelconque de copies du logiciel sur vos appareils pour concevoir, développer et tester vos programmes.
 
-**2. CONDITIONS DE LICENCE SUPPLÉMENTAIRES ET/OU DROITS D’UTILISATION.**
+**2.    CONDITIONS DE LICENCE ET/OU DROITS D’UTILISATION SUPPLÉMENTAIRES.**
 
 &nbsp;&nbsp;**Code. distribuable.**
 
@@ -64,7 +64,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
   * d’autres aient le droit de le modifier.
 
 
-**3. ÉTENDUE DE LA LICENCE.** Le logiciel est concédé sous licence, pas vendu. Sauf si une loi applicable vous accorde des droits supplémentaires, Microsoft se réserve l’ensemble des autres droits qui ne sont pas expressément accordés par ce contrat, que ce soit par implication, préclusion ou autrement. Vous pouvez utiliser le logiciel uniquement tel qu’explicitement autorisé dans le présent contrat. À cette fin, vous devez vous conformer aux restrictions techniques contenues dans le logiciel qui vous permettent de l’utiliser d’une certaine façon. Vous ne pouvez pas effectuer les opérations suivantes :
+**3. PORTÉE DE LA LICENCE.** Le logiciel est concédé sous licence, pas vendu. Sauf si une loi applicable vous accorde des droits supplémentaires, Microsoft se réserve l’ensemble des autres droits qui ne sont pas expressément accordés par ce contrat, que ce soit par implication, préclusion ou autrement. Vous pouvez utiliser le logiciel uniquement tel qu’explicitement autorisé dans le présent contrat. À cette fin, vous devez vous conformer aux restrictions techniques contenues dans le logiciel qui vous permettent de l’utiliser d’une certaine façon. Vous ne pouvez pas effectuer les opérations suivantes :
 
 - Contourner les limitations techniques du logiciel.
 - Rétroconcevoir, décompiler ou désassembler le logiciel, sauf et seulement dans la mesure où la loi applicable l’autorise expressément Nonobstant cette limitation.
@@ -73,23 +73,23 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 **4. AVIS DE TIERS.** Le logiciel peut inclure des composants tiers associés à des avis juridiques distincts ou régis par d’autres contrats, tel que cela est éventuellement indiqué dans le fichier ThirdPartyNotices accompagnant le logiciel.  Même si ces composants sont régis par d’autres contrats de licence, les clauses d’exclusion de responsabilité et les limitations et exclusions de recours et de dommages ci-dessous s’appliquent également.
 
-**5. COPIE DE SAUVEGARDE.** Vous êtes autorisé à effectuer une copie de sauvegarde du logiciel. Vous ne pouvez l’utiliser que dans le but de réinstaller le logiciel.
+**5.    COPIE DE SAUVEGARDE.** Vous êtes autorisé à effectuer une copie de sauvegarde du logiciel. Vous ne pouvez l’utiliser que dans le but de réinstaller le logiciel.
 
-**6. DOCUMENTATION.** Tout utilisateur disposant d’un accès valable à votre ordinateur ou à votre réseau interne est autorisé à copier et à utiliser la documentation à titre de référence et à des fins internes.
+**6.    DOCUMENTATION.** Tout utilisateur disposant d’un accès valable à votre ordinateur ou à votre réseau interne est autorisé à copier et à utiliser la documentation à titre de référence et à des fins internes.
 
-**7. RESTRICTIONS D’EXPORTATION.** Le logiciel est soumis aux lois et réglementations américaines en matière d’exportation. Vous devez vous conformer à toutes les réglementations nationales et internationales en matière d’exportation concernant le logiciel. Ces réglementations comprennent des restrictions sur les pays destinataires, les utilisateurs finaux et les utilisations finales. Pour plus d’informations, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)consultez.
+**7.    RESTRICTIONS D'EXPORTATION.** Le logiciel est soumis aux lois et réglementations américaines en matière d’exportation. Vous devez vous conformer à toutes les réglementations nationales et internationales en matière d’exportation concernant le logiciel. Ces réglementations comprennent des restrictions sur les pays destinataires, les utilisateurs finaux et les utilisations finales. Pour plus d’informations, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)consultez.
 
-**8. SERVICES DE SUPPORT TECHNIQUE.** Étant donné que ce logiciel est « tel quel », nous pouvons ne pas fournir de services de support pour celui-ci.
+**8.    SERVICE D’ASSISTANCE TECHNIQUE.** Étant donné que ce logiciel est « tel quel », nous pouvons ne pas fournir de services de support pour celui-ci.
 
 **9. intégralité des accords**. Le présent contrat ainsi que les termes concernant les suppléments, les mises à jour, les services Internet et d’assistance technique que vous utilisez constituent l’intégralité des accords en ce qui concerne le logiciel et les services d’assistance technique.
 
-**10. LOI APPLICABLE.**
+**10.   RÉGLEMENTATION APPLICABLE.**
 
 &nbsp;&nbsp;**un. États-Unis.** Si vous avez acquis le logiciel aux États-Unis, les lois de l’État de Washington, États-Unis d’Amérique, régissent l’interprétation de ce contrat et s’appliquent en cas de réclamation pour rupture dudit contrat, sans donner d’effet aux dispositions régissant les conflits de lois. Les lois du pays dans lequel vous vivez régissent toutes les autres réclamations, notamment les réclamations fondées sur les lois fédérales en matière de protection des consommateurs, de concurrence déloyale et de délits.
 
 &nbsp;&nbsp;**b. à l’extérieur du États-Unis.** Si vous avez acquis le logiciel dans un autre pays, les lois de ce pays s’appliquent.
 
-**11. EFFET JURIDIQUE.** Le présent contrat décrit certains droits juridiques. Vous pouvez avoir d’autres droits au regard des lois de votre pays. Vous pouvez également bénéficier de certains droits à l’égard de la partie auprès de laquelle vous avez acquis le logiciel. Le présent contrat ne modifie pas vos droits au regard des lois de votre pays si celles-ci ne le permettent pas.
+**11.   EFFET JURIDIQUE.** Le présent contrat décrit certains droits juridiques. Vous pouvez avoir d’autres droits au regard des lois de votre pays. Vous pouvez également bénéficier de certains droits à l’égard de la partie auprès de laquelle vous avez acquis le logiciel. Le présent contrat ne modifie pas vos droits au regard des lois de votre pays si celles-ci ne le permettent pas.
 
 **12. EXCLUSION DE GARANTIE. LE LOGICIEL EST CONCÉDÉ SOUS LICENCE « EN L’OR ». VOUS ASSUMEZ LES RISQUES LIÉS À SON UTILISATION. MICROSOFT N’ACCORDE AUCUNE GARANTIE OU CONDITION EXPRESSE. VOUS POUVEZ BÉNÉFICIER DE DROITS DE CONSOMMATEURS SUPPLÉMENTAIRES OU DE GARANTIES LÉGALES DANS LE CADRE DE LA LÉGISLATION LOCALE QUE LE PRÉSENT CONTRAT NE PEUT PAS MODIFIER. DANS LA MESURE PERMISE PAR LA LOI LOCALE, MICROSOFT EXCLUT LES GARANTIES IMPLICITES DE QUALITÉ MARCHANDE, D’ADÉQUATION À UN USAGE PARTICULIER ET D’ABSENCE DE CONTREFAÇON.**
 

@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243323"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
-  Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
+  Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Rechercher et remplacer**de**.  
   
 #### <a name="to-find-using-regular-expressions"></a>Pour effectuer une recherche à l'aide d'expressions régulières  
   
@@ -33,7 +33,7 @@ ms.locfileid: "75243323"
 2.  Le bouton triangulaire **Générateur d'expressions** situé en regard du champ **Rechercher** devient alors disponible. Cliquez sur ce bouton pour afficher la liste des expressions régulières les plus couramment utilisées. Lorsque vous choisissez un élément dans le Générateur d'expressions, il est inséré dans la chaîne **Rechercher** .  
   
 > [!NOTE]  
->  Il existe des différences de syntaxe entre les expressions régulières qui peuvent être utilisées dans les chaînes **Rechercher** et celles qui sont valides dans la programmation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Par exemple, dans **Rechercher et remplacer**, les accolades {} sont utilisées pour les expressions avec balises. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « zo » suivies de la balise 1, comme dans « Alonzo1 » et « Gonzo1 ».  En revanche, dans le .NET Framework, les accolades {} sont utilisées pour les quantificateurs. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « z » suivies de la lettre « o », comme dans « zone » (et non « zoo »).   
+>  Il existe des différences de syntaxe entre les expressions régulières qui peuvent être utilisées dans les chaînes **Rechercher** et celles qui sont valides dans la programmation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Par exemple, dans **Rechercher et remplacer**, les accolades {} sont utilisées pour les expressions avec balises. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « zo » suivies de la balise 1, comme dans « Alonzo1 » et « Gonzo1 ». En revanche, dans le .NET Framework, les accolades {} sont utilisées pour les quantificateurs. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « z » suivies de la lettre « o », comme dans « zone » (et non « zoo »).  
   
  Le tableau ci-dessous décrit les expressions régulières disponibles dans le **Générateur d'expressions**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75243323"
 |Tout caractère de l'ensemble|[]|Représente tout caractère figurant entre les crochets []. Pour spécifier une plage de caractères, répertoriez les caractères de début et de fin, en les séparant par un tiret (-) ; par exemple [a-z].|  
 |Tout caractère hors de l'ensemble|[^...]|Représente tout caractère ne figurant pas dans le jeu de caractères qui suit le signe ^.|  
 |ou|&#124;|Représente l’expression placée avant ou après le symbole OU (&#124;). Critère surtout utilisé à l'intérieur d'un groupe. Par exemple, compte (courant&#124;rendu) retourne « compte courant » et « compte rendu ».|  
-|Caractère d'échappement|\|Correspond au caractère qui suit la barre oblique\\inverse () comme littéral. Cette syntaxe vous permet de rechercher les caractères utilisés dans les expressions régulières, tels { et ^. Par exemple, \\^ recherche le caractère ^.|  
+|Caractère d'échappement|\|Représente le caractère qui suit la barre oblique inverse (\\) comme littéral. Cette syntaxe vous permet de rechercher les caractères utilisés dans les expressions régulières, tels { et ^. Par exemple, \\^ recherche le caractère ^.|  
 |Expression avec balises|{}|Représente le texte avec les balises de l'expression.|  
 |Identificateur C/C++|:i|Représente l'expression ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Chaîne entre guillemets|:q|Représente l’expression (("[^"]*")&#124;('[^']\*')).|  
@@ -66,9 +66,8 @@ ms.locfileid: "75243323"
 |Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9]^4 représente toute séquence à quatre chiffres.|  
 |Regroupement|()|Regroupe une sous-expression.|  
 |Énième texte avec balises|\n|Dans une expression **Rechercher ou Remplacer** , recherche la concordance du texte correspondant à la énième expression avec balises, où n désigne un chiffre compris entre 1 et 9.<br /><br /> Dans une expression **Remplacer** , \0 insère le texte correspondant à l’expression entière.|  
-|Champ justifié à droite|\\(w, n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
-|Champ justifié à gauche|
-  \\(-w,n)|Dans une expression **Remplacer** , aligne à gauche la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
+|Champ justifié à droite|\\(w,n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
+|Champ justifié à gauche|\\(-w,n)|Dans une expression **Remplacer** , aligne à gauche la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
 |Empêcher la concordance|~(X)|Empêche la recherche d'une concordance quand le caractère X apparaît à cet endroit dans l'expression. Par exemple, réal~(ité) correspond à « réal » dans « réalisme » et « réalisation », mais pas à « réal » dans « réalité ».|  
 |Caractère alphanumérique|:a|Représente l'expression ([a-zA-Z0-9]).|  
 |Caractère alphabétique|:c|Représente l'expression ([a-zA-Z]).|  

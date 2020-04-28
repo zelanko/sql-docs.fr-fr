@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957229"
 ---
 # <a name="enable-tde-using-ekm"></a>Activer le chiffrement transparent des données à l'aide de la gestion de clés extensible (EKM)
@@ -37,9 +37,9 @@ ms.locfileid: "74957229"
   
 -   [Pour activer le chiffrement TDE à l'aide de la gestion de clés extensible, avec Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous devez être un utilisateur doté de privilèges élevés (comme un administrateur système) pour créer une clé de chiffrement de base de données et chiffrer une base de données. Cet utilisateur doit pouvoir être authentifié par le module EKM.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "74957229"
   
 -   Les options et les paramètres requis par votre fournisseur EKM peuvent différer de ce qui est indiqué dans l'exemple de code ci-dessous. Pour plus d'informations, consultez votre fournisseur EKM.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Cette rubrique utilise les autorisations suivantes :  
   
 -   Pour modifier une option de configuration et exécuter l'instruction RECONFIGURE, vous devez disposer de l'autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
@@ -64,7 +64,7 @@ ms.locfileid: "74957229"
   
 -   Requiert l'autorisation CONTROL sur la base de données pour chiffrer la base de données.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>Pour activer le chiffrement transparent des données (TDE) à l'aide de la gestion de clés extensible (EKM)  
   

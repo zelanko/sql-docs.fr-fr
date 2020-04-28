@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957167"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
@@ -31,21 +31,21 @@ ms.locfileid: "74957167"
   
      [Sécurité](#Security)  
   
--   **Pour créer une base de données protégée par le chiffrement transparent des données, utilisez :**  
+-   **Pour créer une base de données protégée par le chiffrement transparent des données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSCreate)  
   
      [Transact-SQL](#TsqlCreate)  
   
--   **Pour déplacer une base de données, utilisez :**  
+-   **Pour déplacer une base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installé dans `master` la base de données du serveur de destination [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , afin que puisse accéder aux fichiers de base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957167"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]stocke les fichiers créés ici dans **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** par défaut. Vos noms et emplacements de fichier peuvent être différents.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
 -   Nécessite `CONTROL DATABASE` l’autorisation sur `master` la base de données pour créer la clé principale de base de données.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74957167"
   
 -   Requiert l'autorisation `CONTROL DATABASE` sur la base de données chiffrée et l'autorisation `VIEW DEFINITION` sur le certificat ou la clé asymétrique qui sert à chiffrer la clé de chiffrement de la base de données.  
   
-##  <a name="SSMSProcedure"></a>Pour créer une base de données protégée par le chiffrement transparent des données  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a>Pour créer une base de données protégée par le chiffrement transparent des données  
   
-###  <a name="SSMSCreate"></a> Utilisation de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Utilisation de SQL Server Management Studio  
   
 1.  Créez une clé principale de base de données et `master` un certificat dans la base de données. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
   
@@ -84,21 +84,20 @@ ms.locfileid: "74957167"
      Les options suivantes sont disponibles dans la boîte de dialogue **Gérer le chiffrement de base de données** .  
   
      **Algorithme de chiffrement**  
-     Affiche ou définit l'algorithme à utiliser pour le chiffrement de la base de données. 
-  `AES128` est l'algorithme par défaut. Ce champ ne peut pas être vide. Pour plus d'informations sur les algorithmes de chiffrement, consultez [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
+     Affiche ou définit l'algorithme à utiliser pour le chiffrement de la base de données. `AES128` est l'algorithme par défaut. Ce champ ne peut pas être vide. Pour plus d'informations sur les algorithmes de chiffrement, consultez [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
   
-     **Utiliser le certificat de serveur**  
+     **Utilisez un certificat de serveur**  
      Définit le chiffrement à sécuriser par un certificat. Sélectionnez une option dans la liste. Si vous n'avez pas l'autorisation `VIEW DEFINITION` sur les certificats de serveur, cette liste sera vide. Si une méthode de chiffrement de certificat est sélectionnée, cette valeur ne peut pas être vide. Pour plus d'informations sur les certificats, consultez [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
-     **Utiliser une clé asymétrique de serveur**  
+     **Utilisez une clé asymétrique de serveur**  
      Définit le chiffrement à sécuriser par une clé asymétrique. Seules les clés asymétriques disponibles sont affichées. Seule une clé asymétrique protégée par un module EKM peut chiffrer une base de données en utilisant le chiffrement transparent de données.  
   
-     **Définir le chiffrement de la base de données**  
+     **Définir le chiffrement de la base de données sur**  
      Modifie la base de données pour activer ou désactiver le chiffrement transparent des données.  
   
 8.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-###  <a name="TsqlCreate"></a> Utilisation de Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Utilisation de Transact-SQL  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -144,7 +143,7 @@ ms.locfileid: "74957167"
     GO  
     ```  
   
- Pour plus d'informations, consultez les pages suivantes :  
+ Pour plus d’informations, voir :  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -158,9 +157,9 @@ ms.locfileid: "74957167"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-##  <a name="TsqlProcedure"></a>Pour déplacer une base de données  
+##  <a name="to-move-a-database"></a><a name="TsqlProcedure"></a>Pour déplacer une base de données  
   
-###  <a name="SSMSMove"></a> Utilisation de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Utilisation de SQL Server Management Studio  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données que vous avez chiffrée précédemment, pointez sur **Tâches** et sélectionnez **Détacher…**.  
   
@@ -217,9 +216,8 @@ ms.locfileid: "74957167"
      **Bases de données à attacher**  
      Affiche des informations sur les bases de données sélectionnées.  
   
-     
      \<aucun en-tête de colonne>  
-  Affiche une icône indiquant l'état de l'opération d'attachement. Les icônes possibles sont décrites dans la section **État** ci-dessous.  
+     Affiche une icône indiquant l'état de l'opération d'attachement. Les icônes possibles sont décrites dans la section **État** ci-dessous.  
   
      **Emplacement du fichier MDF**  
      Affiche le chemin d'accès et le nom du fichier MDF sélectionné.  
@@ -240,7 +238,7 @@ ms.locfileid: "74957167"
     |----------|-----------------|-----------------|  
     |(Aucune icône)|(Aucun texte)|L'opération d'attachement n'a pas démarré ou est peut-être en attente pour cet objet. Il s'agit de la valeur par défaut lorsque la boîte de dialogue est ouverte.|  
     |Triangle vert dirigé vers la droite|En cours|L'opération d'attachement a démarré, mais n'est pas terminée.|  
-    |Coche verte|Succès|L'attachement de l'objet a réussi.|  
+    |Coche verte|Opération réussie|L'attachement de l'objet a réussi.|  
     |Cercle rouge contenant une croix blanche|Error|L'opération d'attachement a rencontré une erreur et ne s'est pas terminée correctement.|  
     |Cercle contenant deux quartiers noirs (à gauche et à droite) et deux quartiers blancs (en haut et en bas)|Arrêté|L'opération d'attachement n'a pas réussi, car l'utilisateur l'a interrompue.|  
     |Cercle contenant une flèche courbe pointant dans le sens inverse des aiguilles d'une montre|Restauré|L'opération d'attachement a réussi, mais a été restaurée en raison d'une erreur lors de l'attachement d'un autre objet.|  
@@ -266,13 +264,13 @@ ms.locfileid: "74957167"
      **Type de fichier**  
      Indique le type du fichier, **Données** ou **Journal**.  
   
-     **Chemin d’accès au fichier actuel**  
+     **Chemin d'accès au fichier actuel**  
      Affiche le chemin d'accès au fichier de base de données sélectionné. Le chemin d'accès peut être modifié manuellement.  
   
      **Message**  
-     Affiche un message vierge ou un lien hypertexte «**Fichier introuvable**».  
+     Affiche un message vierge ou un lien hypertexte «**fichier introuvable**».  
   
-###  <a name="TsqlMove"></a> Utilisation de Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Utilisation de Transact-SQL  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -313,7 +311,7 @@ ms.locfileid: "74957167"
     GO  
     ```  
   
- Pour plus d'informations, consultez les pages suivantes :  
+ Pour plus d’informations, voir :  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

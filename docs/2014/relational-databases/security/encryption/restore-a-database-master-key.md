@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957153"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurer une clé principale de base de données
@@ -30,11 +30,11 @@ ms.locfileid: "74957153"
   
      [Sécurité](#Security)  
   
--   [Pour restaurer la clé principale de base de données à l’aide de Transact-SQL](#SSMSProcedure)  
+-   [Pour restaurer la clé principale de base de donnée à l'aide de Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Une fois la clé principale restaurée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déchiffre toutes les clés chiffrées au moyen de la clé principale active, puis chiffre ces clés au moyen de la clé principale restaurée. Cette opération gourmande en ressources doit être planifiée au cours d'une période de faible demande. Si la clé principale de base de données en cours n'est pas ouverte ou ne peut pas être ouverte, ou si une clé chiffrée à l'aide de cette clé principale ne peut pas être déchiffrée, l'opération de restauration échoue.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "74957153"
   
 -   S'il n'existe aucune clé principale dans la base de données en cours, l'instruction RESTORE MASTER KEY crée une clé principale. La nouvelle clé principale n'est pas automatiquement chiffrée au moyen de la clé principale du service.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
-##  <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio avec Transact-SQL  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio avec Transact-SQL  
   
 #### <a name="to-restore-the-database-master-key"></a>Pour restaurer la clé principale de base de données  
   

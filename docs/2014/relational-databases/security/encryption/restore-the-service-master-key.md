@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957158"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurer la clé principale du service
@@ -34,11 +34,11 @@ ms.locfileid: "74957158"
   
      [Sécurité](#Security)  
   
--   [Pour restaurer la clé principale du service à l’aide de Transact-SQL](#SSMSProcedure)  
+-   [Pour restaurer la clé principale de service à l'aide de Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Lorsque la clé principale de service est restaurée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déchiffre toutes les clés et les secrets qui ont été chiffrés au moyen de la clé principale de service en cours, puis les chiffre au moyen de la clé principale de service chargée à partir du fichier de sauvegarde.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74957158"
 > [!CAUTION]  
 >  La clé principale de service représente la racine de la hiérarchie de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La clé principale de service sécurise de manière directe ou indirecte toutes les autres clés de l'arborescence. Si une clé dépendante ne peut pas être déchiffrée au cours d'une restauration forcée, les données sécurisées par cette clé sont perdues.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL SERVER sur le serveur.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="SSMSProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>Pour restaurer la clé principale du service  
   

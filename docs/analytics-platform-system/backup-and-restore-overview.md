@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401349"
 ---
 # <a name="backup-and-restore"></a>Sauvegarde et restauration
 
 Décrit le fonctionnement de la sauvegarde et de la restauration des données pour les Data Warehouse parallèles (PDW). Les opérations de sauvegarde et de restauration sont utilisées pour la récupération d’urgence. La sauvegarde et la restauration peuvent également être utilisées pour copier une base de données d’une appliance vers une autre.  
     
-## <a name="BackupRestoreBasics"></a>Notions de base de la sauvegarde et de la restauration
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>Notions de base de la sauvegarde et de la restauration
 
 Une *sauvegarde de base de données* PDW est une copie d’une base de données d’appliance, stockée dans un format afin de pouvoir être utilisée pour restaurer la base de données d’origine sur un appareil.  
   
@@ -36,7 +36,7 @@ Les sauvegardes de base de données sont stockées sur un ou plusieurs serveurs 
   
 Les sauvegardes sont stockées sur le serveur de sauvegarde sous la forme d’un ensemble de fichiers dans le système de fichiers Windows. Une sauvegarde de base de données PDW peut uniquement être restaurée sur PDW. Toutefois, vous pouvez archiver des sauvegardes de base de données à partir du serveur de sauvegarde vers un autre emplacement à l’aide des processus de sauvegarde de fichiers Windows standard. Pour plus d’informations sur les serveurs de sauvegarde, consultez [acquérir et configurer un serveur de sauvegarde](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Types de sauvegardes de base de données
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>Types de sauvegardes de base de données
 
 Il existe deux types de données qui nécessitent une sauvegarde : les bases de données utilisateur et les bases de données système (par exemple, la base de données Master). PDW ne sauvegarde pas le journal des transactions.  
   
@@ -50,7 +50,7 @@ Une sauvegarde différentielle est uniquement prise en charge pour les bases de 
   
 Pour sauvegarder l’ensemble de l’appliance, vous devez effectuer une sauvegarde de toutes les bases de données utilisateur et une sauvegarde de la base de données Master.  
   
-## <a name="BackupProc"></a>Processus de sauvegarde de base de données
+## <a name="database-backup-process"></a><a name="BackupProc"></a>Processus de sauvegarde de base de données
 
 Le diagramme suivant montre le déroulement des données lors d’une sauvegarde de base de données.  
   
@@ -82,9 +82,9 @@ Le processus de sauvegarde fonctionne comme suit :
   
     -   Une sauvegarde ne peut être restaurée que sur une appliance PDW qui possède un nombre égal ou supérieur de nœuds de calcul.  
   
-    -   Vous ne pouvez pas modifier le nom de la sauvegarde avant d’effectuer une restauration. Le nom du répertoire de sauvegarde doit correspondre au nom du nom d’origine de la sauvegarde. Le nom d’origine de la sauvegarde se trouve dans le fichier backup. xml dans le répertoire de sauvegarde. Pour restaurer une base de données avec un nom différent, vous pouvez spécifier le nouveau nom dans la commande Restore. Par exemple : `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
+    -   Vous ne pouvez pas modifier le nom de la sauvegarde avant d’effectuer une restauration. Le nom du répertoire de sauvegarde doit correspondre au nom du nom d’origine de la sauvegarde. Le nom d’origine de la sauvegarde se trouve dans le fichier backup. xml dans le répertoire de sauvegarde. Pour restaurer une base de données avec un nom différent, vous pouvez spécifier le nouveau nom dans la commande Restore. Par exemple : `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Modes de restauration de base de données
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>Modes de restauration de base de données
 
 Une restauration de base de données complète recrée la base de données PDW en utilisant les données de la sauvegarde de base de données. La restauration de la base de données est effectuée en commençant par restaurer une sauvegarde complète, puis en restaurant éventuellement une sauvegarde différentielle. La restauration de la base de données comprend les utilisateurs de base de données et les rôles de base de données.  
   
@@ -92,7 +92,7 @@ Une restauration d’en-tête uniquement retourne les informations d’en-tête 
   
 Une restauration de l’appliance est une restauration de l’ensemble de l’appliance. Cela comprend la restauration de toutes les bases de données utilisateur et de la base de données Master.  
   
-## <a name="RestoreProc"></a>Processus de restauration
+## <a name="restore-process"></a><a name="RestoreProc"></a>Processus de restauration
 
 Le diagramme suivant montre le déroulement des données lors d’une restauration de base de données.  
   

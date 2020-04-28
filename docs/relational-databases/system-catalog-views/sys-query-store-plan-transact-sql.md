@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d1137aab32a98a4699e95b7138bb333f63c65e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479458"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74479458"
 |**plan_id**|**bigint**|Clé primaire|  
 |**query_id**|**bigint**|Clé étrangère. Jointures à [sys. query_store_query &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|ID du groupe de plans. Les requêtes de curseur nécessitent généralement plusieurs plans (remplissage et extraction). Les plans de remplissage et de récupération qui sont compilés ensemble se trouvent dans le même groupe.<br /><br /> 0 signifie que le plan n’est pas dans un groupe.|  
-|**engine_version**|**nvarchar (32)**|Version du moteur utilisée pour compiler le plan dans le format **« major. mineure. Build. Revision »** .|  
+|**engine_version**|**nvarchar(32)**|Version du moteur utilisée pour compiler le plan dans le format **« major. mineure. Build. Revision »** .|  
 |**compatibility_level**|**smallint**|Niveau de compatibilité de base de données de la base de données référencée dans la requête.|  
 |**query_plan_hash**|**Binary(8**|Hachage MD5 du plan individuel.|  
 |**query_plan**|**nvarchar(max)**|Showplan XML pour le plan de requête.|  
@@ -57,7 +57,7 @@ ms.locfileid: "74479458"
 |**avg_compile_duration**|**float**|Planifiez les statistiques de compilation. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**last_compile_duration**|**bigint**|Planifiez les statistiques de compilation. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**plan_forcing_type**|**int**|Type de forçage du plan.<br /><br />0 : AUCUN<br /><br />1 : MANUEL<br /><br />2 : AUTO|  
-|**plan_forcing_type_desc**|**nvarchar (60)**|Description textuelle de plan_forcing_type.<br /><br />AUCUN : aucun plan forcé<br /><br />Manuel : plan forcé par l’utilisateur<br /><br />AUTO : plan forcé par réglage automatique|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Description textuelle de plan_forcing_type.<br /><br />AUCUN : aucun plan forcé<br /><br />Manuel : plan forcé par l’utilisateur<br /><br />AUTO : plan forcé par réglage automatique|  
 
 ## <a name="plan-forcing-limitations"></a>Limites de l'application forcée d'un plan
 Le Magasin des requêtes a un mécanisme qui permet de forcer l’optimiseur de requête à utiliser un certain plan d’exécution. Toutefois, il existe certaines limitations qui peuvent empêcher l’application d’un plan. 
@@ -91,10 +91,10 @@ Enfin, s’il y a des problèmes avec le plan lui-même :
  [sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Analyse des performances à l’aide de l’Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

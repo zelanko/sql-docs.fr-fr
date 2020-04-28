@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228995"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Administration d'un groupe de disponibilité (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75228995"
 -   Migration entre clusters de groupes de disponibilité AlwaysOn pour la mise à niveau du système d'exploitation  
   
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un groupe de disponibilité existant**  
   
 -   [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -113,7 +113,7 @@ ms.locfileid: "75228995"
 -   [Placer un groupe de disponibilité hors connexion &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   

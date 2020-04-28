@@ -13,31 +13,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243081"
 ---
 # <a name="command-window"></a>Fenêtre Commande
   Utilisez la **Fenêtre Commande** pour exécuter des commandes, telles que les commandes de débogage et de modification, sur le code contenu dans la fenêtre de l’éditeur de requête du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en cours de débogage. Vous devez être en mode débogage pour pouvoir utiliser la **Fenêtre Commande**. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge la plupart des commandes qui sont également prises en charge dans la fenêtre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. Pour plus d’informations, consultez [Fenêtre Commande de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
   
 ## <a name="task-list"></a>Liste des tâches  
- **Pour accéder à la fenêtre commande**  
+ **Pour accéder à la Fenêtre Commande**  
   
 -   Dans le menu **Déboguer** , cliquez sur **Démarrer le débogage**.  
   
- **Pour imprimer la valeur d’une variable**  
+ **Pour imprimer la valeur d'une variable**  
   
--   Dans la **fenêtre Commande**, tapez **Debug.Print \<nom_variable>**, puis appuyez sur Entrée.  
+-   Dans la **fenêtre Commande**, tapez **Debug.Print \<nom_variable>** , puis appuyez sur Entrée.  
   
- **Pour répertorier les informations sur le thread actuel**  
+ **Pour afficher des informations sur le thread actuel**  
   
 -   Dans **CommandWindow**, tapez `Debug.ListThread`, puis appuyez sur entrée.  
   
  **Pour ajouter une variable à la fenêtre Espion express**  
   
--   Dans la **fenêtre Commande**, tapez **Debug.QuickWatch \<nom_variable>**, puis appuyez sur Entrée.  
+-   Dans la **fenêtre Commande**, tapez **Debug.QuickWatch \<nom_variable>** , puis appuyez sur Entrée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](transact-sql-debugger.md)  

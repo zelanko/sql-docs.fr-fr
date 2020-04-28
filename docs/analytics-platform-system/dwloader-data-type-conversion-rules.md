@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401179"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Règles de conversion de type de données pour dwloader-Parallel Data Warehouse
 Cette rubrique décrit les formats de données d’entrée et les conversions de types de données implicites prises en charge par le [chargeur de ligne de commande dwloader](dwloader.md) lorsqu’il charge des données dans PDW. Les conversions de données implicites se produisent lorsque les données d’entrée ne correspondent pas au type de données dans la table cible SQL Server PDW. Utilisez ces informations lors de la conception de votre processus de chargement pour vous assurer que vos données seront chargées correctement dans SQL Server PDW.  
    
   
-## <a name="InsertBinaryTypes"></a>Insertion de littéraux dans des types binaires  
+## <a name="inserting-literals-into-binary-types"></a><a name="InsertBinaryTypes"></a>Insertion de littéraux dans des types binaires  
 Le tableau suivant définit les types de littéraux, le format et les règles de conversion acceptés pour le chargement d’une valeur littérale dans une colonne SQL Server PDW de type **Binary** (*n*) ou **varbinary**(*n*).  
   
 |Type de données d’entrée|Exemples de données d’entrée|Conversion en type de données binary ou varbinary|  
 |-------------------|-----------------------|-----------------------------------------------|  
 |Littéral binaire|0x *hexidecimal_string*<br /><br />Exemple : 12Ef ou 0x12Ef|Le préfixe 0x est facultatif.<br /><br />La longueur de la source de données ne peut pas dépasser le nombre d’octets spécifié pour le type de données.<br /><br />Si la longueur de la source de données est inférieure à la taille du type de données **Binary** , les données sont complétées à droite avec des zéros pour atteindre la taille du type de données.|  
   
-## <a name="InsertDateTimeTypes"></a>Insertion de littéraux dans des types de date et d’heure  
+## <a name="inserting-literals-into-date-and-time-types"></a><a name="InsertDateTimeTypes"></a>Insertion de littéraux dans des types de date et d’heure  
 Les littéraux de date et d’heure sont représentés à l’aide de littéraux de chaîne dans des formats spécifiques, placés entre guillemets simples. Les tableaux suivants définissent les types de littéraux, le format et les règles de conversion autorisés pour le chargement d’un littéral de date ou d’heure dans une colonne de type **DateTime**, **smalldatetime**, **Date**, **Time**, **DateTimeOffset**ou **datetime2**. Les tables définissent le format par défaut pour le type de données spécifié. Les autres formats qui peuvent être spécifiés sont définis dans la section [formats DateTime](#DateFormats). Les littéraux de date et d’heure ne peuvent pas inclure d’espaces de début ou de fin. les valeurs de **Date**, **smalldatetime**et NULL ne peuvent pas être chargées en mode de largeur fixe.  
   
 ### <a name="datetime-data-type"></a>Type de données datetime  
@@ -83,7 +83,7 @@ Le tableau suivant définit le format et les règles par défaut pour le chargem
 |Littéral de chaîne dans le format de **Date**|'AAAA-MM-JJ'<br /><br />Exemple : « 2007-05-08 »|Les valeurs d’heure (heure, minutes, secondes et fractions) sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral « 2007-05-08 » est inséré en tant que « 2007-05-08 12:00:00.0000000 ».|  
 |Littéral de chaîne au format **datetime2**|'AAAA-MM-JJ hh : mm : SS : fffffff'<br /><br />Exemple : « 2007-05-08 12:35:29.1234567 »|Si la source de données contient des composants de données et d’heure qui sont inférieurs ou égaux à la valeur spécifiée dans **datetime2**(*n*), les données sont insérées. dans le cas contraire, une erreur est générée.|  
   
-### <a name="DateFormats"></a>Formats DateTime  
+### <a name="datetime-formats"></a><a name="DateFormats"></a>Formats DateTime  
 Dwloader prend en charge les formats de données suivants pour les données d’entrée qu’il charge dans SQL Server PDW. Plus de détails sont répertoriés après le tableau.  
   
 |DATETIME|smalldatetime|Date|datetime2|datetimeoffset|  
@@ -115,7 +115,7 @@ Détails :
   
 -   Les lettres « zzz » désignent le décalage par rapport au fuseau horaire du système, au format {+|-}HH:ss].  
   
-## <a name="InsertNumerictypes"></a>Insertion de littéraux dans des types numériques  
+## <a name="inserting-literals-into-numeric-types"></a><a name="InsertNumerictypes"></a>Insertion de littéraux dans des types numériques  
 Les tableaux suivants définissent le format et les règles de conversion par défaut pour le chargement d’une valeur littérale dans une colonne SQL Server PDW qui utilise un type numérique.  
   
 ### <a name="bit-data-type"></a>bit, type de données  
@@ -162,7 +162,7 @@ Les valeurs littérales monétaires sont représentées sous la forme d’une ch
 |Littéral décimal|123344,34455|Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123344,34455 est insérée sous la forme 123344,3446.|  
 |Littéral Money|$123456,7890|Le symbole monétaire n’est pas inséré avec la valeur.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche.|  
   
-## <a name="InsertStringTypes"></a>Insertion de littéraux dans des types String  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertStringTypes"></a>Insertion de littéraux dans des types String  
 Les tableaux suivants définissent le format et les règles de conversion par défaut pour le chargement d’une valeur littérale dans une colonne SQL Server PDW qui utilise un type chaîne.  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>Types de données char, varchar, nchar et nvarchar  
@@ -170,10 +170,10 @@ Le tableau suivant définit le format et les règles par défaut pour le chargem
   
 |Type de données d’entrée|Exemples de données d’entrée|Conversion en types de données caractères|  
 |---------------|-------------------|----------------------------------|  
-|Littéral de chaîne|Format : 'chaîne de caractères'<br /><br />Exemple : « ABC »| N/D |  
-|Littéral de chaîne Unicode|Format : N’character chaîne'<br /><br />Exemple : N’abc'| N/D |  
-|Littéral d’entier|Format : ffffffffffn<br /><br />Exemple : 321312313123| N/D |  
-|Littéral décimal|Format : FFFFFF. fffffff<br /><br />Exemple : 12344,34455| N/D |  
+|Littéral de chaîne|Format : 'chaîne de caractères'<br /><br />Exemple : « ABC »| NA |  
+|Littéral de chaîne Unicode|Format : N’character chaîne'<br /><br />Exemple : N’abc'| NA |  
+|Littéral d’entier|Format : ffffffffffn<br /><br />Exemple : 321312313123| NA |  
+|Littéral décimal|Format : FFFFFF. fffffff<br /><br />Exemple : 12344,34455| NA |  
 |Littéral Money|Format : $ffffff. fffnn<br /><br />Exemple : $123456,99|Le symbole monétaire facultatif n’est pas inséré avec la valeur. Pour insérer le symbole monétaire, insérez la valeur en tant que littéral de chaîne. Cela correspond au format du chargeur, qui traite chaque littéral comme un littéral de chaîne.<br /><br />Les virgules ne sont pas autorisées.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 2, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123,946789 est insérée sous la forme 123,95.<br /><br />Seul le style par défaut 0 (aucune virgule et 2 chiffres après la virgule décimale) est autorisé lors de l’utilisation de la fonction CONVERT pour insérer des littéraux Money.|  
   
 ### <a name="general-remarks"></a>Remarques d'ordre général  

@@ -18,10 +18,10 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ca4364709462eee9df62baa8193dec9f8ea36241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74866034"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
@@ -40,11 +40,11 @@ ms.locfileid: "74866034"
 |**subscriber_db**|**sysname**|Nom de la base de données d’abonnement.|  
 |**subscription_type**|**int**|Type d’abonnement :<br /><br /> **0** = push.<br /><br /> **1** = pull.<br /><br /> **2** = anonyme.|  
 |**sync_type**|**tinyint**|Type de synchronisation :<br /><br /> **1** = automatique.<br /><br /> **2** = aucune synchronisation.|  
-|**statu**|**tinyint**|État de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = abonné.<br /><br /> **2** = actif.|  
+|**statut**|**tinyint**|État de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = abonné.<br /><br /> **2** = actif.|  
 |**subscription_seqno**|**varbinary(16)**|Numéro de séquence de la transaction d'instantané.|  
 |**snapshot_seqno_flag**|**bit**|Indique la source du numéro de séquence de la transaction d’instantané, où la valeur **1** signifie que **subscription_seqno** est le numéro de séquence de l’instantané.|  
 |**independent_agent**|**bit**|Indique s'il existe un Agent de distribution autonome pour cette publication.|  
-|**subscription_time**|**DATETIME**|À usage interne uniquement|  
+|**subscription_time**|**datetime**|À usage interne uniquement|  
 |**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **1** = n’est pas renvoyé.<br /><br /> **0** = renvoie.<br /><br />|  
 |**agent_id**|**int**|ID de l'Agent.|  
 |**update_mode**|**tinyint**|Type de mise à jour.|  

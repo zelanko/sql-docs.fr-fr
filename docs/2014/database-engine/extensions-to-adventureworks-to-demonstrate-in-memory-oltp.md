@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228468"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensions à AdventureWorks pour présenter l'OLTP en mémoire
@@ -31,7 +31,7 @@ ms.locfileid: "75228468"
   
  La documentation de l'exemple est structurée comme suit :  
   
--   [Conditions préalables](#Prerequisites) à l’installation de l’exemple et à l’exécution de la charge de travail de démonstration  
+-   [Configuration requise](#Prerequisites) pour installer l'exemple et exécuter la charge de travail de démonstration  
   
 -   Instructions pour [Installation de l’exemple In-Memory OLTP basé sur AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
@@ -41,13 +41,13 @@ ms.locfileid: "75228468"
   
 -   [Utilisation de la mémoire et de l’espace disque dans l’exemple](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a>Conditions préalables  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-version d’évaluation, Developer ou Enterprise  
   
 -   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d'au moins 16 Go de mémoire disponible sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir des recommandations générales sur [!INCLUDE[hek_2](../includes/hek-2-md.md)]le matériel pour, consultez le billet de blog suivant :[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Installation de [!INCLUDE[hek_2](../includes/hek-2-md.md)] l’exemple basé sur AdventureWorks  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Installation de [!INCLUDE[hek_2](../includes/hek-2-md.md)] l’exemple basé sur AdventureWorks  
  Procédez comme suit pour installer l'exemple :  
   
 1.  Téléchargez l'archive pour la sauvegarde complète de la base de données AdventureWorks2014 :  
@@ -121,7 +121,7 @@ ms.locfileid: "75228468"
   
         4.  Cliquez sur le bouton « Exécuter » pour exécuter le script.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a>Description des exemples de tables et de procédures  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> Description des exemples de tables et de procédures  
  L'exemple crée de nouvelles tables pour les produits et les commandes, selon les tables existantes dans AdventureWorks. Le schéma des nouvelles tables est similaire à celui des tables existantes, avec quelques différences, comme expliqué ci-dessous.  
   
  Les nouvelles tables à mémoire optimisée ont le suffixe « _inmem ». L’exemple inclut également les tables correspondantes avec le suffixe « _ondisk » : ces tables peuvent être utilisées pour effectuer une comparaison un-à-un entre les performances des tables à mémoire optimisée et des tables sur disque de votre système.  
@@ -180,38 +180,37 @@ ms.locfileid: "75228468"
   
  Sales.SalesOrderHeader_inmem  
   
--   Les *contraintes par défaut* sont prises en charge pour les tables optimisées en mémoire, et la plupart des contraintes par défaut que nous avons migrées comme c’est le cas. Toutefois, la table d'origine Sales.SalesOrderHeader contient plusieurs contraintes par défaut qui récupèrent la date actuelle, pour les colonnes OrderDate et ModifiedDate. Dans une charge de travail de traitement des commandes à haut débit, avec de nombreuses concurrences, n'importe quelle ressource globale peut devenir un point de contention. L'heure système est l'une de ces ressources globales, et nous avons observé qu'elle peut devenir un goulot d'étranglement lorsqu'une charge de travail [!INCLUDE[hek_2](../includes/hek-2-md.md)] qui insère des commandes client est exécutée, en particulier si l'heure système doit être extraite pour plusieurs colonnes dans l'en-tête de la commande, ainsi que pour ses détails. Le problème est résolu dans cet exemple en récupérant l'heure système une seule fois pour chaque commande client insérée, puis en utilisant cette valeur pour les colonnes datetime dans SalesOrderHeader_inmem et SalesOrderDetail_inmem, dans la procédure stockée Sales.usp_InsertSalesOrder_inmem.  
+-   Les*contraintes par défaut* sont prises en charge pour les tables optimisées en mémoire, et la plupart des contraintes par défaut ont été migrées en l’état. Toutefois, la table d'origine Sales.SalesOrderHeader contient plusieurs contraintes par défaut qui récupèrent la date actuelle, pour les colonnes OrderDate et ModifiedDate. Dans une charge de travail de traitement des commandes à haut débit, avec de nombreuses concurrences, n'importe quelle ressource globale peut devenir un point de contention. L'heure système est l'une de ces ressources globales, et nous avons observé qu'elle peut devenir un goulot d'étranglement lorsqu'une charge de travail [!INCLUDE[hek_2](../includes/hek-2-md.md)] qui insère des commandes client est exécutée, en particulier si l'heure système doit être extraite pour plusieurs colonnes dans l'en-tête de la commande, ainsi que pour ses détails. Le problème est résolu dans cet exemple en récupérant l'heure système une seule fois pour chaque commande client insérée, puis en utilisant cette valeur pour les colonnes datetime dans SalesOrderHeader_inmem et SalesOrderDetail_inmem, dans la procédure stockée Sales.usp_InsertSalesOrder_inmem.  
   
--   *UDT alias* : la table d’origine utilise deux types de données définis par l’utilisateur (UDT) alias dbo. OrderNumber et dbo. AccountNumber, respectivement pour les colonnes PurchaseOrderNumber et AccountNumber. 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ne prend pas en charge le type défini par l’utilisateur alias pour les tables optimisées en mémoire, par conséquent les nouvelles tables utilisent les types de données système nvarchar(25) et nvarchar(15), respectivement.  
+-   *Types définis par l’utilisateur (UDT) alias* : la table d’origine utilise deux types définis par l’utilisateur (UDT) alias : dbo.OrderNumber et dbo.AccountNumber, pour les colonnes PurchaseOrderNumber et AccountNumber, respectivement. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ne prend pas en charge le type défini par l’utilisateur alias pour les tables optimisées en mémoire, par conséquent les nouvelles tables utilisent les types de données système nvarchar(25) et nvarchar(15), respectivement.  
   
--   *Colonnes autorisant les valeurs NULL dans les clés d’index* : dans la table d’origine, la colonne SalesPersonID est Nullable, alors que dans les nouvelles tables, la colonne n’accepte pas les valeurs NULL et a une contrainte par défaut avec la valeur (-1). Cela est dû au fait que les index des tables optimisées en mémoire ne peuvent pas avoir de colonnes autorisant des valeurs NULL dans la clé d'index ; -1 est un substitut de la valeur NULL dans ce cas.  
+-   *Colonnes autorisant des valeurs NULL dans l’index* : dans la table d’origine, la colonne SalesPersonID autorise les valeurs NULL, tandis que dans les nouvelles tables, la colonne n’accepte pas les valeurs NULL et a une contrainte par défaut avec la valeur (-1). Cela est dû au fait que les index des tables optimisées en mémoire ne peuvent pas avoir de colonnes autorisant des valeurs NULL dans la clé d'index ; -1 est un substitut de la valeur NULL dans ce cas.  
   
--   *Colonnes calculées* : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
+-   *Colonnes calculées[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car* ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
   
--   Les *contraintes de clé étrangère* ne sont pas prises en charge pour [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]les tables optimisées en mémoire dans. En outre, SalesOrderHeader_inmem est une table très sollicitée dans l'exemple de charge de travail, et les contraintes de clé étrangère nécessitent un traitement supplémentaire pour toutes les opérations DML, avec des recherches dans les autres tables référencées dans ces contraintes. Par conséquent, on formule l'hypothèse que l'application garantit l'intégrité référentielle, et celle-ci n'est pas validée lorsque des lignes sont insérées. L'intégrité référentielle des données de cette table peut être vérifiée à l'aide de la procédure stockée dbo.usp_ValidateIntegrity, en utilisant le script suivant :  
-  
-    ```  
-    DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
-    EXEC dbo.usp_ValidateIntegrity @o  
-    ```  
-  
--   Les *contraintes CHECK* ne sont pas prises en charge pour les tables optimisées en mémoire dans le serveur sq 2014. L'intégrité du domaine est validée avec l'intégrité référentielle en utilisant ce script :  
+-   Les*contraintes de clé étrangère* ne sont pas prises en charge pour les tables optimisées en mémoire dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. En outre, SalesOrderHeader_inmem est une table très sollicitée dans l'exemple de charge de travail, et les contraintes de clé étrangère nécessitent un traitement supplémentaire pour toutes les opérations DML, avec des recherches dans les autres tables référencées dans ces contraintes. Par conséquent, on formule l'hypothèse que l'application garantit l'intégrité référentielle, et celle-ci n'est pas validée lorsque des lignes sont insérées. L'intégrité référentielle des données de cette table peut être vérifiée à l'aide de la procédure stockée dbo.usp_ValidateIntegrity, en utilisant le script suivant :  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -la colonne ROWGUID est omise. Alors que uniqueidentifier est pris en charge pour les tables optimisées en mémoire, l'option ROWGUIDCOL n'est pas prise en charge dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Les colonnes de ce type sont généralement utilisées pour la réplication de fusion ou pour des tables qui possèdent des colonnes FILESTREAM. Cet exemple ne comporte aucun de ces éléments.  
+-   Les*contraintes de validation* ne sont pas prises en charge pour les tables optimisées en mémoire dans SQ Server 2014. L'intégrité du domaine est validée avec l'intégrité référentielle en utilisant ce script :  
+  
+    ```  
+    DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
+    EXEC dbo.usp_ValidateIntegrity @o  
+    ```  
+  
+-   *Rowguid* : la colonne ROWGUID est omise. Alors que uniqueidentifier est pris en charge pour les tables optimisées en mémoire, l'option ROWGUIDCOL n'est pas prise en charge dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Les colonnes de ce type sont généralement utilisées pour la réplication de fusion ou pour des tables qui possèdent des colonnes FILESTREAM. Cet exemple ne comporte aucun de ces éléments.  
   
  Sales.SalesOrderDetail  
   
--   *Contraintes par défaut* -similaire à SalesOrderHeader, la contrainte par défaut qui exige la date/l’heure système n’est pas migrée, au lieu de cela, la procédure stockée qui insère les commandes client s’occupe de l’insertion de la date/heure système actuelle lors de la première insertion.  
+-   *Contraintes par défaut* : similairement à SalesOrderHeader, la contrainte par défaut qui exige la date/l’heure système n’est pas migrée. En revanche, la procédure stockée d’insertion des commandes prend soin d’insérer la date et l’heure système actuelles à la première insertion.  
   
--   *Colonnes calculées* -la colonne calculée LineTotal n’a pas été migrée, car les colonnes calculées ne sont pas prises en charge [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]avec les tables mémoire optimisées dans. Pour accéder à cette colonne, utilisez la vue Sales.vSalesOrderDetail_extended_inmem.  
+-   *Colonnes calculées* : la colonne calculée LineTotal n’a pas été migrée, car les colonnes calculées ne sont pas prises en charge par les tables à mémoire optimisée dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Pour accéder à cette colonne, utilisez la vue Sales.vSalesOrderDetail_extended_inmem.  
   
--   *Rowguid* -la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
+-   *Rowguid* : la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
   
 -   Pour les contraintes *de validation* et *de clé étrangère* consultez la description de SalesOrderHeader. Le script suivant peut être utilisé pour vérifier l'intégrité du domaine et l'intégrité référentielle de cette table :  
   
@@ -222,13 +221,13 @@ ms.locfileid: "75228468"
   
  Production.Product  
   
--   *UDT alias* : la table d’origine utilise le type de données défini par l’utilisateur dbo. Indicateur, qui est l’équivalent du bit de type de données système. La table migrée utilise le type de données bit à la place.  
+-   *Types définis par l’utilisateur (UDT) alias* : la table d’origine utilise le type de données défini par l’utilisateur dbo.Flag, qui est équivalent au bit de type de données système. La table migrée utilise le type de données bit à la place.  
   
 -   *Classement BIN2* : les colonnes Name et ProductNumber sont incluses dans les clés d’index, et doivent donc avoir des classements [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]BIN2 dans. Ici, l'hypothèse est que l'application ne tient pas compte des spécificités du classement, comme le non-respect de la casse.  
   
--   *Rowguid* -la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
+-   *Rowguid* : la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
   
--   Les contraintes *uniques*, de *validation* et de *clé étrangère* sont représentées de deux manières : les procédures stockées product. usp_InsertProduct_inmem et Product. usp_DeleteProduct_inmem peuvent être utilisées pour insérer et supprimer des produits ; ces procédures valident le domaine et l’intégrité référentielle, et échouent si l’intégrité n’est pas respectée. En outre, le script suivant peut être utilisé pour valider l'intégrité du domaine et l'intégrité référentielle, comme suit :  
+-   Les contraintes*uniques*, *de validation* et *de clé étrangère* are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem et Product.usp_DeleteProduct_inmem can be used to insert et delete products; these procedures validate domain et referential integrity, et will fail if integrity is violated. En outre, le script suivant peut être utilisé pour valider l'intégrité du domaine et l'intégrité référentielle, comme suit :  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  
@@ -239,25 +238,25 @@ ms.locfileid: "75228468"
   
  Sales.SpecialOffer  
   
--   Les contraintes de *validation* et de *clé étrangère* sont représentées de deux manières : les procédures stockées Sales. usp_InsertSpecialOffer_inmem et Sales. usp_DeleteSpecialOffer_inmem peuvent être utilisées pour insérer et supprimer des offres spéciales. ces procédures valident le domaine et l’intégrité référentielle, et échouent si l’intégrité n’est pas respectée. En outre, le script suivant peut être utilisé pour valider l'intégrité du domaine et l'intégrité référentielle, comme suit :  
+-   Les contraintes*de validation* et *de clé étrangère* are accounted for in two ways: the stored procedures Sales.usp_InsertSpecialOffer_inmem et Sales.usp_DeleteSpecialOffer_inmem can be used to insert et delete special offers; these procedures validate domain et referential integrity, et will fail if integrity is violated. En outre, le script suivant peut être utilisé pour valider l'intégrité du domaine et l'intégrité référentielle, comme suit :  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
+-   *Rowguid* : la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
   
  Sales.SpecialOfferProduct  
   
--   Les *contraintes de clé étrangère* sont représentées de deux manières : la procédure stockée Sales. usp_InsertSpecialOfferProduct_inmem peut être utilisée pour insérer des relations entre les offres spéciales et les produits. Cette procédure valide l’intégrité référentielle et échoue si l’intégrité n’est pas respectée. En outre, le script suivant peut être utilisé pour valider l'intégrité référentielle, comme suit :  
+-   Les contraintes*de clé étrangère* sont prises en compte de deux façons : la procédure stockée Sales.usp_InsertSpecialOfferProduct_inmem peut être utilisée pour insérer des relations entre des offres spéciales et des produits ; cette procédure valide l'intégrité référentielle, et échoue si l'intégrité est violée. En outre, le script suivant peut être utilisé pour valider l'intégrité référentielle, comme suit :  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
+-   *Rowguid* : la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
   
 #### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>Observations sur les index des tables optimisées en mémoire  
  L'index de base des tables optimisées en mémoire est l'index non cluster, qui prend en charge les recherches de point (recherche d'index dans le prédicat d'égalité), les analyses de plage (recherche d'index dans l'attribut d'inégalité), les analyses d'index complet, et les analyses triées. En outre, les index non cluster prennent en charge la recherche dans les colonnes de début de la clé d'index. En fait, les index non cluster optimisés en mémoire autorisent toutes les opérations prises en charge par les index non cluster sur disque, à la seule exception des analyses ascendantes. Par conséquent, l'utilisation des index non cluster est un choix sûr pour les index.  
@@ -310,48 +309,43 @@ ms.locfileid: "75228468"
   
     -   Paramètre de sortie :  
   
-        -   
-  @SalesOrderID int : SalesOrderID de la commande qui vient d’être insérée  
+        -   @SalesOrderID int : SalesOrderID de la commande qui vient d’être insérée  
   
     -   Paramètres d'entrée (obligatoires) :  
   
-        -   @DueDatedatetime2  
+        -   @DueDate datetime2  
   
-        -   @CustomerIDtiers  
+        -   @CustomerID int  
   
-        -   @BillToAddressIDtiers  
+        -   @BillToAddressID [int]  
   
-        -   @ShipToAddressIDtiers  
+        -   @ShipToAddressID [int]  
   
-        -   @ShipMethodIDtiers  
+        -   @ShipMethodID [int]  
   
-        -   
-  @SalesOrderDetails Sales.SalesOrderDetailType_inmem : paramètre table qui contient les articles de la commande  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem : paramètre table qui contient les articles de la commande  
   
     -   Paramètres d'entrée (facultatifs) :  
   
-        -   @Statussa  
+        -   @Status [tinyint]  
   
-        -   @OnlineOrderFlag64bits  
+        -   @OnlineOrderFlag [bit]  
   
-        -   
-  @PurchaseOrderNumber [nvarchar](25\)  
+        -   @PurchaseOrderNumber [nvarchar](25\)  
   
-        -   
-  @AccountNumber [nvarchar](15\)  
+        -   @AccountNumber [nvarchar](15\)  
   
-        -   @SalesPersonIDtiers  
+        -   @SalesPersonID [int]  
   
-        -   @TerritoryIDtiers  
+        -   @TerritoryID [int]  
   
-        -   @CreditCardIDtiers  
+        -   @CreditCardID [int]  
   
-        -   
-  @CreditCardApprovalCode [varchar](15\)  
+        -   @CreditCardApprovalCode [varchar](15\)  
   
-        -   @CurrencyRateIDtiers  
+        -   @CurrencyRateID [int]  
   
-        -   @Commentnvarchar(128  
+        -   @Comment nvarchar(128)  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_inmem  
   
@@ -391,13 +385,13 @@ ms.locfileid: "75228468"
   
     -   Elle repose sur les procédures d'assistance dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck, et dbo.GenerateUQCheck pour générer l'instruction T-SQL nécessaire pour effectuer les vérifications d'intégrité.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a>Mesures des performances à l’aide de la charge de travail Demo  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a>Mesures des performances à l’aide de la charge de travail Demo  
  Ostress est un outil de ligne de commande qui a été développé par l'équipe de support technique de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Cet outil peut être utilisé pour exécuter des requêtes ou des procédures stockées distantes en parallèle. Vous pouvez configurer le nombre de threads pour exécuter une instruction T-SQL donnée en parallèle et spécifier combien de fois l'instruction doit être exécutée sur ce thread. Ostress assemblera les threads et exécutera l'instruction sur tous les threads en parallèle. Lorsque l'exécution est terminée pour tous les threads, Ostress indique le temps qu'il a fallu pour terminer l'exécution sur tous les threads.  
   
 ### <a name="installing-ostress"></a>Installation d'Ostress  
  Ostress est installé avec les utilitaires RML ; il n'y a aucune installation autonome pour Ostress.  
   
- Procédure d’installation :  
+ Étapes d'installation :  
   
 1.  Téléchargez et exécutez le package d’installation x64 pour les utilitaires RML à partir de la page suivante :[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
@@ -542,7 +536,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  Nous vous recommandons de réinitialiser après chaque exécution de démonstration. Étant donné que cette charge de travail est réservée à l'insertion, chaque exécution consommera plus de mémoire, c'est pourquoi une réinitialisation est requise afin d'éviter des conditions de mémoire insuffisante. La quantité de mémoire consommée après une exécution est décrite dans la section [Utilisation de la mémoire après avoir exécuté la charge de travail](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a>Dépannage des tests lents  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Dépannage des tests lents  
  Les résultats des tests varient généralement selon le matériel, mais aussi selon le niveau de concurrence utilisé dans l'exécution du test. Voici quelques pistes à explorer, si les résultats ne sont pas tels que prévu :  
   
 -   Nombre de transactions simultanées : lors de l'exécution de la charge de travail sur un seul thread, le gain de performances avec [!INCLUDE[hek_2](../includes/hek-2-md.md)] sera probablement inférieur à 2X. La contention de verrou n'est un problème que si le niveau de concurrence est élevé.  
@@ -555,10 +549,10 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
     -   Symptôme : si l'utilisation de l'UC n'est pas proche de 100 % ou varie beaucoup pendant l'exécution de la charge de travail sur les tables optimisées en mémoire, il est possible qu'il existe un goulot d'étranglement du journal des E/S. Cela peut être vérifié en ouvrant le moniteur de ressource et en examinant la longueur de la file d'attente du lecteur de journalisation.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a>Utilisation de la mémoire et de l’espace disque dans l’exemple  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> Utilisation de la mémoire et de l’espace disque dans l’exemple  
  Vous trouverez ci-dessous la description de ce à quoi vous devez vous attendre en termes d'utilisation de la mémoire et de l'espace disque pour l'exemple de base de données. Nous présentons également les résultats obtenus pour un serveur de test avec 16 noyaux logiques.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a>Utilisation de la mémoire pour les tables optimisées en mémoire  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Utilisation de la mémoire pour les tables optimisées en mémoire  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilisation générale de la base de données  
  La requête suivante peut être utilisée pour obtenir l'utilisation totale de mémoire pour [!INCLUDE[hek_2](../includes/hek-2-md.md)] dans le système.  
@@ -574,11 +568,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**entrer**|**nomme**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|94|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Par défaut|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Par défaut|0|  
   
  Les régisseurs de mémoire par défaut contiennent les structures de mémoire à l'échelle du système et sont relativement petits. Le régisseur de mémoire de la base de données utilisateur, dans ce cas la base de données dont l'ID est 5, a une taille d'environ 900 Mo.  
   
@@ -611,7 +605,7 @@ WHERE t.type='U'
   
  Ce qui est frappant ici est la taille de la mémoire allouée aux index, par rapport à la taille des données de table. Cela est dû au fait que les index de hachage de l'exemple sont prédimensionnés pour contenir plus de données. Notez que les index de hachage ont une taille fixe, par conséquent, leur taille n'augmente pas selon la taille des données de la table.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a>Utilisation de la mémoire après l’exécution de la charge de travail  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> Utilisation de la mémoire après avoir exécuté la charge de travail  
  Après l'insertion de 10 millions de commandes, l'utilisation globale de la mémoire devrait s'apparenter à ce qui suit :  
   
 ```  
@@ -623,11 +617,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**entrer**|**nomme**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|146|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Par défaut|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Par défaut|0|  
   
  Comme vous pouvez le voir, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un bit sous 8 Go pour les tables optimisées en mémoire et les index dans l'exemple de base de données.  
   
@@ -658,8 +652,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Après la réinitialisation de la démonstration  
  La procédure stockée Demo.usp_DemoReset peut être utilisée pour réinitialiser la démonstration. Elle supprime les données dans les tables SalesOrderHeader_inmem et SalesOrderDetail_inmem, puis réinsère les données à partir des tables d'origine SalesOrderHeader et SalesOrderDetail.  
   
- Cependant, même si les lignes des tables ont été supprimées, cela ne signifie pas pour autant que la mémoire est immédiatement récupérée. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] récupère la mémoire des lignes supprimées dans les tables optimisées en mémoire en arrière-plan, si nécessaire. Vous verrez qu'immédiatement après la réinitialisation de la démonstration, sans charge de travail transactionnelle sur le système, la mémoire des lignes supprimées n'est pas encore récupérée :  
+ Cependant, même si les lignes des tables ont été supprimées, cela ne signifie pas pour autant que la mémoire est immédiatement récupérée. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] récupère la mémoire des lignes supprimées dans les tables optimisées en mémoire en arrière-plan, si nécessaire. Vous verrez qu'immédiatement après la réinitialisation de la démonstration, sans charge de travail transactionnelle sur le système, la mémoire des lignes supprimées n'est pas encore récupérée :  
   
 ```  
 SELECT type  
@@ -670,11 +663,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**entrer**|**nomme**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|2261|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Par défaut|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Par défaut|0|  
   
  C'est le comportement attendu : la mémoire est récupérée lorsque la charge de travail transactionnelle s'exécute.  
   
@@ -689,11 +682,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**entrer**|**nomme**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|1863|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Par défaut|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Par défaut|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Utilisation du disque pour les tables optimisées en mémoire  
  La taille globale sur disque des fichiers de point de contrôle d'une base de données à un moment donné peut être récupérée à l'aide de la requête :  
@@ -746,14 +739,13 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**saut**|**taille sur disque en Mo**|  
+|**state_desc**|**file_type_desc**|**count**|**taille sur disque en Mo**|  
 |PRECREATED|DATA|16|2 048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- Comme vous pouvez le voir, la majeure partie de l'espace est utilisé par les fichiers de données et delta précréés. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] créé au préalable une paire de fichiers (données, delta) par processeur logique. En outre, les fichiers de données ont une taille prédimensionnée de 128 Mo, et les fichiers delta de 8 Mo, afin d'optimiser l'insertion des données dans ces fichiers.  
+ Comme vous pouvez le voir, la majeure partie de l'espace est utilisé par les fichiers de données et delta précréés. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] créé au préalable une paire de fichiers (données, delta) par processeur logique. En outre, les fichiers de données ont une taille prédimensionnée de 128 Mo, et les fichiers delta de 8 Mo, afin d'optimiser l'insertion des données dans ces fichiers.  
   
  Les données réelles dans les tables optimisées en mémoire se trouvent dans un seul fichier de données.  
   
@@ -793,7 +785,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**saut**|**taille sur disque en Mo**|  
+|**state_desc**|**file_type_desc**|**count**|**taille sur disque en Mo**|  
 |PRECREATED|DATA|16|2 048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -839,7 +831,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**saut**|**taille sur disque en Mo**|  
+|**state_desc**|**file_type_desc**|**count**|**taille sur disque en Mo**|  
 |PRECREATED|DATA|16|2 048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -872,7 +864,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**saut**|**taille sur disque en Mo**|  
+|**state_desc**|**file_type_desc**|**count**|**taille sur disque en Mo**|  
 |PRECREATED|DATA|16|2 048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
@@ -883,5 +875,5 @@ ORDER BY state, file_type
  Dans ce cas, il existe deux paires de fichiers de point de contrôle avec l’état « under construction », signifiant que plusieurs paires de fichiers ont été déplacées vers l’état « under construction », probablement en raison du haut niveau de concurrence dans la charge de travail. Plusieurs threads simultanés ont nécessité une nouvelle paire de fichiers en même temps ; par conséquent, une paire est passée de l’état « precreated » à l’état « under construction ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;optimisation en mémoire&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

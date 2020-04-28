@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243330"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
@@ -67,7 +67,7 @@ ms.locfileid: "75243330"
  **IntelliSense**  
  Dans les éditeurs, dans le menu **Edition** , pointez sur **IntelliSense**pour consulter les options [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense.  
   
- **Codage en couleurs**  
+ **codage en couleurs ;**  
  Affiche différentes couleurs pour chaque type d'élément syntaxique, qui améliore la lisibilité des instructions complexes.  
   
  **Mise en relief du code**  
@@ -79,7 +79,7 @@ ms.locfileid: "75243330"
  **Messages**  
  Affiche des erreurs, des avertissements et des messages d'information retournés par le serveur lors de l'exécution d'un script. La liste de messages ne change pas tant que le script n'est pas réexécuté.  
   
- **Barre d’état**  
+ **Barre d’État**  
  Affiche des informations système associées à la fenêtre de l'éditeur de requête, par exemple l'instance à laquelle l'éditeur de requête est connecté.  
   
 ## <a name="database-engine-query-editor-components"></a>Composants de l'éditeur de requête du moteur de base de données  
@@ -91,7 +91,7 @@ ms.locfileid: "75243330"
  **Liste d'erreurs**  
  Affiche les erreurs syntaxiques et sémantiques détectées par IntelliSense. La liste d'erreurs se met à jour de manière dynamique lors de la modification des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- **Showplan graphique**  
+ **Plan d'exécution de requêtes graphique**  
  Affiche les étapes logiques établies dans le plan d'exécution d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Statistiques du client**  
@@ -108,11 +108,11 @@ ms.locfileid: "75243330"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX.|[Éditeur de requête MDX &#40;Analysis Services-données multidimensionnelles&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX.|[Éditeur de requête DMX &#40;Analysis Services d’exploration de données&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX.|[Éditeur de requête MDX &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
+|Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX.|[Éditeur de requête DMX &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Décrit comment afficher et utiliser les fonctionnalités de base dans l'éditeur XML/A.|[Éditeur XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
-|Décrit comment configurer les options des différents éditeurs, tels que la numérotation des lignes et les options IntelliSense.|[Configurer les éditeurs &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
-|Décrit les différentes façons d'ouvrir les éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Ouvrez un éditeur &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
+|Décrit comment configurer les options des différents éditeurs, tels que la numérotation des lignes et les options IntelliSense.|[Configurer des éditeurs &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
+|Décrit les différentes façons d'ouvrir les éditeurs dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Ouvrir un éditeur &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
 |Décrit comment gérer le mode d'affichage, tel que le retour automatique à la ligne, le fractionnement d'une fenêtre, ou les onglets.|[Gérer l'Éditeur et le mode d'affichage](manage-the-editor-and-view-mode.md)|  
 |Explique comment définir les options de mise en forme, telles que le texte masqué ou la mise en retrait.|[Gérer la mise en forme du code](manage-code-formatting.md)|  
 |Décrit comment parcourir le texte dans une fenêtre d'éditeur à l'aide de fonctionnalités telles que la recherche incrémentielle ou Atteindre.|[Naviguer dans le code et le texte](navigate-code-and-text.md)|  
@@ -123,10 +123,10 @@ ms.locfileid: "75243330"
 |Décrit comment définir des signets afin de rechercher plus facilement les segments de code importants.|[Gérer les signets](../native-client-ole-db-rowsets/bookmarks.md)|  
 |Explique comment imprimer des scripts ou les résultats dans une fenêtre ou une grille.|[Imprimer le code et les résultats](print-code-and-results.md)|  
 |Décrit comment utiliser les fonctionnalités sqlcmd dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête](edit-sqlcmd-scripts-with-query-editor.md)|  
-|Décrit comment utiliser des fonctionnalités IntelliSense telles que la saisie semi-automatique des noms d'objets à mesure que vous les tapez, ou la garantie que les points d'arrêt sont placés dans des emplacements valides.|[SQL Server Management Studio de &#40;IntelliSense&#41;](intellisense-sql-server-management-studio.md)|  
+|Décrit comment utiliser des fonctionnalités IntelliSense telles que la saisie semi-automatique des noms d'objets à mesure que vous les tapez, ou la garantie que les points d'arrêt sont placés dans des emplacements valides.|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
 |Décrit comment utiliser les extraits de code dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Les extraits de code sont des modèles pour des instructions ou des blocs couramment utilisés, et peuvent être personnalisés ou étendus pour inclure les extraits de code spécifiques au site.|[Extraits de code Transact-SQL](transact-sql-code-snippets.md)|  
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code et afficher les informations de débogage telles que les valeurs des variables et des paramètres.|[Débogueur Transact-SQL](transact-sql-debugger.md)|  
-|Décrit comment définir des couleurs personnalisées pour différentes instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]et faire en sorte que ces couleurs soient définies comme arrière-plan de la barre d'état dans des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barre d’État &#40;Moteur de base de données éditeur de requête&#41;](status-bar-database-engine-query-editor.md)|  
+|Décrit comment définir des couleurs personnalisées pour différentes instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]et faire en sorte que ces couleurs soient définies comme arrière-plan de la barre d'état dans des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barre d’état &#40;éditeur de requête du moteur de base de données&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683586"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot pour SharePoint (SSAS)
@@ -53,18 +53,18 @@ ms.locfileid: "74683586"
   
  Une instance de serveur Analysis Service en mode intégré SharePoint complète le déploiement. Elle charge, interroge et décharge les données. Elle traite également les données si le classeur est configuré pour l'actualisation des données PowerPivot.  Chaque instance est étroitement associée au service système PowerPivot local qui fait partie de la même installation.  
   
-##  <a name="bkmk_RelatedContent"></a> Dans cette section  
- [Administration et configuration d'un serveur PowerPivot dans l'Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>Dans cette section  
+ [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [Configuration de PowerPivot à l'aide de Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
+ [Configuration de PowerPivot à l’aide de Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
+ [Outils de configuration de PowerPivot](power-pivot-configuration-tools.md)  
   
  [Authentification et autorisation PowerPivot](power-pivot-authentication-and-authorization.md)  
   
  [Règles d'intégrité de PowerPivot - Configurer](configure-power-pivot-health-rules.md)  
   
- [Tableau de bord de gestion PowerPivot et données d'utilisation](power-pivot-management-dashboard-and-usage-data.md)  
+ [Tableau de bord de gestion PowerPivot et données d’utilisation](power-pivot-management-dashboard-and-usage-data.md)  
   
  [Galerie PowerPivot](../../2014-toc/index.yml)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74683586"
   
  [Connexion de modèle sémantique BI PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
- **Dans d’autres sections**  
+ **Sections connexes**  
   
 ## <a name="additional-topics"></a>Rubriques supplémentaires  
  [Mettre à niveau PowerPivot pour SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  

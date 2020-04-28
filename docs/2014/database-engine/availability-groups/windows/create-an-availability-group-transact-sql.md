@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228792"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Créer un groupe de disponibilité (Transact-SQL)
@@ -28,32 +28,32 @@ ms.locfileid: "75228792"
 > [!NOTE]  
 >  En guise d'alternative à [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous pouvez utiliser l'Assistant Création d'un groupe de disponibilité ou les applets de commande PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md), [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)ou [Créer un groupe de disponibilité &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Nous vous recommandons fortement de lire cette section avant d'essayer de créer votre premier groupe de disponibilité.  
   
-###  <a name="PrerequisitesRestrictions"></a> Conditions préalables requises, restrictions et recommandations  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a>Conditions préalables requises, restrictions et recommandations  
   
 -   Avant de créer un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité résident sur des nœuds WSFC (Windows Server Failover Clustering) différents au sein du même clustering de basculement WSFC. Vérifiez également que chaque instance du serveur répond à toutes les autres conditions requises relatives à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
-###  <a name="SummaryTsqlStatements"></a>Résumé des tâches et instructions Transact-SQL correspondantes  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a> Résumé des tâches et instructions Transact-SQL correspondantes  
  Le tableau suivant répertorie les tâches de base impliquées dans la création et la configuration d'un groupe de disponibilité et indique les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] à utiliser pour ces tâches. Les tâches [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] doivent être effectuées dans la séquence dans laquelle elles sont présentées dans le tableau.  
   
 |Tâche|Instruction(s) Transact-SQL|Où effectuer la tâche**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[Créer un point de terminaison](/sql/t-sql/statements/create-endpoint-transact-sql) *EndpointName* ... POUR DATABASE_MIRRORING|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.|  
-|Créer un groupe de disponibilité|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
-|Joindre le réplica secondaire au groupe de disponibilité|[ALTER Availability GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* Join|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
+|Créer un groupe de disponibilité|[CRÉER UN GROUPE DE DISPONIBILITÉ](/sql/t-sql/statements/create-availability-group-transact-sql)|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
+|Joindre le réplica secondaire au groupe de disponibilité|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *nom_groupe* JOIN|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
 |Préparer la base de données secondaire|[Sauvegarde](/sql/t-sql/statements/backup-transact-sql) et [restauration](/sql/t-sql/statements/restore-statements-transact-sql).|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide de RESTORE WITH NORECOVERY.|  
-|Démarrer la synchronisation des données en joignant chaque base de données secondaire au groupe de disponibilité|[ALTER database](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *database_name* Set HADR Availability Group = *group_name*|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
+|Démarrer la synchronisation des données en joignant chaque base de données secondaire au groupe de disponibilité|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *nom_base_de_données* SET HADR AVAILABILITY GROUP = *nom_groupe*|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
   
  **<sup>*</sup>** Pour effectuer une tâche donnée, connectez-vous à l’instance ou aux instances de serveur indiquées.  
   
-##  <a name="TsqlProcedure"></a>Utilisation de Transact-SQL pour créer et configurer un groupe de disponibilité  
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL pour créer et configurer un groupe de disponibilité  
   
 > [!NOTE]  
 >  Pour obtenir un exemple de procédure de configuration qui contient des exemples de code de chacune de ces instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consultez [Exemple : configuration d’un groupe de disponibilité qui utilise l’authentification Windows](#ExampleConfigAGWinAuth).  
@@ -68,7 +68,7 @@ ms.locfileid: "75228792"
   
 5.  Joignez chaque nouvelle base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a>Exemple : configuration d’un groupe de disponibilité qui utilise l’authentification Windows  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a> Exemple : configuration d’un groupe de disponibilité qui utilise l’authentification Windows  
  Cet exemple crée un exemple de procédure de configuration [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] qui utilise [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour installer des points de terminaison de mise en miroir de bases de données qui utilisent l'authentification Windows, et créer et configurer un groupe de disponibilité et ses bases de données secondaires.  
   
  Cet exemple contient les sections suivantes :  
@@ -77,12 +77,12 @@ ms.locfileid: "75228792"
   
 -   [Exemple de procédure de configuration](#SampleProcedure)  
   
--   [Exemple de code complet pour l’exemple de procédure de configuration](#CompleteCodeExample)  
+-   [Exemple de code complet pour l'exemple de procédure de configuration](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a>Conditions préalables à l’utilisation de l’exemple de procédure de configuration  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a> Conditions préalables requises pour l'utilisation de l'exemple de procédure de configuration  
  Cet exemple de procédure présente les conditions suivantes :  
   
--   Les instances de serveur doivent prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, consultez [conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Les instances de serveur doivent prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Deux exemples de bases de données, *MyDb1* et *MyDb2*, doivent exister sur l'instance de serveur qui hébergera le réplica principal. Les exemples de code suivants créent et configurent ces deux bases de données et créent une sauvegarde complète de chacune d'elles. Exécutez ces exemples de code sur l'instance de serveur sur laquelle vous envisagez de créer l'exemple de groupe de disponibilité. Cette instance de serveur hébergera le réplica principal initial de l'exemple de groupe de disponibilité.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "75228792"
         GO
         ```  
   
-###  <a name="SampleProcedure"></a> Exemple de procédure de configuration  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> Exemple de procédure de configuration  
  Dans cet exemple de configuration, le réplica de disponibilité sera créé sur deux instances de serveur autonomes dont les comptes de service s'exécutent sous des domaines différents, mais approuvés (`DOMAIN1` et `DOMAIN2`).  
   
  Le tableau ci-dessous récapitule les valeurs utilisées dans cet exemple de configuration.  
@@ -282,7 +282,7 @@ ms.locfileid: "75228792"
     GO
     ```  
   
-###  <a name="CompleteCodeExample"></a> Exemple de code complet pour l'exemple de procédure de configuration  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> Exemple de code complet pour l'exemple de procédure de configuration  
  L'exemple suivant fusionne les exemples de code de toutes les étapes de l'exemple de procédure configuration. Le tableau suivant répertorie les valeurs d'espace réservé utilisées dans cet exemple de code. Pour plus d'informations sur les étapes de cet exemple de code, consultez [Conditions préalables requises pour l'utilisation de l'exemple de procédure de configuration](#PrerequisitesForExample) et [Exemple de procédure de configuration](#SampleProcedure), plus avant dans cette rubrique.  
   
 |Espace réservé|Description|  
@@ -437,7 +437,7 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer les propriétés du groupe de disponibilité et du réplica**  
   
 -   [Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -496,7 +496,7 @@ GO
   
 -   [Résoudre les problèmes liés à l’échec d’une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231795"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Leçon 6 : Migrer une base de données d’une machine source locale vers une machine de destination dans Azure
@@ -128,7 +128,7 @@ ms.locfileid: "75231795"
   
 1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.  
   
-2.  Cliquez avec le bouton droit sur **Bases de données**, puis cliquez sur **Nouvelle base de données**. Ensuite, cliquez avec le bouton droit sur TestDB1. Cliquez sur Tâches, puis cliquez sur Détacher. Dans la fenêtre de dialogue Détacher, cochez Supprimer les connexions. Cliquez sur **OK**.  
+2.  Cliquez avec le bouton droit sur **bases de données**, puis cliquez sur **nouvelle base de données**. Ensuite, cliquez avec le bouton droit sur TestDB1. Cliquez sur Tâches, puis cliquez sur Détacher. Dans la fenêtre de dialogue Détacher, cochez Supprimer les connexions. Cliquez sur **OK**.  
   
 3.  Connectez-vous à l'ordinateur de destination, sur lequel SQL Server 2014 CTP2 ou version ultérieure est installé. Pour préparer l'ordinateur de destination, vous devez créer des informations d'identification SQL Server sur l'ordinateur de destination de façon à indiquer le même conteneur que celui qui contient TestDB1. Si vous rattachez dans le même ordinateur, vous n'avez pas besoin de créer d'autres informations d'identification.  
   
@@ -146,5 +146,5 @@ ms.locfileid: "75231795"
   
  **Leçon suivante :**  
   
- [Leçon 7 :Déplacer vos fichiers de données dans Stockage Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Leçon 7 : Déplacer vos fichiers de données dans le Stockage Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

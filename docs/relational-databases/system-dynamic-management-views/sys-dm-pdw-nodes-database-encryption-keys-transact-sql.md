@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401639"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -28,11 +28,11 @@ ms.locfileid: "74401639"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID de la base de données physique sur chaque nœud.|  
 |encryption_state|**int**|Indique si la base de données sur ce nœud est chiffrée ou non chiffrée.<br /><br /> 0 = aucune clé de chiffrement de base de données présente, pas de chiffrement<br /><br /> 1 = non chiffré<br /><br /> 2 = chiffrement en cours<br /><br /> 3 = chiffrée.<br /><br /> 4 = modification de clé en cours<br /><br /> 5 = déchiffrement en cours<br /><br /> 6 = modification de la protection en cours (le certificat qui chiffre la clé de chiffrement de la base de données est en cours de modification).|  
-|create_date|**DATETIME**|Affiche la date de création de la clé de chiffrement.|  
-|regenerate_date|**DATETIME**|Affiche la date de régénération de la clé de chiffrement.|  
-|modify_date|**DATETIME**|Affiche la date de modification de la clé de chiffrement.|  
-|set_date|**DATETIME**|Affiche la date à laquelle la clé de chiffrement a été appliquée à la base de données.|  
-|opened_date|**DATETIME**|Indique à quel moment la clé de base de données a été ouverte pour la dernière fois.|  
+|create_date|**datetime**|Affiche la date de création de la clé de chiffrement.|  
+|regenerate_date|**datetime**|Affiche la date de régénération de la clé de chiffrement.|  
+|modify_date|**datetime**|Affiche la date de modification de la clé de chiffrement.|  
+|set_date|**datetime**|Affiche la date à laquelle la clé de chiffrement a été appliquée à la base de données.|  
+|opened_date|**datetime**|Indique à quel moment la clé de base de données a été ouverte pour la dernière fois.|  
 |key_algorithm|**varchar ( ?)**|Affiche l'algorithme utilisé pour la clé.|  
 |key_length|**int**|Affiche la longueur de la clé.|  
 |encryptor_thumbprint|**varbin**|Affiche l'empreinte numérique du chiffreur.|  
@@ -42,7 +42,7 @@ ms.locfileid: "74401639"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation VIEW SERVER STATE sur le serveur.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant joint `sys.dm_pdw_nodes_database_encryption_keys` à d’autres tables système pour indiquer l’état de chiffrement pour chaque nœud des bases de données protégées par TDE.  
   
 ```  
@@ -63,7 +63,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
  [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CRÉER une clé de CHIFFREment de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [SUPPRIMER la clé de CHIFFREment de base de données &#40;&#41;Transact-SQL](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+ [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

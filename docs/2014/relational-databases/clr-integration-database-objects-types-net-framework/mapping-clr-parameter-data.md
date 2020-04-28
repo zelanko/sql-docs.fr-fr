@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232280"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mappage des données de paramètres CLR
@@ -59,11 +59,9 @@ ms.locfileid: "75232280"
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|None|None|  
 |`numeric`|`SqlDecimal`|**Décimal, Nullable\<>décimal**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
-  `SQLChars` est une meilleure correspondance pour le transfert de données et leur accès, et `SQLString` est une meilleure correspondance pour effectuer des opérations sur une chaîne.|`String, Char[]`|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` est une meilleure correspondance pour le transfert de données et leur accès, et `SQLString` est une meilleure correspondance pour effectuer des opérations sur une chaîne.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<char>**|  
-|`real`|
-  `SqlSingle` (la plage de `SqlSingle`, toutefois, est plus grande que `real`)|**Single, Nullable\<>unique**|  
+|`real`|`SqlSingle` (la plage de `SqlSingle`, toutefois, est plus grande que `real`)|**Single, Nullable\<>unique**|  
 |`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
 |`smallmoney`|`SqlMoney`|**Décimal, Nullable\<>décimal**|  
@@ -72,11 +70,11 @@ ms.locfileid: "75232280"
 |`text`|None|None|  
 |`time`|None|**TimeSpan, null\<TimeSpan>**|  
 |`timestamp`|None|None|  
-|`tinyint`|`SqlByte`|**Byte,>\<d’octets Nullable**|  
+|`tinyint`|`SqlByte`|**Byte, Nullable\<Byte>**|  
 |`uniqueidentifier`|`SqlGuid`|**Guid,>\<GUID Nullable**|  
 |`User-defined type(UDT)`|None|La même classe liée au type défini par l'utilisateur dans le même assembly ou un assembly dépendant.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**Byte, Byte [],>\<d’octets Nullable**|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, Byte[], Nullable\<byte>**|  
 |`varchar`|None|None|  
 |`xml`|`SqlXml`|None|  
   

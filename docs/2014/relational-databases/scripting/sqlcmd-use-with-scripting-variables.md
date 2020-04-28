@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243166"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Utiliser sqlcmd avec des variables de script
@@ -44,9 +44,9 @@ ms.locfileid: "75243166"
   
 3.  Interface de commande (**SET X=Y**) définie dans l’invite de commandes avant le démarrage de **sqlcmd**  
   
-4.  **sqlcmd-v** X = Y  
+4.  **sqlcmd-v** X=Y  
   
-5.  **: Setvar** X Y  
+5.  **:Setvar** X Y  
   
 > [!NOTE]  
 >  Pour afficher les variables d’environnement, dans le **Panneau de configuration**, ouvrez **Système**, puis cliquez sur l’onglet **Avancé** .  
@@ -64,8 +64,7 @@ ms.locfileid: "75243166"
   
  `FROM Person.Person x`  
   
- 
-  `WHERE c.`BusinessEntityID `< 5;`  
+ `WHERE c.`BusinessEntityID `< 5;`  
   
  Vous pouvez ensuite spécifier le nom de la colonne à retourner à l'aide de l'option `-v` :  
   
@@ -103,7 +102,7 @@ ms.locfileid: "75243166"
 ## <a name="sqlcmd-scripting-variables"></a>Variables de script sqlcmd  
  Les variables définies par **sqlcmd** sont reconnues comme des variables de script. Le tableau suivant répertorie les variables de script **sqlcmd** .  
   
-|Variable|Option connexe|R/W (Lecture/écriture)|Default|  
+|Variable|Option connexe|R/W (Lecture/écriture)|Par défaut|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -111,9 +110,9 @@ ms.locfileid: "75243166"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W (Lecture/écriture)|"8" (secondes)|  
-|SQLCMDSTATTIMEOUT|-t|R/W (Lecture/écriture)|"0" = Attendre indéfiniment|  
-|SQLCMDHEADERS|-h|R/W (Lecture/écriture)|"0"|  
-|SQLCMDCOLSEP|-s|R/W (Lecture/écriture)|" "|  
+|SQLCMDSTATTIMEOUT|-T|R/W (Lecture/écriture)|"0" = Attendre indéfiniment|  
+|SQLCMDHEADERS|-H|R/W (Lecture/écriture)|"0"|  
+|SQLCMDCOLSEP|-S|R/W (Lecture/écriture)|" "|  
 |SQLCMDCOLWIDTH|-w|R/W (Lecture/écriture)|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W (Lecture/écriture)|"0"|  
@@ -344,6 +343,6 @@ ms.locfileid: "75243166"
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser l’utilitaire sqlcmd](sqlcmd-use-the-utility.md)   
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
- [Informations de référence sur l’utilitaire d’invite de commandes &#40;Moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

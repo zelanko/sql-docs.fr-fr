@@ -15,15 +15,15 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74687159"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de la migration du service d’intégration SQL Server avec Assistant Migration de données
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour évaluer les packages SQL Server Integration Service (SSIS), les composants ci-dessous doivent être installés avec Assistant Migration de données :
 
@@ -44,7 +44,7 @@ Les instructions pas à pas suivantes vous aident à effectuer la première éva
 
     Sélectionnez la source en tant que **SQL Server**, puis définissez le type de serveur cible sur **Azure SQL Database** ou **Azure SQL Database Managed instance**.
 
-1. Cliquez sur **Créer**.
+1. Cliquez sur **Créer**.
 
     ![créer une évaluation](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -74,5 +74,5 @@ La catégorie de problèmes de compatibilité fournit des fonctionnalités parti
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Vue d’ensemble de la migration des charges de travail SSIS locales vers SSIS dans ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migrer des packages SQL Server Integration Services vers une instance gérée Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migrer les packages SQL Server Integration Services vers une instance managée Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Redéployer des packages SQL Server Integration Services vers Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

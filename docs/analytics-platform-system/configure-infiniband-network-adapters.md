@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401291"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurer des cartes réseau InfiniBand pour Analytics Platform System
 Décrit comment configurer les cartes réseau InfiniBand sur un serveur client non-appareil pour se connecter au nœud de contrôle sur des Data Warehouse parallèles (PDW). Utilisez ces instructions pour la connectivité de base et pour la haute disponibilité, afin que le chargement, la sauvegarde et d’autres processus se connectent automatiquement au réseau InfiniBand actif.  
   
-## <a name="Basics"></a>Description  
+## <a name="description"></a><a name="Basics"></a>Description  
 Ces instructions vous indiquent comment rechercher et définir les adresses IP InfiniBand et les masques de sous-réseau appropriés sur votre serveur connecté par InfiniBand. Elles expliquent également comment configurer votre serveur pour utiliser le DNS de l’appliance APS afin que votre connexion soit résolue en réseau InfiniBand actif.  
   
 Pour la haute disponibilité, les APS possèdent deux réseaux InfiniBand, un actif et un passif. Chaque réseau InfiniBand possède une adresse IP différente pour le nœud de contrôle. Si le réseau InfiniBand actif tombe en panne, le réseau de l’InfiniBand passif devient le réseau actif. Dans ce cas, un script ou un processus se connecte automatiquement au réseau InfiniBand actif sans modifier les paramètres du script.  
@@ -32,7 +32,7 @@ Plus précisément, dans cet article, vous allez :
   
     1.  Si vous avez deux cartes réseau InfiniBand, vous configurez une carte avec une adresse IP disponible dans le premier réseau InfiniBand, appelé TeamIB1, et l’autre adaptateur avec une adresse IP disponible dans le second réseau InfiniBand, appelé TeamIB2. Utilisez l’adresse IP appliance_domain-AD01 TeamIB1 comme serveur DNS préféré et l’adresse IP appliance_domain-AD02 TeamIB1 en tant que serveur DNS auxiliaire pour la carte réseau TeamIB1. Utilisez l’adresse IP appliance_domain-AD01 TeamIB2 comme serveur DNS préféré et l’adresse IP appliance_domain-AD02 TeamIB2 en tant que serveur DNS auxiliaire pour la carte réseau TeamIB2.  
   
-    2.  Si vous n’avez qu’une seule carte réseau InfiniBand, vous configurez la carte avec une adresse IP disponible à partir de l’un des réseaux InfiniBand. Ensuite, vous configurez les serveurs DNS préférés et secondaires sur cet adaptateur à l’aide de appliance_domain-AD01 TeamIB1 et appliance_domain-AD02 TeamIB1, ou à l’aide de appliance_domain-AD01 TeamIB2 et appliance_domain-AD02 TeamIB2 selon le même réseau en tant qu’adaptateur configuré en tant que serveur préféré et les serveurs DNS secondaires, respectivement.  
+    2.  Si vous n’avez qu’une seule carte réseau InfiniBand, vous configurez la carte avec une adresse IP disponible à partir de l’un des réseaux InfiniBand. Ensuite, vous configurez les serveurs DNS préférés et secondaires sur cet adaptateur à l’aide de appliance_domain-AD01 TeamIB1 et appliance_domain-AD02 TeamIB1 ou à l’aide de appliance_domain-AD01 TeamIB2 et appliance_domain-AD02 TeamIB2, selon le même réseau que l’adaptateur configuré comme les serveurs DNS préférés et secondaires, respectivement.  
   
 3.  Configurez votre carte réseau InfiniBand pour utiliser les serveurs DNS APS pour résoudre votre connexion au réseau InfiniBand actif.  
   
@@ -46,14 +46,14 @@ Par exemple, si le nom de votre région PDW est MyPDW et que le nom de l’appli
   
 -   `dwloader -S MYPDW-SQLCTL01`  
   
-## <a name="BeforeBegin"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Avant de commencer  
   
 ### <a name="requirements"></a>Spécifications  
 Vous avez besoin d’un compte de domaine d’appliance APS pour vous connecter au nœud AD01. Par exemple, F12345 * \administrator.  
   
 Vous avez besoin d’un compte Windows sur le serveur client qui a l’autorisation de configurer les cartes réseau.  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
 Ces instructions supposent que le serveur client est déjà monté en rack et branché au réseau de l’appliance InfiniBand. Pour obtenir des instructions sur la mise en rack et le câblage, consultez [acquérir et configurer un serveur de chargement](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Remarques d'ordre général  
@@ -61,7 +61,7 @@ En utilisant SQLCTL01, le système de plateforme d’analyse DNS connecte votre 
   
 Pour répondre aux besoins de votre entreprise, vous pouvez également joindre le serveur client à votre propre groupe de travail ou domaine Windows non-appliance.  
   
-## <a name="Sec1"></a>Étape 1 : obtenir les paramètres réseau de l’appliance InfiniBand  
+## <a name="step-1-obtain-the-appliance-infiniband-network-settings"></a><a name="Sec1"></a>Étape 1 : obtenir les paramètres réseau de l’appliance InfiniBand  
 *Pour obtenir les paramètres réseau de l’appliance InfiniBand*  
   
 1.  Connectez-vous au nœud AD01 de l’appliance à l’aide du compte appliance_domain \Administrateur.  
@@ -96,7 +96,7 @@ Pour répondre aux besoins de votre entreprise, vous pouvez également joindre l
   
     Pour rechercher une adresse IP inutilisée, ouvrez une fenêtre de commande et essayez d’envoyer une requête ping à des adresses IP au sein de la plage d’adresses de votre appliance. Dans cet exemple, l’adresse IP du réseau TeamIB2 est 172.16.18.30. Recherchez une adresse IP commençant par 172.16.18 qui n’est pas utilisée. Par exemple, à partir de la ligne de commande, entrez « ping 172.16.18.254 ». Si la demande Ping échoue, l’adresse IP est disponible.  
   
-## <a name="Sec2"></a>Étape 2 : configurer les paramètres de carte réseau InfiniBand sur votre serveur client  
+## <a name="step-2-configure-the-infiniband-network-adapter-settings-on-your-client-server"></a><a name="Sec2"></a>Étape 2 : configurer les paramètres de carte réseau InfiniBand sur votre serveur client  
 
 ### <a name="notes"></a>Notes  
   
@@ -151,7 +151,7 @@ Pour répondre aux besoins de votre entreprise, vous pouvez également joindre l
     4.  Définissez le serveur DNS de remplacement sur l’adresse IP de TeamIB2 que vous avez notée précédemment à partir du nœud appliance_domain *-AD02.  
   
         > [!NOTE]  
-        > Si vous n’avez qu’une seule carte réseau, configurez les serveurs DNS préférés et secondaires à l’aide de l’appliance AD01 TeamIB1 et de l’appliance AD02 TeamIB1 en tant que serveurs DNS préférés et secondaires, ou utilisez l’appliance AD01 TeamIB2 et l’appliance AD02 TeamIB2 en tant que serveurs DNS préférés et secondaires, selon que la machine virtuelle Active Directory a basculé.  
+        > Si vous ne disposez que d’une seule carte réseau, configurez les serveurs préférés et secondaires à l’aide de l’appliance AD01 TeamIB1 et de l’appliance AD02 TeamIB1 en tant que serveurs DNS préférés et secondaires, ou utilisez l’appliance AD01 TeamIB2 et appliance AD02 TeamIB2 en tant que serveurs DNS préférés et auxiliaires, selon que la machine virtuelle Active Directory a basculé.  
   
         ![Propriétés de la carte réseau InfiniBand 1](media/network-ib1-properties.png "Propriétés de la carte réseau InfiniBand 1")  
   

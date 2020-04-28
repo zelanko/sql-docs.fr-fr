@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957123"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
@@ -74,7 +74,7 @@ ms.locfileid: "74957123"
   
  [Créer une clé principale de base de données](create-a-database-master-key.md)  
   
- [Sauvegarder une clé primaire de base de données](back-up-a-database-master-key.md)  
+ [Sauvegarder une clé principale de base de données](back-up-a-database-master-key.md)  
   
  [Restaurer une clé principale de base de données](restore-a-database-master-key.md)  
   
@@ -92,9 +92,9 @@ ms.locfileid: "74957123"
  [Restaurer une clé principale de base de données](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Sauvegarder et restaurer des clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Supprimer et recréer des clés de chiffrement &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Ajouter et supprimer des clés de chiffrement pour le déploiement avec montée en puissance parallèle &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Chiffrement transparent des données &#40;TDE&#41;](transparent-data-encryption.md)  
   
   

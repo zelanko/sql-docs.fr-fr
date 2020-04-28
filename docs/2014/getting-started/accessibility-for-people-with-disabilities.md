@@ -22,35 +22,33 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683598"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accessibilité pour personnes handicapées
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] considère qu'il est de son devoir de faire en sorte que ses produits et services soient accessibles et faciles à utiliser par tous. Cette rubrique contient des informations sur les fonctionnalités, produits et services ci-après qui contribuent à rendre les produits de la famille [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server plus accessibles aux personnes handicapées.  
   
 > [!NOTE]  
 >  Les informations contenues dans cette rubrique s'appliquent uniquement aux utilisateurs qui ont acheté leurs produits [!INCLUDE[msCoName](../includes/msconame-md.md)] aux États-Unis. Si vous vous êtes procuré ce produit en dehors des États-Unis, votre coffret contient une fiche d'informations qui répertorie les services de Support technique, les numéros de téléphone et les adresses de [!INCLUDE[msCoName](../includes/msconame-md.md)] . Contactez votre filiale pour savoir si les produits et services décrits dans cette rubrique sont disponibles dans votre pays. Pour plus d'informations, disponibles en anglais, français, espagnol, chinois, japonais et italien, consultez le site Web [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-accessibility-features"></a>Fonctionnalités d'accessibilité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="ssnoversion-accessibility-features"></a>Fonctionnalités d'accessibilité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Outre les fonctions et les utilitaires d'accessibilité de Windows décrits dans la section suivante, la visionneuse de l'aide rend [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] encore plus facile d'accès aux personnes atteintes de handicaps.  
   
 ### <a name="the-help-viewer"></a>Visionneuse de l'aide  
  La Visionneuse de l'aide Microsoft 1.1 est l'outil de consultation de la documentation du produit. Il dispose de fonctions d'accessibilité, notamment de touches de raccourci pour la navigation et les commandes, incluses dans [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Il vous permet, par exemple, de changer les couleurs d'affichage sur l'écran de votre ordinateur. Pour plus d’informations sur les fonctionnalités d’accessibilité de Microsoft Help Viewer 1,1, voir [fonctionnalités d’accessibilité de Microsoft Help Viewer 1,1](https://go.microsoft.com/fwlink/?LinkID=220144).  
   
-## <a name="accessibility-in-includemsconameincludesmsconame-mdmd-windows"></a>Accessibilité dans [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows  
+## <a name="accessibility-in-msconame-windows"></a>Accessibilité dans [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows  
  De nombreuses fonctionnalités d'accessibilité ont été intégrées à la famille [!INCLUDE[msCoName](../includes/msconame-md.md)] de systèmes d'exploitation Windows. Ces fonctionnalités s'adressent aux personnes ayant des difficultés à utiliser un clavier ou une souris, aveugles ou malvoyantes, sourdes ou malentendantes. Ces fonctionnalités peuvent être installées par le programme d'installation.  
   
-## <a name="adjusting-includemsconameincludesmsconame-mdmd-products-for-people-with-accessibility-needs"></a>Personnalisation des produits [!INCLUDE[msCoName](../includes/msconame-md.md)] pour les personnes atteintes d'handicaps  
+## <a name="adjusting-msconame-products-for-people-with-accessibility-needs"></a>Personnalisation des produits [!INCLUDE[msCoName](../includes/msconame-md.md)] pour les personnes atteintes d'handicaps  
  Des options et fonctionnalités d'accessibilité sont intégrées à de nombreux produits [!INCLUDE[msCoName](../includes/msconame-md.md)] , notamment la famille des systèmes d'exploitation Windows. Ces options et fonctionnalités d'accessibilité s'adressent aux personnes ayant des difficultés à utiliser un clavier ou une souris, aveugles ou malvoyantes, sourdes ou malentendantes.  
   
 ### <a name="free-step-by-step-tutorials"></a>Didacticiels gratuits étape par étape  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] propose une série de didacticiels qui vous aident pas à pas à personnaliser les options et paramètres d'accessibilité sur votre ordinateur. Les didacticiels expliquent en détail les procédures à suivre pour régler les options, les fonctionnalités et les paramètres qui facilitent l'utilisation des ordinateurs par les personnes présentant une incapacité physique. Ces informations sont présentées en vis-à-vis, afin que vous puissiez visualiser d'un seul coup d'œil la marche à suivre pour utiliser la souris, le clavier ou une combinaison des deux. Les didacticiels pas à pas d’une série de produits sont disponibles sur le site web [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67163).  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose une série de didacticiels qui vous aident pas à pas à personnaliser les options et paramètres d'accessibilité sur votre ordinateur. Les didacticiels expliquent en détail les procédures à suivre pour régler les options, les fonctionnalités et les paramètres qui facilitent l'utilisation des ordinateurs par les personnes présentant une incapacité physique. Ces informations sont présentées en vis-à-vis, afin que vous puissiez visualiser d'un seul coup d'œil la marche à suivre pour utiliser la souris, le clavier ou une combinaison des deux. Les didacticiels pas à pas d’une série de produits sont disponibles sur le site web [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67163).  
   
 ## <a name="assistive-technology-products-for-windows"></a>Produits de technologies d'assistance pour Windows  
  Il existe de nombreux produits de technologies d'assistance conçus pour faciliter l'utilisation des ordinateurs individuels par les personnes atteintes d'handicaps.  
@@ -74,17 +72,16 @@ ms.locfileid: "74683598"
 ### <a name="upgrading"></a>Mise à niveau  
  Si vous utilisez un produit de technologie d'assistance, contactez votre revendeur pour vérifier la compatibilité des produits avant la mise à niveau de votre ordinateur. Votre revendeur vous aidera aussi à choisir les paramètres appropriés pour optimiser la compatibilité avec votre version de Windows ou d'autres produits [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
-## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>Documentation [!INCLUDE[msCoName](../includes/msconame-md.md)] dans d'autres formats  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] présente la documentation de ses produits sous d'autres formats de façon à la rendre accessible à tous.  
+## <a name="msconame-documentation-in-alternative-formats"></a>Documentation [!INCLUDE[msCoName](../includes/msconame-md.md)] dans d'autres formats  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] présente la documentation de ses produits sous d'autres formats de façon à la rendre accessible à tous.  
   
-### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Obtention de la documentation pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+### <a name="obtaining-documentation-for-ssnoversion"></a>Obtention de la documentation pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  La documentation pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est disponible en ligne. Pour plus d’informations, consultez [utiliser la documentation du produit pour SQL Server](../2014-toc/index.yml).  
   
-## <a name="obtaining-documentation-for-additional-includemsconameincludesmsconame-mdmd-products"></a>Obtention de documentation pour d'autres produits [!INCLUDE[msCoName](../includes/msconame-md.md)]  
+## <a name="obtaining-documentation-for-additional-msconame-products"></a>Obtention de documentation pour d'autres produits [!INCLUDE[msCoName](../includes/msconame-md.md)]  
  Vous pouvez obtenir de la documentation [!INCLUDE[msCoName](../includes/msconame-md.md)] accessible pour les produits sur le [site Web Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
-### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
+### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic Inc.  
  Vous pouvez obtenir des [!INCLUDE[msCoName](../includes/msconame-md.md)] publications supplémentaires auprès de l’enregistrement pour le aveugle & Dyslexic, Inc. Ces documents sont distribués aux membres inscrits et éligibles du service de distribution sur des disquettes de cassettes audio ou. La collection de RFB&amp;D contient plus de 80 000 titres, dont la documentation sur les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] et les ouvrages de [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Pour plus d'informations sur l'accès et la disponibilité de la documentation sur les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] et des ouvrages de [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, contactez :  
   
  Recording for the Blindal & Dyslexic, Inc. 20 Roszel Road Princeton, NJ 08540  

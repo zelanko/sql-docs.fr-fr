@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228202"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configuration de la sauvegarde managée de SQL Server sur Azure pour les groupes de disponibilité
@@ -27,7 +27,7 @@ ms.locfileid: "75228202"
   
 -   Bande passante réseau : cela s’applique aux implémentations où les réplicas se trouvent dans des emplacements physiques différents, comme dans un Cloud hybride, ou dans des régions Azure différentes dans une configuration Cloud uniquement. La bande passante réseau peut affecter la latence des serveurs secondaires, et si les serveurs secondaires sont configurés avec la réplication synchrone, cela peut entraîner une croissance du journal sur le serveur principal. Si les serveurs secondaires utilisent la réplication synchrone, il est possible qu'ils n'arrivent pas à garder le pas en raison du temps de réponse du réseau, ce qui peut entraîner une perte de données en cas de basculement vers le réplica secondaire.  
   
-### <a name="configuring-includess_smartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>Configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour les bases de données de disponibilité  
+### <a name="configuring-ss_smartbackup-for-availability-databases"></a>Configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour les bases de données de disponibilité  
  **Autorisations**  
   
 -   Requiert l’appartenance au rôle de base de données **db_backupoperator** , avec les autorisations `EXECUTE` **ALTER ANY CREDENTIAL** et les autorisations sur **sp_delete_backuphistory**procédure stockée.  
@@ -57,7 +57,7 @@ ms.locfileid: "75228202"
   
 -   Spécifiez le réplica de sauvegarde. Le paramètre du réplica de sauvegarde par défaut est utilisé par la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour planifier les sauvegardes. Pour déterminer si le réplica actuel est le réplica de sauvegarde par défaut, utilisez la fonction [sys. fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) .  
   
--   Si le réplica secondaire est configuré comme réplica par défaut, il doit avoir au moins un accès à la connexion en lecture seule. Les groupes de disponibilité qui n'ont pas d'accès à la connexion sur les bases de données secondaires ne sont pas pris en charge.  Pour plus d’informations, consultez [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+-   Si le réplica secondaire est configuré comme réplica par défaut, il doit avoir au moins un accès à la connexion en lecture seule. Les groupes de disponibilité qui n'ont pas d'accès à la connexion sur les bases de données secondaires ne sont pas pris en charge.  Pour plus d’informations, consultez [configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   Si vous configurez la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] après avoir configuré le groupe de disponibilité, la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tentera de copier toutes les sauvegardes existantes sur le conteneur de stockage.  Si la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] n'arrive pas à trouver ou à accéder aux sauvegardes existantes, elle planifiera une sauvegarde de bases de données complète. Cela vise précisément à optimiser les opérations de sauvegarde pour les bases de données d'un groupe de disponibilité.  
   
@@ -65,15 +65,14 @@ ms.locfileid: "75228202"
   
 -   Lorsque vous utilisez le chiffrement, utilisez le même certificat sur tous les réplicas. Cela permet des opérations de sauvegarde continues et ininterrompues en cas de basculement ou de restauration sur un réplica différent.  
   
-#### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>Activer et configurer la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données de disponibilité  
+#### <a name="enable-and-configure-ss_smartbackup-for-an-availability-database"></a>Activer et configurer la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données de disponibilité  
  Ce didacticiel décrit les étapes d'activation et de configuration de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données (AGTestDB) sur les ordinateurs Node1 et Node2, puis les étapes d'activation de la surveillance de l'état d'intégrité de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
 1.  **Créez un compte de stockage Azure :** Les sauvegardes sont stockées dans le service de stockage d’objets BLOB Azure. Vous devez d’abord créer un compte de stockage Azure, si vous n’en avez pas déjà un. Pour plus d’informations, consultez [création d’un compte de stockage Azure](https://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Notez le nom du compte de stockage, les clés d'accès et l'URL du compte de stockage. Le nom du compte de stockage et les informations de clé d'accès sont utilisés pour créer un objet contenant les informations d'identification SQL. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se sert des informations d'identification SQL pour authentifier le compte de stockage pendant les opérations de sauvegarde.  
   
 2.  **Créer des informations d’identification SQL :** Créez des informations d’identification SQL en utilisant le nom du compte de stockage comme identité et la clé d’accès de stockage comme mot de passe.  
   
-3.  **Assurez-vous SQL Server Agent Service est démarré et en cours d’exécution :** Démarrez SQL Server Agent s’il n’est pas en cours d’exécution. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de l'Agent SQL, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
+3.  **Vérifiez que le service SQL Server Agent est démarré et exécuté** . Démarrez SQL Server Agent s'il n'est pas exécuté actuellement. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nécessite l'exécution de SQL Server Agent sur l'instance pour effectuer les opérations de sauvegarde.  Vous pouvez configurer l'exécution automatique de l'Agent SQL, pour vous assurer que les opérations de sauvegarde se déroulent régulièrement.  
   
 4.  **Déterminez la période de rétention :** Déterminez la période de rétention souhaitée pour les fichiers de sauvegarde. La période de rétention est spécifiée en jours, sur une plage de 1 à 30. Elle détermine le délai de récupérabilité de la base de données.  
   
@@ -115,8 +114,7 @@ ms.locfileid: "75228202"
   
     ```  
   
-     
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est maintenant activée sur la base de données spécifiée. Un délai de 15 minutes au maximum peut être nécessaire pour le démarrage des opérations de sauvegarde sur la base de données. La sauvegarde aura lieu sur le réplica de sauvegarde par défaut.  
+     [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est maintenant activée sur la base de données spécifiée. Un délai de 15 minutes au maximum peut être nécessaire pour le démarrage des opérations de sauvegarde sur la base de données. La sauvegarde aura lieu sur le réplica de sauvegarde par défaut.  
   
 8.  **Passez en revue la configuration par défaut des événements étendus :**  Passez en revue la configuration des événements étendus en exécutant l’instruction Transact-SQL suivante [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur le réplica qui utilise pour planifier les sauvegardes à partir de. Il s'agit généralement des paramètres du réplica de sauvegarde par défaut pour le groupe de disponibilité auquel appartient la base de données.  
   
@@ -126,13 +124,13 @@ ms.locfileid: "75228202"
   
      Les événements du canal d'administration, opérationnel et analytique doivent être activés par défaut et ne doivent pas pouvoir être désactivés. Cela est en principe suffisant pour surveiller les événements qui nécessitent une intervention manuelle.  Vous pouvez activer les événements de débogage, mais ces canaux comprennent des événements d'information et de débogage que la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] utilise pour détecter et résoudre les problèmes. Pour plus d’informations, consultez [Monitor SQL Server Managed Backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
-9. **Activer et configurer la notification pour l’état d’intégrité :** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] contient une procédure stockée qui crée un travail de l’agent pour envoyer des notifications par courrier électronique d’erreurs ou d’avertissements susceptibles de nécessiter votre attention.  Pour recevoir ces notifications, vous devez activer l'exécution de la procédure stockée qui crée un travail SQL Server Agent. Les étapes suivantes décrivent la procédure d'activation et de configuration des notifications par courrier électronique :  
+9. **Activez et configurez les notifications de l’état d’intégrité :** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] fournit une procédure stockée qui crée un travail d’agent pour envoyer des notifications par e-mail des erreurs ou des avertissements susceptibles de nécessiter une intervention.  Pour recevoir ces notifications, vous devez activer l'exécution de la procédure stockée qui crée un travail SQL Server Agent. Les étapes suivantes décrivent la procédure d'activation et de configuration des notifications par courrier électronique :  
   
     1.  Configurez la messagerie de base de données si elle n'est pas déjà activée sur l'instance. Pour plus d'informations, consultez [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
     2.  Configurez la notification SQL Server Agent afin qu'elle utilise la messagerie de base de données. Pour plus d’informations, consultez [Configure SQL Server Agent mail to Use Database mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Activer les notifications par courrier électronique pour recevoir des erreurs et des avertissements de sauvegarde :** À partir de la fenêtre de requête, exécutez les instructions Transact-SQL suivantes :  
+    3.  **Activez les notifications par courrier électronique afin de recevoir les erreurs de sauvegarde et les avertissements :** dans la fenêtre de requête, exécutez les instructions Transact-SQL suivantes :  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -145,7 +143,7 @@ ms.locfileid: "75228202"
   
 10. **Affichez les fichiers de sauvegarde dans le compte de stockage Azure :** Connectez-vous au compte de stockage à partir de SQL Server Management Studio ou du Portail de gestion Azure. Vous verrez un conteneur pour l'instance de SQL Server qui héberge la base de données que vous avez configurée pour utiliser la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Vous pourrez voir aussi une base de données et une sauvegarde de journal 15 minutes après l'activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour la base de données.  
   
-11. **Surveiller l’état d’intégrité :**  Vous pouvez surveiller les notifications par courrier électronique que vous avez configurées précédemment ou surveiller activement les événements consignés. Voici quelques exemples d'instructions Transact SQL utilisées pour afficher les événements :  
+11. **Surveillez l’état d’intégrité :**  vous pouvez le surveiller au moyen des notifications par courrier électronique configurées précédemment, ou en surveillant activement les événements enregistrés. Voici quelques exemples d'instructions Transact SQL utilisées pour afficher les événements :  
   
     ```  
     --  view all admin events  

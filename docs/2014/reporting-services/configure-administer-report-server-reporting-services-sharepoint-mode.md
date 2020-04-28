@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74685346"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuration et administration d'un serveur de rapports (mode SharePoint de Reporting Services)
@@ -27,13 +27,13 @@ ms.locfileid: "74685346"
   
     -   [Gestionnaire des alertes de données pour les utilisateurs SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Créer et gérer des abonnements pour les serveurs de rapports en mode Sharepoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Mettre à jour les informations d'identification dans les sources de données de rapport à partir d'un site SharePoint](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
     -   [Gérer des datasets partagés](report-data/manage-shared-datasets.md)  
   
-    -   [Définir des paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
+    -   [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
     -   [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
@@ -43,13 +43,13 @@ ms.locfileid: "74685346"
   
 -   [Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
--   [Paramètres et fonctionnalités du site Reporting Services&#40;en mode SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
+-   [Paramètres et fonctions du site Reporting Services &#40;mode SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   
--   [Activer la fonctionnalité de File Sync du serveur de rapports dans l’administration centrale de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
+-   [Activer la fonctionnalité Synchronisation de fichiers de serveur de rapports dans l'Administration centrale de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
 -   [Ajouter des types de contenu de serveur de rapports à une bibliothèque &#40;Reporting Services en mode intégré SharePoint&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [Rapports en mode local et rapports en mode connecté dans la visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
 -   [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   

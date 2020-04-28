@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401193"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Télécharger et appliquer des mises à jour Microsoft pour Analytics Platform System
 Cette rubrique explique comment télécharger des mises à jour à partir du catalogue Microsoft Update vers Windows Server Update Services (WSUS) et appliquer ces mises à jour aux serveurs d’appliances système Analytics Platform. Microsoft Update installera toutes les mises à jour applicables pour Windows et SQL Server. WSUS est installé sur la machine virtuelle VMM de l’appliance.  
   
-## <a name="TOP"></a>Avant de commencer  
+## <a name="before-you-begin"></a><a name="TOP"></a>Avant de commencer  
   
 > [!WARNING]  
 > N’essayez pas d’appliquer les mises à jour si votre appliance ou un composant de l’appareil est en panne ou dans un État basculé. Dans ce cas, contactez le support technique pour obtenir de l’aide.  
 >   
 > N’appliquez pas les mises à jour Microsoft lorsque l’appliance est en cours d’utilisation. L’application de mises à jour peut entraîner le redémarrage des nœuds de l’appliance. Les mises à jour doivent être appliquées au cours d’une fenêtre de maintenance lorsque l’appliance n’est pas utilisée.  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
 Avant d’effectuer ces étapes, vous devez :  
   
 -   Configurez WSUS sur votre appareil en suivant les instructions de la procédure de [configuration de Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
@@ -35,9 +35,9 @@ Avant d’effectuer ces étapes, vous devez :
   
 -   Disposer d’une connexion disposant d’autorisations pour accéder à la console d’administration système Analytics Platform et afficher les informations d’état de l’appliance.  
   
--   Dans la plupart des cas, WSUS doit accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation, le système DNS de la plateforme d’analyse peut être configuré pour prendre en charge un redirecteur de nom externe qui permettra aux ordinateurs hôtes du système de la plateforme d’analyse et aux machines virtuelles d’utiliser des serveurs DNS externes pour résoudre les noms en dehors de 5200. Pour plus d’informations, consultez [utiliser un redirecteur DNS pour résoudre les noms DNS non-Appliance &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Dans la plupart des cas, WSUS doit accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation, le système DNS de la plateforme d’analyse peut être configuré pour prendre en charge un redirecteur de nom externe qui permettra aux ordinateurs hôtes du système de plateforme d’analyse et aux machines virtuelles d’utiliser des serveurs DNS externes pour résoudre les noms en dehors de l’appliance. Pour plus d’informations, consultez [utiliser un redirecteur DNS pour résoudre les noms DNS non-Appliance &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
-## <a name="bkmk_ImportUpdates"></a>Pour télécharger et appliquer des mises à jour Microsoft  
+## <a name="to-download-and-apply-microsoft-updates"></a><a name="bkmk_ImportUpdates"></a>Pour télécharger et appliquer des mises à jour Microsoft  
   
 #### <a name="verify-the-appliance-state-indicators"></a>Vérifier les indicateurs d’état de l’appliance  
   
@@ -139,7 +139,7 @@ Avant d’effectuer ces étapes, vous devez :
   
 2.  Vérifiez que les colonnes **cluster** et **réseau** affichent le vert (ou na) pour tous les nœuds. Si des alertes se trouvent dans l’une de ces colonnes, l’appliance peut ne pas être en mesure d’installer les mises à jour correctement. Contactez le support technique s’il existe des alertes critiques.  
   
-## <a name="RunUpdateWizard"></a>Exécuter le programme de mise à jour  
+## <a name="run-the-update-program"></a><a name="RunUpdateWizard"></a>Exécuter le programme de mise à jour  
 Suivez ces instructions pour exécuter le programme de mise à jour du système Analytics Platform.  
   
 > [!NOTE]  

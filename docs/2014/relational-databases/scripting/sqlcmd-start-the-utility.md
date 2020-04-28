@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243271"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Démarrer l'utilitaire sqlcmd
@@ -24,15 +24,15 @@ ms.locfileid: "75243271"
 >  L'authentification Windows est le mode d'authentification par défaut pour `sqlcmd`. Pour utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez spécifier un nom d’utilisateur et un mot de passe en utilisant les options **-U** et **-P** .  
   
 > [!NOTE]  
->  Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] s’installe en tant qu’instance nommée **sqlexpress**.  
+>   Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] s'installe en tant qu'instance nommée **sqlexpress**.  
   
  Si vous ne vous êtes pas connecté préalablement à cette instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vous devez configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour accepter les connexions.  
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>Pour démarrer l'utilitaire sqlcmd et établir une connexion à une instance par défaut de SQL Server  
   
-1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans la zone **Ouvrir** , tapez **cmd**, puis cliquez sur **OK** pour ouvrir une fenêtre d'invite de commandes.  
+1.  Dans le menu **Démarrer** , cliquez sur **exécuter**. Dans la zone **Ouvrir** , tapez **cmd**, puis cliquez sur **OK** pour ouvrir une fenêtre d'invite de commandes.  
   
-2.  Dans l’invite de commandes, tapez `sqlcmd`.  
+2.  À l’invite de commandes, tapez `sqlcmd`.  
   
 3.  Appuyez sur Entrée.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75243271"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>Pour démarrer l'utilitaire sqlcmd et établir une connexion à une instance nommée de SQL Server  
   
-1.  Ouvrez une fenêtre d’invite de commandes, `sqlcmd -S`puis tapez *myServer\instanceName*. Remplacez *mon_serveur\nom_instance* par le nom de l’ordinateur et de l’instance de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous souhaitez vous connecter.  
+1.  Ouvrez une fenêtre d’invite de commandes, `sqlcmd -S`puis tapez *myServer\instanceName*. Remplacez *mon_serveur\nom_instance[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le nom de l’ordinateur et de l’instance de* à laquelle vous souhaitez vous connecter.  
   
 2.  Appuyez sur Entrée.  
   

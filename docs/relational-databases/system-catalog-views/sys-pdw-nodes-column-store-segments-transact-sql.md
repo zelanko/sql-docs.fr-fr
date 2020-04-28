@@ -14,10 +14,10 @@ ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401670"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-SQL)
@@ -32,7 +32,7 @@ Contient une ligne pour chaque colonne dans un index columnstore.
 | **hobt_id**                 | **bigint** | ID du segment ou de l'index d'arbre B (B-tree) pour la table ayant cet index columnstore. |
 | **column_id**               | **int**    | ID de la colonne columnstore.                                |
 | **segment_id**              | **int**    | Retourne le segment de la colonne. Pour la compatibilité descendante, le nom de colonne continue d’être appelé segment_id même s’il s’agit de l’ID rowgroup. Vous pouvez identifier un segment de manière unique à l’aide de <hobt_id, partition_id, column_id>, <segment_id>. |
-| **Version**                 | **int**    | Version du format de segment de colonne.                        |
+| **version**                 | **int**    | Version du format de segment de colonne.                        |
 | **encoding_type**           | **int**    | Type d’encodage utilisé pour ce segment :<br /><br /> 1 = VALUE_BASED non chaîne/binaire sans dictionnaire (semblable à 4 avec certaines variations internes)<br /><br /> 2 = VALUE_HASH_BASED-colonne non chaîne/binaire avec des valeurs communes dans le dictionnaire<br /><br /> 3 = STRING_HASH_BASED-chaîne/colonne binaire avec des valeurs communes dans le dictionnaire<br /><br /> 4 = STORE_BY_VALUE_BASED-non-chaîne/binaire sans dictionnaire<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED chaîne/binaire sans dictionnaire<br /><br /> Tous les encodages tirent parti de l’encodage de bits et de la longueur d’exécution lorsque cela est possible. |
 | **row_count**               | **int**    | Nombre de lignes dans le groupe de lignes.                             |
 | **has_nulls**               | **int**    | 1 si le segment de colonne a des valeurs NULL.                     |
@@ -47,7 +47,7 @@ Contient une ligne pour chaque colonne dans un index columnstore.
 | **pdw_node_id**             | **int**    | Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud. |
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Joindre sys. pdw_nodes_column_store_segments avec d’autres tables système pour déterminer le nombre de segments ColumnStore par table logique.
 
@@ -82,11 +82,11 @@ ORDER BY    table_nm
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l’autorisation **View Server State** .
+Nécessite l’autorisation **VIEW SERVER STATE**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Affichages catalogue de la SQL Data Warehouse et des Data Warehouse parallèles](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-[CRÉER un INDEX COLUMNSTORE &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
 [sys. pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
 [sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

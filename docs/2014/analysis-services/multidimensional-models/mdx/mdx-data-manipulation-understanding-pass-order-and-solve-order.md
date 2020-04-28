@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229428"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Présentation des concepts d'ordre de passage et d'ordre de résolution (MDX)
@@ -92,7 +92,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Différence d’année**|($20,160.56)|$2,878.06|  
+|**Year Difference**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>Requête 2 : pourcentage de revenus après dépenses  
  Pour la seconde requête, calculez le pourcentage de revenus après dépenses pour chaque année à l'aide de la requête MDX suivante :  
@@ -149,14 +149,13 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- Dans cet exemple de requête MDX combinée, `Profit Margin` a l’ordre de résolution le plus élevé ; il est donc prioritaire quand les deux expressions interagissent. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue la cellule en question à l’aide de la formule `Profit Margin` . Le tableau suivant présente les résultats de ces calculs imbriqués.  
+ Dans cet exemple de requête MDX combinée, `Profit Margin` a l’ordre de résolution le plus élevé ; il est donc prioritaire quand les deux expressions interagissent. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évalue la cellule en question à l’aide de la formule `Profit Margin` . Le tableau suivant présente les résultats de ces calculs imbriqués.  
   
 ||Internet Sales Amount|Internet Total Product Cost|Marge de bénéfice|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Différence d’année**|($20,160.56)|$2,878.06|114.28%|  
+|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
   
  Le résultat mentionné dans la cellule partagée est basé sur la formule de `Profit Margin`. Autrement dit, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calcule le résultat de la cellule partagée avec les données `Year Difference` , ce qui donne la formule suivante (le résultat est arrondi pour plus de clarté) :  
   
@@ -196,7 +195,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Différence d’année**|($20,160.56)|$2,878.06|(0.15%)|  
+|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
   
  Comme cette requête utilise la formule `Year Difference` avec les données `Profit Margin` , la formule de la cellule partagée ressemble au calcul suivant :  
   
@@ -217,5 +216,5 @@ FROM [Adventure Works]
  [CalculationCurrentPass&#41;MDX &#40;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue&#41;MDX &#40;](/sql/mdx/calculationpassvalue-mdx)   
  [Instruction CREATe MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Manipulation de données &#40;&#41;MDX](mdx-data-manipulation-manipulating-data.md)  
+ [Manipulation de données &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   

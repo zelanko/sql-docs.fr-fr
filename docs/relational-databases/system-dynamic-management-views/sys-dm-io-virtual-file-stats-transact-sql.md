@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412838"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
@@ -57,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NUL
 
- **s’applique à :** SQL Server (à partir de 2008), Azure SQL Database
+ **S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
 
  ID de la base de données. *database_id* est de type int, sans valeur par défaut. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL. Lorsque vous spécifiez la valeur NULL, toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont renvoyées.  
   
@@ -65,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NUL
 
-**s’applique à :** SQL Server (à partir de 2008), Azure SQL Database
+**S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
  
 ID du fichier. *file_id* est de type int, sans valeur par défaut. Les entrées autorisées sont l'ID d'un fichier ou la valeur NULL. Lorsque vous spécifiez la valeur NULL, tous les fichiers de la base de données sont renvoyés.  
   
@@ -78,7 +78,7 @@ ID du fichier. *file_id* est de type int, sans valeur par défaut. Les entrées 
 |**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il s’agit du nom de la base de données stockée sur le nœud identifié par pdw_node_id. Chaque nœud possède une base de données tempdb qui contient 13 fichiers. Chaque nœud possède également une base de données par distribution, et chaque base de données de distribution contient 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats affichent 20 fichiers de base de données de distribution par pdw_node_id. 
 |**database_id**|**smallint**|ID de la base de données.|  
 |**file_id**|**smallint**|ID du fichier.|  
-|**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données **** est int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] pour jusqu’à[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données **int** est int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] pour jusqu’à[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Nombre de lectures effectuées sur le fichier.|  
 |**num_of_bytes_read**|**bigint**|Nombre total d'octets lus sur ce fichier.|  
 |**io_stall_read_ms**|**bigint**|Durée totale (en millisecondes) d'attente des utilisateurs pour les lectures effectuées sur le fichier.|  
@@ -90,7 +90,7 @@ ID du fichier. *file_id* est de type int, sans valeur par défaut. Les entrées 
 |**file_handle**|**varbinary**|Descripteur de fichier Windows pour ce fichier.|  
 |**io_stall_queued_read_ms**|**bigint**|**Ne s’applique pas à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]à.<br /><br /> Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les lectures. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Ne s’applique pas à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]à.<br /><br />  Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les écritures. N'accepte pas la valeur NULL.|
-|**pdw_node_id**|**int**|**S’applique à :**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud de la distribution.
+|**pdw_node_id**|**int**|**S’applique à :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud de la distribution.
  
 ## <a name="remarks"></a>Notes
 Les compteurs sont initialisés à vide chaque fois que le service SQL Server (MSSQLSERVER) est démarré.
@@ -122,9 +122,9 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 ```
 
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I O fonctions et vues de gestion dynamique associées &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

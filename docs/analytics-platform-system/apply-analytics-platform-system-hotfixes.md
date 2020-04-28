@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401375"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Appliquer des correctifs logiciels Analytics Platform System
@@ -27,14 +27,14 @@ Cet article explique comment appliquer des correctifs au logiciel système de la
 > [!WARNING]  
 > N’appliquez pas de correctif logiciel de plateforme d’analyse lorsque l’appareil est en cours d’utilisation. L’application d’un correctif peut entraîner le redémarrage des nœuds de l’appliance. Le correctif doit être appliqué au cours d’une fenêtre de maintenance lorsque l’appareil n’est pas utilisé.  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
 Pour effectuer ces étapes, vous aurez besoin des éléments suivants :  
   
 -   Une connexion Analytics Platform System avec des autorisations pour accéder à la console d’administration afin de surveiller l’état de l’appliance. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
 -   Connaissance du compte d’administrateur de domaine de l’infrastructure pour se connecter au nœud _<domain_name>_ **-HST01** .  
   
-## <a name="HowToInstallPDW"></a>Pour appliquer un correctif logiciel de plateforme d’analyse  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>Pour appliquer un correctif logiciel de plateforme d’analyse  
 Contrairement aux mises à jour Microsoft, les correctifs logiciels pour le logiciel système de la plateforme d’analyse ne sont pas gérés par le biais de WSUS. Ils disposent d’un flux de travail différent et sont installés en exécutant un package de correctifs.  
   
 1.  **Vérifiez les indicateurs d’état de l’appliance.**  

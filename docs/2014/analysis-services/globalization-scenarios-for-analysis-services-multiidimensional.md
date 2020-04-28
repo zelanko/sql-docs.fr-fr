@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75225386"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scénarios de globalisation pour données multidimensionnelles Analysis Services
@@ -36,7 +36,7 @@ ms.locfileid: "75225386"
   
 -   Les métadonnées, telles que les noms d'objets, les identificateurs et les descriptions, peuvent également être dans n'importe quel(le) langue et script Unicode. Cela est vrai même quand les outils et l'environnement sont dans une autre langue. Par exemple, dans un environnement de développement qui utilise la langue anglaise et un classement Latin dans toute la pile, vous pouvez inclure dans votre modèle un objet dont le nom contient des caractères cyrilliques.  
   
-     Pour les modèles multidimensionnels uniquement, les légendes et les membres d'attributs peuvent être exprimés comme des traductions. Vous pouvez définir une ou plusieurs traductions, puis utiliser un identificateur de paramètres régionaux pour déterminer la traduction retournée au client. Pour plus d’informations, consultez les [fonctionnalités](#bkmk_features) ci-dessous.  
+     Pour les modèles multidimensionnels uniquement, les légendes et les membres d'attributs peuvent être exprimés comme des traductions. Vous pouvez définir une ou plusieurs traductions, puis utiliser un identificateur de paramètres régionaux pour déterminer la traduction retournée au client. Pour plus d'informations, consultez [Fonctionnalités](#bkmk_features) plus loin dans cet article.  
   
 -   Les messages d'erreur, d'avertissement et d'information retournés par le moteur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (msmdsrv) sont traduits dans les 43 langues prises en charge par Office et Office 365. Aucune configuration n'est requise pour obtenir les messages dans une langue spécifique. Les paramètres régionaux de l'application cliente déterminent quelles chaînes sont retournées.  
   
@@ -54,9 +54,8 @@ ms.locfileid: "75225386"
   
 -   Les environnements de développement et de production sont géolocalisés dans différents pays. Il est de plus en plus courant de développer une solution dans un pays, puis de la déployer dans un autre. Savoir comment définir les propriétés de langue et de classement est essentiel si vous êtes chargé de la préparation d'une solution développée dans une langue et devant être déployée sur un serveur qui utilise un module linguistique différent. Définir ces propriétés vous permet de remplacer les valeurs par défaut héritées du système hôte d'origine. Pour plus d’informations, consultez la section [Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  
   
-##  <a name="bkmk_features"></a>Fonctionnalités de création d’une solution multidimensionnelle globalisée  
- 
-  [!INCLUDE[applies](../includes/applies-md.md)] Modèles de données multidimensionnels uniquement  
+##  <a name="features-for-building-a-globalized-multidimensional-solution"></a><a name="bkmk_features"></a>Fonctionnalités de création d’une solution multidimensionnelle globalisée  
+ [!INCLUDE[applies](../includes/applies-md.md)] Modèles de données multidimensionnels uniquement  
   
  Au niveau du client, les applications globalisées qui consomment ou manipulent des données multidimensionnelles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent utiliser les fonctionnalités multilingues et multiculturelles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
@@ -73,11 +72,11 @@ ms.locfileid: "75225386"
 |[Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Spécifiez la langue par défaut et le classement Windows pour une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vos choix affectent les données et les métadonnées gérées par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Traductions &#40;Analysis Services&#41;](translations-analysis-services.md)|Définissez des traductions pour une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et des objets contenus dans la base de données. Cette rubrique explique comment [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] résout les demandes de données et de métadonnées traduites envoyées par les applications clientes.|  
 |[Conversions monétaires &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Définissez une conversion monétaire à l'aide de l'Assistant Business Intelligence.|  
-|[Conseils de globalisation et meilleures pratiques &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Passe en revue plusieurs pratiques de conception et de codage qui peuvent vous aider à éviter les problèmes liés aux données multilingues.|  
+|[Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Passe en revue plusieurs pratiques de conception et de codage qui peuvent vous aider à éviter les problèmes liés aux données multilingues.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Internationalisation pour les applications Windows](/windows/desktop/Intl/international-support)   
  [Documentation de la globalisation Microsoft](/globalization/)   
  [Écriture d’applications du Windows Store avec la conception adaptative basée sur les paramètres régionaux](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Développement d’applications Windows universelles avec C# et XAML](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Développement d'applications Windows universelles avec C# et XAML](https://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

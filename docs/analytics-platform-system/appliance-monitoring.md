@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401423"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Surveillance de l’appliance pour Analytics Platform System
 Ce guide de surveillance de l’appliance décrit les outils et les tâches permettant de surveiller l’appliance Analytics Platform System.  
   
-## <a name="Basics"></a>Outils de base et outils de surveillance  
+## <a name="monitoring-basics-and-tools"></a><a name="Basics"></a>Outils de base et outils de surveillance  
 Les valeurs et les informations qui peuvent être surveillées sur l’appareil SQL Server PDW sont étendues. Par exemple, les tâches de surveillance classiques sont les suivantes :  
   
 -   Recherchez les alertes émises par SQL Server PDW.  
@@ -38,7 +38,7 @@ Les valeurs et les informations qui peuvent être surveillées sur l’appareil 
 Plusieurs outils sont disponibles pour surveiller l’appliance.  
   
 Console Administration  
-SQL Server PDW dispose d’une console d’administration. Il s’agit d’un outil basé sur le Web qui affiche des informations sur les requêtes, les chargements, les sauvegardes et les restaurations, les verrous, les sessions, les alertes et l’état de l’appareil. La console d’administration s’exécute sur l’appliance. les utilisateurs se connectent à la console d’administration via Internet Explorer. Pour plus d'informations, consultez les pages suivantes :  
+SQL Server PDW dispose d’une console d’administration. Il s’agit d’un outil basé sur le Web qui affiche des informations sur les requêtes, les chargements, les sauvegardes et les restaurations, les verrous, les sessions, les alertes et l’état de l’appareil. La console d’administration s’exécute sur l’appliance. les utilisateurs se connectent à la console d’administration via Internet Explorer. Pour plus d’informations, voir :  
   
 -   [Surveiller l’appliance à l’aide de la console d’administration &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
@@ -61,7 +61,7 @@ Si votre solution de surveillance ne prend pas en\-charge les requêtes Transact
   
 -   [Exemple d’analyse de Power Shell pour SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>Tâches d’analyse associées  
+## <a name="related-monitoring-tasks"></a><a name="Tasks"></a>Tâches d’analyse associées  
   
 |Tâche d’analyse|Description|  
 |-------------------|---------------|  

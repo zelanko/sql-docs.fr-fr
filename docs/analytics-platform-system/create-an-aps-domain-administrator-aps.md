@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401232"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Créer un administrateur de domaine APS
@@ -26,7 +26,7 @@ Pour disposer des autorisations suffisantes pour configurer tous les nœuds APS,
   
 1.  Connectez-vous au nœud AD actif **(_domaine d’appliance\__-ad01** ou domaine d' ** _Appliance\__-AD02**) à l’aide d’un compte d’administrateur de domaine d’appliance existant.  
   
-2.  Dans le menu Démarrer, cliquez sur **exécuter**. Dans la zone **ouvrir** , tapez **DSA. msc**. Cliquez sur **OK**.  
+2.  Dans le menu Démarrer, cliquez sur **Exécuter**. Dans la zone **ouvrir** , tapez **DSA. msc**. Cliquez sur **OK**.  
   
 3.  Dans le programme **Active Directory les utilisateurs et les ordinateurs** , cliquez avec le bouton droit sur **utilisateurs**, pointez sur **nouveau**, puis cliquez sur **utilisateur**.  
   

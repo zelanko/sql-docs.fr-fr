@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401263"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Configurer des Data Warehouse parallèles pour les copies de tables distantes
@@ -28,7 +28,7 @@ Pour configurer SQL Server PDW pour utiliser la copie de table distante, vous de
   
 -   Connaissez le nom d’hôte ou le nom IP du serveur de destination.  
   
-## <a name="HowToPDW"></a>Configurer SQL Server PDW pour la copie de table distante : mettre à jour les noms d’hôte dans DNS  
+## <a name="configure-sql-server-pdw-for-remote-table-copy-update-host-names-in-dns"></a><a name="HowToPDW"></a>Configurer SQL Server PDW pour la copie de table distante : mettre à jour les noms d’hôte dans DNS  
 L’instruction **Create Remote table** , utilisée pour les copies de tables distantes, spécifie le serveur de destination à l’aide de l’adresse IP ou du nom d’adresse IP du système Windows SMP. Pour utiliser le nom IP, vous devez ajouter des entrées pour la résolution de noms réussie au serveur DNS.  
   
 Les étapes suivantes décrivent comment mettre à jour le serveur DNS.  

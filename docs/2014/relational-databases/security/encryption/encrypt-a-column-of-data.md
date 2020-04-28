@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957200"
 ---
 # <a name="encrypt-a-column-of-data"></a>Chiffrer une colonne de données
@@ -29,13 +29,13 @@ ms.locfileid: "74957200"
   
      [Sécurité](#Security)  
   
--   [Pour chiffrer une colonne de données à l’aide de Transact-SQL](#TsqlProcedure)  
+-   [Pour chiffrer une colonne de données à l'aide de Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations suivantes sont nécessaires pour effectuer les étapes ci-dessous :  
   
 -   Autorisation CONTROL sur la base de données.  
@@ -46,7 +46,7 @@ ms.locfileid: "74957200"
   
 -   Autorisation sur la clé, et l'autorisation VIEW DEFINITION ne doit pas lui avoir été refusée.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Pour chiffrer une colonne de données à l'aide d'un chiffrement symétrique simple  
   

@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412847"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -86,16 +86,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |«**QueueReader**»|Travail de l'Agent de lecture de la file d'attente de réplication|  
 |«**ANALYSISQUERY**»|Requête Analysis Services (MDX, DMX).|  
 |«**ANALYSISCOMMAND**»|Commande Analysis Services (XMLA).|  
-|«**DTS**»|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]exécution du package|  
-|«**PowerShell**»|Script PowerShell|  
-|'**Tsql**' (valeur par défaut)|[!INCLUDE[tsql](../../includes/tsql-md.md)]gestion|  
+|«**DTS**»|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Exécution du package|  
+|«**PowerShell**»|script PowerShell|  
+|'**Tsql**' (valeur par défaut)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
 `[ @command = ] 'command'`Commandes qui doivent être exécutées par le service **SQLServerAgent** par le biais du *sous-système*. la *commande* est de type **nvarchar (max)**, avec NULL comme valeur par défaut. L'Agent SQL Server effectue une substitution de jetons qui offre la même souplesse que les variables lorsque vous écrivez des logiciels.  
   
 > [!IMPORTANT]  
 >  Une macro d’échappement doit désormais accompagner tous les jetons utilisés dans les étapes de travail, sinon ces étapes de travail échouent. De plus, vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Par exemple :  
 >   
->  `$(ESCAPE_`*nom* de la macro`(DATE))`  
+>  `$(ESCAPE_` *macro name* `(DATE))`  
   
  Pour plus d’informations sur ces jetons et la mise à jour de vos étapes de travail afin d’utiliser la nouvelle syntaxe de jeton, consultez [utiliser des jetons dans les étapes de travail](../../ssms/agent/use-tokens-in-job-steps.md).  
   
@@ -114,7 +114,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |-----------|----------------------------|  
 |**1** (par défaut)|Quitter avec succès|  
 |**2**|Quitter avec échec|  
-|**1,3**|Passez à l'étape suivante|  
+|**3**|Passez à l'étape suivante|  
 |**4**|Aller à l’étape *on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`ID de l’étape du travail à exécuter si l’étape se déroule correctement et que *success_action* a la valeur **4**. *success_step_id* est de **type int**, avec **0**comme valeur par défaut.  
@@ -125,7 +125,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |-----------|----------------------------|  
 |**1**|Quitter avec succès|  
 |**2** (par défaut)|Quitter avec échec|  
-|**1,3**|Passez à l'étape suivante|  
+|**3**|Passez à l'étape suivante|  
 |**4**|Aller à l’étape *on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`ID de l’étape de ce travail à exécuter si l’étape échoue et *fail_action* a la valeur **4**. *fail_step_id* est de **type int**, avec **0**comme valeur par défaut.  
@@ -148,11 +148,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0** (par défaut)|Écrasement du fichier de sortie|  
+|**0** (valeur par défaut)|Écrasement du fichier de sortie|  
 |**2**|Ajout au fichier de sortie|  
 |**4**|Écriture de la sortie de l'étape d'un travail [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l'historique des étapes.|  
 |**version8**|Écriture du journal dans la table (remplace l'historique existant)|  
-|**16**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
+|**16bits**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
 |**32**|Écriture de toute la sortie dans l'historique des travaux|  
 |**64**|Création d'un événement Windows à utiliser comme signal pour l'étape de travail Cmd à abandonner|  
   
@@ -184,7 +184,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Le créateur de l'étape de travail doit disposer des droits d'accès au proxy pour cette étape. Les membres du rôle serveur fixe **sysadmin** ont accès à tous les proxys. Pour les autres utilisateurs, les droits d'accès à un proxy doivent être octroyés explicitement.  
   

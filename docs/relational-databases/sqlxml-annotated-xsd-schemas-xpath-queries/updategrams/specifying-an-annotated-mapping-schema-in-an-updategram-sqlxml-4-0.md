@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243569"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
@@ -47,7 +47,7 @@ ms.locfileid: "75243569"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l’aide des exemples suivants, vous devez respecter les exigences spécifiées dans la [Configuration requise pour l’exécution d’exemples SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>R. Création d'un code de mise à jour avec un schéma de mappage simple  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Création d'un code de mise à jour avec un schéma de mappage simple  
  Le schéma XSD suivant (SampleSchema. Xml) est un schéma de mappage qui mappe l' ** \<élément Customer>** à la table Sales. Customer :  
   
 ```  
@@ -236,11 +236,9 @@ ms.locfileid: "75243569"
   
  Cet exemple suppose que les tables suivantes se trouvent dans la base de données **tempdb** :  
   
--   
-  `Cust (CustomerID, CompanyName)`, où `CustomerID` est la clé primaire  
+-   `Cust (CustomerID, CompanyName)`, où `CustomerID` est la clé primaire  
   
--   
-  `Ord (OrderID, CustomerID)`, où `CustomerID` est une clé étrangère qui fait référence à la clé primaire `CustomerID` dans la table `Cust`.  
+-   `Ord (OrderID, CustomerID)`, où `CustomerID` est une clé étrangère qui fait référence à la clé primaire `CustomerID` dans la table `Cust`.  
   
  Le code de mise à jour utilise le schéma XSD suivant pour insérer des enregistrements dans les tables Cust et Ord :  
   

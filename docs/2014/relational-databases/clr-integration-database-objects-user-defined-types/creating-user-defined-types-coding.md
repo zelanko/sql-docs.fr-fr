@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232237"
 ---
 # <a name="coding-user-defined-types"></a>Codage de types définis par l'utilisateur
@@ -65,12 +65,10 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>Spécification d'attributs  
  Les attributs déterminent la façon dont la sérialisation est utilisée pour construire la représentation de stockage des types définis par l'utilisateur et pour transmettre des types définis par l'utilisateur par valeur au client.  
   
- 
-  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` est obligatoire. L'attribut `Serializable` est facultatif. Vous pouvez également spécifier l'attribut `Microsoft.SqlServer.Server.SqlFacetAttribute` pour fournir des informations à propos du type de retour d'un type défini par l'utilisateur. Pour plus d’informations, consultez [Attributs personnalisés pour les routines CLR](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
+ L'attribut `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` est requis. L'attribut `Serializable` est facultatif. Vous pouvez également spécifier l'attribut `Microsoft.SqlServer.Server.SqlFacetAttribute` pour fournir des informations à propos du type de retour d'un type défini par l'utilisateur. Pour plus d’informations, consultez [Attributs personnalisés pour les routines CLR](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
 ### <a name="point-udt-attributes"></a>Attributs du type défini par l'utilisateur Point  
- L'attribut `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` définit le format de stockage pour le type défini par l'utilisateur `Point` à `Native`. 
-  `IsByteOrdered` a la valeur `true`, ce qui garantit que les résultats des comparaisons dans SQL Server sont les mêmes que si les comparaisons avaient eu lieu dans le code managé. Le type défini par l'utilisateur implémente l'interface `System.Data.SqlTypes.INullable` pour rendre le type défini par l'utilisateur compatible avec la valeur NULL.  
+ L'attribut `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` définit le format de stockage pour le type défini par l'utilisateur `Point` à `Native`. `IsByteOrdered` a la valeur `true`, ce qui garantit que les résultats des comparaisons dans SQL Server sont les mêmes que si les comparaisons avaient eu lieu dans le code managé. Le type défini par l'utilisateur implémente l'interface `System.Data.SqlTypes.INullable` pour rendre le type défini par l'utilisateur compatible avec la valeur NULL.  
   
  Le fragment de code suivant montre les attributs pour le type défini par l'utilisateur `Point`.  
   
@@ -291,8 +289,7 @@ public Int32 Y
 ## <a name="validating-udt-values"></a>Validation de valeurs de type défini par l'utilisateur  
  Lors de l'utilisation de données de type défini par l'utilisateur, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] convertit automatiquement les valeurs binaires en valeurs de type défini par l'utilisateur. Ce processus de conversion nécessite de vérifier que les valeurs sont adaptées au format de sérialisation du type et de s'assurer que la valeur peut être désérialisée correctement. Cela permet de garantir que la valeur peut être reconvertie au format binaire. Dans le cas des types définis par l'utilisateur ordonnés par octet, cela permet de s'assurer également que la valeur binaire résultante correspond à la valeur binaire d'origine. Cela empêche des valeurs non valides d'être rendues persistantes dans la base de données. Dans certains cas, ce niveau de contrôle peut être inadéquat. Une validation supplémentaire peut être requise lorsque les valeurs de type défini par l'utilisateur doivent se trouver dans un domaine ou une plage attendu(e). Par exemple, un type défini par l'utilisateur qui implémente une date peut exiger que la valeur de jour soit un nombre positif compris dans une certaine plage de valeurs valides.  
   
- La propriété `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` de l'attribut `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` vous permet de fournir le nom d'une méthode de validation exécutée par le serveur lorsque des données sont assignées à un type défini par l'utilisateur ou converties en un type défini par l'utilisateur. 
-  `ValidationMethodName` est également appelé pendant l'exécution de l'utilitaire bcp et des opérations BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, requête distribuée et RPC (Remote Procedure Call) TDS (Tabular Data Stream). La valeur par défaut de `ValidationMethodName` est Null, ce qui indique qu'il n'y a aucune méthode de validation.  
+ La propriété `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` de l'attribut `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` vous permet de fournir le nom d'une méthode de validation exécutée par le serveur lorsque des données sont assignées à un type défini par l'utilisateur ou converties en un type défini par l'utilisateur. `ValidationMethodName` est également appelé pendant l'exécution de l'utilitaire bcp et des opérations BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, requête distribuée et RPC (Remote Procedure Call) TDS (Tabular Data Stream). La valeur par défaut de `ValidationMethodName` est Null, ce qui indique qu'il n'y a aucune méthode de validation.  
   
 ### <a name="example"></a>Exemple  
  Le fragment de code suivant illustre la déclaration de la classe `Point`, qui spécifie un `ValidationMethodName` de `ValidatePoint`.  
@@ -566,8 +563,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Indique si la méthode est appelée lorsque des arguments d'entrée de référence nulle sont spécifiés. La valeur par défaut est `true`.  
   
 ### <a name="example"></a>Exemple  
- La propriété `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` vous permet de marquer une méthode qui autorise une modification de l'état d'une instance d'un type défini par l'utilisateur. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ne vous permet pas de définir deux propriétés de type défini par l'utilisateur dans la clause SET d'une instruction UPDATE. Toutefois, vous pouvez avoir une méthode marquée comme mutateur qui modifie les deux membres.  
+ La propriété `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` vous permet de marquer une méthode qui autorise une modification de l'état d'une instance d'un type défini par l'utilisateur. [!INCLUDE[tsql](../../includes/tsql-md.md)] ne vous permet pas de définir deux propriétés de type défini par l'utilisateur dans la clause SET d'une instruction UPDATE. Toutefois, vous pouvez avoir une méthode marquée comme mutateur qui modifie les deux membres.  
   
 > [!NOTE]  
 >  Les méthodes mutateurs ne sont pas autorisés dans les requêtes. Elles peuvent être appelées uniquement dans les instructions d'assignation ou les instructions de modification de données. Si une méthode marquée comme mutateur ne retourne pas `void` (ou n'est pas un `Sub` dans Visual Basic), CREATE TYPE échoue avec une erreur.  

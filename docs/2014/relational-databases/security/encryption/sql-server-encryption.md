@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957093"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
@@ -66,8 +66,8 @@ ms.locfileid: "74957093"
  Informations à jour sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [sys. key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [SQL Server et clés de chiffrement de base de données &#40;Moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243229"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Spécifier une condition de point d'arrêt
@@ -43,5 +43,5 @@ ms.locfileid: "75243229"
     >  Le débogueur n'évalue l'expression booléenne que lorsque le point d'arrêt est atteint pour la première fois. Si vous choisissez **a changé**, le débogueur ne considère pas la première évaluation comme une modification, donc il ne s’y arrête pas.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier un nombre d'accès](specify-a-hit-count.md)   
+ [Spécifier un nombre d’accès](specify-a-hit-count.md)   
  [Spécifier une action de point d’arrêt](specify-a-breakpoint-action.md)  

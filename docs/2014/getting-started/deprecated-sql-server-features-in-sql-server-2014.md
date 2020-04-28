@@ -11,16 +11,16 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228215"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
   
-## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>Fonctionnalités non prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="features-not-supported-in-the-next-version-of-ssnoversion"></a>Fonctionnalités non prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Les fonctionnalités suivantes du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ne seront pas prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours. La colonne Nom de la fonctionnalité apparaît dans les événements de suivi comme ObjectName, et dans les compteurs de performance et sys.dm_os_performance_counters comme nom_instance. L'ID de la fonctionnalité apparaît dans les événements de trace comme ObjectId.  
   
 |Category|Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957243"
 ---
 # <a name="create-a-database-master-key"></a>Créer une clé principale de base de données
@@ -29,17 +29,17 @@ Cette rubrique explique comment créer une clé principale de base de données `
 
   [Sécurité](#Security)
 
-- [Pour créer une clé principale de base de données à l’aide de Transact-SQL](#TsqlProcedure)
+- [Pour créer une clé principale de base de données à l'aide de Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Avant de commencer
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer
 
-### <a name="Security"></a> Sécurité
+### <a name="security"></a><a name="Security"></a> Sécurité
 
-#### <a name="Permissions"></a> Autorisations
+#### <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
 Requiert l'autorisation CONTROL sur la base de données.
 
-## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Pour créer une clé principale de base de données
 

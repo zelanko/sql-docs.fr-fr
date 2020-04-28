@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 2ae652f584ceaad62379256f822527a316c30f89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401736"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "74401736"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|ID d’objet de la table. Consultez [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **object_id** est la clé de cette vue.||  
-|state|**nvarchar (40)**|État du cache de la table répliquée pour cette table.|« Nochapy », « Ready »|  
+|state|**nvarchar(40)**|État du cache de la table répliquée pour cette table.|« Nochapy », « Ready »|  
   
 ## <a name="example"></a>Exemple
 Cet exemple joint sys. pdw_replicated_table_cache_state à sys. tables pour récupérer le nom de la table et l’état du cache de la table répliquée.

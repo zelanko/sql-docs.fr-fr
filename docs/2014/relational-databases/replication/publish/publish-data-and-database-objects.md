@@ -42,10 +42,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479324"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
@@ -197,7 +197,7 @@ ms.locfileid: "74479324"
   
 -   Pour les articles de publications utilisant les instantanés en mode caractère (utilisées pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les abonnés [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ) : le propriétaire est laissé vide par défaut. Le propriétaire prend les valeurs par défaut du propriétaire associé au compte utilisé par l'Agent de distribution ou l'Agent de fusion pour se connecter à l'Abonné.  
   
- Le propriétaire de l’objet peut être modifié par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md), [Définir un article](define-an-article.md) et [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md).  
+ Le propriétaire de l’objet peut être changé par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md), [Définir un article](define-an-article.md) et [Afficher et modifier les propriétés d’un article](view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publication de données sur les Abonnés exécutant des versions antérieures de SQL Server  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243155"
 ---
 # <a name="step-through-transact-sql-code"></a>Exécuter pas à pas du code Transact-SQL
@@ -51,9 +51,9 @@ ms.locfileid: "75243155"
   
 |Action|Procédure|  
 |------------|---------------|  
-|Exécuter toutes les instructions à partir de l'instruction actuelle jusqu'au point d'arrêt suivant|Dans le menu **Déboguer** , cliquez sur **Continuer**.<br /><br /> Dans la barre d’outils **Déboguer** , cliquez sur le bouton **Continuer** .|  
+|Exécuter toutes les instructions à partir de l'instruction actuelle jusqu'au point d'arrêt suivant|Dans le menu **Déboguer**, cliquez sur **Continuer**.<br /><br /> Dans la barre d’outils **Déboguer** , cliquez sur le bouton **Continuer** .|  
 |Effectuer un pas à pas détaillé dans l'instruction ou le module suivant|Dans le menu **Déboguer** , cliquez sur **pas à pas détaillé**.<br /><br /> Dans la barre d’outils **Déboguer** , cliquez sur le bouton **pas à pas détaillé** .<br /><br /> Appuyez sur F11.|  
-|Effectuer un pas à pas principal dans l'instruction ou le module suivant|Dans le menu **Déboguer** , cliquez sur **pas à pas principal**.<br /><br /> Dans la barre d’outils **Déboguer** , cliquez sur le bouton **pas à pas principal** .<br /><br /> Appuyez sur F10.|  
+|Effectuer un pas à pas principal dans l'instruction ou le module suivant|Dans le menu **Déboguer**, cliquez sur **Pas à pas principal**.<br /><br /> Dans la barre d’outils **Déboguer** , cliquez sur le bouton **pas à pas principal** .<br /><br /> Appuyez sur F10.|  
 |Effectuer un pas à pas sortant dans un module|Dans le menu **Déboguer** , cliquez sur **pas à pas sortant**.<br /><br /> Dans la barre d’outils **Déboguer** , cliquez sur le bouton **pas à pas sortant** .<br /><br /> Appuyez sur Maj+F11.|  
 |Exécuter le code jusqu'à l'emplacement du curseur actuel|Cliquez avec le bouton droit dans la fenêtre de l’éditeur de requête, puis cliquez sur **Exécuter jusqu’au curseur**.<br /><br /> Appuyez sur Ctrl+F10.|  
   

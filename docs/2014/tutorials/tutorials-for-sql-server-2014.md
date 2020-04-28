@@ -11,14 +11,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242056"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Didacticiels pour SQL Server 2014
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduit de nombreuses nouvelles technologies et fonctionnalités.  
   
  D'autres didacticiels sont à venir. En attendant, vous pouvez continuer à suivre les didacticiels de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] . Dans certains cas, vous constaterez des différences mineures entre l'interface utilisateur de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et celle de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , il peut également y avoir de légères variantes dans les composants requis pour les didacticiels. Si un didacticiel utilise l'une des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , vous devez télécharger et utiliser la version [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  

@@ -42,14 +42,13 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683604"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistance sur SQL Server
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose trois principales sources d'informations sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   La documentation installée comme une collection locale de documentation en ligne [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -60,7 +59,7 @@ ms.locfileid: "74683604"
   
  Si vous ne trouvez pas les informations que vous recherchez dans ces sources, vous pouvez poser des questions sur les forums et groupes de discussion de la communauté [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou présenter un cas de support à [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Documentation en ligne[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="ssnoversion-books-online"></a>Documentation en ligne[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  La documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aborde les concepts et les procédures requis pour l'utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La documentation en ligne inclut également des documents de référence sur les langages et les interfaces de programmation pour le stockage et l'extraction de données, la création de rapports et la modification de données à l'aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Vous pouvez accéder à la documentation en ligne des façons suivantes :  
@@ -78,7 +77,7 @@ ms.locfileid: "74683604"
   
  Le tableau suivant décrit ces sources d'information et les personnes à qui elles sont destinées.  
   
-|Ressource|Public|  
+|Ressource|Public visé|  
 |--------------|--------------|  
 |[Centre de développement SQL Server](https://msdn.microsoft.com/sqlserver/)|Les développeurs qui créent des bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], des systèmes de génération de rapports et des solutions de Business Intelligence, et qui font en sorte que leurs applications et leurs sites Web utilisent ces systèmes.|  
 |[XML Developer Center (en anglais)](https://go.microsoft.com/fwlink/?LinkId=42458)|Les créateurs de sites Web et les développeurs d'applications dont les sites et applications utilisent XML pour le stockage et la manipulation des données.|  
@@ -92,7 +91,7 @@ ms.locfileid: "74683604"
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fournit des informations d'avant-vente sur l'évaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'outil de stockage de données et de Business Intelligence.|  
 |[Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?LinkId=42461)|Fournit un référentiel dans lequel il est possible de chercher des articles sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rédigés par le support [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
   
- Les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] ont un cycle de vie de support qui détermine la durée du support pour chaque version Le support [!INCLUDE[msCoName](../includes/msconame-md.md)]  tient à jour une page qui définit le cycle de vie du support [!INCLUDE[msCoName](../includes/msconame-md.md)]. Cette page contient des liens vers d'autres pages qui indiquent la disponibilité du support pour les produits [!INCLUDE[msCoName](../includes/msconame-md.md)]. Pour plus d’informations, consultez [support Microsoft Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  
+ Les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] ont un cycle de vie de support qui détermine la durée du support pour chaque version Le support [!INCLUDE[msCoName](../includes/msconame-md.md)]  tient à jour une page qui définit le cycle de vie du support [!INCLUDE[msCoName](../includes/msconame-md.md)]. Cette page contient des liens vers d'autres pages qui indiquent la disponibilité du support pour les produits [!INCLUDE[msCoName](../includes/msconame-md.md)]. Pour plus d’informations, consultez [Politique de support Microsoft](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser la documentation du produit pour SQL Server](../2014-toc/index.yml)  

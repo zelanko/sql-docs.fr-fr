@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228181"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Surveiller et dépanner la fusion de paires de fichiers de données et de fichiers delta
@@ -50,5 +50,5 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
  La [transition de l’état du blog des fichiers de point de contrôle dans les bases de données avec des tables mémoire optimisées](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) décrit la transition d’état des paires de fichiers de données et Delta de la création à la garbage collection.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création et gestion du stockage des objets à mémoire optimisée](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Création et gestion du stockage des objets mémoire optimisés](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   

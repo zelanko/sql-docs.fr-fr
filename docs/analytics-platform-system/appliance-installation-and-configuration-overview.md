@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401445"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Installation et configuration de l’appliance pour Analytics Platform System
@@ -27,7 +27,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 -   Review [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808) to understand how and when appliance administrators will connect to each appliance node.  
 -->
 
-## <a name="InstallHardware"></a>1. installer le matériel  
+## <a name="1-install-the-hardware"></a><a name="InstallHardware"></a>1. installer le matériel  
 Votre nouvelle appliance sera livrée sur des palettes à la station d’accueil de votre centre de données.  
   
 > [!IMPORTANT]  
@@ -41,14 +41,14 @@ Si votre IHV n’effectue pas l’installation matérielle, procédez comme suit
 |Confirmer la documentation|Confirmez que vous avez reçu tous les documents et informations nécessaires de la part de votre fournisseur de matériel indépendant (IHV). Consultez [les informations à obtenir auprès de votre fabricant de matériel &#40;Analytics Platform System&#41;](information-to-obtain-from-your-ihv.md).|  
 |Installer le matériel|Vérifiez que le centre de données peut prendre en charge l’appliance. Déplacez les composants de l’appliance vers le centre de données. Monter en rack les commutateurs, les PDU et le câblage réseau. Consultez [installation matérielle &#40;Analytics Platform System&#41;](hardware-installation.md).|  
   
-## <a name="PowerOnAppliance"></a>2. mise sous tension de l’appareil  
+## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. mise sous tension de l’appareil  
   
 |||  
 |-|-|  
 |**Tâche**|**Description**|  
 |Mise sous tension de l’appareil|Mettez sous tension chaque nœud de composant d’appliance dans l’ordre requis, en attendant le cas échéant pour confirmer qu’aucune erreur n’a été rencontrée.|  
   
-## <a name="ConfigureAppliance"></a>3. configurer l’appliance  
+## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. configurer l’appliance  
   
 |||  
 |-|-|  
@@ -59,7 +59,7 @@ Si votre IHV n’effectue pas l’installation matérielle, procédez comme suit
 > [!WARNING]  
 > Les modifications de configuration doivent être effectuées uniquement à l’aide de la**Configuration Manager**SQL Server PDW. Les modifications non exposées par le biais de **Configuration Manager** ne sont pas prises en charge. Par exemple, l’appliance SQL Server PDW prend uniquement en charge le paramètre de langue Anglais (États-Unis).  
   
-## <a name="SoftwareServicing"></a>4. configurer la maintenance des logiciels  
+## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. configurer la maintenance des logiciels  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ Si votre IHV n’effectue pas l’installation matérielle, procédez comme suit
 |Appliquer les mises à jour de SQL Server PDW|Facultatif Vous devrez peut-être appliquer une ou plusieurs mises à jour SQL Server PDW pour mettre à jour votre logiciel SQL Server PDW avec la dernière version. Consultez [appliquer des correctifs de système de plateforme analytics &#40;Analytics Platform system&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Configurer Windows Server Update Services|Configurez l’appliance pour recevoir des mises à jour de Windows Server Update Services pour les logiciels de prise en charge. Consultez [Télécharger et appliquer des mises à jour Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
-## <a name="NextSteps"></a>Étapes suivantes  
+## <a name="next-steps"></a><a name="NextSteps"></a>Étapes suivantes  
 Une fois que vous avez effectué toutes les étapes précédentes, votre appliance est prête à être utilisée. Vous ou d’autres personnes à votre emplacement pouvez effectuer les tâches suivantes.  
   
 |||  

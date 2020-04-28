@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957263"
 ---
 # <a name="back-up-a-database-master-key"></a>Sauvegarder une clé primaire de base de données
@@ -30,22 +30,22 @@ ms.locfileid: "74957263"
   
      [Sécurité](#Security)  
   
--   [Pour sauvegarder une clé principale de base de données à l’aide de Transact-SQL](#Procedure)  
+-   [Pour sauvegarder une clé principale de base de données à l'aide de Transact-SQL](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   La clé principale doit être ouverte et, par conséquent, déchiffrée avant d'être sauvegardée. Si elle est chiffrée avec la clé principale de service, il n'est pas nécessaire que la clé principale soit ouverte explicitement. En revanche, si la clé principale est chiffrée seulement à l'aide d'un mot de passe, elle doit être ouverte explicitement.  
   
 -   Nous vous conseillons de sauvegarder la clé principale dès sa création et de stocker cette sauvegarde en lieu sûr, en dehors de votre lieu de travail.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
-##  <a name="Procedure"></a>Utilisation de SQL Server Management Studio avec Transact-SQL  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="Procedure"></a>Utilisation de SQL Server Management Studio avec Transact-SQL  
   
 #### <a name="to-back-up-the-database-master-key"></a>Pour sauvegarder la clé principale de base de données  
   

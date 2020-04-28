@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243242"
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
   L’action de point d’arrêt **Lorsqu’il est atteint** spécifie une tâche personnalisée que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] effectue pour un point d’arrêt. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Considérations sur l'action  
+##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> Considérations sur l'action  
  L'action par défaut pour un point d'arrêt consiste à arrêter l'exécution lorsque le nombre d'accès et la condition de point d'arrêt sont tous les deux satisfaits. L’action **Lorsqu’il est atteint** dans le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] sert, quant à elle, principalement à afficher des informations dans la fenêtre **Sortie** du débogueur en spécifiant un message à afficher.  
   
  Le message à afficher est indiqué dans l’option **Afficher un message** et spécifié comme une chaîne de texte qui inclut des expressions contenant des informations issues du [!INCLUDE[tsql](../../includes/tsql-md.md)] débogué. Ces expressions sont notamment les suivantes.  

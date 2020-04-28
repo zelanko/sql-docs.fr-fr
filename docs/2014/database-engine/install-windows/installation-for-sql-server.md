@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228410"
 ---
 # <a name="installation-for-sql-server-2014"></a>Installation de SQL Server 2014
- ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Télécharger SQL Server Express 2014](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## <a name="download-sql-server-2014-express"></a>[Télécharger SQL Server Express 2014](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Nous vous remercions de [Scott Hanselman](http://www.hanselman.com/) pour la collecte de tous les liens du package d’installation en un seul endroit.**
   
   L'Assistant Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une arborescence de fonctionnalités unique pour installer tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -41,12 +41,11 @@ ms.locfileid: "75228410"
   
 -   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]  
   
--   Outils de gestion  
+-   Outils d'administration  
   
 -   Composants de connectivité  
   
- Vous pouvez installer chaque composant individuellement ou sélectionner une combinaison de composants ci-dessus. Pour faire le meilleur choix parmi les éditions et les composants disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est disponible en éditions 32 bits et 64 bits.
+ Vous pouvez installer chaque composant individuellement ou sélectionner une combinaison de composants ci-dessus. Pour faire le meilleur choix parmi les éditions et les composants disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est disponible en éditions 32 bits et 64 bits.
  
  **Essayez-le :**  
   
@@ -55,7 +54,7 @@ ms.locfileid: "75228410"
 ## <a name="in-this-section"></a>Dans cette section  
  Que vous utilisiez l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'invite de commandes pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le processus d'installation implique les étapes suivantes :  
   
- [Planification d'une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  
+ [Planification d’une installation de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  
  Décrit comment préparer l'ordinateur pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Configuration matérielle et logicielle requise.  
@@ -73,12 +72,11 @@ ms.locfileid: "75228410"
  [Désinstaller SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)  
  Décrit les procédures pour désinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
- [Installation d'un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+ [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  Cette section de la documentation d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] décrit comment installer et configurer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  [Installer les fonctionnalités BI de SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les fonctions qui font partie de la plateforme BI de Microsoft sont notamment [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que plusieurs applications clientes servant à créer ou utiliser des données analytiques. Cette section de la documentation de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explique comment installer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les fonctions qui font partie de la plateforme BI de Microsoft sont notamment [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que plusieurs applications clientes servant à créer ou utiliser des données analytiques. Cette section de la documentation de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explique comment installer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="related-sections"></a>Sections connexes  
  [Rubriques de procédures relatives à l'installation](../../sql-server/install/installation-how-to-topics.md)  
@@ -92,5 +90,5 @@ ms.locfileid: "75228410"
   
 ## <a name="see-also"></a>Voir aussi  
  [Nouveautés de l’installation de SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Configuration matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

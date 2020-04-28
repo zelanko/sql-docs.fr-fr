@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401323"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Configurer un SQL Server SMP externe pour recevoir des copies de tables distantes-Parallel Data Warehouse
@@ -30,7 +30,7 @@ Avant de pouvoir configurer l’SQL Server externe, vous devez :
   
 -   Un compte de connexion SQL Server (si SQL Server est déjà installé) avec la possibilité de créer des connexions et d’accorder des autorisations sur la ou les bases de données de destination.  
   
-## <a name="HowToSQLServer"></a>Configurer un SQL Server SMP externe pour recevoir des copies de tables distantes  
+## <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a><a name="HowToSQLServer"></a>Configurer un SQL Server SMP externe pour recevoir des copies de tables distantes  
 La fonctionnalité de copie de table distante copie les tables de l’appliance SQL Server PDW vers une base de données SMP SQL Server externe qui s’exécute sur un système Windows. Après avoir configuré le système Windows externe pour recevoir des copies de tables distantes, l’étape suivante consiste à installer et à configurer SQL Server sur le système Windows.  
   
 Pour configurer SQL Server, procédez comme suit :  
@@ -45,7 +45,7 @@ Pour configurer SQL Server, procédez comme suit :
   
 5.  Déterminez un compte SQL Server sur le SQL Server SMP qui sera utilisé pour l’authentification. Accordez à ce compte le privilège de créer, de supprimer et d’insérer des données dans les tables de la base de données de destination pour l’opération d’exportation de données en parallèle.  
   
-## <a name="BPSQLConfig"></a>Meilleures pratiques pour la configuration SMP SQL Server pour la copie de tables distantes  
+## <a name="best-practices-for-smp-sql-server-configuration-for-remote-table-copy"></a><a name="BPSQLConfig"></a>Meilleures pratiques pour la configuration SMP SQL Server pour la copie de tables distantes  
 Quand vous configurez le SMP SQL Server pour recevoir des copies de tables distantes, utilisez les meilleures pratiques suivantes pour améliorer les performances.  
   
 1.  Suivez les meilleures pratiques décrites dans SQL Server Documentation du produit. Par exemple, activez le chiffrement des données. Pour plus d’informations sur la sécurisation des SQL Server, consultez [sécurisation des SQL Server](../relational-databases/security/securing-sql-server.md) sur MSDN.  

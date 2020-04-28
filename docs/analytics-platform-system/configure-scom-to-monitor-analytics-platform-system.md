@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401299"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurer System Center Operations Manager (SCOM) pour surveiller Analytics Platform System
 Procédez comme suit pour configurer les packs d’administration System Center Operations Manager (SCOM) pour Analytics Platform System. Les packs d’administration sont requis pour analyser le système de plateforme d’analyse à partir de SCOM.  
   
-## <a name="BeforeBegin"></a>Avant de commencer  
-**Prérequis**  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Avant de commencer  
+**Conditions préalables**  
   
 System Center Operations Manager 2007 R2 doit être installé et en cours d’exécution.  
   
 Les packs d’administration doivent être installés et configurés. Consultez [installation des packs d’administration scom &#40;Analytics Platform system&#41;](install-the-scom-management-packs.md) et [importez le pack d’administration SCOM pour le système d’administration de plateforme PDW &#40;Analytics&#41;](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>Configurer un profil d’identification dans System Center  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>Configurer un profil d’identification dans System Center  
 Pour configurer System Center, vous devez effectuer les étapes suivantes :  
   
 -   Créez un compte d’identification pour l’utilisateur de domaine de l' **Observateur APS** et mappez-le au **compte Microsoft APS Watcher.**  
@@ -71,7 +71,7 @@ Voici des instructions détaillées sur la façon d’effectuer les tâches :
   
     3.  La boîte de dialogue de l' **Assistant Profil** d’identification s’ouvre. Ignorez la page **Introduction** en cliquant sur **suivant**.  
   
-    4.  Sur la page **Propriétés générales** , cliquez sur **suivant**.  
+    4.  Sur la page **Propriétés générales** , cliquez sur **Suivant**.  
   
     5.  Sur la page **comptes** d’identification, cliquez sur le bouton **Ajouter...** , puis sélectionnez le compte d’identification d' **Observateur APS** créé précédemment.  
   

@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479245"
 ---
 # <a name="replicate-identity-columns"></a>Répliquer des colonnes d'identité
-  Lorsque vous affectez une propriété d’identité à une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colonne, génère automatiquement des numéros séquentiels pour les nouvelles lignes insérées dans la table contenant la colonne d’identité. Pour plus d’informations, consultez [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Les colonnes d'identité devant être incluses comme composantes de la clé primaire, il est important d'éviter les valeurs dupliquées dans les colonnes d'identité. Pour utiliser des colonnes d'identité dans une topologie de réplication qui a des mises à jour sur plusieurs nœuds, chaque nœud de cette topologie de réplication doit avoir une plage différente de valeurs d'identité, de façon à ce qu'il n'y ait pas de valeurs dupliquées.  
+  Quand vous attribuez une propriété IDENTITY à une colonne, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère automatiquement des numéros séquentiels pour les nouvelles lignes insérées dans la table contenant la colonne d’identité. Pour plus d’informations, consultez [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Les colonnes d'identité devant être incluses comme composantes de la clé primaire, il est important d'éviter les valeurs dupliquées dans les colonnes d'identité. Pour utiliser des colonnes d'identité dans une topologie de réplication qui a des mises à jour sur plusieurs nœuds, chaque nœud de cette topologie de réplication doit avoir une plage différente de valeurs d'identité, de façon à ce qu'il n'y ait pas de valeurs dupliquées.  
   
  Par exemple, la plage 1-100 pourrait être affectée au serveur de publication, la plage 101-200 à l'abonné A et la plage 201-300 à l'abonné B. Si une ligne est insérée au niveau du serveur de publication et la valeur d'identité est, par exemple, 65, cette valeur est répliquée sur chaque abonné. Quand la réplication insère des données sur chaque Abonné, elle n'incrémente pas la valeur de la colonne d'identité dans la table de l'Abonné ; c'est au contraire la valeur littérale 65 qui est insérée. Seules les insertions des utilisateurs - et pas les insertions des agents de réplication - provoquent l'incrémentation de la valeur de la colonne d'identité.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "74479245"
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
- [Propriété IDENTity &#40;&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
+ [IDENTITY, propriété &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
  [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

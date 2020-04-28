@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0000e0c7a5933003544de22b60a8adc4d9c59c82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684444"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Conditions d'implémentation des éléments de rapports personnalisés
@@ -36,8 +36,7 @@ ms.locfileid: "74684444"
 ## <a name="language-and-namespace-requirements"></a>Conditions de langage et d'espace de noms  
  Les éléments de rapports personnalisés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent entièrement en charge le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Vous pouvez développer des éléments de rapports personnalisés à l'aide du langage compatible .NET de votre choix.  
   
- 
-  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] offre de nombreux outils et fonctionnalités au développeur pour simplifier et accélérer les cycles itératifs du codage, du débogage et du test et pour simplifier le déploiement. Le Kit de développement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK inclut des compilateurs [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et C# ainsi que des outils connexes.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] offre de nombreux outils et fonctionnalités au développeur pour simplifier et accélérer les cycles itératifs du codage, du débogage et du test et pour simplifier le déploiement. Le Kit de développement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK inclut des compilateurs [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et C# ainsi que des outils connexes.  
   
 -   Les éléments de rapports personnalisés utilisent les espaces de noms `Microsoft.ReportDesigner` et <xref:Microsoft.ReportingServices.Interfaces>. Ceux-ci sont stockés dans les assemblys Microsoft.ReportingServices.Designer.DLL et Microsoft.ReportingServices.Interfaces.DLL, lesquels sont installés dans le cadre de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
@@ -50,6 +49,6 @@ ms.locfileid: "74684444"
  [Création d’un composant d’exécution d’élément de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)   
  [Création d’un composant au moment de la conception d’éléments de rapport personnalisés](creating-a-custom-report-item-design-time-component.md)   
  [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)   
- [Bibliothèques de classes d'éléments de rapports personnalisés](custom-report-item-class-libraries.md)  
+ [Bibliothèques de classes d'éléments de rapport personnalisés](custom-report-item-class-libraries.md)  
   
   

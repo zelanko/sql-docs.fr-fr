@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401485"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Acquérir et configurer un serveur de chargement pour les Data Warehouse parallèles
 Cet article explique comment acquérir et configurer un serveur de chargement comme système Windows non-appareil pour soumettre des chargements de données à des Data Warehouse parallèles (PDW).  
   
-## <a name="Basics"></a>Fondamentaux  
+## <a name="basics"></a><a name="Basics"></a>Concepts de base  
 Le serveur de chargement :  
   
 -   Ne doit pas nécessairement être un serveur unique. Vous pouvez charger en même temps avec plusieurs serveurs de chargement.  
@@ -32,18 +32,18 @@ Le serveur de chargement :
   
 -   Se trouve dans votre propre domaine de client, et non dans le domaine de l’appliance. Il n’existe aucune relation d’approbation entre votre domaine client et le domaine de l’appliance.  
   
-## <a name="Step1"></a>Étape 1 : déterminer les besoins en capacité  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Étape 1 : déterminer les besoins en capacité  
 Le système de chargement peut être conçu comme un ou plusieurs serveurs de chargement qui effectuent des chargements simultanés. Il n’est pas nécessaire que chaque serveur de chargement soit dédié au chargement, à condition qu’il gère les besoins en termes de performances et de stockage de votre charge de travail.  
   
 La configuration système requise pour un serveur de chargement dépend presque entièrement de votre propre charge de travail. Utilisez la [feuille de calcul de planification de la capacité du serveur](loading-server-capacity-planning-worksheet.md) pour déterminer vos besoins en capacité.  
   
-## <a name="Step2"></a>Étape 2 : acquérir le Server  
+## <a name="step-2-acquire-the-sserver"></a><a name="Step2"></a>Étape 2 : acquérir le Server  
 Maintenant que vous comprenez mieux vos besoins en matière de capacité, vous pouvez planifier les serveurs et les composants de mise en réseau que vous devrez acheter ou approvisionner. Incorporez la liste suivante d’exigences dans votre plan d’achat, puis achetez votre serveur ou approvisionnez un serveur existant.  
   
-### <a name="R"></a>Configuration logicielle requise  
+### <a name="software-requirements"></a><a name="R"></a>Configuration logicielle requise  
 Systèmes d'exploitation pris en charge :  
   
--   Windows Server 2012 ou Windows Server 2012 R2. Ces systèmes d’exploitation nécessitent la carte réseau FDR.  
+-   Windows Server 2012 ou Windows Server 2012 R2. Ces systèmes d’exploitation nécessitent la carte réseau FDR.  
   
 -   Windows Server 2008 R2. Ce système d’exploitation nécessite la carte réseau DDR.  
   
@@ -60,7 +60,7 @@ Pour préparer une connexion Windows Server 2012 ou Windows Server 2012 R2 Infin
   
 3.  Acheter 2 câbles FDR InfiniBand pour une carte à double port, ou un câble de 1 FDR InfiniBand pour une seule carte de port. Les câbles FDR InfiniBand connectent le serveur de chargement au réseau de l’appliance InfiniBand. La longueur du câble dépend de la distance entre le serveur de chargement et les commutateurs InfiniBand de l’appliance, en fonction de votre environnement.  
   
-## <a name="Step3"></a>Étape 3 : connecter le serveur aux réseaux InfiniBand  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Étape 3 : connecter le serveur aux réseaux InfiniBand  
 Procédez comme suit pour connecter le serveur de chargement au réseau InfiniBand. Si le serveur n’utilise pas le réseau InfiniBand, ignorez cette étape.  
   
 1.  Rackez le serveur suffisamment près de l’appareil pour pouvoir le connecter au réseau de l’appliance InfiniBand.  
@@ -75,7 +75,7 @@ Procédez comme suit pour connecter le serveur de chargement au réseau InfiniBa
   
 5.  Configurez les paramètres InfiniBand et DNS pour les cartes réseau. Pour obtenir des instructions de configuration, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Étape 4 : installer les outils de chargement  
+## <a name="step-4-install-the-loading-tools"></a><a name="Step4"></a>Étape 4 : installer les outils de chargement  
 Les outils clients peuvent être téléchargés à partir du centre de téléchargement Microsoft. 
 
 Pour installer dwloader, exécutez l’installation de dwloader à partir des outils clients.
@@ -85,8 +85,8 @@ Si vous envisagez d’utiliser Integration Services pour le chargement, vous dev
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Étape 5 : démarrer le chargement  
-Vous êtes maintenant prêt à commencer le chargement des données. Pour plus d'informations, consultez les pages suivantes :  
+## <a name="step-5-start-loading"></a><a name="Step5"></a>Étape 5 : démarrer le chargement  
+Vous êtes maintenant prêt à commencer le chargement des données. Pour plus d’informations, voir :  
   
 1.  [Outil de chargement de ligne de commande dwloader](dwloader.md)  
   
@@ -95,7 +95,7 @@ Vous êtes maintenant prêt à commencer le chargement des données. Pour plus d
 ## <a name="performance"></a>Performances  
 Pour optimiser les performances de chargement sur Windows Server 2012 et versions ultérieures, activez l’initialisation instantanée des fichiers de sorte que lorsque les données sont remplacées, le système d’exploitation ne remplacera pas les données existantes par des zéros. S’il s’agit d’un risque pour la sécurité, car les données antérieures existent toujours sur les disques, veillez à désactiver l’initialisation instantanée des fichiers.  
   
-## <a name="Security"></a>Notifications de sécurité  
+## <a name="security-notices"></a><a name="Security"></a>Notifications de sécurité  
 Étant donné que les données à charger ne sont pas stockées sur l’appliance, votre équipe informatique est responsable de la gestion de tous les aspects de la sécurité de vos données à charger. Par exemple, cela comprend la gestion de la sécurité des données à charger, la sécurité du serveur utilisé pour stocker les chargements et la sécurité de l’infrastructure réseau qui connecte le serveur de chargement à l’appareil SQL Server PDW.  
   
 > [!IMPORTANT]  
@@ -112,5 +112,5 @@ Pour réduire les risques de sécurité liés à vos données, nous vous recomma
 -   Désactivez l’initialisation instantanée des fichiers sur Windows Server 2012 et versions ultérieures. Il s’agit d’un compromis entre les performances et la sécurité, comme indiqué dans la section performances. Vous devez déterminer ce qui est le mieux en fonction de vos besoins en matière de sécurité.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Vue d’ensemble de la sauvegarde et de la restauration](backup-and-restore-overview.md)  
+[vue d’ensemble des fonctionnalités de sauvegarde et de restauration](backup-and-restore-overview.md)  
   
