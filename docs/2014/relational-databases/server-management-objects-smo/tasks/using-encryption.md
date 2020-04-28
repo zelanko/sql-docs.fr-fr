@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781846"
 ---
 # <a name="using-encryption"></a>Utilisation du chiffrement
@@ -35,8 +35,7 @@ ms.locfileid: "72781846"
   
  Lorsqu'une base de données est associée à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez soit fournir le mot de passe de la clé principale de la base de données, soit exécuter la méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> pour réaliser une copie non chiffrée de la clé principale de la base de données, qui sera ensuite disponible pour un chiffrement à l'aide de la clé principale du service. Cette étape est recommandée pour éviter d'avoir à ouvrir explicitement la clé principale de base de données.  
   
- La méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> régénère la clé principale de base de données. Lorsque la clé principale de base de données est régénérée, toutes les clés qu'elle a permis de chiffrer sont déchiffrées, puis elles sont à nouveau chiffrées au moyen de la nouvelle clé principale de base de données. La méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> supprime le chiffrement de la clé principale de la base de données par la clé principale du service. 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> entraîne le chiffrement d'une copie de la clé principale à l'aide de la clé principale du service, puis le stockage de cette clé à la fois dans la base de données actuelle et dans la base de données master.  
+ La méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> régénère la clé principale de base de données. Lorsque la clé principale de base de données est régénérée, toutes les clés qu'elle a permis de chiffrer sont déchiffrées, puis elles sont à nouveau chiffrées au moyen de la nouvelle clé principale de base de données. La méthode <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> supprime le chiffrement de la clé principale de la base de données par la clé principale du service. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> entraîne le chiffrement d'une copie de la clé principale à l'aide de la clé principale du service, puis le stockage de cette clé à la fois dans la base de données actuelle et dans la base de données master.  
   
  Dans SMO, les certificats sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Certificate>. L'objet <xref:Microsoft.SqlServer.Management.Smo.Certificate> a des propriétés qui spécifient la clé publique, le nom du sujet, la période de validité et les informations sur l'émetteur. L'autorisation d'accès au certificat est contrôlée en utilisant les méthodes `Grant`, `Revoke` et `Deny`.  
   

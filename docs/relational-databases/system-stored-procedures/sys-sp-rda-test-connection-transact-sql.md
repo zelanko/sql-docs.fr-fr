@@ -17,10 +17,10 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305154"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
@@ -72,7 +72,7 @@ EXECUTE sys.sp_rda_test_connection
 |-----------------|---------------|-----------------|  
 |link_state|int|L’une des valeurs suivantes, qui correspondent aux valeurs de **link_state_desc**.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
 |link_state_desc|varchar(32)|L’une des valeurs suivantes, qui correspondent aux valeurs précédentes pour **LINK_STATE**.<br /><br /> -SAIN<br />     L’état entre SQL Server et le serveur Azure distant est sain.<br />-ERROR_AZURE_FIREWALL<br />     Le pare-feu Azure empêche le lien entre SQL Server et le serveur Azure distant.<br />-ERROR_NO_CONNECTION<br />     SQL Server ne peut pas établir de connexion au serveur Azure distant.<br />-ERROR_AUTH_FAILURE<br />     Un échec d’authentification empêche le lien entre SQL Server et le serveur Azure distant.<br />-ERREUR<br />     Une erreur qui n’est pas un problème d’authentification, un problème de connectivité ou un problème de pare-feu empêche le lien entre SQL Server et le serveur Azure distant.|  
-|error_number|int|Numéro de l’erreur. S’il n’y a pas d’erreur, ce champ a la valeur NULL.|  
+|error_number|int|Numéro de l'erreur. S’il n’y a pas d’erreur, ce champ a la valeur NULL.|  
 |error_message|nvarchar(1024)|Message d’erreur. S’il n’y a pas d’erreur, ce champ a la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

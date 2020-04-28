@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154965"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Leçon 1 : Création d'une base de connaissances DQS nommée Fournisseurs
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Leçon 1 : Création d’une base de connaissances DQS nommée Fournisseurs
   Dans cette leçon, vous allez créer une base de connaissances DQS nommée **Suppliers** avec les connaissances (métadonnées) relatives aux données des fournisseurs. Utilisez la base de connaissances pour effectuer les activités de nettoyage et de correspondance sur les données d'entrée des fournisseurs. L'activité de nettoyage identifie les données incorrectes ou non valides, les corrige, propose des corrections/suggestions, normalise les données, et les enrichit avec des informations. L'activité de correspondance compare les données et identifie les enregistrements de données similaires (mais légèrement différents), et vous permet de supprimer les doublons.  
   
  Vous pouvez utiliser des processus assistés par ordinateur et interactifs pour créer et gérer une base de connaissances. Les connaissances contenues dans une base de connaissances sont conservées dans des domaines, chacun d'entre eux étant spécifique à un champ dans les données que vous souhaitez nettoyer et/ou mettre en correspondance.  
@@ -43,6 +43,6 @@ ms.locfileid: "70154965"
 -   Publiez la base de connaissances afin qu'elle puisse être utilisée pour les activités de nettoyage et de correspondance.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 1 : Création d'une base de connaissances et de domaines](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [Tâche 1 : Création d’une base de connaissances et de domaines](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

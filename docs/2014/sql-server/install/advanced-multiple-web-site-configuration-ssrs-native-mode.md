@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952667"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuration avancée de plusieurs sites Web (SSRS en mode natif)
@@ -34,20 +34,20 @@ ms.locfileid: "71952667"
  **Adresse IP**  
  Identifie le serveur de rapports sur un réseau TCP/IP. Les valeurs valides sont les suivantes :  
   
--   **All Assigned** indique que les adresses IP qui sont affectées à l’ordinateur peuvent être utilisées dans une URL pointant vers une application du serveur de rapports. Cette valeur comprend également les noms d'hôte conviviaux (tels que les noms d'ordinateur) qui peuvent être résolus par un serveur de noms de domaine en une adresse IP assignée à l'ordinateur. Il s'agit de la valeur par défaut pour une URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Assigné** spécifie que chacune des adresses IP assignées à l'ordinateur peut être utilisée dans une URL qui pointe sur une application du serveur de rapports. Cette valeur comprend également les noms d'hôte conviviaux (tels que les noms d'ordinateur) qui peuvent être résolus par un serveur de noms de domaine en une adresse IP assignée à l'ordinateur. Il s'agit de la valeur par défaut pour une URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   Non **assigné** spécifie que le serveur de rapports accepte toute demande qui n’a pas de correspondance exacte pour l’adresse IP ou le nom d’hôte. N'utilisez pas cette valeur si une autre application Web l'utilise déjà. Sinon, vous interromprez le service pour l'autre application.  
+-   **Non assigné** spécifie que le serveur de rapports accepte toute demande qui n'a pas de correspondance exacte pour l'adresse IP ou le nom d'hôte. N'utilisez pas cette valeur si une autre application Web l'utilise déjà. Sinon, vous interromprez le service pour l'autre application.  
   
--   **127.0.0.1** est utilisé pour accéder à localhost. Cette valeur prend en charge l'administration locale sur le serveur de rapports. Si vous sélectionnez uniquement cette valeur, seuls les utilisateurs qui se connectent localement au serveur de rapports ont accès à l'application.  
+-   **127.0.0.1** est utilisée pour l'accès à localhost. Cette valeur prend en charge l'administration locale sur le serveur de rapports. Si vous sélectionnez uniquement cette valeur, seuls les utilisateurs qui se connectent localement au serveur de rapports ont accès à l'application.  
   
--   *Nnn. nnn. nnn. nnn* est l’adresse IPv4 d’une carte réseau sur votre ordinateur. Si votre réseau utilise l’adressage IPv6, l’adresse IP sera une valeur 128 bits de champs de 8 4 octets semblable au format suivant : \<en-tête> :*nnnn : nnnn : nnnn : nnnn*.  
+-   *Nnn.nnn.nnn.nnn* est l'adresse IPv4 d'une carte réseau sur votre ordinateur. Si votre réseau utilise l’adressage IPv6, l’adresse IP sera une valeur 128 bits de champs de 8 4 octets semblable au format suivant : \<en-tête> :*nnnn : nnnn : nnnn : nnnn*.  
   
      Si vous avez plusieurs cartes, une adresse IP apparaît pour chacune d'elles. Si vous sélectionnez uniquement cette valeur, elle limite l'accès de l'application à la seule adresse IP (et à tout nom d'hôte mappé sur cette adresse par un serveur de noms de domaine). Vous ne pouvez pas utiliser localhost pour accéder à un serveur de rapports, et vous ne pouvez pas utiliser les adresses IP des autres cartes réseau installées sur le serveur de rapports.  
   
  **Port**  
  Spécifie le port que surveille le serveur de rapports pour les demandes. Le port par défaut est le port 80. Si vous utilisez le port 80, vous n'avez pas à l'inclure dans l'URL. Si vous utilisez un autre numéro de port, vous devez toujours l’inclure dans l’URL (par exemple http://localhost:8181/reports),.  
   
- **En-tête d’hôte**  
+ **En-tête de l'hôte**  
  Si vous avez déjà un en-tête de l'hôte défini sur un serveur de noms de domaine qui se résout sur votre ordinateur, vous pouvez spécifier cet en-tête de l'hôte dans une URL que vous configurez pour l'accès au serveur de rapports.  
   
  Un en-tête de l'hôte est un nom unique qui permet à plusieurs sites Web de partager une même adresse IP et un même port. Les noms d'en-tête de l'hôte sont plus faciles à mémoriser et à taper que les adresses IP et les numéros de port. Un exemple de nom d'en-tête de l'hôte peut être www.adventure-works.com.  
@@ -60,9 +60,9 @@ ms.locfileid: "71952667"
   
  Spécifie le nom complet de l'ordinateur pour lequel le certificat est enregistré. Le nom que vous spécifiez doit être identique au nom pour lequel le certificat est enregistré.  
   
- Un certificat doit être installé pour utiliser cette option. Vous devez également modifier le paramètre de configuration UrlRoot dans le fichier RSReportServer.config, afin qu'il spécifie le nom complet de l'ordinateur pour lequel le certificat est enregistré. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Un certificat doit être installé pour utiliser cette option. Vous devez également modifier le paramètre de configuration UrlRoot dans le fichier RSReportServer.config, afin qu'il spécifie le nom complet de l'ordinateur pour lequel le certificat est enregistré. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Délivré à**  
+ **Émis à**  
  Nom de l'ordinateur sur lequel le certificat a été créé.  
   
  **Ajouter**  
@@ -76,7 +76,7 @@ ms.locfileid: "71952667"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

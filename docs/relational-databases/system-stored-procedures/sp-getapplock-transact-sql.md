@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72717261"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Une fois qu'un verrou d'application a été acquis, seuls les 32 premiers caractères peuvent être récupérés sous forme de texte brut ; les autres caractères sont hachés.  
   
  [ @LockMode= ] '*lock_mode*'  
- Mode de verrouillage à obtenir pour une ressource spécifique. *lock_mode* est de type **nvarchar (32)** et n’a pas de valeur par défaut. La valeur peut être l’une des suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **exclusive**. Pour plus d’informations, consultez [modes de verrouillage](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Mode de verrouillage à obtenir pour une ressource spécifique. L’argument *lock_mode* est de type **nvarchar(32)** et n’a pas de valeur par défaut. La valeur peut être l’une des suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **exclusive**. Pour plus d’informations, consultez [modes de verrouillage](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner= ] '*lock_owner*'  
- Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est **de type nvarchar (32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque la valeur de *lock_owner* est **transaction**, par défaut ou explicitement spécifiée, sp_getapplock doit être exécutée à partir d’une transaction.  
+ Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque la valeur de *lock_owner* est **transaction**, par défaut ou explicitement spécifiée, sp_getapplock doit être exécutée à partir d’une transaction.  
   
  [ @LockTimeout= ] '*valeur*'  
  Valeur de délai d'attente de verrou, en millisecondes. La valeur par défaut est la même que la valeur retournée@LOCK_TIMEOUTpar @. Pour indiquer qu’une demande de verrou doit retourner un code de retour de-1 au lieu d’attendre le verrou quand la demande ne peut pas être accordée immédiatement, spécifiez 0.  
@@ -111,7 +111,7 @@ GO
   
  Un blocage avec un verrou d'application n'annule pas la transaction qui a demandé le verrou. Toute annulation qui peut être requise en conséquence de la valeur de retour doit être effectuée manuellement. Par conséquent, nous vous recommandons d'inclure un contrôle d'erreur dans le code de façon à ce qu'une instruction ROLLBACK TRANSACTION ou une action équivalente soit exécutée si certaines valeurs sont retournées (-3 par exemple).  
   
- Voici un exemple :   
+ Voici un exemple :  
   
 ```  
 USE AdventureWorks2012;  
@@ -132,8 +132,7 @@ END;
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l'ID de la base de données active pour qualifier la ressource. Par conséquent, si sp_getapplock est exécutée, le résultat sera des verrous distincts sur des ressources distinctes, même si les valeurs des paramètres sont identiques.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l'ID de la base de données active pour qualifier la ressource. Par conséquent, si sp_getapplock est exécutée, le résultat sera des verrous distincts sur des ressources distinctes, même si les valeurs des paramètres sont identiques.  
   
  Utilisez la vue de gestion dynamique sys.dm_tran_locks ou la procédure stockée système sp_lock pour examiner les informations de verrou. Vous pouvez également utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour surveiller les verrous.  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952044"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Rubriques d'aide (F1) du Gestionnaire de configurations de Reporting Services (SSRS en mode natif)
@@ -30,7 +30,7 @@ ms.locfileid: "71952044"
   
 -   [État de Report Server](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   
--   [Compte de service](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
+-   [Compte Service Account](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
 -   [URL du service Web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952044"
   
 -   [Sauvegarde de la base de données](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
--   [Assistant modification de base de données](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
+-   [Assistant Modification de base de données](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
 -   [Assistant Modification des informations d'identification](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   

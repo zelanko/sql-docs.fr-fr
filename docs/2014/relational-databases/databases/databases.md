@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154582"
 ---
 # <a name="databases"></a>Bases de données
@@ -40,18 +40,18 @@ ms.locfileid: "70154582"
   
 |||  
 |-|-|  
-|[Bases de données système](system-databases.md)|[Supprimer des fichiers de données ou des fichiers journaux d’une base de données](delete-data-or-log-files-from-a-database.md)|  
-|[Bases de données autonomes](contained-databases.md)|[Afficher les informations sur l’espace occupé par les données et par le journal d’une base de données](display-data-and-log-space-information-for-a-database.md)|  
-|[Fichiers de données SQL Server dans Azure](sql-server-data-files-in-microsoft-azure.md)|[Augmenter la taille d’une base de données](increase-the-size-of-a-database.md)|  
+|[Bases de données système](system-databases.md)|[Supprimer des fichiers de données ou des fichiers journaux d'une base de données](delete-data-or-log-files-from-a-database.md)|  
+|[Bases de données à relation contenant-contenu](contained-databases.md)|[Afficher les informations sur l’espace occupé par les données et par le journal d’une base de données](display-data-and-log-space-information-for-a-database.md)|  
+|[SQL Server de fichiers de données dans Azure](sql-server-data-files-in-microsoft-azure.md)|[Augmenter la taille d'une base de données](increase-the-size-of-a-database.md)|  
 |[Groupes de fichiers et fichiers de base de données](database-files-and-filegroups.md)|[Renommer une base de données](rename-a-database.md)|  
 |[États d’une base de données](database-states.md)|[Définir une base de données en mode mono-utilisateur](set-a-database-to-single-user-mode.md)|  
 |[États des fichiers](file-states.md)|[Réduire une base de données](shrink-a-database.md)|  
 |[Estimer la taille d'une base de données](estimate-the-size-of-a-database.md)|[Réduire un fichier](shrink-a-file.md)|  
 |[Copier des bases de données sur d’autres serveurs](copy-databases-to-other-servers.md)|[Afficher ou modifier les propriétés d’une base de données](view-or-change-the-properties-of-a-database.md)|  
 |[Attacher et détacher une base de données &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[Afficher une liste des bases de données sur une instance de SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
-|[Ajouter des fichiers de données ou journaux à une base de données](add-data-or-log-files-to-a-database.md)|[Afficher ou modifier le niveau de compatibilité d’une base de données](view-or-change-the-compatibility-level-of-a-database.md)|  
+|[Ajouter des fichiers de données ou journaux à une base de données](add-data-or-log-files-to-a-database.md)|[Afficher ou modifier le niveau de compatibilité d'une base de données](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[Modifier les paramètres de configuration d’une base de données](change-the-configuration-settings-for-a-database.md)|[Utiliser l'Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[Créer une base de données](create-a-database.md)|[Créer un alias de type de données défini par l’utilisateur](create-a-user-defined-data-type-alias.md)|  
+|[Créer une base de données](create-a-database.md)|[Créer un type de données d'alias défini par l'utilisateur](create-a-user-defined-data-type-alias.md)|  
 |[Supprimer une base de données](delete-a-database.md)|[Instantanés de base de données &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
@@ -59,6 +59,6 @@ ms.locfileid: "70154582"
   
  [Views](../views/views.md)  
   
- [Procédures stockées &#40;moteur de base de données &#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [Procédures stockées &#40;moteur de base de données&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   

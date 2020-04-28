@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72005972"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -63,7 +63,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 `[ @path = ] 'root_directory'`Répertoire racine (pas le chemin d’accès physique complet) pour une action de **création** . *root_directory* est de type **nvarchar (100)** et sa valeur par défaut est null, ce qui indique l’utilisation de l’emplacement par défaut spécifié lors de l’installation. Il s’agit du sous-répertoire Ftdata dans le répertoire MSSQL. par exemple, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Le répertoire racine spécifié doit se trouver sur un lecteur du même ordinateur, ne pas être désigné seulement par une lettre de lecteur et ne pas être un chemin d'accès relatif. Les disques réseau et amovibles, les disquettes et chemins UNC ne sont pas pris en charge. Les catalogues de texte intégral doivent être créés sur un lecteur de disque local associé à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- le chemin ** **d’accès est valide uniquement quand l’action est \@** **créer**. Pour les actions autres que **Create** (**Stop**, **Rebuild**, etc.), ** \@Path** doit avoir la valeur null ou être omis.  
+ le chemin *action* **d’accès est valide uniquement quand l’action est \@** **créer**. Pour les actions autres que **Create** (**Stop**, **Rebuild**, etc.), ** \@Path** doit avoir la valeur null ou être omis.  
   
  Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un serveur virtuel de cluster, le répertoire de catalogue spécifié doit être installé sur un lecteur de disque partagé dont la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépend. Si @path n’est pas spécifié, l’emplacement du répertoire de catalogue par défaut se trouve sur le lecteur de disque partagé, dans le répertoire spécifié lors de l’installation du serveur virtuel.  
   
@@ -138,7 +138,7 @@ GO
  [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recherche en texte intégral](../../relational-databases/search/full-text-search.md)  
   
   

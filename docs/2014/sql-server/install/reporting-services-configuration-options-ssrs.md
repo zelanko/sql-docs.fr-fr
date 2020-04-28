@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952122"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Options de configuration Reporting Services (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "71952122"
 > [!NOTE]  
 >  Un fichier de base de données de serveur de rapports existant peut entraîner l'échec de l'installation si vous choisissez l'une des options d'installation par défaut. Lorsque vous choisissez une option d'installation par défaut, le programme d'installation tente de créer une base de données de serveur de rapports à l'aide du nom par défaut. Si une base de données existe déjà sous ce nom, le programme d'installation échoue et vous devez restaurer l'installation. Pour éviter ce problème, vous pouvez renommer la base de données existante avant d’exécuter le programme d’installation ou choisir l’option **Installer uniquement** afin de pouvoir spécifier des paramètres de base de données personnalisés une fois l’installation terminée.  
   
-#### <a name="install-and-configure"></a>Installer et configurer  
+#### <a name="install-and-configure"></a>Installation et configuration  
  Installe une instance du serveur de rapports en mode natif en utilisant les valeurs par défaut pour les bases de données, le compte de service et les réservations d'URL du serveur de rapports. Lorsque vous choisissez cette option, l'instance du serveur de rapports est prête à être utilisée à la fin de l'installation. Le programme d'installation crée la base de données du serveur de rapports à l'aide d'une instance locale du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , puis configure un serveur de rapports pour l'utilisation des valeurs par défaut.  
   
  Cette option n'est disponible que si les valeurs par défaut utilisées dans l'installation d'un serveur de rapports sont valides pour votre système. Cette option est recommandée pour les développeurs qui souhaitent installer tous les composants localement, ainsi que pour les utilisateurs qui évaluent le logiciel.  

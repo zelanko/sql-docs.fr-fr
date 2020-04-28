@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154839"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
@@ -56,7 +56,7 @@ ms.locfileid: "70154839"
  **Remplacer tous les jeux de sauvegarde existants**  
  Remplace les éventuelles sauvegardes antérieures présentes sur le support de sauvegarde existant par la sauvegarde active.  
   
- **Vérifier l’expiration du nom du support de sauvegarde et du jeu de sauvegarde**  
+ **Vérifier le nom du support de sauvegarde et la date d'expiration du jeu de sauvegarde**  
  Éventuellement, si vous sauvegardez sur un support de sauvegarde existant, exigez la vérification du nom et de la date d'expiration des jeux de sauvegarde pendant l'opération de sauvegarde.  
   
  **Nom du support de sauvegarde**  
@@ -94,7 +94,7 @@ ms.locfileid: "70154839"
  **Tronquer le journal des transactions**  
  Permet de sauvegarder le journal des transactions puis de le tronquer pour libérer de l'espace. La base de données reste en ligne. Il s'agit de l'option par défaut.  
   
- **Sauvegarder la fin du journal et conserver la base de données dans l’état de restauration**  
+ **Sauvegarder la fin du journal et laisser la base de données dans l'état de restauration**  
  Sauvegarder la fin du journal et laisser la base de données dans l'état de restauration. Crée une *sauvegarde de la fin du journal*, incluant les journaux n’ayant pas encore été sauvegardés (journal actif), généralement en guise de préparation à la restauration d’une base de données. La base de données est inaccessible aux utilisateurs tant qu'elle n'a pas été restaurée dans son intégralité.  
   
  La sélection de cette option revient à spécifier WITH NO_TRUNCATE, NORECOVERY dans une instruction [BACKUP](/sql/t-sql/statements/backup-transact-sql) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Pour plus d’informations, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  

@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952053"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 Installation
-  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est une collection de composants serveur qui fournissent le traitement des requêtes et le contrôle de gestion pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que vous publiez sur SharePoint. Les services incluent le moteur Analysis Services et le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
@@ -50,6 +49,6 @@ ms.locfileid: "71952053"
  [Configuration initiale &#40;PowerPivot pour SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration et configuration d'un serveur PowerPivot dans l'Administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
+ [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   

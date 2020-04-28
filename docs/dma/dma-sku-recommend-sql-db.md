@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72586738"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifier la référence SKU Azure SQL Database/Managed Instance appropriée pour votre base de données locale
@@ -38,7 +38,7 @@ La fonctionnalité recommandations SKU vous permet d’identifier la référence
 
 Voici des instructions pour vous aider à déterminer les recommandations de Azure SQL Database SKU et à approvisionner une ou plusieurs bases de données uniques dans Azure à l’aide de DMA.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Téléchargez et installez la dernière version de [DMA](https://aka.ms/get-dma). Si vous disposez déjà d’une version antérieure de l’outil, ouvrez-la et vous serez invité à mettre à niveau DMA.
 - Assurez-vous que votre ordinateur dispose de [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou ultérieure, ce qui est nécessaire pour exécuter tous les scripts. Pour plus d’informations sur la findoug de la version de PowerShell installée sur votre ordinateur, consultez l’article [Télécharger et installer Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -102,7 +102,7 @@ En outre, sélectionnez l’un des arguments suivants :
     - **/AzureAuthenticationTenantId**: locataire d’authentification.
     - **/AzureAuthenticationClientId**: ID client de l’application AAD utilisée pour l’authentification.
     - L’une des options d’authentification suivantes :
-      - Interactive
+      - Interactive (Interactif)
         - **AzureAuthenticationInteractiveAuthentication**: affectez la valeur true à une fenêtre indépendante d’authentification.
       - Basé sur le certificat
         - **AzureAuthenticationCertificateStoreLocation**: défini sur l’emplacement du magasin de certificats (par exemple, « CurrentUser »).

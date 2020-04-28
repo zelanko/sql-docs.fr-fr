@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72260378"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72260378"
 |**session_id**|**smallint**|ID de la session associée à la tâche.|  
 |**exec_context_id**|**int**|ID du contexte d'exécution associé à la tâche.|  
 |**wait_duration_ms**|**bigint**|Temps d'attente total de ce type d'attente (en millisecondes). Cette heure est comprise entre **signal_wait_time**.|  
-|**wait_type**|**nvarchar (60)**|Nom du type d’attente.|  
+|**wait_type**|**nvarchar(60)**|Nom du type d'attente.|  
 |**resource_address**|**varbinary (8)**|Adresse de la ressource que la tâche attend.|  
 |**blocking_task_address**|**varbinary (8)**|Tâche qui mobilise actuellement cette ressource.|  
 |**blocking_session_id**|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé en raison de transitions d'état de verrou interne.|  

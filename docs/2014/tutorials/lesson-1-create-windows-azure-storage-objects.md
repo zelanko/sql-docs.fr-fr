@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176108"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>Leçon 1 : Créer des objets de stockage Azure
@@ -29,8 +29,7 @@ ms.locfileid: "70176108"
   
 2.  Pour créer un compte de stockage, suivez les instructions pas à pas détaillées [ici](https://go.microsoft.com/fwlink/?LinkId=271926).  
   
-3.  Accédez au compte de stockage créé à l'étape précédente. Dans le centre en bas de la page Web, cliquez sur **gérer les clés**. Les informations de compte sont affichées. Copiez le nom du compte de stockage et les clés d'accès. Ces informations sont nécessaires pour créer des informations d'identification stockées dans SQL. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise ces informations pour accéder au compte de stockage et créer des sauvegardes.  
+3.  Accédez au compte de stockage créé à l'étape précédente. Dans le centre en bas de la page Web, cliquez sur **gérer les clés**. Les informations de compte sont affichées. Copiez le nom du compte de stockage et les clés d'accès. Ces informations sont nécessaires pour créer des informations d'identification stockées dans SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise ces informations pour accéder au compte de stockage et créer des sauvegardes.  
   
      ![Capture d’écran des clés de compte de stockage Azure](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Capture d’écran des clés de compte de stockage Azure")  
   

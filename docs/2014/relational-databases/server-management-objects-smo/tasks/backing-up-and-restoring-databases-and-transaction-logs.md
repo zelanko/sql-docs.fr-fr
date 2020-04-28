@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783051"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sauvegarde et restauration de bases de données et de journaux de transactions
@@ -445,8 +445,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>Exécution des contrôles d'intégrité de la base de données en Visual Basic  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose une vérification de l'intégrité des données. Cet exemple de code exécute une vérification de type cohérence de la base de données sur la base de données spécifiée. Dans cet exemple, la méthode <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> est utilisée, mais les méthodes <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> ou <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> peuvent être utilisées de la même façon.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose une vérification de l'intégrité des données. Cet exemple de code exécute une vérification de type cohérence de la base de données sur la base de données spécifiée. Dans cet exemple, la méthode <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> est utilisée, mais les méthodes <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> ou <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> peuvent être utilisées de la même façon.  
   
 > [!NOTE]  
 >  L'objet <xref:System.Collections.Specialized.StringCollection> requiert une référence à l'espace de noms à l'aide de l'instruction `imports System.Collections.Specialized`.  
@@ -476,8 +475,7 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>Exécution des contrôles d'intégrité de la base de données en Visual C#  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose une vérification de l'intégrité des données. Cet exemple de code exécute une vérification de type cohérence de la base de données sur la base de données spécifiée. Dans cet exemple, la méthode <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> est utilisée, mais les méthodes <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> ou <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> peuvent être utilisées de la même façon.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose une vérification de l'intégrité des données. Cet exemple de code exécute une vérification de type cohérence de la base de données sur la base de données spécifiée. Dans cet exemple, la méthode <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> est utilisée, mais les méthodes <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> ou <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> peuvent être utilisées de la même façon.  
   
 > [!NOTE]  
 >  L'objet <xref:System.Collections.Specialized.StringCollection> requiert une référence à l'espace de noms à l'aide de l'instruction `imports System.Collections.Specialized`.  
@@ -509,8 +507,7 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>Exécution des contrôles d'intégrité de la base de données dans PowerShell  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose une vérification de l'intégrité des données. Cet exemple de code exécute une vérification de type cohérence de la base de données sur la base de données spécifiée. Dans cet exemple, la méthode <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> est utilisée, mais les méthodes <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> ou <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> peuvent être utilisées de la même façon.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose une vérification de l'intégrité des données. Cet exemple de code exécute une vérification de type cohérence de la base de données sur la base de données spécifiée. Dans cet exemple, la méthode <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> est utilisée, mais les méthodes <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> ou <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> peuvent être utilisées de la même façon.  
   
 > [!NOTE]  
 >  L'objet <xref:System.Collections.Specialized.StringCollection> requiert une référence à l'espace de noms à l'aide de l'instruction `imports System.Collections.Specialized`.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d3a5fab0a0502d2e6faba2f66b64ae65b995b48f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952183"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Liste de vérification du déploiement : montée en puissance parallèle en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint 2010
@@ -22,7 +22,7 @@ ms.locfileid: "71952183"
   
  Après avoir installé une nouvelle instance, vous disposerez d'une capacité supplémentaire pour interroger les données PowerPivot ou traiter les travaux d'actualisation des données PowerPivot. Vous pourrez éventuellement configurer chaque serveur afin que celui-ci ne gère qu'un type de demande : requête ou actualisation des données.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  SharePoint Server 2010 est installé et configuré.  
   
  SharePoint Server 2010 SP1 est appliqué et la batterie est mise à niveau.  
@@ -52,6 +52,6 @@ ms.locfileid: "71952183"
 ## <a name="see-also"></a>Voir aussi  
  [Configuration initiale &#40;PowerPivot pour SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
  [Installation de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Administration et configuration d'un serveur PowerPivot dans l'Administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
+ [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689052"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
@@ -56,7 +56,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |name|**sysname**|Nom de la publication.|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|État actuel de la publication.<br /><br /> **0** = inactif.<br /><br /> **1** = actif.|  
-|task||Utilisé pour la compatibilité descendante.|  
+|tâche||Utilisé pour la compatibilité descendante.|  
 |replication frequency|**tinyint**|Type de fréquence de réplication :<br /><br /> **0** = transactionnel<br /><br /> **1** = instantané|  
 |synchronization method|**tinyint**|Mode de synchronisation :<br /><br /> **0** = programme de copie en bloc natif (utilitaire**BCP** )<br /><br /> **1** = copie en bloc de caractères<br /><br /> **3** = simultané, ce qui signifie que la copie en bloc native (utilitaire**BCP**) est utilisée, mais que les tables ne sont pas verrouillées lors de l’instantané<br /><br /> **4** = concurrent_c, ce qui signifie que la copie en bloc de caractères est utilisée, mais que les tables ne sont pas verrouillées lors de l’instantané|  
 |description|**nvarchar(255)**|Description facultative de la publication.|  
@@ -88,7 +88,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Spécifie la durée de rétention des conflits en jours.|  
 |conflict_policy|**int**|Spécifie la stratégie de résolution de conflits à suivre lorsque l'option d'abonné avec mise à jour en attente est utilisée. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = le serveur de publication gagne le conflit.<br /><br /> **2** = l’abonné gagne le conflit.<br /><br /> **3** = l’abonnement est réinitialisé.|  
 |queue_type||Spécifie le type de file d'attente utilisé. Peut prendre l'une des valeurs suivantes :<br /><br /> **MSMQ** = utilisez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing pour stocker les transactions.<br /><br /> **SQL** = utilisé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.<br /><br /> Remarque : la prise en charge de Message Queuing a été interrompue.|  
-|backward_comp_level||Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Spécifie si la publication est publiée dans l'annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. La valeur **1** indique qu’elle est publiée, tandis que la valeur **0** indique qu’elle n’est pas publiée.|  
 |allow_initialize_from_backup|**bit**|Indique si les Abonnés peuvent initialiser un abonnement à cette publication à partir d'une sauvegarde plutôt qu'à partir de son instantané initial. **1** signifie que les abonnements peuvent être initialisés à partir d’une sauvegarde, et **0** signifie qu’ils ne le peuvent pas. Pour plus d’informations, consultez [initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) un abonné transactionnel sans instantané.|  
 |replicate_ddl|**int**|Précise si la réplication de schéma est prise en charge pour la publication. **1** indique que les instructions DDL (Data Definition Language) exécutées sur le serveur de publication sont répliquées, et **0** indique que les instructions DDL ne sont pas répliquées. Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  

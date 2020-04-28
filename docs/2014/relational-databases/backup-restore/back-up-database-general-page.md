@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155078"
 ---
 # <a name="back-up-database-general-page"></a>Sauvegarder la base de données (page Général)
@@ -27,7 +27,7 @@ ms.locfileid: "70155078"
 > [!NOTE]  
 >  Quand vous spécifiez une tâche de sauvegarde à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination pour le script.  
   
- **Pour utiliser SQL Server Management Studio pour créer une sauvegarde**  
+ **Pour créer une sauvegarde à l'aide de SQL Server Management Studio**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70155078"
  **Sauvegarde de la base de données**  
  Sélectionnez la base de données à sauvegarder.  
   
- **mode de récupération**  
+ **Mode de récupération**  
  Spécifie le mode de récupération (simple, complète ou avec journal des transactions) pour la base de données sélectionnée.  
   
  **Type de sauvegarde**  
@@ -67,7 +67,7 @@ ms.locfileid: "70155078"
 >  Lorsque l'option **Différentielle** est sélectionnée, vous ne pouvez pas créer de sauvegarde de copie uniquement.  
   
  **Composant de sauvegarde**  
- Sélectionnez le composant de base de données à sauvegarder. Si **Journal des transactions** est sélectionné dans la liste **Type de sauvegarde**, cette option n'est pas activée.  
+ Sélectionnez le composant de base de données à sauvegarder. Si **Journal des transactions** est sélectionné dans la liste **Type de sauvegarde** , cette option n'est pas activée.  
   
  Sélectionnez l'une des cases d'option suivantes :  
   
@@ -82,12 +82,12 @@ ms.locfileid: "70155078"
 > [!NOTE]  
 >  Pour plus d’informations sur les unités de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
- **Sauvegarder sur**  
+ **Sauvegarde sur**  
  Sélectionnez un des types de support ci-dessous pour la sauvegarde. Les destinations que vous sélectionnez apparaissent dans la liste **Sauvegarde sur** .  
   
 |||  
 |-|-|  
-|**Libérer**|Permet de sauvegarder sur un disque. Il peut s'agir d'un fichier système ou d'une unité logique de sauvegarde sur disque créée pour la base de données. Les disques sélectionnés apparaissent dans la liste **Sauvegarde sur** . Vous pouvez sélectionner jusqu'à 64 disques pour l'opération de sauvegarde.|  
+|**Disque**|Permet de sauvegarder sur un disque. Il peut s'agir d'un fichier système ou d'une unité logique de sauvegarde sur disque créée pour la base de données. Les disques sélectionnés apparaissent dans la liste **Sauvegarde sur** . Vous pouvez sélectionner jusqu'à 64 disques pour l'opération de sauvegarde.|  
 |**Bande**|Permet de sauvegarder sur bande. Il peut s'agir d'un lecteur de bandes local ou d'une unité logique de sauvegarde sur bande créée pour la base de données. Les bandes sélectionnées apparaissent dans la liste **Sauvegarde sur** . Le nombre maximal est de 64. Si aucun lecteur de bandes n'est connecté au serveur, cette option est désactivée. Les bandes que vous sélectionnez sont répertoriées dans la liste **Sauvegarde sur** .<br /><br /> Remarque : la prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
 |**URL**|Sauvegarde dans le stockage d’objets BLOB Azure.|  
   
@@ -116,13 +116,13 @@ ms.locfileid: "70155078"
  **Conteneur de stockage Azure**  
  Spécifiez le nom du conteneur de stockage Azure  
   
- **Préfixe d’URL :**  
+ **Préfixe d'URL**  
  Est généré automatiquement à partir des informations du compte de stockage contenues dans les informations d'identification SQL, et du nom du conteneur de stockage Windows Azure que vous avez spécifié. Nous vous recommandons de ne pas modifier les informations de ce champ, sauf si vous utilisez un domaine qui utilise un format autre que le ** \<compte de stockage>. blob.Core.Windows.net**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Définir une unité de sauvegarde logique pour un fichier disque &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Définir une unité de sauvegarde logique pour un lecteur de bande &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Modes de récupération &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   

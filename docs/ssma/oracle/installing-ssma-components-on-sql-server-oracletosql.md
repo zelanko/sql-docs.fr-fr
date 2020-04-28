@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71713310"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installation des composants SSMA sur SQL Server (OracleToSQL)
@@ -30,7 +30,7 @@ Le pack d’extension SSMA ajoute les bases de données **sysdb** et **ssmateste
   
 En outre, lorsque vous migrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crée des travaux de l’agent lorsque le moteur de migration de données côté serveur est utilisé pour la migration des données.  
   
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Prérequis
 
 Avant d’installer les composants SSMA pour Oracle Server sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assurez-vous que le système répond aux exigences suivantes :  
   

@@ -16,10 +16,10 @@ ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252051"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
@@ -50,7 +50,7 @@ ms.locfileid: "72252051"
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null dans le paramètre * \@* de sortie redirected_publisher. Si une entrée existe, elle est retournée dans le paramètre de sortie dans les deux cas (réussite et échec).  
@@ -63,7 +63,7 @@ ms.locfileid: "72252051"
  L’appelant doit être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** pour la base de données de distribution, ou être membre d’une liste d’accès à une publication pour une publication définie associée à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Procédures stockées de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

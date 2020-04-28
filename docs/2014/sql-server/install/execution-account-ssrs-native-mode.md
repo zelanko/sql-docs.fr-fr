@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952546"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Compte d'exécution (SSRS en mode natif)
@@ -40,21 +40,21 @@ ms.locfileid: "71952546"
  Pour ouvrir cette page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez **Compte d'exécution** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
- **Spécifier un compte d’exécution**  
+ **Spécifier un compte d'exécution**  
  Sélectionnez un compte.  
   
  **Compte**  
  Entrez un compte d'utilisateur de domaine Windows. Utilisez le format suivant : * \<domaine \\><compte\>d’utilisateur*.  
   
  **Mot de passe**  
- Saisissez le mot de passe.  
+ Tapez le mot de passe.  
   
  **Confirmer le mot de passe**  
  Retapez le mot de passe.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de configuration de Reporting Services les rubriques d’aide F1 &#40;le mode natif SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Stocker les données du serveur de rapports chiffrées &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

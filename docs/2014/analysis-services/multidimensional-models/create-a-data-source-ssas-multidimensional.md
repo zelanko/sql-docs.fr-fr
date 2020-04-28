@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175915"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
@@ -36,18 +36,18 @@ ms.locfileid: "70175915"
   
  [Afficher ou modifier les propriétés de connexion](#bkmk_ConnectionString)  
   
- [Créer une source de données à l’aide de l’Assistant source de données](#bkmk_steps)  
+ [Créer une source de données à l'aide de l'Assistant Source de données](#bkmk_steps)  
   
- [Créer une source de données à l’aide d’une connexion existante](#bkmk_connection)  
+ [Créer une source de données à l'aide d'une connexion existante](#bkmk_connection)  
   
  [Ajouter plusieurs sources de données à un modèle](#bkmk_multipleDS)  
   
-##  <a name="bkmk_provider"></a>Choisir un Fournisseur de données  
+##  <a name="choose-a-data-provider"></a><a name="bkmk_provider"></a> Choisir un fournisseur de données  
  Vous pouvez vous connecter via un fournisseur OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework managé ou natif. Le fournisseur de données recommandé pour les sources de données SQL Server est SQL Server Native Client car il offre généralement de meilleures performances.  
   
  Pour Oracle et d'autres sources de données tierces, vérifiez si le tiers fournit un fournisseur OLE DB natif et essayez celui-ci en premier. Si vous rencontrez des erreurs, essayez les autres fournisseurs .NET ou fournisseurs OLE DB natifs répertoriés dans le Gestionnaire de connexions. Assurez-vous que tous les fournisseurs de données que vous utilisez sont installés sur tous les ordinateurs utilisés pour développer et exécuter la solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-##  <a name="bkmk_impersonation"></a>Définir les options d’emprunt d’identité et les informations d’identification  
+##  <a name="set-credentials-and-impersonation-options"></a><a name="bkmk_impersonation"></a> Définir les options d'emprunt d'identité et les informations d'identification  
  Une connexion de source de données peut parfois utiliser l'authentification Windows ou un service d'authentification fourni par le système de gestion de base de données, comme l'authentification SQL Server, lors de la connexion aux bases de données SQL Azure. Le compte que vous spécifiez doit avoir une connexion sur le serveur de base de données distant et des autorisations de lecture sur la base de données externe.  
   
 ### <a name="windows-authentication"></a>Authentification Windows  
@@ -63,13 +63,12 @@ ms.locfileid: "70175915"
  Après avoir enregistré l'objet de source de données dans votre modèle, la chaîne de connexion et le mot de passe sont chiffrés.  Pour des raisons de sécurité, toutes les traces visibles du mot de passe sont supprimées de la chaîne de connexion lorsque vous l'affichez ensuite dans les outils, le script ou le code.  
   
 > [!NOTE]  
->  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’enregistre pas les mots de passe avec la chaîne de connexion. Si le mot de passe n’est pas enregistré, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous invite à le taper si nécessaire. Si vous avez choisi d'enregistrer le mot de passe, ce dernier est stocké dans un format chiffré dans la chaîne de connexion de données. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre les informations de mot de passe pour les sources de données à l’aide de la clé de chiffrement de la base de données qui contient la source de données. Avec les informations de connexion chiffrées, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour modifier le mot de passe ou le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , sinon les informations chiffrées ne peuvent pas être récupérées. Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
+>  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’enregistre pas les mots de passe avec la chaîne de connexion. Si le mot de passe n’est pas enregistré, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous invite à le taper si nécessaire. Si vous avez choisi d'enregistrer le mot de passe, ce dernier est stocké dans un format chiffré dans la chaîne de connexion de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre les informations de mot de passe pour les sources de données à l’aide de la clé de chiffrement de la base de données qui contient la source de données. Avec les informations de connexion chiffrées, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour modifier le mot de passe ou le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , sinon les informations chiffrées ne peuvent pas être récupérées. Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Définition des informations d'emprunt d'identité pour les objets d'exploration de données  
  Les requêtes d'exploration de données peuvent être exécutées dans le contexte du compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais également dans le contexte de l'utilisateur qui soumet la requête ou dans le contexte d'un utilisateur spécifique. Le contexte dans lequel une requête est exécutée peut avoir une incidence sur les résultats de la requête. Pour les opérations d'exploration de données de type `OPENQUERY`, vous pouvez exécuter la requête d'exploration de données dans le contexte de l'utilisateur actuel ou dans le contexte d'un utilisateur spécifique (quel que soit l'utilisateur qui soumet la requête) plutôt que dans le contexte d'un compte de service. Cela permet d'exécuter la requête avec des informations d'identification de sécurité limitées. Si vous souhaitez que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emprunte l’identité de l’utilisateur actuel ou d’un utilisateur spécifique, sélectionnez l’option **Utiliser un nom d’utilisateur et un mot de passe spécifiques** ou **Utiliser les infos d’identification de l’utilisateur actuel** .  
   
-##  <a name="bkmk_steps"></a>Créer une source de données à l’aide de l’Assistant source de données  
+##  <a name="create-a-data-source-using-the-data-source-wizard"></a><a name="bkmk_steps"></a>Créer une source de données à l’aide de l’Assistant source de données  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ouvrez le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou connectez-vous à la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle vous souhaitez définir la source de données.  
   
@@ -87,9 +86,9 @@ ms.locfileid: "70175915"
   
 5.  Tapez les informations requises par le fournisseur sélectionné pour établir la connexion à la source de données sous-jacente. Si le fournisseur **OLE DB natif\SQL Server Native Client** est sélectionné, tapez les informations suivantes :  
   
-    1.  **Nom du serveur** est le nom réseau de l’instance de moteur de base de données. Il peut être spécifié comme adresse IP, nom NetBIOS de l'ordinateur ou nom de domaine complet. Si le serveur est installé en tant qu’instance nommée, vous devez inclure le nom de l’instance ( \<par exemple \\ , ComputerName\>><nom_instance).  
+    1.  **Nom du serveur** correspond au nom réseau de l’instance du moteur de base de données. Il peut être spécifié comme adresse IP, nom NetBIOS de l'ordinateur ou nom de domaine complet. Si le serveur est installé en tant qu’instance nommée, vous devez inclure le nom de l’instance ( \<par exemple \\ , ComputerName\>><nom_instance).  
   
-    2.  **Ouvrir une session sur le serveur** spécifie la manière dont la connexion sera l’authentification. **Utiliser l’authentification Windows** utilise l’authentification Windows. **Utiliser l’authentification SQL Server** spécifie une connexion d’utilisateur de base de données pour une base de données SQL Azure ou une instance SQL Server qui prend en charge l’authentification en mode mixte.  
+    2.  **Connexion au serveur** spécifie le mode d’authentification de la connexion. **Utiliser l’authentification Windows** fait appel à l’authentification Windows. **Utiliser l’authentification SQL Server** spécifie une connexion d’utilisateur de base de données pour une base de données SQL Azure ou une instance SQL Server qui prend en charge l’authentification en mode mixte.  
   
         > [!IMPORTANT]  
         >  Le gestionnaire de connexions inclut une case à cocher **Enregistrer mon mot de passe** pour les connexions qui utilisent l’authentification SQL Server. Bien que la case à cocher soit toujours visible, elle n'est pas toujours utilisée.  
@@ -98,7 +97,7 @@ ms.locfileid: "70175915"
         >   
         >  Ce comportement s'applique uniquement aux bases de données qui a) sont conservées sur une instance de serveur Analysis Services, et b) utilisent l'authentification SQL Server pour actualiser ou traiter les données relationnelles. Il ne s'applique pas aux connexions à la source de données que vous configurez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilisées uniquement pour la durée d'une session. Lorsqu'il est impossible de supprimer un mot de passe déjà stocké, vous pouvez utiliser d'autres informations d'identification, ou l'authentification Windows, pour remplacer les informations utilisateur qui sont actuellement stockées avec la base de données.  
   
-    3.  **Sélectionnez ou entrez un nom de base de données** ou **Attachez un fichier de base de** données pour spécifier la base de données.  
+    3.  **Sélectionner ou entrer un nom de base de données** ou **Attacher un fichier de base de données** permettent de spécifier la base de données.  
   
     4.  Dans la partie gauche de la boîte de dialogue, cliquez sur **Tous** pour afficher des paramètres supplémentaires pour cette connexion, notamment tous les paramètres par défaut pour ce fournisseur.  
   
@@ -112,9 +111,9 @@ ms.locfileid: "70175915"
   
      Les instructions de sélection d'une option d'emprunt d'identité varient selon le mode d'utilisation de la source de données. Pour les tâches de traitement, le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit s'exécuter dans le contexte de sécurité du compte de service ou d'un compte d'utilisateur spécifié lors de la connexion à une source de données.  
   
-    -   **Utilisez un nom d’utilisateur et un mot de passe Windows spécifiques** pour spécifier un ensemble unique d’informations d’identification de moindre privilège.  
+    -   **Utiliser un nom d’utilisateur et un mot de passe Windows spécifiques** pour spécifier un ensemble unique d’informations d’identification doté de privilèges minimaux.  
   
-    -   **Utilisez le compte de service** pour traiter les données à l’aide de l’identité de service.  
+    -   **Utiliser le compte de service** pour traiter les données à l’aide de l’identité de service.  
   
      Le compte que vous spécifiez doit disposer d'autorisations en lecture sur la source de données.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "70175915"
   
 9. Cliquez sur **Terminer**.  La nouvelle source de données apparaît dans le dossier **Sources de données** , dans l’Explorateur de solutions.  
   
-##  <a name="bkmk_connection"></a>Créer une source de données à l’aide d’une connexion existante  
+##  <a name="create-a-data-source-using-an-existing-connection"></a><a name="bkmk_connection"></a>Créer une source de données à l’aide d’une connexion existante  
  Si vous utilisez un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , la source de données peut reposer sur une source de données existante dans la solution ou sur un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . L'Assistant Source de données fournit plusieurs options pour créer l'objet de source de données, notamment l'utilisation d'une connexion existante dans le même projet.  
   
 -   Créer une source de données basée sur une source de données existante dans votre solution vous permet de définir une source de données synchronisée avec la source de données existante. Lorsque le projet contenant cette nouvelle source de données est généré, les paramètres de source de données de la source de données sous-jacente sont utilisés.  
@@ -131,7 +130,7 @@ ms.locfileid: "70175915"
   
  Si vous référencez un objet source de données, vous pouvez modifier cet objet uniquement dans l'objet ou le projet référencé. Vous ne pouvez pas modifier les informations de connexion dans l'objet de source de données qui contient la référence. Les modifications apportées aux informations de connexion dans l'objet ou le projet référencé apparaissent dans la nouvelle source de données lorsqu'elle est générée. Les informations de chaîne de connexion qui apparaissent dans le fichier de source de données (.ds), dans le projet, sont synchronisées lorsque vous créez le projet ou lorsque vous supprimez la référence dans le Concepteur de source de données.  
   
-##  <a name="bkmk_ConnectionString"></a>Afficher ou modifier les propriétés de connexion  
+##  <a name="view-or-edit-connection-properties"></a><a name="bkmk_ConnectionString"></a>Afficher ou modifier les propriétés de connexion  
  La chaîne de connexion est formulée sur la base des propriétés que vous sélectionnez dans le Concepteur de source de données ou dans l'Assistant Nouvelle source de données. Vous pouvez afficher la chaîne de connexion et d’autres propriétés dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  **Pour modifier la chaîne de connexion**  
@@ -148,7 +147,7 @@ ms.locfileid: "70175915"
   
  Vous pouvez supprimer la référence en désactivant la case à cocher. Cela met un terme à la synchronisation entre les objets et vous permet de modifier la chaîne de connexion dans la source de données.  
   
-##  <a name="bkmk_multipleDS"></a>Ajouter plusieurs sources de données à un modèle  
+##  <a name="add-multiple-data-sources-to-a-model"></a><a name="bkmk_multipleDS"></a> Ajouter plusieurs sources de données à un modèle  
  Vous pouvez créer plusieurs objets de source de données pour prendre en charge la connexion à des sources de données supplémentaires. Chaque source de données doit comporter des colonnes pouvant servir à créer des relations.  
   
 > [!NOTE]  

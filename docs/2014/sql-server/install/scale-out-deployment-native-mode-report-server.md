@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952417"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Déploiement avec montée en puissance parallèle (serveur de rapports en mode natif)
@@ -37,7 +37,7 @@ ms.locfileid: "71952417"
  Pour ouvrir la page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez **Déploiement avec montée en puissance parallèle** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
- **Nom du serveur SQL Server**  
+ **Nom de l’SQL Server**  
  Spécifiez le nom de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] l’instance qui héberge la base de données du serveur de rapports.  
   
  **Nom de la base de données**  
@@ -76,8 +76,8 @@ ms.locfileid: "71952417"
  Si vous n'avez plus besoin des données chiffrées ou si vous ne possédez pas de copie de sauvegarde de la clé, vous devez supprimer les données chiffrées. Pour plus d’informations, consultez [clés de chiffrement &#40;SSRS en mode natif&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Initialiser un serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Configurer et gérer des clés de chiffrement &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

@@ -11,18 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ab44323dfabd389113351e413751b7a230c176e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175755"
 ---
 # <a name="sql-server-managed--backup-to-azure"></a>SQL Server la gestion de sauvegarde sur Azure
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]gère et automatise les sauvegardes SQL Server dans le service de stockage d’objets BLOB Azure. La stratégie de sauvegarde utilisée par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est basée sur la période de rétention et la charge de travail transactionnelle sur la base de données. 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] prend en charge la restauration limitée dans le temps pour la période de rétention spécifiée.   
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]gère et automatise les sauvegardes SQL Server dans le service de stockage d’objets BLOB Azure. La stratégie de sauvegarde utilisée par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est basée sur la période de rétention et la charge de travail transactionnelle sur la base de données. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] prend en charge la restauration limitée dans le temps pour la période de rétention spécifiée.   
 La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être activée au niveau de la base de données ou au niveau de l'instance pour gérer toutes les bases de données sur l'instance de SQL Server. Les SQL Server peuvent s’exécuter localement ou dans des environnements hébergés comme la machine virtuelle Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]est recommandé pour les SQL Server s’exécutant sur des machines virtuelles Azure.  
   
-## <a name="benefits-of-automating-sql-server-backup-using-includess_smartbackupincludesss-smartbackup-mdmd"></a>Avantages de l'automatisation de la sauvegarde SQL Server à l'aide de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="benefits-of-automating-sql-server-backup-using-ss_smartbackup"></a>Avantages de l'automatisation de la sauvegarde SQL Server à l'aide de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 -   Actuellement, l'automatisation des sauvegardes pour plusieurs bases de données requiert le développement d'une stratégie de sauvegarde, l'écriture d'un code personnalisé et la planification des sauvegardes. La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] exige uniquement que vous indiquiez les paramètres de période de rétention et l'emplacement de stockage. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]planifie, exécute et gère les sauvegardes.  
   
@@ -48,20 +47,20 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
  Séquence de journaux de transactions consécutifs  
  Une séquence continue de sauvegardes de journaux s'appelle une séquence de journaux de transactions consécutifs. Une séquence de journaux de transactions consécutifs commence par une sauvegarde complète de la base de données.  
   
-##  <a name="Concepts"></a>Spécifications, concepts et composants  
+##  <a name="requirements-concepts-and-components"></a><a name="Concepts"></a>Spécifications, concepts et composants  
   
   
-###  <a name="Security"></a> Autorisations  
+###  <a name="permissions"></a><a name="Security"></a> Autorisations  
  Transact-SQL est l'interface principale utilisée pour configurer et surveiller la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. En général, pour exécuter les procédures stockées de configuration, **db_backupoperator** rôle de base de données avec les autorisations `EXECUTE` **ALTER ANY CREDENTIAL** et les autorisations sur **sp_delete_backuphistory** procédure stockée sont requis.  Les procédures stockées et les fonctions utilisées pour passer en revue les informations nécessitent généralement des autorisations `Execute` sur la procédure stockée et `Select` sur la fonction, respectivement.  
   
-###  <a name="Prereqs"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prereqs"></a> Conditions préalables  
  **Conditions préalables**  
   
  Le **service stockage Azure** est utilisé [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] par pour stocker les fichiers de sauvegarde.    Les concepts, la structure et la configuration requise pour la création d’un compte de stockage Azure sont expliqués en détail dans la section [Introduction aux composants clés et aux concepts](sql-server-backup-to-url.md#intorkeyconcepts) de la rubrique **SQL Server sauvegarde vers une URL** .  
   
  Les informations **d’identification SQL** sont utilisées pour stocker les informations requises pour l’authentification auprès du compte de stockage Azure. L'objet contenant les informations d'identification SQL stocke le nom du compte et les informations de la clé d'accès. Pour plus d’informations, consultez la section [Introduction to Key Components and concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) dans la rubrique **SQL Server Backup to URL** . Pour obtenir une procédure pas à pas sur la façon de créer des informations d’identification SQL pour stocker les informations d’authentification Azure Storage, consultez la [leçon 2 : créer des informations d’identification de SQL Server](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
-###  <a name="Concepts_Components"></a>Concepts et composants clés  
+###  <a name="concepts-and-key-components"></a><a name="Concepts_Components"></a>Concepts et composants clés  
  La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est une fonctionnalité qui gère les opérations de sauvegarde. Elle stocke les métadonnées dans la base de données **msdb** et utilise des travaux système pour écrire des sauvegardes complètes de la base de données et du journal des transactions.  
   
 #### <a name="components"></a>Components  
@@ -106,8 +105,7 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
   
 -   L'intervalle maximum d'une semaine est dépassé depuis la dernière sauvegarde de base de données complète.  
   
--   La séquence de journaux de transactions consécutifs est rompue. 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] vérifie périodiquement si la séquence de journaux de transactions consécutifs est intacte en comparant le premier et le dernier LSN des fichiers de sauvegarde. Si la séquence de journaux de transactions consécutifs est rompue pour un motif quelconque, la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] planifie une sauvegarde de base de données complète. Le motif le plus fréquent d'une rupture de la séquence de journaux de transactions consécutifs est le plus souvent une commande de sauvegarde émise à l'aide de Transact-SQL ou via la tâche de sauvegarde dans SQL Server Management Studio.  D'autres scénarios communs sont la suppression accidentelle des fichiers journaux de sauvegarde ou le remplacement accidentel des sauvegardes.  
+-   La séquence de journaux de transactions consécutifs est rompue. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] vérifie périodiquement si la séquence de journaux de transactions consécutifs est intacte en comparant le premier et le dernier LSN des fichiers de sauvegarde. Si la séquence de journaux de transactions consécutifs est rompue pour un motif quelconque, la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] planifie une sauvegarde de base de données complète. Le motif le plus fréquent d'une rupture de la séquence de journaux de transactions consécutifs est le plus souvent une commande de sauvegarde émise à l'aide de Transact-SQL ou via la tâche de sauvegarde dans SQL Server Management Studio.  D'autres scénarios communs sont la suppression accidentelle des fichiers journaux de sauvegarde ou le remplacement accidentel des sauvegardes.  
   
  **Sauvegarde du journal des transactions :** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] planifie une sauvegarde du journal si l’une des conditions suivantes est vraie :  
   
@@ -122,18 +120,16 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
 #### <a name="retention-period-settings"></a>Paramètres de période de rétention  
  Lorsque vous configurez la sauvegarde, vous devez définir la période de rétention en jours : 1 jour au minimum et 30 jours au maximum.  
   
- 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , en fonction des paramètres de la période de rétention, évalue la capacité à restaurer une base de données à un point précis dans le temps au cours de la période de rétention pour déterminer quels sont les fichiers de sauvegarde à conserver et quels sont ceux à supprimer. Le paramètre backup_finish_date de la sauvegarde est utilisé pour déterminer et vérifier la durée spécifiée dans les paramètres de la période de rétention.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , en fonction des paramètres de la période de rétention, évalue la capacité à restaurer une base de données à un point précis dans le temps au cours de la période de rétention pour déterminer quels sont les fichiers de sauvegarde à conserver et quels sont ceux à supprimer. Le paramètre backup_finish_date de la sauvegarde est utilisé pour déterminer et vérifier la durée spécifiée dans les paramètres de la période de rétention.  
   
 #### <a name="important-considerations"></a>Éléments importants à prendre en considération  
  Certains éléments doivent être pris en considération, car ils ont un impact important sur les opérations de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Ils sont répertoriés ci-dessous :  
   
 -   Pour une base de données, si un travail de sauvegarde complète de base de données est en cours, la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] attend la fin du travail avant d'effectuer une autre sauvegarde complète de la même base de données. De même, une seule sauvegarde de journal de transactions peut être exécutée à la fois. Toutefois, une sauvegarde de base de données complète et une sauvegarde de journal peuvent s'exécuter simultanément. Les échecs sont enregistrés en tant qu'événements étendus.  
   
--   Si plus de 10 sauvegardes de base de données complètes sont planifiées simultanément, un avertissement est généré au moyen du canal de débogage des événements étendus. 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] met alors en file d'attente les bases de données qui restent à sauvegarder, jusqu'à ce que toutes les sauvegardes soient planifiées et terminées.  
+-   Si plus de 10 sauvegardes de base de données complètes sont planifiées simultanément, un avertissement est généré au moyen du canal de débogage des événements étendus. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] met alors en file d'attente les bases de données qui restent à sauvegarder, jusqu'à ce que toutes les sauvegardes soient planifiées et terminées.  
   
-###  <a name="support_limits"></a>Limitations de la prise en charge   
+###  <a name="support-limitations"></a>Limitations de la prise en charge <a name="support_limits"></a>  
  Voici quelques limitations spécifiques à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
   
 -   L'agent de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] prend en charge les sauvegardes complètes de base de données et les sauvegardes de fichier journal uniquement.  La sauvegarde automatique de fichier n'est pas prise en charge.  
@@ -144,14 +140,13 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
   
 -   Le service de stockage d’objets BLOB Azure est la seule option de stockage de sauvegarde prise en charge. Les sauvegardes sur disque ou sur bande ne sont pas prises en charge.  
   
--   Actuellement, la taille de fichier maximale autorisée pour un objet blob de pages dans le stockage Azure est de 1 to. Les fichiers de sauvegarde d'une taille supérieure à 1 To échouent. Afin d'éviter cette situation, nous vous recommandons, pour les bases de données de grande taille, d'utiliser la compression et de tester la taille du fichier de sauvegarde avant de configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Vous pouvez effectuer un test en sauvegardant sur un disque local ou en sauvegardant manuellement sur le stockage Azure `BACKUP TO URL` à l’aide de l’instruction Transact-SQL. Pour plus d’informations, voir [SQL Server Backup to URL](sql-server-backup-to-url.md)(en anglais).  
+-   Actuellement, la taille de fichier maximale autorisée pour un objet blob de pages dans le stockage Azure est de 1 to. Les fichiers de sauvegarde d'une taille supérieure à 1 To échouent. Afin d'éviter cette situation, nous vous recommandons, pour les bases de données de grande taille, d'utiliser la compression et de tester la taille du fichier de sauvegarde avant de configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Vous pouvez effectuer un test en sauvegardant sur un disque local ou en sauvegardant manuellement sur le stockage Azure `BACKUP TO URL` à l’aide de l’instruction Transact-SQL. Pour plus d’informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Modèles de récupération : seules les bases de données en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions sont prises en charge.  Les bases de données utilisant le mode de récupération simple ne sont pas prises en charge.  
   
--   
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut avoir d'autres limitations lorsqu'elle est configurée avec d'autres technologies prenant en charge la sauvegarde, la haute disponibilité ou la récupération d'urgence. Pour plus d’informations, consultez [SQL Server la gestion de sauvegarde sur Azure : interopérabilité et coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut avoir d'autres limitations lorsqu'elle est configurée avec d'autres technologies prenant en charge la sauvegarde, la haute disponibilité ou la récupération d'urgence. Pour plus d’informations, consultez [SQL Server la gestion de sauvegarde sur Azure : interopérabilité et coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 |||  
 |-|-|  

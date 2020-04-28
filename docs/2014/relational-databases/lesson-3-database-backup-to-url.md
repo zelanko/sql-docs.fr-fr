@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175631"
 ---
-# <a name="lesson-4-create-a-database-in-azure-storage"></a>Leçons 4 : Créer une base de données dans Stockage Azure
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>Leçon 4 : Créer une base de données dans Stockage Azure
   Dans cette leçon, vous allez apprendre à créer une base de données à l’aide de la fonctionnalité fichiers de données SQL Server dans Azure. Notez que vous devez avoir terminé les leçons 1, 2 et 3 avant d'effectuer les tâches de cette leçon. La leçon 3 est une étape très importante, car vous devez stocker les informations relatives à votre conteneur de stockage Azure, ainsi que le nom de la stratégie et la clé SAS qui lui sont associés dans le magasin d’informations d’identification SQL Server avant la leçon 4.  
   
  Pour chaque conteneur de stockage utilisé par un fichier de données ou un fichier journal, vous devez créer des informations d'identification SQL Server dont le nom correspond au chemin d'accès du conteneur. Ensuite, vous pouvez créer une nouvelle base de données dans le stockage Azure.  
@@ -73,7 +73,7 @@ ms.locfileid: "70175631"
   
 6.  De même, pour afficher la base de données nouvellement créée dans votre compte de stockage, connectez-vous à votre compte de stockage via SQL Server Management Studio (SSMS). Pour plus d’informations sur la façon de se connecter à un stockage Azure à l’aide de SQL Server Management Studio, procédez comme suit :  
   
-    1.  Tout d'abord, obtenez les informations sur le compte de stockage. Connectez-vous au portail de gestion. Cliquez ensuite sur **stockage** et choisissez votre compte de stockage. Quand un compte de stockage est sélectionné, cliquez sur **gérer les clés d’accès** au bas de la page. Cela permet d'ouvrir une fenêtre de dialogue similaire :  
+    1.  Tout d'abord, obtenez les informations sur le compte de stockage. Connectez-vous au Portail de gestion. Cliquez ensuite sur **stockage** et choisissez votre compte de stockage. Quand un compte de stockage est sélectionné, cliquez sur **gérer les clés d’accès** au bas de la page. Cela permet d'ouvrir une fenêtre de dialogue similaire :  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   

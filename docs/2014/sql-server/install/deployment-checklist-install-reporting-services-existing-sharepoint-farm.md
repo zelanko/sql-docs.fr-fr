@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952626"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Liste de vérification du déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante
   Les serveurs de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint peuvent être installés dans une nouvelle batterie de serveurs SharePoint ou dans une batterie de serveurs SharePoint existante. Cette rubrique décrit les scénarios possibles et les meilleures pratiques pour l'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une batterie de serveurs SharePoint existante.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Avant d'exécuter le programme d'installation, examinez les informations suivantes :  
   
 |Étape|Lien|  
@@ -35,14 +35,9 @@ ms.locfileid: "71952626"
   
 |Démarrer la configuration|Workflow|Terminer la configuration|Commentaires|  
 |----------------------------|--------------|--------------------------|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]en mode local|Installation|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en mode connecté.||  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en mode connecté|Mise à niveau sur place|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en mode connecté.||  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en mode connecté|Migration|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en mode connecté.||  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en mode local|Installation|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en mode connecté.||  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en mode connecté|Mise à niveau sur place|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en mode connecté.||  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en mode connecté|Migration|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en mode connecté.||  
   
 ## <a name="installation-and-in-place-upgrade-checklist"></a>Installation et liste de vérification de mise à niveau sur place  
  Le tableau suivant résume les étapes, les outils et les informations que vous devez examiner et utiliser pour l'installation :  
@@ -64,8 +59,7 @@ ms.locfileid: "71952626"
   
 |Étape|Lien|  
 |----------|----------|  
-|Installez et configurez votre nouveau serveur. Notamment :<br /><br /> Outil de préparation des produits SharePoint<br /><br /> Produit SharePoint 2010<br /><br /> SharePoint 2010 SP1<br /><br /> 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint<br /><br /> Complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint 2010|[Installer Reporting Services mode SharePoint pour SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|Installez et configurez votre nouveau serveur. Notamment :<br /><br /> Outil de préparation des produits SharePoint<br /><br /> Produit SharePoint 2010<br /><br /> SharePoint 2010 SP1<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint<br /><br /> Complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint 2010|[Installer Reporting Services mode SharePoint pour SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Créez au moins une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Sauvegardez les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Sauvegardez les clés de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  

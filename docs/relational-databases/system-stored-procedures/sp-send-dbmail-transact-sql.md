@@ -19,10 +19,10 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42c763b37f5c721a259fbe87eca804e22f5c27b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71974373"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
@@ -143,7 +143,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 > [!NOTE]  
 >  Lorsqu’elle est utilisée avec de grandes quantités de \@données, l’option **query_no_truncate** consomme des ressources supplémentaires et peut ralentir les performances du serveur.  
   
-`[ @query_result_no_padding ] @query_result_no_padding`Le type est bit. La valeur par défaut est 0. Lorsque vous affectez la valeur 1 à, les résultats de la requête ne sont pas remplis, ce qui réduit éventuellement la taille du fichier. \@Si vous affectez à query_result_no_padding la valeur 1 et \@que vous définissez le \@paramètre query_result_width, le paramètre query_result_no_padding \@remplace le paramètre query_result_width.  
+`[ @query_result_no_padding ] @query_result_no_padding`Le type est bit. La valeur par défaut est 0. Lorsque vous affectez la valeur 1 à, les résultats de la requête ne sont pas remplis, ce qui réduit éventuellement la taille du fichier. \@Si vous affectez à query_result_no_padding la valeur 1 et \@que vous définissez le \@paramètre query_result_width, le paramètre query_result_no_padding \@remplace le paramètre query_result_width.  
   
  Dans ce cas, aucune erreur ne se produit.  
  
@@ -246,7 +246,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  

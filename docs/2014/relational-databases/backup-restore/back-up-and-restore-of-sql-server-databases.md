@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176025"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "70176025"
   
 
   
-##  <a name="Benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="Benefits"></a>Avantageuse  
   
 -   La sauvegarde de vos bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'exécution de procédures de restauration de test sur vos sauvegardes et le stockage des copies des sauvegardes à un emplacement sécurisé et hors site permettent de vous protéger contre une éventuelle perte catastrophique de données.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "70176025"
   
 
   
-##  <a name="TermsAndDefinitions"></a>Composants et concepts  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>Composants et concepts  
  sauvegarder [verbe]  
  Copie les données ou les enregistrements de journal d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de son journal des transactions sur une unité de sauvegarde, telle qu'un disque, pour créer une sauvegarde de données ou de journal.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70176025"
   
 
   
-##  <a name="BnrStrategies"></a>Présentation des stratégies de sauvegarde et de restauration  
+##  <a name="introduction-to-backup-and-restore-strategies"></a><a name="BnrStrategies"></a>Présentation des stratégies de sauvegarde et de restauration  
  Les sauvegardes et restaurations de données doivent être adaptées à un environnement particulier et doivent pouvoir utiliser les ressources disponibles. Pour qu'elles soient efficaces, les sauvegardes et restaurations aux fins de récupération doivent par conséquent faire l'objet d'une stratégie. Une stratégie de sauvegarde et de restauration bien conçue doit maximiser la disponibilité des données et minimiser la perte de données, en prenant en compte les besoins spécifiques de votre entreprise.  
   
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ ms.locfileid: "70176025"
   
      Pour plus d'informations, consultez [Estimer la taille d'une sauvegarde complète de base de données](#EstimateDbBuSize) plus loin dans cette section.  
   
-####  <a name="EstimateDbBuSize"></a>Estimer la taille d’une sauvegarde complète de base de données  
+####  <a name="estimate-the-size-of-a-full-database-backup"></a><a name="EstimateDbBuSize"></a>Estimer la taille d’une sauvegarde complète de base de données  
  Avant de mettre en place une stratégie de sauvegarde et de restauration, vous devez estimer la quantité d'espace disque qu'utilisera une sauvegarde complète de base de données. L'opération de sauvegarde copie les données de la base de données dans un fichier de sauvegarde. La sauvegarde contient uniquement les données réelles de la base de données et aucun espace inutilisé. Ainsi, la sauvegarde est généralement moins volumineuse que la base de données elle-même. Vous pouvez estimer la taille d’une sauvegarde complète de base de données en utilisant la procédure stockée système **sp_spaceused** . Pour plus d’informations, consultez [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Planifier des sauvegardes  
@@ -166,7 +166,7 @@ ms.locfileid: "70176025"
   
  Nous vous recommandons la tenue d'un manuel des opérations pour chaque base de données. Ce manuel doit consigner l'emplacement des sauvegardes, les noms des unités de sauvegarde (le cas échéant) et le temps requis pour la restauration des sauvegardes de test.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 ### <a name="scheduling-backup-jobs"></a>Planification des travaux de sauvegarde  
   
@@ -174,7 +174,7 @@ ms.locfileid: "70176025"
   
 -   [Créer un travail](../../ssms/agent/create-a-job.md)  
   
--   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
+-   [Planifier un travail](../../ssms/agent/schedule-a-job.md)  
   
 ### <a name="working-with-backup-devices-and-backup-media"></a>Utilisation des unités et supports de sauvegarde  
   
@@ -182,15 +182,15 @@ ms.locfileid: "70176025"
   
 -   [Définir une unité de sauvegarde logique pour un lecteur de bande &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Spécifiez un disque ou une bande comme destination de sauvegarde &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Spécifier un disque ou une bande comme destination de sauvegarde &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Supprimer une unité de sauvegarde &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [Définir la date d’expiration sur un &#40;de sauvegarde SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Définir la date d’expiration d’une sauvegarde &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Afficher le contenu d’un fichier ou d’une bande de sauvegarde &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Affichez les fichiers de données et les fichiers journaux dans un jeu de sauvegarde &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [Afficher les fichiers de données et les fichiers journaux dans un jeu de sauvegarde &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -213,7 +213,7 @@ ms.locfileid: "70176025"
   
  **Utilisation de Transact-SQL**  
   
--   [Utilisez Resource Governor pour limiter l’utilisation de l’UC par compression de sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [Sauvegarder le journal des transactions lorsque la base de données est endommagée &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
@@ -244,7 +244,7 @@ ms.locfileid: "70176025"
   
 -   [Restaurer des fichiers à un nouvel emplacement &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  
   
--   [Restaurer la base de données Master &#40;&#41;Transact-SQL](restore-the-master-database-transact-sql.md)  
+-   [Restaurer la base de données MASTER &#40;Transact-SQL&#41;](restore-the-master-database-transact-sql.md)  
   
 
   
@@ -266,7 +266,7 @@ ms.locfileid: "70176025"
 ### <a name="additional-restore-tasks"></a>Tâches de restauration supplémentaires  
  **Utilisation de Transact-SQL**  
   
--   [Redémarrage d’une opération de restauration interrompue &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Redémarrer une opération de restauration interrompue &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   
 -   [Récupérer une base de données sans restaurer les données &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
@@ -278,7 +278,7 @@ ms.locfileid: "70176025"
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Sauvegarde et restauration de bases de données Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
- [Sauvegarder et restaurer des catalogues et des index de texte intégral](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Journal des transactions &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [Modes de récupération &#40;SQL Server&#41;](recovery-models-sql-server.md)   

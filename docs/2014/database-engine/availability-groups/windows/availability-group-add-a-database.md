@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dda5ac5b2f569c8438439ec77da33fde3a385fa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782897"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>Ajouter une base de données à un groupe de disponibilité (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "72782897"
   
      [autorisations](#Permissions)  
   
--   **Pour ajouter une base de données à un groupe de disponibilité, utilisez :**  
+-   **Pour ajouter une base de données à un groupe de disponibilité, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -38,20 +38,20 @@ ms.locfileid: "72782897"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises et restrictions  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Conditions préalables et restrictions  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
--   La base de données doit résider sur l'instance de serveur qui héberge le réplica principal et se conformer aux conditions préalables requises et aux restrictions applicables aux bases de données de disponibilité. Pour plus d’informations, consultez [conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   La base de données doit résider sur l'instance de serveur qui héberge le réplica principal et se conformer aux conditions préalables requises et aux restrictions applicables aux bases de données de disponibilité. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour ajouter une base de données à un groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
@@ -72,7 +72,7 @@ ms.locfileid: "72782897"
   
          Après avoir utilisé la boîte de dialogue **Propriétés du groupe de disponibilité** pour ajouter une base de données à un groupe de disponibilité, vous devez configurer la base de données secondaire correspondante sur chaque instance de serveur qui héberge un réplica secondaire. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour ajouter une base de données à un groupe de disponibilité**  
   
 1.  Connectez-vous à l'instance de serveur qui héberge l'instance de serveur qui héberge le réplica principal.  
@@ -94,12 +94,12 @@ ms.locfileid: "72782897"
   
 3.  Après avoir ajouté une base de données à un groupe de disponibilité, vous devez configurer la base de données secondaire correspondante sur chaque instance de serveur qui héberge un réplica secondaire. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour ajouter une base de données à un groupe de disponibilité**  
   
 1.  Accédez au répertoire (`cd`) de l'instance de serveur qui héberge le réplica principal.  
   
-2.  Utilisez l’applet de commande `Add-SqlAvailabilityDatabase` .  
+2.  Utilisez l'applet de commande `Add-SqlAvailabilityDatabase`.  
   
      Par exemple, la commande suivante ajoute la base de données secondaire `MyDd` au groupe de disponibilité `MyAG` , dont le réplica principal est hébergé par `PrimaryServer\InstanceName`.  
   

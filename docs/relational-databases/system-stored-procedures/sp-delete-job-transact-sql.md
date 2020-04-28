@@ -18,10 +18,10 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72306273"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
@@ -68,8 +68,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  L' ** \@argument delete_unused_schedule** fournit une compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont associées à aucun travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas attachées à un travail, vous devez fournir la valeur **0** comme argument ** \@delete_unused_schedule** .  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
  Cette procédure stockée ne peut pas supprimer les plans de maintenance ni les travaux relevant de plans de maintenance. Pour supprimer les plans de maintenance, vous devez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -82,7 +81,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_delete_job** pour supprimer un travail. Un utilisateur qui n'est pas membre du rôle serveur fixe **sysadmin** n'a le droit de supprimer que les travaux dont il est propriétaire.  
   

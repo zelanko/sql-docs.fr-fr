@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952412"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>URL du gestionnaire de rapports (SSRS en mode natif)
@@ -35,14 +35,14 @@ ms.locfileid: "71952412"
  **Répertoire virtuel**  
  Spécifie le nom de répertoire virtuel pour le Gestionnaire de rapports. Vous ne pouvez avoir qu'un seul nom de répertoire virtuel pour chaque instance du Gestionnaire de rapports sur le même ordinateur.  
   
- **URL**  
+ **URLs**  
  Affiche l'URL définie pour l'instance en cours du Gestionnaire de rapports.  
   
- **Avancée**  
+ **Avancé**  
  Ajoutez une URL supplémentaire pour l'instance en cours du Gestionnaire de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [URL dans les fichiers de configuration &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

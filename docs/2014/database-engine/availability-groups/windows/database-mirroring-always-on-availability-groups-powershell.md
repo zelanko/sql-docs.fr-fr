@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782991"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité AlwaysOn (SQL Server PowerShell)
@@ -26,29 +26,28 @@ ms.locfileid: "72782991"
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  [sécurité](#Security)  
+-   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour créer un point de terminaison de mise en miroir de bases de données, utilisez :**  [PowerShell](#PowerShellProcedure)  
+-   **Pour créer un point de terminaison de mise en miroir de bases de données, à l'aide de :**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
 > [!IMPORTANT]  
->  L'algorithme RC4 est déconseillé. 
-  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
+>  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour créer un point de terminaison pour la mise en miroir de bases de données**  
   
 1.  Accédez au répertoire (`cd`) de l'instance de serveur pour laquelle vous voulez créer le point de terminaison de mise en miroir de bases de données.  
   
 2.  Utilisez l'applet de commande `New-SqlHadrEndpoint` pour créer le point de terminaison, puis utilisez `Set-SqlHadrEndpoint` pour démarrer le point de terminaison.  
   
-###  <a name="PShellExample"></a>Exemple (PowerShell)  
+###  <a name="example-powershell"></a><a name="PShellExample"></a> Exemple (PowerShell)  
  Les commandes PowerShell suivantes créent un point de terminaison de mise en miroir de bases de données sur une instance de SQL Server (*instance*de*machine*\\). Le point de terminaison utilise le port 5022.  
   
 > [!IMPORTANT]  
@@ -62,7 +61,7 @@ $endpoint = New-SqlHadrEndpoint MyMirroringEndpoint -Port 5022 -Path SQLSERVER:\
 Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un point de terminaison de mise en miroir de bases de données**  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

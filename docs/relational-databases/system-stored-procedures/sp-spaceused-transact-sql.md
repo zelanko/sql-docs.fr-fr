@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6b0bd2f253dede1c427eda826eba0e998a144736
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252024"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
@@ -97,7 +97,7 @@ Si *nom_d’nom_d* 'n’est pas spécifié, les résultats sont retournés pour 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**réservé**|**varchar (18)**|Quantité totale d'espace allouée par les objets dans la base de données.|  
-|**métadonnée**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
+|**data**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
 |**index_size**|**varchar (18)**|Quantité totale d'espace qu'occupent les index.|  
 |**inutilisé**|**varchar (18)**|Quantité totale d'espace réservée pour les objets dans la base de données, mais non encore utilisé.|  
   
@@ -109,7 +109,7 @@ Si *nom_d’nom_d* 'n’est pas spécifié, les résultats sont retournés pour 
 |**database_size**|**varchar (18)**|Taille de la base de données actuelle en mégaoctets. **database_size** contient à la fois des fichiers de données et des fichiers journaux.|  
 |**espace non alloué**|**varchar (18)**|Espace de la base de données qui n'a pas été réservé pour des objets de base de données.|  
 |**réservé**|**varchar (18)**|Quantité totale d'espace allouée par les objets dans la base de données.|  
-|**métadonnée**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
+|**data**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
 |**index_size**|**varchar (18)**|Quantité totale d'espace qu'occupent les index.|  
 |**inutilisé**|**varchar (18)**|Quantité totale d'espace réservée pour les objets dans la base de données, mais non encore utilisé.|  
   
@@ -117,10 +117,10 @@ Si *nom_d’nom_d* 'n’est pas spécifié, les résultats sont retournés pour 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**nvarchar(128)**|Nom de l'objet pour lequel ont été demandées les informations relatives à l'utilisation de l'espace.<br /><br /> Le nom de schéma de l'objet n'est pas renvoyé. Si le nom du schéma est requis, utilisez les vues de gestion dynamique [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) ou [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) pour obtenir des informations de taille équivalentes.|  
-|**rows**|**Char (20)**|Nombre de lignes existant dans la table. Si l'objet spécifié est une file d'attente [!INCLUDE[ssSB](../../includes/sssb-md.md)], cette colonne indique le nombre de messages en file d'attente.|  
+|**name**|**nvarchar(128)**|Nom de l'objet pour lequel ont été demandées les informations relatives à l'utilisation de l'espace.<br /><br /> Le nom de schéma de l'objet n'est pas renvoyé. Si le nom du schéma est requis, utilisez les vues de gestion dynamique [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) ou [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) pour obtenir des informations de taille équivalentes.|  
+|**lignes**|**Char (20)**|Nombre de lignes existant dans la table. Si l'objet spécifié est une file d'attente [!INCLUDE[ssSB](../../includes/sssb-md.md)], cette colonne indique le nombre de messages en file d'attente.|  
 |**réservé**|**varchar (18)**|Quantité totale d’espace réservé pour *nomobj*.|  
-|**métadonnée**|**varchar (18)**|Quantité totale d’espace utilisée par les données dans *nomobj*.|  
+|**data**|**varchar (18)**|Quantité totale d’espace utilisée par les données dans *nomobj*.|  
 |**index_size**|**varchar (18)**|Quantité totale d’espace utilisée par les index dans *nomobj*.|  
 |**inutilisé**|**varchar (18)**|Quantité totale d’espace réservée pour *nomobj* , mais pas encore utilisée.|  
  
@@ -137,7 +137,7 @@ Espace utilisé par les tables dans la base de données : (ce ResultSet ne refl
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**réservé**|**varchar (18)**|Quantité totale d'espace allouée par les objets dans la base de données.|  
-|**métadonnée**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
+|**data**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
 |**index_size**|**varchar (18)**|Quantité totale d'espace qu'occupent les index.|  
 |**inutilisé**|**varchar (18)**|Quantité totale d'espace réservée pour les objets dans la base de données, mais non encore utilisé.|
 
@@ -157,7 +157,7 @@ Si *nom_d* 'objet est omis, la valeur de oneresultset est 1, et *include_total_x
 |**database_size**|**varchar (18)**|Taille de la base de données actuelle en mégaoctets. **database_size** contient à la fois des fichiers de données et des fichiers journaux. Si la base de données a un groupe de fichiers MEMORY_OPTIMIZED_DATA, cela inclut la taille totale sur disque de tous les fichiers de point de contrôle dans le groupe de fichiers.|
 |**espace non alloué**|**varchar (18)**|Espace de la base de données qui n'a pas été réservé pour des objets de base de données. Si la base de données a un groupe de fichiers MEMORY_OPTIMIZED_DATA, cela inclut la taille totale sur disque des fichiers de point de contrôle dont l’État est précréé dans le groupe de fichiers.|  
 |**réservé**|**varchar (18)**|Quantité totale d'espace allouée par les objets dans la base de données.|  
-|**métadonnée**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
+|**data**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
 |**index_size**|**varchar (18)**|Quantité totale d'espace qu'occupent les index.|  
 |**inutilisé**|**varchar (18)**|Quantité totale d'espace réservée pour les objets dans la base de données, mais non encore utilisé.|
 |**xtp_precreated**|**varchar (18)**|Taille totale des fichiers de point de contrôle dont l’État est précréé, en Ko. Cela compte dans l’ensemble de l’espace non alloué dans la base de données. Retourne NULL si la base de données n’a pas de groupe de fichiers memory_optimized_data avec au moins un conteneur. *Cette colonne est incluse uniquement si @include_total_xtp_storage= 1*.| 
@@ -250,8 +250,8 @@ GO
  [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874872"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -41,11 +41,11 @@ ms.locfileid: "70874872"
 |upgrade|**int**|Réservé pour le système.|  
 |name|**sysname**|Nom officiel de la langue, par exemple « Français ».|  
 |alias|**sysname**|Nom de la langue de remplacement, par exemple « French ».|  
-|mois|**nvarchar (372)**|Liste des noms complets des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 20 caractères.|  
-|mois courts|**nvarchar (132)**|Liste des noms abrégés des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 9 caractères.|  
-|days|**nvarchar (217)**|Liste des noms des jours, séparés par des virgules, dans l'ordre, de lundi à dimanche. Chaque nom peut comporter jusqu'à 30 caractères.|  
+|mois|**nvarchar(372)**|Liste des noms complets des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 20 caractères.|  
+|mois courts|**nvarchar(132)**|Liste des noms abrégés des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 9 caractères.|  
+|jours|**nvarchar(217)**|Liste des noms des jours, séparés par des virgules, dans l'ordre, de lundi à dimanche. Chaque nom peut comporter jusqu'à 30 caractères.|  
 |lcid|**int**|Identificateur des paramètres régionaux [!INCLUDE[msCoName](../../includes/msconame-md.md)] de la langue.|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]ID du groupe de messages.|  
+|msglangid|**smallint**|ID du groupe de messages du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
  Les langues suivantes sont contenues dans [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782904"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utiliser le fournisseur PowerShell pour les événements étendus
   Vous pouvez gérer les Événements étendus de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le sous-dossier XEvent est disponible sous le lecteur SQLSERVER. Vous pouvez accéder à ce dossier selon l'une des méthodes suivantes :  
   
--   À l’invite de commandes, saisissez `sqlps`, puis appuyez sur ENTRÉE. Saisissez `cd xevent`, puis appuyez sur ENTRÉE. À partir de là, vous pouvez **** utiliser les `dir` applets de commande CD et Commands (ou **set-location** et **obten-ChildItem** ) pour accéder au nom du serveur et au nom de l’instance.  
+-   À l’invite de commandes, saisissez `sqlps`, puis appuyez sur ENTRÉE. Tapez `cd xevent`, puis appuyez sur ENTRÉE. À partir de là, vous pouvez **cd** utiliser les `dir` applets de commande CD et Commands (ou **set-location** et **obten-ChildItem** ) pour accéder au nom du serveur et au nom de l’instance.  
   
 -   Dans l’Explorateur d’objets, développez le nom de l’instance, développez **Gestion**, cliquez avec le bouton droit sur **Événements étendus**, puis cliquez sur **Démarrer PowerShell**. Cela démarre PowerShell selon le chemin d'accès suivant :  
   
-     PS SQLSERVER:\XEvent\\*nom_serveur*\\*nom_instance*>  
+     PS SqlServer : \ XEvent\\*nom_serveur*\\*nom_instance*>  
   
     > [!NOTE]  
     >  Vous pouvez démarrer PowerShell à partir de n'importe quel nœud sous **Événements étendus**. Par exemple, vous pouvez cliquer avec le bouton droit sur **Sessions**, puis cliquer sur **Démarrer PowerShell**. Cela démarre PowerShell à un niveau plus profond, au niveau du dossier Sessions.  

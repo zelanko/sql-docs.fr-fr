@@ -11,23 +11,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251314"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Déployer et exécuter des packages SSIS à l'aide de procédures stockées
   Lorsque vous configurez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] afin d'utiliser le modèle de déploiement de projet, vous pouvez utiliser les procédures stockées du catalogue [!INCLUDE[ssIS](../includes/ssis-md.md)] pour déployer le projet et pour exécuter des packages. Pour plus d’informations sur le modèle de déploiement de projet, consultez [Déploiement de projets et de packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
- Vous pouvez également utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour déployer le projet et pour exécuter des packages. Pour plus d’informations, consultez les rubriques de la section **Voir aussi**.  
+ Vous pouvez également utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour déployer le projet et pour exécuter des packages. Pour plus d’informations, consultez les rubriques de la section **Voir aussi** .  
   
 > [!TIP]
 >  Vous pouvez facilement créer des instructions Transact-SQL pour les procédures stockées répertoriées dans la procédure ci-dessous, à l'exception de catalog.deploy_project, en procédant comme suit :  
 > 
 >  1.  Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le nœud **Catalogues Integration Services** dans l’Explorateur d’objets et accédez au package à exécuter.  
 > 2.  Cliquez avec le bouton droit sur le package, puis cliquez sur **Exécuter**.  
-> 3.  Si nécessaire, définissez les valeurs des paramètres, les propriétés du gestionnaire de connexions, ainsi que les options de l’onglet **Avancé**, telles que le niveau de journalisation.  
+> 3.  Si nécessaire, définissez les valeurs des paramètres, les propriétés du gestionnaire de connexions, ainsi que les options de l’onglet **Avancé** , telles que le niveau de journalisation.  
 > 
 >      Pour plus d’informations sur les niveaux de journalisation, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
 > 4.  Avant de cliquer sur **OK** pour exécuter le package, cliquez sur **Script**. Transact-SQL s’affiche dans une fenêtre de l’Éditeur de requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -97,7 +97,7 @@ ms.locfileid: "72251314"
   
 -   Créez un objet serveur lié. Pour plus d’informations, consultez [Créer des serveurs liés &#40;moteur de base de données SQL Server&#41;](../database-engine/sql-server-database-engine-overview.md).  
   
-     Dans la page **Options du serveur** de la boîte de dialogue **Propriétés du serveur lié**, attribuez à **RPC** et à **Sortie RPC** la valeur **True**. Par ailleurs, attribuez à **Activer la promotion des transactions distribuées pour RPC** la valeur **False**.  
+     Dans la page **Options du serveur** de la boîte de dialogue **Propriétés du serveur lié** , attribuez à **RPC** et à **Sortie RPC** la valeur **True**. Par ailleurs, attribuez à **Activer la promotion des transactions distribuées pour RPC** la valeur **False**.  
   
 -   Vérifiez les paramètres dynamiques du fournisseur que vous avez sélectionné pour le serveur lié : développez le nœud **Fournisseurs** sous **Serveurs liés** dans l’Explorateur d’objets, puis cliquez avec le bouton droit sur le fournisseur et cliquez sur **Propriétés**. Sélectionnez **Activer** en regard de **Paramètre dynamique**.  
   

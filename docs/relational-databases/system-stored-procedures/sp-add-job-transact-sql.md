@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381912"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -78,7 +78,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**0**|Jamais|  
 |**1**|Si succès|  
 |**2** (par défaut)|Si échec|  
-|**1,3**|Toujours|  
+|**3**|Toujours|  
   
 `[ @notify_level_email = ] email_level`Valeur qui indique quand envoyer un message électronique à la fin de ce travail. *email_level*est de **type int**, avec **0**comme valeur par défaut, qui indique Never. *email_level*utilise les mêmes valeurs que *eventlog_level*.  
   
@@ -112,8 +112,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Si le travail s’exécute sur un ou plusieurs serveurs cibles dans un environnement multiserveur, utilisez **sp_apply_job_to_targets** pour définir les serveurs cibles ou les groupes de serveurs cibles pour le travail. Pour supprimer des tâches des serveurs cibles ou des groupes de serveurs cibles, utilisez **sp_remove_job_from_targets**.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
 ## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent être membres du rôle serveur fixe **sysadmin** ou disposer de l’un des rôles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données fixes de l’agent suivants, qui résident dans la base de données **msdb** :  

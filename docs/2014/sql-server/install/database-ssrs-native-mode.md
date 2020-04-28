@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952311"
 ---
 # <a name="database-ssrs-native-mode"></a>Base de données (SSRS en mode natif)
@@ -31,7 +31,7 @@ ms.locfileid: "71952311"
  Pour ouvrir cette page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et cliquez sur **Base de données** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
- **Nom du serveur SQL Server**  
+ **Nom de l’SQL Server**  
  Dans la base de données en cours du serveur de rapports, **Nom du serveur SQL** spécifie le nom du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute la base de données du serveur de rapports. Vous pouvez utiliser une instance par défaut ou nommée sur un ordinateur local ou distant.  
   
  **Nom de la base de données**  
@@ -58,7 +58,7 @@ ms.locfileid: "71952311"
 ## <a name="see-also"></a>Voir aussi  
  [Créer une base de données du serveur de rapports en mode natif &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Gestionnaire de configuration de Reporting Services les rubriques d’aide F1 &#40;le mode natif SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Base de données du serveur de rapports &#40;le mode natif SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

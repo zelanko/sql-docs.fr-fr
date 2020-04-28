@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176016"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptateur de cloud pour SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "70176016"
   
 -   **Paramètres du fichier de configuration** -  
   
-    -   \<> de configuration  
+    -   \<configuration>  
   
         -   \<> appSettings  
   
@@ -86,7 +86,7 @@ ms.locfileid: "70176016"
   
 -   **Contrôle, configuration** : utilisez le fichier de configuration situé dans : C:\Program Files\Microsoft SQL\\Server\120\Tools\CloudAdapter.  
   
-|Error|ID d'erreur|Cause :|Solution|  
+|Error|ID d'erreur|Cause|Résolution|  
 |-----------|--------------|-----------|----------------|  
 |Une exception s'est produite lors de l'ajout du certificat dans le magasin de certificats. [Texte de l'exception].|45560|Autorisations dans le magasin de certificats de l'ordinateur|Vérifiez que le service Adaptateur de cloud dispose des autorisations nécessaires pour ajouter des certificats dans le magasin de certificats de l'ordinateur.|  
 |Une exception s'est produite lors de la configuration de la liaison SSL du port {numéro de port} et du certificat {Thumbprint}. {Exception}.|45561|Une autre application a déjà utilisé le port ou lié un certificat à celui-ci.|Supprimez les liaisons existantes ou modifiez le port de l'adaptateur de cloud dans le fichier de configuration.|  

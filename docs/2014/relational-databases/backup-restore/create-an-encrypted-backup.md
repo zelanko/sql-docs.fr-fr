@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2f16425978b1e6ddc560aabd445b6cfe6737b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154754"
 ---
 # <a name="create-an-encrypted-backup"></a>Créer une sauvegarde chiffrée
@@ -29,7 +29,7 @@ ms.locfileid: "70154754"
   
  Utilisez la procédure suivante pour créer une sauvegarde chiffrée d'une base de données sur un disque local. Cet exemple utilise une base de données utilisateur appelée MyTestDB.  
   
-1.  **Créez une clé principale de base de données de la base de données Master :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
+1.  **Créez une clé principale de base de données pour la base de données master :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera enregistrée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Creates a database master key.   
@@ -41,7 +41,7 @@ ms.locfileid: "70154754"
   
     ```  
   
-2.  **Créer un certificat de sauvegarde :** Créez un certificat de sauvegarde dans la base de données Master. Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter** .  
+2.  **Créez une sauvegarde du certificat.** Créez une sauvegarde du certificat dans la base de données master. Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter** .  
   
     ```  
     Use Master  
@@ -52,7 +52,7 @@ ms.locfileid: "70154754"
   
     ```  
   
-3.  **Sauvegardez la base de données :** Spécifiez l’algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+3.  **Sauvegardez la base de données :** spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -76,11 +76,11 @@ ms.locfileid: "70154754"
   
  **Conditions préalables**  
   
--   Un compte de stockage Windows et un conteneur. Pour plus d’informations, consultez. [Leçon 1 : créer des objets de stockage Azure](../../tutorials/lesson-1-create-windows-azure-storage-objects.md).  
+-   Un compte de stockage Windows et un conteneur. Pour plus d'informations, consultez [Leçon 1 : créer des objets de stockage Azure](../../tutorials/lesson-1-create-windows-azure-storage-objects.md).  
   
 -   Une clé principale de base de données pour la base de données master, et un certificat ou une clé asymétrique sur l'instance de SQL Server. Pour les conditions et les autorisations de chiffrement, consultez [Backup Encryption](backup-encryption.md).  
   
-1.  **Créer SQL Server informations d’identification :** Pour créer des informations d’identification de SQL Server, connectez-vous à la Moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l’exemple suivant, puis cliquez sur **exécuter**.  
+1.  **Créez les informations d'identification SQL Server :** Pour créer des informations d'identification SQL Server, connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple suivant, puis cliquez sur **Exécuter**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -88,7 +88,7 @@ ms.locfileid: "70154754"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Créer une clé principale de base de données :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
+2.  **Créez une clé principale de base de données.** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera enregistrée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Creates a database master key.  
@@ -111,7 +111,7 @@ ms.locfileid: "70154754"
   
     ```  
   
-4.  **Sauvegardez la base de données :** Spécifiez l’algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+4.  **Sauvegardez la base de données :** spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

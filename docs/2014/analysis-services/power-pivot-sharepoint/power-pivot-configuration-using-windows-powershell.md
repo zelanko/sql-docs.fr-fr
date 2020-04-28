@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782805"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Configuration de PowerPivot à l'aide de Windows PowerShell
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclut des applets de commande Windows PowerShell que vous pouvez utiliser pour configurer une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. La configuration complète d'une installation avec PowerShell requiert l'utilisation des applets de commande SharePoint et PowerPivot pour SharePoint. La majorité des configurations peut être effectuée avec un des outils de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d'informations sur les outils, consultez [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
@@ -82,8 +81,8 @@ ms.locfileid: "72782805"
 4.  Fermez la fenêtre. Rouvrez-la, à nouveau à l'aide de l'option **Exécuter en tant qu'administrateur** .  
   
 ## <a name="related-content"></a>Contenu associé  
- [Administration et configuration d'un serveur PowerPivot dans l'Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
+ [Outils de configuration de PowerPivot](power-pivot-configuration-tools.md)  
   
  [Référence PowerShell pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  

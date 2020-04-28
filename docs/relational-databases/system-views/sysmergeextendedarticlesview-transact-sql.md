@@ -18,10 +18,10 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278169"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
@@ -31,18 +31,18 @@ ms.locfileid: "72278169"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom de l’article.|  
-|**entrer**|**tinyint**|Indique le type d'article, qui peut être l'un des suivants :<br /><br /> **10** = table.<br /><br /> **32** = schéma de procédure uniquement.<br /><br /> **64** = schéma de vue uniquement ou schéma de vue indexée uniquement.<br /><br /> **128** = schéma de fonction uniquement.<br /><br /> **160** = schéma de synonyme uniquement.|  
-|**ID**|**int**|Identificateur de l'objet du serveur de publication.|  
+|**name**|**sysname**|Nom de l’article.|  
+|**type**|**tinyint**|Indique le type d'article, qui peut être l'un des suivants :<br /><br /> **10** = table.<br /><br /> **32** = schéma de procédure uniquement.<br /><br /> **64** = schéma de vue uniquement ou schéma de vue indexée uniquement.<br /><br /> **128** = schéma de fonction uniquement.<br /><br /> **160** = schéma de synonyme uniquement.|  
+|**objid**|**int**|Identificateur de l'objet du serveur de publication.|  
 |**sync_objid**|**int**|Identificateur de la vue représentant le dataset synchronisé.|  
 |**view_type**|**tinyint**|Type de vue :<br /><br /> **0** = n’est pas une vue ; Utilisez l’ensemble de l’objet de base.<br /><br /> **1** = affichage permanent.<br /><br /> **2** = affichage temporaire.|  
 |**artid**|**uniqueidentifier**|Numéro d'identification unique de l'article donné.|  
-|**description**|**nvarchar(255)**|Brève description de l'article.|  
+|**descriptive**|**nvarchar(255)**|Brève description de l'article.|  
 |**pre_creation_command**|**tinyint**|Action par défaut à effectuer lors de la création de l’article dans la base de données d’abonnement :<br /><br /> **0** = aucun-si la table existe déjà sur l’abonné, aucune action n’est effectuée.<br /><br /> **1** = drop-supprime la table avant de la recréer.<br /><br /> **2** = DELETE : émet une suppression basée sur la clause WHERE dans le filtre de sous-ensemble.<br /><br /> **3** = tronquer-identique à 2, mais supprime les pages au lieu des lignes. Toutefois, n'accepte pas la clause WHERE.|  
 |**pubid**|**uniqueidentifier**|ID de la publication à laquelle appartient l'article actif.|  
-|**mon**|**int**|Le mappage de surnom pour l'identification de l'article.|  
+|**nickname**|**int**|Le mappage de surnom pour l'identification de l'article.|  
 |**column_tracking**|**int**|Indique si la fonction de suivi des colonnes est implémentée pour l'article.|  
-|**statu**|**tinyint**|Indique l'état de l'article, qui peut être l'un des suivants :<br /><br /> **1** = non synchronisé : le script de traitement initial permettant de publier la table sera exécuté lors de la prochaine exécution du agent d’instantané.<br /><br /> **2** = actif : le script de traitement initial pour la publication de la table a été exécuté.<br /><br /> **5** = New_inactive à ajouter.<br /><br /> **6** = New_active à ajouter.|  
+|**statut**|**tinyint**|Indique l'état de l'article, qui peut être l'un des suivants :<br /><br /> **1** = non synchronisé : le script de traitement initial permettant de publier la table sera exécuté lors de la prochaine exécution du agent d’instantané.<br /><br /> **2** = actif : le script de traitement initial pour la publication de la table a été exécuté.<br /><br /> **5** = New_inactive à ajouter.<br /><br /> **6** = New_active à ajouter.|  
 |**conflict_table**|**sysname**|Nom de la table locale qui contient les enregistrements en conflit pour l'article actif. Cette table est fournie à titre d'information uniquement et son contenu peut être modifié ou supprimé à l'aide des routines personnalisées de résolution de conflits ou directement par l'administrateur.|  
 |**creation_script**|**nvarchar(255)**|Script de création de l'article.|  
 |**conflict_script**|**nvarchar(255)**|Script de conflit de l'article.|  
@@ -54,14 +54,14 @@ ms.locfileid: "72278169"
 |**schema_option**|**Binary(8**|Pour les valeurs prises en charge de *schema_option*, consultez [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Nom de la table créée sur l'Abonné.|  
 |**resolver_clsid**|**nvarchar(50)**|ID de l'outil personnalisé de résolution des conflits|  
-|**subset_filterclause**|**nvarchar (1000)**|Clause de filtre de l'article.|  
+|**subset_filterclause**|**nvarchar(1000)**|Clause de filtre de l'article.|  
 |**missing_col_count**|**int**|Nombre de colonnes manquantes.|  
-|**missing_cols**|**varbinary (128)**|Bitmap des colonnes manquantes.|  
-|**colonnes**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**missing_cols**|**varbinary(128)**|Bitmap des colonnes manquantes.|  
+|**colonnes**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resolver_info**|**nvarchar(255)**|Espace de stockage réservé aux informations complémentaires requises par les outils de résolution des conflits personnalisés.|  
 |**view_sel_proc**|**nvarchar (290)**|Nom de la procédure stockée utilisée par l'Agent de fusion pour effectuer le remplissage initial d'un article dans une publication filtrée dynamiquement et pour énumérer les lignes modifiées d'une publication filtrée.|  
 |**gen_cur**|**int**|Numéro de génération des modifications locales apportées à la table de base d'un article.|  
-|**excluded_cols**|**varbinary (128)**|Bitmap des colonnes exclues de l'article lors de son envoi à l'Abonné.|  
+|**excluded_cols**|**varbinary(128)**|Bitmap des colonnes exclues de l'article lors de son envoi à l'Abonné.|  
 |**excluded_col_count**|**int**|Nombre de colonnes exclues.|  
 |**vertical_partition**|**int**|Indique si le filtrage de colonne est activé sur un article de table. **0** indique qu’il n’y a pas de filtrage vertical et publie toutes les colonnes.|  
 |**identity_support**|**int**|Spécifie si la gestion automatique de plages d'identités est activée. **1** signifie que la gestion des plages d’identité est activée, et **0** signifie qu’il n’y a aucune prise en charge de plage d’identité.|  
@@ -82,7 +82,7 @@ ms.locfileid: "72278169"
 |**delete_tracking**|**bit**|Indique si les suppressions sont répliquées.<br /><br /> **0** = les suppressions ne sont pas répliquées.<br /><br /> **1** = les suppressions sont répliquées, ce qui correspond au comportement par défaut de la réplication de fusion.<br /><br /> Lorsque la valeur de *delete_tracking* est **0**, les lignes supprimées sur l’abonné doivent être supprimées manuellement sur le serveur de publication, et les lignes supprimées sur le serveur de publication doivent être supprimées manuellement sur l’abonné.<br /><br /> Remarque : la valeur **0** aboutit à une non-convergence.|  
 |**compensate_for_errors**|**bit**|Indique si des actions de compensation interviennent lorsque des erreurs se produisent pendant la synchronisation.<br /><br /> **0** = les actions de compensation sont désactivées.<br /><br /> **1** = les modifications qui ne peuvent pas être appliquées sur un abonné ou un serveur de publication entraînent toujours des actions de compensation pour annuler ces modifications, ce qui constitue le comportement par défaut de la réplication de fusion.<br /><br /> Remarque : la valeur **0** aboutit à une non-convergence.|  
 |**pub_range**|**bigint**|Taille de la plage d'identité du serveur de publication.|  
-|**vont**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
+|**range**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
 |**durée**|**int**|Seuil de la plage d'identité exprimé en pourcentage.|  
 |**metadata_select_proc**|**sysname**|Nom de la procédure stockée générée automatiquement utilisée pour accéder aux métadonnées dans les tables système de réplication de fusion.|  
 |**stream_blob_columns**|**bit**|Spécifie si une optimisation de flux de données est utilisée lors de la réplication de colonnes d’objets binaires volumineux. **1** signifie que l’optimisation sera tentée.|  

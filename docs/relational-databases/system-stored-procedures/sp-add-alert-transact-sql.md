@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174258"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
@@ -84,7 +84,7 @@ sp_add_alert [ @name = ] 'name'
 |**0**|None|  
 |**1**|Messagerie électronique|  
 |**2**|Récepteur de radiomessagerie|  
-|**4**|**envoi réseau**|  
+|**4**|**net send**|  
   
 `[ @database_name = ] 'database'`Base de données dans laquelle l’erreur doit se produire pour déclencher l’alerte. Si la *base de données*n’est pas fournie, l’alerte se déclenche indépendamment de l’endroit où l’erreur s’est produite. *Database est de* **type sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
@@ -132,8 +132,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Tout événement enregistré à l’aide de **xp_logevent**  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, fonctionnant en mode graphique, qui permet de gérer tout le système d'alerte. Son utilisation est recommandée pour configurer une infrastructure d'alertes.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, fonctionnant en mode graphique, qui permet de gérer tout le système d'alerte. Son utilisation est recommandée pour configurer une infrastructure d'alertes.  
   
  Si une alerte ne fonctionne pas correctement, vérifiez que :  
   

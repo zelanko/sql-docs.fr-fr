@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251216"
 ---
 # <a name="relational-query-designer-ssas"></a>Concepteur de requêtes relationnelles (SSAS)
   Le concepteur de requêtes relationnelles vous aide à créer une requête qui spécifie les données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] récupérer à partir des bases [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]de données relationnelles et. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer la requête de manière interactive et afficher les résultats de votre requête.  Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
   
- Si vous préférez, vous pouvez écrire la requête en langage SQL à l'aide de l'éditeur textuel. Pour basculer vers le Concepteur de requêtes textuel, cliquez sur **Modifier en tant que texte** dans la barre d’outils. Une fois que vous modifiez une requête dans le Concepteur de requêtes textuel, vous ne pouvez plus utiliser le Concepteur de requêtes graphique.  
+ Si vous préférez, vous pouvez écrire la requête en langage SQL à l'aide de l'éditeur textuel. Pour basculer vers le Concepteur de requêtes textuel, cliquez sur **Modifier en tant que texte**dans la barre d’outils. Une fois que vous modifiez une requête dans le Concepteur de requêtes textuel, vous ne pouvez plus utiliser le Concepteur de requêtes graphique.  
   
 > [!NOTE]  
 >  Vous devez utiliser le Concepteur de requêtes textuel pour spécifier une requête pour les types de source de données Oracle, OLE DB, ODBC et Teradata.  
@@ -38,8 +38,7 @@ ms.locfileid: "72251216"
  Le concepteur de requêtes graphique est divisé en trois zones. La mise en page du concepteur de requêtes varie selon que la requête utilise des tables/vues ou des fonctions table/procédures stockées.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] ne prend pas en charge les procédures stockées, ni les fonctions table.  
+>  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] ne prend pas en charge les procédures stockées, ni les fonctions table.  
   
  La figure suivante illustre le Concepteur de requêtes graphique lorsqu'il est utilisé avec des tables ou des vues.  
   
@@ -60,19 +59,19 @@ ms.locfileid: "72251216"
 |[Filtres appliqués](#AppliedFilters)|Affiche une liste des champs et des critères de filtre pour les tables ou vues dans le volet Vue de base de données.|  
 |[Résultats de la requête](#QueryResults)|Affiche des exemples de données pour le jeu de résultats de la requête générée automatiquement.|  
   
-###  <a name="DatabaseView"></a>Volet vue de base de données  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Volet Vue de base de données  
  Le volet Vue de base de données affiche les métadonnées des objets de base de données que vous êtes autorisé à afficher, selon la connexion à la source de données et les informations d'identification. La vue hiérarchique affiche les objets de base de données organisés par le schéma de base de données. Développez le nœud de chaque schéma pour afficher les tables, les vues, les procédures stockées et les fonctions table. Développez une table ou une vue pour afficher les colonnes.  
   
-###  <a name="SelectedFields"></a>Volet champs sélectionnés  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a>Volet champs sélectionnés  
  Le volet Champs sélectionnés affiche les champs du dataset, ainsi que les groupes et agrégats à inclure dans la requête.  
   
  Les options suivantes s'affichent :  
   
--   **Champs sélectionnés** Affiche les champs de base de données que vous sélectionnez pour les tables ou les vues, ou les paramètres d’entrée pour les procédures stockées ou les fonctions table. Les champs qui sont affichés dans ce volet deviennent la collection de champs du dataset.  
+-   **Champs sélectionnés** : affiche les champs de base de données que vous sélectionnez pour les tables ou les vues, ou les paramètres d’entrée pour les procédures stockées ou les fonctions table. Les champs qui sont affichés dans ce volet deviennent la collection de champs du dataset.  
   
      Utilisez le volet Données du rapport pour afficher la collection de champs d'un dataset.  
   
--   **Groupe et agrégat** Active ou désactive l’utilisation du regroupement et des agrégats dans la requête. Si vous désactivez la fonctionnalité relative au regroupement et aux agrégats après avoir ajouté un regroupement et des agrégats, ces derniers sont supprimés. Le texte, **(aucun)**, indique qu’aucun regroupement ou agrégat n’est utilisé. Si vous réactivez la fonctionnalité relative au regroupement et aux agrégats, le regroupement et les agrégats antérieurs sont restaurés.  
+-   **Groupe et agrégat** Active/désactive l'utilisation du regroupement et des agrégats dans la requête. Si vous désactivez la fonctionnalité relative au regroupement et aux agrégats après avoir ajouté un regroupement et des agrégats, ces derniers sont supprimés. Le texte, **(aucun)**, indique qu’aucun regroupement ou agrégat n’est utilisé. Si vous réactivez la fonctionnalité relative au regroupement et aux agrégats, le regroupement et les agrégats antérieurs sont restaurés.  
   
 -   **Supprimer le champ** Supprime le champ sélectionné.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "72251216"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise [!INCLUDE[tsql](../includes/tsql-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] et [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utilise [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
   
- Pour plus d’informations sur [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la documentation en ligne[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [ de ](https://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com.  
+ Pour plus d’informations sur [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=141687) de  sur msdn.microsoft.com.  
   
  Le tableau suivant répertorie les agrégats et fournit de brèves descriptions de ces derniers.  
   
@@ -108,24 +107,24 @@ ms.locfileid: "72251216"
 |Var Distinct|Retourne des variances statistiques uniques. Implémente une combinaison de l'agrégat VAR et du mot clé DISTINCT.|  
 |VarP Distinct|Retourne des variances statistiques uniques. Implémente une combinaison de l'agrégat VARP et du mot clé DISTINCT.|  
   
-###  <a name="FunctionParameters"></a>Volet Paramètres de fonction  
- Le volet Paramètres de fonction affiche les paramètres pour une procédure stockée ou une fonction table. Les colonnes suivantes sont affichées :  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Volet Paramètres de fonction  
+ Le volet Paramètres de fonction affiche les paramètres pour une procédure stockée ou une fonction table. Les colonnes suivantes s’affichent :  
   
--   **Nom du paramètre** Affiche le nom du paramètre défini par la procédure stockée ou la fonction table.  
+-   **Nom du paramètre** : affiche le nom du paramètre défini par la procédure stockée ou la fonction table.  
   
--   **Valeur** Valeur à utiliser pour le paramètre lorsque la requête s’exécute pour récupérer les données à afficher dans le volet des résultats de la requête au moment de la conception. Cette valeur n'est pas utilisée au moment de l'exécution.  
+-   **Valeur** Valeur à utiliser pour le paramètre quand la requête s’exécute pour récupérer les données à afficher dans le volet Résultats de la requête au moment de la conception. Cette valeur n'est pas utilisée au moment de l'exécution.  
   
-###  <a name="Relationships"></a>Volet relations  
+###  <a name="relationships-pane"></a><a name="Relationships"></a>Volet relations  
  Le volet Relations affiche les relations de jointure. Les relations peuvent être détectées automatiquement en fonction des relations de clé étrangère récupérées à partir des métadonnées de la base de données, mais vous pouvez également les créer manuellement.  
   
  Les options suivantes s'affichent :  
   
--   **Détection automatique** Active/désactive la fonctionnalité de détection automatique qui crée automatiquement les relations entre les tables. Si la détection automatique est activée, le Concepteur de requêtes crée les relations à partir des clés étrangères des tables ; sinon, vous devez créer les relations manuellement. Lorsque vous sélectionnez des tables dans le volet **Vue de base de données** , la fonctionnalité de détection automatique tente de créer les relations. Si vous activez la détection automatique après avoir créé des jointures manuellement, ces jointures sont ignorées.  
+-   **Détection automatique** : active/désactive la fonctionnalité de détection automatique qui crée automatiquement les relations entre les tables. Si la détection automatique est activée, le Concepteur de requêtes crée les relations à partir des clés étrangères des tables ; sinon, vous devez créer les relations manuellement. Lorsque vous sélectionnez des tables dans le volet **Vue de base de données** , la fonctionnalité de détection automatique tente de créer les relations. Si vous activez la détection automatique après avoir créé des jointures manuellement, ces jointures sont ignorées.  
   
     > [!IMPORTANT]  
     >  Lors de l'utilisation de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] , les métadonnées nécessaires à la création de jointures ne sont pas fournies ; en outre, les relations ne peuvent pas être détectées automatiquement. Si votre requête récupère les données à partir de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], toutes les jointures de table doivent être créées manuellement.  
   
--   **Ajouter une relation** Ajoute une relation à la liste de **relations** .  
+-   **Ajouter une relation** Ajoute une relation à la liste **Relation** .  
   
      Si la détection automatique est activée, les tables à partir desquelles les colonnes sont utilisées dans la requête sont ajoutées automatiquement à la liste **Relation** . Lorsque la détection automatique identifie que deux tables sont associées, une table est ajoutée à la colonne **Table de gauche** , l'autre est ajoutée à la colonne **Table de droite** , et une jointure interne est créée entre elles. Chaque relation génère une clause JOIN dans la requête. Si les tables ne sont pas associées, elles apparaissent toutes dans la colonne **Table de gauche** et la colonne **Type de jointure** indique que les tables ne sont pas associées à d'autres tables. Lorsque la détection automatique est activée, vous ne pouvez pas ajouter manuellement de relations entre les tables qui ne sont pas identifiées par la détection automatique comme étant associées.  
   
@@ -137,36 +136,36 @@ ms.locfileid: "72251216"
   
      Si les deux tables d'une relation sont référencées par une relation précédente, la relation ne génère pas de clause de jointure distincte ; à la place, une condition de jointure est ajoutée à la clause de jointure générée pour la relation précédente. Le type de jointure est déduit par la relation précédente qui a référencé les mêmes tables.  
   
--   **Modifier les champs** Ouvre la boîte de dialogue **modifier les champs associés** dans laquelle vous ajoutez et modifiez des relations entre des tables. Vous avez choisi les champs dans les tables de droite et de gauche à joindre. Vous pouvez joindre plusieurs champs de la table de gauche et de la table de droite pour spécifier plusieurs conditions de jointure dans une relation. Les deux champs qui joignent les tables de droite et de gauche n'ont pas besoin d'avoir le même nom. Les types de données des champs joints doivent être compatibles.  
+-   **Modifier des champs** Ouvre la boîte de dialogue **Modifier les champs associés** dans laquelle vous pouvez ajouter et modifier des relations entre les tables. Vous avez choisi les champs dans les tables de droite et de gauche à joindre. Vous pouvez joindre plusieurs champs de la table de gauche et de la table de droite pour spécifier plusieurs conditions de jointure dans une relation. Les deux champs qui joignent les tables de droite et de gauche n'ont pas besoin d'avoir le même nom. Les types de données des champs joints doivent être compatibles.  
   
 -   **Supprimer la relation**  Supprime la relation sélectionnée **.**  
   
--   **Monter** et **descendre** déplace les relations vers le haut ou vers le haut **de la liste des relations.** L'ordre dans lequel les relations sont placées dans la requête peut avoir un impact sur les résultats de la requête. Les relations sont ajoutées à la requête dans l'ordre où elles s'affichent dans la liste **Relation** .  
+-   **Monter** et **Descendre** Monte les relations vers le haut ou vers le bas de la liste **Relation** . L'ordre dans lequel les relations sont placées dans la requête peut avoir un impact sur les résultats de la requête. Les relations sont ajoutées à la requête dans l'ordre où elles s'affichent dans la liste **Relation** .  
   
- Les colonnes suivantes sont affichées :  
+ Les colonnes suivantes s’affichent :  
   
--   **Table de gauche** Affiche le nom de la première table qui fait partie d’une relation de jointure.  
+-   **Table de gauche** Affiche le nom de la première table qui fait partie d'une relation de jointure.  
   
--   **Type de jointure** Affiche le type de l’instruction de jointure SQL utilisée dans la requête générée automatiquement. Par défaut, si une contrainte de clé étrangère est détectée, une jointure interne (INNER JOIN) est utilisée. D'autres types de jointures peuvent être des jointures gauches (LEFT JOIN) ou droites (RIGHT JOIN). Si aucun de ces types de jointures ne s'applique, la colonne **Type de jointure** affiche **Non lié**. Aucune jointure CROSS JOIN n'est créée pour les tables non associées ; à la place, vous devez créer manuellement les relations en joignant les colonnes des tables de gauche et de droite. Pour plus d'informations sur les types de jointures, consultez « Principes de base des jointures » dans la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com.  
+-   **Type de jointure** Affiche le type d'instruction SQL JOIN utilisée dans la requête générée automatiquement. Par défaut, si une contrainte de clé étrangère est détectée, une jointure interne (INNER JOIN) est utilisée. D'autres types de jointures peuvent être des jointures gauches (LEFT JOIN) ou droites (RIGHT JOIN). Si aucun de ces types de jointures ne s'applique, la colonne **Type de jointure** affiche **Non lié**. Aucune jointure CROSS JOIN n'est créée pour les tables non associées ; à la place, vous devez créer manuellement les relations en joignant les colonnes des tables de gauche et de droite. Pour plus d'informations sur les types de jointures, consultez « Principes de base des jointures » dans la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com.  
   
 -   **Table de droite** Affiche le nom de la deuxième table dans la relation de jointure.  
   
--   **Champs de jointure** Répertorie les paires de champs joints, si une relation a plusieurs conditions de jointure, les paires de champs joints sont séparées par des virgules (,).  
+-   **Champs de jointure** : répertorie les paires de champs joints ; si une relation a plusieurs conditions de jointure, les paires de champs joints sont séparées par des virgules (,).  
   
-###  <a name="AppliedFilters"></a>Volet filtres appliqués  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Volet Filtres appliqués  
  Le volet Filtres appliqués affiche les critères utilisés pour limiter le nombre de lignes de données qui sont récupérées au moment de l'exécution. Les critères spécifiés dans ce volet sont utilisés pour générer une clause SQL WHERE. Lorsque vous sélectionnez l'option de paramètre, un paramètre est créé automatiquement.  
   
- Les colonnes suivantes sont affichées :  
+ Les colonnes suivantes s’affichent :  
   
 -   **Nom du champ** Affiche le nom du champ auquel appliquer les critères.  
   
--   **Opérateur** Affiche l’opération à utiliser dans l’expression de filtre.  
+-   **Opérateur** Affiche l'opération à utiliser dans l'expression de filtrage.  
   
--   **Valeur** Affiche la valeur à utiliser dans l’expression de filtre.  
+-   **Valeur** Affiche la valeur à utiliser dans l'expression de filtrage.  
   
--   **Paramètre** Affiche l’option permettant d’ajouter un paramètre de requête à la requête.  
+-   **Paramètre** Affiche l'option pour ajouter un paramètre de requête à la requête.  
   
-###  <a name="QueryResults"></a>Volet résultats de la requête  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Volet Résultats de la requête  
  Le volet Résultats de la requête affiche les résultats pour la requête générée automatiquement qui est spécifiée par des sélections dans d'autres volets. Les colonnes dans le jeu de résultats sont les champs que vous spécifiez dans le volet Champs sélectionnés et les données de ligne sont limitées par les filtres que vous spécifiez dans le volet Filtres appliqués.  
   
  Ces données représentent les valeurs de la source de données au moment de l'exécution de la requête.  
@@ -192,9 +191,9 @@ ms.locfileid: "72251216"
   
  Le Concepteur de requêtes textuel affiche une barre d'outils et les deux volets suivants :  
   
--   **Requête** Affiche le texte de la requête, le nom de la table ou le nom de la procédure stockée en fonction du type de requête. Les types de requêtes ne sont pas tous disponibles pour tous les types de sources. Par exemple, le nom de table n'est pris en charge que pour le type de source de données OLE DB.  
+-   **Requête** Affiche le texte de la requête, le nom de la table ou celui de la procédure stockée, en fonction du type de requête. Les types de requêtes ne sont pas tous disponibles pour tous les types de sources. Par exemple, le nom de table n'est pris en charge que pour le type de source de données OLE DB.  
   
--   **Résultat** Affiche les résultats de l’exécution de la requête au moment de la conception.  
+-   **Résultats** Affiche les résultats de l'exécution de la requête au moment de la conception.  
   
 ### <a name="text-based-query-designer-toolbar"></a>Barre d'outils du Concepteur de requêtes textuel  
  Le Concepteur de requêtes textuel fournit une barre d'outils unique pour tous les types de commandes. Le tableau suivant répertorie chaque bouton de la barre d'outils et décrit sa fonction.  
@@ -225,7 +224,7 @@ ms.locfileid: "72251216"
 SELECT Name FROM ContactType  
 ```  
   
- Quand vous cliquez sur **Exécuter** dans la barre d’outils, la commande du volet **Requête** s’exécute et les résultats (une liste de noms) s’affichent dans le volet **Résultat**.  
+ Quand vous cliquez sur **Exécuter** dans la barre d’outils, la commande du volet **Requête** s’exécute et les résultats (une liste de noms) s’affichent dans le volet **Résultat** .  
   
 #### <a name="command-type-storedprocedure"></a>Type de commande StoredProcedure  
  Quand vous sélectionnez le **Type de commande StoredProcedure**, le concepteur de requêtes textuel présente deux volets : Requête et Résultats. Entrez le nom de la procédure stockée dans le volet Requête, puis cliquez sur **Exécuter** dans la barre d'outils. Si les procédures stockées utilisent des paramètres, la boîte de dialogue **Définir les paramètres de la requête** s'ouvre. Entrez les valeurs des paramètres de la procédure stockée.  

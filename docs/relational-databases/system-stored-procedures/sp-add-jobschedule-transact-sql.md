@@ -18,10 +18,10 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810497"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
@@ -70,9 +70,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
-|**16**|Mensuelle|  
+|**16bits**|Mensuelle|  
 |**32**|Mensuellement, par rapport à *frequency_interval.*|  
 |**64**|Lancer lorsque le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre.|  
 |**128**|Lancer lorsque l'ordinateur est inactif.|  
@@ -109,7 +109,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**version8**|Quatrième|  
-|**16**|Dernier|  
+|**16bits**|Dernier|  
   
  *frequency_relative_interval* indique l’occurrence de l’intervalle. Par exemple, si *frequency_relative_interval* a la valeur **2**, *frequency_type* a la valeur **32**et *frequency_interval* la valeur **3**, la tâche planifiée se produit le deuxième mardi de chaque mois.  
   
@@ -147,7 +147,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
  
  ## <a name="example"></a>Exemple
  L’exemple suivant affecte une planification de `SaturdayReports` travail qui s’exécute tous les samedis à 2:00 AM.

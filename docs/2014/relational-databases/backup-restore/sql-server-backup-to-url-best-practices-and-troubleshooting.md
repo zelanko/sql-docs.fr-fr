@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175965"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
@@ -22,9 +22,9 @@ ms.locfileid: "70175965"
   
  Pour plus d’informations sur l’utilisation du service de stockage Blob Azure pour les opérations de sauvegarde et de restauration SQL Server, consultez :  
   
--   [Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gestion des sauvegardes  
  La liste suivante comprend des recommandations générales sur la gestion des sauvegardes :  
@@ -69,7 +69,7 @@ ms.locfileid: "70175965"
   
 -   Vérifiez le nom du compte de stockage et la valeur des clés. Les informations stockées dans les informations d’identification doivent correspondre aux valeurs de propriétés du compte de stockage Azure utilisé lors des opérations de sauvegarde et de restauration.  
   
- **Erreurs/échecs de sauvegarde :**  
+ **Erreurs/Échecs de sauvegarde :**  
   
 -   Les sauvegardes parallèles dans un même objet blob provoquent l'échec d'une des sauvegardes avec l'erreur **Échec de l’initialisation** .  
   
@@ -102,11 +102,11 @@ ms.locfileid: "70175965"
   
      Si une instruction de sauvegarde est retentée, l'opération de sauvegarde échoue avec une erreur semblable à celle qui suit :  
   
-     **La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : le serveur distant a retourné une erreur : (412) il existe actuellement un bail sur l’objet BLOB et aucun ID de bail n’a été spécifié dans la demande**.  
+     **La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception : Le serveur distant a retourné une erreur : (412) Il y a actuellement un bail sur l’objet blob et aucun ID de bail n’a été spécifié dans la requête**.  
   
      Si une instruction de restauration est tentée sur un fichier de sauvegarde d'objet blob dont le bail est actif, l'opération de restauration échoue avec une erreur semblable à celle qui suit :  
   
-     **Message d’exception : le serveur distant a retourné une erreur : (409) conflit..**  
+     **Message d'exception : Le serveur distant a retourné une erreur : (409) Conflit.**  
   
      Lorsqu'une telle erreur se produit, les fichiers d'objets blob doivent être supprimés. Pour plus d'informations sur ce scénario et la résolution du problème, consultez [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "70175965"
   
  Code d'état HTTP 502, message d'état HTTP, erreur de proxy (le nombre de requêtes HTTP par minute a dépassé la limite configurée. Contactez votre administrateur ISA Server.  )  
   
- **Paramètres de proxy par défaut non récupérés :**  
+ **Les paramètres du proxy par défaut ne sont pas sélectionnés :**  
   
  Parfois, les paramètres par défaut ne sont pas sélectionnés et provoquent des erreurs d’authentification du proxy telles que celle illustrée ci-dessous :*une erreur d'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:e/s non récupérable s’est produite dans le fichier «». la sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : le serveur distant a retourné une erreur : (407)* **authentification proxy requise**.  
   

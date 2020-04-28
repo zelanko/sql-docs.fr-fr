@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305226"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "72305226"
 |hobt_id|**bigint**|ID de la segment de mémoire ou arbre B (B-tree) de données (HoBT) qui contient les lignes de cette partition.|  
 |rows|**bigint**|Nombre approximatif de lignes dans cette partition. |  
 |data_compression|**int**|Indique l'état de compression pour chaque partition :<br /><br /> 0 = AUCUN<br /><br /> 1 = LIGNE<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar (60)**|Indique l'état de compression pour chaque partition. Les valeurs possibles sont NONE, ROW et PAGE.|  
+|data_compression_desc|**nvarchar(60)**|Indique l'état de compression pour chaque partition. Les valeurs possibles sont NONE, ROW et PAGE.|  
 |pdw_node_id|**int**|Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `CONTROL SERVER`.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Exemple A : afficher des lignes dans chaque partition au sein de chaque distribution 
 
@@ -49,7 +49,7 @@ Pour afficher le nombre de lignes dans chaque partition au sein de chaque distri
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Exemple B : utilise des vues système pour afficher des lignes dans chaque partition de chaque distribution d’une table
 
-**S’applique à :**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**S’applique à :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 Cette requête retourne le nombre de lignes dans chaque partition de chaque distribution de la table `myTable`.  
  
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue de la SQL Data Warehouse et des Data Warehouse parallèles](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

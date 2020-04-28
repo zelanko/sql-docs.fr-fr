@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952636"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
@@ -62,8 +62,7 @@ ms.locfileid: "71952636"
  Les informations d'identification que vous fournissez doivent disposer de l'accès à la base de données du serveur de rapports. Si vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , cette opération est effectuée automatiquement. Pour plus d'informations sur les autorisations requises pour accéder à la base de données, consultez la section « Autorisations de base de données » dans cette rubrique.  
   
 ### <a name="storing-database-connection-information"></a>Stockage des informations de connexion à la base de données  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke et chiffre les informations de connexion dans les paramètres RSreportserver.config suivants. Vous devez recourir à l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou à l'utilitaire rsconfig.exe pour créer des valeurs chiffrées pour ces paramètres.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke et chiffre les informations de connexion dans les paramètres RSreportserver.config suivants. Vous devez recourir à l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou à l'utilitaire rsconfig.exe pour créer des valeurs chiffrées pour ces paramètres.  
   
  Certaines valeurs ne sont pas définies pour tous les types de connexion. Si vous configurez la connexion à l’aide des valeurs par défaut (c’est-à-dire, en utilisant les comptes de service pour `LogonUser` établir la connexion `LogonDomain` ), <> `LogonCred` , <> et <> seront vides, comme suit :  
   
@@ -107,9 +106,9 @@ ms.locfileid: "71952636"
 ### <a name="database-permissions"></a>Autorisations de base de données  
  Les rôles suivants sont attribués aux comptes utilisés pour la connexion à la base de données du serveur de rapports :  
   
--   rôles **public** et **RSExecRole** pour la base de données **reportserver** .  
+-   Rôles**public** et **RSExecRole** pour la base de données **ReportServer** .  
   
--   Rôle **RSExecRole** pour les bases de données **Master**, **msdb**et **ReportServerTempDB** .  
+-   Rôle**RSExecRole** pour les bases de données **master**, **msdb**et **ReportServerTempDB** .  
   
  Lorsque vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer ou modifier la connexion, ces autorisations sont automatiquement accordées. Si vous recourez à l'utilitaire rsconfig.exe et que vous spécifiez un autre compte pour la connexion, vous devez mettre à jour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour ce nouveau compte. Dans l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez créer les fichiers de script qui mettent à jour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le serveur de rapports.  
   
@@ -117,13 +116,13 @@ ms.locfileid: "71952636"
  Utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour déterminer quelle est la base de données de serveur de rapports qu'utilise une instance de serveur de rapports particulière. Pour rechercher le nom, connectez-vous à l'instance de serveur de rapports puis ouvrez la page Installation de la base de données.  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>Utilisation d'une base de données de serveur de rapports différente ou déplacement d'une base de données de serveur de rapports  
- Vous pouvez configurer une instance de serveur de rapports de manière à utiliser une autre base de données de serveur de rapports en modifiant les informations de connexion. Il est courant de changer de base de données lors du déploiement d'un serveur de rapports de production. Le passage d’une base de données de serveur de rapports de test à une base de données de serveur de rapports de production est généralement le déploiement des serveurs de production. Vous pouvez également déplacer une base de données du serveur de rapports vers un autre ordinateur. Pour plus d’informations, consultez [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Vous pouvez configurer une instance de serveur de rapports de manière à utiliser une autre base de données de serveur de rapports en modifiant les informations de connexion. Il est courant de changer de base de données lors du déploiement d'un serveur de rapports de production. C'est généralement au passage d'une base de données de serveur de rapports de test à une base de données de serveur de rapports de production que les serveurs de production sont transférés. Par ailleurs, vous pouvez déplacer une base de données de serveur de rapports vers un autre ordinateur. Pour plus d’informations, consultez [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>Configuration de plusieurs serveurs de rapports de manière à utiliser la même base de données de serveur de rapports  
  Vous pouvez configurer plusieurs serveurs de rapports de manière à utiliser la même base de données de serveur de rapports. Cette configuration de déploiement est appelée déploiement avec montée en puissance parallèle. Cette configuration est une condition préalable requise si vous voulez exécuter plusieurs serveurs de rapports dans un cluster de serveurs. Toutefois, vous pouvez aussi utiliser cette configuration pour segmenter les applications de service ou pour tester l'installation et les paramètres d'une nouvelle instance de serveur de rapports afin de la comparer à l'installation existante d'un serveur de rapports. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Créer une base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Gérer un serveur de rapports Reporting Services en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

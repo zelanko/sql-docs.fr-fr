@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304884"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -49,7 +49,7 @@ sp_help_fulltext_system_components
   
 -   **analyseur lexical**  
   
--   **filtres**  
+-   **filter**  
   
 -   **Gestionnaire de protocole**  
   
@@ -67,11 +67,11 @@ sp_help_fulltext_system_components
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Type de composant. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**ComponentName**|**sysname**|Nom du composant.|  
+|**componenttype**|**sysname**|Type de composant. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> Filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componentname**|**sysname**|Nom du composant.|  
 |**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
-|**FullPath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre du rôle serveur fixe **ServerAdmin** .|  
-|**Version**|**nvarchar(30**|Numéro de version du composant.|  
+|**FullPath**|**nvarchar(256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre du rôle serveur fixe **ServerAdmin** .|  
+|**version**|**nvarchar(30)**|Numéro de version du composant.|  
 |**manufacturer**|**sysname**|Nom du fabricant du composant.|  
   
  Le jeu de résultats suivant est retourné uniquement si un ou plusieurs catalogues de texte intégral existent qui utilisent *component_type*.  

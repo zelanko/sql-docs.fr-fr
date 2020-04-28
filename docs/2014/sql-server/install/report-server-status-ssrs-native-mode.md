@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952458"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>État du serveur de rapports (SSRS en mode natif)
@@ -38,7 +38,7 @@ ms.locfileid: "71952458"
 > [!NOTE]  
 >  Dans SQL Server Express with Advanced Services, l'instance par défaut est SQLExpress.  
   
- **ID de l'instance**  
+ **ID de l’instance**  
  Correspond à un dossier sur le système de fichiers contenant les fichiers programme de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté. La valeur **ID d'instance** est affectée par le programme d'installation au format *composant*.*instance*, où *composant* est une valeur qui représente un composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et *instance* un nom d'instance. MSSQLSERVER est le nom de l'instance par défaut. Par exemple, si vous installez des instances par défaut des composants [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les noms de dossiers correspondants sont les suivants :  
   
 -   MSSQL12.MSSQLSERVER  

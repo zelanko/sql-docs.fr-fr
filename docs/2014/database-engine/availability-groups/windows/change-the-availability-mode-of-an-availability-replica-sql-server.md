@@ -15,30 +15,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dafa6037682610d7011cdfc9f378ead6f95774fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782888"
 ---
 # <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>Modifier le mode de disponibilité d'un réplica de disponibilité (SQL Server)
-  Cette rubrique explique comment modifier le mode de disponibilité d'un réplica de disponibilité dans un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell. Le mode de disponibilité est une propriété de réplica qui contrôle si le réplica effectue la validation de façon synchrone ou asynchrone. Le *mode de validation asynchrone* optimise les performances au détriment de la haute disponibilité et prend en charge uniquement le basculement manuel forcé (avec perte de données possible), généralement appelé *basculement forcé*. Le *mode de validation synchrone* met en évidence la haute disponibilité par rapport aux performances et, une fois le réplica secondaire synchronisé, prend en charge le basculement manuel et, éventuellement, le basculement automatique.  
+  Cette rubrique explique comment modifier le mode de disponibilité d'un réplica de disponibilité dans un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell. Le mode de disponibilité est une propriété de réplica qui contrôle si le réplica effectue la validation de façon synchrone ou asynchrone. Le*mode de validation asynchrone* optimise les performances au détriment d’une haute disponibilité et prend en charge uniquement le basculement forcé manuel (avec une possible perte de données), qu’on appelle généralement *basculement forcé*. Le*mode de validation synchrone* privilégie la haute disponibilité plutôt que les performances et, une fois que le réplica secondaire est synchronisé, prend en charge le basculement manuel et, éventuellement, le basculement automatique.  
   
 
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- **Pour modifier le mode de disponibilité d’un groupe de disponibilité**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+ **Pour modifier le mode de disponibilité d'un groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "72782888"
   
 5.  Dans la boîte de dialogue **Propriétés du réplica de disponibilité** , utilisez la liste déroulante **Mode de disponibilité** pour modifier le mode de disponibilité de ce réplica.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- **Pour modifier le mode de disponibilité d’un groupe de disponibilité**  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+ **Pour modifier le mode de disponibilité d'un groupe de disponibilité**  
   
 1.  Connectez-vous à l'instance de serveur qui héberge le réplica principal.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72782888"
        WITH (FAILOVER_MODE = AUTOMATIC);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell
 
 ### <a name="to-change-the-availability-mode-of-an-availability-group"></a>Pour modifier le mode de disponibilité d'un groupe de disponibilité
   

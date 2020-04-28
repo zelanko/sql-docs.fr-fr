@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71326144"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
@@ -39,13 +39,13 @@ ms.locfileid: "71326144"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ID numérique unique associé au nœud. Clé pour cette vue.|Unique sur un cluster avec montée en puissance parallèle, quel que soit le type.|  
-|type|**nvarchar (32)**|Type du nœud.|'COMPUTE', 'HEAD'|  
-|name|**nvarchar (32)**|Nom logique du nœud.|Toute chaîne de longueur appropriée.|  
-|address|**nvarchar (32)**|Adresse IP de ce nœud.|Plage d’adresses IP|  
+|type|**nvarchar(32)**|Type du nœud.|'COMPUTE', 'HEAD'|  
+|name|**nvarchar(32)**|Nom logique du nœud.|Toute chaîne de longueur appropriée.|  
+|address|**nvarchar(32)**|Adresse IP de ce nœud.|Plage d'adresses IP|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résolution des problèmes de Polybase avec les vues de gestion dynamique](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

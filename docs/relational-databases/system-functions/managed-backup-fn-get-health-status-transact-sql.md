@@ -21,10 +21,10 @@ ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155804"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "70155804"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="Arguments"></a> Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  [@begin_time]  
  Début de la période à partir de laquelle le nombre agrégé des erreurs est calculé.  Le @begin_time paramètre est DateTime. La valeur par défaut est NULL. Lorsque la valeur est NULL, la fonction traite les événements signalés 30 minutes avant l'heure actuelle.  
   
@@ -62,7 +62,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|int|Nombre de fois où l'agent de sauvegarde analyse toutes les bases de données configurées avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |number_of_retention_loops|int|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
   
-## <a name="best-practices"></a>Bonnes pratiques  
+## <a name="best-practices"></a>Meilleures pratiques  
  Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou ne fonctionne pas correctement. Les colonnes d’erreur non null peuvent indiquer des problèmes et les journaux des événements étendus doivent être vérifiés pour en savoir plus sur les problèmes éventuels. Vous pouvez également utiliser la procédure stockée **managed_backup. sp_get_backup_diagnostics** pour obtenir la liste des événements étendus afin de trouver les détails de l’erreur.  
   
 ## <a name="security"></a>Sécurité  

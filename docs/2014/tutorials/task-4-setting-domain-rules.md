@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381743"
 ---
-# <a name="task-4-setting-domain-rules"></a>Tâche 4 : Définition de règles de domaine
+# <a name="task-4-setting-domain-rules"></a>Tâche 4 : Définition de règles de domaine
   Dans cette tâche, vous allez créer une règle pour le domaine de **messagerie du contact** afin de vérifier si l’adresse de messagerie se termine par ** \@Adventure-Works.com**. Pour plus d’informations sur la page, consultez la rubrique [création d’une règle de domaine](https://msdn.microsoft.com/library/hh510397.aspx) .  
   
 1.  Cliquez sur **adresse de messagerie du contact** dans la **liste domaine**.  
@@ -59,6 +59,6 @@ ms.locfileid: "72381743"
 13. Cliquez sur **Fermer** pour fermer la boîte de dialogue **tester la règle de domaine** .  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 5 : Définition des relations basées sur des termes](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Tâche 5 : Définition des relations basées sur des termes](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

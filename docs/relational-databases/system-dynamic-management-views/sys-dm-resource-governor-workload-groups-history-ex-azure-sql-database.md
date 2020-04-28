@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70873771"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
@@ -34,7 +34,7 @@ Retourne un instantané à un intervalle de 20 secondes pour les 32 dernières m
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |ID du pool de ressources. N'accepte pas la valeur NULL.|
 |**group_id**| int |ID du groupe de charges de travail. N'accepte pas la valeur NULL.|
-|**nomme**| nvarchar(256) |Nom du groupe de charges de travail. N'accepte pas la valeur NULL.|
+|**name**| nvarchar(256) |Nom du groupe de charges de travail. N'accepte pas la valeur NULL.|
 |**snapshot_time**| DATETIME |Date et heure de la capture instantanée des statistiques du groupe de ressources.|
 |**duration_ms**| int |Durée entre l’instantané actuel et l’instantané précédent.|
 |**active_worker_count**| int |Nombre total de travailleurs dans l’instantané actuel.|
@@ -103,5 +103,5 @@ ORDER BY snapshot_time DESC;
 ## <a name="see-also"></a>Voir aussi
 
 - [Gouvernance du taux de journal des traductions](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Limites des ressources de DTU du pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Limites de ressources vCore du pool élastique](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Limites des ressources DTU des pools élastiques](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Limites des ressources vCore des pools élastiques](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

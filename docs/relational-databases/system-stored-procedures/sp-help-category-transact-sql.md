@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304807"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -72,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID de la catégorie|  
 |**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = aucun|  
-|**nomme**|**sysname**|Nom de la catégorie|  
+|**name**|**sysname**|Nom de la catégorie|  
   
  Lorsque ** \@le suffixe** est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
   
@@ -80,7 +80,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID de la catégorie|  
 |**category_type**|**sysname**|Type de catégorie : Un serveur **local**, **plusieurs serveurs**ou **aucun**|  
-|**nomme**|**sysname**|Nom de la catégorie|  
+|**name**|**sysname**|Nom de la catégorie|  
   
 ## <a name="remarks"></a>Notes  
  **sp_help_category** doit être exécuté à partir de la base de données **msdb** .  
@@ -96,7 +96,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
   

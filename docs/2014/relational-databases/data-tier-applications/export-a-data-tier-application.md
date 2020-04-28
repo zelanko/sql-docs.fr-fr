@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175976"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
@@ -44,16 +44,16 @@ ms.locfileid: "70175976"
  Le processus d'exportation définit la version de la DAC sur 1.0.0.0 et la description de la DAC dans le fichier d'exportation sur une chaîne vide. Si la base de données a été déployée à partir de la DAC, la définition de la DAC dans le fichier d'exportation contient le nom donné à la DAC d'origine, sinon le nom de la DAC est défini sur le nom de la base de données.  
   
 
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Une DAC ou une base de données peut uniquement être exportée à partir d'une base de données dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure.  
   
  Vous ne pouvez pas exporter une base de données contenant des objets qui ne sont pas pris en charge dans une DAC ou contenant des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  L’exportation d’une DAC requiert au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.  
   
-##  <a name="UsingDeployDACWizard"></a>Utilisation de l’Assistant Exporter l’application de la couche données  
- **Pour exporter une DAC à l’aide d’un Assistant**  
+##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a>Utilisation de l’Assistant Exporter l’application de la couche données  
+ **Pour exporter une DAC à l'aide d'un Assistant**  
   
 1.  Connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sur site ou dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70175976"
   
     -   [Page Introduction](#Introduction)  
   
-    -   [Page Paramètres d’exportation](#Export_settings)  
+    -   [Page Paramètres d'exportation](#Export_settings)  
   
     -   [Page Validation](#Validation)  
   
@@ -77,44 +77,44 @@ ms.locfileid: "70175976"
   
     -   [Page Résultats](#Results)  
   
-##  <a name="Introduction"></a>Page Introduction  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Page Introduction  
  Cette page décrit les étapes de l'Assistant Exporter l'application de la couche Données.  
   
  **Options**  
   
  **Ne plus afficher cette page.** - Activez la case à cocher pour ne plus afficher la page Introduction à l'avenir.  
   
- **Suivant** -passe à la page **Sélectionner le package DAC** .  
+ **Suivant** - Passe à la page **Sélectionner le package DAC** .  
   
  **Annuler** -annule l’opération et ferme l’Assistant.  
   
-##  <a name="Export_settings"></a>Page Paramètres d’exportation  
+##  <a name="export-settings-page"></a><a name="Export_settings"></a>Page Paramètres d’exportation  
  Utilisez cette page pour indiquer l'emplacement où vous souhaitez créer le fichier BACPAC.  
   
--   **Enregistrer sur le disque local** -crée un fichier baBACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
+-   **Enregistrer sur le disque local** - Crée un fichier de BACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
   
--   **Enregistrer dans Azure** -crée un fichier baBACPAC dans un conteneur Azure. Vous devez vous connecter à un conteneur Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
+-   **Enregistrer dans Azure** - Crée un fichier BACPAC dans un conteneur Azure. Vous devez vous connecter à un conteneur Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
   
  Pour spécifier un sous-ensemble de tables à exporter, utilisez l'option **Avancé** .  
   
-##  <a name="Validation"></a>Page validation  
+##  <a name="validation-page"></a><a name="Validation"></a>Page validation  
  Utilisez la page de validation pour passer en revue tous les problèmes qui empêchent l'opération. Pour continuer, résolvez les problèmes bloquants, puis cliquez sur **Réexécuter la validation** pour vous assurer que la validation est réussie.  
   
  Pour continuer, cliquez sur **Suivant**.  
   
-##  <a name="Summary"></a>Page Résumé  
+##  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer l'exportation à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler l'exportation et quitter l'Assistant, cliquez sur **Annuler**.  
   
-##  <a name="Progress"></a>Page progression  
+##  <a name="progress-page"></a><a name="Progress"></a>Page progression  
  Cette page affiche une barre de progression indiquant l'état de l'opération. Pour afficher l'état détaillé, cliquez sur l'option **Afficher les détails** .  
   
-##  <a name="Results"></a>Page résultats  
+##  <a name="results-page"></a><a name="Results"></a>Page résultats  
  Cette page signale la réussite ou l'échec de l'exportation et affiche les résultats de chaque action. Toute action pour laquelle une erreur s'est produite aura un lien dans la colonne **Résultat** . Cliquez sur le lien pour consulter le rapport d'erreur de cette action.  
   
  Cliquez sur **Terminer** pour fermer l’Assistant.  
   
-##  <a name="NetApp"></a>Utilisation d’une application .NET Framework  
- **Pour exporter une DAC à l’aide de la méthode Export () dans une application .NET Framework.**  
+##  <a name="using-a-net-framework-application"></a><a name="NetApp"></a>Utilisation d’une application .NET Framework  
+ **Pour exporter une DAC à l’aide de la méthode Export() dans une application .Net Framework.**  
   
  Pour afficher un exemple de code, téléchargez l'exemple d'application DAC sur [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
@@ -126,6 +126,6 @@ ms.locfileid: "70175976"
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications de la couche données](data-tier-applications.md)   
- [Extraire une DAC d'une base de données](extract-a-dac-from-a-database.md)  
+ [Extraire une DAC d’une base de données](extract-a-dac-from-a-database.md)  
   
   

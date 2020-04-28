@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874474"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server)
@@ -59,8 +59,7 @@ ms.locfileid: "70874474"
   
 -   les câbles sont débranchés ;  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
   
 -   l'application de surveillance d'un port ne fonctionne pas ;  
   
@@ -69,8 +68,7 @@ ms.locfileid: "70874474"
 -   un serveur Windows a été redémarré ;  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] ne protège pas des problèmes spécifiques au client qui accède aux serveurs. Prenons l'exemple d'un cas dans lequel une carte réseau publique gère des connexions clientes au réplica principal, tandis qu'une carte d'interface réseau privée gère le trafic entre les instances de serveur qui hébergent les réplicas d'un groupe de disponibilité. Dans ce cas, l'échec de la carte réseau publique empêcherait les clients d'accéder aux bases de données.  
+>  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] ne protège pas des problèmes spécifiques au client qui accède aux serveurs. Prenons l'exemple d'un cas dans lequel une carte réseau publique gère des connexions clientes au réplica principal, tandis qu'une carte d'interface réseau privée gère le trafic entre les instances de serveur qui hébergent les réplicas d'un groupe de disponibilité. Dans ce cas, l'échec de la carte réseau publique empêcherait les clients d'accéder aux bases de données.  
   
 ## <a name="failures-due-to-soft-errors"></a>Défaillances dues à des erreurs logicielles  
  Parmi les conditions susceptibles de provoquer des délais d'expiration de session figurent notamment, sans s'y limiter, les situations suivantes :  
@@ -94,11 +92,11 @@ ms.locfileid: "70874474"
  Quel que soit le type d'erreur, une instance de serveur qui détecte une erreur réagit comme il se doit en fonction du rôle de l'instance, du mode de disponibilité de la session et de l'état des autres connexions de la session. Pour plus d’informations sur ce qui se produit lors de la perte d’un partenaire, consultez [modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
- **Pour modifier la valeur du délai d’attente (mode de disponibilité avec validation synchrone uniquement)**  
+ **Pour modifier la valeur du délai d'expiration (mode de disponibilité avec validation synchrone uniquement)**  
   
 -   [Modifier le délai d’expiration de session pour un réplica de disponibilité &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **Pour afficher la valeur du délai d’attente actuel**  
+ **Pour afficher la valeur actuelle du délai d'attente**  
   
 -   Interroger **session_timeout** dans [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql).  
   

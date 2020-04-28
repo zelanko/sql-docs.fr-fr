@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252195"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -47,7 +47,7 @@ sp_OAMethod objecttoken , methodname
  *MethodName*  
  Nom de la méthode de l'objet OLE à appeler.  
   
- __**sortie** returnValue    
+ _returnvalue_**sortie** returnValue    
  Valeur renvoyée de la méthode de l'objet OLE. Si elle est spécifiée, il doit s'agir d'une variable locale du type de données approprié.  
   
  Si la méthode retourne une valeur unique, spécifiez une variable locale pour *returnValue*, qui retourne la valeur de retour de la méthode dans la variable locale, ou ne spécifiez pas *returnValue*, qui retourne la valeur de retour de la méthode au client sous la forme d’un jeu de résultats à une seule colonne et une seule ligne.  
@@ -97,7 +97,7 @@ sp_OAMethod objecttoken , methodname
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
-|**DATETIME**|**varchar**|**varchar**|**varchar**|**DATETIME**|**varchar**|**nvarchar**|  
+|**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   

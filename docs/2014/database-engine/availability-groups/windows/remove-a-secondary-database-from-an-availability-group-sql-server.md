@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85cd7335290a619a7dd7b5e2cfcb729879bdaf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782950"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Supprimer une base de données secondaire d'un groupe de disponibilité (SQL Server)
@@ -28,11 +28,11 @@ ms.locfileid: "72782950"
   
 -   **Avant de commencer :**  
   
-     [Prérequis](#Prerequisites)  
+     [Conditions préalables](#Prerequisites)  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer une base de données secondaire, utilisez :**  
+-   **Pour supprimer une base de données secondaire, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,21 +40,21 @@ ms.locfileid: "72782950"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Suivi :**  [après la suppression d’une base de données secondaire d’un groupe de disponibilité](#FollowUp)  
+-   **Suivi :**  [Après la suppression d'une base de données secondaire dans un groupe de disponibilité](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> Conditions préalables requises et restrictions  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Conditions préalables et restrictions  
   
 -   Cette tâche est prise en charge sur les réplicas secondaires uniquement. Vous devez être connecté à l'instance de serveur qui héberge le réplica secondaire duquel la base de données doit être supprimée.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour supprimer une base de données secondaire dans un groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica secondaire dont vous souhaitez supprimer une ou plusieurs bases de données secondaires, et développez l'arborescence du serveur.  
@@ -73,7 +73,7 @@ ms.locfileid: "72782950"
   
 6.  Dans la boîte de dialogue **Supprimer la base de données du groupe de disponibilité** , pour supprimer toutes les bases de données répertoriées, cliquez sur **OK**. Si vous ne souhaitez pas supprimer toutes les bases de données répertoriées, cliquez sur **Annuler**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour supprimer une base de données secondaire dans un groupe de disponibilité**  
   
 1.  Connectez-vous à l'instance de serveur qui héberge le réplica secondaire.  
@@ -91,7 +91,7 @@ ms.locfileid: "72782950"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour supprimer une base de données secondaire dans un groupe de disponibilité**  
   
 1.  Remplacez le répertoire (`cd`) par l'instance de serveur qui héberge le réplica secondaire.  
@@ -111,7 +111,7 @@ ms.locfileid: "72782950"
   
 -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Suivi : Après la suppression d'une base de données secondaire dans un groupe de disponibilité  
+##  <a name="follow-up-after-removing-a-secondary-database-from-an-availability-group"></a><a name="FollowUp"></a> Suivi : Après la suppression d'une base de données secondaire dans un groupe de disponibilité  
  Lorsqu'une base de données secondaire est supprimée, elle n'est plus jointe au groupe de disponibilité et toutes les informations relatives à la base de données secondaire supprimée sont ignorées par le groupe de disponibilité. La base de données secondaire supprimée est placée dans l'état RESTORING.  
   
 > [!TIP]  

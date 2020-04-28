@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: dfa640787f42d06ed65b713c9fea415dc9560a2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252202"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>Assistant Migration SQL Server pour l’accès (AccessToSQL)
@@ -33,6 +33,6 @@ Cette documentation vous présente les SSMA pour l’accès et fournit des instr
 |[Préparation des bases de données Access pour la migration](preparing-access-databases-for-migration-accesstosql.md)|Décrit comment préparer vos bases de données Access pour la conversion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en/SQL Azure.|  
 |[Migration de bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)|Fournit une vue d’ensemble du processus de conversion et des informations détaillées sur chaque étape du processus.|  
 |[Liaison des applications Access à SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|Décrit comment utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Référence de l'interface utilisateur](user-interface-reference-accesstosql.md)|Contient la documentation pour les boîtes de dialogue SSMA.|  
+|[Référence de l’interface utilisateur](user-interface-reference-accesstosql.md)|Contient la documentation pour les boîtes de dialogue SSMA.|  
 |[Utilisation de la console SSMA pour Access](working-with-ssma-for-access-console-accesstosql.md)|Contient la documentation sur l’application de console SSMA|  
 |[Obtention de l’assistance SSMA pour l’accès](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Fournit des informations sur l’obtention d’une assistance supplémentaire.|  

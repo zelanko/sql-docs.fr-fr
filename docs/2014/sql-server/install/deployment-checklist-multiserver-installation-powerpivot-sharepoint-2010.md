@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952245"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Liste de vérification du déploiement : Installation à plusieurs serveurs de PowerPivot pour SharePoint 2010
@@ -26,7 +26,7 @@ ms.locfileid: "71952245"
   
   
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Vous devez être administrateur local pour installer SQL Server et SharePoint 2010.  
   
  La personne qui installe SharePoint doit également configurer la batterie de serveurs. Pour configurer la batterie de serveurs, vous devez avoir un compte de connexion SQL Server sur le serveur de base de données. La connexion doit être affectée aux rôles suivants : `dbcreator`, `securityadmin` et `public`.  
@@ -63,7 +63,7 @@ ms.locfileid: "71952245"
   
     9. Cliquez sur OK pour fermer la boîte de dialogue Options Internet.  
   
-##  <a name="installdb"></a>Installer un serveur de base de données  
+##  <a name="install-a-database-server"></a><a name="installdb"></a>Installer un serveur de base de données  
  Cette rubrique suppose que la topologie de votre batterie de serveurs est basée sur celle décrite dans l’article [plusieurs serveurs pour une batterie à trois niveaux](https://go.microsoft.com/fwlink/?LinkId=182771). Si vous disposez déjà d’une batterie de serveurs opérationnelle, passez directement à la [PowerPivot pour SharePoint d’installation](#installppapp).  
   
  Si vous venez de démarrer votre topologie, commencez par installer un moteur de base de données SQL Server. Ces instructions aboutissent à la création d'un serveur de base de données accessible depuis les serveurs SharePoint de votre batterie.  
@@ -86,7 +86,7 @@ ms.locfileid: "71952245"
   
     3.  Sélectionnez **Protocoles pour MSSQLSERVER**.  
   
-    4.  Cliquez avec le bouton droit sur **TCP/IP**, puis sélectionnez **Enable**.  
+    4.  Cliquez avec le bouton droit sur **TCP/IP** , puis sélectionnez **activer**.  
   
     5.  Cliquez sur **services de SQL Server**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71952245"
   
     15. Cliquez sur **Terminer**.  
   
-##  <a name="installsp"></a>Installer et configurer une batterie de serveurs SharePoint 2010 à trois niveaux  
+##  <a name="install-and-configure-a-three-tier-sharepoint-2010-farm"></a><a name="installsp"></a>Installer et configurer une batterie de serveurs SharePoint 2010 à trois niveaux  
  Exécutez sur chacun des ordinateurs que vous utilisez comme serveurs SharePoint le programme d'installation des composants requis de SharePoint, puis le programme d'installation de SharePoint Server.  
   
  Utilisez les instructions suivantes de la documentation SharePoint 2010 pour installer et configurer une batterie de serveurs SharePoint 2010 comprenant deux serveurs Web et un serveur d'applications :  
@@ -141,16 +141,16 @@ ms.locfileid: "71952245"
   
 -   une collection de données d'utilisation et d'intégrité ;  
   
--   Journalisation de diagnostic  
+-   la journalisation des diagnostics.  
   
-##  <a name="installppapp"></a>Installer PowerPivot pour SharePoint sur un serveur d’applications  
+##  <a name="install-powerpivot-for-sharepoint-on-an-application-server"></a><a name="installppapp"></a>Installer PowerPivot pour SharePoint sur un serveur d’applications  
  Exécutez le programme d'installation de SQL Server pour ajouter PowerPivot pour SharePoint à une batterie de serveurs SharePoint. Si la batterie est composée de plusieurs serveurs SharePoint, vous devez exécuter le programme d'installation de SQL Server sur un serveur d'applications déjà joint à la batterie.  
   
  Installez toujours PowerPivot pour SharePoint sur un serveur d'applications. Bien que les serveurs Web frontaux exécutent également PowerPivot pour les composants serveur SharePoint, les composants qui s'exécutent sur le Web frontal sont installés pendant l'étape de configuration de PowerPivot pour SharePoint, lorsque vous déployez des solutions dans la batterie. Pour plus d’informations sur le programme d’installation, consultez [installer PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md).  
   
  Si votre topologie de déploiement appelle deux instances de PowerPivot pour SharePoint, exécutez le programme d'installation de SQL Server sur chaque serveur d'applications. Vous ne pouvez avoir qu'une seule instance de PowerPivot pour SharePoint sur un même ordinateur. Si vous avez besoin de plusieurs instances, vous devez utiliser des serveurs supplémentaires. Pour plus d’informations sur l’ajout de plusieurs serveurs PowerPivot pour SharePoint à la même batterie de serveurs, consultez [liste de vérification du déploiement : montée en puissance parallèle en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
-##  <a name="installclientlib"></a>Installez Analysis Services bibliothèques clientes sur des serveurs d’applications SharePoint qui n’ont pas d’installation de PowerPivot pour SharePoint  
+##  <a name="install-analysis-services-client-libraries-on-sharepoint-applications-servers-that-do-not-have-an-installation-of-powerpivot-for-sharepoint"></a><a name="installclientlib"></a>Installez Analysis Services bibliothèques clientes sur des serveurs d’applications SharePoint qui n’ont pas d’installation de PowerPivot pour SharePoint  
  Une topologie de batterie de serveurs qui inclut un serveur Web frontal ou un serveur d'applications exécutant les applications suivantes, sans installation de PowerPivot pour SharePoint sur le même ordinateur, requiert des logiciels supplémentaires pour prendre en charge les fonctionnalités et l'accès aux données PowerPivot :  
   
 -   Excel Services ou PerformancePoint Services  
@@ -161,12 +161,12 @@ ms.locfileid: "71952245"
   
  De la même manière, un ordinateur qui comporte juste l'Administration centrale, sans PowerPivot pour SharePoint sur le même ordinateur, requiert la bibliothèque cliente ADOMD.NET. Cette bibliothèque est utilisée par le tableau de bord de gestion PowerPivot pour accéder aux données internes servant à remplir le tableau de bord. Pour plus d’informations, consultez [Installer ADOMD.NET sur des serveurs web frontaux exécutant l’Administration centrale](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).  
   
-##  <a name="configsrvr"></a>Configurer le serveur  
+##  <a name="configure-the-server"></a><a name="configsrvr"></a>Configurer le serveur  
  Utilisez l'outil de configuration de PowerPivot pour configurer PowerPivot pour SharePoint. L’outil analyse la configuration existante de la batterie de serveurs et fournit des options pour installer ou activer les fonctionnalités SharePoint requises par PowerPivot pour SharePoint. Au cours de cette étape, le service d'émission de jetons Revendications vers Windows est démarré. De plus, si d'autres fonctionnalités SharePoint requises ne sont pas encore activées, l'outil de configuration les ajoute à la liste et inclut des actions pour activer la fonctionnalité.  
   
  Pour plus d’informations, consultez [configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de configuration de PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
   
-##  <a name="AAM"></a>Configurer le mappage des accès de substitution pour les serveurs Web frontaux  
+##  <a name="configure-alternate-access-mapping-for-web-front-end-servers"></a><a name="AAM"></a>Configurer le mappage des accès de substitution pour les serveurs Web frontaux  
  Pour que les demandes d'accès aux données ou d'actualisation des données PowerPivot soient gérées par chaque serveurWeb frontal, vous devez mapper les différentes URL de chaque serveur à la même application Web.  
   
 1.  Dans administration centrale, dans gestion des applications, cliquez sur **configurer les mappages des accès de substitution**.  
@@ -179,12 +179,12 @@ ms.locfileid: "71952245"
   
 5.  Répétez les étapes précédentes pour ajouter l'URL du deuxième serveur Web frontal.  
   
-##  <a name="activatePP"></a>Activer l’intégration des fonctionnalités PowerPivot pour les collections de sites  
+##  <a name="activate-powerpivot-feature-integration-for-site-collections"></a><a name="activatePP"></a>Activer l’intégration des fonctionnalités PowerPivot pour les collections de sites  
  L'activation de fonctionnalités au niveau de la collection de sites met à la disposition de vos sites des pages et des modèles d'application, notamment des pages de configuration pour l'actualisation des données planifiée et des pages d'application pour la Galerie PowerPivot et les bibliothèques de flux de données.  
   
  L'outil de configuration de PowerPivot active l'intégration de fonctionnalité pour la collection de sites indiquée. Vous pouvez exécuter l'outil plusieurs fois pour sélectionner des collections de sites supplémentaires. Les administrateurs de site peuvent également configurer l'activation de fonctionnalités à partir de SharePoint. Pour plus d’informations, consultez [activer l’intégration des fonctionnalités PowerPivot pour les collections de sites dans l’administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca).  
   
-##  <a name="verify"></a>Vérifier la disponibilité des serveurs et de l’intégration  
+##  <a name="verify-integration-and-server-availability"></a><a name="verify"></a>Vérifier la disponibilité des serveurs et de l’intégration  
  Le traitement des requêtes PowerPivot dans la batterie de serveurs se produit lorsqu'un utilisateur ou une application ouvre un classeur Excel contenant des données PowerPivot. Au minimum, vous pouvez activer des pages sur les sites SharePoint pour vérifier que les fonctionnalités PowerPivot sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d'un classeur PowerPivot que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d'une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d'exemple contenant déjà des données PowerPivot et l'utiliser pour confirmer que l'intégration SharePoint est correctement configurée.  
   
  Pour vérifier l'intégration de PowerPivot avec un site SharePoint, procédez comme suit :  
@@ -199,7 +199,7 @@ ms.locfileid: "71952245"
   
  Pour vérifier l'accès aux données PowerPivot sur le serveur, procédez comme suit :  
   
-1.  [Téléchargez](https://go.microsoft.com/fwlink/?LinkID=219108) l’exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l'exemple de classeur des fichiers téléchargés pour vérifier l'accès aux données PowerPivot. Procédez à l’extraction des fichiers.  
+1.  [Téléchargez](https://go.microsoft.com/fwlink/?LinkID=219108) l'exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l'exemple de classeur des fichiers téléchargés pour vérifier l'accès aux données PowerPivot. Procédez à l’extraction des fichiers.  
   
 2.  Téléchargez un classeur PowerPivot dans la Bibliothèque PowerPivot ou une autre bibliothèque SharePoint.  
   
@@ -219,13 +219,13 @@ ms.locfileid: "71952245"
   
 10. Sur le système de fichiers de l'ordinateur, vérifiez le dossier suivant pour déterminer si les fichiers sont mis en cache sur disque. La présence de fichiers mis en cache est une vérification supplémentaire que votre déploiement est opérationnel. Pour consulter le cache des fichiers, accédez au dossier \Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup.  
   
-##  <a name="nextsteps"></a>Étapes consécutives à l’installation  
+##  <a name="post-installation-steps"></a><a name="nextsteps"></a>Étapes consécutives à l’installation  
  Après avoir vérifié l'installation, terminez la configuration du service en créant une Galerie PowerPivot ou en ajustant certains paramètres de configuration. Pour exploiter au mieux les composants serveur que vous venez d'installer, vous pouvez télécharger [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] pour créer puis publier votre premier classeur PowerPivot.  
   
-####  <a name="bkmk_disk"></a>Définir des limites supérieures sur l’utilisation de l’espace disque  
+####  <a name="set-upper-limits-on-disk-space-usage"></a><a name="bkmk_disk"></a>Définir des limites supérieures sur l’utilisation de l’espace disque  
  Vous pouvez définir une limite maximale sur la quantité d'espace disque utilisée pour les fichiers de données PowerPivot qui sont mis en cache sur disque. L'option par défaut consiste à utiliser tout l'espace disque disponible. Pour obtenir des instructions sur la façon de limiter l’utilisation de l’espace disque, consultez [configurer l’utilisation de l’espace disque &#40;PowerPivot pour SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint).  
   
-####  <a name="Upload"></a>Augmenter la taille maximale de téléchargement des fichiers pour les applications Web SharePoint  
+####  <a name="increase-file-maximum-upload-size-for-sharepoint-web-applications"></a><a name="Upload"></a>Augmenter la taille maximale de téléchargement des fichiers pour les applications Web SharePoint  
  Étant donné que les classeurs PowerPivot peuvent être volumineux, vous pouvez augmenter la taille maximale de téléchargement de fichier. Il y a deux paramètres de taille de fichier à configurer : Taille maximale du téléchargement pour l'application Web, et Taille maximale du classeur dans Excel Services. La taille de fichier maximale définie doit avoir la même valeur dans les deux applications. Pour obtenir des instructions, consultez [configurer la taille maximale de téléchargement de fichiers &#40;PowerPivot pour SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Accorder des autorisations SharePoint aux utilisateurs des classeurs  

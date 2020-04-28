@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782763"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
@@ -63,7 +63,7 @@ ms.locfileid: "72782763"
  Par exemple, spécifiez Server pour la classe **ServerCollection** et Database pour la classe **DatabaseCollection** .  
   
  \@*PropertyName*  
- Spécifie le nom de l’une des propriétés de la classe associée à l’objet spécifié dans *Object*. Le nom de la propriété doit avoir pour préfixe le caractère \@. Par exemple, spécifiez \@IsAnsiNull pour la propriété de classe **Database** **IsAnsiNull**.  
+ Spécifie le nom de l’une des propriétés de la classe associée à l’objet spécifié dans *Object*. Le nom de la propriété doit avoir pour préfixe le caractère \@. Par exemple, spécifiez \@IsAnsiNull pour la propriété de classe **Database****IsAnsiNull**.  
   
  \@*BooleanPropertyName*=true()  
  Énumère tous les objets où la propriété booléenne spécifiée a la valeur TRUE.  
@@ -103,7 +103,7 @@ ms.locfileid: "72782763"
   
  Les expressions de requête doivent commencer par une référence absolue à l'objet serveur. Les expressions relatives avec une barre oblique (/) de début ne sont pas autorisées. La séquence des objets spécifiés dans une expression de requête doit respecter la hiérarchie des objets de collection dans le modèle objet associé. Par exemple, une expression de requête qui fait référence à des objets dans l'espace de noms Microsoft.SqlServer.Management.Smo doit commencer par un nœud Server, suivi d'un nœud Database, etc.  
   
- Si un *\<FilterExpression>* n’est pas spécifié pour un objet, tous les objets au niveau de ce nœud sont énumérés.  
+ Si un * \<>FilterExpression* n’est pas spécifié pour un objet, tous les objets au niveau de ce nœud sont énumérés.  
   
 ## <a name="uniform-resource-names-urn"></a>URN (Uniform Resource Name)  
  Les noms URN sont un sous-ensemble d'expressions de requête. Chaque nom URN forme une référence complète à un objet unique. Un nom URN type utilise la propriété Name pour identifier un objet unique au niveau de chaque nœud. Par exemple, ce nom URN fait référence à une colonne spécifique :  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Invoke-PolicyEvaluation (applet de commande)](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [Applet de commande Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40moteur de base de données&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

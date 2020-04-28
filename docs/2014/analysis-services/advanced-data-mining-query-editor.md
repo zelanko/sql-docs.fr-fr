@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313610"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Éditeur de requêtes d’exploration de données avancée
@@ -41,7 +41,7 @@ ms.locfileid: "72313610"
  **Modèles DMX**  
  Cliquez et sélectionnez à partir d'une liste de modèles qui contient des exemples DMX. Les modèles fournissent tous les types de modèle ou requête de prédiction nécessaires, notamment les requêtes qui utilisent des tables imbriquées, et les instructions DMX pour gérer des modèles. Même si vous connaissez certaines instructions DMX, les modèles permettent de gagner du temps en obtenant la syntaxe correcte.  
   
- **Choisir le modèle**  
+ **Choisir un modèle**  
  Cliquez pour afficher la liste des modèles d'exploration de données disponibles sur la connexion actuelle.  
   
  Vous pouvez également afficher une liste des modèles disponibles en cliquant sur le nom du modèle dans l’instruction DMX dans le volet **requête DMX** . Le nom du modèle est généralement surligné en rouge.  
@@ -68,7 +68,7 @@ ms.locfileid: "72313610"
  **Colonnes de modèles**  
  Répertorie les colonnes du modèle d'exploration de données sélectionné. Une marque en forme de losange en regard du nom de la colonne indique que celle-ci est une colonne prévisible.  
   
- **Colonnes d’entrée**  
+ **Colonnes d'entrée**  
  Répertorie les colonnes issues de la source de données externes ajoutées comme entrées.  
   
 ## <a name="see-also"></a>Voir aussi  

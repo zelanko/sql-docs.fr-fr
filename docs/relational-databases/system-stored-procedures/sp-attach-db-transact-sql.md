@@ -18,10 +18,10 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305274"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "72305274"
 >  Pour reconstruire plusieurs fichiers journaux lorsqu’un ou plusieurs d’entre eux ont un nouvel emplacement, utilisez CREATe DATABASE *database_name* pour ATTACH_REBUILD_LOG.  
   
 > [!IMPORTANT]  
->  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données provenant d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur qui n’est pas un serveur de production et examinez également le code, tel que les procédures stockées ou un autre code défini par l’utilisateur, dans la base de données.  
+>  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   

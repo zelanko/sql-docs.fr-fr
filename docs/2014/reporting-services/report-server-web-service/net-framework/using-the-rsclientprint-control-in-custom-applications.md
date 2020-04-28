@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155000"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilisation du contrôle RSClientPrint dans les applications personnalisées
@@ -42,9 +42,9 @@ ms.locfileid: "70155000"
 -   Consultez les rubriques de la documentation en ligne en matière de rendu d'image (EMF) pour comprendre la façon dont les pages sont rendues lors de l'aperçu avant impression et de la sortie.  
   
 ## <a name="rsprintclient-overview"></a>Présentation de RSPrintClient   
- Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge les fonctionnalités communes aux autres boîtes de dialogue d'impression, notamment l'aperçu avant impression, les options de pages pour les choix spécifiques liés aux pages, aux plages, aux marges des pages et à l'orientation. Le contrôle est créé sous forme de package désigné en tant que fichier CAB. Le texte de la boîte de dialogue**Imprimer** est localisé dans toutes les langues prises en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **RSPrintClient** Le contrôle ActiveX utilise l’extension de rendu d’image (EMF) pour imprimer le rapport. Les informations de périphérique EMF suivantes sont utilisées : StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight et PageWidth. Les autres paramètres d'informations de périphérique pour le rendu d'image ne sont pas pris en charge.  
+ Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge les fonctionnalités communes aux autres boîtes de dialogue d'impression, notamment l'aperçu avant impression, les options de pages pour les choix spécifiques liés aux pages, aux plages, aux marges des pages et à l'orientation. Le contrôle est créé sous forme de package désigné en tant que fichier CAB. Le texte de la boîte de dialogue**Imprimer** est localisé dans toutes les langues prises en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le contrôle ActiveX **RSPrintClient** utilise l’extension de rendu d’image (EMF) pour imprimer le rapport. Les informations de périphérique EMF suivantes sont utilisées : StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight et PageWidth. Les autres paramètres d'informations de périphérique pour le rendu d'image ne sont pas pris en charge.  
   
-### <a name="language-support"></a>Prise en charge des langages  
+### <a name="language-support"></a>Prise en charge de la langue  
  Le contrôle d'impression fournit une interface utilisateur en plusieurs langues ; par ailleurs, il accepte les valeurs d'entrée calibrées selon les différents systèmes de mesure. La langue et le système de mesure utilisés sont déterminés par les propriétés **Culture** et **UICulture**. Les deux propriétés acceptent les valeurs LCID. Si vous spécifiez une valeur LCID pour une langue qui représente une variante d'une autre langue prise en charge, vous obtiendrez la langue la plus proche. Si vous spécifiez une valeur LCID qui n'est pas prise en charge et pour laquelle il n'existe aucune valeur LCID approchante, vous obtiendrez l'anglais (États-Unis).  
   
 ## <a name="using-rsclientprint-in-code"></a>Utilisation de RSClientPrint dans le code  
@@ -59,23 +59,23 @@ ms.locfileid: "70155000"
   
 -   **PageHeight** et **PageWidth** spécifient la hauteur et la largeur de page par défaut. Lorsque le contrôle d'impression est lancé, ces valeurs de propriétés servent à sélectionner le format de papier le plus approprié à l'imprimante actuellement sélectionnée. Si **PageWidth** est supérieur à **PageHeight**, l’orientation est définie sur Paysage. Dans le cas contraire, elle est définie au format Portrait.  
   
--   **LeftMargin**, **RightMargin**, **TopMargin**et **BottomMargin** ont tous la valeur 12,2 millimètres par défaut.  
+-   **LeftMargin**, **RightMargin**, **TopMargin** et **BottomMargin** ont tous par défaut la valeur 12,2 millimètres.  
   
  Ces propriétés sont stockées dans la collection de propriétés **Item** sur le serveur de rapports. Les valeurs sont remplacées chaque fois qu'une définition de rapport est mise à jour.  
   
 ### <a name="rsclientprint-properties"></a>Propriétés de RSClientPrint  
   
-|Propriété|Type|RW|Default|Description|  
+|Propriété|Type|L/E|Default|Description|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|Double|RW|paramètre du rapport|Obtient ou définit la marge de gauche. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
-|MarginRight|Double|RW|paramètre du rapport|Obtient ou définit la marge de droite. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
-|MarginTop|Double|RW|paramètre du rapport|Obtient ou définit la marge supérieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
-|MarginBottom|Double|RW|paramètre du rapport|Obtient ou définit la marge inférieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
-|PageWidth|Double|RW|paramètre du rapport|Obtient ou définit la largeur de page. La valeur par défaut, si elle n’est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 215,9 millimètres.|  
-|PageHeight|Double|RW|paramètre du rapport|Obtient ou définit la hauteur de page. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 279,4 millimètres.|  
-|Culture|Int32|RW|Paramètres régionaux du navigateur|Spécifie l'identificateur de paramètres régionaux (LCID). Cette valeur détermine l'unité de mesure de l'entrée d'utilisateur. Par exemple, si un utilisateur tape `3`, la valeur est mesurée en millimètres si la langue est le français ou le pouce si la langue est l’anglais (États-Unis). Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|String|RW|Culture du client|Spécifie la localisation de la chaîne de la boîte de dialogue. Le texte de la boîte de dialogue d'impression est disponible dans les langues suivantes : chinois simplifié, chinois traditionnel, anglais, français, allemand, italien, japonais, coréen, et espagnol. Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authentifier|Boolean|RW|False|Spécifie si le contrôle émet une commande GET destinée au serveur de rapports pour établir une connexion pour l'impression hors session.|  
+|MarginLeft|Double|L/E|paramètre du rapport|Obtient ou définit la marge de gauche. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
+|MarginRight|Double|L/E|paramètre du rapport|Obtient ou définit la marge de droite. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
+|MarginTop|Double|L/E|paramètre du rapport|Obtient ou définit la marge supérieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
+|MarginBottom|Double|L/E|paramètre du rapport|Obtient ou définit la marge inférieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
+|PageWidth|Double|L/E|paramètre du rapport|Obtient ou définit la largeur de page. La valeur par défaut, si elle n’est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 215,9 millimètres.|  
+|PageHeight|Double|L/E|paramètre du rapport|Obtient ou définit la hauteur de page. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 279,4 millimètres.|  
+|Culture|Int32|L/E|Paramètres régionaux du navigateur|Spécifie l'identificateur de paramètres régionaux (LCID). Cette valeur détermine l'unité de mesure de l'entrée d'utilisateur. Par exemple, si un utilisateur tape `3`, la valeur est mesurée en millimètres si la langue est le français ou le pouce si la langue est l’anglais (États-Unis). Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|L/E|Culture du client|Spécifie la localisation de la chaîne de la boîte de dialogue. Le texte de la boîte de dialogue d'impression est disponible dans les langues suivantes : chinois simplifié, chinois traditionnel, anglais, français, allemand, italien, japonais, coréen, et espagnol. Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Authenticate|Boolean|L/E|False|Spécifie si le contrôle émet une commande GET destinée au serveur de rapports pour établir une connexion pour l'impression hors session.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quand définir la propriété Authenticate  
  Lorsque vous effectuez une impression dans une session de navigateur, vous n'avez pas besoin de définir la propriété `Authenticate`. Dans le contexte d'une session active, toutes les demandes adressées au serveur de rapports par le contrôle d'impression sont gérées via le navigateur. Le navigateur définit les variables de session nécessaires pour communiquer avec le serveur de rapports.  
@@ -142,8 +142,8 @@ ms.locfileid: "70155000"
  `</BODY>`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+ [Imprimer des rapports à partir d’un navigateur avec le contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
- [Paramètres d’informations de périphérique pour l’image](../../image-device-information-settings.md)  
+ [Paramètres d'informations de périphérique pour l'image](../../image-device-information-settings.md)  
   
   

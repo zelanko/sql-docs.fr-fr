@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952593"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Des extensions personnalisées ont été détectées sur le serveur de rapports (Conseiller de mise à niveau)
@@ -28,7 +28,7 @@ ms.locfileid: "71952593"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le mode SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.|  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "71952593"
   
  Si vous décidez de ne pas poursuivre la mise à niveau, vous pouvez choisir de migrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la place. Pour plus d’instructions sur la migration d’extensions personnalisées, consultez [migration d’extensions personnalisées](#migrcustext) dans cette rubrique.  
   
-###  <a name="dataprocdeliver"></a>Extensions de traitement de données ou de remise personnalisées  
+###  <a name="custom-data-processing-or-delivery-extensions"></a><a name="dataprocdeliver"></a>Extensions de traitement de données ou de remise personnalisées  
  Si le Conseiller de mise à niveau détecte des extensions pour le traitement des données ou de remise personnalisées, la mise à niveau n'est pas bloquée. Toutefois, une fois la mise à niveau terminée, vous devrez peut-être effectuer des étapes supplémentaires pour que les fonctionnalités personnalisées fournies par ces extensions fonctionnent. Par exemple, vous devez effectuer des étapes supplémentaires lorsque les fichiers des extensions personnalisées sont installés dans le dossier d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Étapes postérieures à la mise à niveau pour les extensions pour le traitement des données ou de remise personnalisées  
@@ -75,7 +75,7 @@ ms.locfileid: "71952593"
   
  Pour plus d'informations, consultez « Déploiement d'une extension pour le traitement des données » et « Implémentation d'une extension de remise » dans la documentation en ligne de SQL Server.  
   
-###  <a name="render"></a>Extensions de rendu personnalisées  
+###  <a name="custom-rendering-extensions"></a><a name="render"></a>Extensions de rendu personnalisées  
  Si le Conseiller de mise à niveau détecte des extensions de rendu personnalisées, la mise à niveau est bloquée. Vous pouvez poursuivre la mise à niveau en supprimant les entrées de configuration d'extensions personnalisées du fichier de configuration. Toutefois, les extensions personnalisées ne seront pas accessibles aux utilisateurs une fois la mise à niveau terminée. Si vous avez besoin d'extensions de rendu personnalisées après la mise à niveau, vous devez générer des extensions de rendu mises à jour ou obtenir des extensions de rendu mises à jour d'un fournisseur d'extensions personnalisées.  
   
  Vous devez effectuer des étapes pour activer une mise à niveau ou vous pouvez choisir de migrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la place.  
@@ -95,7 +95,7 @@ ms.locfileid: "71952593"
   
  Pour plus d'informations, consultez « Implémentation d'une extension de rendu » dans la documentation en ligne de SQL Server.  
   
-###  <a name="secauth2000"></a>Extensions de sécurité ou d’authentification personnalisées sur un serveur de rapports SQL Server 2000  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2000-report-server"></a><a name="secauth2000"></a>Extensions de sécurité ou d’authentification personnalisées sur un serveur de rapports SQL Server 2000  
  Si le Conseiller de mise à niveau détecte des extensions de sécurité ou d'authentification personnalisées sur un serveur de rapports [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], la mise à niveau est bloquée. Vous devez effectuer des étapes pour activer une mise à niveau ou vous pouvez choisir de migrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la place. Dans les deux cas, vous devez mettre à jour et recompiler les extensions avec les interfaces les plus récentes dans Microsoft.ReportingServices.Interfaces.dll car les interfaces ont évolué entre [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 > [!IMPORTANT]  
@@ -115,7 +115,7 @@ ms.locfileid: "71952593"
   
  Pour plus d'informations, consultez « Implémentation d'une extension de sécurité » dans la documentation en ligne de SQL Server.  
   
-###  <a name="secauth2005"></a>Extensions de sécurité ou d’authentification personnalisées sur un serveur de rapports SQL Server 2005  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2005-report-server"></a><a name="secauth2005"></a>Extensions de sécurité ou d’authentification personnalisées sur un serveur de rapports SQL Server 2005  
  Si le Conseiller de mise à niveau détecte des extensions de sécurité ou d'authentification personnalisées sur un serveur de rapports [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la mise à niveau est bloquée. Vous devez effectuer des étapes pour activer une mise à niveau ou vous pouvez choisir de migrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la place.  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>Pour mettre à niveau des extensions de sécurité ou d'authentification personnalisées à partir d'un serveur de rapports SQL Server 2005  
@@ -130,7 +130,7 @@ ms.locfileid: "71952593"
   
  Pour plus d'informations, consultez « Implémentation d'une extension de sécurité » dans la documentation en ligne de SQL Server.  
   
-###  <a name="migrcustext"></a>Migration d’extensions personnalisées  
+###  <a name="migrating-custom-extensions"></a><a name="migrcustext"></a>Migration d’extensions personnalisées  
  Si vous décidez de migrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au lieu d'effectuer une mise à niveau, utilisez les étapes pour migrer des extensions personnalisées vers la nouvelle instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-migrate-custom-extensions-to-a-new-reporting-services-instance"></a>Pour migrer des extensions personnalisées vers une nouvelle instance de Reporting Services  

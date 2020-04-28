@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199328"
 ---
 # <a name="query-options-execution-advanced-page"></a>Options Exécution de la requête (page Avancé)
@@ -35,18 +35,18 @@ ms.locfileid: "71199328"
   
 **définir SHOWPLAN_TEXT** Lorsque cette case à cocher est activée, le plan de requête est retourné sous forme de texte avec chaque requête. Cette option est désactivée par défaut.
   
-**définir l’heure des statistiques** Lorsque cette case à cocher est activée, les statistiques de temps sont retournées avec chaque requête. Cette option est désactivée par défaut.
+**SET STATISTICS TIME** Lorsque cette case à cocher est activée, les statistiques de temps sont retournées avec chaque requête. Cette option est désactivée par défaut.
   
 **définir les statistiques d’e/s** Lorsque cette case à cocher est activée, les statistiques relatives à l’entrée/sortie (e/s) sont retournées avec chaque requête. Cette option est désactivée par défaut.
   
-**définir le niveau d’isolation** de la transaction Le niveau d’isolation de la transaction READ COMMITTED est défini par défaut. Pour plus d’informations, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql). Le niveau d’isolation de la transaction d’instantané n’est pas disponible. Pour utiliser l'isolation SNAPSHOT, ajoutez l'instruction [!INCLUDE[tsql](../includes/tsql-md.md)] suivante :
+**SET TRANSACTION ISOLATION LEVEL** Le niveau d'isolation des transactions READ COMMITTED est défini par défaut. Pour plus d’informations, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql). Le niveau d’isolation de la transaction d’instantané n’est pas disponible. Pour utiliser l'isolation SNAPSHOT, ajoutez l'instruction [!INCLUDE[tsql](../includes/tsql-md.md)] suivante :
   
   ```sql
   SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
   GO
   ```
 
-**définir la priorité de blocage** La valeur par défaut **normal** permet à chaque requête d’avoir la même priorité lorsqu’un blocage se produit. Sélectionnez une priorité Basse dans la liste déroulante, si vous voulez que cette requête perde tout conflit de blocage et soit sélectionnée comme requête à interrompre.
+**SET DEADLOCK PRIORITY** La valeur par défaut **Normal** permet à chaque requête de disposer de la même priorité lorsqu'un blocage se produit. Sélectionnez une priorité Basse dans la liste déroulante, si vous voulez que cette requête perde tout conflit de blocage et soit sélectionnée comme requête à interrompre.
 
 **définir le délai de verrouillage** La valeur par défaut-1 indique que les verrous sont maintenus jusqu’à ce que les transactions soient terminées. Une valeur égale à 0 signifie que l'instruction n'attendra pas et qu'elle retournera un message dès qu'un verrou sera localisé. Spécifiez une valeur supérieure à 0 milliseconde pour mettre fin à une transaction si les verrous de cette transaction doivent être maintenus plus longtemps que cette valeur.
 
@@ -54,7 +54,7 @@ ms.locfileid: "71199328"
 
 **Supprimer les en-têtes de message de fournisseur** Lorsque cette case à cocher est activée, les messages d’État du fournisseur (tels que le fournisseur OLE DB) ne sont pas affichés. Cette case à cocher est activée par défaut. Désactivez cette case à cocher pour afficher les messages du fournisseur lors de la résolution des problèmes en cas d'échec des requêtes au niveau du fournisseur.
 
-**Déconnecter après l’exécution de la requête** Lorsque cette case à cocher est activée, la connexion à SQL Server se termine une fois la requête terminée. Cette option est désactivée par défaut.
+**Déconnecter après l'exécution de la requête** Lorsque cette case à cocher est activée, il est mis fin à la connexion à SQL Server une fois la requête terminée. Cette option est désactivée par défaut.
 
 **Afficher l’heure d’achèvement** Permet d’imprimer l’heure à laquelle l’exécution de la requête s’est terminée après les résultats de la requête ou dans l’onglet messages.
 
@@ -66,4 +66,4 @@ Les protocoles d’attestation actuellement pris en charge sont les suivants :
 
 Pour plus d’informations, consultez [Always Encrypted avec les enclaves sécurisées](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) et l' [attestation d’enclave sécurisée](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
-**Rétablir les valeurs par défaut** Rétablit les valeurs par défaut d’origine de toutes les valeurs de cette page.
+**Rétablir les valeurs par défaut** Rétablit toutes les valeurs par défaut initiales des options de cette page.

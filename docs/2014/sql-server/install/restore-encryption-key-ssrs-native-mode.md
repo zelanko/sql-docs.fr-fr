@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952032"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurer la clé de chiffrement (SSRS en mode natif)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise une clé de chiffrement pour sécuriser les données sensibles stockées dans la base de données du serveur de rapports. Pour garantir un accès ininterrompu aux données chiffrées, il importe que vous créiez une sauvegarde de la clé de chiffrement au cas où vous devriez la restaurer ultérieurement en raison de modifications dans le compte de service ou dans le cadre d'une migration planifiée. Cette rubrique est une vue d'ensemble de l'utilisation du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour restaurer des clés.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
@@ -41,15 +40,14 @@ ms.locfileid: "71952032"
  Sélectionnez le fichier protégé par mot de passe qui contient une copie de la clé symétrique. L'extension de fichier par défaut est .snk.  
   
  **Mot de passe**  
- Entrez le mot de passe permettant de déverrouiller le fichier. Seuls les utilisateurs qui connaissent le mot de passe peuvent restaurer la clé. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applique une stratégie de mot de passe fort. Le mot de passe doit contenir au moins 8 caractères et inclure une combinaison de caractères alphanumériques majuscules et minuscules, ainsi qu'au moins un caractère symbole.  
+ Entrez le mot de passe permettant de déverrouiller le fichier. Seuls les utilisateurs qui connaissent le mot de passe peuvent restaurer la clé. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applique une stratégie de mot de passe fort. Le mot de passe doit contenir au moins 8 caractères et inclure une combinaison de caractères alphanumériques majuscules et minuscules, ainsi qu'au moins un caractère symbole.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de configuration de Reporting Services les rubriques d’aide F1 &#40;le mode natif SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Initialiser un serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Stocker les données du serveur de rapports chiffrées &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Sauvegarder et restaurer des clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Supprimer et recréer des clés de chiffrement &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Clés de chiffrement &#40;SSRS en mode natif&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
   

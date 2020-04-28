@@ -18,10 +18,10 @@ ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9c1dfefbc309e9ccc0f170461795c00a117247e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304986"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
@@ -40,15 +40,15 @@ ms.locfileid: "72304986"
 |**monitor_server**|**sysname**|Nom de l’instance du utilisé comme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serveur moniteur dans la configuration de la copie des journaux de session.|  
 |**monitor_server_security_mode**|**bit**|Mode de sécurité utilisé pour la connexion au serveur moniteur.<br /><br /> 1 = Authentification Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.|  
 |**last_backup_file**|**nvarchar (500)**|Chemin d'accès absolu de la sauvegarde la plus récente des journaux de transactions.|  
-|**last_backup_date**|**DATETIME**|Date et heure de la dernière opération de sauvegarde des journaux.|  
+|**last_backup_date**|**datetime**|Date et heure de la dernière opération de sauvegarde des journaux.|  
 |**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** et **sp_help_log_shipping_secondary_primary** Utilisez cette colonne pour contrôler l’affichage des paramètres d’analyse [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dans.<br /><br /> 0 = lors de l’appel de l’une de ces deux procédures stockées, l’utilisateur n’a pas spécifié de ** \@** valeur explicite pour le paramètre monitor_server.<br /><br /> 1 = Une valeur explicite a été spécifiée par l'utilisateur.|  
-|**backup_compression**|**tinyint**|Indique si la configuration de la copie des journaux de transaction substitue le comportement de compression de la sauvegarde au niveau du serveur.<br /><br /> 0 = Désactivées. Les sauvegardes de fichiers journaux ne sont jamais compressés, quels que soient les paramètres de compression de sauvegarde configurés par serveur.<br /><br /> 1 = Activé. Les sauvegardes de fichiers journaux sont toujours compressés, quels que soient les paramètres de compression de sauvegarde configurés par serveur.<br /><br /> 2 = utilise la configuration du serveur pour l’affichage ou configurer l’option de configuration de serveur [compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) de l’option de configuration de serveur. Il s’agit de la valeur par défaut.<br /><br /> La compression de la sauvegarde est prise en charge uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**backup_compression**|**tinyint**|Indique si la configuration de la copie des journaux de transaction substitue le comportement de compression de la sauvegarde au niveau du serveur.<br /><br /> 0 = Désactivées. Les sauvegardes de fichiers journaux ne sont jamais compressés, quels que soient les paramètres de compression de sauvegarde configurés par serveur.<br /><br /> 1 = Activé. Les sauvegardes de fichiers journaux sont toujours compressés, quels que soient les paramètres de compression de sauvegarde configurés par serveur.<br /><br /> 2 = utilise la configuration du serveur pour l’affichage ou configurer l’option de configuration de serveur [compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) de l’option de configuration de serveur. Il s'agit de la valeur par défaut.<br /><br /> La compression de la sauvegarde est prise en charge uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [Tables système &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

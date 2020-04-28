@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049296ff601296edbd990fe9ea70aef3efa8c44b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782856"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Supprimer un écouteur de groupe de disponibilité (SQL Server)
@@ -26,13 +26,13 @@ ms.locfileid: "72782856"
   
 -   **Avant de commencer :**  
   
-     [Prérequis](#Prerequisites)  
+     [Conditions préalables](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer un écouteur, utilisez :**  
+-   **Pour supprimer un écouteur à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,21 +40,21 @@ ms.locfileid: "72782856"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
  Avant de supprimer un écouteur de groupe de disponibilité, nous vous recommandons de vérifier qu'aucune application ne l'utilise.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour supprimer un écouteur de groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal, cliquez sur le nom du serveur pour développer l'arborescence du serveur.  
@@ -67,14 +67,14 @@ ms.locfileid: "72782856"
   
 5.  Cela ouvre la boîte de dialogue **Supprimer l'écouteur du groupe de disponibilité** . Pour plus d'informations, consultez [Supprimer l'écouteur du groupe de disponibilité](#AgListenerPropertiesDialog), plus loin dans cette rubrique.  
   
-###  <a name="AgListenerPropertiesDialog"></a>Supprimer l’écouteur du groupe de disponibilité (boîte de dialogue)  
+###  <a name="remove-listener-from-availability-group-dialog-box"></a><a name="AgListenerPropertiesDialog"></a>Supprimer l’écouteur du groupe de disponibilité (boîte de dialogue)  
  **Nom**  
  Nom de l'écouteur à supprimer.  
   
  **Résultat**  
  Affiche un lien, **Opération réussie** ou **Erreur**, sur lequel vous pouvez cliquer pour plus d’informations.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour supprimer un écouteur de groupe de disponibilité**  
   
 1.  Connectez-vous à l'instance de serveur qui héberge le réplica principal.  
@@ -91,7 +91,7 @@ ms.locfileid: "72782856"
     ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour supprimer un écouteur de groupe de disponibilité**  
   
 1.  Définissez la valeur par défaut (`cd`) sur l'instance de serveur qui héberge le réplica principal.  
@@ -105,7 +105,7 @@ ms.locfileid: "72782856"
     > [!NOTE]  
     >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   

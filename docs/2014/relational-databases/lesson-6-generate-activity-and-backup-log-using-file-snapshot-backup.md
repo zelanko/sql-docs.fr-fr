@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175457"
 ---
-# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Leçon 7 :Déplacer vos fichiers de données dans Stockage Azure
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Leçon 7 : Déplacer vos fichiers de données dans le Stockage Azure
   Dans cette leçon, vous allez apprendre à déplacer vos fichiers de données vers le stockage Azure (mais pas votre instance SQL Server). Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5 et 6.  
   
  Pour déplacer vos fichiers de données vers le stockage Azure, vous pouvez `ALTER DATABASE` utiliser l’instruction, car elle permet de modifier l’emplacement des fichiers de données.  
@@ -50,7 +50,7 @@ ms.locfileid: "70175457"
   
     ```  
   
-2.  Exécutez le code suivant :  
+2.  Exécutez le code ci-dessous :  
   
     ```sql  
   

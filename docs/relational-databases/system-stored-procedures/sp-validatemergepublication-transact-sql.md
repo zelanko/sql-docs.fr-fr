@@ -16,10 +16,10 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72006103"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
@@ -47,7 +47,7 @@ sp_validatemergepublication [@publication=] 'publication'
 |-----------------|-----------------|  
 |**1**|Validation du décompte de lignes uniquement.|  
 |**2**|Validation du nombre de lignes et de la somme de contrôle. Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]les abonnés, cette valeur est automatiquement définie sur **3**.|  
-|**1,3**|Il s'agit de la valeur recommandée.|  
+|**3**|Il s'agit de la valeur recommandée.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -59,7 +59,7 @@ sp_validatemergepublication [@publication=] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_validatemergepublication**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Valider les données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   

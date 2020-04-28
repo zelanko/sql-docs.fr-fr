@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71708213"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importer et exporter des données en bloc à l'aide de l'utilitaire bcp (SQL Server)
@@ -56,21 +56,21 @@ Cette rubrique est une présentation générale de l'utilisation de l' [utilitai
   
 -   [Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Conserver les valeurs d’identité lors de l’importation en bloc de données &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Conserver des valeurs d’identité lors de l’importation de données en bloc &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 -   [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Utilisez le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
 ## <a name="see-also"></a>Voir aussi
 

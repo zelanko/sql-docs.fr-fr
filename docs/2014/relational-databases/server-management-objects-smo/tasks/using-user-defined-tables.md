@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781818"
 ---
 # <a name="using-user-defined-tables"></a>Utilisation de tables définies par l'utilisateur
@@ -26,8 +26,7 @@ ms.locfileid: "72781818"
   
  Lorsque vous définissez une nouvelle table définie par l'utilisateur en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, vous devez fournir des colonnes et une clé primaire basée sur l'une des colonnes.  
   
- Les types de table définis par l'utilisateur ne peuvent pas être modifiés une fois qu'ils ont été créés. 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> ne prend pas en charge la méthode Alter. Les types de table définis par l'utilisateur peuvent avoir des contraintes de validation, mais certaines opérations de validation lèveront une exception car le type n'est pas modifiable.  
+ Les types de table définis par l'utilisateur ne peuvent pas être modifiés une fois qu'ils ont été créés. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> ne prend pas en charge la méthode Alter. Les types de table définis par l'utilisateur peuvent avoir des contraintes de validation, mais certaines opérations de validation lèveront une exception car le type n'est pas modifiable.  
   
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> est utilisée pour spécifier le type de données qui est associé aux colonnes et paramètres. Utilisez ce type pour spécifier le type de table défini par l'utilisateur comme paramètre pour des fonctions définies par l'utilisateur et des procédures stockées.  
   

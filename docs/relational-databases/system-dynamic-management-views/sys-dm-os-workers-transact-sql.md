@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72289350"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "72289350"
 |worker_address|**varbinary (8)**|Adresse mémoire du processus de travail.|  
 |status|**int**|À usage interne uniquement|  
 |is_preemptive|**bit**|1 = le processus de travail s'exécute avec une planification préemptive. Tout processus de travail qui exécute du code externe est exécuté en mode de planification préemptive.|  
-|is_fiber|**bit**|1 = le processus de travail s'exécute en mode Regroupement léger. Pour plus d’informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
+|is_fiber|**bit**|1 = le processus de travail s'exécute en mode Regroupement léger. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
 |is_sick|**bit**|1 = le processus de travail est bloqué car il essaie toujours d'obtenir un verrouillage total de l'UC. Si ce bit est défini, cela peut signaler un problème de contention sur un objet auquel les accès sont fréquents.|  
 |is_in_cc_exception|**bit**|1 = le processus de travail gère actuellement une exception non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |is_fatal_exception|**bit**|Indique si le processus de travail a reçu une exception fatale.|  
@@ -58,11 +58,11 @@ ms.locfileid: "72289350"
 |exception_severity|**int**|Gravité de la dernière exception rencontrée par ce processus de travail.|  
 |exception_address|**varbinary (8)**|Adresse du code qui a levé l'exception.|  
 |affinité|**bigint**|Affinité de thread du processus de travail. Correspond à l’affinité du thread dans [sys. dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar (60)**|État du processus de travail. Peut être l’une des valeurs suivantes :<br /><br /> INIT = le processus de travail est en cours d'initialisation.<br /><br /> RUNNING = le processus de travail est en cours d'exécution, en mode non préemptif ou préemptif.<br /><br /> RUNNABLE = le processus de travail est prêt à s'exécuter sur le planificateur.<br /><br /> SUSPENDED = le processus de travail est actuellement interrompu car il attend qu'un événement lui envoie un signal.|  
+|state|**nvarchar(60)**|État du processus de travail. Peut avoir l’une des valeurs suivantes :<br /><br /> INIT = le processus de travail est en cours d'initialisation.<br /><br /> RUNNING = le processus de travail est en cours d'exécution, en mode non préemptif ou préemptif.<br /><br /> RUNNABLE = le processus de travail est prêt à s'exécuter sur le planificateur.<br /><br /> SUSPENDED = le processus de travail est actuellement interrompu car il attend qu'un événement lui envoie un signal.|  
 |start_quantum|**bigint**|Temps, en millisecondes, au début de l'exécution actuelle de ce processus de travail.|  
 |end_quantum|**bigint**|Temps, en millisecondes, à la fin de l'exécution actuelle de ce processus de travail.|  
-|last_wait_type|**nvarchar (60)**|Type de la dernière attente. Pour obtenir la liste des types d’attente, consultez [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|return_code|**int**|Valeur retournée par la dernière attente. Peut être l’une des valeurs suivantes :<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|last_wait_type|**nvarchar(60)**|Type de la dernière attente. Pour obtenir la liste des types d’attente, consultez [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|return_code|**int**|Valeur retournée par la dernière attente. Peut avoir l’une des valeurs suivantes :<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|À usage interne uniquement|  
 |max_quantum|**bigint**|À usage interne uniquement|  
 |boost_count|**int**|À usage interne uniquement|  
@@ -79,8 +79,7 @@ ms.locfileid: "72289350"
 ## <a name="remarks"></a>Notes  
  Si le processus de travail est à l'état RUNNING et qu'il s'exécute de façon non préemptive, son adresse correspond à la valeur de active_worker_address dans sys.dm_os_schedulers.  
   
- Lorsqu'un processus de travail en attente sur un événement est signalé, il est placé en tête de la file d'attente exécutable. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise cette situation mille fois de suite, après quoi le processus de travail est placé à la fin de la file d'attente. Le fait de placer un processus de travail à la fin de la file d'attente a un impact sur les performances.  
+ Lorsqu'un processus de travail en attente sur un événement est signalé, il est placé en tête de la file d'attente exécutable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise cette situation mille fois de suite, après quoi le processus de travail est placé à la fin de la file d'attente. Le fait de placer un processus de travail à la fin de la file d'attente a un impact sur les performances.  
   
 ## <a name="permissions"></a>Autorisations
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   

@@ -18,10 +18,10 @@ ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305236"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
@@ -58,8 +58,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="remarks"></a>Notes  
  automatic_post existe dans **sp_add_jobserver**, mais n’est pas listé sous arguments. ** \@** automatic_post est réservé à un usage interne. ** \@**  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -70,7 +69,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter des **sp_add_jobserver** pour les tâches qui impliquent plusieurs serveurs.  
   

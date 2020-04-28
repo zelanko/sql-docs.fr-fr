@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952664"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Assistant Modification de base de données (SSRS en mode natif)
@@ -40,8 +40,7 @@ ms.locfileid: "71952664"
   
  Pour vous connecter à l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vous devez utiliser les informations d’identification qui ont l’autorisation de se connecter au serveur et de mettre à jour les informations de la base de données. Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise vos informations d'identification Windows en cours, mais si vous n'avez pas de connexion ou d'autorisations sur la base de données, vous devez spécifier une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous ne pouvez pas spécifier d'autres informations d'identification Windows. Si vous souhaitez vous connecter en tant qu'utilisateur Windows différent, connectez-vous comme cet utilisateur et démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- La connexion à une instance distante nécessite que vous activiez au préalable cette instance pour les connexions distantes. Certaines versions et éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorisent pas les connexions distantes par défaut. Pour vérifier si les connexions distantes sont autorisées, utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et confirmez que les protocoles TCP/IP et des canaux nommés sont activés. Si l'instance distante est également une instance nommée, vérifiez que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est activé et en cours d'exécution sur le serveur cible. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fournit le numéro de port utilisé par l'instance nommée sur le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ La connexion à une instance distante nécessite que vous activiez au préalable cette instance pour les connexions distantes. Certaines versions et éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorisent pas les connexions distantes par défaut. Pour vérifier si les connexions distantes sont autorisées, utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et confirmez que les protocoles TCP/IP et des canaux nommés sont activés. Si l'instance distante est également une instance nommée, vérifiez que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est activé et en cours d'exécution sur le serveur cible. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fournit le numéro de port utilisé par l'instance nommée sur le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  **Sauvegarde de la base de données**  
  Spécifie le nom de la base de données du serveur de rapports qui stocke les données du serveur. Vous pouvez spécifier une base de données existante ou en créer une.  
@@ -53,8 +52,7 @@ ms.locfileid: "71952664"
  **Langage**  
  Cette valeur est définie uniquement lorsque vous créez une nouvelle base de données du serveur de rapports.  
   
- Avec cette valeur, vous spécifiez la langue dans laquelle les définitions de rôle et les descriptions sont créées. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un modèle d'autorisation à base de rôles qui inclut un ensemble de rôles prédéfinis. Ces rôles sont créés une fois dans la langue spécifiée. Les noms des rôles et les descriptions n'apparaissent jamais dans d'autres langues, même si vous vous connectez au serveur de rapports à l'aide d'un navigateur dont les paramètres de culture ou de langue sont pris en charge par le serveur. La langue que vous spécifiez détermine aussi celle utilisée pour créer le nom du dossier Mes rapports et les dossiers Utilisateurs qui font partie de la fonctionnalité Mes rapports.  
+ Avec cette valeur, vous spécifiez la langue dans laquelle les définitions de rôle et les descriptions sont créées. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un modèle d'autorisation à base de rôles qui inclut un ensemble de rôles prédéfinis. Ces rôles sont créés une fois dans la langue spécifiée. Les noms des rôles et les descriptions n'apparaissent jamais dans d'autres langues, même si vous vous connectez au serveur de rapports à l'aide d'un navigateur dont les paramètres de culture ou de langue sont pris en charge par le serveur. La langue que vous spécifiez détermine aussi celle utilisée pour créer le nom du dossier Mes rapports et les dossiers Utilisateurs qui font partie de la fonctionnalité Mes rapports.  
   
  **Mode serveur**  
  Une base de données de serveur de rapports prend en charge le mode natif ou le mode intégré SharePoint. Les modes s'excluent mutuellement.  

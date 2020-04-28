@@ -14,10 +14,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304817"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "72304817"
 |index_id|**int**|ID d’index de l’index ColumnStore défini sur la table.<br /><br /> 1 = index cluster ColumnStore<br /><br /> 2 = index ColumnStore non cluster|  
 |partition_number|**int**|Numéro de partition.<br /><br /> 1 = première partition d’une table partitionnée, ou partition unique d’une table non partitionnée.<br /><br /> 2 = deuxième partition, et ainsi de suite.|  
 |internal_object_type|**tinyint**|Objets rowset qui effectuent le suivi des données internes pour l’index ColumnStore.<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar (60)**|COLUMN_STORE_DELETE_BITMAP : cet index bitmap effectue le suivi des lignes marquées comme supprimées du ColumnStore. La bitmap est pour chaque rowgroup, car les partitions peuvent avoir des lignes dans plusieurs RowGroups. Les lignes sont toujours présentes physiquement et occupent de l’espace dans le ColumnStore.<br /><br /> COLUMN_STORE_DELTA_STORE : stocke les groupes de lignes, appelés RowGroups, qui n’ont pas été compressés dans un stockage en colonnes. Chaque partition de table peut avoir zéro ou plusieurs deltastore RowGroups.<br /><br /> COLUMN_STORE_DELETE_BUFFER : pour conserver les suppressions des index ColumnStore non cluster actualisables. Quand une requête supprime une ligne de la table rowstore sous-jacente, le tampon de suppression effectue le suivi de la suppression à partir du ColumnStore. Lorsque le nombre de lignes supprimées dépasse 1048576, elles sont refusionnées dans le bitmap de suppression par le thread du moteur de tuple de l’arrière-plan ou par une commande REORGANIZE explicite.  À un moment donné, l’Union de l’image bitmap de suppression et du tampon de suppression représente toutes les lignes supprimées.<br /><br /> COLUMN_STORE_MAPPING_INDEX-utilisé uniquement lorsque l’index cluster ColumnStore possède un index non cluster secondaire. Cela mappe les clés d’index non cluster à la rowgroup et à l’ID de ligne corrects dans le ColumnStore. Il stocke uniquement les clés pour les lignes qui se déplacent vers un autre rowgroup ; Cela se produit lorsqu’un rowgroup Delta est compressé dans le ColumnStore, et lorsqu’une opération de fusion fusionne des lignes à partir de deux RowGroups différents.|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP : cet index bitmap effectue le suivi des lignes marquées comme supprimées du ColumnStore. La bitmap est pour chaque rowgroup, car les partitions peuvent avoir des lignes dans plusieurs RowGroups. Les lignes sont toujours présentes physiquement et occupent de l’espace dans le ColumnStore.<br /><br /> COLUMN_STORE_DELTA_STORE : stocke les groupes de lignes, appelés RowGroups, qui n’ont pas été compressés dans un stockage en colonnes. Chaque partition de table peut avoir zéro ou plusieurs deltastore RowGroups.<br /><br /> COLUMN_STORE_DELETE_BUFFER : pour conserver les suppressions des index ColumnStore non cluster actualisables. Quand une requête supprime une ligne de la table rowstore sous-jacente, le tampon de suppression effectue le suivi de la suppression à partir du ColumnStore. Lorsque le nombre de lignes supprimées dépasse 1048576, elles sont refusionnées dans le bitmap de suppression par le thread du moteur de tuple de l’arrière-plan ou par une commande REORGANIZE explicite.  À un moment donné, l’Union de l’image bitmap de suppression et du tampon de suppression représente toutes les lignes supprimées.<br /><br /> COLUMN_STORE_MAPPING_INDEX-utilisé uniquement lorsque l’index cluster ColumnStore possède un index non cluster secondaire. Cela mappe les clés d’index non cluster à la rowgroup et à l’ID de ligne corrects dans le ColumnStore. Il stocke uniquement les clés pour les lignes qui se déplacent vers un autre rowgroup ; Cela se produit lorsqu’un rowgroup Delta est compressé dans le ColumnStore, et lorsqu’une opération de fusion fusionne des lignes à partir de deux RowGroups différents.|  
 |Row_group_id|**int**|ID du rowgroup deltastore. Chaque partition de table peut avoir zéro ou plusieurs deltastore RowGroups.|  
 |hobt_id|**bigint**|ID de l’objet d’ensemble de lignes interne (HoBT). Il s’agit d’une bonne clé pour la jointure avec d’autres DMV pour obtenir plus d’informations sur les caractéristiques physiques de l’ensemble de lignes interne.|  
 |rows|**bigint**|Nombre approximatif de lignes dans cette partition.|  
 |data_compression|**tinyint**|État de compression de l’ensemble de lignes :<br /><br /> 0 = AUCUN<br /><br /> 1 = LIGNE<br /><br /> 2 = PAGE|  
-|data_compression_desc|**nvarchar (60)**|État de la compression pour chaque partition. Les valeurs possibles pour les tables rowstore sont AUCUN, LIGNE et PAGE. Les valeurs possibles pour les tables columnstore sont COLUMNSTORE et COLUMNSTORE_ARCHIVE.|  
+|data_compression_desc|**nvarchar(60)**|État de la compression pour chaque partition. Les valeurs possibles pour les tables rowstore sont AUCUN, LIGNE et PAGE. Les valeurs possibles pour les tables columnstore sont COLUMNSTORE et COLUMNSTORE_ARCHIVE.|  
 |optimize_for_sequential_key|**bit**|1 = l’optimisation de l’insertion de la dernière page a été activée pour la partition.<br><br>0 = valeur par défaut. L’optimisation de l’insertion de la dernière page de la partition est désactivée.|
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au `public` rôle. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Nécessite l’appartenance au rôle `public`.  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]recrée de nouveaux index internes ColumnStore chaque fois qu’il crée ou reconstruit un index ColumnStore.  
@@ -61,7 +61,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782937"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Supprimer un réplica secondaire d'un groupe de disponibilité (SQL Server)
@@ -29,11 +29,11 @@ ms.locfileid: "72782937"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Prérequis](#Prerequisites)  
+     [Conditions préalables](#Prerequisites)  
   
      [Sécurité](#Security)  
   
--   **Pour supprimer un réplica secondaire, utilisez :**  
+-   **Pour supprimer un réplica secondaire, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,26 +41,26 @@ ms.locfileid: "72782937"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Suivi :**  [après la suppression d’un réplica secondaire](#PostBestPractices)  
+-   **Suivi :**  [Après avoir supprimé un réplica secondaire](#PostBestPractices)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Cette tâche est prise en charge uniquement sur le réplica principal.  
   
 -   Seul un réplica secondaire peut être supprimé d'un groupe de disponibilité.  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal du groupe de disponibilité.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour supprimer un réplica secondaire**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
@@ -79,7 +79,7 @@ ms.locfileid: "72782937"
   
 6.  Dans la boîte de dialogue **Supprimer les réplicas secondaires du groupe de disponibilité** , pour supprimer tous les réplicas secondaires répertoriés, cliquez sur **OK**. Si vous ne souhaitez pas supprimer tous les réplicas répertoriés, cliquez sur **Annuler**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour supprimer un réplica secondaire**  
   
 1.  Connectez-vous à l'instance de serveur qui héberge le réplica principal.  
@@ -96,7 +96,7 @@ ms.locfileid: "72782937"
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour supprimer un réplica secondaire**  
   
 1.  Accédez au répertoire (`cd`) de l'instance de serveur qui héberge le réplica principal.  
@@ -116,7 +116,7 @@ ms.locfileid: "72782937"
   
 -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a>Suivi : après la suppression d’un réplica secondaire  
+##  <a name="follow-up-after-removing-a-secondary-replica"></a><a name="PostBestPractices"></a> Suivi : Après avoir supprimé un réplica secondaire  
  Si vous spécifiez un réplica qui n'est pas disponible actuellement, lorsque le réplica est mis en ligne, on découvre qu'il a été supprimé.  
   
  La suppression d'un réplica provoque l'arrêt de la réception des données. Après qu'un réplica secondaire a confirmé qu'il a été supprimé du magasin global, le réplica supprime les paramètres de groupe de disponibilité de ses bases de données, lesquelles demeurent sur l'instance de serveur locale dans l'état RECOVERING.  
