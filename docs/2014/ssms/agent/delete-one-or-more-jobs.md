@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783258"
 ---
 # <a name="delete-one-or-more-jobs"></a>Supprimer un ou plusieurs travaux
@@ -28,18 +28,18 @@ ms.locfileid: "72783258"
   
  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Vous ne pouvez supprimer que les travaux dont vous êtes propriétaire, à moins que vous ne soyez membre du rôle de serveur fixe **sysadmin** .  
   
  
   
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-delete-a-job"></a>Pour supprimer un travail  
   
-1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Développez **Agent SQL Server**, développez **Travaux**, cliquez avec le bouton droit sur le travail à supprimer, puis cliquez sur **Supprimer**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72783258"
   
 #### <a name="to-delete-multiple-jobs"></a>Pour supprimer plusieurs travaux  
   
-1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Développez **Agent SQL Server**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72783258"
   
 
   
-##  <a name="TSQL"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-delete-a-job"></a>Pour supprimer un travail  
   
@@ -80,8 +80,8 @@ ms.locfileid: "72783258"
   
  Pour plus d’informations, consultez [sp_delete_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
 
-##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 
 ### <a name="to-delete-multiple-jobs"></a>Pour supprimer plusieurs travaux
   
- Utilisez la classe `JobCollection` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la classe `JobCollection` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

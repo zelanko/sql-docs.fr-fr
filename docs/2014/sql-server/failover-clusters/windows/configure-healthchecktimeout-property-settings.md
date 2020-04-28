@@ -11,30 +11,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797452"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurer les paramètres de propriété HealthCheckTimeout
   Le paramètre HealthCheckTimeout est utilisé pour spécifier le temps, en millisecondes, pendant lequel la DLL de ressource SQL Server doit attendre les informations retournées par la procédure stockée [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) avant de déclarer l'instance de cluster de basculement (FCI) AlwaysOn comme sans réponse. Les modifications apportées aux paramètres de délai d'attente entrent immédiatement en vigueur et ne requièrent pas de redémarrage de la ressource SQL Server.  
   
--   **Avant de commencer :**  [limitations et restrictions](#Limits), [sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Limits), [Sécurité](#Security)  
   
--   **Pour configurer le paramètre HeathCheckTimeout à l’aide de :**  [PowerShell](#PowerShellProcedure), [Gestionnaire du cluster de basculement](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **Pour configurer le paramètre HeathCheckTimeout, utilisez :**  [PowerShell](#PowerShellProcedure), [Gestionnaire du cluster de basculement](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Limits"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Limits"></a> Limitations et restrictions  
  La valeur par défaut pour cette propriété est 60 000 millisecondes (60 secondes). La valeur minimale est 15 000 millisecondes (15 secondes).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite les autorisations ALTER SETTINGS et VIEW SERVER STATE.  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
 ### <a name="to-configure-healthchecktimeout-settings"></a>Pour configurer les paramètres HealthCheckTimeout  
   
@@ -58,14 +58,14 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>Contenu connexe (PowerShell)  
   
--   [Clustering et haute disponibilité](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (blog de l’équipe de clustering de basculement et d’équilibrage de la charge réseau)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Clustering et haute disponibilité) (Blog de l’équipe de clustering de basculement et d’équilibrage de la charge réseau)  
   
--   [Prise en main avec Windows PowerShell sur un cluster de basculement](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Mise en route de Windows PowerShell sur un cluster de basculement](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
 -   [Commandes de ressource de cluster et applets de commande Windows PowerShell équivalentes](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a>Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  
- **Pour configurer le paramètre HealthCheckTimeout**  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  
+ **Pour configurer le paramètre HeathCheckTimeout**  
   
 1.  Ouvrez le composant logiciel enfichable Gestionnaire du cluster de basculement.  
   
@@ -75,10 +75,10 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 4.  Sélectionnez l'onglet **Propriétés** , entrez la valeur souhaitée pour la propriété **HealthCheckTimeout** , puis cliquez sur **OK** pour appliquer la modification.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  À l’aide de l’instruction [ALTER Server Configuration](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] , vous pouvez spécifier la valeur de la propriété HealthCheckTimeOut.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemple (Transact-SQL)  
  L'exemple suivant définit l'option HealthCheckTimeout sur 15 000 millisecondes (15 secondes).  
   
 ```sql

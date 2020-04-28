@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798293"
 ---
 # <a name="create-a-schedule"></a>Créer une planification
@@ -29,7 +29,7 @@ ms.locfileid: "72798293"
   
      [Sécurité](#Security)  
   
--   **Pour créer une planification, utilisez :**  
+-   **Pour créer une planification, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -37,16 +37,16 @@ ms.locfileid: "72798293"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-schedule"></a>Pour créer une planification  
   
-1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Développez **SQL Server Agent**, cliquez avec le bouton droit sur **Travaux**, puis sélectionnez **Gérer les planifications**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "72798293"
   
     -   Si vous souhaitez que la planification ne s'exécute qu'une seule fois, cliquez sur **Une fois**. Pour définir la planification **Une fois** , renseignez le groupe **Une seule occurrence** dans la boîte de dialogue.  
   
-##  <a name="TSQL"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-schedule"></a>Pour créer une planification  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72798293"
   
  Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
   
-##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
  **Pour créer une planification**  
   
- Utilisez la classe `JobSchedule` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la classe `JobSchedule` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

@@ -21,10 +21,10 @@ ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9134b2964c27129b5ccc9d6a5992dda7c638dc7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658121"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Utilisation du fournisseur WMI pour les événements de serveur
@@ -47,7 +47,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  Pour activer [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans une base de données, utilisez l’option Set ENABLE_BROKER de l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) .  
   
 ## <a name="specifying-a-connection-string"></a>Spécification d'une chaîne de connexion  
- Les applications dirigent le fournisseur WMI pour les événements de serveur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur, Sqlwep.dll, puis la charge en mémoire. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède son propre espace de noms WMI, qui a comme \\ \\valeur par défaut :. \\ **\\*instance_name*racine \Microsoft\SqlServer\ServerEvents. *instance_name* a pour valeur par défaut MSSQLServer dans une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]par défaut de.  
+ Les applications dirigent le fournisseur WMI pour les événements de serveur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur, Sqlwep.dll, puis la charge en mémoire. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède son propre espace de noms WMI, qui a comme \\ \\valeur par défaut :. \\ *root*\\*instance_name*racine \Microsoft\SqlServer\ServerEvents. *instance_name* a pour valeur par défaut MSSQLServer dans une installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]par défaut de.  
   
 ## <a name="permissions-and-server-authentication"></a>Autorisations et authentification serveur  
  Pour accéder au fournisseur WMI pour les événements de serveur, le client d'où provient une application de gestion WMI doit correspondre à une connexion authentifiée Windows ou à un groupe dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée dans la chaîne de connexion de l'application.  

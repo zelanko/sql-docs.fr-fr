@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633433"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
@@ -28,7 +28,7 @@ Retourne les statistiques des groupes de charges de travail et les valeurs effec
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|ID unique du groupe de charges de travail.||
 |name|**sysname**|Nom du groupe de charges de travail.||
-|statistics_start_time|**DATETIME**|Heure de début de la collecte de statistiques pour le groupe de charge de travail.  La valeur est lorsque le groupe de charge de travail a été créé ou lorsque l’instance est suspendue ou mise à l’échelle.||
+|statistics_start_time|**datetime**|Heure de début de la collecte de statistiques pour le groupe de charge de travail.  La valeur est lorsque le groupe de charge de travail a été créé ou lorsque l’instance est suspendue ou mise à l’échelle.||
 |total_request_count|**bigint**|Nombre cumulatif de demandes traitées dans le groupe de charges de travail.||
 |total_shared_resource_reqeusts|**bigint**|Nombre cumulatif de demandes terminées dans le groupe de charge de travail qui utilisaient des ressources du pool partagé.||
 |total_queued_request_count|**bigint**|Nombre cumulatif de demandes en attente une fois la limite d’max_concurrency atteinte.||

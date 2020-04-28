@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637788"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Niveaux d’isolation des transactions dans les tables optimisées en mémoire
@@ -50,7 +50,7 @@ ms.locfileid: "73637788"
  Pour les tables sur disque, la plupart des garanties de niveau d'isolation sont implémentées à l'aide d'un verrouillage, qui empêche les conflits par blocage. Pour les tables mémoire optimisées, les garanties sont appliquées à l'aide d'un mécanisme de détection de conflit, qui évite de prendre des verrous. L'exception est l'isolation SNAPSHOT sur les tables sur disque. Cela est implémenté de façon similaire à l'isolation SNAPSHOT sur les tables mémoire optimisées à l'aide d'un mécanisme de détection de conflit.  
   
  SNAPSHOT  
- Ce niveau d'isolation spécifie que les données lues par n'importe quelle instruction d'une transaction représenteront la version cohérente d'un point de vue transactionnel des données qui existaient au début de la transaction. La transaction peut seulement reconnaître les modifications de données qui ont été validées avant qu'elle ne commence. Les modifications de données effectuées par d'autres transactions après le début de la transaction actuelle ne sont pas visibles pour les instructions qui s’exécutent dans la transaction actuelle. Les instructions d'une transaction obtiennent un instantané des données validées telles qu'elles existaient au début de cette transaction.  
+ Ce niveau d'isolation spécifie que les données lues par n'importe quelle instruction d'une transaction représenteront la version cohérente d'un point de vue transactionnel des données qui existaient au début de la transaction. La transaction peut seulement reconnaître les modifications de données qui ont été validées avant qu'elle ne commence. Autrement dit, les modifications de données effectuées par d'autres transactions après le début de la transaction active ne sont pas visibles pour les instructions qui s'exécutent dans le cadre de ladite transaction. Les instructions d'une transaction obtiennent un instantané des données validées telles qu'elles existaient au début de cette transaction.  
   
  Les opérations d'écriture (mises à jour, insertions et suppressions) sont toujours totalement isolées des autres transactions. Par conséquent, les opérations d'écriture dans une transaction SNAPSHOT peuvent être en conflit avec les opérations d'écriture d'autres transactions. Lorsque la transaction active tente de mettre à jour ou de supprimer une ligne mise à jour ou supprimée par une autre transaction validée après le début de la transaction active, la transaction prend fin avec le message d'erreur suivant.  
   

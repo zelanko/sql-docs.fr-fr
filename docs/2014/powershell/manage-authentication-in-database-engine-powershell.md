@@ -11,26 +11,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a04e581758748d55b9defcab3beaa6a86f0eecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797798"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gérer l'authentification dans le moteur de base de données PowerShell
   Par défaut, les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent l'authentification Windows lors de la connexion à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Vous pouvez utiliser l'authentification SQL Server en définissant un lecteur virtuel PowerShell ou en spécifiant les paramètres `-Username` et `-Password` pour `Invoke-Sqlcmd`.  
   
-1.  **Avant de commencer :**  [autorisations](#Permissions)  
+1.  **Avant de commencer :**  [Autorisations](#Permissions)  
   
-2.  **Pour définir l’authentification à l’aide de :**  [un lecteur virtuel](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **Pour définir l’authentification en utilisant :**  [Un lecteur virtuel](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Toutes les actions que vous pouvez effectuer dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] sont contrôlées par les autorisations accordées aux informations d'identification utilisées pour la connexion à l'instance. Par défaut, le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent le compte Windows sous lequel ils s'exécutent pour établir une connexion via l'authentification Windows au [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  Pour établir une connexion via l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un ID de connexion et un mot de passe d'authentification SQL Server. Lorsque vous utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le fournisseur, vous devez associer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] les informations d’identification de connexion à un lecteur virtuel, puis utiliser la commande de`cd`changement de répertoire () pour vous connecter à ce lecteur. Dans Windows PowerShell, les informations d'identification de sécurité peuvent être associées uniquement à des lecteurs virtuels.  
   
-##  <a name="SQLAuthVirtDrv"></a>SQL Server l’authentification à l’aide d’un lecteur virtuel  
- **Pour créer un lecteur virtuel associé à une connexion d’authentification SQL Server**  
+##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a> Authentification SQL Server avec un lecteur virtuel  
+ **Pour créer un lecteur virtuel associé à une connexion via l'authentification SQL Server**  
   
 1.  Créez une fonction qui :  
   
@@ -67,8 +67,8 @@ sqldrive SQLAuth
 cd SQLAuth  
 ```  
   
-##  <a name="SQLAuthInvSqlCmd"></a>Authentification SQL Server à l’aide de Invoke-Sqlcmd  
- **Pour utiliser Invoke-Sqlcmd avec l’authentification SQL Server**  
+##  <a name="sql-server-authentication-using-invoke-sqlcmd"></a><a name="SQLAuthInvSqlCmd"></a> Authentification SQL Server avec Invoke-Sqlcmd  
+ **Pour utiliser Invoke-Sqlcmd avec l'authentification SQL Server**  
   
 1.  Utilisez le paramètre de `-Username` pour spécifier un ID de connexion, et le paramètre de `-Password` pour spécifier le mot de passe associé.  
   
@@ -84,5 +84,5 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](sql-server-powershell.md)   
- [fournisseur PowerShell SQL Server](sql-server-powershell-provider.md)   
+ [Fournisseur SQL Server PowerShell](sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd (applet de commande)](../database-engine/invoke-sqlcmd-cmdlet.md)  

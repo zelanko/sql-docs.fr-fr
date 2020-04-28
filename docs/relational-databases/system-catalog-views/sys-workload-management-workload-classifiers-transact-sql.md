@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632963"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys. workload_management_workload_classifiers (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "73632963"
 group_name|**sysname**|Nom du groupe de charge de travail auquel le classifieur est affecté. N'accepte pas la valeur NULL. Rejoignable à sys. workload_management_workload_groups ||
 name|**sysname**|Nom du classifieur. Doit être unique pour l’instance. N'accepte pas la valeur NULL.||
 |importance|**sysname**|Est l’importance relative d’une demande dans ce groupe de charges de travail et entre les groupes de charges de travail pour les ressources partagées.  L’importance spécifiée dans le classifieur remplace le paramètre d’importance du groupe de charge de travail. Autorise la valeur NULL.  Si la valeur est null, le paramètre d’importance du groupe de charge de travail est utilisé.|Low, below_normal, normal (par défaut), above_normal, High |
-|create_time|**DATETIME**|Heure de création du classifieur. N'accepte pas la valeur NULL.||
-modify_time|**DATETIME**|Heure de la dernière modification du classifieur. N'accepte pas la valeur NULL.||
+|create_time|**datetime**|Heure de création du classifieur. N'accepte pas la valeur NULL.||
+modify_time|**datetime**|Heure de la dernière modification du classifieur. N'accepte pas la valeur NULL.||
 is_enabled|**bit**|INTERNAL||
 |&nbsp;||||
   

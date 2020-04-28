@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 50ed3ac0703429f7848a7eb7b4fc9413a0f3e5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783380"
 ---
 # <a name="view-a-job"></a>View a Job
@@ -31,7 +31,7 @@ ms.locfileid: "72783380"
   
      [Sécurité](#Security)  
   
--   **Pour afficher un travail, utilisez :**  
+-   **Pour consulter un travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -39,22 +39,22 @@ ms.locfileid: "72783380"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Vous pouvez afficher uniquement les travaux dont vous êtes propriétaire, sauf si vous êtes membre du rôle serveur fixe **sysadmin** . Les membres de ce rôle peuvent afficher tous les travaux. Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-a-job"></a>Pour afficher un travail  
   
-1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Développez **SQL Server Agent**, puis **Travaux**.  
   
 3.  Cliquez avec le bouton droit sur un travail, puis sélectionnez **Propriétés**.  
   
-##  <a name="TSQL"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-a-job"></a>Pour afficher un travail  
   
@@ -75,7 +75,7 @@ ms.locfileid: "72783380"
     GO  
     ```  
   
-##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
  **Pour afficher un travail**  
   
- Utilisez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

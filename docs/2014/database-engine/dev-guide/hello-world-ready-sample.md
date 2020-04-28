@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637657"
 ---
 # <a name="hello-world-ready-sample"></a>Exemple HelloWorldReady
@@ -30,13 +30,12 @@ ms.locfileid: "73637657"
   
  Le code source et l'assembly pour la procédure stockée CLR elle-même ne changent pas. Un script `build.cmd` est fourni, qui montre comment compiler et lier les assemblys de ressource. Bien que le code source pour l'application crée un gestionnaire de ressources basé sur l'assembly en cours d'exécution, vous n'avez pas à incorporer les ressources neutres de culture dans la DLL qui contient la procédure stockée. Le `System.Resources.NeutralResourcesLanguage attribute` permet aux ressources indépendantes de la culture d'exister dans une DLL satellite. Il est bien plus avantageux d'utiliser une DLL distincte à cet effet, de sorte qu'il ne soit pas nécessaire de modifier la DLL principale contenant la procédure stockée CLR lorsqu'un texte localisé doit être ajouté ou modifié. Cela set particulièrement utile pour les types clr définis par l'utilisateur qui peuvent avoir des colonnes et d'autres dépendances qui rendraient la suppression et le rajout du type difficiles à effectuer. Généralement, les versions de DLL satellites doivent être identiques à la version d'assembly principale. Toutefois, vous pouvez utiliser l'attribut `SatelliteContractVersion` pour permettre une mise à jour de l'assembly principal sans mise à jour des assemblys satellites. Pour plus d'informations, consultez la classe `ResourceManager` dans la documentation Microsoft .NET.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Cet exemple fonctionne uniquement avec SQL Server 2005 et les versions ultérieures.  
   
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -65,7 +64,7 @@ ms.locfileid: "73637657"
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly**  pour terminer l'installation.  
+-   Si vous n’êtes pas administrateur de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez demander à un administrateur de vous accorder l’autorisation **CreateAssembly** pour terminer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -452,6 +451,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

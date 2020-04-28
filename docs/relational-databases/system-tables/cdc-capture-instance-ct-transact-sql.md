@@ -18,10 +18,10 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72908393"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt;_CT&gt;CAPTURE_INSTANCE (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "72908393"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**_ _ $ start_lsn**|**binaire (10)**|Numéro séquentiel dans le journal associé à la transaction de validation pour la modification.<br /><br /> Toutes les modifications validées dans la même transaction partagent le même numéro séquentiel dans le journal de validation. Par exemple, si une opération de suppression sur la table source supprime deux lignes, la table de modifications contiendra deux lignes, chacune avec la même valeur **_ _ $ start_lsn** .|  
-|**_ _ $ end_lsn**|**binaire (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette colonne a toujours pour valeur NULL.|  
-|**_ _ $ seqval**|**binaire (10)**|Valeur de séquence utilisée pour classer les modifications de ligne dans une transaction.|  
-|**_ _ $ opération**|**int**|Identifie l'opération de langage de manipulation de données associée à la modification. Il peut s'agir d'une des méthodes suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (anciennes valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne avant d'exécuter l'instruction UPDATE.<br /><br /> 4 = mise à jour (nouvelles valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne après l'exécution de l'instruction UPDATE.|  
-|**_ _ $ update_mask**|**varbinary (128)**|Masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes qui ont été modifiées.|  
+|**__$start_lsn**|**binary(10)**|Numéro séquentiel dans le journal associé à la transaction de validation pour la modification.<br /><br /> Toutes les modifications validées dans la même transaction partagent le même numéro séquentiel dans le journal de validation. Par exemple, si une opération de suppression sur la table source supprime deux lignes, la table de modifications contiendra deux lignes, chacune avec la même valeur **_ _ $ start_lsn** .|  
+|**_ _ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette colonne a toujours pour valeur NULL.|  
+|**__$seqval**|**binary(10)**|Valeur de séquence utilisée pour classer les modifications de ligne dans une transaction.|  
+|**_ _ $ opération**|**int**|Identifie l'opération de langage de manipulation de données associée à la modification. Il peut s’agir de l’un des éléments suivants :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (anciennes valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne avant d'exécuter l'instruction UPDATE.<br /><br /> 4 = mise à jour (nouvelles valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne après l'exécution de l'instruction UPDATE.|  
+|**__$update_mask**|**varbinary(128)**|Masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes qui ont été modifiées.|  
 |*\<colonnes de table source capturées>*|varie|Les colonnes restantes de la table de modifications sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont incluses dans cette table.|  
 |**_ _ $ command_id** |**int** |Effectue le suivi de l’ordre des opérations dans une transaction. |  
   

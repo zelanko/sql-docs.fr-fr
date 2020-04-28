@@ -11,32 +11,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783161"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Services Reporting Services SharePoint et applications de service
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint repose sur l'architecture de service SharePoint et utilise un service SharePoint et l'une des nombreuses applications de service disponibles. Lorsque vous créez une application de service, le service devient disponible et la base de données d'application de service est générée. Vous pouvez créer plusieurs applications de service Reporting Services mais une application de service est suffisante pour la plupart des scénarios de déploiement.  
   
  Cette rubrique fournit les informations suivantes :  
   
--   [Création d’une application de service Reporting Services](#bkmk_createapp)  
+-   [Création d'une application de service Reporting Services](#bkmk_createapp)  
   
 -   [Modifier les associations de l’application de service avec un groupe de proxy](#bkmk_associations)  
   
--   [Modifier les propriétés d’une application de service](#bkmk_editserviceapplication)  
+-   [Modifier les propriétés d'une application de service](#bkmk_editserviceapplication)  
   
--   [Pour créer une application de service Reporting Services à l’aide de PowerShell](#bkmk_powershell_create_ssrs_serviceapp)  
+-   [Pour créer une application de service Reporting Services à l'aide de PowerShell](#bkmk_powershell_create_ssrs_serviceapp)  
   
 -   [Tâches associées](#bkmk_related)  
   
-##  <a name="bkmk_createapp"></a>Création d’une application de service Reporting Services  
+##  <a name="creating-a-reporting-services-service-application"></a><a name="bkmk_createapp"></a>Création d’une application de service Reporting Services  
  Vous pouvez utiliser l'Administration centrale de SharePoint ou les scripts PowerShell pour créer des applications de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur l’utilisation de l’Administration centrale de SharePoint, consultez la section « Créer une application de service Reporting Services » dans [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md). Consultez la section PowerShell plus loin dans cette rubrique pour obtenir un exemple de script PowerShell permettant de créer des applications de service.  
   
-##  <a name="bkmk_associations"></a>Modifier les associations de l’application de service avec un groupe de proxy  
+##  <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a><a name="bkmk_associations"></a> Modifier les associations de l'application de service avec un groupe de proxy  
  La nouvelle page de création d'une application de service contient la section **Association d'application Web**. Cette section vous permet d'associer l'application de service que vous créez. Utilisez la procédure suivante pour modifier l'association et assigner une configuration personnalisée à l'application de service. Le même processus général peut également être utilisé pour ajouter le proxy au groupe par défaut plutôt que modifier l'association à un groupe personnalisé de l'application de service.  
   
 1.  Dans l'Administration Centrale de SharePoint, sous Gestion des applications, cliquez sur **Configurer les associations des applications de service**.  
@@ -49,7 +48,7 @@ ms.locfileid: "72783161"
   
 5.  Activez la zone pour votre proxy et cliquez sur **OK**.  
   
-##  <a name="bkmk_editserviceapplication"></a>Modifier les propriétés d’une application de service  
+##  <a name="edit-service-application-properties"></a><a name="bkmk_editserviceapplication"></a>Modifier les propriétés d’une application de service  
  Vous pouvez rouvrir la page de propriétés de l'application de service pour modifier les propriétés.  
   
 1.  Dans l’administration centrale de SharePoint, dans le groupe gestion des applications, cliquez sur **gérer les applications de service**.  
@@ -58,7 +57,7 @@ ms.locfileid: "72783161"
   
 3.  Dans le ruban Applications de service, cliquez sur **Propriétés**.  
   
-##  <a name="bkmk_powershell_create_ssrs_serviceapp"></a>Pour créer une application de service Reporting Services à l’aide de PowerShell  
+##  <a name="to-create-a-reporting-services-service-application-using-powershell"></a><a name="bkmk_powershell_create_ssrs_serviceapp"></a>Pour créer une application de service Reporting Services à l’aide de PowerShell  
  Vous pouvez utiliser PowerShell pour créer l'application de service et le proxy. L'exemple suivant suppose que vous connaissez le pool d'applications qui sera utilisé par l'application de service.  
   
 1.  Ajoutez l'objet de pool d'applications de votre nom de pool d'applications à une variable qui est passée dans l'action New.  
@@ -79,9 +78,9 @@ ms.locfileid: "72783161"
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
-##  <a name="bkmk_related"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="bkmk_related"></a> Tâches associées  
   
 |Tâche|Lien|  
 |----------|----------|  
-|Gérez les paramètres de votre application de service.|[Gérer une application de service Reporting Services SharePoint](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
+|Gérez les paramètres de votre application de service.|[Gérer une application de service SharePoint Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
 |Sauvegardez et restaurez l'application de service et ses composants connexes tels que les clés de chiffrement et le proxy.|[Applications de service SharePoint de sauvegarde et de restauration Reporting Services](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  

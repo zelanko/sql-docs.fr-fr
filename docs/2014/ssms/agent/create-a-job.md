@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7126b01fcaee1a0ab3f7776cc54e6eb0dbe2774d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798307"
 ---
 # <a name="create-a-job"></a>Création d’un travail
@@ -31,7 +31,7 @@ ms.locfileid: "72798307"
   
      [Sécurité](#Security)  
   
--   **Pour créer un travail, utilisez :**  
+-   **Pour créer un travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure),  
   
@@ -39,9 +39,9 @@ ms.locfileid: "72798307"
   
      [SQL Server Management Objects](#SMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   Pour créer un travail, l'utilisateur doit être membre de l'un des rôles de base de données fixes de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou du rôle de serveur fixe **sysadmin** . Un travail ne peut être modifié que par son propriétaire ou par les membres du rôle **sysadmin** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consultez [Rôles de base de données fixe de SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72798307"
   
 -   Les travaux locaux sont mis en cache par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local. Ainsi, toutes les modifications obligent implicitement l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à remettre le travail dans le cache. Étant donné que l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne met pas le travail en mémoire cache tant que la procédure stockée **sp_add_jobserver** n’est pas appelée, il est plus efficace d’appeler **sp_add_jobserver** en dernier.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
 -   Vous devez être administrateur système pour modifier le propriétaire d'un travail.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "72798307"
     > [!NOTE]  
     >  Si vous transférez la propriété d’un travail à un utilisateur qui n’est pas membre du rôle serveur fixe **sysadmin** et que ce travail exécute des étapes qui nécessitent des comptes proxy (par exemple l’exécution de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), vérifiez que l’utilisateur en question a accès à ce compte proxy, sinon le travail échouera.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72798307"
   
 2.  Cliquez sur le signe plus (+) pour développer **Agent SQL Server**.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Nouveau travail...**.  
+3.  Cliquez avec le bouton droit sur le dossier **travaux** et sélectionnez **nouveau travail...**.  
   
 4.  Dans la boîte de dialogue **Nouveau travail** , sur la page **Général** , modifiez les propriétés générales du travail. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail et nouveau travail &#40;page général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72798307"
   
 10. Lorsque vous avez terminé, cliquez sur **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72798307"
     GO  
     ```  
   
- Pour plus d'informations, consultez les pages suivantes :  
+ Pour plus d’informations, voir :  
   
 -   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
@@ -136,8 +136,8 @@ ms.locfileid: "72798307"
   
 -   [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
-##  <a name="SMOProcedure"></a>Utilisation de SQL Server Management Objects  
- **Pour créer un travail de SQL Server Agent**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMOProcedure"></a>Utilisation de SQL Server Management Objects  
+ **Pour créer un travail de l'Agent SQL Server**  
   
  Appelez la méthode `Create` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans l’Agent SQL Server](sql-server-agent.md).  
   

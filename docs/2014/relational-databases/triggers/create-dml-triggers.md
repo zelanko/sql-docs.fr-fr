@@ -20,31 +20,31 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796388"
 ---
 # <a name="create-dml-triggers"></a>Créer des déclencheurs DML
   Cette rubrique explique comment créer un déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
   
-##  <a name="Top"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="Top"></a> Avant de commencer  
   
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Pour obtenir la liste des limitations et des restrictions liées à la création de déclencheurs DML, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est créé.  
   
-##  <a name="Procedures"></a> Comment créer un déclencheur DML  
+##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> Comment créer un déclencheur DML  
  Vous pouvez utiliser l'un des éléments suivants :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et développez-la.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72796388"
   
  [Avant de commencer](#Top)  
   
-###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et développez-la.  
   

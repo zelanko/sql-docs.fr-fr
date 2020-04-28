@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632746"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
@@ -63,7 +63,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |pending_deletes|**int**|Nombre de suppressions en attente de réplication.|  
 |pending_ins_and_upd|**int**|Nombre d'insertions et de mises à jour en attente de réplication.|  
 |is_delete|**bit**|Indique si la modification en attente est une suppression. La valeur **1** indique que la modification est une suppression. Requiert une valeur de **1** pour @show_rows.|  
-|GuidLigne|**uniqueidentifier**|GUID qui identifie la ligne modifiée. Requiert une valeur de **1** pour @show_rows.|  
+|rowguid|**uniqueidentifier**|GUID qui identifie la ligne modifiée. Requiert une valeur de **1** pour @show_rows.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

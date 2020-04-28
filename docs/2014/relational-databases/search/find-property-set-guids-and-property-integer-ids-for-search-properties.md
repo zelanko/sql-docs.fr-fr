@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637895"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
@@ -35,7 +35,7 @@ ms.locfileid: "73637895"
   
  Cette rubrique décrit les méthodes couramment utilisées pour rechercher des informations sur les propriétés disponibles, notamment sur les propriétés définies par Microsoft. Pour plus d'informations sur les propriétés définies par un tiers, reportez-vous à la documentation de ce tiers ou contactez le fournisseur.  
   
-##  <a name="wellknown"></a> Recherche d'informations sur les propriétés Microsoft largement répandues et connues  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> Recherche d'informations sur les propriétés Microsoft largement répandues et connues  
  Microsoft définit des centaines de propriétés de document utiles dans de nombreux contextes, mais seul un modeste sous-ensemble des propriétés disponibles est utilisé par chaque format de fichier. Parmi les propriétés Windows fréquemment utilisées se trouve un petit jeu de propriétés génériques. Quelques exemples de propriétés génériques connues sont présentés dans le tableau suivant. Le tableau indique le nom connu, le nom canonique Windows (issu de la description de la propriété publiée par Microsoft), le GUID du jeu de propriétés, l'identificateur entier de propriété et une brève description.  
   
 |Nom connu|Nom canonique Windows|GUID du jeu de propriétés|ID entier|Description|  
@@ -43,7 +43,7 @@ ms.locfileid: "73637895"
 |Auteurs|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Auteur ou auteurs d'un élément donné.|  
 |Balises|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Ensemble de mots clés (également appelé balises) affecté à l'élément.|  
 |Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Type de fichier perçu selon son type canonique.|  
-|Intitulé|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titre de l'élément. Par exemple, le titre d'un document, l'objet d'un message, la légende d'une photo ou le nom d'une piste de musique.|  
+|Titre|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titre de l'élément. Par exemple, le titre d'un document, l'objet d'un message, la légende d'une photo ou le nom d'une piste de musique.|  
   
  Pour favoriser la cohérence parmi les formats de fichier, Microsoft a identifié des sous-ensembles de propriétés du document fréquemment utilisées et prioritaires pour plusieurs catégories de documents. Celles-ci incluent des communications, des contacts, des documents, des fichiers de musique, des images et des vidéos. Pour plus d’informations sur les propriétés principales de chaque catégorie, consultez [Propriétés définies par le système pour les formats de fichiers personnalisés](https://go.microsoft.com/fwlink/?LinkId=144336) dans la documentation Windows Search.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73637895"
   
 -   Propriétés personnalisées, spécifiques à l'application définies par le fournisseur de logiciels.  
   
-##  <a name="filtdump"></a> Recherche d'informations sur les propriétés disponibles à l'aide de FILTDUMP.EXE  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a> Recherche d'informations sur les propriétés disponibles à l'aide de FILTDUMP.EXE  
  Pour savoir quelles propriétés sont détectées et extraites, le cas échéant, par un IFilter installé, vous pouvez installer et exécuter l’utilitaire **filtdump.exe** , qui fait partie du Kit de développement logiciel (SDK) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  Exécutez **filtdump.exe** à partir de l’invite de commandes et fournissez un argument unique. Cet argument est le nom d'un fichier individuel dont le type de fichier correspond à un IFilter installé. L'utilitaire affiche une liste de toutes les propriétés identifiées par l'IFilter dans le document, avec leurs GUID de jeu de propriétés, leurs ID d'entier et des informations supplémentaires.  
@@ -66,7 +66,7 @@ ms.locfileid: "73637895"
   
 -   Pour la version 32 bits, recherchez dans `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`.  
   
-##  <a name="propdesc"></a> Recherche de valeurs pour une propriété de recherche à partir d'une description de la propriété Windows  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a>Recherche de valeurs pour une propriété de recherche à partir d’une description de propriété Windows  
  Pour une propriété de recherche Windows connue, vous pouvez obtenir ces informations à partir des attributs `formatID` et `propID` de la description de la propriété (`propertyDescription`).  
   
  L'exemple suivant montre la partie pertinente d'une description de propriété Microsoft typique, dans ce cas, la propriété `System.Author` . L'attribut `formatID` spécifie le GUID du jeu de propriétés, `F29F85E0-4FF9-1068-AB91-08002B27B3D9`et l'attribut `propID` spécifie l'ID entier de propriété `4.` . Remarquez que l'attribut `name` spécifie le nom canonique Windows de la propriété `System.Author`. (Cet exemple omet les parties de la description de la propriété qui ne sont pas appropriées.)  
@@ -81,11 +81,11 @@ propID = 4
 ...  
 ```  
   
- Pour obtenir la description complète de cette propriété, consultez [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) dans la documentation Windows Search.  
+ Pour obtenir la description complète de cette propriété, consultez [System.Author ](https://go.microsoft.com/fwlink/?LinkId=144337) dans la documentation de développement de Win32 et COM.  
   
  Pour obtenir une liste complète des propriétés Windows, consultez [Propriétés Windows](https://go.microsoft.com/fwlink/?LinkId=215013)et aussi la documentation Windows Search.  
   
-##  <a name="examples"></a> Ajout d'une propriété à une liste de propriétés de recherche  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> Ajout d'une propriété à une liste de propriétés de recherche  
  L'exemple suivant indique comment ajouter une propriété à une liste de propriétés de recherche. L’exemple utilise une instruction [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) pour ajouter la propriété `System.Author` à une liste de propriétés de recherche nommée `PropertyList1`, et fournit un nom convivial à la propriété, `Author`.  
   
 ```  
@@ -102,7 +102,7 @@ GO
  Pour plus d’informations sur la création d’une liste de propriétés de recherche et son association à un index de recherche en texte intégral, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](search-document-properties-with-search-property-lists.md)   
+ [Rechercher des propriétés de document avec des listes de propriétés de recherche](search-document-properties-with-search-property-lists.md)   
  [Configurer et gérer des filtres pour la recherche](configure-and-manage-filters-for-search.md)  
   
   

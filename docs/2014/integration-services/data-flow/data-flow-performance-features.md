@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637823"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
@@ -157,7 +157,7 @@ ms.locfileid: "73637823"
 ### <a name="review-the-information-on-the-progress-tab"></a>Vérification des informations de l'onglet Progression  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] fournit des informations sur le flux de contrôle et le flux de données lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. L'onglet **Progression** énumère les tâches et les conteneurs par ordre d'exécution et indique les heures de début et de fin, les avertissements et les messages d'erreur pour chaque tâche et chaque conteneur, y compris le package lui-même. Il répertorie également les composants de flux de données par ordre d'exécution et dévoile des informations sur la progression (sous forme de pourcentage) et le nombre de lignes traitées.  
   
- Pour activer ou désactiver l'affichage de messages sous l'onglet **Progression** , basculez l'option **Création de rapports de progression de débogage** dans le menu **SSIS** . La désactivation du rapport de progression peut aider à améliorer les performances lors de l'exécution d'un package complexe dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+  Pour activer ou désactiver l'affichage de messages sous l'onglet **Progression** , basculez l'option **Création de rapports de progression de débogage** dans le menu **SSIS** . La désactivation du rapport de progression peut aider à améliorer les performances lors de l'exécution d'un package complexe dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -197,7 +197,7 @@ ms.locfileid: "73637823"
 -   Vidéo, [Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de dépannage pour le développement des packages](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Outils de dépannage pour le développement de packages](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Outils de dépannage pour l'exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

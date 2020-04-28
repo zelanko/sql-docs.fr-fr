@@ -15,23 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798181"
 ---
 # <a name="start-a-job"></a>Démarrer un travail
   Cette rubrique explique comment démarrer l’exécution d' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un travail de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’agent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dans [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de, ou SQL Server Management Objects.  
   
- Un travail est une série d'actions exécutées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être exécutés sur un serveur local ou sur plusieurs serveurs distants.  
+ Un travail est une série d'actions exécutées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être exécutés sur un serveur local ou sur plusieurs serveurs distants.  
   
 -   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour démarrer un travail, utilisez :**  
+-   **Pour démarrer un travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -39,16 +38,16 @@ ms.locfileid: "72798181"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 ### <a name="to-start-a-job"></a>Pour démarrer un travail  
   
-1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Développez **Agent SQL Server** et développez **Travaux**. Selon la façon dont vous voulez démarrer le travail, procédez de l'une des manières suivantes :  
   
@@ -60,7 +59,7 @@ ms.locfileid: "72798181"
   
     -   Si vous travaillez sur un serveur maître et souhaitez spécifier les serveurs cibles pour le travail, cliquez avec le bouton droit sur le travail à démarrer, cliquez sur **Démarrer le travail**, puis sur **Démarrer sur les serveurs cibles spécifiques**. Dans la boîte de dialogue **Publier les instructions à télécharger** , activez la case à cocher **Serveurs cibles sélectionnés** , puis sélectionnez chacun des serveurs cibles sur lesquels ce travail doit s'exécuter.  
   
-##  <a name="TSQL"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Utilisation de Transact-SQL  
   
 ### <a name="to-start-a-job"></a>Pour démarrer un travail  
   
@@ -81,8 +80,8 @@ ms.locfileid: "72798181"
   
  Pour plus d’informations, consultez [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
-##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 
 ### <a name="to-start-a-job"></a>Pour démarrer un travail
   
- Appelez la méthode `Start` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Appelez la méthode `Start` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

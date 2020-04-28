@@ -11,23 +11,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798332"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installer PowerPivot à partir de l'invite de commandes
   Vous pouvez exécuter le programme d'installation depuis la ligne de commande pour installer SQL Server PowerPivot pour SharePoint. Vous devez inclure le paramètre de `/ROLE` dans votre commande et exclure le paramètre `/FEATURES`.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  L'édition entreprise SharePoint Server 2010 Enterprise Edition dotée du Service Pack 1 (SP1) doit être installée.  
   
  Vous devez utiliser des comptes de domaine pour configurer Analysis Services.  
   
  L'ordinateur doit être joint au même domaine que la batterie de serveurs SharePoint.  
   
-##  <a name="Commands"></a>Options d’installation basées sur/ROLE  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>Options d’installation basées sur/ROLE  
  Dans les déploiements PowerPivot pour SharePoint, le paramètre `/ROLE` est utilisé à la place du paramètre `/FEATURES`. Les valeurs valides sont les suivantes :  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>Modification de la syntaxe de la commande  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>Modification de la syntaxe de la commande  
  Utilisez la procédure suivante pour modifier la syntaxe de commande de l'exemple.  
   
 1.  Copiez la commande suivante dans le Bloc-notes :  

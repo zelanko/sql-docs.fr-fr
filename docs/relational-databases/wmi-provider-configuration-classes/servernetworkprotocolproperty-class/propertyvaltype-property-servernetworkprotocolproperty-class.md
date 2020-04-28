@@ -18,10 +18,10 @@ ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b2a74e515d2dddd58242e4760e3dd33c2c5031f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659931"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Propriété PropertyValType (classe ServerNetworkProtocolProperty)
@@ -37,7 +37,7 @@ object.PropertyValType [= value]
   
 ## <a name="parts"></a>Éléments  
  *dessin*  
- Objet de [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau sur l'instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** qui spécifie le type de données de la valeur de la propriété. Elle retourne 0 pour une valeur de chaîne et 1 pour un type numérique.  

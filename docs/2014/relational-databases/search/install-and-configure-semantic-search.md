@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637917"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installer et configurer la recherche sémantique
@@ -25,7 +25,7 @@ ms.locfileid: "73637917"
   
 ## <a name="installing-semantic-search"></a>Installation de la recherche sémantique  
   
-###  <a name="HowToCheckInstalled"></a>Procédure : vérifier si la recherche sémantique est installée  
+###  <a name="how-to-check-whether-semantic-search-is-installed"></a><a name="HowToCheckInstalled"></a>Procédure : vérifier si la recherche sémantique est installée  
  Interrogez la propriété **IsFullTextInstalled** de la fonction de métadonnées [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql).  
   
  Une valeur de retour de 1 indique que la recherche en texte intégral et la recherche sémantique sont installées ; une valeur de retour de 0 indique qu'elles ne le sont pas.  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a>Comment : installer la recherche sémantique  
+###  <a name="how-to-install-semantic-search"></a><a name="BasicsSemanticSearch"></a>Comment : installer la recherche sémantique  
  Pour installer la recherche sémantique, sélectionnez **Extraction en texte intégral et extraction sémantique de recherche** dans la page **Fonctionnalités à installer** pendant l'installation.  
   
  La recherche sémantique statistique dépend de la recherche en texte intégral. Ces deux fonctionnalités en option de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont installées ensemble.  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>Installation ou suppression de la base de données des statistiques linguistiques de sémantique  
  La recherche sémantique a une dépendance externe supplémentaire qui est appelée base de données des statistiques linguistiques de sémantique. Cette base de données contient les modèles linguistiques statistiques requis par la recherche sémantique. Une base de données unique des statistiques linguistiques de sémantique contient les modèles linguistiques de toutes les langues prises en charge pour l'indexation sémantique.  
   
-###  <a name="HowToCheckDatabase"></a>Procédure : vérifier si la base de données Base de langages statistiques pour la recherche sémantique est installée  
+###  <a name="how-to-check-whether-the-semantic-language-statistics-database-is-installed"></a><a name="HowToCheckDatabase"></a>Procédure : vérifier si la base de données Base de langages statistiques pour la recherche sémantique est installée  
  Interrogez l’affichage catalogue [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql).  
   
  Si la base de données des statistiques linguistiques de sémantique est installée et inscrite pour l'instance, les résultats de la requête contiennent une seule ligne d'informations sur la base de données.  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a>Comment : installer, attacher et inscrire la base de données Base de langages statistiques pour la recherche sémantique  
+###  <a name="how-to-install-attach-and-register-the-semantic-language-statistics-database"></a><a name="HowToInstallModel"></a>Comment : installer, attacher et inscrire la base de données Base de langages statistiques pour la recherche sémantique  
  La base de données des statistiques linguistiques de sémantique n'est pas installée par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour installer la base de données des statistiques linguistiques de sémantique comme une condition préalable à l'indexation sémantique, procédez comme suit :  
   
  **1. Installez la base de données des statistiques linguistiques de sémantique.**  
@@ -74,7 +74,7 @@ GO
 > [!IMPORTANT]  
 >  Lorsque la base de données des statistiques linguistiques de sémantique est extraite, des autorisations limitées sont assignées au fichier de base de données et au fichier journal à l'emplacement par défaut dans le système de fichiers. Par conséquent, vous pouvez ne pas avoir l'autorisation d'attacher la base de données si vous la laissez dans l'emplacement par défaut. Si une erreur se produit lorsque vous essayez d'attacher la base de données, déplacez les fichiers, ou vérifiez et corrigez les autorisations du système de fichiers s'il y a lieu.  
   
- **2. Attachez la base de données de statistiques linguistiques de sémantique.**  
+ **2. Attachez la base de données des statistiques linguistiques de sémantique.**  
  Attachez la base de données à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou en appelant [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) avec la syntaxe **FOR ATTACH**. Pour plus d’informations, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md).  
   
  Par défaut, le nom de la base de données est **semanticsdb**. Vous pouvez éventuellement donner un nom différent à la base de données lorsque vous l'attachez. Vous devez spécifier ce nom lorsque vous inscrivez la base de données à l'étape suivante.  
@@ -89,7 +89,7 @@ GO
   
  Cet exemple de code suppose que vous avez déplacé la base de données de son emplacement par défaut vers un nouvel emplacement.  
   
- **3. Inscrivez la base de données de statistiques linguistiques de sémantique.**  
+ **3. Inscrivez la base de données des statistiques linguistiques de sémantique.**  
  Appelez la procédure stockée [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) et fournissez le nom attribué à la base de données lors de son attachement.  
   
 ```sql  
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a>Comment : annuler l’inscription, détacher et supprimer la base de données Base de langages statistiques pour la recherche sémantique  
+###  <a name="how-to-unregister-detach-and-remove-the-semantic-language-statistics-database"></a><a name="HowToUnregister"></a>Comment : annuler l’inscription, détacher et supprimer la base de données Base de langages statistiques pour la recherche sémantique  
  **Annule l’inscription de la base de données de statistiques linguistiques de sémantique.**  
  Appelez la procédure stockée [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). Vous ne devez pas fournir le nom de la base de données étant donné qu'une instance ne peut avoir qu'une seule base de données des statistiques linguistiques de sémantique.  
   
@@ -120,7 +120,7 @@ GO
  **Supprimez la base de données de statistiques linguistiques de sémantique.**  
  Après avoir annulé l'inscription de la base de données et l'avoir détachée, vous pouvez simplement supprimer le fichier de base de données. Il n'existe aucun programme de désinstallation ni aucune entrée dans **Programmes et fonctionnalités** dans le Panneau de configuration.  
   
-###  <a name="reqinstall"></a>Exigences et restrictions pour l’installation et la suppression de la base de données Base de langages statistiques pour la recherche sémantique  
+###  <a name="requirements-and-restrictions-for-installing-and-removing-the-semantic-language-statistics-database"></a><a name="reqinstall"></a>Exigences et restrictions pour l’installation et la suppression de la base de données Base de langages statistiques pour la recherche sémantique  
   
 -   Vous ne pouvez attacher et inscrire une base de données des statistiques linguistiques de sémantique que sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>Installation de la prise en charge facultative de nouveaux types de documents  
   
-###  <a name="office"></a>Comment : installer les derniers filtres pour les Microsoft Office et d’autres types de documents Microsoft  
+###  <a name="how-to-install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a>Comment : installer les derniers filtres pour les Microsoft Office et d’autres types de documents Microsoft  
  Cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe les analyseurs lexicaux et les générateurs de formes dérivées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les plus récents, mais n'installe pas les filtres les plus récents pour les documents [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office et d'autres types de documents [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Ces filtres sont nécessaires pour l'indexation des documents créés avec les versions récentes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office et d'autres applications [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Pour télécharger les filtres les plus récents, consultez [Microsoft Office 2010 Filter Packs](https://www.microsoft.com/download/details.aspx?id=17062).  
   
   

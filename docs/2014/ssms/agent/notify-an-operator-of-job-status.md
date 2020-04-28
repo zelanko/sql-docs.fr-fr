@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798204"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
@@ -33,7 +33,7 @@ ms.locfileid: "72798204"
   
      [Sécurité](#Security)  
   
--   **Pour notifier l’état d’un travail à un opérateur, utilisez :**  
+-   **Pour notifier l'état d'un travail à un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -41,16 +41,16 @@ ms.locfileid: "72798204"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Pour notifier l'état d'un travail à un opérateur  
   
-1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Développez **Agent SQL Server**, puis **Travaux**, cliquez avec le bouton droit sur le travail à modifier et sélectionnez **Propriétés**.  
   
@@ -58,29 +58,29 @@ ms.locfileid: "72798204"
   
 4.  Pour avertir un opérateur par e-mail, cochez la case **Messagerie électronique**, sélectionnez un opérateur dans la liste, puis l’une des options suivantes :  
   
-    -   **Lors de la réussite du travail** pour avertir l’opérateur quand le travail s’est terminé avec succès.  
+    -   **Lors de la réussite du travail** pour avertir l'opérateur quand le travail s'est effectué avec succès ;  
   
-    -   **Lorsque le travail échoue** pour notifier l’opérateur quand le travail ne s’est pas terminé correctement.  
+    -   **Lors de l'échec du travail** pour avertir l'opérateur quand le travail a échoué.  
   
-    -   **Lorsque le travail est terminé** pour avertir l’opérateur, quel que soit l’état d’achèvement.  
+    -   **Lorsque le travail est terminé** pour avertir l'opérateur, quel que soit l'état du travail à son achèvement.  
   
 5.  Pour avertir un opérateur par radiomessagerie, activez la case à cocher **Radiomessagerie**, sélectionnez un opérateur dans la liste, puis l'une des options suivantes :  
   
-    -   **Lors de la réussite du travail** pour avertir l’opérateur quand le travail s’est terminé avec succès.  
+    -   **Lors de la réussite du travail** pour avertir l'opérateur quand le travail s'est effectué avec succès ;  
   
-    -   **Lorsque le travail échoue** pour notifier l’opérateur quand le travail ne s’est pas terminé correctement.  
+    -   **Lors de l'échec du travail** pour avertir l'opérateur quand le travail a échoué.  
   
-    -   **Lorsque le travail est terminé** pour avertir l’opérateur, quel que soit l’état d’achèvement.  
+    -   **Lorsque le travail est terminé** pour avertir l'opérateur, quel que soit l'état du travail à son achèvement.  
   
 6.  Pour avertir un opérateur par envoi réseau, activez la case à cocher **Envoi réseau**, sélectionnez un opérateur dans la liste, puis l'une des options suivantes :  
   
-    -   **Lors de la réussite du travail** pour avertir l’opérateur quand le travail s’est terminé avec succès.  
+    -   **Lors de la réussite du travail** pour avertir l'opérateur quand le travail s'est effectué avec succès ;  
   
-    -   **Lorsque le travail échoue** pour notifier l’opérateur quand le travail ne s’est pas terminé correctement.  
+    -   **Lors de l'échec du travail** pour avertir l'opérateur quand le travail a échoué.  
   
-    -   **Lorsque le travail est terminé** pour avertir l’opérateur, quel que soit l’état d’achèvement.  
+    -   **Lorsque le travail est terminé** pour avertir l'opérateur, quel que soit l'état du travail à son achèvement.  
   
-##  <a name="TSQL"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Pour notifier l'état d'un travail à un opérateur  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72798204"
   
  Pour plus d’informations, consultez [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
   
-##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
- **Pour notifier l’état d’un travail à un opérateur**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
+ **Pour notifier l'état d'un travail à un opérateur**  
   
- Utilisez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la classe `Job` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

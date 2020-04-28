@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797925"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Créer un point de terminaison de mise en miroir de bases de données pour l'authentification Windows (Transact-SQL)
@@ -31,23 +31,22 @@ ms.locfileid: "72797925"
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  [sécurité](#Security)  
+-   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour créer un point de terminaison de mise en miroir de bases de données, utilisez :**  [Transact-SQL](#TsqlProcedure)  
+-   **Pour créer un point de terminaison de mise en miroir de bases de données, utilisez :**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Les méthodes d'authentification et de chiffrement d'instance de serveur sont établies par l'administrateur système.  
   
 > [!IMPORTANT]  
->  L'algorithme RC4 est déconseillé. 
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
+>  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>Pour créer un point de terminaison de mise en miroir de bases de données qui utilise l'authentification Windows  
   
@@ -115,7 +114,7 @@ ms.locfileid: "72797925"
         |-----------|----------------|  
         |DISABLED|Spécifie que les données envoyées sur une connexion ne sont pas chiffrées.|  
         |SUPPORTED|Spécifie que les données sont chiffrées uniquement si le point de terminaison opposé spécifie SUPPORTED ou REQUIRED.|  
-        |OBLIGATOIRE|Spécifie que les données envoyées sur une connexion doivent être chiffrées.|  
+        |REQUIRED|Spécifie que les données envoyées sur une connexion doivent être chiffrées.|  
   
          Si un point de terminaison exige un chiffrement, l'autre point de terminaison doit avoir l'instruction ENCRYPTION définie sur SUPPORTED ou REQUIRED.  
   
@@ -124,8 +123,7 @@ ms.locfileid: "72797925"
          AES RC4 spécifie que ce point de terminaison va négocier l'algorithme de chiffrement et donner la préférence à l'algorithme AES. RC4 AES spécifie que ce point de terminaison va négocier l'algorithme de chiffrement et donner la préférence à l'algorithme RC4. Si les deux points de terminaison spécifient les deux algorithmes mais dans des ordres différents, le point de terminaison acceptant la connexion a le dernier mot.  
   
         > [!NOTE]  
-        >  L'algorithme RC4 est déconseillé. 
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
+        >  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
     -   le rôle>définit le ou les rôles que le serveur peut effectuer. * \<* La spécification de ROLE est obligatoire. Toutefois, le rôle du point de terminaison concerne uniquement la mise en miroir de bases de données. Pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], le rôle du point de terminaison est ignoré.  
   
@@ -139,7 +137,7 @@ ms.locfileid: "72797925"
     > [!NOTE]  
     >  Pour modifier un point de terminaison existant, utilisez [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql).  
   
-###  <a name="TsqlExample"></a>Exemple : création de points de terminaison pour la prise en charge de la mise en miroir de bases de données (Transact-SQL)  
+###  <a name="example-creating-endpoints-to-support-for-database-mirroring-transact-sql"></a><a name="TsqlExample"></a> Exemple : Création de points de terminaison pour prendre en charge la mise en miroir de bases de données (Transact-SQL)  
  L'exemple suivant crée des points de terminaison de mise en miroir de bases de données pour les instances de serveur par défaut sur trois systèmes informatiques distincts :  
   
 |Rôle de l'instance de serveur|Nom de l'ordinateur hôte|  
@@ -179,7 +177,7 @@ CREATE ENDPOINT endpoint_mirroring
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>Pour configurer un point de terminaison de mise en miroir de bases de données
   

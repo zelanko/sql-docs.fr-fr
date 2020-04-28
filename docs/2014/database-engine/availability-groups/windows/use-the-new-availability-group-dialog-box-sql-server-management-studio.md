@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee729f9f2bdd0044f2897a06e93f00b7b37ca785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783139"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)
@@ -27,12 +27,12 @@ ms.locfileid: "72783139"
   
 
 > [!NOTE]  
->  Pour plus d’informations sur les autres manières de créer un groupe de disponibilité, consultez [Tâches associées](#RelatedTasks)plus loin dans cette rubrique.  
+>   Pour plus d'informations sur les autres manières de créer un groupe de disponibilité, consultez [Tâches associées](#RelatedTasks), plus loin dans cette rubrique.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Nous vous recommandons fortement de lire cette section avant d'essayer de créer votre premier groupe de disponibilité.  
   
-###  <a name="PrerequisitesRestrictions"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> Conditions préalables  
   
 -   Avant de créer un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité résident sur des nœuds WSFC (Windows Server Failover Clustering) différents au sein du même clustering de basculement WSFC. Vérifiez également que chaque instance du serveur est activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et répond à toutes les autres conditions requises relatives à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72783139"
   
 -   Pour utiliser la boîte de dialogue **Nouveau groupe de disponibilité** , vous devez connaître les noms des instances de serveur qui hébergeront les réplicas de disponibilité. De plus, vous devez connaître les noms de toutes les bases de données que vous envisagez d’ajouter à votre nouveau groupe de disponibilité, et vous devez vérifier que ces bases de données respectent les conditions préalables requises et les restrictions de base de données de disponibilité décrites dans [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md). Si vous entrez des valeurs non valides, le nouveau groupe de disponibilité ne fonctionnera pas.  
   
-###  <a name="Limitations"></a>Limitations  
+###  <a name="limitations"></a><a name="Limitations"></a> Limitations  
  La boîte de dialogue **Nouveau groupe de disponibilité** ne permet pas d'effectuer les opérations suivantes :  
   
 -   Créez un écouteur de groupe de disponibilité.  
@@ -51,12 +51,12 @@ ms.locfileid: "72783139"
   
  Pour plus d'informations sur ces tâches de configuration, consultez [Suivi : Après la création d'un groupe de disponibilité](#FollowUp), plus loin dans cette rubrique.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a>Utilisation de la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)  
+##  <a name="using-the-new-availability-group-dialog-box-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)  
  **Pour créer un groupe de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et cliquez sur le nom du serveur.  
@@ -82,7 +82,7 @@ ms.locfileid: "72783139"
   
      Pour quitter la boîte de dialogue sans créer le groupe de disponibilité, cliquez sur **Annuler**.  
   
-##  <a name="FollowUp"></a>Suivi : après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> Suivi : Après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité  
   
 -   Vous devez vous connecter en retour à chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité et procéder comme suit :  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72783139"
   
 -   Il est recommandé de créer un écouteur de groupe de disponibilité pour le nouveau groupe de disponibilité. Pour celà, vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel. Pour plus d'informations, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer les propriétés du groupe de disponibilité et du réplica**  
   
 -   [Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -137,7 +137,7 @@ ms.locfileid: "72783139"
   
 -   [Activer et désactiver les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
- **Pour configurer un point de terminaison pour la mise en miroir de bases de données**  
+ **Pour configurer un point de terminaison de mise en miroir de bases de données**  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
@@ -153,12 +153,12 @@ ms.locfileid: "72783139"
   
 -   [Résoudre les problèmes liés à l’échec d’une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Guide de solutions Microsoft SQL Server AlwaysOn pour la haute disponibilité et la récupération d'urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Le point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et &#40;de basculement d’application SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

@@ -17,17 +17,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797849"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation (applet de commande)
-  **Invoke-PolicyEvaluation** est une [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applet de commande qui indique si un ensemble cible d’objets SQL Server est conforme aux conditions spécifiées dans une ou plusieurs stratégies de la gestion basée sur des stratégies.  
+  **Invoke-PolicyEvaluation** est une applet de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui indique si un jeu cible d’objets SQL Server est conforme ou non aux conditions spécifiées dans une ou plusieurs stratégies de gestion basée sur des stratégies.  
   
 ## <a name="using-invoke-policyevaluation"></a>Utilisation d'Invoke-PolicyEvaluation  
- **Invoke-PolicyEvaluation** évalue une ou plusieurs stratégies par rapport à un ensemble d’objets SQL Server appelé le jeu de cibles. Le jeu d'objets cibles provient d'un serveur cible. Chaque stratégie définit des conditions qui représentent les états autorisés pour les objets cibles. Par exemple, la stratégie **Trustworthy Database** stipule que la propriété de base de données TRUSTWORTHY doit avoir la valeur OFF.  
+ **Invoke-PolicyEvaluation** évalue une ou plusieurs stratégies par rapport à un jeu d’objets SQL Server appelé « jeu cible ». Le jeu d'objets cibles provient d'un serveur cible. Chaque stratégie définit des conditions qui représentent les états autorisés pour les objets cibles. Par exemple, la stratégie **Trustworthy Database** stipule que la propriété de base de données TRUSTWORTHY doit avoir la valeur OFF.  
   
  Le paramètre **-AdHocPolicyEvaluationMode** spécifie les actions effectuées :  
   
@@ -86,9 +86,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetServerName** spécifie l’instance de SQL Server contenant les objets cibles. Vous pouvez spécifier les informations dans une chaîne qui utilise le format défini pour la propriété ConnectionString de la classe <xref:System.Data.SqlClient.SqlConnection> . Vous pouvez utiliser la classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> pour générer une chaîne de connexion correctement mise en forme. Vous pouvez également créer un objet <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> et le transmettre à **-TargetServer**. Si vous spécifiez une chaîne qui ne contient que le nom du serveur, **Invoke-PolicyEvaluation** utilise l’authentification Windows pour se connecter au serveur.  
   
--   **-TargetObjects** accepte un objet ou un tableau d’objets qui représentent les objets SQL Server dans le jeu de cibles. Par exemple, vous pouvez créer un tableau d’objets de classe <xref:Microsoft.SqlServer.Management.Smo.Database> à transmettre à **-TargetObjects**.  
+-   **-TargetObjects** accepte un objet ou un tableau d’objets représentant les objets SQL Server dans le jeu cible. Par exemple, vous pouvez créer un tableau d’objets de classe <xref:Microsoft.SqlServer.Management.Smo.Database> à transmettre à **-TargetObjects**.  
   
--   **-TargetExpressions** accepte une chaîne contenant une expression de requête qui spécifie les objets dans le jeu de cibles. L'expression de requête se présente sous la forme de nœuds séparés par le caractère « / ». Chaque nœud se présente sous la forme ObjectType[Filter]. Le type d’objet est l’un des objets d’une hiérarchie d’objets SMO (SQL Server Management Object). Le filtre est une expression qui filtre les objets au niveau de ce nœud. Pour plus d’informations, consultez [Expressions de requête et noms URN](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** accepte une chaîne contenant une expression de requête qui spécifie les objets dans le jeu cible. L'expression de requête se présente sous la forme de nœuds séparés par le caractère « / ». Chaque nœud se présente sous la forme ObjectType[Filter]. Le type d’objet est l’un des objets d’une hiérarchie d’objets SMO (SQL Server Management Object). Le filtre est une expression qui filtre les objets au niveau de ce nœud. Pour plus d’informations, consultez [Expressions de requête et noms URN](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Spécifiez **-TargetObjects** ou **-TargetExpression**, mais pas les deux.  
   
@@ -129,7 +129,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ```  
   
 ## <a name="formatting-output"></a>Mise en forme de la sortie  
- Par défaut, la sortie de **Invoke-PolicyEvaluation** s’affiche dans la fenêtre d’invite de commandes sous la forme d’un rapport concis au format explicite. Vous pouvez utiliser le paramètre **-OutputXML** pour que l’applet de commande génère plutôt un rapport détaillé sous la forme d’un fichier XML. **Invoke-PolicyEvaluation** utilise le schéma SML-if (Systems Modeling Language Interchange Format) pour que le fichier puisse être lu par les lecteurs SML-if.  
+ Par défaut, la sortie de **Invoke-PolicyEvaluation** s’affiche dans la fenêtre d’invite de commandes sous la forme d’un rapport concis au format explicite. Vous pouvez utiliser le paramètre **-OutputXML** pour que l’applet de commande génère plutôt un rapport détaillé sous la forme d’un fichier XML. **Invoke-PolicyEvaluation** utilise le schéma SML-IF (Systems Modeling Language Interchange Format) pour que le fichier soit lisible par les lecteurs SML-IF.  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  

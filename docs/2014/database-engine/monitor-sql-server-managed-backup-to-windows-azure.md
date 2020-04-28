@@ -11,19 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798038"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Surveiller la sauvegarde managée de SQL Server vers Azure
   La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] possède des mesures intégrées permettant d'identifier les problèmes et les erreurs pendant les processus de sauvegarde et les corrige lorsque cela est possible.  Toutefois, dans certaines situations, l'intervention de l'utilisateur est requise. Cette rubrique décrit les outils que vous pouvez utiliser pour déterminer l'état d'intégrité général des sauvegardes, et identifier les erreurs qui doivent être corrigées.  
   
-## <a name="overview-of-includess_smartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>Présentation du débogage intégré de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>Présentation du débogage intégré de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] vérifie périodiquement les sauvegardes planifiées et tente de replanifier toute sauvegarde ayant échoué. Elle interroge régulièrement le compte de stockage pour identifier une rupture des séquences de journaux de transactions affectant la récupérabilité de la base de données et planifie de nouvelles sauvegardes en conséquence. Il prend également en compte les stratégies de limitation Azure et met en place des mécanismes pour gérer plusieurs sauvegardes de base de données. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] enregistre et utilise des événements étendus pour suivre toutes les activités. Les canaux d'événements étendus utilisés par l'agent de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] comprennent les canaux d'administration, opérationnel, analytique et de débogage. Les événements tombant sous la catégorie d'administration sont généralement liés aux erreurs, nécessitent l'intervention de l'utilisateur et sont activés par défaut. Les événements analytiques sont également activés par défaut, mais ne sont généralement pas liés à des erreurs nécessitant l'intervention de l'utilisateur. Les événements opérationnels sont généralement informatifs. Par exemple, les événements opérationnels incluent la planification d’une sauvegarde, l’aboutissement d’une sauvegarde, etc. Le débogage est le plus détaillé et est utilisé en interne par [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour déterminer les problèmes et les corriger si nécessaire.  
   
-### <a name="configure-monitoring-parameters-for-includess_smartbackupincludesss-smartbackup-mdmd"></a>Configurer les paramètres de surveillance de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>Configurer les paramètres de surveillance de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  La procédure stockée système **smart_admin. sp_set_parameter** vous permet de spécifier des paramètres d’analyse. Les sections suivantes expliquent pas à pas la procédure d'activation des événements étendus et l'activation de la notification par courrier électronique des erreurs et des avertissements.  
   
  La fonction **smart_admin. fn_get_parameter** peut être utilisée pour obtenir la valeur actuelle d’un paramètre spécifique ou de tous les paramètres configurés. Si les paramètres n'ont jamais été configurés, la fonction ne retourne aucune valeur.  

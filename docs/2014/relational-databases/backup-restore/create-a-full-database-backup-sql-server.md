@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4c750f4230cc83467cc5993d2a6ab571a06d2f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798033"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
@@ -48,9 +48,9 @@ ms.locfileid: "72798033"
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
 -   L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou implicite.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72798033"
   
 -   Pour plus d’informations, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   À mesure que la taille d'une base de données augmente, les sauvegardes complètes de base de données nécessitent davantage de temps et d'espace de stockage. Par conséquent, pour les bases de données volumineuses, il est conseillé de compléter les sauvegardes complètes avec une série de *sauvegardes différentielles de base de données*. Pour plus d’informations, consultez [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
@@ -66,28 +66,28 @@ ms.locfileid: "72798033"
   
 -   Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez très fréquemment le journal, ces messages de réussite peuvent rapidement s'accumuler, créer des journaux d'erreurs très volumineux et compliquer la recherche d'autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l'indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
-###  <a name="Security"></a> Sécurité  
- TRUSTWORTHY a la valeur OFF pour une sauvegarde de base de données. Pour obtenir des informations sur la façon d’affecter la valeur ON à TRUSTWORTHY, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
+ TRUSTWORTHY a la valeur OFF pour une sauvegarde de base de données. Pour plus d’informations sur la façon d’affecter la valeur ON à TRUSTWORTHY, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les options `PASSWORD` et `MEDIAPASSWORD` sont supprimées pour la création de sauvegardes. Vous pouvez toujours restaurer les sauvegardes créées avec des mots de passe.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
  Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d'écrire sur l'unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit avoir des autorisations d'écriture. Toutefois, [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. De tels problèmes pour le fichier physique de l'unité de sauvegarde peuvent n'apparaître que lorsque la ressource physique est sollicitée au moment de la sauvegarde ou de la restauration.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 > [!NOTE]  
->  Si vous spécifiez une tâche de sauvegarde à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination de script.  
+>   Si vous spécifiez une tâche de sauvegarde à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez générer le script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondant en cliquant sur le bouton **Script** et en sélectionnant une destination de script.  
   
 #### <a name="to-back-up-a-database"></a>Pour sauvegarder une base de données  
   
-1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]du, dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer l’arborescence du serveur.  
   
 2.  Développez **bases de données**et, en fonction de la base de données, sélectionnez une base de données utilisateur ou développez **bases de données système** , puis sélectionnez une base de données système.  
   
-3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis cliquez sur **Sauvegarder**. La boîte de dialogue **Sauvegarder la base de données** s'affiche.  
+3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis cliquez sur **Sauvegarder**. La boîte de dialogue **Sauvegarder la base de données** s’affiche.  
   
 4.  Dans la `Database` zone de liste, vérifiez le nom de la base de données. Vous pouvez éventuellement sélectionner une autre base de données dans la liste.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "72798033"
   
      Notez qu’après la création d’une sauvegarde de base de données complète, vous pouvez créer une sauvegarde de base de données différentielle. Pour plus d’informations, consultez [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).  
   
-7.  Vous pouvez si vous le souhaitez sélectionner **Sauvegarde de copie uniquement** pour créer une sauvegarde de copie uniquement. Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+7.  Vous pouvez si vous le souhaitez sélectionner **Sauvegarde de copie uniquement** pour créer une sauvegarde de copie uniquement.  Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
     >  Lorsque l'option **Différentielle** est sélectionnée, vous ne pouvez pas créer de sauvegarde de copie uniquement.  
@@ -131,7 +131,7 @@ ms.locfileid: "72798033"
   
     -   **Sauvegarder sur un nouveau support de sauvegarde et effacer tous les jeux de sauvegarde existants**  
   
-         Pour cette option, entrez un nom dans la zone de texte **Nouveau nom du support de sauvegarde** et décrivez éventuellement le jeu de supports dans la zone de texte **Description du nouveau support de sauvegarde** .  
+         Pour cette option, entrez un nom dans la zone de texte **Nouveau nom du support de sauvegarde** et décrivez éventuellement le support de sauvegarde dans la zone de texte **Description du nouveau support de sauvegarde**.  
   
         > [!IMPORTANT]  
         >  Cette option est désactivée si vous avez sélectionné **URL** dans la page **Général** . Ces actions ne sont pas prises en charge lors de la sauvegarde dans le stockage Azure.  
@@ -140,7 +140,7 @@ ms.locfileid: "72798033"
   
     -   **Vérifier la sauvegarde en fin d'opération**;  
   
-    -   **Effectuer une somme de contrôle avant d’écrire sur le support**et, éventuellement, **Continuer lors d’une erreur de somme de contrôle**. Pour plus d’informations sur les sommes de contrôle, consultez [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Effectuer une somme de contrôle avant d’écrire sur le support** et, éventuellement, **Continuer lors d’erreurs**. Pour plus d’informations sur les sommes de contrôle, consultez [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 15. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général** ), l’option **Décharger la bande après la sauvegarde** est active. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
   
@@ -151,26 +151,26 @@ ms.locfileid: "72798033"
   
 17. Spécifiez le moment où le jeu de sauvegarde va expirer et pourra être remplacé sans ignorer explicitement la vérification des données d'expiration :  
   
-    -   Pour que le jeu de sauvegarde expire au bout d’un nombre de jours spécifique, cliquez sur **Après** (option par défaut) et entrez le nombre de jours souhaité pour l’expiration du jeu après sa création. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.  
+    -   Pour que le jeu de sauvegarde expire après un nombre de jours spécifique, cliquez sur **Après** (option par défaut) et entrez le nombre de jours au terme duquel le jeu expirera à compter de sa création. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.  
   
          La valeur par défaut est définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** de la boîte de dialogue **Propriétés du serveur** (page Paramètres de base de données). Pour y accéder, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et sélectionnez les propriétés. Ensuite, sélectionnez la page **Paramètres de base de données** .  
   
-    -   Pour que le jeu de sauvegarde expire à une date spécifique, cliquez sur **Le**et entrez la date d'expiration souhaitée.  
+    -   Pour que le jeu de sauvegarde expire à une date spécifique, cliquez sur **Le** et entrez la date voulue.  
   
          Pour plus d’informations sur les dates d’expiration des sauvegardes, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
-18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] et versions ultérieures prennent en charge la [compression de la sauvegarde](backup-compression-sql-server.md). Par défaut, la compression d’une sauvegarde dépend de la valeur de l’option de configuration de serveur **Compression par défaut des sauvegardes** . Toutefois, quelle que soit la valeur par défaut actuelle au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde**, et vous pouvez empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
+18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)]et versions ultérieures prennent en charge la [compression de sauvegarde](backup-compression-sql-server.md). Par défaut, la compression de la sauvegarde est régie par la valeur de l’option de configuration du serveur **Compression par défaut des sauvegardes**. Toutefois, quelle que soit la valeur par défaut actuellement définie au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde** et empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
   
      **Pour consulter ou modifier la valeur par défaut de compression de la sauvegarde actuelle**  
   
-    -   [Afficher ou configurer la compression par défaut des sauvegardes (option de configuration de serveur)](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+    -   [Afficher ou configurer l'option de configuration de serveur backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
 19. Spécifiez si utiliser le chiffrement pour la sauvegarde. Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Le chiffrement est pris en charge dans SQL Server 2014 ou les versions ultérieures. Pour plus d’informations sur les options de chiffrement, consultez [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](back-up-database-backup-options-page.md).  
   
 > [!NOTE]  
 >  Vous pouvez également utiliser l'Assistant Plan de maintenance pour créer des sauvegardes de bases de données.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-full-database-backup"></a>Pour créer une sauvegarde de base de données complète  
   
@@ -190,11 +190,11 @@ ms.locfileid: "72798033"
   
     |Option|Description|  
     |------------|-----------------|  
-    |*Database*|Base de données à sauvegarder|  
-    |*backup_device* [ **,**... *n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> {DISK &#124; BANDE} **=** _physical_backup_device_name_<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |*database*|Base de données à sauvegarder|  
+    |*unité_sauvegarde* [ **,**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> {DISK &#124; BANDE} **=** _physical_backup_device_name_<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
     |WITH *options_with* [ **,**...*o* ]|Spécifie éventuellement une ou plusieurs options supplémentaires, *o*. Pour obtenir des informations de base sur les options, consultez l'étape 2.|  
   
-2.  Spécifiez éventuellement une ou plusieurs options WITH. Quelques options WITH de base sont décrites ici. Pour obtenir des informations sur toutes les options WITH, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
+2.  Spécifiez éventuellement une ou plusieurs options WITH. Quelques options WITH de base sont décrites ici. Pour plus d’informations sur toutes les options WITH, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
     -   Options WITH de base relatives au jeu de sauvegarde :  
   
@@ -222,9 +222,9 @@ ms.locfileid: "72798033"
         > [!IMPORTANT]  
         >  Soyez extrêmement vigilant lorsque vous utilisez la clause FORMAT de l'instruction BACKUP, car elle entraîne la destruction de toutes les sauvegardes préalablement stockées sur le support de sauvegarde.  
   
-###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemples (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>R. Sauvegarde sur une unité de disque  
+#### <a name="a-backing-up-to-a-disk-device"></a>A. Sauvegarde sur une unité de disque  
  L'exemple suivant sauvegarde entièrement la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur disque, à l'aide de `FORMAT` , pour créer une nouveau jeu de supports.  
   
 ```sql  
@@ -270,9 +270,9 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
-1.  Utilisez l’applet de commande `Backup-SqlDatabase` . Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de base de données, spécifiez le paramètre **-BackupAction** avec sa valeur par défaut, `Database`. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.  
+1.  Utilisez l'applet de commande `Backup-SqlDatabase`. Pour indiquer explicitement qu’il s’agit d’une sauvegarde complète de base de données, spécifiez le paramètre **-BackupAction** avec sa valeur par défaut, `Database`. Ce paramètre est facultatif pour les sauvegardes complètes de base de données.  
   
      L'exemple suivant crée une sauvegarde complète de la base de données `MyDB` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`. Cet exemple spécifie, de manière facultative, `-BackupAction Database`.  
   
@@ -284,7 +284,7 @@ GO
   
 -   [Fournisseur SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Sauvegarder une base de données (SQL Server)](create-a-full-database-backup-sql-server.md)  
   
@@ -302,11 +302,11 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Sauvegarder la base de données &#40;page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](back-up-database-backup-options-page.md)   
+ [Sauvegarder la base de données &#40;page général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
+ [Sauvegarder la base de données &#40;la page Options de sauvegarde&#41;](back-up-database-backup-options-page.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](full-database-backups-sql-server.md)  

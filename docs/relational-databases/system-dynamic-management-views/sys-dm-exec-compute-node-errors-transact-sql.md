@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73532789"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73532789"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|ID numérique unique associé à l’erreur.|Unique pour toutes les erreurs de requête dans le système|  
 |source|`nvarchar(255)`|Description du thread ou du processus source||  
-|type|`nvarchar(255)`|Le type d’erreur.||  
+|type|`nvarchar(255)`|Type d'erreur||  
 |create_time|`datetime`|Heure de l’occurrence d’erreur||  
 |compute_node_id|`int`|Identificateur du nœud de calcul spécifique|Consultez compute_node_id de [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificateur de la requête Polybase, le cas échéant.||  
@@ -50,7 +50,7 @@ ms.locfileid: "73532789"
   
 ## <a name="see-also"></a>Voir aussi  
  [Résolution des problèmes de Polybase avec les vues de gestion dynamique](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

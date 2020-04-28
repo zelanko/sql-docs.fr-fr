@@ -16,30 +16,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797969"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Spécifier l'URL de point de terminaison lors de l'ajout ou lors de la modification d'un réplica de disponibilité (SQL Server)
-  Pour héberger un réplica de disponibilité pour un groupe de disponibilité, une instance de serveur doit posséder un point de terminaison de mise en miroir de bases de données. L'instance de serveur utilise ce point de terminaison pour écouter les messages [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] des réplicas de disponibilité hébergés par d'autres instances de serveur. Pour définir un réplica de disponibilité pour un groupe de disponibilité, vous devez spécifier l'URL de point de terminaison de l'instance de serveur qui hébergera le réplica. L’*URL de point de terminaison* identifie le protocole de transport du point de terminaison de mise en miroir de bases de données (TCP), l’adresse système de l’instance de serveur et le numéro de port associé au point de terminaison.  
+  Pour héberger un réplica de disponibilité pour un groupe de disponibilité, une instance de serveur doit posséder un point de terminaison de mise en miroir de bases de données. L'instance de serveur utilise ce point de terminaison pour écouter les messages [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] des réplicas de disponibilité hébergés par d'autres instances de serveur. Pour définir un réplica de disponibilité pour un groupe de disponibilité, vous devez spécifier l'URL de point de terminaison de l'instance de serveur qui hébergera le réplica. L' *URL du point de terminaison* identifie le protocole de transport du point de terminaison de mise en miroir de bases de données-TCP, l’adresse système de l’instance de serveur et le numéro de port associé au point de terminaison.  
   
 > [!NOTE]  
 >  Le terme « URL de point de terminaison » est synonyme du terme « adresse réseau du serveur » qui est utilisé dans l'interface utilisateur et la documentation de la mise en miroir de bases de données.  
   
 -   [Syntaxe pour une URL de point de terminaison](#SyntaxOfURL)  
   
--   [Recherche du nom de domaine complet d’un système](#Finding_FQDN)  
+-   [Recherche du nom de domaine complet d'un système](#Finding_FQDN)  
   
 -   [Tâches associées](#RelatedTasks)  
   
--   [Contenu associé](#RelatedContent)  
+-   [Contenu connexe](#RelatedContent)  
   
-##  <a name="SyntaxOfURL"></a>Syntaxe pour une URL de point de terminaison  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a>Syntaxe pour une URL de point de terminaison  
  La syntaxe d'une URL de point de terminaison est la suivante :  
   
- TCP<strong>://</strong> *\<adresse-système>* <strong>:</strong> *\<port>*  
+ TCP<strong>://</strong>*\<>d’adresse système * <strong>:</strong>*\<port>*  
   
  where  
   
@@ -47,19 +47,19 @@ ms.locfileid: "72797969"
   
     -   Étant donné que les nœuds du cluster WSFC (clustering de basculement Windows Server) figurent dans le même domaine, vous pouvez utiliser le nom du système informatique, par exemple `SYSTEM46`.  
   
-    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[** _<adresse_IPv6>_ **]** .  
+    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[** _<IPv6_address>_ **]**.  
   
          Pour connaître l'adresse IP d'un système, à l'invite de commandes Windows, entrez la commande **ipconfig** .  
   
     -   L'utilisation du nom de domaine complet garantit un fonctionnement correct. Il s'agit d'une chaîne d'adresse définie localement qui prend des formes différentes dans des emplacements différents. Souvent, mais pas systématiquement, un nom de domaine complet correspond à un nom composé qui inclut le nom de l'ordinateur et une série de segments de domaine séparés par des points, de la forme :  
   
-         _nom_ordinateur_ **.** _segment_domaine_[... **.** _segment_domaine_]  
+         _nom_ordinateur_ **.** _segment_domaine_[...**.**_segment_domaine_]  
   
-         où *nom_ordinateur*correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[... **.** _segment_domaine_] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
+         où *nom_ordinateur*correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[...**.**_segment_domaine_] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
   
          Le contenu et le nombre de segments de domaine sont déterminés au sein de la société ou de l'organisation. Pour plus d'informations, consultez [Recherche du nom de domaine complet](#Finding_FQDN), plus loin dans cette rubrique.  
   
--   *\<port>* est le numéro de port utilisé par le point de terminaison de mise en miroir de l’instance du serveur partenaire.  
+-   port>est le numéro de port utilisé par le point de terminaison de mise en miroir de l’instance de serveur partenaire. * \<*  
   
      Un point de terminaison de mise en miroir de bases de données peut utiliser tout port disponible sur le système informatique. Chaque numéro de port doit être associé à un seul point de terminaison, et chaque point de terminaison est associé à une seule instance de serveur ; ainsi, différentes instances de serveurs sur le même serveur écoutent sur différents points de terminaison dotés de différents ports. Par conséquent, le port que vous précisez dans l'URL de point de terminaison lorsque vous spécifiez un réplica de disponibilité dirigera toujours les messages entrants à l'instance de serveur dont le point de terminaison est associé à ce port.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "72797969"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a>Recherche du nom de domaine complet d’un système  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a>Recherche du nom de domaine complet d’un système  
  Pour rechercher le nom de domaine complet d'un système, à l'invite de commandes Windows de ce système, entrez :  
   
  **IPCONFIG /ALL**  
@@ -119,7 +119,7 @@ ms.locfileid: "72797969"
 > [!NOTE]  
 >  Pour obtenir des informations supplémentaires sur un nom de domaine complet, contactez votre administrateur système.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer un point de terminaison de mise en miroir de bases de données**  
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour groupes de disponibilité AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
@@ -146,7 +146,7 @@ ms.locfileid: "72797969"
   
 -   [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [Guide de solutions Microsoft SQL Server AlwaysOn pour la haute disponibilité et la récupération d'urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797876"
 ---
 # <a name="get-help-sql-server-powershell"></a>Obtenir de l'aide sur SQL Server PowerShell
@@ -30,7 +30,7 @@ ms.locfileid: "72797876"
  Pour obtenir une vue d’ensemble des applets de commande et du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , consultez [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
 ### <a name="help-in-the-windows-powershell-environment"></a>Aide dans l'environnement Windows PowerShell  
- Utilisez l’applet de commande **Get-Help** pour obtenir de l’aide dans l’environnement Windows PowerShell. La commande **obtenir-Help fournit une** aide de base pour le langage Windows PowerShell et les diverses applets de commande et tous les fournisseurs disponibles dans Windows PowerShell.  
+ Utilisez l’applet de commande **Get-Help** pour obtenir de l’aide dans l’environnement Windows PowerShell. **Get-Help** fournit l’aide de base pour le langage Windows PowerShell, ainsi que pour les différentes applets de commande et les divers fournisseurs disponibles dans Windows PowerShell.  
   
  Pour plus d’informations sur les moyens d’utiliser **Get-Help**, consultez [Obtention d’aide : Get-Help](https://go.microsoft.com/fwlink/?LinkId=102136).  
   
@@ -42,9 +42,9 @@ ms.locfileid: "72797876"
   
  L’entrée *-Query* ou *-QueryFromFile* peut contenir :  
   
--   variables et commandes **sqlcmd** . Pour plus d'informations sur ces variables et commandes, consultez la section Notes de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
+-   Variables et commandes**sqlcmd** . Pour plus d'informations sur ces variables et commandes, consultez la section Notes de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)]publication. Pour plus d’informations sur le langage [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference).  
+-   Instructions[!INCLUDE[tsql](../includes/tsql-md.md)] . Pour plus d’informations sur le langage [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference).  
   
 -   Instructions XQuery. Pour plus d’informations sur le langage XQuery pris en charge par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Références relatives au langage Xquery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
@@ -89,7 +89,7 @@ Get-Help -Category provider
 ```  
   
 ## <a name="get-help-about-the-sql-server-provider"></a>Obtenir de l'aide sur le fournisseur SQL Server  
- **Pour obtenir de l’aide sur le fournisseur**  
+ **Pour obtenir de l'aide sur le fournisseur**  
   
 1.  Exécuter Get-Help en spécifiant le nom SQLServer  
   
@@ -101,7 +101,7 @@ Get-Help SQLServer
 ```  
   
 ## <a name="list-methods-and-properties"></a>Répertorier les méthodes et les propriétés  
- **Pour répertorier les méthodes et les propriétés d’un nœud dans un chemin d’accès de fournisseur SQL Server**  
+ **Pour répertorier les méthodes et les propriétés pour un nœud dans un chemin d'accès du fournisseur SQL Server**  
   
 1.  Utilisez la commande CD pour passer à un nœud dans le chemin d'accès de SQL Server ou créez une variable ayant pour valeur cet emplacement.  
   
@@ -123,5 +123,5 @@ $MyVar | Get-Member -Type Properties
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [fournisseur PowerShell SQL Server](../powershell/sql-server-powershell-provider.md)   
+ [Fournisseur SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
  [Utiliser les applets de commande du Moteur de base de données](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

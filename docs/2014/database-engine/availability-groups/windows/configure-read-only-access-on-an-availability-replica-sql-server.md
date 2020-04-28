@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d93f78c157d5551e805437f156b8972ca8616c2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797738"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurer l'accès en lecture seule sur un réplica de disponibilité (SQL Server)
@@ -30,15 +30,15 @@ ms.locfileid: "72797738"
   
   
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises et restrictions  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Conditions préalables requises et restrictions  
   
 -   Pour configurer un autre accès à la connexion, vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
 |Tâche|Autorisations|  
 |----------|-----------------|  
@@ -46,8 +46,8 @@ ms.locfileid: "72797738"
 |Pour modifier un réplica de disponibilité :|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  
   
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- **Pour configurer l’accès sur un réplica de disponibilité**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+ **Pour configurer l'accès sur un réplica de disponibilité**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
   
@@ -79,8 +79,8 @@ ms.locfileid: "72797738"
          Lorsque la propriété d’intention de l’application est définie sur **ReadWrite** ou si la propriété de connexion d’intention de l’application n’est pas définie, la connexion est autorisée. Les connexions où la propriété de connexion d'intention de l'application a la valeur **ReadOnly** ne sont pas autorisées. Cela peut permettre d'éviter aux clients de se connecter à une charge de travail de tentative de lecture au réplica primaire par erreur. Pour plus d'informations sur la propriété de connexion d'intention de l'application, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- **Pour configurer l’accès sur un réplica de disponibilité**  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+ **Pour configurer l'accès sur un réplica de disponibilité**  
   
 > [!NOTE]  
 >  Pour obtenir un exemple de cette procédure, consultez [Exemple (Transact-SQL)](#TsqlExample)plus loin dans cette section.  
@@ -95,7 +95,7 @@ ms.locfileid: "72797738"
   
          où :  
   
-         NON  
+         Non  
          Aucune connexion directe n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s'agit du paramètre par défaut.  
   
          READ_ONLY  
@@ -116,7 +116,7 @@ ms.locfileid: "72797738"
      ALL  
      Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du paramètre par défaut.  
   
-###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemple (Transact-SQL)  
  L'exemple suivant ajoute un réplica secondaire à un groupe de disponibilité nommé *AG2*. Une instance de serveur autonome, *COMPUTER03\HADR_INSTANCE*, est spécifiée pour héberger le nouveau réplica de disponibilité. Ce réplica est configuré pour autoriser uniquement les connexions en lecture/écriture pour le rôle principal et pour autoriser uniquement les connexions de tentative de lecture pour le rôle secondaire.  
   
 ```sql
@@ -132,7 +132,7 @@ GO
 ```  
   
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
 
 ### <a name="to-configure-access-on-an-availability-replica"></a>Pour configurer l'accès sur un réplica de disponibilité
   
@@ -179,19 +179,19 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 -InputObject $primaryReplica
 ```  
 
-##  <a name="FollowUp"></a>Suivi : après avoir configuré l’accès en lecture seule pour un réplica de disponibilité  
- **Accès en lecture seule à un réplica secondaire accessible en lecture**  
+##  <a name="follow-up-after-configuring-read-only-access-for-an-availability-replica"></a><a name="FollowUp"></a>Suivi : après avoir configuré l’accès en lecture seule pour un réplica de disponibilité  
+ **Accès en lecture seule aux réplicas secondaires accessibles en lecture.**  
   
 -   Lorsque vous utilisez l' [utilitaire bcp](../../../tools/bcp-utility.md) ou l' [utilitaire sqlcmd](../../../tools/sqlcmd-utility.md), vous pouvez spécifier l’accès en lecture seule à n’importe quel réplica secondaire qui est activé pour l’accès `-K ReadOnly` en lecture seule en spécifiant le commutateur.  
   
 -   Pour permettre aux applications clientes de se connecter aux réplicas secondaires accessibles en lecture :  
   
-    ||Configuration requise|Lien|  
+    ||Prérequis|Lien|  
     |-|------------------|----------|  
-    |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Assurez-vous que le groupe de disponibilité possède un écouteur.|[Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Configurez le routage en lecture seule pour le groupe de disponibilité.|[Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Activé](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Assurez-vous que le groupe de disponibilité possède un écouteur.|[Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Activé](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Configurez le routage en lecture seule pour le groupe de disponibilité.|[Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
- **Facteurs qui peuvent affecter les déclencheurs et les travaux après un basculement**  
+ **Facteurs qui peuvent affecter les déclencheurs et les travaux à la suite d'un basculement**  
   
  Si vous avez des déclencheurs et des travaux qui vont échouer lors de l'exécution sur une base de données secondaire inaccessible en lecture ou sur une base de données secondaire accessible en lecture, vous devez générer un script pour les déclencheurs et travaux à vérifier sur un réplica donné afin de déterminer si la base de données est une base de données principale ou une base de données secondaire accessible en lecture. Pour obtenir ces informations, utilisez la fonction [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) pour retourner la propriété **Updatability** de la base de données. Pour identifier une base de données en lecture seule, spécifiez la valeur READ_ONLY, comme suit :  
   
@@ -202,14 +202,14 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
  Pour identifier une base de données en lecture-écriture, spécifiez la valeur READ_WRITE.  
   
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 -   [Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 -   [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> Contenu associé  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
 -   [AlwaysOn : Proposition de valeur du réplica secondaire accessible en lecture](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   

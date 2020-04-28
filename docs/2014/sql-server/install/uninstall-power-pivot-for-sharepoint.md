@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 51b6788c0bc41796f91f8dee74812ff79062cda3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798133"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Désinstaller PowerPivot pour SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "72798133"
   
 -   [Étape 6 : Liste de vérification post-désinstallation](#bkmk_post)  
   
-##  <a name="prereq"></a> Conditions préalables  
+##  <a name="prerequisites"></a><a name="prereq"></a> Conditions préalables  
   
 -   Vous devez être administrateur de batterie de serveurs SharePoint ou administrateur d'application de service pour désinstaller des fonctionnalités et des solutions de la batterie.  
   
@@ -46,12 +46,12 @@ ms.locfileid: "72798133"
   
 -   Vous devez être un administrateur système Analysis Services et membre du groupe Administrateurs local pour désinstaller Analysis Services et [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
-##  <a name="bkmk_before"></a> Étape 1 : Liste de vérification préalable à la désinstallation  
+##  <a name="step-1-pre-uninstall-checklist"></a><a name="bkmk_before"></a> Étape 1 : Liste de vérification préalable à la désinstallation  
  L'accès aux données PowerPivot sera désactivé une fois que le logiciel qui prend en charge le traitement des requêtes et des données est supprimé de la batterie. La première étape consiste à supprimer de façon préemptive les fichiers et les bibliothèques qui ne seront plus opérationnels. Cela vous permet de répondre à toutes les questions ou problèmes relatifs aux données manquantes avant de désinstaller le logiciel.  
   
 1.  Supprimez tous les classeurs PowerPivot, documents et bibliothèques associés à une installation PowerPivot pour SharePoint. Ni les bibliothèques ni les documents ne fonctionneront une fois le logiciel désinstallé.  
   
-    -   [Supprimer une bibliothèque PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
+    -   [Supprimer une Galerie PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
     -   [Supprimer une bibliothèque de flux de données PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72798133"
   
 5.  Éventuellement, arrêtez les services et attendez plusieurs jours avant de désinstaller le logiciel. Cette étape n'est pas nécessaire pour la désinstallation, mais elle vous permet de reprendre le service temporairement pendant que vous résolvez les problèmes de migration des données ou de substitution de technologie que vous avez omis.  
   
-##  <a name="bkmk_remove"></a> Étape 2 : Supprimer des fonctionnalités et des solutions de SharePoint  
+##  <a name="step-2-remove-features-and-solutions-from-sharepoint"></a><a name="bkmk_remove"></a> Étape 2 : Supprimer des fonctionnalités et des solutions de SharePoint  
  Pour supprimer des services PowerPivot et des applications de SharePoint, utilisez l'outil de configuration de PowerPivot.  
   
 -   Vous devez être administrateur de batterie de serveurs, administrateur de serveur sur l’instance Analysis Services et **db_owner** sur la base de données de configuration de la batterie de serveurs.  
@@ -132,7 +132,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
  Ou bien, vous pouvez utiliser PowerShell pour supprimer des fonctionnalités et des solutions de la batterie. Pour plus d’informations, consultez informations [de référence sur PowerShell pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
-##  <a name="bkmk_uninstall"></a> Étape 3 : Exécuter le programme d'installation de SQL Server pour supprimer des programmes sur l'ordinateur local  
+##  <a name="step-3-run-sql-server-setup-to-remove-programs-from-the-local-computer"></a><a name="bkmk_uninstall"></a> Étape 3 : Exécuter le programme d'installation de SQL Server pour supprimer des programmes sur l'ordinateur local  
  La suppression des fichiers programme nécessite l'exécution du programme d'installation de SQL Server pour désinstaller le logiciel. La désinstallation supprime les fichiers et les entrées de Registre créés par le programme d'installation. Vous pouvez utiliser la page Programmes et fonctionnalités pour désinstaller le logiciel. Une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] fait partie d'une installation de SQL Server.  
   
  Vous pouvez désinstaller une partie d'une installation sans affecter les autres instances de SQL Server (ou les autres fonctionnalités de la même instance) déjà installées. Par exemple, vous pouvez désinstaller PowerPivot pour SharePoint en laissant d'autres composants, tels que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le moteur de base de données, installés.  
@@ -145,10 +145,10 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
      Dans le programme d'installation, vous pouvez sélectionner l'instance de **PowerPivot** , puis sélectionner **Analysis Services** et **Intégration SharePoint pour Analysis Services** pour supprimer uniquement cette fonctionnalité et laisser tout le reste en place.  
   
-##  <a name="bkmk_addin"></a>Étape 4 : désinstaller le complément PowerPivot pour SharePoint  
+##  <a name="step-4-uninstall-the-powerpivot-for-sharepoint-add-in"></a><a name="bkmk_addin"></a>Étape 4 : désinstaller le complément PowerPivot pour SharePoint  
  Si votre déploiement [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] comporte plusieurs serveurs et que vous avez installé le complément [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , désinstallez ce complément [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de chaque serveur où il est installé pour désinstaller complètement tous les fichiers [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Pour plus d’informations, consultez [installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-##  <a name="verify"></a> Étape 5 : Vérifier la désinstallation  
+##  <a name="step-5-verify-uninstall"></a><a name="verify"></a> Étape 5 : Vérifier la désinstallation  
   
 1.  Dans l'Administration centrale, dans **Gérer les services sur le serveur**, connectez-vous au serveur duquel vous avez désinstallé PowerPivot pour SharePoint.  
   
@@ -166,14 +166,14 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  Dans Paramètres généraux de l'application, vérifiez que **Tableau de bord de gestion PowerPivot** n'est plus répertorié.  
   
-##  <a name="bkmk_post"></a> Étape 6 : Liste de vérification post-désinstallation  
+##  <a name="step-6-post-uninstall-checklist"></a><a name="bkmk_post"></a> Étape 6 : Liste de vérification post-désinstallation  
  Utilisez la liste ci-dessous pour supprimer les logiciels et fichiers qui n'ont pas été supprimés pendant la désinstallation.  
   
 1.  Supprimez tous les fichiers de données et les sous-dossiers de `C:\Program Files\Microsoft SQL Server\MSAS12.PowerPivot`, puis supprimez le dossier lui-même. Cette étape supprime également des fichiers mis en cache précédemment dans le répertoire DATA.  
   
 2.  Supprimez tous les classeurs PowerPivot, documents et bibliothèques si vous ne l'avez pas déjà fait.  
   
-    -   [Supprimer une bibliothèque PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
+    -   [Supprimer une Galerie PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
     -   [Supprimer une bibliothèque de flux de données PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
@@ -189,4 +189,4 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
- [PowerPivot Configuration Tools](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
+ [Outils de configuration de PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  

@@ -18,10 +18,10 @@ ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 48f81c86a823d75d501187ef953930ec92083d27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659124"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Propriété NumberOfFlags (classe ClientNetworkProtocol)
@@ -45,6 +45,6 @@ object.NumberofFlags [= value]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73536217"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
@@ -60,12 +60,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @configname = ] 'option_name'`Nom d’une option de configuration. *option_name* est de type **varchar (35)**, avec NULL comme valeur par défaut. 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconnaît toute chaîne unique qui fait partie du nom de configuration. Si ce dernier n'est pas spécifié, la liste complète des options est renvoyée.  
+`[ @configname = ] 'option_name'`Nom d’une option de configuration. *option_name* est **varchar(35)**, avec NULL comme valeur par défaut. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconnaît toute chaîne unique qui fait partie du nom de configuration. Si ce dernier n'est pas spécifié, la liste complète des options est renvoyée.  
   
  Pour plus d’informations sur les options de configuration disponibles et leurs paramètres, consultez [options de configuration du serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-`[ @configvalue = ] 'value'`Nouveau paramètre de configuration. la *valeur* est de **type int**, avec NULL comme valeur par défaut. La valeur maximale dépend de l'option individuelle.  
+`[ @configvalue = ] 'value'`Nouveau paramètre de configuration. *value* est de type **int**, avec NULL comme valeur par défaut. La valeur maximale dépend de l'option individuelle.  
   
  Pour afficher la valeur maximale de chaque option, consultez la colonne **maximum** de l’affichage catalogue **sys. configurations** .  
   
@@ -79,7 +78,7 @@ RECONFIGURE
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**nvarchar (35)**|Nom de l'option de configuration.|  
+|**name**|**nvarchar(35)**|Nom de l'option de configuration.|  
 |**minimale**|**int**|Valeur minimale de l'option de configuration.|  
 |**valeurs**|**int**|Valeur maximale de l'option de configuration.|  
 |**config_value**|**int**|Valeur à laquelle l’option de configuration a été définie à l’aide de **sp_configure** (valeur dans **sys. configurations. Value**). Pour plus d’informations sur ces options, consultez [options de configuration du serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) et [sys. configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
@@ -149,7 +148,7 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-list-all-available-configuration-settings"></a>C. Liste de tous les paramètres de configuration disponibles  
  L'exemple suivant montre comment afficher toutes les options de configuration.  
@@ -158,8 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- Le résultat renvoie le nom de l'option suivi des valeurs minimales et maximales de cette option. Le **config_value** est la valeur qui [!INCLUDE[ssDW](../../includes/ssdw-md.md)] sera utilisée lorsque la reconfiguration est terminée. 
-  **run_value** est la valeur en cours d’utilisation. Les valeurs **config_value** et **run_value** sont généralement identiques, sauf si la valeur est en cours de modification.  
+ Le résultat renvoie le nom de l'option suivi des valeurs minimales et maximales de cette option. Le **config_value** est la valeur qui [!INCLUDE[ssDW](../../includes/ssdw-md.md)] sera utilisée lorsque la reconfiguration est terminée. **run_value** est la valeur en cours d’utilisation. Les valeurs **config_value** et **run_value** sont généralement identiques, sauf si la valeur est en cours de modification.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Liste des paramètres de configuration pour un nom de configuration  
   
@@ -175,7 +173,7 @@ EXEC sp_configure @configname='hadoop connectivity';
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [ALTER DATABASE SCOPEd CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  

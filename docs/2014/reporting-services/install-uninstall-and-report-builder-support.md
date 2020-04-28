@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d3f7e5829c19b79ca19783d36885f6bfd3761f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637884"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installer, désinstaller et prendre en charge le Générateur de rapports
@@ -29,7 +29,7 @@ ms.locfileid: "73637884"
   
  En règle générale, un administrateur installe et configure [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], et accorde l'autorisation d'utiliser la version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports ; en outre, il gère les dossiers et les autorisations d'accès aux rapports, parties de rapports et datasets partagés enregistrés sur le serveur de rapports. Pour plus d’informations [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur l’administration, consultez [Reporting Services serveur de rapports &#40;le mode natif&#41;](report-server/reporting-services-report-server-native-mode.md) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) de sur MSDN.Microsoft.com.  
   
-##  <a name="Installing"></a>Installation de Générateur de rapports  
+##  <a name="installing-report-builder"></a><a name="Installing"></a>Installation de Générateur de rapports  
  Le Générateur de rapports est disponible en version autonome et en version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Vous ou votre administrateur devez télécharger et installer la version autonome sur votre ordinateur, alors que la version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est installée avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous pouvez télécharger le Générateur de rapports à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53613).  
   
 > [!NOTE]  
@@ -58,9 +58,7 @@ ms.locfileid: "73637884"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Installation de la version ClickOnce du Générateur de rapports sur votre ordinateur  
  La version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports est installée avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Elle est installée via l'installation native et l'installation intégrée SharePoint de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- 
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est une technologie Microsoft pour le déploiement d'applications Windows. 
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permet aux utilisateurs d'installer et d'exécuter une application Windows telle que le Générateur de rapports en cliquant sur un lien dans une page Web. Pour plus d’informations sur le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] déploiement d’applications [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , l’application de la [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sécurité de l’application ou l’exécution d’applications dans la zone Internet, consultez les articles « déploiement ClickOnce pour les applications Windows Forms », « vue d’ensemble de la sécurité [!INCLUDE[msCoName](../includes/msconame-md.md)] dans Windows Forms » ou « [https://developer.microsoft.com/](https://developer.microsoft.com/)vue d’ensemble du déploiement d’applications approuvées » sur le site Web Developer Network à l’adresse.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est une technologie Microsoft pour le déploiement d'applications Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permet aux utilisateurs d'installer et d'exécuter une application Windows telle que le Générateur de rapports en cliquant sur un lien dans une page Web. Pour plus d’informations sur le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] déploiement d’applications [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , l’application de la [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sécurité de l’application ou l’exécution d’applications dans la zone Internet, consultez les articles « déploiement ClickOnce pour les applications Windows Forms », « vue d’ensemble de la sécurité [!INCLUDE[msCoName](../includes/msconame-md.md)] dans Windows Forms » ou « [https://developer.microsoft.com/](https://developer.microsoft.com/)vue d’ensemble du déploiement d’applications approuvées » sur le site Web Developer Network à l’adresse.  
   
  La version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports se trouve sur le serveur de rapports et est installée sur votre ordinateur lorsque vous cliquez sur le bouton **Générateur de rapports** dans le Gestionnaire de rapports, ou sur l'option **Rapport du Générateur de rapports** dans le menu **Nouveau document** d'une bibliothèque SharePoint.  
   
@@ -102,13 +100,13 @@ ms.locfileid: "73637884"
 |3082|Espagnol (Espagne)|es-ES|  
   
   
-##  <a name="Uninstalling"></a>Désinstallation de Générateur de rapports  
+##  <a name="uninstalling-report-builder"></a><a name="Uninstalling"></a>Désinstallation de Générateur de rapports  
  Vous pouvez désinstaller la version autonome du Générateur de rapports à partir du Panneau de configuration ou de la ligne de commande. Cela s'applique uniquement à la version autonome du Générateur de rapports. La version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports ne peut pas être désinstallée séparément. Elle est toujours installée et désinstallée avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  Pour plus d’informations, consultez [désinstaller la version autonome de Générateur de rapports &#40;Générateur de rapports&#41;](install-windows/uninstall-report-builder.md).  
   
   
-##  <a name="Supporting"></a>Prise en charge Générateur de rapports  
+##  <a name="supporting-report-builder"></a><a name="Supporting"></a>Prise en charge Générateur de rapports  
  Pour assurer la prise en charge des auteurs de rapports, un administrateur est responsable de la gestion des dossiers, des rapports et des éléments liés aux rapports sur le serveur de rapports ; en outre, il est chargé d'accorder les autorisations relatives aux ressources du serveur de rapports et de configurer l'accès à ce dernier.  
   
 ### <a name="folders-reports-and-report-related-items"></a>Dossiers, rapports et éléments liés aux rapports  
@@ -157,7 +155,7 @@ ms.locfileid: "73637884"
  Pour plus d’informations sur la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]configuration de, consultez [Gestionnaire de configuration de Reporting Services &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) dans la [documentation Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) sur MSDN.Microsoft.com.  
   
   
-##  <a name="SampleDatabases"></a>SQL Server des exemples de bases de données  
+##  <a name="sql-server-sample-databases"></a><a name="SampleDatabases"></a>SQL Server des exemples de bases de données  
  La famille d'exemples de bases de données Adventure Works fournit des données que vous pouvez utiliser pour apprendre à créer des rapports et écrire des exemples de rapports.  
   
  Les bases de données sont disponibles dans les versions suivantes :  
@@ -173,7 +171,7 @@ ms.locfileid: "73637884"
  Pour connaître les éléments requis et les instructions spécifiques au téléchargement et à l'installation des exemples de bases de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , consultez [Conditions préalables d'installation pour les exemples de bases de données SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=166648) et [Installation les exemples de bases de données](https://go.microsoft.com/fwlink/?LinkId=166649) sur CodePlex.  
   
   
-##  <a name="HowTo"></a>Rubriques de procédures  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Rubriques de procédures  
  Cette section répertorie les procédures qui vous montrent comment installer et désinstaller le Générateur de rapports.  
   
  [Installer la version autonome de Générateur de rapports &#40;Générateur de rapports&#41;](install-windows/install-report-builder.md)  

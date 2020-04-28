@@ -18,10 +18,10 @@ ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d75a202b368df339b97a4a9588ad3ac073429c6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659641"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance, classe (méthode SetDefaults)
@@ -51,6 +51,6 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

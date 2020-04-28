@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632852"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Vue d’ensemble de Assistant Migration de données
@@ -43,7 +43,7 @@ Pour installer DMA, téléchargez la dernière version de l’outil à partir du
 - Détectez les problèmes qui peuvent affecter une mise à niveau vers un SQL Server local.Celles-ci sont décrites comme des problèmes de compatibilité et sont organisées dans les catégories suivantes :
 
   - Changements cassants
-  -  Changements de comportement
+  - Changements de comportement
   - Fonctionnalités dépréciées
 
 - Découvrez les nouvelles fonctionnalités de la plateforme de SQL Server cible dont la base de données peut bénéficier après une mise à niveau. Celles-ci sont décrites comme recommandations relatives aux fonctionnalités et sont organisées dans les catégories suivantes :
@@ -56,7 +56,7 @@ Pour installer DMA, téléchargez la dernière version de l’outil à partir du
 
   - Schéma de bases de données
   - Données et utilisateurs
-  - Rôles de serveur
+  - Rôles serveur
   - Connexions SQL Server et Windows
 
 - Après une migration réussie, les applications peuvent se connecter aux bases de données SQL Server cible en toute transparence.
@@ -67,7 +67,7 @@ Pour installer DMA, téléchargez la dernière version de l’outil à partir du
 
   - Problèmes d’informations : détecte les fonctionnalités partiellement prises en charge ou déconseillées qui sont utilisées dans le ou les packages source.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour exécuter une évaluation, vous devez être membre du rôle **sysadmin** SQL Server.
 

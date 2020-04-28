@@ -18,10 +18,10 @@ ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 59c42bdb98d5ed19ea2d415a85e9d2ccb4aeb8b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658966"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>Propriété SqlServiceType (classe SqlServiceAdvancedProperty)
@@ -49,13 +49,13 @@ object.SetBoolValue(NumValue)
 |----------|----------------|  
 |*1*|MSSQLSERVER est le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |*2*|SQLSERVERAGENT est le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|  
-|*1,3*|MSFTESQL est le service du moteur de recherche en texte intégral [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+|*3*|MSFTESQL est le service du moteur de recherche en texte intégral [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |*4*|MsDtsServer est le service [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .|  
-|*5,5*|MSSQLServerOLAPService est le service [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
+|*5*|MSSQLServerOLAPService est le service [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |*6*|ReportServer est le service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser est le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser.|  
 |*version8*|NsService est le [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] service de notification.|  
-|*0,9*|MSSQLFDLauncher est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service du lanceur de démon de filtre de texte intégral.|  
+|*9*|MSSQLFDLauncher est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service du lanceur de démon de filtre de texte intégral.|  
 |*10*|SQLPBENGINE est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service de moteur Polybase.|  
 |*11*|SQLPBDMS est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service de déplacement de données Polybase.|  
 |*12*|MSSQLLaunchpad est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service launchpad.|  

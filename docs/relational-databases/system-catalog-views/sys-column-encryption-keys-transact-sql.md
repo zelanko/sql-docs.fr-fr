@@ -21,10 +21,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4cd6b4a4cb8eeed0dd0a2a78adc2d39c6a2e895d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593727"
 ---
 # <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys (Transact-SQL)
@@ -34,10 +34,10 @@ ms.locfileid: "73593727"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom du CMK.|  
+|**name**|**sysname**|Nom du CMK.|  
 |**column_encryption_key_id**|**int**|ID du clé CEK.|  
-|**create_date**|**DATETIME**|Date à laquelle le clé CEK a été créé.|  
-|**modify_date**|**DATETIME**|Date de dernière modification du clé CEK.|  
+|**create_date**|**datetime**|Date à laquelle le clé CEK a été créé.|  
+|**modify_date**|**datetime**|Date de dernière modification du clé CEK.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **afficher une clé de chiffrement de colonne** .  
@@ -54,7 +54,7 @@ ms.locfileid: "73593727"
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted avec des enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [Gérer des clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+ [Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
 
   
   

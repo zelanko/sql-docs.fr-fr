@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633443"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "73633443"
 |request_max_resource_grant_percent |**décimal (5, 2)**|Spécifie la quantité maximale de ressources allouées à une demande.||
 |query_execution_timeout_sec|**int**|Durée d’exécution, en secondes, autorisée avant l’annulation de la requête.  Les requêtes ne peuvent pas être annulées une fois qu’elles ont atteint la phase de retour de l’exécution.  query_execution_timeout_sec n’inclut pas le temps passé en file d’attente.|
 |query_wait_timeout_sec|**int**|INTERNAL||
-|create_time|**DATETIME**|Heure de création du groupe de charge de travail. N'accepte pas la valeur NULL.||
-modify_time|**DATETIME**|Heure de la dernière modification du groupe de charge de travail. N'accepte pas la valeur NULL.||
+|create_time|**datetime**|Heure de création du groupe de charge de travail. N'accepte pas la valeur NULL.||
+modify_time|**datetime**|Heure de la dernière modification du groupe de charge de travail. N'accepte pas la valeur NULL.||
 |&nbsp;||||
   
 ## <a name="permissions"></a>Autorisations

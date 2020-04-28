@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811601"
 ---
 # <a name="user-hierarchies"></a>Hiérarchies utilisateur
@@ -40,11 +40,11 @@ ms.locfileid: "72811601"
 |1999|Trimestre 1|Jan|  
 |1999|Trimestre 1|Fév|  
 |1999|Trimestre 1|Mar|  
-|1999|Trimestre 2|Apr|  
+|1999|Trimestre 2|Avr|  
 |1999|Trimestre 2|Mai|  
-|1999|Trimestre 2|Jun|  
-|1999|Trimestre 3|Juil|  
-|1999|Trimestre 3|Août|  
+|1999|Trimestre 2|Juin|  
+|1999|Trimestre 3|Jui|  
+|1999|Trimestre 3|Aoû|  
 |1999|Trimestre 3|Sep|  
 |1999|Trimestre 4|Oct|  
 |1999|Trimestre 4|Nov|  

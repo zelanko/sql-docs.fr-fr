@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637837"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installer la version autonome du Générateur de rapports (Générateur de rapports)
@@ -113,7 +113,7 @@ ms.locfileid: "73637837"
   
 4.  Si vous le souhaitez, accédez à l’emplacement où vous souhaitez enregistrer, vérifiez que l’option **Enregistrer sous** est **Windows Installer Package**, puis cliquez sur **Enregistrer**.  
   
-5.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
+5.  Dans le menu **Démarrer**, cliquez sur **Exécuter**.  
   
 6.  Dans la zone de texte Ouvrir, tapez .`cmd.`  
   

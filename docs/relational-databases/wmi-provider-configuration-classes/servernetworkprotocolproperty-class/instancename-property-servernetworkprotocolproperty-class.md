@@ -18,10 +18,10 @@ ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2c2b86b50b6792cf8a2c921dd0e61826282cee74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660617"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>Propriété InstanceName (classe ServerNetworkProtocolProperty)
@@ -37,7 +37,7 @@ object.InstanceName [= value]
   
 ## <a name="parts"></a>Éléments  
  *dessin*  
- Objet de [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle le protocole réseau serveur est installé.  

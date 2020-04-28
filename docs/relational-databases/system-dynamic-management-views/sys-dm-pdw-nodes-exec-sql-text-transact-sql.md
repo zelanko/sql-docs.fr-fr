@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: fd886217b2fb2caf0fe3f32e88b7bf0215ece1a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145674"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys. pdw_nodes_dm_exec_sql_text (Transact-SQL)
@@ -39,7 +39,7 @@ Retourne le texte du lot SQL identifié par le *sql_handle*spécifié. Cette fon
 Les mêmes remarques dans [sys. dm_exec_sql_text](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=sql-server-ver15) s’appliquent.  
   
 ## <a name="permissions"></a>Autorisations  
- Exiger **** un rôle de serveur `VIEW SERVER STATE` sysadmin ou une autorisation sur le serveur.  
+ Exiger **sysadmin** un rôle de serveur `VIEW SERVER STATE` sysadmin ou une autorisation sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

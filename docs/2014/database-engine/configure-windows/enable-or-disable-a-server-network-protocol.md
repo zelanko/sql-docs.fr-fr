@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 917abf00789cfca75ee6edb52ffef07832bfe981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783037"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Activer ou désactiver un protocole réseau de serveur
@@ -34,17 +34,17 @@ ms.locfileid: "72783037"
 >  Lors de l'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] une connexion est ajoutée pour le groupe BUILTIN\Users. Cela permet à tous les utilisateurs authentifiés sur l'ordinateur d'accéder à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] en tant que membres du rôle public. La connexion BUILTIN\Users peut être supprimée sans risque pour restreindre l'accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] aux utilisateurs de l'ordinateur qui disposent de connexions ou qui sont membres d'autres groupes Windows avec des connexions.  
   
 > [!WARNING]  
->  Les fournisseurs de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
+>  Les fournisseurs de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
   
  **Dans cette rubrique**  
   
--   **Pour activer ou désactiver un protocole réseau de serveur à l’aide de :**  
+-   **Pour activer ou désactiver un protocole réseau de serveur à l'aide de :**  
   
      [Gestionnaire de configuration SQL Server](#SSMSProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
   
 #### <a name="to-enable-a-server-network-protocol"></a>Pour activer un protocole réseau de serveur  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72783037"
   
 5.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (***\<nom_instance>***)**, puis cliquez sur **Redémarrer** pour arrêter et redémarrer le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="PowerShellProcedure"></a>Utilisation de SQL Server PowerShell  
+##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell SQL Server  
   
 #### <a name="to-enable-a-server-network-protocol-using-powershell"></a>Pour activer un protocole réseau de serveur à l'aide de PowerShell  
   

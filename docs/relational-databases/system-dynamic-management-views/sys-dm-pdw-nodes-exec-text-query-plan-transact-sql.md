@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 45f26c9569950c2450318abf546a838632e06f20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145664"
 ---
 # <a name="sysdm_pdw_nodes_exec_text_query_plan--transact-sql"></a>sys. dm_pdw_nodes_exec_text_query_plan (Transact-SQL)
@@ -40,7 +40,7 @@ Retourne le plan d'exécution de requêtes au format texte pour un lot [!INCLUDE
 Les mêmes remarques dans [sys. dm_exec_text_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql?view=sql-server-ver15) s’appliquent.  
 
 ## <a name="permissions"></a>Autorisations  
- Exiger **** un rôle de serveur `VIEW SERVER STATE` sysadmin ou une autorisation sur le serveur.  
+ Exiger **sysadmin** un rôle de serveur `VIEW SERVER STATE` sysadmin ou une autorisation sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

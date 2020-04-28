@@ -16,10 +16,10 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 932a54323ad8f6ffafbe8ff8f4a7f3c2dc58b0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632986"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
@@ -52,7 +52,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 |-----------------|-----------------|  
 |**1**|Validation du décompte de lignes uniquement.|  
 |**2**|Validation du nombre de lignes et de la somme de contrôle.|  
-|**1,3**|Validation du nombre de lignes et de la somme de contrôle binaire.|  
+|**3**|Validation du nombre de lignes et de la somme de contrôle binaire.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -64,7 +64,7 @@ sp_validatemergesubscription [@publication=] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_validatemergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Procédures stockées de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Valider les données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   

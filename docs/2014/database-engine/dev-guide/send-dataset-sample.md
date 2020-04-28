@@ -11,21 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637736"
 ---
 # <a name="send-dataset-sample"></a>Exemple Send DataSet
-  L'exemple Send `DataSet` montre comment retourner un `DataSet` basé sur ADO.NET dans une procédure stockée CLR (Common Language Runtime) côté serveur en tant que jeu de résultats au client. Cette opération est utile lorsque, par exemple, ce type de procédure stockée remplit un `DataSet` à l'aide des résultats d'une requête, puis manipule les données contenues dans ce `DataSet`. C'est également utile si la procédure stockée crée et remplit un `DataSet` de toutes pièces. L'exemple est composé de deux classes, `DataSetUtilities` et `TestSendDataSet`. La méthode `SendDataSet` sur la classe `DataSetUtilities` implémente une méthode globale pour transmettre le contenu d'une instance de `DataSet` au client. La méthode `DoTest` définie sur la classe `TestSendDataSet` s'assure que la méthode `SendDataSet` fonctionne en créant un `DataSet` et en le remplissant de données provenant de la procédure stockée `uspGetTwoBOMTestData` Transact-SQL. 
-  `uspGetTwoBOMTestData` exécute la procédure stockée Transact-SQL exécute la procédure stockée `uspGetBillOfMaterials` à deux reprises pour interroger de manière récursive la nomenclature de deux produits spécifiés en tant que paramètres pour la procédure stockée `usp_GetTwoBOMTestData` . Généralement, après avoir rempli le jeu de données, les données sont modifiées avant d'appeler `SendDataSet` pour remettre les données dans le jeu de données, sous la forme d'un jeu de résultats au client. Mais, à des fins de simplicité, cet exemple retourne les données sans modification.  
+  L'exemple Send `DataSet` montre comment retourner un `DataSet` basé sur ADO.NET dans une procédure stockée CLR (Common Language Runtime) côté serveur en tant que jeu de résultats au client. Cette opération est utile lorsque, par exemple, ce type de procédure stockée remplit un `DataSet` à l'aide des résultats d'une requête, puis manipule les données contenues dans ce `DataSet`. C'est également utile si la procédure stockée crée et remplit un `DataSet` de toutes pièces. L'exemple est composé de deux classes, `DataSetUtilities` et `TestSendDataSet`. La méthode `SendDataSet` sur la classe `DataSetUtilities` implémente une méthode globale pour transmettre le contenu d'une instance de `DataSet` au client. La méthode `DoTest` définie sur la classe `TestSendDataSet` s'assure que la méthode `SendDataSet` fonctionne en créant un `DataSet` et en le remplissant de données provenant de la procédure stockée `uspGetTwoBOMTestData` Transact-SQL. `uspGetTwoBOMTestData` exécute la procédure stockée Transact-SQL exécute la procédure stockée `uspGetBillOfMaterials` à deux reprises pour interroger de manière récursive la nomenclature de deux produits spécifiés en tant que paramètres pour la procédure stockée `usp_GetTwoBOMTestData` . Généralement, après avoir rempli le jeu de données, les données sont modifiées avant d'appeler `SendDataSet` pour remettre les données dans le jeu de données, sous la forme d'un jeu de résultats au client. Mais, à des fins de simplicité, cet exemple retourne les données sans modification.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -54,7 +52,7 @@ ms.locfileid: "73637736"
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly**  pour terminer l'installation.  
+-   Si vous n’êtes pas administrateur de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez demander à un administrateur de vous accorder l’autorisation **CreateAssembly** pour terminer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -596,6 +594,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

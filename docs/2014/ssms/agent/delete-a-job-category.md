@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783199"
 ---
 # <a name="delete-a-job-category"></a>Supprimer une catégorie de travaux
@@ -28,15 +28,15 @@ ms.locfileid: "72783199"
   
  Les catégories de travaux permettent d'organiser les travaux afin d'en faciliter le filtrage et le regroupement. Par exemple, vous pouvez organiser tous vos travaux de sauvegarde de base de données dans la catégorie Maintenance de bases de données.  
 
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
  Lorsque vous supprimez une catégorie de travaux définie par l'utilisateur, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous invite à réaffecter les travaux qui en dépendent à une autre catégorie de travaux. Seules les catégories de travaux définies par l'utilisateur peuvent être supprimées.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
 
-##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 ### <a name="to-delete-a-job-category"></a>Pour supprimer une catégorie de travaux  
   
@@ -46,15 +46,15 @@ ms.locfileid: "72783199"
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue **gérer les catégories de travaux**_SERVER_NAME_ , sélectionnez la catégorie de travaux à supprimer.  
+4.  Dans la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ , sélectionnez la catégorie de travaux à supprimer.  
   
 5.  Cliquez sur **Supprimer**.  
   
 6.  Dans la boîte de dialogue **Catégories de travaux** , cliquez sur **Oui**.  
   
-7.  Fermez la boîte de dialogue **gérer les catégories de travaux**_SERVER_NAME_ .  
+7.  Fermez la boîte de dialogue **Gérer les catégories de travaux**_nom_serveur_ .  
   
-##  <a name="TSQL"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Utilisation de Transact-SQL  
   
 ### <a name="to-delete-a-job-category"></a>Pour supprimer une catégorie de travaux  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72783199"
  Pour plus d’informations, consultez [sp_delete_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
 
   
-##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilisation de SQL Server Management Objects  
 
 ### <a name="to-delete-a-job-category"></a>Pour supprimer une catégorie de travaux
   

@@ -18,10 +18,10 @@ ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ac698d7fa655e47459b9de3af0f5896e038c0c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73657638"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings, classe (méthode SetDefaults)
@@ -43,7 +43,7 @@ object.SetDefaults(OverwriteAll)
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|Valeur booléenne qui spécifie s'il faut remplacer les valeurs existantes sur l'instance du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** pour remplacer les données existantes ; **false** si les données existantes ne doivent pas être remplacées.|  
+|*OverwriteAll*|Valeur booléenne qui spécifie s'il faut remplacer les valeurs existantes sur l'instance du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** pour remplacer les données existantes ou **false** si les données existantes ne doivent pas être remplacées.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

@@ -16,22 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637796"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Configuration requise pour SQL Server Native Client
   Pour utiliser les fonctionnalités d'accès aux données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple MARS, les logiciels suivants doivent être installés :  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sur votre client.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sur votre client.  
   
 -   Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur votre serveur.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requiert Windows Installer 3.0. Windows Installer 3.0 est déjà installé sur les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Pour toutes les autres plateformes, vous devez l'installer explicitement. Pour plus d’informations, consultez [Windows Installer 3,0 Redistributable](https://www.microsoft.com/download/details.aspx?id=16821).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requiert Windows Installer 3.0. Windows Installer 3.0 est déjà installé sur les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Pour toutes les autres plateformes, vous devez l'installer explicitement. Pour plus d’informations, consultez [Windows Installer 3,0 Redistributable](https://www.microsoft.com/download/details.aspx?id=16821).  
   
 > [!NOTE]  
 >  Assurez-vous que vous vous connectez avec les privilèges d'administrateur avant d'installer ce logiciel.  
@@ -42,8 +40,7 @@ ms.locfileid: "73637796"
 ## <a name="sql-server-requirements"></a>Configuration SQL Server requise  
  Pour utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client afin d'accéder aux données de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez avoir installé une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] prend en charge les connexions à partir de toutes les versions de MDAC, Windows Data Access Components, et toutes les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Lorsqu'une version cliente plus ancienne se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les types de données de serveur inconnus du client sont mappés à des types compatibles avec la version du client. Pour plus d'informations, consultez Compatibilité des types de données pour les versions du client, plus loin dans cette rubrique.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] prend en charge les connexions à partir de toutes les versions de MDAC, Windows Data Access Components, et toutes les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Lorsqu'une version cliente plus ancienne se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les types de données de serveur inconnus du client sont mappés à des types compatibles avec la version du client. Pour plus d'informations, consultez Compatibilité des types de données pour les versions du client, plus loin dans cette rubrique.  
   
 ## <a name="cross-language-requirements"></a>Configuration multilingue  
  La version anglaise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est prise en charge sur toutes les versions localisées des systèmes d'exploitation pris en charge. Les versions localisées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont prises en charge sur les systèmes d'exploitation localisés dans la même langue que la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client localisée. Les versions localisées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont également prises en charge sur les versions en anglais des systèmes d'exploitation pris en charge, sous réserve que les paramètres de langue correspondants soient installés.  
@@ -59,8 +56,7 @@ ms.locfileid: "73637796"
 -   Les versions localisées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ne peuvent pas être mises à niveau vers des versions localisées dans une autre langue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="data-type-compatibility-for-client-versions"></a>Compatibilité des types de données pour les versions du client  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client mappent les nouveaux types de données aux types de données plus anciens qui sont compatibles avec les clients de bas niveau, comme indiqué dans le tableau ci-dessous.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client mappent les nouveaux types de données aux types de données plus anciens qui sont compatibles avec les clients de bas niveau, comme indiqué dans le tableau ci-dessous.  
   
  Les applications OLE DB et ADO peuvent utiliser le mot clé de chaîne de connexion `DataTypeCompatibility` avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour exploiter les types de données plus anciens. Lorsque `DataTypeCompatibility=80`, les clients OLE DB se connectent à l'aide de la version TDS (Tabular Data Stream) de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] plutôt que de la version TDS. Cela signifie que pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les types de données ultérieurs, la conversion de bas niveau sera effectuée par le serveur et non par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Cela signifie également que les fonctionnalités disponibles sur la connexion seront limitées à l'ensemble de fonctionnalités de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Plutôt que d'essayer de transmettre des requêtes non valides au serveur, une détection des tentatives d'utilisation de nouveaux types de données ou fonctionnalités intervient dès que possible sur les appels d'API et les erreurs sont retournées à l'application appelante.  
   
@@ -68,7 +64,7 @@ ms.locfileid: "73637796"
   
  IDBInfo :: GetKeywords retourne toujours une liste de mots clés qui correspond à la version du serveur sur la connexion et n’est `DataTypeCompatibility`pas affectée par.  
   
-|Type de données|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC et<br /><br /> applications OLE DB SQL Server Native Client avec DataTypeCompatibility=80|  
+|Type de données|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC et<br /><br /> applications OLE DB SQL Server Native Client avec DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 Ko)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Image|  

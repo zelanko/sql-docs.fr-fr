@@ -18,10 +18,10 @@ ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 21cdfe10b918e474f3b2adcfe40d05e5c9eeb636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660739"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>Propriété PropertyType (classe ClientNetworkProtocolProperty)
@@ -45,6 +45,6 @@ object.PropertyType [= value]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

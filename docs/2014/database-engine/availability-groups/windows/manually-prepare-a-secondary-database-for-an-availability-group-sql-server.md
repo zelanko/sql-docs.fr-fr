@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797654"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Préparer manuellement une base de données secondaire pour un groupe de disponibilité (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "72797654"
   
      [Sécurité](#Security)  
   
--   **Pour préparer une base de données secondaire, utilisez :**  
+-   **Pour préparer une base de données secondaire, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "72797654"
   
      [PowerShell](#PowerShellProcedure)  
   
--   [Tâches de sauvegarde et de restauration connexes](#RelatedTasks)  
+-   [Tâches connexes de sauvegarde et de restauration](#RelatedTasks)  
   
--   **Suivi :** [après avoir préparé une base de données secondaire](#FollowUp)  
+-   **Suivi :** [Après avoir préparé une base de données secondaire](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables requises et restrictions  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Conditions préalables et restrictions  
   
 -   Assurez-vous que le système dans lequel vous envisagez de placer la base de données possède un lecteur de disque avec suffisamment d'espace pour les bases de données secondaires.  
   
@@ -67,24 +67,24 @@ ms.locfileid: "72797654"
   
 -   Après la restauration de la base de données, vous devez restaurer (WITH NORECOVERY) chaque sauvegarde de journal créée depuis la dernière sauvegarde de données restaurée.  
   
-###  <a name="Recommendations"></a> Recommandations  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 -   Sur les instances autonomes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], nous recommandons, si possible, que le chemin d'accès au fichier (y compris la lettre de lecteur) d'une base de données secondaire particulière soit identique au chemin d'accès de la base de données primaire correspondante. Cela est dû au fait que, si vous déplacez les fichiers de base de données lors de la création d'une base de données secondaire, une opération ultérieure d'ajout de fichier peut échouer sur la base de données secondaire et provoquer l'interruption de la base de données secondaire.  
   
 -   Avant de préparer vos bases de données secondaires, il est fortement recommandé d'interrompre les sauvegardes de fichiers journaux planifiées sur les bases de données dans le groupe de disponibilité jusqu'à ce que l'initialisation des réplicas secondaires soit terminée.  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
  Lorsqu’une base de données est sauvegardée, la valeur OFF est attribuée à la [Propriété Trustworthy de la base de données](../../../relational-databases/security/trustworthy-database-property.md) . Par conséquent, la propriété TRUSTWORTHY d'une base de données nouvellement restaurée a toujours la valeur OFF.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** . Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
  Lorsque la base de données en cours de restauration n'existe pas dans l'instance de serveur, l'instruction RESTORE nécessite des autorisations CREATE DATABASE. Pour plus d’informations, consultez [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 > [!NOTE]  
->  Si les chemins de fichier de sauvegarde et de restauration sont identiques entre l’instance de serveur qui héberge le réplica principal et chaque instance qui héberge un réplica secondaire, vous devez pouvoir créer des bases de données secondaires à l’aide de l’ [Assistant Nouveau groupe de disponibilité](use-the-availability-group-wizard-sql-server-management-studio.md), de l’ [Assistant Ajouter un réplica au groupe de disponibilité](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)ou de l’ [Assistant Ajouter une base de données au groupe de disponibilité](availability-group-add-database-to-group-wizard.md).  
+>   Si les chemins d'accès de fichier de sauvegarde et de restauration sont identiques entre l'instance de serveur qui héberge le réplica principal et chaque instance qui héberge un réplica secondaire, vous devriez être en mesure de créer des bases de données secondaires à l'aide de l' [Assistant Nouveau groupe de disponibilité](use-the-availability-group-wizard-sql-server-management-studio.md), l' [Assistant Ajouter un réplica au groupe de disponibilité](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)ou l' [Assistant Ajouter une base de données au groupe de disponibilité](availability-group-add-database-to-group-wizard.md).  
   
  **Pour préparer une base de données secondaire**  
   
@@ -103,14 +103,14 @@ ms.locfileid: "72797654"
 > [!NOTE]  
 >  Pour plus d'informations sur l'exécution de ces opérations de sauvegarde et de restauration, consultez [Tâches connexes de sauvegarde et de restauration](#RelatedTasks), plus loin dans cette section.  
   
-###  <a name="RelatedTasks"></a>Tâches de sauvegarde et de restauration connexes  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a>Tâches de sauvegarde et de restauration connexes  
  **Pour créer une sauvegarde de base de données**  
   
 -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
- **Pour créer une sauvegarde de fichier journal**  
+ **Pour créer une sauvegarde du journal**  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72797654"
   
 -   [Restaurer une base de données à un nouvel emplacement &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour préparer une base de données secondaire**  
   
 > [!NOTE]  
@@ -146,7 +146,7 @@ ms.locfileid: "72797654"
 > [!NOTE]  
 >  Pour plus d'informations sur l'exécution de ces opérations de sauvegarde et de restauration, consultez [Tâches connexes de sauvegarde et de restauration](#RelatedTasks), plus loin dans cette rubrique.  
   
-###  <a name="ExampleTsql"></a>Exemple Transact-SQL  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a>Exemple Transact-SQL  
  L'exemple suivant prépare une base de données secondaire. L'exemple suivant utilise la base de données d'exemple [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] qui emploie par défaut le mode de récupération simple.  
   
 1.  Pour utiliser la base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , modifiez-la afin qu'elle utilise le mode de récupération complète :  
@@ -177,7 +177,7 @@ ms.locfileid: "72797654"
   
 4.  Restaurez la sauvegarde complète, à l'aide de RESTORE WITH NORECOVERY, sur l'instance de serveur qui héberge le réplica secondaire. La commande de restauration varie selon que les chemins d'accès des bases de données primaire et secondaire sont identiques ou non.  
   
-    -   **Si les chemins d’accès sont identiques :**  
+    -   **Si les chemins d'accès sont identiques :**  
   
          Sur l'ordinateur qui héberge le réplica secondaire, restaurez la sauvegarde complète comme suit :  
   
@@ -188,7 +188,7 @@ ms.locfileid: "72797654"
         GO  
         ```  
   
-    -   **Si les chemins d’accès sont différents :**  
+    -   **Si les chemins d'accès sont différents :**  
   
          Si le chemin d'accès de la base de données secondaire n'est pas le même que celui de la base de données primaire (lettres de lecteurs différentes, par exemple), la création de la base de données secondaire requiert l'intégration d'une clause MOVE dans l'opération de restauration.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "72797654"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour préparer une base de données secondaire**  
   
 1.  Si vous devez créer une sauvegarde récente de la base de données primaire, accédez au répertoire (`cd`) de l'instance de serveur qui héberge le réplica principal.  
@@ -262,7 +262,7 @@ ms.locfileid: "72797654"
   
 -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a>Exemple de commande et de script de sauvegarde et de restauration  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a>Exemple de commande et de script de sauvegarde et de restauration  
  Les commandes PowerShell suivantes effectuent une sauvegarde complète de base de données et de son journal des transactions dans un partage réseau et restaurent ces sauvegardes depuis ce partage. Dans cet exemple, on suppose que le chemin d'accès de fichier dans lequel la base de données est restaurée est identique au chemin d'accès de fichier dans lequel la base de données a été sauvegardée.  
   
 ```powershell
@@ -276,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a>Suivi : après avoir préparé une base de données secondaire  
+##  <a name="follow-up-after-preparing-a-secondary-database"></a><a name="FollowUp"></a>Suivi : après avoir préparé une base de données secondaire  
  Pour terminer la configuration de la base de données secondaire, attachez la base de données nouvellement restaurée au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Arguments RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Arguments Restore &#40;&#41;Transact-SQL](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Résoudre les problèmes liés à l’échec d’une opération d’ajout de fichier &#40;groupes de disponibilité AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

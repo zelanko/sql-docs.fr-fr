@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798007"
 ---
 # <a name="copy-only-backups-sql-server"></a>Sauvegardes de type copie seule (SQL Server)
@@ -43,11 +43,11 @@ ms.locfileid: "72798007"
 ## <a name="to-create-a-copy-only-backup"></a>Pour créer une sauvegarde de type copie uniquement  
  Vous pouvez créer une sauvegarde de copie uniquement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell.  
   
-###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 1.  Sur la page **Général** de la boîte de dialogue **Sauvegarder la base de données**, sélectionnez l’option **Sauvegarde de copie uniquement**.  
   
-###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  La syntaxe [!INCLUDE[tsql](../../../includes/tsql-md.md)] essentielle est la suivante :  
   
 -   Pour une sauvegarde complète de type copie uniquement :  
@@ -61,11 +61,11 @@ ms.locfileid: "72798007"
   
      *Database_name* du journal de *\<* sauvegarde*>* sur backup_device... AVEC COPY_ONLY...  
   
-###  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
 Utilisez l'applet de commande `Backup-SqlDatabase` avec le paramètre `-CopyOnly`.  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
 
 ### <a name="to-create-a-full-or-log-backup"></a>Pour créer une sauvegarde complète ou de fichier journal
   
@@ -84,5 +84,5 @@ Utilisez l'applet de commande `Backup-SqlDatabase` avec le paramètre `-CopyOnly
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Modes de récupération &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [Copier des bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md)   
+ [Copier les bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

@@ -14,18 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798136"
 ---
 # <a name="sqlps-utility"></a>sqlps (utilitaire)
   L'utilitaire `sqlps` démarre une session Windows PowerShell 2.0 avec les applets de commande et le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell chargés et inscrits. Vous pouvez entrer des scripts ou des commandes PowerShell qui utilisent les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell pour travailler avec des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leurs objets.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt le module `sqlps` PowerShell. Pour plus d’informations sur `sqlps` le module, consultez [importer le module sqlps](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt le module `sqlps` PowerShell. Pour plus d’informations sur `sqlps` le module, consultez [importer le module sqlps](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   

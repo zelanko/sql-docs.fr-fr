@@ -18,10 +18,10 @@ ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0c1c9ffc6ad69515d6e7b7cd291a2a5501980b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660727"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>Méthode SetNumericalValue (classe ClientNetworkProtocolProperty)
@@ -43,7 +43,7 @@ object.SetNumericalValue [= value]
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*ajoutée*|Valeur **uint32** qui spécifie la valeur numérique de la propriété référencée.|  
+|*value*|Valeur **uint32** qui spécifie la valeur numérique de la propriété référencée.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
@@ -51,6 +51,6 @@ object.SetNumericalValue [= value]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

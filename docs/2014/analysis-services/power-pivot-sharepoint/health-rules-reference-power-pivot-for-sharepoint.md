@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bae8efeda0a82873498af93b0b79061f6135fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797601"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>Référence de règles d'intégrité (PowerPivot pour SharePoint)
@@ -26,7 +26,7 @@ ms.locfileid: "72797601"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Remarque :** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe différents jeux de règles d’intégrité pour différentes versions de SharePoint. Consultez la colonne « version » dans le tableau ci-dessous, ou exécutez la commande Windows PowerShell suivante pour voir les règles installées.  
+ **Remarque :** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe différents jeux de règles d'intégrité pour différentes versions de SharePoint. Consultez la colonne « version » dans le tableau ci-dessous, ou exécutez la commande Windows PowerShell suivante pour voir les règles installées.  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  

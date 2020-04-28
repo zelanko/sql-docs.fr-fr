@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00cf7a7fab52640cc3fc19a3d9da051d281be7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783013"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Ajouter un réplica secondaire à un groupe de disponibilité (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "72783013"
   
      [Sécurité](#Security)  
   
--   **Pour ajouter un réplica, utilisez :**  
+-   **Pour ajouter un réplica, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -37,23 +37,23 @@ ms.locfileid: "72783013"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Suivi :**  [après avoir ajouté un réplica secondaire](#FollowUp)  
+-   **Suivi :**  [Après avoir ajouté un réplica secondaire](#FollowUp)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Nous vous recommandons fortement de lire cette section avant d'essayer de créer votre premier groupe de disponibilité.  
   
-##  <a name="PrerequisitesRestrictions"></a> Conditions préalables requises et restrictions  
+##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a>Conditions préalables et restrictions  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
- Pour plus d’informations, consultez [conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="Security"></a> Sécurité  
+##  <a name="security"></a><a name="Security"></a> Sécurité  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour ajouter un réplica**  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal et développez l'arborescence du serveur.  
@@ -72,7 +72,7 @@ ms.locfileid: "72783013"
   
          Pour ajouter des réplicas supplémentaires, répétez les étapes précédentes. Lorsque vous avez terminé de spécifier des réplicas, cliquez sur **OK** pour terminer l'opération.  
   
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour ajouter un réplica**  
   
 1.  Connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica principal.  
@@ -90,7 +90,7 @@ ms.locfileid: "72783013"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour ajouter un réplica**  
   
 1.  Accédez au répertoire (`cd`) de l'instance de serveur qui héberge le réplica principal.  
@@ -121,7 +121,7 @@ ms.locfileid: "72783013"
   
 -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>Suivi : après avoir ajouté un réplica secondaire  
+##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a> Suivi : Après avoir ajouté un réplica secondaire  
  Pour ajouter un réplica pour un groupe de disponibilité existant, vous devez effectuer les étapes suivantes :  
   
 1.  Connectez-vous à l'instance de serveur qui va héberger le nouveau réplica secondaire.  
@@ -132,7 +132,7 @@ ms.locfileid: "72783013"
   
 4.  Joignez chacune des nouvelles bases de données secondaires au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour gérer un réplica de disponibilité**  
   
 -   [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  

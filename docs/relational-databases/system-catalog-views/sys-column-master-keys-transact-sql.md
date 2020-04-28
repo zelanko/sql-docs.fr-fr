@@ -26,10 +26,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73594520"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "73594520"
     
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom du CMK.|  
+|**name**|**sysname**|Nom du CMK.|  
 |**column_master_key_id**|**int**|ID de la clé principale de colonne.|  
-|**create_date**|**DATETIME**|Date de création de la clé principale de colonne.|  
-|**modify_date**|**DATETIME**|Date de la dernière modification de la clé principale de colonne.|  
+|**create_date**|**datetime**|Date de création de la clé principale de colonne.|  
+|**modify_date**|**datetime**|Date de la dernière modification de la clé principale de colonne.|  
 |**key_store_provider_name**|**sysname**|Nom du fournisseur pour le magasin de clés principales de colonne qui contient CMK. Les valeurs autorisées sont les suivantes :<br /><br /> MSSQL_CERTIFICATE_STORE-si le magasin de clés principales de colonne est un magasin de certificats.<br /><br /> Valeur définie par l’utilisateur, si le magasin de clés principales de colonne est d’un type personnalisé.|  
 |**key_path**|**nvarchar(4000)**|Chemin d’accès spécifique au magasin de clés principales de colonne pour la clé. Le format du chemin d’accès dépend du type de magasin de clés principales de colonne. Exemple :<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Pour un magasin de clés principales de colonne personnalisé, le développeur est chargé de définir ce qu’est un chemin d’accès de clé pour le magasin de clés principales de colonne personnalisé.|  
 |**allow_enclave_computations**|**bit**|Indique si la clé principale de colonne est activée pour l’enclave, (si les clés de chiffrement de colonne, chiffrées avec cette clé principale, peuvent être utilisées pour les calculs dans les enclaves sécurisées côté serveur). Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
@@ -61,7 +61,7 @@ ms.locfileid: "73594520"
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [Gérer des clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
  
   
   
