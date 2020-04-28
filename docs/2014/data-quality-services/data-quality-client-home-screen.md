@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154483"
 ---
 # <a name="data-quality-client-home-screen"></a>Écran d'accueil de Data Quality Client
@@ -27,7 +27,7 @@ ms.locfileid: "70154483"
 ### <a name="knowledge-base-management"></a>Gestion des bases de connaissances  
  Une base de connaissances DQS désigne un référentiel de métadonnées utilisé par DQS pour améliorer la qualité des données. Ces métadonnées sont créées à la fois par la plateforme DQS lors d'un processus de découverte des connaissances assisté par ordinateur et par le gestionnaire de données dans un processus interactif de gestion des domaines.  
   
- **Nouvelle base de connaissances**  
+ **Nouvelle Base de connaissances**  
  Démarrez le processus de la création d'une base de connaissances de toutes pièces ou basez-le sur les métadonnées d'une base de connaissances existante. Cette commande affiche une page dans laquelle vous pouvez identifier la base de connaissances, la baser sur une base de connaissances existante, sélectionner l'activité de base de connaissances souhaitée, puis créer la base de connaissances.  
   
  **Ouvrir la base de connaissances**  
@@ -44,7 +44,7 @@ ms.locfileid: "70154483"
  **Nouveau projet de qualité des données**  
  Lancez le projet de création d'un nouveau projet. Cette commande affiche une page dans laquelle vous pouvez identifier le projet, l'associer à une base de connaissances, afficher les détails de la base de connaissances, sélectionner l'activité de projet souhaitée, puis créer le projet.  
   
- **Ouvrir le projet de qualité des données**  
+ **Ouvrir un projet de qualité des données**  
  Ouvrez un projet afin de procéder au nettoyage ou à la mise en correspondance des données. Un clic sur le bouton **Ouvrir le projet de qualité des données** affiche la page **Ouvrir le projet de qualité des données** qui présente la liste des projets existants avec leurs propriétés, leur état actuel, la base de connaissances utilisée, ainsi que les détails des domaines et des règles de stratégies de correspondance. Sélectionnez un projet et ouvrez-le depuis la page **Ouvrir le projet de qualité des données**.  
   
  **Projet de qualité des données récent**  
@@ -53,7 +53,7 @@ ms.locfileid: "70154483"
 ### <a name="administration"></a>Administration  
  L'administration de DQS vous permet d'analyser, de configurer et de gérer DQS.  
   
- **Surveillance de l’activité**  
+ **Analyse des activités**  
  Affiche une vue de l'état de toutes les activités (à la fois actuelles et historiques) en rapport avec le [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]connecté. Les types d'activités analysées incluent la gestion des connaissances, le projet de qualité des données et la correction des données SSIS.  
   
  **Configuration**  
