@@ -15,10 +15,10 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924146"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
@@ -49,10 +49,10 @@ SHAPE child-command [AS] child-alias
  *alias-enfant*  
  Alias utilisé pour faire référence au **jeu d’enregistrements** retourné par la *commande enfant.* L' *alias d’enfant* est requis dans la liste de colonnes de la clause COMPUTE et définit la relation entre les objets **Recordset** enfant et parent.  
   
- *ajouté-colonne-liste*  
+ *appended-column-list*  
  Liste dans laquelle chaque élément définit une colonne dans le parent généré. Chaque élément contient soit une colonne de chapitre, une nouvelle colonne, une colonne calculée, soit une valeur résultant d’une fonction d’agrégation sur le **jeu d’enregistrements**enfant.  
   
- *GRP-champ-liste*  
+ *grp-field-list*  
  Liste de colonnes dans les objets **Recordset** parent et enfant qui spécifient comment les lignes doivent être regroupées dans l’enfant.  
   
  Pour chaque colonne de la *liste grp-field-list* figure une colonne correspondante dans les objets **Recordset** parent et enfant. Pour chaque ligne de l’ensemble d' **enregistrements**parent, les colonnes *grp-field-list* ont des valeurs uniques et le **jeu d’enregistrements** enfant référencé par la ligne parente se compose uniquement de lignes enfants dont les colonnes *grp-field-list* ont les mêmes valeurs que la ligne parente.  
@@ -110,21 +110,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |1,2 million|Référence à enfant2|WA|  
 |1,1 million|Référence à child3|OR|  
   
-## <a name="child1"></a>Child1  
+## <a name="child1"></a>Enfant 1  
   
 |State|City|Remplissage|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800 000|  
 |CA|San Diego|600 000|  
   
-## <a name="child2"></a>Child2  
+## <a name="child2"></a>Enfant 2  
   
 |State|City|Remplissage|  
 |-----------|----------|----------------|  
 |WA|Seattle|700 000|  
 |WA|Tacoma|500 000|  
   
-## <a name="child3"></a>Child3  
+## <a name="child3"></a>Enfant 3  
   
 |State|City|Remplissage|  
 |-----------|----------|----------------|  

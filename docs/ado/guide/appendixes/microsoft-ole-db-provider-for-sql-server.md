@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926615"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour SQL Server
@@ -152,7 +152,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |Catalogue actuel|DBPROP_CURRENTCATALOG|
 |source de données|DBPROP_INIT_DATASOURCE|
-|Data Source Name|DBPROP_DATASOURCENAME|
+|Nom de la source de données|DBPROP_DATASOURCENAME|
 |Modèle de thread de l’objet de source de données|DBPROP_DSOTHREADMODEL|
 |Nom SGBD|DBPROP_DBMSNAME|
 |Version de SGBD|DBPROP_DBMSVER|
@@ -201,7 +201,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |DDL de la transaction|DBPROP_SUPPORTEDTXNDDL|
 |ID d'utilisateur|DBPROP_AUTH_USERID|
 |User Name|DBPROP_USERNAME|
-|Handle de fenêtre|DBPROP_INIT_HWND|
+|Handle de la fenêtre|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset
  Les propriétés suivantes sont ajoutées à la collection **Properties** de l’objet **Recordset** .

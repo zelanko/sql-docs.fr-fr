@@ -14,10 +14,10 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926794"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Vue d’ensemble du service de curseur Microsoft pour OLE DB
@@ -63,7 +63,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Mettre en cache les lignes enfants (DBPROP_ADC_CACHECHILDROWS)|Pour les jeux d’enregistrements créés avec le service de mise en forme des données, cette valeur indique si les recordsets enfants sont stockés dans un cache pour une utilisation ultérieure.|
 |Version du moteur de curseur (DBPROP_ADC_CEVER)|Indique la version du service de curseur utilisé.|
 |Conserver l’état de modification (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indique le texte de la commande utilisée pour resynchroniser une ou plusieurs lignes dans une jointure de tables multiples.|
-|[Requêtes](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indique si un index doit être créé. Quand la valeur est **true**, autorise la création temporaire d’index pour améliorer l’exécution de certaines opérations.|
+|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indique si un index doit être créé. Quand la valeur est **true**, autorise la création temporaire d’index pour améliorer l’exécution de certaines opérations.|
 |[Reformer le nom](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Indique le nom de l’ensemble d' **enregistrements**. Peut être référencé dans les commandes de mise en forme des données actuelles ou suivantes.|
 |[Commande Resync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Indique une chaîne de commande personnalisée qui est utilisée par la méthode [Resync](../../../ado/reference/ado-api/resync-method.md) lorsque la propriété de [table unique](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) est appliquée.|
 |[Catalogue unique](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indique le nom de la base de données contenant la table référencée dans la propriété de **table unique** .|

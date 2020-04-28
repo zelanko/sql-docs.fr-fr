@@ -17,10 +17,10 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931906"
 ---
 # <a name="open-method-ado-recordset"></a>Open, méthode (objet Recordset ADO)
@@ -35,19 +35,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- facultatif. **Variante** qui prend la valeur d’un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) valide, d’une instruction SQL, d’un nom de table, d’un appel de procédure stockée, d’une URL ou du nom d’un fichier ou d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) contenant un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)stocké de façon permanente.  
+ Facultatif. **Variante** qui prend la valeur d’un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) valide, d’une instruction SQL, d’un nom de table, d’un appel de procédure stockée, d’une URL ou du nom d’un fichier ou d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) contenant un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)stocké de façon permanente.  
   
  *ActiveConnection*  
- facultatif. Valeur **Variant** qui prend la valeur d’un nom de variable objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) valide, ou **chaîne** qui contient les paramètres [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
+ Facultatif. Valeur **Variant** qui prend la valeur d’un nom de variable objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) valide, ou **chaîne** qui contient les paramètres [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
  *CursorType*  
- facultatif. Valeur [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) qui détermine le type de curseur que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adOpenForwardOnly**.  
+ Facultatif. Valeur [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) qui détermine le type de curseur que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adOpenForwardOnly**.  
   
  *Verrou*  
- facultatif. Valeur [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) qui détermine le type de verrouillage (accès concurrentiel) que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adLockReadOnly**.  
+ Facultatif. Valeur [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) qui détermine le type de verrouillage (accès concurrentiel) que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adLockReadOnly**.  
   
  *Options*  
- facultatif. Valeur de **type long** qui indique comment le fournisseur doit évaluer l’argument *source* s’il représente autre chose qu’un objet **Command** ou si le **jeu d’enregistrements** doit être restauré à partir d’un fichier dans lequel il a été précédemment enregistré. Il peut s’agir d’une ou plusieurs valeurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) , qui peuvent être combinées avec un opérateur or au niveau du bit.  
+ Facultatif. Valeur de **type long** qui indique comment le fournisseur doit évaluer l’argument *source* s’il représente autre chose qu’un objet **Command** ou si le **jeu d’enregistrements** doit être restauré à partir d’un fichier dans lequel il a été précédemment enregistré. Il peut s’agir d’une ou plusieurs valeurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) , qui peuvent être combinées avec un opérateur or au niveau du bit.  
   
 > [!NOTE]
 >  Si vous ouvrez un **jeu d’enregistrements** à partir d’un **flux** contenant un **Recordset**persistant, l’utilisation d’une valeur [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) de **adAsyncFetchNonBlocking** n’aura aucun effet. l’extraction est synchrone et bloque.  

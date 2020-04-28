@@ -16,10 +16,10 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923462"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Fonctions Visual Basic pour Applications
@@ -29,22 +29,22 @@ Les fonctions de Visual Basic pour Applications suivantes peuvent être utilisé
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CMonnaie|  
 |CDate|CDbl|Chr|ChrB|ChrW|Caract$|  
-|ChrB $|CEnt|CLong|Cos|CSmpl|CStr|  
-|CVar|CVDate|CVErr|Date|Date$|DateAdd|  
+|ChrB $|CEnt|CLong|Cos|CSmpl|CChaîne|  
+|CVar|CVDate|CVErr|Date|Date$|AjDate|  
 |DiffDate|PartDate|SérieDate|ValDate|jour|DDB|  
-|Error|Error$|Exp|Correctif|Format|Format$|  
+|Error|Error$|Exp|Fix|Format|Format$|  
 |VC|Hex|Hex$|Heure|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|Minuscule$|Gauche|  
-|GAUCHEB|Gauche$|GAUCHEB $|Len|Journal|LTrim|  
-|SupprGauche$|Mid|ExtracChaîne$|Minute|MIRR|Month|  
-|Now|NPer|NPV|Oct|Oct$|Vpm|  
+|IsNull|IsNumeric|IsObject|Minuscule|Minuscule$|Gauche|  
+|GAUCHEB|Gauche$|GAUCHEB $|NbCar|Journal|SupprGauche|  
+|SupprGauche$|ExtracChaîne|ExtracChaîne$|Minute|MIRR|Month|  
+|maintenant|NPer|NPV|Oct|Oct$|Vpm|  
 |PPmt|PV|RVBC|Tarif|RGB|Right|  
-|RightB|Droite$|RightB $|Aléat|RTrim|RTrim $|  
+|RightB|Droite$|RightB $|Aléat|SupprDroite|RTrim $|  
 |Seconde|Sgn|Sin|AmorLin|Espace|Espace$|  
 |Racine|NumChaîne|Str$|CompChaîne|ConvChaîne|String|  
-|Chaîne$|SYD|Tan|Temps|Temps$|Minuteur|  
-|SérieHeure|VHeure|Trim|Trim$|TypeName|UCase|  
+|Chaîne$|SYD|Tan|Heure|Temps$|Minuterie|  
+|SérieHeure|VHeure|SupprEspace|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Jour de la semaine|Year||  
   
 ## <a name="see-also"></a>Voir aussi  

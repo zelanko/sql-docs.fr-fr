@@ -13,10 +13,10 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929396"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Paramètres du projet (migration) (AccessToSQL)
@@ -38,7 +38,7 @@ Spécifie si SSMA doit vérifier les contraintes lorsqu’il ajoute des données
   
 -   **Mode complet**: false  
   
-**Déclencher les déclencheurs**  
+**Exécuter les déclencheurs**  
 Spécifie si SSMA doit déclencher les déclencheurs d’insertion lorsqu’il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute des données aux tables.  
   
 -   **Mode par défaut**: false  
@@ -47,7 +47,7 @@ Spécifie si SSMA doit déclencher les déclencheurs d’insertion lorsqu’il [
   
 -   **Mode complet**: false  
   
-**Conserver l’identité**  
+**Conserver l'identité**  
 Spécifie si SSMA conserve les valeurs d’identité d’accès lorsqu’il ajoute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des données à. Si cette valeur est false [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , assigne des valeurs d’identité.  
   
 -   **Mode par défaut**: true  
@@ -56,7 +56,7 @@ Spécifie si SSMA conserve les valeurs d’identité d’accès lorsqu’il ajou
   
 -   **Mode complet**: false  
   
-**Conserver les valeurs null**  
+**Conserver les valeurs NULL**  
 Spécifie si SSMA conserve les valeurs NULL dans les données sources lorsqu’il ajoute des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à, quelles que soient les valeurs par défaut spécifiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Mode par défaut**: true  

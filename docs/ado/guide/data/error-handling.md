@@ -15,10 +15,10 @@ ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cb3213b6a4c5711ccb8d6f9243047d8361a6e37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925427"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
@@ -39,7 +39,7 @@ ADO utilise plusieurs méthodes différentes pour notifier une application des e
   
 -   Les problèmes qui se produisent lors de l’exécution d’un **champ** particulier dans l’enregistrement actif sont également indiqués par la propriété **Status** de chaque **champ** de la collection **Fields** de l' **enregistrement** ou du **Recordset**. Par exemple, les mises à jour qui n’ont pas pu être effectuées ou les types de données incompatibles peuvent être spécifiés par les valeurs **FieldStatusEnum** .  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Erreurs ADO](../../../ado/guide/data/ado-errors.md)  
   

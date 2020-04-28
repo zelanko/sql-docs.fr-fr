@@ -18,10 +18,10 @@ ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920965"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>Index de syntaxe ADO for Visual C++ avec #import
@@ -39,7 +39,7 @@ Cet index est une référence croisée à la référence du langage ADO basée s
   
 -   [Objet Connection](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Error, objet](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet Error](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Objet Field](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
   

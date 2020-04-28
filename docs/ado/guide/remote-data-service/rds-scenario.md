@@ -14,10 +14,10 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 665afeb4be263ae0772557d2d2f30e112596f289
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922446"
 ---
 # <a name="rds-scenario"></a>Scénario RDS
@@ -28,7 +28,7 @@ ms.locfileid: "67922446"
   
  Ce scénario suppose que vous savez utiliser les balises de mise en page HTML de base, utiliser les techniques de liaison de données DHTML et programmer avec les contrôles ActiveX.  
   
- Si vous avez installé le kit de développement logiciel (SDK), vous trouverez le code source complet de l’exemple d’application de carnet d’adresses dans le répertoire du kit de développement logiciel (SDK) sur samples\dataaccess\rds\AddressBook\AddressBook.asp. Pour afficher le scénario de carnet d’adresses, dans Internet Explorer 4,0 ou version ultérieure, tapez **https:///RDS/AddressBook/addressbook.asp**** , où *serveur* Web est le nom donné à votre ordinateur serveur Web Windows NT 4,0 ou Windows 2000 exécutant Internet Information Services (IIS) et ASP.  
+ Si vous avez installé le kit de développement logiciel (SDK), vous trouverez le code source complet de l’exemple d’application de carnet d’adresses dans le répertoire du kit de développement logiciel (SDK) sur samples\dataaccess\rds\AddressBook\AddressBook.asp. Pour afficher le scénario de carnet d’adresses, dans Internet Explorer 4,0 ou version ultérieure, tapez **https:///RDS/AddressBook/addressbook.asp*webserver*** , où *serveur* Web est le nom donné à votre ordinateur serveur Web Windows NT 4,0 ou Windows 2000 exécutant Internet Information Services (IIS) et ASP.  
   
 ## <a name="introduction-to-address-book"></a>Présentation du carnet d’adresses  
  L’exemple d’application Carnet d’adresses fournit un carnet d’adresses en ligne simple que vous pouvez utiliser pour publier un répertoire pouvant faire l’objet d’une recherche sur un intranet. Le carnet d’adresses est conçu pour permettre à un utilisateur d’entrer une chaîne de recherche dans un ou plusieurs champs pour demander des informations sur les employés. Pour vous montrer les fonctionnalités de base du service de données à distance, l’exemple d’application est intentionnellement petit, avec un nombre minimal d’objets et de champs de recherche.  

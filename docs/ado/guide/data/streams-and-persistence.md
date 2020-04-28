@@ -14,10 +14,10 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924027"
 ---
 # <a name="streams-and-persistence"></a>Flux et persistance
@@ -49,7 +49,7 @@ rs1.Save stm, adPersistXML
 rs2.Open stm  
 ```  
   
-## <a name="scenario-2"></a>Scénario 2  
+## <a name="scenario-2"></a>Scénario 2  
  Ce scénario conserve un **jeu d’enregistrements** dans un **flux** au format XML. Il lit ensuite le **flux** dans une chaîne que vous pouvez examiner, manipuler ou afficher.  
   
 ```  
@@ -99,7 +99,7 @@ Set rs = nothing
 ...  
 ```  
   
-## <a name="scenario-4"></a>Scénario 4  
+## <a name="scenario-4"></a>Scénario 4  
  Dans ce scénario, le code ASP écrit le contenu de l’ensemble d' **enregistrements** au format ADTG sur le client. Le [service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) peut utiliser ces données pour créer un **jeu d’enregistrements**déconnecté.  
   
  Une nouvelle propriété sur le [DATACONTROL](../../../ado/reference/rds-api/datacontrol-object-rds.md)RDS, [URL](../../../ado/reference/rds-api/url-property-rds.md), pointe vers la page. asp qui génère le **Recordset**. Cela signifie qu’un objet **Recordset** peut être obtenu sans RDS à l’aide de l’objet [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) côté serveur ou de l’utilisateur qui écrit un objet métier. Cela simplifie considérablement le modèle de programmation RDS.  

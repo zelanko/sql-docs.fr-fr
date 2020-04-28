@@ -16,10 +16,10 @@ ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923860"
 ---
 # <a name="transaction-processing"></a>Traitement des transactions
@@ -44,4 +44,4 @@ Une *transaction* délimite le début et la fin d’une série d’opérations d
  Utilisez la propriété **IsolationLevel** pour définir le niveau d’isolation d’une transaction sur un objet de **connexion** . Le paramètre ne prend pas effet avant la prochaine fois que vous appelez la méthode [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Si le niveau d’isolation demandé n’est pas disponible, le fournisseur peut retourner le niveau d’isolation supérieur suivant. Pour plus d’informations sur les valeurs valides, reportez-vous à la propriété **IsolationLevel** dans le Guide de référence du programmeur ADO.  
   
 ## <a name="nested-transactions"></a>Transactions imbriquées  
- Pour les fournisseurs qui prennent en charge les transactions imbriquées, l’appel de la méthode **BeginTrans** dans une transaction ouverte démarre une nouvelle transaction imbriquée. La valeur de retour indique le niveau d’imbrication : une valeur de retour de « 1 » indique que vous avez ouvert une transaction de niveau supérieur (c’est-à-dire que la transaction n’est pas imbriquée dans une autre transaction), « 2 » indique que vous avez ouvert une transaction de second niveau (a transaction imbriquée dans une transaction de niveau supérieur), et ainsi de suite. L’appel de **CommitTrans** ou **RollbackTrans** affecte uniquement la dernière transaction ouverte ; vous devez fermer ou restaurer la transaction en cours avant de pouvoir résoudre les transactions de niveau supérieur.
+ Pour les fournisseurs qui prennent en charge les transactions imbriquées, l’appel de la méthode **BeginTrans** dans une transaction ouverte démarre une nouvelle transaction imbriquée. La valeur de retour indique le niveau d’imbrication : une valeur de retour de « 1 » indique que vous avez ouvert une transaction de niveau supérieur (c’est-à-dire que la transaction n’est pas imbriquée dans une autre transaction), « 2 » indique que vous avez ouvert une transaction de second niveau (une transaction imbriquée dans une transaction de niveau supérieur), et ainsi de suite. L’appel de **CommitTrans** ou **RollbackTrans** affecte uniquement la dernière transaction ouverte ; vous devez fermer ou restaurer la transaction en cours avant de pouvoir résoudre les transactions de niveau supérieur.

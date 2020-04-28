@@ -13,10 +13,10 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924818"
 ---
 # <a name="namespaces"></a>Espaces de noms
@@ -28,7 +28,7 @@ Le format de persistance XML dans ADO utilise les quatre espaces de noms suivant
 |Préfixe|Description|  
 |------------|-----------------|  
 |s|Fait référence à l’espace de noms « XML-Data » contenant les éléments et les attributs qui définissent le schéma du Recordset actuel.|  
-|div|Fait référence à la spécification des définitions des types de données.|  
+|dt|Fait référence à la spécification des définitions des types de données.|  
 |rs|Fait référence à l’espace de noms contenant des éléments et des attributs spécifiques aux attributs et propriétés ADO Recordset.|  
 |z|Fait référence au schéma de l’ensemble de lignes actuel.|  
   

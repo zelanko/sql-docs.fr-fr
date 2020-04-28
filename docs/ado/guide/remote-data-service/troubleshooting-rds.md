@@ -13,17 +13,17 @@ ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c580006938c4180ccd0f575af81f687de5d6a630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922011"
 ---
 # <a name="troubleshooting-rds"></a>Résolution des problèmes liés à RDS
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Reportez-vous à cette section pour obtenir des solutions à des erreurs ou problèmes spécifiques liés à RDS. Cette section contient les rubriques suivantes :  
+ Reportez-vous à cette section pour obtenir des solutions à des erreurs ou problèmes spécifiques liés à RDS. Cette section contient les rubriques suivantes :  
   
 -   [Configuration de RDS sur Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   

@@ -13,13 +13,13 @@ ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922054"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Étape 5 : DataControl devient utilisable (tutoriel RDS)
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Étape 5 : DataControl devient utilisable (tutoriel RDS)
 L’objet **Recordset** retourné peut être utilisé. Vous pouvez l’examiner, le parcourir ou le modifier comme n’importe quel autre **jeu d’enregistrements**. Ce que vous pouvez faire avec le **Recordset** dépend de votre environnement. Visual Basic et Visual C++ disposent de contrôles visuels qui peuvent utiliser un **jeu d’enregistrements** directement ou indirectement avec l’aide d’un contrôle d’activation des données.  
   
 > [!IMPORTANT]

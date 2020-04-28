@@ -23,10 +23,10 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920528"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans et RollbackTrans, méthodes (ADO)
@@ -63,13 +63,13 @@ object.RollbackTrans
   
  Une fois que vous avez appelé la méthode **BeginTrans** , le fournisseur ne valide plus instantanément les modifications apportées jusqu’à ce que vous appeliez **CommitTrans** ou **RollbackTrans** pour terminer la transaction.  
   
- Pour les fournisseurs qui prennent en charge les transactions imbriquées, l’appel de la méthode **BeginTrans** dans une transaction ouverte démarre une nouvelle transaction imbriquée. La valeur de retour indique le niveau d’imbrication : une valeur de retour de « 1 » indique que vous avez ouvert une transaction de niveau supérieur (c’est-à-dire que la transaction n’est pas imbriquée dans une autre transaction), « 2 » indique que vous avez ouvert une transaction de second niveau (a transaction imbriquée dans une transaction de niveau supérieur), et ainsi de suite. L’appel de **CommitTrans** ou **RollbackTrans** affecte uniquement la dernière transaction ouverte ; vous devez fermer ou restaurer la transaction en cours avant de pouvoir résoudre les transactions de niveau supérieur.  
+ Pour les fournisseurs qui prennent en charge les transactions imbriquées, l’appel de la méthode **BeginTrans** dans une transaction ouverte démarre une nouvelle transaction imbriquée. La valeur de retour indique le niveau d’imbrication : une valeur de retour de « 1 » indique que vous avez ouvert une transaction de niveau supérieur (c’est-à-dire que la transaction n’est pas imbriquée dans une autre transaction), « 2 » indique que vous avez ouvert une transaction de second niveau (une transaction imbriquée dans une transaction de niveau supérieur), et ainsi de suite. L’appel de **CommitTrans** ou **RollbackTrans** affecte uniquement la dernière transaction ouverte ; vous devez fermer ou restaurer la transaction en cours avant de pouvoir résoudre les transactions de niveau supérieur.  
   
  L’appel de la méthode **CommitTrans** enregistre les modifications apportées dans une transaction ouverte sur la connexion et met fin à la transaction. L’appel de la méthode **RollbackTrans** inverse toutes les modifications apportées dans une transaction ouverte et met fin à la transaction. L’appel de l’une ou l’autre méthode quand aucune transaction n’est ouverte génère une erreur.  
   
  En fonction de la propriété [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) de l’objet de **connexion** , l’appel des méthodes **CommitTrans** ou **RollbackTrans** peut démarrer automatiquement une nouvelle transaction. Si la propriété **attributes** a la valeur **adXactCommitRetaining**, le fournisseur démarre automatiquement une nouvelle transaction après un appel **CommitTrans** . Si la propriété **attributes** a la valeur **adXactAbortRetaining**, le fournisseur démarre automatiquement une nouvelle transaction après un appel **RollbackTrans** .  
   
-## <a name="remote-data-service"></a>Service de données distant  
+## <a name="remote-data-service"></a>Service de données à distance  
  Les méthodes **BeginTrans**, **CommitTrans**et **RollbackTrans** ne sont pas disponibles sur un objet de **connexion** côté client.  
   
 ## <a name="applies-to"></a>S'applique à  

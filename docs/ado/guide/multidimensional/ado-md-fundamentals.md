@@ -13,10 +13,10 @@ ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923201"
 ---
 # <a name="ado-md-fundamentals"></a>Concepts de base d’ADO MD
@@ -26,7 +26,7 @@ Microsoft® ActiveX® Data Objects (multidimensionnel) (ADO MD) permet d’accé
   
  Ce document suppose une connaissance du langage de programmation Visual Basic et une connaissance générale de ADO et OLAP. Pour plus d’informations, consultez le [Guide du programmeur ADO](../../../ado/guide/ado-programmer-s-guide.md) et [OLE DB pour le traitement analytique en ligne (OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Vue d’ensemble des données et des schémas multidimensionnels](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)  
   

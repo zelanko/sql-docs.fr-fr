@@ -14,10 +14,10 @@ ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925349"
 ---
 # <a name="formal-shape-grammar"></a>Grammaire formelle de la commande SHAPE
@@ -46,17 +46,14 @@ Il s’agit de la grammaire formelle pour créer n’importe quelle commande de 
 |\<> d’action de forme|Ajouter \<un alias-Field-List> &#124;<br /><br /> Compute \<Aliased-Field-List> [par \<liste de champs>]|  
 |\<> de liste de champs avec alias|\<Aliased-Field> [, \<alias-Field... >]|  
 |\<> de champ avec alias|\<Field-exp> [[AS] \<alias>]|  
-|
-  \<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<> &#124; calculé-exp<br /><br /> \<agrégat-exp> &#124;<br /><br /> \<New-exp>|  
+|\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<> &#124; calculé-exp<br /><br /> \<agrégat-exp> &#124;<br /><br /> \<New-exp>|  
 |<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> Relation \<entre relations-cond-List>|  
-|
-  \<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
 |\<relation-cond>|\<> de nom de champ \<en> de référence enfant|  
 |\<> de référence enfant|\<nom de champ> &#124;<br /><br /> PARAMÈTRE \<param-Ref>|  
 |\<Param-Ref>|\<nombre>|  
-|\<> de liste de champs|\<Field-name> [, \<Field-name>]|  
-|
-  \<aggregate-exp>|SUM (\<Qualified-Field-name>) &#124;<br /><br /> AVG (\<Qualified-Field-name>) &#124;<br /><br /> &#124; MIN\<(Qualified-Field-name>)<br /><br /> MAX (\<Qualified-Field-name>) &#124;<br /><br /> COUNT (\<Qualified-alias \<> &#124; qualified-name>) &#124;<br /><br /> ECARTYPE (\<Qualified-Field-name>) &#124;<br /><br /> ANY (\<Qualified-Field-name>)|  
+|\<field-list>|\<Field-name> [, \<Field-name>]|  
+|\<aggregate-exp>|SUM (\<Qualified-Field-name>) &#124;<br /><br /> AVG (\<Qualified-Field-name>) &#124;<br /><br /> &#124; MIN\<(Qualified-Field-name>)<br /><br /> MAX (\<Qualified-Field-name>) &#124;<br /><br /> COUNT (\<Qualified-alias \<> &#124; qualified-name>) &#124;<br /><br /> ECARTYPE (\<Qualified-Field-name>) &#124;<br /><br /> ANY (\<Qualified-Field-name>)|  
 |\<> calculé-exp|CALC (\<expression>)|  
 |\<Qualified-Field-name>|\<> d’alias. [\<alias>...] \<nom de champ>|  
 |\<alias>|\<nom entre guillemets>|  
@@ -66,8 +63,7 @@ Il s’agit de la grammaire formelle pour créer n’importe quelle commande de 
 |\<nom>|alpha [chiffre &#124; alpha &#124; _ &#124; # &#124; : &#124;...]|  
 |\<nombre>|chiffre [chiffre...]|  
 |\<New-exp>|NEW \<Field-type> [(\<Number> [, \<Number>])]|  
-|
-  \<field-type>|Type de données OLE DB ou ADO.|  
+|\<field-type>|Type de données OLE DB ou ADO.|  
 |\<> de chaîne|Unicode-Char [Unicode-char...]|  
 |\<expression>|Expression Visual Basic pour Applications dont les opérandes sont d’autres colonnes non CALCULées dans la même ligne.|  
   

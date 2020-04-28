@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926635"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour ODBC
@@ -52,8 +52,8 @@ MSDASQL
 |Mot clé|Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur de OLE DB pour ODBC.|
-|**DIAGNOSTIC**|Spécifie le nom de la source de données.|
-|**Identificateur d’utilisateur**|Spécifie le nom d'utilisateur.|
+|**DSN**|Spécifie le nom de la source de données.|
+|**UID**|Spécifie le nom d'utilisateur.|
 |**PWD**|Spécifie le mot de passe de l’utilisateur.|
 |**URL**|Spécifie l’URL d’un fichier ou d’un répertoire publié dans un dossier Web.|
 
@@ -87,7 +87,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Vous pouvez également spécifier un nom de compte d’utilisateur (**UID =**) et le mot de passe du compte d’utilisateur (**PWD =**) dans les paramètres spécifiques à ODBC ou dans les paramètres d' *utilisateur* et de *mot de passe* définis par ADO standard.
 
- Bien qu’une définition de **DSN** spécifie déjà une base de données, vous pouvez spécifier *un* paramètre *de base de données* en plus d’un nom de **source** de données pour vous connecter à une autre base de données. Il est judicieux de toujours inclure le paramètre ** *de base de données* lorsque vous utilisez un **nom de source**de données. Cela permet de s’assurer que vous vous connectez à la base de données correcte si un autre utilisateur a modifié le paramètre de base de données par défaut depuis la dernière vérification de la définition du **DSN** .
+ Bien qu’une définition de **DSN** spécifie déjà une base de données, vous pouvez spécifier *un* paramètre *de base de données* en plus d’un nom de **source** de données pour vous connecter à une autre base de données. Il est judicieux de toujours inclure le paramètre *the* *de base de données* lorsque vous utilisez un **nom de source**de données. Cela permet de s’assurer que vous vous connectez à la base de données correcte si un autre utilisateur a modifié le paramètre de base de données par défaut depuis la dernière vérification de la définition du **DSN** .
 
 ## <a name="provider-specific-connection-properties"></a>Propriétés de connexion spécifiques au fournisseur
  Le fournisseur OLE DB pour ODBC ajoute plusieurs propriétés à la collection [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) de l’objet **Connection** . Le tableau suivant répertorie ces propriétés avec le nom de la propriété OLE DB correspondante entre parenthèses.
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilité des propriétés standard du **Recordset** ADO :
 
-|Propriété|ForwardOnly|Dynamique|Keyset|statique|
+|Propriété|ForwardOnly|Dynamique|Keyset|Statique|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|non disponible|non disponible|lecture/écriture|lecture/écriture|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|non disponible|non disponible|lecture/écriture|lecture/écriture|
@@ -198,14 +198,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilité des méthodes de l’ensemble d' **enregistrements** ADO standard :
 
-|Méthode|ForwardOnly|Dynamique|Keyset|statique|
+|Méthode|ForwardOnly|Dynamique|Keyset|Statique|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Oui|Oui|Oui|Oui|
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Oui|Oui|Oui|Oui|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Oui|Oui|Oui|Oui|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Répliqué](../../../ado/reference/ado-api/clone-method-ado.md)|Non|Non|Oui|Oui|
-|[Plus](../../../ado/reference/ado-api/close-method-ado.md)|Oui|Oui|Oui|Oui|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Non|Non|Oui|Oui|
+|[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|Oui|Oui|Oui|
 |[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|Oui|Oui|Oui|
 |[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|Oui|Oui|Oui|
@@ -217,7 +217,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|Oui|Oui|Oui|
 |[Resynchroniser](../../../ado/reference/ado-api/resync-method.md)|Non|Non|Oui|Oui|
-|[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Oui|
+|[Permet](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Oui|
 |[Mise à jour](../../../ado/reference/ado-api/update-method.md)|Oui|Oui|Oui|Oui|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Oui|Oui|Oui|Oui|
 
@@ -243,7 +243,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |Catalogue actuel|DBPROP_CURRENTCATALOG|
 |source de données|DBPROP_INIT_DATASOURCE|
-|Data Source Name|DBPROP_DATASOURCENAME|
+|Nom de la source de données|DBPROP_DATASOURCENAME|
 |Modèle de thread de l’objet de source de données|DBPROP_DSOTHREADMODEL|
 |Nom SGBD|DBPROP_DBMSNAME|
 |Version de SGBD|DBPROP_DBMSVER|
@@ -255,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Niveaux d’isolation|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Rétention de l’isolation|DBPROP_SUPPORTEDTXNISORETAIN|
 |Identificateur de paramètres régionaux|DBPROP_INIT_LCID|
-|Location|DBPROP_INIT_LOCATION|
+|Emplacement|DBPROP_INIT_LOCATION|
 |Taille maximale de l’index|DBPROP_MAXINDEXSIZE|
 |Taille de ligne maximale|DBPROP_MAXROWSIZE|
 |La taille de ligne maximale comprend l’objet BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
@@ -295,7 +295,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |DDL de la transaction|DBPROP_SUPPORTEDTXNDDL|
 |ID d'utilisateur|DBPROP_AUTH_USERID|
 |User Name|DBPROP_USERNAME|
-|Handle de fenêtre|DBPROP_INIT_HWND|
+|Handle de la fenêtre|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset
  Les propriétés suivantes sont ajoutées à la collection **Properties** de l’objet **Recordset** .

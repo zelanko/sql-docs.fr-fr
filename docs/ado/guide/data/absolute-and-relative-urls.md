@@ -15,10 +15,10 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926367"
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
@@ -38,10 +38,10 @@ Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local
  *serveurs*  
  Spécifie le nom de l’ordinateur sur lequel se trouve la *ressource* .  
   
- *d*  
+ *path*  
  Spécifie la séquence de répertoires menant à la cible. Si la *ressource* est omise, la cible est le dernier répertoire du *chemin d’accès*.  
   
- *ressource*  
+ *resource*  
  S’il est inclus, la *ressource* est la cible, et est généralement le nom d’un fichier. Il peut s’agir d’un *fichier simple,* contenant un seul flux binaire d’octets, ou un *document structuré,* contenant un ou plusieurs stockages et flux binaires d’octets.  
   
 ## <a name="url-scheme-registration"></a>Inscription du schéma d’URL  

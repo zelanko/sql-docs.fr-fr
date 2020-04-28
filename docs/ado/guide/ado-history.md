@@ -13,10 +13,10 @@ ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927168"
 ---
 # <a name="ado-features-for-each-release"></a>Fonctionnalités ADO pour chaque version
@@ -40,7 +40,7 @@ Ces méthodes vérifient à présent que les handles de fichiers pointent vers d
  **Recordset. ActiveCommand**  _retourne une erreur lorsqu’elle est appelée à partir d’une page HTML/ASP._
 Cela empêche l’utilisation inutilisée de l’objet de **commande** .
 
- _Le nombre d'_**ensembles d’enregistrements**_retournés par une commande de forme imbriquée_****_a une limite supérieure._        
+ _Le nombre d'_**ensembles d’enregistrements**_retournés par une commande de forme imbriquée_**Shape**_a une limite supérieure._        
 Une commande SHAPE imbriquée retourne à présent un maximum de 512 **recordsets**. Cela signifie qu’une commande **Shape** ne peut plus être imbriquée à aucune profondeur. Au lieu de cela, la profondeur de niveau maximale est de 512, si chaque commande produit un seul **Recordset**(enfant). Si, à un niveau quelconque, une commande **Shape** retourne plusieurs **recordsets**, le niveau maximal de profondeur sera inférieur à 512.
 
 ## <a name="ado-27"></a>ADO 2,7
@@ -59,7 +59,7 @@ Une commande SHAPE imbriquée retourne à présent un maximum de 512 **recordset
 
  *Champ statusvalues* Si l’utilisateur rencontre une erreur DB_E_ERRORSOCCURRED lors de la modification d’un **champ** d’un **jeu d’enregistrements**, ADO remplit à présent la propriété **Field. Status** avec les informations d’État appropriées afin que l’utilisateur ait plus d’informations sur ce qui s’est produit. Consultez [Status, propriété (champ ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- La propriété **NamedParameters**__ [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) est une nouvelle propriété de l’objet de **commande** qui indique que le fournisseur doit utiliser des paramètres nommés.  
+ La propriété **NamedParameters**_property_ [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) est une nouvelle propriété de l’objet de **commande** qui indique que le fournisseur doit utiliser des paramètres nommés.  
 
  *Jeux de résultats dans les flux* ADO peut retourner des jeux de résultats à partir d’une source de données dans un **flux**, plutôt qu’un objet **Recordset** . À l’aide de la dernière version du fournisseur Microsoft OLE DB pour SQL Server, vous pouvez obtenir des résultats XML à partir du fournisseur en exécutant une requête « for XML ». Un **flux** de données qui reçoit le jeu de résultats peut être ouvert avec une commande « for XML » comme source. Consultez [récupération de jeux de résultats dans des flux](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
@@ -67,9 +67,9 @@ Une commande SHAPE imbriquée retourne à présent un maximum de 512 **recordset
 
 ## <a name="ado-25"></a>ADO 2,5
 
- **** _Objet_ Record ADO 2,5 introduit l’objet **Record** pour représenter et gérer une ligne d’un **jeu d’enregistrements** ou d’un fournisseur de données, ou un objet qui encapsule des données semi-structurées, telles qu’un fichier ou un répertoire.
+ **Record** _Objet_ Record ADO 2,5 introduit l’objet **Record** pour représenter et gérer une ligne d’un **jeu d’enregistrements** ou d’un fournisseur de données, ou un objet qui encapsule des données semi-structurées, telles qu’un fichier ou un répertoire.
 
- **** _Objet_ Stream ADO 2,5 introduit également l’objet **Stream** pour représenter un flux de données binaires ou de texte.
+ **Stream** _Objet_ Stream ADO 2,5 introduit également l’objet **Stream** pour représenter un flux de données binaires ou de texte.
 
  *Liaison d’URL* ADO 2,5 introduit l’utilisation d’une URL, comme alternative à une chaîne de connexion et un texte de commande, pour nommer les objets de banque de données. Une URL peut être utilisée avec les objets **Connection** et **Recordset** existants, ainsi qu’avec les nouveaux objets **Record** et **Stream** .
 

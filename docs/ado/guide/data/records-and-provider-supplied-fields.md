@@ -14,10 +14,10 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924517"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs fournis par le fournisseur
@@ -72,7 +72,7 @@ Lorsqu’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) 
 |RESOURCE_ISCOLLECTION|AdBoolean|Lecture seule. True si la ressource est une collection, telle qu’un répertoire. False si la ressource est un fichier simple.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True si la ressource est un document structuré. False si la ressource n’est pas un document structuré. Il peut s’agir d’une collection ou d’un fichier simple.|  
 |DEFAULT_DOCUMENT|AdVarWChar|Lecture seule. Indique que cette ressource contient une URL vers le document simple par défaut d’un dossier ou d’un document structuré. Utilisé lorsque le flux par défaut est demandé à partir d’une ressource. Cette propriété est vide pour un fichier simple.|  
-|CHAPTERED_CHILDREN|AdChapter|Lecture seule. facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur de OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
+|CHAPTERED_CHILDREN|AdChapter|Lecture seule. Facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur de OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Lecture seule. Indique le nom complet de la ressource.|  
 |RESOURCE_ISROOT|AdBoolean|Lecture seule. True si la ressource est la racine d’une collection ou d’un document structuré.|  
   

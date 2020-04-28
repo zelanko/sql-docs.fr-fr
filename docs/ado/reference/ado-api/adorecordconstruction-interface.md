@@ -16,10 +16,10 @@ ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920806"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction, interface
@@ -35,13 +35,13 @@ L’interface **ADORecordConstruction**est utilisée pour construire un objet **
 |[Haut](../../../ado/reference/ado-api/row-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet de **ligne** OLE DB à partir de cet objet **enregistrement** ADO.|  
   
 ## <a name="methods"></a>Méthodes  
- Aucun.  
+ Aucune.  
   
 ## <a name="events"></a>Événements  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
- À partir d' **** un objet Row`pRow`OLE DB (), la construction d’un objet **Record** ADO (`adoR`) s’élève aux trois opérations de base suivantes :  
+ À partir d' **Row** un objet Row`pRow`OLE DB (), la construction d’un objet **Record** ADO (`adoR`) s’élève aux trois opérations de base suivantes :  
   
 1.  Créez un objet **enregistrement** ADO :  
   

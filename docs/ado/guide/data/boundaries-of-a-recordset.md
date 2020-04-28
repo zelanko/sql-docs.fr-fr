@@ -15,16 +15,16 @@ ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925913"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites d’un recordset
 **Recordset** prend en charge les propriétés **BOF** et **EOF** pour détourer le début et la fin, respectivement, du jeu de données. Vous pouvez considérer **BOF** et **EOF** comme des enregistrements « fantômes » placés au début et à la fin de l’ensemble d' **enregistrements**. En comptant **BOF** et **EOF**, notre exemple de **jeu d’enregistrements** se présenterait comme suit :  
   
-|IDProduit|ProductName|UnitPrice|  
+|ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
 |Business|||  
 |7|Poires séchées Organic d’oncle Bob|30,0000|  

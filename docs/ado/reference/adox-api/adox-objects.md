@@ -14,10 +14,10 @@ ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928503"
 ---
 # <a name="adox-objects"></a>Objets ADOX
@@ -31,9 +31,9 @@ ms.locfileid: "67928503"
 |[Évaluer](../../../ado/reference/adox-api/index-object-adox.md)|Représente un index à partir d’une table de base de données.|  
 |[Clé](../../../ado/reference/adox-api/key-object-adox.md)|Représente un champ clé primaire, étrangère ou unique d’une table de base de données.|  
 |[Procédures](../../../ado/reference/adox-api/procedure-object-adox.md)|Représente une procédure stockée.|  
-|[Table](../../../ado/reference/adox-api/table-object-adox.md)|Représente une table de base de données, y compris des colonnes, des index et des clés.|  
+|[Tableau](../../../ado/reference/adox-api/table-object-adox.md)|Représente une table de base de données, y compris des colonnes, des index et des clés.|  
 |[Utilisateur](../../../ado/reference/adox-api/user-object-adox.md)|Représente un compte d’utilisateur qui dispose d’autorisations d’accès au sein d’une base de données sécurisée.|  
-|[Afficher](../../../ado/reference/adox-api/view-object-adox.md)|Représente un jeu d’enregistrements filtré ou une table virtuelle.|  
+|[Affichage](../../../ado/reference/adox-api/view-object-adox.md)|Représente un jeu d’enregistrements filtré ou une table virtuelle.|  
   
  Les relations entre ces objets sont illustrées dans le [modèle objet ADOX](../../../ado/reference/adox-api/adox-object-model.md).  
   

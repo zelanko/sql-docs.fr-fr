@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924544"
 ---
 # <a name="provider-errors"></a>Erreurs du fournisseur
@@ -68,8 +68,8 @@ End Function
 |-------------------|-----------------|  
 |**Description**|Description textuelle de l’erreur qui s’est produite.|  
 |**HelpContext, HelpFile**|Fait référence à la rubrique d’aide et au fichier d’aide qui contiennent une description de l’erreur qui s’est produite.|  
-|**Native**|Numéro d’erreur spécifique au fournisseur.|  
-|**Certain**|Entier long qui représente le nombre (listé dans **ErrorValueEnum**) de l’erreur qui s’est produite.|  
+|**NativeError**|Numéro d’erreur spécifique au fournisseur.|  
+|**Number**|Entier long qui représente le nombre (listé dans **ErrorValueEnum**) de l’erreur qui s’est produite.|  
 |**Source**|Indique le nom de l’objet ou de l’application qui a généré une erreur.|  
 |**SQLState**|Code d’erreur à cinq caractères renvoyé par le fournisseur pendant le processus d’une instruction SQL.|  
   

@@ -14,10 +14,10 @@ ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924757"
 ---
 # <a name="ole-db-providers-ado"></a>Fournisseurs OLE DB (ADO)
@@ -29,9 +29,9 @@ OLE DB définit un ensemble d’interfaces COM pour fournir aux applications un 
   
 -   Les données se trouvent dans Microsoft SQL Server pour lesquelles il existe un fournisseur de OLE DB natif : l’application utilise ADO pour communiquer directement avec le fournisseur OLE DB pour Microsoft SQL Server. Aucun intermédiaire n’est requis.  
   
--   Les données résident dans Microsoft Exchange Server, pour lequel il existe un fournisseur de OLE DB, mais qui n’expose pas de moteur pour traiter les requêtes SQL : l’application utilise ADO pour communiquer avec le fournisseur OLE DB pour Microsoft Exchange et appelle sur un processeur de requêtes OLE DB composant pour gérer l’interrogation.  
+-   Les données résident dans Microsoft Exchange Server, pour lequel il existe un fournisseur de OLE DB mais qui n’expose pas de moteur pour traiter les requêtes SQL : l’application utilise ADO pour communiquer avec le fournisseur OLE DB pour Microsoft Exchange et appelle un composant de processeur de requêtes OLE DB pour gérer l’interrogation.  
   
--   Les données résident dans le système de fichiers Microsoft NTFS sous la forme de documents : les données sont accessibles à l’aide d’un fournisseur de OLE DB natif sur le service d’indexation Microsoft, qui indexe le contenu et les propriétés des documents dans le système de fichiers pour permettre un contenu efficace leurs.  
+-   Les données résident dans le système de fichiers Microsoft NTFS sous la forme de documents : les données sont accessibles à l’aide d’un fournisseur de OLE DB natif sur le service d’indexation Microsoft, qui indexe le contenu et les propriétés des documents dans le système de fichiers pour permettre des recherches de contenu efficaces.  
   
  Dans tous les exemples précédents, l’application peut interroger les données. Les besoins de l’utilisateur sont satisfaits avec un nombre minimal de composants. Dans chaque cas, les composants supplémentaires sont utilisés uniquement si nécessaire, et seuls les composants requis sont appelés. Ce chargement à la demande des composants réutilisables et partageables contribue fortement aux performances élevées lorsque OLE DB est utilisé.  
   
@@ -39,7 +39,7 @@ OLE DB définit un ensemble d’interfaces COM pour fournir aux applications un 
   
  ADO offre une interface cohérente et de niveau supérieur aux différents fournisseurs de OLE DB.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Fournisseurs de données](../../../ado/guide/data/data-providers.md)  
   

@@ -15,10 +15,10 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926664"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour le service d’indexation Microsoft
@@ -93,14 +93,14 @@ MSIDXS
 
  **Disponibilité des méthodes de l’ensemble d’enregistrements ADO standard :**
 
-|Méthode|Téléchargé?|
+|Méthode|Disponible ?|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Non|
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Oui|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Non|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Non|
-|[Répliqué](../../../ado/reference/ado-api/clone-method-ado.md)|Oui|
-|[Plus](../../../ado/reference/ado-api/close-method-ado.md)|Oui|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Oui|
+|[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|
 |[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Non|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|
 |[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|
@@ -109,7 +109,7 @@ MSIDXS
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|
 |[Resynchroniser](../../../ado/reference/ado-api/resync-method.md)|Oui|
-|[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|
+|[Permet](../../../ado/reference/ado-api/supports-method.md)|Oui|
 |[Mise à jour](../../../ado/reference/ado-api/update-method.md)|Non|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Non|
 

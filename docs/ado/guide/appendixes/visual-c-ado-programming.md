@@ -16,10 +16,10 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926422"
 ---
 # <a name="visual-c-ado-programming"></a>Programmation ADO Visual C++
@@ -37,7 +37,7 @@ Les informations de référence sur l’API ADO décrivent les fonctionnalités 
 ## <a name="using-the-import-compiler-directive"></a>Utilisation de la directive de compilateur #import  
  La directive du compilateur **#import** Visual C++ simplifie l’utilisation des méthodes et des propriétés ADO. La directive prend le nom d’un fichier contenant une bibliothèque de types, tel que le fichier ADO. dll (Msado15. dll), et génère des fichiers d’en-tête contenant des déclarations typedef, des pointeurs intelligents pour les interfaces et des constantes énumérées. Chaque interface est encapsulée, ou encapsulée, dans une classe.  
   
- Pour chaque opération dans une classe (autrement dit, un appel de méthode ou de propriété), il existe une déclaration pour appeler l’opération directement (autrement dit, la forme « brute » de l’opération) et une déclaration pour appeler l’opération brute et lever une erreur COM si l’opération échoue à exécuter Succ essfully. Si l’opération est une propriété, il existe généralement une directive de compilateur qui crée une syntaxe alternative pour l’opération dont la syntaxe est comme Visual Basic.  
+ Pour chaque opération dans une classe (autrement dit, un appel de méthode ou de propriété), il existe une déclaration permettant d’appeler l’opération directement (c’est-à-dire la forme « brute » de l’opération), ainsi qu’une déclaration d’appel de l’opération brute et de lever une erreur COM si l’exécution de l’opération a échoué. Si l’opération est une propriété, il existe généralement une directive de compilateur qui crée une syntaxe alternative pour l’opération dont la syntaxe est comme Visual Basic.  
   
  Les opérations qui récupèrent la valeur d’une propriété ont des noms sous la forme, **obtenir**la_propriété_. Les opérations qui définissent la valeur d’une propriété ont des noms de la forme, **put**_Property_. Les opérations qui définissent la valeur d’une propriété avec un pointeur vers un objet ADO ont des noms au format de la_propriété_ **PutRef**.  
   

@@ -17,10 +17,10 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932893"
 ---
 # <a name="execute-method-ado-connection"></a>Execute, méthode (objet Connection ADO)
@@ -42,12 +42,12 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Valeur de **chaîne** qui contient l’instruction SQL, la procédure stockée, une URL ou un texte spécifique au fournisseur à exécuter. Si **vous le souhaitez**, les noms de table peuvent être utilisés, mais uniquement si le fournisseur prend en charge SQL. Par exemple, si le nom de table « Customers » est utilisé, ADO ajoutera automatiquement la syntaxe SQL SELECT standard pour former et passer « SELECT * FROM Customers [!INCLUDE[tsql](../../../includes/tsql-md.md)] » comme instruction au fournisseur.  
   
  *RecordsAffected*  
- facultatif. Variable de **type long** à laquelle le fournisseur retourne le nombre d’enregistrements affectés par l’opération.  
+ Facultatif. Variable de **type long** à laquelle le fournisseur retourne le nombre d’enregistrements affectés par l’opération.  
   
  *Options*  
- facultatif. Valeur de **type long** qui indique comment le fournisseur doit évaluer l’argument CommandText. Peut être un masque de masque d’une ou plusieurs valeurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .  
+ Facultatif. Valeur de **type long** qui indique comment le fournisseur doit évaluer l’argument CommandText. Peut être un masque de masque d’une ou plusieurs valeurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .  
   
- **Remarque** Utilisez la **** valeur ExecuteOptionEnum **adExecuteNoRecords** pour améliorer les performances en minimisant le traitement interne et pour les applications que vous migrez à partir de Visual Basic 6,0.  
+ **Remarque** Utilisez la **ExecuteOptionEnum** valeur ExecuteOptionEnum **adExecuteNoRecords** pour améliorer les performances en minimisant le traitement interne et pour les applications que vous migrez à partir de Visual Basic 6,0.  
   
  N’utilisez pas **adExecuteStream** avec la méthode **Execute** d’un objet **Connection** .  
   

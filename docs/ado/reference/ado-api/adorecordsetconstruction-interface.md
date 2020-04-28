@@ -16,10 +16,10 @@ ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920796"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction, interface
@@ -36,13 +36,13 @@ L’interface **ADORecordsetConstruction** est utilisée pour construire un obje
 |[Ensemble de lignes](../../../ado/reference/ado-api/rowset-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet d' **ensemble de lignes** OLE DB à partir de cet objet **Recordset** ADO.|  
   
 ## <a name="methods"></a>Méthodes  
- Aucun.  
+ Aucune.  
   
 ## <a name="events"></a>Événements  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
- À partir d' **** un objet d'`pRowset`ensemble de lignes OLE DB (), la construction d’un`adoRs`objet **Recordset** ADO () se base sur les trois opérations de base suivantes :  
+ À partir d' **Rowset** un objet d'`pRowset`ensemble de lignes OLE DB (), la construction d’un`adoRs`objet **Recordset** ADO () se base sur les trois opérations de base suivantes :  
   
 1.  Créez un objet **Recordset** ADO :  
   

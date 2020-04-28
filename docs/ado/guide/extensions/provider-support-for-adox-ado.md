@@ -13,10 +13,10 @@ ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b07f4563d54254310c08c8c132d0729b8ccdc6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923217"
 ---
 # <a name="provider-support-for-adox-ado"></a>Prise en charge de fournisseur pour ADOX (ADO)
@@ -47,7 +47,7 @@ Certaines fonctionnalités d’ADOX ne sont pas prises en charge, en fonction de
 |Collection d' **utilisateurs**|**Les utilisateurs** ne sont pas pris en charge.|  
 |Collection de **groupes**|Les **groupes** ne sont pas pris en charge.|  
   
-## <a name="microsoft-ole-db-provider-for-oracle"></a>Fournisseur Microsoft OLE DB pour Oracle  
+## <a name="microsoft-ole-db-provider-for-oracle"></a>Fournisseur Microsoft OLE DB pour Oracle  
   
 |Objet ou collection|Restriction d’utilisation|  
 |--------------------------|-----------------------|  

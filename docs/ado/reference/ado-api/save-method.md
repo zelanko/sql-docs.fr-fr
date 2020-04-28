@@ -17,10 +17,10 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931176"
 ---
 # <a name="save-method"></a>Save, méthode
@@ -35,10 +35,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Paramètres  
  *Destination*  
- facultatif. **Variant** qui représente le nom de chemin d’accès complet du fichier dans lequel le **Recordset** doit être enregistré, ou une référence à un objet de **flux** .  
+ Facultatif. **Variant** qui représente le nom de chemin d’accès complet du fichier dans lequel le **Recordset** doit être enregistré, ou une référence à un objet de **flux** .  
   
  *PersistFormat*  
- facultatif. Valeur [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) qui spécifie le format dans lequel l' **objet Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
+ Facultatif. Valeur [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) qui spécifie le format dans lequel l' **objet Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
   
 ## <a name="remarks"></a>Notes  
  La méthode [Save Method](../../../ado/reference/ado-api/save-method.md) ne peut être appelée que sur un **Recordset**ouvert. Utilisez la méthode [Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) pour restaurer ultérieurement le **Recordset** de la *destination*.  

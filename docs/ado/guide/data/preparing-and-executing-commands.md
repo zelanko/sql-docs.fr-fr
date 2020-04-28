@@ -13,10 +13,10 @@ ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2295d421f8b802f2f3b531d7de3fc086e43ad572
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924563"
 ---
 # <a name="preparing-and-executing-commands"></a>Préparation et l’exécution de commandes
@@ -29,7 +29,7 @@ Les commandes sont des instructions émises à un fournisseur pour effectuer des
 > [!NOTE]
 >  Certaines **commandes**peuvent retourner un jeu de résultats sous la forme d’un flux binaire ou sous la forme d’un enregistrement unique plutôt que d’un **Recordset**, si ce **dernier** est pris en charge par le fournisseur. En outre, certaines **commandes**ne sont pas destinées à retourner un jeu de résultats (par exemple, une requête de mise à jour SQL). Cette section décrit le scénario le plus courant, en revanche : l’exécution des **commandes**qui retournent les résultats sous la forme d’un objet **Recordset** . Pour plus d’informations sur le retour de **résultats dans**les enregistrements ou les **flux**de données, consultez [enregistrements et flux](../../../ado/guide/data/records-and-streams.md).  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Vue d’ensemble de l’objet Command](../../../ado/guide/data/command-object-overview.md)  
   

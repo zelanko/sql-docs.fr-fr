@@ -13,10 +13,10 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923133"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilisation de données multidimensionnelles
@@ -30,7 +30,7 @@ Un jeu de *cellules* est le résultat d’une requête sur des données multidim
   
  Par exemple, un cube présente les six dimensions suivantes (Notez que ce schéma de cube diffère légèrement de l’exemple donné dans [vue d’ensemble des schémas et des données multidimensionnels](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)) :  
   
--   Equipe  
+-   Vendeur  
   
 -   Géographie (hiérarchie naturelle)-continents, pays, États, etc.  
   
@@ -40,7 +40,7 @@ Un jeu de *cellules* est le résultat d’une requête sur des données multidim
   
 -   Measures-Sales, PercentChange, BudgetedSales  
   
--   Produits  
+-   Products  
   
  L’ensemble de cellules suivant représente les ventes de 1991 pour tous les produits :  
   

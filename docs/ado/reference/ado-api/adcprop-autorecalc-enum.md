@@ -16,10 +16,10 @@ ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921441"
 ---
 # <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
@@ -29,7 +29,7 @@ Spécifie quand le fournisseur [MSDataShape](../../../ado/guide/appendixes/micro
   
 |Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adRecalcAlways**|1|valeur par défaut. Recalcule chaque fois que le fournisseur **MSDataShape** détermine les valeurs dont dépendent les colonnes calculées.|  
+|**adRecalcAlways**|1|Par défaut. Recalcule chaque fois que le fournisseur **MSDataShape** détermine les valeurs dont dépendent les colonnes calculées.|  
 |**adRecalcUpFront**|0|Calcule uniquement lors de la création initiale du **Recordset**hiérarchique.|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  

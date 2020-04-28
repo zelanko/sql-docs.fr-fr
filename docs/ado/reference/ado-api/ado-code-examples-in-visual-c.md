@@ -15,10 +15,10 @@ ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921189"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Exemples de code ADO dans Visual C++
@@ -148,4 +148,4 @@ Utilisez les exemples de code suivants pour apprendre à utiliser les méthodes,
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de code ADO en Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [Exemples de code ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Annexe D : Exemples ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Annexe D : Exemples ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

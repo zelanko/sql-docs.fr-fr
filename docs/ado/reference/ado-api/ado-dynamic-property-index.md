@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921080"
 ---
 # <a name="ado-dynamic-property-index"></a>Index des propriétés dynamiques ADO
@@ -39,7 +39,7 @@ Les fournisseurs de données, les fournisseurs de services et les composants de 
 |Connect Timeout|DBPROP_INIT_TIMEOUT|  
 |Catalogue actuel|DBPROP_CURRENTCATALOG|  
 |source de données|DBPROP_INIT_DATASOURCE|  
-|Data Source Name|DBPROP_DATASOURCENAME|  
+|Nom de la source de données|DBPROP_DATASOURCENAME|  
 |Modèle de thread de l’objet de source de données|DBPROP_DSOTHREADMODEL|  
 |Nom SGBD|DBPROP_DBMSNAME|  
 |Version de SGBD|DBPROP_DBMSVER|  
@@ -51,7 +51,7 @@ Les fournisseurs de données, les fournisseurs de services et les composants de 
 |Niveaux d’isolation|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Rétention de l’isolation|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Identificateur de paramètres régionaux|DBPROP_INIT_LCID|  
-|Location|DBPROP_INIT_LOCATION|  
+|Emplacement|DBPROP_INIT_LOCATION|  
 |Taille maximale de l’index|DBPROP_MAXINDEXSIZE|  
 |Taille de ligne maximale|DBPROP_MAXROWSIZE|  
 |La taille de ligne maximale comprend l’objet BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -91,7 +91,7 @@ Les fournisseurs de données, les fournisseurs de services et les composants de 
 |DDL de la transaction|DBPROP_SUPPORTEDTXNDDL|  
 |ID d'utilisateur|DBPROP_AUTH_USERID|  
 |User Name|DBPROP_USERNAME|  
-|Handle de fenêtre|DBPROP_INIT_HWND|  
+|Handle de la fenêtre|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset  
  Notez que les **propriétés dynamiques** de l’objet **Recordset** sont hors de portée (deviennent indisponibles) lorsque le **Recordset** est fermé.  

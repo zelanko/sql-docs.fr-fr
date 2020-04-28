@@ -17,10 +17,10 @@ ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920017"
 ---
 # <a name="clone-method-ado"></a>Clone, méthode (ADO)
@@ -44,7 +44,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Variable objet qui identifie l’objet **Recordset** à dupliquer.  
   
  *Verrou*  
- facultatif. Valeur [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) qui spécifie le type de verrou du **Recordset**d’origine ou un **jeu d’enregistrements**en lecture seule. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
+ Facultatif. Valeur [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) qui spécifie le type de verrou du **Recordset**d’origine ou un **jeu d’enregistrements**en lecture seule. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez la méthode **clone** pour créer plusieurs objets **Recordset** dupliqués, en particulier si vous souhaitez conserver plusieurs enregistrements actifs dans un ensemble donné d’enregistrements. L’utilisation de la méthode **clone** est plus efficace que la création et l’ouverture d’un nouvel objet **Recordset** qui utilise la même définition que l’original.  

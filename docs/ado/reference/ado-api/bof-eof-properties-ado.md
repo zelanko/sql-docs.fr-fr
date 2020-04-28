@@ -18,10 +18,10 @@ ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920386"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF, propriétés (ADO)
@@ -61,9 +61,9 @@ ms.locfileid: "67920386"
 ||Business|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Définir sur **true**|Définir sur **true**|  
-|**Déplacer** 0|Aucune modification|Aucune modification|  
-|**MovePrevious**, **déplacer** < 0|Définir sur **true**|Aucune modification|  
-|**MoveNext**, **Move** > 0|Aucune modification|Définir sur **true**|  
+|**Déplacer** 0|Aucun changement|Aucun changement|  
+|**MovePrevious**, **déplacer** < 0|Définir sur **true**|Aucun changement|  
+|**MoveNext**, **Move** > 0|Aucun changement|Définir sur **true**|  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

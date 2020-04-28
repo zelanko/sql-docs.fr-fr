@@ -15,10 +15,10 @@ ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923722"
 ---
 # <a name="updating-and-persisting-data"></a>Mise à jour et enregistrement des données
@@ -32,7 +32,7 @@ Les chapitres précédents ont expliqué comment utiliser ADO pour accéder aux 
   
  En mode exécution, chaque appel de la méthode **Update** propage les modifications à la source de données. En mode batch, chaque appel de **mise à jour** ou de déplacement de la position de ligne actuelle enregistre les modifications dans la mémoire tampon de copie, mais seule la méthode **UpdateBatch** propage les modifications à la source de données.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Mise à jour des données](../../../ado/guide/data/updating-data.md)  
   

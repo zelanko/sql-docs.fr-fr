@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928321"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Model&gt; PREDICTION JOIN (DMX)
@@ -33,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *sélectionner la liste d’expressions*  
  Liste séparée par des virgules des identificateurs de colonnes et expressions dérivées du modèle d'exploration de données.  
@@ -48,13 +48,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Requête source  
   
  *liste de mappage de jointure*  
- facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
+ Facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
   
  *expression de condition*  
- facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ Facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
- *formule*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ *expression*  
+ Facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Les colonnes de \<la *liste de mappage de jointure*> sont associées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
@@ -175,7 +175,7 @@ NATURAL PREDICTION JOIN
   UNION SELECT 'Mountain-200' AS [Model]) AS [v Assoc Seq Line Items ]) AS t  
 ```  
   
- Résultats de l’exemple :  
+ Résultats de l'exemple :  
   
 |Expression.Model|  
 |----------------------|  
@@ -189,6 +189,6 @@ NATURAL PREDICTION JOIN
  [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
- [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

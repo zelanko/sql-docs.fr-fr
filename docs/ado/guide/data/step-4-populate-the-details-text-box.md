@@ -11,13 +11,13 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924065"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>Étape 4 : Remplir la zone de texte Détails
+# <a name="step-4-populate-the-details-text-box"></a>Étape 4 : Remplir la zone de texte Détails
 Pour remplir la zone de texte détails, créez une sous-routine nommée **recFields** et insérez le code suivant :  
   
 ```  
@@ -48,4 +48,4 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Étape 3 : Remplir la zone de liste des champs](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Étape 3 : Remplir la zone de liste des champs](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

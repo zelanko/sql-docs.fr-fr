@@ -18,10 +18,10 @@ ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931933"
 ---
 # <a name="open-method-ado-connection"></a>Open, méthode (objet Connection ADO)
@@ -36,16 +36,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Paramètres  
  *ConnectionString*  
- facultatif. Valeur de **chaîne** qui contient les informations de connexion. Pour plus d’informations sur les paramètres valides, consultez la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
+ Facultatif. Valeur de **chaîne** qui contient les informations de connexion. Pour plus d’informations sur les paramètres valides, consultez la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
  *IDutilisateur*  
- facultatif. Valeur de **chaîne** qui contient un nom d’utilisateur à utiliser lors de l’établissement de la connexion.  
+ Facultatif. Valeur de **chaîne** qui contient un nom d’utilisateur à utiliser lors de l’établissement de la connexion.  
   
  *Mot de passe*  
- facultatif. Valeur de **chaîne** qui contient un mot de passe à utiliser lors de l’établissement de la connexion.  
+ Facultatif. Valeur de **chaîne** qui contient un mot de passe à utiliser lors de l’établissement de la connexion.  
   
  *Options*  
- facultatif. Valeur [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) qui détermine si cette méthode doit retourner après (de façon synchrone) ou avant (de façon asynchrone) la connexion est établie.  
+ Facultatif. Valeur [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) qui détermine si cette méthode doit retourner après (de façon synchrone) ou avant (de façon asynchrone) la connexion est établie.  
   
 ## <a name="remarks"></a>Notes  
  L’utilisation de la méthode **Open** sur un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) établit la connexion physique à une source de données. Une fois que cette méthode s’est terminée avec succès, la connexion est active et vous pouvez émettre des commandes sur celle-ci et traiter les résultats.  

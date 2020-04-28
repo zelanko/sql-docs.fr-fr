@@ -13,16 +13,16 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923857"
 ---
 # <a name="types-of-cursors-ado"></a>Types de curseurs (ADO)
 En règle générale, votre application doit utiliser le curseur le plus simple qui fournit l’accès aux données requis. Chaque caractéristique de curseur supplémentaire au-delà des principes de base (avant uniquement, en lecture seule, statique, de défilement, sans mise en mémoire tampon) a un prix en mémoire client, de charge réseau ou de performances. Dans de nombreux cas, les options de curseur par défaut génèrent un curseur plus complexe que celui dont votre application a réellement besoin.  
   
- Le type de curseur choisi dépend de la manière dont votre application utilise le jeu de résultats, ainsi que de plusieurs considérations relatives à la conception, notamment la taille du jeu de résultats, le pourcentage de données susceptibles d’être utilisées, la sensibilité aux modifications de données et les performances de l’application. exigences.  
+ Le type de curseur choisi dépend de la manière dont votre application utilise le jeu de résultats, ainsi que de plusieurs considérations relatives à la conception, notamment la taille du jeu de résultats, le pourcentage de données susceptibles d’être utilisées, la sensibilité aux modifications de données et les exigences en matière de performances des applications.  
   
  Au plus basique, votre choix de curseur dépend de la nécessité ou non de modifier ou d’afficher simplement les données :  
   
@@ -34,7 +34,7 @@ En règle générale, votre application doit utiliser le curseur le plus simple 
   
  Bien que chaque type de curseur semble être distinct, gardez à l’esprit que ces types de curseur ne sont pas tellement différents que le résultat du chevauchement des caractéristiques et des options.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Curseurs avant uniquement](../../../ado/guide/data/forward-only-cursors.md)  
   

@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927036"
 ---
 # <a name="ado-security-design-features"></a>Fonctionnalités de conception de la sécurité ADO
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  Le message précédent permet à l’utilisateur de prendre une décision plus éclairée et de continuer en conséquence.
 
 > [!NOTE]
->  Pour les sites non approuvés (c’est-à-dire les sites qui ne sont pas répertoriés dans la liste zone de sites de confiance), si le fournisseur est également non approuvé (comme indiqué plus haut dans cette section), l’utilisateur peut voir deux avertissements de sécurité dans une ligne, un avertissement concernant le fournisseur unsafe et un deuxième avertissement concernant le essayez d’utiliser leur identité. Si l’utilisateur clique sur OK jusqu’au premier avertissement, les paramètres d’Internet Explorer et le code de comportement de la réponse décrits dans le tableau précédent sont exécutés.
+>  Pour les sites non approuvés (c’est-à-dire les sites qui ne sont pas répertoriés dans la liste zone de sites de confiance), si le fournisseur est également non approuvé (comme indiqué plus haut dans cette section), l’utilisateur peut voir deux avertissements de sécurité dans une ligne, un avertissement concernant le fournisseur unsafe et un deuxième avertissement concernant la tentative d’utilisation de son identité. Si l’utilisateur clique sur OK jusqu’au premier avertissement, les paramètres d’Internet Explorer et le code de comportement de la réponse décrits dans le tableau précédent sont exécutés.
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>Contrôler si le texte du mot de passe est retourné dans les chaînes de connexion ADO
  Lorsque vous essayez d’extraire la valeur de la propriété [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) sur un objet de **connexion** ADO, les événements suivants se produisent :

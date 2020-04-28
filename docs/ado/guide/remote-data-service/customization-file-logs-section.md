@@ -14,10 +14,10 @@ ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922786"
 ---
 # <a name="customization-file-logs-section"></a>Fichier de personnalisation, section Logs
@@ -41,7 +41,7 @@ FileName
 |Élément|Description|  
 |----------|-----------------|  
 |**Raise**|Chaîne littérale qui indique qu’il s’agit d’une entrée de fichier journal.|  
-|*Extension*|Un chemin d’accès complet et un nom de fichier. Le nom de fichier par défaut est **c:\msdfmap.log**.|  
+|*FileName*|Un chemin d’accès complet et un nom de fichier. Le nom de fichier par défaut est **c:\msdfmap.log**.|  
   
  Le fichier journal contient le nom d’utilisateur, HRESULT, la date et l’heure de chaque erreur.  
   

@@ -17,10 +17,10 @@ ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab93d8117a5fb3d2bbc95ea33bbacdc7fba3f151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932828"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress, événement (ADO)
@@ -34,16 +34,16 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Avancement*  
+ *Progression*  
  Valeur de **type long** indiquant le nombre d’enregistrements qui ont été récupérés actuellement par l’opération d’extraction.  
   
  *MaxProgress*  
  Valeur de **type long** indiquant le nombre maximal d’enregistrements qui doivent être récupérés.  
   
- *Statu*  
+ *adStatus*  
  Valeur d’état [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
- *jeu d’enregistrements*  
+ *pRecordset*  
  Objet **Recordset** qui est l’objet pour lequel les enregistrements sont récupérés.  
   
 ## <a name="remarks"></a>Notes  

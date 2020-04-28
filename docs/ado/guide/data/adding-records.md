@@ -16,10 +16,10 @@ ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926262"
 ---
 # <a name="adding-records-to-a-recordset"></a>Ajout d’enregistrements à un jeu d’enregistrements
@@ -29,7 +29,7 @@ Utilisez la méthode **AddNew** pour créer et initialiser un nouvel enregistrem
 
  Si vous appelez **AddNew** pendant la modification de l’enregistrement en cours ou lors de l’ajout d’un nouvel enregistrement, ADO appelle la méthode **Update** pour enregistrer les modifications apportées, puis crée le nouvel enregistrement.
 
- Cette section contient les rubriques suivantes :
+ Cette section contient les rubriques suivantes :
 
 -   [Ajout d’enregistrements avec AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
 

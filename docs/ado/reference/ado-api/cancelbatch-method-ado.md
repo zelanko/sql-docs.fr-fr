@@ -17,10 +17,10 @@ ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1c6a9f57d30b47641b9280e25a97336c28b0496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920168"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch, méthode (ADO)
@@ -35,7 +35,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Paramètres  
  *AffectRecords*  
- facultatif. Valeur [AffectEnum](../../../ado/reference/ado-api/affectenum.md) qui indique le nombre d’enregistrements affectés par la méthode **CancelBatch** .  
+ Facultatif. Valeur [AffectEnum](../../../ado/reference/ado-api/affectenum.md) qui indique le nombre d’enregistrements affectés par la méthode **CancelBatch** .  
   
 ## <a name="remarks"></a>Notes  
  Utilisez la méthode **CancelBatch** pour annuler les mises à jour en attente dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en mode de mise à jour par lot. Si le **jeu d’enregistrements** est en mode de mise à jour immédiate, l’appel de **CancelBatch** sans **adAffectCurrent** génère une erreur.  

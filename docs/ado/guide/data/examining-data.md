@@ -16,10 +16,10 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925358"
 ---
 # <a name="examining-data"></a>Examen des données
@@ -27,7 +27,7 @@ La section [obtention de données](../../../ado/guide/data/getting-data.md) a ex
   
  **Recordset** prend en charge différentes [Propriétés et méthodes](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) permettant de parcourir et d’examiner les données contenues dans. Ces fonctionnalités dépendent du fournisseur. Certains fournisseurs peuvent ne pas prendre en charge certaines propriétés ou méthodes.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Enregistrement actif et taille du recordset](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
   

@@ -14,10 +14,10 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928603"
 ---
 # <a name="adox-collections"></a>Collections ADOX
@@ -27,7 +27,7 @@ ms.locfileid: "67928603"
 |[Colonnes](../../../ado/reference/adox-api/columns-collection-adox.md)|Contient tous les objets **Column** d’une table, d’un index ou d’une clé.|  
 |[Groupes](../../../ado/reference/adox-api/groups-collection-adox.md)|Contient tous les objets de **groupe** stockés d’un catalogue ou d’un utilisateur.|  
 |[Index](../../../ado/reference/adox-api/indexes-collection-adox.md)|Contient tous les objets **index** d’une table.|  
-|[Keys](../../../ado/reference/adox-api/keys-collection-adox.md)|Contient tous les objets **clés** d’une table.|  
+|[Clés](../../../ado/reference/adox-api/keys-collection-adox.md)|Contient tous les objets **clés** d’une table.|  
 |[Procédures](../../../ado/reference/adox-api/procedures-collection-adox.md)|Contient tous les objets de **procédure** d’un catalogue.|  
 |[Tables](../../../ado/reference/adox-api/tables-collection-adox.md)|Contient tous les objets **table** d’un catalogue.|  
 |[Utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md)|Contient tous les objets **utilisateur** stockés d’un catalogue ou d’un groupe.|  

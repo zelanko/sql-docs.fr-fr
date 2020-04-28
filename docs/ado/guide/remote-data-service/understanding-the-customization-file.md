@@ -13,10 +13,10 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921967"
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
@@ -43,10 +43,10 @@ identifier
   
 |Élément|Description|  
 |----------|-----------------|  
-|**entre**|Chaîne littérale qui modifie une chaîne de connexion.|  
-|**sql**|Chaîne littérale qui modifie une chaîne de commande.|  
-|**UserList**|Chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
-|**ouvrir**|Chaîne littérale qui spécifie un enregistrement de fichier journal d’erreurs opérationnelles.|  
+|**connect**|Chaîne littérale qui modifie une chaîne de connexion.|  
+|**Server**|Chaîne littérale qui modifie une chaîne de commande.|  
+|**userlist**|Chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
+|**logs**|Chaîne littérale qui spécifie un enregistrement de fichier journal d’erreurs opérationnelles.|  
 |**valeurs**|Chaîne littérale qui est utilisée si aucun identificateur n’est spécifié ou trouvé.|  
 |*identificateur*|Chaîne qui correspond à une chaîne dans la chaîne de **connexion** ou de **commande** .<br /><br /> -Utilisez cette section si l’en-tête de section contient **Connect** et que la chaîne d’identificateur est trouvée dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **SQL** et que la chaîne d’identificateur est trouvée dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **UserList** et que la chaîne d’identificateur correspond à un identificateur de section de **connexion** .|  
   

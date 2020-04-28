@@ -15,10 +15,10 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924181"
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de la commande SHAPE
@@ -65,7 +65,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>Notes  
- *Recordset enfant*  
+ *child-recordset*  
  -   Commande de fournisseur placée entre accolades ("{}") qui retourne un objet **Recordset** . La commande est émise pour le fournisseur de données sous-jacent, et sa syntaxe dépend des spécifications de ce fournisseur. Il s’agit généralement du langage SQL, bien qu’ADO ne nécessite pas de langage de requête particulier.  
   
 -   Autre commande de forme incorporée entre parenthèses.  
@@ -77,10 +77,10 @@ SHAPE [parent-command [[AS] parent-alias]]
  *alias-enfant*  
  Alias qui fait référence au **Recordset**enfant.  
   
- *colonne parente*  
+ *parent-column*  
  Colonne du **Recordset** retournée par la *commande parent-.*  
   
- *colonne enfant*  
+ *child-column*  
  Colonne du **Recordset** retournée par la *commande enfant*.  
   
  *Param-nombre*  
@@ -110,7 +110,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
  SHAPE s’exécute `select * from t1; drop table t1` et (`select * from t2 RELATE k1 TO k2),` sans réaliser qu' `drop table t1` il s’agit d’un distinct et dans ce cas, une commande de fournisseur dangereuse. Les applications doivent toujours valider l’entrée utilisateur pour empêcher l’apparition de telles attaques potentielles de pirates.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Fonctionnement des commandes non paramétrées](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
   

@@ -14,10 +14,10 @@ ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c455d816b3ba5a9606d09e3b05e54583e11ca41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922533"
 ---
 # <a name="rds-object-model-summary"></a>Résumé du modèle objet RDS
@@ -28,7 +28,7 @@ ms.locfileid: "67922533"
 |------------|-----------------|  
 |[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Cet objet contient une méthode pour obtenir un serveur proxy. Le proxy peut être la valeur par défaut ou un programme serveur personnalisé (objet métier). Le programme serveur peut être appelé sur Internet, sur un intranet, sur un réseau local ou sur une bibliothèque de liens dynamiques locale.<br /><br /> L’objet **DataSpace** est sécurisé pour l’écriture de scripts.|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Cet objet représente le programme serveur par défaut. Il exécute le comportement par défaut de la récupération et de la mise à jour des données RDS.<br /><br /> L’objet **DataFactory** n’est pas sûr pour l’écriture de scripts.|  
-|[Licence. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Cet objet peut appeler automatiquement le **RDS. Objets DataSpace** et **RDSServer. DataFactory** .<br /><br /> Utilisez cet objet pour appeler le comportement par défaut de la récupération ou de la mise à jour des données RDS.<br /><br /> Cet objet fournit également les moyens pour les contrôles visuels d’accéder à l’objet **Recordset** retourné.<br /><br /> L’objet **DataControl** est sécurisé pour l’écriture de scripts.|  
+|[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Cet objet peut appeler automatiquement le **RDS. Objets DataSpace** et **RDSServer. DataFactory** .<br /><br /> Utilisez cet objet pour appeler le comportement par défaut de la récupération ou de la mise à jour des données RDS.<br /><br /> Cet objet fournit également les moyens pour les contrôles visuels d’accéder à l’objet **Recordset** retourné.<br /><br /> L’objet **DataControl** est sécurisé pour l’écriture de scripts.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Notions de base sur RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

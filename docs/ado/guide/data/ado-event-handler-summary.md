@@ -14,10 +14,10 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926200"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Événements ADO Connection et Recordset
@@ -25,7 +25,7 @@ Deux objets ADO peuvent déclencher des événements : l’objet [Connection](.
 
 -   **Événements de connexion**: les événements sont émis lorsqu’une transaction sur une connexion commence, est validée ou est annulée ; lors de l’exécution d’une [commande](../../../ado/reference/ado-api/command-object-ado.md) ; Lorsqu’un avertissement se produit pendant une opération d' **événement de connexion** ; ou lorsqu’une **connexion** démarre ou se termine.
 
--   **Événements Recordset**: les événements sont émis autour des opérations d’extraction asynchrones, ainsi que lorsque vous parcourez les lignes d’un objet **Recordset** , que vous modifiez un champ dans une ligne d’un jeu d' **enregistrements**, que vous modifiez une ligne dans un **jeu d'** enregistrements, que vous ouvrez un **jeu d’enregistrements** avec un curseur côté serveur ****, que vous fermez un **jeu d’enregistrements**ou que vous apportez
+-   **Événements Recordset**: les événements sont émis autour des opérations d’extraction asynchrones, ainsi que lorsque vous parcourez les lignes d’un objet **Recordset** , que vous modifiez un champ dans une ligne d’un jeu d' **enregistrements**, que vous modifiez une ligne dans un **jeu d'** enregistrements, que vous ouvrez un **jeu d’enregistrements** avec un curseur côté serveur **Recordset**, que vous fermez un **jeu d’enregistrements**ou que vous apportez
 
  Les tableaux suivants résument les événements et leurs descriptions.
 
@@ -45,4 +45,4 @@ Deux objets ADO peuvent déclencher des événements : l’objet [Connection](.
 |[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Gestion des modifications** de l’ensemble d’enregistrements-notification indiquant qu’un **objet du jeu d’enregistrements** actuel est modifié ou a changé.|
 
 ## <a name="see-also"></a>Voir aussi
- [Instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md) [](../../../ado/reference/ado-api/ado-events.md) [paramètres d’événement](../../../ado/guide/data/event-parameters.md) ADO [Comment les gestionnaires d’événements fonctionnent ensemble](../../../ado/guide/data/how-event-handlers-work-together.md) [types d’événements](../../../ado/guide/data/types-of-events.md)
+ [Instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO Events](../../../ado/reference/ado-api/ado-events.md) [paramètres d’événement](../../../ado/guide/data/event-parameters.md) ADO [Comment les gestionnaires d’événements fonctionnent ensemble](../../../ado/guide/data/how-event-handlers-work-together.md) [types d’événements](../../../ado/guide/data/types-of-events.md)

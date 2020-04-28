@@ -13,10 +13,10 @@ ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927128"
 ---
 # <a name="ado-overview-and-benefits"></a>Vue d’ensemble et avantages d’ADO
@@ -24,7 +24,7 @@ ActiveX Data Objects (ADO) est une interface de haut niveau et facile à utilise
 
  ADO fournit une couche d’abstraction entre votre application cliente ou de niveau intermédiaire et les interfaces de OLE DB de bas niveau. ADO utilise un petit ensemble d’objets Automation pour fournir une interface simple et efficace à OLE DB. Grâce à cette interface, ADO est un bon choix pour les développeurs dans des langages de niveau supérieur, tels que Visual Basic et VBScript, qui souhaitent accéder aux données sans avoir à apprendre les subtilités de COM et OLE DB.
 
- Cette section contient les rubriques suivantes :
+ Cette section contient les rubriques suivantes :
 
 -   [Historique d’ADO](../../ado/guide/ado-history.md)
 

@@ -15,10 +15,10 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926645"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour Microsoft Jet
@@ -132,7 +132,7 @@ Microsoft.Jet.OLEDB.4.0
 |Définition de colonne|DBPROP_COLUMNDEFINITION|
 |Catalogue actuel|DBPROP_CURRENTCATALOG|
 |source de données|DBPROP_INIT_DATASOURCE|
-|Data Source Name|DBPROP_DATASOURCENAME|
+|Nom de la source de données|DBPROP_DATASOURCENAME|
 |Modèle de thread de l’objet de source de données|DBPROP_DSOTHREADMODEL|
 |Nom SGBD|DBPROP_DBMSNAME|
 |Version de SGBD|DBPROP_DBMSVER|
@@ -179,7 +179,7 @@ Microsoft.Jet.OLEDB.4.0
 |DDL de la transaction|DBPROP_SUPPORTEDTXNDDL|
 |ID d'utilisateur|DBPROP_AUTH_USERID|
 |User Name|DBPROP_USERNAME|
-|Handle de fenêtre|DBPROP_INIT_HWND|
+|Handle de la fenêtre|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset
  Les propriétés suivantes sont ajoutées à la collection **Properties** de l’objet **Recordset** .

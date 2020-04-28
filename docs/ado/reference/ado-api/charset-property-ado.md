@@ -16,10 +16,10 @@ ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920084"
 ---
 # <a name="charset-property-ado"></a>Charset, propriété (ADO)
@@ -29,7 +29,7 @@ Indique le jeu de caractères dans lequel le contenu d’un [flux](../../../ado/
  Définit ou retourne une valeur de **chaîne** qui spécifie le jeu de caractères dans lequel le contenu du **flux** sera traduit. La valeur par défaut est **Unicode**. Les valeurs autorisées sont des chaînes typiques transmises à l’interface en tant que noms de jeux de caractères Internet (par exemple, « ISO-8859-1 », « Windows-1252 », etc.). Pour obtenir la liste des noms de jeux de caractères connus par un système, consultez les sous-clés de HKEY_CLASSES_ROOT \MIME\Database\Charset dans le Registre Windows.  
   
 ## <a name="remarks"></a>Notes  
- Dans un objet de **flux** de texte, les données texte sont stockées dans le jeu de caractères spécifié par la propriété **charset** . La valeur par défaut est Unicode. La propriété **charset** est utilisée pour convertir des données entrant dans le **flux** ou sortant du **flux**. Par exemple, si le **flux** contient des données ISO-8859-1 et que celles-ci sont copiées dans un BSTR, l’objet de **flux** convertira les données au format Unicode. L’opération inverse est également possible.  
+ Dans un objet de **flux** de texte, les données texte sont stockées dans le jeu de caractères spécifié par la propriété **charset** . La valeur par défaut est Unicode. La propriété **charset** est utilisée pour convertir des données entrant dans le **flux** ou sortant du **flux**. Par exemple, si le **flux** contient des données ISO-8859-1 et que celles-ci sont copiées dans un BSTR, l’objet de **flux** convertira les données au format Unicode. L’inverse est également vrai.  
   
  Pour un **flux**ouvert, la [position](../../../ado/reference/ado-api/position-property-ado.md) actuelle doit se trouver au début du **flux** (0) pour pouvoir définir **charset**.  
   

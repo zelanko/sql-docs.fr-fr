@@ -15,10 +15,10 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925222"
 ---
 # <a name="handling-ado-events"></a>Gestion des événements ADO
@@ -33,7 +33,7 @@ Le modèle d’événements ADO prend en charge certaines opérations ADO synchr
 > [!NOTE]
 >  Pour gérer les événements, ADO doit avoir une pompe de messages ou être utilisé dans un modèle STA (Single-Threaded Apartment). Les événements ADO sont gérés en interne par la création d’une fenêtre masquée. ADO publie des messages dans cette fenêtre lorsque des événements doivent être déclenchés. Cela permet de s’assurer que les événements sont envoyés au thread qui a appelé **IConnectionPoint :: Advise** sur le point de connexion. Cette architecture peut entraîner des problèmes lorsque le thread qui doit recevoir les notifications ne pompe pas les messages de fenêtre. Les problèmes potentiels incluent les événements ADO non remis au thread et les diffusions de fenêtre globale expirent et ralentissent éventuellement le système entier, car les fenêtres masquées ne traitent pas les messages. Les threads STA ont généralement une pompe de messages en cours d’exécution, ce problème ne se manifeste donc pas sur les threads STA. Toutefois, les threads MTA ne disposent généralement pas d’une pompe de messages, de sorte que le problème se manifeste généralement sur les threads MTA.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Présentation rapide du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
   

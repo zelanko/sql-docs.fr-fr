@@ -14,10 +14,10 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930573"
 ---
 # <a name="ado-md-objects"></a>Objets ADO MD
@@ -26,14 +26,14 @@ ms.locfileid: "67930573"
 |-|-|  
 |[Axe](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Représente un axe positionnel ou de filtre d’un CellSet, contenant les membres sélectionnés d’une ou plusieurs dimensions.|  
 |[Catalogue](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contient des informations sur les schémas multidimensionnels (c’est-à-dire les cubes et les dimensions sous-jacentes, les hiérarchies, les niveaux et les membres) spécifiques à un fournisseur de données multidimensionnelles (MDP).|  
-|[Cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Représente les données à l’intersection des coordonnées d’axe, contenues dans un CellSet.|  
+|[Cellules](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Représente les données à l’intersection des coordonnées d’axe, contenues dans un CellSet.|  
 |[CellSet](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Représente les résultats d’une requête multidimensionnelle. Il s’agit d’une collection de cellules sélectionnées à partir de cubes ou d’autres cellules.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Représente un cube à partir d’un schéma multidimensionnel, contenant un ensemble de dimensions associées.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Représente l’une des dimensions d’un cube multidimensionnel, contenant une ou plusieurs hiérarchies de membres.|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Représente une façon dont les membres d’une dimension peuvent être agrégés ou « cumulés ». Une dimension peut être agrégée avec une ou plusieurs hiérarchies.|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contient un ensemble de membres, chacun ayant le même rang dans une hiérarchie.|  
+|[Niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contient un ensemble de membres, chacun ayant le même rang dans une hiérarchie.|  
 |[Membre](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Représente un membre d’un niveau dans un cube, les enfants d’un membre d’un niveau ou un membre d’une position le long d’un axe d’un ensemble de cellules.|  
-|[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Représente un ensemble d’un ou plusieurs membres de dimensions différentes qui définissent un point le long d’un axe.|  
+|[Endroit](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Représente un ensemble d’un ou plusieurs membres de dimensions différentes qui définissent un point le long d’un axe.|  
   
  En outre, l’objet **catalogue** est connecté à un objet de **connexion** ADO, qui est inclus dans la bibliothèque ADO standard :  
   

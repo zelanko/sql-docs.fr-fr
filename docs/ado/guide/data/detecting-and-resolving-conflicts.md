@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925565"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Détection et résolution des conflits
@@ -30,7 +30,7 @@ Si vous traitez votre Recordset en mode immédiat, il y a beaucoup moins de risq
   
  Quand vous appelez BatchUpdate, ADO et le fournisseur génèrent des instructions SQL pour effectuer des mises à jour sur la source de données. N’oubliez pas que certaines sources de données ont des limitations sur les types de colonnes qui peuvent être utilisés dans une clause WHERE.  
   
- Ensuite, appelez la méthode Resync sur le Recordset avec l’argument AffectRecords défini sur adAffectGroup et le jeu d’arguments ResyncValues égal à adResyncUnderlyingValues. La méthode Resync met à jour les données de l’objet Recordset actuel à partir de la base de données sous-jacente. En utilisant adAffectGroup, vous vous assurez que seuls les enregistrements visibles avec le paramètre de filtre actuel, c’est-à-dire uniquement les enregistrements en conflit, sont resynchronisés avec la base de données. Cela peut avoir une incidence significative sur les performances si vous traitez un jeu d’enregistrements volumineux. En définissant l’argument ResyncValues sur adResyncUnderlyingValues lors de l’appel de Resync, vous vous assurez que la propriété UnderlyingValue contiendra la valeur (en conflit) de la base de données, que la propriété de valeur conservera la valeur entrée par l’utilisateur, et que la propriété OriginalValue contiendra la valeur d’origine du champ (la valeur qu’elle avait avant la dernière opération UpdateBatch réussie). Vous pouvez ensuite utiliser ces valeurs pour résoudre le conflit par programme ou demander à l’utilisateur de sélectionner la valeur qui sera utilisée.  
+ Ensuite, appelez la méthode Resync sur le Recordset avec l’argument AffectRecords défini sur adAffectGroup et le jeu d’arguments ResyncValues égal à adResyncUnderlyingValues. La méthode Resync met à jour les données de l’objet Recordset actuel à partir de la base de données sous-jacente. En utilisant adAffectGroup, vous vous assurez que seuls les enregistrements visibles avec le paramètre de filtre actuel, c’est-à-dire uniquement les enregistrements en conflit, sont resynchronisés avec la base de données. Cela peut avoir une incidence significative sur les performances si vous traitez un jeu d’enregistrements volumineux. En définissant l’argument ResyncValues sur adResyncUnderlyingValues lors de l’appel de Resync, vous vous assurez que la propriété UnderlyingValue contiendra la valeur (en conflit) de la base de données, que la propriété Value conserve la valeur entrée par l’utilisateur, et que la propriété OriginalValue contiendra la valeur d’origine du champ (valeur qu’il avait avant la dernière opération UpdateBatch réussie). Vous pouvez ensuite utiliser ces valeurs pour résoudre le conflit par programme ou demander à l’utilisateur de sélectionner la valeur qui sera utilisée.  
   
  Cette technique est illustrée dans l’exemple de code suivant. L’exemple crée artificiellement un conflit à l’aide d’un jeu d’enregistrements distinct pour modifier une valeur dans la table sous-jacente avant l’appel de UpdateBatch.  
   
@@ -116,4 +116,4 @@ Si vous traitez votre Recordset en mode immédiat, il y a beaucoup moins de risq
  Pour plus d’informations sur la gestion des erreurs, consultez [gestion des erreurs](../../../ado/guide/data/error-handling.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mode Lot](../../../ado/guide/data/batch-mode.md)
+ [Mode Batch](../../../ado/guide/data/batch-mode.md)

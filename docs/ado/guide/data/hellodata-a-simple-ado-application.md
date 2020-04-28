@@ -14,10 +14,10 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925136"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData : une application ADO simple
@@ -44,17 +44,17 @@ Cette simple application passe par chacune des quatre principales opérations AD
   
 |Type de contrôle|Propriété|Valeur|  
 |------------------|--------------|-----------|  
-|Forme|Name|Feuille1|  
+|Formulaire|Nom|Form1|  
 ||Hauteur|6500|  
 ||Largeur|6500|  
-|MS DataGrid|Name|grdDisplay1|  
-|Zone de texte|Name|txtDisplay1|  
+|MS DataGrid|Nom|grdDisplay1|  
+|TextBox|Nom|txtDisplay1|  
 ||Multiline|true|  
-|Bouton de commande|Name|cmdGetData|  
-||Caption|Obtenir des données|  
-|Bouton de commande|Name|cmdExamineData|  
+|Bouton de commande|Nom|cmdGetData|  
+||Caption|Get Data|  
+|Bouton de commande|Nom|cmdExamineData|  
 ||Caption|Examiner les données|  
-|Bouton de commande|Name|cmdEditData|  
-||Caption|Modifier les données|  
-|Bouton de commande|Name|cmdUpdateData|  
+|Bouton de commande|Nom|cmdEditData|  
+||Caption| Modification des données|  
+|Bouton de commande|Nom|cmdUpdateData|  
 ||Caption|Données mises à jour|

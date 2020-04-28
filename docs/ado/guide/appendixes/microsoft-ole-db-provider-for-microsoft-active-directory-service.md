@@ -16,10 +16,10 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926675"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Fournisseur Microsoft OLE DB pour le service Microsoft Active Directory
@@ -61,10 +61,10 @@ ADSDSOObject
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*Root*|Indique l’objet **ADsPath** à partir duquel démarrer la recherche (c’est-à-dire la racine de la recherche).|  
+|*Causes*|Indique l’objet **ADsPath** à partir duquel démarrer la recherche (c’est-à-dire la racine de la recherche).|  
 |*Filter*|Indique le filtre de recherche au format RFC 1960.|  
 |*Attributs*|Indique une liste d’attributs délimités par des virgules à retourner.|  
-|*Étendue*|facultatif. **Chaîne** qui spécifie la portée de la recherche. Il peut s'agir d'une des méthodes suivantes :<br /><br /> -Base-recherche uniquement l’objet de base (racine de la recherche).<br />-OneLevel-Rechercher un seul niveau.<br />-Sous-arborescence-recherchez la sous-arborescence entière.|  
+|*Étendue*|Facultatif. **Chaîne** qui spécifie la portée de la recherche. Il peut s’agir de l’un des éléments suivants :<br /><br /> -Base-recherche uniquement l’objet de base (racine de la recherche).<br />-OneLevel-Rechercher un seul niveau.<br />-Sous-arborescence-recherchez la sous-arborescence entière.|  
   
  Par exemple :  
   
@@ -114,14 +114,14 @@ objectClass='user' AND objectCategory='Person'"
   
  **Disponibilité des méthodes de l’ensemble d’enregistrements ADO standard :**  
   
-|Méthode|Téléchargé?|  
+|Méthode|Disponible ?|  
 |------------|----------------|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Non|  
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Non|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Non|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Non|  
-|[Répliqué](../../../ado/reference/ado-api/clone-method-ado.md)|Oui|  
-|[Plus](../../../ado/reference/ado-api/close-method-ado.md)|Oui|  
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Oui|  
+|[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|  
 |[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Non|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|  
 |[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|  
@@ -133,7 +133,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|  
 |[Resynchroniser](../../../ado/reference/ado-api/resync-method.md)|Oui|  
-|[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|  
+|[Permet](../../../ado/reference/ado-api/supports-method.md)|Oui|  
 |[Mise à jour](../../../ado/reference/ado-api/update-method.md)|Non|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Non|  
   

@@ -15,10 +15,10 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926620"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Présentation de Fournisseur Microsoft OLE DB pour Oracle
@@ -64,11 +64,11 @@ MSDAORA
 
 |Paramètre|Description|
 |---------------|-----------------|
-|**Handle de fenêtre**|Indique le handle de fenêtre à utiliser pour demander des informations supplémentaires.|
+|**Handle de la fenêtre**|Indique le handle de fenêtre à utiliser pour demander des informations supplémentaires.|
 |**Identificateur de paramètres régionaux**|Indique un nombre 32 bits unique (par exemple, 1033) qui spécifie les préférences relatives à la langue de l’utilisateur. Ces préférences indiquent comment les dates et les heures sont mises en forme, les éléments sont triés par ordre alphabétique, les chaînes sont comparées, et ainsi de suite.|
 |**Services OLE DB**|Indique un masque de masque qui spécifie OLE DB services à activer ou à désactiver.|
 |**Prompt**|Indique s’il faut inviter l’utilisateur lors de l’établissement d’une connexion.|
-|**Extended Properties**|Chaîne contenant des informations de connexion étendues spécifiques au fournisseur. Utilisez cette propriété uniquement pour les informations de connexion spécifiques au fournisseur qui ne peuvent pas être décrites par le biais du mécanisme de propriété.|
+|**Propriétés étendues**|Chaîne contenant des informations de connexion étendues spécifiques au fournisseur. Utilisez cette propriété uniquement pour les informations de connexion spécifiques au fournisseur qui ne peuvent pas être décrites par le biais du mécanisme de propriété.|
 
 ## <a name="see-also"></a>Voir aussi
  [ConnectionString, propriété (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Provider, propriété](../../../ado/reference/ado-api/provider-property-ado.md) (ADO), [objet Recordset (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)
