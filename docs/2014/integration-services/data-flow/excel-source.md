@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37eb17ccaa418a6d81ef4caa461af50e505a8747
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087149"
 ---
 # <a name="excel-source"></a>Source Excel
@@ -51,7 +51,7 @@ ms.locfileid: "82087149"
   
 -   **Sources de données**. Dans un classeur Excel, la source de données peut être une feuille de calcul, à laquelle le signe « $ » doit être ajouté (par exemple, « Feuille1$ ») ou une plage nommée (par exemple, « MaPlage »). Dans une instruction SQL, le nom d'une feuille de calcul doit être délimité (par exemple, « [Feuille1$] ») afin que le signe « $ » ne provoque pas une erreur de syntaxe. Le générateur de requêtes ajoute automatiquement ces délimiteurs. Lorsque vous spécifiez une feuille de calcul ou une plage, le pilote lit le bloc de cellules contigu, à partir de la première cellule non vide dans l'angle supérieur gauche de la feuille de calcul ou de la plage. Par conséquent, il ne peut pas y avoir de ligne vide dans les données source, ni entre les lignes de titre ou d'en-tête et les lignes de données.  
   
--   **Valeurs manquantes**. Le pilote Excel lit un certain nombre de lignes (par défaut, 8 lignes) dans la source spécifiée afin de déterminer le type de données de chaque colonne. Lorsqu'il s'avère qu'une colonne combine différents types de données, notamment des données numériques avec des données texte, le pilote porte son choix sur le type de données majoritaire et retourne des valeurs NULL dans les cellules qui contiennent des données de l'autre type. En cas d'égalité, le type numérique l'emporte. La plupart des options de mise en forme de cellule dans la feuille de calcul Excel n'affectent pas cette détermination du type de données. Vous pouvez modifier ce comportement du pilote Excel en spécifiant le mode d'importation. Pour spécifier `IMEX=1` le mode d’importation, ajoutez à la valeur des propriétés étendues dans la chaîne de connexion du gestionnaire de connexion Excel dans la fenêtre **Propriétés.** Pour plus d’informations, consultez [PRB: valeurs Excel retournées en tant que valeurs NULL à l’aide de DAO OpenRecordset](https://support.microsoft.com/kb/194124).  
+-   **Valeurs manquantes**. Le pilote Excel lit un certain nombre de lignes (par défaut, 8 lignes) dans la source spécifiée afin de déterminer le type de données de chaque colonne. Lorsqu'il s'avère qu'une colonne combine différents types de données, notamment des données numériques avec des données texte, le pilote porte son choix sur le type de données majoritaire et retourne des valeurs NULL dans les cellules qui contiennent des données de l'autre type. En cas d'égalité, le type numérique l'emporte. La plupart des options de mise en forme de cellule dans la feuille de calcul Excel n'affectent pas cette détermination du type de données. Vous pouvez modifier ce comportement du pilote Excel en spécifiant le mode d'importation. Pour spécifier le mode d’importation `IMEX=1` , ajoutez à la valeur des propriétés étendues dans la chaîne de connexion du gestionnaire de connexions Excel dans la fenêtre **Propriétés** . Pour plus d’informations, consultez [PRB: valeurs Excel retournées en tant que valeurs NULL à l’aide de DAO OpenRecordset](https://support.microsoft.com/kb/194124).  
   
 -   **Texte tronqué**. Lorsque le pilote détermine qu'une colonne Excel contient des données texte, il sélectionne le type de données (string ou memo) en fonction de la valeur la plus longue qu'il échantillonne. Si le pilote ne découvre pas de valeurs comptant plus de 255 caractères dans les lignes échantillonnées, il traite la colonne comme une colonne de type string à 255 caractères et non comme une colonne de type memo. Par conséquent, les valeurs de plus de 255 caractères peuvent être tronquées. Pour importer des données à partir d'une colonne de type memo sans troncation, vous devez vous assurer que la colonne de type memo dans au moins une des lignes échantillonnées contient une valeur comptant plus de 255 caractères, sinon, vous devez augmenter le nombre de lignes échantillonnées par le pilote pour inclure une telle ligne. Vous pouvez augmenter le nombre de lignes échantillonnées en augmentant la valeur de **TypeGuessRows** sous la clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Pour plus d’informations, consultez [PRB : échec de transfert de données de source Jet 4.0 OLEDB avec erreur de dépassement de mémoire tampon](https://support.microsoft.com/kb/281517).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "82087149"
   
     -   Booléen - booléen (DT_BOOL)  
   
-    -   Date/heure `datetime` - (DT_DATE)  
+    -   Date/heure- `datetime` (DT_DATE)  
   
     -   Chaîne - chaîne Unicode, longueur 255 (DT_WSTR)  
   
@@ -112,6 +112,6 @@ ms.locfileid: "82087149"
   
 -   Entrée de blog, [Importing data from 64-bit Excel in SSIS](https://go.microsoft.com/fwlink/?LinkId=217673), sur hrvoje.piasevoli.com  
   
--   Entrée de blog, [Connecting to Excel (XLSX) dans SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
+-   Entrée de blog, [connexion à Excel (xlsx) dans SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

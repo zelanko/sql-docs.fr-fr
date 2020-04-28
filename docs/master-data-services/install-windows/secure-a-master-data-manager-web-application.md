@@ -10,10 +10,10 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728501"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Sécuriser une application Web Master Data Manager
@@ -40,7 +40,7 @@ ms.locfileid: "81728501"
   
 3.  Dans le volet **Actions**, cliquez sur **Liaisons**.  
   
-4.  Cliquez sur **Add**.  
+4.  Cliquez sur **Ajouter**.  
   
 5.  Dans la liste, sélectionnez **https**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81728501"
   
 7.  Cliquez sur **OK**.  
   
-8.  facultatif. Pour supprimer HTTP afin que les utilisateurs puissent accéder au site avec HTTPS uniquement, dans la liste, cliquez sur la ligne avec **http**. Cliquez sur **Supprimer** et dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
+8.  Facultatif. Pour supprimer HTTP afin que les utilisateurs puissent accéder au site avec HTTPS uniquement, dans la liste, cliquez sur la ligne avec **http**. Cliquez sur **Supprimer** et dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
   
     > [!IMPORTANT]  
     >  Vous devez changer les configurations basicHttp et wsHttpBinding après avoir supprimé HTTP.  

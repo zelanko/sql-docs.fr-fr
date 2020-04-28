@@ -1,5 +1,5 @@
 ---
-title: Tabular Modeling (Adventure Works Tutorial) Microsoft Docs
+title: Modélisation tabulaire (didacticiel Adventure Works) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487628"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modélisation tabulaire (didacticiel Adventure Works)
@@ -58,7 +58,7 @@ ms.locfileid: "81487628"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Exemple de base de données AdventureWorksDW. Cet exemple de base de données comprend les données nécessaires pour effectuer ce didacticiel. Pour télécharger la base [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)de données de l’échantillon, voir .  
+-   Exemple de base de données AdventureWorksDW. Cet exemple de base de données comprend les données nécessaires pour effectuer ce didacticiel. Pour télécharger l’exemple de base de [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)données, consultez.  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 ou version ultérieure (pour utiliser la fonctionnalité Analyser dans Excel dans la leçon 11)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81487628"
 |Leçon|Durée estimée|  
 |------------|--------------------------------|  
 |[Implémentation de la sécurité dynamique à l'aide des filtres de lignes](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutes|  
-|[Configurer les propriétés de reporting pour les rapports Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) Configurer les propriétés de reporting pour les rapports Power View|30 minutes|  
+|[Configurer les propriétés de création de rapports pour les rapports Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) Configurer les propriétés de création de rapports pour les rapports Power View|30 minutes|  
   
 ## <a name="next-step"></a>étape suivante  
  Pour démarrer le didacticiel, passez à la première leçon : [Leçon 1 : Créer un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  

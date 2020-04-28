@@ -1,6 +1,6 @@
 ---
-title: Utilisation de System.Transactions (fr) Microsoft Docs
-description: L’espace de nom System.Transactions fournit un cadre de transaction entièrement intégré à l’intégration ADO.NET et SQL Server CLR.
+title: Utilisation de System. transactions | Microsoft Docs
+description: L’espace de noms System. transactions fournit une infrastructure de transaction qui est entièrement intégrée à ADO.NET et SQL Server l’intégration du CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488493"
 ---
 # <a name="using-systemtransactions"></a>Utilisation de System.Transactions

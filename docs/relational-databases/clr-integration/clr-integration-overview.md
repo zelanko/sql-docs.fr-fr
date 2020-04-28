@@ -1,6 +1,6 @@
 ---
-title: Aperçu de l’intégration CLR (fr) Microsoft Docs
-description: Microsoft SQL Server hébergeant CLR s’appelle l’intégration CLR. L’auteur dans le code géré peut améliorer les performances. SQL Server utilise CAS pour sécuriser le code géré.
+title: Vue d’ensemble de l’intégration du CLR | Microsoft Docs
+description: Microsoft SQL Server hébergeant le CLR est appelé intégration du CLR. La création dans du code managé peut améliorer les performances. SQL Server utilise les autorités de certification pour aider à sécuriser le code managé.
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 64c30629cf7608a7816ec16c458f55f4dfad1e75
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488102"
 ---
 # <a name="clr-integration---overview"></a>Intégration du CLR - Vue d’ensemble
@@ -41,11 +41,11 @@ ms.locfileid: "81488102"
  Le code managé est mieux adapté que [!INCLUDE[tsql](../../includes/tsql-md.md)] pour les calculs et les logiques d'exécution élaborées, et des fonctionnalités étendues prennent en charge nombre de tâches complexes, comme la manipulation des chaînes et des expressions régulières. Avec les fonctionnalités proposées dans la bibliothèque .NET Framework, vous avez accès aux milliers de classes et routines prégénérées. Il est possible d'accéder simplement à celles-ci à partir d'une procédure stockée, d'un déclencheur ou d'une fonction définie par l'utilisateur. La bibliothèque des classes de base (BCL, Base Class Library) inclut les classes qui fournissent les fonctionnalités de manipulation de chaînes, d'opérations mathématiques avancées, d'accès aux fichiers, de chiffrement, etc.  
   
 > [!NOTE]  
->  Alors que la plupart de ces classes sont disponibles pour être utilisées au sein du code CLR de SQL Server, celles qui ne sont pas adaptées à une utilisation côté serveur (par exemple, les classes de fenêtrage) ne sont pas disponibles. Pour plus d’informations, voir [Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Alors que la plupart de ces classes sont disponibles pour être utilisées au sein du code CLR de SQL Server, celles qui ne sont pas adaptées à une utilisation côté serveur (par exemple, les classes de fenêtrage) ne sont pas disponibles. Pour plus d’informations, consultez [.NET Framework les bibliothèques prises en charge](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
  L'un des avantages du code managé est la cohérence des types, ou l'assurance que le code n'accède aux types que de façon bien définie et autorisée. Avant que le code managé ne soit exécuté, le CLR vérifie que le code ne présente pas de risque. Par exemple, il est procédé à un contrôle du code pour s'assurer qu'aucune mémoire ne soit lue qui n'ait été préalablement écrite. Le CLR peut également aider à vérifier que le code ne manipule pas une mémoire non managée.  
   
- L'intégration du CLR offre la possibilité de meilleures performances. Pour plus d’informations, voir [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ L'intégration du CLR offre la possibilité de meilleures performances. Pour plus d’informations, consultez [performances de l’intégration du CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
  
 > [!WARNING]
 >  CLR utilise la sécurité d’accès du code (CAS) dans le .NET Framework, qui n’est plus pris en charge comme limite de sécurité. Un assembly CLR créé avec `PERMISSION_SET = SAFE` peut être en mesure d’accéder à des ressources système externes, d’appeler du code non managé et d’acquérir des privilèges sysadmin. À compter de [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], une option de `sp_configure` appelée `clr strict security` est introduite pour renforcer la sécurité des assemblys CLR. `clr strict security` est activée par défaut et traite les assemblys `SAFE` et `EXTERNAL_ACCESS` comme s’ils étaient marqués `UNSAFE`. L’option `clr strict security` peut être désactivée pour assurer une compatibilité descendante, mais ceci n’est pas recommandé. Microsoft recommande que tous les assemblys soient signés par un certificat ou une clé asymétrique avec une connexion correspondante à laquelle a été accordée l’autorisation `UNSAFE ASSEMBLY` dans la base de données master. Pour plus d’informations, consultez [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). 
@@ -57,12 +57,12 @@ ms.locfileid: "81488102"
  Autre facteur de votre décision relative au choix de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou du code managé, l'emplacement où vous souhaitez que votre code réside, à savoir sur le serveur ou sur l'ordinateur client. [!INCLUDE[tsql](../../includes/tsql-md.md)] et le code managé peuvent tous deux être exécutés sur le serveur. Le code et les données se retrouvent ensemble, et vous permettent de tirer parti de la puissance de traitement du serveur. En revanche, vous pouvez souhaiter éviter de placer les tâches intensives du processeur sur votre serveur de base de données. Aujourd'hui, la plupart des ordinateurs clients sont très puissants et il se peut que vous souhaitiez tirer parti de cette puissance de traitement en plaçant autant de code que possible sur le client. Le code managé peut s'exécuter sur un ordinateur client, contrairement à [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Choix entre procédures stockées étendues et code managé  
- Les procédures stockées étendues peuvent être créées pour remplir une fonctionnalité inaccessible via les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)]. Toutefois, les procédures stockées étendues peuvent compromettre l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contrairement au code managé qui est soumis à une vérification pour être certain qu'il ne présente aucun risque. En outre, la gestion de la mémoire, la planification des threads et des fibres, et les services de synchronisation sont plus profondément intégrés entre le code managé du CLR et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avec l'intégration du CLR, vous avez une solution plus sécurisée que les procédures stockées étendues pour écrire les procédures stockées qui vous sont nécessaires pour exécuter des tâches qui ne peuvent l'être dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour plus d’informations sur l’intégration CLR et les procédures stockées étendues, voir [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ Les procédures stockées étendues peuvent être créées pour remplir une fonctionnalité inaccessible via les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)]. Toutefois, les procédures stockées étendues peuvent compromettre l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contrairement au code managé qui est soumis à une vérification pour être certain qu'il ne présente aucun risque. En outre, la gestion de la mémoire, la planification des threads et des fibres, et les services de synchronisation sont plus profondément intégrés entre le code managé du CLR et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avec l'intégration du CLR, vous avez une solution plus sécurisée que les procédures stockées étendues pour écrire les procédures stockées qui vous sont nécessaires pour exécuter des tâches qui ne peuvent l'être dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour plus d’informations sur l’intégration du CLR et les procédures stockées étendues, consultez [performances de l’intégration du CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installation du cadre .NET](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Architecture de l’intégration CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
- [Accès aux données à partir d’objets de base de données CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
+ [Installation du .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Architecture de l’intégration du CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Accès aux données à partir des objets de base de données CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Mise en route avec l'intégration du CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   
   

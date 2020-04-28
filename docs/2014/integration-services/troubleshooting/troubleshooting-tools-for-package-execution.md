@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087059"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
@@ -52,13 +52,13 @@ ms.locfileid: "82087059"
   
 -   **Dotez les sorties d'erreur d'informations conviviales**. Vous pouvez faciliter le travail d'analyse de la sortie d'erreur en ajoutant des informations descriptives, en plus des deux identificateurs numériques fournis par la sortie d'erreur.  
   
-     **Ajouter la description de l’erreur**. Vous pouvez aisément rechercher une description de l'erreur à l'aide d'un composant Script. Pour plus d’informations, voir [Améliorer une sortie d’erreur pour le composant script .](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)  
+     **Ajoutez la description de l’erreur**. Vous pouvez aisément rechercher une description de l'erreur à l'aide d'un composant Script. Pour plus d’informations, consultez [amélioration d’une sortie d’erreur pour le composant script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Ajouter le nom de la colonne d’erreur**. La recherche du nom de colonne correspondant à l'ID de colonne enregistré dans la sortie d'erreur n'est pas facile dans le composant Script et exige d'autres étapes. Chaque ID de colonne au sein d'un flux de données est unique dans la tâche de flux de données concernée et demeure dans le package au moment de la conception. L'approche suivante est une solution qui suggère l'ajout du nom de la colonne à la sortie d'erreur. 
+     **Ajoutez le nom de la colonne d’erreur**. La recherche du nom de colonne correspondant à l'ID de colonne enregistré dans la sortie d'erreur n'est pas facile dans le composant Script et exige d'autres étapes. Chaque ID de colonne au sein d'un flux de données est unique dans la tâche de flux de données concernée et demeure dans le package au moment de la conception. L'approche suivante est une solution qui suggère l'ajout du nom de la colonne à la sortie d'erreur. 
   
     1.  **Créez une table de recherche de noms de colonnes**. Créez une application qui utilise l'API [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour intervenir de manière itérative dans chaque package enregistré, chaque flux de données au sein du package, chaque objet au sein du flux de données, puis chaque entrée ou sortie dans l'objet du flux de données. L'application doit conserver l'ID de colonne et le nom de chaque colonne dans une table de recherche, ainsi que l'ID de la tâche de flux de données parent et celui du package.  
   
-    2.  **Ajouter le nom de colonne à la sortie**. Ajoutez une transformation de recherche à la sortie d'erreur chargée de rechercher le nom de colonne dans la table de recherche créée à l'étape précédente. La recherche peut se servir de l'ID de colonne dans la sortie d'erreur, de l'ID du package (disponible dans la variable système System::PackageID) et de l'ID de la tâche de flux de données (disponible dans la variable système System::TaskID).  
+    2.  **Ajoutez le nom de colonne à la sortie**. Ajoutez une transformation de recherche à la sortie d'erreur chargée de rechercher le nom de colonne dans la table de recherche créée à l'étape précédente. La recherche peut se servir de l'ID de colonne dans la sortie d'erreur, de l'ID du package (disponible dans la variable système System::PackageID) et de l'ID de la tâche de flux de données (disponible dans la variable système System::TaskID).  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de rapports d'opérations  
  Des rapports d'opérations standard sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à contrôler les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ces rapports de package vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs.  
@@ -66,7 +66,7 @@ ms.locfileid: "82087059"
  Pour plus d’informations, voir [Rapports de dépannage pour l’exécution des packages](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de vues SSISDB  
- Vous pouvez interroger plusieurs vues de base de données SSISDB pour contrôler les informations relatives à l'exécution des packages et à d'autres opérations. Pour plus d’informations, voir [Surveillance des exécutions de colis et autres opérations](../performance/monitor-running-packages-and-other-operations.md).  
+ Vous pouvez interroger plusieurs vues de base de données SSISDB pour contrôler les informations relatives à l'exécution des packages et à d'autres opérations. Pour plus d’informations, consultez [surveillance des exécutions de packages et d’autres opérations](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de la journalisation  
  Vous pouvez contrôler la plupart des opérations réalisées dans vos packages en cours d'exécution en activant la fonction de journalisation. Les modules fournisseur d'informations permettent de capturer des informations sur des événements spécifiques à des fins d'analyse ultérieure, puis d'enregistrer ces informations dans une table de base de données, un fichier plat, un fichier XML ou un autre format de sortie pris en charge.  

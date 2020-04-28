@@ -1,6 +1,6 @@
 ---
-title: Performance de l’intégration CLR (fr) Microsoft Docs
-description: Cet article traite des choix de conception pour l’intégration de Microsoft SQL Server avec le .NET Framework CLR, y compris le processus de compilation et les performances.
+title: Performances de l’intégration du CLR | Microsoft Docs
+description: Cet article décrit les choix de conception pour l’intégration de Microsoft SQL Server avec le CLR .NET Framework, y compris le processus de compilation et les performances.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488147"
 ---
 # <a name="clr-integration-architecture----performance"></a>Architecture de l’intégration du CLR - Performances
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Ce sujet traite de certains des choix [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] conception qui améliorent la performance de l’intégration avec le cadre .NET heure courante de langue commune (CLR).  
+  Cette rubrique décrit quelques-uns des choix de conception qui améliorent les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performances de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] intégration avec le .NET Framework Common Language Runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>Processus de compilation  
  Pendant la compilation d'expressions SQL, en cas de référence à une routine managée, un stub MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language) est généré. Ce stub inclut le code pour marshaler les paramètres de routine à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers le CLR, appeler la fonction et retourner le résultat. Ce code de type glue est basé sur le type de paramètre et sur la direction du paramètre (in, out ou reference).  
@@ -36,7 +36,7 @@ ms.locfileid: "81488147"
  Le processus de compilation génère une fonction pointeur qui peut être appelée au moment de l'exécution à partir du code natif. Dans le cas de fonctions scalaires définies par l'utilisateur, cet appel de fonction se produit ligne par ligne. Pour réduire le coût de la transition entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR, les instructions qui contiennent un appel managé possèdent une étape de démarrage pour identifier le domaine d'application cible. Cette étape d'identification réduit le coût de la transition pour chaque ligne.  
   
 ## <a name="performance-considerations"></a>Considérations relatives aux performances  
- Les éléments suivants résument les considérations sur les performances spécifiques à l'intégration du CLR dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Des informations plus détaillées peuvent être trouvées dans "[Utilisation de CLR Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" sur le site Web de MSDN. Des informations générales concernant les performances du code géré peuvent être trouvées dans "[Améliorer les performances et l’évolutivité d’application de .NET](https://go.microsoft.com/fwlink/?LinkId=50333)» sur le site Web de MSDN.  
+ Les éléments suivants résument les considérations sur les performances spécifiques à l'intégration du CLR dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez «[utilisation de l’intégration du CLR dans SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)» sur le site Web MSDN. Vous trouverez des informations générales sur les performances du code managé dans la rubrique «[amélioration des performances et de l’évolutivité des applications .net](https://go.microsoft.com/fwlink/?LinkId=50333)» sur le site Web MSDN.  
   
 ### <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur  
  Les fonctions CLR tirent parti d'un chemin d'accès d'appel plus rapide que celui des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] définies par l'utilisateur. En outre, le code managé possède un avantage décisif en termes de performances par rapport à [!INCLUDE[tsql](../../includes/tsql-md.md)] quant au code procédural, au calcul et à la manipulation de chaînes. Les fonctions CLR gourmandes en calculs et n'effectuant pas d'accès aux données sont mieux écrites en code managé. Toutefois, les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutent l'accès aux données plus efficacement que l'intégration du CLR.  
@@ -47,16 +47,16 @@ ms.locfileid: "81488147"
 ### <a name="streaming-table-valued-functions"></a>Fonctions table en continu  
  Les applications doivent souvent retourner une table comme résultat de l'appel d'une fonction. Les exemples incluent la lecture de données tabulaires à partir d'un fichier dans le cadre d'une opération d'importation et la conversion de valeurs séparées par des virgules dans le cas d'une représentation relationnelle. En général, vous pouvez accomplir ces actions en matérialisant la table de résultats et en la remplissant avant qu'elle ne puisse être consommée par l'appelant. L'intégration du CLR dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduit un nouveau mécanisme d'extensibilité appelé fonction table en continu. Les fonctions table en continu offrent de meilleures performances que les implémentations de procédure stockée étendue comparables.  
   
- Les STVF sont des fonctions gérées qui renvoient une interface **IEnumerable.** **IEnumerable** a des méthodes pour naviguer dans l’ensemble de résultats retournés par le STVF. Lorsque le STVF est invoqué, **l’IEnumerable** retourné est directement connecté au plan de requête. Le plan de requête appelle les méthodes **IEnumerable** quand il a besoin d’aller chercher des rangées. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
+ Les multi-diffusion sont des fonctions managées qui retournent une interface **IEnumerable** . **IEnumerable** a des méthodes pour naviguer dans le jeu de résultats retourné par STVF. Lorsque le STVF est appelé, l' **IEnumerable** retourné est directement connectée au plan de requête. Le plan de requête appelle les méthodes **IEnumerable** lorsqu’il doit extraire des lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
   
 ### <a name="arrays-vs-cursors"></a>Différences entre les tableaux et les curseurs  
  Lorsque les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] doivent parcourir des données qui sont plus aisément exprimées en tableau, le code managé peut être utilisé avec des gains de performance significatifs.  
   
 ### <a name="string-data"></a>Données de type chaîne  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les données de caractère, telles que **le varchar,** peuvent être du type SqlString ou SqlChars dans les fonctions gérées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML serveur peuvent être consultés via une interface de streaming retourné par **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les données de type caractère, telles que **varchar**, peuvent être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML du serveur sont accessibles par le biais d’une interface de streaming retournée par **SQLXML. CreateReader ()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>Différences entre le CLR et les procédures stockées étendues  
- Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les API System.Data.SqlServer prennent en charge les types de données tels que **xml**, **varchar(max)**, **nvarchar(max)**, et **varbinary(max)**, introduit dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tandis que les API ODS n’ont pas été étendus pour soutenir les nouveaux types de données.  
+ Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les API System. Data. SqlServer prennent en charge des types de données tels que **XML**, **varchar (max)**, **nvarchar (max)** et **varbinary (max)**, introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tandis que les API ODS n’ont pas été étendues pour prendre en charge les nouveaux types de données.  
   
  Avec le code managé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l'utilisation de ressources telles que la mémoire, les threads et la synchronisation. La raison en est que les API managées qui exposent ces ressources sont implémentées sur le gestionnaire de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inversement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a ni vue ou contrôle sur l'utilisation des ressources de la procédure stockée étendue. Par exemple, si une procédure stockée étendue consomme une quantité trop importante d'UC ou de ressources mémoire, il n'existe aucun moyen de le détecter ou de le contrôler avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avec le code managé, toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut détecter qu'un thread donné n'a rien produit pendant une longue période de temps, puis forcer la tâche à être abandonnée afin qu'un autre travail puisse être planifié. Par conséquent, l'utilisation du code managé offre une meilleure évolutivité et une meilleure utilisation des ressources système.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "81488147"
 >  Il est recommandé de ne pas développer de nouvelles procédures stockées étendues, parce que cette fonctionnalité a été déconseillée.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Sérialisation native pour les types définis par l'utilisateur  
- Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implémente un format de sérialisation pour les UDT appelés **Format.Native**. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
+ Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implémente un format de sérialisation pour les UDT appelé **format. Native**. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
   
- La sérialisation native est l'implémentation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sérialisation définie par l'utilisateur appelle une méthode définie par le créateur du type pour effectuer la sérialisation. **Format.Native** sérialisation doit être utilisé lorsque possible pour la meilleure performance.  
+ La sérialisation native est l'implémentation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sérialisation définie par l'utilisateur appelle une méthode définie par le créateur du type pour effectuer la sérialisation. **Format.** la sérialisation native doit être utilisée dans la mesure du possible pour des performances optimales.  
   
 ### <a name="normalization-of-comparable-udts"></a>Normalisation d'UDT comparables  
  Les opérations relationnelles, telles que le tri et la comparaison d'UDT, fonctionnent directement sur la représentation binaire de la valeur. Cette tâche s'effectue en stockant une représentation normalisée (classement binaire) de l'état de l'UDT sur le disque.  

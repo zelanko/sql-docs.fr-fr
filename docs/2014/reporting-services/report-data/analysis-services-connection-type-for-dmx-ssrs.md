@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c6d2c689689cde5c6c5ef4ffa8ab5c0e8737078
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82086962"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Type de connexion Analysis Services pour DMX (SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "82086962"
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
- [Outils de conception de requête dans report Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Outils de conception de requête dans Concepteur de rapports SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

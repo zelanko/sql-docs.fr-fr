@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487863"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Découvrez SQL Server Master Data Services
@@ -26,8 +26,8 @@ ms.locfileid: "81487863"
   
   
 ## <a name="training"></a>Entrainement  
-* Pour explorer les nouvelles fonctionnalités et fonctionnalités introduites dans [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], essayez un [laboratoire auto-rythmé](https://www.microsoft.com/handsonlabs/selfpacedlabs) (connectez-vous avec votre compte Microsoft est nécessaire).  
-* Pour développer [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] une solution pour stocker et gérer les listes de maîtres [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]des données géographiques, en utilisant l’Add-in pour Excel et le , essayez un [laboratoire auto-rythmé](https://www.microsoft.com/handsonlabs/selfpacedlabs). Vous allez créer des entités et des hiérarchies, et utiliser [!INCLUDE[ssIS_md](../includes/ssis-md.md)] pour remplir une table de dimension.  
+* Pour explorer les nouvelles fonctionnalités et capacités introduites [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]dans, essayez un [laboratoire](https://www.microsoft.com/handsonlabs/selfpacedlabs) à votre rythme (connectez-vous avec votre compte Microsoft est requis).  
+* Pour développer une [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solution de stockage et de gestion des listes principales de données géographiques, à l’aide du complément pour Excel [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]et du, essayez un laboratoire à votre [rythme](https://www.microsoft.com/handsonlabs/selfpacedlabs). Vous allez créer des entités et des hiérarchies, et utiliser [!INCLUDE[ssIS_md](../includes/ssis-md.md)] pour remplir une table de dimension.  
   
 ## <a name="videos"></a>Videos  
 * Pour en savoir plus sur les nouvelles fonctionnalités de la version [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**visionnez cette vidéo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  

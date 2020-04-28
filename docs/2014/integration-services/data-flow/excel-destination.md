@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087159"
 ---
 # <a name="excel-destination"></a>Destination Excel
@@ -48,7 +48,7 @@ ms.locfileid: "82087159"
   
      Pour plus d'informations sur la façon d'inclure l'apostrophe, consultez le billet de blog, [Une apostrophe est ajoutée à toutes les chaînes quand des données sont transformées dans excel lors de l'utilisation d'un composant de flux de données de destination Excel dans un package SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), sur msdn.com.  
   
--   **Enregistrement des données mémo (ntext)**. Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une colonne Excel, le pilote doit reconnaître le type de données de la colonne de destination comme **mémo** et non comme **chaîne**. Si la table de destination contient déjà des lignes de données, les premières lignes échantillonnées par le pilote doivent contenir au moins une instance d'une valeur dépassant 255 caractères dans la colonne mémo. Si la table de destination est créée pendant la conception du paquet ou à l’heure d’exécution, l’instruction CREATE TABLE doit utiliser LONGTEXT (ou l’un de ses synonymes) comme type de données de la colonne de mémo.  
+-   **Enregistrement des données mémo (ntext)**. Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une colonne Excel, le pilote doit reconnaître le type de données de la colonne de destination comme **mémo** et non comme **chaîne**. Si la table de destination contient déjà des lignes de données, les premières lignes échantillonnées par le pilote doivent contenir au moins une instance d'une valeur dépassant 255 caractères dans la colonne mémo. Si la table de destination est créée pendant la conception du package ou au moment de l’exécution, l’instruction CREATE TABLE doit utiliser LONGTEXT (ou l’un de ses synonymes) comme type de données de la colonne MEMO.  
   
 -   **Types de données**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
   
@@ -104,9 +104,9 @@ ms.locfileid: "82087159"
 -   [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Excel Source](excel-source.md)   
- [Services d’intégration &#40;SSIS&#41; variables](../integration-services-ssis-variables.md)   
- [Flux de données](data-flow.md)   
+ [Source Excel](excel-source.md)   
+ [Integration Services &#40;les variables de&#41; SSIS](../integration-services-ssis-variables.md)   
+ [Transmission de données](data-flow.md)   
  [Utilisation de fichiers Excel avec la tâche de script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   
