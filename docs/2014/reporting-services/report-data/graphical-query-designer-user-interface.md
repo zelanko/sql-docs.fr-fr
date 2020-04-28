@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388547"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes graphique
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel pour la création de requêtes permettant de récupérer des données d’une base de données relationnelle pour un dataset de rapport dans le Concepteur de rapports. Utilisez le concepteur de requêtes graphique pour générer une requête de manière interactive et afficher les résultats pour les types de sources de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB et ODBC. Utilisez le concepteur de requêtes textuel pour spécifier plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , une syntaxe de requête ou de commande complexe et des requêtes basées sur des expressions. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](../text-based-query-designer-user-interface.md). Pour plus d’informations sur le travail avec des types spécifiques de source de données, voir [Ajouter des données à un rapport &#40;Report Builder et SSRS&#41;](report-datasets-ssrs.md).
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel pour la création de requêtes permettant de récupérer des données d’une base de données relationnelle pour un dataset de rapport dans le Concepteur de rapports. Utilisez le concepteur de requêtes graphique pour générer une requête de manière interactive et afficher les résultats pour les types de sources de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB et ODBC. Utilisez le concepteur de requêtes textuel pour spécifier plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] , une syntaxe de requête ou de commande complexe et des requêtes basées sur des expressions. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](../text-based-query-designer-user-interface.md). Pour plus d’informations sur l’utilisation de types de sources de données spécifiques, consultez [Ajouter des données à un rapport &#40;générateur de rapports et SSRS&#41;](report-datasets-ssrs.md).
 
  .
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>Voir aussi
- [Les outils de conception de requête dans les outils de données de serveur SQL de report SQL &#40;SSRS&#41;](query-design-tools-ssrs.md) [ajouter des données à un report &#40;Report Builder et SSRS&#41;](report-datasets-ssrs.md) [SQL Server Connection Type &#40;SSRS&#41;](sql-server-connection-type-ssrs.md) [OLE DB Connection Type &#40;SSRS&#41;](ole-db-connection-type-ssrs.md) ajouter des données à un rapport &#40;Report Builder et [SSRS&#41;](report-datasets-ssrs.md) oracle Connection Type &#40;[SSRS&#41;](oracle-connection-type-ssrs.md) [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md) Design Questions and Views [How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+ [Outils de conception de requête dans Concepteur de rapports SQL Server Data Tools &#40;ssrs&#41;](query-design-tools-ssrs.md) [Ajouter des données à un rapport &#40;générateur de rapports et SSRS](report-datasets-ssrs.md)&#41;SQL Server [type de connexion &#40;SSRS](sql-server-connection-type-ssrs.md)&#41;[OLE DB type de connexion &#40;SSRS&#41;](ole-db-connection-type-ssrs.md) [Ajouter des données à un rapport &#40;](report-datasets-ssrs.md) de générateur de rapports [Visual Database Tools](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)&#41;de &#40;SSRS&#41;de [configuration](../report-server/rsreportdesigner-configuration-file.md) de [SSRS](oracle-connection-type-ssrs.md) &#40;
 
 

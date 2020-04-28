@@ -1,5 +1,5 @@
 ---
-title: Interopérabilité Microsoft Docs
+title: Interopérabilité | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31b20a696c601ff91c591e4c717f468beca34e36
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306220"
 ---
 # <a name="interoperability"></a>Interopérabilité
-*L’interopérabilité* est la capacité d’une seule application à fonctionner avec de nombreux DBMS différents. La nécessité d’écrire des applications génériques et interopérables a été l’un des principaux facteurs qui ont mené au développement d’ODBC. Cependant, l’interopérabilité n’est pas un simple chemin suivi de « non interopérable » à « complètement interopérable ». Le chemin a de nombreuses branches, et chacun nécessite des compromis entre les caractéristiques, la vitesse, la complexité du code, et le temps de développement.  
+L' *interopérabilité* est la capacité d’une application unique à fonctionner avec de nombreux SGBD différents. La nécessité d’écrire des applications génériques et interopérables était l’un des principaux facteurs qui conduisent au développement d’ODBC. Toutefois, l’interopérabilité n’est pas un chemin d’accès simple, suivi de « non interopérable » à « entièrement interopérable ». Le chemin d’accès comporte de nombreuses branches, chacune nécessitant des compromis entre les fonctionnalités, la vitesse, la complexité du code et le temps de développement.  
   
- Le processus de rédaction d’une demande interopérable suit plusieurs étapes :  
+ Le processus d’écriture d’une application interopérable suit plusieurs étapes :  
   
-1.  Décider si l’application utilisera ODBC.  
+1.  Déterminer si l’application utilisera ODBC.  
   
-2.  Choisir un niveau d’interopérabilité et décider quels compromis sont nécessaires pour atteindre ce niveau.  
+2.  Le choix d’un niveau d’interopérabilité et la décision des compromis sont nécessaires pour atteindre ce niveau.  
   
-3.  Rédaction de code interopérable et test de test aussi pleinement que possible.  
+3.  Écrire du code interopérable et le tester aussi complètement que possible.  
   
- Il convient de noter que l’interopérabilité est principalement le domaine de l’auteur de l’application. Les conducteurs sont conçus pour travailler avec un seul DBMS et, par définition, ne sont pas interopérables. Ils jouent un rôle dans l’interopérabilité en mettant correctement en œuvre et en exposant ODBC sur un seul DBMS.  
+ Il convient de noter que l’interopérabilité est principalement le domaine du writer de l’application. Les pilotes sont conçus pour fonctionner avec un SGBD unique et, par définition, ne sont pas interopérables. Ils jouent un rôle dans l’interopérabilité en implémentant et en exposant correctement ODBC sur un SGBD unique.  
   
  Cette section contient les rubriques suivantes :  
   

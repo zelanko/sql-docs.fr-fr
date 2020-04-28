@@ -1,5 +1,5 @@
 ---
-title: Outils de conception de requête dans report Designer SQL Server Data Tools (SSRS) Microsoft Docs
+title: Outils de conception de requête dans Concepteur de rapports SQL Server Data Tools (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1179f4e5a6c8be90b5bc52b814ae49c96a3a39aa
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388620"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Outils de conception de requête dans les outils de données SQL Server du Concepteur de rapports (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit différents outils de conception de requêtes que vous pouvez utiliser pour créer des requêtes de dataset dans le Concepteur de rapports. Le type de source de données utilisé détermine la disponibilité d'un concepteur de requêtes particulier. En outre, certains Concepteurs de requêtes offrent d'autres modes afin que vous puissiez choisir s'il convient de travailler en mode visuel ou directement dans le langage de requête. Cette rubrique présente chaque outil et décrit le type de source de données que chacun prend en charge. Les outils suivants sont décrits dans cette rubrique :
 
--   [Concepteur de requêtes textuelles](#Textbased)
+-   [Concepteur de requêtes textuel](#Textbased)
 
--   [Concepteur de requête graphique](#Graphical)
+-   [Concepteur de requêtes graphique](#Graphical)
 
 -   [Concepteur de requêtes Modèle de rapport](#Model)
 
@@ -47,46 +47,46 @@ ms.locfileid: "81388620"
  Tous les outils de conception de requêtes fonctionnent dans l’environnement de conception de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] quand vous travaillez avec un modèle de projet de Report Server ou de l’Assistant Projet Report Server. Pour plus d’informations sur l’utilisation des concepteurs de requêtes, consultez [Concepteurs de requêtes Reporting Services](../reporting-services-query-designers.md).
 
 ##  <a name="text-based-query-designer"></a><a name="Textbased"></a> Concepteur de requêtes textuel
- Le concepteur de requêtes textuelles est l’outil de construction [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de requêtes par défaut pour les sources de données relationnelles les plus prisées, y compris , Oracle, Teradata, OLE DB, XML et ODBC. Contrairement au concepteur de requêtes graphique, cet outil de conception de requêtes ne valide pas la syntaxe des requêtes lors de leur conception. L'image suivante présente le concepteur de requêtes textuel.
+ Le concepteur de requêtes textuel est l’outil de création de requêtes par défaut pour la plupart des sources de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]relationnelles prises en charge, notamment, Oracle, Teradata, OLE DB, XML et ODBC. Contrairement au concepteur de requêtes graphique, cet outil de conception de requêtes ne valide pas la syntaxe des requêtes lors de leur conception. L'image suivante présente le concepteur de requêtes textuel.
 
  ![Concepteur de requêtes générique pour les requêtes de données relationnelles](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Concepteur de requêtes générique pour les requêtes de données relationnelles")
 
  Le concepteur de requêtes textuel est recommandé pour la création de requêtes complexes, à l'aide de procédures stockées, d'interrogation de données XML et d'écriture de requêtes dynamiques. Selon la source de données, vous pouvez peut-être cliquer sur le bouton **Modifier en tant que texte** dans la barre d’outils pour basculer entre le concepteur de requêtes graphique et le concepteur de requêtes textuel. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](../text-based-query-designer-user-interface.md).
 
-##  <a name="graphical-query-designer"></a><a name="Graphical"></a>Concepteur de requête graphique
+##  <a name="graphical-query-designer"></a><a name="Graphical"></a>Concepteur de requêtes graphique
  Le concepteur de requêtes graphique permet de créer ou de modifier des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s’exécutent sur une base de données relationnelle. Cet outil de conception de requêtes est utilisé dans plusieurs produits [!INCLUDE[msCoName](../../../includes/msconame-md.md)] et dans d'autres composants de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Selon le type de source de données, il prend en charge les modes Text, StoredProcedure et TableDirect. L'image suivante présente le concepteur de requêtes graphique.
 
  ![Concepteur de requêtes graphique pour requêtes SQL](../media/rsqd-dsaw-sql.gif "Concepteur de requêtes graphique pour requêtes SQL")
 
  Vous pouvez cliquer sur le bouton **Modifier en tant que texte** dans la barre d’outils pour basculer entre le concepteur de requêtes graphique et le concepteur de requêtes textuel. Pour plus d’informations, consultez [Interface utilisateur du concepteur de requêtes graphique](graphical-query-designer-user-interface.md).
 
-##  <a name="report-model-query-designer"></a><a name="Model"></a>Report Model Query Designer
+##  <a name="report-model-query-designer"></a><a name="Model"></a>Concepteur de requêtes modèle de rapport
  Le concepteur de requêtes Modèle de rapport sert à créer ou à modifier des requêtes qui s'exécutent dans un modèle de rapport SMDL publié sur un serveur de rapports. Les rapports qui s'exécutent sur des modèles prennent en charge l'exploration de données consultables à l'aide de clics. La requête détermine le chemin de l'exploration des données au moment de l'exécution. L'image suivante présente le concepteur de requêtes Modèle de rapport.
 
  ![Interface du concepteur de requêtes Modèle sémantique](../media/rsqd-dsawmodel-smql.gif "Interface du concepteur de requêtes Modèle sémantique")
 
  Pour utiliser le concepteur de requêtes Modèle de rapport, vous devez définir une source de données qui pointe vers un modèle publié. Lorsque vous définissez un dataset pour la source de données, vous pouvez ouvrir la requête de dataset dans le concepteur de requêtes Modèle de rapport. Le concepteur de requêtes Modèle de rapport peut être utilisé en mode graphique ou textuel. Vous pouvez cliquer sur le bouton **Modifier en tant que texte** dans la barre d’outils pour basculer entre le concepteur de requêtes graphique et le concepteur de requêtes textuel. Pour plus d’informations, consultez [Interface utilisateur du concepteur de requêtes de modèle de rapport](report-model-query-designer-user-interface.md).
 
-##  <a name="mdx-query-designer"></a><a name="MDX"></a>MDX Query Designer
+##  <a name="mdx-query-designer"></a><a name="MDX"></a>Concepteur de requêtes MDX
  Le concepteur de requêtes MDX (Multidimensional Expression) permet de créer ou de modifier des requêtes exécutées sur une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avec des cubes multidimensionnels. L'image suivante présente le concepteur de requêtes MDX après définition de la requête et du filtre.
 
  ![Concepteur de requêtes MDX Analysis Services, mode Conception](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Concepteur de requêtes MDX Analysis Services, mode Conception")
 
  Pour utiliser le concepteur de requêtes MDX, vous devez définir une source de données possédant un cube Analysis Services disponible, valide et traité. Lorsque vous définissez un dataset pour la source de données, vous pouvez ouvrir la requête dans le concepteur de requêtes MDX. Si nécessaire, utilisez les boutons MDX et DMX sur la barre d'outils pour commuter entre les modes MDX et DMX. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes MDX Analysis Services](analysis-services-mdx-query-designer-user-interface.md).
 
-##  <a name="dmx-query-designer"></a><a name="DMX"></a>Concepteur de requête DMX
+##  <a name="dmx-query-designer"></a><a name="DMX"></a>Concepteur de requêtes DMX
  Le concepteur de requêtes DMX (Data Mining Prediction Expression) permet de créer ou de modifier des requêtes exécutées sur une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avec des modèles d'exploration de données. L'image suivante présente le concepteur de requêtes DMX après sélection du modèle et des tables d'entrée.
 
  ![Concepteur de requêtes DMX Analysis Services, mode Conception](../media/rsqd-dsawas-dmx-designmode.gif "Concepteur de requêtes DMX Analysis Services, mode Conception")
 
  Pour utiliser le concepteur de requêtes DMX, vous devez définir une source de données possédant un modèle d'exploration de données disponible et valide. Lorsque vous définissez un dataset pour la source de données, vous pouvez ouvrir la requête dans le concepteur de requêtes DMX. Si nécessaire, utilisez les boutons MDX et DMX sur la barre d'outils pour commuter entre les modes MDX et DMX. Après la sélection du modèle, vous pouvez créer des requêtes de prédiction d'exploration de données qui fournissent des données à un rapport. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](analysis-services-dmx-query-designer-user-interface.md).
 
-##  <a name="sap-netweaver-bi-query-designer"></a><a name="SAPBW"></a>Sap NetWeaver BI Query Designer
+##  <a name="sap-netweaver-bi-query-designer"></a><a name="SAPBW"></a>Concepteur de requêtes SAP NetWeaver BI
  Le concepteur de requêtes [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] permet de récupérer des données d’une base de données [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] . Pour utiliser ce concepteur de requêtes, vous devez avoir une source de données [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] possédant au moins une requête InfoCube, MultiProvider ou web définie. L'image suivante présente le concepteur de requêtes [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] .
 
  ![Concepteur de requêtes avec MDX en mode Conception](../media/rsqd-dssapbw-mdx-designmode.gif "Concepteur de requêtes avec MDX en mode Conception")
 
-##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Hyperion Essbase Query Designer
+##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Concepteur de requêtes Hyperion Essbase
  Le concepteur de requêtes [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] permet de récupérer des données à partir de bases de données et d'applications [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] . L'image suivante présente le concepteur de requêtes [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] .
 
  ![Concepteur de requêtes pour la source de données Hyperion Essbase](../media/rsqd-dshyperionessbase-mdx-designmode.gif "Concepteur de requêtes pour la source de données Hyperion Essbase")
@@ -94,6 +94,6 @@ ms.locfileid: "81388620"
  Pour utiliser ce concepteur de requêtes, vous devez avoir une source de données [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] possédant au moins une base de données. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Les outils de services de reporting](../tools/reporting-services-tools.md) ajoutent des données à un rapport &#40;Report Builder et [SSRS&#41;](report-datasets-ssrs.md) Data [Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) Reporting Services [Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md) Data Sources Supported by Reporting Services &#40;[SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) Create an Embedded or Shared Data Source &#40;[SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)
+ Les [Outils](../tools/reporting-services-tools.md) [de Reporting Services ajoutent des données à un rapport &#40;les](report-datasets-ssrs.md) [connexions de données, les sources de données et les chaînes de connexion de](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)&#41;générateur de rapports et SSRS dans Reporting Services Reporting Services les sources de données [ssrs](../reporting-services-tutorials-ssrs.md) &#40;[prises en charge par&#41;Reporting Services SSRS &#40;](../create-deploy-and-manage-mobile-and-paginated-reports.md) [créer une source de données incorporée ou partagée&#41;SSRS &#40;](../create-an-embedded-or-shared-data-source-ssrs.md)
 
 

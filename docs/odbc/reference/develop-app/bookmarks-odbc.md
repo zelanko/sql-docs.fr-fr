@@ -1,5 +1,5 @@
 ---
-title: Signets (ODBC) Microsoft Docs
+title: Signets (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e8273c82b918024417e613ea44a2d26bafaf7d76
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306320"
 ---
 # <a name="bookmarks-odbc"></a>Signets (ODBC)
-Un signet est une valeur utilisée pour identifier une ligne de données. La signification de la valeur du signet est connue uniquement du pilote ou de la source de données. Par exemple, il peut être aussi simple qu'un numéro de ligne ou aussi complexe qu'une adresse disque. Les signets dans ODBC sont un peu différents des signets dans les vrais livres. Dans un vrai livre, le lecteur place un signet à une page spécifique, puis cherche ce signet pour revenir à la page. Dans ODBC, l'application demande un signet pour une ligne particulière, le stocke, puis le passe au curseur à retourner à la ligne. Ainsi, les signets dans ODBC sont similaires à un lecteur écrit un numéro de page, s’en souvenir, puis en regardant la page à nouveau.  
+Un signet est une valeur utilisée pour identifier une ligne de données. La signification de la valeur du signet est connue uniquement du pilote ou de la source de données. Par exemple, il peut être aussi simple qu'un numéro de ligne ou aussi complexe qu'une adresse disque. Dans ODBC, les signets diffèrent légèrement des signets dans les livres réels. Dans un livre réel, le lecteur place un signet sur une page spécifique, puis recherche ce signet pour revenir à la page. Dans ODBC, l'application demande un signet pour une ligne particulière, le stocke, puis le passe au curseur à retourner à la ligne. Ainsi, les signets dans ODBC sont similaires à ceux d’un lecteur qui écrivent un numéro de page, le mémorise, puis rerecherchent la page.  
   
- Pour déterminer le soutien d’un conducteur des signets, une application appelle **SQLGetInfo** avec l’option SQL_BOOKMARK_PERSISTENCE. Les bits de cette valeur décrivent les signets d’opérations qui survivent, comme la validité des signets après la fermeture du curseur.  
+ Pour déterminer la prise en charge des signets par un pilote, une application appelle **SQLGetInfo** avec l’option SQL_BOOKMARK_PERSISTENCE. Les bits de cette valeur décrivent ce que les signets d’opérations survivent, par exemple si les signets sont toujours valides après la fermeture du curseur.  
   
  Cette section contient les rubriques suivantes :  
   

@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90ddf4e4617e1182e50979f051fa6ee2657166ba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306709"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -124,7 +124,7 @@ HRESULT GetStatus(
  Le fait d'appeler **ISSAsynchStatus::GetStatus** sur un objet source de données initialisé ou un ensemble de lignes rempli, ou de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN, retourne S_OK avec la même valeur attribuée à *pulProgress* et à *pulProgressMax* . Si **ISSAsynchStatus::GetStatus** est appelé sur un objet créé à partir de l'exécution d'une commande qui met à jour, supprime ou insère des lignes, *pulProgress* et *pulProgressMax* indiquent le nombre total de lignes affectées par la commande.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution des opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
+ [Exécution d’opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

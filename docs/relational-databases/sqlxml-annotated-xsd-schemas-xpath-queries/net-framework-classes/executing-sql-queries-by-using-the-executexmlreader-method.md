@@ -1,6 +1,6 @@
 ---
 title: Exécuter des requêtes SQL avec la méthode ExecuteXMLReader
-description: Apprenez à exécuter des requêtes SQL à l’aide de la méthode ExecuteXmlReader de l’objet SqlXmlCommand pour exécuter les commandes.
+description: Découvrez comment exécuter des requêtes SQL à l’aide de la méthode ExecuteXmlReader de l’objet SqlXmlCommand pour exécuter des commandes.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,15 +19,15 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9acfa4eecb97902f20a0ba25762e2b14f2d5c756
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387993"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Exécution de requêtes SQL à l'aide de la méthode ExecuteXMLReader
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Au lieu d’utiliser la méthode ExecuteToStream, vous pouvez utiliser la méthode ExecuteXmlReader de l’objet SqlXmlCommand pour exécuter les commandes. Cette méthode renvoie un objet XmlReader qui peut être utilisé pour le traitement ultérieur du résultat (qui dans cet exemple est l’impression de l’élément ou attribuer des noms et les valeurs).  
+  Au lieu d’utiliser la méthode ExecuteToStream, vous pouvez utiliser la méthode ExecuteXmlReader de l’objet SqlXmlCommand pour exécuter des commandes. Cette méthode retourne un objet XmlReader qui peut être utilisé pour le traitement supplémentaire du résultat (qui, dans cet exemple, imprime les noms d’éléments ou d’attributs et les valeurs).  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  

@@ -1,5 +1,5 @@
 ---
-title: Exemple de source de données Microsoft Docs
+title: Exemple de source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 48c87f0d9f0a48b7d216151178c15bb019c0cbaa
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306520"
 ---
 # <a name="data-source-example"></a>Exemple de source de données
-Sur les ordinateurs exécutant Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional, ou Microsoft Windows® 95/98, les informations source de données machines sont stockées dans le registre. Selon la clé de registre sous laquelle les informations sont stockées, la source de données est connue sous le nom de *source de données utilisateur* ou de source de données *système*. Les sources de données utilisateur sont stockées sous la clé HKEY_CURRENT_USER et ne sont disponibles que pour l’utilisateur actuel. Les sources de données système sont stockées sous la clé HKEY_LOCAL_MACHINE et peuvent être utilisées par plus d’un utilisateur sur une machine. Ils peuvent également être utilisés par les services à l’échelle du système, qui peuvent ensuite accéder à la source de données, même si aucun utilisateur n’est connecté à la machine. Pour plus d’informations sur les sources de données utilisateur et système, voir [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  
+Sur les ordinateurs exécutant Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional ou Microsoft Windows® 95/98, les informations relatives à la source de données de l’ordinateur sont stockées dans le registre. Selon la clé de Registre dans laquelle les informations sont stockées, la source de données est appelée *source de données utilisateur* ou *source de données système*. Les sources de données utilisateur sont stockées sous la clé de HKEY_CURRENT_USER et sont disponibles uniquement pour l’utilisateur actuel. Les sources de données système sont stockées sous la clé de HKEY_LOCAL_MACHINE et peuvent être utilisées par plusieurs utilisateurs sur un même ordinateur. Elles peuvent également être utilisées par les services du système, qui peuvent alors accéder à la source de données même si aucun utilisateur n’est connecté à la machine. Pour plus d’informations sur les sources de données utilisateur et système, consultez [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  
   
- Supposons qu’un utilisateur dispose de trois sources de données utilisateur : personnel et inventaire, qui utilisent un DBMS Oracle ; et Payroll, qui utilise un serveur Microsoft SQL DBMS. Les valeurs de registre des sources de données peuvent être les suivante :  
+ Supposons qu’un utilisateur possède trois sources de données utilisateur : le personnel et l’inventaire, qui utilisent un SGBD Oracle. et Payroll, qui utilise un SGBD Microsoft SQL Server. Les valeurs de Registre pour les sources de données peuvent être :  
   
 ```  
 HKEY_CURRENT_USER  
@@ -35,7 +35,7 @@ SOFTWARE
                     Payroll : REG_SZ : SQL Server  
 ```  
   
- et les valeurs du registre de la source de données sur la paie peuvent être les suivante :  
+ et les valeurs de registre de la source de données de la paie peuvent être :  
   
 ```  
 HKEY_CURRENT_USER  

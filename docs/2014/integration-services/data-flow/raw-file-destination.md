@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487010"
 ---
 # <a name="raw-file-destination"></a>Destination de fichier brut
@@ -113,7 +113,7 @@ ms.locfileid: "81487010"
   
 1.  Définissez la propriété sur **CreateOnce** ou **CreateAlways**, et effectuez une itération de la boucle. Le fichier est créé. Cette opération permet de s'assurer de la correspondance entre les métadonnées des données ajoutées et le fichier.  
   
-2.  Réinitialisez la propriété WriteOption à **l’annexe** et `False`définissez la propriété ValidateExternalMetadata à .  
+2.  Réinitialisez la propriété WriteOption à **Append** et affectez à `False`la propriété ValidateExternalMetadata la valeur.  
   
  Si vous utilisez l’option **TruncateAppend** au lieu de l’option **Append** , celle-ci tronque les lignes ajoutées dans les itérations précédentes, puis ajoute de nouvelles lignes. L’utilisation de l’option **TruncateAppend** nécessite également que les données correspondent au format du fichier.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "81487010"
  Entrée de blog, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), sur sqlservercentral.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Source de fichiers bruts](raw-file-source.md)   
- [Data Flow](data-flow.md)  
+ [Source de fichier brut](raw-file-source.md)   
+ [Flux de données](data-flow.md)  
   
   

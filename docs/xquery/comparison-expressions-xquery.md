@@ -1,6 +1,6 @@
 ---
-title: Expressions de comparaison (XQuery) Microsoft Docs
-description: Apprenez à utiliser des expressions de comparaison XQuery qui contiennent des opérateurs de comparaison général, de valeur, de nœud et de nœud.
+title: Expressions de comparaison (XQuery) | Microsoft Docs
+description: Découvrez comment utiliser des expressions de comparaison XQuery qui contiennent des opérateurs de comparaison général, de valeur, de nœud et d’ordre de nœud.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388168"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressions de comparaison (XQuery)
@@ -34,11 +34,11 @@ ms.locfileid: "81388168"
   
 -   Opérateurs de comparaison générale  
   
--   Opérateurs de comparaison de valeur  
+-   Opérateurs de comparaison de valeurs  
   
 -   Opérateurs de comparaison de nœuds  
   
--   Opérateurs de comparaison de commande de nœuds  
+-   Opérateurs de comparaison de l’ordre des nœuds  
   
 ## <a name="general-comparison-operators"></a>Opérateurs de comparaison générale  
  Les opérateurs de comparaison générale peuvent être utilisés pour comparer des valeurs atomiques, des séquences ou une combinaison des deux.  
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- La requête suivante renvoie les illustrations petit format d'un modèle de produit à partir du catalogue de produits fourni dans l'exemple de base de données AdventureWorks. La requête compare une séquence de valeurs atomiques renvoyée par `PD:ProductDescription/PD:Picture/PD:Size` à une séquence singleton, "small". Si la comparaison est vraie, elle renvoie l’élément <Image.\>  
+ La requête suivante renvoie les illustrations petit format d'un modèle de produit à partir du catalogue de produits fourni dans l'exemple de base de données AdventureWorks. La requête compare une séquence de valeurs atomiques renvoyée par `PD:ProductDescription/PD:Picture/PD:Size` à une séquence singleton, "small". Si la comparaison a la valeur true, elle retourne l'\> élément image <.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -91,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- La requête suivante compare une séquence de numéros\> de téléphone dans <éléments de numéro à la chaîne littérale "112-111-1111". La requête compare la séquence des éléments numéro de téléphone de la colonne AdditionalContactInfo pour déterminer s'il existe dans le document un numéro de téléphone spécifique pour un client spécifique.  
+ La requête suivante compare une séquence de numéros de téléphone dans <\> éléments Number au littéral de chaîne « 112-111-1111 ». La requête compare la séquence des éléments numéro de téléphone de la colonne AdditionalContactInfo pour déterminer s'il existe dans le document un numéro de téléphone spécifique pour un client spécifique.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- La requête renvoie la valeur True. ce qui indique que le numéro existe dans le document. La requête suivante est une version légèrement modifiée de la précédente. Dans cette requête, les valeurs de numéro de téléphone récupérées à partir du document sont comparées à une séquence de deux valeurs de numéro de téléphone. Si la comparaison est vraie, l’élément <numéro\> est retourné.  
+ La requête renvoie la valeur True. ce qui indique que le numéro existe dans le document. La requête suivante est une version légèrement modifiée de la précédente. Dans cette requête, les valeurs de numéro de téléphone récupérées à partir du document sont comparées à une séquence de deux valeurs de numéro de téléphone. Si la comparaison est true, l’élément <\> number est retourné.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  Ces opérateurs fonctionnent uniquement sur des valeurs atomiques singleton. Autrement dit, vous ne pouvez pas spécifier une séquence en tant qu'opérande.  
   
- Par exemple, la requête \<suivante récupère des éléments d’image> pour un modèle de produit où la taille de l’image est « petite :  
+ Par exemple, la requête suivante récupère les \<éléments d'> d’images pour un modèle de produit où la taille de l’image est «petite :  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,9 +170,9 @@ WHERE ProductModelID=19
   
 -   `declare namespace` définit le préfixe d'espace de noms qui est utilisé par la suite dans la requête.  
   
--   La \<valeur de l’élément de taille> est comparée à la valeur atomique spécifiée, « petite ».  
+-   La \<taille> valeur de l’élément est comparée à la valeur atomique spécifiée, « petite ».  
   
--   Notez que parce que les opérateurs de valeur ne fonctionnent que sur les valeurs atomiques, la fonction **données()** est implicitement utilisée pour récupérer la valeur du nœud. Autrement dit, `data($P/PD:Size) eq "small"` donne le même résultat.  
+-   Notez que, étant donné que les opérateurs de valeur fonctionnent uniquement sur les valeurs atomiques, la fonction **Data ()** est implicitement utilisée pour récupérer la valeur du nœud. Autrement dit, `data($P/PD:Size) eq "small"` donne le même résultat.  
   
  Voici le résultat obtenu :  
   
@@ -188,7 +188,7 @@ WHERE ProductModelID=19
  Notez que les règles de promotion de type sont identiques qu'il s'agisse d'opérateur de comparaison générale ou de valeurs. De plus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applique les mêmes règles de conversion pour les valeurs non typées au cours des comparaisons, qu'elles portent sur des valeurs ou soient générales. En revanche, les règles de la spécification XQuery convertissent toujours la valeur non typée en xs:string lors des comparaisons de valeurs.  
   
 ## <a name="node-comparison-operator"></a>Opérateurs de comparaison de nœuds  
- L’opérateur de comparaison de nœuds, **est**, ne s’applique qu’aux types de nœuds. Le résultat renvoyé indique si les deux nœuds transmis comme opérandes représentent le même nœud dans le document source. Cet opérateur renvoie la valeur True si les deux opérandes identifient le même nœud. Dans le cas contraire, il renvoie la valeur False.  
+ L’opérateur de comparaison de nœuds, **is**, s’applique uniquement aux types de nœuds. Le résultat renvoyé indique si les deux nœuds transmis comme opérandes représentent le même nœud dans le document source. Cet opérateur renvoie la valeur True si les deux opérandes identifient le même nœud. Dans le cas contraire, il renvoie la valeur False.  
   
  La requête suivante vérifie que le poste de travail 10 est le premier dans le processus de fabrication d'un modèle de produit spécifique.  
   
@@ -221,11 +221,11 @@ ProductModelID       Result
   
  Ces comparaisons sont faites en fonction de l'ordre du document :  
   
--   `<<`: **L’opéra 1** précède-t-il **l’opéra 2** dans l’ordre de document.  
+-   `<<`: L' **opérande 1** précède l' **opérande 2** dans l’ordre du document.  
   
--   `>>`: **L’opéra 1** suit-il **l’opéra 2** dans l’ordre de document.  
+-   `>>`: L' **opérande 1** suit l' **opérande 2** dans l’ordre du document.  
   
- La requête suivante renvoie True si \<la description du catalogue de \<produits a la garantie> élément apparaissant avant la maintenance> élément dans l’ordre de document pour un produit particulier.  
+ La requête suivante renvoie la valeur true si la description du catalogue \<de produits contient l’élément warranty> qui apparaît avant l' \<élément maintenance> dans l’ordre du document pour un produit particulier.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -241,9 +241,9 @@ where ProductModelID=19
   
  Notez les points suivants dans la requête précédente :  
   
--   La méthode de **valeur()** du type de données **xml**est utilisée dans la requête.  
+-   La méthode **value ()** du type de données **XML**est utilisée dans la requête.  
   
--   Le résultat Boolean de la requête est converti en **nvarchar(10)** et retourné.  
+-   Le résultat booléen de la requête est converti en **nvarchar (10)** et retourné.  
   
 -   La requête renvoie la valeur True.  
   

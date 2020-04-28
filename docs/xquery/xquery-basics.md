@@ -1,6 +1,6 @@
 ---
-title: XQuery Basics - France Microsoft Docs
-description: Apprenez les principes fondamentaux de la langue XQuery, y compris, séquence et QNames, contexte d’expression, atomisation, système de type, traitement des erreurs et commentaires.
+title: Principes fondamentaux de XQuery | Microsoft Docs
+description: Découvrez les principes de base du langage XQuery, y compris, SEQUENCE et QNames, le contexte d’expression, l’atomisation, le système de type, la gestion des erreurs et les commentaires.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92882722baab0284f421989ba4906e60e777049e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388138"
 ---
 # <a name="xquery-basics"></a>Concepts de base de XQuery
@@ -31,19 +31,19 @@ ms.locfileid: "81388138"
  [Séquence et QNames &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  Décrit la séquence ainsi que les QName et les espaces de noms prédéfinis.  
   
- [Expression Contexte et évaluation de la requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [Contexte d’expression et évaluation de requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  Décrit les deux contextes dans lesquels XQuery est évalué. Ces deux contextes sont le contexte statique et le contexte dynamique.  
   
  [Atomisation &#40;XQuery&#41;](../xquery/atomization-xquery.md)  
  Décrit l'atomisation, qui est le processus d'extraction de la valeur typée d'un élément.  
   
- [Une valeur Boolean efficace &#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
+ [Valeur booléenne effective &#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
  Décrit la valeur booléenne effective. Cette valeur peut être calculée pour les expressions qui renvoient une valeur booléenne unique, une séquence de nœuds ou une séquence vide.  
   
  [Système de type &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  Décrit le système de type XQuery avec différents types prédéfinis. XQuery est un langage fortement typé pour les types de schéma et faiblement typé pour les données non typées.  
   
- [Traitement des erreurs &#40;XQuery&#41;](../xquery/error-handling-xquery.md)  
+ [Gestion des erreurs &#40;&#41;XQuery](../xquery/error-handling-xquery.md)  
  Décrit la gestion des erreurs statiques, dynamiques et de type dans XQuery.  
   
  [Commentaires dans XQuery](../xquery/comments-in-xquery.md)  

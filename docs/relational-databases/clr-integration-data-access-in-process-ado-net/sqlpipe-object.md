@@ -1,6 +1,6 @@
 ---
-title: Objet SqlPipe Microsoft Docs
-description: Pour les objets de base de données CLR en cours d’exécution dans SQL Server, vous pouvez envoyer des résultats au tuyau connecté en utilisant les méthodes d’envoi de l’objet SqlPipe.
+title: SqlPipe, objet | Microsoft Docs
+description: Pour les objets de base de données CLR s’exécutant dans SQL Server, vous pouvez envoyer des résultats au canal connecté à l’aide des méthodes Send de l’objet SqlPipe.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487513"
 ---
 # <a name="sqlpipe-object"></a>Objet SqlPipe
@@ -141,7 +141,7 @@ EXEC uspGetProductLineVB 'T';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
+ [SqlDataRecord, objet](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
  [Procédures stockées CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensions spécifiques in-process de SQL Server à ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   

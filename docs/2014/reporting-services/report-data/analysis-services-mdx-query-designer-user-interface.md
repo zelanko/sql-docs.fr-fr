@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388705"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes MDX Analysis Services
@@ -115,6 +115,6 @@ ms.locfileid: "81388705"
 -   **Afficher les agrégations** (![Bouton Afficher les agrégations](../../analysis-services/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations"))
 
 ## <a name="see-also"></a>Voir aussi
- [Définir les paramètres du MDX Query Designer for Analysis Services &#40;Report Builder et SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [créer un ensemble de données partagé ou un ensemble de données intégrés &#40;Report Builder et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) Analysis Services Connection Type for [DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md) Analysis Services Type for [MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)
+ [Définir des paramètres dans le concepteur de requêtes MDX pour Analysis Services &#40;générateur de rapports et ssrs&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [Analysis Services type de connexion pour DMX &#40;ssrs](analysis-services-connection-type-for-dmx-ssrs.md)&#41;[fichier](../report-server/rsreportdesigner-configuration-file.md) [de Configuration Analysis Services type de connexion pour MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Mots-clés réservés (fr) Microsoft Docs
+title: Mots clés réservés | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307990"
 ---
 # <a name="reserved-keywords"></a>Mots clés réservés
-Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire minimale SQL; toutefois, pour assurer la compatibilité avec les conducteurs qui prennent en charge la grammaire SQL de base, les applications doivent éviter d’utiliser l’un de ces mots clés. La valeur de**définition** SQL_ODBC_KEYWORDS contient une liste de ces mots clés séparées par la virgule.  
+Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire SQL minimale ; Toutefois, pour garantir la compatibilité avec les pilotes qui prennent en charge la grammaire SQL de base, les applications doivent éviter d’utiliser l’un de ces mots clés. La valeur #**define** SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  
   
 |||  
 |-|-|  

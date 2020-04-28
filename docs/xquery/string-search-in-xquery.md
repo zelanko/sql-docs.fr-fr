@@ -1,6 +1,6 @@
 ---
-title: String Search in XQuery (fr) Microsoft Docs
-description: Apprenez à rechercher du texte dans les documents XML en visualisant un exemple de recherche de chaînes dans XQuery.
+title: Recherche de chaînes dans XQuery | Microsoft Docs
+description: Découvrez comment rechercher du texte dans des documents XML en affichant un exemple de recherche de chaînes dans XQuery.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388050"
 ---
 # <a name="string-search-in-xquery"></a>Recherche de chaînes dans XQuery
@@ -45,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Dans la requête précédente, l’expression `where` FLOWR filtre `for` le résultat de l’expression et ne renvoie que les éléments qui satisfont à **l’état contient.)**  
+ Dans la requête précédente, le `where` dans l’expression Flower filtre le résultat de l' `for` expression et retourne uniquement les éléments qui satisfont à la condition **Contains ()** .  
   
  Voici le résultat obtenu :  
   
@@ -59,7 +59,7 @@ WHERE ProductModelID=19
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [SQL Server de &#40;de données XML&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

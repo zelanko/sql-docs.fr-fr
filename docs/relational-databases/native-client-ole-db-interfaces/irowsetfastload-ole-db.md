@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: feea17329a8e809083263a83217aeb87fbf91bc3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307241"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  L’interface **IRowsetFastLoad** expose la prise en charge des opérations de copie en bloc basées sur mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les consommateurs fournisseurs de fournisseurs natives de DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE de clientent l’utilisation de l’interface pour ajouter rapidement des données à une table existante.  
+  L’interface **IRowsetFastLoad** expose la prise en charge des opérations de copie en bloc basées sur mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les consommateurs de fournisseurs OLE DB Native Client utilisent l’interface pour ajouter rapidement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une table existante.  
   
  Si vous affectez la valeur VARIANT_TRUE à SSPROP_ENABLEFASTLOAD pour une session, vous ne pouvez pas lire les données des ensembles de lignes retournés ultérieurement à partir de cette session. Lorsque SSPROP_ENABLEFASTLOAD a la valeur VARIANT_TRUE, tous les ensembles de lignes créés sur la session sont du type IRowsetFastLoad. Les ensembles de lignes IRowsetFastLoad ne prennent pas en charge la fonctionnalité de récupération (fetch) des ensembles de lignes. Par conséquent, les données issues de ces ensembles de lignes ne peuvent pas être lues.  
   
@@ -36,8 +36,8 @@ ms.locfileid: "81307241"
 |[IRowsetFastLoad::InsertRow &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md)|Ajoute une ligne à l'ensemble de lignes de copie en bloc.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interfaces &#40;&#41;OLE DB](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
- [Données de copie en vrac à l’aide d’IRowsetFastLoad &#40;&#41;OLE DB](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)   
+ [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [Copier des données en bloc à l’aide de IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)   
  [Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
   

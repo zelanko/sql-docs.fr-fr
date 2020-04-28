@@ -1,5 +1,5 @@
 ---
-title: Colonnes de l’ensemble de résultats contraignants (en anglais seulement) Microsoft Docs
+title: Colonnes de l’ensemble de résultats de liaison | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 558ceb79d42d82477b70a028395de82cc023c170
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306360"
 ---
 # <a name="binding-result-set-columns"></a>Liaison des colonnes d’un ensemble de résultats
-Les applications peuvent lier autant ou aussi peu de colonnes de l’ensemble de résultat qu’ils le souhaitent, y compris la liaison aucune colonne du tout. Lorsqu’une série de données est récupérée, le pilote renvoie les données des colonnes liées à l’application. La question de savoir si l’application lie toutes les colonnes de l’ensemble de résultats dépend de l’application. Par exemple, les applications qui génèrent des rapports ont généralement un format fixe; ces applications créent un ensemble de résultats contenant toutes les colonnes utilisées dans le rapport, puis lient et récupèrent les données pour toutes ces colonnes. Les applications qui affichent des écrans pleins de données permettent parfois à l’utilisateur de décider quelles colonnes afficher; ces applications créent un ensemble de résultats contenant toutes les colonnes que l’utilisateur peut vouloir, mais lient et ne récupèrent les données que pour les colonnes choisies par l’utilisateur.  
+Les applications peuvent lier autant de colonnes que vous le souhaitez dans le jeu de résultats, y compris la liaison d’aucune colonne. Lorsqu’une ligne de données est extraite, le pilote retourne les données des colonnes liées à l’application. Le fait que l’application lie toutes les colonnes du jeu de résultats dépend de l’application. Par exemple, les applications qui génèrent des rapports ont généralement un format fixe ; de telles applications créent un jeu de résultats contenant toutes les colonnes utilisées dans le rapport, puis lient et récupèrent les données pour toutes ces colonnes. Les applications qui affichent des écrans pleins de données permettent parfois à l’utilisateur de choisir les colonnes à afficher ; de telles applications créent un jeu de résultats contenant toutes les colonnes que l’utilisateur peut souhaiter, mais qui lient et récupère les données uniquement pour les colonnes choisies par l’utilisateur.  
   
- Les données peuvent être récupérées à partir de colonnes non liées en appelant **SQLGetData**. Ceci est communément appelé pour récupérer de longues données, qui dépassent souvent la longueur d’un seul tampon et doivent être récupérés en pièces.  
+ Les données peuvent être récupérées à partir de colonnes indépendantes en appelant **SQLGetData**. Cela est communément appelé pour extraire des données de type long, qui sont souvent supérieures à la longueur d’une seule mémoire tampon et doivent être extraites en parties.  
   
- Les colonnes peuvent être liées à tout moment, même après que les rangées ont été récupérées. Cependant, les nouvelles fixations n’entrent pas en vigueur avant la prochaine fois qu’une rangée est récupérée; ils ne sont pas appliqués aux données des rangées déjà récupérées.  
+ Les colonnes peuvent être liées à tout moment, même après l’extraction des lignes. Toutefois, les nouvelles liaisons ne prennent pas effet avant la prochaine extraction d’une ligne. elles ne sont pas appliquées aux données des lignes déjà extraites.  
   
- Une variable reste liée à une colonne jusqu’à ce qu’une variable différente soit liée à la colonne, jusqu’à ce que la colonne ne soit pas liée en appelant **SQLBindCol** avec un pointeur nul comme adresse de la variable, jusqu’à ce que toutes les colonnes ne soient pas liées en appelant **SQLFreeStmt** avec l’option SQL_UNBIND, ou jusqu’à ce que la déclaration soit publiée. Pour cette raison, l’application doit être sûre que toutes les variables liées restent valides tant qu’elles sont liées. Pour plus d’informations, voir [Allocating and Freeing Buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Une variable reste liée à une colonne jusqu’à ce qu’une variable différente soit liée à la colonne, jusqu’à ce que la colonne soit détachée en appelant **SQLBindCol** avec un pointeur null comme adresse de la variable, jusqu’à ce que toutes les colonnes soient indépendantes en appelant **SQLFreeStmt** avec l’option SQL_UNBIND ou jusqu’à ce que l’instruction soit libérée. Pour cette raison, l’application doit s’assurer que toutes les variables liées restent valides tant qu’elles sont liées. Pour plus d’informations, consultez [allocation et libération de mémoires tampons](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Étant donné que les liaisons de colonne ne sont que des informations associées à la structure de l’instruction, elles peuvent être définies dans n’importe quel ordre. Ils sont également indépendants de l’ensemble de résultats. Supposons, par exemple, qu’une application lie les colonnes de l’ensemble de résultats générés par la déclaration SQL suivante :  
+ Étant donné que les liaisons de colonnes sont simplement des informations associées à la structure d’instruction, elles peuvent être définies dans n’importe quel ordre. Elles sont également indépendantes du jeu de résultats. Supposons, par exemple, qu’une application lie les colonnes du jeu de résultats généré par l’instruction SQL suivante :  
   
 ```  
 SELECT * FROM Orders  
 ```  
   
- Si l’application exécute alors la déclaration SQL  
+ Si l’application exécute ensuite l’instruction SQL  
   
 ```  
 SELECT * FROM Lines  
 ```  
   
- sur la même poignée de relevé, les fixations de colonne pour le premier ensemble de résultat sont toujours en vigueur parce que ce sont les liaisons stockées dans la structure de l’instruction. Dans la plupart des cas, il s’agit d’une mauvaise pratique de programmation et doit être évitée. Au lieu de cela, l’application devrait appeler **SQLFreeStmt** avec la SQL_UNBIND option de délier toutes les anciennes colonnes, puis lier de nouvelles.
+ sur le même descripteur d’instruction, les liaisons de colonne pour le premier jeu de résultats sont toujours en vigueur, car il s’agit des liaisons stockées dans la structure de l’instruction. Dans la plupart des cas, il s’agit d’une pratique de programmation médiocre qui devrait être évitée. Au lieu de cela, l’application doit appeler **SQLFreeStmt** avec l’option SQL_UNBIND pour dissocier toutes les anciennes colonnes, puis en lier de nouvelles.

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487156"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
@@ -32,13 +32,13 @@ ms.locfileid: "81487156"
   
 -   [Autorisations relatives à des éléments sécurisables spécifiques](#_securables)  
   
--   [Autorisations SQL Server](#_permissions)  
+-   [Autorisations de SQL Server](#_permissions)  
   
 -   [Algorithme de vérification des autorisations](#_algorithm)  
   
 -   [Exemples](#_examples)  
   
-##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>Autorisations nommant des conventions  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>Conventions de dénomination des autorisations  
  La section ci-après décrit les conventions générales qui sont suivies pour affecter des noms aux autorisations.  
   
 -   CONTROL  
@@ -49,11 +49,11 @@ ms.locfileid: "81487156"
   
      Confère la capacité de modifier les propriétés, excepté l'appartenance, d'un élément sécurisable particulier. Lorsque ALTER est accordé sur une portée, ALTER octroie également la capacité de modifier, de créer ou de supprimer tous les éléments sécurisables contenus dans cette portée. Par exemple, l'autorisation ALTER sur un schéma inclut la capacité de créer, de modifier et de supprimer les objets du schéma.  
   
--   ALTER \<N’importe quel *serveur titrable*>, où *Server Securable* peut être n’importe quel serveur titrable.  
+-   ALTER ANY \< *Server sécurisable*>, où l’élément *sécurisable* du serveur peut être n’importe quel élément sécurisable du serveur.  
   
      Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable du serveur*. Par exemple, ALTER ANY LOGIN confère la capacité de créer, de modifier ou de supprimer n'importe quelle connexion dans l'instance.  
   
--   ALTER \<N’importe quelle *base de données> récurable,* où la base de données *titrable* peut être n’importe quelle titrable au niveau de la base de données.  
+-   Modifiez n' \<importe quel> *sécurisable de base* de données, où *sécurisable de base de données* peut être n’importe quel élément sécurisable au niveau de la base de données.  
   
      Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable de base de données*. Par exemple, ALTER ANY SCHEMA confère la capacité de créer, de modifier ou de supprimer n'importe quel schéma dans la base de données.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "81487156"
   
      Permet au bénéficiaire d'obtenir la propriété de l'élément sécurisable sur lequel cette autorisation est accordée.  
   
--   IMPERSONATE \< *Login*>  
+-   Emprunter l’identité \<de la *connexion*>  
   
      Permet au bénéficiaire d'emprunter l'identité impliquée dans la connexion.  
   
--   Utilisateur \<DE *l’USER DE l’IMITATE*>  
+-   Emprunter l’identité \<de l' *utilisateur*>  
   
      Permet au bénéficiaire d'emprunter l'identité de l'utilisateur.  
   
--   SERVEUR \<CREATE *Titrable*>  
+-   Créer \<un élément *sécurisable du serveur*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable du serveur*.  
   
--   Base \<de données CREATE *Titrable*>  
+-   Créer \<un élément *sécurisable de base de données*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable de base de données*.  
   
--   CREATE \< *Schéma-contenu Securable*>  
+-   Créer \< *un élément sécurisable contenu dans un schéma*>  
   
      Confère la capacité de créer l'élément sécurisable contenu dans le schéma. Toutefois, l'autorisation ALTER sur le schéma est requise pour créer l'élément sécurisable dans un schéma particulier.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "81487156"
      L'autorisation REFERENCES est obligatoire sur un objet pour pouvoir créer une FONCTION ou une VUE avec la clause `WITH SCHEMABINDING` qui référence cet objet.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Graphique des autorisations SQL Server  
- Pour un tableau de [!INCLUDE[ssDE](../../includes/ssde-md.md)] taille d’affiche [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)de toutes les autorisations en format pdf, voir .  
+ Pour obtenir un graphique de la taille [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’une affiche de toutes les [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)autorisations au format PDF, consultez.  
   
-##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Autorisations applicables à des titrables spécifiques  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Autorisations applicables à des éléments sécurisables spécifiques  
  Le tableau ci-dessous répertorie les principales classes d'autorisations et les types d'éléments sécurisables auxquels elles peuvent s'appliquer.  
   
 |Autorisation|S’applique à|  
@@ -109,7 +109,7 @@ ms.locfileid: "81487156"
 |RECEIVE|Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
 |VIEW DEFINITION|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues<br /><br /> Objets séquence|  
 |ALTER|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Objets séquence<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues|  
-|TAKE OWNERSHIP|Groupes de disponibilité<br /><br /> Rôles<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Rôles de serveur<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues<br /><br /> Objets séquence|  
+|TAKE OWNERSHIP|Groupes de disponibilité<br /><br /> Rôles<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Rôles serveur<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues<br /><br /> Objets séquence|  
 |CONTROL|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Les vues<br /><br /> Objets séquence|  
 |IMPERSONATE|Connexions et utilisateurs|  
   
@@ -157,7 +157,7 @@ ms.locfileid: "81487156"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Note: Ne [!INCLUDE[ssSDS](../../includes/sssds-md.md)]s’applique qu’à .|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "81487156"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|MODIFIER UNE STRATÉGIE DE SÉCURITÉ|ALSP<br /><br /> Note: Ne [!INCLUDE[ssSDS](../../includes/sssds-md.md)]s’applique qu’à .|SERVER|CONTROL SERVER|  
+|DATABASE|MODIFIER UNE STRATÉGIE DE SÉCURITÉ|ALSP<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "81487156"
 |DATABASE|Suppression|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Exécutez|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Note: Ne [!INCLUDE[ssSDS](../../includes/sssds-md.md)]s’applique qu’à . Utilisez ALTER ANY CONNECTION dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à. Utilisez ALTER ANY CONNECTION dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -399,7 +399,7 @@ ms.locfileid: "81487156"
 ##  <a name="examples"></a><a name="_examples"></a> Exemples  
  Les exemples de cette section montrent comment récupérer des informations relatives aux autorisations.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. Retour de la liste complète des autorisations accordables  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Retour de la liste complète des autorisations accordables  
  L'instruction suivante retourne toutes les autorisations du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de la fonction `fn_builtin_permissions` . Pour plus d’informations, consultez [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Permissions Hiérarchie &#40;moteur de base de données&#41;](permissions-hierarchy-database-engine.md)   
+ [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurer un conteneur pour boucle Microsoft Docs
+title: Configurer un conteneur de boucles for | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486996"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurer un conteneur de boucles For
@@ -43,8 +43,8 @@ ms.locfileid: "81486996"
 7.  Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur de boucle For**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Pour le conteneur de boucle](control-flow/for-loop-container.md)   
- [Services d’intégration &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md)   
+ [Conteneur de boucles for](control-flow/for-loop-container.md)   
+ [Integration Services &#40;des expressions de&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
  [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md)  
   
   

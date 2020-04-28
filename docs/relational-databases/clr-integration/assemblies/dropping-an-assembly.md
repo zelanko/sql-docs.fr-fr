@@ -1,6 +1,6 @@
 ---
-title: L’abandon d’une assemblée (fr) Microsoft Docs
-description: Vous pouvez supprimer ou supprimer un assemblage dans SQL Server lorsqu’il n’est plus nécessaire. Utilisez DROP ASSEMBLY pour supprimer un assemblage et ses fichiers associés.
+title: Suppression d’un assembly | Microsoft Docs
+description: Vous pouvez supprimer ou supprimer un assembly dans SQL Server lorsqu’il n’est plus nécessaire. Utilisez DROP ASSEMBLy pour supprimer un assembly et ses fichiers associés.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48fca2d5a255193800fed39e9869e1be231229a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485586"
 ---
 # <a name="dropping-an-assembly"></a>Suppression d'un assembly
@@ -44,7 +44,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Des fonctions, procédures stockées ou déclencheurs créés dans la base de données avec la clause WITH SCHEMABINDING utilisent des variables ou des paramètres de l'UDT.  
   
 ### <a name="finding-udt-dependencies"></a>Recherche des dépendances d'un UDT  
- Vous devez commencer par supprimer tous les objets dépendants, puis exécuter l'instruction DROP TYPE. La [!INCLUDE[tsql](../../../includes/tsql-md.md)] requête suivante localise toutes les colonnes et paramètres qui utilisent un UDT dans la base de données **AdventureWorks.**  
+ Vous devez commencer par supprimer tous les objets dépendants, puis exécuter l'instruction DROP TYPE. La requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante localise toutes les colonnes et tous les paramètres qui utilisent un UDT dans la base de données **AdventureWorks** .  
   
 ```  
 USE Adventureworks;  
@@ -65,12 +65,12 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des assemblées d’intégration CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Modification d’une assemblée](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Création d’une assemblée](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [BAISSE DE L’agrégat &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [Gestion des assemblys d’intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Modification d’un assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [Création d’un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
+ [DROP AGGREGATe &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [SUPPRIMER la procédure &#40;&#41;Transact-SQL](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   

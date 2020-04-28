@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase Query Designer User Interface (Report Builder) Microsoft Docs
+title: Interface utilisateur du concepteur de requêtes Hyperion Essbase (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b0b620ec15bc160ddbbbd18a75c56737960745d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388501"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes Hyperion Essbase (Générateur de rapports)

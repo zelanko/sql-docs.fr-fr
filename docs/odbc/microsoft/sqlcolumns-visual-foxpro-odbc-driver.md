@@ -1,5 +1,5 @@
 ---
-title: SQLColumns (Visual FoxPro ODBC Driver) Microsoft Docs
+title: SQLColumns (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: b588a875-0153-43a0-9b76-f89e728cfa65
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0efd76ab1407734a60dfbfbf5df733bdedef4bfb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307850"
 ---
 # <a name="sqlcolumns-visual-foxpro-odbc-driver"></a>SQLColumns (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Ce sujet contient des informations visuelles spécifiques à FoxPro ODBC Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soutien: Complet  
+ Prise en charge : complète  
   
- Conformité API ODBC: Niveau 1  
+ Conformité de l’API ODBC : niveau 1  
   
- Pour une table, crée un ensemble de résultats qui est la liste de colonnes pour le tableau ou les tables spécifiés.  
+ Pour une table, crée un jeu de résultats qui est la liste des colonnes de la ou des tables spécifiées.  
   
- Pour plus d’informations, voir [SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md) dans la *référence du programmeur ODBC*.
+ Pour plus d’informations, consultez [SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md) dans le *Guide de référence du programmeur ODBC*.

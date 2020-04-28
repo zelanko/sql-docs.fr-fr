@@ -1,5 +1,5 @@
 ---
-title: Commandes et fonctions Visual FoxPro non étayées (fr) Microsoft Docs
+title: Commandes et fonctions Visual FoxPro non prises en charge | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,130 +17,130 @@ ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 7e5b8ed06ad9f996d644df0dfb99d15adcff86bc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307650"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Commandes et fonctions Visual FoxPro non prises en charge (pilote ODBC Visual FoxPro)
-Le tableau suivant répertorie les commandes et les fonctions FoxPro qui ne sont pas prises en charge par le visual FoxPro ODBC Driver, mais qui sont prises en charge par Microsoft® Visual FoxPro®.  
+Le tableau suivant répertorie les commandes et les fonctions FoxPro qui ne sont pas prises en charge par le pilote ODBC Visual FoxPro, mais qui sont prises en charge par Microsoft® Visual FoxPro®.  
   
- Si votre application interagit avec les données dont les règles, les déclencheurs, les valeurs par défaut ou les procédures stockées appellent ces commandes ou fonctions Visual FoxPro, le pilote peut générer une erreur.  
+ Si votre application interagit avec des données dont les règles, les déclencheurs, les valeurs par défaut ou les procédures stockées appellent ces commandes ou fonctions Visual FoxPro, le pilote peut générer une erreur.  
   
-## <a name="unsupported-visual-foxpro-commands-and-functions"></a>Commandes et fonctions Visuelles FoxPro non étayées  
+## <a name="unsupported-visual-foxpro-commands-and-functions"></a>Commandes et fonctions Visual FoxPro non prises en charge  
   
 ||||  
 |-|-|-|  
-|#DEFINE ... #UNDEF|#IF ... directive préprocesseur #ENDIF|#IFDEF #IFNDEF &#124;|  
-|directive #INCLUDE préprocesseur|:: Opérateur de résolution de portée|! Commande (voir RUN &#124; ! Commande)|  
-|? &#124; ?? Commande|??? Commande|&#124; \\'Commande'|  
-|@ ... Commande BOX|@ ... Commande CLASS|@ ... Commande CLEAR|  
-|@ ... EDIT - Modifier les boîtes de commande|@ ... Commandement FILL|@ ... Avoir|  
-|@ ... Commande MENU|@ ... Commandement PROMPT|@ ... Commande SAY|  
-|@ ... Commande SCROLL|@ ... À Commander||  
+|#DEFINE... #UNDEF|#IF... #ENDIF directive de préprocesseur|#IFDEF &#124; #IFNDEF|  
+|Directive de préprocesseur #INCLUDE|:: Scope Resolution, opérateur|! Commande (consultez exécuter &#124; ! Commande|  
+|? &#124; ?? Commande|??? Commande|\ &#124; \\\, commande|  
+|@ ... BOX, commande|@ ... Commande de classe|@ ... Commande CLEAR|  
+|@ ... Commande Modifier/modifier les zones|@ ... FILL, commande|@ ... Télécharger|  
+|@ ... Commande de MENU|@ ... Commande PROMPT|@ ... EXEMPLE de commande|  
+|@ ... SCROLL, commande|@ ... À la commande||  
   
 ## <a name="a"></a>Un  
   
 ||||  
 |-|-|-|  
-|Commandement ACCEPT|ACLASS) ) Fonction|Commande ACTIVE MENU|  
-|Commande POPUP ACTIVE|Commande SCREEN ACTIVATE|Commande DE WINDOW ACTIVE|  
-|Méthode ActivateCell|Commande ADD CLASS|ADIR( ) Fonction|  
-|AFONT( ) Fonction|AINSTANCE( ) Fonction|_ALIGNMENT variable de mémoire du système|  
-|AMEMBERS( ) Fonction|ANSITOOEM( ) Fonction|APRINTERS( ) Fonction|  
-|ASELOBJ( ) Fonction|Commandement ASSIST||  
+|Commande ACCEPT|ACLASS () (fonction)|Commande de MENU Activer|  
+|ACTIVER la commande contextuelle|ACTIVER l’écran, commande|Commande Activer la fenêtre|  
+|Méthode ActivateCell|Ajouter une classe, commande|ADIR () (fonction)|  
+|AFONT () (fonction)|AINSTANCE () (fonction)|_ALIGNMENT variable de mémoire système|  
+|AMEMBERS () (fonction)|ANSITOOEM () (fonction)|APRINTERS () (fonction)|  
+|ASELOBJ () (fonction)|Commande ASSIST||  
   
 ## <a name="b"></a>B  
   
 ||||  
 |-|-|-|  
-|BAR( ) Fonction|BARCOUNT( ) Fonction|BARPROMPT( ) Fonction|  
-|_BEAUTIFY Variable de Mémoire du système|_BOX Variable de mémoire du système|Commande BROWSE|  
-|_BROWSER Variable de mémoire du système|Commande BUILD APP|Build EXE Commande|  
-|Commande BUILD PROJECT|_BUILDER Variable de mémoire du système||  
+|Fonction BAR ()|BARCOUNT () (fonction)|BARPROMPT () (fonction)|  
+|_BEAUTIFY variable de mémoire système|_BOX variable de mémoire système|Parcourir la commande|  
+|_BROWSER variable de mémoire système|CRÉER une application, commande|GÉNÉRER une commande EXE|  
+|GÉNÉRER un projet, commande|_BUILDER variable de mémoire système||  
   
 ## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
-|_CALCVALUE variable de mémoire du système|_CLIPTEXT Variable de mémoire du système|_CONVERTER variable de mémoire du système|  
-|_CUROBJ Variable de mémoire du système|Commande CALL|Commande CANCEL|  
-|CAPSLOCK( ) Fonction|Commande DE CD|Commande CHANGE|  
-|Commandement CHDIR|CHRSAW( ) Fonction|Commandement CLOSE MEMO|  
-|CNTBAR( ) Fonction|CNTPAD) ) Fonction|COL( ) Fonction|  
-|Commande COMPILE|Commande COMPILE DATABASE|Commande COMPILE FORM|  
-|COMPOBJ( ) Fonction|Objet de conteneur|Objet de contrôle|  
-|Commande COPY FILE|Commande COPY MEMO|Commande CREATE CLASS|  
-|CREATE CLASSLIB Commande|CREATE COLOR SET Commande|Commande CREATE|  
-|Commande CREATE CONNECTION|Commande CREATE DATABASE|Commande FORM CREATE|  
-|CREATE DE Commande|Commande CREATE LABEL|Commande CREATE MENU|  
-|Commande DE PROJET CREATE|Commandement DE LA REQUÊTE CREATE|Commande DE RAPPORT CREATE|  
-|Commande SCREEN CREATE|CREATE SQL VIEW Commande|COMMANDE CREATE TRIGGER|  
-|Commande CREATE VIEW|CREATEOBJECT( ) Fonction|CURDIR( ) Fonction|  
+|_CALCVALUE variable de mémoire système|_CLIPTEXT variable de mémoire système|_CONVERTER variable de mémoire système|  
+|_CUROBJ variable de mémoire système|Commande CALL|Commande CANCEL|  
+|CAPSLOCK () (fonction)|Commande CD|MODIFIER, commande|  
+|CHDIR, commande|CHRSAW () (fonction)|FERMER la commande MEMO|  
+|CNTBAR () (fonction)|CNTPAD () (fonction)|COL () (fonction)|  
+|Compiler (commande)|COMPILER la base de données, commande|COMPILER le formulaire, commande|  
+|COMPOBJ () (fonction)|Container (objet)|Objet de contrôle|  
+|COPIER le fichier (commande)|COPIER la commande MEMO|Commande CREATe CLASS|  
+|CRÉER une commande CLASSLIB|Commande créer un jeu de couleurs|CRÉER une commande|  
+|CRÉER une connexion, commande|Commande CREATe DATABASE|CRÉER un formulaire, commande|  
+|CRÉER à partir d’une commande|Commande CREATe LABEL|CRÉER une commande de MENU|  
+|CRÉER un projet, commande|Commande de création de requête|CRÉER un rapport, commande|  
+|CRÉER un écran, commande|CRÉER une commande de vue SQL|Commande CREATe TRIGGER|  
+|CRÉER une vue, commande|Fonction CREATEOBJECT ()|Fonction CURDIR ()|  
   
 ## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  
-|_DBLCLICK Variable de mémoire du système|_DIARYDATE Variable de mémoire du système|DBSETPROP( ) Fonction|  
-|Fonctions DDE|COMMANDE DEACTIVATE MENU|DEACTIVATE POPUP Command|  
-|Commande WINDOW DEACTIVATE|DECLARE - Commandement DLL|Commande DE POSTE|  
-|Commande DE LA BAR DEFINE|Commande DE LA BOX DEFINE|Commande DE LA CLASSE DE DEFINE|  
-|COMMANDE DE DEFINE MENU|Commande PAD DEFINE|DÉCRIVEZ POPUP Command (en)|  
-|Commande DE LA FENÊTRE DE DEFINE|Commande DELETE CONNECTION|Commande DATABASE DELETE|  
-|Commande DE FILE DELETE|Commande TRIGGER DELETE|Commande DE VUE SUPPRIMER|  
-|Commandement DIR|Commande DIRECTORY|Commande DISPLAY|  
-|Display CONNECTIONS Commande|Display DATABASE Commande|DISPLAY DLLS Commande|  
-|Display FILES Commande|Display MEMORY Commande|Display OBJECTS Commande|  
-|DISPLAY PROCEDURES Commande|Display STATUS Commande|Commande DISPLAY STRUCTURE|  
-|Display TABLES Commande|Display VIEWS Commande|Commande DO FORM|  
+|_DBLCLICK variable de mémoire système|_DIARYDATE variable de mémoire système|DBSETPROP () (fonction)|  
+|Fonctions DDE|DÉSACTIVER la commande de MENU|DÉSACTIVER la commande contextuelle|  
+|Commande de désactivation de la fenêtre|Commande DECLARE-DLL|Commande DECLARE|  
+|DÉFINIR la barre, commande|DÉFINIR la zone, commande|DÉFINIR la classe, commande|  
+|DÉFINIR la commande de MENU|DÉFINIR la commande PAD|DÉFINIR la commande contextuelle|  
+|DÉFINIR la fenêtre, commande|SUPPRIMER la connexion, commande|SUPPRIMER la base de données, commande|  
+|SUPPRIMER le fichier (commande)|SUPPRIMER le DÉCLENCHEur, commande|SUPPRIMER la vue, commande|  
+|DIR, commande|Commande de répertoire|AFFICHER la commande|  
+|AFFICHER les connexions, commande|AFFICHER la base de données, commande|AFFICHER les dll, commande|  
+|AFFICHER les fichiers, commande|AFFICHER la mémoire, commande|AFFICHER les objets, commande|  
+|Commande Afficher les procédures|AFFICHER l’État, commande|AFFICHER la STRUCTURE, commande|  
+|Commande Afficher les TABLES|AFFICHER les AFFICHAGEs, commande|Commande DO FORM|  
   
 ## <a name="e"></a>E  
   
 ||||  
 |-|-|-|  
-|Commande EDIT|Commande ERROR||  
-|Commande ERASE|Commandement EXTERNAL|Commandement EXPORT|  
-|Commandement EJECT|Commandement EJECT PAGE||  
+|MODIFIER, commande|Commande d’erreur||  
+|ERASE, commande|Commande externe|Commande d’exportation|  
+|Commande EJECT|Commande EJECT PAGE||  
   
 ## <a name="f"></a>F  
   
 ||||  
 |-|-|-|  
-|_FOXDOC Variable de mémoire du système|_FOXGRAPH Variable de mémoire du système|FEOF( ) Fonction|  
-|FCLOSE( ) Fonction|FCREATE( ) Fonction|FGETS( ) Fonction|  
-|FERROR( ) Fonction|FFLUSH) ) Fonction|FKLABEL( ) Fonction|  
-|Commandement FILER|Commande FIND|FOPEN( ) Fonction|  
-|FKMAX) ) Fonction|FONTMETRIC( ) Fonction|FSEEK( ) Fonction|  
-|FPUTS( ) Fonction|FREAD( ) Fonction||  
-|FWRITE( ) Fonction|FCHSIZE( ) Fonction||  
+|_FOXDOC variable de mémoire système|_FOXGRAPH variable de mémoire système|FEOF () (fonction)|  
+|FCLOSE () (fonction)|FCREATE () (fonction)|FGETS () (fonction)|  
+|Fonction de reversion ()|FFLUSH () (fonction)|FKLABEL () (fonction)|  
+|Commande de serveur de fichiers|Rechercher, commande|FOPEN () (fonction)|  
+|FKMAX () (fonction)|FONTMETRIC () (fonction)|FSEEK () (fonction)|  
+|FPUTS () (fonction)|FREAD () (fonction)||  
+|FWRITE () (fonction)|FCHSIZE () (fonction)||  
   
 ## <a name="g"></a>G  
   
 ||||  
 |-|-|-|  
-|_GENGRAPH Variable de mémoire du système|_GENMENU Variable de mémoire du système|_GENPD Variable de mémoire du système|  
-|_GENSCRN Variable de mémoire du système|_GENXTAB variable de mémoire du système|GETBAR( ) Fonction|  
-|GETCOLOR( ) Fonction|GETDIR( ) Fonction|Commandement GETEXPR|  
-|GETFILE( ) Fonction|GETFONT( ) Fonction|GETOBJECT( ) Fonction|  
-|GETPAD) ) Fonction|GETPICT( ) Fonction|GETPRINTER( ) Fonction|  
+|_GENGRAPH variable de mémoire système|_GENMENU variable de mémoire système|_GENPD variable de mémoire système|  
+|_GENSCRN variable de mémoire système|_GENXTAB variable de mémoire système|GETBAR () (fonction)|  
+|Fonction GETCOLOR ()|GETDIR () (fonction)|Commande GETEXPR|  
+|GETFILE () (fonction)|Fonction GETFONT ()|Fonction GETOBJECT ()|  
+|GETPAD () (fonction)|GETPICT () (fonction)|GETPRINTER () (fonction)|  
   
 ## <a name="h"></a>H  
   
 ||||  
 |-|-|-|  
-|Commande HELP|Hide MENU Commande|Hide POPUP Commande|  
-|Commande DE WINDOW HIDE|HOME) ) Fonction||  
+|AIDE (commande)|MASQUER la commande de MENU|MASQUER la commande contextuelle|  
+|MASQUER la fenêtre, commande|Fonction de démarrage ()||  
   
 ## <a name="i"></a>I  
   
 ||||  
 |-|-|-|  
-|IMESTATUS( ) Fonction|Commandement IMPORT|Commande INPUT|  
-|INDEX ON Commande|INKEY) ) Fonction|ISCOLOR) ) Fonction|  
-|Commande INSERT|INSMODE( ) Fonction||  
-|ISMOUSE( ) Fonction|_INDENT variable de mémoire du système||  
+|Fonction IMESTATUS ()|Commande d’importation|ENTRÉE, commande|  
+|INDEX sur la commande|INKEY () (fonction)|ISCOLOR (), fonction|  
+|Insérer une commande|INSMODE () (fonction)||  
+|ISMOUSE () (fonction)|_INDENT variable de mémoire système||  
   
 ## <a name="j"></a>J  
   
@@ -152,69 +152,69 @@ Le tableau suivant répertorie les commandes et les fonctions FoxPro qui ne sont
   
 ||||  
 |-|-|-|  
-|Commande KEYBOARD|||  
+|Commande clavier|||  
   
 ## <a name="l"></a>L  
   
 ||||  
 |-|-|-|  
-|_LMARGIN variable de mémoire du système|Commande LABEL|LASTKEY( ) Fonction|  
-|LINENO( ) Fonction|Commandes LIST|Commande LIST CONNECTIONS|  
-|LOAD Command|LOCFILE( ) Fonction||  
+|_LMARGIN variable de mémoire système|ÉTIQUETTE, commande|LASTKEY () (fonction)|  
+|LINENO () (fonction)|Liste des commandes|Liste des connexions, commande|  
+|Commande LOAD|LOCFILE () (fonction)||  
   
 ## <a name="m"></a>M  
   
 ||||  
 |-|-|-|  
-|MCOL( ) Fonction|Commandement MD|MENU TO Commande|  
-|MEMORY( ) Fonction|Commande MENU|Commandement MKDIR|  
-|MENU( ) Fonction|MESSAGEBOX( ) Fonction|Commande DE CONNECTION DE MODI|  
-|Commande DE CLASSE DE MODI|Commande COMMAND DE MODI|Commande FORM DE MODI|  
-|Commande DE DATABASE DE MODI|Commande MODI FILE|Commande DE MEMO DE MODI|  
-|Commande GENERAL DE MODIFICATION|Commande DE LABEL DE MODI|Commande DE PROJECT DE MODIFICATION|  
-|Commande DE MENU DE MODIFICATION|Commande DE PROCÉDURE DE MODIFICATION|Commande SCREEN MODI|  
-|Commande DE QUESTIONRY DE MODIFICATION|Commande RAPPORT MODI|Commande DE WINDOW DE MODI|  
-|Commande STRUCTURE DE MODIFICATION|Commande DE VUE DE MODI|Commande MOVE WINDOW|  
-|Commande MOUSE|Move POPUP Commande|MROW) ) Fonction|  
-|FONCTION MRKBAR( )|MRKPAD) ) Fonction||  
-|MWINDOW( ) Fonction|MDOWN) ) Fonction||  
+|MCOL () (fonction)|Commande MD|MENU à commande|  
+|Fonction MEMORY ()|Commande de MENU|MKDIR, commande|  
+|Fonction MENU ()|Fonction MESSAGEBOX ()|MODIFIER la connexion, commande|  
+|Commande MODIFY CLASS|Commande modifier la commande|Commande modifier le formulaire|  
+|Commande modifier la base de données|MODIFIER le fichier (commande)|MODIFIER la commande MEMO|  
+|MODIFIER la commande générale|Commande modifier l’étiquette|MODIFIER le projet, commande|  
+|MODIFIER la commande de MENU|Commande modifier la procédure|Commande modifier l’écran|  
+|MODIFIER la requête, commande|MODIFIER la commande de rapport|Commande modifier la fenêtre|  
+|MODIFIER la STRUCTURE, commande|MODIFIER la vue, commande|DÉPLACER la fenêtre, commande|  
+|SOURIS, commande|DÉPLACER la commande contextuelle|MROW () (fonction)|  
+|MRKBAR () (fonction)|MRKPAD () (fonction)||  
+|MWINDOW () (fonction)|MDOWN () (fonction)||  
   
 ## <a name="n"></a>N  
   
 ||||  
 |-|-|-|  
-|NUMLOCK( ) Fonction|||  
+|Fonction Verr. num ()|||  
   
 ## <a name="o"></a>O  
   
 ||||  
 |-|-|-|  
-|OBJNUM) ) Fonction|OBJTOCLIENT( ) Fonction|Commandement ON BAR|  
-|OEMTOANSI( ) Fonction|SUR APLABOUT Command|ON EXIT MENU Command|  
-|Sur ESCAPE Command|ON EXIT BAR Command|SUR KEY - Commande|  
-|SUR EXIT PAD Command|SUR EXIT POPUP Command|Sur le commandement DE PAD|  
-|Sur KEY LABEL Command|Sur LE COMMANDEMENT MACHELP|ON SELECTION BAR Command|  
-|Sur PAGE Command|Sur READERROR Commande|SUR SELECTION POPUP Command|  
-|ON SELECTION MENU Commande|SUR SELECTION PAD Command||  
-|Sur LE COMMANDEMENT SHUTDOWN|OBJVAR( ) Fonction||  
+|OBJNUM () (fonction)|OBJTOCLIENT () (fonction)|Commande sur la barre|  
+|OEMTOANSI () (fonction)|SUR la commande APLABOUT|EN QUITTant la commande de MENU|  
+|Commande ON ESCAPE|Dans la barre de sortie, commande|ON KEY =, commande|  
+|À la fin de la commande PAD|Commande contextuelle à la sortie|Commande ON PAD|  
+|Commande sur une étiquette de clé|SUR la commande MACHELP|Dans la barre de sélection, commande|  
+|SUR la PAGE, commande|SUR la commande READERROR|Commande contextuelle à la sélection|  
+|Dans la commande de MENU de sélection|Dans la commande de bloc de sélection||  
+|À la commande SHUTDOWN|OBJVAR () (fonction)||  
   
 ## <a name="p"></a>P  
   
 ||||  
 |-|-|-|  
-|_PADVANCE Variable de Mémoire du système|_PAGENO Variable de mémoire du système|_PBPAGE Variable de mémoire du système|  
-|_PCOLNO Variable de mémoire du système|_PCOPIES variable de mémoire du système|_PDRIVER variable de mémoire du système|  
-|_PDSETUP Variable de mémoire du système|_PECODE Variable de mémoire du système|_PEJECT variable de mémoire du système|  
-|_PEPAGE variable de mémoire du système|_PLENGTH Variable de mémoire du système|_PLINENO Variable de mémoire du système|  
-|_PLOFFSET Variable de mémoire du système|_PPITCH Variable de mémoire du système|_PQUALITY Variable de mémoire du système|  
-|_PRETEXT Variable de mémoire du système|_PSCODE Variable de mémoire du système|_PSPACING Variable de mémoire du système|  
-|_PWAIT Variable de mémoire du système|Pack DATABASE Commande|PAD( ) Fonction|  
-|PCOL( ) Fonction|PEMSTATUS( ) Fonction|PLAY MACRO Commande|  
-|Commandement POP KEY|Commande POP MENU|Commandement POPUP POPUP|  
-|POPUP( ) Fonction|PRINTJOB ... Commande ENDPRINTJOB|PRINTSTATUS( ) Fonction|  
-|PRMBAR( ) Fonction|PRMPAD) ) Fonction|PROMPT( ) Fonction|  
-|PROW( ) Fonction|PRTINFO( ) Fonction|Commande PUSH KEY|  
-|Commande PUSH MENU|Commande PUSH POPUP|FONCTION PUTFILE( )|  
+|_PADVANCE variable de mémoire système|_PAGENO variable de mémoire système|_PBPAGE variable de mémoire système|  
+|_PCOLNO variable de mémoire système|_PCOPIES variable de mémoire système|_PDRIVER variable de mémoire système|  
+|_PDSETUP variable de mémoire système|_PECODE variable de mémoire système|_PEJECT variable de mémoire système|  
+|_PEPAGE variable de mémoire système|_PLENGTH variable de mémoire système|_PLINENO variable de mémoire système|  
+|_PLOFFSET variable de mémoire système|_PPITCH variable de mémoire système|_PQUALITY variable de mémoire système|  
+|_PRETEXT variable de mémoire système|_PSCODE variable de mémoire système|_PSPACING variable de mémoire système|  
+|_PWAIT variable de mémoire système|Commande PACK DATABASE|Fonction PAD ()|  
+|PCOL () (fonction)|PEMSTATUS () (fonction)|LIRE la MACRO, commande|  
+|Commande POP KEY|MENU contextuel, commande|Fenêtre contextuelle contextuelle|  
+|Fonction POPUP ()|PRINTJOB... Commande ENDPRINTJOB|PRINTSTATUS () (fonction)|  
+|PRMBAR () (fonction)|PRMPAD () (fonction)|Fonction PROMPT ()|  
+|PROW () (fonction)|PRTINFO () (fonction)|Commande PUSH KEY|  
+|Commande de MENU PUSH|Commande PUSH contextuelle|PUTFILE () (fonction)|  
   
 ## <a name="q"></a>Q  
   
@@ -226,97 +226,97 @@ Le tableau suivant répertorie les commandes et les fonctions FoxPro qui ne sont
   
 ||||  
 |-|-|-|  
-|_RMARGIN Variable de mémoire du système|Commandement DE la RD|READKEY( ) Fonction|  
-|LIRE Commande|LIRE AUSSI - Commande|RELEASE BAR Command|  
-|FONCTION REFRESH()|Commande REINDEX|RELEASE LIBRARY Command|  
-|RELEASE CLASSLIB Commande|Commande RELEASE|RELEASE PAD Command|  
-|Release MENUS Commande|Release MODULE Commande|Release WINDOWS Commande|  
-|Release POPUPS Commande|Release PROCEDURE Commande|Commande RENAME|  
-|REMOVE CLASS Command|RENAME CLASS Command|ReNAME VIEW Commande|  
-|ReNAME CONNECTION Commande|RENAME TABLE Command|RESTORE FROM Command|  
-|Commande REPORT|REQUERY( ) Fonction|Commande WINDOW RESTORE|  
-|COMMANDE MACROS RESTAUR|COMMANDE SCREEN RESTORE|RGBSCHEME( ) Fonction|  
-|Commande RESUME|RGB) ) Fonction|RUN &#124; ! Commande|  
-|Commandement RMDIR|ROW( ) Fonction||  
-|Commande RUNSCRIPT|RDLEVEL( ) Fonction||  
+|_RMARGIN variable de mémoire système|RD, commande|READKEY () (fonction)|  
+|LIRE, commande|LIRE la commande de MENU|Commande de la barre de lancement|  
+|Fonction REFRESH ()|Commande de réindexation|Commande de la bibliothèque de mise en version|  
+|Commande RELEASE CLASSLIB|Commande RELEASE|Commande RELEASE PAD|  
+|Commande MENUS RELEASE|Commande du MODULE de version|Commande WINDOWS RELEASE|  
+|Commande contextuels de mise en version|Commande de procédure de lancement|Renommer, commande|  
+|Commande REMOVE CLASS|Renommer la classe, commande|Renommer la vue, commande|  
+|Renommer la commande de connexion|Renommer la TABLE, commande|RESTAURER à partir de la commande|  
+|Commande de rapport|Fonction Requery ()|Commande restaurer la fenêtre|  
+|Commande Restore MACROs|Commande restaurer l’écran|RGBSCHEME () (fonction)|  
+|RESUME, commande|Fonction RGB ()|EXÉCUTEZ &#124; ! Commande|  
+|RMDIR, commande|Fonction ROW ()||  
+|Commande RUNSCRIPT|RDLEVEL () (fonction)||  
   
 ## <a name="s"></a>S  
   
 ||||  
 |-|-|-|  
-|SAVE MACROS Commande|Commande SCREEN SAVE|SAVE TO Command|  
-|Commande WINDOWS SAVE|SCHEME( ) Fonction|SCOLS( ) Fonction|  
-|Commande SCROLL|_SCREEN Variable de mémoire du système|Commande SET|  
-|SET ALTERNATE Commande|SET ANSI, commande|Set APLABOUT Commande|  
-|SET AUTOSAVE Commande|Set BELL Commande|Set BLINK Commande|  
-|Set BORDER Commande|Set BRSTATUS Commande|Set CLASSLIB Commande|  
-|Set CLEAR Commande|Set CLOCK Commande|SET COLOR OF Commande|  
-|SET COLOR OF SCHEME Command|SET COLOR SET Commande|SET COLOR À Commande|  
-|Set COMPATIBLE Commande|Set CONFIRM Commande|Commande SET CONSOLE|  
-|DÉFINIR CPCOMPILE|DÉFINIR CPDIALOG|Set CURRENCY Commande|  
-|Set CURSOR Commande|SET DATASESSION Commande|Set DEBUG Commande|  
-|SET DECIMALS Commande|SET DELIMITERS Commande|Set DEVELOPMENT Commande|  
-|Commande SET DEVICE|Set DISPLAY Commande|SET DOHISTORY Commande|  
-|Set ECHO Commande|Set ESCAPE Commande|Commande SET FORMAT|  
-|Set FUNCTION Commande|Set HEADINGS Commande|Set HELP Commande|  
-|Set HELPFILTER Commande|Set INTENSITY Commande|Set KEY Commande|  
-|Set KEYCOMP Commande|Set LOGERRORS Commande|SET MACDESKTOP Commande|  
-|Set MACHELP Commande|Set MACKEY Commande|Set MARGIN Commande|  
-|SET MARK OF Commande|SET MARK À Commande|SET MEMOWIDTH Commande|  
-|Set MESSAGE Commande|Commande SET MOUSE|Set ODOMETER Commande|  
-|SET OLEOBJECT Commande|Commande SET PALETTE|SET PDSETUP Commande|  
-|Set POINT Commande|Commande SET PRINTER|SET READBORDER Commande|  
-|SET REFRESH Commande|Set RESOURCE Commande|Set SAFETY Commande|  
-|Set SCOREBOARD Commande|Set SECONDS Commande|Set SEPARATOR Commande|  
-|Set SHADOWS Commande|SET SKIP OF Command|Set SPACE Commande|  
-|Set STATUS Commande|SET STATUS BAR Commande|Set STEP Commande|  
-|SET STICKY Commande|Set SYSFORMATS Commande|SET SYSMENU Commande|  
-|Set TALK Commande|SET TEXTMERGE Commande|SET TEXTMERGE DELIMITERS Commande|  
-|Set TOPIC Commande|SET TOPIC ID Commande|SET TRBETWEEN Commande|  
-|Set TYPEAHEAD Commande|Set VIEW Commande|SET WINDOW OF MEMO Command|  
-|Set XCMDFILE Commande|_SHELL variable de mémoire du système|Commande SHOW GET|  
-|Show GETS Commande|Commande SHOW MENU|Commande SHOW OBJECT|  
-|Show POPUP Commande|Commande SHOW WINDOW|Commande SIZE POPUP|  
-|Commande SIZE WINDOW|SKPBAR( ) Fonction|SKPPAD) ) Fonction|  
-|SOUNDEX( ) Fonction|_SPELLCHK variable de mémoire du système|Fonctions SQL|  
-|SROWS( ) Fonction|_STARTUP variable de mémoire du système|Commande SUSPEND|  
-|Fonctions SYS() à l’exception de SYS(2011)|SYSMETRIC( ) Fonction||  
+|Commande Enregistrer les MACROs|ENREGISTRER l’écran, commande|ENREGISTRER dans la commande|  
+|ENREGISTRER la commande WINDOWS|Fonction SCHEMe ()|SCOLS () (fonction)|  
+|SCROLL, commande|_SCREEN variable de mémoire système|Commande SET|  
+|DÉFINIR une autre commande|SET ANSI, commande|DÉFINIR la commande APLABOUT|  
+|SET autosave, commande|DÉFINIR la commande BELL|DÉFINIR la commande BLINK|  
+|DÉFINIR la bordure, commande|DÉFINIR la commande BRSTATUS|DÉFINIR la commande CLASSLIB|  
+|DÉFINIR la commande CLEAR|SET CLOCK (commande)|DÉFINIR la couleur de la commande|  
+|DÉFINIR la couleur de la commande de schéma|Commande SET COLOR SET|DÉFINIR la couleur sur la commande|  
+|DÉFINIR la commande COMPATIBLE|DÉFINIR la commande CONFIRM|DÉFINIR une commande de CONSOLE|  
+|DÉFINIR CPCOMPILE|DÉFINIR CPDIALOG|SET CURRENCY, commande|  
+|SET CURSOR, commande|DÉFINIR la commande DATASESSION|DÉFINIR la commande de débogage|  
+|SET DECIMALs, commande|Commande SET Delimiters|DÉFINIR la commande de développement|  
+|SET DEVICE, commande|DÉFINIR la commande d’affichage|DÉFINIR la commande de l’historique|  
+|DÉFINIR la commande ECHO|SET ESCAPE, commande|DÉFINIR le FORMAT, commande|  
+|Commande SET FUNCTION|DÉFINIR les en-têtes, commande|DÉFINIR l’aide, commande|  
+|DÉFINIR la commande HELPFILTER|DÉFINIR la commande INTENSity|DÉFINIR la clé, commande|  
+|DÉFINIR la commande keycomp|DÉFINIR la commande LOGERRORS|DÉFINIR la commande MACDESKTOP|  
+|DÉFINIR la commande MACHELP|DÉFINIR la commande MACKEY|SET MARGIN, commande|  
+|DÉFINIR la marque de la commande|DÉFINIR la commande Marquer pour|DÉFINIR la commande MEMOWIDTH|  
+|DÉFINIR le MESSAGE, commande|DÉFINIR la souris, commande|SET kilométrique, commande|  
+|SET OLEOBJECT, commande|DÉFINIR la PALETTE, commande|DÉFINIR la commande PDSETUP|  
+|Commande SET POINT|Commande SET PRINTER|DÉFINIR la commande READBORDER|  
+|DÉFINIR la commande ACTUALISer|SET Resource, commande|Commande SET SAFETY|  
+|SET SCOREBOARD, commande|Commande SET SECONDS|Commande SET SEPARATOR|  
+|DÉFINIR SHADOWs, commande|DÉFINIR ignorer la commande|SET SPACE, commande|  
+|SET STATUs (commande)|DÉFINIR la barre d’État, commande|Commande SET STEP|  
+|DÉFINIR la commande RÉMANENTe|DÉFINIR la commande SYSFORMATS|DÉFINIR la commande SYSMENU|  
+|DÉFINIR la commande parler|DÉFINIR la commande TEXTMERGE|Commande SET TEXTMERGE Delimiters|  
+|Commande SET TOPIC|Commande SET TOPIC ID|DÉFINIR la commande TRBETWEEN|  
+|DÉFINIR la commande TYPEAHEAD|SET VIEW, commande|SET WINDOW OF MEMO, commande|  
+|DÉFINIR la commande XCMDFILE|_SHELL variable de mémoire système|AFFICHER la commande d’extraction|  
+|Commande SHOW obtient|AFFICHER la commande de MENU|Commande SHOW OBJECT|  
+|AFFICHER la commande contextuelle|AFFICHER la fenêtre, commande|Fenêtre contextuelle de la taille|  
+|FENÊTRE taille, commande|SKPBAR () (fonction)|SKPPAD () (fonction)|  
+|Fonction SOUNDEX ()|_SPELLCHK variable de mémoire système|Fonctions SQL|  
+|SROWS () (fonction)|_STARTUP variable de mémoire système|Commande SUSPEND|  
+|Fonctions SYS (), à l’exception de SYS (2011)|SYSMETRIC () (fonction)||  
   
 ## <a name="t"></a>T  
   
 ||||  
 |-|-|-|  
-|_TABS variable de mémoire du système|Texte... Commande ENDTEXT|TXTWIDTH( ) Fonction|  
-|TRANSFORM( ) Fonction|_TRANSPORT Variable de mémoire du système||  
-|Commande TYPE|_THROTTLE variable de mémoire du système||  
+|_TABS variable de mémoire système|TEXTE... Commande ENDTEXT|Fonction TXTWIDTH ()|  
+|Fonction TRANSFORM ()|_TRANSPORT variable de mémoire système||  
+|Commande de TYPE|_THROTTLE variable de mémoire système||  
   
 ## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  
-|MISE À JOUR( ) Fonction|Commande USE||  
+|Fonction UPDATEd ()|UTILISER la commande||  
   
 ## <a name="v"></a>V  
   
 ||||  
 |-|-|-|  
-|Commande DATABASE VALIDATE|VARREAD( ) Fonction|VERSION( ) Fonction|  
+|Commande valider la base de données|VARREAD () (fonction)|VERSION () (fonction)|  
   
 ## <a name="w"></a>W  
   
 ||||  
 |-|-|-|  
-|_WINDOWS variable de mémoire du système|_WIZARD Variable de mémoire du système|WCHILD( ) Fonction|  
-|Commandement WAIT|WBORDER( ) Fonction|WFONT( ) Fonction|  
-|WCOLS( ) Fonction|WEXIST( ) Fonction|WLROW( ) Fonction|  
-|Avec... Commandement ENDWITH|WLAST( ) Fonction|WONTOP( ) Fonction|  
-|WMAXIMUM( ) Fonction|WLCOL( ) Fonction|WREAD( ) Fonction|  
-|WOUTPUT( ) Fonction|WMINIMUM( ) Fonction|WVISIBLE( ) Fonction|  
-|WPARENT( ) Fonction|WTITLE( ) Fonction||  
-|WROWS( ) Fonction|_WRAP Variable de mémoire du système||  
+|_WINDOWS variable de mémoire système|_WIZARD variable de mémoire système|WCHILD () (fonction)|  
+|WAIT, commande|WBORDER () (fonction)|WFONT () (fonction)|  
+|WCOLS () (fonction)|WEXIST () (fonction)|WLROW () (fonction)|  
+|AVEC... Commande ENDWITH|WLAST () (fonction)|WONTOP () (fonction)|  
+|WMAXIMUM () (fonction)|WLCOL () (fonction)|WREAD () (fonction)|  
+|WOUTPUT () (fonction)|WMINIMUM () (fonction)|WVISIBLE () (fonction)|  
+|WPARENT () (fonction)|WTITLE () (fonction)||  
+|WROWS () (fonction)|_WRAP variable de mémoire système||  
   
 ## <a name="z"></a>Z  
   
 ||||  
 |-|-|-|  
-|Commande ZOOM WINDOW|||
+|FENÊTRE ZOOM, commande|||

@@ -1,6 +1,6 @@
 ---
-title: Objet SqlDataRecord (fr) Microsoft Docs
-description: Dans l’intégration SQL Server CLR, les procédures stockées peuvent utiliser la classe SqlDataRecord pour envoyer des ensembles de résultats personnalisés au client.
+title: SqlDataRecord, objet | Microsoft Docs
+description: Dans SQL Server l’intégration du CLR, les procédures stockées peuvent utiliser la classe SqlDataRecord pour envoyer des jeux de résultats personnalisés au client.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487506"
 ---
 # <a name="sqldatarecord-object"></a>Objet SqlDataRecord

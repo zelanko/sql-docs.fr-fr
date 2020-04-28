@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 1 (Préalable) : Suppression des données des fournisseurs dans le SMD Microsoft Docs'
+title: 'Tâche 1 (condition préalable) : suppression des données des fournisseurs dans MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,78 +11,78 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0290f033be47bec61e9ccce8465892d8cc98608c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81484629"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tâche 1 (prérequis) : Suppression de données de fournisseur dans MDS
-  Dans cette tâche, vous allez supprimer les données des fournisseurs stockées dans MDS. Vous avez téléchargé les données manuellement à l’aide **de MDS Excel Add-in** dans la leçon précédente. Le paquet SSIS que vous créez dans cette leçon téléchargera automatiquement les données sur MDS pour vous. Par conséquent, avant de tester le package SSIS, vous devez supprimer les données des fournisseurs dans MDS, ainsi que la hiérarchie dérivée, les entités Fournisseur et État, et créer l'entité Fournisseur sans données.  
+  Dans cette tâche, vous allez supprimer les données des fournisseurs stockées dans MDS. Vous avez chargé les données manuellement à l’aide du **complément MDS pour Excel** dans la leçon précédente. Le package SSIS que vous créez dans cette leçon charge automatiquement les données dans MDS pour vous. Par conséquent, avant de tester le package SSIS, vous devez supprimer les données des fournisseurs dans MDS, ainsi que la hiérarchie dérivée, les entités Fournisseur et État, et créer l'entité Fournisseur sans données.  
   
-1.  Lancez **Master Data** Manager `http://localhost/MDS` en naviguant vers ou sur le site Web et l’application que vous avez spécifiée lors de la configuration du MDS. Si vous maintenez le **Master Data Manager** ouvert, cliquez sur **SQL Server 2012 Master Data Services** en haut pour passer à la page **d’accueil**.  
+1.  Lancez le **Data Manager maître** en accédant `http://localhost/MDS` à ou au site Web et à l’application que vous avez spécifiés lors de la configuration de MDS. Si vous avez conservé le **Data Manager maître** ouvert, cliquez sur **SQL Server Master Data Services 2012** en haut pour basculer vers la **page d’hébergement**.  
   
-2.  Cliquez sur **l’administration du système** dans la section **Tâches administratives.**  
+2.  Cliquez sur **administration de système** dans la section **tâches administratives** .  
   
-3.  Planer la souris sur **Gérer** sur le menu et cliquez sur **Hiérarchies dérivées**. Vous devez supprimer la hiérarchie dérivée **SuppliersInState** avant de supprimer les entités du modèle **Fournisseurs.**  
+3.  Pointez la souris sur **gérer** dans le menu et cliquez sur **hiérarchies dérivées**. Vous devez supprimer la hiérarchie dérivée **SuppliersInState** avant de supprimer les entités dans le modèle **Suppliers** .  
   
-4.  Sélectionnez **FournisseursInState** de la liste **de hiérarchie dérivée** et cliquez sur le bouton **X (Supprimer)** sur la barre d’outils.  
+4.  Sélectionnez **SuppliersInState** dans la liste **hiérarchie dérivée** , puis cliquez sur le bouton **X (supprimer)** dans la barre d’outils.  
   
-5.  Cliquez **sur OK** pour confirmer la suppression.  
+5.  Cliquez sur **OK** pour confirmer la suppression.  
   
-6.  Planer la souris sur **Gérer** sur le menu et cliquez sur **entités**.  
+6.  Pointez la souris sur **gérer** dans le menu et cliquez sur **entités**.  
   
-7.  Cliquez sur **Fournisseur** et cliquez sur Supprimer (X) le bouton **Supprimer (X)** sur la barre d’outils pour supprimer l’entité. Cliquez **sur OK** sur les boîtes de messages.  
+7.  Cliquez sur **fournisseur** , puis sur le bouton **Supprimer (X)** de la barre d’outils pour supprimer l’entité. Cliquez sur **OK** dans les boîtes de message.  
   
-8.  Répétez l’étape précédente pour supprimer **l’entité d’État.**  
+8.  Répétez l’étape précédente pour supprimer l’entité **État** .  
   
-9. Ne fermez pas **Master Data Manager**.  
+9. Ne fermez pas le **Data Manager maître**.  
   
-10. Passez à la fenêtre Excel qui a nettoyé et assorti le fichier **Suppliers.xls** ouvert. Passez à l’onglet **Feuille1** en bas.  
+10. Basculez vers la fenêtre Excel dans laquelle le fichier **Suppliers. xls nettoyé et mis en correspondance** est ouvert. Basculez vers l’onglet **Feuil1** en bas.  
   
-11. Sélectionnez seulement la **première rangée avec des en-têtes**. Ne sélectionnez pas d’autre rangée. Vous souhaitez créer les entités basées sur les colonnes Excel mais ne souhaitez pas télécharger de données. Par conséquent, sélectionnez uniquement la première ligne avec les en-têtes.  
+11. Sélectionnez uniquement la **première ligne avec des en-têtes**. Ne sélectionnez aucune autre ligne. Vous souhaitez créer les entités en fonction des colonnes Excel, mais vous ne souhaitez pas télécharger de données. Par conséquent, sélectionnez uniquement la première ligne avec les en-têtes.  
   
-12. Cliquez sur **Master Data** sur la barre du menu.  
+12. Dans la barre de menus, cliquez sur **données** de référence.  
   
-13. Cliquez sur **Créer l’entité** à partir du ruban.  
+13. Cliquez sur **créer une entité** dans le ruban.  
   
-14. Dans la boîte de dialogue **Manage Connections,** si vous ne voyez pas la connexion au **serveur MDS local** dans les **connexions existantes,** faites ce qui suit :  
+14. Dans la boîte de dialogue **gérer les connexions** , si vous ne voyez pas la connexion au **serveur MDS local** sous **connexions existantes**, procédez comme suit :  
   
-    1.  Sélectionnez **Créer une nouvelle connexion**et cliquez sur **nouveau** bouton.  
+    1.  Sélectionnez **créer une nouvelle connexion**, puis cliquez sur le bouton **nouveau** .  
   
-    2.  Dans la boîte de dialogue Add New Connection, tapez **local MDS Server** pour **la description** et **http:\//localhost/MDS** pour **l’adresse du serveur MDS**, et cliquez **sur OK** pour fermer la boîte de dialogue.  
+    2.  Dans la boîte de dialogue Ajouter une nouvelle connexion, tapez **serveur MDS local** pour **Description** et **\/http:/localhost/MDS** pour **adresse du serveur MDS**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-15. Dans la boîte de dialogue **Manage Connections,** sélectionnez **Local MDS Server** (),`http://localhost/MDS`cliquez sur **Test** pour tester la connexion. Cliquez sur **OK** dans le message de confirmation.  
+15. Dans la boîte de dialogue **gérer les connexions** , sélectionnez **serveur MDS local** (`http://localhost/MDS`), puis cliquez sur **tester** pour tester la connexion. Cliquez sur **OK** dans le message de confirmation.  
   
-16. Cliquez **sur Connectez-vous** pour établir une connexion au serveur MDS.  
+16. Cliquez sur **connexion** pour établir une connexion au serveur MDS.  
   
-17. Dans la boîte de dialogue **Create Entity,** faites ce qui suit :  
+17. Dans la boîte de dialogue **créer une entité** , procédez comme suit :  
   
-    1.  Confirmez que **la portée** est réglée à **1 $ : 1**$ .  
+    1.  Confirmez que la **plage** est définie sur **$1 : $1**.  
   
-    2.  Sélectionnez **les fournisseurs** pour **le modèle**.  
+    2.  Sélectionnez **Suppliers** pour **Model**.  
   
-    3.  Sélectionnez **VERSION_1** pour **la version**.  
+    3.  Sélectionnez **Version_1** pour **version**.  
   
-    4.  **Fournisseur de** type pour le nouveau **nom d’entité**.  
+    4.  Tapez **Supplier** pour **nouveau nom d’entité**.  
   
-    5.  Sélectionnez **SupplierID** pour **code**.  
+    5.  Sélectionnez **RéfFournisseur** comme **code**.  
   
-    6.  Sélectionnez **nom du fournisseur** pour le **nom**.  
+    6.  Sélectionnez **nom du fournisseur** pour **nom**.  
   
-    7.  Cliquez **sur OK** pour créer l’entité et fermer la boîte de dialogue.  
+    7.  Cliquez sur **OK** pour créer l’entité et fermer la boîte de dialogue.  
   
 18. Fermez **Excel** et **n’enregistrez pas** le fichier.  
   
-19. Dans **Master Data Manager**, actualisez le navigateur Internet et confirmez que **l’entité fournisseur** est affichée dans la liste.  
+19. Dans **Data Manager maître**, actualisez le navigateur Internet et confirmez que l’entité **fournisseur** est affichée dans la liste.  
   
-20. Passez à la **page d’accueil** en cliquant sur **SQL Server 2012 Master Data Services** en haut.  
+20. Basculez vers la **page d’hébergement** en cliquant sur **SQL Server 2012 Master Data Services** en haut.  
   
-21. Confirmez que le modèle **Fournisseurs** est sélectionné pour **le modèle** et **VERSION_1** est sélectionné pour la **version**.  
+21. Vérifiez que l’option **Supplier** Model est sélectionnée pour **model** et que **Version_1** est sélectionné pour **version**.  
   
-22. Cliquez sur **Explorateur**. Notez que l’entité **fournisseur** avec tous les attributs est créé **sans valeurs**.  
+22. Cliquez sur **Explorateur**. Notez que l’entité **Supplier** avec tous les attributs est créée sans **valeur**.  
   
 ## <a name="next-step"></a>étape suivante  
- [Tâche 2 &#40;&#41; facultatif : Création d’une vue d’abonnement MDS à l’aide de Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [Tâche 2 &#40;&#41; facultative : création d’une vue d’abonnement MDS à l’aide du Data Manager maître](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

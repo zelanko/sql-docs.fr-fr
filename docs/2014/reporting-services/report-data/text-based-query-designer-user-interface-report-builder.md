@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388322"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes textuel (Générateur de rapports)
@@ -56,7 +56,7 @@ ms.locfileid: "81388322"
 |Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|
 
 #### <a name="example"></a>Exemple
- La requête suivante renvoie la liste [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]des noms de famille du tableau de base de données `ContactType` `Person` **2008** pour le schéma.
+ La requête [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]suivante renvoie la liste des noms de la table de base de données **2008** `ContactType` 2008 `Person` pour le schéma.
 
 ```
 SELECT Name FROM Person.ContactType
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|
 
 #### <a name="example"></a>Exemple
- La requête suivante [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]appelle la procédure `uspGetWhereUsedProductID`stockée **2008** . Vous devez entrer une valeur pour le paramètre du numéro d'identification de produit lorsque vous exécutez la requête.
+ La requête suivante appelle la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]procédure `uspGetWhereUsedProductID`stockée **2008** . Vous devez entrer une valeur pour le paramètre du numéro d'identification de produit lorsque vous exécutez la requête.
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  Quand vous sélectionnez le **Type de commande TableDirect**, le concepteur de requêtes textuel présente deux volets : Requête et Résultats. Lorsque vous entrez une table et cliquez sur le bouton **Exécuter** , toutes les colonnes pour cette table sont retournées.
 
 #### <a name="example"></a>Exemple
- Pour un type source de données OLE DB, la requête suivante de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]jeu de données renvoie un ensemble de résultats pour tous les types de contacts dans la base de données **2008.**
+ Pour un type de source de données OLE DB, la requête de DataSet suivante retourne un jeu de résultats pour tous [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]les types de contacts dans la base de données **2008** .
 
  `Person.ContactType`
 
  Lorsque vous entrez le nom de table Person.ContactType, cela revient à créer l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)]`SELECT * FROM Person.ContactType`.
 
 ## <a name="see-also"></a>Voir aussi
- [Relational Query Designer User Interface &#40;Report Builder&#41;](relational-query-designer-user-interface-report-builder.md) [Query Designers &#40;Report Builder&#41;](../query-designers-report-builder.md)
+ [Interface utilisateur du concepteur de requêtes relationnelles &#40;Générateur de rapports&#41;](relational-query-designer-user-interface-report-builder.md) [concepteurs de requêtes &#40;générateur de rapports](../query-designers-report-builder.md)&#41;
 
 

@@ -1,6 +1,6 @@
 ---
-title: Restrictions sur les connexions régulières et contextuelles (fr) Microsoft Docs
-description: Cet article décrit les restrictions associées au code en cours d’exécution dans le processus Microsoft SQL Server par le contexte et les connexions régulières.
+title: Restrictions sur les connexions régulières et de contexte | Microsoft Docs
+description: Cet article décrit les restrictions associées au code s’exécutant dans le processus de Microsoft SQL Server par le biais de connexions de contexte et normales.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485284"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Connexions contextuelles et connexions standard - Restrictions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Ce sujet traite des restrictions associées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’exécution du code dans le processus par le contexte et les connexions régulières.  
+  Cette rubrique décrit les restrictions associées au code qui s’exécute dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus via le contexte et les connexions normales.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrictions applicables aux connexions contextuelles  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions contextuelles :  
@@ -31,26 +31,26 @@ ms.locfileid: "81485284"
   
 -   Multiple Active Result Sets (MARS) n'est pas pris en charge dans une connexion contextuelle.  
   
--   La classe **SqlBulkCopy** ne fonctionne pas dans un contexte.  
+-   La classe **SqlBulkCopy** ne fonctionne pas dans une connexion contextuelle.  
   
 -   Le traitement par lot des mises à jour dans une connexion contextuelle n'est pas pris en charge  
   
--   **SqlNotificationRequest** ne peut pas être utilisé avec des commandes qui s’exécutent à l’encontre d’une connexion contextuelle.  
+-   **SqlNotificationRequest** ne peut pas être utilisé avec des commandes qui s’exécutent sur une connexion contextuelle.  
   
--   L'annulation des commandes qui s'exécutent contre la connexion contextuelle n'est pas prise en charge. La méthode **SqlCommand.Cancel** ignore silencieusement la demande.  
+-   L'annulation des commandes qui s'exécutent contre la connexion contextuelle n'est pas prise en charge. La méthode **SqlCommand. Cancel** ignore la demande en mode silencieux.  
   
 -   Aucun autre mot clé de chaîne de connexion ne peut être utilisé lorsque vous utilisez « context connection=true ».  
   
--   La propriété **SqlConnection.DataSource** revient nulle si la chaîne de connexion pour le **SqlConnection** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]est "contexte connection-true", au lieu du nom de l’instance de .  
+-   La propriété **SqlConnection. DataSource** retourne la valeur null si la chaîne de connexion pour **SqlConnection** est « context connection = true », et non le nom de l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instance de.  
   
--   La configuration de la propriété **SqlCommand.CommandTimeout** n’a aucun effet lorsque la commande est exécutée à l’appel d’une connexion contextuelle.  
+-   La définition de la propriété **SqlCommand. CommandTimeout** n’a aucun effet lorsque la commande est exécutée sur une connexion contextuelle.  
   
 ## <a name="restrictions-on-regular-connections"></a>Restrictions applicables aux connexions normales  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions normales :  
   
--   L'exécution de commande asynchrone contre des serveurs internes n'est pas prise en charge. L’inclusion de «async-vrai» dans la chaîne de connexion d’une commande, puis l’exécution de la commande, entraîne **System.NotSupportedException** étant jeté. Le message suivant apparaît : « Le traitement asynchrone n'est pas pris en charge en cas d'exécution à l'intérieur du processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ».  
+-   L'exécution de commande asynchrone contre des serveurs internes n'est pas prise en charge. L’inclusion de « Async = true » dans la chaîne de connexion d’une commande, puis l’exécution de la commande, entraîne la levée de **System. NotSupportedException** . Le message suivant apparaît : « Le traitement asynchrone n'est pas pris en charge en cas d'exécution à l'intérieur du processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ».  
   
--   **L’objet SqlDependency n’est** pas pris en charge.  
+-   L’objet **SqlDependency** n’est pas pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexion contextuelle](../../../relational-databases/clr-integration/data-access/context-connection.md)  

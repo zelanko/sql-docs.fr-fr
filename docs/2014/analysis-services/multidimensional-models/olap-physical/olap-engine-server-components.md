@@ -1,5 +1,5 @@
 ---
-title: Composants du serveur moteur OLAP (fr) Microsoft Docs
+title: Composants du serveur du moteur OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 535d1e05fc82882e0a2b5ea43ac9b2147e62338b
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388014"
 ---
 # <a name="olap-engine-server-components"></a>Composants serveur du moteur OLAP
-  Le composant [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur de est l’application **msmdsrv.exe,** qui fonctionne comme un service Windows. Cette application intègre des composants de sécurité, un composant d'écoute XMLA (XML for Analysis), un composant processeur de requêtes et de nombreux autres composants internes qui permettent d'effectuer les actions suivantes :
+  Le composant serveur de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est l’application **msmdsrv. exe** , qui s’exécute en tant que service Windows. Cette application intègre des composants de sécurité, un composant d'écoute XMLA (XML for Analysis), un composant processeur de requêtes et de nombreux autres composants internes qui permettent d'effectuer les actions suivantes :
 
 -   Analyser des instructions reçues des clients
 
@@ -51,17 +51,17 @@ ms.locfileid: "81388014"
  ![Schéma de l'architecture système Analysis Services](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Schéma de l'architecture système Analysis Services")
 
 ## <a name="xmla-listener"></a>Écouteur XMLA
- Le composant écouteur XMLA gère toutes les communications XMLA entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et ses clients. Le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` paramètre de configuration dans le fichier msmdsrv.ini [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut être utilisé pour spécifier un port sur lequel une instance écoute. La valeur 0 dans ce fichier indique qu' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] écoute sur le port par défaut. Sauf spécification contraire, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilise par défaut les ports TCP suivants :
+ Le composant écouteur XMLA gère toutes les communications XMLA entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et ses clients. Le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` paramètre de configuration dans le fichier msmdsrv. ini peut être utilisé pour spécifier un port sur lequel [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] une instance écoute. La valeur 0 dans ce fichier indique qu' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] écoute sur le port par défaut. Sauf spécification contraire, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilise par défaut les ports TCP suivants :
 
 |Port|Description|
 |----------|-----------------|
-|2383|Instance par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]défaut de .|
-|2382|Réorienteur pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]d’autres cas de .|
-|Affectation dynamique au démarrage du serveur|Exemple nommé [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]de .|
+|2383|Instance par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]de.|
+|2382|Redirecteur pour d’autres instances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]de.|
+|Affectation dynamique au démarrage du serveur|Instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|
 
- Voir [Configurer le pare-feu Windows pour permettre l’accès aux services d’analyse](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) pour plus de détails.
+ Pour plus d’informations, consultez [configurer le pare-feu Windows pour autoriser l’accès à la Analysis Services](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .
 
 ## <a name="see-also"></a>Voir aussi
- [Règles de dénomination d’objets &#40;services d’analyse&#41;](object-naming-rules-analysis-services.md) [services d’analyse physique &#40;- Données multidimensionnelles&#41;](understanding-microsoft-olap-physical-architecture.md) Services [d’analyse &#40;d’architecture logique - Données multidimensionnelles&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)
+ [Règles d’affectation des noms d’objets &#40;Analysis Services](object-naming-rules-analysis-services.md) [architecture physique&#41;&#40;Analysis Services-données multidimensionnelles&#41;](understanding-microsoft-olap-physical-architecture.md) [architecture logique &#40;Analysis Services-données multidimensionnelles&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)
 
 

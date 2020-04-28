@@ -1,5 +1,5 @@
 ---
-title: Grammaire SQL D’ODBC soutenue d’autre Microsoft Docs
+title: Grammaire SQL ODBC supplémentaire prise en charge | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307130"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Grammaire SQL ODBC supplémentaire prise en charge
-Les conducteurs de l’ODBC prennent entièrement en charge la grammaire Minimum ODBC 2.5 et les clauses suivantes dans la grammaire Core and Extended ODBC 2.5. Des informations supplémentaires peuvent être affichées en sautant à [l’énoncé ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), les noms de [corrélation](../../odbc/microsoft/correlation-names.md), et les sujets [d’invocation de procédure.](../../odbc/microsoft/procedure-invocation.md)  
+Les pilotes ODBC prennent entièrement en charge la grammaire ODBC 2,5 minimale et les clauses suivantes dans la syntaxe ODBC 2,5 de base et étendue. Des informations supplémentaires peuvent être affichées en sautant à l' [instruction ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), aux [noms de corrélation](../../odbc/microsoft/correlation-names.md)et aux rubriques d’appel de [procédure](../../odbc/microsoft/procedure-invocation.md) .  
   
--   Alphabète numérique (Core)  
+-   Littéral numérique approximatif (Core)  
   
--   [ÉNONCÉ ALTER TABLE](../../odbc/microsoft/alter-table-statement.md) (Core)  
+-   [ALTER TABLE, instruction](../../odbc/microsoft/alter-table-statement.md) (Core)  
   
--   Littéral binaires (étendu)  
+-   Littéraux binaires (étendus)  
   
 -   [Noms de corrélation](../../odbc/microsoft/correlation-names.md) (Core)  
   
--   [Procédure Invocation](../../odbc/microsoft/procedure-invocation.md) (Étendue)  
+-   [Appel de procédure](../../odbc/microsoft/procedure-invocation.md) (étendu)  
   
--   [BETWEEN Predicate](../../odbc/microsoft/between-predicate.md) (Core)  
+-   [Between, prédicat](../../odbc/microsoft/between-predicate.md) (Core)  
   
 -   [CREATE INDEX, instruction](../../odbc/microsoft/create-index-statement.md)  
   
@@ -51,16 +51,16 @@ Les conducteurs de l’ODBC prennent entièrement en charge la grammaire Minimum
   
 -   [ORDER BY avec GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   EXISTS prédicate (Core)  
+-   Prédicat EXISTs (Core)  
   
--   IN (*liste de valeurs*) (Core)  
+-   IN (*valueList*) (Core)  
   
--   [Jet: Outer Joins](../../odbc/microsoft/jet-outer-joins.md) (Extended)  
+-   [Jet : jointures externes](../../odbc/microsoft/jet-outer-joins.md) (étendues)  
   
--   DÉCLARATION SELECT (extended) (y compris les clauses GROUPE BY, HAVING et UNION)  
+-   Instruction SELECT (étendue) (y compris les clauses GROUP BY, HAVING et UNION)  
   
--   Subqueries (SUBSELECTs) (Core)  
+-   Sous-requêtes (sous-SÉLECTIONs) (Core)  
   
 -   [Fonctions scalaires](../../odbc/microsoft/scalar-functions.md)  
   
--   [Noms de tables](../../odbc/microsoft/table-names.md)
+-   [Noms des tables](../../odbc/microsoft/table-names.md)

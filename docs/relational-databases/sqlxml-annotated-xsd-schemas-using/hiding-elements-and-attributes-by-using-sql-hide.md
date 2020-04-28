@@ -1,6 +1,6 @@
 ---
 title: Masquage d'éléments et d'attributs à l'aide de sql:hide
-description: Apprenez à utiliser l’annotation sql:cacher pour cacher des éléments et des attributs lors de l’exécution d’une requête XPath contre un schéma XSD.
+description: 'Découvrez comment utiliser l’annotation sql : Hide pour masquer des éléments et des attributs lors de l’exécution d’une requête XPath sur un schéma XSD.'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -27,25 +27,25 @@ ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: af964cd3561a28db049baa49c2e74140db994784
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388173"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Masquage d'éléments et d'attributs à l'aide de sql:hide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Lorsqu'une requête XPath est exécutée contre un schéma XSD, le document XML résultant possède des éléments et des attributs spécifiés dans le schéma. Vous pouvez spécifier que certains éléments et attributs soient cachés dans le schéma en utilisant **l’annotation sql:cacher.** Cela est utile lorsque les critères de sélection de la requête requièrent des éléments ou des attributs particuliers dans le schéma, mais que vous ne souhaitez pas les retourner dans le document XML généré.  
+  Lorsqu'une requête XPath est exécutée contre un schéma XSD, le document XML résultant possède des éléments et des attributs spécifiés dans le schéma. Vous pouvez spécifier que certains éléments et attributs soient masqués dans le schéma à l’aide de l’annotation **SQL : Hide** . Cela est utile lorsque les critères de sélection de la requête requièrent des éléments ou des attributs particuliers dans le schéma, mais que vous ne souhaitez pas les retourner dans le document XML généré.  
   
- **L’annotation sql:cacher** prend une valeur Boolean (0-faux, 1-true). Les valeurs acceptables sont 0, 1, true et false.  
+ L’annotation **SQL : Hide** prend une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, voir [Exigences pour l’exécution des exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>R. Spécification de sql:hide sur un attribut  
- Le schéma XSD dans cet exemple se compose d’un ** \<élément person.Contact>** avec **ContactID**, **FirstName**, et **LastName** attributs.  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Spécification de sql:hide sur un attribut  
+ Dans cet exemple, le schéma XSD se compose d’un ** \<élément person. contact>** avec les attributs **ContactID**, **FirstName**et **LastName** .  
   
- ** \<L’élément person.Contact>** est de type complexe et, par conséquent, des cartes à la table du même nom (cartographie par défaut). Tous les attributs de ** \<Person.Contact>** élément sont de type simple et la carte à des colonnes avec les mêmes noms dans la person.Contacttable dans la base de données AdventureWorks. Dans le schéma, **l’annotation sql:hide** est spécifiée sur l’attribut **ContactID.** Lorsqu’une requête XPath est spécifiée contre ce schéma, le **ContactID n’est** pas retourné dans le document XML.  
+ L' ** \<élément person. contact>** est de type complexe et, par conséquent, est mappé à la table du même nom (mappage par défaut). Tous les attributs de ** \<l’élément person. contact>** sont de type simple et sont mappés à des colonnes portant le même nom dans Person. Contacttable dans la base de données AdventureWorks. Dans le schéma, l’annotation **SQL : Hide** est spécifiée sur l’attribut **ContactID** . Lorsqu’une requête XPath est spécifiée sur ce schéma, le **ContactID** n’est pas renvoyé dans le document XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -82,7 +82,7 @@ ms.locfileid: "81388173"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, voir [Utiliser ADO pour exécuter SQLXML 4.0 Requêtes](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici l'ensemble de résultats obtenu :  
   
@@ -92,7 +92,7 @@ ms.locfileid: "81388173"
 </ROOT>  
 ```  
   
- Lorsque **sql:cacher** est spécifié sur un élément, l’élément et ses attributs ou éléments pour enfants n’apparaissent pas dans le document XML qui est généré. Voici un autre schéma XSD dans lequel **sql:hide** est spécifié sur ** \<l’élément de>OD:**  
+ Quand **SQL : Hide** est spécifié sur un élément, l’élément et ses attributs ou éléments enfants n’apparaissent pas dans le document XML généré. Voici un autre schéma XSD dans lequel **SQL : Hide** est spécifié sur l' ** \<élément OD>** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ ms.locfileid: "81388173"
 </xsd:schema>  
 ```  
   
- Lorsqu’une requête XPath `/Customers[@CID="1"]`(par exemple ) est spécifiée par rapport à ce schéma, le document XML qui est généré n’inclut pas ** \<l’élément de>D’OD** et ses enfants, comme le montre ce résultat partiel :  
+ Lorsqu’une requête XPath (par exemple `/Customers[@CID="1"]`) est spécifiée par rapport à ce schéma, le document XML généré n’inclut pas l' ** \<élément OD>** et ses enfants, comme indiqué dans ce résultat partiel :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

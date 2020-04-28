@@ -1,5 +1,5 @@
 ---
-title: Connexion à une source de données ou à un pilote ( Microsoft Docs
+title: Connexion à une source de données ou à un pilote | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 48015cf134b71eb96bd19cdcf61ec2d7fcc04fcc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307461"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Connexion à une source de données ou à un pilote
-Une application peut être connectée à n’importe quel nombre de pilotes et de sources de données. Il peut s’agir d’une variété de pilotes et de sources de données, du même conducteur et d’une variété de sources de données, ou même de connexions multiples avec le même conducteur et la même source de données.  
+Une application peut être connectée à un nombre quelconque de pilotes et de sources de données. Il peut s’agir d’une variété de pilotes et de sources de données, du même pilote et de diverses sources de données, ou même de plusieurs connexions au même pilote et à la même source de données.  
   
  Cette section contient les rubriques suivantes :  
   
@@ -38,4 +38,4 @@ Une application peut être connectée à n’importe quel nombre de pilotes et d
   
 -   [Déconnexion d’une source de données ou d’un pilote](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
--   [Le rôle du gestionnaire de conducteur dans le processus de connexion](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+-   [Rôle du gestionnaire de pilotes dans le processus de connexion](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)

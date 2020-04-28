@@ -1,6 +1,6 @@
 ---
-title: Promotion des transactions (fr) Microsoft Docs
-description: Dans l’intégration SQL Server CLR, une transaction locale légère peut être promue à une transaction entièrement distribuable par le biais de la promotion transaction.
+title: Promotion de la transaction | Microsoft Docs
+description: Dans SQL Server l’intégration du CLR, une transaction locale légère peut être promue en transaction entièrement distribuable via la promotion des transactions.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e77409f6bf6c71363e030f29f86f41205dd4a0f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487475"
 ---
 # <a name="transaction-promotion"></a>Promotion des transactions
@@ -32,7 +32,7 @@ ms.locfileid: "81487475"
 ## <a name="distributed-transactions"></a>Transactions distribuées  
  Les transactions distribuées consomment en général d'importantes ressources système. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) gère ces transactions et intègre tous les gestionnaires de ressources qui y sont accédés. La promotion des transactions, en revanche, est une forme spéciale de transaction **System.Transactions** qui délègue efficacement le travail à une simple transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System.Transactions**, **System.Data.SqlClient**et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordonnent le travail nécessité par la gestion de la transaction, en la promouvant autant que nécessaire en une transaction distribuée complète.  
   
- L'avantage de l'utilisation de la promotion des transaction est que lorsqu'une connexion est ouverte avec une transaction **TransactionScope** active et qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu d'encourir les charges mémoire supplémentaires d'une transaction distribuée complète. Pour plus d’informations sur **TransactionScope**, voir [Using System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
+ L'avantage de l'utilisation de la promotion des transaction est que lorsqu'une connexion est ouverte avec une transaction **TransactionScope** active et qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu d'encourir les charges mémoire supplémentaires d'une transaction distribuée complète. Pour plus d’informations sur **TransactionScope**, consultez [utilisation de System. transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Intégration et transactions du CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

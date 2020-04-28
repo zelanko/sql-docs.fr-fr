@@ -1,5 +1,5 @@
 ---
-title: Interface utilisateur De concepteur de requête basée sur le texte (en anglais seulement) Microsoft Docs
+title: Interface utilisateur du concepteur de requêtes textuel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 340040a0806a87d55582356d085ab924e25b6a48
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388679"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes textuel
@@ -28,7 +28,7 @@ ms.locfileid: "81388679"
 
  Le Concepteur de requêtes textuel affiche une barre d'outils et les deux volets suivants :
 
--   **Requête** Affiche le texte de la requête, le nom de table ou le nom de procédure stocké.
+-   **Requête** Affiche le texte de la requête, le nom de la table ou le nom de la procédure stockée.
 
 -   **Résultats** Affiche les résultats de l'exécution de la requête au moment de la conception.
 
@@ -40,7 +40,7 @@ ms.locfileid: "81388679"
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. Les types de sources de données ne prennent pas tous en charge les concepteurs de requêtes graphiques.|
 |**Importer**|Importe une requête existante à partir d'un fichier ou d'un rapport. Seuls les types de fichiers sql et rdl sont pris en charge. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
 |![Exécuter la requête](../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche le jeu de résultats dans le volet Résultats.|
-|**Type de commande**|Sélectionnez **Text**, **StoredProcedure**ou **TableDirect**. Si une procédure stockée comporte des paramètres, la boîte de dialogue **Définir les paramètres de la requête** s'affiche lorsque vous cliquez sur **Exécuter** dans la barre d'outils, et vous pouvez spécifier les valeurs souhaitées. Notez que si une procédure stockée renvoie plus d’un ensemble de résultats, seul le premier ensemble de résultats est utilisé pour remplir le jeu de données.<br /><br /> La prise en charge du type de commande varie en fonction du type de source de données. Par exemple, seuls OLE DB et ODBC prennent en charge **TableDirect**.|
+|**Type de commande**|Sélectionnez **Text**, **StoredProcedure**ou **TableDirect**. Si une procédure stockée comporte des paramètres, la boîte de dialogue **Définir les paramètres de la requête** s'affiche lorsque vous cliquez sur **Exécuter** dans la barre d'outils, et vous pouvez spécifier les valeurs souhaitées. Notez que si une procédure stockée retourne plusieurs jeux de résultats, seul le premier jeu de résultats est utilisé pour remplir le jeu de données.<br /><br /> La prise en charge du type de commande varie en fonction du type de source de données. Par exemple, seuls OLE DB et ODBC prennent en charge **TableDirect**.|
 
 ### <a name="command-type-text"></a>Texte de type de commande
  Lorsque vous créez un dataset [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le Concepteur de rapports affiche par défaut le concepteur de requêtes graphique. Pour basculer vers le concepteur de requêtes textuel, cliquez sur le bouton bascule **Modifier en tant que texte** dans la barre d’outils. Le concepteur de requêtes textuel présente deux volets : Requête et Résultats. L'illustration suivante présente chaque volet.
@@ -61,7 +61,7 @@ ms.locfileid: "81388679"
 SELECT LastName FROM Person.Person;
 ```
 
- Vous pouvez utiliser toute instruction [!INCLUDE[tsql](../includes/tsql-md.md)] pour le texte de type de commande, y compris des instructions `EXEC`. La requête suivante [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] appelle `uspGetEmployeeManagers` la procédure stockée et renvoie la chaîne de commandement pour l’employé avec le numéro d’identification 1.
+ Vous pouvez utiliser toute instruction [!INCLUDE[tsql](../includes/tsql-md.md)] pour le texte de type de commande, y compris des instructions `EXEC`. La requête suivante appelle la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] procédure `uspGetEmployeeManagers` stockée et retourne la chaîne de commande de l’employé portant le numéro d’identification 1.
 
 ```
 EXEC uspGetEmployeeManagers 1;
@@ -87,9 +87,9 @@ uspGetEmployeeManagers;
 
  `Sales.Customer`
 
- Lorsque vous entrez le nom de table Sales.Customer, c’est l’équivalent de la création de l’instruction [!INCLUDE[tsql](../includes/tsql-md.md)] `SELECT * FROM Sales.Customer;`.
+ Lorsque vous entrez le nom de la table Sales. Customer, cela revient à créer [!INCLUDE[tsql](../includes/tsql-md.md)] l' `SELECT * FROM Sales.Customer;`instruction.
 
 ## <a name="see-also"></a>Voir aussi
- [Outils de conception de requête dans report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md) [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [SQL Server Connection Type &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md) [OLE D Type de connexion BB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md) type de connexion [ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md) Rapport [ensembles de données intégrés et ensembles de données partagés &#40;Report Builder et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)
+ [Outils de conception de requête dans Concepteur de rapports SQL Server Data Tools &#40;ssrs&#41;](report-data/query-design-tools-ssrs.md) [des datasets incorporés et des datasets partagés &#40;générateur de rapports et SSRS](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)&#41;SQL Server [type de connexion &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md) [OLE DB type de connexion &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md) [type de connexion ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md) [rapport Datasets incorporés et des datasets partagés &#40;générateur de rapports et SSRS&#41;fichier de](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [configuration RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)
 
 

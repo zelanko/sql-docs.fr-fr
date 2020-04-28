@@ -1,6 +1,6 @@
 ---
-title: Création d’une Assemblée (fr) Microsoft Docs
-description: Utilisez CREATE ASSEMBLY pour enregistrer un assemblage dans SQL Server et spécifier ses paramètres de sécurité. Enregistrez un assemblage pour utiliser sa fonctionnalité.
+title: Création d’un assembly | Microsoft Docs
+description: Utilisez créer un ASSEMBLy pour inscrire un assembly dans SQL Server et spécifiez ses paramètres de sécurité. Inscrire un assembly pour utiliser ses fonctionnalités.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ca6787abae22722a7bbb99d335e63d47051bb46
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486829"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Les objets de base de données managés, tels que les procédures stockées ou les déclencheurs, sont successivement compilés et déployés dans des unités appelées « assemblys ». Les assemblages DLL gérés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent être enregistrés avant que la fonctionnalité de l’assemblage ne puisse être utilisée. Pour enregistrer un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez l'instruction CREATE ASSEMBLY. Cette rubrique explique comment enregistrer un assembly dans une base de données à l'aide de l'instruction CREATE ASSEMBLY, puis comment spécifier les paramètres de sécurité de l'assembly.  
+  Les objets de base de données managés, tels que les procédures stockées ou les déclencheurs, sont successivement compilés et déployés dans des unités appelées « assemblys ». Les assemblys DLL managés doivent être [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inscrits dans avant que les fonctionnalités fournies par l’assembly puissent être utilisées. Pour enregistrer un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez l'instruction CREATE ASSEMBLY. Cette rubrique explique comment enregistrer un assembly dans une base de données à l'aide de l'instruction CREATE ASSEMBLY, puis comment spécifier les paramètres de sécurité de l'assembly.  
   
 ## <a name="the-create-assembly-statement"></a>Instruction CREATE ASSEMBLY  
  L'instruction CREATE ASSEMBLY permet de créer un assembly dans une base de données. Voici un exemple :  
@@ -131,10 +131,10 @@ WITH PERMISSION_SET = UNSAFE;
  Pour obtenir des informations détaillées sur les autorisations pour chacun de ces paramètres, consultez [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des assemblées d’intégration CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Modification d’une assemblée](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Abandon d’une assemblée](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [Sécurité d’accès au Code d’intégration CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Gestion des assemblys d’intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Modification d’un assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [Suppression d’un assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+ [Sécurité d’accès du code d’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Propriété de base de données TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
  [Autorisation d'appelants partiellement approuvés](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   

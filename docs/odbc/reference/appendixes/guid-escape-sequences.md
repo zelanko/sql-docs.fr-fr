@@ -1,5 +1,5 @@
 ---
-title: Séquences d’évasion GUID (fr) Microsoft Docs
+title: Séquences d’échappement GUID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,43 +15,43 @@ ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 44907bfbd884bf361ce5f2ab8b3f6d8a247aba44
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306970"
 ---
 # <a name="guid-escape-sequences"></a>Séquences d’échappement de GUID
-ODBC utilise des séquences d’évasion pour les littérals GUID. La syntaxe de cette séquence d’évasion est la suivante :  
+ODBC utilise des séquences d’échappement pour les littéraux GUID. La syntaxe de cette séquence d’échappement est la suivante :  
   
 ```  
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
 ## <a name="remarks"></a>Notes  
- Dans la notation BNF, la syntaxe est la suivante :  
+ Dans la notation BNF, la syntaxe est la suivante :  
   
- *ODBC-guid-escape* ::  
-     *Guid ODBC-esc-initiateur* '*guid-value*' *ODBC-esc-terminator*  
+ *ODBC-GUID-Escape* :: =  
+     *ODBC-ESC-GUID de l’initiateur* '*Guid-value*' *ODBC-ESC-terminateur*  
   
- *ODBC-esc-initiateur* ::  
+ *ODBC-Echap-Initiator* :: = {  
   
- *ODBC-esc-terminator* ::  
+ *ODBC-ESC-terminateur* :: =}  
   
- *guid-value* :: *'clock-low-value guid-separator clock-middle-value guid-separator clock-high-value guid-separator clock-seq-value guid-separator node-value*  
+ Guid *-value* :: = *GUID de valeur basse-valeur de séparateur-horloge de point médian-GUID de valeur de séparateur-horloge-valeur maximale GUID-point de séparation-SEQ-valeur Guid-nœud séparateur-valeur*  
   
- *guid-séparateur* ::- -  
+ *GUID-Separator* :: =-  
   
- *horloge-faible valeur* ::' hex_digit hex_digit *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *Clock-Low-value* :: = *hex_digit hex_digit hex_digit hex_digit* hex_digit hex_digit hex_digit hex_digit  
   
- *horloge-valeur moyenne* ::' *hex_digit hex_digit hex_digit hex_digit*  
+ *Clock-Middle-value* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *horloge-haute valeur* ::' *hex_digit hex_digit hex_digit hex_digit*  
+ *Clock-High-Value* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *horloge-seq-valeur* ::' *hex_digit hex_digit hex_digit hex_digit*  
+ *Clock-SEQ-value* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *valeur de l’horloge-noeud* :: hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit *hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *Clock-node-value* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit* hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit  
   
- *hex_digit* ::0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
+ *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
   
- La séquence d’évacuation littérale GUID est prise en charge si le type de données GUID est pris en charge par la source de données. Une application doit appeler **SQLGetTypeInfo** pour déterminer si ce type de données est pris en charge.
+ La séquence d’échappement littérale GUID est prise en charge si le type de données GUID est pris en charge par la source de données. Une application doit appeler **SQLGetTypeInfo** pour déterminer si ce type de données est pris en charge.

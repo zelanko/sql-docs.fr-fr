@@ -1,5 +1,5 @@
 ---
-title: Haute disponibilité, Récupération
+title: Haute disponibilité, récupération
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388430"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client
@@ -30,9 +30,9 @@ ms.locfileid: "81388430"
 >  L'augmentation du délai de connexion et l'implémentation de la logique de tentative de connexion augmente la probabilité qu'une application se connecte à un groupe de disponibilité. En raison du risque d'échec de connexion en cas de basculement d'un groupe de disponibilité, il est également nécessaire d'implémenter la logique de déclenchement de nouvelles tentatives de connexion, afin de multiplier les tentatives jusqu'à ce qu'une connexion soit établie.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connexion à MultiSubnetFailover  
- Spécifiez toujours **MultiSubnetFailover=Yes** lors de la connexion à un écouteur du groupe de disponibilité SQL Server 2012 ou à une instance de cluster de basculement SQL Server 2012. **MultiSubnetFailover** permet une défaillance plus rapide pour tous les groupes de disponibilité et l’instance de cluster failover dans SQL Server 2012 et réduira considérablement le temps d’échec pour les topologies simples et multi-sous-réseau Toujours sur les topologies. Lors d'un basculement de sous-réseaux multiples, le client tente les connexions en parallèle. Lors d'un basculement de sous-réseau, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retente de façon intensive d'établir la connexion TCP.  
+ Spécifiez toujours **MultiSubnetFailover=Yes** lors de la connexion à un écouteur du groupe de disponibilité SQL Server 2012 ou à une instance de cluster de basculement SQL Server 2012. **MultiSubnetFailover** permet un basculement plus rapide pour tous les groupes de disponibilité et l’instance de cluster de basculement dans SQL Server 2012 et réduit considérablement le temps de basculement pour les topologies de Always on de sous-réseaux uniques et multiples. Lors d'un basculement de sous-réseaux multiples, le client tente les connexions en parallèle. Lors d'un basculement de sous-réseau, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retente de façon intensive d'établir la connexion TCP.  
   
- La propriété de connexion **MultiSubnetFailover** indique que l’application est déployée sur un groupe de disponibilité ou une instance de cluster de basculement et que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tente de se connecter à la base de données sur l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] principale en essayant toutes les adresses IP du groupe de disponibilité. Quand **MultiSubnetFailover=Yes** est spécifié dans le cadre d’une connexion, le client retente d’établir une connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d’exploitation. Cela permet une reconnexion plus rapide après l’échec d’un groupe de disponibilité toujours sur ou une instance de cluster Always On Failover, et s’applique à la fois aux groupes de disponibilité à guichet unique et multi-sous-réseau et aux instances de cluster Failover.  
+ La propriété de connexion **MultiSubnetFailover** indique que l’application est déployée sur un groupe de disponibilité ou une instance de cluster de basculement et que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tente de se connecter à la base de données sur l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] principale en essayant toutes les adresses IP du groupe de disponibilité. Quand **MultiSubnetFailover=Yes** est spécifié dans le cadre d’une connexion, le client retente d’établir une connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d’exploitation. Cela permet une reconnexion plus rapide après le basculement d’un groupe de disponibilité Always On ou d’une instance de cluster de basculement Always On, et s’applique aux groupes de disponibilité de sous-réseaux uniques et multiples et aux instances de cluster de basculement.  
   
  Pour plus d’informations sur les mots clés de chaîne de connexion, consultez [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -40,13 +40,13 @@ ms.locfileid: "81388430"
   
  Utilisez les instructions suivantes pour la connexion à un serveur dans un groupe de disponibilité ou dans une instance de cluster de basculement :  
   
--   Utilisez la propriété de connexion **MultiSubnetFailover** lors de la connexion à un seul sous-réseau ou multi-sous-réseau; il améliorera les performances pour les deux.  
+-   Utilisez la propriété de connexion **MultiSubnetFailover** lors de la connexion à un sous-réseau unique ou à plusieurs sous-réseaux ; Cela permet d’améliorer les performances pour les deux.  
   
 -   Pour vous connecter à un groupe de disponibilité, spécifiez l'écouteur du groupe de disponibilité en tant que serveur dans votre chaîne de connexion.  
   
 -   La connexion à une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurée avec plus de 64 adresses IP provoque un échec de connexion.  
   
--   Le comportement d’une application qui utilise la propriété de connexion **MultiSubnetFailover** n’est pas affecté en fonction du type d’authentification : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentification, authentification de Kerberos ou à l’authentification de Windows.  
+-   Le comportement d’une application qui utilise la propriété de connexion **MultiSubnetFailover** n’est pas affecté selon le type d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentification : authentification, authentification Kerberos ou authentification Windows.  
   
 -   Vous pouvez augmenter la valeur de **loginTimeout** pour tenir compte du temps de basculement et réduire les nouvelles tentatives de connexion de l’application.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "81388430"
   
 1.  Si l'emplacement du réplica secondaire n'est pas configuré pour accepter des connexions.  
   
-2.  Si une application utilise **ApplicationIntent-ReadWrite** (discuté ci-dessous) et que l’emplacement de la réplique secondaire est configuré pour un accès sans lecture seulement.  
+2.  Si une application utilise **ApplicationIntent = ReadWrite** (décrite ci-dessous) et que l’emplacement du réplica secondaire est configuré pour un accès en lecture seule.  
   
  Une connexion échoue si un réplica principal est configuré pour rejeter des charges de travail en lecture seule et si la chaîne de connexion contient **ApplicationIntent=ReadOnly**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "81388430"
   
  Un mot clé de chaîne de connexion OLE DB a été ajouté pour prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client :  
   
--   **Intention de demande**  
+-   **Intention de l’application**  
   
  Pour plus d’informations sur les mots clés de chaîne de connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "81388430"
  Lorsque des connexions implicites sont établies, la connexion implicite utilise le paramètre d'intention de l'application de la connexion parente. De la même façon, plusieurs sessions créées à partir de la même source de données héritent du paramètre d'intention de l'application de la source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Caractéristiques des clients autochtones de SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

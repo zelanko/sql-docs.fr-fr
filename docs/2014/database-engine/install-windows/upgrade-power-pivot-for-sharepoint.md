@@ -1,5 +1,5 @@
 ---
-title: Mise à niveau PowerPivot pour SharePoint (fr) Microsoft Docs
+title: Mettre à niveau PowerPivot pour SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b15e2f457cca84abb7ab597bdf14d0b2fb2e3ffe
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388049"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Mettre à niveau PowerPivot pour SharePoint
@@ -26,13 +26,13 @@ ms.locfileid: "81388049"
   
 
   
-## <a name="background"></a>Arrière-plan  
+## <a name="background"></a>Contexte  
   
 -   Si vous mettez à niveau une batterie à plusieurs serveurs SharePoint 2010 qui a deux instances [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ou plus, vous devez procéder à la mise à niveau complète de chaque serveur **avant** de passer au serveur suivant. Une mise à niveau complète implique l'exécution du programme d'installation de SQL Server pour mettre à niveau les fichiers programme [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , puis d'effectuer les actions de mise à niveau de SharePoint qui permettent de configurer les services mis à niveau. La disponibilité du serveur est limitée jusqu'à l'exécution des actions de mise à niveau dans l'outil de configuration de PowerPivot approprié ou dans Windows PowerShell.  
   
 -   Les instances du service système PowerPivot et du service Analysis Services d'une batterie de serveurs SharePoint 2010 doivent avoir la même version. Pour plus d'informations sur la vérification de la version, consultez la section [Vérifier les versions des composants et services PowerPivot](#bkmk_verify_versions) dans cette rubrique.  
   
--   Les outils de configuration PowerPivot constituent l'une des fonctionnalités partagées de SQL Server et toutes les fonctionnalités partagées sont mises à niveau en même temps. Si, au cours d'un processus de mise à niveau, vous sélectionnez d'autres fonctionnalités ou instances SQL Server qui nécessitent une mise à niveau de fonctionnalité partagée, l'outil de configuration de PowerPivot est également mis à niveau. Des problèmes peuvent survenir si l'outil de configuration PowerPivot est mis à niveau, alors que votre instance de PowerPivot ne l'est pas. Pour plus d’informations sur les fonctionnalités partagées SQL Server, voir [Mise à niveau vers SQL Server 2014 En utilisant le Magicien d’installation &#40;Configuration&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+-   Les outils de configuration PowerPivot constituent l'une des fonctionnalités partagées de SQL Server et toutes les fonctionnalités partagées sont mises à niveau en même temps. Si, au cours d'un processus de mise à niveau, vous sélectionnez d'autres fonctionnalités ou instances SQL Server qui nécessitent une mise à niveau de fonctionnalité partagée, l'outil de configuration de PowerPivot est également mis à niveau. Des problèmes peuvent survenir si l'outil de configuration PowerPivot est mis à niveau, alors que votre instance de PowerPivot ne l'est pas. Pour plus d’informations sur les fonctionnalités partagées de SQL Server, consultez [mise à niveau vers SQL Server 2014 à l’aide de l’Assistant installation &#40;&#41;d’installation ](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 -   Le complément PowerPivot pour SharePoint (**spPowerPivot.msi**) s'installe côte à côte avec les versions antérieures. Par exemple le complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé dans le dossier `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`.  
   
@@ -45,19 +45,19 @@ ms.locfileid: "81388049"
   
 -   Vous devez disposer des autorisations **db_owner** pour la base de données de configuration de la batterie.  
   
- **Serveur SQL:**  
+ **SQL Server:**  
   
--   Si l’installation PowerPivot [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] existante est, le Pack de Service 2 (SP2) est nécessaire pour une mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Si l’installation existante de PowerPivot [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]est, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] le Service Pack 2 (SP2) est requis pour une mise [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]à niveau vers.  
   
--   Si l’installation PowerPivot [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] existante est, le Pack de Service 1 (SP1) est nécessaire pour une mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Si l’installation existante de PowerPivot [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]est, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le Service Pack 1 (SP1) est requis pour une mise [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]à niveau vers.  
   
- **SharePoint 2010:**  
+ **SharePoint 2010 :**  
   
 -   Si l'installation existante exécute SharePoint 2010, installez SharePoint 2010 Service Pack 2 avant la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Pour plus d'informations, consultez [Service Pack 2 pour Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Utilisez la commande PowerShell `(Get-SPfarm).BuildVersion.ToString()` pour vérifier la version. Pour référencer la version de la build à la date de version finale, consultez [Numéros de build SharePoint 2010](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
  
   
-##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a>Mettre à niveau une ferme SharePoint 2013 existante  
+##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a>Mettre à niveau une batterie de serveurs SharePoint 2013 existante  
  Pour mettre à niveau [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déployé dans SharePoint 2013, procédez comme suit :  
   
  ![Mettre à niveau PowerPivot pour SharePoint 2013](../../../2014/sql-server/install/media/as-powepivot-upgrade-flow-sharepoint2013.png "Mettre à niveau PowerPivot pour SharePoint 2013")  
@@ -66,15 +66,15 @@ ms.locfileid: "81388049"
   
     1.  Dans l'Assistant Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Installation**.  
   
-    2.  Cliquez **sur mise à niveau de SQL Server .....**.  
+    2.  Cliquez sur **mettre à niveau à partir de SQL Server...**...  
   
     3.  Dans la page **Sélectionner une instance** , sélectionnez l'instance **POWERPIVOT** , puis cliquez sur **Suivant**.  
   
-    4.  Pour plus d’informations, voir [Mise à niveau vers SQL Server 2014 En utilisant l’assistant d’installation &#40;configuration&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+    4.  Pour plus d’informations, consultez [mettre à niveau vers SQL Server 2014 à l’aide de l’Assistant installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
 2.  Redémarrez le serveur.  
   
-3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, voir [Installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, consultez [installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 4.  **Exécutez l'outil de configuration de PowerPivot pour SharePoint 2013** sur un des serveurs d'applications SharePoint pour configurer la batterie de serveurs SharePoint avec les fichiers de solution mis à jour installés par le complément. Vous ne pouvez pas utiliser l'Administration centrale SharePoint pour cette étape. Pour plus d’informations, consultez les rubriques suivantes :  
   
@@ -86,7 +86,7 @@ ms.locfileid: "81388049"
   
          Dans le menu **Démarrer** , pointez sur **Tous les programmes**, puis sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **Outil de configuration de PowerPivot pour SharePoint 2013**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
-    2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions plus anciennes de ces solutions sont détectées, vous verrez le message "**De nouvelles versions des fichiers de solution PowerPivot ont été détectées. S’il vous plaît sélectionnez l’option de mise à niveau pour mettre à niveau votre ferme**. Cliquez sur **OK** pour fermer le message de validation système.  
+    2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions antérieures de ces solutions sont détectées, vous verrez le message «**des versions plus récentes des fichiers de solution PowerPivot ont été détectées. Sélectionnez l’option de mise à niveau pour mettre à niveau votre batterie de serveurs**.» Cliquez sur **OK** pour fermer le message de validation système.  
   
     3.  Cliquez sur **Mettre à niveau des fonctionnalités, des services, des applications et des solutions**, puis cliquez sur **OK**.  
   
@@ -103,17 +103,17 @@ ms.locfileid: "81388049"
         > [!IMPORTANT]  
         >  La première action, **Mettre à niveau une solution de batterie de serveurs**, doit toujours être traitée en premier. Elle inscrit les applets de commande PowerShell qui sont utilisées pour configurer le serveur. Si vous obtenez une erreur sur cette action, ne continuez pas. À la place, utilisez les informations fournies par l'erreur pour diagnostiquer et résoudre le problème avant de traiter des actions supplémentaires dans la liste des tâches.  
   
-    7.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **Run**, l’avertissement suivant apparaît, vous rappelant que les actions sont traitées en mode batch : «**Tous les paramètres de configuration qui sont signalés comme valides dans l’outil seront appliqués à la ferme SharePoint. Voulez-vous continuer?**".  
+    7.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **exécuter**, l’avertissement suivant s’affiche, vous rappelant que les actions sont traitées en mode batch : «**tous les paramètres de configuration marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ?**».  
   
     8.  Cliquez sur **Oui** pour continuer.  
   
-    9. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion pour les données PowerPivot **échoueront** avec des erreurs similaires à "**Incapable de rafraîchir les données**" ou " Une erreur**s’est produite en essayant d’effectuer l’action demandée. S’il vous plaît essayer à nouveau**. Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
+    9. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion pour les données PowerPivot **échouent** avec des erreurs similaires à «**Impossible d’actualiser les données**» ou «**une erreur s’est produite lors de l’exécution de l’action demandée. Veuillez réessayer**.» Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
   
      Pour plus d’informations, consultez les rubriques suivantes :  
   
     -   [Outils de configuration de PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
-    -   [Configurer ou réparer PowerPivot pour SharePoint 2013 &#40;Outil de configuration PowerPivot&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
+    -   [Configurez ou réparez PowerPivot pour SharePoint 2013 &#40;outil de configuration de PowerPivot&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
   
     -   [Configuration de PowerPivot à l’aide de Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
@@ -123,7 +123,7 @@ ms.locfileid: "81388049"
   
  
   
-##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a>Mettre à niveau une ferme SharePoint 2010 existante  
+##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a>Mettre à niveau une batterie de serveurs SharePoint 2010 existante  
  Pour mettre à niveau [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déployé dans SharePoint 2010, procédez comme suit :  
   
  ![Mettre à niveau PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/media/as-powepivot-upgrade-flow-sharepoint2010.png "Mettre à niveau PowerPivot pour SharePoint 2010")  
@@ -148,19 +148,19 @@ ms.locfileid: "81388049"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Exécutez la configuration** sur le premier serveur d’application SharePoint qui exécute le service Windows **SQL Server Analysis Services (PowerPivot)** pour mettre à niveau l’instance POWERPIVOT. Dans la page Installation de l'Assistant Installation de SQL Server, choisissez l'option de mise à niveau. Pour plus d’informations, voir [Mise à niveau vers SQL Server 2014 En utilisant le Magicien d’installation &#40;Configuration&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+5.  **Exécutez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] le programme d’installation** sur le premier serveur d’applications SharePoint qui exécute le service Windows **SQL Server Analysis Services (PowerPivot)** pour mettre à niveau l’instance PowerPivot. Dans la page Installation de l'Assistant Installation de SQL Server, choisissez l'option de mise à niveau. Pour plus d’informations, consultez [mettre à niveau vers SQL Server 2014 à l’aide de l’Assistant installation &#40;&#41;d’installation ](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 6.  **Redémarrez le serveur** avant d'exécuter l'outil de configuration. Cette étape vérifie que tous les éléments requis ou mises à jour installés par le programme d'installation de SQL Server sont entièrement configurés sur le système.  
   
-7.  **Exécutez l’outil de configuration PowerPivot** sur le premier serveur d’application SharePoint qui gère le service SQL Server Analysis Services (PowerPivot) pour mettre à niveau les solutions et les services Web de SharePoint. Vous ne pouvez pas utiliser l'Administration centrale pour cette étape.  
+7.  **Exécutez l’outil de configuration PowerPivot** sur le premier serveur d’applications SharePoint qui exécute le service SQL Server Analysis Services (PowerPivot) pour mettre à niveau les solutions et les services Web dans SharePoint. Vous ne pouvez pas utiliser l'Administration centrale pour cette étape.  
   
     1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Outil de configuration PowerPivot**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
-    2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions plus anciennes de ces solutions sont détectées, vous verrez le message "Les versions plus nouvelles des fichiers de solution PowerPivot ont été détectées. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs ». Cliquez sur **OK** pour fermer le message.  
+    2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions antérieures de ces solutions sont détectées, vous verrez le message «des versions plus récentes des fichiers de solution PowerPivot ont été détectées. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs ». Cliquez sur **OK** pour fermer le message.  
   
     3.  Cliquez sur **Mettre à niveau des fonctionnalités, des services, des applications et des solutions**, puis sur **OK** pour continuer.  
   
-    4.  L’avertissement suivant apparaît : « Les manuels du tableau de bord de gestion PowerPivot sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? ».  
+    4.  L’avertissement suivant s’affiche : «les classeurs dans le tableau de bord de gestion PowerPivot sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? ».  
   
          Cet avertissement fait référence aux classeurs du tableau de bord de gestion PowerPivot qui rendent compte de l'activité d'actualisation des données. Si vous avez personnalisé ces classeurs, toutes les modifications que vous avez apportées à ces classeurs seront perdues lorsque des fichiers existants seront remplacés par des versions plus récentes.  
   
@@ -181,17 +181,17 @@ ms.locfileid: "81388049"
         > [!IMPORTANT]  
         >  La première action, **Mettre à niveau une solution de batterie de serveurs**, doit toujours être traitée en premier. Elle inscrit les applets de commande PowerShell qui sont utilisées pour configurer le serveur. Si vous obtenez une erreur sur cette action, ne continuez pas. À la place, utilisez les informations fournies par l'erreur pour diagnostiquer et résoudre le problème avant de traiter des actions supplémentaires dans la liste des tâches.  
   
-    8.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **Run**, l’avertissement suivant apparaît, vous rappelant que les actions sont traitées en mode batch : « Tous les paramètres de configuration qui sont signalés comme valides dans l’outil seront appliqués à la ferme SharePoint. Voulez-vous continuer ? ».  
+    8.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **exécuter**, l’avertissement suivant s’affiche, vous rappelant que les actions sont traitées en mode batch : «tous les paramètres de configuration marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ? ».  
   
     9. Cliquez sur **Oui** pour continuer.  
   
-    10. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion pour les données PowerPivot échoueront avec des erreurs comme "Incapable de actualiser les données" ou "Une erreur s’est produite en essayant d’effectuer l’action demandée. Réessayez. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
+    10. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion pour les données PowerPivot échouent avec des erreurs telles que « impossible d’actualiser les données » ou «une erreur s’est produite lors de l’exécution de l’action demandée. Réessayez. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
   
-8.  **Répétez le processus** pour chaque service SQL Server Analysis Services (PowerPivot) dans la ferme : 1) Exécuter SQL Server configuration 2) Exécuter l’outil De configuration PowerPivot.  
+8.  **Répétez le processus** pour chaque service d’SQL Server Analysis Services (PowerPivot) dans la batterie de serveurs : 1) exécutez SQL Server Setup 2) exécutez l’outil de configuration de PowerPivot.  
   
 9. Vérifiez que la mise à niveau a réussi en effectuant les étapes postérieures à la mise à niveau et en vérifiant la version des serveurs PowerPivot de la batterie. Pour plus d'informations, consultez [Post-upgrade verification tasks](#verify) dans cette rubrique et la section suivante :  
   
-10. **Erreurs de dépannage**  
+10. **Dépannage des erreurs**  
   
      Vous pouvez afficher les informations d'erreur dans le volet Paramètres pour chaque action.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "81388049"
   
     2.  Consultez les informations suivantes pour les déploiements existants : **Type** indique une rétraction ou un déploiement, **Fichier** correspond à powerpivotwebapp.wsp ou à powerpivotfarm.wsp.  
   
-    3.  Pour les déploiements ou les rétractations liés aux solutions PowerPivot, copiez la valeur GUID pour **JobId,** puis collez-la dans la commande suivante (utilisez les commandes Mark, Copy et Paste sur le menu Edit de Shell pour copier le GUID) :  
+    3.  Pour les déploiements ou les rétractions liés aux solutions PowerPivot, copiez la valeur GUID de **JobID** , puis collez-la dans la commande suivante (utilisez les commandes marquer, copier et coller dans le menu Edition de l’interpréteur de commandes pour copier le GUID) :  
   
         ```cmd
         stsadm -o canceldeployment -id "<GUID>"  
@@ -213,7 +213,7 @@ ms.locfileid: "81388049"
   
     4.  Réexécutez la tâche dans l'outil de configuration en cliquant sur **Valider** suivi d' **Exécuter**.  
   
-     Pour toutes les autres erreurs, vérifiez les journaux ULS. Pour plus d’informations, voir [Configurez et afficher les fichiers de journaux SharePoint et l’enregistrement diagnostique &#40;PowerPivot pour SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
+     Pour toutes les autres erreurs, vérifiez les journaux ULS. Pour plus d’informations, consultez [configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
 
   
@@ -222,7 +222,7 @@ ms.locfileid: "81388049"
   
   
   
-##  <a name="data-refresh"></a><a name="bkmk_datarefresh"></a>Rafraîchissement des données  
+##  <a name="data-refresh"></a><a name="bkmk_datarefresh"></a>Actualisation des données  
  La mise à niveau a un impact sur les opérations d'actualisation des données. L'actualisation des données planifiée sur le serveur est disponible uniquement pour les classeurs qui correspondent à la version du serveur. Si vous hébergez des classeurs de la version antérieure, il est possible que l'actualisation des données ne fonctionne plus pour ces classeurs. Pour réactiver l'actualisation des données, vous devez mettre à niveau les classeurs. Vous pouvez mettre à niveau chaque classeur manuellement dans PowerPivot pour Excel ou activer la mise à niveau automatique pour la fonctionnalité d'actualisation des données dans SharePoint 2010. La mise à niveau automatique effectue la mise à niveau d'un classeur vers la version actuelle avant l'actualisation des données, ce qui permet aux opérations d'actualisation des données de respecter la planification établie.  
   
 
@@ -237,7 +237,7 @@ ms.locfileid: "81388049"
 Get-PowerPivotSystemService  
 ```  
   
- Vérifiez **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]est la version 12.0. \<> de construction majeure. \<> de construction mineure  
+ Vérifiez **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]est la version 12,0. \<> de build majeure. \<> de build mineure  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Vérifier la version du service Windows Analysis Services  
  Si vous n'avez mis à niveau que certains de vos serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dans une batterie SharePoint 2010, l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur les serveurs qui n'ont pas été mis à niveau est plus ancienne que la version attendue dans la batterie. Vous devrez effectuer une mise à niveau de tous vos serveurs vers la même version pour permettre leur utilisation. Utilisez l’une des méthodes suivantes pour vérifier la version du service Windows SQL Server Analysis Services (PowerPivot) sur chaque ordinateur.  
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
   
 3.  Cliquez sur **Détails**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la version de fichier doit être 12.00. \<> de construction majeure. \<> de construction mineure.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la version du fichier doit être 12,00. \<> de build majeure. \<> de build mineure.  
   
 5.  Vérifiez que ce numéro est identique à la version de solution PowerPivot et du service système.  
   
@@ -283,7 +283,7 @@ Get-PowerPivotSystemService
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>Vérifier la version du fournisseur de données MSOLAP sur SharePoint  
  Suivez les instructions suivantes pour vérifier quelles versions des fournisseurs OLE DB Analysis Services sont approuvées par Excel Services. Vous devez être l'administrateur de la batterie ou de l'application de service pour vérifier les paramètres du fournisseur de données approuvé d'Excel Services.  
   
-1.  Dans Central Administration, dans la gestion des applications, cliquez sur **Gérer les applications de service**.  
+1.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications de service**.  
   
 2.  Cliquez sur le nom de l'application de service Excel Services, par exemple **ExcelServiceApp1**.  
   
@@ -300,17 +300,17 @@ Get-PowerPivotSystemService
   
 2.  Triez par nom d'assembly et recherchez **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Vérifiez que vous avez la version 12.0. \<construire le nombre>.  
+3.  Vérifiez que vous disposez de la version 12,0. \<numéro de build>.  
   
 
-##  <a name="upgrading-multiple-powerpivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a>Mise à niveau de plusieurs PowerPivot pour les serveurs SharePoint dans une ferme SharePoint  
+##  <a name="upgrading-multiple-powerpivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a>Mise à niveau de plusieurs serveurs PowerPivot pour SharePoint dans une batterie de serveurs SharePoint  
  Dans une topologie à plusieurs serveurs qui inclut plusieurs serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , toutes les instances de serveur et tous les composants doivent avoir la même version. Le serveur qui exécute la version la plus récente du logiciel définit le niveau pour tous les serveurs de la batterie. Si vous ne mettez à niveau que quelques serveurs, ceux qui exécutent des versions antérieures du logiciel deviendront indisponibles jusqu'à ce qu'ils soient également mis à niveau.  
   
  Une fois le premier serveur à niveau, les serveurs supplémentaires qui n'ont pas encore été mis à niveau **deviennent indisponibles**. Leur disponibilité est restaurée une fois que tous les serveurs sont au même niveau.  
   
  L'installation de SQL Server met à niveau les fichiers de solution PowerPivot en place sur l'ordinateur physique, mais la mise à niveau des solutions utilisées par la batterie exige d'utiliser l'outil de configuration de PowerPivot décrit dans une section précédente de cette rubrique.  
 
-##  <a name="applying-a-qfe-to-a-powerpivot-instance-in-the-farm"></a><a name="qfe"></a>Appliquer un QFE à une instance PowerPivot à la ferme  
+##  <a name="applying-a-qfe-to-a-powerpivot-instance-in-the-farm"></a><a name="qfe"></a>Application d’un correctif QFE à une instance PowerPivot dans la batterie de serveurs  
  L'application d'un correctif à un serveur PowerPivot pour SharePoint met à jour les fichiers programme existants vers une version plus récente qui inclut le correctif d'un problème spécifique. Lors de l'application d'un correctif QFE à une topologie à plusieurs serveurs, il n'y a aucun serveur principal par lequel commencer obligatoirement. Vous pouvez commencer par n'importe quel serveur tant que vous appliquez le même correctif QFE aux autres serveurs PowerPivot de la batterie.  
   
  Lorsque vous appliquez le correctif QFE, vous devez également effectuer une étape de configuration qui met à jour les informations de version du serveur dans la base de données de configuration de la batterie de serveurs. La version du serveur corrigé devient la nouvelle version attendue pour la batterie. Tant que le correctif QFE n'est pas appliqué et configuré sur tous les ordinateurs, les instances de PowerPivot pour SharePoint pour lesquelles le correctif QFE n'est pas disponible ne peuvent pas traiter les demandes de données PowerPivot.  
@@ -334,7 +334,7 @@ Get-PowerPivotSystemService
   
  Pour vérifier les informations de version des services de la batterie de serveurs, utilisez la page **Vérifier l'état d’installation du correctif et du produit** dans la section Gestion des mises à niveau et des correctifs de l'Administration centrale.  
   
-##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a>Tâches de vérification post-mise à niveau  
+##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a>Tâches de vérification consécutives à la mise à niveau  
  Une fois la mise à niveau terminée, utilisez les étapes suivantes pour vérifier que le serveur est opérationnel.  
   
 |Tâche|Lien|  
@@ -342,13 +342,13 @@ Get-PowerPivotSystemService
 |Vérifiez que le service fonctionne sur tous les ordinateurs qui exécutent PowerPivot pour SharePoint.|[Démarrer ou arrêter un service PowerPivot pour un serveur SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
 |Vérifiez l'activation des fonctionnalités au niveau de la collection de sites.|[Activer la fonctionnalité d'intégration PowerPivot pour des collections de sites dans l'Administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
 |Vérifiez que les classeurs PowerPivot se chargent correctement en ouvrant un classeur et cliquant sur les filtres et les segments pour initialiser une requête.|Recherchez la présence de fichiers mis en cache sur le disque dur. La présence de fichiers mis en cache confirme que les fichiers de données ont été chargés sur ce serveur physique. Recherchez les fichiers mis en cache dans le dossier c:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\Backup.|  
-|Testez l'actualisation des données sur les classeurs sélectionnés configurés pour l'actualisation des données.|La méthode la plus simple pour tester l'actualisation des données consiste à modifier une planification d'actualisation des données, en activant la case à cocher **Aussi actualiser dès que possible** afin que l'actualisation des données s'exécute immédiatement. Cette étape détermine si l'actualisation des données aboutit pour le classeur actuel. Répétez ces étapes pour les autres classeurs fréquemment utilisés pour vous assurer que l'actualisation des données est fonctionnelle. Pour plus d’informations sur la mise à jour des données de planification, consultez [l’annexe d’un rafraîchissement des données &#40;PowerPivot pour SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|Testez l'actualisation des données sur les classeurs sélectionnés configurés pour l'actualisation des données.|La méthode la plus simple pour tester l'actualisation des données consiste à modifier une planification d'actualisation des données, en activant la case à cocher **Aussi actualiser dès que possible** afin que l'actualisation des données s'exécute immédiatement. Cette étape détermine si l'actualisation des données aboutit pour le classeur actuel. Répétez ces étapes pour les autres classeurs fréquemment utilisés pour vous assurer que l'actualisation des données est fonctionnelle. Pour plus d’informations sur la planification de l’actualisation des données, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
 |Au fil du temps, vérifiez les rapports d'actualisation des données dans le tableau de bord de gestion PowerPivot pour vous assurer qu'il n'y a pas d'erreurs d'actualisation des données.|[Tableau de bord de gestion PowerPivot et données d’utilisation](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
   
- Pour plus d’informations sur la façon de configurer les paramètres et les fonctionnalités de PowerPivot, voir [PowerPivot Server Administration and Configuration in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
+ Pour plus d’informations sur la configuration des paramètres et des fonctionnalités PowerPivot, consultez [administration et configuration du serveur PowerPivot dans l’administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
- Pour obtenir des instructions étape par étape qui vous guident dans toutes les tâches de configuration post-installation, consultez [la configuration initiale &#40;PowerPivot pour SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
+ Pour obtenir des instructions pas à pas qui vous guident dans toutes les tâches de configuration consécutives à l’installation, consultez [configuration initiale &#40;PowerPivot pour SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
 
 ## <a name="see-also"></a>Voir aussi  
- [Caractéristiques soutenues par les Editions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

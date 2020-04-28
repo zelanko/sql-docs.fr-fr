@@ -1,6 +1,6 @@
 ---
-title: Exécution d’un updategram en utilisant ADO (SQLXML)
-description: Apprenez à établir une connexion à une instance de Microsoft SQL Server et exécutez un updategram.by à l’aide d’ADO (SQLXML 4.0).
+title: Exécution d’un mise à jour à l’aide d’ADO (SQLXML)
+description: Découvrez comment établir une connexion à une instance de Microsoft SQL Server et exécuter un updategram.by à l’aide d’ADO (SQLXML 4,0).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388738"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'ADO (SQLXML 4.0)
@@ -29,15 +29,15 @@ ms.locfileid: "81388738"
   
  Dans cet exemple d'application :  
   
--   **L’objet conn** (**ADODB. Connexion**) établit une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une instance en cours d’exécution sur un ordinateur serveur spécifique.  
+-   Objet **conn** (**ADODB. Connexion**) établit une connexion à une instance en cours [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’exécution de sur un ordinateur serveur spécifique.  
   
--   **L’objet cmd** (**ADODB.Command**) s’exécute sur la connexion établie.  
+-   L’objet **cmd** (**ADODB. Command**) s’exécute sur la connexion établie.  
   
 -   Le dialecte de la commande est défini sur DBGUID_MSSQLXML.  
   
--   Le updategram est copié sur le flux de commande (**strmIn**).  
+-   Le mise à jour est copié dans le flux de commande (**strmIn**).  
   
--   Le flux de sortie de la commande est réglé sur l’objet **StrmOut** **(ADODB. Stream**) pour recevoir toutes les données retournées.  
+-   Le flux de sortie de la commande est défini sur l’objet **StrmOut** (**ADODB. Stream**) pour recevoir toutes les données retournées.  
   
 -   Enfin, la commande (code de mise à jour (updategram)) est exécutée.  
   
@@ -185,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passage de paramètres  
- Dans les applications Visual Basic fournies précédemment, les paramètres ne sont pas transmis. Dans cette application, les valeurs **ContactID** et **MiddleName** sont transmises comme entrée paramétrisées à la mise à jour.  
+ Dans les applications Visual Basic fournies précédemment, les paramètres ne sont pas transmis. Dans cette application, les valeurs **ContactID** et **MiddleName** sont passées comme entrée paramétrable à mise à jour.  
   
 ```vb  
 Private Sub Form_Load()  

@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cf15d32e162dfd7881e6d0418a28e1f10212a44d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388560"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Création d'une application de fournisseur OLE DB de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] création d’une application fournisseur de fournisseur OLE DB de client autochtone comporte ces étapes :  
+  La création [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une application de fournisseur OLE DB Native Client implique les étapes suivantes :  
   
 1.  Établissement d'une connexion à une source de données.  
   

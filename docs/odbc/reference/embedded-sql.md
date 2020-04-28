@@ -1,5 +1,5 @@
 ---
-title: SQL intégré ( Microsoft Docs
+title: Embedded SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306672"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
-La première technique d’envoi des relevés SQL au DBMS est intégrée SQL. Étant donné que SQL n’utilise pas de variables et de relevés de contrôle du flux, il est souvent utilisé comme sous-langage de base de données qui peut être ajouté à un programme écrit dans un langage de programmation classique, comme C ou COBOL. Il s’agit d’une idée centrale de SQL intégré: placer des déclarations SQL dans une émission écrite dans un langage de programmation hôte. En bref, les techniques suivantes sont utilisées pour intégrer les déclarations SQL dans une langue d’hôte:  
+La première technique pour envoyer des instructions SQL au SGBD est Embedded SQL. Étant donné que SQL n’utilise pas de variables et d’instructions de contrôle de workflow, il est souvent utilisé comme sous-langage de base de données qui peut être ajouté à un programme écrit dans un langage de programmation conventionnel, tel que C ou COBOL. Il s’agit d’une idée centrale d’Embedded SQL : placer des instructions SQL dans un programme écrit dans un langage de programmation hôte. Brièvement, les techniques suivantes sont utilisées pour incorporer des instructions SQL dans un langage hôte :  
   
--   Les relevés SQL intégrés sont traités par un précompatateur SQL spécial. Toutes les déclarations SQL commencent par un introducteur et se terminent par un terminateur, qui signalent tous les deux la déclaration SQL pour le précompiler. L’introducteur et le terminateur varient selon la langue d’accueil. Par exemple, l’introducteur est «EXEC SQL» en C et «&SQL(» dans MUMPS, et le terminateur est un point-virgule (;) dans C et une parenthèse droite dans MUMPS.  
+-   Les instructions SQL incorporées sont traitées par un précompilateur SQL spécial. Toutes les instructions SQL commencent par un introducteur et se terminent par un terminateur, qui marquent toutes les deux l’instruction SQL pour le précompilateur. L’introducteur et le terminateur varient en fonction du langage hôte. Par exemple, l’introducteur est « EXEC SQL » en C et « &SQL ( » dans MUMPS, et le terminateur est un point-virgule (;) en C et une parenthèse fermante dans MUMPS.  
   
--   Les variables du programme d’application, appelées variables hôtes, peuvent être utilisées dans les relevés SQL intégrés partout où les constantes sont autorisées. Ceux-ci peuvent être utilisés sur l’entrée pour adapter une déclaration SQL à une situation particulière et sur la sortie pour recevoir les résultats d’une requête.  
+-   Les variables du programme d’application, appelées variables hôtes, peuvent être utilisées dans des instructions SQL incorporées là où les constantes sont autorisées. Elles peuvent être utilisées en entrée pour adapter une instruction SQL à une situation particulière et à la sortie pour recevoir les résultats d’une requête.  
   
--   Les requêtes qui renvoient une seule série de données sont traitées avec une déclaration unique; cette déclaration spécifie à la fois la requête et les variables hôtes dans lesquelles retourner les données.  
+-   Les requêtes qui retournent une seule ligne de données sont gérées avec une instruction SELECT Singleton ; Cette instruction spécifie à la fois la requête et les variables hôtes dans lesquelles les données doivent être retournées.  
   
--   Les requêtes qui renvoient plusieurs rangées de données sont traitées avec des curseurs. Un curseur garde une trace de la ligne actuelle dans un ensemble de résultats. La déclaration DE DECLARE CURSOR définit la requête, l’instruction OPEN commence le traitement des requêtes, la déclaration FETCH récupère les lignes successives de données, et l’instruction CLOSE met fin au traitement des requêtes.  
+-   Les requêtes qui retournent plusieurs lignes de données sont gérées avec des curseurs. Un curseur effectue le suivi de la ligne actuelle dans un jeu de résultats. L’instruction DECLARE CURSOR définit la requête, l’instruction OPEN commence le traitement de la requête, l’instruction FETCH extrait des lignes de données successives et l’instruction CLOSE termine le traitement des requêtes.  
   
--   Bien qu’un curseur soit ouvert, les instructions de mise à jour et de suppression positionnées peuvent être utilisées pour mettre à jour ou supprimer la ligne actuellement sélectionnée par le curseur.  
+-   Lorsqu’un curseur est ouvert, les instructions Update et DELETE positionnées peuvent être utilisées pour mettre à jour ou supprimer la ligne actuellement sélectionnée par le curseur.  
   
  Cette section contient les rubriques suivantes :  
   

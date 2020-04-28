@@ -20,23 +20,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387749"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de DB OLE (SQLNCLI) de Native Client est un API COM de bas niveau qui est utilisé pour accéder aux données. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est recommandé pour développer des outils, des utilitaires ou des composants de bas niveau qui ont besoin de performances élevées. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est un fournisseur natif de hautes performances qui accède directement au protocole TDS (Tabular Data Stream) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client (SQLNCLI) est une API COM de bas niveau utilisée pour accéder aux données. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est recommandé pour développer des outils, des utilitaires ou des composants de bas niveau qui ont besoin de performances élevées. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est un fournisseur natif de hautes performances qui accède directement au protocole TDS (Tabular Data Stream) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fournit la prise en charge OLE DB aux applications qui se connectent à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur native Client OLE DB est un fournisseur conforme à la version 2.0 OLE DB.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client est un fournisseur conforme à la version 2,0 de OLE DB.  
  
 > [!IMPORTANT]
-> Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB (SQLNCLI) demeure déprécié et il n’est pas recommandé de l’utiliser pour de nouveaux travaux de développement. Au lieu de cela, utilisez le nouveau [Microsoft OLE DB Driver pour SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), qui sera mis à jour avec les fonctionnalités serveur les plus récentes.
+> Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Native Client (SQLNCLI) reste déconseillé et il n’est pas recommandé de l’utiliser pour un nouveau travail de développement. Au lieu de cela, utilisez le nouveau [Microsoft OLE DB Driver pour SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), qui sera mis à jour avec les fonctionnalités serveur les plus récentes.
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -52,7 +52,7 @@ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de D
   
 -   [Objets BLOB et OLE](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
--   [Tableaux et indices](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
+-   [Tables et index](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
 -   [Types de données &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
@@ -64,7 +64,7 @@ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de D
   
 -   [Types CLR de grande taille définis par l’utilisateur &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
   
--   [FILESTREAM Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
+-   [Prise en charge FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
 -   [Transactions](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
@@ -74,9 +74,9 @@ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de D
   
 -   [Prise en charge des colonnes éparses &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
   
--   [SQL Server Native Client &#40;OLE DB&#41; Référence](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+-   [SQL Server Native Client &#40;OLE DB référence de&#41;](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Rubriques de procédures OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Rubriques "Comment" relatives aux OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

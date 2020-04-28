@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Excel Driver) Microsoft Docs
+title: SQLDriverConnect (pilote Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1108206bf38183887540b114fda5a1e913aa67d9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307120"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (pilote Excel)
 > [!NOTE]  
->  Ce sujet fournit des informations spécifiques à Excel Driver. Pour plus d’informations générales sur cette fonction, voir le sujet approprié sous [ODBC API Référence](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote Excel. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous référence de l' [API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  **SQLDriverConnect** vous permet de vous connecter à un pilote sans créer de source de données (DSN).  
   
- Les mots clés suivants sont pris en charge dans la chaîne de connexion pour tous les pilotes: **DSN**, **DBQ**, et **FIL**.  
+ Les mots clés suivants sont pris en charge dans la chaîne de connexion pour tous les pilotes : **DSN**, **DBQ**et **fil**.  
   
- Le tableau suivant affiche les mots clés minimums requis pour se connecter à chaque pilote, et fournit un exemple de mots clés / paires de valeur utilisés avec **SQLDriverConnect**. Pour une liste complète des valeurs DRIVERID, voir [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).  
+ Le tableau suivant indique les mots clés minimaux requis pour se connecter à chaque pilote et fournit un exemple de paires mot clé/valeur utilisées avec **SQLDriverConnect**. Pour obtenir la liste complète des valeurs DRIVERID, consultez [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).  
   
 > [!NOTE]  
->  Si DBQ ou DefaultDir n’est pas spécifié pour le pilote Microsoft Excel 3.0 ou 4.0, le pilote se connectera à l’annuaire actuel.  
+>  Si DBQ ou DefaultDir n’est pas spécifié pour le pilote Microsoft Excel 3,0 ou 4,0, le pilote se connecte au répertoire actif.  
   
-|Pilote|Mots-clés requis|Exemples|  
+|Pilote|Mots clés requis|Exemples|  
 |------------|-----------------------|--------------|  
-|Microsoft Excel 3.0 ou 4.0|Pilote, DriverID|DriverMD Microsoft Excel Driver (en anglais seulement) ; DBQ-c: temp; DriverID 278|  
-|Microsoft Excel 5.0/7.0|Pilote, DriverID, DBQ|DriverMD Microsoft Excel Driver (en anglais seulement) ; DBQ-c: temp.sample.xls; DriverID 22|  
-|Microsoft Excel 97 et plus tard|Pilote, DriverID, DBQ|DriverMD Microsoft Excel Driver (en anglais seulement) ; DBQ-c: temp.sample.xls; DriverID 790|
+|Microsoft Excel 3,0 ou 4,0|Pilote, DriverID|Driver = {pilote Microsoft Excel (*. xls)}; DBQ = c:\temp ; DriverID = 278|  
+|Microsoft Excel 5.0/7.0|Pilote, DriverID, DBQ|Driver = {pilote Microsoft Excel (*. xls)}; DBQ = c:\Temp\sample.xls ; DriverID = 22|  
+|Microsoft Excel 97 et versions ultérieures|Pilote, DriverID, DBQ|Driver = {pilote Microsoft Excel (*. xls)}; DBQ = c:\Temp\sample.xls ; DriverID = 790|
