@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467582"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
@@ -35,12 +35,11 @@ ms.locfileid: "62467582"
   
 3.  Extrayez les données de la colonne à l'aide de `IRow::Open()` ou `IRow::GetColumns()`.  
   
-    -   
-  `IRow::Open()` peut être utilisé pour ouvrir un objet `ISequentialStream` sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (`IStream` ou `ISequentialStream` peut ensuite être utilisé pour lire les données de la colonne).  
+    -   `IRow::Open()` peut être utilisé pour ouvrir un objet `ISequentialStream` sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (`IStream` ou `ISequentialStream` peut ensuite être utilisé pour lire les données de la colonne).  
   
     -   Si `IRow::GetColumns()` est utilisé, l’élément **pData** de la structure DBCOLUMNACCESS est défini pour pointer vers un objet de flux.  
   
-4.  Utilisez **ISequentialStream :: Read ()** à plusieurs reprises pour lire le nombre spécifié d’octets dans la mémoire tampon du consommateur.  
+4.  Utilisez **ISequentialStream::Read()** à plusieurs reprises pour lire le nombre spécifié d'octets dans la mémoire tampon du consommateur.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment extraire une seule ligne avec IRow. Dans cet exemple, une colonne est récupérée à la fois de la ligne. Cet exemple illustre l'utilisation de IRow::Open() ainsi que de IRow::GetColumns(). Pour lire les données de la colonne, l'exemple utilise ISequentialStream::Read.  
@@ -671,6 +670,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures OLE DB](ole-db-how-to-topics.md)  
+ [Rubriques "Comment" relatives aux OLE DB](ole-db-how-to-topics.md)  
   
   

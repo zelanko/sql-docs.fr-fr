@@ -11,16 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467279"
 ---
 # <a name="atomic-blocks"></a>Blocs Atomic
-  
-  `BEGIN ATOMIC` fait partie de la norme SQL ANSI. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les blocs Atomic au niveau supérieur des procédures stockées compilées en mode natif.  
+  `BEGIN ATOMIC` fait partie de la norme SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les blocs Atomic au niveau supérieur des procédures stockées compilées en mode natif.  
   
 -   Chaque procédure stockée compilée en mode natif contient précisément un bloc d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il s'agit d'un bloc ATOMIC.  
   
@@ -33,7 +31,7 @@ ms.locfileid: "62467279"
   
  S'il n'y a pas de transactions actives dans une session, `BEGIN ATOMIC` démarre une nouvelle transaction. Si aucune exception n'est levée en dehors de l'étendue du bloc, la transaction est validée à la fin du bloc. Si le bloc lève une exception (autrement dit, l'exception n'est pas interceptée et n'est pas gérée dans le bloc), la transaction est restaurée. Pour les transactions couvrant un bloc Atomic (une procédure stockée compilée en mode natif), vous n'avez pas besoin d'écrire d'instructions `BEGIN TRANSACTION` et `COMMIT` ou `ROLLBACK` explicites.  
   
- Les procédures stockées compilées en mode natif prennent en charge les constructions `TRY`, `CATCH` et `THROW` pour la gestion des erreurs. `RAISERROR`n’est pas pris en charge.  
+ Les procédures stockées compilées en mode natif prennent en charge les constructions `TRY`, `CATCH` et `THROW` pour la gestion des erreurs. La fonction `RAISERROR` n'est pas prise en charge.  
   
  L'exemple suivant illustre le comportement de gestion des erreurs avec les blocs Atomic et les procédures stockées compilées en mode natif :  
   
@@ -164,6 +162,6 @@ GO
 |XACT_ABORT|OFF<br /><br /> Les exceptions qui ne sont pas interceptées entraînent la restauration des blocs Atomic, mais pas l'abandon de la transaction, sauf si l'erreur condamne la transaction.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
+ [procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
   
   
