@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018064"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
@@ -39,16 +39,16 @@ ms.locfileid: "68018064"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**codé**|**smallint**|ID d'utilisateur, unique dans cette base de données.<br /><br /> 1 = Propriétaire de la base de données<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
-|**statu**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**nomme**|**sysname**|Nom d'utilisateur ou de groupe, unique dans cette base de données.|  
-|**sid**|**varbinary(85)**|Identificateur de sécurité pour cette entrée.|  
-|**rôles**|**varbinary (2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**création**|**DATETIME**|Date de l'ajout du compte.|  
-|**updateDate**|**DATETIME**|Date de la dernière modification du compte.|  
+|**statut**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**name**|**sysname**|Nom d'utilisateur ou de groupe, unique dans cette base de données.|  
+|**sid**|**varbinary (85)**|Identificateur de sécurité pour cette entrée.|  
+|**rôles**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**createdate**|**datetime**|Date de l'ajout du compte.|  
+|**updatedate**|**datetime**|Date de la dernière modification du compte.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
-|**de**|**varbinary (256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**ID**|**smallint**|ID du groupe auquel l'utilisateur appartient. Si **UID** est identique à **GID**, cette entrée définit un groupe. Déborde ou retourne la valeur NULL si le nombre total d'utilisateurs et de groupes dépasse 32 767.|  
-|**environ**|**varchar(255**|Réservé.|  
+|**mot de passe**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**gid**|**smallint**|ID du groupe auquel l'utilisateur appartient. Si **UID** est identique à **GID**, cette entrée définit un groupe. Déborde ou retourne la valeur NULL si le nombre total d'utilisateurs et de groupes dépasse 32 767.|  
+|**environ**|**varchar(255)**|Réservé.|  
 |**hasdbaccess**|**int**|1 = Le compte a accès à la base de données.|  
 |**islogin**|**int**|1 = Le compte est un groupe Windows ou un utilisateur Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bénéficiant d'un compte de connexion.|  
 |**isntname**|**int**|1 = Le compte est un utilisateur ou groupe Windows.|  
@@ -61,6 +61,6 @@ ms.locfileid: "68018064"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

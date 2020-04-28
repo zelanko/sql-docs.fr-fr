@@ -18,10 +18,10 @@ ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e1683427057ac458e09bddde51dc70d8d402d38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016449"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68016449"
 |-----------------|---------------|-----------------|  
 |**parent_tracer_id**|**int**|Identifie de manière unique un jeton de suivi.|  
 |**agent_id**|**int**|Identifie l'Agent qui a géré l'enregistrement du jeton de suivi.|  
-|**subscriber_commit**|**DATETIME**|Date et heure auxquelles l'enregistrement du jeton de suivi a été validé sur l'Abonné.|  
+|**subscriber_commit**|**datetime**|Date et heure auxquelles l'enregistrement du jeton de suivi a été validé sur l'Abonné.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

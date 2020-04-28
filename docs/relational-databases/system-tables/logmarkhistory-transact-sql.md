@@ -18,10 +18,10 @@ ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001803"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
@@ -34,14 +34,14 @@ ms.locfileid: "68001803"
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Base de données locale dans laquelle une transaction marquée a été appliquée.|  
 |**mark_name**|**nvarchar(128)**|Nom, fourni par l'utilisateur, de la transaction marquée.|  
-|**description**|**nvarchar(255)**|Description, fournie par l'utilisateur, de la transaction marquée. Sa valeur peut être NULL.|  
+|**descriptive**|**nvarchar(255)**|Description, fournie par l'utilisateur, de la transaction marquée. Sa valeur peut être NULL.|  
 |**user_name**|**nvarchar(128)**|Nom de l'utilisateur de la base de données ayant appliqué la transaction marquée. Sa valeur peut être NULL.|  
-|**lsn**|**numérique (25, 0)**|Numéro séquentiel dans le journal correspondant au marquage de l'enregistrement de la transaction.|  
-|**mark_time**|**DATETIME**|Heure de validation de la transaction marquée (heure locale).|  
+|**LSN**|**numeric(25,0)**|Numéro séquentiel dans le journal correspondant au marquage de l'enregistrement de la transaction.|  
+|**mark_time**|**datetime**|Heure de validation de la transaction marquée (heure locale).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Restaure une base de données sur une &#40;de transaction marquée SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
- [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
- [Tables système &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Utilisez des transactions marquées pour récupérer des bases de données associées de manière cohérente &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
+ [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

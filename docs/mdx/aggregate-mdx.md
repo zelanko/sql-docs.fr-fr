@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017170"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
@@ -52,7 +52,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Opérateurs unaires|Non respectés ; les valeurs sont agrégées par addition.|  
 |Mesures calculées|Ordre de résolution défini pour garantir l'application de la mesure calculée.|  
 |Membres calculés|Application des règles normales, ce qui signifie que le dernier ordre de résolution est prioritaire.|  
-|Affectations|L'agrégation des attributions a lieu selon la mesure d'agrégation des mesures. Si la fonction d'agrégation des mesures est un comptage de valeurs, l'attribution est totalisée.|  
+|Attributions|L'agrégation des attributions a lieu selon la mesure d'agrégation des mesures. Si la fonction d'agrégation des mesures est un comptage de valeurs, l'attribution est totalisée.|  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne la somme du `Measures.[Order Quantity]` membre, agrégée sur les huit premiers mois de l’année civile 2003 qui sont contenus dans la `Date` dimension, à partir du cube **Adventure Works** .  
@@ -131,6 +131,6 @@ WHERE ([Geography].[State-Province].x,
  [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
  [Propriétés &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember&#41;MDX &#40;](../mdx/prevmember-mdx.md)   
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

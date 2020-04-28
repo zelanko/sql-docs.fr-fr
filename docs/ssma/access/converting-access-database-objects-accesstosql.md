@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006632"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Conversion d’objets de base de données Access (AccessToSQL)
@@ -59,8 +59,8 @@ Le tableau suivant répertorie les objets Access qui sont convertis et les [!INC
 |colonne|colonne|  
 |index|index|  
 |clé étrangère|clé étrangère|  
-|requête|vue<br /><br />La plupart des requêtes SELECT sont converties en vues. Les autres requêtes, telles que les requêtes de mise à jour, ne sont pas migrées.<br /><br />Les requêtes SELECT qui acceptent des paramètres ne sont pas converties, et ne sont pas des requêtes à onglets croisées.|  
-|report|non converti|  
+|query|vue<br /><br />La plupart des requêtes SELECT sont converties en vues. Les autres requêtes, telles que les requêtes de mise à jour, ne sont pas migrées.<br /><br />Les requêtes SELECT qui acceptent des paramètres ne sont pas converties, et ne sont pas des requêtes à onglets croisées.|  
+|rapport|non converti|  
 |form|non converti|  
 |macro|non converti|  
 |module|non converti|  
@@ -77,7 +77,7 @@ Pour convertir des objets de base de données Access, vous devez d’abord séle
   
 1.  Dans l’Explorateur de métadonnées Access, développez **accès-métabase**, puis développez **bases de données**.  
   
-2.  Effectuez une ou plusieurs des opérations suivantes :  
+2.  Effectuez une ou plusieurs des actions suivantes :  
   
     -   Pour convertir toutes les bases de données, activez la case à cocher en regard de **bases de données**.  
   
@@ -87,7 +87,7 @@ Pour convertir des objets de base de données Access, vous devez d’abord séle
   
     -   Pour convertir ou omettre des tables individuelles, développez la base de données, développez **tables**, puis activez ou désactivez la case à cocher en regard de la table.  
   
-3.  Effectuez l’une des actions suivantes :  
+3.  Effectuez l'une des opérations suivantes :  
   
     -   Pour convertir des schémas, cliquez avec le bouton droit sur **bases de données** , puis sélectionnez **convertir le schéma**.  
   

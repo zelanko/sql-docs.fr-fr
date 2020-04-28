@@ -10,10 +10,10 @@ ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3a8cde296fd0a47c407752977f5e41269a05354e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020968"
 ---
 # <a name="save-metadata--sybasetosql"></a>Enregistrer les métadonnées (SybaseToSQL)
@@ -33,10 +33,10 @@ SSMA charge les métadonnées dans le projet, si nécessaire. Les métadonnées 
 **Sélectionner tout**  
 Sélectionne toutes les bases de données listées.  
   
-**Clear**  
+**Effacé**  
 Désactive la case à cocher de toutes les bases de données avec des métadonnées manquantes. Vous ne pouvez pas désactiver la case à cocher si des métadonnées ont été chargées.  
   
-**Été**  
+**Save**  
 Enregistre le projet, en chargeant les métadonnées des bases de données sélectionnées qui ont des métadonnées manquantes.  
   
 **Annuler**  

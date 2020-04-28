@@ -18,10 +18,10 @@ ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1b204024d65e72eb65eefc9f63f914eab6ace29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032597"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "68032597"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**ID**|**int**|ID de la table dont la colonne d'identité est gérée par la réplication.|  
-|**vont**|**bigint**|Contrôle la taille de la plage des valeurs d'identité consécutives qui seraient affectées à l'abonnement dans le cadre d'un ajustement.|  
+|**objid**|**int**|ID de la table dont la colonne d'identité est gérée par la réplication.|  
+|**range**|**bigint**|Contrôle la taille de la plage des valeurs d'identité consécutives qui seraient affectées à l'abonnement dans le cadre d'un ajustement.|  
 |**pub_range**|**bigint**|Contrôle la taille de la plage des valeurs d'identité consécutives qui seraient affectées à la publication dans le cadre d'un ajustement.|  
 |**current_pub_range**|**bigint**|Plage actuellement utilisée par la publication. Elle peut être différente de *pub_range* si elle est affichée après avoir été modifiée par **sp_changearticle** et avant l’ajustement suivant de la plage.|  
 |**durée**|**int**|Valeur de pourcentage qui contrôle le moment où l'Agent de distribution affecte une nouvelle plage d'identité. Lorsque le pourcentage de valeurs spécifié dans *seuil* est utilisé, la agent de distribution crée une nouvelle plage d’identité.|  

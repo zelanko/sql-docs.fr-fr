@@ -18,10 +18,10 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045959"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
@@ -43,7 +43,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="arguments"></a>Arguments  
 `[ @backup_file_name = ] 'backup_file_name'`Nom d’un fichier de sauvegarde. *backup_file_name* est **de type nvarchar (128)**.  
   
-`[ @database_name = ] 'database_name'`Nom de la base de données. *database_name* est de **type sysname**.  
+`[ @database_name = ] 'database_name'`Nom de la base de données. *database_name* est de type **sysname**.  
   
 `[ @result = ] _result_ OUTPUT`Indique si le journal des transactions peut être appliqué à la base de données. le *résultat* est un **bit**.  
   

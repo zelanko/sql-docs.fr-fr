@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026860"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
@@ -41,7 +41,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]est fondamentalement différent des versions plus récentes et est abordé plus bas dans la rubrique [SQL Server 2014](#bkmk_2014).**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]et versions ultérieures  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]et versions ultérieures  
  Le tableau suivant décrit les colonnes de `sys.dm_db_xtp_checkpoint_stats`, à partir **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** de.  
   
 |Nom de la colonne|Type|Description|  
@@ -83,7 +83,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |internal_error_code|**bigint**|Erreur détectée par l’un des threads du contrôleur, du sérialiseur, de la fermeture et de la fusion.|
 |bytes_of_large_data_serialized|**bigint**|Quantité de données qui a été sérialisée. |  
   
-##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  Le tableau suivant décrit les colonnes dans `sys.dm_db_xtp_checkpoint_stats`, pour **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
 |Nom de la colonne|Type|Description|  
@@ -108,6 +108,6 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
  Nécessite l'autorisation `VIEW DATABASE STATE` sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables à mémoire optimisée &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

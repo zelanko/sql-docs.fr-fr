@@ -18,10 +18,10 @@ ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029743"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "68029743"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Identificateur de l'alerte.|  
-|**statu**|**int**|Valeur définie par l'utilisateur :<br /><br /> **0** = n’est pas pris en service.<br /><br /> **1** = Serviced.|  
+|**statut**|**int**|Valeur définie par l'utilisateur :<br /><br /> **0** = n’est pas pris en service.<br /><br /> **1** = Serviced.|  
 |**agent_type**|**int**|Type d'agent :<br /><br /> **1** = agent d’instantané.<br /><br /> **2** = agent de lecture du journal.<br /><br /> **3** = agent de distribution.<br /><br /> **4** = agent de fusion.|  
 |**agent_id**|**int**|L’ID d’agent des tables **MSsnapshot_agents**, **MSlogreader_agents**, **MSdistribution_agents**ou **MSmerge_agents**.|  
 |**error_id**|**int**|ID de l’erreur stockée dans **MSrepl_errors**.|  
 |**alert_error_code**|**int**|ID de message de l'alerte déclenchée lors de l'écriture de cet enregistrement dans le journal.|  
-|**time**|**DATETIME**|Date et heure d'insertion de l'enregistrement.|  
+|**time**|**datetime**|Date et heure d'insertion de l'enregistrement.|  
 |**publication**|**sysname**|Nom du serveur de publication associé à l'Agent qui a déclenché l'alerte.|  
 |**publisher_db**|**sysname**|Base de données du serveur de publication associée à l'Agent qui a déclenché l'alerte.|  
 |**édition**|**sysname**|Publication associée à l'Agent qui a déclenché l'alerte.|  

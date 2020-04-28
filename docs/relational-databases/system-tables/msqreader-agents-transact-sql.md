@@ -18,10 +18,10 @@ ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032576"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "68032576"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**identifi**|**int**|ID de l'Agent de lecture de la file d'attente.|  
-|**nomme**|**nvarchar(100**|Nom de l'Agent de lecture de la file d'attente.|  
+|**id**|**int**|ID de l'Agent de lecture de la file d'attente.|  
+|**name**|**nvarchar(100**|Nom de l'Agent de lecture de la file d'attente.|  
 |**job_id**|**Binary(16**|Numéro d’ID de tâche unique de la table **sysjobs** .|  
 |**profile_id**|**int**|ID de profil de la table **MSagent_profiles** .|  
 |**job_step_uid**|**uniqueidentifier**|ID unique de l'étape de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans laquelle l'Agent est démarré.|  

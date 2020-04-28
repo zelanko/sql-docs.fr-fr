@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036596"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Cent*  
+ *Pourcentage*  
  Expression numérique valide qui précise le pourcentage de tuples à retourner.  
   
 > [!IMPORTANT]  
@@ -70,7 +70,7 @@ WHERE([Product].[Product Categories].[Bikes])
 ||Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3 508 904,84|  
-|Londres|$1 521 530,09|  
+|London|$1 521 530,09|  
 |Seattle|$1 209 418,16|  
 |Paris|$1 170 425,18|  
   
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 |Touring-2000 Blue, 50|$157 444,56|$163 112,57|($5 668,01)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

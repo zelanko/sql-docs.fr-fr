@@ -18,10 +18,10 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022272"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
@@ -52,16 +52,16 @@ sp_revoke_proxy_from_subsystem
 |Valeur|Description|  
 |-----------|-----------------|  
 |**2**|Script ActiveX<br /><br /> ** \* Important \* \* ** Le sous-système de script ActiveX sera supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent dans une version future [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
-|**1,3**|Système d'exploitation (CmdExec)|  
+|**3**|Système d'exploitation (CmdExec)|  
 |**4**|Agent d'instantané de réplication|  
-|**5,5**|Agent de lecture du journal des réplications|  
+|**5**|Agent de lecture du journal des réplications|  
 |**6**|Agent de distribution de réplication|  
 |**7**|Replication Merge Agent|  
 |**version8**|Agent de lecture de la file d'attente de réplication|  
-|**0,9**|Commandes Analysis Services|  
+|**9**|Commandes Analysis Services|  
 |**10**|Requête Analysis Services|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]exécution du package|  
-|**12**|Script PowerShell|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] Exécution du package|  
+|**12**|script PowerShell|  
   
 `[ @subsystem_name = ] 'subsystem_name'`Nom du sous-système auquel révoquer l’accès. *Subsystem_name* est de **type sysname**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
@@ -76,14 +76,14 @@ sp_revoke_proxy_from_subsystem
 |QueueReader|Agent de lecture de la file d'attente de réplication|  
 |ANALYSISQUERY|Commandes Analysis Services|  
 |ANALYSISCOMMAND|Requête Analysis Services|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]exécution du package|  
-|PowerShell|Script PowerShell|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] Exécution du package|  
+|PowerShell|script PowerShell|  
   
 ## <a name="remarks"></a>Notes  
  Refuser l'accès à un sous-système ne change en rien les autorisations accordées au principal spécifié dans le proxy.  
   
 > [!NOTE]  
->  Pour déterminer les étapes de travail qui référencent un proxy, cliquez avec le bouton droit **** sur le nœud [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **proxies** sous SQL Server agent dans Microsoft, puis cliquez sur **Propriétés**. Dans la boîte de dialogue **Propriétés du compte proxy** , sélectionnez la page **références** pour afficher toutes les étapes de travail qui font référence à ce proxy.  
+>  Pour déterminer les étapes de travail qui référencent un proxy, cliquez avec le bouton droit **SQL Server Agent** sur le nœud [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **proxies** sous SQL Server agent dans Microsoft, puis cliquez sur **Propriétés**. Dans la boîte de dialogue **Propriétés du compte proxy** , sélectionnez la page **références** pour afficher toutes les étapes de travail qui font référence à ce proxy.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_revoke_proxy_from_subsystem**.  

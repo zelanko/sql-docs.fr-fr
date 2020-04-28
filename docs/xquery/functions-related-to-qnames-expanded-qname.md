@@ -16,10 +16,10 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004584"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Fonctions relatives aux QName : expanded-QName
@@ -45,15 +45,14 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   Si la valeur *$paramLocal* spécifiée n’est pas au format lexical correct pour le type xs : NCName, la séquence vide est retournée et représente une erreur dynamique.  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend en charge la conversion du type xs:QName vers aucun autre type. Pour cette raison, la fonction **expanded-QName ()** ne peut pas être utilisée dans une construction XML. Par exemple, lorsque vous construisez un nœud, tel que `<e> expanded-QName(...) </e>`, la valeur doit être non typée. Cela suppose que vous convertissiez la valeur de type xs:QName renvoyée par `expanded-QName()` en xdt:untypedAtomic. Toutefois, cette opération n'est pas prise en charge. Une solution est proposée dans un exemple, plus loin dans cette rubrique.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend en charge la conversion du type xs:QName vers aucun autre type. Pour cette raison, la fonction **expanded-QName ()** ne peut pas être utilisée dans une construction XML. Par exemple, lorsque vous construisez un nœud, tel que `<e> expanded-QName(...) </e>`, la valeur doit être non typée. Cela suppose que vous convertissiez la valeur de type xs:QName renvoyée par `expanded-QName()` en xdt:untypedAtomic. Toutefois, cette opération n'est pas prise en charge. Une solution est proposée dans un exemple, plus loin dans cette rubrique.  
   
 -   Vous pouvez modifier ou comparer les valeurs de type QName existantes. Par exemple, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compare la valeur de l’élément, <`e`> avec le QName retourné par la fonction **expanded-QName ()** .  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées **** dans différentes colonnes de type [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML dans la base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées **xml** dans différentes colonnes de type [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML dans la base de données.  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>R. Remplacement d'une valeur de nœud de type QName  
+### <a name="a-replacing-a-qname-type-node-value"></a>A. Remplacement d'une valeur de nœud de type QName  
  Cet exemple montre comment vous pouvez modifier la valeur d'un nœud d'élément de type QName. Cet exemple illustre les opérations suivantes :  
   
 -   Crée une collection de schémas XML qui définit un élément de type QName.  
@@ -133,7 +132,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Gestion des limites liées à l'utilisation de la fonction expanded-QName()  
- La fonction **expanded-QName** ne peut pas être utilisée dans une construction XML. L’exemple suivant illustre ces actions. Pour contourner cette limite, l'exemple insère d'abord un nœud, puis le modifie.  
+ La fonction **expanded-QName** ne peut pas être utilisée dans une construction XML. L'exemple suivant illustre ce comportement. Pour contourner cette limite, l'exemple insère d'abord un nœud, puis le modifie.  
   
 ```  
 -- if exists drop the table T  

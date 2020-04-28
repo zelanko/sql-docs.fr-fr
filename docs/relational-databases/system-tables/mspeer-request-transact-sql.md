@@ -18,10 +18,10 @@ ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 25e9a7f2e13af0aafacdfa1882bb6ac5da37b91c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026715"
 ---
 # <a name="mspeer_request-transact-sql"></a>MSpeer_request (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68026715"
 |-----------------|---------------|-----------------|  
 |id|**int**|Identifie une demande.|  
 |publication|**sysname**|Nom de la publication pour laquelle la demande d'état a été effectuée.|  
-|sent_date|**DATETIME**|Date et heure d'émission de la demande d'état.|  
+|sent_date|**datetime**|Date et heure d'émission de la demande d'état.|  
 |description|**nvarchar(4000)**|Informations définies par l'utilisateur utilisables pour identifier des demandes d'état individuelles.|  
   
 ## <a name="see-also"></a>Voir aussi  

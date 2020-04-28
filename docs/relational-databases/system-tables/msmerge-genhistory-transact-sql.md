@@ -18,10 +18,10 @@ ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017701"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68017701"
 |**toute**|**bigint**|Valeur de génération.|  
 |**art_nick**|**int**|Surnom de l’article.|  
 |**nicknames**|**varbinary (1001)**|Liste des surnoms des autres Abonnés qui possèdent déjà cette génération. L'utilisation de cet argument permet d'éviter l'envoi d'une génération à un Abonné qui a déjà consulté ces modifications. Les surnoms de cette liste sont classés par ordre alphabétique afin d'augmenter l'efficacité des recherches. Si le nombre de surnoms dépasse les capacités de ce champ, ces derniers ne bénéficieront pas de l'optimisation.|  
-|**coldate**|**DATETIME**|Date d'ajout de la génération actuelle à la table.|  
+|**coldate**|**datetime**|Date d'ajout de la génération actuelle à la table.|  
 |**genstatus**|**tinyint**|Le statut de la génération est le suivant :<br /><br /> **0** = ouvert.<br /><br /> **1** = fermé.<br /><br /> **2** = fermé et provient d’un autre abonné.|  
 |**changecount**|**int**|Nombre de modifications réfléchies dans une génération donnée.|  
   

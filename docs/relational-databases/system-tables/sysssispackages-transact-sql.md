@@ -18,10 +18,10 @@ ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029644"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68029644"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Identificateur unique du package.|  
-|**identifi**|**uniqueidentifier**|GUID du package.|  
-|**description**|**nvarchar**|Description facultative du package.|  
-|**création**|**DATETIME**|Date à laquelle le package a été créé.|  
+|**name**|**sysname**|Identificateur unique du package.|  
+|**id**|**uniqueidentifier**|GUID du package.|  
+|**descriptive**|**nvarchar**|Description facultative du package.|  
+|**createdate**|**datetime**|Date à laquelle le package a été créé.|  
 |**FolderId**|**uniqueidentifier**|GUID du dossier logique dans lequel [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] répertorie le package.|  
 |**ownersid**|**varbinary**|Identificateur de sécurité unique de l'utilisateur qui a créé le package.|  
 |**packagedata**|**image**|Package.|  

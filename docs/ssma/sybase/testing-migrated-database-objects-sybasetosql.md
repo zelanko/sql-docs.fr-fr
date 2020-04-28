@@ -10,10 +10,10 @@ ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020914"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Test des objets de base de données migrés (SybaseToSQL)
@@ -45,7 +45,7 @@ SSMA tester exécute les objets sélectionnés pour le test sur Sybase et leurs 
 > [!NOTE]  
 > Prise! N’utilisez jamais le testeur SSMA sur les systèmes de production. Au cours de l’exécution du testeur, le schéma source et les données sont modifiés. Pendant ce temps, la restauration complète de l’état d’origine peut être impossible pour certains types de code testé.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Si vous souhaitez utiliser SSMA tester, installez SSMA Sybase extension Pack avec l’option **installer la base de données du testeur** activée.  
   
 En outre, vérifiez les éléments suivants :  

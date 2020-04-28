@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038005"
 ---
 # <a name="using-stored-procedures-mdx"></a>Utilisation de procédures stockées (MDX)
@@ -35,8 +35,7 @@ WHERE [Measures].[Reseller Freight Cost]
 >  La *procédure stockée* est la terminologie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilisée dans pour ces types de fonctions. Les versions antérieures [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de ont appelé ces types de fonctions en tant que *fonctions définies par l’utilisateur*.  
   
 ## <a name="types-of-stored-procedures"></a>Types de procédures stockées  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge à la fois les assemblys COM et CLR. Les assemblys CLR sont recommandés en raison de la sécurité renforcée dont ils disposent. Si Microsoft Office Excel est installé sur le serveur, les fonctions Excel sont également disponibles.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge à la fois les assemblys COM et CLR. Les assemblys CLR sont recommandés en raison de la sécurité renforcée dont ils disposent. Si Microsoft Office Excel est installé sur le serveur, les fonctions Excel sont également disponibles.  
   
 > [!NOTE]  
 >  Les assemblys COM de Microsoft Visual Basic pour Applications (VBA) sont enregistrés automatiquement.  

@@ -20,10 +20,10 @@ ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e077668f870bf7b9de1c2203272aa48b07910f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033112"
 ---
 # <a name="database-mail-views-transact-sql"></a>Vues de la messagerie de base de données (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68033112"
 |[sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|[sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

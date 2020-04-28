@@ -18,10 +18,10 @@ ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006121"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
@@ -45,11 +45,11 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |-----------------------|-----------------|  
 |administrateur système|Administrateurs système|  
 |securityadmin|Administrateurs de la sécurité|  
-|serveradmin|Administrateurs de serveur|  
+|serveradmin|Administrateurs du serveur|  
 |setupadmin|Administrateurs de l'installation et de la configuration|  
 |processadmin|Administrateurs de processus|  
 |diskadmin|Administrateurs de disques|  
-|dbcreator|Créateurs de base de données|  
+|dbcreator|Créateurs de bases de données|  
 |bulkadmin|Exécute les instructions BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -98,7 +98,7 @@ sp_helpsrvrole 'diskadmin' ;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Rôles au niveau du serveur](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

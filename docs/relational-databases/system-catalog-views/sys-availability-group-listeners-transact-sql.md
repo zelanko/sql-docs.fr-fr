@@ -22,10 +22,10 @@ ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041058"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68041058"
 |**group_id**|**uniqueidentifier**|ID de groupe de disponibilité (**group_id**) à partir de [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar (36)**|GUID à partir de l'ID de ressource de cluster.|  
 |**dns_name**|**nvarchar (63)**|Nom réseau configuré (nom d'hôte) de l'écouteur du groupe de disponibilité.|  
-|**importer**|**int**|Numéro de port TCP configuré pour l'écouteur du groupe de disponibilité.<br /><br /> NULL = L'écouteur a été configuré en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et son numéro de port n'a pas été ajouté au groupe de disponibilité. Pour ajouter le port, pleaseuse l’option modifier l’écouteur de l’instruction [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|**port**|**int**|Numéro de port TCP configuré pour l'écouteur du groupe de disponibilité.<br /><br /> NULL = L'écouteur a été configuré en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et son numéro de port n'a pas été ajouté au groupe de disponibilité. Pour ajouter le port, pleaseuse l’option modifier l’écouteur de l’instruction [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**is_conformant**|**bit**|Indique si cette configuration IP est conforme. Peut prendre une des valeurs suivantes :<br /><br /> 1 = L'écouteur est conforme. Seules les relations « ou » existent entre les adresses IP (Internet Protocol). *Conforme* englobe chaque configuration IP créée par l’instruction [Create Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] . De plus, si une configuration IP créée en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple à l'aide du Gestionnaire de cluster de basculement WSFC, peut être modifiée par l'instruction TSQL ALTER AVAILABILITY GROUP, la configuration IP obtient la qualification conforme.<br /><br /> 0 = L'écouteur n'est pas conforme. En général, cela indique une adresse IP qui ne peut pas être configurée à l'aide des commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et, à la place, a été définie directement dans le cluster WSFC.|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|Chaînes de configuration IP de cluster, le cas échéant, pour cet écouteur. NULL = L'écouteur n'a pas d'adresse IP virtuelle. Par exemple :<br /><br /> Adresse IPv4 : `65.55.39.10`.<br /><br /> Adresse IPv6 : `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
@@ -51,9 +51,9 @@ ms.locfileid: "68041058"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamiques de groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
+ [Fonctions et vues de gestion dynamique de groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Affichages catalogue des groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Surveiller les groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

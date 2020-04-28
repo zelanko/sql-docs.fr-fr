@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032641"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
@@ -121,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>R. Création d'un jeu d'éléments de collecte à l'aide de valeurs par défaut  
- L'exemple suivant crée un jeu d'éléments de collecte en spécifiant uniquement les paramètres requis. 
-  `@collection_mode` n'est pas nécessaire, mais le mode de collecte par défaut (mis en cache) nécessite de spécifier un ID de planification ou un nom de planification.  
+ L'exemple suivant crée un jeu d'éléments de collecte en spécifiant uniquement les paramètres requis. `@collection_mode` n'est pas nécessaire, mais le mode de collecte par défaut (mis en cache) nécessite de spécifier un ID de planification ou un nom de planification.  
   
 ```  
 USE msdb;  
@@ -158,7 +157,7 @@ EXEC dbo.sp_syscollector_create_collection_set
   
 ## <a name="see-also"></a>Voir aussi  
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   
- [Créer un jeu d’éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [Créer un jeu d’collections personnalisé qui utilise le type de collecteur requête T-SQL générique &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Procédures stockées du collecteur de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   

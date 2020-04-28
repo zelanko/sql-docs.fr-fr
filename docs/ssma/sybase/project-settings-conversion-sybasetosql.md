@@ -10,10 +10,10 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028765"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Paramètres du projet (Conversion) (SybaseToSQL)
@@ -421,7 +421,7 @@ Lorsque vous sélectionnez un mode de conversion dans la zone **mode** , SSMA ap
 **SUBSTRING (fonction)**  
 Dans ASE, la fonction `SUBSTRING(expression, start, length)` retourne null si une valeur de début supérieure au nombre de caractères dans l’expression est spécifiée, ou si la longueur est égale à zéro. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure, l’expression équivalente retourne une chaîne vide.  
   
--   Pour utiliser le comportement ASE, sélectionnez **remplacer la fonction**. Tous les appels à la fonction SUBSTRING sont substitués par un appel à SUBSTRING_VARCHAR ou SUBSTRING_NVARCHAR ou SUBSTRING_VARBINARY fonction définie par l’utilisateur en fonction du type de paramètres transmis (créé dans la base de données utilisateur sous le 2SS’du nom de schéma) pour émuler le Comportement de Sybase ASE.  
+-   Pour utiliser le comportement ASE, sélectionnez **remplacer la fonction**. Tous les appels à la fonction SUBSTRING sont substitués par un appel à SUBSTRING_VARCHAR ou SUBSTRING_NVARCHAR ou SUBSTRING_VARBINARY fonction définie par l’utilisateur en fonction du type de paramètres transmis (créé dans la base de données utilisateur sous le 2SS’du nom de schéma) pour émuler le comportement de Sybase ASE.  
   
 -   Pour utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement de SQL Azure, sélectionnez **conserver la syntaxe actuelle**.  
   

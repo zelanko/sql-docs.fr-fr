@@ -16,10 +16,10 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038972"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Fonctions d’accesseur de données : data (XQuery)
@@ -78,7 +78,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>R. Utilisation de la fonction XQuery data() pour extraire la valeur typée d'un nœud  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Utilisation de la fonction XQuery data() pour extraire la valeur typée d'un nœud  
  La requête suivante illustre l’utilisation de la fonction **Data ()** pour extraire les valeurs d’un attribut, d’un élément et d’un nœud de texte :  
   
 ```  

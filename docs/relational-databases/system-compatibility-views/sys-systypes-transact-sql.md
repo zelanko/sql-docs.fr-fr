@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018077"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
@@ -38,23 +38,23 @@ ms.locfileid: "68018077"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom du type de données.|  
+|**name**|**sysname**|Nom du type de données.|  
 |**xtype**|**tinyint**|Type de stockage physique|  
-|**statu**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**statut**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Type d'utilisateur étendu Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
-|**base**|**smallint**|Longueur physique du type de données.|  
+|**length**|**smallint**|Longueur physique du type de données.|  
 |**xprec**|**tinyint**|Précision interne, telle qu'utilisée par le serveur. À ne pas utiliser dans les requêtes.|  
 |**xscale**|**tinyint**|Échelle interne, telle qu'utilisée par le serveur. À ne pas utiliser dans les requêtes.|  
-|**TLes**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
-|**Domain**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
+|**tdefault**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
+|**domaine**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
 |**codé**|**smallint**|ID de schéma du propriétaire du type.<br /><br /> Pour les bases de données mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID de schéma correspond à l'ID d'utilisateur du propriétaire.<br /><br /> ** \* Important \* \* ** Si vous utilisez l’une des instructions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL suivantes, vous devez utiliser l’affichage catalogue [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) au lieu de **sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |**réservé**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**CollationID**|**int**|S’il est basé sur un caractère, **CollationID** est l’ID du classement de la base de données active ; dans le cas contraire, la valeur est NULL.|  
-|**Type d’utilisateur**|**smallint**|ID de type d'utilisateur. Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
+|**UserType**|**smallint**|ID de type d'utilisateur. Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
 |**variable**|**bit**|Type de données de longueur variable.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|Détermine la possibilité de valeur NULL par défaut pour ce type de données. Cette valeur par défaut est remplacée par si la possibilité de valeur null est spécifiée à l’aide de [Create table](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
-|**entrer**|**tinyint**|Type de données de stockage physique.|  
-|**printfmt**|**varchar(255**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**type**|**tinyint**|Type de données de stockage physique.|  
+|**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Niveau de précision de ce type de données<br /><br /> -1 = **XML** ou types de valeur élevée.|  
 |**scale**|**tinyint**|Échelle de ce type de données, basée sur la précision.<br /><br /> NULL = le type de données est non numérique.|  
 |**classement**|**sysname**|S’il est basé sur un caractère, **le classement est** le classement de la base de données active ; dans le cas contraire, la valeur est NULL.|  

@@ -24,10 +24,10 @@ ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018031"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Vues de compatibilité système (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68018031"
 |Nom de la colonne|Vue de compatibilité|Vue SQL Server 2005|  
 |-----------------|------------------------|--------------------------|  
 |**xusertype**|**syscolumns**|**sys.columns**|  
-|**Type d’utilisateur**|**syscolumns**|**sys.columns**|  
+|**UserType**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
 |**codé**|**sysobjects**|**sys.objects**|  
@@ -52,7 +52,7 @@ ms.locfileid: "68018031"
 |**codé**|**systypes**|**sys.types**|  
 |**codé**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
-|**ID**|**sysusers**|**sys.database_principals**|  
+|**gid**|**sysusers**|**sys.database_principals**|  
 |**codé**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
 |**codé**|**sysprocesses**|**sys.dm_exec_requests**|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68018031"
  Exemple : si un utilisateur crée une table utilisateur nommée **syslanguages** dans une base de données utilisateur, dans SQL Server 2008, l’instruction `SELECT * from dbo.syslanguages;` de cette base de données retourne les valeurs de la table utilisateur. À compter de SQL Server 2012, cette pratique renverra des données à partir de la vue système **sys. syslanguages**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

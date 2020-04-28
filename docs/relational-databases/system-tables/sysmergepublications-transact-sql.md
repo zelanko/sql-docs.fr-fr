@@ -18,10 +18,10 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029781"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
@@ -33,19 +33,19 @@ ms.locfileid: "68029781"
 |-----------------|---------------|-----------------|  
 |**publication**|**sysname**|Nom du serveur par défaut.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication par défaut.|  
-|**nomme**|**sysname**|Nom de la publication.|  
-|**description**|**nvarchar(255)**|Brève description de la publication.|  
+|**name**|**sysname**|Nom de la publication.|  
+|**descriptive**|**nvarchar(255)**|Brève description de la publication.|  
 |**fixation**|**int**|Période de rétention pour l’ensemble de la publication, où l’unité est indiquée par la valeur de la colonne **retention_period_unit** .|  
 |**publication_type**|**tinyint**|Indique que la publication est filtrée :<br /><br /> **0** = non filtré.<br /><br /> **1** = filtré.|  
 |**pubid**|**uniqueidentifier**|Numéro d'identification unique de cette publication. Ce numéro est généré lors de l'ajout de la publication.|  
-|**designmasterid**|**uniqueidentifier**|réservé à une utilisation future.|  
+|**designmasterid**|**uniqueidentifier**|Réservé pour un usage futur.|  
 |**ID**|**uniqueidentifier**|Indique la publication parente à partir de laquelle la publication paire courante ou la publication de sous-ensemble a été créée (utilisé pour les topologies de publication hiérarchiques).|  
 |**sync_mode**|**tinyint**|Mode de synchronisation de la publication :<br /><br /> **0** = natif.<br /><br /> **1** = caractère.|  
 |**allow_push**|**int**|Indique si la publication autorise les abonnements par envoi de données (push).<br /><br /> **0** = les abonnements envoyés ne sont pas autorisés.<br /><br /> **1** = les abonnements envoyés sont autorisés.|  
 |**allow_pull**|**int**|Indique si la publication autorise les abonnements par extraction de données (pull).<br /><br /> **0** = les abonnements extraits ne sont pas autorisés.<br /><br /> **1** = les abonnements extraits sont autorisés.|  
 |**allow_anonymous**|**int**|Indique si la publication autorise les abonnements anonymes.<br /><br /> **0** = les abonnements anonymes ne sont pas autorisés.<br /><br /> **1** = les abonnements anonymes sont autorisés.|  
 |**centralized_conflicts**|**int**|Indique si les enregistrements conflictuels sont stockés côté serveur de publication :<br /><br /> **0** = les enregistrements en conflit ne sont pas stockés sur le serveur de publication.<br /><br /> **1** = les enregistrements en conflit sont stockés sur le serveur de publication.|  
-|**statu**|**tinyint**|réservé à une utilisation future.|  
+|**statut**|**tinyint**|Réservé pour un usage futur.|  
 |**snapshot_ready**|**tinyint**|Indique l'état de l'instantané de la publication :<br /><br /> **0** = l’instantané n’est pas prêt à être utilisé.<br /><br /> **1** = la capture instantanée est prête à être utilisée.<br /><br /> **2** = un nouvel instantané de cette publication doit être créé.|  
 |**enabled_for_internet**|**bit**|Indique si les fichiers de synchronisation pour la publication sont accessibles sur Internet, par l'intermédiaire de FTP et d'autres services.<br /><br /> **0** = les fichiers de synchronisation sont accessibles à partir d’Internet.<br /><br /> **1** = les fichiers de synchronisation ne sont pas accessibles à partir d’Internet.|  
 |**dynamic_filters**|**bit**|Indique si la publication est filtrée à l'aide d'un filtre de lignes paramétrable.<br /><br /> **0** = la publication n’est pas filtrée par ligne.<br /><br /> **1** = la publication est filtrée par ligne.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029781"
 |**allow_synctoalternate**|**bit**|Spécifie si un partenaire de synchronisation différent est autorisé pour se synchroniser avec le serveur de publication. **0** signifie qu’un partenaire de synchronisation n’est pas autorisé.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Donne la liste des fonctions utilisées pour extraire les informations d'Abonné et valider les critères de filtre de lignes paramétrable sur l'Abonné.|  
 |**ad_guidname**|**sysname**|Spécifie si la publication est publiée dans l'annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un GUID valide spécifie que la publication est publiée dans le Active Directory et que le GUID correspond à l’objet de publication Active Directory **objectGUID**. Si la valeur est NULL, la publication n'est pas publiée dans l'annuaire Active Directory.|  
-|**backward_comp_level**|**int**|Niveau de compatibilité de la base de données. Peut être l’une des valeurs suivantes :<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Niveau de compatibilité de la base de données. Peut avoir l’une des valeurs suivantes :<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|Nombre maximal de processus de fusion simultanés autorisés. La valeur **0** pour cette propriété signifie qu’il n’y a aucune limite au nombre de processus de fusion simultanés en cours d’exécution à un moment donné. Cette propriété définit une limite sur le nombre de processus de fusion simultanés qui peuvent être exécutés sur une publication de fusion à un moment donné. Si, au même moment, le nombre de processus d'instantané planifiés dépasse le nombre maximal autorisé, les travaux en excès sont placés dans une file d'attente jusqu'à achèvement d'un processus de fusion en cours.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Nombre maximal de sessions d'instantanés de données filtrées simultanées autorisées exécutables sur la publication de fusion. Si la **valeur est 0**, le nombre maximal de sessions d’instantanés de données filtrées simultanées pouvant être exécutées simultanément sur la publication n’est pas limité à un moment donné. Cette propriété permet de définir un nombre maximal de processus d'instantané simultanés exécutables sur une publication de fusion à un moment donné. Si, au même moment, le nombre de processus d'instantané planifiés dépasse le nombre maximal autorisé, les travaux en excès sont placés dans une file d'attente jusqu'à achèvement d'un processus de fusion en cours.|  
 |**use_partition_groups**|**smallint**|Spécifie si la publication utilise des partitions précalculées.|  

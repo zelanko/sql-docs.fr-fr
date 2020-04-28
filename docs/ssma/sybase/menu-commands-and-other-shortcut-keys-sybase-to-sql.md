@@ -10,10 +10,10 @@ ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028886"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Commandes de menu et autres touches de raccourci (SybaseToSQL)
@@ -54,7 +54,7 @@ Pour accéder au menu Edition, le raccourci clavier utilisé est ALT + E. Le tab
 |Rechercher précédent.|ALT + E + F + P ou CTRL + Maj + F3|  
 |Suivant|ALT + E + F + N ou CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Commandes du menu Affichage  
+## <a name="view-menu-commands"></a>commandes du menu Affichage  
 Pour accéder au menu Affichage, le raccourci clavier utilisé est ALT + V. Le tableau suivant décrit les raccourcis clavier utilisés pour accéder aux éléments de menu du menu Affichage.  
   
 |POUR EFFECTUER CETTE OPÉRATION|COMPRESSION|  
@@ -104,7 +104,7 @@ Pour accéder au menu testeur, le raccourci clavier utilisé est ALT + S. Le tab
 |Affiche la boîte de dialogue restaurer les tables à partir d’une sauvegarde pour SQL Server.|ALT + S + M + R|  
 |Affichez gérer le contenu de la sauvegarde pour SQL Server boîte de dialogue.|ALT + S + M + C|  
   
-## <a name="help-menu-commands"></a>Commandes du menu aide  
+## <a name="help-menu-commands"></a>commandes du menu Aide  
 Pour accéder au menu aide, le raccourci clavier utilisé est ALT + H. Le tableau suivant décrit les raccourcis clavier utilisés pour accéder aux éléments de menu dans le menu aide.  
   
 |POUR EFFECTUER CETTE OPÉRATION|COMPRESSION|  

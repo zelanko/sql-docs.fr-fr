@@ -21,10 +21,10 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041007"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
@@ -65,7 +65,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **La base de données est une base de données système**  
- Il n'est pas possible de créer des tables [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dans des bases de données système.  Il n'est donc pas possible de créer une liaison de mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)] pour une base de données de ce type.  L’erreur suivante est retournée :  
+ Il n'est pas possible de créer des tables [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dans des bases de données système.  Il n'est donc pas possible de créer une liaison de mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)] pour une base de données de ce type.  L'erreur suivante est retournée :  
 *Database_name% s fait référence à une base de données système.  Les pools de ressources ne peuvent être liés qu’à une base de données utilisateur.*  
   
 ```  

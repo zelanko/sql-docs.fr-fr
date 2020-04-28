@@ -18,10 +18,10 @@ ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026673"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68026673"
 |**request_id**|**int**|Identifie une entrée de demande d’État dans la table [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) .|  
 |**paires**|**sysname**|Homologue qui a généré la réponse.|  
 |**peer_db**|**sysname**|Base de données d'abonnement sur l'homologue qui a généré la réponse.|  
-|**received_date**|**DATETIME**|Date et heure de réception de la demande de l'homologue.|  
+|**received_date**|**datetime**|Date et heure de réception de la demande de l'homologue.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

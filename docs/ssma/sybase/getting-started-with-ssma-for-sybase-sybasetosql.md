@@ -10,10 +10,10 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029123"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Prise en main avec SSMA pour SAP ASE (SybaseToSQL)
@@ -94,10 +94,10 @@ SSMA contient les menus suivants :
   
 |Menu|Description|  
 |--------|---------------|  
-|**Fichier**|Contient des commandes pour travailler avec des projets, se connecter à SAP ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecter à ou Azure SQL Database.|  
+|**File**|Contient des commandes pour travailler avec des projets, se connecter à SAP ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecter à ou Azure SQL Database.|  
 |**Modifier**|Contient des commandes pour rechercher et utiliser du texte dans les pages de détails, telles [!INCLUDE[tsql](../../includes/tsql-md.md)] que la copie à partir du volet d’informations SQL. Contient également l’option **gérer les signets** , dans laquelle vous pouvez voir une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Afficher**|Contient la commande **synchroniser les explorateurs de métadonnées** . Cela synchronise les objets entre l’Explorateur de métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sybase et ou SQL Azure l’Explorateur de métadonnées. Contient également des commandes pour afficher et masquer les volets de **sortie** et de **liste d’erreurs** , ainsi qu’une **disposition** d’options pour gérer les dispositions.|  
-|**Outils**|Contient des commandes pour créer des rapports, exporter des données et migrer des objets et des données. Permet également d’accéder aux boîtes de dialogue **paramètres globaux** et **paramètres du projet** .|  
+|**Affichage**|Contient la commande **synchroniser les explorateurs de métadonnées** . Cela synchronise les objets entre l’Explorateur de métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sybase et ou SQL Azure l’Explorateur de métadonnées. Contient également des commandes pour afficher et masquer les volets de **sortie** et de **liste d’erreurs** , ainsi qu’une **disposition** d’options pour gérer les dispositions.|  
+|**outils**|Contient des commandes pour créer des rapports, exporter des données et migrer des objets et des données. Permet également d’accéder aux boîtes de dialogue **paramètres globaux** et **paramètres du projet** .|  
 |**Testeur**|Contient des commandes pour créer des cas de test, afficher les résultats des tests et les commandes pour la gestion des sauvegardes de base de données.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et à la boîte de dialogue **à propos** de.|  
   

@@ -16,10 +16,10 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039046"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Fonctions constructeurs booléennes : true (XQuery)
@@ -36,7 +36,7 @@ fn:true() as xs:boolean
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-true-xquery-boolean-function"></a>R. Utilisation de la fonction booléenne XQuery true()  
+### <a name="a-using-the-true-xquery-boolean-function"></a>A. Utilisation de la fonction booléenne XQuery true()  
  L’exemple suivant interroge une variable **XML** non typée. L’expression dans la méthode **value ()** retourne la valeur booléenne **true ()** si « AAA » est la valeur de l’attribut. La méthode **value ()** du type de données **XML** convertit la valeur booléenne en un bit et la retourne.  
   
 ```  

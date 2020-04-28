@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032826"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -75,12 +75,11 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|Code entier d'un type de données ODBC. Si ce type de données ne peut pas être mappé à un type ISO, la valeur est NULL. Le nom du type de données natif est retourné dans la colonne **type_name** .|  
 |**TYPE_NAME**|**sysname**|Représentation sous forme de chaîne du type de données. Nom du type de données, tel qu'il existe dans le SGBD sous-jacent.|  
 |**PRÉCISION**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
-|**BASE**|**int**|Taille de transfert des données.|  
+|**LENGTH**|**int**|Taille de transfert des données.|  
 |**ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
 |**RADIX**|**smallint**|Base des types numériques.|  
 |**NULLABLE**|**smallint**|Précise la possibilité de valeur nulle.<br /><br /> 1 = Le type de données peut être créé en autorisant des valeurs NULL.<br /><br /> 0 = les valeurs NULL ne sont pas autorisées.|  
-|**CONCERNANT**|**varchar (** 254 **)**|Description de la colonne de procédure. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
+|**NOTES**|**varchar (** 254 **)**|Description de la colonne de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valeur par défaut de la colonne.|  
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL tel qu’il apparaît dans le champ **type** du descripteur. Cette colonne est la même que la colonne **data_type** , à l’exception des types de données **DateTime** et ISO **Interval** . Cette colonne renvoie toujours une valeur.|  
 |**SQL_DATETIME_SUB**|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les types de données autres que **DateTime** et **Interval**ISO, ce champ a la valeur null.|  

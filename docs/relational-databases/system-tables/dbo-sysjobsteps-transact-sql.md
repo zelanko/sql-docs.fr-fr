@@ -20,10 +20,10 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004733"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68004733"
 |**job_id**|**uniqueidentifier**|ID du travail.|  
 |**step_id**|**int**|ID de l'étape dans le travail|  
 |**step_name**|**sysname**|Nom de l'étape du travail|  
-|**sous-système**|**nvarchar (40)**|Nom du sous-système utilisé par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter l'étape du travail|  
+|**sous-système**|**nvarchar(40)**|Nom du sous-système utilisé par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter l'étape du travail|  
 |**commande**|**nvarchar(max)**|Commande à exécuter par le **sous-système**.|  
-|**père**|**int**|Réservé.|  
+|**flags**|**int**|Réservé.|  
 |**additional_parameters**|**ntext**|Réservé.|  
 |**cmdexec_success_code**|**int**|Valeur de niveau erreur retournée par les étapes du sous-système **CmdExec** pour indiquer la réussite.|  
 |**on_success_action**|**tinyint**|Action à exécuter lors du succès d'une étape|  

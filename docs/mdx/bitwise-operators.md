@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016974"
 ---
 # <a name="bitwise-operators"></a>Opérateurs au niveau du bit
@@ -24,8 +24,8 @@ ms.locfileid: "68016974"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|[LES](../mdx/and-mdx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
-|[IS](../mdx/is-mdx.md)|Effectue une comparaison logique sur deux expressions d'objet.|  
+|[AND](../mdx/and-mdx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
+|[NON](../mdx/is-mdx.md)|Effectue une comparaison logique sur deux expressions d'objet.|  
 |[NOT](../mdx/not-mdx.md)|Effectue une négation logique sur une expression numérique.|  
 |[OR](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
 |[XOR](../mdx/xor-mdx.md)|Effectue une exclusion logique sur deux expressions numériques.|  

@@ -18,10 +18,10 @@ ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042823"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
@@ -47,14 +47,14 @@ fn_syscollector_get_execution_details ( log_id )
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identificateur unique de l'entrée d'enregistrement.|  
-|événement|**sysname**|Nom de l'événement qui a généré l'entrée d'enregistrement.|  
+|event|**sysname**|Nom de l'événement qui a généré l'entrée d'enregistrement.|  
 |computer|**nvarchar**|Ordinateur sur lequel le package s'exécutait lors de la création de l'entrée d'enregistrement.|  
 |operator|**nvarchar**|Nom d'utilisateur de la personne ou de l'agent qui exécutait le package qui a généré l'entrée du journal.|  
 |source|**nvarchar**|Nom de l'exécutable qui a généré l'entrée du journal.|  
 |sourceid|**uniqueidentifier**|GUID de l'exécutable qui a généré l'entrée du journal.|  
 |executionid|**uniqueidentifier**|GUID de l'instance d'exécution de l'exécutable qui a généré l'entrée du journal.|  
-|Heure de départ|**DATETIME**|Heure de début de l'exécution du package.|  
-|endtime|**DATETIME**|Heure de fin d'exécution du package.|  
+|starttime|**datetime**|Heure de début de l'exécution du package.|  
+|endtime|**datetime**|Heure de fin d'exécution du package.|  
 |datacode|**int**|Valeur entière qui identifie l'événement associé à l'entrée du journal. La valeur « 0 » indique que l'événement ne fournit aucun identificateur.|  
 |databytes|**image**|Tableau d'octets qui identifie une valeur de retour.|  
 |message|**nvarchar**|Description de l'événement et des informations associées à l'événement.|  

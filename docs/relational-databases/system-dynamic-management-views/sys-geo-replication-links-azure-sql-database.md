@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6e768f447cd53321861eae91bbe40e2e34ad12f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043164"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
@@ -39,11 +39,11 @@ ms.locfileid: "68043164"
 |partner_server|**sysname**|Nom du serveur de SQL Database qui contient la base de données géo-répliquée.|  
 |partner_database|**sysname**|Nom de la base de données géo-répliquée sur le serveur de SQL Database lié.|  
 |replication_state|**tinyint**|État de la géo-réplication pour cette base de données, un des suivants :.<br /><br /> 0 = en attente. La création de la base de données secondaire active est planifiée, mais les étapes de préparation nécessaires ne sont pas encore terminées.<br /><br /> 1 = amorçage. La cible de géo-réplication est amorcée, mais les deux bases de données ne sont pas encore synchronisées. Tant que l’amorçage n’est pas terminé, vous ne pouvez pas vous connecter à la base de données secondaire. La suppression de la base de données secondaire du réplica principal annule l’opération d’amorçage.<br /><br /> 2 = rattrapage. La base de données secondaire est dans un état cohérent au niveau transactionnel et est constamment synchronisée avec la base de données primaire.|  
-|replication_state_desc|**nvarchar (256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
+|replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |rôle|**tinyint**|Rôle de géo-réplication, parmi les suivants :<br /><br /> 0 = principal. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
-|role_desc|**nvarchar (256)**|PRIMARY<br /><br /> SECONDARY|  
+|role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Le type secondaire, parmi les suivants :<br /><br /> 0 = Non. La base de données secondaire n’est pas accessible avant le basculement.<br /><br /> 1 = ReadOnly. La base de données secondaire est accessible uniquement aux connexions clientes avec ApplicationIntent = ReadOnly.<br /><br /> 2 = Toutes. La base de données secondaire est accessible à toutes les connexions clientes.|  
-|secondary_allow_connections _desc|**nvarchar (256)**|Non<br /><br /> Tous<br /><br /> Lecture seule|  
+|secondary_allow_connections _desc|**nvarchar(256)**|Non<br /><br /> Tous<br /><br /> Lecture seule|  
   
 ## <a name="permissions"></a>Autorisations
 

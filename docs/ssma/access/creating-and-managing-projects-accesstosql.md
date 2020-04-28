@@ -18,10 +18,10 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006616"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Création et gestion de projets (AccessToSQL)
@@ -57,11 +57,11 @@ SSMA contient plusieurs options pour la conversion et la synchronisation des obj
 ## <a name="creating-new-projects"></a>Création de projets  
 SSMA démarre sans charger de projet par défaut. Pour migrer des données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données Access vers ou SQL Azure, vous devez créer un projet.  
   
-**Pour créer un nouveau projet**  
+**Pour créer un projet**  
   
 1.  Dans le menu **Fichier**, sélectionnez **Nouveau projet**.  
   
-    La boîte de dialogue **Nouveau projet** s'affiche.  
+    La boîte de dialogue **Nouveau projet** apparaît.  
   
 2.  Dans la zone **Nom** , tapez le nom de votre projet.  
   
@@ -89,7 +89,7 @@ Lorsque vous enregistrez un projet, SSMA conserve les paramètres du projet et �
   
         L’enregistrement des métadonnées peut prendre plusieurs minutes. Si vous ne souhaitez pas enregistrer les métadonnées à ce stade, n’activez pas les cases à cocher.  
   
-    2.  Cliquez sur **Enregistrer**.  
+    2.  Cliquez sur **Save**.  
   
         SSMA analyse les schémas d’accès et enregistre les métadonnées dans le fichier projet.  
   

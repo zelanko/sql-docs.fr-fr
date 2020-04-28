@@ -12,10 +12,10 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5185e8b1364fe2a5bae92c40c99e8f52bcd32ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028932"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Chargement d’objets de base de données convertis dans SQL Server (SybaseToSQL)
@@ -101,7 +101,7 @@ Vous pouvez exécuter un script ou des instructions individuelles dans [!INCLUDE
   
 Pour plus d’informations sur l’utilisation de l’éditeur de requête pour exécuter des scripts [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requête » dans la documentation en ligne de.  
   
-Vous pouvez également exécuter des scripts à partir de la ligne de **** commande à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’utilitaire sqlcmd et à partir de l’agent. Pour plus d’informations sur **sqlcmd**, consultez « utilitaire sqlcmd » [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la documentation en ligne de. Pour plus d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’agent, consultez « automatisation des tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’administration (agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) » dans la documentation en ligne de.  
+Vous pouvez également exécuter des scripts à partir de la ligne de **sqlcmd** commande à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’utilitaire sqlcmd et à partir de l’agent. Pour plus d’informations sur **sqlcmd**, consultez « utilitaire sqlcmd » [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la documentation en ligne de. Pour plus d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’agent, consultez « automatisation des tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’administration (agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) » dans la documentation en ligne de.  
   
 ## <a name="securing-objects-in-sql-server"></a>Sécurisation des objets dans SQL Server  
 Une fois que vous avez chargé les objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base de données convertis dans, vous pouvez accorder et refuser des autorisations sur ces objets. Il est judicieux de le faire avant de migrer des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vers. Pour plus d’informations sur la sécurisation des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]objets dans, consultez « Considérations sur la sécurité pour les bases de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données et les applications de base de données » dans la documentation en ligne de.  

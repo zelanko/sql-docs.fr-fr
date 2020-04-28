@@ -10,10 +10,10 @@ ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8680685640b234e47f6e68d7fb802fc7e2f5d81c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029020"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Installation du client SSMA pour Sybase (SybaseToSQL)
@@ -21,7 +21,7 @@ Le client SSMA se compose des fichiers programme utilisés pour se connecter à 
   
 Cette rubrique décrit les conditions préalables à l’installation et les instructions pour l’installation de SSMA.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 SSMA est conçu pour fonctionner avec ASE 11.9.2 ou versions ultérieures, ainsi que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]toutes les éditions de.  
   
 Avant d’installer SSMA, assurez-vous que l’ordinateur remplit les conditions suivantes :  

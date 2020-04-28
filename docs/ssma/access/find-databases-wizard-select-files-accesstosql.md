@@ -12,10 +12,10 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006546"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistant Rechercher des bases de données (sélectionner des fichiers) (AccessToSQL)
@@ -44,10 +44,10 @@ Affiche le chemin d’accès du fichier de base de données Access.
 **Taille**  
 Taille de la base de données, en octets.  
   
-**Créé le**  
+**Créer**  
 Date et heure de création de la base de données.  
   
-**Date de modification**  
+**Modifié le**  
 Date et heure de la dernière mise à jour de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  

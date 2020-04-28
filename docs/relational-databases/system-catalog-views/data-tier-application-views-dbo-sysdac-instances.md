@@ -21,10 +21,10 @@ ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033110"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>Affichages des applications de la couche données-dbo. sysdac_instances
@@ -40,7 +40,7 @@ ms.locfileid: "68033110"
 |type_version|**nvarchar (64)**|Version de la DAC spécifiée quand le package DAC a été créé.|  
 |description|**nvarchar(4000)**|Description de la DAC écrite quand le package DAC a été créé.|  
 |type_stream|**varbinary(max)**|Flux de données qui contient une représentation encodée des objets logiques, tels que les tables et vues, contenus dans la DAC.|  
-|date_created|**DATETIME**|Date et heure de création de l'instance DAC.|  
+|date_created|**datetime**|Date et heure de création de l'instance DAC.|  
 |created_by|**sysname**|Connexion qui a créé l'instance DAC.|  
 |database_name|**sysname**|Nom de la base de données créée pour l'instance DAC.|  
   

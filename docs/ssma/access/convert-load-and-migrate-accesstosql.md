@@ -14,10 +14,10 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006633"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Convertir, charger et migrer (AccessToSQL)
@@ -28,7 +28,7 @@ Une fois la migration terminée, vous pouvez afficher des messages d’informati
 La section **migrer des données pour les objets sélectionnés** de la page contient également un bouton **rapport** . Vous pouvez cliquer sur ce bouton pour afficher un rapport de migration de données.  
   
 ## <a name="options"></a>Options  
-**Report**  
+**Rapport**  
 Affiche le rapport de conversion ou de migration associé.  
   
 ## <a name="see-also"></a>Voir aussi  

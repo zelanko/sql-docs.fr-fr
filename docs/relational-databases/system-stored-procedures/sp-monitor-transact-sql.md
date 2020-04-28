@@ -18,10 +18,10 @@ ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022317"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
@@ -47,7 +47,7 @@ sp_monitor
 |-----------------|-----------------|  
 |**last_run**|Heure de la dernière exécution de **sp_monitor** .|  
 |**current_run**|L’heure de **sp_monitor** est en cours d’exécution.|  
-|**secondes**|Nombre de secondes écoulées depuis l’exécution de **sp_monitor** .|  
+|**durée**|Nombre de secondes écoulées depuis l’exécution de **sp_monitor** .|  
 |**cpu_busy**|Nombre de secondes que l'UC de l'ordinateur serveur a consacrées à des tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Nombre de secondes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a consacrées aux opérations d'entrée et de sortie.|  
 |**périodes**|Nombre de secondes pendant lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été inactif.|  
@@ -60,13 +60,12 @@ sp_monitor
 |**connexions**|Nombre de connexions ou de tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="remarks"></a>Notes  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure le suivi, par le biais d'une série de fonctions, du volume de son activité. L’exécution de **sp_monitor** affiche les valeurs actuelles retournées par ces fonctions et indique leur nombre modifié depuis la dernière exécution de la procédure.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure le suivi, par le biais d'une série de fonctions, du volume de son activité. L’exécution de **sp_monitor** affiche les valeurs actuelles retournées par ces fonctions et indique leur nombre modifié depuis la dernière exécution de la procédure.  
   
  Pour chaque colonne, les statistiques sont imprimées au format *Number*(*Number*)-*Number*% ou *Number*(*Number*). Le premier *nombre* fait référence au nombre de secondes (pour **cpu_busy**, **io_busy**et **inactif**) ou au nombre total (pour les autres variables) depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le redémarrage de. Le *nombre* entre parenthèses fait référence au nombre de secondes ou au nombre total depuis la dernière exécution de **sp_monitor** . Le pourcentage est le pourcentage de temps écoulé depuis la dernière exécution de **sp_monitor** . Par exemple, si le rapport indique **cpu_busy** en tant que 4250 (215)-68%, le processeur est occupé 4250 secondes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis le dernier démarrage de, 215 secondes depuis la dernière exécution de **sp_monitor** et 68% du temps total depuis la dernière exécution de **sp_monitor** .  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant fournit des informations sur le niveau d'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -80,7 +79,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**last_run**|**current_run**|**secondes**|  
+|**last_run**|**current_run**|**durée**|  
 |29 mars 1998 11:55|4 avril 1998 14:22|561|  
   
 ||||  

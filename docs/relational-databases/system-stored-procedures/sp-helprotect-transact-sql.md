@@ -18,10 +18,10 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997477"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -67,9 +67,9 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Propriétaire**|**sysname**|Nom du propriétaire de l’objet.|  
 |**Object**|**sysname**|Nom de l'objet.|  
 |**Voient**|**sysname**|Nom du principal auquel des autorisations sont accordées.|  
-|**Fournisseur d'autorisations**|**sysname**|Nom du principal qui a accordé des autorisations au bénéficiaire spécifié.|  
+|**Fournisseur**|**sysname**|Nom du principal qui a accordé des autorisations au bénéficiaire spécifié.|  
 |**ProtectType**|**nvarchar(10**|Nom du type de protection :<br /><br /> GRANT REVOKE|  
-|**Action**|**nvarchar (60)**|Nom de l’autorisation. Les instructions valides d'autorisation varient selon le type d'objet.|  
+|**Action**|**nvarchar(60)**|Nom de l’autorisation. Les instructions valides d'autorisation varient selon le type d'objet.|  
 |**Colonne**|**sysname**|Type d'autorisation :<br /><br /> All = l'autorisation couvre toutes les colonnes en cours de l'objet.<br /><br /> New = l'autorisation couvre toutes les nouvelles colonnes susceptibles d'être modifiées (à l'aide de l'instruction ALTER) pour l'objet ultérieurement.<br /><br /> All+New = combinaison de All et New.<br /><br /> Retourne un point si le type d'autorisation ne s'applique pas aux colonnes.|  
   
 ## <a name="remarks"></a>Notes  
@@ -92,7 +92,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
- Les informations retournées sont sujettes à des restrictions d'accès aux métadonnées. Les entités sur lesquelles le principal ne possède pas d'autorisation n'apparaissent pas. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Les informations retournées sont sujettes à des restrictions d'accès aux métadonnées. Les entités sur lesquelles le principal ne possède pas d'autorisation n'apparaissent pas.  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -132,7 +132,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;&#41;Transact-SQL](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;&#41;Transact-SQL](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;&#41;Transact-SQL](../../t-sql/statements/revoke-transact-sql.md)   

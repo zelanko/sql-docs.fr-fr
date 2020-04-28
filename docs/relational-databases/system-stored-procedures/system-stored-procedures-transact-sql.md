@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037317"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procédures stockées système (Transact-SQL)
@@ -49,14 +49,13 @@ ms.locfileid: "68037317"
 |[Procédures stockées de requêtes distribuées](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Servent à implémenter et gérer les requêtes distribuées.|  
 |[Procédures stockées FileStream et filetable &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Utilisé pour configurer et gérer les fonctionnalités FILESTREAM et FileTable.|  
 |[Procédures stockées de règles de pare-feu &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Utilisé pour configurer le pare-feu Azure SQL Database.|  
-|
-  [Procédures stockées de recherche en texte intégral](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Utilisées pour implémenter et effectuer les requêtes des index de texte intégral.|  
+|[Procédures stockées de recherche en texte intégral](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Utilisées pour implémenter et effectuer les requêtes des index de texte intégral.|  
 |[Procédures stockées étendues générales](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Permettent de fournir une interface depuis une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux programmes externes pour plusieurs activités de maintenance.|  
 |[Procédures stockées de copie des journaux de transaction](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Permettent de configurer, modifier et surveiller les configurations de la copie des journaux de transaction.|  
 |[Procédures stockées de l’entrepôt de données de gestion &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Utilisé pour configurer l’entrepôt de données de gestion.|  
 |[Procédures stockées OLE Automation](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Permettent d'activer des objets Automation standard pour une utilisation dans un lot [!INCLUDE[tsql](../../includes/tsql-md.md)] standard.|  
 |[Procédures stockées de Gestion basée sur des stratégies](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Utilisées pour la Gestion basée sur des stratégies.|  
-|[Procédures stockées Polybase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Ajoutez ou supprimez un ordinateur d’un groupe de scale-out Polybase.|  
+|[Procédures stockées PolyBase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Ajoutez ou supprimez un ordinateur d’un groupe de scale-out Polybase.|  
 |[Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Utilisé pour régler les performances.|  
 |[Procédures stockées de réplication](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Servent à gérer la réplication.|  
 |[Procédures stockées de sécurité](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Servent à gérer la sécurité.|  
@@ -173,11 +172,11 @@ ms.locfileid: "68037317"
 |sp_xml_schema_rowset2||  
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER une procédure &#40;&#41;Transact-SQL](../../t-sql/statements/create-procedure-transact-sql.md)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [Procédures stockées &#40;Moteur de base de données&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Exécution de procédures stockées &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [Exécution de procédures stockées](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Exécution des procédures stockées](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
+ [Exécution de procédures stockées](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

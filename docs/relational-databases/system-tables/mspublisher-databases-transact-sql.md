@@ -18,10 +18,10 @@ ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da208c7fb83053c1817693bb16d16c3488fe90c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032604"
 ---
 # <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68032604"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
-|**identifi**|**int**|ID de la ligne.|  
+|**id**|**int**|ID de la ligne.|  
 |**publisher_engine_edition**|**int**|Édition du serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pouvant prendre l'une des valeurs suivantes :<br /><br /> **10** = édition personnelle<br /><br /> **11** = Desktop Engine (MSDE)<br /><br /> **20** = standard<br /><br /> **21** = groupe de travail<br /><br /> **30** = entreprise (évaluation)<br /><br /> **31** = développeur<br /><br /> **40** = Express (Express ne peut pas être un serveur de publication. Cette valeur est présente par souci d'exhaustivité.)|  
   
 ## <a name="see-also"></a>Voir aussi  

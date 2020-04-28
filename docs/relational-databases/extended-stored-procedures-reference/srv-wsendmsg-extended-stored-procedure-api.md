@@ -20,17 +20,17 @@ ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 301674b9acfd822d0049e548011633b68b249682
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035991"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Envoie un message Unicode au client.  
   
@@ -58,13 +58,13 @@ msglen
  *Msgnum*  
  Numéro de message à 4 octets.  
   
- *severity*  
+ *Gravité*  
  Spécifie la gravité de l'erreur. Une gravité inférieure ou égale à 10 est considérée comme un message d'information ; sinon, il s'agit d'une erreur.  
   
- *Message*  
+ *message*  
  Pointeur vers une chaîne Unicode à envoyer au client.  
   
- *argument msglen*  
+ *msglen*  
  Spécifie la longueur, en caractères, de *message*.  
   
 ## <a name="returns"></a>Retours  

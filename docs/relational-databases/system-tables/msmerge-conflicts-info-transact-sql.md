@@ -18,10 +18,10 @@ ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7629bff37fb33080f8057fc1799437fff182882f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044806"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
@@ -32,13 +32,13 @@ ms.locfileid: "68044806"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Surnom de la table publiée.|  
-|**GuidLigne**|**uniqueidentifier**|Identificateur de la ligne de conflit|  
+|**rowguid**|**uniqueidentifier**|Identificateur de la ligne de conflit|  
 |**origin_datasource**|**nvarchar(255)**|Nom de la base de données d'où provient la modification conflictuelle|  
 |**conflict_type**|**int**|Type de conflit qui s'est produit, qui peut être l'un des suivants :<br /><br /> **1** = conflit de mise à jour : le conflit est détecté au niveau de la ligne.<br /><br /> **2** = conflit de mise à jour de colonne : conflit détecté au niveau de la colonne.<br /><br /> **3** = conflit de suppression de la mise à jour : la suppression gagne le conflit.<br /><br /> **4** = mise à jour du conflit de suppression WINS : le rowguid supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **5** = échec de l’insertion du téléchargement : l’insertion à partir de l’abonné n’a pas pu être appliquée au serveur de publication.<br /><br /> **6** = échec du téléchargement de l’insertion : l’insertion à partir du serveur de publication n’a pas pu être appliquée au niveau de l’abonné.<br /><br /> **7** = échec du chargement de la suppression : la suppression sur l’abonné n’a pas pu être téléchargée sur le serveur de publication.<br /><br /> **8** = échec de la suppression du téléchargement : la suppression sur le serveur de publication n’a pas pu être téléchargée sur l’abonné.<br /><br /> **9** = échec de la mise à jour du téléchargement : la mise à jour sur l’abonné n’a pas pu être appliquée au serveur de publication.<br /><br /> **10** = échec de la mise à jour du téléchargement : la mise à jour sur le serveur de publication n’a pas pu être appliquée à l’abonné.<br /><br /> **11** = résolution<br /><br /> **12** = suppression WINS des enregistrements logiques : l’enregistrement logique supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **13** = conflit d’enregistrements logiques insertion d’une mise à jour : l’insertion sur un enregistrement logique est en conflit avec une mise à jour.<br /><br /> **14** = conflit de suppression de la mise à jour WINS de l’enregistrement logique : l’enregistrement logique mis à jour qui perd le conflit est enregistré dans cette table.|  
 |**reason_code**|**int**|Code d’erreur qui peut être sensible au contexte. Dans le cas de conflits update-Update et Update-Delete, la valeur utilisée pour cette colonne est la même que la **conflict_type**. Par contre, dans les conflits d'échec de modification, le code de la raison correspond à l'erreur qui a empêché l'Agent de fusion d'appliquer la modification. Par exemple, si le Agent de fusion ne peut pas appliquer une insertion sur l’abonné en raison d’une violation de clé primaire, il journalise un **conflict_type** de 6 (« échec du téléchargement de l’insertion ») et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un **reason_code** de 2627, qui est le message d’erreur interne pour une violation de clé primaire : «violation de la contrainte% ls'%. * ls'. Impossible d’insérer une clé en double dans l’objet'% '. \*ls'.»|  
 |**reason_text**|**nvarchar (720)**|Description de l’erreur qui peut être contextuelle.|  
 |**pubid**|**uniqueidentifier**|Identificateur de la publication.|  
-|**MSrepl_create_time**|**DATETIME**|Heure à laquelle le conflit s'est produit.|  
+|**MSrepl_create_time**|**datetime**|Heure à laquelle le conflit s'est produit.|  
 |**origin_datasource_id**|**uniqueidentifier**|Identificateur de la base de données d'où provient la modification à l'origine du conflit|  
   
 ## <a name="see-also"></a>Voir aussi  

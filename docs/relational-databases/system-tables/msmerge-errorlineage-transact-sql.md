@@ -18,10 +18,10 @@ ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1c3191191a9830a38a177ba3a3c353e5c34dedba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044762"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68044762"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Valeur d'entier affectée à la table publiée pour la réplication de fusion. Correspond au champ surnom de la table **sysmergearticles** .|  
-|**GuidLigne**|**uniqueidentifier**|Identificateur de ligne.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne.|  
 |**lignage**|**varbinary (501)**|Stocke une liste historique à partir de laquelle les Abonnés et les serveurs de publication ont apporté des mises à jour sur une ligne. Utilisé pour détecter et résoudre des situations conflictuelles.|  
   
 ## <a name="see-also"></a>Voir aussi  

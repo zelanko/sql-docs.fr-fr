@@ -18,10 +18,10 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008921"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
@@ -49,9 +49,9 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'`Nouveau mot de passe. *new_password* est de **type sysname**, sans valeur par défaut. *OLD_PASSWORD* doit être spécifié si les paramètres nommés ne sont pas utilisés.  
   
 > [!IMPORTANT]  
->  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d'informations, consultez la page [Mots de passe forts](../../relational-databases/security/strong-passwords.md).  
+>  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
-`[ @loginame = ] 'login'`Nom de la connexion affectée par la modification du mot de passe. *login* est de **type sysname**, avec NULL comme valeur par défaut. la *connexion* doit déjà exister et ne peut être spécifiée que par les membres des rôles serveur fixes **sysadmin** ou **securityadmin** .  
+`[ @loginame = ] 'login'`Nom de la connexion affectée par la modification du mot de passe. *login* est de type **sysname**, avec NULL comme valeur par défaut. la *connexion* doit déjà exister et ne peut être spécifiée que par les membres des rôles serveur fixes **sysadmin** ou **securityadmin** .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CRÉER une connexion &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

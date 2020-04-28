@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b6f941e269bb9948dd39ba52db0ea4d0961c029a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033854"
 ---
 # <a name="median-mdx"></a>Median (MDX)
@@ -40,8 +40,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  La valeur médiane est la valeur de milieu d'un jeu de nombres ordonnés. (La valeur médiane n'est pas la moyenne, qui est la somme d'un ensemble de chiffres divisée par le nombre de chiffres présents dans cet ensemble). La valeur médiane est déterminée en choisissant la plus petite valeur de sorte que la moitié au moins des valeurs du jeu ne soient pas supérieures à la valeur choisie. Si le nombre des valeurs du jeu est impair, la valeur médiane correspond à une seule valeur. Si le nombre des valeurs du jeu est pair, la valeur médiane correspond à la somme des deux valeurs du milieu divisée par deux.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignore les valeurs NULL lors du calcul de la valeur médiane dans un jeu de nombres ordonnés.  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignore les valeurs NULL lors du calcul de la valeur médiane dans un jeu de nombres ordonnés.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne les ventes mensuelles médianes de chaque trimestre, sous-catégorie et chaque pays inscrit dans le cube Adventure Works.  
@@ -61,6 +60,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

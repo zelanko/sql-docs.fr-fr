@@ -11,10 +11,10 @@ ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0b26ddaef1373544e0df2fd9186cdf56fdafd801
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68040628"
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Se connecter à Azure SQL DB (AccessToSQL)
@@ -40,9 +40,9 @@ Entrez le nom d’utilisateur que SSMA utilisera pour se connecter à la base de
   
 **Mot de passe**  
   
-Entrez le mot de passe correspondant au nom d’utilisateur.  
+Entrez le mot de passe correspondant au nom d'utilisateur indiqué.  
   
-**Codage**  
+**Encrypt**  
   
 SSMA recommande la connexion chiffrée à SQL Azure.  
   

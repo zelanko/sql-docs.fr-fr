@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032896"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
@@ -54,8 +54,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nom du serveur hébergeant la base de données qui a effectué l'entrée de la version de ligne.|  
 |**db_name**|**sysname**|Nom de la base de données qui a effectué cette entrée.|  
-|**db_nickname**|**binaire (6)**|Surnom de la base de données qui a effectué cette entrée.|  
-|**Version**|**int**|Version de l'entrée.|  
+|**db_nickname**|**binary(6)**|Surnom de la base de données qui a effectué cette entrée.|  
+|**version**|**int**|Version de l'entrée.|  
 |**current_state**|**nvarchar (9)**|Retourne des informations sur l'état actuel de la ligne.<br /><br /> les données de ligne **y** représentent l’état actuel de la ligne.<br /><br /> les données de **n** lignes ne représentent pas l’état actuel de la ligne.<br /><br /> n/a>-non applicable. ** \<**<br /><br /> >inconnu-l’état actuel ne peut pas être déterminé. ** \<**|  
 |**rowversion_table**|**nchar (17)**|Indique si les versions de ligne sont stockées dans la table [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) ou dans la table [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**Commentaire**|**nvarchar(255)**|Informations supplémentaires concernant l'entrée de version de cette ligne. En général, ce champ est vide.|  
@@ -66,8 +66,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nom du serveur hébergeant la base de données qui a effectué l'entrée de la version de colonne.|  
 |**db_name**|**sysname**|Nom de la base de données qui a effectué cette entrée.|  
-|**db_nickname**|**binaire (6)**|Surnom de la base de données qui a effectué cette entrée.|  
-|**Version**|**int**|Version de l'entrée.|  
+|**db_nickname**|**binary(6)**|Surnom de la base de données qui a effectué cette entrée.|  
+|**version**|**int**|Version de l'entrée.|  
 |**colname**|**sysname**|Nom de la colonne d'article que l'entrée de la version de colonne représente.|  
 |**Commentaire**|**nvarchar(255)**|Informations supplémentaires concernant l'entrée de version de cette colonne. En général, ce champ est vide.|  
   

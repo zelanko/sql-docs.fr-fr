@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042901"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
@@ -49,7 +49,7 @@ CHANGETABLE (
  *Table* des modifications, *last_sync_version*  
  Retourne des informations de suivi pour toutes les modifications apportées à une table depuis la version spécifiée par *last_sync_version*.  
   
- *Tableau*  
+ *table*  
  Table définie par l'utilisateur sur laquelle obtenir le suivi des modifications. Le suivi des modifications doit être activé sur la table. Un nom de table en une, deux, trois ou quatre parties peut être utilisé. Le nom de table peut être un synonyme de la table.  
   
  *last_sync_version*  
@@ -68,7 +68,7 @@ CHANGETABLE (
  *Table*de version, {<primary_key_values>}  
  Retourne les informations de suivi des modifications les plus récentes pour une ligne spécifiée. Les valeurs de clé primaire doivent identifier la ligne. <primary_key_values> identifie les colonnes de clé primaire et spécifie les valeurs. Les noms des colonnes clés primaires peuvent être spécifiés dans n'importe quel ordre.  
   
- *Table*  
+ *Tableau*  
  Table définie par l'utilisateur sur laquelle obtenir les informations de suivi des modifications. Le suivi des modifications doit être activé sur la table. Un nom de table en une, deux, trois ou quatre parties peut être utilisé. Le nom de table peut être un synonyme de la table.  
   
  *column_name*  
@@ -87,7 +87,7 @@ CHANGETABLE (
  Alias de colonne facultatif ou liste d'alias de colonne pour les colonnes retournées par CHANGETABLE. Ce paramètre permet de personnaliser les noms de colonne au cas où il existerait des noms en double dans les résultats.  
   
 ## <a name="return-types"></a>Types de retour  
- **Tableau**  
+ **table**  
   
 ## <a name="return-values"></a>Valeurs de retour  
   
@@ -98,9 +98,9 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valeur de version associée à la dernière modification apportée à la ligne|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valeurs de version associées à la dernière opération d'insertion.|  
-|SYS_CHANGE_OPERATION|**nchar (1)**|Spécifie le type de modification :<br /><br /> **U** = mise à jour<br /><br /> **I** = insertion<br /><br /> **D** = supprimer|  
-|SYS_CHANGE_COLUMNS|**varbinary (4100)**|Répertorie les colonnes qui ont été modifiées depuis la version last_sync_version (de référence). Notez que les colonnes calculées ne sont jamais répertoriées comme modifiées.<br /><br /> La valeur est NULL si l'une des conditions suivantes est remplie :<br /><br /> le suivi des modifications de colonne n'est pas activé ;<br /><br /> il s'agit d'une opération d'insertion ou de suppression ;<br /><br /> toutes les colonnes dépourvues de clés primaires ont été mises à jour en une seule opération. Cette valeur binaire ne doit pas être interprétée directement. Au lieu de cela, pour l’interpréter, utilisez [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
-|SYS_CHANGE_CONTEXT|**varbinary (128)**|Modifiez les informations de contexte que vous pouvez éventuellement spécifier à l’aide de la clause [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) dans le cadre d’une instruction INSERT, Update ou DELETE.|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Spécifie le type de modification :<br /><br /> **U** = mise à jour<br /><br /> **I** = insertion<br /><br /> **D** = supprimer|  
+|SYS_CHANGE_COLUMNS|**varbinary(4100)**|Répertorie les colonnes qui ont été modifiées depuis la version last_sync_version (de référence). Notez que les colonnes calculées ne sont jamais répertoriées comme modifiées.<br /><br /> La valeur est NULL si l'une des conditions suivantes est remplie :<br /><br /> le suivi des modifications de colonne n'est pas activé ;<br /><br /> il s'agit d'une opération d'insertion ou de suppression ;<br /><br /> toutes les colonnes dépourvues de clés primaires ont été mises à jour en une seule opération. Cette valeur binaire ne doit pas être interprétée directement. Au lieu de cela, pour l’interpréter, utilisez [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|Modifiez les informations de contexte que vous pouvez éventuellement spécifier à l’aide de la clause [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) dans le cadre d’une instruction INSERT, Update ou DELETE.|  
 |\<valeur de colonne de clé primaire>|Identique aux colonnes de table utilisateur|Valeurs de clés primaires pour la table faisant l'objet d'un suivi. Ces valeurs identifient de manière unique chaque ligne dans la table utilisateur.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
@@ -109,7 +109,7 @@ CHANGETABLE (
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valeur de la version actuelle des modifications associée à la ligne.<br /><br /> La valeur est NULL si aucune modification n'a pas été apportée pendant un délai dépassant la période de rétention de suivi des modifications, ou si la ligne n'a pas été modifiée depuis l'activation du suivi des modifications.|  
-|SYS_CHANGE_CONTEXT|**varbinary (128)**|Modifiez les informations de contexte que vous pouvez éventuellement spécifier à l'aide de la clause WITH dans le cadre d'une instruction INSERT, UPDATE ou DELETE.|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|Modifiez les informations de contexte que vous pouvez éventuellement spécifier à l'aide de la clause WITH dans le cadre d'une instruction INSERT, UPDATE ou DELETE.|  
 |\<valeur de colonne de clé primaire>|Identique aux colonnes de table utilisateur|Valeurs de clés primaires pour la table faisant l'objet d'un suivi. Ces valeurs identifient de manière unique chaque ligne dans la table utilisateur.|  
   
 ## <a name="remarks"></a>Notes  
@@ -210,8 +210,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de suivi des modifications &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [Fonctions Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [Suivre les modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  

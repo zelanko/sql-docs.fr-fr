@@ -16,10 +16,10 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ed0992ff1b6b7de6f93213b612ff05ebcbdb3df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042697"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
@@ -45,7 +45,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @login = ] 'login'`Connexion de l’administrateur système à utiliser lors de la création d’objets système dans la base de données de distribution. *login* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre n’est pas requis si *security_mode* a la valeur **1**, ce qui correspond à l’authentification Windows.  
+`[ @login = ] 'login'`Connexion de l’administrateur système à utiliser lors de la création d’objets système dans la base de données de distribution. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre n’est pas requis si *security_mode* a la valeur **1**, ce qui correspond à l’authentification Windows.  
   
 `[ @password = ] 'password'`Mot de passe de l’administrateur système à utiliser lors de la création d’objets système dans la base de données de distribution. *Password* est de **type sysname**, avec **«»** comme valeur par défaut (chaîne vide). Ce paramètre n’est pas requis si *security_mode* a la valeur **1**, ce qui correspond à l’authentification Windows.  
   
@@ -58,10 +58,10 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
  **sp_vupgrade_mergeobjects** est utilisé uniquement pour la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Procédures stockées de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Mettre à niveau des bases de données répliquées](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

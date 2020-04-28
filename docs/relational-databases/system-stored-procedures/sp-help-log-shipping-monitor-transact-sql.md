@@ -18,10 +18,10 @@ ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000934"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
@@ -39,7 +39,7 @@ sp_help_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Arguments  
- Aucun.  
+ Aucune.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -48,7 +48,7 @@ sp_help_log_shipping_monitor
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**status**|**bit**|État collectif des agents de la base de données d'envoi des journaux :<br /><br /> **0** = échecs d’intégrité et de non-agent.<br /><br /> **1** = sinon.|  
+|**statut**|**bit**|État collectif des agents de la base de données d'envoi des journaux :<br /><br /> **0** = échecs d’intégrité et de non-agent.<br /><br /> **1** = sinon.|  
 |**is_primary**|**bit**|Indique si cette ligne est destinée à une base de données principale :<br /><br /> **1** = la ligne est destinée à une base de données primaire.<br /><br /> **0** = la ligne est destinée à une base de données secondaire.|  
 |**serveurs**|**sysname**|Nom du serveur principal ou secondaire où réside cette base de données.|  
 |**database_name**|**sysname**|Nom de la base de données.|  
@@ -68,10 +68,10 @@ sp_help_log_shipping_monitor
  **sp_help_log_shipping_monitor** doit être exécuté à partir de la base de données **Master** sur le serveur moniteur.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux de &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

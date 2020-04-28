@@ -19,10 +19,10 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026922"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
@@ -35,15 +35,15 @@ ms.locfileid: "68026922"
 ||||  
 |-|-|-|  
 |**Nom de la colonne**|**Type**|**Description**|  
-|*type*|**int**|1 = objet ou colonne (inclut des modules, XPs, vues, synonymes et tables).<br /><br /> 4 = Principal de la base de données<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (index de texte intégral)<br /><br /> 12 = déclencheur DDL de base de données<br /><br /> 19 = Itinéraire<br /><br /> 30 = Spécification d'audit|  
-|*class_desc*|**nvarchar (120)**|Description de la classe de l'entité. L’un des éléments suivants pour correspondre à la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class*|**int**|1 = objet ou colonne (inclut des modules, XPs, vues, synonymes et tables).<br /><br /> 4 = Principal de la base de données<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (index de texte intégral)<br /><br /> 12 = déclencheur DDL de base de données<br /><br /> 19 = Itinéraire<br /><br /> 30 = Spécification d'audit|  
+|*class_desc*|**nvarchar(120)**|Description de la classe de l'entité. L’un des éléments suivants pour correspondre à la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|ID de l'entité.<br /><br /> Si la *classe* est 1, object_id<br /><br /> Si *Class* = 4, sys. database_principals. principal_id.<br /><br /> Si *Class* = 5, sys. Assemblies. assembly_id.<br /><br /> Si *Class* = 6, sys. types. user_type_id.<br /><br /> Si *Class* = 7, sys. indexes. index_id.<br /><br /> Si *Class* = 12, sys. Triggers. OBJECT_ID.<br /><br /> Si *Class* = 19, sys. routes. Route_ID.<br /><br /> Si *Class* = 30, alors sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Si la classe est un module, retourne le numéro de ligne sur lequel l'utilisation sans relation contenant-contenu se trouve.  Sinon, la valeur est Null.|  
 |*statement_ offset_begin*|**int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de départ où l'utilisation sans relation contenant-contenu démarre. Sinon, la valeur de retour est Null.|  
 |*statement_ offset_end*|**int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de fin de l'utilisation sans relation contenant-contenu. La valeur -1 indique la fin du module. Sinon, la valeur de retour est Null.|  
 |*statement_type*|**nvarchar(512)**|Type d'instruction.|  
-|*nom de l’feature_*|**nvarchar (256)**|Retourne le nom externe de l'objet.|  
-|*feature_type_name*|**nvarchar (256)**|Renvoie le type de fonctionnalité.|  
+|*nom de l’feature_*|**nvarchar(256)**|Retourne le nom externe de l'objet.|  
+|*feature_type_name*|**nvarchar(256)**|Renvoie le type de fonctionnalité.|  
   
 ## <a name="remarks"></a>Notes  
  sys. dm_db_uncontained_entities affiche les entités qui peuvent potentiellement traverser la limite de la base de données. Toutes les entités de l'utilisateur qui ont la possibilité d'utiliser des objets en dehors de la base de données sont retournées.  
@@ -86,6 +86,6 @@ LEFT JOIN sys.objects AS SO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)  
+ [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)  
   
   

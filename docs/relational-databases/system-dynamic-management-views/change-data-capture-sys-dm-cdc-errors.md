@@ -20,10 +20,10 @@ ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 506dae205356504c76d47ffe324b82f9f34665f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017999"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Capture de données modifiées-sys. dm_cdc_errors
@@ -36,7 +36,7 @@ ms.locfileid: "68017999"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID de la session.<br /><br /> 0 = l'erreur ne s'est pas produite dans une session d'analyse du journal.|  
 |**phase_number**|**int**|Nombre indiquant la phase de la session au moment où l’erreur s’est produite. Pour obtenir une description de chaque phase, consultez [sys. dm_cdc_log_scan_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
-|**entry_time**|**DATETIME**|Date et heure d'enregistrement de l'erreur. Cette valeur correspond à l'horodateur dans le journal des erreurs SQL.|  
+|**entry_time**|**datetime**|Date et heure d'enregistrement de l'erreur. Cette valeur correspond à l'horodateur dans le journal des erreurs SQL.|  
 |**error_number**|**int**|ID du message d'erreur.|  
 |**error_severity**|**int**|Niveau de gravité du message, entre 1 et 25.|  
 |**error_state**|**int**|Numéro d'état de l'erreur.|  

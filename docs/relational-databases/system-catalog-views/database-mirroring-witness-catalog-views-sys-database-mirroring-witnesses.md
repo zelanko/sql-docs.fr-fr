@@ -22,10 +22,10 @@ ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033082"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Affichages catalogue du témoin de mise en miroir de bases de données-sys. database_mirroring_witnesses
@@ -41,7 +41,7 @@ ms.locfileid: "68033082"
 |**principal_server_name**|**sysname**|Nom du serveur partenaire dont la copie de la base de données est actuellement la base de données principale.|  
 |**mirror_server_name**|**sysname**|Nom du serveur partenaire dont la copie de la base de données est actuellement la base de données miroir.|  
 |**safety_level**|**tinyint**|Paramètre de sécurité de transaction pour les mises à jour sur la base de données miroir :<br /><br /> 0 = État inconnu<br /><br /> 1 = désactivée (asynchrone)<br /><br /> 2 = totale (synchrone)<br /><br /> L'utilisation d'un témoin pour le basculement automatique nécessite une sécurité de transaction totale, ce qui est la valeur par défaut.|  
-|**safety_level_desc**|**nvarchar (60)**|Description de la garantie de la sécurité des mises à jour sur la base de données miroir :<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|Description de la garantie de la sécurité des mises à jour sur la base de données miroir :<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|Mettez à jour le numéro de séquence des modifications apportées à **safety_level**.|  
 |**role_sequence_number**|**int**|Numéro de séquence de mise à jour pour les modifications apportées aux rôles principaux/miroirs utilisés par les partenaires de la mise en miroir.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificateur du partenariat de mise en miroir.|  
@@ -49,13 +49,13 @@ ms.locfileid: "68033082"
 |**is_suspended**|**bit**|La mise en miroir de la base de données est suspendue.|  
 |**is_suspended_sequence_number**|**int**|Numéro de séquence pour la définition de **is_suspended**.|  
 |**partner_sync_state**|**tinyint**|État de synchronisation de la session de mise en miroir :<br /><br /> 5 = les partenaires sont synchronisés. Le basculement est éventuellement possible. Pour plus d’informations sur la configuration requise pour le basculement, consultez [basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = les partenaires ne sont pas synchronisés. Le basculement n'est maintenant pas possible.|  
-|**partner_sync_state_desc**|**nvarchar (60)**|Description de l'état de synchronisation de la session de mise en miroir :<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
+|**partner_sync_state_desc**|**nvarchar(60)**|Description de l'état de synchronisation de la session de mise en miroir :<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+ [Témoin de mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [Questions fréquentes sur l'interrogation des catalogues système de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

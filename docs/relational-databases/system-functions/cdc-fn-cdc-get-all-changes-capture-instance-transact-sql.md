@@ -17,10 +17,10 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043052"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
@@ -60,7 +60,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  Il peut s'agir de l'une des options suivantes :  
   
- tout  
+ all  
  Retourne toutes les modifications dans la plage spécifiée de numéro séquentiel dans le journal. Pour les modifications dues à une opération de mise à jour, cette option retourne seulement la ligne qui contient les nouvelles valeurs après que la mise à jour a été appliquée.  
   
  all update old  
@@ -70,10 +70,10 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**_ _ $ start_lsn**|**binaire (10)**|Numéro séquentiel dans le journal de validation associé à la modification qui préserve l'ordre de validation de la modification. Les modifications validées dans la même transaction partagent la même valeur LSN de validation.|  
-|**_ _ $ seqval**|**binaire (10)**|Valeur de classement utilisée pour classer les modifications d'une ligne dans une transaction.|  
-|**_ _ $ opération**|**int**|Identifie l'opération du langage de manipulation de données permettant d'appliquer la ligne de données de modification à la source de données cible. Il peut s'agir d'une des méthodes suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (les valeurs de colonne capturées sont celles avant l'opération de mise à jour). Cette valeur s'applique uniquement lorsque l'option de filtre de lignes 'all update old' est spécifiée.<br /><br /> 4 = mise à jour (les valeurs de colonne capturées sont celles après l'opération de mise à jour)|  
-|**_ _ $ update_mask**|**varbinary (128)**|Masque de bits avec un bit correspondant à chaque colonne capturée identifiée pour l'instance de capture. Tous les bits définis de cette valeur sont définis sur 1 lorsque **_ _ $ Operation** = 1 ou 2. Lorsque **_ _ $ Operation** = 3 ou 4, seuls les bits correspondant aux colonnes qui ont changé ont la valeur 1.|  
+|**__$start_lsn**|**binary(10)**|Numéro séquentiel dans le journal de validation associé à la modification qui préserve l'ordre de validation de la modification. Les modifications validées dans la même transaction partagent la même valeur LSN de validation.|  
+|**__$seqval**|**binary(10)**|Valeur de classement utilisée pour classer les modifications d'une ligne dans une transaction.|  
+|**_ _ $ opération**|**int**|Identifie l'opération du langage de manipulation de données permettant d'appliquer la ligne de données de modification à la source de données cible. Il peut s’agir de l’un des éléments suivants :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (les valeurs de colonne capturées sont celles avant l'opération de mise à jour). Cette valeur s'applique uniquement lorsque l'option de filtre de lignes 'all update old' est spécifiée.<br /><br /> 4 = mise à jour (les valeurs de colonne capturées sont celles après l'opération de mise à jour)|  
+|**__$update_mask**|**varbinary(128)**|Masque de bits avec un bit correspondant à chaque colonne capturée identifiée pour l'instance de capture. Tous les bits définis de cette valeur sont définis sur 1 lorsque **_ _ $ Operation** = 1 ou 2. Lorsque **_ _ $ Operation** = 3 ou 4, seuls les bits correspondant aux colonnes qui ont changé ont la valeur 1.|  
 |**\<colonnes de table source capturées>**|varie|Les colonnes restantes retournées par la fonction sont les colonnes capturées identifiées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
   
 ## <a name="permissions"></a>Autorisations  

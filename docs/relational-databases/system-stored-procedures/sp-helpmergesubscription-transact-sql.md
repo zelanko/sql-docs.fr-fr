@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002641"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
@@ -67,24 +67,24 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**sysname**|Nom de l’abonnement.|  
+|**subscription_name**|**sysname**|Nom de l'abonnement.|  
 |**édition**|**sysname**|Nom de la publication.|  
 |**publication**|**sysname**|Nom du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**subscriber_db**|**sysname**|Nom de la base de données d'abonnement.|  
-|**statu**|**int**|État de l’abonnement :<br /><br /> **0** = tous les travaux sont en attente de démarrage<br /><br /> **1** = un ou plusieurs travaux commencent<br /><br /> **2** = toutes les tâches ont été exécutées avec succès<br /><br /> **3** = au moins un travail est en cours d’exécution<br /><br /> **4** = tous les travaux sont planifiés et inactifs<br /><br /> **5** = au moins un travail tente de s’exécuter après un échec précédent<br /><br /> **6** = au moins un travail n’a pas réussi à s’exécuter correctement|  
+|**statut**|**int**|État de l’abonnement :<br /><br /> **0** = tous les travaux sont en attente de démarrage<br /><br /> **1** = un ou plusieurs travaux commencent<br /><br /> **2** = toutes les tâches ont été exécutées avec succès<br /><br /> **3** = au moins un travail est en cours d’exécution<br /><br /> **4** = tous les travaux sont planifiés et inactifs<br /><br /> **5** = au moins un travail tente de s’exécuter après un échec précédent<br /><br /> **6** = au moins un travail n’a pas réussi à s’exécuter correctement|  
 |**subscriber_type**|**int**|Type d'Abonné.|  
 |**subscription_type**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = les deux|  
 |**importance**|**float (8)**|Numéro indiquant la priorité de l'abonnement.|  
 |**sync_type**|**tinyint**|Type de synchronisation d'abonnement|  
-|**description**|**nvarchar(255)**|Brève description de cet abonnement de fusion.|  
+|**descriptive**|**nvarchar(255)**|Brève description de cet abonnement de fusion.|  
 |**merge_jobid**|**Binary(16**|ID de travail de l'Agent de fusion.|  
 |**full_publication**|**tinyint**|Indique si l'abonnement concerne une publication complète ou filtrée.|  
 |**offload_enabled**|**bit**|Indique si le déchargement d'un Agent de réplication est configuré pour être exécuté sur l'Abonné. Si la valeur est NULL, l'exécution a lieu sur le serveur de publication.|  
 |**offload_server**|**sysname**|Nom du serveur sur lequel s'exécute l'Agent.|  
 |**use_interactive_resolver**|**int**|Indique si le composant résolveur interactif est utilisé ou non au cours de la réconciliation. Si la **valeur est 0**, le programme de résolution interactif n’est pas utilisé.|  
-|**nom d’hôte**|**sysname**|Valeur fournie lorsqu’un abonnement est filtré par la valeur de la fonction [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
+|**hostname**|**sysname**|Valeur fournie lorsqu’un abonnement est filtré par la valeur de la fonction [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
 |**subscriber_security_mode**|**smallint**|Est le mode de sécurité de l’abonné, où **1** correspond à l’authentification Windows et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** à l’authentification.|  
 |**subscriber_login**|**sysname**|Nom de connexion sur l'Abonné.|  
 |**subscriber_password**|**sysname**|Le mot de passe réel de l'Abonné n'est jamais renvoyé. Le résultat est masqué par une chaîne «**\*\*\*\*\***».|  

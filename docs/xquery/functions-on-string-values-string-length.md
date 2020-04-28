@@ -16,10 +16,10 @@ ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004655"
 ---
 # <a name="functions-on-string-values---string-length"></a>Fonctions sur les valeurs de chaîne : string-length
@@ -60,7 +60,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>R. Utilisation de la fonction XQuery string-length() pour extraire les produits dont la description résumée présente une certaine longueur  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Utilisation de la fonction XQuery string-length() pour extraire les produits dont la description résumée présente une certaine longueur  
  Pour les produits dont la description résumée est supérieure à 50 caractères, la requête suivante extrait l’ID de produit, la longueur de la description résumée et le résumé lui `Summary` -même, l’élément <>.  
   
 ```  

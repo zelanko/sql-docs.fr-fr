@@ -18,10 +18,10 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029584"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "68029584"
 |**publisher_database_id**|**int**|Identifie la base de données de publication.|  
 |**subscription_type**|**int**|Type d’abonnement :<br /><br /> **0** = Push : l’agent de distribution s’exécute sur l’abonné.<br /><br /> **1** = pull-l’agent de distribution s’exécute sur le serveur de distribution.|  
 |**sync_type**|**tinyint**|Type de synchronisation initiale :<br /><br /> **1** = automatique<br /><br /> **2** = aucun|  
-|**statu**|**tinyint**|État de l’abonnement :<br /><br /> **0** = inactif<br /><br /> **1** = abonné<br /><br /> **2** = actif|  
+|**statut**|**tinyint**|État de l’abonnement :<br /><br /> **0** = inactif<br /><br /> **1** = abonné<br /><br /> **2** = actif|  
 |**snapshot_seqno_flag**|**bit**|Indique si un numéro de séquence d'instantané est utilisé.|  
 |**independent_agent**|**bit**|Spécifie s’il existe un Agent de distribution autonome pour cette publication.<br /><br /> **0** = la publication utilise un agent de distribution partagé, et chaque paire base de données du serveur de publication/base de données de l’abonné possède un seul agent partagé.<br /><br /> **1** = il existe un agent de distribution autonome pour cette publication.|  
-|**subscription_time**|**DATETIME**|À usage interne uniquement|  
+|**subscription_time**|**datetime**|À usage interne uniquement|  
 |**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **1** = n’est pas renvoyé.<br /><br /> **0** = renvoie.|  
 |**agent_id**|**int**|Identificateur unique de l'Agent de distribution.|  
 |**update_mode**|**tinyint**|Indique le type du mode de mise à jour, qui peut être l'un des suivants :<br /><br /> **0** = lecture seule.<br /><br /> **1** = mise à jour immédiate.<br /><br /> **2** = mise à jour en file d’attente à l’aide de Message Queuing.<br /><br /> **3** = mise à jour immédiate avec mise à jour en file d’attente comme basculement à l’aide de Message Queuing.<br /><br /> **4** = mise à jour en file d’attente à l’aide de SQL Server file d’attente.<br /><br /> **5** = mise à jour immédiate avec basculement de mise à jour en file d’attente à l’aide de SQL Server file d’attente.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68029584"
 |**ss_cplt_seqno**|**varbinary(16)**|Numéro de séquence utilisé pour indiquer la fin du traitement de l'instantané concurrent.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication de base de données hétérogène](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Réplication de bases de données hétérogènes](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

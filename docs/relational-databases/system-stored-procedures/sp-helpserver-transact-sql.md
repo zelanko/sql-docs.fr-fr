@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997434"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -49,14 +49,14 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------|-----------------|  
 |**compatibilité du classement**|Affecte l'exécution des requêtes distribuées sur les serveurs liés. Si cette option a la valeur true,|  
 |**accès aux données**|Active ou désactive un serveur lié pour l'accès des requêtes distribuées.|  
-|**dist**|Serveur de distribution|  
+|**dist**|Serveur de distribution.|  
 |**dpub**|Serveur de publication distant de ce serveur de distribution.|  
 |**lazy schema validation**|La vérification du schéma des tables distantes est ignorée au début de la requête.|  
 |**pub**|Publication.|  
-|**rpc**|Active l'appel de procédure à distance (RPC) à partir du serveur spécifié.|  
+|**Call**|Active l'appel de procédure à distance (RPC) à partir du serveur spécifié.|  
 |**sortie RPC**|Active l'appel de procédure à distance (RPC) à destination du serveur spécifié.|  
-|**indice**|Côté.|  
-|**requise**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sub**|Côté.|  
+|**système**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**utiliser le classement distant**|Le classement d'une colonne distante est utilisé à la place de celui du serveur local.|  
   
 `[ @show_topology = ] 'show_topology'`Relation entre le serveur spécifié et d’autres serveurs. *show_topology* est de type **varchar (** 1 **)**, avec NULL comme valeur par défaut. Si *show_topology* n’est pas égal à **t** ou a la valeur null, **sp_helpserver** retourne les colonnes listées dans la section ensembles de résultats. Si *show_topology* est égal à **t**, en plus des colonnes listées dans les jeux de résultats, **sp_helpserver** retourne également les informations **topx** et **Topy** .  
@@ -68,10 +68,10 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom du serveur.|  
+|**name**|**sysname**|Nom du serveur.|  
 |**network_name**|**sysname**|Nom réseau du serveur.|  
-|**statu**|**varchar (** 70 **)**|État du serveur.|  
-|**identifi**|**char (** 4 **)**|Numéro d'identification du serveur.|  
+|**statut**|**varchar (** 70 **)**|État du serveur.|  
+|**id**|**char (** 4 **)**|Numéro d'identification du serveur.|  
 |**collation_name**|**sysname**|Classement du serveur.|  
 |**connect_timeout**|**int**|Valeur du délai d'expiration de la connexion au serveur lié.|  
 |**query_timeout**|**int**|Valeur du délai d'expiration des requêtes sur le serveur lié.|  

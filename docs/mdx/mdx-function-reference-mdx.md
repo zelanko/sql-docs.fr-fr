@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ff14718e09fa3732a40ea245430f33c599325eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003514"
 ---
 # <a name="mdx-function-reference-mdx"></a>Guide de référence des fonctions MDX (MDX)
@@ -76,7 +76,7 @@ ms.locfileid: "68003514"
 |[OpeningPeriod&#41;MDX &#40;](../mdx/openingperiod-mdx.md)|Retourne le premier frère parmi les descendants d'un niveau spécifié, éventuellement à un membre spécifié.|  
 |[ParallelPeriod&#41;MDX &#40;](../mdx/parallelperiod-mdx.md)|Retourne un membre d'une période antérieure dans la même position relative que le membre spécifié.|  
 |[&#41;MDX de &#40;parent](../mdx/parent-mdx.md)|Retourne le parent d'un membre.|  
-|[PrevMember&#41;MDX &#40;](../mdx/prevmember-mdx.md)|Retourne le membre précédent dans le niveau qui contient le membre spécifié.|  
+|[PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)|Retourne le membre précédent dans le niveau qui contient le membre spécifié.|  
 |[StrToMember&#41;MDX &#40;](../mdx/strtomember-mdx.md)|Retourne le membre spécifié par une chaîne au format MDX.|  
 |[UnknownMember&#41;MDX &#40;](../mdx/unknownmember-mdx.md)|Retourne le membre inconnu associé à un niveau ou un membre.|  
 |[ValidMeasure&#41;MDX &#40;](../mdx/validmeasure-mdx.md)|Retourne une mesure valide dans un cube virtuel en forçant les dimensions inapplicables à leur niveau maximum.|  
@@ -85,15 +85,15 @@ ms.locfileid: "68003514"
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[&#41;MDX &#40;Aggregate](../mdx/aggregate-mdx.md)|Retourne une valeur scalaire calculée par agrégation soit de mesures soit d'une expression numérique spécifiée éventuellement sur les tuples d'un jeu spécifié.|  
+|[Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)|Retourne une valeur scalaire calculée par agrégation soit de mesures soit d'une expression numérique spécifiée éventuellement sur les tuples d'un jeu spécifié.|  
 |[&#41;MDX AVG &#40;](../mdx/avg-mdx.md)|Retourne la valeur moyenne des mesures ou la valeur moyenne d'une expression numérique facultative, évaluée sur un jeu spécifié.|  
-|[CalculationCurrentPass&#41;MDX &#40;](../mdx/calculationcurrentpass-mdx.md)|Retourne le test de calcul actuel d'un cube pour le contexte de requête spécifié.|  
-|[CalculationPassValue&#41;MDX &#40;](../mdx/calculationpassvalue-mdx.md)|Retourne la valeur d’une expression MDX évaluée sur le test de calcul spécifié d’un cube.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Retourne le test de calcul actuel d'un cube pour le contexte de requête spécifié.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Retourne la valeur d’une expression MDX évaluée sur le test de calcul spécifié d’un cube.|  
 |[&#41;MDX &#40;MDX](../mdx/coalesceempty-mdx.md)|Fusionne la valeur d'une cellule vide avec un nombre ou une chaîne et retourne la valeur fusionnée.|  
 |[&#41;MDX &#40;de corrélation](../mdx/correlation-mdx.md)|Retourne le coefficient de corrélation de deux séries évaluées sur un jeu.|  
 |[Nombre &#40;dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)|Retourne le nombre de dimensions contenues dans un cube.|  
 |[Nombre &#40;niveaux de hiérarchie&#41; &#40;&#41;MDX](../mdx/count-hierarchy-levels-mdx.md)|Retourne le nombre de niveaux d'une dimension ou d'une hiérarchie.|  
-|[Nombre &#40;défini&#41; &#40;&#41;MDX](../mdx/count-set-mdx.md)|Retourne le nombre de cellules d'un jeu.|  
+|[Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)|Retourne le nombre de cellules d'un jeu.|  
 |[Nombre &#40;Tuple&#41; &#40;&#41;MDX](../mdx/count-tuple-mdx.md)|Retourne le nombre de dimensions d'un tuple.|  
 |[Covariance &#40;&#41;MDX](../mdx/covariance-mdx.md)|Retourne la covariance de remplissage de deux séries évaluées sur un jeu, à l'aide de la formule de remplissage biaisée.|  
 |[&#41;MDX &#40;de covariance](../mdx/covariancen-mdx.md)|Retourne l'exemple de covariance de deux séries évaluées sur un jeu, à l'aide de la formule de remplissage non biaisée.|  
@@ -128,7 +128,7 @@ ms.locfileid: "68003514"
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[AddCalculatedMembers&#41;MDX &#40;](../mdx/addcalculatedmembers-mdx.md)|Retourne un jeu généré par l'ajout de membres calculés à un jeu spécifié.|  
+|[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|Retourne un jeu généré par l'ajout de membres calculés à un jeu spécifié.|  
 |[AllMembers&#41;MDX &#40;](../mdx/allmembers-mdx.md)|Retourne un jeu qui contient tous les membres de la dimension, de la hiérarchie ou du niveau spécifié, notamment les membres calculés.|  
 |[Ancêtres &#40;&#41;MDX](../mdx/ancestors-mdx.md)|Retourne un jeu de tous les ancêtres d'un membre à un niveau spécifié ou à une distance spécifiée.|  
 |[Ascendants &#40;&#41;MDX](../mdx/ascendants-mdx.md)|Retourne le jeu des ascendants du membre spécifié, notamment le membre lui-même.|  
@@ -136,12 +136,12 @@ ms.locfileid: "68003514"
 |[BottomCount &#40;&#41;MDX](../mdx/bottomcount-mdx.md)|Trie un jeu en ordre croissant et retourne le nombre spécifié de tuples avec les valeurs les plus basses.|  
 |[BottomPercent&#41;MDX &#40;](../mdx/bottompercent-mdx.md)|Trie un jeu en ordre croissant, et retourne un jeu de tuples avec les valeurs les plus basses dont le total cumulé est égal ou inférieur à un pourcentage spécifié.|  
 |[BottomSum&#41;MDX &#40;](../mdx/bottomsum-mdx.md)|Trie un jeu en ordre croissant et retourne un jeu de tuples avec les valeurs les plus basses dont le total est égal ou inférieur à une valeur spécifiée.|  
-|[&#41;MDX &#40;](../mdx/children-mdx.md)|Retourne les enfants d'un membre spécifié.|  
+|[Children &#40;MDX&#41;](../mdx/children-mdx.md)|Retourne les enfants d'un membre spécifié.|  
 |[Crossjoin &#40;&#41;MDX](../mdx/crossjoin-mdx.md)|Retourne le produit croisé d'un ou plusieurs jeux.|  
 |[CurrentOrdinal&#41;MDX &#40;](../mdx/currentordinal-mdx.md)|Retourne le numéro d'itération actuel dans un jeu lors d'une itération.|  
 |[Descendants &#40;&#41;MDX](../mdx/descendants-mdx.md)|Retourne le jeu de descendants d'un membre à un niveau spécifié ou à une distance spécifiée, en incluant ou en excluant éventuellement des descendants dans d'autres niveaux.|  
 |[&#41;MDX &#40;distinct](../mdx/distinct-mdx.md)|Retourne un jeu et supprime les tuples dupliqués à partir d'un jeu spécifié.|  
-|[DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)|Extrait vers le bas les membres d'un jeu d'un niveau sous le niveau le plus bas représenté dans le jeu, ou d'un niveau sous le niveau facultatif d'un membre représenté dans le jeu.|  
+|[DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)|Extrait vers le bas les membres d'un jeu d'un niveau sous le niveau le plus bas représenté dans le jeu, ou d'un niveau sous le niveau facultatif d'un membre représenté dans le jeu.|  
 |[DrilldownLevelBottom&#41;MDX &#40;](../mdx/drilldownlevelbottom-mdx.md)|Extrait vers le bas les membres les plus bas d'un jeu, d'un niveau à partir d'un niveau spécifié.|  
 |[DrilldownLevelTop&#41;MDX &#40;](../mdx/drilldownleveltop-mdx.md)|Extrait vers le bas les membres les plus hauts d'un jeu, d'un niveau à partir du niveau spécifié.|  
 |[&#41;MDX &#40;MDX](../mdx/drilldownmember-mdx.md)|Extrait vers le bas les membres dans un jeu spécifié, qui sont présents dans un second jeu spécifié. La fonction explore également un ensemble de tuples.|  
@@ -152,10 +152,10 @@ ms.locfileid: "68003514"
 |[Sauf &#40;&#41;MDX](../mdx/except-mdx-function.md)|Recherche la différence entre deux jeux, en conservant éventuellement les doublons.|  
 |[Existe &#40;MDX&#41;](../mdx/exists-mdx.md)|Retourne le jeu des membres d'un jeu qui existe avec un ou plusieurs tuples d'un ou plusieurs autres jeux.|  
 |[Extraire &#40;&#41;MDX](../mdx/extract-mdx.md)|Retourne un jeu de tuples à partir d'éléments de dimension extraits.|  
-|[Filtre &#40;&#41;MDX](../mdx/filter-mdx.md)|Retourne le jeu résultant du filtrage d'un jeu spécifié selon une condition de recherche.|  
+|[Filter &#40;MDX&#41;](../mdx/filter-mdx.md)|Retourne le jeu résultant du filtrage d'un jeu spécifié selon une condition de recherche.|  
 |[Générer &#40;&#41;MDX](../mdx/generate-mdx.md)|Applique un jeu à chaque membre d'un autre jeu, puis effectue la jointure par union des jeux résultants. Cette fonction retourne également une chaîne concaténée créée par l'évaluation d'une expression de chaîne sur un jeu.|  
 |[&#41;MDX &#40;](../mdx/head-mdx.md)|Retourne le premier nombre spécifié d'éléments dans un jeu, en conservant les doublons.|  
-|[Hierarchize&#41;MDX &#40;](../mdx/hierarchize-mdx.md)|Ordonne les membres d'un jeu en hiérachie.|  
+|[Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)|Ordonne les membres d'un jeu en hiérachie.|  
 |[Intersection &#40;&#41;MDX](../mdx/intersect-mdx.md)|Retourne l'intersection de deux ensembles d'entrée, en conservant éventuellement les doublons.|  
 |[LastPeriods &#40;&#41;MDX](../mdx/lastperiods-mdx.md)|Retourne le jeu des membres antérieurs à et incluant un membre spécifié.|  
 |[Membres &#40;définir&#41; &#40;&#41;MDX](../mdx/members-set-mdx.md)|Retourne le jeu des membres d'une dimension, d'un niveau ou d'une hiérarchie.|  
@@ -163,7 +163,7 @@ ms.locfileid: "68003514"
 |[NameToSet&#41;MDX &#40;](../mdx/nametoset-mdx.md)|Retourne un jeu qui contient le membre spécifié par une chaîne au format MDX.|  
 |[NonEmptyCrossjoin&#41;MDX &#40;](../mdx/nonemptycrossjoin-mdx.md)|Retourne le produit croisé d'un ou plusieurs jeux sous la forme d'un jeu, en excluant les tuples vides et les tuples qui ne sont associés à aucune table de faits.|  
 |[Ordre &#40;&#41;MDX](../mdx/order-mdx.md)|Organise les membres d'un jeu spécifié, en conservant ou non la hiérarchie.|  
-|[PeriodsToDate &#40;&#41;MDX](../mdx/periodstodate-mdx.md)|Retourne un jeu des membres frères de même niveau qu'un membre donné, commençant par le premier frère et se terminant par le membre donné, conformément à la contrainte du niveau spécifié de la dimension Time.|  
+|[PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)|Retourne un jeu des membres frères de même niveau qu'un membre donné, commençant par le premier frère et se terminant par le membre donné, conformément à la contrainte du niveau spécifié de la dimension Time.|  
 |[Taj &#40;&#41;MDX](../mdx/qtd-mdx.md)|Retourne un jeu de membres frères du même niveau qu’un membre donné, en commençant par le premier frère et en terminant par le membre donné, conformément à la limite du niveau *Quarter* de la dimension Time.|  
 |[Frères &#40;&#41;MDX](../mdx/siblings-mdx.md)|Retourne les frères d'un membre spécifié, notamment le membre lui-même.|  
 |[StripCalculatedMembers&#41;MDX &#40;](../mdx/stripcalculatedmembers-mdx.md)|Retourne un jeu généré en supprimant les membres calculés à partir d'un jeu spécifique.|  
@@ -184,7 +184,7 @@ ms.locfileid: "68003514"
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[CalculationPassValue&#41;MDX &#40;](../mdx/calculationpassvalue-mdx.md)|Retourne la valeur d'une expression MDX évaluée sur le test de calcul spécifié d'un cube.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Retourne la valeur d'une expression MDX évaluée sur le test de calcul spécifié d'un cube.|  
 |[&#41;MDX &#40;MDX](../mdx/coalesceempty-mdx.md)|Fusionne la valeur d'une cellule vide avec un nombre ou une chaîne et retourne la valeur fusionnée.|  
 |[Générer &#40;&#41;MDX](../mdx/generate-mdx.md)|Applique un jeu à chaque membre d'un autre jeu, puis effectue la jointure par union des jeux résultants. Cette fonction retourne également une chaîne concaténée créée par l'évaluation d'une expression de chaîne sur un jeu.|  
 |[&#41;de &#40;IIf](../mdx/iif-mdx.md)|Retourne l'une des deux valeurs déterminées par un test logique.|  
@@ -201,7 +201,7 @@ ms.locfileid: "68003514"
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[Cette&#41;MDX &#40;](../mdx/this-mdx.md)|Retourne le sous-cube actuel.|  
+|[This &#40;MDX&#41;](../mdx/this-mdx.md)|Retourne le sous-cube actuel.|  
 |[Laisse &#40;&#41;MDX](../mdx/leaves-mdx.md)|Retourne le jeu des membres feuilles situés dans la dimension, le membre ou le tuple spécifié.|  
   
 ## <a name="tuple-functions"></a>fonctions de tuple  
@@ -220,6 +220,6 @@ ms.locfileid: "68003514"
 |[Erreur &#40;&#41;MDX](../mdx/error-mdx.md)|Génère une erreur, et fournit éventuellement un message d'erreur spécifié.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)  
+ [Guide de référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

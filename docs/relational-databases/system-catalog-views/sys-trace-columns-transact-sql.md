@@ -20,10 +20,10 @@ ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bda45d55505356594f23a8bb1ece2e95153206a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022655"
 ---
 # <a name="systrace_columns-transact-sql"></a>sys.trace_columns (Transact-SQL)
@@ -34,13 +34,12 @@ ms.locfileid: "68022655"
  Pour obtenir la liste complète des événements de trace pris en charge, consultez [SQL Server référence](../../relational-databases/event-classes/sql-server-event-class-reference.md)de la classe d’événements.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|ID unique de cette colonne.|  
-|**nomme**|**nvarchar(128)**|Nom unique de cette colonne. Ce paramètre n'est pas localisé.|  
+|**name**|**nvarchar(128)**|Nom unique de cette colonne. Ce paramètre n'est pas localisé.|  
 |**type_name**|**nvarchar(128)**|Nom de type de données de cette colonne.|  
 |**max_size**|**int**|Taille de données maximale de cette colonne en octets.|  
 |**is_filterable**|**bit**|Indique si la colonne peut être utilisée dans la spécification de filtre.<br /><br /> 0 = faux<br /><br /> 1 = vrai|  

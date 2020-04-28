@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028663"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Paramètres du projet (Mappage de type) (SybaseToSQL)
@@ -57,23 +57,23 @@ Le tableau suivant contient le mappage de type par défaut entre [!INCLUDE[ssNoV
 |**binaire [8001..\*.]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**caractère variable**|**varchar**|  
+|**char varying**|**varchar**|  
 |**char varying\*[.. 8000]**|**VARCHAR [\*]**|  
 |**char varying [8001.\*.]**|**varchar(max)**|  
 |**Char [\*.. 8000]**|**Char [\*]**|  
 |**Char [8001..\*;]**|**varchar(max)**|  
 |**symbole**|**char**|  
-|**caractère variable**|**varchar**|  
+|**character varying**|**varchar**|  
 |**caractère variable [\*.. 8000]**|**VARCHAR [\*]**|  
 |**caractère variable [8001..\*]**|**varchar(max)**|  
 |**caractère [\*.. 8000]**|**Char [\*]**|  
 |**caractère [8001..\*.]**|**varchar(max)**|  
-|**Date**|**Date**|  
-|**DATETIME**|**datetime2 [3]**|  
-|**decembre**|**sépar**|  
+|**date**|**date**|  
+|**datetime**|**datetime2 [3]**|  
+|**decembre**|**decimal**|  
 |**Dec [\*.. \*]**|**Decimal [\*]**|  
 |**Dec [\*.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
-|**sépar**|**sépar**|  
+|**decimal**|**decimal**|  
 |**décimale\*[.. \*]**|**Decimal [\*]**|  
 |**décimale\*[.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
 |**double précision**|**float [53]**|  
@@ -106,7 +106,7 @@ Le tableau suivant contient le mappage de type par défaut entre [!INCLUDE[ssNoV
 |**NCHAR variable [4001..\*.]**|**nvarchar(max)**|  
 |**NCHAR [\*.. 4000]**|**NCHAR [\*]**|  
 |**NCHAR [4001..\*.]**|**nvarchar(max)**|  
-|**chiffre**|**chiffre**|  
+|**numeric**|**numeric**|  
 |**numérique [\*.. \*]**|**Numeric [\*]**|  
 |**numérique [\*.. \*][\*.. \*]**|**Numeric [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
@@ -115,12 +115,12 @@ Le tableau suivant contient le mappage de type par défaut entre [!INCLUDE[ssNoV
 |**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
-|**SMALLMONEY**|**SMALLMONEY**|  
+|**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
 |**sysname [\*.. \*]**|**nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**heure [3]**|  
-|**confirmé**|**rowversion**|  
+|**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**UNICHAR variable**|**nvarchar**|  

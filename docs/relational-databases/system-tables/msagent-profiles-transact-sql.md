@@ -18,10 +18,10 @@ ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5147ef1f482850b55a5d01a476b1981dfa012e5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021062"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
@@ -34,8 +34,8 @@ ms.locfileid: "68021062"
 |**profile_id**|**int**|ID de profil.|  
 |**profile_name**|**sysname**|Nom de profil unique pour le type d'agent.|  
 |**agent_type**|**int**|Type d'Agent:<br /><br /> **1** = agent d’instantané<br /><br /> **2** = agent de lecture du journal<br /><br /> **3** = agent de distribution<br /><br /> **4** = agent de fusion<br /><br /> **9** = agent de lecture de la file d’attente|  
-|**entrer**|**int**|Type de profil :<br /><br /> **0** = système**1** = personnalisé|  
-|**description**|**nvarchar (3000)**|Description du profil.|  
+|**type**|**int**|Type de profil :<br /><br /> **0** = système**1** = personnalisé|  
+|**descriptive**|**nvarchar (3000)**|Description du profil.|  
 |**def_profile**|**bit**|Indique si ce profil représente le profil par défaut pour ce type d'agent.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037060"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Mots clés réservés (syntaxe MDX)
@@ -29,6 +29,6 @@ ms.locfileid: "68037060"
 -   Utilisez une convention d'attribution de noms qui permet d'éviter l'utilisation de mots clés réservés. Les consonnes ou les voyelles peuvent être supprimées si un nom d’objet doit ressembler à un mot clé réservé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éléments de syntaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
+ [Éléments de la syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

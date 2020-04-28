@@ -19,10 +19,10 @@ ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff099e48540b7255e2453bfb9b90c9515196449c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005096"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
@@ -51,16 +51,16 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Numéro d'identification du fournisseur de services de chiffrement.|  
 |**session_handle**|**varbytes (8)**|Descripteur de session de chiffrement.|  
-|**personnelles**|**nvarchar(128)**|Identité utilisée pour l'authentification auprès du fournisseur de chiffrement.|  
-|**spid**|**short**|ID de session (SPID) de la connexion. Pour plus d’informations, consultez [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
+|**identity**|**nvarchar(128)**|Identité utilisée pour l'authentification auprès du fournisseur de chiffrement.|  
+|**SPID**|**short**|ID de session (SPID) de la connexion. Pour plus d’informations, consultez [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
 ## <a name="remarks"></a>Notes  
  La vue **sys. dm_cryptographic_provider_sessions** est visible par le public pour la connexion actuelle. Pour afficher toutes les connexions de chiffrement, vous devez disposer de l’autorisation **Control** Server.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [Gestion de clés extensible &#40;&#41;EKM](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [CRÉER un fournisseur de services de CHIFFREment &#40;&#41;Transact-SQL](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

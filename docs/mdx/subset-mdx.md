@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b1f9a79c0e0ba6d578b82d7b1d072f3543888a1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036704"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
@@ -34,7 +34,7 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Start*  
  Expression numérique valide qui précise la position du premier tuple à retourner.  
   
- *Saut*  
+ *Count*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
 ## <a name="remarks"></a>Notes  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

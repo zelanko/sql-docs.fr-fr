@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006556"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportation d’un inventaire des accès (AccessToSQL)
@@ -57,7 +57,7 @@ Les instructions suivantes décrivent comment créer un projet, ajouter des base
   
 2.  Dans le menu **Fichier**, sélectionnez **Nouveau projet**.  
   
-    La boîte de dialogue **Nouveau projet** s'affiche.  
+    La boîte de dialogue **Nouveau projet** apparaît.  
   
 3.  Dans la zone **Nom** , tapez le nom de votre projet.  
   
@@ -82,7 +82,7 @@ Pour plus d’informations sur la création de projets, consultez [création et 
     > [!IMPORTANT]  
     > La zone **de texte tout ou partie du nom de fichier** ne prend pas en charge les caractères génériques.  
   
-5.  Cliquez sur **Scan**.  
+5.  Cliquez sur **Analyse**.  
   
     La page d’analyse s’affiche. Cela indique les bases de données qui ont été trouvées et la progression de la recherche. Pour arrêter la recherche, cliquez sur **arrêter**.  
   

@@ -18,10 +18,10 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022335"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68022335"
   Convertit un utilisateur de la base de données mappé à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en utilisateur de base de données autonome avec mot de passe. Dans une base de données autonome, utilisez cette procédure pour supprimer les dépendances sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où la base de données est installée. **sp_migrate_user_to_contained** sépare l’utilisateur de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’origine, afin que les paramètres tels que le mot de passe et la langue par défaut puissent être administrés séparément pour la base de données à relation contenant-contenu. **sp_migrate_user_to_contained** peut être utilisé avant de déplacer la base de données à relation contenant- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] contenu vers une autre instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour éliminer les dépendances sur les connexions d’instance actuelles.  
   
 > [!NOTE]
-> Soyez prudent lorsque vous utilisez **sp_migrate_user_to_contained**, car vous ne pourrez pas inverser l’effet. Cette procédure est utilisée uniquement dans une base de données à relation contenant-contenu. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md).  
+> Soyez prudent lorsque vous utilisez **sp_migrate_user_to_contained**, car vous ne pourrez pas inverser l’effet. Cette procédure est utilisée uniquement dans une base de données à relation contenant-contenu. Pour plus d’informations, consultez [contained databases](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -118,6 +118,6 @@ DEALLOCATE user_cursor ;
   
 ## <a name="see-also"></a>Voir aussi  
  [Migrer vers une base de données partiellement à relation contenant-contenu](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)  
+ [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)  
   
   

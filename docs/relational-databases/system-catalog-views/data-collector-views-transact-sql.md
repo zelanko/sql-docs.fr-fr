@@ -16,10 +16,10 @@ ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9e412f796a5b04f980557b5a3131763811aa78da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033167"
 ---
 # <a name="data-collector-views-transact-sql"></a>Vues de collecteur de données (Transact-SQL)

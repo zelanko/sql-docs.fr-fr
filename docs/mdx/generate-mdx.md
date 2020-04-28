@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005903"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,7 +41,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Expression de chaîne valide qui correspond généralement au nom du membre actuel (CurrentMember.Name) de chaque tuple dans le jeu spécifié.  
   
- *Delimiter*  
+ *Limite*  
  Délimiteur valide exprimé en tant qu'expression de chaîne.  
   
 ## <a name="remarks"></a>Notes  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 >  Cette forme de la fonction **generate** peut être utile lors du débogage des calculs, car elle vous permet de retourner une chaîne affichant les noms de tous les membres d’un jeu. Cela peut être plus facile à lire que la représentation MDX stricte d’un ensemble que la fonction [SetToStr &#40;mdx&#41;](../mdx/settostr-mdx.md) retourne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

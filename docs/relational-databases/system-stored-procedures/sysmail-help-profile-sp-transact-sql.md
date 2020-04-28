@@ -18,10 +18,10 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044499"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
@@ -53,8 +53,8 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |-|-|-|  
 |Nom de la colonne|Type de données|Description|  
 |**profile_id**|**int**|ID de profil du profil.|  
-|**nomme**|**sysname**|Nom de profil du profil.|  
-|**description**|**nvarchar (256)**|Description du profil.|  
+|**name**|**sysname**|Nom de profil du profil.|  
+|**descriptive**|**nvarchar(256)**|Description du profil.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsqu’un nom de profil ou un ID de profil est spécifié, **sysmail_help_profile_sp** retourne des informations sur ce profil. Dans le cas contraire, **sysmail_help_profile_sp** retourne des informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chaque profil de l’instance.  
@@ -100,7 +100,7 @@ profile_id  name                          description
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

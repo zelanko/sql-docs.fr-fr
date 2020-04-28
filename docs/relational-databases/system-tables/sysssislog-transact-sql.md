@@ -18,10 +18,10 @@ ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029611"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
@@ -36,14 +36,14 @@ ms.locfileid: "68029611"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identificateur unique de l'entrée d'enregistrement.|  
-|événement|**sysname**|Nom de l'événement qui a généré l'entrée d'enregistrement.|  
+|event|**sysname**|Nom de l'événement qui a généré l'entrée d'enregistrement.|  
 |computer|**nvarchar**|Ordinateur sur lequel le package s'exécutait lors de la création de l'entrée d'enregistrement.|  
 |operator|**nvarchar**|Nom de l'utilisateur qui a exécuté le package ayant créé l'entrée du journal.|  
 |source|**nvarchar**|Nom de l'exécutable dans le package qui a généré l'entrée du journal.|  
 |sourceid|**uniqueidentifier**|GUID de l'exécutable dans le package qui a généré l'entrée du journal.|  
 |executionid|**uniqueidentifier**|GUID de l'instance d'exécution de l'exécutable qui a généré l'entrée du journal.|  
-|Heure de départ|**DATETIME**|Heure à laquelle le package a commencé à s’exécuter.|  
-|endtime|**DATETIME**|Heure de fin du package.<br /><br /> Cette fonctionnalité n'est pas implémentée. La valeur dans la colonne endtime est toujours identique à la valeur dans la colonne starttime.|  
+|starttime|**datetime**|Heure à laquelle le package a commencé à s’exécuter.|  
+|endtime|**datetime**|Heure de fin du package.<br /><br /> Cette fonctionnalité n'est pas implémentée. La valeur dans la colonne endtime est toujours identique à la valeur dans la colonne starttime.|  
 |datacode|**int**|Valeur entière facultative qui indique généralement le résultat de l'exécution du conteneur ou de la tâche.|  
 |databytes|**image**|Tableau d'octets facultatif qui contient des informations supplémentaires.|  
 |message|**nvarchar**|Description de l'événement et des informations associées à l'événement.|  

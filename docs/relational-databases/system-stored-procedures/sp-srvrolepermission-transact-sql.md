@@ -18,10 +18,10 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032812"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
@@ -48,11 +48,11 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |-----------|-----------------|  
 |**administrateur système**|Administrateurs système|  
 |**securityadmin**|Administrateurs de la sécurité|  
-|**ServerAdmin**|Administrateurs de serveur|  
+|**serveradmin**|Administrateurs du serveur|  
 |**setupadmin**|Administrateurs de l'installation et de la configuration|  
 |**processadmin**|Administrateurs de processus|  
 |**diskadmin**|Administrateurs de disques|  
-|**rôles**|Créateurs de base de données|  
+|**dbcreator**|Créateurs de bases de données|  
 |**bulkadmin**|Exécute les instructions BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -63,7 +63,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|Nom d'un rôle serveur fixe|  
-|**Permission**|**sysname**|Autorisation associée à **ServerRole**|  
+|**Autorisation**|**sysname**|Autorisation associée à **ServerRole**|  
   
 ## <a name="remarks"></a>Notes  
  Les autorisations répertoriées comprennent les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'il est possible d'exécuter, ainsi que d'autres actions spéciales que les membres du rôle serveur fixe sont en mesure d'accomplir. Pour afficher la liste des rôles serveur fixes, exécutez **sp_helpsrvrole**.  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   

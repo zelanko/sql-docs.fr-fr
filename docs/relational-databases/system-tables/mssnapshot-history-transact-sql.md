@@ -18,10 +18,10 @@ ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997282"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "67997282"
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID de l'Agent d'instantané.|  
 |**runstatus**|**int**|État d'exécution :<br /><br /> **1** = début.<br /><br /> **2** = opération réussie.<br /><br /> **3** = en cours.<br /><br /> **4** = inactif.<br /><br /> **5** = nouvelle tentative.<br /><br /> **6** = échec.|  
-|**start_time**|**DATETIME**|Heure de démarrage de l'exécution de la tâche|  
-|**time**|**DATETIME**|Heure de consignation du message dans le journal|  
-|**Macauley**|**int**|Durée, en secondes, de la session de message.|  
-|**inclus**|**nvarchar(255)**|Texte du message.|  
+|**start_time**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
+|**time**|**datetime**|Heure de consignation du message dans le journal|  
+|**duration**|**int**|Durée, en secondes, de la session de message.|  
+|**commentaires**|**nvarchar(255)**|Texte du message.|  
 |**delivered_transactions**|**int**|Nombre total des transactions transmises dans la session.|  
 |**delivered_commands**|**int**|Nombre de commandes transmises par seconde.|  
-|**delivery_rate**|**float(53)**|Moyenne des commandes transmises par seconde.|  
+|**delivery_rate**|**float (53)**|Moyenne des commandes transmises par seconde.|  
 |**error_id**|**int**|ID de l’erreur dans la table système [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) .|  
-|**confirmé**|**confirmé**|Colonne timestamp de cette table|  
+|**timestamp**|**timestamp**|Colonne timestamp de cette table|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

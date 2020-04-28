@@ -18,10 +18,10 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029630"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
@@ -31,12 +31,12 @@ ms.locfileid: "68029630"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nomme**|**sysname**|Nom de la colonne ou du paramètre de la procédure.|  
-|**identifi**|**int**|Identificateur d'objet de la table à laquelle cette colonne appartient ou identificateur de la procédure stockée à laquelle ce paramètre est associé.|  
+|**name**|**sysname**|Nom de la colonne ou du paramètre de la procédure.|  
+|**id**|**int**|Identificateur d'objet de la table à laquelle cette colonne appartient ou identificateur de la procédure stockée à laquelle ce paramètre est associé.|  
 |**xtype**|**tinyint**|Le type de stockage physique de [sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|Identificateur du type de données étendu défini par l'utilisateur.|  
-|**base**|**bigint**|La longueur maximale de stockage physique de [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|La longueur maximale de stockage physique de [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|Identificateur de colonne ou de paramètre.|  
@@ -45,16 +45,16 @@ ms.locfileid: "68029630"
 |**réservé**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Identificateur de la valeur par défaut pour cette colonne.|  
-|**Domain**|**int**|Identificateur de la règle ou de la contrainte CHECK pour cette colonne.|  
+|**domaine**|**int**|Identificateur de la règle ou de la contrainte CHECK pour cette colonne.|  
 |**number**|**int**|Numéro de sous-procédure lorsque la procédure est regroupée (**0** pour les entrées qui ne sont pas des procédures).|  
-|**coseigneur**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Déplacement dans la ligne où cette colonne apparaît.|  
 |**CollationID**|**int**|Identificateur du classement de la colonne. NULL pour les colonnes non basées sur les caractères.|  
 |**sous**|**int**|Identificateur du langage de la colonne.|  
-|**statu**|**int**|Bitmap utilisée pour décrire une propriété de la colonne ou du paramètre :<br /><br /> **0x08** = la colonne autorise les valeurs NULL.<br /><br /> **0x10** = le remplissage ANSI était en vigueur lorsque des colonnes **varchar** ou **varbinary** étaient ajoutées. Les espaces à droite sont conservés pour les colonnes **varchar** et les zéros à droite sont conservés pour les colonnes **varbinary** .<br /><br /> **0x40** = le paramètre est un paramètre de sortie.<br /><br /> **0x80** = la colonne est une colonne d’identité.|  
-|**entrer**|**int**|Le type de stockage physique de [sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
-|**Type d’utilisateur**|**tinyint**|L’ID du type de données défini par l’utilisateur de [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**statut**|**int**|Bitmap utilisée pour décrire une propriété de la colonne ou du paramètre :<br /><br /> **0x08** = la colonne autorise les valeurs NULL.<br /><br /> **0x10** = le remplissage ANSI était en vigueur lorsque des colonnes **varchar** ou **varbinary** étaient ajoutées. Les espaces à droite sont conservés pour les colonnes **varchar** et les zéros à droite sont conservés pour les colonnes **varbinary** .<br /><br /> **0x40** = le paramètre est un paramètre de sortie.<br /><br /> **0x80** = la colonne est une colonne d’identité.|  
+|**type**|**int**|Le type de stockage physique de [sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**UserType**|**tinyint**|L’ID du type de données défini par l’utilisateur de [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|Niveau de précision de cette colonne.|  
 |**scale**|**int**|Échelle de cette colonne.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029630"
 |**tdscollation**|**int**|Nom du classement de la colonne lors du retour dans un flux de données tabulaires (TDS).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication de base de données hétérogène](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Réplication de bases de données hétérogènes](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002465"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
@@ -48,8 +48,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`Nom de la procédure stockée, fonction définie par l’utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *module_name* ne peut pas être une procédure stockée Common Language Runtime (CLR) ou une fonction CLR. *module_name* ne peut pas être lié à un schéma. *module_name* est `nvarchar`de, sans valeur par défaut. *module_name* peut être un identificateur en plusieurs parties, mais ne peut faire référence qu’à des objets de la base de données active.
 
-`[ @namespace = ] ' < class > '`Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL `<class>` , est requis. 
-  `<class>` a la valeur `nvarchar(20)`. Les entrées `DATABASE_DDL_TRIGGER` valides `SERVER_DDL_TRIGGER`sont et.    
+`[ @namespace = ] ' < class > '`Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL `<class>` , est requis. `<class>` a la valeur `nvarchar(20)`. Les entrées `DATABASE_DDL_TRIGGER` valides `SERVER_DDL_TRIGGER`sont et.    
 
 ## <a name="return-code-values"></a>Codet de retour  
 
@@ -157,5 +156,5 @@ GO
 ## <a name="see-also"></a>Voir aussi 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Assistant Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Assistant Chiffrement intégral.](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

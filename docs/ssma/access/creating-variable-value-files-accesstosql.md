@@ -10,10 +10,10 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006596"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Création de fichiers de valeurs de variables (AccessToSQL)
@@ -26,7 +26,7 @@ Un fichier de valeurs de variable est un fichier XML comprenant les valeurs de p
   
 **Exemples :**  
   
-**Exemple 1 :**  
+**Exemple 1 :**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -49,7 +49,7 @@ Un fichier de valeurs de variable est un fichier XML comprenant les valeurs de p
   
 </variables>  
 ```  
-**Exemple 2 :**  
+**Exemple 2 :**  
   
 ```xml  
 <!--Sample of variable value file commands-->  

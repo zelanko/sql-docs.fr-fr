@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017013"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
@@ -40,8 +40,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  La fonction **AVG** calcule la moyenne des valeurs non vides des cellules dans le jeu spécifié en calculant d’abord la somme des valeurs dans les cellules du jeu spécifié, puis en divisant la somme calculée par le nombre de cellules non vides dans le jeu spécifié.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignore les valeurs NULL lors du calcul de la valeur moyenne dans un jeu de nombres.  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignore les valeurs NULL lors du calcul de la valeur moyenne dans un jeu de nombres.  
   
  Si une expression numérique spécifique (en général une mesure) n’est pas spécifiée, la fonction **AVG** calcule la moyenne de chaque mesure dans le contexte de requête actuel. Si une mesure spécifique est fournie, la fonction **AVG** évalue d’abord la mesure sur le jeu, puis la fonction calcule la moyenne en fonction de la mesure spécifiée.  
   
@@ -146,6 +145,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

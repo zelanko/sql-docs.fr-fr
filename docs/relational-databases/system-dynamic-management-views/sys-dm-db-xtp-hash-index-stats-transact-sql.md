@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026841"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
@@ -112,7 +112,7 @@ Certaines fonctionnalités utilisent des tables internes qui tirent parti des in
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Notez que la BUCKET_COUNT de l’index sur les tables internes ne peut pas être modifiée. par conséquent, la sortie de cette requête doit être considérée comme informatif uniquement. Aucune action n’est requise.  
+Notez que la BUCKET_COUNT de l’index sur les tables internes ne peut pas être modifiée. par conséquent, la sortie de cette requête doit être considérée comme informatif uniquement. Aucune action n'est requise.  
 
 Cette requête ne doit retourner aucune ligne, sauf si vous utilisez une fonctionnalité qui exploite les index de hachage sur les tables internes. La table mémoire optimisée suivante contient un index ColumnStore. Après avoir créé cette table, vous verrez des index de hachage sur les tables internes.
 
@@ -125,6 +125,6 @@ Cette requête ne doit retourner aucune ligne, sauf si vous utilisez une fonctio
 ```
 
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables à mémoire optimisée &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038921"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexte des expressions et évaluation des requêtes (XQuery)
@@ -77,7 +77,7 @@ ms.locfileid: "68038921"
   
      Toutes les liaisons d'espace de noms sont résolues au cours de l'initialisation du contexte statique.  
   
--   En cas d’interrogation d’une colonne ou d’une variable **XML** typée, les composants de la collection de schémas XML associée à la colonne ou à la variable sont importés dans le contexte statique. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+-   En cas d’interrogation d’une colonne ou d’une variable **XML** typée, les composants de la collection de schémas XML associée à la colonne ou à la variable sont importés dans le contexte statique. Pour plus d’informations, consultez [comparer du XML typé et du XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)non typé.  
   
 -   Pour chaque type atomique des schémas importés, une fonction de conversion est également mise à disposition dans le contexte statique. L'exemple suivant illustre ce concept. Dans cet exemple, une requête est spécifiée par rapport à une variable **XML** typée. La collection de schémas XML associée à cette variable définit un type atomique, myType. Correspondant à ce type, une fonction de conversion, **MyType ()**, est disponible pendant l’analyse statique. L'expression de la requête (`ns:myType(0)`) renvoie une valeur de type myType.  
   

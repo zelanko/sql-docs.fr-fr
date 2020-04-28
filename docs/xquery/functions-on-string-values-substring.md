@@ -16,10 +16,10 @@ ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004641"
 ---
 # <a name="functions-on-string-values---substring"></a>Fonctions sur les valeurs de chaîne : substring
@@ -69,9 +69,9 @@ fn:substring($sourceString as xs:string?,
  SQL Server permet à *$startingLoc* et *$Length* d’être la séquence vide, car la séquence vide est une valeur possible suite au mappage des erreurs dynamiques à ().  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances **** XML stockées dans différentes colonnes [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de type XML dans la base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances **xml** XML stockées dans différentes colonnes [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de type XML dans la base de données.  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>R. Utilisation de la fonction XQuery substring() pour extraire une synthèse partielle des descriptions de modèles de produits.  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Utilisation de la fonction XQuery substring() pour extraire une synthèse partielle des descriptions de modèles de produits.  
  La requête récupère les 50 premiers caractères du texte qui décrivent le modèle de produit, le <`Summary`> élément dans le document.  
   
 ```  

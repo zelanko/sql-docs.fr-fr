@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017086"
 ---
 # <a name="arithmetic-operators"></a>Opérateurs arithmétiques
@@ -24,10 +24,10 @@ ms.locfileid: "68017086"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|[+ (Ajouter)](../mdx/add-mdx.md)|Additionne deux nombres.|  
-|[/(Division)](../mdx/divide-mdx-operator-reference.md)|Divise un nombre par un autre nombre.|  
-|[* (Multiplier)](../mdx/multiply-mdx.md)|Multiplie deux nombres.|  
-|[-(Soustraction)](../mdx/subtract-mdx.md)|Soustrait deux nombres.|  
+|[+ (Ajout)](../mdx/add-mdx.md)|Additionne deux nombres.|  
+|[/ (Diviser)](../mdx/divide-mdx-operator-reference.md)|Divise un nombre par un autre nombre.|  
+|[* (Multiplication)](../mdx/multiply-mdx.md)|Multiplie deux nombres.|  
+|[- (Soustraction)](../mdx/subtract-mdx.md)|Soustrait deux nombres.|  
 |^ (Puissance) |Élève un nombre à une puissance égale à un autre nombre.|  
   
 > [!NOTE]  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004896"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -53,16 +53,16 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="arguments"></a>Arguments    
  *database_id* | NULL | 0 | VALEURS    
- ID de la base de données. *database_id* est de type **smallint**. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
+ ID de la base de données. *database_id* est de type **smallint**. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
     
  Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez NULL pour *database_id*, vous devez également spécifier null pour *object_id*, *index_id*et *partition_number*.    
     
  Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md).    
     
  *object_id* | NULL | 0 | VALEURS    
- Identificateur d'objet de la table ou de la vue sur laquelle l'index est défini. *object_id* est de **type int**.    
+ Identificateur d'objet de la table ou de la vue sur laquelle l'index est défini. *l’object_id* est **int**.    
     
- Les entrées autorisées sont l'ID d'une table et d'une vue ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
+ Les entrées autorisées sont l'ID d'une table et d'une vue ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
     
  Spécifiez la valeur NULL pour retourner des informations mises en cache pour toutes les tables et les vues de la base de données spécifiée. Si vous spécifiez NULL pour *object_id*, vous devez également spécifier null pour *index_id* et *partition_number*.    
     
@@ -72,7 +72,7 @@ sys.dm_db_index_operational_stats (
  Spécifiez la valeur NULL pour retourner des informations mises en cache pour tous les index d'une table de base ou d'une vue. Si vous spécifiez NULL pour *index_id*, vous devez également spécifier null pour *partition_number*.    
     
  *partition_number* | NULL | 0 | VALEURS    
- Numéro de partition dans l'objet. *partition_number* est de **type int**. Les entrées valides sont le *partion_number* d’un index ou d’un segment de mémoire, NULL, 0 ou default. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
+ Numéro de partition dans l'objet. *partition_number* est de **type int**. Les entrées valides sont le *partion_number* d’un index ou d’un segment de mémoire, NULL, 0 ou default. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
     
  Spécifiez la valeur NULL pour retourner des informations mises en cache pour toutes les partitions de l'index ou du segment de mémoire.    
     
@@ -135,7 +135,7 @@ sys.dm_db_index_operational_stats (
     
  Utilisez les colonnes suivantes pour identifier les zones de contention.    
     
- **Pour analyser un modèle d’accès commun à la partition de table ou d’index**, utilisez les colonnes suivantes :    
+ **Pour analyser un modèle d'accès commun à la partition de table ou d'index**, utilisez les colonnes suivantes :    
     
 -   **leaf_insert_count**    
     
@@ -172,7 +172,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="column-remarks"></a>Remarques sur les colonnes    
  Les valeurs de **lob_orphan_create_count** et **lob_orphan_insert_count** doivent toujours être égales.    
     
- La valeur des colonnes **lob_fetch_in_pages** et **lob_fetch_in_bytes** peut être supérieure à zéro pour les index non cluster qui contiennent une ou plusieurs colonnes LOB en tant que colonnes incluses. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md). De même, la valeur des colonnes **row_overflow_fetch_in_pages** et **row_overflow_fetch_in_bytes** peut être supérieure à zéro pour un index non cluster si ce dernier contient des colonnes pouvant être envoyées hors ligne.    
+ La valeur des colonnes **lob_fetch_in_pages** et **lob_fetch_in_bytes** peut être supérieure à zéro pour les index non cluster qui contiennent une ou plusieurs colonnes LOB en tant que colonnes incluses. Pour plus d’informations, consultez [créer des index avec des colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md). De même, la valeur des colonnes **row_overflow_fetch_in_pages** et **row_overflow_fetch_in_bytes** peut être supérieure à zéro pour un index non cluster si ce dernier contient des colonnes pouvant être envoyées hors ligne.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>Mode de réinitialisation des compteurs dans le cache des métadonnées    
  Les données retournées par **sys.dm_db_index_operational_stats** existent uniquement tant que l'objet du cache de métadonnées qui représente le segment de mémoire ou l'index est disponible. Ces données ne sont ni persistantes, ni cohérentes d'un point de vue transactionnel. Autrement dit, vous ne pouvez pas utiliser ces compteurs pour déterminer si un index a été utilisé ou pas, ni pour savoir quand il a été utilisé pour la dernière fois. Pour plus d’informations à ce sujet, consultez [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
@@ -236,7 +236,7 @@ GO
 ```    
     
 ## <a name="see-also"></a>Voir aussi    
- [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+ [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [Fonctions et vues de gestion dynamique liées aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     

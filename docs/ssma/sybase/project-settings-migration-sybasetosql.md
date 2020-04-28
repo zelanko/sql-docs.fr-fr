@@ -10,10 +10,10 @@ ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028716"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Paramètres du projet (Migration) (SybaseToSQL)
@@ -44,13 +44,13 @@ Le volet migration est disponible dans les boîtes de dialogue **paramètres du 
   
 |Terme|Définition|  
 |--------|--------------|  
-|**Taille du lot**|Spécifie la taille de lot utilisée lors de la migration des données.<br /><br />**Mode par défaut**: 10000<br /><br />**Mode optimiste**: 10000<br /><br />**Mode complet**: 10000|  
+|**Taille de lot**|Spécifie la taille de lot utilisée lors de la migration des données.<br /><br />**Mode par défaut**: 10000<br /><br />**Mode optimiste**: 10000<br /><br />**Mode complet**: 10000|  
 |**Contraintes de validation**|Spécifie si SSMA doit vérifier les contraintes lorsqu’il insère des données dans SQL Server tables.<br /><br />**Mode par défaut**: false<br /><br />**Mode optimiste**: false<br /><br />**Mode complet**: false|  
 |**Délai d’expiration de la migration des données**|Spécifie le délai d’expiration utilisé pendant la migration des données<br /><br />**Mode par défaut**: 15<br /><br />**Mode optimiste**: 15<br /><br />**Mode complet**: 15|  
 |**Options de migration étendue des données**|Affiche des options de migration de données supplémentaires pour chaque table sous un onglet détail distinct.<br /><br />**Mode par défaut**: masquer<br /><br />**Mode optimiste**: masquer<br /><br />**Mode complet**: masquer|  
-|**Déclencher les déclencheurs**|Spécifie si SSMA doit déclencher les déclencheurs d’insertion lorsqu’il ajoute des données aux tables SQL Server.<br /><br />**Mode par défaut**: false<br /><br />**Mode optimiste**: false<br /><br />**Mode complet**: false|  
-|**Conserver l’identité**|Spécifie si SSMA conserve les valeurs d’identité Sybase lorsqu’il ajoute des données à SQL Server. Si la valeur est false, les valeurs d’identité sont affectées par la destination.<br /><br />**Mode par défaut**: true<br /><br />**Mode optimiste**: true<br /><br />**Mode complet**: true|  
-|**Conserver les valeurs null**|Spécifie si SSMA conserve les valeurs NULL dans les données sources lorsqu’il ajoute des données à SQL Server, quelles que soient les valeurs par défaut spécifiées dans SQL Server.<br /><br />**Mode par défaut**: true<br /><br />**Mode optimiste**: true<br /><br />**Mode complet**: true|  
+|**Exécuter les déclencheurs**|Spécifie si SSMA doit déclencher les déclencheurs d’insertion lorsqu’il ajoute des données aux tables SQL Server.<br /><br />**Mode par défaut**: false<br /><br />**Mode optimiste**: false<br /><br />**Mode complet**: false|  
+|**Conserver l'identité**|Spécifie si SSMA conserve les valeurs d’identité Sybase lorsqu’il ajoute des données à SQL Server. Si la valeur est false, les valeurs d’identité sont affectées par la destination.<br /><br />**Mode par défaut**: true<br /><br />**Mode optimiste**: true<br /><br />**Mode complet**: true|  
+|**Conserver les valeurs NULL**|Spécifie si SSMA conserve les valeurs NULL dans les données sources lorsqu’il ajoute des données à SQL Server, quelles que soient les valeurs par défaut spécifiées dans SQL Server.<br /><br />**Mode par défaut**: true<br /><br />**Mode optimiste**: true<br /><br />**Mode complet**: true|  
 |**En cas d’erreur**|Arrête la migration des données lorsqu’une erreur se produit. Trois options s’imposent :<br /><br />**Arrêter la migration :** Arrête l’opération de migration des données<br /><br />**Passer au tableau suivant :** Arrête la migration des données vers la table actuelle et passe à la suivante<br /><br />**Passer au traitement suivant :** Arrête la migration des données vers le lot actuel et passe à la suivante<br /><br />**Mode par défaut**: passer au traitement suivant<br /><br />**Mode optimiste**: passer au lot suivant<br /><br />**Mode complet**: passer au lot suivant|  
 |**Partie fractionnaire ronde des nombres**|Spécifie s’il faut supprimer les parties fractionnaires des données numériques et décimales pendant la migration vers les types entiers ou afficher le message d’erreur si la partie fractionnaire est non triviale.<br /><br />**Mode par défaut**: non<br /><br />**Mode optimiste**: non<br /><br />**Mode complet**: non|  
 |**Sybase Unicode endian**|Spécifie le type endian pour les chaînes Sybase Unicode. Les options suivantes peuvent être définies pour ce paramètre particulier :<br /><br />Little endian<br /><br />Big endian<br /><br />**Mode par défaut**: Little endian<br /><br />**Mode optimiste**: Little endian<br /><br />**Mode complet**: Little endian|  

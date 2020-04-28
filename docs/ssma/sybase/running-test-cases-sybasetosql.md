@@ -12,10 +12,10 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021021"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Exécution de cas de test (SybaseToSQL)
@@ -34,7 +34,7 @@ Une fois le test terminé, le rapport de cas de test est créé. Cliquez sur le 
   
 ## <a name="test-case-execution-steps"></a>Étapes d’exécution du cas de test  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+### <a name="prerequisites"></a>Prérequis  
 Le testeur SSMA vérifie si toutes les conditions préalables sont remplies pour l’exécution des tests avant le démarrage du test. Si certaines conditions ne sont pas satisfaites, un message d’erreur s’affiche.  
   
 ### <a name="initialization"></a>Initialisation  
@@ -44,7 +44,7 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
   
 Les objets suivants sont créés sur Sybase dans la base de données SSMATESTER2005db ou SSMATESTER2008db [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et dans la base de données ssmatesterdb_syb.  
   
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|Déclencheur|Déclenchez l’audit des modifications dans la table vérifiée.|  
 |USER_TABLE $ AUD|Table de charge de travail|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
@@ -56,7 +56,7 @@ Les objets suivants sont créés sur Sybase dans la base de données SSMATESTER2
   
 L’objet suivant est créé dans la base de données de la table vérifiée sur Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Name|Type|Description|  
+|Nom|Type|Description|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|Déclencheur|Déclenchez l’audit des modifications dans la table vérifiée.|  
   

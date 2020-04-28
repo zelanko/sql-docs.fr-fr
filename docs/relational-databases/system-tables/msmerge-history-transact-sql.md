@@ -18,10 +18,10 @@ ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017690"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "68017690"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID du travail d'Agent de fusion|  
 |**agent_id**|**int**|ID de l'Agent de fusion|  
-|**inclus**|**nvarchar(255)**|Texte du message.|  
+|**commentaires**|**nvarchar(255)**|Texte du message.|  
 |**error_id**|**int**|ID d’une erreur dans la table système [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) .|  
-|**confirmé**|**confirmé**|Colonne timestamp de cette table|  
+|**timestamp**|**timestamp**|Colonne timestamp de cette table|  
 |**updatable_row**|**bit**|Défini sur **1** si la ligne de l’historique peut être remplacée.|  
   
 ## <a name="see-also"></a>Voir aussi  

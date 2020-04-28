@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038983"
 ---
 # <a name="context-functions---position-xquery"></a>Fonctions relatives au contexte : position (XQuery)
@@ -38,9 +38,9 @@ fn:position() as xs:integer
  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **FN : position ()** ne peut être utilisé que dans le contexte d’un prédicat dépendant du contexte. Plus précisément, elle ne peut être utilisée qu'entre crochets ([ ]).Toute comparaison à cette fonction ne réduit pas la cardinalité lors de l'inférence de type statique.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées **** dans différentes colonnes de type [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML dans la base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées **xml** dans différentes colonnes de type [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML dans la base de données.  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>R. Utilisation de la fonction XQuery position() pour récupérer les deux premières caractéristiques de produits  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Utilisation de la fonction XQuery position() pour récupérer les deux premières caractéristiques de produits  
  La requête suivante récupère les deux premières fonctionnalités, les deux premiers éléments enfants de l’élément <`Features`>, à partir de la description du catalogue du modèle de produit. S’il y a plus de fonctionnalités, il ajoute `there-is-more/` un <élément> au résultat.  
   
 ```  

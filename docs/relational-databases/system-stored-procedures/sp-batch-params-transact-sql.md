@@ -18,10 +18,10 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001811"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
@@ -53,12 +53,12 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**DATA_TYPE**|**smallint**|Type de données du paramètre (code d'entier d'un type de données ODBC). Si ce type de données ne peut pas être mappé à un type ISO, la valeur est NULL. Le nom du type de données natif est retourné dans la colonne **type_name** . Cette valeur est toujours NULL.|  
 |**TYPE_NAME**|**sysname**|Représentation sous forme de chaîne du type de données tel qu'il est présenté par le SGBD sous-jacent. Cette valeur est NULL.|  
 |**PRÉCISION**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
-|**BASE**|**int**|Taille de transfert des données. Cette valeur est NULL.|  
+|**LENGTH**|**int**|Taille de transfert des données. Cette valeur est NULL.|  
 |**ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal. Cette valeur est NULL.|  
 |**RADIX**|**smallint**|Base des types numériques. Cette valeur est NULL.|  
 |**NULLABLE**|**smallint**|Précise la possibilité de valeur nulle.<br /><br /> 1 = le type de données du paramètre peut être créé de manière à autoriser les valeurs NULL.<br /><br /> 0 = les valeurs NULL ne sont pas autorisées.<br /><br /> Cette valeur est NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] telle qu'elle apparaît dans le champ TYPE du descripteur. Cette colonne est la même que la colonne **data_type** , à l’exception des types de données **DateTime** et ISO **Interval** . Cette colonne renvoie toujours une valeur. Cette valeur est NULL.|  
-|**SQL_DATETIME_SUB**|**smallint**|Sous-code d' **intervalle** **DateTime** ou ISO si la valeur de **SQL_DATA_TYPE** est SQL_DATETIME ou SQL_INTERVAL. Pour les types de données autres que **DateTime** et **Interval**ISO, cette colonne a la valeur null. Cette valeur est NULL.|  
+|**SQL_DATETIME_SUB**|**smallint**|Sous-code d' **intervalle** **DateTime** ou ISO si la valeur de **SQL_DATA_TYPE** est SQL_DATETIME ou SQL_INTERVAL. Pour les types de données autres que **datetime** et **interval** ISO, cette colonne prend la valeur Null. Cette valeur est NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longueur maximale en octets d’un paramètre de type de données **binaire** ou **caractère** . Pour tous les autres types de données, cette colonne retourne une valeur NULL. Cette valeur est toujours NULL.|  
 |**ORDINAL_POSITION**|**int**|Numéro d'ordre du paramètre dans le traitement. Si le nom du paramètre est répété plusieurs fois, cette colonne indique la position de la première occurrence. Le premier paramètre occupe la position 1. Cette colonne renvoie toujours une valeur.|  
   

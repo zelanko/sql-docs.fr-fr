@@ -10,10 +10,10 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006571"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Exécution de la console SSMA (AccessToSQL)
@@ -26,7 +26,7 @@ Les commandes de projet gèrent la création de projets, l’ouverture, l’enre
   
 Create-New-Project : crée un nouveau projet SSMA.  
   
-**Conseils**  
+**Script**  
   
 -   `project-folder`indique le dossier du projet qui est créé.  
   
@@ -50,7 +50,7 @@ Create-New-Project : crée un nouveau projet SSMA.
   
     La valeur par défaut est « SQL-Server-2008 ».  
   
-**Exemple :**  
+**Exemple :**  
   
 ```xml  
 <create-new-project  
@@ -73,7 +73,7 @@ L’attribut « Project-type » est **SQL-Server-2008** par défaut.
   
 Open-Project : ouvre un projet existant.  
   
-**Conseils**  
+**Script**  
   
 -   `project-folder`indique le dossier du projet qui est créé. La commande échoue si le dossier spécifié n’existe pas.  {string}  
   
@@ -96,7 +96,7 @@ Open-Project : ouvre un projet existant.
   
 Save-Project : enregistre le projet de migration.  
   
-**Conseils**  
+**Script**  
   
 **Exemple de syntaxe :**  
   
@@ -107,7 +107,7 @@ Save-Project : enregistre le projet de migration.
   
 Close-Project : ferme le projet de migration.  
   
-**Conseils**  
+**Script**  
   
 **Exemple de syntaxe :**  
   
@@ -137,7 +137,7 @@ Connect-source-base de données
   
 -   Si la connexion à la source ne peut pas être établie, une erreur est générée et l’application console cesse de s’exécuter.  
   
-**Conseils**  
+**Script**  
   
 La définition de serveur est récupérée à partir de l’attribut de nom défini pour chaque connexion dans la section serveur du fichier de connexion au serveur ou du fichier de script.  
   
@@ -150,7 +150,7 @@ La définition de serveur est récupérée à partir de l’attribut de nom déf
   
 Load-Access-Database : utilisé pour charger les fichiers de base de données Access  
   
-**Conseils**  
+**Script**  
   
 **Exemple de syntaxe :**  
   
@@ -178,7 +178,7 @@ Force-Load-source/cible-base de données
   
 -   Si la connexion à la source/cible ne peut pas être établie, une erreur est générée et l’application console s’arrête de s’exécuter.  
   
-**Conseils**  
+**Script**  
   
 Nécessite un ou plusieurs nœuds de la métabase comme paramètre de ligne de commande.  
   
@@ -208,7 +208,7 @@ reconnecter-Source-base de données
   
 -   Si la connexion (re) avec la source ne peut pas être établie, une erreur est générée et l’application console arrête d’être exécutée.  
   
-**Conseils**  
+**Script**  
   
 **Exemple de syntaxe :**  
   
@@ -223,7 +223,7 @@ connect-target-Database
   
 -   Si la connexion à la cible ne peut pas être établie, une erreur est générée et l’application console arrête d’être exécutée.  
   
-**Conseils**  
+**Script**  
   
 La définition de serveur est récupérée à partir de l’attribut de nom défini pour chaque connexion dans la section serveur du fichier de connexion au serveur ou du fichier de script  
   
@@ -240,7 +240,7 @@ reconnexion-cible-base de données
   
 -   Si la connexion (re) à la cible ne peut pas être établie, une erreur est générée et l’application console arrête d’être exécutée.  
   
-**Conseils**  
+**Script**  
   
 **Exemple de syntaxe :**  
   
@@ -261,7 +261,7 @@ générer un rapport d’évaluation
   
 -   L’échec de la connexion au serveur de base de données source lors de l’exécution de la commande entraîne l’arrêt de l’application console.  
   
-**Conseils**  
+**Script**  
   
 -   `assessment-report-folder:`Spécifie le dossier dans lequel le rapport d’évaluation peut être stocké. (attribut facultatif)  
   
@@ -334,7 +334,7 @@ convertir-schéma
   
 -   Si la connexion à la base de données source ou cible n’est pas exécutée avant l’exécution de cette commande ou si la connexion au serveur de base de données source ou cible échoue lors de l’exécution de la commande, une erreur est générée et l’application console se ferme.  
   
-**Conseils**  
+**Script**  
   
 -   `conversion-report-folder:`Spécifie le dossier dans lequel le rapport d’évaluation peut être stocké. (attribut facultatif)  
   
@@ -397,7 +397,7 @@ migrer-données
   
 1.  Migre les données sources vers la cible.  
   
-**Conseils**  
+**Script**  
   
 -   `object-name:`Spécifie le ou les objets source pris en compte pour la migration des données (il peut avoir des noms d’objets individuels ou un nom d’objet de groupe).  
   
@@ -453,7 +453,7 @@ or
   
 Link-tables : cette commande lie la table source (accès) à la table cible.  
   
-**Conseils**  
+**Script**  
   
 **Exemple de syntaxe :**  
   
@@ -479,7 +479,7 @@ or
   
 unlink-tables : cette commande dissocie la table source (Access) de la table cible.  
   
-**Conseils**  
+**Script**  
   
 **Exemples de syntaxe :**  
   
@@ -509,7 +509,7 @@ La commande de préparation de la migration lance le mappage de schéma entre le
   
 Map-Schema : mappage de schéma de la base de données source vers le schéma cible.  
   
-**Conseils**  
+**Script**  
   
 -   `source-schema`Spécifie le schéma source que nous avons l’intention de migrer.  
   
@@ -538,7 +538,7 @@ synchroniser-cible
   
 3.  Si la connexion à la base de données cible n’est pas exécutée avant l’exécution de cette commande ou si la connexion au serveur de base de données cible échoue au cours de l’exécution de la commande, une erreur est générée et l’application console se ferme.  
   
-**Conseils**  
+**Script**  
   
 1.  `object-name:`Spécifie le ou les objets cibles pris en compte pour la synchronisation avec la base de données cible (il peut avoir des noms d’objets individuels ou un nom d’objet de groupe).  
   
@@ -601,7 +601,7 @@ actualisation à partir de la base de données
   
 -   Si cette commande est exécutée sur la base de données cible, une erreur est générée.  
   
-**Conseils**  
+**Script**  
   
 Nécessite un ou plusieurs nœuds de la métabase comme paramètre de ligne de commande.  
   
@@ -664,7 +664,7 @@ enregistrer en tant que script
   
 Utilisé pour enregistrer les scripts des objets dans un fichier mentionné dans la métabase, il s’agit d’une alternative à la commande de synchronisation dans laquelle, dans, nous obtenons les scripts et exécutons le même sur la base de données cible.  
   
-**Conseils**  
+**Script**  
   
 Nécessite un ou plusieurs nœuds de la métabase comme paramètre de ligne de commande.  
   
