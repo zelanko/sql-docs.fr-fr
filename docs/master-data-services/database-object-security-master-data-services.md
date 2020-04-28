@@ -14,10 +14,10 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cd3ce4034a1e64c7c8ca6b1e54d989b129f177f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728437"
 ---
 # <a name="database-object-security-master-data-services"></a>Sécurité de l'objet de base de données (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "73728437"
   
 -   [Données intermédiaires](#Staging)  
   
--   [Validation des données par rapport aux règles d’entreprise](#rules)  
+-   [Validation de données par rapport aux règles d’entreprise](#rules)  
   
 -   [Suppression de versions](#Versions)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728437"
   
 -   [Configuration des paramètres système](#SysSettings)  
   
-##  <a name="Staging"></a>Données intermédiaires  
+##  <a name="staging-data"></a><a name="Staging"></a> Mise en lots de données  
  Dans le tableau suivant, le nom de chaque élément sécurisable comporte le terme « name ». Il indique le nom de la table de mise en lots spécifié lors de la création d'une entité. Pour plus d’informations, consultez [Présentation : Importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 |Action|Éléments sécurisables|Autorisations|  
@@ -57,7 +57,7 @@ ms.locfileid: "73728437"
   
  Pour plus d’informations, consultez [vue d’ensemble : importation de données à partir de Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="rules"></a>Validation des données par rapport aux règles d’entreprise  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Validation des données par rapport aux règles d’entreprise  
   
 |Action|Élément sécurisable|Autorisations|  
 |------------|---------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "73728437"
   
  Pour plus d’informations, consultez [Procédure stockée de validation &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="Versions"></a>Suppression de versions  
+##  <a name="deleting-versions"></a><a name="Versions"></a>Suppression de versions  
   
 |Action|Éléments sécurisables|Autorisations|  
 |------------|----------------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "73728437"
   
  Pour plus d’informations, consultez [Supprimer une version &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="Hierarchy"></a>Application immédiate des autorisations des membres de la hiérarchie  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Application immédiate des autorisations des membres de la hiérarchie  
   
 |Action|Éléments sécurisables|Autorisations|  
 |------------|----------------|-----------------|  
@@ -82,10 +82,10 @@ ms.locfileid: "73728437"
   
  Pour plus d’informations, consultez [Appliquer immédiatement des autorisations de membre &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysSettings"></a>Configuration des paramètres système  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>Configuration des paramètres système  
  Vous pouvez configurer certains paramètres système pour contrôler le comportement dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Vous pouvez configurer ces paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou bien, si vous disposez d’un accès UPDATE, vous pouvez les configurer directement dans la table de base de données mdm.tblSystemSetting. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#40;de sécurité Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+ [Sécurité &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

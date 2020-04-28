@@ -18,10 +18,10 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728008"
 ---
 # <a name="members-master-data-services"></a>Membres (services de données de référence)
@@ -68,7 +68,7 @@ ms.locfileid: "73728008"
 |Créez un membre consolidé.|[Créer un membre consolidé &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Supprimez une collection ou un membre existant.|[Supprimer un membre ou une collection &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Réactivez une collection ou un membre supprimé.|[Réactiver un membre ou une collection &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Mettez à jour les valeurs d'attribut d'un membre.|[Modifiez le type d’attribut &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Mettez à jour les valeurs d'attribut d'un membre.|[Modifier le type d’attribut &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>Contenu associé  
@@ -83,7 +83,7 @@ ms.locfileid: "73728008"
   
 -   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
--   [Autorisations feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
+-   [Autorisations de feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
  
 -   [Opérateurs de filtre &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  

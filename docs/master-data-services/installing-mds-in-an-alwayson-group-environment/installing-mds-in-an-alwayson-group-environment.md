@@ -11,10 +11,10 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728093"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
@@ -29,11 +29,11 @@ Cet article décrit une solution pour le service de données de référence (MDS
 
 Pour implémenter la solution, vous devez effectuer les tâches suivantes, abordées dans cet article.
 
-1. [Installer et configurer le basculement Windows Server webhdfs (WSFC)](#windows-server-failover-cluster-wsfc).
+1. [Installer et configurer Windows Server Failover Cluster (WSFC)](#windows-server-failover-cluster-wsfc).
 
 2. [Configurez un groupe de disponibilité Always on](#sql-server-always-on-availability-group).
 
-3. [Configurez MDS pour qu’il s’exécute sur un nœud WSFC](#configure-mds-to-run-on-an-wsfc-node).
+3. [Configurer MDS pour qu’il s’exécute sur un nœud WSFC](#configure-mds-to-run-on-an-wsfc-node).
 
 Les sections ci-dessus vous présentent brièvement les technologies, suivies des instructions. Pour plus d’informations sur les technologies, consultez les documents auxquels renvoient les liens dans chaque section.
 
@@ -72,7 +72,7 @@ Cette configuration est utilisée pour effectuer la récupération au cas où le
 
 ![Configuration classique d’un groupe de disponibilité Always On](media/Fig1_TypicalConfig.png)
 
- Figure 1. Configuration de groupe de disponibilité Always On classique
+Figure 1. Configuration de groupe de disponibilité Always On classique
 
 Si vous n’avez pas besoin d’envisager une reprise d’activité, un réplica dans un second centre de données est superflu. Si vous devez améliorer la haute disponibilité, vous pouvez avoir davantage de réplicas synchrones dans le même centre de données principal.
 
@@ -82,7 +82,7 @@ Il est donc important de tenir compte des scénarios et des impératifs, et de c
 
 Cette section couvre les tâches suivantes.
 
-1. [Installez la fonctionnalité de cluster de basculement Windows](#install-failover-cluster-feature).
+1. [Installer la fonctionnalité Cluster de basculement Windows](#install-failover-cluster-feature).
 
 2. [Créez un cluster de basculement Windows Server](#create-a-windows-server-failover-cluster).
 
@@ -90,7 +90,7 @@ Comme l’indique la figure 1 de la section précédente, la solution décrite 
 
 Le cluster WSFC est une fonctionnalité destinée à améliorer la haute disponibilité des applications et des services. Il se compose d’un groupe d’instances de Windows Server indépendantes sur lesquelles s’exécute le service de cluster de basculement Microsoft. Les instances de Windows Server (parfois appelées « nœuds ») sont connectées afin qu’elles puissent communiquer entre elles, rendant ainsi possible la détection de défaillance. Le cluster WSFC fournit des fonctionnalités de détection de défaillance et de basculement. Si un nœud ou un service échoue dans le cluster, la défaillance est détectée, puis un autre nœud commence automatiquement ou manuellement à fournir les services hébergés sur le nœud défaillant. Ainsi, les utilisateurs ne connaissent que des interruptions minimales des services, dont la disponibilité se trouve améliorée.  
 
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Prérequis
 
 Le système d’exploitation Windows Server est installé sur toutes les instances et toutes les mises à jour sont corrigées.
 
@@ -133,7 +133,7 @@ Une fois la fonctionnalité WSFC installée sur toutes les instances, vous pouve
 
    Figure 4
 
-3. Dans l’**Assistant** **Validation d’une configuration**, cliquez sur **Suivant**.
+3. Dans l' **Assistant** **validation d’une configuration** , cliquez sur **suivant**.
 
 4. Dans la boîte de dialogue **Sélectionner des serveurs ou un cluster**, ajoutez les noms des serveurs destinés à héberger SQL Server, puis cliquez sur **Suivant**. Voir figure 5.
 
@@ -161,9 +161,9 @@ Une fois la fonctionnalité WSFC installée sur toutes les instances, vous pouve
 
    Figure 7
 
-8. Dans la page **Résumé**, vérifiez que la case **Créer le cluster maintenant en utilisant les nœuds validés** est cochée, puis cliquez sur **Terminer** pour démarrer l’**Assistant** **Création d’un cluster**.
+8. Sur la page **Résumé** , vérifiez que la case à cocher **créer le cluster maintenant en utilisant les nœuds validés** est activée, puis cliquez sur **Terminer** pour démarrer l' **Assistant**création d’un **cluster** .
 
-9. Dans l’**Assistant** **Création d’un cluster**, cliquez sur **Suivant**.
+9. Dans l' **Create Cluster** **Assistant**création d’un cluster, cliquez sur **suivant**.
 
 10. Dans la page **Point d’accès pour l’administration du cluster**, entrez le nom du cluster WSFC, puis cliquez sur **Suivant**. Dans cet exemple, nous utilisons « MDS-HA » comme nom de cluster. Voir figure 8.
 
@@ -195,7 +195,7 @@ Cette section couvre les tâches suivantes.
 
 2. [Créez un groupe de disponibilité](#create-an-availability-group).
 
-3. [Validez et testez le groupe de disponibilité](#validation-and-test-the-availability-group).
+3. [Valider et tester le groupe de disponibilité](#validation-and-test-the-availability-group).
 
 Always On a deux fonctionnalités pour assurer la haute disponibilité et la récupération d’urgence pour MDS, elles sont toutes deux basées sur WSFC.
 
@@ -207,9 +207,9 @@ Un groupe de disponibilité offre une disponibilité au niveau de la base de don
 
 Instances FCI fournissent une haute disponibilité au niveau de l’instance. Le service SQL Server et ses services associés sont inscrits en tant que ressources dans WSFC. De plus, la solution des instances de cluster de basculement requiert un stockage sur disque partagé symétrique, tel que des partages de fichiers SAN ou SMB, qui soit disponible pour tous les nœuds du cluster WFC.
    
-### <a name="prerequisites"></a>Conditions préalables requises
+### <a name="prerequisites"></a>Prérequis
 
-- Installez SQL Server sur tous les nœuds. Pour plus d’informations, consultez [installer SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
+- Installez SQL Server sur tous les nœuds. Pour plus d’informations, consultez [Installer SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
 
 - (Recommandé) Installez exactement les mêmes jeu de fonctionnalités et version SQL Server sur chaque nœud. Vous devez notamment installer MDS.
 
@@ -242,9 +242,9 @@ Instances FCI fournissent une haute disponibilité au niveau de l’instance. Le
 4. Cliquez sur **Redémarrer** pour redémarrer le service **SQL Server** afin d’appliquer ce changement. Voir figure 10.
 
 > [!NOTE]
-> Vous pouvez changer le compte de service exécutant le service SQL Server en utilisant le **Gestionnaire de configuration SQL Server**. Cliquez sur l’onglet **Se connecter** dans la boîte de dialogue **Propriétés de** **SQL Server (MSSQLSERVER)**. Voir figure 11.
+> Vous pouvez changer le compte de service exécutant le service SQL Server en utilisant le **Gestionnaire de configuration SQL Server**. Cliquez sur l’onglet **ouvrir une session** dans la boîte de dialogue **Propriétés** de **SQL Server (MSSQLSERVER)** . Voir figure 11.
 
-### <a name="create-an-availability-group"></a>Création d’un groupe de disponibilité
+### <a name="create-an-availability-group"></a>Créer un groupe de disponibilité
 
 Une fois la fonctionnalité AG activée dans toutes les instances de SQL Server, vous créez un groupe de disponibilité qui contient la base de données MDS sur un nœud.
 
@@ -298,13 +298,13 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
 
    Pour chaque réplica, configurez les paramètres **Validation synchrone**, **Basculement automatique** et **Secondaire accessible en lecture**. Voir figure 17.
 
-**Validation synchrone**: cela garantit que si une transaction est validée sur le réplica principal d’une base de données, la transaction est également validée sur tous les autres réplicas synchrones. Ne pouvant pas garantir cela, la validation asynchrone risque d’être en retard par rapport au réplica principal.
+**Validation synchrone** : si une transaction est validée sur le réplica principal d’une base de données, la transaction est également validée sur tous les autres réplicas synchrones. Ne pouvant pas garantir cela, la validation asynchrone risque d’être en retard par rapport au réplica principal.
 
 En règle générale, vous ne devez activer la validation synchrone que si les deux nœuds se trouvent dans le même centre de données. S’ils se trouvent dans des centres de données différents, la validation synchrone risque de ralentir les performances de la base de données. Si cette case n’est pas cochée, la validation asynchrone est utilisée.
 
-**Basculement automatique :** Lorsque le réplica principal est en panne, le groupe de disponibilité bascule automatiquement vers son réplica secondaire lorsque le basculement automatique est sélectionné. Cette option ne peut être activée que sur les réplicas avec validations synchrones.
+**Basculement automatique** : quand le réplica principal est arrêté et que le basculement automatique est activé, le groupe de disponibilité bascule automatiquement vers son réplica secondaire. Cette option ne peut être activée que sur les réplicas avec validations synchrones.
 
-**Secondaire accessible en lecture :** Par défaut, les utilisateurs ne peuvent pas se connecter à des réplicas secondaires. Cette option permet aux utilisateurs de se connecter au réplica secondaire avec un accès en lecture seule.
+**Secondaire accessible en lecture** : par défaut, les utilisateurs ne peuvent se connecter à aucun réplica secondaire. Cette option permet aux utilisateurs de se connecter au réplica secondaire avec un accès en lecture seule.
 
 8. Dans la page **Spécifier les réplicas**, cliquez sur l’onglet **Écouteur**, puis effectuez la procédure suivante. Voir figure 18.
 
@@ -371,7 +371,7 @@ Dans le cadre de cet article, cette solution nécessite uniquement que la base d
 
    Figure 22
 
-4. Exécutez l’**Assistant** **Création d’une base de données**. Pour plus d’informations, consultez [Installation et configuration de Master Data Services](../master-data-services-installation-and-configuration.md).
+4. Terminez l' **Assistant**création d’une **base de données** . Pour plus d’informations, consultez [Installation et configuration de Master Data Services](../master-data-services-installation-and-configuration.md).
 
 5. Cliquez sur **Applications web** dans **Gestionnaire de configuration Master Data Services** pour configurer l’application web, puis cliquez sur **Appliquer** pour appliquer les paramètres à MDS. Voir figure 23. Pour plus d’informations, consultez [Installation et configuration de Master Data Services](../master-data-services-installation-and-configuration.md).
 

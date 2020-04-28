@@ -14,10 +14,10 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 8ffc7c1e901e3c93701c4e94ed62b8e70dbb7c0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728518"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Créer un attribut de date (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73728518"
 > [!NOTE]  
 >  L'attribut est appelée DateTime, mais les valeurs d'heure ne sont pas prises en charge.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Vous devez avoir une entité pour laquelle créer l'attribut. Pour plus d’informations, consultez [créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728518"
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
-2.  Dans la page **Gérer le modèle** , sélectionnez un modèle dans la grille et cliquez sur **Entités**.  
+2.  Sur la page **gérer le modèle** , sélectionnez un modèle dans la grille, puis cliquez sur **entités**.  
   
 3.  Dans la page **Gérer l’entité** , sélectionnez la ligne de l’entité pour laquelle vous souhaitez créer un attribut.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73728518"
   
     -   Si l’attribut concerne les collections, sélectionnez **Collection** dans la zone de liste **Types de membre** .  
   
-6.  Dans la zone **Nom** , tapez un nom pour l'attribut. Pour obtenir la liste des mots qui ne doivent pas être utilisés comme noms d’attribut, consultez [Mots réservés &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
+6.  Dans la zone **Nom** , tapez un nom pour l'attribut. Pour obtenir la liste des mots qui ne doivent pas être utilisés comme noms d’attribut, consultez la section [Mots réservés &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
   
 7.  Si vous le souhaitez, tapez le nom complet et une description de l’attribut dans le champ **Description** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73728518"
   
 12. Sélectionnez éventuellement **Activer le suivi des modifications** pour effectuer le suivi des modifications apportées aux groupes d'attributs. Pour plus d’informations, consultez [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-13. Cliquez sur **Enregistrer**.  
+13. Cliquez sur **Save**.  
   
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>Pour afficher la partie heure d'une valeur datetime  
  Pour que l'interface utilisateur affiche la partie heure d'une valeur datetime, vous devez sélectionner un masque de saisie approprié pour l'attribut. Aucun des masques intégrés des attributs Datetime ne le permet, mais vous avez la possibilité d'ajouter un nouveau masque grâce auquel vous pourrez afficher l'heure. Pour ce faire, ajoutez une ligne dans la table mdm.tblList de la base de données MDS, dans laquelle sont stockés les masques intégrés. La ligne doit contenir les valeurs suivantes :  
@@ -82,7 +82,7 @@ ms.locfileid: "73728518"
 |Seq|19|  
 |Option de liste|jj/MM/aaaa hh:mm:ss tt|  
 |ID d'option|19|  
-|IsVisible|1|  
+|EstVisible|1|  
 |Group_ID|3|  
   
  Une fois que vous avez entré une ligne comportant les valeurs ci-dessus dans la table mdm.tblList, le masque « jj/MMM/aaaa hh:mm:ss tt » devient disponible dans la zone de liste de masque de saisie. Vous pouvez alors sélectionner ce masque afin d'afficher la date et l'heure dans la colonne d'attribut datetime d'une entité dans l'Explorateur MDS.  

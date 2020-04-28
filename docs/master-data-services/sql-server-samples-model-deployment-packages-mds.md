@@ -14,10 +14,10 @@ ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727875"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Exemples SQL Server : packages de déploiement de modèle (MDS)
@@ -29,7 +29,7 @@ ms.locfileid: "73727875"
  Pour obtenir des instructions sur la façon de déployer les exemples de packages de modèle, consultez [Déployer les exemples de modèles et de données](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Vous déployez les exemples de packages de package à l’aide de [l’outil MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Exemples de mises à jour dans[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Mises à jour des exemples dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  Les exemples de packages ont été mis à jour pour prendre en charge les nouvelles fonctionnalités suivantes.  
 > 

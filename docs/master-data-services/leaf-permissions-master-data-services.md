@@ -17,10 +17,10 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728077"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
@@ -31,7 +31,7 @@ ms.locfileid: "73728077"
   
  Pour les entités sans hiérarchies explicites activées, l'affectation d'une autorisation **Feuille** revient à affecter l'autorisation à l'entité.  
   
- **Notes**  
+ **Remarques :**  
   
 -   Les autorisations de feuille s'appliquent à la zone fonctionnelle **Explorateur** de l'interface utilisateur uniquement.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73728077"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lire**|L’utilisateur peut lire les membres feuille et les attributs.|  
-|**Créés**|L’utilisateur peut créer des membres feuille et affecter des valeurs d’attribut lors de la création.|  
+|**Créer**|L’utilisateur peut créer des membres feuille et affecter des valeurs d’attribut lors de la création.|  
 |**Mise à jour**|L’utilisateur peut mettre à jour les membres feuille et les attributs.|  
 |**Supprimer**|L’utilisateur peut supprimer des membres feuille.|  
 |**Deny**|Refusez tout accès aux membres feuille.|  
@@ -53,15 +53,15 @@ ms.locfileid: "73728077"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lire**|L’utilisateur peut lire des attributs.|  
-|**Créés**|L’utilisateur peut attribuer des valeurs lorsqu’il crée des membres.|  
+|**Créer**|L’utilisateur peut attribuer des valeurs lorsqu’il crée des membres.|  
 |**Mise à jour**|L’utilisateur peut mettre à jour des attributs.|  
-|**Supprimer**|Aucun effet|  
+|**Supprimer**|Aucun effet.|  
 |**Deny**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
 ### <a name="example"></a>Exemple  
  Pour l'entité Product, affectez l'autorisation **Mise à jour** à l'attribut Subcategory. Autorisation refuser à tous les autres attributs.  
   
-|Name|Code|Subcategory (Mise à jour)|  
+|Nom|Code|Subcategory (Mise à jour)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5}VTT|  
 |Mountain-100|BK-M201|{5}VTT|  

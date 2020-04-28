@@ -11,10 +11,10 @@ ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728189"
 ---
 # <a name="import-statuses-master-data-services"></a>États d'importation (Master Data Services)
@@ -32,6 +32,6 @@ ms.locfileid: "73728189"
 |Désactivé|Le traitement a été effacé.|5|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ [Présentation : Importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

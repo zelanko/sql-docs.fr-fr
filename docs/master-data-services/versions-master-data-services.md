@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727797"
 ---
 # <a name="versions-master-data-services"></a>Versions (Master Data Services)
@@ -50,7 +50,7 @@ ms.locfileid: "73727797"
   
 1.  Une version initiale est créée automatiquement lorsque vous créez un modèle et remplissez la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] avec les données de référence de votre société. Selon les autorisations, les utilisateurs peuvent apporter autant que nécessaire des modifications à cette version.  
   
-2.  Lorsque vous voulez valider une version d'un modèle, verrouillez la version afin que seuls les administrateurs de modèle puissent mettre à jour les données. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Si les notifications sont configurées, une notification par e-mail est envoyée aux administrateurs de modèle à chaque modification de l’état de la version. Pour plus d’informations, consultez [Configurer des notifications par e-mail &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Lorsque vous voulez valider une version d'un modèle, verrouillez la version afin que seuls les administrateurs de modèle puissent mettre à jour les données. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Si les notifications sont configurées, une notification par e-mail est envoyée aux administrateurs de modèle à chaque modification de l’état de la version. Pour plus d’informations, consultez [Configurer des notifications par e-mail &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Appliquez les règles d'entreprise aux données de la version verrouillée et examinez tous les problèmes de validation. Si nécessaire, vous pouvez renseigner les informations manquantes ou rétablir la transaction à l'origine du problème. Vous pouvez également déverrouiller la version pour que les utilisateurs apportent des modifications.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73727797"
 |Modifier le nom d'une version existante.|[Modifier le nom d’une version &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
 |Verrouiller une version pour que seuls les administrateurs puissent en modifier les données.|[Verrouiller une version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |Déverrouiller une version afin que les utilisateurs puissent en modifier les données.|[Déverrouiller une version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Activer une version une fois que toutes les données ont été validées.|[Valider une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Activer une version une fois que toutes les données ont été validées.|[Activer une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
 |Créer un indicateur pour marquer une version.|[Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
 |Modifier le nom d'un indicateur de version existant.|[Modifier le nom d’un indicateur de version &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Affecter un indicateur existant à une version.|[Affecter un indicateur à une version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
@@ -87,8 +87,8 @@ ms.locfileid: "73727797"
   
 -   [Inverser une transaction &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [&#40;de notifications Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

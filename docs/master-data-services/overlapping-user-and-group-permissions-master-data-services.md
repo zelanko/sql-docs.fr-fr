@@ -15,10 +15,10 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727938"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "73727938"
   
  Si un utilisateur appartient à plusieurs groupes, et que ces groupes ont accès à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], les règles suivantes s’appliquent :  
   
--   **Deny** remplace toutes les autres autorisations. Si l’autorisation associée à l’objet est **Refuser** dans un groupe, l’autorisation effective est également Refuser.  
+-   **Refuser** remplace toutes les autres autorisations. Si l’autorisation associée à l’objet est **Refuser** dans un groupe, l’autorisation effective est également Refuser.  
   
 -   Une autorisation d’accès correspond à l’association de toutes les autorisations effectives d’un groupe. Si l’autorisation associée à l’objet est **Créer** dans un groupe et **Mettre à jour** dans un autre, l’autorisation effective correspond à **Créer** et **Mettre à jour**.  
   

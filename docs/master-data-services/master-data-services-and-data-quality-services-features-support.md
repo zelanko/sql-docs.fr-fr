@@ -11,10 +11,10 @@ ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9cd3259e29d3d54216ccf4a73599766631f2548e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728046"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Prise en charge des fonctionnalités de Master Data Services et de Data Quality Services
@@ -22,13 +22,12 @@ ms.locfileid: "73728046"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-and-data-quality-services"></a>
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] et Data Quality Services
+## <a name="ssmdsshort_md-and-data-quality-services"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] et Data Quality Services
 
 |Fonctionnalité|Entreprise|standard|Web|Express with Advanced Services|Express with Tools|Express|Développeur|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Database|Oui||||||Oui|  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]application Web|Oui||||||Oui|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données|Oui||||||Oui|  
+|Application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]|Oui||||||Oui|  
 |Data Quality Services|Oui||||||Oui|  
 
 

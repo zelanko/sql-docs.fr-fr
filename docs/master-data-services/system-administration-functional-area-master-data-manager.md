@@ -11,10 +11,10 @@ ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e128ba2b53383c83bc58ba66526e9768355e140b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727865"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Zone fonctionnelle Administration de système (Master Data Manager)
@@ -36,7 +36,7 @@ ms.locfileid: "73727865"
   
  [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
- [Créez un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+ [Créer un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
  [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
@@ -50,10 +50,10 @@ ms.locfileid: "73727865"
   
  [Créer un package de déploiement de modèle à l'aide de l'Assistant](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [Résolution des problèmes de déploiement de modèle (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [Résolution des problèmes de déploiement de modèle de (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## <a name="business-rules"></a>Règles d'entreprise  
- [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   

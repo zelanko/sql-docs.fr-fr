@@ -11,10 +11,10 @@ ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e651a31bc37de8f90ecf18615c761100dbdfff2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727813"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Zone fonctionnelle Autorisations d'accès (Master Data Manager)
@@ -29,7 +29,7 @@ ms.locfileid: "73727813"
   
  [Utilisateurs et groupes &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)  
   
- [Ajouter un &#40;d’utilisateur Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)  
+ [Ajouter un utilisateur &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)  
   
  [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73727813"
   
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
- [Résolution des problèmes de sécurité du Data Manager maître](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
+ [Résolution des problèmes de sécurité de Master Data Manager](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Application Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
