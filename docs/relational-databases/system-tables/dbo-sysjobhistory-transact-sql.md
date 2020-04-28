@@ -20,10 +20,10 @@ ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761833"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
@@ -44,7 +44,7 @@ Cette table est stockée dans la base de données **msdb** .
 |**step_name**|**sysname**|Nom de l'étape|  
 |**sql_message_id**|**int**|Identificateur de tout message d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné en cas d'échec du travail.|  
 |**sql_severity**|**int**|Gravité des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Message**|**nvarchar(4000)**|Texte éventuel d'une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**message**|**nvarchar(4000)**|Texte éventuel d'une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**run_status**|**int**|État de l'exécution du travail :<br /><br /> **0** = échec<br /><br /> **1** = réussite<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulé<br /><br />**4** = en cours|  
 |**run_date**|**int**|Date du début d'exécution du travail ou de l'étape. Pour l'historique des travaux en cours, date et heure de l'écriture de l'historique.|  
 |**run_time**|**int**|Heure à laquelle le travail ou l’étape a démarré au format **HHMMSS** .|  

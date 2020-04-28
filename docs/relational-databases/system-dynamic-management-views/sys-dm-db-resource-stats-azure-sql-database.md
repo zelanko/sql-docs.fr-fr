@@ -20,16 +20,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175142"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retourne la consommation d'UC, d’E/S et de mémoire pour une base de données [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il existe une ligne pour toutes les 15 secondes, même s’il n’existe aucune activité dans la base de données. Les données historiques sont conservées pendant environ une heure.  
+  Retourne la consommation d'UC, d’E/S et de mémoire pour une base de données [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il existe une ligne pour chaque période de 15 secondes, même s'il n'y a aucune activité dans la base de données. Les données historiques sont conservées pendant environ une heure.  
   
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  

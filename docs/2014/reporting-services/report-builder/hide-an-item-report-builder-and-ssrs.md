@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0eb06c9136179a075057791f88bf2d80e187026
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176878"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Masquer un élément (Générateur de rapports et SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176878"
     > [!NOTE]
     >  Pour sélectionner l’intégralité d’une région de données de table ou de matrice, cliquez dans la région de données pour la sélectionner, cliquez avec le bouton droit sur une ligne, une colonne ou une poignée d’angle, puis cliquez sur **Propriétés du tableau matriciel**.
 
-2.  Cliquez sur **Visibilité**.
+2.  Cliquez sur **visibilité.**
 
 3.  Dans **Lors de la première exécution du rapport**, spécifiez s’il faut masquer ou non l’élément quand le rapport est affiché pour la première fois :
 
@@ -51,7 +51,7 @@ ms.locfileid: "78176878"
         >  Quand vous spécifiez une expression de visibilité, vous définissez la propriété Hidden de l’élément de rapport, comment indiqué dans l’image suivante. L'expression évaluée affiche l'élément de rapport lorsque la valeur est False et le masque lorsque la valeur est True. 
         > ![Boîte de dialogue de visibilité de propriétés et propriété masquée](../media/hiddenproperty-propertiesvisibility.png "Boîte de dialogue de visibilité de propriétés et propriété masquée")
 
-4.  Cliquez deux fois sur **OK** .
+4.  Cliquez deux fois sur **OK**.
 
 ### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>Pour masquer des lignes statiques dans une table, une matrice ou une liste
 

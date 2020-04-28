@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761903"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurer Windows Server Update Services (WSUS) dans Analytics Platform System
@@ -35,7 +35,7 @@ Pour configurer WSUS, vous devez :
   
 -   Vous devez connaître l’adresse IP du serveur proxy si votre appliance doit utiliser un serveur proxy pour accéder au serveur en amont ou à Microsoft Update.  
   
--   Dans la plupart des cas, WSUS doit accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation, le système DNS de la plateforme d’analyse peut être configuré pour prendre en charge un redirecteur de nom externe qui permettra aux ordinateurs hôtes du système de la plateforme d’analyse et aux machines virtuelles d’utiliser des serveurs DNS externes pour résoudre les noms en dehors de 5200. Pour plus d’informations, consultez [utiliser un redirecteur DNS pour résoudre les noms DNS non-Appliance &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Dans la plupart des cas, WSUS doit accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation, le système DNS de la plateforme d’analyse peut être configuré pour prendre en charge un redirecteur de nom externe qui permettra aux ordinateurs hôtes du système de plateforme d’analyse et aux machines virtuelles d’utiliser des serveurs DNS externes pour résoudre les noms en dehors de l’appliance. Pour plus d’informations, consultez [utiliser un redirecteur DNS pour résoudre les noms DNS non-Appliance &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Pour configurer Windows Server Update Services (WSUS)  
   
@@ -109,7 +109,7 @@ Pour configurer WSUS, vous devez :
   
     ![Proxy WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
-    #### <a name="to-configure-proxy-server-settings"></a>Pour configurer les paramètres du serveur proxy  
+    #### <a name="to-configure-proxy-server-settings"></a>Pour configurer les paramètres de serveur proxy  
   
     1.  Dans la page **spécifier le serveur proxy** de l’Assistant Configuration, activez la case à cocher **utiliser un serveur proxy lors** de la synchronisation, puis tapez l’adresse IP du serveur proxy (et non le nom) et le numéro de port (port 80 par défaut) dans les zones correspondantes.  
   
@@ -172,7 +172,7 @@ Pour configurer WSUS, vous devez :
   
     Cliquez sur **Terminer**.  
   
-## <a name="bkmk_WSUSGroup"></a>Regrouper les serveurs d’appliance dans WSUS  
+## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>Regrouper les serveurs d’appliance dans WSUS  
 Après la configuration de WSUS pour Analytics Platform System, l’étape suivante consiste à regrouper les serveurs de l’appliance. En ajoutant tous les serveurs d’appliances à un groupe, WSUS peut appliquer les mises à jour logicielles à tous les serveurs de l’appliance.  
   
 > [!NOTE]  

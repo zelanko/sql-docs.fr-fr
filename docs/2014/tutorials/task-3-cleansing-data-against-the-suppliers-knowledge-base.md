@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177279"
 ---
-# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tâche 3 : Nettoyage des données dans la base de connaissances Fournisseurs
+# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tâche 3 : Nettoyage des données dans la base de connaissances Fournisseurs
   Dans cette tâche, vous allez exécuter le processus de nettoyage assisté par ordinateur. DQS utilise des algorithmes avancés et des niveaux de confiance basés sur les valeurs de seuil spécifiées pour analyser vos données par rapport à la base de connaissances sélectionnée, puis les nettoyer. Pour plus d’informations, consultez [nettoyage des données à l’aide de la connaissance de DQS (interne)](https://msdn.microsoft.com/library/hh213061.aspx) .
 
 1.  Cliquez sur **Démarrer** pour démarrer le processus de nettoyage assisté par ordinateur.

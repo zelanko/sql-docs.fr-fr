@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175406"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transactions dans les tables mémoire optimisées
@@ -82,7 +82,7 @@ Durée de vie d'une transaction qui accède à des tables mémoire optimisées.
 
  Cette erreur provoque l'arrêt de la transaction (même si XACT_ABORT est désactivé), ce qui signifie que la transaction sera restaurée à la fin de la session utilisateur. Les transactions vouées à l'échec ne peuvent pas être validées et prennent uniquement en charge les opérations de lecture qui n'écrivent pas dans le journal et n'accèdent pas aux tables mémoire optimisées.
 
-#####  <a name="cd"></a>Dépendances de validation
+#####  <a name="commit-dependencies"></a><a name="cd"></a>Dépendances de validation
  Lors du traitement normal, une transaction peut lire les lignes écrites par d'autres transactions qui sont en phase de validation, mais qui ne sont pas encore validées. Les lignes sont visibles, car l'heure de fin logique des transactions a été définie au début de la phase de validation.
 
  Si une transaction lit ces lignes non validées, elle prendra une dépendance de validation sur cette transaction. Cela a deux conséquences principales :

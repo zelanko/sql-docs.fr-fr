@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929442"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Dépannage de la sauvegarde managée de SQL Server sur Azure
@@ -33,8 +33,7 @@ ms.locfileid: "76929442"
   
 1.  Activez la notification par courrier électronique pour recevoir des courriers électroniques en cas d'erreurs ou d'avertissements.  
   
-     Exécutez aussi régulièrement `smart_admin.fn_get_health_status` pour vérifier le nombre agrégé des erreurs. Par exemple, `number_of_invalid_credential_errors` est le nombre de fois où la sauvegarde intelligente a tenté une sauvegarde, mais a rencontré une erreur d'informations d'identification non valides. 
-  `Number_of_backup_loops` et `number_of_retention_loops` ne sont pas des erreurs ; mais indiquent le nombre de fois où le thread de sauvegarde et le thread de rétention ont analysé la liste de bases de données. En règle générale @begin_time , @end_time lorsque et ne sont pas fournis, la fonction affiche les informations des 30 dernières minutes, puis les valeurs non nulles sont normalement affichées pour ces deux colonnes. Si des valeurs égales à zéro s'affichent, cela indique que le système est surchargé ou qu'il ne répond pas. Pour plus d’informations, consultez la section **résolution des problèmes système** plus loin dans cette rubrique.  
+     Exécutez aussi régulièrement `smart_admin.fn_get_health_status` pour vérifier le nombre agrégé des erreurs. Par exemple, `number_of_invalid_credential_errors` est le nombre de fois où la sauvegarde intelligente a tenté une sauvegarde, mais a rencontré une erreur d'informations d'identification non valides. `Number_of_backup_loops` et `number_of_retention_loops` ne sont pas des erreurs ; mais indiquent le nombre de fois où le thread de sauvegarde et le thread de rétention ont analysé la liste de bases de données. En règle générale @begin_time , @end_time lorsque et ne sont pas fournis, la fonction affiche les informations des 30 dernières minutes, puis les valeurs non nulles sont normalement affichées pour ces deux colonnes. Si des valeurs égales à zéro s'affichent, cela indique que le système est surchargé ou qu'il ne répond pas. Pour plus d’informations, consultez la section **résolution des problèmes système** plus loin dans cette rubrique.  
   
 2.  Passez en revue les journaux des événements étendus pour obtenir plus de détails sur les erreurs et les autres événements associés.  
   

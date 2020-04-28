@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175768"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Création de mesures et de groupes de mesures dans les modèles multidimensionnels
@@ -24,15 +24,15 @@ ms.locfileid: "78175768"
 
  Cette rubrique contient les sections suivantes :
 
--   [Approches pour la création de mesures](#bkmk_create)
+-   [Approches permettant la création de mesures](#bkmk_create)
 
--   [Composants d’une mesure](#bkmk_comps)
+-   [Composants d'une mesure](#bkmk_comps)
 
 -   [Mesures et groupes de mesures de modélisation sur des faits et des tables de faits](#bkmk_modeling)
 
--   [Granularité d’un groupe de mesures](#bkmk_grain)
+-   [Granularité d'un groupe de mesures](#bkmk_grain)
 
-##  <a name="bkmk_create"></a>Approches pour la création de mesures
+##  <a name="approaches-for-creating-measures"></a><a name="bkmk_create"></a>Approches pour la création de mesures
  Les mesures peuvent être un élément statique du cube, créé au moment du design, toujours présent lorsque le cube fait l'objet d'un accès. Mais vous pouvez aussi définir une mesure en tant que *membre calculé* en utilisant une expression MDX pour fournir une valeur calculée pour une mesure basée sur d'autres mesures du cube. Un membre calculé peut être limité à une session ou à un utilisateur.
 
  Pour créer une mesure ou un groupe de mesures, utilisez l'une des approches suivantes :
@@ -44,7 +44,7 @@ ms.locfileid: "78175768"
 |membre calculé|Les membres calculés ajoutent de la flexibilité et des fonctionnalités d'analyse à un cube dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , car vous pouvez contrôler comment et à quel moment ils sont créés. Vous avez parfois uniquement besoin d'une mesure temporaire, pour la durée d'une session utilisateur, ou dans le cadre d'une analyse dans Management Studio.<br /><br /> Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez l'onglet Calculs pour créer un membre calculé.<br /><br /> Choisissez cette approche lorsque vous basez une mesure sur une expression MDX. Pour plus d’informations, consultez les rubriques suivantes : [Génération de mesures dans une expression MDX](mdx/mdx-building-measures.md), [Calculs](../multidimensional-models-olap-logical-cube-objects/calculations.md), [Calculs dans les modèles multidimensionnels](calculations-in-multidimensional-models.md) et [Principes de base des scripts MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md).|
 |MDX ou XMLA|Dans SQL Server Management Studio, vous pouvez exécuter des scripts MDX ou XMLA pour modifier une base de données afin d'inclure une nouvelle mesure calculée. Cette approche est utile pour le test ad hoc de données, une fois la solution déployée sur un serveur. Consultez [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md).|
 
-##  <a name="bkmk_comps"></a>Composants d’une mesure
+##  <a name="components-of-a-measure"></a><a name="bkmk_comps"></a>Composants d’une mesure
  Une mesure est un objet ayant des propriétés. En plus de son nom, une mesure doit avoir un type d'agrégation, ainsi qu'une colonne source ou une expression utilisée pour charger la mesure avec des données. Vous pouvez modifier la définition de la mesure en définissant ses propriétés.
 
 |||
@@ -53,7 +53,7 @@ ms.locfileid: "78175768"
 |**agréger**|Par défaut, les mesures sont additionnées avec chaque dimension. Toutefois, la propriété `AggregateFunction` vous permet de modifier ce comportement. Pour obtenir la liste des fonctions d'agrégation, consultez [Use Aggregate Functions](use-aggregate-functions.md) .|
 |**Propriétés**|Pour obtenir des descriptions de propriété supplémentaires, consultez [Configure Measure Properties](configure-measure-properties.md) .|
 
-##  <a name="bkmk_modeling"></a>Mesures et groupes de mesures de modélisation sur des faits et des tables de faits
+##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>Mesures et groupes de mesures de modélisation sur des faits et des tables de faits
  Avant d'exécuter un Assistant, il est utile de comprendre les principes de modélisation qui sous-tendent la définition d'une mesure.
 
  Les mesures et groupes de mesures sont les objets multidimensionnels qui représentent des faits et des tables de faits d'un entrepôt de données externe. Dans la plupart des cas, les mesures et groupes de mesures sont basés sur des objets d'une vue de source de données qui, quant à eux, sont créés à partir de l'entrepôt de données sous-jacent.
@@ -75,7 +75,7 @@ ms.locfileid: "78175768"
 > [!NOTE]
 >  Les mesures ne sont pas toutes dérivées directement d'une valeur stockée dans une colonne de la table de faits. Par exemple, la mesure **Sales Person Count** définie dans le groupe de mesures **Sales Quota** de l’exemple de cube Adventure Works est en réalité basée sur le nombre de valeurs uniques (ou comptage de valeurs) présentes dans la colonne **EmployeeKey** de la table de faits **FactSalesQuota** .
 
-##  <a name="bkmk_grain"></a>Granularité d’un groupe de mesures
+##  <a name="granularity-of-a-measure-group"></a><a name="bkmk_grain"></a>Granularité d’un groupe de mesures
  Les groupes de mesures ont une granularité associée qui fait référence au niveau de détail pris en charge par une table de faits. La granularité est définie via la relation de clé étrangère avec une dimension.
 
  Par exemple, la table de faits **FactSalesQuota** a une relation de clé étrangère avec la table **DimEmployee** , chaque enregistrement de la table **FactSalesQuota** est lié à un seul employé, et par conséquent, la granularité du groupe de mesures, du point de vue de la dimension Employee, est au niveau de l'employé individuel.

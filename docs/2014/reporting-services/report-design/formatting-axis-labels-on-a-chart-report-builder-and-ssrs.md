@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 446c45c22e664f1dae981e8219c3289aeadb783f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176779"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
@@ -77,7 +77,7 @@ ms.locfileid: "78176779"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Exemple de calcul d'étiquettes d'axe par le graphique
  Le tableau présenté ici contient des exemples de données de vente à tracer sur un histogramme. Le champ Name est ajouté à la zone Groupes d'abscisses et le champ Quantity est ajouté à la zone Valeurs.
 
-|Nom|Quantité|
+|Name|Quantité|
 |----------|--------------|
 |Michael Blythe|229|
 |Jae Pak|112|

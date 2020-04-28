@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: acb218e5d6377e8926d22aa66de0aded9a1fb0a8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177049"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Présentation du fournisseur WMI pour les événements serveur
@@ -52,12 +52,11 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO
 ```
 
- Dans cet exemple, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` est un identificateur [!INCLUDE[tsql](../../includes/tsql-md.md)] composé du préfixe `SQLWEP_` et d'un GUID. 
-  `SQLWEP` crée un GUID pour chaque identificateur. La valeur `A7E5521A-1CA6-4741-865D-826F804E5135` dans la `TO SERVICE` clause est le GUID qui identifie l’instance Broker dans la base de données **msdb** .
+ Dans cet exemple, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` est un identificateur [!INCLUDE[tsql](../../includes/tsql-md.md)] composé du préfixe `SQLWEP_` et d'un GUID. `SQLWEP` crée un GUID pour chaque identificateur. La valeur `A7E5521A-1CA6-4741-865D-826F804E5135` dans la `TO SERVICE` clause est le GUID qui identifie l’instance Broker dans la base de données **msdb** .
 
  Pour plus d’informations sur l’utilisation de WQL, consultez [utilisation de WQL avec le fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).
 
- Les applications de gestion dirigent le fournisseur WMI pour les événements serveur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur, Sqlwep.dll, puis la charge en mémoire. Le fournisseur gère un espace de noms WMI pour les événements serveur pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]chaque instance de et le format \\ \\est :. \\ ** \Microsoft\SqlServer\ServerEvents\\racine*instance_name*, où *instance_name* par défaut est MSSQLSERVER. Pour plus d’informations sur la façon de se connecter à un espace de noms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]WMI pour une instance de, consultez [utilisation de WQL avec le fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).
+ Les applications de gestion dirigent le fournisseur WMI pour les événements serveur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur, Sqlwep.dll, puis la charge en mémoire. Le fournisseur gère un espace de noms WMI pour les événements serveur pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]chaque instance de et le format \\ \\est :. \\ *root*\Microsoft\SqlServer\ServerEvents\\racine*instance_name*, où *instance_name* par défaut est MSSQLSERVER. Pour plus d’informations sur la façon de se connecter à un espace de noms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]WMI pour une instance de, consultez [utilisation de WQL avec le fournisseur WMI pour les événements de serveur](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).
 
  La DLL de fournisseur, Sqlwep.dll, est chargée une seule fois dans le service hôte WMI du système d'exploitation du serveur, indépendamment du nombre d'instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] présentes sur le serveur.
 

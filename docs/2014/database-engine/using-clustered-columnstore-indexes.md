@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175358"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Utilisation d'index columnstore cluster
@@ -38,7 +38,7 @@ ms.locfileid: "78175358"
 
 -   [Réorganiser un index cluster columnstore](#reorganize)
 
-##  <a name="create"></a>Créer un index ColumnStore cluster
+##  <a name="create-a-clustered-columnstore-index"></a><a name="create"></a>Créer un index ColumnStore cluster
  Pour créer un index ColumnStore cluster, commencez par créer une table rowstore en tant que segment de mémoire ou index cluster, puis utilisez l’instruction [Create Clustered COLUMNSTORE index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) pour convertir la table en index ColumnStore cluster. Si vous souhaitez que l'index columnstore cluster ait le même nom que l'index cluster, utilisez l'option DROP_EXISTING.
 
  Cet exemple crée une table en tant que segment puis la convertit en un index columnstore cluster nommé cci_Simple. Cela modifie le stockage de la table entière qui change de rowstore en columnstore.
@@ -56,10 +56,10 @@ GO
 
  Pour obtenir plus d’exemples, consultez la section exemples dans [Create Clustered COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).
 
-##  <a name="drop"></a>Supprimer un index ColumnStore cluster
+##  <a name="drop-a-clustered-columnstore-index"></a><a name="drop"></a>Supprimer un index ColumnStore cluster
  Utilisez l’instruction [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql) pour supprimer un index cluster ColumnStore. Cette opération supprime l'index et convertit la table columnstore en un segment de mémoire rowstore.
 
-##  <a name="load"></a>Charger des données dans un index ColumnStore cluster
+##  <a name="load-data-into-a-clustered-columnstore-index"></a><a name="load"></a>Charger des données dans un index ColumnStore cluster
  Ajoutez des données à un index columnstore cluster existant à l'aide de l'une des méthodes de chargement standard.  Par exemple, l’outil de chargement en masse BCP, Integration Services et INSERT... SELECT peut toutes charger des données dans un index ColumnStore en cluster.
 
  Les index columnstore cluster tirent parti du deltastore pour éviter la fragmentation de segments de colonne dans le columnstore.
@@ -83,9 +83,9 @@ GO
 |Lignes à charger en masse|Lignes ajoutées au columnstore|Lignes ajoutées au deltastore|
 |-----------------------|-----------------------------------|----------------------------------|
 |102 000|0|102 000|
-|145 000|145 000<br /><br /> Taille de rowgroup : 145 000|0|
-|1 048 577|1,048,576<br /><br /> Taille de rowgroup : 1 048 576|1|
-|2 252 152|2 252 152<br /><br /> Tailles de rowgroup : 1 048 576, 1 048 576, 155 000.|0|
+|145 000|145 000<br /><br /> Taille de rowgroup : 145 000|0|
+|1 048 577|1,048,576<br /><br /> Taille de rowgroup : 1 048 576|1|
+|2 252 152|2 252 152<br /><br /> Tailles de rowgroup : 1 048 576, 1 048 576, 155 000.|0|
 
  L'exemple suivant montre les résultats du chargement de 1 048 577 lignes dans une partition. Les résultats indiquent un rowgroup COMPRESSÉ dans le columnstore (comme segments de colonne compressés), et 1 ligne dans le deltastore.
 
@@ -97,7 +97,7 @@ SELECT * FROM sys.column_store_row_groups
 
 
 
-##  <a name="change"></a>Modifier des données dans un index ColumnStore cluster
+##  <a name="change-data-in-a-clustered-columnstore-index"></a><a name="change"></a>Modifier des données dans un index ColumnStore cluster
  Les index columnstore cluster prennent en charge les opérations DML d'insertion, mise à jour et suppression.
 
  Utilisez [insert &#40;&#41;Transact-SQL](/sql/t-sql/statements/insert-transact-sql) pour insérer une ligne. La ligne sera ajoutée au deltastore.
@@ -114,7 +114,7 @@ SELECT * FROM sys.column_store_row_groups
 
 -   Si la ligne est dans le deltastore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] met à jour la ligne dans le deltastore.
 
-##  <a name="rebuild"></a>Reconstruire un index ColumnStore cluster
+##  <a name="rebuild-a-clustered-columnstore-index"></a><a name="rebuild"></a>Reconstruire un index ColumnStore cluster
  Utilisez [Create Clustered COLUMNSTORE index &#40;Transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) ou [ALTER index &#40;transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) pour effectuer une reconstruction complète d’un index COLUMNSTORE cluster existant. En outre, vous pouvez utiliser ALTER INDEX... Régénérez pour reconstruire une partition spécifique.
 
 ### <a name="rebuild-process"></a>Processus de reconstruction
@@ -145,7 +145,7 @@ SELECT * FROM sys.column_store_row_groups
 
      Cela garantit que toutes les données sont stockées dans le columnstore. Si plusieurs chargements se produisent simultanément, chaque partition peut disposer de plusieurs deltastores. La reconstruction déplacera toutes les lignes du deltastore dans le columnstore.
 
-##  <a name="reorganize"></a>Réorganiser un index ColumnStore cluster
+##  <a name="reorganize-a-clustered-columnstore-index"></a><a name="reorganize"></a>Réorganiser un index ColumnStore cluster
  La réorganisation des index columnstore cluster déplace tous les rowgroups fermés dans le columnstore. Pour effectuer une réorganisation, utilisez [ALTER INDEX &#40;&#41;Transact-SQL ](/sql/t-sql/statements/alter-index-transact-sql)avec l’option REORGANIZE.
 
  La réorganisation n'est pas requise pour déplacer les rowgroups fermés dans le columnstore. Le processus de déplacement de tuple recherche tous les rowgroups CLOSED et les déplace. Toutefois, le processus de déplacement de tuple est monothread et peut ne pas déplacer les rowgroups suffisamment rapidement pour votre charge de travail.

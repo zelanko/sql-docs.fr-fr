@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175908"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
@@ -23,7 +23,7 @@ ms.locfileid: "78175908"
  Cette rubrique traite de la surveillance de votre utilisation de la mémoire [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .
 
 
-##  <a name="bkmk_CreateDB"></a>Créer un exemple de base de données avec des tables mémoire optimisées
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a>Créer un exemple de base de données avec des tables mémoire optimisées
  Ignorez cette section si vous avez déjà une base de données avec des tables optimisées en mémoire.
 
  Dans les étapes suivantes, vous allez créer une base de données avec trois tables optimisées en mémoire que vous utiliserez pour la suite de la rubrique. Dans l'exemple, nous avons mappé la base de données à un pool de ressources de sorte à pouvoir contrôler la quantité de mémoire consommée par les tables optimisées en mémoire.
@@ -113,8 +113,7 @@ ms.locfileid: "78175908"
 ##  <a name="monitoring-memory-usage"></a>Surveillance de l'utilisation de la mémoire
 
 ###  <a name="using-ssmanstudiofull"></a>Utilisation de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclut des rapports standard intégrés pour surveiller la mémoire consommée par les tables en mémoire. Accédez à ces rapports à l'aide de l'Explorateur d'objets comme décrit [ici](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Vous pouvez également utiliser l'Explorateur d'objets pour surveiller la mémoire consommée par les tables optimisées en mémoire individuelles.
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclut des rapports standard intégrés pour surveiller la mémoire consommée par les tables en mémoire. Accédez à ces rapports à l'aide de l'Explorateur d'objets comme décrit [ici](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Vous pouvez également utiliser l'Explorateur d'objets pour surveiller la mémoire consommée par les tables optimisées en mémoire individuelles.
 
 #### <a name="consumption-at-the-database-level"></a>Consommation au niveau de la base de données
  Surveillez l'utilisation de la mémoire au niveau de la base de données comme suit.

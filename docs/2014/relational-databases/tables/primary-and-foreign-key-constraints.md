@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176812"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Contraintes de clé primaire et de clé étrangère
@@ -33,7 +33,7 @@ ms.locfileid: "78176812"
 
  [Tâches associées](../tables/primary-and-foreign-key-constraints.md#Tasks)
 
-##  <a name="PKeys"></a> Contraintes de clé primaire
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> Contraintes de clé primaire
  Une table contient généralement une colonne ou une combinaison de colonnes dont les valeurs identifient de façon unique chaque ligne dans la table. Cette colonne (ou ces colonnes), appelée clé primaire (PK, Primary Key), assure l'intégrité de l'entité de la table. Les contraintes de clé primaire garantissent des données uniques, c'est pourquoi elles sont souvent définies pour une colonne d'identité.
 
  Lorsque vous spécifiez une contrainte de clé primaire pour une table, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] garantit l'unicité des données en créant automatiquement un index unique pour les colonnes de clé primaire. Cet index permet également l'accès rapide aux données lorsque la clé primaire est utilisée dans des requêtes. Si une contrainte de clé primaire est définie sur plusieurs colonnes, des valeurs peuvent apparaître en double dans une colonne, mais chaque combinaison de valeurs issues de toutes les colonnes de la définition de contrainte de clé primaire doit être unique.
@@ -54,7 +54,7 @@ ms.locfileid: "78176812"
 
 -   Si une clé primaire est définie sur une colonne avec le type de données CLR défini par l'utilisateur, l'implémentation du type doit prendre en charge le tri binaire.
 
-##  <a name="FKeys"></a> Foreign Key Constraints
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints
  On appelle « clé étrangère » une colonne ou une combinaison de colonnes utilisée pour établir et conserver une liaison entre les données de deux tables pour contrôler les données qui peuvent être stockées dans la table de clés étrangères. Dans une référence de clé étrangère, la création d'une liaison entre deux tables s'effectue lors du référencement de la ou des colonnes contenant les valeurs de clé primaire d'une table dans la ou les colonnes de l'autre table. Cette colonne devient alors une clé étrangère dans la seconde table.
 
  Par exemple, la table **Sales.SalesOrderHeader** possède une liaison de clé étrangère avec la table **Sales.SalesPerson** car il existe une relation logique entre les commandes et les vendeurs. La colonne **SalesPersonID** de la table **SalesOrderHeader** correspond à la colonne clé primaire de la table **SalesPerson** . La colonne **SalesPersonID** de la table **SalesOrderHeader** est donc la clé étrangère de la table **SalesPerson** . Lors de la création de cette relation de clé étrangère, une valeur pour **SalesPersonID** ne peut pas être insérée dans la table **SalesOrderHeader** si elle n'existe pas déjà dans la table **SalesPerson** .
@@ -103,7 +103,7 @@ ms.locfileid: "78176812"
 
 -   En outre, une table possédant un déclencheur INSTEAD OF ne peut pas détenir de clause REFERENCES spécifiant une action en cascade. Cependant, un déclencheur AFTER d'une table impliquée dans une action en cascade peut exécuter une instruction INSERT, UPDATE ou DELETE sur une autre table ou vue, qui active un déclencheur INSTEAD OF défini sur cet objet.
 
-##  <a name="Tasks"></a> Tâches associées
+##  <a name="related-tasks"></a><a name="Tasks"></a> Tâches associées
  Le tableau suivant répertorie les tâches courantes associées aux contraintes de clé primaire et de clé étrangère.
 
 |Tâche|Rubrique|

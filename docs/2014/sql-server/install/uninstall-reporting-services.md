@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 4ef45498efdd86f5abe885108e4b140ba930cc58
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172221"
 ---
 # <a name="uninstall-reporting-services"></a>Désinstaller Reporting Services
@@ -33,11 +33,11 @@ ms.locfileid: "78172221"
 
  Voici des exemples de noms des trois bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui ne sont pas supprimées.
 
--   **Base de données du serveur de rapports :** ReportingService_7f616e2d253040e8ab5653b3c09a065e
+-   **Base de données du serveur de rapports :** ReportingService_7f616e2d253040e8ab5653b3c09a065e
 
--   **Base de données temporaire du serveur de rapports :** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB
+-   **Base de données temporaire du serveur de rapports :** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB
 
--   **Base de données d’alerte du serveur de rapports :** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting
+-   **Base de données des alertes du serveur de rapports :** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting
 
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>Désinstallez le complément pour les produits SharePoint.
  Lorsque vous désinstallez le complément sur un ordinateur, vous pouvez choisir de désinstaller uniquement les fichiers ou de supprimer également la fonctionnalité [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la batterie de serveurs. Pour plus d’informations sur la désinstallation du complément pour les [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] produits SharePoint, consultez [installer ou désinstaller le complément Reporting Services pour sharepoint &#40;SharePoint 2010 et SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).

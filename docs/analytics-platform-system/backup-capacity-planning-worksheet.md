@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 57b036269dd4aeed91cf8af811bd2f24faecbb98
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171608"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Feuille de planification de la capacité du serveur de sauvegarde-Data Warehouse parallèles
@@ -39,7 +39,7 @@ Imprimez cette feuille de calcul et remplissez-la avec vos propres exigences.
 |Réseau|Type de connexion réseau.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|Déterminez le meilleur type de connexion réseau pouvant répondre à vos besoins en termes de taux de charge.<br /><br />Par exemple : InfiniBand ou 10 Gbit offre Ethernet fournira les vitesses de chargement optimales. 1 Gbit Ethernet limite les vitesses de chargement à 360 Go par heure ou moins.|
 |E/S|Octets par heure pour les écritures.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|Pour l’écriture de sauvegardes sur disque, les vitesses d’écriture de 4 to par heure sont optimales.<br /><br />Par exemple : pour les lecteurs qui peuvent écrire 50 Mo/s, vous devez disposer d’au moins 24 disques, ainsi que d’autres éléments pour la mise en miroir ou la parité.<br /><br />Pour la capacité d’e/s, prenez en compte toutes les e/s qui se produisent sur le serveur de chargement. Si le serveur de chargement a un autre trafic d’e/s en plus des charges de données, telles que la réception de fichiers de données à partir d’un serveur ETL, les exigences d’e/s augmentent.|
 |UC|Nombre de Sockets.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|La réception et le stockage des fichiers de sauvegarde ne sont pas une application gourmande en ressources processeur.  Pour une configuration minimale, nous vous recommandons d’utiliser un serveur à 2 sockets fabriqué récemment.|
-|RAM|Go de mémoire qui permet à Windows de mettre en cache les fichiers pendant les chargements.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|La réception et le stockage des fichiers de sauvegarde nécessitent très peu de RAM sur le serveur de chargement.<br /><br />Pour déterminer les besoins en RAM, consultez votre installation de Windows Server et les applications tierces requises. Nous vous recommandons un minimum de 32 Go si vous n’avez pas de spécifications provenant d’autres sources.|
+|Mémoire vive (RAM)|Go de mémoire qui permet à Windows de mettre en cache les fichiers pendant les chargements.|![Icône de crayon](media/pencil-icon.png "Icône de crayon")|La réception et le stockage des fichiers de sauvegarde nécessitent très peu de RAM sur le serveur de chargement.<br /><br />Pour déterminer les besoins en RAM, consultez votre installation de Windows Server et les applications tierces requises. Nous vous recommandons un minimum de 32 Go si vous n’avez pas de spécifications provenant d’autres sources.|
 
 Lorsque vous avez terminé de déterminer vos besoins en capacité, revenez à la rubrique [acquisition et configuration d’un serveur de chargement](acquire-and-configure-loading-server.md) pour planifier votre achat.
 

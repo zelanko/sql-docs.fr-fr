@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175415"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Mettre à niveau la copie des journaux de transaction vers SQL Server 2014 (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "78175415"
 >  [La compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md) a été introduite dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. Une configuration mise à niveau de copie des journaux de transaction utilise l’option de configuration du niveau serveur par défaut pour la **compression de sauvegarde** pour contrôler si la compression de la sauvegarde est utilisée pour les fichiers de sauvegarde du journal des transactions. Le comportement de la compression de la sauvegarde des sauvegardes de fichiers journaux peut être spécifié pour chaque configuration de la copie des journaux de transaction. Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](configure-log-shipping-sql-server.md).
 
 
-##  <a name="ProtectData"></a>Protéger vos données avant la mise à niveau
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> Protéger vos données avant la mise à niveau
  Comme méthode conseillée, nous vous recommandons de protéger vos données avant une mise à niveau de la copie des journaux de transaction.
 
  **Pour protéger vos données**
@@ -37,12 +37,12 @@ ms.locfileid: "78175415"
 
 2.  Exécutez la commande [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur chaque base de données primaire.
 
-##  <a name="UpgradeMonitor"></a>Mise à niveau de l’instance du serveur moniteur
+##  <a name="upgrading-the-monitor-server-instance"></a><a name="UpgradeMonitor"></a>Mise à niveau de l’instance du serveur moniteur
  L'instance du serveur moniteur, si elle existe, peut être mise à niveau à tout moment.
 
  Pendant que le serveur moniteur est mis à niveau, la configuration de la copie des journaux de transaction continue à fonctionner, mais son état n'est pas enregistré dans les tables sur le moniteur. Les alertes qui ont été configurées ne sont pas déclenchées tant que le serveur moniteur est en cours de mise à niveau. Après la mise à niveau, vous pouvez mettre à jour les informations dans les tables du moniteur en exécutant la procédure stockée système [sp_refresh_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql).
 
-##  <a name="UpgradeSingleSecondary"></a>Mise à niveau des configurations de copie des journaux de route avec un seul serveur secondaire
+##  <a name="upgrading-log-shipping-configurations-with-a-single-secondary-server"></a><a name="UpgradeSingleSecondary"></a>Mise à niveau des configurations de copie des journaux de route avec un seul serveur secondaire
  Le processus de mise à niveau décrit dans cette section présume une configuration composée du serveur principal et d'un seul serveur secondaire. La figure ci-après illustre cette configuration, avec une instance du serveur principal, A, et une seule instance du serveur secondaire, B.
 
  ![Un serveur secondaire et aucun serveur moniteur](../media/ls-2-wayconfig-nomonitor.gif "Un serveur secondaire et aucun serveur moniteur")
@@ -50,7 +50,7 @@ ms.locfileid: "78175415"
  Pour plus d'informations sur la mise à niveau de plusieurs serveurs secondaires, consultez [Mise à niveau de plusieurs instances du serveur secondaire](#MultipleSecondaries), plus loin dans cette rubrique.
  
 
-###  <a name="UpgradeSecondary"></a>Mise à niveau de l’instance de serveur secondaire
+###  <a name="upgrading-the-secondary-server-instance"></a><a name="UpgradeSecondary"></a>Mise à niveau de l’instance de serveur secondaire
  Le processus de mise à niveau implique la mise à niveau des instances de serveur secondaire d'une configuration [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou une version supérieure) de copie des journaux de transaction vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avant la mise à niveau de l'instance du serveur principal. Mettez toujours à niveau l'instance du serveur secondaire en premier. Si le serveur principal a été mis à niveau avant un serveur secondaire, la copie des journaux de transaction échoue parce qu'une sauvegarde créée sur une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être restaurée sur une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  La copie des journaux de transaction se poursuit durant le processus de mise à niveau parce que les serveurs secondaires mis à niveau continuent à restaurer les sauvegardes des journaux à partir du serveur principal [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou une version supérieure). Le processus de mise à niveau des instances de serveur secondaire dépend en partie du fait que la configuration de la copie des journaux de transaction possède ou non plusieurs serveurs secondaires. Pour plus d'informations, consultez [Mise à niveau de plusieurs instances du serveur secondaire](#MultipleSecondaries), plus loin dans cette rubrique.
@@ -65,7 +65,7 @@ ms.locfileid: "78175415"
 > [!IMPORTANT]
 >  L'option RESTORE WITH STANDBY n'est pas prise en charge pour une base de données qui requiert une mise à niveau. Si une base de données secondaire mise à niveau a été configurée à l'aide de RESTORE WITH STANDBY, les journaux des transactions ne peuvent plus être restaurés après la mise à niveau. Pour reprendre la copie des journaux de transaction sur cette base de données secondaire, vous devrez reconfigurer la copie des journaux de transaction sur ce serveur de secours. Pour plus d’informations sur l’option STANDBY, consultez [Restore Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).
 
-###  <a name="UpgradePrimary"></a>Mise à niveau de l’instance de serveur principal
+###  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> Mise à niveau de l'instance du serveur principal
  Lors de la planification d'une mise à niveau, un élément important à prendre en compte est la durée pendant laquelle votre base de données ne sera pas disponible. Le scénario de mise à niveau le plus simple est que la base de données ne soit pas disponible pendant que vous mettez à niveau le serveur principal (scénario 1, ci-après).
 
  Au prix d'un processus de mise à niveau plus compliqué, vous pouvez augmenter la disponibilité de votre base de données en basculant le serveur principal [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou une version supérieure) vers un serveur secondaire [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avant de mettre à niveau le serveur principal d'origine (scénario 2, ci-après). Il existe deux variantes du scénario de basculement : vous pouvez revenir au serveur principal d'origine et sauvegarder la configuration de la copie des journaux de transaction originale. Autre solution, vous pouvez supprimer la configuration de la copie des journaux de transaction originale avant de mettre à niveau le serveur principal d'origine, puis, ultérieurement, créer une configuration à l'aide du nouveau serveur principal. Cette section décrit ces deux scénarios.
@@ -74,7 +74,7 @@ ms.locfileid: "78175415"
 >  Veillez à mettre à niveau l'instance du serveur secondaire avant l'instance du serveur principal. Pour plus d'informations, consultez [Mise à niveau de l'instance du serveur secondaire](#UpgradeSecondary), plus haut dans cette rubrique.
 
 
-####  <a name="Scenario1"></a>Scénario 1 : mettre à niveau l’instance de serveur principal sans basculement
+####  <a name="scenario-1-upgrade-primary-server-instance-without-failover"></a><a name="Scenario1"></a>Scénario 1 : mettre à niveau l’instance de serveur principal sans basculement
  C'est le scénario plus simple, mais il se traduit par un temps mort plus important que le basculement. L'instance de serveur principal est simplement mise à niveau et la base de données n'est pas disponible pendant cette mise à niveau.
 
  Une fois que le serveur est mis à niveau, la base de données est automatiquement remise en ligne, ce qui entraîne sa mise à niveau. Après que la base de données a été mise à niveau, les travaux de la copie des journaux de transaction reprennent.
@@ -88,7 +88,7 @@ ms.locfileid: "78175415"
 >  Si vous prévoyez d'avoir l'instance de serveur secondaire comme nouvelle instance de serveur principal, vous devez supprimer la configuration de la copie des journaux de transaction. La copie des journaux de transaction doit être reconfigurée à partir du nouveau serveur principal vers le nouveau serveur secondaire, une fois que l'instance de serveur principal d'origine a été mise à niveau. Pour plus d’informations, consultez [Supprimer l’envoi de journaux &#40;SQL Server&#41;](remove-log-shipping-sql-server.md).
 
 
-#####  <a name="Procedure1"></a>Procédure 1 : effectuer un basculement contrôlé sur le serveur secondaire
+#####  <a name="procedure-1-perform-a-controlled-failover-to-the-secondary-server"></a><a name="Procedure1"></a>Procédure 1 : effectuer un basculement contrôlé sur le serveur secondaire
  Basculement contrôlé vers le serveur secondaire :
 
 1.  Exécutez manuellement une [sauvegarde de la fin du journal](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) du journal des transactions sur la base de données primaire en spécifiant WITH NORECOVERY. Cette sauvegarde capture les enregistrements de journal qui n'ont pas encore été sauvegardés et place la base de données hors connexion. Notez que pendant que la base de données est hors connexion, le travail de sauvegarde de la copie des journaux de transaction échoue.
@@ -130,17 +130,17 @@ ms.locfileid: "78175415"
 
     5.  Veillez à ce que le journal des transactions de la base de données secondaire ne se remplisse pas pendant que la base de données est en ligne. Pour empêcher le journal des transactions de se remplir, vous pouvez avoir besoin de le sauvegarder. Si tel est le cas, nous vous recommandons de le sauvegarder dans un emplacement partagé, un *partage de sauvegarde*, pour que les sauvegardes soient disponibles pour être restaurées sur l'autre instance de serveur.
 
-#####  <a name="Procedure2"></a>Procédure 2 : mettre à niveau l’instance du serveur principal d’origine vers[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#####  <a name="procedure-2-upgrade-the-original-primary-server-instance-to-sscurrent"></a><a name="Procedure2"></a>Procédure 2 : mettre à niveau l’instance du serveur principal d’origine vers[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
  Après avoir mis à niveau l'instance du serveur principal d'origine vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données demeure hors connexion et dans le format.
 
-#####  <a name="Procedure3"></a>Procédure 3 : configurer la copie des journaux de connexion sur[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#####  <a name="procedure-3-set-up-log-shipping-on-sscurrent"></a><a name="Procedure3"></a>Procédure 3 : configurer la copie des journaux de connexion sur[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
  Le reste du processus de mise à niveau dépend du fait que la copie des journaux de transaction est toujours configurée ou pas, comme suit :
 
 -   Si vous avez conservé la configuration de copie des journaux de transaction [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)](ou version supérieure), revenez à l'instance du serveur principal d'origine. Pour plus d'informations, consultez [Pour revenir à l'instance du serveur principal d'origine](#SwitchToOrigPrimary), plus loin dans cette section.
 
 -   Si vous avez supprimé la configuration de la copie des journaux de transaction avant le basculement, créez une nouvelle configuration de la copie des journaux de transaction dans laquelle l'instance de serveur secondaire d'origine est la nouvelle instance de serveur principal. Pour plus d'informations, consultez [Pour conserver l'ancienne instance du serveur secondaire comme nouvelle instance du serveur principal](#KeepOldSecondaryAsNewPrimary), plus loin dans cette section.
 
-######  <a name="SwitchToOrigPrimary"></a>Pour revenir à l’instance du serveur principal d’origine
+######  <a name="to-switch-back-to-the-original-primary-server-instance"></a><a name="SwitchToOrigPrimary"></a>Pour revenir à l’instance du serveur principal d’origine
 
 1.  Sur le serveur principal temporaire (serveur B), sauvegardez la fin du journal avec l'option WITH NORECOVERY pour créer une sauvegarde de la fin du journal et placer la base de données hors connexion. La sauvegarde de la fin du journal s'intitule `Switchback_AW_20080315.trn`. Par exemple :
 
@@ -159,7 +159,7 @@ ms.locfileid: "78175415"
 
  Après que la base de données a été placée en ligne, la configuration de la copie des journaux de transaction d'origine se poursuit.
 
-######  <a name="KeepOldSecondaryAsNewPrimary"></a>Pour conserver l’ancienne instance de serveur secondaire comme nouvelle instance de serveur principal
+######  <a name="to-keep-the-old-secondary-server-instance-as-the-new-primary-server-instance"></a><a name="KeepOldSecondaryAsNewPrimary"></a>Pour conserver l’ancienne instance de serveur secondaire comme nouvelle instance de serveur principal
  Établissez une nouvelle configuration de la copie des journaux de transaction en utilisant l'ancienne instance de serveur secondaire, B, comme serveur principal et l'ancienne instance de serveur principal, A, comme nouveau serveur secondaire :
 
 > [!IMPORTANT]
@@ -181,9 +181,9 @@ ms.locfileid: "78175415"
 5.  Basculez la base de données en redirigeant les clients depuis le serveur principal original (serveur A) vers le serveur secondaire en ligne (serveur B).
 
     > [!IMPORTANT]
-    >  Lorsque vous basculez vers une nouvelle base de données primaire, vous devez vous assurer que ses métadonnées sont cohérentes avec celles de la base de données principale d'origine. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
+    >  Lorsque vous basculez vers une nouvelle base de données primaire, vous devez vous assurer que ses métadonnées sont cohérentes avec celles de la base de données principale d'origine. Pour plus d’informations, consultez [gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
 
-##  <a name="MultipleSecondaries"></a>Mise à niveau de plusieurs instances de serveur secondaire
+##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>Mise à niveau de plusieurs instances de serveur secondaire
  La figure ci-après illustre cette configuration, avec une instance du serveur principal, A, et deux instances du serveur secondaire, B et C.
 
  ![Deux serveurs secondaires et aucun serveur moniteur](../media/ls-3-wayconfig-nomonitor.gif "Deux serveurs secondaires et aucun serveur moniteur")
@@ -216,7 +216,7 @@ ms.locfileid: "78175415"
 
 9. Restaurez le journal des transactions depuis le serveur principal temporaire (serveur B) vers la base de données primaire d'origine (sur le serveur A) à l'aide de l'option WITH RECOVERY.
 
-##  <a name="Redeploying"></a>Redéploiement de la copie des journaux de session
+##  <a name="redeploying-log-shipping"></a><a name="Redeploying"></a>Redéploiement de la copie des journaux de session
  Si vous ne souhaitez pas migrer la configuration de la copie des journaux de transaction à l'aide de l'une des procédures indiquées ci-dessus, vous pouvez redéployer entièrement la copie des journaux de transaction en réinitialisant la base de données secondaire avec une sauvegarde et une restauration complètes de la base de données primaire. Cette option peut être souhaitable si vous avez une base de données peu volumineuse ou si une haute disponibilité n'est pas primordiale pendant la mise à niveau.
 
  Pour plus d’informations sur l’activation de la copie des journaux de session, consultez [configurer la copie des journaux de &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).

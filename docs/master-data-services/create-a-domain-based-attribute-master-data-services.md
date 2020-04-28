@@ -15,10 +15,10 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7bc13897797e8f782a1dbe83401fa658107eb5b8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177389"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Créer un attribut basé sur un domaine (Master Data Services)
@@ -32,20 +32,20 @@ ms.locfileid: "78177389"
 
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .
 
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
 
 -   Une entité doit exister pour servir de source de valeurs d'attribut. Par exemple, vous devez créer l'entité Color avant de créer un attribut basé sur un domaine et sur l'entité Color. Pour plus d’informations, consultez [créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
 
 -   Une entité doit exister pour créer l'attribut qui lui est destiné. Pour plus d’informations, consultez [créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
 
 ## <a name="attribute-information"></a>Informations sur les attributs
- Pour chaque attribut créé, une ligne comportant sept colonnes est ajoutée à la grille. Le tableau suivant décrit les colonnes.
+ Pour chaque attribut créé, une ligne comportant sept colonnes est ajoutée à la grille. Le tableau suivant décrit ces colonnes.
 
 |Colonne|Description|
 |------------|-----------------|
-|Statut|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|
+|État|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|
 |Nom|Nom de l'attribut.|
-|Display Name|Nom de l’attribut.|
+|Nom d’affichage|Nom de l’attribut.|
 |Description|Description de l’attribut.|
 |Largeur d’affichage en pixels|Largeur de l’attribut.|
 |Types et propriétés|Informations sur le type et le type de données de l’attribut.|
@@ -55,11 +55,11 @@ ms.locfileid: "78177389"
 
 -   **Créé par**: nom de l’utilisateur qui a créé l’attribut.
 
--   Le : date et heure **de**création de l’attribut.
+-   **Le**: date et heure de création de l’attribut.
 
--   **Mise à jour par**: nom de l’utilisateur qui a mis à jour l’attribut pour la dernière fois.
+-   **Mis à jour par**: nom du dernier utilisateur qui a mis à jour l’attribut.
 
--   Le : date et heure **de**la dernière mise à jour de l’attribut.
+-   **Le**: date et heure de la dernière mise à jour de l’attribut.
 
 ### <a name="to-create-a-domain-based-attribute"></a>Pour créer un attribut basé sur un domaine
 
@@ -79,7 +79,7 @@ ms.locfileid: "78177389"
 
     -   Si l’attribut concerne les collections, sélectionnez **Collection** dans la zone de liste **Types de membre** .
 
-6.  Dans la zone **Nom** , tapez un nom pour l'attribut. Pour obtenir la liste des mots qui ne doivent pas être utilisés comme noms d’attribut, consultez la section [Mots réservés &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)
+6.  Dans la zone **Nom** , tapez un nom pour l'attribut. Pour obtenir la liste des mots qui ne doivent pas être utilisés comme noms d’attribut, consultez [Mots réservés &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).
 
 7.  Si vous le souhaitez, entrez le nom complet et une description dans le champ **Description** .
 
@@ -89,15 +89,15 @@ ms.locfileid: "78177389"
 
 10. Dans la liste **Entité de domaine** , sélectionnez l’entité à utiliser pour renseigner les valeurs d’attribut. 
 
-11. **Facultatif, pour les attributs basés sur un domaine pour les membres feuille.** Sélectionnez un attribut parent de filtre utilisé pour limiter les valeurs autorisées pour l’attribut basé sur un domaine.
+11. **Facultatif, pour les attributs basés sur un domaine des membres feuille.** Sélectionnez un attribut parent de filtre utilisé pour limiter les valeurs autorisées pour l’attribut basé sur un domaine.
 
      L’attribut parent du filtre doit être un autre attribut basé sur un domaine d’un membre feuille attaché à la même entité. Ceci suppose d’instaurer une hiérarchie dérivée contenant un niveau qui définit la relation parent-enfant entre les entités de domaine des deux attributs.
 
      Pour plus d’informations sur la restriction des valeurs autorisées, consultez le billet [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(Filtrage des listes déroulantes d’attributs basés sur un domaine) sur le blog Master Data Services.
 
-12. **facultatif.** Sélectionnez **Activer le suivi des modifications** pour effectuer le suivi des modifications apportées aux groupes d'attributs. Pour plus d’informations, consultez [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
+12. **Facultatif.** Sélectionnez **Activer le suivi des modifications** pour effectuer le suivi des modifications apportées aux groupes d'attributs. Pour plus d’informations, consultez [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 
-13. Cliquez sur **Enregistrer**.
+13. Cliquez sur **Save**.
 
 ## <a name="see-also"></a>Voir aussi
  [Les attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md) [créer une hiérarchie dérivée &#40;Master Data Services](../master-data-services/create-a-derived-hierarchy-master-data-services.md)&#41;[modifier un nom d’attribut et un type de données &#40;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md) Master Data Services [supprimer un attribut](../master-data-services/delete-an-attribute-master-data-services.md)&#41;&#40;Master Data Services

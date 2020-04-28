@@ -21,10 +21,10 @@ ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77507531"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="Arguments"></a> Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  @database_name  
  Nom de la base de données pour activer la sauvegarde managée sur une base de données spécifique. Si la valeur est NULL ou *, cette sauvegarde managée s’applique à toutes les bases de données sur le serveur.  
   
@@ -82,6 +82,6 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ## <a name="see-also"></a>Voir aussi  
  [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+ [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

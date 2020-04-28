@@ -12,10 +12,10 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a070f5a279cdddfb78d3188c210faf43661d5516
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557842"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Ouvrir des projets Integration Services dans Data Quality Client
@@ -24,9 +24,9 @@ ms.locfileid: "75557842"
 
   Le composant de nettoyage DQS dans Integration Services vous permet d’exécuter un projet de nettoyage en mode batch. Toutefois, vous pouvez parfois examiner les résultats de nettoyage dans un package Integration Services de la même façon que vous pouvez examiner les résultats de nettoyage dans l'onglet **Gérer et afficher les résultats** d'une activité de nettoyage dans un projet de qualité des données dans DQS. DQS vous permet d'ouvrir des projets Integration Services dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] comme tout autre projet de qualité des données à partir de l'écran **Ouvrir le projet** et d'avoir une expérience de nettoyage interactif des résultats de nettoyage dans un projet Integration Services.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
   
 -   Seuls les projets Integration Services finalisés sont disponibles dans l'écran **Ouvrir le projet** dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Les projets qui ont échoué ou en cours d'exécution ne sont pas disponibles dans l'écran **Ouvrir le projet** .  
   
@@ -34,26 +34,26 @@ ms.locfileid: "75557842"
   
 -   Vous ne pouvez pas supprimer un projet Integration Services verrouillé dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Vous devez d'abord le déverrouiller.  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Vous devez avoir correctement exécuté un projet Integration Services contenant un package avec un composant de nettoyage DQS pour l'afficher et l'ouvrir dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour ouvrir un projet Integration Services.  
   
   
-##  <a name="Open"></a>Ouvrir un projet Integration Services  
+##  <a name="open-an-integration-services-project"></a><a name="Open"></a> Ouvrir un projet Integration Services  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Dans l' [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] écran d’accueil, cliquez sur **ouvrir le projet de qualité des données**. L'écran **Ouvrir le projet** s'affiche.  
+2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Ouvrir le projet de qualité des données**. L'écran **Ouvrir le projet** s'affiche.  
   
 3.  Dans l'écran **Ouvrir le projet** , vous pouvez identifier un projet Integration Services de l'une des manières suivantes :  
   
     1.  **Nom du projet**: Integration Services projets sont répertoriés à l’aide de la terminologie de dénomination suivante : « Package. DQS Cleansing_*\<date \<>heure>*_ {GUID} ». Chaque fois que vous exécutez correctement le même package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], un nouveau projet est répertorié dans l’écran **Ouvrir le projet** .  
   
-    2.  **Type de projet**: Integration Services les projets ont **SSIS** comme type de projet dans l’écran **ouvrir le projet** .  
+    2.  **Type de projet**: les projets Integration Services ont **SSIS** comme type de projet dans l'écran **Ouvrir le projet** .  
   
      Sélectionnez un projet, puis cliquez sur **Suivant**.  
   

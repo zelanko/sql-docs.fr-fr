@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 418007a3095f2b3cdd24cd2949c2b1c2abb87664
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175146"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Compteurs de performance du service Web MSRS 2014 en mode SharePoint et des objets de performance du service Windows MSRS 2014 en mode SharePoint (mode SharePoint)
@@ -32,7 +32,7 @@ ms.locfileid: "78175146"
 
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Mode SharePoint
 
- Les objets de performance sont disponibles dans l’Analyseur de performances Windows (**Perfmon.exe**). Pour plus d'informations, consultez la documentation Windows. [Profilage au moment](https://msdn.microsoft.com/library/w4bz2147.aspx)de l’exécution.
+ Les objets de performance sont disponibles dans l’Analyseur de performances Windows (**Perfmon.exe**). Pour plus d'informations, consultez la documentation Windows. [Profilage de runtime](https://msdn.microsoft.com/library/w4bz2147.aspx).
 
  **Dans cette rubrique :**
 
@@ -42,7 +42,7 @@ ms.locfileid: "78175146"
 
 -   [Utiliser des applets de commande PowerShell pour retourner des listes](#bkmk_powershell)
 
-##  <a name="bkmk_webservice"></a>Compteurs de performance du service Web MSRS 2014 en mode SharePoint
+##  <a name="msrs-2014-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a>Compteurs de performance du service Web MSRS 2014 en mode SharePoint
  L'objet de performance `MSRS 2014 Web Service SharePoint Mode` contrôle les performances du serveur de rapports. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement du serveur de rapports initialisé en général via des opérations de consultation du rapport interactives. Lorsque vous configurez ce compteur, vous pouvez l'appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou sélectionner des instances spécifiques. Ces compteurs sont réinitialisés à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .
 
  Le tableau suivant répertorie les compteurs inclus dans l'objet de performance `MSRS 2014 Web Service SharePoint Mode`.
@@ -55,7 +55,7 @@ ms.locfileid: "78175146"
 |`Cache Misses/Sec`|Nombre de requêtes par seconde qui n'ont pas retourné un rapport à partir du cache. Utilisez ce compteur afin de déterminer si les ressources utilisées pour la mise en cache (disque ou mémoire) sont suffisantes.|
 |`Cache Misses/Sec (Semantic Models)`|Nombre de requêtes par seconde qui n'ont pas retourné de modèle à partir du cache. Utilisez ce compteur afin de déterminer si les ressources utilisées pour la mise en cache (disque ou mémoire) sont suffisantes.|
 |`First Session Requests/Sec`|Nombre de nouvelles sessions utilisateur démarrées chaque seconde à partir du cache du serveur de rapports.|
-|`Memory Cache Hits/Sec`|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le *cache en mémoire* fait partie du cache qui stocke les rapports dans la mémoire de l’UC. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|
+|`Memory Cache Hits/Sec`|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le*cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|
 |`Memory Cache Misses/Sec`|Nombre de fois par seconde où les rapports n'ont pas pu être récupérés du cache mémoire.|
 |`Next Session Requests/Sec`|Nombre de requêtes par seconde pour les rapports qui sont ouverts dans une session existante (tels que les rapports rendus à partir d'un instantané de session).|
 |`Report Requests`|Nombre de rapports qui sont actuellement actifs et gérés par le serveur de rapports.|
@@ -65,14 +65,14 @@ ms.locfileid: "78175146"
 |`Total Cache Hits (Semantic Models)`|Nombre total de demandes de modèle à partir du cache après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par ASP.NET.|
 |`Total Cache Misses`|Nombre total d'échecs de retour d'un rapport à partir du cache après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] . Utilisez ce compteur pour déterminer si l'espace disque et la mémoire sont suffisants.|
 |`Total Cache Misses (Semantic Models)`|Nombre total d'échecs de retour d'un modèle à partir du cache après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par ASP.NET. Utilisez ce compteur pour déterminer si l'espace disque et la mémoire sont suffisants.|
-|`Total Memory Cache Hits`|Nombre total de rapports mis en cache retournés par le cache mémoire après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] . Le *cache en mémoire* fait partie du cache qui stocke les rapports dans la mémoire de l’UC. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|
+|`Total Memory Cache Hits`|Nombre total de rapports mis en cache retournés par le cache mémoire après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] . Le*cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|
 |`Total Memory Cache Misses`|Nombre total d'absences dans le cache mémoire après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|
 |`Total Processing Failures`|Nombre d'erreurs dans le traitement des demandes du service Web du serveur de rapports.|
 |`Total Rejected Threads`|Nombre total de threads rejetés pour le traitement asynchrone, puis gérés comme processus synchrones dans le même thread. Chaque source de données est traitée sur un thread. Si le volume de threads dépasse la capacité, les threads sont rejetés pour le traitement asynchrone et sont traités ensuite en série.|
 |`Total Reports Executed`|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|
 |`Total Requests`|Nombre total des demandes envoyées au serveur de rapports après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web Report Server par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|
 
-##  <a name="bkmk_windowsservice"></a>Compteurs de performance du service Windows MSRS 2014 en mode SharePoint
+##  <a name="msrs-2014-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a>Compteurs de performance du service Windows MSRS 2014 en mode SharePoint
  L'objet de performance `MSRS 2014 Windows Service SharePoint Mode` est utilisé pour contrôler le service Windows Report Server. Cet objet de performance inclut une collection de compteurs utilisée pour suivre le traitement des rapports initialisé via des opérations planifiées. Les opérations planifiées peuvent englober l'abonnement et la remise, les instantanés d'exécution de rapport et l'historique de rapport. Lorsque vous configurez ce compteur, vous pouvez l'appliquer à toutes les instances de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ou sélectionner des instances spécifiques.
 
  Le tableau suivant répertorie les compteurs inclus dans l'objet de performance `MSRS 2014 Windows Service SharePoint mode`.
@@ -96,7 +96,7 @@ ms.locfileid: "78175146"
 |`Delivers/Sec`|Nombre de remises de rapport par seconde, de toute extension de remise.|
 |`Events/Sec`|Nombre d'événements traités par seconde. Les événements contrôlés incluent `SnapshotUpdated` et `TimedSubscription`.|
 |`First Session Requests/Sec`|Nombre de nouvelles sessions d'exécution de rapport crées par seconde.|
-|`Memory Cache Hits/Sec`|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le *cache en mémoire* fait partie du cache qui stocke les rapports dans la mémoire de l’UC. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|
+|`Memory Cache Hits/Sec`|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le*cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|
 |`Memory Cache Misses/Sec`|Nombre de fois par seconde où les rapports ne peuvent pas être récupérés du cache mémoire.|
 |`Next Session Requests/Sec`|Nombre de requêtes par seconde pour les rapports qui sont ouverts dans une session existante (tels que les rapports rendus à partir d'un instantané de session).|
 |`Report Requests`|Nombre de rapports qui sont actuellement actifs et gérés par le serveur de rapports. Utilisez ce compteur pour évaluer la stratégie de mise en cache. Il peut exister beaucoup plus de requêtes que de rapports générés.|
@@ -119,8 +119,8 @@ ms.locfileid: "78175146"
 |`Total Requests`|Nombre total de rapports qui ont été correctement exécutés après le démarrage du service. Ce compteur est remis à zéro lorsque le domaine d'application se recycle.|
 |`Total Snapshot Updates`|Nombre total de mises à jour d'instantanés d'exécution de rapport.|
 
-##  <a name="bkmk_powershell"></a>Utiliser des applets de commande PowerShell pour retourner des listes
- ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Le script Windows PowerShell suivant retourne les ensembles de compteurs où le CounterSetName commence par « MSR ».
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a>Utiliser des applets de commande PowerShell pour retourner des listes
+ ![Contenu relatif à PowerShell](../media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Le script Windows PowerShell suivant retourne les ensembles de compteurs dans lesquels CounterSetName commence par « msr »
 
 ```powershell
 Get-Counter -ListSet msr*

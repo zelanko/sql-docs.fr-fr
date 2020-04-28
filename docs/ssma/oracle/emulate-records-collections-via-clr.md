@@ -8,10 +8,10 @@ ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
 ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76762813"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>Émulation des enregistrements et des collections via l’UDT du CLR
@@ -247,7 +247,7 @@ EXISTS | `ContainsElement(@index int) returns bit`
 ÉTENDRE (n, i) | `ExtendDefault(@count int, @def int) returns <UDT_type>`
 FIRST | `First() returns int`
 LAST | `Last() returns int`
-LIMIT | N/A
+LIMIT | NON APPLICABLE
 PRIOR | `Prior(@current int) returns int`
 NEXT | `Next(@current int) returns int`
 TRIM | `Trim() returns <UDT_type>`

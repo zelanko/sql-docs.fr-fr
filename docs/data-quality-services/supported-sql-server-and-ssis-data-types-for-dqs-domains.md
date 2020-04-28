@@ -12,10 +12,10 @@ ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75558165"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Types de données SQL Server et SSIS pris en charge pour les domaines DQS
@@ -27,7 +27,7 @@ ms.locfileid: "75558165"
 > [!NOTE]  
 >  Dans les fichiers .xlsx et .xls, le type de données de la colonne source est déterminé par le type de données prédominant des huit premières lignes. Si une cellule n'est pas conforme à ce type de données, elle recevra une valeur NULL. De la même manière, dans les fichiers .csv, le type de données de la colonne source est déterminé par le type de données prédominant des huit premières lignes.  
   
-##  <a name="SQLServer"></a>Types de données SQL Server pris en charge 
+##  <a name="supported-sql-server-data-types"></a><a name="SQLServer"></a>Types de données SQL Server pris en charge 
  Le tableau suivant fournit des informations sur les types de données SQL Server pris en charge pour chaque type de données de domaine DQS :  
   
 |Type de données de domaine DQS|Type de données SQL Server pris en charge|  
@@ -39,7 +39,7 @@ ms.locfileid: "75558165"
   
  Les autres types de données SQL Server ne sont pas pris en charge dans DQS. Pour plus d’informations sur les types de données SQL Server, consultez [Types de données &#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md).  
   
-##  <a name="SSIS"></a>Types de données SSIS pris en charge  
+##  <a name="supported-ssis-data-types"></a><a name="SSIS"></a>Types de données SSIS pris en charge  
  Le tableau suivant fournit des informations sur les types de données SSIS pris en charge pour chaque type de données de domaine DQS :  
   
 |Type de données de domaine DQS|Type de données SSIS pris en charge|  

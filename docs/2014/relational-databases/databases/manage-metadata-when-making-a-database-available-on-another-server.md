@@ -35,10 +35,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929903"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gérer les métadonnées lors de la mise à disposition d'une base de données sur une autre instance de serveur (SQL Server)
@@ -54,34 +54,34 @@ ms.locfileid: "76929903"
   
 -   lors de l'attachement d'une copie d'une base de données sur une autre instance de serveur.  
   
- Certaines applications dépendent d'informations, d'entités et/ou d'objets qui n'appartiennent pas au champ d'action d'une base de données mono-utilisateur. En règle générale, une application a des dépendances sur les bases de données **Master** et **msdb** , ainsi que sur la base de données utilisateur. Les informations stockées en dehors d'une base de données utilisateur et nécessaires au bon fonctionnement de cette base de données doivent être disponibles sur l'instance du serveur de destination. Par exemple, les connexions pour une application sont stockées en tant que métadonnées dans la base de données **Master** , et elles doivent être recréées sur le serveur de destination. Si un plan de maintenance d’application ou de base de données dépend des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dont les métadonnées sont stockées dans la base de données **msdb** , vous devez recréer ces travaux sur l’instance du serveur de destination. De même, les métadonnées d’un déclencheur de niveau serveur sont stockées dans **Master**.  
+ Certaines applications dépendent d'informations, d'entités et/ou d'objets qui n'appartiennent pas au champ d'action d'une base de données mono-utilisateur. Généralement, une application possède des dépendances sur les bases de données **master** et **msdb** ainsi que la base de données utilisateur. Les informations stockées en dehors d'une base de données utilisateur et nécessaires au bon fonctionnement de cette base de données doivent être disponibles sur l'instance du serveur de destination. Par exemple, les connexions pour une application sont stockées en tant que métadonnées dans la base de données **master** , et doivent être recréées sur le serveur de destination. Si un plan de maintenance d’application ou de base de données dépend des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dont les métadonnées sont stockées dans la base de données **msdb** , vous devez recréer ces travaux sur l’instance du serveur de destination. De la même façon, les métadonnées d’un déclencheur de niveau serveur sont stockées dans la base de données **master**.  
   
- Lorsque vous déplacez la base de données d’une application vers une autre instance de serveur, vous devez recréer toutes les métadonnées des entités et des objets dépendants dans **Master** et **msdb** sur l’instance du serveur de destination. Par exemple, si une application de base de données utilise des déclencheurs au niveau serveur, il ne suffit pas d'attacher ou de restaurer la base de données sur le nouveau système. La base de données ne fonctionnera pas comme prévu, sauf si vous recréez manuellement les métadonnées pour ces déclencheurs dans la base de données **Master** .  
+ Quand vous déplacez la base de données d’une application vers une autre instance de serveur, vous devez recréer toutes les métadonnées des entités et des objets dépendants dans les bases de données **master** et **msdb** sur l’instance du serveur de destination. Par exemple, si une application de base de données utilise des déclencheurs au niveau serveur, il ne suffit pas d'attacher ou de restaurer la base de données sur le nouveau système. La base de données ne fonctionne pas comme prévu, sauf si vous recréez manuellement les métadonnées pour ces déclencheurs dans la base de données **master** .  
   
-##  <a name="information_entities_and_objects"></a>Informations, entités et objets stockés en dehors des bases de données utilisateur  
+##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> Informations, entités, et objets stockés en dehors des bases de données utilisateur  
  La suite de cette rubrique résume les problèmes susceptibles d'affecter une base de données qui est rendue disponible sur une autre instance de serveur. Vous devrez peut-être recréer un ou plusieurs des types d'informations, d'entités ou d'objets répertoriés dans la liste suivante. Pour consulter un résumé, cliquez sur le lien correspondant à l'élément.  
   
 -   [Paramètres de configuration du serveur](#server_configuration_settings)  
   
 -   [Informations d'identification](#credentials)  
   
--   [Requêtes de bases de données croisées](#cross_database_queries)  
+-   [Requêtes entre plusieurs bases de données](#cross_database_queries)  
   
--   [Propriété de base de données](#database_ownership)  
+-   [Propriété de la base de données](#database_ownership)  
   
 -   [Requêtes distribuées/serveurs liés](#distributed_queries_and_linked_servers)  
   
 -   [Données chiffrées](#encrypted_data)  
   
--   [Messages d’erreur définis par l’utilisateur](#user_defined_error_messages)  
+-   [Messages d'erreur définis par l'utilisateur](#user_defined_error_messages)  
   
--   [Notifications d’événements et événements de Windows Management Instrumentation (WMI) (au niveau du serveur)](#event_notif_and_wmi_events)  
+-   [Notifications d'événements et événements WMI (Windows Management Instrumentation) (au niveau du serveur)](#event_notif_and_wmi_events)  
   
 -   [Procédures stockées étendues](#extended_stored_procedures)  
   
--   [Moteur de texte intégral pour les propriétés de SQL Server](#ifts_service_properties)  
+-   [Moteur d'indexation et de recherche en texte intégral pour les propriétés SQL Server](#ifts_service_properties)  
   
--   [travaux](#jobs)  
+-   [Tâches](#jobs)  
   
 -   [Connexions](#logins)  
   
@@ -89,21 +89,20 @@ ms.locfileid: "76929903"
   
 -   [Paramètres de réplication](#replication_settings)  
   
--   [Applications Service Broker](#sb_applications)  
+-   [applications Service Broker](#sb_applications)  
   
 -   [Procédures de démarrage](#startup_procedures)  
   
 -   [Déclencheurs (au niveau du serveur)](#triggers)  
   
-##  <a name="server_configuration_settings"></a>Paramètres de configuration du serveur  
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures installent et démarrent sélectivement les services et les fonctionnalités clés. Ainsi, la surface d'exposition vulnérable aux attaques d'un système est réduite. Dans la configuration par défaut des nouvelles installations, de nombreuses fonctionnalités ne sont pas activées. Si la base de données repose sur une fonctionnalité ou un service qui est désactivé par défaut, cette fonction ou ce service doit être activé sur l'instance du serveur de destination.  
+##  <a name="server-configuration-settings"></a><a name="server_configuration_settings"></a> Server Configuration Settings  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures installent et démarrent sélectivement les services et les fonctionnalités clés. Ainsi, la surface d'exposition vulnérable aux attaques d'un système est réduite. Dans la configuration par défaut des nouvelles installations, de nombreuses fonctionnalités ne sont pas activées. Si la base de données repose sur une fonctionnalité ou un service qui est désactivé par défaut, cette fonction ou ce service doit être activé sur l'instance du serveur de destination.  
   
  Pour plus d’informations sur ces paramètres et leur activation ou désactivation, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="credentials"></a>Informations d’identification  
+##  <a name="credentials"></a><a name="credentials"></a>Informations d’identification  
  Les informations d'identification sont un enregistrement qui contient les informations d'authentification requises pour la connexion à une ressource en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La plupart des informations d'identification sont composées d'un nom de connexion Windows et d'un mot de passe.  
   
  Pour plus d’informations sur cette fonctionnalité, consultez [Informations d’identification &#40;moteur de base de données&#41;](../security/authentication-access/credentials-database-engine.md).  
@@ -111,33 +110,31 @@ ms.locfileid: "76929903"
 > [!NOTE]  
 >  Les comptes proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des informations d'identification. Pour connaître les informations d'identification d'un compte proxy, utilisez la table système [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="cross_database_queries"></a>Requêtes de bases de données croisées  
+##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a>Requêtes de bases de données croisées  
  Les options de base de données DB_CHAINING et TRUSTWORTHY sont désactivées par défaut. Si elles sont définies à ON pour la base de données d'origine, vous devrez peut-être les activer sur la base de données de l'instance du serveur de destination. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
  Les opérations d'attachement et de détachement désactivent le chaînage des propriétés des bases de données croisées pour la base de données. Pour plus d’informations sur l’activation du chaînage, consultez [Chaînage des propriétés des bases de données croisées (option de configuration de serveur)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
  Pour plus d’informations, consultez également [Configurer une base de données miroir pour utiliser la propriété Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="database_ownership"></a>Propriété de base de données  
+##  <a name="database-ownership"></a><a name="database_ownership"></a>Propriété de base de données  
  Lorsqu'une base de données est restaurée sur un autre ordinateur, la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'utilisateur Windows à l'origine de l'opération de restauration devient automatiquement le propriétaire de la nouvelle base de données. Lorsque la base de données est restaurée, l'administrateur du système ou le nouveau propriétaire de la base de données peut modifier la propriété de la base de données.  
   
-##  <a name="distributed_queries_and_linked_servers"></a>Requêtes distribuées et serveurs liés  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>Requêtes distribuées et serveurs liés  
  Les requêtes distribuées et les serveurs liés sont pris en charge pour les applications OLE DB. Les requêtes distribuées accèdent aux données issues de multiples sources de données hétérogènes sur le même ordinateur ou sur des ordinateurs différents. Une configuration de serveurs liés permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter des commandes sur les sources de données OLE DB hébergées sur des serveurs distants. Pour plus d’informations sur ces fonctionnalités, consultez [Serveurs liés &#40;moteur de base de données&#41;](../linked-servers/linked-servers-database-engine.md).  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="encrypted_data"></a>Données chiffrées  
+##  <a name="encrypted-data"></a><a name="encrypted_data"></a>Données chiffrées  
  Si la base de données que vous mettez à disposition sur une autre instance du serveur contient des données chiffrées et si la clé principale de base de données est protégée par la clé principale du service sur le serveur d'origine, il peut être nécessaire de recréer le chiffrement à clé principale du service. La *clé principale de base de données* est une clé symétrique qui permet de protéger les clés privées des certificats et les clés asymétriques dans une base de données chiffrée. Lors de sa création, la clé principale de base de données est chiffrée à l'aide de l'algorithme Triple DES et d'un mot de passe fourni par l'utilisateur.  
   
- Pour permettre le déchiffrement automatique de la clé principale de base de données sur une instance de serveur, une copie de cette clé est chiffrée à l'aide de la clé principale du service. Cette copie chiffrée est stockée dans la base de données et dans la base **master**. En règle générale, la copie stockée dans **Master** est mise à jour sans avertissement chaque fois que la clé principale est modifiée. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente tout d'abord de déchiffrer la clé principale de base de données avec la clé principale de service de l'instance. Si ce déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification. Une clé principale qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction OPEN MASTER KEY et d'un mot de passe.  
+ Pour permettre le déchiffrement automatique de la clé principale de base de données sur une instance de serveur, une copie de cette clé est chiffrée à l'aide de la clé principale du service. Cette copie chiffrée est stockée dans la base de données et dans la base **master**. En règle générale, la copie stockée dans **Master** est mise à jour sans avertissement chaque fois que la clé principale est modifiée. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente tout d'abord de déchiffrer la clé principale de base de données avec la clé principale de service de l'instance. Si ce déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification. Une clé principale qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction OPEN MASTER KEY et d'un mot de passe.  
   
- Lorsqu'une base de données chiffrée est copiée, restaurée ou attachée à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données chiffrée par la clé principale du service n'est pas stockée dans la base **master** sur l'instance du serveur de destination. Sur l'instance du serveur de destination, vous devez ouvrir la clé principale de la base de données. Pour ouvrir la clé principale, exécutez l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD **='***mot_de_passe***'**. Nous vous recommandons d'activer alors le déchiffrement automatique de la clé principale de la base de données en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Cette instruction ALTER MASTER KEY fournit à l'instance du serveur une copie de la clé principale de la base de données qui est chiffrée à l'aide de la clé principale du service. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Lorsqu'une base de données chiffrée est copiée, restaurée ou attachée à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données chiffrée par la clé principale du service n'est pas stockée dans la base **master** sur l'instance du serveur de destination. Sur l'instance du serveur de destination, vous devez ouvrir la clé principale de la base de données. Pour ouvrir la clé principale, exécutez l’instruction suivante : ouvrir le déchiffrement de la clé principale par mot de passe **= '***Password***'**. Nous vous recommandons d'activer alors le déchiffrement automatique de la clé principale de la base de données en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Cette instruction ALTER MASTER KEY fournit à l'instance du serveur une copie de la clé principale de la base de données qui est chiffrée à l'aide de la clé principale du service. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Pour plus d’informations sur l’activation du déchiffrement automatique de la clé principale d’une base de données miroir, consultez [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -149,14 +146,14 @@ ms.locfileid: "76929903"
   
 -   [Créer des clés symétriques identiques sur deux serveurs](../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="user_defined_error_messages"></a>Messages d’erreur définis par l’utilisateur  
+##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a>Messages d’erreur définis par l’utilisateur  
  Les messages d’erreur définis par l’utilisateur résident dans l’affichage catalogue [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) . Cet affichage catalogue est stocké dans la base de données **master**. Si une application de base de données dépend des messages d’erreur définis par l’utilisateur et que la base de données est mise à disposition sur une autre instance du serveur, utilisez [sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql) pour ajouter ces messages définis par l’utilisateur sur l’instance du serveur de destination.  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a>Notifications d’événements et événements de Windows Management Instrumentation (WMI) (au niveau du serveur)  
+##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> Notifications d’événements et des événements Windows Management Instrumentation (WMI) (au niveau du serveur)  
   
 ### <a name="server-level-event-notifications"></a>Notifications d'événements au niveau du serveur  
  Les notifications d’événements au niveau du serveur sont stockées dans la base de données **msdb**. Par conséquent, si une application de base de données repose sur une notification d'événements au niveau du serveur, cette notification doit être recréée sur l'instance du serveur de destination. Pour afficher les notifications d’événements sur une instance de serveur, utilisez l’affichage catalogue [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) . Pour plus d'informations, voir [Event Notifications](../service-broker/event-notifications.md).  
@@ -169,7 +166,7 @@ ms.locfileid: "76929903"
 > [!NOTE]  
 >  Pour plus d’informations, consultez [Fournisseur WMI pour les concepts des événements de serveur](../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
- **Pour créer une alerte WMI à l’aide de SQL Server Management Studio**  
+ **Pour créer une alerte WMI à l'aide de SQL Server Management Studio**  
   
 -   [Créer une alerte d'événement WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
   
@@ -184,9 +181,9 @@ ms.locfileid: "76929903"
   
 -   Si le service initiateur est dans la base de données miroir, le service cible doit avoir un itinéraire mis en miroir qui ramène à l'initiateur pour remettre les accusés et les réponses. Cependant, l'initiateur peut avoir un itinéraire standard qui ramène à la cible.  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="extended_stored_procedures"></a>Procédures stockées étendues  
+##  <a name="extended-stored-procedures"></a><a name="extended_stored_procedures"></a>Procédures stockées étendues  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez plutôt l' [intégration du CLR](../clr-integration/common-language-runtime-integration-overview.md) .  
@@ -200,9 +197,9 @@ ms.locfileid: "76929903"
   
  Pour plus d’informations, consultez [Autorisations d’objet GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql), [Autorisations d’objet DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-object-permissions-transact-sql) et [Autorisations d’objet REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-object-permissions-transact-sql).  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="ifts_service_properties"></a>Moteur de texte intégral pour les propriétés de SQL Server  
+##  <a name="full-text-engine-for-sql-server-properties"></a><a name="ifts_service_properties"></a>Moteur de texte intégral pour les propriétés de SQL Server  
  Les propriétés sont définies sur le moteur de texte intégral par [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql). Vérifiez que l'instance du serveur de destination possède les paramètres requis pour ces propriétés. Pour plus d’informations sur ces propriétés, consultez [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextserviceproperty-transact-sql).  
   
  Par ailleurs, si le composant des [analyseurs lexicaux et générateurs de formes dérivées](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md) ou le composant des [filtres de recherche en texte intégral](../search/configure-and-manage-filters-for-search.md) ont des versions différentes sur les instances du serveur d’origine et de destination, il est possible que les requêtes et l’index de texte intégral n’aient pas le même comportement. En outre, le [dictionnaire des synonymes](../search/full-text-search.md) est stocké dans des fichiers spécifiques à l’instance. Vous devez transférer une copie de ces fichiers à un emplacement équivalent sur l'instance du serveur de destination ou les recréer sur la nouvelle instance.  
@@ -216,31 +213,27 @@ ms.locfileid: "76929903"
   
 -   [Mise en miroir de bases de données et catalogues de texte intégral &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="jobs"></a>Travaux  
+##  <a name="jobs"></a><a name="jobs"></a>Travaux  
  Si la base de données repose sur les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devrez recréer ces derniers sur l'instance du serveur de destination. Les travaux dépendent de leur environnement. Si vous prévoyez de recréer un travail existant sur l'instance du serveur de destination, cette dernière devra peut-être être modifiée pour correspondre à l'environnement de ce travail sur l'instance du serveur d'origine. Les éléments d'environnement ci-après sont importants :  
   
 -   Connexion utilisée par le travail  
   
      Pour créer ou exécuter des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez d'abord ajouter toutes les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requises par le travail à l'instance du serveur de destination. Pour plus d’informations, consultez [Configurer un utilisateur de manière à créer et à gérer des travaux de l’Agent SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-     Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dans le contexte duquel l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, ainsi que ses autorisations réseau. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans le contexte d'un compte d'utilisateur spécifié. Le contexte du service de l'Agent affecte les paramètres du travail et son environnement d'exécution. Le compte doit avoir accès aux ressources, telles que les partages réseau, requises par le travail. Pour plus d’informations sur la façon de sélectionner et de modifier le compte de démarrage du service, consultez [Sélectionner un compte pour le service SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
+     Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dans le contexte duquel l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, ainsi que ses autorisations réseau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans le contexte d'un compte d'utilisateur spécifié. Le contexte du service de l'Agent affecte les paramètres du travail et son environnement d'exécution. Le compte doit avoir accès aux ressources, telles que les partages réseau, requises par le travail. Pour plus d’informations sur la façon de sélectionner et de modifier le compte de démarrage du service, consultez [Sélectionner un compte pour le service SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      Le bon fonctionnement du compte de démarrage du service repose sur une configuration correcte du domaine, du système de fichiers et des autorisations de Registre. Qui plus est, un travail peut nécessiter une ressource réseau partagée qui doit être configurée pour le compte du service. Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, qui est associé à une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], possède sa propre ruche de Registre, et ses travaux dépendent généralement d'un ou de plusieurs paramètres de cette ruche de Registre. Pour qu'un travail fonctionne comme prévu, il a besoin de ces paramètres du Registre. Si vous utilisez un script pour recréer un travail dans un autre service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, il est possible que son Registre ne dispose pas des paramètres corrects pour ce travail. Pour que les travaux recréés fonctionnent correctement sur une instance du serveur de destination, les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent d'origine et de destination doivent posséder les mêmes paramètres de Registre.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, qui est associé à une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], possède sa propre ruche de Registre, et ses travaux dépendent généralement d'un ou de plusieurs paramètres de cette ruche de Registre. Pour qu'un travail fonctionne comme prévu, il a besoin de ces paramètres du Registre. Si vous utilisez un script pour recréer un travail dans un autre service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, il est possible que son Registre ne dispose pas des paramètres corrects pour ce travail. Pour que les travaux recréés fonctionnent correctement sur une instance du serveur de destination, les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent d'origine et de destination doivent posséder les mêmes paramètres de Registre.  
   
     > [!CAUTION]  
     >  La modification des paramètres du Registre sur le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent de destination afin de gérer un travail recréé peut être problématique si les paramètres actuels sont requis par d'autres travaux. En outre, une modification incorrecte du Registre peut sérieusement endommager votre système. Avant que vous apportiez des modifications au Registre, nous vous recommandons de sauvegarder toutes les données importantes qui se trouvent sur l'ordinateur.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxys d’Agent  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxys d’Agent  
   
      Un proxy d'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit le contexte de sécurité d'une étape de travail spécifiée. L'exécution d'un travail sur l'instance du serveur de destination implique la recréation manuelle de tous les proxys nécessaires sur cette instance. Pour plus d’informations, consultez [Créer un proxy d’Agent SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md) et [Résoudre les problèmes liés aux travaux multiserveurs qui utilisent des proxys](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
@@ -250,13 +243,13 @@ ms.locfileid: "76929903"
   
 -   [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (pour la mise en miroir de bases de données)  
   
--   [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (lorsque vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]une instance de)  
+-   [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (quand vous installez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Configurer SQL Server Agent](../../ssms/agent/sql-server-agent.md) (lorsque vous installez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configurer l’Agent SQL Server](../../ssms/agent/sql-server-agent.md) (quand vous installez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
 -   [Implémenter la sécurité de l'Agent SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   
- **Pour afficher les travaux existants et leurs propriétés**  
+ **Pour afficher des travaux existants et leurs propriétés**  
   
 -   [Surveiller l'activité des travaux](../../ssms/agent/monitor-job-activity.md)  
   
@@ -264,7 +257,7 @@ ms.locfileid: "76929903"
   
 -   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
--   [dbo. sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
+-   [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
   
  **Pour créer un travail**  
   
@@ -275,9 +268,9 @@ ms.locfileid: "76929903"
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Meilleures pratiques pour utiliser un script afin de recréer un travail  
  Nous vous conseillons de commencer par générer le script d'un travail simple, en recréant le travail sur l'autre service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent et en exécutant le travail pour vérifier qu'il fonctionne comme prévu. Ces opérations vous permettront d'identifier d'éventuelles incompatibilités puis de les résoudre. Si un travail faisant l'objet d'un script ne fonctionne pas comme prévu dans son nouvel environnement, nous vous conseillons de créer un travail équivalent qui fonctionne correctement dans cet environnement.  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="logins"></a>Connexions  
+##  <a name="logins"></a><a name="logins"></a>Connexions  
  Une ouverture de session sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Cette connexion est utilisée dans le processus d'authentification qui vérifie que le principal peut se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un utilisateur de base de données pour lequel la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondante n'est pas définie sur une instance serveur, ou l'est de façon incorrecte, ne peut pas se connecter à cette instance. L'utilisateur devient donc un *utilisateur orphelin* de la base de données sur cette instance du serveur. Un utilisateur de base de données peut devenir orphelin lorsqu'une base de données a été restaurée, attachée ou copiée sur une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Pour générer un script pour une partie ou l'intégralité des objets figurant dans la copie initiale de la base de données, vous pouvez utiliser l'Assistant Générer des scripts, et dans la boîte de dialogue **Sélectionner les options de script** , vous attribuez à l'option **Créer un script des connexions** la valeur **True**.  
@@ -285,9 +278,9 @@ ms.locfileid: "76929903"
 > [!NOTE]  
 >  Pour plus d’informations sur la configuration des connexions pour une base de données mise en miroir, consultez [Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) et [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="permissions"></a> Autorisations  
+##  <a name="permissions"></a><a name="permissions"></a> Autorisations  
  Les types d'autorisations suivants peuvent être affectés par la mise à disponibilité d'une base de données sur une autre instance de serveur.  
   
 -   Autorisations GRANT, REVOKE ou DENY sur les objets système  
@@ -302,7 +295,7 @@ ms.locfileid: "76929903"
 > [!IMPORTANT]  
 >  Si vous générez un script pour les connexions, les mots de passe ne sont pas chiffrés. Si vous disposez de connexions qui utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez modifier le script sur la destination.  
   
- Les objets système sont consultables dans l’affichage catalogue [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) . Les autorisations sur les objets système sont consultables dans l’affichage catalogue [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) dans la base de données **master** . Pour plus d’informations sur l’interrogation de ces affichages catalogue et l’octroi d’autorisations sur les objets système, consultez [Autorisations d’objet système GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql). Pour plus d’informations, consultez [Autorisations d’objet système REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql) et [Autorisations d’objet système DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql).  
+ Les objets système sont consultables dans l’affichage catalogue [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) . Les autorisations sur les objets système sont visibles dans l’affichage catalogue [sys. database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) dans la base de données **Master** . Pour plus d’informations sur l’interrogation de ces affichages catalogue et l’octroi d’autorisations sur les objets système, consultez [Autorisations d’objet système GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql). Pour plus d’informations, consultez [Autorisations d’objet système REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql) et [Autorisations d’objet système DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql).  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>Autorisations GRANT, REVOKE et DENY sur une instance de serveur  
  Les autorisations à l'échelle du serveur sont stockées dans la base de données **master** et doivent être configurées sur l'instance du serveur de destination. Pour plus d’informations sur les autorisations serveur d’une instance de serveur, interrogez l’affichage catalogue [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) ; pour plus d’informations sur les principaux de serveur, interrogez l’affichage catalogue [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)et pour plus d’informations sur l’appartenance aux rôles de serveur, interrogez l’affichage catalogue [sys.server_role_members](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql) .  
@@ -327,40 +320,40 @@ ms.locfileid: "76929903"
   
 -   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
- **Pour affecter des autorisations à la connexion mappée**  
+ **Pour accorder des autorisations à la connexion mappée**  
   
--   [ACCORDER des autorisations de serveur &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
+-   [Autorisations de serveur GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
   
  Pour plus d'informations sur les certificats et les clés asymétriques, consultez [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md).  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="replication_settings"></a>Paramètres de réplication  
+##  <a name="replication-settings"></a><a name="replication_settings"></a>Paramètres de réplication  
  Si vous restaurez une sauvegarde d'une base de données répliquée sur un autre serveur ou dans une autre base de données, les paramètres de réplication ne peuvent pas être conservés. Dans ce cas, vous devez recréer la totalité des abonnements et des publications une fois les sauvegardes restaurées. Pour faciliter ce processus, créez des scripts pour vos paramètres de réplication actuels, et également pour l'activation et la désactivation de la réplication. Pour recréer facilement vos paramètres de réplication, copiez ces scripts et modifiez les références de nom de serveur afin qu'elles fonctionnent pour l'instance du serveur de destination.  
   
  Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données répliquées](../replication/administration/back-up-and-restore-replicated-databases.md), [ Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) et [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="sb_applications"></a>Applications Service Broker  
+##  <a name="service-broker-applications"></a><a name="sb_applications"></a>Applications Service Broker  
  De nombreux aspects d'une application [!INCLUDE[ssSB](../../includes/sssb-md.md)] sont déplacés avec la base de données. Cependant, certains aspects doivent être recréés ou reconfigurés dans le nouvel emplacement.  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="startup_procedures"></a>Procédures de démarrage  
+##  <a name="startup-procedures"></a><a name="startup_procedures"></a>Procédures de démarrage  
  Une procédure de démarrage est une procédure stockée qui est marquée pour l'exécution automatique et qui est exécutée à chaque démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si la base de données dépend de procédures de démarrage, celles-ci doivent être définies sur l'instance du serveur de destination et configurées pour s'exécuter automatiquement au démarrage.  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="triggers"></a>Déclencheurs (au niveau du serveur)  
+##  <a name="triggers-at-server-level"></a><a name="triggers"></a>Déclencheurs (au niveau du serveur)  
  Les déclencheurs DDL lancent des procédures stockées en réponse à différents événements DDL (Data Definition Language). Ces événements correspondent principalement à des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui commencent avec les mots clés CREATE, ALTER et DROP. Certaines procédures stockées système qui effectuent des opérations de type DDL peuvent également activer des déclencheurs DDL.  
   
  Pour plus d'informations sur cette fonctionnalité, consultez [DDL Triggers](../triggers/ddl-triggers.md).  
   
- [&#91;&#93;supérieure](#information_entities_and_objects)  
+ [&#91;Haut&#93;](#information_entities_and_objects)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Bases de données autonomes](contained-databases.md)   
+ [Bases de données à relation contenant-contenu](contained-databases.md)   
  [Copier les bases de données sur d’autres serveurs](copy-databases-to-other-servers.md)   
  [Détachement et attachement de la base de données &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [Basculer vers un &#40;secondaire de copie des journaux de SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e6cc08adc2682b65b1e2de9a2c3fd1d483a33c92
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176484"
 ---
 # <a name="connect-components-with-paths"></a>Connecter des composants avec des chemins d’accès
@@ -26,7 +26,7 @@ ms.locfileid: "78176484"
 
  Le diagramme qui suit montre un flux de données simple formé d'un composant source, de deux transformations, d'un composant de destination et des chemins d'accès les connectant.
 
- ![Transmission de données](media/mw-dts-08.gif "Flux de données")
+ ![Data flow](media/mw-dts-08.gif "Flux de données") (Flux de données)
 
  Une fois deux composants connectés, vous pouvez afficher les métadonnées des données empruntant le chemin et les propriétés du chemin dans **l’Éditeur du chemin d’accès au flux de données**. Pour plus d’informations, consultez [Chemins d’accès d’Integration Services](data-flow/integration-services-paths.md).
 
@@ -38,7 +38,7 @@ ms.locfileid: "78176484"
 
 ### <a name="to-set-path-properties"></a>Pour définir les propriétés d'un chemin d'accès
 
--   [Définir les propriétés d'un chemin d'accès à l'aide de l'Éditeur du chemin d'accès au flux de données](../../2014/integration-services/set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md)
+-   [Définir les propriétés d’un chemin à l’aide de l’Éditeur du chemin d’accès au flux de données](../../2014/integration-services/set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md)
 
 ### <a name="to-view-path-metadata"></a>Pour afficher les métadonnées d'un chemin d'accès
 

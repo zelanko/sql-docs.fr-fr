@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176269"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Création d'une source à l'aide du composant Script
@@ -85,8 +85,7 @@ ms.locfileid: "78176269"
 ### <a name="understanding-the-auto-generated-code"></a>Fonctionnement du code généré automatiquement
  Lorsque vous ouvrez l'environnement de développement intégré VSTA après avoir créé et configuré un composant source, la classe `ScriptMain` modifiable apparaît dans l'éditeur de code. Vous pouvez écrire votre code personnalisé dans la classe `ScriptMain`.
 
- La classe `ScriptMain` inclut un stub pour la méthode `CreateNewOutputRows`. 
-  `CreateNewOutputRows` est la méthode la plus importante d'un composant source.
+ La classe `ScriptMain` inclut un stub pour la méthode `CreateNewOutputRows`. `CreateNewOutputRows` est la méthode la plus importante d'un composant source.
 
  Si vous ouvrez la fenêtre **Explorateur de projets** dans VSTA, vous pouvez voir que le composant script a également généré des éléments `BufferWrapper` de `ComponentWrapper` projet et en lecture seule. La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.
 
@@ -387,7 +386,7 @@ ms.locfileid: "78176269"
     }
     ```
 
-![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
 
 ## <a name="see-also"></a>Voir aussi
  [Création d’une destination à l’aide du composant script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) [développement d’un composant source personnalisé](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)

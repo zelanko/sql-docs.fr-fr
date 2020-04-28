@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 5cefc88469ac3c98f3bb944c0e490f1ce7e88472
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172373"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Report Manager  (SSRS Native Mode)
@@ -25,7 +25,7 @@ ms.locfileid: "78172373"
 
 -   [Descriptions des icônes](#bkmk_icon_descriptions)
 
-##  <a name="bkmk_whatis_report_manager"></a>Qu’est-ce que Gestionnaire de rapports ?
+##  <a name="what-is-report-manager"></a><a name="bkmk_whatis_report_manager"></a>Qu’est-ce que Gestionnaire de rapports ?
  Vous pouvez utiliser le Gestionnaire de rapports pour exécuter les tâches suivantes :
 
 -   Afficher, rechercher, imprimer et s'abonner à des rapports,
@@ -55,13 +55,13 @@ ms.locfileid: "78172373"
 
  Le Gestionnaire de rapports est utilisé uniquement pour un serveur de rapports qui s'exécute en mode natif. Il n'est pas pris en charge sur un serveur de rapports que vous configurez en mode intégré SharePoint.
 
- Certaines fonctionnalités du gestionnaire de rapports sont disponibles uniquement dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ Certaines fonctionnalités du gestionnaire de rapports sont disponibles uniquement dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
- Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possèdent les autorisations suffisantes pour travailler avec le contenu et les paramètres. Pour octroyer des autorisations à d'autres utilisateurs, un administrateur local doit créer des attributions de rôles permettant d'accéder au serveur de rapports. Les pages et les tâches auxquelles un utilisateur pourra ensuite accéder dépendent des attributions de rôles qui ont été définies pour cet utilisateur. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](security/grant-user-access-to-a-report-server.md)ne doit être attribué qu'à un nombre très limité d'utilisateurs.
+ Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possèdent les autorisations suffisantes pour travailler avec le contenu et les paramètres. Pour octroyer des autorisations à d'autres utilisateurs, un administrateur local doit créer des attributions de rôles permettant d'accéder au serveur de rapports. Les pages et les tâches auxquelles un utilisateur pourra ensuite accéder dépendent des attributions de rôles qui ont été définies pour cet utilisateur. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](security/grant-user-access-to-a-report-server.md).
 
  Si vous utilisez [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] ou Windows Server 2008, vous devez configurer le Gestionnaire de rapports pour l'administration locale. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
-##  <a name="bkmk_start_report_manager"></a>Démarrer et utiliser Gestionnaire de rapports
+##  <a name="start-and-use-report-manager"></a><a name="bkmk_start_report_manager"></a>Démarrer et utiliser Gestionnaire de rapports
  Le Gestionnaire de rapports est une application Web que vous ouvrez en tapant l'URL du Gestionnaire de rapports dans la barre d'adresses d'une fenêtre de navigateur. Lorsque vous démarrez le Gestionnaire de rapports, les pages, liens et options que vous voyez varient en fonction des autorisations dont vous disposez pour le serveur de rapports. Pour effectuer une tâche, vous devez être titulaire d'un rôle qui inclut la tâche. Un utilisateur doté d'un rôle disposant d'autorisations complètes peut accéder à l'ensemble des menus et des pages de l'application qui sont disponibles pour gérer un serveur de rapports. Un utilisateur doté d'un rôle limité aux autorisations d'affichage et d'exécution des rapports ne peut voir que les menus et les pages concernées par ces activités. Chaque utilisateur peut disposer de rôles divers pour les différents serveurs de rapports qu'il utilise, voire pour les divers rapports et dossiers stockés sur un serveur de rapports unique.
 
  Pour plus d'informations, consultez [Attribution d'autorisations sur un serveur de rapports en mode natif](security/granting-permissions-on-a-native-mode-report-server.md).
@@ -86,7 +86,7 @@ ms.locfileid: "78172373"
 
  La personnalisation du Gestionnaire de rapports est très limitée. Par exemple, vous pouvez modifier le titre de l'application sur la page Paramètres du site. En tant que développeur Web, vous avez la possibilité de modifier les feuilles de style qui contiennent des informations exploitées par le Gestionnaire de rapports. Cet outil n'étant pas conçu spécifiquement pour la personnalisation, il est important de tester soigneusement chacune de vos modifications. Si vous estimez que le Gestionnaire de rapports ne répond pas à vos besoins, développez une visionneuse de rapports personnalisés ou configurez des composants WebPart de SharePoint pour rechercher et afficher des rapports dans un site SharePoint. Pour plus d’informations, consultez [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](report-server/configure-web-portal.md).
 
-##  <a name="bkmk_icon_descriptions"></a>Descriptions des icônes
+##  <a name="icon-descriptions"></a><a name="bkmk_icon_descriptions"></a>Descriptions des icônes
  Le tableau suivant décrit les icônes utilisées dans le Gestionnaire de rapports. Pour plus d’informations sur les icônes qui apparaissent dans la barre d’outils rapport, consultez [visionneuse HTML et barre d’outils rapport](html-viewer-and-the-report-toolbar.md).
 
 |Icône|Description|Action|
@@ -94,8 +94,8 @@ ms.locfileid: "78172373"
 |![Icône de rapport](media/hlp-16doc.gif "Icône de rapport")|Rapport|Cliquez sur l'icône ou le nom du rapport pour ouvrir le rapport. Le rapport s'ouvre dans une fenêtre distincte.|
 |![Icône de modèle](media/model-icon.gif "Icône Modèle")|Modèle de rapport|Cliquez sur l'icône Modèle de rapport pour ouvrir les pages des propriétés du modèle.|
 |![Icône Rapport lié](media/hlp-16linked.gif "Icône Rapport lié")|Rapport lié|Cliquez sur l'icône ou sur le nom du rapport pour ouvrir le rapport lié. Le rapport s'ouvre dans une fenêtre distincte.|
-|![Icône Dossier](media/hlp-16folder.gif "Icône Dossier")|Dossier|Cliquez sur l'icône ou le nom du dossier pour ouvrir le dossier.|
-|![Icône Abonnement](media/hlp-16subscription.gif "Icône Abonnement")|Subscription|Cliquez sur l'icône ou sur la description d'un abonnement pour le modifier.|
+|![Icône de dossier](media/hlp-16folder.gif "Icône de dossier")|Dossier|Cliquez sur l'icône ou le nom du dossier pour ouvrir le dossier.|
+|![Icône Abonnement](media/hlp-16subscription.gif "Icône Abonnement")|Abonnement|Cliquez sur l'icône ou sur la description d'un abonnement pour le modifier.|
 |![Icône Abonnement piloté par les données](media/hlp-16subscriptiondd.gif "Icône Abonnement piloté par les données")|Abonnement piloté par les données|Cliquez sur l'icône ou sur la description d'un abonnement piloté par les données pour le modifier.|
 |![icône de ressource générique](media/hlp-16file.gif "icône de ressource générique")|Ressource|Cliquez sur l'icône ou le nom de la ressource pour ouvrir la ressource. La ressource s'ouvre dans une fenêtre distincte.|
 |![Icône de source de données partagée](media/hlp-16datasource.png "Icône de source de données partagée")|Élément de source de données partagée|Cliquez sur l'icône d'une source de données partagée pour ouvrir la page des propriétés, la liste des rapports et la liste des abonnements de cette source de données.|

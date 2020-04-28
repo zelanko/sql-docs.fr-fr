@@ -11,15 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4777d3536f739ae1bfb3c79f321a6906c01807fc
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176859"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Type de connexion à un entrepôt de données SQL Server Parallel Data Warehouse (SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] est un appareil d'entrepôt de données évolutif qui offre performances et montée en charge via le traitement parallèle massif. 
-  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] utilise des bases de données [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour le traitement distribué et le stockage des données.
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] est un appareil d'entrepôt de données évolutif qui offre performances et montée en charge via le traitement parallèle massif. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] utilise des bases de données [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour le traitement distribué et le stockage des données.
 
  L'appareil partitionne de grandes tables de base de données entre plusieurs nœuds physiques, chaque nœud exécutant sa propre instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Lorsqu'un rapport se connecte à [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] pour récupérer les données de rapport, il se connecte au nœud de contrôle, qui gère le traitement des requête dans l'appareil [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Après avoir établi la connexion, il n'y a pas de différences entre utiliser une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui est ou n'est pas dans un environnement [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] .
 
@@ -31,7 +30,7 @@ ms.locfileid: "78176859"
 
  Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions pas à pas, consultez [Ajouter et vérifier une connexion de données ou une source de données &#40;générateur de rapports et des&#41;SSRS ](add-and-verify-a-data-connection-report-builder-and-ssrs.md).
 
-##  <a name="Connection"></a> Chaîne de connexion
+##  <a name="connection-string"></a><a name="Connection"></a>Chaîne de connexion
  Lorsque vous vous connectez à [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], vous vous connectez à un objet de base de données dans une appliance [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Vous spécifiez l'objet de base de données à utiliser dans le concepteur de requêtes. Si vous ne spécifiez pas de base de données dans la chaîne de connexion, vous vous connectez à la base de données par défaut que l'administrateur vous a affectée. Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L'exemple de chaîne de connexion suivant spécifie l'exemple de base de données, **CustomerSales**, dans l'appliance [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] :
 
 ```
@@ -42,7 +41,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
  Pour plus d’informations sur les exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).
 
-##  <a name="Credentials"></a> Informations d'identification
+##  <a name="credentials"></a><a name="Credentials"></a>Informations d’identification
  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fournit sa propre technologie de sécurité pour implémenter et stocker les noms d'utilisateurs et les mots de passe. Vous ne pouvez pas utiliser l'authentification Windows. Si vous essayez de vous connecter à [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] à l'aide de l'authentification Windows, une erreur se produit.
 
  Les informations d'identification doivent être suffisantes pour accéder à la base de données. Selon votre requête, vous pouvez avoir besoin d'autres autorisations, par exemple des autorisations suffisantes pour accéder aux tables et aux vues. Le propriétaire de la source de données externe doit configurer des informations d'identification suffisantes pour fournir un accès en lecture seule aux objets de base de données nécessaires.
@@ -55,7 +54,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
  Pour plus d’informations, consultez [connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [spécifier des informations d’identification dans générateur de rapports](../specify-credentials-in-report-builder.md).
 
-##  <a name="Query"></a> Requêtes
+##  <a name="queries"></a><a name="Query"></a>Adressée
  Une requête spécifie les données à récupérer pour un dataset de rapport.
 
  Les colonnes dans le jeu de résultats d'une requête remplissent la collection de champs pour un dataset. Si la requête retourne plusieurs jeux de résultats, le rapport traite uniquement le premier jeu de résultats qu'une requête récupère. Par défaut, si vous créez une requête ou si vous ouvrez une requête existante qui peut être représentée dans le concepteur de requêtes graphique, le concepteur de requêtes relationnelles est disponible. Vous pouvez spécifier une requête de plusieurs façons :
@@ -80,9 +79,9 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
  Le concepteur de requêtes graphique utilisé par [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fournit une prise en charge intégrée du regroupement et des agrégats pour vous aider à écrire des requêtes qui récupèrent uniquement les données de synthèse. Les fonctionnalités du langage [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] sont les suivantes : clause GROUP BY, mot clé DISTINCT et agrégats tels que SUM et COUNT. Le concepteur de requêtes textuel fournit une prise en charge complète du langage [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] , notamment en matière de regroupement et d’agrégats.
 
- Pour plus d’informations sur [!INCLUDE[tsql](../../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la documentation en ligne[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [ de ](https://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com.
+ Pour plus d’informations sur [!INCLUDE[tsql](../../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=141687) de  sur msdn.microsoft.com.
 
-###  <a name="QueryText"></a> Utilisation du type de requête Texte
+###  <a name="using-query-type-text"></a><a name="QueryText"></a>Utilisation du type de requête texte
  Dans le concepteur de requêtes textuel, vous tapez des commandes [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] pour définir les données d’un dataset. Les requêtes que vous utilisez pour récupérer des données de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] sont les mêmes que celles que vous utilisez pour récupérer des données à partir d'instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui ne s'exécutent pas dans une application [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Par exemple, la requête [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] suivante sélectionne les noms de tous les employés qui occupent la fonction d'assistants marketing :
 
 ```
@@ -98,7 +97,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant' 
 ```
 
- Cliquez sur le bouton **Exécuter** ( **!** ) de la barre d’outils pour exécuter la requête et afficher un jeu de résultats.
+ Cliquez sur le bouton **Exécuter** (**!**) de la barre d’outils pour exécuter la requête et afficher un jeu de résultats.
 
  Pour paramétrer cette requête, ajoutez un paramètre de requête. Par exemple, modifiez la clause WHERE comme suit :
 
@@ -106,7 +105,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
 
  Lorsque vous exécutez la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont créés automatiquement. Pour plus d'informations, consultez [Paramètres de requête](#Parameters) plus loin dans cette rubrique.
 
-##  <a name="Parameters"></a> Paramètres
+##  <a name="parameters"></a>Paramètres <a name="Parameters"></a>
  Lorsque le texte de requête contient des variables de requête ou des procédures stockées dotées de paramètres d'entrée, les paramètres de requête correspondants pour le dataset et les paramètres de rapport pour le rapport sont automatiquement générés. Le texte de requête ne doit pas inclure l'instruction DECLARE pour chaque variable de requête.
 
  Par exemple, la requête SQL suivante crée un paramètre de rapport nommé `EmpID` :
@@ -119,12 +118,12 @@ WHERE EmployeeID = (@EmpID)
 
  Par défaut, chaque paramètre de rapport a le type de données Texte ; en outre, un dataset est créé automatiquement pour fournir une liste déroulante de valeurs disponibles. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).
 
-##  <a name="Remarks"></a> Notes
+##  <a name="remarks"></a>Notes concernant <a name="Remarks"></a>
 
 ###### <a name="platform-and-version-information"></a>Informations sur les plateformes et les versions
- Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la documentation en ligne[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [ de ](https://go.microsoft.com/fwlink/?linkid=121312).
+ Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de .
 
-##  <a name="HowTo"></a> Rubriques de procédures
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Rubriques de procédures
  Cette section contient des instructions pas à pas sur l'utilisation des connexions de données, des sources de données et des datasets.
 
  [Ajouter et vérifier une connexion de données ou une source de données &#40;Générateur de rapports et SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)
@@ -133,7 +132,7 @@ WHERE EmployeeID = (@EmpID)
 
  [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)
 
-##  <a name="Related"></a> Sections connexes
+##  <a name="related-sections"></a><a name="Related"></a>Sections connexes
  Ces sections de la documentation fournissent des informations de fond d'ordre conceptuel sur les données de rapport, ainsi que des informations sur les procédures de définition, de personnalisation et d'utilisation des parties d'un rapport qui sont liées aux données.
 
  [Ajouter des données à un rapport &#40;générateur de rapports et SSRS&#41;](report-datasets-ssrs.md) Fournit une vue d’ensemble de l’accès aux données de votre rapport.
@@ -144,7 +143,7 @@ WHERE EmployeeID = (@EmpID)
 
  [Collection de champs de Dataset &#40;générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md) Fournit des informations sur la collection de champs de DataSet générée par la requête.
 
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la documentation de la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] documentation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [en ligne](https://go.microsoft.com/fwlink/?linkid=121312)de.
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de .
 Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.
 
 ## <a name="see-also"></a>Voir aussi

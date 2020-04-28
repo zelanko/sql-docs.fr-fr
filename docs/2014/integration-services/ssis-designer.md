@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34079d17fd847b2a522b74f7ecdddcf3a0342b2c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176108"
 ---
 # <a name="ssis-designer"></a>Concepteur SSIS
@@ -41,7 +41,7 @@ ms.locfileid: "78176108"
 
  Le diagramme qui suit montre le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et la fenêtre **Boîte à outils** .
 
- ![Capture d’écran du concepteur SSIS et de la boîte à outils](media/denali-designerandtoolbox.gif "Capture d'écran du concepteur SSIS et de la boîte à outils")
+ ![Capture d’écran du concepteur SSIS et de la boîte à outils](media/denali-designerandtoolbox.gif "Capture d’écran du concepteur SSIS et de la boîte à outils")
 
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des boîtes de dialogue et des fenêtres supplémentaires permettant d'ajouter des fonctionnalités aux packages, tandis que [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en propose d'autres pour configurer l'environnement de développement et l'utilisation de packages. Pour plus d’informations, consultez [Interface utilisateur d’Integration Services](integration-services-user-interface.md).
 
@@ -93,11 +93,10 @@ ms.locfileid: "78176108"
  L'onglet **Progression** indique la progression de l'exécution du package. À la fin de l'exécution du package, les résultats de l'exécution sont disponibles sous l'onglet **Résultats d'exécution** .
 
 > [!NOTE]
->  Pour activer ou désactiver l'affichage de messages sous l'onglet **Progression** , basculez l'option **Création de rapports de progression de débogage** dans le menu **SSIS** .
+>   Pour activer ou désactiver l'affichage de messages sous l'onglet **Progression** , basculez l'option **Création de rapports de progression de débogage** dans le menu **SSIS** .
 
 ##### <a name="connection-managers-area"></a>Zone Gestionnaires de connexion
- Ajoutez et modifiez les gestionnaires de connexions utilisés par un package dans la zone **Gestionnaires de connexions** . 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut des gestionnaires de connexions permettant de se connecter à différentes sources de données, telles que des fichiers texte, des bases de données OLE DB et des fournisseurs .NET.
+ Ajoutez et modifiez les gestionnaires de connexions utilisés par un package dans la zone **Gestionnaires de connexions** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut des gestionnaires de connexions permettant de se connecter à différentes sources de données, telles que des fichiers texte, des bases de données OLE DB et des fournisseurs .NET.
 
  Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](../../2014/integration-services/create-connection-managers.md).
 

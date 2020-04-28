@@ -13,10 +13,10 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925597"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
@@ -164,14 +164,14 @@ Cette rubrique définit les termes pertinents pour ADO.
   
  Également appelée *constante énumérée*. Voir aussi *constante*.  
   
- événement  
+ event  
  Action reconnue par un objet, pour laquelle vous pouvez écrire du code pour répondre. Les événements peuvent être générés par l’exécution de la commande, la saisie semi-automatique des transactions, la navigation dans les jeux d’enregistrements et les mises à jour des données, entre autres actions. Voir aussi *Gestionnaire d’événements*.  
   
  gestionnaire d'événements  
  Un gestionnaire d’événements est le code exécuté lorsqu’un événement se produit. Voir aussi événement.  
   
 ## <a name="h"></a>H  
- handler  
+ gestionnaire  
  Routine qui gère une condition ou une opération commune et relativement simple, telle que la récupération d’erreur ou la gestion des données.  
   
  jeu d’enregistrements hiérarchique  

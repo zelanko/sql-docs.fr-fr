@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929194"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
   Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
   
-##  <a name="Capture"></a>Travail de capture  
+##  <a name="capture-job"></a><a name="Capture"></a> Travail de capture  
  Le travail de capture est démarré par l'exécution de la procédure stockée sans paramètre `sp_MScdc_capture_job`. Cette procédure stockée commence par extraire les valeurs configurées pour *maxtrans*, *maxscans*, *continuous*, et *pollinginterval* pour le travail de capture de msdb.dbo.cdc_jobs. Ces valeurs configurées sont ensuite transférées en tant que paramètres à la procédure stockée `sp_cdc_scan`. Cela permet d'invoquer `sp_replcmds` pour effectuer l'analyse du journal.  
   
 ### <a name="capture-job-parameters"></a>Paramètres du travail de capture  
@@ -61,7 +61,7 @@ ms.locfileid: "76929194"
 ### <a name="capture-job-customization"></a>Personnalisation du travail de capture  
  Pour le travail de capture, vous pouvez appliquer une logique supplémentaire afin de déterminer si une nouvelle analyse commence immédiatement ou à l'issue d'une période de veille, au lieu de s'en remettre à une fréquence d'interrogation fixe. Le choix pourrait reposer uniquement sur l'heure du jour, par exemple en mettant en place de très longues veilles pendant les périodes de pic d'activité, ou même passer à une fréquence d'interrogation de 0 à la fin de la journée, moment où il est important de mettre fin aux traitements de jour et de préparer les opérations de nuit. La progression du processus de capture peut également être surveillée afin de déterminer à quel moment toutes les transactions validées en milieu de la nuit ont été analysées et déposées dans les tables de modifications. Cela permet au travail de capture de s'achever, pour être redémarré par un redémarrage quotidien planifié. En remplaçant l'étape de remise de travail qui appelle `sp_cdc_scan` par un appel à un wrapper écrit par un utilisateur pour `sp_cdc_scan`, vous pouvez disposer d'un comportement hautement personnalisé, pour un minimum d'effort supplémentaire.  
   
-##  <a name="Cleanup"></a>Travail de nettoyage  
+##  <a name="cleanup-job"></a><a name="Cleanup"></a> Travail de nettoyage  
  Cette section fournit des informations sur le fonctionnement du travail de nettoyage de la capture de données modifiées.  
   
 ### <a name="structure-of-the-cleanup-job"></a>Structure du travail de nettoyage  
@@ -77,8 +77,8 @@ ms.locfileid: "76929194"
 ### <a name="cleanup-job-customization"></a>Personnalisation d'un travail de nettoyage  
  Pour le travail de nettoyage, la possibilité de personnalisation réside dans la stratégie utilisée pour déterminer quelles entrées de table de modifications doivent être ignorées. La seule stratégie prise en charge dans le travail de nettoyage réalisé est une stratégie basée sur le temps. Dans cette situation, la nouvelle limite inférieure est calculée en soustrayant la période de rétention autorisée de l'heure de validation de la dernière transaction traitée. Comme les procédures de nettoyage sous-jacentes sont basées sur `lsn` et non pas sur le temps, vous pouvez utiliser autant de stratégies que vous le souhaitez pour déterminer le plus petit `lsn` à conserver dans les tables de modifications. Seules certaines sont strictement basées sur le temps. Par exemple, la connaissance des clients pourrait être utilisée comme mécanisme de prévention de défaillance si en aval, les processus qui requièrent l'accès aux tables de modifications ne peuvent pas s'exécuter. Par ailleurs, bien que la stratégie par défaut applique le même `lsn` pour nettoyer les tables de modifications de toutes les bases de données, la procédure de nettoyage sous-jacente peut également être appelée pour effectuer le nettoyage au niveau de l’instance de capture.  
   
-##  <a name="Monitor"></a>Surveiller le processus de capture de données modifiées  
- La surveillance du processus de capture de données modifiées vous permet de déterminer si les modifications sont écrites correctement et avec une latence raisonnable aux tables de modifications. La surveillance peut également vous aider à identifier les erreurs qui peuvent se produire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]comprend deux vues de gestion dynamique pour vous aider à surveiller la capture de données modifiées : [sys. dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) et [sys. dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
+##  <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Surveiller le processus de capture de données modifiées  
+ La surveillance du processus de capture de données modifiées vous permet de déterminer si les modifications sont écrites correctement et avec une latence raisonnable aux tables de modifications. La surveillance peut également vous aider à identifier les erreurs qui peuvent se produire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut deux vues de gestion dynamique pour vous aider à surveiller la capture de données modifiées : [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) et [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
   
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identifier les sessions avec des jeux de résultats vides  
  Chaque ligne dans sys.dm_cdc_log_scan_sessions représente une session d'analyse du journal (sauf la ligne avec un ID de 0). Une session d’analyse du journal est équivalente à une exécution de [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). Pendant une session, l'analyse peut retourner des modifications ou un résultat vide. Si le jeu de résultats est vide, la colonne empty_scan_count dans sys.dm_cdc_log_scan_sessions est définie sur 1. S'il existe des jeux de résultats vides consécutifs, par exemple si le travail de capture s'exécute continuellement, empty_scan_count dans la dernière ligne existante est incrémenté. Ainsi, si sys.dm_cdc_log_scan_sessions contient déjà 10 lignes pour les analyses qui ont retourné des modifications et qu'il existe cinq résultats vides dans une ligne, la vue contient 11 lignes. La dernière ligne a une valeur de 5 dans la colonne empty_scan_count. Pour déterminer les sessions qui avaient une analyse vide, exécutez la requête suivante :  
@@ -160,7 +160,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 4.  Dans l'entrepôt de données que vous avez configuré à l'étape 1, recherchez la table custom_snapshots.cdc_log_scan_data. Cette table fournit un instantané historique de données de sessions d'analyse du journal. Ces données peuvent être utilisées pour analyser la latence, le débit et d'autres mesures de la performance sur la durée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Suivi des modifications de données &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
+ [Suivre les modifications de données &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   
  [Utiliser les données modifiées &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  

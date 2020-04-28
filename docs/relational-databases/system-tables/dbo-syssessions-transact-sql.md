@@ -19,10 +19,10 @@ ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 566445a3680dc54382a7e3e66bf77dbcbddca2e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75548284"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
@@ -36,7 +36,7 @@ Chaque fois que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID d'une session de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette session_id n’est pas le SPID pour la session, mais plutôt une valeur d’identité dans cette table système.|  
-|**agent_start_date**|**DATETIME**|Date et heure du démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour cette session.|  
+|**agent_start_date**|**datetime**|Date et heure du démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour cette session.|  
   
 ## <a name="remarks"></a>Notes  
  Seuls les utilisateurs qui sont membres du rôle serveur fixe **sysadmin** peuvent accéder à cette table.  

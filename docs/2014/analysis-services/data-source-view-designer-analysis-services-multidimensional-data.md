@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd19f3a7f4978d2f8bcbd8e62cdf542e05437519
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175165"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Concepteur de vue de source de données (Analysis Services - Données multidimensionnelles)
@@ -48,8 +48,8 @@ ms.locfileid: "78175165"
 |Renommer des colonnes ou des tables, ou encore créer des colonnes calculées. Par exemple, concaténez un prénom et un nom dans une nouvelle colonne de nom et prénom.|[Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|
 |Ajouter manuellement des relations entre tables|[Définir des relations logiques dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|
 |Créer une requête nommée pour définir un nouvel objet basé sur une requête T-SQL.|[Définir des requêtes nommées dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|
-|Explorer les données sous-jacentes pour afficher les valeurs de données réelles représentées par les objets de modèle.<br /><br /> L'exploration de données vous permet d'inspecter visuellement et de copier les données retournées à partir de la table ou de la requête dimensionnelle sous-jacente. Par défaut, l'exploration de données utilise la méthode d'échantillonnage « Les premières » qui échantillonne les 5000 premières lignes, mais vous pouvez modifier ces paramètres.|[Explorez les données dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|
-|Représenter sous forme de diagramme tout ou partie des tables et des relations dans une vue de source de données|[Utiliser des diagrammes dans le concepteur de vue de source de données &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|
+|Explorer les données sous-jacentes pour afficher les valeurs de données réelles représentées par les objets de modèle.<br /><br /> L'exploration de données vous permet d'inspecter visuellement et de copier les données retournées à partir de la table ou de la requête dimensionnelle sous-jacente. Par défaut, l'exploration de données utilise la méthode d'échantillonnage « Les premières » qui échantillonne les 5000 premières lignes, mais vous pouvez modifier ces paramètres.|[Explorer des données dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|
+|Représenter sous forme de diagramme tout ou partie des tables et des relations dans une vue de source de données|[Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|
 
 ## <a name="see-also"></a>Voir aussi
  Les [vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md) [ajoutent ou suppriment des tables ou des vues dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)

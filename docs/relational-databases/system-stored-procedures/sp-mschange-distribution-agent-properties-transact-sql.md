@@ -17,10 +17,10 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1a2e2e3c0074c3fcc53298c2556c786c9b7057db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322263"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
@@ -72,10 +72,10 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_provider**||Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
 |**subscriber_providerstring**||Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données. *Cette propriété est uniquement valide pour les Abonnés non-SQL Server.*|  
 |**subscriber_security_mode**|**1**|Authentification Windows.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Identification.|  
+||**0**|Authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Côté|  
 ||**1**|Serveur de la source de données ODBC.|  
-||**1,3**|Fournisseur OLE DB|  
+||**3**|Fournisseur OLE DB|  
 |**SubscriptionStreams**||Indique le nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. *Non pris en charge pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les serveurs de *publication Oracle ou les abonnements d’égal à égal.*|  
   
 > [!NOTE]  

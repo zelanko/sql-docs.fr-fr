@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec6d819d48ba5307e4c5c9e61ef8f7c375d6d96c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176088"
 ---
 # <a name="view-package-objects"></a>Afficher des objets de packages
@@ -37,7 +37,7 @@ ms.locfileid: "78176088"
 
  Le schéma suivant illustre l'arborescence d'un package simple.
 
- ![Capture d’écran de l'onglet Explorateur de package](media/packageexplorer.gif "Capture d'écran de l'onglet Explorateur de package")
+ ![Capture d’écran de l'onglet Explorateur de package](media/packageexplorer.gif "Capture d’écran de l'onglet Explorateur de package")
 
 ### <a name="to-view-package-content"></a>Pour afficher le contenu d'un package
 

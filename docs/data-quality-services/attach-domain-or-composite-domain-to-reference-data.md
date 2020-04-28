@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557914"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>Attacher un domaine ou un domaine composite à des données de référence-Data Quality Services (DQS)
@@ -39,15 +39,15 @@ ms.locfileid: "75557914"
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a>Conditions préalables  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Vous devez avoir configuré [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) pour utiliser les services de données de référence. Consultez [Configurer DQS pour utiliser des données de référence](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a> Sécurité  
+###  <a name="security"></a><a name="Security"></a> Sécurité  
   
 #### <a name="permissions"></a>Autorisations  
  Vous devez disposer du rôle de dqs_kb_editor sur la base de données de DQS_MAIN pour mapper les domaines aux données de référence.  
   
-##  <a name="Map"></a>Mapper les domaines aux données de référence à partir de melissa Data  
+##  <a name="map-domains-to-reference-data-from-melissa-data"></a><a name="Map"></a>Mapper les domaines aux données de référence à partir de melissa Data  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -78,17 +78,17 @@ ms.locfileid: "75557914"
   
 9. Vous revenez à l’onglet **données de référence** . Dans la zone **paramètres du fournisseur** , modifiez les valeurs dans les zones suivantes, si nécessaire :  
   
-    -   **Seuil de correction automatique**: les corrections à partir du service de données de référence avec un niveau de confiance supérieur à ces valeurs de seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
+    -   **Seuil de correction automatique**: les corrections des services de données de référence avec un niveau de confiance supérieur à ces valeurs de seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
   
-    -   **Candidats suggérés**: nombre de candidats suggérés à afficher à partir du service de données de référence.  
+    -   **Candidats suggérés**: nombre des candidats suggérés à afficher à partir du service de données de référence.  
   
-    -   **Confiance minimale**: les suggestions du service de données de référence avec un niveau de confiance inférieur à cette valeur seront ignorées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,6 pour 60 %.  
+    -   **Confiance minimale**: les suggestions du service des données de référence avec un niveau de confiance inférieur à cette valeur sont ignorées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,6 pour 60 %.  
   
 10. Cliquez sur **Terminer** pour publier la base de connaissances. Un message de confirmation s'affiche après que la base de connaissances a été publiée avec succès.  
   
  Vous pouvez maintenant utiliser cette base de connaissances pour l’activité de nettoyage dans un projet de qualité des données afin de normaliser et nettoyer les adresses américaines de vos données sources en fonction des connaissances fournies par Melissa Data via la place de marché Azure.  
   
-##  <a name="FollowUp"></a>Suivi : après le mappage d’un domaine aux données de référence  
+##  <a name="follow-up-after-mapping-a-domain-to-reference-data"></a><a name="FollowUp"></a>Suivi : après le mappage d’un domaine aux données de référence  
  Créez un projet de qualité des données et exécutez l'activité de nettoyage sur vos données sources contenant les adresses américaines en les comparant à la base de connaissances créée dans cette rubrique. Consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Voir aussi  

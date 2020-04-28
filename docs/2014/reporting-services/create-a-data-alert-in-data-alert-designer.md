@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a8cd7ddaac1138599701e4ccfe14c3cb0b84656
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173945"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
@@ -48,7 +48,7 @@ ms.locfileid: "78173945"
 
 4.  Éventuellement, sélectionnez un flux de données différent dans la liste déroulante **Nom des données du rapport** .
 
-     Si aucun flux de données n'est généré à partir du rapport, vous ne pouvez pas créer de définition d'alerte pour le rapport. La mise en page du rapport détermine le contenu de chaque flux de données. Pour plus d’informations, consultez [génération de flux de données à partir de rapports &#40;générateur de rapports et les&#41;SSRS ](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
+     Si aucun flux de données n'est généré à partir du rapport, vous ne pouvez pas créer de définition d'alerte pour le rapport. La mise en page du rapport détermine le contenu de chaque flux de données. Pour plus d’informations, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
 
 5.  Éventuellement, dans la zone de texte **Nom de l’alerte** , modifiez le nom par défaut pour qu’il soit plus explicite.
 
@@ -109,11 +109,11 @@ ms.locfileid: "78173945"
 
 20. Éventuellement, dans la zone de texte **Objet** , mettez à jour la ligne Objet du message d’alerte.
 
-     L’objet par défaut est **Alerte de données pour \<nom de l’alerte de données>**.
+     L’objet par défaut est **alerte de \<données pour le nom de l’alerte de données>**.
 
 21. Éventuellement, dans la zone de texte **Description** , tapez une description pour le message d’alerte.
 
-22. Cliquez sur **Enregistrer**.
+22. Cliquez sur **Save**.
 
 ## <a name="see-also"></a>Voir aussi
  [Concepteur](../../2014/reporting-services/data-alert-designer.md) [d’alertes de données Gestionnaire des alertes de données pour les administrateurs d’alertes Reporting Services les alertes de](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) [données](../ssms/agent/alerts.md)

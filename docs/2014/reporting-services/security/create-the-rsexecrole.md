@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e3717bb9af98c9f3231115a7bad4cc8639998d1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177102"
 ---
 # <a name="create-the-rsexecrole"></a>Créer le rôle RSExecRole
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise un rôle de base de données prédéfini appelé `RSExecRole` pour octroyer des autorisations de serveur de rapports à la base de données du serveur de rapports. Le `RSExecRole` rôle est créé automatiquement avec la base de données du serveur de rapports. En règle générale, ne modifiez ou n'assignez jamais d'autres utilisateurs au rôle. Toutefois, lorsque vous déplacez une base de données du serveur de rapports vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]un nouveau ou différent, doit recréer le rôle dans les bases de données système Master et msdb.
 
  À l'aide des instructions suivantes, vous exécuterez les étapes ci-dessous :
@@ -93,8 +92,7 @@ ms.locfileid: "78177102"
 
 19. Cliquez sur la case à cocher située à l'intersection de la ligne **Execute** et de la colonne **Octroyer** , puis cliquez sur **OK**.
 
-20. Répétez ces étapes pour chacune des procédures stockées restantes. 
-  `RSExecRole` doit disposer des autorisations d'exécution pour les trois procédures stockées.
+20. Répétez ces étapes pour chacune des procédures stockées restantes. `RSExecRole` doit disposer des autorisations d'exécution pour les trois procédures stockées.
 
  ![Page de propriétés du rôle de base de données](../media/rsexecroledbproperties.gif "Page de propriétés du rôle de base de données")
 
@@ -119,7 +117,7 @@ ms.locfileid: "78177102"
 
 8.  Cliquez sur **Éléments sécurisables**.
 
-9. Cliquez sur **Add**. La boîte de dialogue **Ajouter des objets** s'affiche. L'option **Spécifier des objets** est sélectionnée par défaut.
+9. Cliquez sur **Ajouter**. La boîte de dialogue **Ajouter des objets** s'affiche. L'option **Spécifier des objets** est sélectionnée par défaut.
 
 10. Cliquez sur **OK**.
 
@@ -188,7 +186,7 @@ ms.locfileid: "78177102"
 30. Répétez ces étapes pour la table sysjobs. Des autorisations Select doivent être octroyées à RSExecRole pour les deux tables.
 
 ## <a name="move-the-report-server-database"></a>Déplacement de la base de données du serveur de rapports
- Une fois les rôles créés, vous pouvez déplacer la base de données du serveur de rapports vers une nouvelle instance de SQL Server. Pour plus d’informations, consultez [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).
+ Une fois les rôles créés, vous pouvez déplacer la base de données du serveur de rapports vers une nouvelle instance de SQL Server. Pour plus d’informations, consultez [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;en mode natif SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).
 
  Si vous mettez à niveau le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], vous pouvez effectuer cette opération avant ou après le déplacement de la base de données.
 

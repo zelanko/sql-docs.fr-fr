@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175973"
 ---
 # <a name="data-collection"></a>Collecte de données
@@ -31,7 +31,7 @@ ms.locfileid: "78175973"
 
  L'illustration suivante montre l'intégration du collecteur de données dans la stratégie globale de la collecte et de la gestion de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
- ![Rôle du collecteur de données dans la gestion des données](../../database-engine/media/datacollectorroleindatastrategy.gif "Rôle du collecteur de données dans la gestion des données")
+ ![Rôle du collecteur de données dans la Gestion des données](../../database-engine/media/datacollectorroleindatastrategy.gif "Rôle du collecteur de données dans la Gestion des données")
 
 ## <a name="data-collector-concepts"></a>Concepts du collecteur de données
  Le collecteur de données est intégré à l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], et il utilise ces deux composants de manière intensive. Avant de vous servir du collecteur de données, vous devez donc comprendre certains concepts liés à chacun de ces composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
@@ -50,10 +50,9 @@ ms.locfileid: "78175973"
 
  Pour plus d’informations, consultez [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).
 
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) permet d’exécuter des packages qui collectent des données provenant de fournisseurs de données individuels. Vous devez maîtriser les outils et les concepts [!INCLUDE[ssIS](../../includes/ssis-md.md)] suivants :
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) permet d’exécuter des packages qui collectent des données provenant de fournisseurs de données individuels. Vous devez maîtriser les outils et les concepts [!INCLUDE[ssIS](../../includes/ssis-md.md)] suivants :
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]Packages
+-   Package [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 
 -   Configuration de package [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 

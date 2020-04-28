@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175984"
 ---
 # <a name="data-import-master-data-services"></a>Importation de données (Master Data Services)
@@ -71,9 +71,9 @@ ms.locfileid: "78175984"
 
 -   [Table de mise en lots des membres feuille &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
 
--   [&#40;de la table de mise en lots des membres consolidés Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
+-   [Table de mise en lots des membres consolidés &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
 
--   [&#40;de la table de mise en lots des relations Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
+-   [Table de mise en lots des relations &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
 
  Pour chaque entité du modèle, il existe une table de mise en lots. Le nom de la table indique l'entité correspondante et le type d'entité comme membre feuille. L'illustration suivante montre les tables de mise en lots pour les entités Devise, Client et Produit.
 
@@ -81,8 +81,7 @@ ms.locfileid: "78175984"
 
  Le nom de la table est spécifié lors de la création d'une entité et ne peut pas être modifié. Si le nom de la table de mise en lots contient un _1 ou tout autre nombre, une autre table de ce nom existait déjà lorsque l'entité a été créée.
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de procédures stockées de mise en lots.
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de procédures stockées de mise en lots.
 
 -   stg.udp_\<nom>_Leaf
 
@@ -103,8 +102,8 @@ ms.locfileid: "78175984"
 
 ## <a name="related-content"></a>Contenu associé
 
--   [&#40;de validation Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)
+-   [Validation &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)
 
--   [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
+-   [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
 
 

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175718"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
@@ -43,8 +43,7 @@ ms.locfileid: "78175718"
  Objets de cube chaque objet de base de données contient un ou plusieurs objets de cube. Un cube est défini par ses mesures et ses dimensions. Les mesures et les dimensions d'un cube sont dérivées des tables et des vues de la vue de source de données sur laquelle est basé le cube ou qui est générée à partir des définitions des mesures et des dimensions.
 
 ## <a name="object-inheritance"></a>Héritage d'objet
- Le modèle objet ASSL contient de nombreux groupes d'éléments répétés. Par exemple, le groupe d’éléments «`Dimensions` Contains `Hierarchies`» définit la hiérarchie de dimension d’un élément. 
-  `Cubes` et `MeasureGroups` contiennent le groupe d'élément, « `Dimensions` contient `Hierarchies` ».
+ Le modèle objet ASSL contient de nombreux groupes d'éléments répétés. Par exemple, le groupe d’éléments «`Dimensions` Contains `Hierarchies`» définit la hiérarchie de dimension d’un élément. `Cubes` et `MeasureGroups` contiennent le groupe d'élément, « `Dimensions` contient `Hierarchies` ».
 
  Sauf en cas de remplacement explicite, un élément hérite les détails de ces groupes d'éléments répétés du niveau supérieur. Par exemple, les `Translations` pour un `CubeDimension` sont les mêmes que `Translations` pour son élément ancêtre `Cube`.
 
@@ -99,7 +98,7 @@ ms.locfileid: "78175718"
 |Niveau Route Category dans la dimension Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|
 |Niveau Route dans la dimension Route|air,sea,road,rail|RouteDimensionTable|Routage|Sea|
 |Attribut Hemisphere dans la dimension Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|
-|Attribut Continent dans la dimension Source|Afrique, Asie, AustraliaEurope, N. America,S. Amérique|SourceDimensionTable|Continent|Europe|
+|Attribut Continent dans la dimension Source|Afrique, Asie, AustraliaEurope, N. America,S. America|SourceDimensionTable|Continent|Europe|
 |Attribut Half dans la dimension Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|
 |Attribut Quarter dans la dimension Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|
 
@@ -122,6 +121,6 @@ ms.locfileid: "78175718"
  L'exemple présenté ici ne contient qu'une seule table de faits. Quand un cube a plusieurs tables de faits, les mesures de chaque table de faits sont organisées en groupes de mesures et un groupe de mesures est lié à un jeu de dimensions spécifique par des relations de dimension définies. Ces relations sont définies en spécifiant les tables participantes dans la vue de source de données et la granularité de la relation. **Rubrique connexe :**[relations de dimension](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Bases de données de modèle multidimensionnels &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
+ [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
 
 

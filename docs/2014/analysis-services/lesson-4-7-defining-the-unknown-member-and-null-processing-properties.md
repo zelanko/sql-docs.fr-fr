@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175308"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Définition du membre inconnu et des propriétés de traitement Null
@@ -178,6 +178,6 @@ ms.locfileid: "78175308"
      ![Niveau Nom de produit affichant des composants d'assembly](../../2014/tutorials/media/l4-assemblycomponents-1.gif "Niveau Nom de produit affichant des composants d'assembly")
 
 ## <a name="next-lesson"></a>Leçon suivante
- [Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)
+ [Leçon 5 : définition des relations entre les dimensions et les groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)
 
 

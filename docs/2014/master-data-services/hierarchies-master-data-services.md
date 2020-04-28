@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e2b606fae657fdc7d5652e4f33c6d14ccff690c9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176014"
 ---
 # <a name="hierarchies-master-data-services"></a>Hiérarchies (services de données de référence)
@@ -69,7 +69,7 @@ ms.locfileid: "78176014"
 
 -   [Hiérarchies récursives &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)
 
--   [Hiérarchies dérivées avec des majuscules &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)
+-   [Hiérarchies dérivées avec un niveau supérieur composé d’une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)
 
 -   [Collections &#40;Master Data Services&#41;](collections-master-data-services.md)
 

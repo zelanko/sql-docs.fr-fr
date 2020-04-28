@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429012"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
@@ -39,13 +39,13 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary (64)**  |Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête.<br /><br /> **sql_handle**, ainsi que **statement_start_offset** et **statement_end_offset**, peuvent être utilisés pour récupérer le texte SQL de la requête en appelant la fonction de gestion dynamique **sys. dm_exec_sql_text** .|  
+|**sql_handle**|**varbinary(64)**  |Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête.<br /><br /> **sql_handle**, combiné avec **statement_start_offset** et **statement_end_offset**, peut s'utiliser pour extraire le texte SQL de la requête en appelant la fonction de gestion dynamique **sys.dm_exec_sql_text**.|  
 |**statement_start_offset**|**int**|Indique, en octets, la position de début (à partir de 0) de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant.|  
 |**statement_end_offset**|**int**|Indique, en octets, la position de fin (à partir de 0) de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant. Pour les versions [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]antérieures à, la valeur-1 indique la fin du traitement. Les commentaires de fin ne sont plus inclus.|  
 |**plan_generation_num**|**bigint**|Numéro de séquence permettant de distinguer les instances de plans après une recompilation.|  
-|**plan_handle**|**varbinary (64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Cette valeur peut être passée à la fonction de gestion dynamique [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) pour obtenir le plan de requête.<br /><br /> Sa valeur est toujours 0x000 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
-|**creation_time**|**DATETIME**|Heure de compilation du plan.|  
-|**last_execution_time**|**DATETIME**|Heure de début de la dernière exécution du plan.|  
+|**plan_handle**|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Cette valeur peut être passée à la fonction de gestion dynamique [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) pour obtenir le plan de requête.<br /><br /> Sa valeur est toujours 0x000 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
+|**creation_time**|**datetime**|Heure de compilation du plan.|  
+|**last_execution_time**|**datetime**|Heure de début de la dernière exécution du plan.|  
 |**execution_count**|**bigint**|Nombre d'exécutions du plan depuis sa dernière compilation.|  
 |**total_worker_time**|**bigint**|Temps processeur total, indiqué en microsecondes (mais précis uniquement en millisecondes), utilisé par les exécutions de ce plan depuis sa compilation.<br /><br /> Pour les procédures stockées compilées en mode natif, **total_worker_time** peut être inexact si plusieurs exécutions sont réalisées en moins d’une milliseconde.|  
 |**last_worker_time**|**bigint**|Temps processeur, indiqué en microsecondes (mais précis uniquement en millisecondes), utilisé lors de la dernière exécution du plan. <sup>1</sup>|  
@@ -77,7 +77,7 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
 |**last_rows**|**bigint**|Nombre de lignes renvoyées par la dernière exécution de la requête. Ne peut pas avoir la valeur null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
 |**min_rows**|**bigint**|Nombre minimal de lignes retournées par la requête au cours d’une exécution. Ne peut pas avoir la valeur null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
 |**max_rows**|**bigint**|Nombre maximal de lignes retournées par la requête au cours d’une exécution. Ne peut pas avoir la valeur null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
-|**statement_sql_handle**|**varbinary (64)**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Renseigné avec des valeurs non NULL uniquement si Magasin des requêtes est activé et collecte les statistiques de cette requête particulière.|  
+|**statement_sql_handle**|**varbinary(64)**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Renseigné avec des valeurs non NULL uniquement si Magasin des requêtes est activé et collecte les statistiques de cette requête particulière.|  
 |**statement_context_id**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Renseigné avec des valeurs non NULL uniquement si Magasin des requêtes est activé et collecte les statistiques de cette requête particulière.|  
 |**total_dop**|**bigint**|Somme totale du degré de parallélisme utilisé par ce plan depuis sa compilation. Elle sera toujours 0 pour l’interrogation d’une table optimisée en mémoire.<br /><br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
 |**last_dop**|**bigint**|Degré de parallélisme de la dernière exécution de ce plan. Elle sera toujours 0 pour l’interrogation d’une table optimisée en mémoire.<br /><br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  

@@ -11,19 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 09d57d0b1b0ac00cbad6f4d8dab1e2afad790d37
-ms.sourcegitcommit: c30a2def43c86860aeec69d3e3029f2296544b13
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175518"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
-  
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) est un produit de gestion de la qualité des données reposant sur les connaissances. DQS vous permet de générer une base de connaissances et de l'utiliser pour effectuer diverses tâches stratégiques liées à la qualité des données, notamment la correction, l'enrichissement, la normalisation et la déduplication de vos données. DQS vous permet de nettoyer vos données à l'aide de services de données de référence en nuage proposés par des fournisseurs de données de référence. DQS propose également un profilage intégré à ses tâches de qualité des données pour l'analyse de l'intégrité de vos données.
 
- DQS se compose de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] et de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], tous deux installés dans le cadre de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est une fonctionnalité d'instance de SQL Server composée de trois catalogues SQL Server offrant des fonctionnalités de qualité des données et de stockage des données. 
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est une fonctionnalité partagée de SQL Server que les utilisateurs professionnels, les travailleurs de l'information et les professionnels de l'informatique peuvent utiliser pour effectuer des analyses de qualité des données assistées par ordinateur et gérer interactivement la qualité de leurs données. Vous pouvez également exécuter des processus de qualité des données à l'aide des fonctionnalités de qualité des données [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] et Master Data Services (MDS), qui sont basés sur DQS.
+ DQS se compose de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] et de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], tous deux installés dans le cadre de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est une fonctionnalité d'instance de SQL Server composée de trois catalogues SQL Server offrant des fonctionnalités de qualité des données et de stockage des données. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est une fonctionnalité partagée de SQL Server que les utilisateurs professionnels, les travailleurs de l'information et les professionnels de l'informatique peuvent utiliser pour effectuer des analyses de qualité des données assistées par ordinateur et gérer interactivement la qualité de leurs données. Vous pouvez également exécuter des processus de qualité des données à l'aide des fonctionnalités de qualité des données [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] et Master Data Services (MDS), qui sont basés sur DQS.
 
  Pour obtenir des informations sur l'installation de DQS, consultez [Install Data Quality Services](install-windows/install-data-quality-services.md). Pour effectuer une mise à niveau de votre version existante de DQS vers [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consultez [Upgrade Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).
 

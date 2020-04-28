@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176174"
 ---
 # <a name="integration-services-ssis-projects"></a>Projets Integration Services (SSIS)
@@ -48,7 +48,7 @@ ms.locfileid: "78176174"
 
 |Dossier|Description|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]Paquet|Contient les packages. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41;, packages](../../2014/integration-services/integration-services-ssis-packages.md).|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] .|Contient les packages. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41;, packages](../../2014/integration-services/integration-services-ssis-packages.md).|
 |Divers|Contient d'autres fichiers que les fichiers de package.|
 
 ### <a name="files-in-integration-services-projects"></a>Fichiers des projets Integration Services
@@ -71,8 +71,7 @@ ms.locfileid: "78176174"
 
 -   Le fichier *.suo contient des informations sur vos préférences concernant l'utilisation de la solution.
 
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crée automatiquement une solution lorsque vous créez un projet, mais vous pouvez aussi créer une solution vierge et lui ajouter ultérieurement des projets.
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crée automatiquement une solution lorsque vous créez un projet, mais vous pouvez aussi créer une solution vierge et lui ajouter ultérieurement des projets.
 
 > [!NOTE]
 >  Par défaut, lorsque vous créez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la solution n'est pas affichée dans le volet **Explorateur de projets** . Pour modifier ce comportement par défaut, dans le menu **Outils** , cliquez sur **Options**. Dans la boîte de dialogue **Options** , développez **Projets et solutions**, puis cliquez sur **Général**. Dans la page **Général** , sélectionnez **Toujours afficher la solution**.

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 761abc52c7ef0ba974540ff0b87a57773a4badc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918091"
 ---
 # <a name="glossary-report-builder"></a>Glossaire (Générateur de rapports)
@@ -42,7 +42,7 @@ ms.locfileid: "76918091"
 |axe|Lignes horizontales et verticales d'un graphique utilisées pour afficher la position d'un point.|  
 |intervalle d'axe|Nombre d'unités entre les graduations principales sur un axe de graphique. L'intervalle est calculé automatiquement mais peut être défini manuellement.|  
 |sauvegarder|Faire une copie d'un programme, d'un disque ou de données.|  
-|backup|Collection de fichiers, de dossiers et d'autres données qui ont été dupliqués et stockés dans un fichier ou sur une ou plusieurs bandes.|  
+|sauvegarde|Collection de fichiers, de dossiers et d'autres données qui ont été dupliqués et stockés dans un fichier ou sur une ou plusieurs bandes.|  
 |table de base|Table stockée en permanence dans une base de données. Les tables de base sont référencées par les vues, les curseurs, les instructions SQL et les procédures stockées.|  
 |lot|1. Jeu d'instructions SQL soumises ensembles et exécutées comme un tout.  2. Dans Reporting Services, il s'agit d'une collection d'appels de méthode SOAP au sein d'une transaction unique.|  
 |objet BLOB (Binary Large Object)|Donnée binaire de taille particulièrement volumineuse (telle que des images, des pistes audio ou des morceaux multimédias stockés sous un format numérique) ou toute variable ou colonne de table pouvant contenir de telles valeurs.|  
@@ -144,11 +144,11 @@ ms.locfileid: "76918091"
 |caractère d’échappement|Caractère permettant d'indiquer qu'un autre caractère dans une expression doit être interprété littéralement et non comme un opérateur.|  
 |fichier ESRI .shp|Spécification Open développée par l'ESRI (Environmental Systems Research Institute, Inc.) pour les données spatiales.|  
 |fichier de forme ESRI|Spécification Open développée par l'ESRI (Environmental Systems Research Institute, Inc.) pour les données spatiales.|  
-|événement|Toute occurrence significative se produisant dans le système ou dans une application, qui doit être signalée aux utilisateurs ou être ajoutée sous forme d'entrée dans un journal.|  
+|event|Toute occurrence significative se produisant dans le système ou dans une application, qui doit être signalée aux utilisateurs ou être ajoutée sous forme d'entrée dans un journal.|  
 |gestionnaire d'événements|1. Routine logicielle qui s'exécute en réponse à un événement. 2. Dans Integration Services, flux de contrôle qui s'exécute en réponse à un événement d'exécution.|  
 |expression|1. Dans SQL, combinaison de symboles et d'opérateurs dont l'évaluation aboutit à une valeur de données unique. 2. Dans Integration Services, combinaison de littéraux, de constantes, de fonctions et d'opérateurs dont l'évaluation aboutit à une valeur de données unique.|  
 |field|1. Zone d'une fenêtre ou d'un enregistrement qui stocke une valeur unique.  2. Dans le Générateur de rapports, les champs de dataset représentent des données numériques ou non numériques d'une connexion de données. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images et des données spatiales. Un rapport peut comporter trois types de champs : champs de dataset, champs calculés de dataset et champs prédéfinis.|  
-|filter|1. Ensemble de critères qui détermine l'ensemble d'enregistrements retourné comme jeu de résultats.  2. Dans la recherche en texte intégral, en spécifiant une extension de fichier, les filtres permettent d'extraire du texte à partir d'un fichier stocké dans une colonne varbinary(max) ou image.|  
+|Filter|1. Ensemble de critères qui détermine l'ensemble d'enregistrements retourné comme jeu de résultats.  2. Dans la recherche en texte intégral, en spécifiant une extension de fichier, les filtres permettent d'extraire du texte à partir d'un fichier stocké dans une colonne varbinary(max) ou image.|  
 |expression de filtre|Expression utilisée pour filtrer des données dans l'opérateur Filter.|  
 |fichier plat|Fichier constitué d'enregistrements d'un type d'enregistrement unique, dans lequel il ne figure pas d'informations de structure incorporées qui gouvernent les relations entre les enregistrements.|  
 |clé étrangère|Colonne ou combinaison de colonnes dont les valeurs correspondent à la clé primaire (PK) ou à la clé unique de la même table ou d'une autre table. Également appelée clé de référence.|  
@@ -196,7 +196,7 @@ ms.locfileid: "76918091"
 |rapport lié|Rapport faisant référence à une définition de rapport existante en utilisant un ensemble différent de valeurs de paramètres ou de propriétés. Un rapport lié est un élément de serveur de rapports qui fournit un point d'accès à un rapport existant. Au niveau conceptuel, il est assimilable au raccourci d'un programme que vous utilisez pour exécuter une application ou ouvrir un fichier.|  
 |région de données de liste|Région de données dans une mise en page de rapport qui est répétée pour chaque groupe ou ligne du dataset du rapport. Une liste peut être utilisée pour créer des formulaires ou des rapports de forme libre, tels que des factures, ou associés à d'autres régions de données.|  
 |serveur local|1. Dans les connexions SQL Server, instance de SQL Server en cours d'exécution sur le même ordinateur que l'application. <br />2. Dans une instruction Transact-SQL, lors de la résolution de références à des objets de base de données, instance de SQL Server exécutant l'instruction. <br />3. Dans les requêtes distribuées SQL Server, instance de SQL Server exécutant la requête distribuée. Le serveur local accède ensuite à tous les serveurs liés référencés dans la requête.|  
-|local|Attribut du système d'exploitation Windows qui définit certains comportements liés à la langue.|  
+|locale|Attribut du système d'exploitation Windows qui définit certains comportements liés à la langue.|  
 |identificateur de paramètres régionaux (LCID)|Numéro qui identifie un paramètre régional de Windows.|  
 |fichier journal|Fichier ou ensemble de fichiers qui contient les enregistrements des modifications apportées à une base de données.|  
 |nom logique|Nom utilisé par SQL Server pour identifier un fichier.|  
@@ -229,7 +229,7 @@ ms.locfileid: "76918091"
 |imbrication|Placement d'une région de données à l'intérieur d'une autre région de données, par exemple un graphique sparkline dans une table. Les régions de données imbriquées sont basées sur le même dataset de rapport et l'étendue des données de la région de données imbriquée est automatiquement définie par son placement dans la région de données parente.|  
 |NULL|Entrée n'ayant pas de valeur explicite.|  
 |expression numérique|Toute expression dont l'évaluation aboutit à un nombre.|  
-|object|Un des composants d'une base de données, tel qu'une table, un index ou une procédure stockée.|  
+|objet|Un des composants d'une base de données, tel qu'une table, un index ou une procédure stockée.|  
 |identificateur d'objet|1. Nom unique attribué à un objet. 2. Dans Meta Data Services, identificateur unique construit à partir d'un identificateur global unique (GUID) et d'un identificateur interne.|  
 |Source de données ODBC|1. Emplacement d'un ensemble de données accessible à l'aide d'un pilote ODBC. 2. Définition stockée qui contient toutes les informations de connexion requises par une application ODBC pour se connecter à la source de données.|  
 |Pilote ODBC|Bibliothèque de liens dynamiques (DLL) qu'une application compatible ODBC, telle qu'Excel, peut utiliser pour accéder à une source de données ODBC.|  
@@ -243,7 +243,7 @@ ms.locfileid: "76918091"
 |operator|Signe ou symbole qui spécifie le type de calcul à effectuer dans une expression. Il existe des opérateurs mathématiques, de comparaison, logiques et de référence.|  
 |agrégat externe|Fonction d'agrégation qui spécifie un paramètre d'étendue qui est une autre fonction d'agrégation.|  
 |remplissage|1. Chaîne, généralement ajoutée lorsque le dernier bloc de texte en clair est court. 2. Espace alloué dans une cellule pour obtenir ou conserver une taille spécifique.|  
-|Page|Dans le Générateur de rapports, la page fait référence à la page de papier physique. Le format de papier que vous spécifiez pour le rapport contrôle le rendu du rapport.|  
+|page|Dans le Générateur de rapports, la page fait référence à la page de papier physique. Le format de papier que vous spécifiez pour le rapport contrôle le rendu du rapport.|  
 |palette|Ensemble de valeurs prédéfinies ou définies par l'utilisateur pour les couleurs utilisées dans les graphiques, cartes et jauges.|  
 |paramètre|Collection globals intégrée dans un rapport qui permet aux utilisateurs de définir des valeurs qui peuvent modifier les données de rapport ainsi que l'apparence et connecter les rapports associés. Les paramètres de rapport sont créés automatiquement à partir des paramètres de requête et de dataset, et manuellement par les créateurs de rapports.|  
 |rapport paramétrable|Rapport publié qui accepte des valeurs d'entrée sous forme de paramètres.|  
@@ -264,7 +264,7 @@ ms.locfileid: "76918091"
 |provider|1. Fournisseur OLE DB. 2. Bibliothèque de liens dynamiques (DLL) in-process qui permet d'accéder à une base de données.|  
 |paramètres de requête|Paramètres spécifiés dans une requête de dataset, par exemple une requête Transact-SQL.|  
 |RDL|Voir le terme : Report Definition Language (RDL)|  
-|record|Groupe de champs (colonnes) associés d'informations, traité comme une unité. Un enregistrement est plus communément appelé ligne dans une base de données relationnelle.|  
+|enregistrement|Groupe de champs (colonnes) associés d'informations, traité comme une unité. Un enregistrement est plus communément appelé ligne dans une base de données relationnelle.|  
 |rectangle|Élément de rapport qui peut être utilisé comme conteneur pour plusieurs éléments de rapport ou comme élément graphique sur un rapport.|  
 |hiérarchie récursive|1. Hiérarchie de données d'un dataset de rapport unique qui inclut plusieurs niveaux hiérarchiques dans une structure de hiérarchie, par exemple la structure de rapports pour les relations entre directeur et employé dans une hiérarchie d'organisation. 2. Dans Master Data Services, hiérarchie dérivée qui comporte une relation récursive. Une relation récursive existe lorsqu'une entité a un attribut basé sur un domaine basé sur l'entité elle-même.|  
 |base de données relationnelle|Base de données ou système de gestion de base de données qui stocke des informations dans des tables sous forme de lignes et de colonnes de données, et qui mène des recherches en utilisant les données des colonnes spécifiques d'une table pour trouver des données supplémentaires dans une autre table.|  
@@ -337,7 +337,7 @@ ms.locfileid: "76918091"
 |données spatiales|Données qui spécifient les emplacements des objets sur une surface plate ou courbe. Les données spatiales peuvent être des points, lignes ou polygones.|  
 |types de données spatiales|Spécifie des données qui représentent des informations de géométrie (planaires) ou de géographie (géodésiques).|  
 |SQL|Voir le terme : SQL (Structured Query Language)|  
-|Requête SQL|Instruction SQL, telle que SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
+|requête SQL|Instruction SQL, telle que SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
 |l’authentification SQL Server|Mécanisme de validation d'une tentative de connexion à une instance de SQL Server en spécifiant un ID de compte de connexion et un mot de passe SQL Server.|  
 |compte de connexion SQL Server|Compte stocké dans SQL Server et qui permet aux utilisateurs de se connecter à SQL Server.|  
 |Instruction SQL|Commande SQL ou Transact-SQL, telle que SELECT ou DELETE, qui effectue une action sur des données.|  
@@ -353,7 +353,7 @@ ms.locfileid: "76918091"
 |table|1. Objet à deux dimensions, composé de lignes et de colonnes, permettant de stocker des données relatives à une entité modélisée dans une base de données relationnelle. 2. Région de données dans une mise en page de rapport qui affiche les données dans un format de colonne.|  
 |région de données de type table|Élément de rapport dans une mise en page de rapport qui affiche les données dans un format de colonne.|  
 |tableau matriciel|Région de données RDL Reporting Services qui contient des lignes et des colonnes semblables à un tableau ou une matrice et qui partagent éventuellement les caractéristiques de ces deux éléments.|  
-|task|Collection des autorisations qui constituent une tâche (gestion des rapports, gestion des dossiers, etc.)|  
+|tâche|Collection des autorisations qui constituent une tâche (gestion des rapports, gestion des dossiers, etc.)|  
 |Transact-SQL|Langage contenant les commandes utilisées pour administrer les instances de SQL Server, créer et gérer tous les objets d'une instance de SQL Server, ainsi que pour insérer, récupérer, modifier et supprimer toutes les données des tables SQL Server. Transact-SQL est une extension du langage défini dans les normes SQL publiées par les organismes ISO (International Standards Organization) et ANSI (American National Standards Institute).|  
 |instance utilisateur|Instance de SQL Server Express qui est générée par l'instance parente pour le compte d'un utilisateur.|  
 |axe des ordonnées (y)|Axe pour l'affichage de valeurs de données numériques dans un graphique. Il s'agit en général de l'axe vertical. Exception : dans les graphiques à barres, les axes sont inversés et l'axe Y affiche le regroupement des données.|  
@@ -362,7 +362,7 @@ ms.locfileid: "76918091"
 |intervalle variable|Option sur un graphique Reporting Services qui peut être spécifiée pour calculer automatiquement le nombre optimal d'étiquettes qui peuvent être placées sur un axe, selon la largeur ou la hauteur du graphique.|  
 |visualisation|Dans les cartes, graphiques et jauges, choix d'un utilisateur pour visualiser des données analytiques.|  
 |Service Web|Dans Reporting Services, service qui utilise le protocole SOAP (Simple Object Access Protocol) sur HTTP et agit comme une interface de communication entre les programmes clients et le serveur de rapports.|  
-|Windows Management Instrumentation|Interface qui fournit des informations sur les objets dans un environnement managé.|  
+|WMI (Windows Management Instrumentation)|Interface qui fournit des informations sur les objets dans un environnement managé.|  
 |WKB|Représentation des données WKB (Well Known Binary) comme spécifié par l'OGC (Open Geospatial Consortium).|  
 |WKT|Représentation des données WKT (Well Known Text) comme spécifié par l'OGC (Open Geospatial Consortium).|  
 |WMI|Voir le terme : Windows Management Instrumentation|  
@@ -370,6 +370,6 @@ ms.locfileid: "76918091"
 |axe Y|Voir le terme : axe des ordonnées (y)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

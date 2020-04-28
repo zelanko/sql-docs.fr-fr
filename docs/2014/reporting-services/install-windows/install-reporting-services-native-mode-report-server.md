@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba2744f759a59ae4360bcd0d7c09dc45c7a4bdbf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173468"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services en mode natif
@@ -28,13 +28,13 @@ ms.locfileid: "78173468"
 |-|
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif|
 
-##  <a name="bkmk_top"></a>Dans cette rubrique
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a>Dans cette rubrique
 
 -   [Quelle est la configuration par défaut ?](#bkmk_whatisdefaultconfiguration)
 
 -   [Quand installer la configuration par défaut pour le mode natif](#bkmk_whentoinstalldefaultconfig)
 
--   [Spécifications](#bkmk_requirements)
+-   [Configuration requise](#bkmk_requirements)
 
 -   [Réservations d’URL par défaut](#bkmk_defaultURLreservations)
 
@@ -42,7 +42,7 @@ ms.locfileid: "78173468"
 
 -   [Installer le mode natif avec la ligne de commande](#bkmk_commandline)
 
-##  <a name="bkmk_whatisdefaultconfiguration"></a>Quelle est la configuration par défaut ?
+##  <a name="what-is-the-default-configuration"></a><a name="bkmk_whatisdefaultconfiguration"></a>Quelle est la configuration par défaut ?
  Le programme d'installation installe les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suivantes lorsque vous sélectionnez la configuration par défaut de l'option de mode natif :
 
 -   Le service Report Server (lequel inclut le service Web Report Server, application de traitement en arrière-plan, et le gestionnaire de rapports)
@@ -69,21 +69,21 @@ ms.locfileid: "78173468"
 
  L'installation ne configure pas le compte d'exécution sans assistance, la messagerie électronique de serveur de rapports, la sauvegarde des clés de chiffrement ou le déploiement avec montée en puissance parallèle. Vous pouvez utiliser le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer ces propriétés. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).
 
-##  <a name="bkmk_whentoinstalldefaultconfig"></a>Quand installer la configuration par défaut pour le mode natif
+##  <a name="when-to-install-the-default-configuration-for-native-mode"></a><a name="bkmk_whentoinstalldefaultconfig"></a>Quand installer la configuration par défaut pour le mode natif
  Une configuration par défaut installe [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un état opérationnel afin que vous puissiez utiliser immédiatement le serveur de rapports une fois l'installation terminée. Spécifiez ce mode lorsque vous souhaitez économiser des étapes en éliminant toutes les tâches de configuration requises que vous devriez autrement exécuter dans l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
  L'installation de la configuration par défaut ne garantit pas que le serveur de rapports fonctionne après que l'installation est terminée. L'inscription des URL par défaut peut ne pas s'effectuer quand le service démarre. Testez toujours votre installation pour vérifier que le service démarre et s'exécute comme prévu.
 
-##  <a name="bkmk_requirements"></a>Exigences
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> Spécifications
  L'option de configuration par défaut utilise les valeurs par défaut pour configurer les paramètres principaux obligatoires pour rendre un serveur de rapports opérationnel. Elle comporte les impératifs suivants :
 
 -   Votre matériel doit correspondre aux configurations matérielle et logicielle minimales requises pour l'exécution de Microsoft SQL Server. Pour plus d'informations, consultez [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent être installés ensemble dans la même instance. L'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] héberge la base de données du serveur de rapports que le programme d'installation crée et configure.
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent être installés ensemble dans la même instance. L'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] héberge la base de données du serveur de rapports que le programme d'installation crée et configure.
 
 -   Le compte d'utilisateur utilisé pour exécuter le programme d'installation doit être membre du groupe local Administrateurs et avoir l'autorisation de créer des bases de données et d'y accéder sur l'instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge les bases de données du serveur de rapports.
 
--   L'installation doit être en mesure d'utiliser les valeurs par défaut pour réserver les URL qui fournissent l'accès au serveur de rapports et au Gestionnaire de rapports. Ces valeurs sont le port 80, un caractère générique fort et les noms de répertoire virtuel aux formats **ReportServer_\<***nom_instance***>** et **Reports_\<***nom_instance***>**.
+-   L'installation doit être en mesure d'utiliser les valeurs par défaut pour réserver les URL qui fournissent l'accès au serveur de rapports et au Gestionnaire de rapports. Ces valeurs sont le port 80, un caractère générique fort et les noms de répertoire virtuel aux formats **ReportServer_\<***nom_instance***>** et **Reports_\<***nom_instance***>** .
 
 -   L'installation doit être en mesure d'utiliser les valeurs par défaut pour créer les bases de données du serveur de rapports. Ces valeurs sont **ReportServer** et **ReportServerTempDB**. Si vous avez des bases de données d'une précédente installation, le programme d'installation sera bloqué car il ne peut pas configurer le serveur de rapports dans la configuration par défaut pour le mode natif. Vous devez renommer, déplacer ou supprimer les bases de données pour débloquer le programme d'installation.
 
@@ -91,7 +91,7 @@ ms.locfileid: "78173468"
 
  N'essayez pas de reconfigurer votre ordinateur uniquement pour autoriser une installation par défaut à se poursuivre. Un tel choix pourrait nécessiter plusieurs heures de travail, en éliminant concrètement l'avantage en termes de gain de temps que l'option d'installation fournit. La meilleure solution consiste à installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode fichiers uniquement, puis à configurer le serveur de rapports pour utiliser des valeurs spécifiques.
 
-##  <a name="bkmk_defaultURLreservations"></a>Réservations d’URL par défaut
+##  <a name="default-url-reservations"></a><a name="bkmk_defaultURLreservations"></a>Réservations d’URL par défaut
  Les réservations d'URL se composent d'un préfixe, d'un nom d'hôte, d'un port et d'un répertoire virtuel :
 
 |Élément|Description|
@@ -107,18 +107,18 @@ ms.locfileid: "78173468"
 
 -   http://+:80/reports, fournit l’accès aux Gestionnaire de rapports.
 
-##  <a name="bkmk_installwithwizard"></a>Installer le mode natif avec l’Assistant Installation de SQL Server
+##  <a name="install-native-mode-with-the-sql-server-installation-wizard"></a><a name="bkmk_installwithwizard"></a>Installer le mode natif avec l’Assistant Installation de SQL Server
  La liste suivante décrit les étapes et les options spécifiques à  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous pouvez sélectionner dans l'Assistant Installation de SQL Server. La liste ne décrit pas chacune des pages que vous voyez dans l'Assistant Installation. Seules les pages relatives à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et qui font partie d'une installation en mode natif sont décrites.
 
-1.  Dans la page **rôle d’installation** , sélectionnez **SQL Server l’installation des fonctionnalités**.
+1.  Dans la page **Rôle d'installation** , sélectionnez **Installation de fonctionnalités SQL Server**.
 
      ![Installation de fonctionnalités SQL Server pour le rôle d'installation](../../../2014/sql-server/install/media/rs-setuprole.gif "Installation de fonctionnalités SQL Server pour le rôle d'installation")
 
 2.  Dans la page **Sélection de fonctionnalités** , sélectionnez ce qui suit :
 
-    -   **Moteur de base de données les services**, sauf si une instance du moteur de base de données est déjà installée.
+    -   **Services Moteur de base de données**, à moins qu'une instance du moteur de base de données ne soit déjà installée.
 
-    -   **Reporting Services-natif**.
+    -   **Reporting Services - Natif**.
 
     -   **Outils de gestion-de base**. Les outils d'administration ne sont pas nécessaires mais ils sont recommandés, sauf si vous disposez déjà d'une autre installation d'outils d'administration. L’option de configuration par défaut produit un serveur de rapports opérationnel, mais vous pouvez modifier les options de configuration à une date ultérieure. Certaines options telles que « Mes rapports » sont gérées via[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
@@ -140,11 +140,11 @@ ms.locfileid: "78173468"
 
  Pour plus d'informations, consultez la section relative au mode natif dans les deux rubriques suivantes :
 
- [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)
+ [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)
 
- [Dépanner une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)
+ [Résoudre les problèmes d’une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)
 
-##  <a name="bkmk_commandline"></a>Installer le mode natif avec la ligne de commande
+##  <a name="install-native-mode-with-the-command-line"></a><a name="bkmk_commandline"></a>Installer le mode natif avec la ligne de commande
  L'exemple suivant inclut le service [!INCLUDE[ssDE](../../includes/ssde-md.md)] parce qu'il est requis pour une configuration par défaut.
 
 ```
@@ -156,6 +156,6 @@ SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"
  Pour plus d’informations et d’exemples, consultez [installation d’une invite de commandes de Reporting Services mode SharePoint et mode natif](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) et [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 
 ## <a name="see-also"></a>Voir aussi
- [Résoudre les problèmes d’une installation Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md) [vérifier une installation Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) [configurer le compte de Service report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md) [configurer les url du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurer une connexion à la base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [les fichiers uniquement](../../reporting-services/install-windows/files-only-installation-reporting-services.md) &#40;Reporting Services&#41;[initialiser un serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md) [configurer SSL Connexions sur un serveur de rapports en mode natif](../security/configure-ssl-connections-on-a-native-mode-report-server.md) [configurer les URL du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) [installation rapide de SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)
+ [Résoudre les problèmes d’une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md) [vérifier une installation Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) [configurer le compte de Service du serveur de rapports &#40;Configuration Manager SSRS&#41;configurer les](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md) [url du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurer une connexion à la base de données du serveur de rapports &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [installation des fichiers uniquement &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md) [initialiser un serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md) [configurer des connexions SSL sur un serveur de rapports en mode natif](../security/configure-ssl-connections-on-a-native-mode-report-server.md) [configurer les URL du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) [installation rapide de SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)
 
 

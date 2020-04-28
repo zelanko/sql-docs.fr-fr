@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaa5729c47c66e40b62cddc6bfcef1ba2ec84bdf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175019"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutoriel : Création d’un rapport au format libre (Générateur de rapports)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
   Ce didacticiel vous apprend à créer un rapport de forme libre SSRS qui ressemble à une lettre type. Vous pouvez organiser les éléments du rapport pour créer un formulaire avec des zones de texte, des images et autres régions de données.
 
  Le rapport que vous créez dans ce didacticiel est basé sur des exemples de données de vente incluses dans le didacticiel. Le rapport regroupe les informations par secteur de vente et affiche le nom du directeur des ventes pour le secteur, ainsi que des informations détaillées et de synthèse sur les ventes. Vous allez utiliser la région de données de liste comme base du rapport de forme libre, puis ajouterez un panneau décoratif avec une image, du texte statique avec des données insérées, un tableau pour afficher les informations détaillées, et éventuellement, un graphique à secteurs et un histogramme pour afficher les informations de synthèse.
 
-##  <a name="BackToTop"></a>Ce que vous allez apprendre
- Ce didacticiel vous apprendra à effectuer les opérations suivantes :
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Ce que vous allez apprendre
+ Dans ce didacticiel, vous apprendrez à effectuer les tâches suivantes :
 
 -   [Créer un rapport, une source de données et un dataset vides](#BlankReport)
 
@@ -50,7 +50,7 @@ ms.locfileid: "78175019"
 ## <a name="requirements"></a>Spécifications
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).
 
-##  <a name="BlankReport"></a>1. créer un rapport vide, une source de données et un jeu de données
+##  <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1. créer un rapport vide, une source de données et un jeu de données
 
 > [!NOTE]
 >  Dans ce didacticiel, la requête contient les valeurs de données, afin que le rapport n'ait pas besoin d'une source de données externe. L'utilisation de ce type de données internes est très utile à des fins pédagogiques, mais l'approche rend la requête longue. .
@@ -82,9 +82,9 @@ ms.locfileid: "78175019"
 
 6.  Cliquez sur **OK**.
 
-#### <a name="to-create-a-new-dataset"></a>Création d’un jeu de données
+#### <a name="to-create-a-new-dataset"></a>Pour créer un dataset
 
-1.  Dans le volet données du rapport, cliquez sur **nouveau**, puis sur **DataSet**.
+1.  Dans le volet des données de rapport, cliquez sur **Nouveau**, puis sur **Dataset**.
 
 2.  Dans la `Name` zone, tapez : **ListDataset.**
 
@@ -137,9 +137,8 @@ ms.locfileid: "78175019"
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-##  <a name="List"></a>2. Ajouter et configurer une liste
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit trois modèles de région de données : tableau, matrice et liste. Ces modèles sont tous basés sur une région de données de tableau matriciel.
+##  <a name="2-add-and-configure-a-list"></a><a name="List"></a>2. Ajouter et configurer une liste
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit trois modèles de région de données : tableau, matrice et liste. Ces modèles sont tous basés sur une région de données de tableau matriciel.
 
  Dans ce didacticiel, vous allez utiliser une liste pour afficher les informations de ventes pour les secteurs de vente dans un rapport ayant l'apparence d'un bulletin d'informations. Les informations sont regroupées par secteur. Vous allez ajouter un nouveau groupe de lignes qui regroupe les données par secteur, puis vous supprimerez le groupe de lignes Détails intégré. Le modèle de liste est idéal pour la création de rapports de forme libre. Pour plus d’informations, consultez la page [répertorie &#40;générateur de rapports et les&#41;SSRS ](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).
 
@@ -190,11 +189,11 @@ ms.locfileid: "78175019"
 
      ![Supprimer le groupe des détails](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "Supprimer le groupe des détails")
 
-7.  Cliquez sur **supprimer le groupe uniquement**.
+7.  Cliquez sur **Supprimer le groupe uniquement**.
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-##  <a name="Graphics"></a>3. ajouter des graphiques
+##  <a name="3-add-graphics"></a><a name="Graphics"></a>3. ajouter des graphiques
  L'un des avantages de l'utilisation d'une région de données de liste est que vous pouvez ajouter des éléments de rapport comme des rectangles et des zones de texte n'importe où, sans être limité par une disposition tabulaire. Vous allez améliorer l'apparence du rapport en ajoutant un graphique (un rectangle rempli avec une couleur).
 
 #### <a name="to-add-graphic-elements-to-the-report"></a>Pour ajouter des éléments graphiques au rapport
@@ -215,7 +214,7 @@ ms.locfileid: "78175019"
 
  Le côté gauche du rapport a maintenant un graphique vertical formé d'un rectangle gris foncé.
 
-##  <a name="Text"></a>4. Ajouter un texte de forme libre
+##  <a name="4-add-free-form-text"></a><a name="Text"></a>4. Ajouter un texte de forme libre
  Une zone de texte contient du texte statique qui est répété sur chaque page de rapport, ainsi que des champs de données.
 
 #### <a name="to-add-text-to-the-report"></a>Pour ajouter du texte au rapport
@@ -226,7 +225,7 @@ ms.locfileid: "78175019"
 
 3.  Placez le curseur dans la partie supérieure de la zone de texte, puis tapez **Bulletin d'informations pour** .
 
-     ![Ajouter un texte de titre au bulletin d'informations](../../2014/tutorials/media/tutorial-newsletterfor.png "Ajouter un texte de titre au bulletin d'informations")
+     ![Ajouter un texte de titre au bulletin d’informations](../../2014/tutorials/media/tutorial-newsletterfor.png "Ajouter un texte de titre au bulletin d’informations")
 
     > [!NOTE]
     >  Veillez à inclure l'espace supplémentaire après « pour ». Cet espace sépare le texte du champ que vous allez ajouter à l'étape suivante.
@@ -320,7 +319,7 @@ ms.locfileid: "78175019"
 
  ![Aperçu du bulletin d'informations](../../2014/tutorials/media/tutorial-newsletters.png "Aperçu du bulletin d'informations")
 
-##  <a name="Table"></a>5. Ajouter une table pour afficher les détails des ventes
+##  <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. Ajouter une table pour afficher les détails des ventes
  Utilisez l'Assistant Nouveau tableau ou nouvelle matrice pour ajouter un tableau au rapport de forme libre. Après avoir terminé l'Assistant, vous ajouterez manuellement une ligne pour les totaux.
 
 #### <a name="to-add-a-table"></a>Pour ajouter un tableau
@@ -362,12 +361,12 @@ ms.locfileid: "78175019"
 
  ![Total des ventes dans le rapport](../../2014/tutorials/media/tutorial-reportsalestotals.png "Total des ventes dans le rapport")
 
-##  <a name="Format"></a>6. mettre en forme les données
+##  <a name="6-format-data"></a><a name="Format"></a>6. mettre en forme les données
  Mettez en forme les données numériques sous forme de valeurs monétaires et les dates sous forme de jour et heure.
 
 #### <a name="to-format-fields-table"></a>Pour mettre en forme les champs du tableau
 
-1.  Cliquez sur **conception** pour basculer en mode conception.
+1.  Cliquez sur **Conception** pour basculer en mode Conception.
 
 2.  Cliquez sur les cellules du tableau qui contiennent `[Sum(SalesSales)]` et sous l'onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** .
 
@@ -381,7 +380,7 @@ ms.locfileid: "78175019"
 
  ![Mettre en forme le total des ventes dans le rapport](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "Mettre en forme le total des ventes dans le rapport")
 
-##  <a name="Save"></a>7. enregistrer le rapport
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. enregistrer le rapport
  Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur. Vous pouvez également exporter le rapport dans de nombreux formats tels que Word et PDF ; pour ce faire, exécutez le rapport, puis sélectionnez le format dans le menu **Exporter** .
 
  Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous n'avez pas accès à un serveur de rapports, enregistrez le rapport sur votre ordinateur.
@@ -398,7 +397,7 @@ ms.locfileid: "78175019"
 
 4.  Dans `Name`, remplacez le nom par défaut par **SalesInformationByTerritory**.
 
-5.  Cliquez sur **Enregistrer**.
+5.  Cliquez sur **Save**.
 
  Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapports auquel vous êtes connecté est indiqué dans la barre d'état située au bas de la fenêtre.
 
@@ -410,9 +409,9 @@ ms.locfileid: "78175019"
 
 3.  Dans `Name`, remplacez le nom par défaut par **SalesInformationByTerritory**.
 
-4.  Cliquez sur **Enregistrer**.
+4.  Cliquez sur **Save**.
 
-##  <a name="Line"></a>8. (facultatif) ajouter une ligne pour séparer les zones du rapport
+##  <a name="8-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>8. (facultatif) ajouter une ligne pour séparer les zones du rapport
  Ajoutez une ligne pour séparer la zone éditoriale de la zone de détails dans le rapport.
 
 #### <a name="to-add-a-line"></a>Pour ajouter une ligne
@@ -431,7 +430,7 @@ ms.locfileid: "78175019"
 
      ![Ajouter une ligne au rapport](../../2014/tutorials/media/tutorial-reportwithline.png "Ajouter une ligne au rapport")
 
-##  <a name="Visualization"></a>9. (facultatif) ajouter la visualisation des données de synthèse
+##  <a name="9-optional-add-summary-data-visualization"></a><a name="Visualization"></a>9. (facultatif) ajouter la visualisation des données de synthèse
  Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphique à secteurs et un histogramme à l'intérieur d'un rectangle pour vérifier que le rendu du rapport est conforme à vos attentes
 
 #### <a name="to-add-a-rectangle"></a>Pour ajouter un rectangle
@@ -446,7 +445,7 @@ ms.locfileid: "78175019"
 
 1.  Sous l'onglet **Insertion** du ruban, dans la zone **Visualisations des données** , cliquez sur **Graphique** , puis sur **Assistant Graphique**.
 
-2.  Dans la page Choisir un dataset, cliquez sur **ListDataset**, puis sur **Suivant**.
+2.  Dans la page Choisir un dataset , cliquez sur **ListDataset**, puis sur **Suivant**.
 
 3.  Cliquez sur **Secteurs**, puis sur **Suivant**.
 
@@ -476,7 +475,7 @@ ms.locfileid: "78175019"
 
 1.  Sous l'onglet **Insertion** du ruban, dans la zone **Visualisations des données** , cliquez sur **Graphique** , puis sur **Assistant Graphique**.
 
-2.  Dans la page **choisir un DataSet** , cliquez sur **ListDataset**, puis sur **suivant**.
+2.  Dans la page **Choisir un dataset** , cliquez sur **ListDataset**, puis sur **Suivant**.
 
 3.  Cliquez sur **Colonne**, puis sur **Suivant**.
 

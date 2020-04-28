@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176439"
 ---
 # <a name="cast-ssis-expression"></a>Cast (expression SSIS)
@@ -51,11 +51,11 @@ ms.locfileid: "78176439"
 
 |Type de données|Paramètre|Exemple|
 |---------------|---------------|-------------|
-|DT_STR|*charcount*<br /><br /> *codepage*|L'expression (DT_STR,30,1252) convertit 30 octets, ou 30 caractères codés sur un octet, vers le type de données DT_STR à l'aide de la page de codes 1252.|
+|DT_STR|*charcount*<br /><br /> *courante*|L'expression (DT_STR,30,1252) convertit 30 octets, ou 30 caractères codés sur un octet, vers le type de données DT_STR à l'aide de la page de codes 1252.|
 |DT_WSTR|*CharCount*|L'expression (DT_WSTR,20) convertit 20 paires d'octets, ou 20 caractères Unicode, vers le type de données DT_WSTR.|
 |DT_BYTES|*ByteCount*|L'expression (DT_BYTES,50) convertit 50 octets vers le type de données DT_BYTES.|
-|DT_DECIMAL|*Échelle*|L'expression (DT_DECIMAL,2) convertit une valeur numérique dans le type de données DT_DECIMAL avec une échelle égale à 2.|
-|DT_NUMERIC|*Précision*<br /><br /> *Échelle*|L'expression (DT_NUMERIC,10,3) convertit une valeur numérique dans le type de données DT_NUMERIC avec une précision de 10 et une échelle de 3.|
+|DT_DECIMAL|*Mettre à l'échelle*|L'expression (DT_DECIMAL,2) convertit une valeur numérique dans le type de données DT_DECIMAL avec une échelle égale à 2.|
+|DT_NUMERIC|*Précision*<br /><br /> *Mettre à l'échelle*|L'expression (DT_NUMERIC,10,3) convertit une valeur numérique dans le type de données DT_NUMERIC avec une précision de 10 et une échelle de 3.|
 |DT_TEXT|*Courante*|L'expression (DT_TEXT,1252) convertit une valeur vers le type de données DT_TEXT à l'aide de la page de codes 1252.|
 
  Lorsque vous convertissez une chaîne vers un type de données DT_DATE ou vice versa, les paramètres régionaux de la transformation sont utilisés. Toutefois, la date se présente dans le format ISO AAAA-MM-JJJ, que les préférences des paramètres régionaux utilisent ou non le format ISO.

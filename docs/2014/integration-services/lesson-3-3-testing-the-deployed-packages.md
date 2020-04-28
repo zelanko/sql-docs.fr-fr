@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 687a3c6e92dad953d39199afb446389bc11b9841
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176135"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>Étape 3 : Test des packages déployés
@@ -22,8 +22,7 @@ ms.locfileid: "78176135"
 
  Dans d'autres didacticiels [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous avez exécuté des packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], l'environnement de développement pour [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], à l'aide de l'option **Démarrer le débogage** du menu **Débogage** . Vous allez cette fois exécuter les packages différemment.
 
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit plusieurs outils que vous pouvez utiliser pour exécuter des packages dans l'environnement de production et de test : l'utilitaire d'invite de commandes `dtexec` et l'utilitaire d'exécution de package. Cet utilitaire est un outil graphique qui repose sur `dtexec`. Ces deux outils exécutent le package immédiatement. De plus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un sous-système de SQL Server Agent conçu spécifiquement pour planifier l'exécution de package comme une étape d'un travail de SQL Server Agent.
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit plusieurs outils que vous pouvez utiliser pour exécuter des packages dans l'environnement de production et de test : l'utilitaire d'invite de commandes `dtexec` et l'utilitaire d'exécution de package. Cet utilitaire est un outil graphique qui repose sur `dtexec`. Ces deux outils exécutent le package immédiatement. De plus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un sous-système de SQL Server Agent conçu spécifiquement pour planifier l'exécution de package comme une étape d'un travail de SQL Server Agent.
 
  Vous allez utiliser l'utilitaire d'exécution de package pour exécuter les packages déployés. Les packages sont utilisés tel quel ; par conséquent, vous n'avez pas à mettre à jour les informations sur les pages de la boîte de dialogue. Vous allez exécuter les packages à partir de la page Général, la première page de l'utilitaire d'exécution de package. Si vous le souhaitez, vous pouvez cliquer sur les autres pages pour consulter les informations destinées à chaque package.
 
@@ -104,7 +103,7 @@ ms.locfileid: "78176135"
 
      La requête retourne 21 lignes de données. Le résultat retourné comprend les lignes provenant du fichier de données XML, orders.xml. Chaque ligne est une synthèse par pays/région ; la ligne répertorie le nom d'un pays/d'une région, le nombre de commandes par pays/région, ainsi que les dates des commandes les plus récentes et les plus anciennes.
 
-![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
+![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
 
 ## <a name="see-also"></a>Voir aussi
  [Utilitaire dtexec](packages/dtexec-utility.md)

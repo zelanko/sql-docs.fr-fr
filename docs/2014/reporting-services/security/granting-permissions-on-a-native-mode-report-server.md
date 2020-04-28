@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76971393"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Octroi d'autorisations sur un serveur de rapports en mode natif
@@ -70,10 +70,10 @@ ms.locfileid: "76971393"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles prédéfinis](role-definitions-predefined-roles.md)   
- [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Octroi d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentification avec le serveur de rapports](authentication-with-the-report-server.md)   
  (create-and-manage-role-assignments.md)   
- [Sécurité et protection de Reporting Services](reporting-services-security-and-protection.md)   
+ [Sécurité et protection Reporting Services](reporting-services-security-and-protection.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

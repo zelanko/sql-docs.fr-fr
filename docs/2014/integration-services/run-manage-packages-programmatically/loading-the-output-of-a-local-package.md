@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 843c5e8cbb857271d4cbd07288e24bfbd98019e3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176619"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Chargement de la sortie d'un package local
@@ -38,7 +38,7 @@ ms.locfileid: "78176619"
 
 2.  Dans le projet de développement, définissez une référence à `Microsoft.SqlServer.Dts.DtsClient` l’espace de noms en localisant l’assembly **Microsoft. SqlServer. Dts. DtsClient. dll**. Par défaut, cet assembly est installé dans **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Importez l’espace de noms dans votre code `Using` à l' [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` aide de l’instruction C# ou.
 
-3.  Dans votre code, créez un objet de type `DtsClient.DtsConnection` avec une chaîne de connexion qui contient les paramètres de ligne de commande requis par **dtexec. exe** pour exécuter le package. Pour plus d’informations, consultez l' [utilitaire dtexec](../packages/dtexec-utility.md). Ouvrez ensuite la connexion à l'aide de cette chaîne de connexion. Vous pouvez également vous servir de l’utilitaire **dtexecui** pour créer visuellement la chaîne de connexion nécessaire.
+3.  Dans votre code, créez un objet de type `DtsClient.DtsConnection` avec une chaîne de connexion qui contient les paramètres de ligne de commande requis par **dtexec. exe** pour exécuter le package. Pour plus d'informations, consultez [Utilitaire dtexec](../packages/dtexec-utility.md). Ouvrez ensuite la connexion à l'aide de cette chaîne de connexion. Vous pouvez également vous servir de l’utilitaire **dtexecui** pour créer visuellement la chaîne de connexion nécessaire.
 
     > [!NOTE]
     >  L'exemple de code montre le chargement du package à partir du système de fichiers en utilisant la syntaxe `/FILE <path and filename>`. Toutefois, vous pouvez également charger le package à partir de la base de données MSDB en utilisant la syntaxe `/SQL <package name>` ou à partir du magasin de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en utilisant la syntaxe `/DTS \<folder name>\<package name>`.
@@ -293,7 +293,7 @@ namespace DtsClientWParamCS
 }
 ```
 
-![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
 
 ## <a name="see-also"></a>Voir aussi
  [Comprendre les différences entre l’exécution locale et l’exécution distante et le](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md) [chargement et l’exécution d’un package local par](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md) programmation pour le [chargement et l’exécution d’un package distant](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)

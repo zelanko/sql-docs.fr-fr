@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175588"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurer les propriétés de comportement de table pour les rapports Power View (SSAS Tabulaire)
   Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.
 
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] diffère des autres applications de création de rapports en ceci qu'il groupe automatiquement les éléments lors de la conception de rapports en évaluant les colonnes que vous avez placées dans la liste des champs du rapport en fonction du format de présentation que vous utilisez. Dans la plupart des cas, le regroupement par défaut produit un résultat optimal. Mais pour certaines tables, en particulier celles qui contiennent des données de détail, le comportement de regroupement par défaut regroupe parfois des lignes qui ne devraient pas l'être. Pour ces tables, vous pouvez définir des propriétés qui modifient la manière dont les groupes sont évalués.
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] diffère des autres applications de création de rapports en ceci qu'il groupe automatiquement les éléments lors de la conception de rapports en évaluant les colonnes que vous avez placées dans la liste des champs du rapport en fonction du format de présentation que vous utilisez. Dans la plupart des cas, le regroupement par défaut produit un résultat optimal. Mais pour certaines tables, en particulier celles qui contiennent des données de détail, le comportement de regroupement par défaut regroupe parfois des lignes qui ne devraient pas l'être. Pour ces tables, vous pouvez définir des propriétés qui modifient la manière dont les groupes sont évalués.
 
  La définition des propriétés de comportement de table est recommandée pour les tables dans lesquelles les lignes individuelles sont particulièrement importantes, notamment les enregistrements d'employés ou de clients. Par opposition, parmi les tables qui ne profitent pas de ces propriétés, figurent celles qui agissent comme table de recherche (par exemple, une table de date, une table de catégorie de produit ou une table de service, où la table consiste en un nombre relativement réduit de lignes et de colonnes) ou les tables de synthèse contenant des lignes qui sont uniquement intéressantes une fois résumées (par exemple, les données de recensement regroupées par sexe, par âge ou par situation géographique). Pour les tables de recherche et de synthèse, le comportement de regroupement par défaut produit un résultat optimal.
 
@@ -32,16 +31,16 @@ ms.locfileid: "78175588"
 
  Les propriétés de comportement de table sont les suivantes :
 
--   **Identificateur de ligne** ─ spécifie une colonne qui contient uniquement des valeurs uniques, ce qui permet d’utiliser cette colonne comme clé de regroupement interne.
+-   **Identificateur de ligne** : spécifie une colonne qui contient seulement des valeurs uniques et permet l'utilisation de cette colonne comme clé de regroupement interne.
 
--   **Conserver les lignes uniques** ─ spécifie les colonnes qui fournissent des valeurs qui doivent être traitées comme uniques même s’il s’agit de doublons (par exemple, prénom et nom de l’employé, dans les cas où deux employés ou plus portent le même nom).
+-   **Conserver les lignes uniques** : spécifie les colonnes qui fournissent des valeurs qui doivent être traitées comme uniques même en cas de doublons (par exemple, prénom et nom de l’employé, dans le cas où deux employés ou plus portent le même nom).
 
 -   **Étiquette par défaut** : spécifie la colonne qui fournit un nom d’affichage pour représenter les données de ligne (par exemple, nom de l’employé dans un enregistrement d’employé).
 
--   **Image par défaut** ─ spécifie la colonne qui fournit une image représentant les données de ligne (par exemple, un ID de photo dans un enregistrement d’employé).
+-   **Image par défaut** : spécifie la colonne qui fournit une image représentant les données de ligne (par exemple, une pièce d’identité avec photo dans un enregistrement d’employé).
 
 > [!NOTE]
->  Consultez la section suivante pour considérer les optimisations de mise en page du point de vue d’un format de présentation particulier :  [Optimisation pour les dispositions spécifiques](#bkmk_optimizeforlayout).
+>   Consultez la section suivante pour considérer les optimisations de mise en page du point de vue d'un format de présentation particulier :  [Optimisation pour les dispositions spécifiques](#bkmk_optimizeforlayout).
 
 ## <a name="opening-the-table-behavior-dialog-box"></a>Ouverture de la boîte de dialogue Comportement de la table
 
@@ -87,7 +86,7 @@ ms.locfileid: "78175588"
 > [!NOTE]
 >  Les images peuvent provenir d'adresses URL pointant vers un fichier image sur un serveur Web, ou de données binaires incorporées dans le classeur. Si l'image est basée sur une URL, veillez à définir également la colonne comme type d'image afin que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] récupère l'image au lieu d'afficher l'URL comme données texte dans le rapport.
 
-##  <a name="bkmk_optimizeforlayout"></a>Optimisation pour les dispositions spécifiques
+##  <a name="optimizing-for-specific-layouts"></a><a name="bkmk_optimizeforlayout"></a> Optimisation pour les dispositions spécifiques
  Cette section décrit l'impact de la définition des propriétés de comportement de table du point de vue d'un format de présentation particulier, ainsi que les caractéristiques des données. Si vous essayez d'améliorer la présentation d'un rapport de matrice, vous pouvez par exemple utiliser ces informations pour apprendre à améliorer une présentation de matrice à l'aide des propriétés de comportement de table du modèle.
 
 ### <a name="images-are-missing"></a>Des images sont manquantes
@@ -113,11 +112,11 @@ ms.locfileid: "78175588"
 
  Comparez les images avant et après suivantes qui illustrent l'incidence de la définition de cette propriété sur une présentation en matrice.
 
- **Avant : regroupement par défaut en fonction des champs dans la matrice**
+ **Avant : regroupement par défaut en fonction des champs dans la matrice**
 
  ![Disposition de matrice avec regroupement par identificateur de ligne](../media/ssas-rptprop-matrixrowid.gif "Disposition de matrice avec regroupement par identificateur de ligne")
 
- **Après : regroupement en fonction de l’identificateur de ligne**
+ **Après : regroupement en fonction de l'identificateur de ligne**
 
  ![Disposition de matrice avec regroupement par identificateur de ligne](../media/ssas-rptprop-matrixrowid.gif "Disposition de matrice avec regroupement par identificateur de ligne")
 
@@ -126,11 +125,11 @@ ms.locfileid: "78175588"
 
  Comparez les images avant et après suivantes qui illustrent l'incidence de la définition de cette propriété sur une présentation en graphique. Il s'agit du même rapport, avec des champs et une présentation identiques. La seule différence est que l'image du bas affiche un rapport après définition de l' **Identificateur de ligne** sur la table Éléments.
 
- **Avant : regroupement par défaut en fonction des champs d’un graphique**
+ **Avant : regroupement par défaut en fonction des champs dans le graphique**
 
  ![Graphique basé sur le regroupement par défaut au niveau des champs](../media/ssas-rptprop-chartfieldgroup.gif "Graphique basé sur le regroupement par défaut au niveau des champs")
 
- **Après : regroupement en fonction de l’identificateur de ligne (l’identificateur de ligne devient l’axe)**
+ **Après : regroupement en fonction de l'identificateur de ligne (l'identificateur de ligne devient l'axe)**
 
  ![Graphique basé sur le regroupement par ID de ligne](../media/ssas-rptprop-chartrowid.gif "Graphique basé sur le regroupement par ID de ligne")
 

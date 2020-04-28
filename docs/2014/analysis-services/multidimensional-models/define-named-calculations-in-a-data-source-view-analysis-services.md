@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 435ef9a3b64b6a2b39a898bb0db0afaa5c79f828
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175744"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Définir des calculs nommés dans une vue de source de données (Analysis Services)
-  Un calcul nommé est une expression SQL représentée sous la forme d'une colonne calculée. Cette expression apparaît et se comporte comme une colonne dans la table. Un calcul nommé vous permet d'étendre le schéma relationnel des tables ou vues existantes dans une vue de source de données sans modifier les tables ou vues dans la source de données sous-jacente. Penchez-vous sur les exemples suivants :
+  Un calcul nommé est une expression SQL représentée sous la forme d'une colonne calculée. Cette expression apparaît et se comporte comme une colonne dans la table. Un calcul nommé vous permet d'étendre le schéma relationnel des tables ou vues existantes dans une vue de source de données sans modifier les tables ou vues dans la source de données sous-jacente. Penchez-vous sur les exemples suivants :
 
 -   Créez un seul calcul nommé dérivé de plusieurs colonnes dans une table de faits (par exemple, en créant le montant des taxes en multipliant un taux de taxe par un prix de vente).
 
@@ -66,7 +66,7 @@ FROM
      ![Capture d'écran du menu contextuel de l'espace de travail du diagramme](../media/ssas-olapdsv-diagram.gif "Capture d'écran du menu contextuel de l'espace de travail du diagramme")
 
     > [!NOTE]
-    >  Pour rechercher une table ou une vue, vous pouvez utiliser l’option **Rechercher une table** en cliquant sur le menu vue de **source de données** ou en cliquant avec le bouton droit dans une zone ouverte du volet **tables** ou **diagramme** .
+    >  Pour rechercher une table ou une vue, vous pouvez utiliser l’option **Rechercher une table** en cliquant sur le menu **Vue de source de données** ou en cliquant avec le bouton droit dans une zone ouverte du volet **Tables** ou **Diagramme** .
 
 4.  Dans la boîte de dialogue **Créer un calcul nommé** , procédez comme suit :
 

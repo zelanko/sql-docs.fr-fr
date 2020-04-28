@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175318"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Masquage et désactivation des hiérarchies d'attributs
@@ -49,25 +49,25 @@ ms.locfileid: "78175318"
 
 2.  Vérifiez si les hiérarchies d'attributs suivantes apparaissent dans la liste **Hiérarchie** :
 
-    -   **Taux de base**
+    -   **Base Rate**
 
-    -   **Date de naissance**
+    -   **Birth Date**
 
-    -   **ID de connexion**
+    -   **Nom d'accès**
 
-    -   **SSN du gestionnaire**
+    -   **Manager SSN**
 
     -   **N**
 
 3.  Affichez l'onglet **Structure de dimension** , puis sélectionnez les attributs suivants dans le volet **Attributs** . Vous pouvez sélectionner plusieurs mesures en cliquant sur chacune d'elles tout en maintenant enfoncée la touche CTRL :
 
-    -   **Taux de base**
+    -   **Base Rate**
 
-    -   **Date de naissance**
+    -   **Birth Date**
 
-    -   **ID de connexion**
+    -   **Nom d'accès**
 
-    -   **SSN du gestionnaire**
+    -   **Manager SSN**
 
     -   **N**
 
@@ -126,6 +126,6 @@ ms.locfileid: "78175318"
      Notez que les niveaux masqués, **Postal Code** et **Full Name**, sont visibles dans la hiérarchie définie par l’utilisateur.
 
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon
- [Tri des membres d'attribut sur la base d'un attribut secondaire](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)
+ [Tri des membres d’attribut sur la base d’un attribut secondaire](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)
 
 

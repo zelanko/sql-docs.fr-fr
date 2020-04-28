@@ -13,17 +13,17 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761533"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurer Distributed Replay pour Assistant Expérimentation de base de données
 
 Assistant Expérimentation de base de données (DEA) utilise les outils de Distributed Replay de l’installation SQL Server pour relire une trace capturée sur un environnement de test mis à niveau. Nous vous recommandons d’effectuer une série de tests à l’aide d’un petit fichier de trace avant d’effectuer une relecture complète afin de garantir la relecture correcte des requêtes.
 
-## <a name="distributed-replay-requirements"></a>Configuration requise pour la Distributed Replay
+## <a name="distributed-replay-requirements"></a>Configuration requise pour Distributed Replay
 
 - 78% supplémentaires d’espace disque dur sont nécessaires pour créer des fichiers IRF sur l’ordinateur contrôleur Distributed Replay.
 - 200 Mo ou 512 Mo correspond à la taille de survol de trace idéale pour capturer les traces de production ou de performances.

@@ -17,10 +17,10 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320000"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
@@ -51,7 +51,7 @@ sp_validate_replica_hosts_as_publishers
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null pour le paramètre * \@* de sortie redirected_publisher. Sinon, le serveur de publication redirigé associé est retourné, à la fois en cas de réussite et d'échec.  
@@ -61,7 +61,7 @@ sp_validate_replica_hosts_as_publishers
  Si la validation échoue, les erreurs appropriées sont générées.  **sp_validate_redirected_publisher** fait le meilleur effort pour signaler tous les problèmes et pas seulement le premier rencontré.  
   
 > [!NOTE]  
->  **sp_validate_replica_hosts_as_publishers** échoue avec l’erreur suivante lors de la validation des hôtes de réplica secondaire qui n’autorisent pas l’accès en lecture ou qui nécessitent la spécification d’une intention de lecture.  
+>  **sp_validate_replica_hosts_as_publishers** échoue avec l’erreur suivante lors de la validation des hôtes de réplica secondaire qui n’autorisent pas l’accès en lecture, ou nécessitent la spécification de l’intention de lecture.  
 >   
 >  Msg 21899, Niveau 11, État 1, Procédure **sp_hadr_verify_subscribers_at_publisher**, Ligne 109  
 >   
@@ -73,7 +73,7 @@ sp_validate_replica_hosts_as_publishers
  L’appelant doit être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** pour la base de données de distribution, ou être membre d’une liste d’accès à une publication pour une publication définie associée à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Procédures stockées de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  

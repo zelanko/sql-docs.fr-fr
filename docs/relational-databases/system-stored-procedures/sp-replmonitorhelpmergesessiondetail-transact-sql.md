@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321617"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
@@ -46,8 +46,8 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|Phase de la session de synchronisation, qui peut prendre l'une des valeurs suivantes :<br /><br /> **0** = ligne d’initialisation ou de résumé<br /><br /> **1** = téléchargement<br /><br /> **2** = téléchargement|  
 |**ArticleName**|**sysname**|Nom de l'article en cours de synchronisation. **ArticleName** contient également des informations de synthèse pour les lignes du jeu de résultats qui ne représentent pas les détails de l’article.|  
-|**PercentComplete**|**sépar**|Indique le pourcentage de modifications appliqué dans une ligne de détails d'article donnée pour des sessions en cours d'exécution ou ayant échoué.|  
-|**RelativeCost**|**sépar**|Indique le temps consacré à la synchronisation de l'article en pourcentage de la durée de synchronisation totale pour la session.|  
+|**PourcentageAchevé**|**decimal**|Indique le pourcentage de modifications appliqué dans une ligne de détails d'article donnée pour des sessions en cours d'exécution ou ayant échoué.|  
+|**RelativeCost**|**decimal**|Indique le temps consacré à la synchronisation de l'article en pourcentage de la durée de synchronisation totale pour la session.|  
 |**Durée**|**int**|Durée de la session de l'Agent.|  
 |**Insère**|**int**|Nombre d'insertions dans une session.|  
 |**Mises à jour**|**int**|Nombre de mises à jour dans une session.|  

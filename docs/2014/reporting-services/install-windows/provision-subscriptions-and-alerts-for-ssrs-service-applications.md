@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1dbe2fbd89042ceed1dbe17a2e5e68ce74bba72d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176949"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Configurer les abonnements et les alertes pour les applications de service de SSRS
@@ -59,7 +59,7 @@ ms.locfileid: "78176949"
 
 5.  Cliquez sur le bouton **OK** .
 
-##  <a name="bkmk_download"></a> Pour télécharger le script Transact-SQL
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> Pour télécharger le script Transact-SQL
 
 1.  Depuis l’Administration centrale de SharePoint, dans le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service**.
 

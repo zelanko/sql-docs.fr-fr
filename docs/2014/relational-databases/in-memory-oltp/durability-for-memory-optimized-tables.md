@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175946"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
@@ -43,7 +43,7 @@ ms.locfileid: "78175946"
 ## <a name="populating-data-and-delta-files"></a>Remplissage des fichiers de données et des fichiers delta
  Les fichiers de données et delta sont remplis par un thread d'arrière-plan appelé point de contrôle hors connexion. Ce thread lit les enregistrements du journal des transactions générés par les transactions validées sur les tables mémoire optimisées et ajoute des informations concernant les lignes insérées et supprimées dans les fichiers de données et delta appropriés. Contrairement aux tables sur disque où les pages de données/index sont vidées avec des E/S aléatoires lorsque le point de contrôle est effectué, la persistance de la table optimisée en mémoire est une opération en arrière-plan continue. Plusieurs fichiers delta sont accédés car une transaction peut supprimer ou mettre à jour toute ligne ayant été insérée par une transaction précédente. Les informations de suppression sont toujours ajoutées à la fin du fichier delta. Par exemple, une transaction avec un horodateur de validation de 600 insère une nouvelle ligne et supprime les lignes insérées par les transactions ayant un horodateur de validation de 150, 250 et 450, comme le montre l'illustration ci-après. Les quatre opérations d'E/S de fichier (trois pour les lignes supprimées et une pour les nouvelles lignes insérées) sont des opérations Append-Only sur les fichiers de données et delta correspondants.
 
- ![Lecture des enregistrements du journal des tables optimisées en mémoire.](../../database-engine/media/read-logs-hekaton.gif "Lecture des enregistrements du journal des tables optimisées en mémoire.")
+ ![Lecture des enregistrements de journal pour les tables à mémoire optimisée.](../../database-engine/media/read-logs-hekaton.gif "Lecture des enregistrements de journal pour les tables à mémoire optimisée.")
 
 ## <a name="accessing-data-and-delta-files"></a>Accès aux fichiers de données et aux fichiers delta
  Les paires de fichiers de données et delta sont accessibles dans les cas suivants.
@@ -79,13 +79,12 @@ ms.locfileid: "78175946"
 
  Dans l'exemple ci-dessous, le groupe de fichiers de la table mémoire optimisée contient quatre paires de fichiers de données et delta ayant l'horodateur 500 et contenant des données issues de transactions précédentes. Par exemple, les lignes du premier fichier de données correspondent aux transactions avec un horodateur supérieur à 100 et inférieur ou égal à 200 ; alternativement représenté comme (100, 200]. Le deuxième et le troisième fichiers de données affichent un taux de remplissage inférieur à 50 % après prise en compte des lignes marquées comme supprimées. L'opération de fusion associe ces deux paires de fichiers de point de contrôle et crée une paire de fichiers de point de contrôle contenant des transactions avec un horodateur supérieur à 200 et inférieur ou égal à 400, qui est la plage combinée de ces deux paires de fichiers de point de contrôle. Vous voyez une autre paire de fichiers de point de contrôle avec une plage (500, 600] et un fichier delta non vide pour la plage de transactions (200, 400] indique que l'opération de fusion peut être effectuée en même temps que l'activité transactionnelle comprenant la suppression de plus de lignes des paires de fichiers de point de contrôle source.
 
- ![Le diagramme affiche le groupe de fichiers de table optimisé en mémoire](../../database-engine/media/storagediagram-hekaton.png "Le diagramme affiche le groupe de fichiers de table optimisé en mémoire")
+ ![Le diagramme présente le groupe de fichiers de table à mémoire optimisée](../../database-engine/media/storagediagram-hekaton.png "Le diagramme présente le groupe de fichiers de table à mémoire optimisée")
 
  Un thread d'arrière-plan évalue toutes les paires de fichiers de point de contrôle fermées à l'aide d'une stratégie de fusion, puis initie une ou plusieurs demandes de fusion pour les paires de fichiers de point de contrôle qualifiées. Ces demandes de fusion sont traitées par le thread de point de contrôle hors connexion. L'évaluation de la stratégie de fusion est effectuée périodiquement et lorsqu'un point de contrôle est fermé.
 
-### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Stratégie de fusion
- 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implémente la stratégie de fusion suivante :
+### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Stratégie de fusion
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implémente la stratégie de fusion suivante :
 
 -   Une fusion est planifiée si 2 ou plus paires de fichiers de point de contrôle peuvent être consolidées, après avoir tenu compte des lignes supprimées, de sorte que les lignes résultantes puissent tenir dans une paire de fichiers de point de contrôle de taille idéale. La taille idéale d'une paire de fichiers de point de contrôle est déterminée comme suit :
 
@@ -115,6 +114,6 @@ ms.locfileid: "78175946"
  Forcez manuellement le point de contrôle, puis la sauvegarde de fichier journal pour accélérer l'opération de garbage collection, mais cela ajoutera 5 paires de fichiers de point de contrôle vides (5 paires de fichiers de données/delta avec chacune une taille de fichier de données de 128 Mo). Dans les scénarios de production, les points de contrôle automatiques et les sauvegardes de fichier journal effectuées dans le cadre de la stratégie de sauvegarde basculent sans problème les paires de fichiers de point de contrôle vers ces phases sans aucune intervention manuelle. L'impact du processus de garbage collection est le suivant : les bases de données avec des tables mémoire optimisées peuvent avoir une plus grande taille de stockage comparée à leur taille en mémoire. Il n'est pas rare que les paires de fichiers de point de contrôle soient jusqu'à quatre fois plus volumineuses que les tables mémoire optimisées durables en mémoire.
 
 ## <a name="see-also"></a>Voir aussi
- [Création et gestion du stockage des objets à mémoire optimisée](creating-and-managing-storage-for-memory-optimized-objects.md)
+ [Création et gestion du stockage des objets mémoire optimisés](creating-and-managing-storage-for-memory-optimized-objects.md)
 
 

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb1a0a862d3e6bf2a1d4e4361e2151c6ee4bf843
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176849"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Contrôle des en-têtes de ligne et de colonne (Générateur de rapports et SSRS)
@@ -40,18 +40,18 @@ ms.locfileid: "78176849"
 
 -   **Dans la définition de rapport** Chaque ligne ou colonne dans une définition de région de données de tableau matriciel est un membre de tableau matriciel d’un groupe de lignes ou de colonnes spécifique. Un membre de tableau matriciel est statique ou dynamique. Un membre de tableau matriciel statique contient des étiquettes ou des sous-totaux et se répète une fois par groupe. Un membre de tableau matriciel dynamique contient des valeurs de groupe et se répète une fois par valeur unique d'un groupe, également appelé instance de groupe.
 
--   **Sur l’aire de conception** Sur l’aire de conception, les traits en pointillés divisent une région de données de tableau matriciel en quatre zones. Chaque cellule d'une zone de région de données de tableau matriciel est organisée en lignes et colonnes. Les lignes et colonnes sont associées aux groupes, notamment le groupe de détails. Pour une région de données de tableau matriciel sélectionnée, les poignées de ligne et de colonne ainsi que les barres de surbrillance indiquent l'appartenance aux groupes. Les cellules dans la zone du groupe de lignes ou de colonnes représentent les en-têtes de groupes pour les membres de tableau matriciel. Une seule ligne ou colonne peut être associée à plusieurs groupes.
+-   **Sur l’aire de conception** Sur l’aire de conception, des traits en pointillés divisent une région de données de tableau matriciel en quatre zones. Chaque cellule d'une zone de région de données de tableau matriciel est organisée en lignes et colonnes. Les lignes et colonnes sont associées aux groupes, notamment le groupe de détails. Pour une région de données de tableau matriciel sélectionnée, les poignées de ligne et de colonne ainsi que les barres de surbrillance indiquent l'appartenance aux groupes. Les cellules dans la zone du groupe de lignes ou de colonnes représentent les en-têtes de groupes pour les membres de tableau matriciel. Une seule ligne ou colonne peut être associée à plusieurs groupes.
 
      Pour plus d’informations, consultez [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) et [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).
 
  Pour les régions de données de tableau matriciel avec des zones de groupe de lignes ou de colonnes, contrôlez les lignes et colonnes associées en définissant des propriétés sur la région de données de tableau matriciel. Dans tous les autres cas, contrôlez les lignes et colonnes en définissant des propriétés dans le volet Propriétés pour le membre de tableau matriciel sélectionné. Pour obtenir des instructions détaillées, consultez [Afficher des en-têtes de ligne et de colonne sur plusieurs pages &#40;Générateur de rapports et SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) et [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;Générateur de rapports et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).
 
-##  <a name="Top"></a> Exemples
+##  <a name="examples"></a><a name="Top"></a> Exemples
  Les exemples les plus courants de régions de données de tableau matriciel sont relatifs à une matrice, une table sans groupes, une table avec un groupe de lignes et un en-tête de groupe de lignes, et une table avec un groupe de lignes mais sans en-tête de groupe de lignes. Pour contrôler la façon de répéter ou de figer les en-têtes, vous devez déterminer si les lignes ou colonnes que vous souhaitez contrôler sont associées à un en-tête de groupe dans la zone de groupes de lignes ou de groupes de colonnes.
 
  Les sections suivantes fournissent des exemples pour les mises en page courantes d'une région de données de tableau matriciel :
 
--   [Matrice](#Matrix)
+-   [Comparatif](#Matrix)
 
 -   [Table sans groupes](#TableNoGroups)
 
@@ -59,7 +59,7 @@ ms.locfileid: "78176849"
 
 -   [Table avec groupes de lignes mais sans zone de groupe de lignes](#TableRowGroupsNoGroupHeader)
 
-###  <a name="Matrix"></a> Matrice
+###  <a name="matrix"></a><a name="Matrix"></a>Comparatif
  Par défaut, une matrice simple possède un groupe de lignes et un groupe de colonnes. La figure ci-dessous illustre une matrice avec un groupe de lignes basé sur la catégorie et un groupe de colonnes basé sur la géographie :
 
  ![Matrice, ligne Category et groupe de colonnes Geography](../media/rs-basicmatrixdesign.gif "Matrice, ligne Category et groupe de colonnes Geography")
@@ -74,7 +74,7 @@ ms.locfileid: "78176849"
 
  [Retour au début](#Top)
 
-###  <a name="TableNoGroups"></a>Table sans groupes de lignes
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a>Table sans groupes de lignes
  Par défaut, une table simple sans groupes inclut le groupe de détails. La figure ci-dessous illustre une table qui affiche la catégorie, le numéro de commande et les données de ventes :
 
  ![Conception, table avec une ligne statique, une ligne dynamique](../media/rs-tableheaderstaticdesign.gif "Conception, table avec une ligne statique, une ligne dynamique")
@@ -95,7 +95,7 @@ ms.locfileid: "78176849"
 
  [Retour au début](#Top)
 
-###  <a name="TableRowGroupsGroupHeader"></a>Table avec groupes de lignes et zone de groupe de lignes
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a>Table avec groupes de lignes et zone de groupe de lignes
  Si vous ajoutez un groupe de lignes à une table simple, une zone de groupe de lignes est ajoutée à la table sur l'aire de conception. La figure ci-dessous illustre une table avec un groupe de lignes basé sur la catégorie :
 
  ![Conception, table avec un groupe de lignes et détails](../media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Conception, table avec un groupe de lignes et détails")
@@ -116,7 +116,7 @@ ms.locfileid: "78176849"
 
  [Retour au début](#Top)
 
-###  <a name="TableRowGroupsNoGroupHeader"></a>Table avec groupes de lignes et sans zone de groupe de lignes
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a>Table avec groupes de lignes et sans zone de groupe de lignes
  Il existe plusieurs cas où une table peut avoir des groupes de lignes mais aucune zone de groupe de lignes. Cette situation se produit par exemple dans les deux cas suivants :
 
 -   Démarrez avec une table avec des groupes de lignes et une zone de groupe de lignes, puis supprimez les colonnes de la zone de groupe de lignes. Supprimez uniquement les colonnes et non les groupes. Par exemple, vous pouvez choisir une grille simple pour le format de la table.
@@ -139,7 +139,7 @@ ms.locfileid: "78176849"
 
  ![Groupes de lignes, avancé, aucun en-tête de groupe.](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Groupes de lignes, avancé, aucun en-tête de groupe.")
 
- Dans le volet Groupes de lignes, les membres de tableau matriciel suivants sont répertoriés : (**Statique**), (Catégorie), (**Statique**) et (**Détails**). Pour répéter ou figer les en-têtes de colonnes, sélectionnez le membre de tableau matriciel (**statique**) supérieur et définissez les propriétés dans le volet Propriétés.
+ Dans le volet Groupes de lignes, les membres de tableau matriciel suivants sont répertoriés : (**Statique**), (Catégorie), (**Statique**) et (**Détails**). Pour répéter ou figer les en-têtes de colonne, sélectionnez le membre de tableau matriciel (**Statique**) supérieur et définissez les propriétés dans le volet Propriétés.
 
  [Retour au début](#Top)
 

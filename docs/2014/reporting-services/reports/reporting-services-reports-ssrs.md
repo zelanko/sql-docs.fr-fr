@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9697d5a53b2aac0d951445206adc4c4f30e5385
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177074"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Rapports Reporting Services (SSRS)
@@ -47,14 +47,14 @@ ms.locfileid: "78177074"
 
  ![rs_GettingStartedReport](../media/rs-gettingstartedreport.gif "rs_GettingStartedReport")
 
-##  <a name="bkmk_StagesSummary"></a>Étapes du traitement des rapports
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Étapes du traitement des rapports
  Lorsque vous créez un rapport, vous définissez un fichier de définition de rapport (.rdl) au format XML. Ce fichier contient toutes les informations nécessaires pour combiner les données et la mise en page du rapport par le processeur de rapports. Lorsque vous affichez un rapport, le rapport passe par les étapes suivantes :
 
 -   **Compilation.** Évalue les expressions dans la définition de rapport et stocke le format intermédiaire compilé en interne sur le serveur de rapports.
 
--   **Traitement.** Exécute les requêtes de dataset, puis combine le format intermédiaire avec les données et la mise en page.
+-   **Traiter.** Exécute les requêtes de dataset, puis combine le format intermédiaire avec les données et la mise en page.
 
--   **Rendu.** Envoie le rapport traité à une extension de rendu pour déterminer la quantité d'informations pouvant tenir sur chaque page et crée le rapport paginé.
+-   **Crée.** Envoie le rapport traité à une extension de rendu pour déterminer la quantité d'informations pouvant tenir sur chaque page et crée le rapport paginé.
 
 -   **Exportation (facultatif).** Exporte le rapport vers un autre format de fichier.
 
@@ -126,11 +126,11 @@ ms.locfileid: "78177074"
 
 -   **Navigateur.**  Utilisez le service Web Report Server ou le site SharePoint pour afficher les rapports publiés. Sur un site SharePoint, vous pouvez également configurer un composant WebPart pour afficher les rapports publiés. Pour plus d’informations, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md), [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md) et [Accès URL &#40;SSRS&#41;](../url-access-ssrs.md).
 
--   **Remise.**  Configurez un abonnement pour remettre les rapports aux personnes souhaitant les lire dans un dossier de messagerie ou dans un dossier partagé.  Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).
+-   **Envoi.**  Configurez un abonnement pour remettre les rapports aux personnes souhaitant les lire dans un dossier de messagerie ou dans un dossier partagé.  Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).
 
--   **Exportation.**  Dans la barre d'outils de la visionneuse de rapports, un lecteur du rapport peut exporter un rapport dans un autre format de fichier. Les formats de fichier d'exportation peuvent être configurés par l'administrateur du serveur de rapports. Pour plus d’informations, consultez [Exportation des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).
+-   **Exporter.**  Dans la barre d'outils de la visionneuse de rapports, un lecteur du rapport peut exporter un rapport dans un autre format de fichier. Les formats de fichier d'exportation peuvent être configurés par l'administrateur du serveur de rapports. Pour plus d’informations, consultez [Exportation des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).
 
--   **Impression.**  Un lecteur de rapport peut imprimer un rapport ou des pages d'un rapport selon la façon dont il est affiché. Pour plus d’informations, consultez [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).
+-   **Étendue.**  Un lecteur de rapport peut imprimer un rapport ou des pages d'un rapport selon la façon dont il est affiché. Pour plus d’informations, consultez [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).
 
 -   **Application Web ou Windows Form.**  Utilisez Visual Studio pour développer une application AJAX ASP.NET ou Windows Form qui héberge le contrôle Visionneuse de rapports. Le contrôle peut indiquer les rapports publiés sur un serveur de rapports. Pour plus d'informations, consultez [Rapports Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).
 
@@ -139,11 +139,11 @@ ms.locfileid: "78177074"
 
 -   **Sources de données.** Les sources de données incorporées et partagées sont gérées indépendamment de la définition de rapport.
 
--   **DataSets.**  Les datasets partagés sont gérés indépendamment de la définition de rapport.
+-   **Jeux.**  Les datasets partagés sont gérés indépendamment de la définition de rapport.
 
 -   **Paramètres.**  Les paramètres sont gérés indépendamment de la définition de rapport. Une fois les paramètres modifiés sur le serveur de rapports, les clients de création de rapports ne peuvent pas publier sur les modifications effectuées sur le serveur.
 
--   **Ressources.**  Les images et les données spatiales dans les fichiers de forme ESRI sont des ressources qui peuvent être publiées et gérées indépendamment de la définition de rapport.
+-   **Situées.**  Les images et les données spatiales dans les fichiers de forme ESRI sont des ressources qui peuvent être publiées et gérées indépendamment de la définition de rapport.
 
 -   **Cache de rapports.**  En planifiant l'exécution de rapports volumineux durant les heures creuses, vous diminuez l'impact de leur traitement sur le serveur de rapports pendant les heures d'activité principale de l'entreprise.
 
@@ -153,7 +153,7 @@ ms.locfileid: "78177074"
 
  Pour plus d’informations sur les performances, consultez [Performances, instantanés, mise en cache &#40;Reporting Services&#41;](../report-server/performance-snapshots-caching-reporting-services.md).
 
-##  <a name="bkmk_SecureReportsSummary"></a>Sécuriser les rapports
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Sécuriser les rapports
  Pour sécuriser un rapport :
 
 -   Auprès de l'administrateur du serveur de rapports, identifiez le système d'autorisation et d'authentification utilisé pour votre installation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Par défaut, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise l'authentification Windows, la sécurité intégrée, et l'attribution de rôle pour contrôler l'accès aux rapports publiés. Pour plus d’informations, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) et [Sécurité et protection de Reporting Services](../security/reporting-services-security-and-protection.md).
@@ -164,7 +164,7 @@ ms.locfileid: "78177074"
 ## <a name="upgrade-reports"></a>Mettre à niveau des rapports
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] prend en charge plusieurs versions des définitions de rapports, serveurs de rapports et sites SharePoint. Pour mettre à niveau un rapport :
 
--   Mettez à niveau une installation du serveur de rapports. Les rapports compilés stockés sur le serveur de rapports sont automatiquement mis à niveau lors de la première utilisation. La définition de rapport (.rdl) n'est pas modifiée. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
+-   Mettez à niveau une installation du serveur de rapports. Les rapports compilés stockés sur le serveur de rapports sont automatiquement mis à niveau lors de la première utilisation. La définition de rapport (.rdl) n'est pas modifiée. Pour plus d’informations, consultez [mettre à niveau et migrer Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
 
 -   Ouvrez u rapport dans un environnement de création de rapports. La définition de rapport est mise à niveau dans la plupart des cas. Pour plus d’informations, consultez [Mettre à niveau des rapports](../install-windows/upgrade-reports.md) et [Déploiement et prise en charge des versions dans SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).
 

@@ -19,10 +19,10 @@ ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6ed3a127d2527b35c301ab7f3d05305c4f8d2ced
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322125"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
@@ -42,8 +42,8 @@ ms.locfileid: "75322125"
 |originator_id|**varbinary(16)**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**int**|Durée, en jours, du stockage des métadonnées dans les tables en conflit.|  
 |peer_subscriptions|**XML**|Informations relatives au nœud ayant répondu à la demande.|  
-|progress_phase|**nvarchar (32)**|Identifie la phase actuelle du traitement en utilisant l'une des valeurs suivantes :<br /><br /> Démarré<br /><br /> Version homologue collectée<br /><br /> État collecté|  
-|modified_date|**DATETIME**|Date et heure d'achèvement d'une phase.|  
+|progress_phase|**nvarchar(32)**|Identifie la phase actuelle du traitement en utilisant l'une des valeurs suivantes :<br /><br /> Démarré<br /><br /> Version homologue collectée<br /><br /> État collecté|  
+|modified_date|**datetime**|Date et heure d'achèvement d'une phase.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a92d967e0b37f1143c9fd37a0d5ee8154ac21db
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177119"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modification de l’extension de remise par défaut de Reporting Services
@@ -29,7 +29,7 @@ ms.locfileid: "78177119"
 ## <a name="default-native-mode-report-server-configuration"></a>Configuration de serveur de rapports en mode natif par défaut
  L’ordre d’une extension de remise dans la liste **Remis par** du Gestionnaire de rapports dépend de l’ordre des entrées d’extension de remise dans le fichier **RSReportServer.config** . Par exemple, l'image suivante présente la messagerie au début de la liste et elle est sélectionnée par défaut.
 
- ![liste par défaut des extensions de remise](../media/ssrs-default-delivery.png "liste des extensions de remise par défaut")
+ ![liste par défaut des extensions de remise](../media/ssrs-default-delivery.png "liste par défaut des extensions de remise")
 
  Voici la section par défaut de **RSReportServer.config** qui contrôle l’extension de remise par défaut et l’ordre d’apparition dans le Gestionnaire de rapports. Notez que la messagerie électronique apparaît en premier dans le fichier, elle est définie comme valeur par défaut.
 

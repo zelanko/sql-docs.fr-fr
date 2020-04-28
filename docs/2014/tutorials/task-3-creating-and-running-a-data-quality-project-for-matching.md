@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171768"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tâche 3 : Création et exécution d'un projet de qualité des données pour la mise en correspondance
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tâche 3 : Création et exécution d’un projet de qualité des données pour la mise en correspondance
   Dans cette tâche, vous allez créer un projet de qualité des données pour l'activité de correspondance, puis exécuter le processus de mise en correspondance sur les données des fournisseurs nettoyées pour supprimer les doublons.
 
 1.  Sur la page principale du **client DQS**, cliquez sur **nouveau projet de qualité des données**.
@@ -47,6 +47,6 @@ ms.locfileid: "78171768"
 12. Cliquez sur **suivant** pour passer à la page **Exporter** .
 
 ## <a name="next-step"></a>étape suivante
- [Tâche 4 (Facultatif) : Exportation des résultats de l'activité de mise en correspondance dans un fichier Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
+ [Tâche 4 : Exportation des résultats de l’activité de mise en correspondance dans un fichier Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
 
 

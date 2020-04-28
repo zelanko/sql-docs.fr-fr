@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320776"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
@@ -62,8 +62,8 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|ID de la mesure de performance de réplication qui peut correspondre à l'une des valeurs suivantes.<br /><br /> **1expiration** : contrôle l’expiration imminente des abonnements aux publications transactionnelles.<br /><br /> **2latency** : analyse les performances des abonnements aux publications transactionnelles.<br /><br /> **4mergeexpiration** : contrôle l’expiration imminente des abonnements aux publications de fusion.<br /><br /> **5mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).<br /><br /> **6mergefastrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à bande passante élevée (LAN).<br /><br /> **7mergefastrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à bande passante élevée (LAN).<br /><br /> **8mergeslowrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
-|**bonhomme**|**sysname**|Nom de la mesure de performance de réplication.|  
-|**ajoutée**|**int**|Valeur seuil de la mesure de performance.|  
+|**title**|**sysname**|Nom de la mesure de performance de réplication.|  
+|**value**|**int**|Valeur seuil de la mesure de performance.|  
 |**shouldalert**|**bit**|Indique si une alerte doit être générée lorsque la mesure dépasse le seuil défini pour cette publication ; la valeur **1** indique qu’une alerte doit être déclenchée.|  
 |**IsEnabled**|**bit**|Indique si l’analyse est activée pour cette mesure de performance de réplication pour cette publication ; la valeur **1** indique que l’analyse est activée.|  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175348"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Utilisation d'index columnstore non cluster
@@ -28,14 +28,14 @@ ms.locfileid: "78175348"
 
 -   [Créer un index columnstore non cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)
 
--   [Modifier les données dans un index ColumnStore non cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
+-   [Changer les données dans un index columnstore non cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
 
-##  <a name="load"></a>Créer un index ColumnStore non cluster
+##  <a name="create-a-nonclustered-columnstore-index"></a><a name="load"></a>Créer un index ColumnStore non cluster
  Pour charger des données dans un index ColumnStore non cluster, chargez d’abord les données dans une table rowstore traditionnelle stockée en tant que segment de mémoire ou index cluster, puis utilisez [Create COLUMNSTORE index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) pour créer un index ColumnStore.
 
  ![Chargement de données dans un index columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Chargement de données dans un index columnstore")
 
-##  <a name="change"></a>Modifier les données dans un index ColumnStore non cluster
+##  <a name="change-the-data-in-a-nonclustered-columnstore-index"></a><a name="change"></a>Modifier les données dans un index ColumnStore non cluster
  Une fois que vous avez créé un index columnstore non cluster sur une table, vous ne pouvez pas modifier directement les données dans cette table. Une requête avec INSERT, UPDATE, DELETE ou MERGE échouera et renverra un message d'erreur. Pour ajouter ou modifier les données de la table, effectuez les tâches suivantes :
 
 -   Désactivez l’index ColumnStore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Par exemple :

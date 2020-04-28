@@ -11,16 +11,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 295372026ec0a1eed0abb4e62a10bc56fd279d56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76910212"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA pour Oracle (OracleToSQL)
 Ce chapitre décrit les nouvelles fonctionnalités de l’interface utilisateur SSMA.  
   
-## <a name="layouts"></a>Mises en forme  
+## <a name="layouts"></a>Dispositions  
 Cette fonctionnalité vous permet de choisir l’un des deux déploiements Windows prédéfinis ou de créer votre propre disposition. Pour accéder au sous-menu disposition, dans le menu Affichage, pointez sur dispositions. Vous pouvez choisir l’une des dispositions existantes, ajouter une nouvelle disposition ou gérer des dispositions.  
   
 ### <a name="add-current-layout"></a>Ajouter la disposition actuelle  
@@ -48,7 +48,7 @@ Pour ouvrir la boîte de dialogue gérer les dispositions, dans le menu Affichag
 ## <a name="bookmarks"></a>Signets  
 Cette fonctionnalité vous permet de définir un ou plusieurs signets dans le code source ou cible, de trouver rapidement un signet à l’aide de raccourcis, de gérer les signets avec une boîte de dialogue conviviale.  
   
-### <a name="toggle-bookmark"></a>Activer/désactiver le signet  
+### <a name="toggle-bookmark"></a>Activer/Désactiver le signet  
 Vous pouvez définir/supprimer un signet des manières suivantes :  
   
 -   Bouton Activer/désactiver le signet par-dessus la fenêtre SQL source ou cible  

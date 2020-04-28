@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc23747a13ee2e5b126b7e57ba7121878d05643d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176469"
 ---
 # <a name="precedence-constraints"></a>Contraintes de précédence
@@ -29,7 +29,7 @@ ms.locfileid: "78176469"
 
  Une contrainte de précédence lie deux exécutables : l'exécutable de précédence et l'exécutable contraint. L'exécutable de précédence s'exécute avant l'exécutable contraint et le résultat de l'exécution de l'exécutable de précédence peut déterminer si l'exécutable contraint s'exécute. Le schéma suivant illustre deux exécutables liés par une contrainte de précédence.
 
- ![Exécutables connectés par le biais d’une contrainte de précédence](../media/ssis-pcsimple.gif "Exécutables connectés par le biais d'une contrainte de précédence")
+ ![Exécutables connectés par le biais d’une contrainte de précédence](../media/ssis-pcsimple.gif "Exécutables connectés par le biais d’une contrainte de précédence")
 
  Dans un flux de contrôle linéaire, c'est-à-dire sans branchement, les contraintes de précédence déterminent à elles seules la séquence d'exécution des tâches. Dans un flux de contrôle avec branchements, le moteur d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] détermine l'ordre d'exécution des tâches et des conteneurs qui suivent immédiatement le branchement. Le moteur d'exécution détermine également l'ordre d'exécution des flux de travail non connectés dans un flux de contrôle.
 

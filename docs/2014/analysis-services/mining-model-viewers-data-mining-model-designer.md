@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175803"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visionneuses de modèle d'exploration de données (Concepteur de modèle d'exploration de données)
@@ -27,11 +27,11 @@ ms.locfileid: "78175803"
  Pour connaître la procédure pas à pas d’utilisation de chaque visionneuse, consultez [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md).
 
 ## <a name="common-options"></a>Options courantes
- **Actualiser le contenu de la visionneuse** Rechargez le modèle d’exploration de données dans la visionneuse.
+ **Actualiser le contenu de l'observateur** Recharge le modèle d'exploration de données dans la visionneuse.
 
- **Modèle d’exploration de données** Choisissez un modèle d’exploration de données à afficher qui est contenu dans la structure d’exploration de données actuelle. Le modèle d'exploration de données s'ouvre tout d'abord dans sa visionneuse personnalisée associée.
+ **Modèle d'exploration de données** Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre tout d'abord dans sa visionneuse personnalisée associée.
 
- **Visionneuse** Choisissez une visionneuse à utiliser pour explorer le modèle d’exploration de données sélectionné. Cette liste inclut les visionneuses [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournies par pour chaque modèle d’exploration [!INCLUDE[msCoName](../includes/msconame-md.md)] de données, la visionneuse de contenu d’exploration de données et les visionneuses de plug-in.
+ **Visionneuse** Choisissez la visionneuse à utiliser pour explorer le modèle d'exploration de données sélectionné. Cette liste inclut les visionneuses [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournies par pour chaque modèle d’exploration [!INCLUDE[msCoName](../includes/msconame-md.md)] de données, la visionneuse de contenu d’exploration de données et les visionneuses de plug-in.
 
  Le diagramme suivant représente une visionneuse personnalisée et la visionneuse générique pour le même modèle.
 

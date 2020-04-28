@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c7b827440609bc2de5b75fbeedbf441fa2a9d63
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176789"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "78176789"
 
  Dans cette illustration, la zone de texte proprement dite a une bordure ; par ailleurs, l'ensemble du texte figure dans la même zone de texte mais le texte comporte diverses mises en forme.
 
- Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).
+ Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]

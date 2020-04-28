@@ -16,14 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76928027"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd (applet de commande)
-  **Invoke-Sqlcmd** est une [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applet de commande qui exécute des scripts contenant des instructions des[!INCLUDE[tsql](../includes/tsql-md.md)] langages (et XQuery) et des commandes prises en charge par l’utilitaire **sqlcmd** .  
+  **Invoke-Sqlcmd** est une applet de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui exécute des scripts contenant des instructions des langages [!INCLUDE[tsql](../includes/tsql-md.md)] et XQuery ainsi que les commandes prises en charge par l’utilitaire **sqlcmd**.  
   
 ## <a name="using-invoke-sqlcmd"></a>Utilisation d'Invoke-Sqlcmd  
  L’applet de commande **Invoke-Sqlcmd** vous permet d’exécuter vos fichiers de script **sqlcmd** dans un environnement Windows PowerShell. La plupart des fonctionnalités offertes avec **sqlcmd** sont également disponibles avec **Invoke-Sqlcmd**.  
@@ -89,13 +89,13 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
  Invoke-Sqlcmd affiche un avertissement lorsqu'il utilise le contexte de base de données du chemin d'accès. Vous pouvez utiliser le paramètre -SuppressProviderContextWarning pour désactiver le message d'avertissement. Vous pouvez utiliser le paramètre -IgnoreProviderContext pour indiquer à Invoke-Sqlcmd de toujours utiliser la base de données par défaut pour la connexion.  
   
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Comparaison d'Invoke-Sqlcmd et de l'utilitaire sqlcmd  
- **Invoke-Sqlcmd** peut être utilisé pour exécuter un grand nombre des scripts qui peuvent être exécutés à l’aide de l’utilitaire **sqlcmd** . Toutefois, **Invoke-Sqlcmd** s’exécute dans un environnement Windows PowerShell différent de l’environnement d’invite de commandes dans lequel **sqlcmd** est exécuté. Le comportement d’ **Invoke-Sqlcmd** a été modifié pour permettre son fonctionnement dans un environnement Windows PowerShell.  
+ **Invoke-Sqlcmd** peut être utilisé pour exécuter un grand nombre des scripts pris en charge par l’utilitaire **sqlcmd** . Toutefois, **Invoke-Sqlcmd** s’exécute dans un environnement Windows PowerShell différent de l’environnement d’invite de commandes dans lequel **sqlcmd** est exécuté. Le comportement d’ **Invoke-Sqlcmd** a été modifié pour permettre son fonctionnement dans un environnement Windows PowerShell.  
   
- Les commandes **sqlcmd** ne sont pas toutes implémentées dans **Invoke-Sqlcmd**. Les commandes **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**et **:serverlist**, par exemple, ne sont pas prises en charge.  
+ Les commandes **sqlcmd** ne sont pas toutes implémentées dans **Invoke-Sqlcmd**. Les commandes qui ne sont pas implémentées sont les suivantes : **:!!**, **: Connect**, **: Error**, **: out**, **: Ed**, **: List**, **: listvar**, **: Reset**, **:p erftrace**et **: ServerList**.  
   
  **Invoke-Sqlcmd** n’initialise pas l’environnement **sqlcmd** ou les variables de script telles que SQLCMDDBNAME ou SQLCMDWORKSTATION.  
   
- **Invoke-Sqlcmd** n’affiche pas les messages, tels que la sortie des instructions print, sauf si vous spécifiez le paramètre commun Windows PowerShell **-Verbose** . Par exemple :  
+ **Invoke-Sqlcmd** n’affiche pas les messages, tels que la sortie des instructions PRINT, sauf si vous spécifiez le paramètre commun Windows PowerShell **-Verbose** . Par exemple :  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -108,11 +108,10 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Serveur et le nom de l'instance.|-S|-ServerInstance|  
 |Base de données initiale à utiliser.|-d|-Database|  
 |Exécuter la requête spécifiée et quitter.|-Q|-Query|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Mot de passe d’authentification.|-P|-Mot de passe|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Mot de passe|  
 |Définition de variable.|-v|-Variable|  
-|Intervalle de délai de requête.|-t|-QueryTimeout|  
+|Intervalle de délai de requête.|-T|-QueryTimeout|  
 |Arrêter l'exécution en cas d'erreur|-b|-AbortOnError|  
 |Connexion administrateur dédiée.|-A|-DedicatedAdministratorConnection|  
 |Désactiver les commandes interactives, le script de démarrage et les variables d'environnement.|-X|-DisableCommands|  
@@ -133,12 +132,12 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Page de codes à utiliser pour les données de sortie|-f|Aucun paramètre|  
 |Modifier un mot de passe et rester actif|-Z|Aucun paramètre|  
 |Taille du paquet|-a|Aucun paramètre|  
-|Séparateur de colonnes|-s|Aucun paramètre|  
-|En-têtes de sortie des contrôles|-h|Aucun paramètre|  
+|Séparateur de colonnes|-S|Aucun paramètre|  
+|En-têtes de sortie des contrôles|-H|Aucun paramètre|  
 |Spécifier des caractères de contrôle|-k|Aucun paramètre|  
 |Largeur d'écran de longueur fixe|-y|Aucun paramètre|  
 |Largeur d'écran de longueur variable|-y|Aucun paramètre|  
-|Entrée d'écho|-e|Aucun paramètre|  
+|Entrée d'écho|-E|Aucun paramètre|  
 |Activer les identificateurs entre guillemets|-I|Aucun paramètre|  
 |Supprimer des espaces de fin|-w|Aucun paramètre|  
 |Instances de liste|-l|Aucun paramètre|  

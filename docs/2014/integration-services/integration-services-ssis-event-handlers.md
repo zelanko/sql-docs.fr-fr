@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176130"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestionnaires d'événements Integration Services (SSIS)
@@ -47,7 +47,7 @@ ms.locfileid: "78176130"
 
  Seul le package possède un gestionnaire d'événements (pour son événement `OnError`). Si une erreur se produit pendant l'exécution de la tâche d'exécution SQL, le gestionnaire d'événements `OnError` du package s'exécute. Le diagramme qui suit montre la séquence d'appels qui conduit à l'exécution du gestionnaire d'événements `OnError` du package.
 
- ![Flux de gestionnaire d'événements](media/mw-dts-eventhandlers.gif "Flux de gestionnaire d'événements")
+ ![Flux de gestionnaire d'événements](media/mw-dts-eventhandlers.gif "Flux de gestionnaire d’événements")
 
  Les gestionnaires d'événements sont membres d'une collection de gestionnaires d'événements. Tous les conteneurs incluent cette collection. Si vous créez le package à l’aide du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , vous pouvez afficher les membres des collections de gestionnaires d’événements dans les dossiers **Gestionnaires d’événements** de l’onglet **Explorateur de package** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .
 
@@ -73,7 +73,7 @@ ms.locfileid: "78176130"
 
 |Gestionnaire d'événements|Événement|
 |-------------------|-----------|
-|`OnError`|Gestionnaire d’événements pour l' `OnError` événement. Cet événement est déclenché par un exécutable lorsqu'une erreur se produit.|
+|`OnError`|Gestionnaire d'événements de l'événement `OnError`. Cet événement est déclenché par un exécutable lorsqu'une erreur se produit.|
 |**OnExecStatusChanged**|Gestionnaire d’événements de l’événement **OnExecStatusChanged** . Cet événement est déclenché par un exécutable lorsque son état d'exécution change.|
 |**OnInformation**|Gestionnaire d’événements de l’événement **OnInformation** . Cet événement se déclenche au cours de la validation et de l'exécution d'un exécutable afin de rapporter des informations. Cet événement véhicule des informations uniquement (aucune erreur ni avertissement).|
 |**OnPostExecute**|Gestionnaire d’événements de l’événement **OnPostExecute** . Cet événement est déclenché par un exécutable immédiatement après la fin de son exécution.|

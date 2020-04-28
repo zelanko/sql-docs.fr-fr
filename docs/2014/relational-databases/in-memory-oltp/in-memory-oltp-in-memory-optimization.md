@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175918"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
@@ -68,17 +68,17 @@ ms.locfileid: "78175918"
 
 |Rubrique|Description|
 |-----------|-----------------|
-|[Conditions requises pour l’utilisation des tables optimisées en mémoire](memory-optimized-tables.md)|Décrit les configurations matérielle et logicielle requises et fournit des instructions pour l'utilisation des tables optimisées en mémoire.|
+|[Conditions requises pour l'utilisation des tables optimisées en mémoire](memory-optimized-tables.md)|Décrit les configurations matérielle et logicielle requises et fournit des instructions pour l'utilisation des tables optimisées en mémoire.|
 |[Utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Décrit l'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] dans un environnement virtualisé.|
 |[Exemples de code OLTP en mémoire](in-memory-oltp-code-samples.md)|Contient des exemples de code qui montrent comment créer et utiliser une table optimisée en mémoire.|
-|[Tables à mémoire optimisée](memory-optimized-tables.md)|Présente les tables optimisées en mémoire.|
-|[Variables de table optimisée en mémoire](../../database-engine/memory-optimized-table-variables.md)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|
-|[Index sur des tables optimisées en mémoire](../../database-engine/indexes-on-memory-optimized-tables.md)|Présente les index optimisés en mémoire.|
-|[Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)|Présente les procédures stockées compilées en mode natif.|
-|[Gestion de la mémoire pour l’OLTP en mémoire](../../database-engine/managing-memory-for-in-memory-oltp.md)|Comprendre et gérer l'utilisation de la mémoire sur votre système.|
-|[Création et gestion du stockage des objets à mémoire optimisée](creating-and-managing-storage-for-memory-optimized-objects.md)|Traite des fichiers de données et delta, qui stockent les informations sur les transactions dans les tables optimisées en mémoire.|
+|[Tables optimisées en mémoire](memory-optimized-tables.md)|Présente les tables optimisées en mémoire.|
+|[Variables de table mémoire optimisée](../../database-engine/memory-optimized-table-variables.md)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|
+|[Index sur les tables optimisées en mémoire](../../database-engine/indexes-on-memory-optimized-tables.md)|Présente les index optimisés en mémoire.|
+|[procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)|Présente les procédures stockées compilées en mode natif.|
+|[Gestion de la mémoire pour l'OLTP en mémoire](../../database-engine/managing-memory-for-in-memory-oltp.md)|Comprendre et gérer l'utilisation de la mémoire sur votre système.|
+|[Création et gestion du stockage des objets mémoire optimisés](creating-and-managing-storage-for-memory-optimized-objects.md)|Traite des fichiers de données et delta, qui stockent les informations sur les transactions dans les tables optimisées en mémoire.|
 |[Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](restore-and-recovery-of-memory-optimized-tables.md)|Décrit la sauvegarde, la restauration et la récupération des tables optimisées en mémoire.|
-|[Prise en charge de Transact-SQL pour OLTP en mémoire](transact-sql-support-for-in-memory-oltp.md)|Décrit la prise en charge [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
+|[Prise en charge d'OLTP en mémoire par Transact-SQL](transact-sql-support-for-in-memory-oltp.md)|Décrit la prise en charge [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
 |[Prise en charge de la haute disponibilité pour les bases de données OLTP en mémoire](high-availability-support-for-in-memory-oltp-databases.md)|Décrit les groupes de disponibilité et le clustering de basculement dans l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
 |[Prise en charge d'OLTP en mémoire par SQL Server](sql-server-support-for-in-memory-oltp.md)|Répertorie les nouveautés et les mises à jour en matière de syntaxe et de fonctionnalités prenant en charge les tables optimisées en mémoire.|
 |[Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)|Explique comment migrer les tables sur disque vers des tables optimisées en mémoire.|
@@ -89,7 +89,7 @@ ms.locfileid: "78175918"
 
 -   [Blog OLTP en mémoire](https://go.microsoft.com/fwlink/?LinkId=311696)
 
--   [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx)
+-   [OLTP en mémoire-modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx)
 
 -   [Vue d'ensemble des mécanismes internes de l'OLTP en mémoire SQL Server](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
     <!--

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175706"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualiser le schéma dans une vue de source de données (Analysis Services)
@@ -28,11 +28,11 @@ ms.locfileid: "78175706"
 
  Cette rubrique contient les sections suivantes :
 
- [Modifications prises en charge dans l’actualisation](#bkmk_changlist)
+ [Modifications prises en charge dans l'actualisation](#bkmk_changlist)
 
- [Actualiser une vue DSV dans SQL Server Data Tools](#bkmk_DSVrefresh)
+ [Actualiser une vue de source de données dans SQL Server Data Tools](#bkmk_DSVrefresh)
 
-##  <a name="bkmk_changlist"></a>Modifications prises en charge dans l’actualisation
+##  <a name="changes-supported-in-refresh"></a><a name="bkmk_changlist"></a>Modifications prises en charge dans l’actualisation
  L'actualisation d'une vue DSV peut inclure l'une des actions suivantes :
 
 -   Suppression de tables, de colonnes et de relations
@@ -43,7 +43,7 @@ ms.locfileid: "78175706"
 
  L'actualisation n'ajoute jamais de nouvelles tables à une vue DSV. Si vous souhaitez ajouter une nouvelle table, vous devez l'ajouter manuellement. Pour plus d’informations, consultez [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).
 
-##  <a name="bkmk_DSVrefresh"></a>Actualiser une vue DSV dans SQL Server Data Tools
+##  <a name="refresh-a-dsv-in-sql-server-data-tools"></a><a name="bkmk_DSVrefresh"></a>Actualiser une vue DSV dans SQL Server Data Tools
  Pour actualiser une vue de source de données, double-cliquez sur la vue en question dans l’Explorateur de solutions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis cliquez sur le bouton Actualiser la vue de source de données ou choisissez **Actualiser** dans le menu Vue de source de données.
 
  Au cours de l'actualisation, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] interroge les sources de données relationnelles sous-jacentes pour déterminer si des modifications ont été apportées dans les tables/vues qui sont incluses dans la vue DSV. Si les connexions peuvent être établies à toutes les sources de données sous-jacentes et si des modifications ont été apportées, elles apparaîtront dans la boîte de dialogue **Actualiser la vue de source de données** .

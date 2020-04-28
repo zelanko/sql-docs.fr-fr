@@ -19,10 +19,10 @@ ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d2c324f032f9cdd3206f6f2bed77fba74c2c0f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322115"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "75322115"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**_nom\_de\_colonne de l’article_**|**variable**|Représente une colonne d'une table répliquée. Cette table système contient une colonne pour chaque colonne de l'article de la table.|  
-|**GuidLigne**|**uniqueidentifier**|Identificateur de ligne de la ligne en conflit.|  
-|**DateModification**|**DATETIME**|Heure d'occurrence du conflit.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne de la ligne en conflit.|  
+|**DateModification**|**datetime**|Heure d'occurrence du conflit.|  
 |**ID\_de\_source de source d’origine**|**uniqueidentifier**|Abonnement pour lequel la modification de ligne a été annulée ou qui a perdu le conflit.|  
   
 ## <a name="see-also"></a>Voir aussi  

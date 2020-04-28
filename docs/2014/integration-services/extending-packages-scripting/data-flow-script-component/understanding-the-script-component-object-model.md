@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176198"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Présentation du modèle objet du composant Script
@@ -158,8 +158,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Composants fournis par l'élément de projet ComponentWrapper
  L'élément de projet ComponentWrapper contient une classe nommée `UserComponent` dérivée de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` dans laquelle vous écrivez votre code personnalisé dérive à son tour de `UserComponent`. La classe `UserComponent` contient les méthodes suivantes :
 
--   Une implémentation substituée de la méthode `PrimeOutput`. Le moteur de flux de données appelle cette méthode avant `ProcessInput` au moment de l'exécution. La méthode est appelée une seule fois. 
-  `PrimeOutput` fait appel à la méthode `CreateNewOutputRows` pour effectuer le traitement. Puis, si le composant est une source (autrement dit, le composant ne possède pas d'entrée), `PrimeOutput` appelle la méthode `FinishOutputs` substituable et la méthode `MarkOutputsAsFinished` privée. La méthode `MarkOutputsAsFinished` appelle `SetEndOfRowset` sur la dernière mémoire tampon de sortie.
+-   Une implémentation substituée de la méthode `PrimeOutput`. Le moteur de flux de données appelle cette méthode avant `ProcessInput` au moment de l'exécution. La méthode est appelée une seule fois. `PrimeOutput` fait appel à la méthode `CreateNewOutputRows` pour effectuer le traitement. Puis, si le composant est une source (autrement dit, le composant ne possède pas d'entrée), `PrimeOutput` appelle la méthode `FinishOutputs` substituable et la méthode `MarkOutputsAsFinished` privée. La méthode `MarkOutputsAsFinished` appelle `SetEndOfRowset` sur la dernière mémoire tampon de sortie.
 
 -   Une implémentation substituable de la méthode `CreateNewOutputRows`. L'implémentation par défaut est vide. Il s'agit normalement de la méthode que vous devez substituer pour écrire votre code de traitement de données personnalisé.
 
@@ -202,7 +201,7 @@ public override void ReleaseConnections()
 }
 ```
 
-![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
 
 ## <a name="see-also"></a>Voir aussi
  [Configuration du composant script dans l’éditeur de composant de script](configuring-the-script-component-in-the-script-component-editor.md) [codage et débogage du composant Script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md

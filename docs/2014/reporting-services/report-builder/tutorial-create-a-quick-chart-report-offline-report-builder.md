@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5cd666ec589737d83717e9b435a260bd2a0d0ef6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176893"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutoriel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
   Dans ce didacticiel, vous allez créer un graphique à secteurs à l'aide d'un Assistant, puis le modifier quelque peu afin d'obtenir un petit aperçu des opérations réalisables. Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes ont le même résultat : un graphique à secteurs comme celui de l’illustration suivante :
 
  ![« Mon premier graphique à secteurs » en mode exécution](../media/rs-my1stpierunview.gif "Mon premier graphique à secteurs en mode exécution")
@@ -29,7 +29,7 @@ ms.locfileid: "78176893"
 ## <a name="prerequisites"></a>Prérequis
  Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Vous pouvez exécuter la version autonome ou la version ClickOnce disponible à partir du Gestionnaire de rapports ou d'un site SharePoint. Seule la première étape, l'ouverture du Générateur de rapports, est différente pour les versions ClickOnce. Pour plus d’informations, consultez [installation, désinstallation et prise en charge de générateur de rapports](../install-uninstall-and-report-builder-support.md).
 
-##  <a name="TwoWays"></a> Deux façons de réaliser ce didacticiel
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a>Deux méthodes pour suivre ce didacticiel
 
 -   [Créer le graphique à secteurs avec des données XML](#CreatePieChartXML)
 
@@ -54,13 +54,13 @@ ms.locfileid: "78176893"
 
  [Étapes suivantes](#WhatsNext)
 
-##  <a name="CreatePieChartXML"></a>Création du graphique à secteurs avec des données XML
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a>Création du graphique à secteurs avec des données XML
 
 #### <a name="to-create-the-pie-chart-with-xml-data"></a>Pour créer le graphique à secteurs avec des données XML
 
 1.  Cliquez sur **Démarrer**, pointez sur **Programmes**, sur **Générateur de rapports Microsoft SQL Server 2012**, puis cliquez sur **Générateur de rapports version**.
 
-     La boîte de dialogue **Mise en route** s'affiche.
+     La boîte de dialogue **prise en main** s’affiche.
 
     > [!NOTE]
     >  Si la boîte de dialogue **prise en main** n’apparaît pas, à partir du bouton **Générateur de rapports** , cliquez sur **nouveau**.
@@ -110,7 +110,7 @@ ms.locfileid: "78176893"
     </Query>
     ```
 
-11. (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.
+11. (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.
 
 12. Cliquez sur **Suivant**.
 
@@ -130,9 +130,9 @@ ms.locfileid: "78176893"
 
 18. Pour afficher votre graphique à secteurs, cliquez sur **Exécuter** sous l'onglet **Accueil** du ruban.
 
- ![Icône de flèche utilisée avec le lien Retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#TwoWays)
+ ![Icône de flèche utilisée avec le lien retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [vers le haut](#TwoWays)
 
-##  <a name="CreatePieQueryData"></a>Création du graphique à secteurs avec [!INCLUDE[tsql](../../../includes/tsql-md.md)] une requête
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Création du graphique à secteurs avec une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)]
 
 #### <a name="to-create-the-pie-chart-with-a-tsql-query-that-contains-data"></a>Pour créer le graphique à secteurs avec une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui contient des données
 
@@ -149,7 +149,7 @@ ms.locfileid: "78176893"
     > [!NOTE]
     >  La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, voir [Éléments requis pour les didacticiels (Générateur de rapports)](../report-builder-tutorials.md).
 
-6.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.
+6.  Sur la page **créer une requête** , cliquez sur **modifier en tant que texte**.
 
 7.  Collez la requête suivante dans le volet de requête :
 
@@ -161,7 +161,7 @@ ms.locfileid: "78176893"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName 
     ```
 
-8.  (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.
+8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.
 
 9. Cliquez sur **Suivant**.
 
@@ -181,9 +181,9 @@ ms.locfileid: "78176893"
 
 15. Pour afficher votre graphique à secteurs, cliquez sur **Exécuter** sous l'onglet **Accueil** du ruban.
 
- ![Icône de flèche utilisée avec le lien Retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#TwoWays)
+ ![Icône de flèche utilisée avec le lien retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [vers le haut](#TwoWays)
 
-##  <a name="AfterWizard"></a> Après l'exécution de l'Assistant
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Après l'exécution de l'Assistant
  Maintenant que vous avez créé votre rapport de graphique à secteurs, vous pouvez le manipuler. Sous l'onglet **Exécuter** du ruban, cliquez sur **Conception**de manière à pouvoir continuer de le modifier.
 
 ### <a name="make-the-chart-bigger"></a>Augmenter la taille du graphique
@@ -202,15 +202,13 @@ ms.locfileid: "78176893"
 
 3.  Type `#PERCENT{P0}` de l’option des **données d’étiquette** .
 
-     
-  `{P0}` indique le pourcentage sans décimales. Si vous tapez simplement `#PERCENT`, vos chiffres comporteront deux décimales. 
-  `#PERCENT` est un mot clé qui effectue un calcul ou une fonction pour vous ; il en existe de nombreux autres.
+     `{P0}` indique le pourcentage sans décimales. Si vous tapez simplement `#PERCENT`, vos chiffres comporteront deux décimales. `#PERCENT` est un mot clé qui effectue un calcul ou une fonction pour vous ; il en existe de nombreux autres.
 
  Pour plus d’informations sur la personnalisation des étiquettes et légendes de graphique, voir [Afficher des valeurs en pourcentage dans un graphique à secteurs (Générateur de rapports et SSRS)](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) et [Modifier le texte d’un élément de légende (Générateur de rapports et SSRS)](../report-design/chart-legend-change-item-text-report-builder.md).
 
- ![Icône de flèche utilisée avec le lien Retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#TwoWays)
+ ![Icône de flèche utilisée avec le lien retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [vers le haut](#TwoWays)
 
-##  <a name="WhatsNext"></a>Et ensuite ?
+##  <a name="whats-next"></a><a name="WhatsNext"></a>Et ensuite ?
  Maintenant que vous avez créé votre premier rapport dans le Générateur de rapports, vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter Générateur de rapports, vous devez avoir l’autorisation d’accéder à vos sources de données, telles que des bases de données, avec une *chaîne de connexion*, qui vous permet de vous connecter à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.
 
  Pour utiliser les autres didacticiels, vous avez besoin du nom d'une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] et d'informations d'identification suffisantes pour accéder en lecture seule aux bases de données. Là encore, vous pouvez vous adresser à votre administrateur système.
@@ -219,7 +217,7 @@ ms.locfileid: "78176893"
 
  Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Pour plus d’informations, consultez [concepts de création de rapports &#40;générateur de rapports et&#41;SSRS ](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Pour plus d’informations, consultez [planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md).
 
- ![Icône de flèche utilisée avec le lien Retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#TwoWays)
+ ![Icône de flèche utilisée avec le lien retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [vers le haut](#TwoWays)
 
 ## <a name="see-also"></a>Voir aussi
  [Didacticiels &#40;Générateur de rapports&#41;](../report-builder-tutorials.md) [Générateur de rapports dans SQL Server 2014](report-builder-in-sql-server-2016.md)

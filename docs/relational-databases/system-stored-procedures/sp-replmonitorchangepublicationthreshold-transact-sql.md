@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322226"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -68,7 +68,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**1**|**expiration** : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
 |**2**|**latency** : contrôle les performances des abonnements aux publications transactionnelles.|  
 |**4**|**mergeexpiration** : contrôle l'expiration imminente des abonnements aux publications de fusion.|  
-|**5,5**|**mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
+|**5**|**mergeslowrunduration** : contrôle la durée des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  
 |**6**|**mergefastrunduration** : contrôle la durée des synchronisations de fusion sur les connexions de réseau local (LAN) à bande passante élevée.|  
 |**7**|**mergefastrunspeed** - supervise le taux de synchronisation des synchronisations de fusion sur des connexions à bande passante élevée (LAN).|  
 |**version8**|**mergeslowrunspeed** : contrôle la vitesse de synchronisation des synchronisations de fusion sur les connexions à faible bande passante (accès à distance).|  

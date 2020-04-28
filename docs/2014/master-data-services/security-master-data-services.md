@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 05f5390323efcf38c4f0d91f71613b5a2c3161a7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176604"
 ---
 # <a name="security-master-data-services"></a>Sécurité (Master Data Services)
@@ -22,8 +22,7 @@ ms.locfileid: "78176604"
 
  Vous pouvez également utiliser la sécurité pour attribuer à un utilisateur le rôle d'administrateur d'un modèle et d'une zone fonctionnelle spécifiques (par exemple, pour lui permettre de créer des versions du modèle Customer ou pour lui donner la possibilité de définir des autorisations de sécurité).
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est basée sur des utilisateurs et des groupes de domaine local ou Active Directory. La sécurité MDS vous permet d'utiliser un niveau de détail granulaire pour déterminer les données auxquelles un utilisateur peut accéder. En raison de sa granularité, la sécurité peut rapidement se compliquer et vous devez être prudent lorsque vous utilisez le chevauchement des utilisateurs et des groupes. Pour plus d’informations, consultez [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](overlapping-user-and-group-permissions-master-data-services.md).
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est basée sur des utilisateurs et des groupes de domaine local ou Active Directory. La sécurité MDS vous permet d'utiliser un niveau de détail granulaire pour déterminer les données auxquelles un utilisateur peut accéder. En raison de sa granularité, la sécurité peut rapidement se compliquer et vous devez être prudent lorsque vous utilisez le chevauchement des utilisateurs et des groupes. Pour plus d’informations, consultez [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](overlapping-user-and-group-permissions-master-data-services.md).
 
  Vous pouvez attribuer un accès de sécurité dans la zone fonctionnelle **Autorisations d'accès** de l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou à l'aide du service Web.
 
@@ -37,12 +36,11 @@ ms.locfileid: "78176604"
 ## <a name="how-to-set-security"></a>Comment définir la sécurité
  Pour accorder à un utilisateur ou un groupe l'autorisation d'accéder à des données ou des fonctionnalités dans MDS, vous devez attribuer les droits suivants :
 
--   [Accès à la zone fonctionnelle](../../2014/master-data-services/functional-area-permissions-master-data-services.md), qui détermine laquelle des cinq zones fonctionnelles de l’interface utilisateur à laquelle un utilisateur peut accéder.
+-   [Accès à la zone fonctionnelle](../../2014/master-data-services/functional-area-permissions-master-data-services.md), qui détermine laquelle des cinq zones fonctionnelles de l'interface utilisateur est accessible à l'utilisateur.
 
--   Les [autorisations d’objet de modèle](../../2014/master-data-services/model-object-permissions-master-data-services.md), qui déterminent les attributs auxquels un utilisateur peut accéder, ainsi que le type d’accès (lecture ou mise à jour) dont dispose l’utilisateur sur ces attributs.
+-   [Autorisations d'objet de modèle](../../2014/master-data-services/model-object-permissions-master-data-services.md), qui déterminent les attributs auxquels un utilisateur peut accéder, et le type d'accès (lecture ou mise à jour) dont dispose l'utilisateur sur ces attributs.
 
--   
-  [Autorisations des membres de la hiérarchie](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(le cas échéant), qui déterminent les membres auxquels un utilisateur peut accéder, et le type d'accès (lecture ou mise à jour) dont l'utilisateur dispose sur ces membres.
+-   [Autorisations des membres de la hiérarchie](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(le cas échéant), qui déterminent les membres auxquels un utilisateur peut accéder, et le type d'accès (lecture ou mise à jour) dont l'utilisateur dispose sur ces membres.
 
  Lorsque vous affectez des autorisations à des attributs et des membres, ces autorisations se croisent et des règles déterminent leur ordre de priorité. Pour plus d’informations, consultez [Mode de détermination des autorisations &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).
 

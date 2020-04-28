@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27667eececc3905b927b7e888e692a8261d14d30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177058"
 ---
 # <a name="create-a-linked-report"></a>Créer un rapport lié
@@ -34,11 +34,9 @@ ms.locfileid: "78177058"
 
 2.  Indiquez un nom pour le nouveau rapport lié. Tapez éventuellement une description.
 
-3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . 
-  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si vous ne sélectionnez aucun dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport sur lequel il est basé).
+3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si vous ne sélectionnez aucun dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport sur lequel il est basé).
 
-4.  
-  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Le rapport lié s’ouvre.
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Le rapport lié s’ouvre.
 
      L'icône d'un rapport lié est différente des autres éléments gérés par un serveur de rapports. L'icône ci-après indique un rapport lié :
 

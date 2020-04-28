@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44a63e55d6a0868ac8395828e5f386573665fcaa
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175828"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Réduire la charge de paramétrage du serveur de production
@@ -57,7 +57,7 @@ ms.locfileid: "78175828"
 
  L'illustration suivante montre le scénario du serveur de test et du serveur de production :
 
- ![Utilisation du serveur test de l’Assistant Paramétrage du moteur de base de données](../../database-engine/media/testsvr.gif "Utilisation du serveur test de l'Assistant Paramétrage du moteur de base de données")
+ ![Utilisation du serveur test de l’Assistant Paramétrage du moteur de base de données](../../database-engine/media/testsvr.gif "Utilisation du serveur test de l’Assistant Paramétrage du moteur de base de données")
 
 > [!NOTE]
 >  La fonction de paramétrage du serveur de test n'est pas prise en charge par l'interface utilisateur graphique de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .

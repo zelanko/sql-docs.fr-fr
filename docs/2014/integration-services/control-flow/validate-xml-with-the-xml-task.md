@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176497"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,7 +25,7 @@ ms.locfileid: "78176497"
 
  La capture d’écran ci-après affiche l’ **Éditeur de tâche XML** avec les paramètres requis pour l’exécution d’une validation XML avec une sortie d’erreur détaillée.
 
- ![Propriétés de la tâche XML dans l’Éditeur de tâche XML](../media/xmltaskproperties.jpg "Propriétés de la tâche XML dans l’éditeur de tâche XML")
+ ![Propriétés de la tâche XML dans l’Éditeur de tâche XML](../media/xmltaskproperties.jpg "Propriétés de la tâche XML dans l’Éditeur de tâche XML")
 
  Avant que la propriété `ValidationDetails` ne soit disponible, la validation XML par la tâche XML ne renvoyait qu’un résultat true ou false, sans aucune information sur les erreurs ou leur emplacement. À présent, quand vous définissez `ValidationDetails` sur true, le fichier de sortie contient des informations détaillées sur chaque erreur, notamment le numéro de ligne et la position. Vous pouvez utiliser ces informations pour comprendre, localiser et corriger les erreurs dans les documents XML.
 
@@ -116,7 +116,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
 
  Voici le résultat dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] du second exemple de requête figurant dans le texte précédent.
 
- ![Erreurs XML de requête sur un groupe dans Management Studio](../media/queryforxmlerrors.jpg "Requête pour regrouper des erreurs XML dans Management Studio")
+ ![Erreurs XML de requête sur un groupe dans Management Studio](../media/queryforxmlerrors.jpg "Erreurs XML de requête sur un groupe dans Management Studio")
 
 ## <a name="see-also"></a>Voir aussi
  Éditeur de tâche XML de [tâche xml](xml-task.md) [&#40;page général&#41;](../xml-task-editor-general-page.md)

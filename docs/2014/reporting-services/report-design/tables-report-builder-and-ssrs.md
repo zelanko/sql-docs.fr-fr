@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74346c2563366300058c1a33bd625162aec7121e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172607"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tables (Générateur de rapports et SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "78172607"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="AddingTable"></a>Ajout d’une table pour afficher des données de détail
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> Ajout d'une table pour afficher des données de détail
  Ajoutez une table à l'aire de conception depuis l'onglet Insérer sur le ruban. Vous pouvez ajouter une table à l'aide de l'Assistant Tableau ou matrice, qui inclut la création d'une connexion à la source de données et d'un dataset ainsi que la configuration de la table, ou une table basée sur le modèle de table, que vous configurez manuellement.
 
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "78172607"
 
  ![Modèle de table sur l'aire de conception, sélectionné](../media/rs-tabletemplatenewselected.gif "Modèle de table sur l'aire de conception, sélectionné")
 
- Le descripteur de ligne de la ligne de données affiche le symbole de détails (![descripteur de ligne avec 3 lignes parallèles pour la ligne de détails](../media/rs-icontablix-detailsrow.gif "Handle de ligne avec 3 lignes parallèles pour la ligne de détails")). Pour afficher des données sur ces lignes, faites glisser les champs du volet des données de rapport vers la ligne d'en-tête ou de détails. Les deux lignes sont remplies simultanément. Pour ajouter des colonnes supplémentaires, faites glisser le champ vers la table jusqu'à ce que vous voyiez un point d'insertion. Après avoir ajouté des champs de dataset à la table, vous pouvez modifier le format par défaut pour les dates et devises afin de contrôler leur mode d'affichage dans le rapport. Le diagramme suivant représente une région de données d'une table comportant les champs suivants : Date, Order, Product, Qty et Line Total.
+ Le handle de ligne de la ligne de données affiche le symbole de détails (![handle de ligne avec 3 traits parallèles pour la ligne de détails](../media/rs-icontablix-detailsrow.gif "Handle de ligne avec 3 lignes parallèles pour la ligne de détails")). Pour afficher des données sur ces lignes, faites glisser les champs du volet des données de rapport vers la ligne d'en-tête ou de détails. Les deux lignes sont remplies simultanément. Pour ajouter des colonnes supplémentaires, faites glisser le champ vers la table jusqu'à ce que vous voyiez un point d'insertion. Après avoir ajouté des champs de dataset à la table, vous pouvez modifier le format par défaut pour les dates et devises afin de contrôler leur mode d'affichage dans le rapport. Le diagramme suivant représente une région de données d'une table comportant les champs suivants : Date, Order, Product, Qty et Line Total.
 
  ![Conception, table avec en-têtes de colonnes en gras](../media/rs-basictabledetailsformatteddesign.gif "Conception, table avec en-têtes de colonnes en gras")
 
@@ -67,7 +67,7 @@ ms.locfileid: "78172607"
 
  Pour plus d’informations, consultez [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).
 
-##  <a name="AddingRowGroups"></a>Ajout de groupes de lignes à une table
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a>Ajout de groupes de lignes à une table
  De la même manière que vous pouvez faire glisser un champ du volet des données de rapport vers une cellule pour afficher les données de détail, vous pouvez faire glisser un champ vers le volet de regroupement pour ajouter un groupe. Pour une table, faites glisser le champ vers le volet Groupes de lignes. Une fois que vous avez ajouté un groupe, la table ajoute automatiquement des cellules dans les nouvelles colonnes dans la région du groupe de lignes dans laquelle afficher les valeurs du groupe. Pour plus d’informations sur les zones, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).
 
  L'illustration suivante représente une table avec deux groupes de lignes imbriquées en mode Conception. Les groupes de lignes ont été créés en faisant glisser le champ Order, puis le champ Date vers le volet Groupes de lignes puis en insérant chaque groupe comme un parent des groupes existants. L'illustration montre un groupe parent basé sur la date et un groupe enfant basé sur le numéro de commande, ainsi que le groupe de détails défini par défaut.
@@ -91,7 +91,7 @@ ms.locfileid: "78172607"
 
  Pour plus d’informations, consultez [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).
 
-##  <a name="RemovingHidingRows"></a>Suppression ou masquage de lignes de détails
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a>Suppression ou masquage de lignes de détails
  Après avoir affiché l'aperçu d'une table dans un rapport, vous pouvez décider de supprimer des lignes de détails existantes. Ou vous pouvez décider de les masquer par défaut et autoriser l'utilisateur à afficher alternativement plus ou moins de détails, comme dans un rapport d'extraction.
 
  Pour supprimer toutes les lignes de détails d'une table, utilisez le volet de regroupement. Sélectionnez le groupe de détails et utilisez le menu contextuel pour supprimer le groupe et les lignes qui affichent les données de détail. L'illustration suivante montre la vue de conception pour une table regroupée par date et numéro de commande, mais sans lignes de détails. Aucune ligne de total n'a été ajoutée à cette table.

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cf6a58c50922b412b76576ee2a7fd44cdf9e32a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176699"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Synchronisation Web pour la réplication de fusion
@@ -45,9 +45,9 @@ ms.locfileid: "78176699"
 
  L'illustration suivante montre certains des composants concernés par la synchronisation Web pour la réplication de fusion.
 
- ![Composants et flux de données de synchronisation web](media/web-sync01.gif "Composants et flux de données de synchronisation Web")
+ ![Composants et flux de données de synchronisation web](media/web-sync01.gif "Composants et flux de données de synchronisation web")
 
- La synchronisation Web est une option disponible uniquement pour les abonnements par extraction de données (pull) ; un Agent de fusion sera donc toujours exécuté sur l'Abonné. Il peut s'agir de l'Agent de fusion standard, du contrôle ActiveX de l'Agent de fusion, ou d'une application assurant la synchronisation par le biais de Replication Management Objects. Pour spécifier l’emplacement de l’ordinateur exécutant IIS, utilisez le paramètre **-InternetUrl** pour l’Agent de fusion.
+ La synchronisation Web est une option disponible uniquement pour les abonnements par extraction de données (pull) ; un Agent de fusion sera donc toujours exécuté sur l'Abonné. Il peut s'agir de l'Agent de fusion standard, du contrôle ActiveX de l'Agent de fusion, ou d'une application assurant la synchronisation par le biais de Replication Management Objects. Pour spécifier l’emplacement de l’ordinateur exécutant IIS, utilisez le paramètre **-InternetUrl** pour l’agent de fusion.
 
  L'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) est configuré sur l'ordinateur exécutant IIS ; il est également responsable de la gestion des messages qui sont envoyés au serveur à partir du serveur de publication et des Abonnés. Chaque nœud de la topologie gère le flux de données XML par le biais du réconciliateur de réplication de fusion (Replrec.dll).
 

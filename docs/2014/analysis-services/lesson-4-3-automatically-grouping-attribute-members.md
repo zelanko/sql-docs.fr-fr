@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175338"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Regroupement automatique des membres d'attribut
@@ -22,11 +22,11 @@ ms.locfileid: "78175338"
 
  La propriété **DiscretizationMethod** détermine si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] effectue le regroupement et détermine le type de regroupement effectué. Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n'effectue aucun regroupement. Lorsque vous activez les regroupements automatiques, vous pouvez autoriser [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à déterminer automatiquement la meilleure méthode de regroupement en se basant sur la structure de l'attribut ou bien, vous pouvez choisir l'un des algorithmes de regroupement dans la liste suivante pour spécifier la méthode de regroupement :
 
- **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des plages de groupes afin que la population totale des membres de dimension soit distribuée de manière égale entre les groupes.
+ **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des plages de groupes pour que la totalité de la population des membres de dimension soit distribuée de façon égale dans les groupes.
 
  **Clusters** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des groupes en effectuant un clustering unidimensionnel sur les valeurs d’entrée à l’aide de la méthode de clustering K-signifiant avec des distributions gaussienles. Cette option est valide uniquement pour les colonnes numériques.
 
- Après avoir spécifié une méthode de regroupement, vous devez spécifier le nombre de groupes, en utilisant la propriété **DiscretizationBucketCount** . Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;Discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
+ Après avoir spécifié une méthode de regroupement, vous devez spécifier le nombre de groupes, en utilisant la propriété **DiscretizationBucketCount** . Pour plus d’informations, consultez [regrouper les membres d’attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
  Au cours des tâches de cette rubrique, vous allez regrouper différents types pour les éléments suivants : les revenus annuels dans la dimension **Customer** , le nombre d'heures de congé maladie des employés dans la dimension **Employees** et enfin, le nombre d'heures de congé des employés dans la dimension **Employees** . Vous allez ensuite traiter et explorer le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour constater le résultat des regroupements. Enfin, vous allez modifier les propriétés des groupes de membres pour constater le résultat des modifications dans les types de regroupements.
 
@@ -121,9 +121,9 @@ ms.locfileid: "78175338"
      Notez que trois groupes de membres de l'attribut **Vacation Hours** contiennent maintenant des valeurs correspondant à la vente de produits. (Les 7 autres groupes contiennent des membres sans données de vente.)
 
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon
- [Masquage et désactivation des hiérarchies d'attributs](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)
+ [Masquage et désactivation des hiérarchies d’attributs](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)
 
 ## <a name="see-also"></a>Voir aussi
- [Membres d’attribut de groupe &#40;&#41;de discrétisation](multidimensional-models/attribute-properties-group-attribute-members.md)
+ [Regrouper des membres d’un attribut &#40;Discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
 

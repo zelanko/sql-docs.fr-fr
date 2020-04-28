@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175730"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Octroyer des autorisations de base de données (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "78175730"
 
  Trois types d'autorisations sont spécifiés au niveau de la base de données.
 
- **Contrôle total (administrateur)** ─ le contrôle total est une autorisation complète qui transmet des pouvoirs étendus sur une base de données Analysis Services, telle que la capacité d’interroger ou de traiter un objet dans la base de données et de gérer la sécurité des rôles. Contrôle total est synonyme de statut d'administrateur de base de données. Lorsque vous sélectionnez `Full Control`, les autorisations `Process Database` et `Read Definition` sont également sélectionnées et ne peuvent pas être supprimées.
+ **Contrôle total (Administrateur)** : Contrôle total est une autorisation complète qui permet de disposer de capacités étendues sur une base de données Analysis Services, telles que la capacité à interroger ou à traiter tout objet de la base de données et à gérer la sécurité des rôles. Contrôle total est synonyme de statut d'administrateur de base de données. Lorsque vous sélectionnez `Full Control`, les autorisations `Process Database` et `Read Definition` sont également sélectionnées et ne peuvent pas être supprimées.
 
 > [!NOTE]
 >  Les administrateurs de serveur (membres du rôle Administrateur du serveur) disposent également d'un Contrôle total implicite sur chaque base de données du serveur.

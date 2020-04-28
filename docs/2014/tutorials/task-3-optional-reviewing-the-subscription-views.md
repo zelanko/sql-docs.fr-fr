@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d567ccb528d881057829eb4b1071410e37e944fe
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171734"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tâche 3 (Facultatif) : Examiner les vues d'abonnement
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tâche 3 (facultatif) : Examiner les vues d’abonnement
   Dans cette tâche, vous allez vérifier que les vues SQL sont créées à l'aide de SQL Server Management Studio.
 
 1.  Lancez **SQL Server Management Studio**. Cliquez sur le bouton **Démarrer** , sur **tous les programmes**, sur **Microsoft SQL Server 2012**, puis sur **SQL Server Management Studio**.
@@ -31,4 +31,4 @@ ms.locfileid: "78171734"
      ![SQL Server Management Studio - Vue mdm.Suppliers](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio - Vue mdm.Suppliers")
 
 ## <a name="next-step"></a>étape suivante
- [Tâche 4 (Facultatif) : Création d'un projet SSIS à l'aide de SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
+ [Tâche 4 : Création d’un projet SSIS à l’aide de SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

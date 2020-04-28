@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42ac0e7f8b2c41fa30dd41c8255e0b8f04f6e730
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176539"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilisation de variables par programmation
@@ -55,7 +55,7 @@ ms.locfileid: "78176539"
 
  Si un package exécute d'autres packages, les variables définies dans la portée du package appelant sont disponibles pour le package appelé. La seule exception se produit lorsqu'une variable de même nom existe dans le package appelé. Lorsque cette collision se produit, la valeur de la variable dans le package appelé remplace celle du package appelant. Les variables définies dans la portée du package appelé ne sont jamais de nouveau disponibles pour le package appelant.
 
- L'exemple de code suivant crée une variable, `myCustomVar`, programmatiquement, à la portée du package, puis parcourt toutes les variables visibles pour le package, en imprimant leur nom, leur type de données et leur valeur.
+ L'exemple de code suivant crée une variable, `myCustomVar`, par programme, à la portée du package, puis parcourt toutes les variables visibles pour le package, en imprimant leur nom, leur type de données et leur valeur.
 
 ```csharp
 using System;
@@ -158,7 +158,7 @@ End Module
  Notez que toutes les variables délimitées à l’espace de noms **System** sont disponibles dans le package. Pour plus d’informations, consultez [Variables système](../system-variables.md).
 
 ## <a name="namespaces"></a>Espaces de noms
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]() fournit deux espaces de[!INCLUDE[ssIS](../../includes/ssis-md.md)]noms par défaut dans lesquels les variables résident ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les espaces de noms **utilisateur** et **système** . Par défaut, toute variable personnalisée créée par le développeur est ajoutée à l’espace de noms **User**. Les variables système résident dans l’espace de noms **System**. Vous pouvez créer d’autres espaces de noms dans lesquels placer des variables personnalisées en plus de l’espace de noms **User** et modifier le nom de l’espace de noms **User**. En revanche, vous ne pouvez pas ajouter ou modifier des variables dans l’espace de noms **System**, ni assigner des variables système à un autre espace de noms.
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) fournit deux espaces de noms par défaut dans lesquels résident les variables : **User** et **System**. Par défaut, toute variable personnalisée créée par le développeur est ajoutée à l’espace de noms **User**. Les variables système résident dans l’espace de noms **System**. Vous pouvez créer d’autres espaces de noms dans lesquels placer des variables personnalisées en plus de l’espace de noms **User** et modifier le nom de l’espace de noms **User**. En revanche, vous ne pouvez pas ajouter ou modifier des variables dans l’espace de noms **System**, ni assigner des variables système à un autre espace de noms.
 
  Les variables système qui sont disponibles diffèrent selon le type de conteneur. Pour obtenir la liste des variables système disponibles pour les packages, conteneurs, tâches et gestionnaires d’événements, consultez [Variables système](../system-variables.md).
 
@@ -228,7 +228,7 @@ End Module
 ## <a name="configuration-files"></a>Fichiers de configuration
  Si un fichier de configuration inclut une variable personnalisée, la variable peut être mise à jour au moment de l'exécution. Cela signifie que lorsque le package s'exécute, la valeur de la variable qui se trouvait à l'origine dans le package est remplacée par une nouvelle valeur provenant du fichier de configuration. Cette technique de remplacement s'avère utile lorsqu'un package est déployé sur plusieurs serveurs qui requièrent des valeurs de variables différentes. Par exemple, une variable peut spécifier combien de fois un conteneur de **boucles Foreach** répète son flux de travail, répertorier les destinataires auxquels un gestionnaire d’événements envoie des e-mails lorsqu’une erreur est déclenchée ou changer le nombre d’erreurs pouvant se produire avant que le package n’échoue. Ces variables sont fournies de manière dynamique dans des fichiers de configuration pour chaque environnement. Par conséquent, seules les variables accessibles en lecture/écriture sont autorisées dans les fichiers de configuration. Pour plus d’informations, consultez [Créer des configurations de package](../create-package-configurations.md).
 
-![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
 
 ## <a name="see-also"></a>Voir aussi
  [Integration Services &#40;les variables de&#41; SSIS](../integration-services-ssis-variables.md) [utilisent des variables dans des packages](../use-variables-in-packages.md)

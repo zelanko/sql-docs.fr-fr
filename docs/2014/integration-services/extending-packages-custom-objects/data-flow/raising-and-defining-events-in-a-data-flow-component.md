@@ -21,17 +21,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 774cb9a56fbe4e81df6a440c754c417ae90c16e0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176326"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Déclenchement et définition d'événements dans un composant de flux de données
   Les développeurs de composants peuvent déclencher un sous-ensemble des événements définis dans l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> en appelant les méthodes exposées sur la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Vous pouvez également définir des événements personnalisés à l'aide de la collection <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A>, puis les déclencher pendant l'exécution en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. Cette section décrit comment créer et déclencher un événement. Elle fournit également des conseils sur l'opportunité de déclencher des événements au moment de la conception.
 
 ## <a name="raising-events"></a>Déclenchement d’événements
- Les composants déclenchent des événements à l’aide des méthodes **Fire\<X>** de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Vous pouvez déclencher des événements pendant la conception et l'exécution de composants. En général, les méthodes <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> sont appelées pendant la validation, lors de la conception de composants. Ces événements affichent des messages dans le volet **Liste d’erreurs[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] de**  et fournissent des commentaires aux utilisateurs du composant lorsque ce dernier n’est pas correctement configuré.
+ Les composants déclenchent des événements à l’aide des méthodes **Fire\<X>** de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Vous pouvez déclencher des événements pendant la conception et l'exécution de composants. En général, les méthodes <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> sont appelées pendant la validation, lors de la conception de composants. Ces événements affichent des messages dans le volet **Liste d’erreurs** de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et fournissent des commentaires aux utilisateurs du composant lorsque ce dernier n’est pas correctement configuré.
 
  Les composants peuvent également déclencher des événements à tout moment pendant l'exécution. Les événements permettent aux développeurs de composants de fournir des commentaires aux utilisateurs du composant pendant son exécution. L'appel de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> pendant l'exécution risque de provoquer l'échec du package.
 
@@ -90,7 +90,7 @@ Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pip
 End Sub
 ```
 
-![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
 
 ## <a name="see-also"></a>Voir aussi
  [Integration Services &#40;des gestionnaires d’événements de&#41; SSIS](../../integration-services-ssis-event-handlers.md) [Ajouter un gestionnaire d’événements à un package](../../add-an-event-handler-to-a-package.md)

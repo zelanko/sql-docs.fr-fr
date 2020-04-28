@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176649"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
@@ -29,7 +29,7 @@ ms.locfileid: "78176649"
 > [!IMPORTANT]
 >  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], notamment les optimisations des types de données spatiales, téléchargez le livre blanc [New Spatial Features in SQL Server Code-Named "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctions spatiales dans SQL Server nom de code « Denali »).
 
-##  <a name="objects"></a>Objets de données spatiales
+##  <a name="spatial-data-objects"></a><a name="objects"></a>Objets de données spatiales
  Les types de données `geometry` et `geography` prennent en charge seize objets de données spatiales, ou types d'instances. Toutefois, seuls onze de ces types d’instances sont *instanciables*; vous pouvez créer et utiliser ces instances (ou les instancier) dans une base de données. Ces instances dérivent certaines propriétés de leurs types de données parents qui `Points`les distinguent comme, **LineStrings, CircularStrings**, `CompoundCurves` `Polygons`, `geometry` , `geography` `CurvePolygons` ou comme instances `GeometryCollection`multiples ou dans un. Le type `Geography` possède un type d'instance supplémentaire, `FullGlobe`.
 
  La figure ci-dessous représente la hiérarchie `geometry` sur laquelle les types de données `geometry` et `geography` sont basés. Les types instanciables `geometry` de `geography` et sont indiqués en bleu.
@@ -50,7 +50,7 @@ ms.locfileid: "78176649"
 
 -   [CompoundCurve](../spatial/compoundcurve.md)
 
--   [Polygon](../spatial/polygon.md)
+-   [Polygone](../spatial/polygon.md)
 
 -   [CurvePolygon](../spatial/curvepolygon.md)
 
@@ -65,7 +65,7 @@ ms.locfileid: "78176649"
 -   [GeometryCollection](../spatial/geometrycollection.md)
 
 
-##  <a name="differences"></a>Différences entre les types de données geometry et Geography
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Différences entre les types de données geometry et geography
  Les deux types de données spatiales se comportent souvent à peu près de la même façon, mais il existe des différences clés dans la façon dont les données sont stockées et manipulées.
 
 ### <a name="how-connecting-edges-are-defined"></a>Mode de définition des arêtes de connexion
@@ -92,20 +92,19 @@ ms.locfileid: "78176649"
 
 -   Les `geography` méthodes de type de données qui requièrent l' `geography` entrée de deux instances, telles que STIntersection (), STUnion (), STDifference () et STSymDifference (), retournent Null si les résultats des méthodes ne s’ajustent pas à l’intérieur d’un seul hémisphère. STBuffer() retourne également null si la sortie dépasse un seul hémisphère.
 
- Dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], `FullGlobe` est un type spécial de polygone qui couvre le globe entier. 
-  `FullGlobe` possède une zone, mais aucune bordure ni sommet.
+ Dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], `FullGlobe` est un type spécial de polygone qui couvre le globe entier. `FullGlobe` possède une zone, mais aucune bordure ni sommet.
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Les anneaux internes et externes ne sont pas importants dans le type de données geography
  La spécification OGC simple Features for SQL traite des anneaux externes et internes, mais cette distinction n’a que peu de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` sens pour le type de données ; tout anneau d’un polygone peut être considéré comme l’anneau externe.
 
  Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites Web suivants :
 
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
 
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)
 
 
-##  <a name="circular"></a>Segments d’arc de cercle
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Segments d'arc de cercle
  Trois types instanciables acceptent des segments d'arc de cercle : `CircularString`, `CompoundCurve` et `CurvePolygon`.  Un segment d'arc de cercle est défini par trois points dans un plan à deux dimensions ; le troisième point doit être différent du premier point.
 
  Les figures A et B affichent des segments d'arc de cercle types. Remarquez comment chacun des trois points se situe sur le périmètre d'un cercle.

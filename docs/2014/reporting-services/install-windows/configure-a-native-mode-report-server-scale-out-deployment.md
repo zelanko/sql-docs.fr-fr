@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9fea6ae71046de3cf1a6b4dc765b1a2a19e149
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173579"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif (Gestionnaire de configuration de SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "78173579"
 
  Les serveurs de rapports en mode SharePoint utilisent l’infrastructure de produits SharePoint pour la montée en puissance parallèle. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).
 
- **Les déploiements avec montée en puissance parallèle sont constitués des éléments suivants :**
+ **Les déploiements avec montée en puissance parallèle sont constitués de :**
 
 -   Plusieurs instances de serveurs de rapports qui partagent une base de données de serveur de rapports unique.
 
@@ -37,7 +37,7 @@ ms.locfileid: "78173579"
 
  Reporting Services ne participe pas aux clusters Microsoft Cluster Services. Toutefois, vous pouvez créer la base de données du serveur de rapports sur une instance de Moteur de base de données qui fait partie d'un cluster de basculement.
 
- **Pour planifier, installer et configurer un déploiement avec montée en puissance parallèle, procédez comme suit :**
+ **Pour planifier, installer et configurer un déploiement avec montée en puissance parallèle, suivez ces étapes :**
 
 -   Pour obtenir des instructions sur l’installation d’instances de serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapports, consultez [installer SQL Server 2014 à partir de l’Assistant installation &#40;le&#41;d'](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) installation dans la documentation en ligne.
 
@@ -59,8 +59,7 @@ ms.locfileid: "78173579"
 
 1.  Installez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur qui hébergera les bases de données du serveur de rapports. Au minimum, installez [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
-2.  Si nécessaire, activez le serveur de rapports pour les connexions distantes. Certaines versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorisent pas les connexions TCP/IP et Canaux nommés distantes par défaut. Pour déterminer si les connexions distantes sont autorisées ou non, utilisez l'outil Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et vérifiez les paramètres de configuration réseau de l'instance cible. Si l'instance distante est également une instance nommée, vérifiez que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est activé et en cours d'exécution sur le serveur cible. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fournit le numéro de port utilisé pour se connecter à l’instance nommée.
+2.  Si nécessaire, activez le serveur de rapports pour les connexions distantes. Certaines versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorisent pas les connexions TCP/IP et Canaux nommés distantes par défaut. Pour déterminer si les connexions distantes sont autorisées ou non, utilisez l'outil Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et vérifiez les paramètres de configuration réseau de l'instance cible. Si l'instance distante est également une instance nommée, vérifiez que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est activé et en cours d'exécution sur le serveur cible. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fournit le numéro de port utilisé pour se connecter à l’instance nommée.
 
 ### <a name="to-install-the-first-report-server-instance"></a>Pour installer la première instance du serveur de rapports
 
@@ -113,13 +112,13 @@ ms.locfileid: "78173579"
     > [!NOTE]
     >  **Problème :** Lorsque vous essayez de joindre une instance de serveur de rapports Reporting Services au déploiement avec montée en puissance parallèle, vous pouvez rencontrer des messages d’erreur semblables à « accès refusé ».
     > 
-    >  **Solution de contournement :** Sauvegardez la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] clé de chiffrement à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] partir de la première instance et restaurez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la clé sur le deuxième serveur de rapports. Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+    >  **Solution :** sauvegardez la clé de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la première instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et restaurez la clé dans le deuxième serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
 4.  Vous devez maintenant être en mesure de vérifier que les deux instances de serveur de rapports sont opérationnelles. Pour vérifier la deuxième instance, vous pouvez utiliser l'outil de configuration de Reporting Services pour vous connecter au serveur de rapports et cliquer sur l'URL du service Web ou l'URL du Gestionnaire de rapports.
 
  Si vous envisagez d'exécuter les serveurs de rapports dans un cluster de serveurs avec équilibrage de charge, une configuration supplémentaire est requise. Pour plus d’informations, consultez [Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Configurer un compte de Service &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [configurer une URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [créer une base de données de serveur de rapports en mode natif &#40;SSRS](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md) Configuration Manager&#41;[configurer des URL de serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurer une connexion de base de données de serveur de rapports &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [Ajouter et supprimer des clés de chiffrement pour le déploiement avec montée en](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) puissance parallèle &#40;Configuration Manager de [gestion Serveur de rapports en mode natif des services](../report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Configurer un compte de Service &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [configurer une url &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [créer une base de données de serveur de rapports en mode natif &#40;SSRS](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md) Configuration Manager&#41;[configurer des URL de serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurer une connexion de base de données de serveur de rapports &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [Ajouter et supprimer des clés de chiffrement pour le déploiement avec montée](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) en puissance parallèle &#40;Configuration Manager de [gestion](../report-server/manage-a-reporting-services-native-mode-report-server.md)
 
 

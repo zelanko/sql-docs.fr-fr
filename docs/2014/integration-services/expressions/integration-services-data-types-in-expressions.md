@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176429"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Types de données Integration Services dans les expressions
@@ -55,7 +55,7 @@ ms.locfileid: "78176429"
 
 -   [== &#40;Égal&#41; &#40;expression SSIS&#41;](equal-ssis-expression.md)
 
--   [\!= &#40;Non égal&#41; &#40;expression SSIS&#41;](unequal-ssis-expression.md)
+-   [! = &#40;&#41; &#40;Expression SSIS inégale&#41;](unequal-ssis-expression.md)
 
 -   [&#62; &#40;Supérieur à&#41; &#40;expression SSIS&#41;](greater-than-ssis-expression.md)
 

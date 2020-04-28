@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c5198b614047d36c53cf41a1d82a44f612c62be6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177098"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Scripts et PowerShell avec Reporting Services
@@ -56,7 +56,7 @@ ms.locfileid: "78177098"
 
 -   Consultez la section « Accéder aux classes WMI à l’aide de PowerShell » dans [Accéder au fournisseur WMI de Reporting Services](access-the-reporting-services-wmi-provider.md).
 
--   [Comment administrer SSRS à l’aide de PowerShell](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/). script
+-   [Comment administrer SSRS à l'aide de PowerShell](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/).scriptin
 
 ## <a name="rsexe-scripting-samples"></a>Exemples de scripts RS.exe
 

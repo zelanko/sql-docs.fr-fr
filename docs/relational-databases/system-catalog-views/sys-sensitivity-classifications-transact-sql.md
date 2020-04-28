@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77903900"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -37,7 +37,7 @@ Retourne une ligne pour chaque élément classifié dans la base de données.
 
 |Nom de la colonne|Type de données|Description|
 |-----------------|---------------|-----------------|  
-|**type**|**int**|Identifie la classe de l’élément sur lequel la classification existe. Aura toujours la valeur 1 (représentant une colonne)|  
+|**class**|**int**|Identifie la classe de l’élément sur lequel la classification existe. Aura toujours la valeur 1 (représentant une colonne)|  
 |**class_desc**|**varchar (16)**|Description de la classe de l’élément sur lequel la classification existe. aura toujours la valeur *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Représente l’ID de la table contenant la colonne classifiée, correspondant à sys. all_objects. object_id|  
 |**minor_id**|**int**|Représente l’ID de la colonne sur laquelle la classification existe, correspondant à sys. all_columns. column_id|   
@@ -82,7 +82,7 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 ## <a name="see-also"></a>Voir aussi  
 
-[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[AJOUTER UNE CLASSIFICATION DE SENSIBILITÉ (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 

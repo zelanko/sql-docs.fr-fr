@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175638"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Créer ou personnaliser une bibliothèque de flux de données (PowerPivot pour SharePoint)
@@ -33,19 +33,18 @@ ms.locfileid: "78175638"
 
  Cette rubrique contient les sections suivantes :
 
- [Prérequis](#prereq)
+ [Conditions préalables](#prereq)
 
- [Créer une nouvelle bibliothèque de flux de données](#createlib)
+ [Créer une bibliothèque de flux](#createlib)
 
- [Ajouter le type de contenu de flux de données à n’importe quelle bibliothèque](#addtolib)
+ [Ajouter le type de contenu du flux à une bibliothèque](#addtolib)
 
-##  <a name="prereq"></a> Conditions préalables
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] L’intégration de la fonctionnalité doit être activée pour les sites pour lesquels vous créez la bibliothèque de flux de données. Si le type de modèle de bibliothèque de flux n'est pas disponible, la cause en est probablement que cette condition préalable n'est pas respectée. Pour plus d’informations, consultez [activer l’intégration des fonctionnalités PowerPivot pour les collections de sites dans l’administration centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).
+##  <a name="prerequisites"></a><a name="prereq"></a> Conditions préalables
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] L’intégration de la fonctionnalité doit être activée pour les sites pour lesquels vous créez la bibliothèque de flux de données. Si le type de modèle de bibliothèque de flux n'est pas disponible, la cause en est probablement que cette condition préalable n'est pas respectée. Pour plus d’informations, consultez [activer l’intégration des fonctionnalités PowerPivot pour les collections de sites dans l’administration centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).
 
  Vous devez être propriétaire de site pour créer la bibliothèque.
 
-##  <a name="createlib"></a>Créer une nouvelle bibliothèque de flux de données
+##  <a name="create-a-new-data-feed-library"></a><a name="createlib"></a>Créer une nouvelle bibliothèque de flux de données
  La création d’une bibliothèque de flux de données est la première étape de l’activation des flux de données pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Avant de pouvoir créer un document, une bibliothèque de flux doit être en place, car c'est elle qui fournit les pages d'application et de gestion de documents de service de données.
 
  Une bibliothèque de flux de données est basée sur un modèle intégré et sur un *type de contenu de document de service de données* préconfiguré qui définit les propriétés et comportements d’un document de service de données.
@@ -58,13 +57,13 @@ ms.locfileid: "78175638"
 
 4.  Tapez le nom et la description, ainsi que les préférences en termes de démarrage et de version. Incluez des informations descriptives pour aider les utilisateurs à identifier cette bibliothèque en tant qu'emplacement de stockage pour les documents de service de données.
 
-5.  Cliquez sur **Créer**.
+5.  Cliquez sur **Créer**.
 
  Un lien vers la bibliothèque de flux s'affiche dans le volet de navigation Lancement rapide du site actuel.
 
  Après avoir créé une bibliothèque, vous pouvez l'utiliser pour créer des documents de service de données. Pour plus d’informations, consultez [utiliser des flux de données &#40;PowerPivot pour SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).
 
-##  <a name="addtolib"></a>Ajouter le type de contenu de flux de données à n’importe quelle bibliothèque
+##  <a name="add-the-data-feed-content-type-to-any-library"></a><a name="addtolib"></a>Ajouter le type de contenu de flux de données à n’importe quelle bibliothèque
  Si vous ne souhaitez pas créer de bibliothèque de flux de données dédiée, mais souhaitez toujours créer et gérer des documents de service de données à partir d'un site SharePoint, vous pouvez ajouter et configurer manuellement le type de contenu de document de service de données pour toute bibliothèque que vous utiliserez pour partager des fichiers de documents de service de données (.atomsvc).
 
  Pour ajouter et configurer un type de contenu, vous devez au minimum disposer d'une autorisation Gérer les listes. Cette autorisation est intégrée au niveau d'autorisation de conception et aux niveaux supérieurs.
@@ -110,6 +109,6 @@ ms.locfileid: "78175638"
 4.  Cliquez sur la flèche vers le bas de Nouveau document et sélectionnez **Document de service de données**. La page Nouveau document de service de données s'affiche.
 
 ## <a name="see-also"></a>Voir aussi
- [Utiliser des flux de données &#40;PowerPivot pour SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md) [supprimer une bibliothèque de flux de données PowerPivot](delete-a-power-pivot-data-feed-library.md) [administration et configuration du serveur PowerPivot dans les flux de données PowerPivot de l’administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md) [](power-pivot-data-feeds.md)
+ [Utiliser des flux de données &#40;PowerPivot pour SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md) [supprimer une bibliothèque de flux de données PowerPivot](delete-a-power-pivot-data-feed-library.md) [administration et configuration du serveur PowerPivot dans les flux de données PowerPivot de l’administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md) [PowerPivot Data Feeds](power-pivot-data-feeds.md)
 
 

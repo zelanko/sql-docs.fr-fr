@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f56a7fc3d4d5d24143d2c83709e9674e1b2fd43d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176829"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicateurs (Générateur de rapports et SSRS)
@@ -41,10 +41,9 @@ ms.locfileid: "78176829"
 
  ![rs_IndicatorTableTrafficLight](../media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")
 
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des icônes d'indicateur et des jeux d'indicateurs intégrés à utiliser tels quels, mais vous pouvez également personnaliser des icônes d'indicateur individuelles et des jeux d'indicateurs en fonction de vos besoins.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des icônes d'indicateur et des jeux d'indicateurs intégrés à utiliser tels quels, mais vous pouvez également personnaliser des icônes d'indicateur individuelles et des jeux d'indicateurs en fonction de vos besoins.
 
- Pour plus d'informations sur l'utilisation d'indicateurs comme indicateurs de performance clés, consultez le [tutoriel : Ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).
+ Pour plus d’informations sur l’utilisation des indicateurs comme indicateurs de performance clés, consultez [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).
 
 > [!NOTE]
 >  Vous pouvez publier des indicateurs hors d'un rapport en tant que parties du rapport. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "78176829"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="ComparingIndicatorsToGauges"></a> Comparaison des indicateurs aux jauges
+##  <a name="comparing-indicators-to-gauges"></a><a name="ComparingIndicatorsToGauges"></a> Comparaison des indicateurs aux jauges
  Bien qu'ils semblent très différents, les indicateurs sont juste de simples jauges. Les indicateurs et les jauges affichent tous deux une valeur des données unique. Les principales différences résident dans le fait que les jauges comportent des éléments, tels que les cadres et pointeurs. Les indicateurs ont uniquement des états, des icônes et, éventuellement, des étiquettes. Les états d'indicateur sont semblables aux plages de jauge.
 
  Comme les jauges, les indicateurs sont placés à l'intérieur d'un panneau de jauge. Quand vous souhaitez configurer un indicateur à l’aide de la boîte de dialogue **Propriétés des indicateurs** ou du volet Propriétés, vous devez sélectionner l’indicateur plutôt que le panneau. Sinon, les options disponibles s'appliquent aux options du panneau de jauge et vous ne pouvez pas configurer l'indicateur. L'image suivante illustre un indicateur sélectionné dans son panneau de jauge.
@@ -62,7 +61,7 @@ ms.locfileid: "78176829"
  Selon la façon dont vous souhaitez représenter la valeur des données, les jauges peuvent être plus efficaces que les indicateurs. Pour plus d’informations, consultez [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md).
 
 
-##  <a name="ChoosingIndicatorTypes"></a> Choix du type d'indicateur à utiliser
+##  <a name="choosing-the-indicator-type-to-use"></a><a name="ChoosingIndicatorTypes"></a> Choix du type d'indicateur à utiliser
  L'utilisation du jeu d'indicateurs approprié permet de communiquer instantanément la signification des données, si les données sont dans une ligne de détails ou dans un groupe de lignes ou de colonnes dans une table ou matrice, ou seules dans le corps du rapport ou tableau de bord. Les jeux d'indicateurs intégrés ont trois icônes ou plus. Les icônes peuvent varier selon la forme, la couleur, ou les deux à la fois. Chaque icône communique un état des données différent.
 
  Le tableau suivant répertorie les jeux d'indicateurs intégrés et décrit certaines de leurs utilisations courantes.
@@ -77,7 +76,7 @@ ms.locfileid: "78176829"
  Après avoir choisi un jeu d'indicateurs, vous pouvez personnaliser l'apparence de chaque icône d'indicateur dans le jeu en définissant ses propriétés dans les boîtes de dialogue pour les indicateurs ou le volet Propriétés. Vous pouvez utiliser les couleurs, icônes et tailles ou expressions intégrées pour configurer des indicateurs.
 
 
-##  <a name="CustomizingIndicators"></a> Personnalisation des indicateurs
+##  <a name="customizing-indicators"></a><a name="CustomizingIndicators"></a> Personnalisation des indicateurs
  Les indicateurs peuvent être personnalisés en fonction de vos besoins. Vous pouvez modifier les jeux d'indicateurs ainsi qu'une icône d'indicateur individuelle dans un jeu des façons suivantes :
 
 -   Modifiez les couleurs des icônes d'indicateur. Par exemple, vous pouvez choisir un modèle de couleurs monochromatique pour le jeu d'indicateurs ou utiliser des couleurs autres que celles par défaut.
@@ -93,10 +92,10 @@ ms.locfileid: "78176829"
  Pour plus d’informations, consultez [Modifier les icônes d’indicateur et jeux d’indicateurs &#40;Générateur de rapports et SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).
 
 
-##  <a name="UsingIndicatorsInTablesMatrices"></a> Utilisation d'indicateurs dans les tables et les matrices
+##  <a name="using-indicators-in-tables-and-matrices"></a><a name="UsingIndicatorsInTablesMatrices"></a> Utilisation d'indicateurs dans les tables et les matrices
  Les formes simples des indicateurs les rendent idéaux pour une utilisation dans les tables et les matrices. Les indicateurs sont efficaces même dans les petites tailles. Cela les rend utiles dans les lignes de détails ou de groupes des rapports.
 
- Le diagramme suivant montre un rapport avec une table qui utilise le jeu d’indicateurs directionnels, **4 flèches (en couleur)** , pour indiquer les ventes. Les icônes d'indicateur dans le rapport sont configurées pour utiliser des nuances de bleu au lieu des couleurs par défaut : rouge, jaune et vert.
+ Le diagramme suivant montre un rapport avec une table qui utilise le jeu d’indicateurs directionnels, **4 flèches (en couleur)**, pour indiquer les ventes. Les icônes d'indicateur dans le rapport sont configurées pour utiliser des nuances de bleu au lieu des couleurs par défaut : rouge, jaune et vert.
 
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")
 
@@ -113,7 +112,7 @@ ms.locfileid: "78176829"
  Les indicateurs utilisent uniquement une valeur unique. Si vous devez afficher plusieurs valeurs de données, utilisez un graphique sparkline ou une barre de données au lieu d'un indicateur. Ils peuvent représenter plusieurs valeurs des données mais sont également simples, faciles à comprendre à des petites tailles et fonctionnent correctement dans les tables et les matrices. Pour plus d’informations, consultez [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).
 
 
-##  <a name="SizingIndicatators"></a> Dimensionnement des indicateurs pour optimiser l'impact visuel
+##  <a name="sizing-indicators-to-maximize-visual-impact"></a><a name="SizingIndicatators"></a> Dimensionnement des indicateurs pour optimiser l'impact visuel
  Outre la couleur, la direction et la forme, vous pouvez utiliser la taille pour optimiser l'impact visuel des indicateurs. Imaginez un rapport qui utilise des indicateurs pour illustrer la satisfaction des clients avec différents types de bicyclettes. L'icône que l'indicateur utilise peut être configurée selon des tailles différentes en fonction de la satisfaction des clients. Plus la satisfaction est grande, plus l'icône qui s'affiche dans le rapport est grande. L'image suivante affiche un rapport des ventes de bicyclettes et les tailles de l'icône reflètent le montant des ventes.
 
  Vous utilisez des expressions pour définir de façon dynamique la taille des étoiles selon les valeurs de champ utilisées par l'indicateur. Pour plus d’informations, consultez [Spécifier la taille d’un indicateur à l’aide d’une expression &#40;Générateur de rapports et SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).
@@ -121,7 +120,7 @@ ms.locfileid: "78176829"
  Pour en savoir plus sur la création et l’utilisation d’expressions, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md).
 
 
-##  <a name="IncludingIndicatorsInGauges"></a> Insertion d'indicateurs et de jauges dans les panneaux de jauge
+##  <a name="including-indicators-and-gauges-in-gauge-panels"></a><a name="IncludingIndicatorsInGauges"></a> Insertion d'indicateurs et de jauges dans les panneaux de jauge
  Les indicateurs sont toujours placés à l'intérieur d'un panneau de jauge. Le panneau de jauge est un conteneur de niveau supérieur qui peut inclure une ou plusieurs jauges et des indicateurs d'état. Le panneau de jauge peut contenir des indicateurs ou des jauges enfants ou adjacents. Si vous utilisez un indicateur en tant qu'enfant d'une jauge, vous pouvez davantage visualiser les données en affichant l'état de la valeur des données affichée dans la jauge. Par exemple, un indicateur dans une jauge peut afficher un cercle vert pour indiquer que la valeur vers laquelle la jauge pointe figure dans les 33 pour cent supérieurs de la plage de valeurs. En utilisant côte à côte une jauge et un indicateur, vous pouvez représenter les données de différentes façons. Dans les deux cas, l'indicateur et la jauge peuvent utiliser des champs de données identiques ou différents.
 
  Le diagramme suivant illustre un indicateur côte à côte avec une jauge et dans une jauge.
@@ -133,7 +132,7 @@ ms.locfileid: "78176829"
  Pour plus d’informations sur l’utilisation de jauges, consultez [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md).
 
 
-##  <a name="SequenceIndicatorStates"></a> Séquence d'états d'indicateur
+##  <a name="sequence-of-indicator-states"></a><a name="SequenceIndicatorStates"></a> Séquence d'états d'indicateur
  La séquence des états d’indicateur sous l’onglet **Valeur et états** de la boîte de dialogue **Propriétés de l’indicateur** détermine l’icône d’indicateur affichée pour une valeur de données quand les valeurs de début et de fin des états d’indicateur se chevauchent.
 
  Cela peut se produire si vous utilisez l'unité de mesure des états de type pourcentage ou numérique. C'est plus probable si vous utilisez l'unité de mesure numérique car vous fournissez des valeurs spécifiques pour cette mesure. C'est également le cas lorsque vous arrondissez les valeurs des données du rapport car cela a tendance à rendre les valeurs moins discrètes.
@@ -185,7 +184,7 @@ ms.locfileid: "78176829"
  En résumé, l'évaluation commence et le haut de la liste d'états de l'indicateur ainsi que le rapport affichent l'icône d'indicateur associée au premier état d'indicateur qui a une plage de valeurs pouvant contenir les données. En modifiant l'ordre des états d'indicateur vous pouvez donc affecter la visualisation des valeurs de données.
 
 
-##  <a name="HowTo"></a> Rubriques de procédures
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Rubriques de procédures
  Cette section répertorie les procédures qui vous indiquent comment ajouter, modifier et supprimer des indicateurs, configurer et personnaliser des indicateurs et utiliser des indicateurs dans les jauges.
 
 -   [Ajouter ou supprimer un indicateur &#40;Générateur de rapports et SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd17110b5a5f2abf8f64662221f334ebf769b258
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77114565"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
@@ -105,7 +105,7 @@ CREATE SEQUENCE Test.RangeSeq
 ;  
 ```  
   
-### <a name="a-retrieving-a-range-of-sequence-values"></a>R. Récupération d'une plage de valeurs de séquence  
+### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Récupération d'une plage de valeurs de séquence  
  L’instruction suivante obtient quatre numéros de séquence de l’objet de séquence test. RangeSeq et retourne le premier des nombres à l’utilisateur.  
   
 ```  
@@ -180,10 +180,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CRÉER une séquence &#40;&#41;Transact-SQL](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [Instruction ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [SUPPRIMER la séquence &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [VALEUR suivante pour &#40;&#41;Transact-SQL](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

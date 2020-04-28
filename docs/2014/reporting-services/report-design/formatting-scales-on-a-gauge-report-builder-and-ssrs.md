@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dec6f4898f46246b31e0808d0ff0997dd4c0913c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176769"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des échelles sur une jauge (Générateur de rapports et SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176769"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="DefiningMinMax"></a> Définition de valeurs minimale et maximale et d'intervalles sur une échelle
+##  <a name="defining-minimum-maximum-and-intervals-on-a-scale"></a><a name="DefiningMinMax"></a> Définition de valeurs minimale et maximale et d'intervalles sur une échelle
  Comme une jauge est souvent utilisée pour afficher des indicateurs de performance clés mesurés (KPI) en pourcentage de 0 à 100, ces valeurs sont attribuées par défaut aux propriétés de la valeur minimale et de la valeur maximale de la jauge. Ces valeurs risquent toutefois de ne pas représenter l'échelle de valeurs que vous tentez d'afficher. En l'absence de logique intégrée permettant de déterminer ce que le champ de données KPI représente, la jauge ne calcule pas automatiquement les valeurs minimale et maximale. Si la valeur du champ de données KPI n'est pas comprise entre 0 et 100, vous devez définir explicitement des valeurs pour les propriétés de la valeur minimale et de la valeur maximale de manière à replacer dans son contexte la valeur qui est affichée sur la jauge.
 
  Des graduations principales et secondaires figurent sur l'échelle. De plus, l'échelle possède des étiquettes qui sont généralement associées aux graduations principales. Par exemple, une échelle peut avoir des graduations principales indiquant 0, 20, 40, 60, 80 et 100. Les étiquettes doivent correspondre à ces graduations. La différence entre les valeurs des étiquettes est appelée « intervalle d'échelle ». Dans cet exemple, l'intervalle d'échelle est défini sur 20. Vous pouvez définir la propriété Interval dans la boîte de dialogue **Propriétés de l'échelle radiale** ou **Propriétés de l'échelle linéaire** .
@@ -53,14 +53,14 @@ ms.locfileid: "78176769"
  Le décalage d'intervalle détermine le nombre d'unités qui seront ignorées avant que la première étiquette ne s'affiche. Toutes les graduations principales et les étiquettes qui apparaissent successivement sur l'échelle utiliseront l'intervalle spécifié. Lorsque la valeur des intervalles d'étiquettes et de graduations est 0, cela revient à redéfinir l'intervalle sur Auto.
 
 
-##  <a name="ReducingCollisions"></a> Réduction des collisions d'étiquettes avec des multiplicateurs
+##  <a name="reducing-label-collisions-with-multipliers"></a><a name="ReducingCollisions"></a> Réduction des collisions d'étiquettes avec des multiplicateurs
  Lorsque des valeurs contiennent de nombreux chiffres, elles risquent d'altérer la lisibilité de la jauge. Vous pouvez utiliser un multiplicateur d'échelle pour augmenter ou réduire l'échelle des valeurs. Lorsqu'un multiplicateur d'échelle est spécifié, chaque valeur d'origine sur l'échelle est multipliée par le multiplicateur antérieur à leur affichage sur l'échelle. Pour réduire l'échelle des valeurs, vous devez spécifier un nombre décimal. Par exemple, si l' échelle va de 0 à 10000 et que vous souhaitez afficher les nombres de 0 à 10 sur la jauge, vous pouvez utiliser une valeur de multiplicateur de 0,001.
 
 > [!NOTE]
 >  L'utilisation d'un multiplicateur ne multiplie pas la valeur réelle du champ agrégé que la jauge utilise. Seules les valeurs des étiquettes affichées sur la jauge sont multipliées une fois les valeurs minimale et maximale et les intervalles définis. Envisagez de continuer à automatiser les calculs des intervalles lorsque vous utilisez un multiplicateur.
 
 
-##  <a name="SpecifyingScaleBar"></a> Spécification de la largeur de barre d'échelle, du rayon et des angles sur une échelle radiale
+##  <a name="specifying-the-scale-bar-width-radius-and-angles-on-a-radial-scale"></a><a name="SpecifyingScaleBar"></a> Spécification de la largeur de barre d'échelle, du rayon et des angles sur une échelle radiale
  Utilisez la page **Mise en page** de la boîte de dialogue **Propriétés de l'échelle radiale** pour définir la largeur de barre de l'échelle, le rayon, l'angle de début et l'angle de balayage de l'échelle. Vous pouvez utiliser ces propriétés pour personnaliser la taille et le format de l'échelle. Par exemple, si vous positionnez des étiquettes d'échelle à l'extérieur de l'échelle, vous devrez redimensionner le rayon de l'échelle pour que ces étiquettes puissent tenir à l'intérieur de la jauge.
 
 > [!NOTE]
@@ -77,7 +77,7 @@ ms.locfileid: "78176769"
  L'angle de balayage correspond au nombre de degrés, entre 0 et 360, que l'échelle balaiera dans un cercle. Avec un angle de balayage de 360 degrés, une échelle représente un cercle complet. Cela peut s'avérer utile si vous souhaitez concevoir une jauge ressemblant à une horloge.
 
 
-##  <a name="PositioningLabels"></a> Positionnement des étiquettes sur une échelle linéaire ou radiale
+##  <a name="positioning-labels-on-a-linear-or-radial-scale"></a><a name="PositioningLabels"></a> Positionnement des étiquettes sur une échelle linéaire ou radiale
  Il existe deux propriétés qui déterminent la position des étiquettes. La propriété de placement des étiquettes spécifie si les étiquettes sont affichées à l'intérieur, à l'extérieur ou en travers de la barre de l'échelle. La propriété de distance définit la distance qui sépare les étiquettes de l'échelle, à partir de la barre de l'échelle. Si vous souhaitez positionner les étiquettes à l'intérieur de la barre de l'échelle, spécifiez un nombre négatif. Par exemple, si les étiquettes se trouvent à l'extérieur de l'échelle et que vous avez défini une distance de 10 entre les étiquettes et l'échelle, les étiquettes s'afficheront à 10 unités à l'extérieur de l'emplacement où les étiquettes se trouveraient normalement, où 1 unité correspond à :
 
 -   1 % du diamètre de la jauge sur une jauge radiale, ou

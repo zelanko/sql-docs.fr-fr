@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177289"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tâche 14 : Ajout d'une tâche d'exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tâche 14 : Ajout d’une tâche d’exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS
   Après le chargement des données dans les tables intermédiaires de MDS, vous allez exécuter une procédure stockée associée à ces tables pour charger les données des tables intermédiaires vers les tables appropriées dans la base de données MDS. Cette procédure stockée nécessite deux paramètres : LogFlag et VersionName. LogFlag spécifie si les transactions sont journalisées pendant le processus intermédiaire et VersionName représente la version du modèle. Pour plus d’informations, consultez la rubrique [procédure stockée intermédiaire](https://msdn.microsoft.com/library/hh231028.aspx) .
 
  Dans cette tâche, vous allez ajouter la tâche d'exécution SQL au flux de contrôle pour appeler la procédure stockée et charger les données intermédiaires dans les tables MDS appropriées.
@@ -34,7 +34,7 @@ ms.locfileid: "78177289"
 
 5.  À l’aide de la fenêtre **variables** , ajoutez deux nouvelles variables avec les paramètres suivants. Si vous ne voyez pas la fenêtre **variables** , cliquez sur **SSIS** dans la barre de menus, puis cliquez sur **variables**.
 
-    |Name|Type de données|Valeur|
+    |Nom|Type de données|Valeur|
     |----------|---------------|-----------|
     |LogFlag|Int32|1|
     |VersionName|String|VERSION_1|
@@ -71,6 +71,6 @@ ms.locfileid: "78177289"
 15. Cliquez sur **OK** pour fermer la boîte de dialogue **éditeur SQL d’exécution** .
 
 ## <a name="next-step"></a>étape suivante
- [Tâche 15 : Générer et exécuter le projet SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
+ [Tâche 15 : Génération et exécution du projet SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
 
 

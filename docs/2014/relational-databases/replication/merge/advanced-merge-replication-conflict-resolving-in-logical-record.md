@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175849"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Détection et résolution des conflits dans les enregistrements logiques
@@ -105,6 +105,6 @@ ms.locfileid: "78175849"
  ![Séries de tables affichant les modifications apportées aux lignes associées](../media/logical-records-08.gif "Séries de tables affichant les modifications apportées aux lignes associées")
 
 ## <a name="see-also"></a>Voir aussi
- [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](group-changes-to-related-rows-with-logical-records.md)
+ [Regrouper les modifications apportées aux lignes associées avec des enregistrements logiques](group-changes-to-related-rows-with-logical-records.md)
 
 

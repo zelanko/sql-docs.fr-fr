@@ -11,20 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76928102"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Exemple de manipulation de chaînes sensible aux caractères supplémentaires
   Cet exemple pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illustre un traitement de chaînes sensible aux caractères supplémentaires. Cet exemple illustre l'implémentation de cinq fonctions de chaîne Transact-SQL qui procurent les mêmes fonctions de manipulation de chaînes que les fonctions intégrées, mais avec une capacité additionnelle autorisant la gestion des chaînes de caractères Unicode et supplémentaires. Les cinq fonctions sont Lens ( `lefts(), rights(), subs()` ) et `replace_s()` sont équivalentes aux fonctions intégrées `LEN(), LEFT(), RIGHT(), SUBSTRING()` et `REPLACE()` aux fonctions de chaîne.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "76928102"
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
--   Si vous n'êtes pas administrateur de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, vous devez demander à un administrateur de vous accorder l'autorisation **CreateAssembly**  pour terminer l'installation.  
+-   Si vous n’êtes pas administrateur de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance que vous utilisez, vous devez demander à un administrateur de vous accorder l’autorisation **CreateAssembly** pour terminer l’installation.  
   
 ## <a name="building-the-sample"></a>Génération de l'exemple  
   
@@ -687,6 +686,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios d’utilisation et exemples pour le Common Language Runtime &#40;l’intégration du CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

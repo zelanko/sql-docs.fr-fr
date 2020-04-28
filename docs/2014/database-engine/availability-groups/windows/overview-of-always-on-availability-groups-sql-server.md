@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c13b66a5ffe594589c325bc7d8001451161f054
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175498"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Vue d'ensemble des groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique présente les concepts [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] essentiels pour configurer et gérer un ou plusieurs groupes de disponibilité dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Pour obtenir un résumé des avantages offerts par les groupes de disponibilité et une vue d’ensemble de la terminologie [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).
 
- Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent de concert. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires et un à huit ensembles de bases de données secondaires correspondantes. Les bases de données secondaires ne sont *pas* des sauvegardes. Continuez à sauvegarder vos bases de données et leurs journaux des transactions de manière régulière.
+ Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent ensemble. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires et un à huit ensembles de bases de données secondaires correspondantes. Les bases de données secondaires ne sont *pas* des sauvegardes. Continuez à sauvegarder vos bases de données et leurs journaux des transactions de manière régulière.
 
 > [!TIP]
 >  Vous pouvez créer n'importe quel type de sauvegarde d'une base de données primaire. Vous pouvez également créer des sauvegardes de journaux et des sauvegardes complètes de copie uniquement des bases de données secondaires. Pour plus d’informations, consultez [Secondaires actifs : sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).
@@ -49,7 +49,7 @@ ms.locfileid: "78175498"
  ![Groupe de disponibilité avec cinq réplicas](../../media/aoag-agintrofigure.gif "Groupe de disponibilité avec cinq réplicas")
 
 
-##  <a name="AvDbs"></a> Availability Databases
+##  <a name="availability-databases"></a><a name="AvDbs"></a>Bases de données de disponibilité
  Pour ajouter une base de données à un groupe de disponibilité, la base de données doit être une base de données en ligne en lecture-écriture qui existe sur l'instance de serveur qui héberge le réplica principal. Lorsque vous ajoutez une base de données, elle joint le groupe de disponibilité comme base de données primaire, tout en restant disponible aux clients. Il n'existe aucune base de données secondaire correspondante jusqu'à ce que les sauvegardes de la nouvelle base de données primaire soient restaurées dans l'instance de serveur qui héberge le réplica secondaire (avec RESTORE WITH NORECOVERY). La nouvelle base de données secondaire se trouve dans l'état RESTORING jusqu'à ce qu'elle soit jointe au groupe de disponibilité. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).
 
  Une jointure place la base de données secondaire dans l'état ONLINE et démarre la synchronisation des données avec la base de données primaire correspondante. La*synchronisation des données* correspond au processus selon lequel les modifications apportées à une base de données primaire sont reproduites sur une base de données secondaire. La synchronisation des données implique l'envoi par la base de données primaire d'enregistrements de journal des transactions à la base de données secondaire.
@@ -57,7 +57,7 @@ ms.locfileid: "78175498"
 > [!IMPORTANT]
 >  Une base de données de disponibilité est parfois désignée sous le terme de *réplica de base de données* dans [!INCLUDE[tsql](../../../includes/tsql-md.md)], PowerShell et les noms SMO (SQL Server Management Objects). Par exemple, le terme « réplica de base de données » est utilisé dans les noms des vues de gestion dynamique AlwaysOn qui retournent des informations sur les bases de données de disponibilité :  **sys.dm_hadr_database_replica_states** et **sys.dm_hadr_database_replica_cluster_states**. Toutefois, dans la documentation en ligne de SQL Server, le terme « réplica » fait généralement référence aux réplicas de disponibilité. Par exemple, les termes « réplica principal » et « réplica secondaire » font toujours référence aux réplicas de disponibilité.
 
-##  <a name="AGsARsADBs"></a> Réplicas de disponibilité
+##  <a name="availability-replicas"></a><a name="AGsARsADBs"></a>Réplicas de disponibilité
  Chaque groupe de disponibilité définit un ensemble de deux partenaires de basculement ou plus, appelés réplicas de disponibilité. Les*réplicas de disponibilité* sont des composants du groupe de disponibilité. Chaque réplica de disponibilité héberge une copie des bases de données de disponibilité dans le groupe de disponibilité. Pour un groupe de disponibilité donné, les réplicas de disponibilité doivent être hébergés par des instances distinctes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui résident sur différents nœuds d'un cluster WSFC. Chacune de ces instances de serveur doit être activée pour AlwaysOn.
 
  Un instance donnée ne peut héberger qu'un seul réplica de disponibilité par groupe de disponibilité. Toutefois, chaque instance peut être utilisée pour de nombreux groupes de disponibilité. Une instance donnée peut être une instance autonome ou une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI). Si vous avez besoin d'une redondance au niveau serveur, utilisez des instances de cluster de basculement.
@@ -67,10 +67,10 @@ ms.locfileid: "78175498"
 > [!NOTE]
 >  Lorsque le rôle d'un réplica de disponibilité est indéterminé, comme lors d'un basculement, ses bases de données sont temporairement dans un état NOT SYNCHRONIZING. Leur rôle est défini sur RESOLVING jusqu'à ce que le rôle du réplica de disponibilité soit résolu. Si un réplica de disponibilité est résolu en rôle principal, ses bases de données deviennent les bases de données primaires. Si un réplica de disponibilité est résolu en rôle secondaire, ses bases de données deviennent les bases de données secondaires.
 
-##  <a name="AvailabilityModes"></a> Modes de disponibilité
- Le mode de disponibilité est une propriété de chaque réplica de disponibilité. Le mode de disponibilité détermine si le réplica principal attend, pour valider des transactions sur une base de données, qu'un réplica secondaire donné ait écrit les enregistrements du journal des transactions sur le disque (journal renforcé). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge deux modes de disponibilité : le*mode avec validation asynchrone* et le *mode avec validation synchrone*.
+##  <a name="availability-modes"></a><a name="AvailabilityModes"></a>Modes de disponibilité
+ Le mode de disponibilité est une propriété de chaque réplica de disponibilité. Le mode de disponibilité détermine si le réplica principal attend, pour valider des transactions sur une base de données, qu'un réplica secondaire donné ait écrit les enregistrements du journal des transactions sur le disque (journal renforcé). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]prend en charge deux modes de disponibilité : le*mode de validation asynchrone* et le *mode de validation synchrone*.
 
--   **Asynchronous-commit mode**
+-   **Mode de validation asynchrone**
 
      Un réplica de disponibilité qui utilise ce mode de disponibilité est appelé*réplica avec validation asynchrone*. En mode de validation asynchrone, le réplica principal valide les transactions sans attendre d'accusé de réception confirmant qu'un réplica secondaire avec validation asynchrone a renforcé le journal. Le mode de validation asynchrone réduit la latence de transaction sur les bases de données secondaires, mais leur permet d'être antérieures aux bases de données primaires, ce qui rend possible la perte de données.
 
@@ -78,14 +78,14 @@ ms.locfileid: "78175498"
 
      Un réplica de disponibilité qui utilise ce mode de disponibilité est appelé *réplica avec validation synchrone*. En mode de validation synchrone, avant de valider des transactions, un réplica principal avec validation synchrone attend qu'un réplica secondaire avec validation synchrone confirme qu'il a terminé le renforcement du journal. Le mode de validation synchrone garantit qu'une fois qu'une base de données secondaire particulière est synchronisée avec la base de données primaire, les transactions validées sont entièrement protégées. Cette protection se fait au prix d'une latence accrue des transactions.
 
- Pour plus d’informations, consultez [modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md).
+ Pour plus d’informations, consultez [Modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md).
 
-##  <a name="FormsOfFailover"></a> Types de basculement
+##  <a name="types-of-failover"></a><a name="FormsOfFailover"></a>Types de basculement
  Dans le contexte d'une session entre le réplica principal et un réplica secondaire, les rôles principal et secondaire sont potentiellement interchangeables dans un processus appelé *basculement*. Lors d'un basculement, le réplica secondaire cible joue le rôle principal, en devenant le nouveau réplica principal. Le nouveau réplica principal met ses bases de données en ligne comme bases de données primaires, et les applications clientes peuvent se connecter à ces dernières. Lorsque le réplica principal précédent est disponible, il prend le rôle secondaire, en devenant un réplica secondaire. Les bases de données primaires précédentes deviennent les bases de données secondaires et la synchronisation des données reprend.
 
  Il existe trois types de basculement : automatique, manuel et forcé (avec perte de données possible). La ou les formes de basculement prises en charge par un réplica secondaire dépendent de son mode de disponibilité, et en mode de validation synchrone, du mode de basculement sur le réplica principal et le réplica secondaire cible, comme suit.
 
--   Le mode de validation synchrone prend en charge deux formes de basculement : le*basculement manuel planifié* et le *basculement automatique*, si le réplica secondaire cible est actuellement synchronisé avec avt1. La prise en charge de ces formes de basculement dépend du paramètre de la *propriété de mode de basculement* sur les serveurs partenaires de basculement. Si le mode de basculement est défini sur « manuel » sur le réplica principal ou secondaire, seul le basculement manuel est pris en charge pour ce réplica secondaire. Si le mode de basculement est défini sur « automatique » dans les réplicas principal et secondaire, les basculements manuel et automatique sont pris en charge sur ce réplica secondaire.
+-   Le mode de validation synchrone prend en charge deux formes de basculement*Manuel planifié* et de basculement *automatique*, si le réplica secondaire cible est actuellement synchronisé avec le AVT1. La prise en charge de ces formes de basculement dépend du paramètre de la *propriété de mode de basculement* sur les serveurs partenaires de basculement. Si le mode de basculement est défini sur « manuel » sur le réplica principal ou secondaire, seul le basculement manuel est pris en charge pour ce réplica secondaire. Si le mode de basculement est défini sur « automatique » dans les réplicas principal et secondaire, les basculements manuel et automatique sont pris en charge sur ce réplica secondaire.
 
     -   **Basculement manuel planifié** (sans perte de données)
 
@@ -105,7 +105,7 @@ ms.locfileid: "78175498"
 
  Pour plus d’informations, consultez [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).
 
-##  <a name="ClientConnections"></a> Connexions clientes
+##  <a name="client-connections"></a><a name="ClientConnections"></a>Connexions client
  Vous pouvez fournir la connectivité client au réplica principal d'un groupe de disponibilité donné en créant un écouteur de groupe de disponibilité. Un *écouteur de groupe de disponibilité* fournit un ensemble de ressources joint à un groupe de disponibilité donné pour diriger les connexions clientes vers le réplica de disponibilité approprié.
 
  Un écouteur de groupe de disponibilité est associé à un nom DNS unique qui sert de nom de réseau virtuel (VNN), une ou plusieurs adresses IP virtuelles (VIP) et un numéro de port TCP. Pour plus d’informations, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).
@@ -113,7 +113,7 @@ ms.locfileid: "78175498"
 > [!TIP]
 >  Si un groupe de disponibilité a uniquement deux réplicas de disponibilité et n’est pas configuré pour autoriser l’accès en lecture au réplica secondaire, les clients peuvent se connecter au réplica principal à l’aide d’une [chaîne de connexion de mise en miroir de bases de données](../../database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md). Cette approche peut être utile temporairement après avoir migré une base de données de la mise en miroir de bases de données vers [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Avant d'ajouter des réplicas secondaires supplémentaires, vous devrez créer un écouteur de groupe de disponibilité pour le groupe de disponibilité, puis mettre à jour vos applications afin d'utiliser le nom réseau de l'écouteur.
 
-##  <a name="ActiveSecondaries"></a> Réplicas secondaires actifs
+##  <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a>Réplicas secondaires actifs
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge les réplicas secondaires actifs. Les fonctions secondaires actives prennent en charge les opérations suivantes :
 
 -   **Exécution d'opérations de sauvegarde sur des réplicas secondaires**
@@ -126,26 +126,26 @@ ms.locfileid: "78175498"
 
      Si un groupe de disponibilité a un écouteur de groupe de disponibilité et un ou plusieurs réplicas secondaires lisibles, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut acheminer les demandes de connexion d’intention de lecture vers l’un d’entre eux (*routage en lecture seule*). Pour plus d’informations, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).
 
-##  <a name="SessionTimeoutPerios"></a> Période d'expiration de session
+##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a>Période d’expiration de session
  La période d'expiration de session est une propriété du réplica de disponibilité qui détermine le temps pendant lequel une connexion avec un autre réplica de disponibilité peut rester inactive avant qu'elle soit fermée. Les réplicas primaire et secondaire exécutent réciproquement une commande ping pour signaler qu'ils sont toujours actifs. La réception d'une commande ping de l'autre réplica au cours de la période de délai d'attente indique que la connexion est toujours ouverte et que les instances de serveur communiquent. À la réception d'un ping, un réplica de disponibilité réinitialise son compteur de période d'expiration de session sur cette connexion.
 
- La période d'expiration de session évite que l'un ou l'autre réplica attendent indéfiniment de recevoir un ping de l'autre réplica. Si aucun ping n'est reçu de l'autre réplica au cours de la période d'expiration de session, le réplica expire. Sa connexion est fermée, et le réplica expiré passe à l'état DISCONNECTED. Même si un réplica déconnecté est configuré pour le mode de validation synchrone, les transactions n'attendront pas que ce réplica se reconnecte et se resynchronise.
+ La période d'expiration de session évite que l'un ou l'autre réplica attendent indéfiniment de recevoir un ping de l'autre réplica. Si aucun ping n’est reçu de l’autre réplica au cours de la période d’expiration de session, le réplica expire. Sa connexion est fermée, et le réplica ayant expiré passe à l’État Disconnected. Même si un réplica déconnecté est configuré pour le mode de validation synchrone, les transactions n'attendront pas que ce réplica se reconnecte et se resynchronise.
 
  La période d'expiration de session par défaut pour chaque réplica de disponibilité est de 10 secondes. Cette valeur peut être configurée par l'utilisateur et ne peut être inférieure à 5 secondes. Généralement, le temps d'attente recommandé est de 10 secondes minimum. En définissant une valeur inférieure à 10 secondes, vous permettez qu'un système surchargé déclare à tort un échec.
 
 > [!NOTE]
 >  Pour le rôle de résolution, la période d'expiration de session ne s'applique pas parce que la requête ping ne se produit pas.
 
-##  <a name="APR"></a> Réparation de page automatique
+##  <a name="automatic-page-repair"></a><a name="APR"></a>Réparation de page automatique
  Chaque réplica de disponibilité essaie d'effectuer une récupération automatiquement à partir de pages endommagées sur une base de données locale en résolvant certains types d'erreurs qui empêchent la lecture d'une page de données. Si un réplica secondaire ne peut pas lire une page, le réplica demande une nouvelle copie de la page du réplica principal. Si le réplica principal ne peut pas lire une page, le réplica diffuse une demande de nouvelle copie à tous les réplicas secondaires et obtient la page du premier qui y répond. Si cette demande aboutit, la page illisible est remplacée par la copie, ce qui permet généralement de résoudre l'erreur.
 
  Pour plus d’informations, consultez [Réparation de page automatique &#40;pour les groupes de disponibilité et la mise en miroir de bases de données&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).
 
-##  <a name="RelatedTasks"></a> Tâches associées
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées
 
 -   [Prise en main groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)
 
-##  <a name="RelatedContent"></a> Contenu associé
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé
 
 -   **Blogs :**
 
@@ -155,7 +155,7 @@ ms.locfileid: "78175498"
 
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)
 
--   **Vidéos :**
+-   **Vidéos**
 
      [Microsoft SQL Server, nom de code « Denali », série AlwaysOn, Partie 1 : Présentation de la solution haute disponibilité de la prochaine génération](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)
 
@@ -170,5 +170,5 @@ ms.locfileid: "78175498"
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)
 
 ## <a name="see-also"></a>Voir aussi
- [Modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md) [modes de basculement et](failover-and-failover-modes-always-on-availability-groups.md) de basculement &#40;groupes de disponibilité AlwaysOn&#41;[vue d’ensemble des instructions Transact-SQL pour](transact-sql-statements-for-always-on-availability-groups.md) groupes de disponibilité AlwaysOn &#40;SQL Server&#41;[vue d’ensemble des applets de commande PowerShell pour groupes de disponibilité AlwaysOn](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md) &#40;SQL Server&#41;groupes de disponibilité AlwaysOn la [haute disponibilité pour les bases de données OLTP en mémoire](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md) [conditions préalables requises, restrictions et recommandations pour &#40;](prereqs-restrictions-recommendations-always-on-availability.md) [SQL Server&#41;Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md) secondaires [actifs : réplicas secondaires lisibles &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) les secondaires [actifs : sauvegarde sur les réplicas secondaires &#40;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) groupes de disponibilité AlwaysOn&#41;[les écouteurs de groupe de disponibilité, la connectivité client et le basculement d’application](../../listeners-client-connectivity-application-failover.md) &#40;SQL Server&#41;
+ [Modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md) [modes de basculement et](failover-and-failover-modes-always-on-availability-groups.md) de basculement &#40;groupes de disponibilité AlwaysOn&#41;[vue d’ensemble des instructions Transact-SQL pour](transact-sql-statements-for-always-on-availability-groups.md) groupes de disponibilité AlwaysOn &#40;SQL Server&#41;[vue d’ensemble des applets de commande PowerShell pour groupes de disponibilité AlwaysOn](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md) &#40;SQL Server&#41;la [haute disponibilité pour les bases de données OLTP en mémoire](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md) [, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md) [la création et la configuration des groupes de disponibilité](creation-and-configuration-of-availability-groups-sql-server.md) &#40;SQL Server&#41;les [secondaires actifs : les réplicas secondaires accessibles en lecture &#40;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) groupes de disponibilité AlwaysOn&#41;[secondaires actifs : sauvegarde sur les réplicas secondaires &#40;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) groupes de disponibilité AlwaysOn&#41;les [écouteurs de groupe de disponibilité, la connectivité client et le basculement d’application](../../listeners-client-connectivity-application-failover.md) &#40;SQL Server&#41;
 

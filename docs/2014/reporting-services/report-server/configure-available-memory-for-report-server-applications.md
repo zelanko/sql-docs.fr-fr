@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 30f21dc69f4607f04a68fe0b099d1fd65dbdfc1f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172252"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
@@ -54,11 +54,9 @@ ms.locfileid: "78172252"
 ## <a name="configuration-settings-for-memory-management"></a>Paramètres de configuration pour la gestion de la mémoire
  Les paramètres de configuration qui contrôlent l'allocation de mémoire pour le serveur de rapports sont `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin` et `MemoryThreshold`.
 
--   
-  `WorkingSetMaximum` et `WorkingSetMinimum` définissent la plage de mémoire disponible. Vous pouvez configurer ces paramètres pour définir une plage de mémoire disponible pour les applications du serveur de rapports. Cela peut être utile si vous hébergez plusieurs applications sur le même ordinateur et si vous réalisez que le serveur de rapports utilise une quantité disproportionnée de ressources système par rapport aux autres applications du même ordinateur.
+-   `WorkingSetMaximum` et `WorkingSetMinimum` définissent la plage de mémoire disponible. Vous pouvez configurer ces paramètres pour définir une plage de mémoire disponible pour les applications du serveur de rapports. Cela peut être utile si vous hébergez plusieurs applications sur le même ordinateur et si vous réalisez que le serveur de rapports utilise une quantité disproportionnée de ressources système par rapport aux autres applications du même ordinateur.
 
--   
-  `MemorySafetyMargin` et `MemoryThreshold` définissent les limites des niveaux faible, moyen et élevé de sollicitation de la mémoire. Pour chaque état, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] entreprend une action corrective visant à garantir une gestion appropriée du traitement des rapports et des autres requêtes en fonction de la quantité de mémoire disponible sur l’ordinateur. Vous pouvez spécifier les paramètres de configuration qui déterminent la limite entre les niveaux faible, moyen et élevé de sollicitation de la mémoire.
+-   `MemorySafetyMargin` et `MemoryThreshold` définissent les limites des niveaux faible, moyen et élevé de sollicitation de la mémoire. Pour chaque état, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] entreprend une action corrective visant à garantir une gestion appropriée du traitement des rapports et des autres requêtes en fonction de la quantité de mémoire disponible sur l’ordinateur. Vous pouvez spécifier les paramètres de configuration qui déterminent la limite entre les niveaux faible, moyen et élevé de sollicitation de la mémoire.
 
      Bien que vous puissiez modifier les paramètres de configuration, cela n'améliorera pas les performances de traitement des rapports. La modification des paramètres de configuration n'est utile que si les requêtes sont supprimées avant la fin de leur exécution. La meilleure méthode pour améliorer les performances du serveur est de déployer le serveur de rapports ou des applications individuelles du serveur de rapports sur des ordinateurs dédiés.
 
@@ -89,8 +87,7 @@ ms.locfileid: "78172252"
 ```
 
 #### <a name="about-aspnet-memory-configuration-settings"></a>À propos des paramètres de configuration de la mémoire ASP.NET
- Bien que le service Web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], aucune d'entre elles ne répond aux paramètres de configuration de la mémoire spécifiés dans la section `processModel` de machine.config pour les applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] qui s'exécutent en mode de compatibilité IIS 5.0. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire du fichier RSReportServer.config uniquement.
+ Bien que le service Web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], aucune d'entre elles ne répond aux paramètres de configuration de la mémoire spécifiés dans la section `processModel` de machine.config pour les applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] qui s'exécutent en mode de compatibilité IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lit les paramètres de configuration de la mémoire du fichier RSReportServer.config uniquement.
 
 ## <a name="see-also"></a>Voir aussi
  Fichier de [configuration RSReportServer](rsreportserver-config-configuration-file.md) fichier de [configuration RSReportServer](rsreportserver-config-configuration-file.md) [modifier un fichier de configuration Reporting Services &#40;fichiers RSReportServer. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) [domaines d’application pour les applications du serveur de rapports](application-domains-for-report-server-applications.md)

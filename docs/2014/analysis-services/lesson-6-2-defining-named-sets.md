@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175266"
 ---
 # <a name="defining-named-sets"></a>Définition de jeux nommés
@@ -75,7 +75,7 @@ ms.locfileid: "78175266"
 
 8.  Ouvrez le Concepteur de dimensions pour la dimension **Reseller** , puis cliquez sur **Number of Employees** dans le volet **Attributs** .
 
-9. Dans la Fenêtre Propriétés, remplacez la `DiscretizationMethod` valeur de la propriété par **automatique**, puis `DiscretizationBucketCount` remplacez la `5`propriété par. Pour plus d’informations, consultez [regrouper les membres d’attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
+9. Dans la Fenêtre Propriétés, remplacez la `DiscretizationMethod` valeur de la propriété par **automatique**, puis `DiscretizationBucketCount` remplacez la `5`propriété par. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
 
 10. Dans le menu **Générer** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], cliquez sur **Déployer Analysis Services Tutorial**.
 
@@ -132,7 +132,7 @@ ms.locfileid: "78175266"
      ![Volet Filtre contenant deux jeux nommés](../../2014/tutorials/media/l6-named-set-05.gif "Volet Filtre contenant deux jeux nommés")
 
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon
- [Leçon 7 : définition d’indicateurs de performance clés &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
+ [Leçon 7 : Définition d’indicateurs de performance clés &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
 
 ## <a name="see-also"></a>Voir aussi
  [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md) [créer des jeux nommés](multidimensional-models/create-named-sets.md)

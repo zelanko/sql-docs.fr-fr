@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175428"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
-  Introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'extension du pool de mémoires tampons permet l'intégration transparente d'une extension de mémoire vive non volatile (c'est-à-dire d'un disque SSD) dans le pool de mémoires tampons [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour améliorer le débit d'E/S de façon significative. L'extension du pool de mémoires tampons n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+  Introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'extension du pool de mémoires tampons permet l'intégration transparente d'une extension de mémoire vive non volatile (c'est-à-dire d'un disque SSD) dans le pool de mémoires tampons [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour améliorer le débit d'E/S de façon significative. L'extension du pool de mémoires tampons n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Avantages de l'extension du pool de mémoires tampons
  L'objectif principal d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de stocker et de récupérer les données, l'utilisation intensive d'E/S sur disque est donc une caractéristique centrale du moteur de base de données. Étant donné que les opérations d'E/S sur disque peuvent consommer beaucoup de ressources et durer relativement longtemps, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'attache à rendre ces opérations efficaces. Le pool de mémoires tampons fait office de source principale d'allocation mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La gestion des tampons joue un rôle essentiel pour parvenir à cette efficacité. Le composant de gestion des tampons comprend deux mécanismes : le gestionnaire de tampons qui permet d'accéder et mettre à jour les pages de la base de données, et le pool de mémoires tampons, qui permet de réduire les opérations d'E/S du fichier de la base de données.
 
  Les pages de données et d'index sont lues sur le disque dans le pool de mémoires tampons et les pages modifiées (également appelées « pages de modifications ») sont écrites sur le disque. Lorsque la mémoire sur les points de contrôle du serveur et de la base de données est sollicitée, les pages de modifications actives dans le cache des tampons sont supprimées du cache et écrites sur des disques mécaniques, puis relues dans le cache. Ces opérations d'E/S sont généralement des lectures et des écritures aléatoires de petite taille, de l'ordre de 4 à 16 Ko de données. Les E/S de ce type entraînent des appels fréquents qui entrent en concurrence pour les contentions de disque mécanique, augmentent la latence des E/S et réduisent le débit global des E/S du système.
 
- L'approche habituelle pour résoudre ces goulots d'étranglement des E/S est d'ajouter plus de DRAM, ou bien, des axes SAS hautes performances. Si ces options sont utiles, elles présentent des inconvénients importants : la DRAM est plus coûteuse que les disques de stockage de données, et l’ajout d’axes augmente les dépenses d’investissement en matériel et les coûts d’exploitation en raison d’une consommation d’énergie accrue et de la plus forte probabilité de défaillance d’un composant.
+ L'approche habituelle pour résoudre ces goulots d'étranglement des E/S est d'ajouter plus de DRAM, ou bien, des axes SAS hautes performances. Si ces options sont utiles, elles ont des inconvénients importants : la DRAM est plus coûteuse que les disques de stockage de données, et l'ajout d'axes augmente les dépenses d'investissement en matériel et les coûts d'exploitation en raison d'une consommation d'énergie accrue et de la plus forte probabilité de défaillance d'un composant.
 
  La fonctionnalité d'extension du pool de mémoires tampons étend le cache du pool avec le stockage non volatile (généralement, les disques SSD). Grâce à cette extension, le pool de mémoires tampons peut gérer une plus vaste plage de travail de la base de données, ce qui force la pagination des E/S entre la mémoire RAM et les disques SSD. Cela décharge efficacement les E/S aléatoires de petite taille des disques mécaniques vers les disques SSD. En raison de la plus faible latence et des meilleures performances des E/S aléatoires fournies par les disques SSD, l'extension du pool de mémoires tampons améliore considérablement le débit des E/S.
 
@@ -57,11 +57,11 @@ ms.locfileid: "78175428"
 
  L'illustration suivante présente une vue d'ensemble de l'architecture du pool de mémoires tampons par rapport aux autres composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
- ![Architecture de l'extension du pool de mémoires tampons SSD](../media/ssdbufferpoolextensionarchitecture.gif "Architecture de l'extension du pool de mémoires tampons SSD")
+ ![Architecture de l’extension du pool de mémoires tampons SSD](../media/ssdbufferpoolextensionarchitecture.gif "Architecture de l’extension du pool de mémoires tampons SSD")
 
  Une fois activée, l'extension du pool de mémoires tampons spécifie la taille et le chemin d'accès du fichier de mise en cache du pool de mémoires tampons sur le disque SSD. Ce fichier est une extension contiguë du stockage sur le disque SSD, et est configuré statiquement au démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La modification des paramètres de configuration des fichiers est uniquement possible lorsque la fonctionnalité d'extension du pool de mémoires tampons est désactivée. Dans ce cas, tous les paramètres de configuration associés sont supprimés du Registre. Le fichier d'extension du pool de mémoires tampons est supprimé en cas d'arrêt de l'instance de SQL Server.
 
-## <a name="best-practices"></a>Bonnes pratiques
+## <a name="best-practices"></a>Meilleures pratiques
  Nous vous recommandons d'appliquer ces bonnes pratiques.
 
 -   Après avoir activé l’extension du pool de mémoires tampons pour la première fois, il est recommandé de redémarrer l’instance SQL Server pour obtenir des performances optimales.
@@ -73,9 +73,9 @@ ms.locfileid: "78175428"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Retour des informations concernant l'extension du pool de mémoires tampons
  Utilisez les vues de gestion dynamique suivantes pour afficher la configuration de l'extension du pool de mémoires tampons et obtenir des informations sur les pages de données dans l'extension.
 
--   [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [sys. dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  Les compteurs de performances sont disponibles dans l'objet Gestionnaire de tampons de SQL Server pour assurer le suivi des pages de données dans le fichier d'extension du pool de mémoires tampons. Pour plus d'informations, consultez la rubrique sur les [compteurs de performances de l'extension du pool de mémoires tampons](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).
 
@@ -95,7 +95,7 @@ ms.locfileid: "78175428"
 |**Description de la tâche**|**Rubrique**|
 |Activer et configurer l'extension du pool de mémoires tampons|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |Modifier la configuration de l'extension du pool de mémoires tampons|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|Afficher la configuration de l'extension du pool de mémoires tampons|[sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|Surveiller l'extension du pool de mémoires tampons|[sys. dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Compteurs de performances](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|Afficher la configuration de l'extension du pool de mémoires tampons|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|Surveiller l'extension du pool de mémoires tampons|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Compteurs de performance](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

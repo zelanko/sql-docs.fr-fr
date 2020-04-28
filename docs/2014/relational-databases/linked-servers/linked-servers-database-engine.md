@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e50cd7bc491109c1aa7a1941d04330141e907941
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175898"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
@@ -49,8 +49,7 @@ ms.locfileid: "78175898"
  Le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client (ProgID : SQLNCLI11) est le fournisseur OLE DB officiel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]pour.
 
 > [!NOTE]
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ont été conçues pour être utilisées avec tout fournisseur OLE DB qui implémente les interfaces OLE DB requises. Toutefois, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'a été testé qu’avec le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et certains autres fournisseurs.
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ont été conçues pour être utilisées avec tout fournisseur OLE DB qui implémente les interfaces OLE DB requises. Toutefois, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'a été testé qu’avec le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et certains autres fournisseurs.
 
 ## <a name="linked-server-details"></a>Détails des serveurs liés
  L'illustration suivante montre les aspects fondamentaux d'une configuration de serveurs liés.
@@ -85,7 +84,7 @@ ms.locfileid: "78175898"
 >  Les serveurs liés peuvent être définis de façon à repointer (en bouclage) vers le serveur sur lequel ils sont définis. Les serveurs en boucle sont particulièrement utiles pour tester une application utilisant des requêtes distribuées sur un réseau comportant un seul serveur. Les serveurs liés en boucle sont conçus à des fins de test et ne sont pas pris en charge pour de nombreuses opérations, telles que les transactions distribuées.
 
 ## <a name="related-tasks"></a>Tâches associées
- [Créer des serveurs liés &#40;SQL Server Moteur de base de données&#41;](create-linked-servers-sql-server-database-engine.md)
+ [Créer des serveurs liés &#40;moteur de base de données SQL Server&#41;](create-linked-servers-sql-server-database-engine.md)
 
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)
 
@@ -94,7 +93,7 @@ ms.locfileid: "78175898"
  [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)
 
 ## <a name="related-content"></a>Contenu associé
- [sys. Servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)
+ [sys.servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)
 
  [sp_linkedservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)
 

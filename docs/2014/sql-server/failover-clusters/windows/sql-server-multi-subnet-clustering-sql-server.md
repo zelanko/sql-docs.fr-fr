@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca6e081097cb26d4054e5b62fd62cefc0c6d96f8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172358"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de sous-réseaux multiples SQL Server (SQL Server)
@@ -28,32 +28,28 @@ ms.locfileid: "78172358"
 
  
 
-##  <a name="VisualElement"></a>SQL Server cluster de basculement de sous-réseaux multiples (deux nœuds, deux sous-réseaux)
+##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a>SQL Server cluster de basculement de sous-réseaux multiples (deux nœuds, deux sous-réseaux)
  L'illustration suivante représente une instance de cluster de basculement (FCI) à deux nœuds et deux sous-réseaux dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].
 
  ![Architecture de sous-réseaux multiples avec MultiSubnetFailover](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Architecture de sous-réseaux multiples avec MultiSubnetFailover")
 
 
 
-##  <a name="Configurations"></a>Configurations d’instance de cluster de basculement de sous-réseaux multiples
+##  <a name="multi-subnet-failover-cluster-instance-configurations"></a><a name="Configurations"></a>Configurations d’instance de cluster de basculement de sous-réseaux multiples
  Voici quelques exemples d'instances de cluster de basculement FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui utilisent plusieurs sous-réseaux :
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1 et Node2. Node1 est connecté à Subnet1. Node2 est connecté à Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Le programme d’installation voit cette configuration comme un cluster à plusieurs sous-réseaux et définit la dépendance de ressource d’adresse IP sur **or**.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1 et Node2. Node1 est connecté à Subnet1. Node2 est connecté à Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le programme de configuration considère cette configuration comme un cluster à plusieurs sous-réseaux et définit la dépendance de ressource d’adresse IP sur **OR**.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1, Node2 et Node3. Node1 et Node2 sont connectés à Subnet1. Node3 est connecté à Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Le programme d’installation voit cette configuration comme un cluster à plusieurs sous-réseaux et définit la dépendance de ressource d’adresse IP sur **or**. Étant donné que Node1 et Node2 se trouvent sur le même sous-réseau, cette configuration fournit une haute disponibilité locale supplémentaire.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1, Node2 et Node3. Node1 et Node2 sont connectés à Subnet1. Node3 est connecté à Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le programme de configuration considère cette configuration comme un cluster à plusieurs sous-réseaux et définit la dépendance de ressource d’adresse IP sur **OR**. Étant donné que Node1 et Node2 se trouvent sur le même sous-réseau, cette configuration fournit une haute disponibilité locale supplémentaire.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1 et Node2. Node1 se trouve sur Subnet1. Node2 est sur Subnet1 et Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Le programme d’installation voit cette configuration comme un cluster à plusieurs sous-réseaux et définit la dépendance de ressource d’adresse IP sur **or**.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1 et Node2. Node1 se trouve sur Subnet1. Node2 est sur Subnet1 et Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le programme de configuration considère cette configuration comme un cluster à plusieurs sous-réseaux et définit la dépendance de ressource d’adresse IP sur **OR**.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1 et Node2. Node1 est connecté à Subnet1 et Subnet2. Node2 est également connecté à Subnet1 et Subnet2. La dépendance de ressource d’adresse IP est définie sur **AND** par le programme de configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1 et Node2. Node1 est connecté à Subnet1 et Subnet2. Node2 est également connecté à Subnet1 et Subnet2. La dépendance de ressource d’adresse IP est définie sur **AND** par le programme de configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
     > [!NOTE]
     >  Cette configuration n'est pas considérée comme une configuration de cluster de basculement de sous-réseaux multiples car les nœuds de clusters se trouvent sur le même ensemble de sous-réseaux.
 
-##  <a name="ComponentsAndConcepts"></a>Considérations relatives aux ressources d’adresses IP
+##  <a name="ip-address-resource-considerations"></a><a name="ComponentsAndConcepts"></a> Considérations relatives aux ressources d'adresses IP
  Dans une configuration de cluster de basculement de sous-réseaux multiples, les adresses IP ne sont pas détenues par tous les nœuds dans le cluster de basculement et ne peuvent pas être toutes en ligne pendant le démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vous pouvez définir la dépendance de ressource d’adresse IP sur **OR**. Cela permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'être en ligne lorsqu'il y a au moins une adresse IP valide avec laquelle il peut être lié.
 
 > [!NOTE]
@@ -70,7 +66,7 @@ ms.locfileid: "78172358"
 
  Lorsqu'une instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installée côte à côte avec une instance autonome de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], prenez soin d'éviter les conflits de numéro de port TCP sur les adresses IP. Les conflits se produisent généralement lorsque deux instances de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] sont configurées pour utiliser le port TCP par défaut (1433). Pour éviter des conflits, configurez une instance pour utiliser un port fixe non défini par défaut. La configuration d'un port fixe est généralement plus simple sur l'instance autonome. La configuration de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] de manière à utiliser des ports différents empêche un conflit inattendu adresse IP/port TCP qui bloque un démarrage de l'instance lorsqu'une instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] échoue au nœud en attente.
 
-##  <a name="DNS"></a>Latence de récupération du client pendant le basculement
+##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> Latence de récupération cliente pendant un basculement
  Une instance FCI à plusieurs sous-réseaux active par défaut la ressource de cluster RegisterAllProvidersIP pour son nom réseau. Dans une configuration à plusieurs sous-réseaux, les adresses IP en ligne et hors connexion du nom réseau seront inscrites sur le serveur DNS. L'application cliente récupère ensuite toutes les adresses IP inscrites depuis le serveur DNS, puis tente de se connecter aux adresses dans l'ordre ou en parallèle. Cela signifie que le temps de récupération client dans les basculements à plusieurs sous-réseaux ne dépend plus des latences de mise à jour DNS. Par défaut, le client tente les adresses IP dans l'ordre. Lorsque le client utilise le nouveau paramètre facultatif `MultiSubnetFailover=True` dans sa chaîne de connexion, il tente à la place les adresses IP simultanément et se connecte au premier serveur qui répond. Cela peut réduire la latence de récupération cliente lorsque des basculements se produisent. Pour plus d’informations, consultez [connectivité client AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) et [créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
  Avec les bibliothèques clientes héritées ou les fournisseurs de données tiers, vous ne pouvez pas utiliser le paramètre `MultiSubnetFailover` dans votre chaîne de connexion. Pour vous aider à vous assurer que votre application cliente s'exécute de façon optimale avec l'instance FCI à plusieurs sous-réseaux dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], essayez d'ajuster le délai de connexion dans la chaîne de connexion du client par 21 secondes pour chaque adresse IP supplémentaire. Cela garantit que la tentative de reconnexion du client n’expire pas avant de pouvoir faire défiler toutes les adresses IP de votre instance FCI à plusieurs sous-réseaux.
@@ -79,13 +75,13 @@ ms.locfileid: "78172358"
 
  
 
-##  <a name="RelatedContent"></a> Contenu associé
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé
 
 |Description du contenu|Rubrique|
 |-------------------------|-----------|
-|Installation d'un cluster de basculement SQL Server|[Créer un cluster de basculement SQL Server &#40;d’installation&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|
-|Mise à niveau sur place de votre cluster de basculement SQL Server existant|[Mettre à niveau une instance de cluster de basculement SQL Server &#40;de l’installation&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|
-|Maintenance de votre cluster de basculement SQL Server existant|[Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|
+|Installation d'un cluster de basculement SQL Server|[Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|
+|Mise à niveau sur place de votre cluster de basculement SQL Server existant|[Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|
+|Maintenance de votre cluster de basculement SQL Server existant|[Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|
 |Clustering de basculement Windows|[Meilleures pratiques pour le cluster de basculement Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|
 |Utiliser le composant logiciel enfichable de gestion du cluster de basculement pour afficher les événements et les journaux WSFC|[Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|
 |Utiliser Windows PowerShell pour créer un fichier journal pour tous les nœuds (ou un nœud spécifique) dans un cluster de basculement WSFC|[Applets de commande de cluster de basculement Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)|

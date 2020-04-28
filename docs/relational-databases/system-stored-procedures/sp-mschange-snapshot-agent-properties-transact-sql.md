@@ -17,10 +17,10 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321798"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
@@ -69,7 +69,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|À la demande|  
-|**4**|Quotidienne|  
+|**4**|Quotidien|  
 |**version8**|Hebdomadaire|  
 |**10**|Mensuelle|  
 |**20**|Mensuellement, en fonction de l'intervalle de fréquence|  

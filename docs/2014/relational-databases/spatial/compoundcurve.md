@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176679"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
@@ -79,8 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- 
-  `@g3` est valide parce que l'instance `CircularString` est valide. Pour plus d’informations sur la validité de `CircularString` l’instance, consultez [CircularString](circularstring.md).
+ `@g3` est valide parce que l'instance `CircularString` est valide. Pour plus d’informations sur la validité de `CircularString` l’instance, consultez [CircularString](circularstring.md).
 
  L'exemple suivant montre des instances `CompoundCurve` qui ne sont pas valides.
 
@@ -91,10 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g1` n’est pas valide car la deuxième instance n’est pas une instance LineString valide. 
-  `@g2` n'est pas valide car l'instance `LineString` n'est pas valide. 
-  `@g3` n'est pas valide car l'instance `CircularString` n'est pas valide. Pour plus d’informations sur `CircularString` les `LineString` instances et valides, consultez [CircularString](circularstring.md) et [LineString](linestring.md).
+ `@g1` n’est pas valide car la deuxième instance n’est pas une instance LineString valide. `@g2` n'est pas valide car l'instance `LineString` n'est pas valide. `@g3` n'est pas valide car l'instance `CircularString` n'est pas valide. Pour plus d’informations sur `CircularString` les `LineString` instances et valides, consultez [CircularString](circularstring.md) et [LineString](linestring.md).
 
 ## <a name="examples"></a>Exemples
 
@@ -190,6 +186,6 @@ Circle Two12.566370...
  Le périmètre du cercle deux est approximativement de 4&#x03c0; (4 * pi), qui est la valeur réelle du périmètre. Toutefois, le périmètre de Circle One est exagérément inexact. L'instance `CompoundCurve` de Circle One stocke un segment d'arc de cercle (ABC) et deux segments de ligne (CD, DA). L'instance `CompoundCurve` doit stocker deux segments d'arc de cercle (ABC, CDA) pour définir un cercle. Une instance `LineString` définit le deuxième ensemble de points (4 2, 2 4, 0 2) dans l'instance `CompoundCurve` de Circle One. Vous devez déclarer de manière explicite une instance `CircularString` à l'intérieur d'un `CompoundCurve`.
 
 ## <a name="see-also"></a>Voir aussi
- [STIsValid &#40;Geometry type de données&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) [STLength &#40;Geometry type de données&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry type de données&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) [STEndpoint &#40;Geometry type de données&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [LineString](linestring.md) [CircularString](circularstring.md) [types de données spatiales point de vue d’ensemble](spatial-data-types-overview.md) [](point.md)
+ [STIsValid &#40;Geometry type de données&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) [STLength &#40;Geometry type de données&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry type de données&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) [STEndpoint &#40;Geometry type de données&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [LineString](linestring.md) [CircularString](circularstring.md) [types de données spatiales point de vue d’ensemble](spatial-data-types-overview.md) [Point](point.md)
 
 

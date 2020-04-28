@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176569"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurer la topologie (réplication d'égal à égal)
@@ -31,7 +31,7 @@ ms.locfileid: "78176569"
 |Élément d'interface|Description|
 |-----------------------|-----------------|
 |Aire de conception|Affiche d'autres éléments d'interface. Pour ajouter des éléments, cliquez avec le bouton droit sur l'aire de conception.|
-|![Premier nœud d’une topologie](media/p2pwizard-firstnode.gif "Premier nœud d'une topologie")|Nœud d'origine dans la topologie. Les nouveaux nœuds sont initialisés grâce à une copie de la base de données de publication du nœud d'origine.|
+|![Premier nœud d’une topologie](media/p2pwizard-firstnode.gif "Premier nœud d’une topologie")|Nœud d'origine dans la topologie. Les nouveaux nœuds sont initialisés grâce à une copie de la base de données de publication du nœud d'origine.|
 |![Nœud pour lequel nous avons des informations complètes](media/p2pwizard-complete.gif "Nœud pour lequel nous avons des informations complètes") ou une version ultérieure, pour lesquelles la réplication a des informations complètes. Pour spécifier des options de configuration, cliquez avec le bouton droit sur le nœud.|
 |![Nœud pour lequel nous avons des informations incomplètes](media/p2pwizard-incomplete.gif "Nœud pour lequel nous avons des informations incomplètes")|Nœud sur lequel la réplication possède des informations incomplètes. Pour spécifier des options de configuration, cliquez avec le bouton droit sur le nœud. La réplication possède des informations incomplètes pour l'une des raisons suivantes :<br /><br /> Le nœud exécute une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] qui ne stocke pas toutes les métadonnées requises par l'Assistant.<br /><br /> Le nœud exécute une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la réplication ne peut pas récupérer les informations d'abonnement du nœud. Pour résoudre ce problème :<br />-Assurez-vous que la base de données au niveau du nœud est en ligne et que vous pouvez vous y connecter en utilisant les mêmes informations d’identification que les agents de distribution qui se connectent au nœud.<br />-Assurez-vous que l’agent de lecture du journal et tous les agents de distribution qui se connectent au nœud sont en cours d’exécution.<br />-Assurez-vous que le délai d’expiration de l’actualisation est suffisamment élevé pour collecter toutes les informations de topologie. Pour définir le délai, cliquez avec le bouton droit sur l'aire de conception, puis cliquez sur **Définir le délai d'actualisation**.|
 |Ligne grise avec des flèches|Connexion entre deux nœuds. Pour ajouter une connexion, cliquez avec le bouton droit sur l'un des nœuds que vous souhaitez connecter. Pour supprimer une connexion, cliquez avec le bouton droit sur la connexion.<br /><br /> Si la ligne a une flèche unique, la réplication possède des informations incomplètes sur l'un des nœuds.|

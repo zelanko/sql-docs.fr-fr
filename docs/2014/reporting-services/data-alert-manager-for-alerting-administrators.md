@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dff332a686371db290a5ff16a929e5bed596b9b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173886"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gestionnaire des alertes de données pour les administrateurs d'alertes
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit le Gestionnaire des alertes de données utilisé par les administrateurs d’alertes SharePoint pour gérer des alertes de données. Les administrateurs d'alertes peuvent consulter les informations relatives à toutes les alertes enregistrées sur le site et supprimer des alertes. L'image suivante affiche les fonctionnalités disponibles aux gestionnaires d'alertes SharePoint dans le Gestionnaire des alertes de données.
 
  ![Gestionnaire d'alertes pour les administrateurs du site SharePoint](media/rs-alertmanagersite.gif "Gestionnaire d'alertes pour les administrateurs du site SharePoint")
@@ -35,7 +34,7 @@ ms.locfileid: "78173886"
 > [!NOTE]
 >  En tant qu’administrateur d’alertes, vous pouvez autoriser les travailleurs de l’information à accéder aux fonctionnalités d’alerte de données de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur les autorisations nécessaires, consultez [Alertes de données Reporting Services](../ssms/agent/alerts.md).
 
-##  <a name="ViewingAlerts"></a>Affichage des informations sur les alertes de données
+##  <a name="viewing-data-alert-information"></a><a name="ViewingAlerts"></a> Consulter les informations relatives aux alertes de données
  Quand Reporting Services est installé et configuré dans SharePoint, la page Paramètres du site SharePoint inclut les options **Reporting Services** . Les administrateurs d’alertes cliquent sur l’option **Gérer les alertes de données** dans Reporting Service pour ouvrir le Gestionnaire des alertes de données. L'image suivante montre à quel endroit de la page Paramètres du site vous ouvrez le Gestionnaire des alertes de données.
 
  ![Section Reporting Services de la page Paramètres du site](media/rs-sitesettings.gif "Section Reporting Services de la page Paramètres du site")
@@ -44,31 +43,30 @@ ms.locfileid: "78173886"
 
  Le tableau suivant présente des exemples de données d'une table dans le Gestionnaire des alertes de données. Quand une erreur se produit, le message d’erreur et l’identificateur de l’entrée du journal (GUID) sont inclus dans le champ **État** de la table.
 
-|Nom de l’alerte|Nom du rapport|Créé par|Alertes envoyées|Dernière exécution|Dernière modification|Statut|
+|Nom de l’alerte|Nom du rapport|Créé par|Alertes envoyées|Dernière exécution|Dernière modification|État|
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|La dernière alerte a été exécutée avec succès et l'alerte a été envoyée.|
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|La dernière alerte a été exécutée avec succès, mais aucune donnée n'a été modifiée et aucune alerte n'a été envoyée.|
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|
-  \<message d’erreur> Le fichier journal contient des informations détaillées sur l’erreur. Consultez l’entrée du journal portant l’identificateur : \<GUID>.|
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<message d’erreur> Le fichier journal contient des informations détaillées sur l’erreur. Consultez l’entrée du journal portant l’identificateur : \<GUID>.|
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Alerte créée.|
 
- Pour plus d’informations, consultez [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).
+ Pour plus d’informations, consultez [gérer toutes les alertes de données sur un site SharePoint dans le gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).
 
  Vous pouvez consulter toutes les alertes créées par les utilisateurs du site. Choisissez un utilisateur puis indiquez s'il faut consulter toutes ses alertes ou uniquement celles pour un rapport spécifique.
 
 
-##  <a name="DeleteAlerts"></a>Supprimer des alertes de données
+##  <a name="delete-data-alerts"></a><a name="DeleteAlerts"></a>Supprimer des alertes de données
  Vous pouvez supprimer des définitions d'alerte dans le Gestionnaire des alertes de données. Chaque définition d'alerte de données a un propriétaire, l'utilisateur SharePoint qui l'a créée. Les propriétaires peuvent supprimer uniquement les définitions d'alerte qu'ils ont créées. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).
 
- Un administrateurs d'alertes SharePoint peut répertorier puis supprimer des définitions d'alerte créées par tous les utilisateurs du site. Pour plus d’informations, consultez [gérer toutes les alertes de données sur un site SharePoint dans le gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md) .
+ Un administrateurs d'alertes SharePoint peut répertorier puis supprimer des définitions d'alerte créées par tous les utilisateurs du site. Pour plus d’informations, consultez [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).
 
  Une fois que vous avez supprimé la définition d'alerte, aucune alerte supplémentaire n'est envoyée. Toutefois, si vous interrogez la base de données des alertes, vous constaterez que la définition d'alerte existe encore. Le service d'alertes effectue un nettoyage planifié qui supprimera définitivement la définition d'alerte lors du nettoyage suivant. L'intervalle de nettoyage par défaut est de 20 minutes. Cet intervalle, ainsi que d'autres paramètres de nettoyage, sont configurables. Pour plus d’informations, consultez [Alertes de données Reporting Services](../ssms/agent/alerts.md).
 
 
-##  <a name="HowTo"></a> Tâches associées
+##  <a name="related-tasks"></a><a name="HowTo"></a> Tâches associées
  Cette section décrit la procédure qui vous explique comment gérer vos alertes.
 
--   [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)
+-   [Gérer toutes les alertes de données sur un site SharePoint dans le gestionnaire des alertes de données](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)
 
 
 ## <a name="see-also"></a>Voir aussi

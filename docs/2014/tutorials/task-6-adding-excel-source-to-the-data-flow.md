@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177237"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tâche 6 : Ajout d'une source Excel au flux de données
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tâche 6 : Ajout d’une source Excel au flux de données
   Dans cette tâche, vous allez ajouter une source Excel au flux de données pour lire les données des fournisseurs à partir du fichier Excel source. La source Excel extrait des données depuis des feuilles de calcul ou des plages dans des classeurs Microsoft Excel. Consultez la rubrique [Source Excel](../integration-services/data-flow/excel-source.md) pour plus de détails.
 
 1.  Faites glisser la **Source Excel** depuis **Autres sources** dans **Boîte à outils SSIS** vers l'onglet **Flux de données** .
@@ -46,7 +46,7 @@ ms.locfileid: "78177237"
 
 ## <a name="next-step"></a>étape suivante
 
-[Tâche 7 : Ajout d'une transformation de nettoyage DQS au flux de données](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)
+[Tâche 7 : Ajout d’une transformation de nettoyage DQS au flux de données](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)
 
 ### <a name="see-also"></a>Voir aussi
 

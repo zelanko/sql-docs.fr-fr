@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ca879d51f947ec078b3c1b7e14842ea926f0240
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174848"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Afficher des rapports Reporting Services sur des appareils Microsoft Surface et Apple iOS
@@ -47,16 +47,16 @@ ms.locfileid: "78174848"
 
 2.  Ouvrez le rapport en effectuant une des actions suivantes.
 
-    -   **Démarrer à partir d’un message électronique :** À partir d’un message électronique créé par [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] un abonnement, appuyez sur l’URL du rapport. Le rapport s'ouvre dans le navigateur.
+    -   **Démarrer à partir d’un message électronique :** dans un message électronique qui est créé par un abonnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , appuyez sur l’URL du rapport. Le rapport s'ouvre dans le navigateur.
 
-    -   **Démarrer à partir du serveur de rapports :** Parcourez le répertoire [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur le serveur de rapports, puis appuyez sur le nom du rapport pour ouvrir le rapport.
+    -   **Lancement à partir du serveur de rapports :** Parcourez le répertoire sur le serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , puis touchez le nom du rapport pour l'ouvrir.
 
-    -   **Démarrer à partir d’une bibliothèque de documents SharePoint :** Accédez à une bibliothèque de documents SharePoint qui [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contient des rapports, puis appuyez sur le nom du rapport. Vous pouvez afficher et interagir avec le rapport.
+    -   **Démarrer à partir d'une bibliothèque de documents SharePoint :** accédez à une bibliothèque de documents SharePoint qui contient les rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , puis touchez le nom du rapport. Vous pouvez afficher et interagir avec le rapport.
 
         > [!IMPORTANT]
-        >  Pour un iPad, assurez-vous que la propriété **Private Browsing** de Safari est désactivée.
+        >   Pour un iPad, assurez-vous que la propriété **Private Browsing** de Safari est désactivée.
 
-    -   **Composant WebPart SharePoint :** Si le composant WebPart a été ajouté à une page SharePoint, vous pouvez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] afficher des rapports.
+    -   **Composant WebPart SharePoint :** si le composant WebPart a été ajouté à une page SharePoint, vous pouvez afficher des rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .
 
 3.  Sur votre appareil Microsoft Surface, vous pouvez également ouvrir le rapport grâce au Gestionnaire de rapports. Parcourez le répertoire du Gestionnaire de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , puis touchez le nom du rapport pour l'ouvrir.
 
@@ -105,7 +105,7 @@ ms.locfileid: "78174848"
 
         -   Si vous affichez le rapport sur un iPad, vous pouvez exporter le rapport en tant que fichier TIFF ou PDF.
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>Authentification
  L'authentification RSWindowsNTLM et l'authentification RSWindowsBasic fonctionnent avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif et avec l'iPad.
 
  En général, il est recommandé de ne pas utiliser RSWindowsBasic dans un environnement autre que https car ce type d'authentification ne garantit pas la confidentialité des informations de connexion transmises.
