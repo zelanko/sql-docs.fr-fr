@@ -1,7 +1,7 @@
 ---
 title: Indicateurs de table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981762"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087515"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "73981762"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]
 > [!IMPORTANT]  
 > L'omission du mot clé WITH est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Par exemple :  
+Les indicateurs de table suivants sont autorisés avec et sans le mot clé `WITH` : `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT` et `NOEXPAND`. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Par exemple :  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -192,7 +192,7 @@ Indique que l'optimiseur de requête doit utiliser uniquement une opération de 
   
 L'indicateur FORCESEEK peut être spécifié des manières suivantes.  
   
-|Syntaxe|Exemple|Description|  
+|Syntaxe| Exemple|Description|  
 |------------|-------------|-----------------|  
 |Sans index ou indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK)`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de tout index approprié.|  
 |Combiné avec un indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de l'index spécifié.|  
@@ -261,7 +261,7 @@ NOLOCK
 > Pour les instructions UPDATE ou DELETE : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-Indique au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de retourner un message dès qu'un verrou est rencontré sur la table. L'utilisation de NOWAIT est équivalente à la spécification de SET LOCK_TIMEOUT 0 pour une table spécifique. L'indicateur NOWAIT ne fonctionne pas lorsque l'indicateur TABLOCK est également inclus. Pour terminer une requête sans délai en cas d'utilisation de l'indicateur TABLOCK, préfacez plutôt la requête avec `SETLOCK_TIMEOUT 0;`.  
+Indique au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de retourner un message dès qu'un verrou est rencontré sur la table. L'utilisation de NOWAIT est équivalente à la spécification de `SET LOCK_TIMEOUT 0` pour une table spécifique. L'indicateur NOWAIT ne fonctionne pas lorsque l'indicateur TABLOCK est également inclus. Pour terminer une requête sans délai en cas d'utilisation de l'indicateur TABLOCK, préfacez plutôt la requête avec `SETLOCK_TIMEOUT 0;`.  
   
 PAGLOCK  
 Établit des verrous de page là où des verrous individuels sont généralement utilisés sur des lignes ou des clés ou là où un verrou de table unique est généralement utilisé. Par défaut, utilise le mode de verrou approprié pour l'opération. Si cet argument est spécifié dans des transactions fonctionnant au niveau d'isolement SNAPSHOT, les verrous de page ne sont établis que si PAGLOCK est combiné avec d'autres indicateurs de table qui requièrent des verrous, tels que UPDLOCK et HOLDLOCK.  
@@ -339,7 +339,7 @@ Cette option permet de paramétrer précisément l'heure d'exécution de la requ
 TABLOCK  
 Spécifie que le verrou acquis est appliqué au niveau de la table. Le type de verrou acquis dépend de l'instruction en cours d'exécution. Par exemple, une instruction SELECT peut acquérir un verrou partagé. En spécifiant TABLOCK, le verrou partagé est appliqué à la table entière plutôt qu'au niveau de la ligne ou de la page. Si l'option HOLDLOCK est également spécifiée, le verrou de table est maintenu jusqu'à la fin de la transaction.  
   
-Quand vous importez des données dans un segment à l’aide de l’instruction INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table>, vous pouvez activer l’optimisation de la journalisation et du verrouillage de l’instruction en spécifiant l’indicateur TABLOCK pour la table cible. En outre, le mode de récupération de la base de données doit correspondre au mode simple ou au mode de récupération utilisant les journaux de transactions. Pour plus d’informations, consultez [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+Quand vous importez des données dans un segment à l’aide de l’instruction `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`, vous pouvez activer la journalisation minimale et l’optimisation du verrouillage de l’instruction en spécifiant l’indicateur TABLOCK pour la table cible. En outre, le mode de récupération de la base de données doit correspondre au mode simple ou au mode de récupération utilisant les journaux de transactions. L’indicateur TABLOCK permet également les insertions parallèles dans les segments de mémoire ou les index columnstore en cluster. Pour plus d’informations, consultez [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
 Quand l’indicateur TABLOCK est utilisé avec le fournisseur d’ensembles de lignes [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) pour importer des données dans une table, il permet à plusieurs clients de charger en même temps les données dans la table cible avec une optimisation de la journalisation et du verrouillage. Pour plus d’informations, consultez [Conditions requises pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
@@ -354,7 +354,7 @@ Lorsque UPDLOCK est spécifié, les indicateurs de niveau d'isolation READCOMMIT
 XLOCK  
 Spécifie que les verrous exclusifs doivent être établis et maintenus jusqu'à ce que la transaction s'achève. Si l'option ROWLOCK, PAGLOCK ou TABLOCK est spécifiée, les verrous exclusifs s'appliquent au niveau de granularité approprié.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Les indicateurs de table sont ignorés si l'accès à la table ne s'effectue pas par un plan de requête. Ceci peut résulter du choix de l'optimiseur d'empêcher globalement l'accès à la table ou de l'accès à une vue indexée à la place. Dans ce dernier cas, l'accès à une vue indexée peut être proscrit à l'aide de l'indicateur de requête OPTION (EXPAND VIEWS).  
   
 Tous les indicateurs de verrou sont diffusés à toutes les vues et tables accessibles par le plan de requête ainsi que les vues et tables référencées dans une vue. En outre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les contrôles de cohérence de verrous correspondants.  
@@ -468,7 +468,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  

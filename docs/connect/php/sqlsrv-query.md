@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_query | Microsoft Docs
+title: sqlsrv_query
+description: La fonction sqlsrv_query fournit une méthode pour exécuter une requête avec une quantité minimale de code et peut être utilisée pour exécuter des requêtes paramétrables.
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab8c3912c33280738c8bebc012686490d7c55926
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928559"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728408"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,9 +38,9 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$conn*: ressource de connexion associée à l’instruction préparée.  
+*$conn* : La ressource de connexion associée à l’instruction préparée.  
   
-*$tsql* : expression Transact-SQL qui correspond à l’instruction préparée.  
+*$tsql* : L’expression Transact-SQL qui correspond à l’instruction préparée.  
   
 *$params* [FACULTATIF] : objet **array** de valeurs qui correspondent aux paramètres d’une requête paramétrable. Chaque élément du tableau peut être l’un des éléments suivants :
   
@@ -67,13 +68,13 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="return-value"></a>Valeur de retour  
 Ressource d’instruction. Si l’instruction ne peut pas être créée et/ou exécutée, la valeur **false** est retournée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 La fonction **sqlsrv_query** convient bien aux requêtes à usage unique. Elle doit être le choix par défaut pour exécuter des requêtes, sauf en cas de circonstances particulières. Cette fonction fournit une méthode simplifiée pour exécuter une requête avec une quantité minimale de code. La fonction **sqlsrv_query** effectue à la fois la préparation et l’exécution des instructions. Vous pouvez l’utiliser pour exécuter des requêtes paramétrables.  
   
-Pour plus d’informations, consultez [Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Pour plus d’informations, consultez [Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemple  
-Dans l’exemple suivant, une seule ligne est insérée dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+Dans l’exemple suivant, une seule ligne est insérée dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 > [!NOTE]  
 > Bien que l’exemple suivant utilise une instruction INSERT pour illustrer l’utilisation de **sqlsrv_query** pour exécuter une seule instruction, le concept s’applique à n’importe quelle instruction Transact-SQL.  
@@ -119,8 +120,8 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant met à jour un champ dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+L’exemple suivant met à jour un champ dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -158,7 +159,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple de code montre comment lier une valeur décimale comme paramètre d’entrée.  
 
 ```
@@ -182,7 +183,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Cet exemple de code montre comment créer une table de types [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) et extraire les données insérées.
 
 ```
@@ -240,14 +241,14 @@ First field:  1
 Second field:  test_data
 ```
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
-[Guide pratique pour exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)  
+[Procédure : Exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)  
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
 
-[Guide pratique pour envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)  
+[Procédure : Envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)  
 
 [Utilisation de paramètres directionnels](../../connect/php/using-directional-parameters.md)  
 

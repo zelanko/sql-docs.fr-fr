@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 3667a8bffa62dbb4b297fc73ce2910048110468f
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80464379"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138279"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -68,7 +68,7 @@ Les configurations de niveau base de données sont utilisées pour définir plus
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 SET
 {
@@ -328,11 +328,11 @@ L'option AUTO_CLOSE est utile pour les bases de données bureautiques, puisqu'el
 >
 > La mise en miroir de bases de données exige AUTO_CLOSE OFF.
 
-Si la base de données a la valeur AUTOCLOSE = ON, une opération qui initialise un arrêt de la base de données automatique efface le cache du plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et ultérieur, pour chaque magasin de caches effacé dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache ’%s’ (partie du cache du plan) en raison d’opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.
+Si la base de données a la valeur AUTOCLOSE = ON, une opération qui initialise un arrêt de la base de données automatique efface le cache du plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d'information suivant : `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ACTIVÉ     
-L’optimiseur de requête crée si nécessaire des statistiques sur les colonnes uniques des prédicats de requête, afin d’améliorer les plans de requête et les performances des requêtes. Ces statistiques de colonnes uniques sont créées quand l’optimiseur de requête compile les requêtes. Les statistiques de colonnes uniques sont créées uniquement sur les colonnes qui ne constituent pas déjà la première colonne d’un objet de statistiques existant.
+L’optimiseur de requête crée des statistiques sur les colonnes uniques des prédicats de requête, en fonction des besoins, afin d’améliorer les plans de requête et les performances des requêtes. Ces statistiques de colonnes uniques sont créées quand l’optimiseur de requête compile les requêtes. Les statistiques de colonnes uniques sont créées uniquement sur les colonnes qui ne constituent pas déjà la première colonne d’un objet de statistiques existant.
 
 Le paramètre par défaut est ON. Nous vous recommandons d'utiliser le paramètre par défaut pour la plupart des bases de données.
 
@@ -1193,21 +1193,21 @@ Toutes les options de base de données n’utilisent pas la clause WITH \<termin
 |\<db_user_access_option>|Oui|Oui|
 |\<db_update_option>|Oui|Oui|
 |\<delayed_durability_option>|Oui|Oui|
-|\<external_access_option>|Oui|Non|
-|\<cursor_option>|Oui|Non|
-|\<auto_option>|Oui|Non|
-|\<sql_option>|Oui|Non|
-|\<recovery_option>|Oui|Non|
-|\<target_recovery_time_option>|Non|Oui|
-|\<database_mirroring_option>|Non|Non|
-|ALLOW_SNAPSHOT_ISOLATION|Non|Non|
-|READ_COMMITTED_SNAPSHOT|Non|Oui|
+|\<external_access_option>|Oui|Non |
+|\<cursor_option>|Oui|Non |
+|\<auto_option>|Oui|Non |
+|\<sql_option>|Oui|Non |
+|\<recovery_option>|Oui|Non |
+|\<target_recovery_time_option>|Non |Oui|
+|\<database_mirroring_option>|Non |Non |
+|ALLOW_SNAPSHOT_ISOLATION|Non |Non |
+|READ_COMMITTED_SNAPSHOT|Non |Oui|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Oui|Oui|
-|\<service_broker_option>|Oui|Non|
+|\<service_broker_option>|Oui|Non |
 |DATE_CORRELATION_OPTIMIZATION|Oui|Oui|
 |\<parameterization_option>|Oui|Oui|
 |\<change_tracking_option>|Oui|Oui|
-|\<db_encryption_option>|Oui|Non|
+|\<db_encryption_option>|Oui|Non |
 
 Le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est effacé par la configuration d'une des options suivantes :
 
@@ -1228,7 +1228,7 @@ Le cache du plan est également vidé dans les scénarios suivants.
 - Vous restaurez une sauvegarde de base de données.
 - Vous détachez une base de données.
 
-Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Pour chaque magasin de caches effacé dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d’opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.
+Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Pour chaque mémoire cache effacée du cache du plan, le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d'information suivant : `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.
 
 ## <a name="examples"></a>Exemples
 
@@ -1386,7 +1386,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -1420,7 +1420,7 @@ Bien que les niveaux de compatibilité soient des options `SET`, ils sont décri
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2079,20 +2079,20 @@ Toutes les options de base de données n’utilisent pas la clause WITH \<termin
 
 |Catégorie d'options|Peut être spécifiée avec d'autres options|Peut utiliser la clause WITH \<termination>|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|Oui|Non|
+|\<auto_option>|Oui|Non |
 |\<change_tracking_option>|Oui|Oui|
-|\<cursor_option>|Oui|Non|
-|\<db_encryption_option>|Oui|Non|
+|\<cursor_option>|Oui|Non |
+|\<db_encryption_option>|Oui|Non |
 |\<db_update_option>|Oui|Oui|
 |\<db_user_access_option>|Oui|Oui|
 |\<delayed_durability_option>|Oui|Oui|
 |\<parameterization_option>|Oui|Oui|
-|ALLOW_SNAPSHOT_ISOLATION|Non|Non|
-|READ_COMMITTED_SNAPSHOT|Non|Oui|
+|ALLOW_SNAPSHOT_ISOLATION|Non |Non |
+|READ_COMMITTED_SNAPSHOT|Non |Oui|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Oui|Oui|
 |DATE_CORRELATION_OPTIMIZATION|Oui|Oui|
-|\<sql_option>|Oui|Non|
-|\<target_recovery_time_option>|Non|Oui|
+|\<sql_option>|Oui|Non |
+|\<target_recovery_time_option>|Non |Oui|
 
 ## <a name="examples"></a>Exemples
 
@@ -2181,7 +2181,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -2214,7 +2214,7 @@ Bien que les niveaux de compatibilité soient des options `SET`, ils sont décri
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2881,7 +2881,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -2909,7 +2909,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 ALTER DATABASE { database_name }
 SET
 {
@@ -2972,7 +2972,7 @@ La valeur par défaut est ON. Nous vous recommandons d'utiliser le paramètre pa
 OFF     
 L’optimiseur de requête ne crée pas de statistiques sur les colonnes uniques des prédicats de requête quand il compile les requêtes. Si cette option a la valeur OFF, il peut en résulter des plans de requête non optimisés et une dégradation des performances des requêtes.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes 
 Cette commande doit être exécutée lorsque vous êtes connecté à la base de données utilisateur.
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `s_auto_create_stats_on` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `IsAutoCreateStatistics` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
@@ -3023,7 +3023,7 @@ Spécifie que les jeux de résultats de requête retournés à partir de cette b
 OFF     
 Spécifie que les jeux de résultats de requête retournés à partir de cette base de données ne seront pas mis en cache dans la base de données.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes 
 
 Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure Synapse.
 
@@ -3034,10 +3034,10 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Exécutez cette commande pour vérifier si une requête a été exécutée avec un résultat mis en cache.  La colonne result_set_cache retourne 1 pour la correspondance dans le cache, 0 pour l’absence dans le cache et des valeurs négatives reflétant les raisons pour lesquelles la mise en cache du jeu de résultats n’a pas été utilisée.  Pour plus d’informations, consultez [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
+Exécutez cette commande pour vérifier si une requête a été exécutée avec un résultat mis en cache.  La colonne result_cache_hit retourne 1 pour la correspondance dans le cache, 0 pour l’absence dans le cache et des valeurs négatives reflétant les raisons pour lesquelles la mise en cache du jeu de résultats n’a pas été utilisée.  Pour plus d’informations, consultez [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
 
 ```sql
-SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 ```
 
@@ -3063,7 +3063,7 @@ Active l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
 OFF     
 Désactive l’option READ_COMMITTED_SNAPSHOT au niveau de la base de données.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes 
 
 Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`. La définition de READ_COMMITTED_SNAPSHOT sur ON ou sur OFF pour une base de données utilisateur entraîne la fermeture de toutes les connexions ouvertes à cette base de données. Vous pouvez effectuer cette modification pendant la fenêtre de maintenance de la base de données ou attendre qu’il n’existe plus de connexion active à la base de données, à l’exception de la connexion exécutant la commande ALTER DATABASE.  Il n'est pas nécessaire que la base de données soit en mode mono-utilisateur. La modification du paramètre READ_COMMITTED_SNAPSHOT au niveau de la session n’est pas prise en charge.  Pour vérifier ce paramètre pour une base de données, vérifiez la colonne is_read_committed_snapshot_on dans sys. databases.
 

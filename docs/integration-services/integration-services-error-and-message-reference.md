@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53ea3f9eb2704de6c6c2c1ba5237ba96aa10c011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433826"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087389"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
 
@@ -241,9 +241,9 @@ ms.locfileid: "79433826"
 >|0xC0016005|-1073651707|DTS_E_LOGINFAILURE|La tentative de connexion a échoué pour « %1 ». Cette erreur se produit lorsque les informations d'identification de connexion fournies sont incorrectes. Vérifiez ces informations.|  
 >|0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|Impossible de résoudre le nom de serveur spécifié dans l'URL %1.|  
 >|0xC0016007|-1073651705|DTS_E_PROXYAUTH|Échec de l'authentification du proxy. Cette erreur se produit lorsque les informations d'identification de connexion ne sont pas fournies, ou sont incorrectes.|  
->|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|La réponse de certificat SSL obtenue du serveur n'est pas valide. Impossible de traiter la requête.|  
+>|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|La réponse de certificat TLS/SSL obtenue du serveur n'est pas valide. Impossible de traiter la requête.|  
 >|0xC0016009|-1073651703|DTS_E_TIMEOUT|Le délai d'attente de la requête a expiré. Cette erreur peut se produire lorsque le délai d'attente spécifié est trop court ou lorsqu'une connexion au serveur ou au proxy ne peut pas être établie. Assurez-vous que l'URL du serveur et l'URL du proxy sont correctes.|  
->|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Un certificat client est absent. Cette erreur se produit lorsque le serveur attend un certificat client SSL et que l'utilisateur a fourni un certificat non valide, ou n'a fourni aucun certificat. Un certificat client doit être configuré pour cette connexion.|  
+>|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Un certificat client est absent. Cette erreur se produit lorsque le serveur attend un certificat client TLS/SSL et que l'utilisateur a fourni un certificat non valide, ou n'a fourni aucun certificat. Un certificat client doit être configuré pour cette connexion.|  
 >|0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|Le serveur spécifié, URL %1, contient une redirection, et la demande de redirection a échoué.|  
 >|0xC001600C|-1073651700|DTS_E_SERVERAUTH|Échec de l'authentification du serveur. Cette erreur se produit lorsque les informations d'identification de connexion ne sont pas fournies, ou sont incorrectes.|  
 >|0xC001600D|-1073651699|DTS_E_WINHTTPUNKNOWNERROR|Impossible de traiter la requête. Réessayez plus tard.|  

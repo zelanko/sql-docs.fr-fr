@@ -1,5 +1,6 @@
 ---
 title: Problèmes connus concernant le pilote ODBC sur Linux et macOS
+description: Découvrez les problèmes connus avec le pilote Microsoft ODBC pour SQL Server sur Linux et macOS, ainsi que les étapes de résolution des problèmes de connectivité.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0486cea609f0ab6bcc1261d6cad26f47f123476f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f6e39184b8ba565fed48ba501e2502dad19257ce
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912498"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728413"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problèmes connus concernant le pilote ODBC sur Linux et macOS
 

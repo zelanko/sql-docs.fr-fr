@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f3dbfa81e52d050b3e5df46ea2ea5911a8b1254
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 844b0a958b241de985a22067b4e3175137e1c6bb
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903686"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087409"
 ---
 # <a name="install-integration-services-ssis"></a>Installer Integration Services (SSIS)
 
@@ -131,7 +131,7 @@ Pour une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisn
 
   - Microsoft® Connector pour SAP BW pour Microsoft SQL Server®. Pour obtenir ces composants, consultez [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
-  - Microsoft Connector Version 5.0 pour Oracle by Attunity et Microsoft Connector Version 5.0 for Teradata by Attunity. Pour obtenir ces composants, consultez [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179).
+  - Microsoft Connectors pour Oracle et Teradata par Attunity. Pour obtenir ces composants, consultez [Connecteurs Attunity](../attunity-connectors.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

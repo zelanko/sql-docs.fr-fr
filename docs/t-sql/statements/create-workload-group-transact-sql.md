@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2020
+ms.date: 04/20/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61185c660e650a2052a2e5a6df1ad9ac3ad0af4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568062"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087462"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -49,7 +49,7 @@ Crée un groupe de charges de travail du gouverneur de ressources et l'associe �
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]
@@ -149,7 +149,7 @@ Le groupe de charge de travail peut spécifier un pool de ressources externes. V
 - Un pool de ressources pour les charges de travail et les requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 - Un pool de ressources externes pour les processus externes. Pour plus d’informations, consultez [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Quand `REQUEST_MEMORY_GRANT_PERCENT` est utilisé, la création d’index est autorisée à utiliser une mémoire d’espace de travail supérieure à celle qui lui a été initialement allouée, afin d’améliorer les performances. Cette gestion spéciale est prise en charge par le gouverneur de ressources dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charges de travail.
 
@@ -165,7 +165,7 @@ La mémoire consommée par la création d'index sur une table partitionnée non 
 
 Nécessite l'autorisation `CONTROL SERVER`.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Créez un groupe de charge de travail nommé `newReports` qui utilise les paramètres par défaut de Resource Governor et se trouve dans le pool par défaut de ce dernier. L'exemple spécifie le pool `default`, mais cela n'est pas obligatoire.
 
@@ -179,7 +179,7 @@ USING "default" ;
 GO
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)
 - [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)
@@ -203,7 +203,7 @@ Crée un groupe de charge de travail. Les groupes de charge de travail sont les 
 
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
@@ -265,7 +265,7 @@ L’importance définie pour le groupe de charge de travail est l’importance p
 *QUERY_EXECUTION_TIMEOUT_SEC* = valeur</br>     
 Spécifie la durée maximale (en secondes) pendant laquelle une requête peut s’exécuter avant d’être annulée. *value* doit être égal à 0 ou un entier positif. Le paramètre par défaut de la valeur est 0, ce qui signifie que la requête n’expire jamais. Le délai QUERY_EXECUTION_TIMEOUT_SEC démarre une fois que la requête est en cours d’exécution, pas quand elle est mise en file d’attente.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Les groupes de charge de travail correspondant aux classes de ressources sont créés automatiquement pour permettre une compatibilité descendante. Ces groupes de charge de travail définis par le système ne peuvent pas être supprimés. Il est possible de créer 8 autres groupes de charge de travail définis par l’utilisateur.
 
@@ -275,7 +275,7 @@ Si un groupe de charge de travail est créé avec une `min_percentage_resource` 
 
 Les paramètres `min_percentage_resource`, `cap_percentage_resource`, `request_min_resource_grant_percent` et `request_max_resource_grant_percent` ont des valeurs effectives qui sont ajustées dans le contexte du niveau de service actuel et de la configuration d’autres groupes de charge de travail.
 
-La concurrence prise en charge par chaque niveau de service est la même que lorsque les classes de ressources ont été utilisées pour définir des allocations de ressources par requête. Par conséquent, les valeurs prises en charge pour request_min_resource_grant_percent dépendent du niveau de service qui a été défini pour l’instance. Au niveau de service le plus bas, DW100c, un minimum de 25 % des ressources par demande est nécessaire. Au niveau DW100c, la valeur request_min_resource_grant_percent effective pour un groupe de charge de travail configuré peut s’élever à 25 % ou plus. Pour plus d’informations sur la façon dont les valeurs effectives sont dérivées, consultez le tableau ci-dessous.
+Le paramètre `request_min_resource_grant_percent` a une valeur effective, car les ressources minimales nécessaires par requête dépendent du niveau de service.  Par exemple, au niveau de service le plus bas, DW100c, un minimum de 25 % des ressources par demande est nécessaire.  Si le groupe de charge de travail est configuré avec 3 % pour `request_min_resource_grant_percent` et `request_max_resource_grant_percent`, les valeurs effectives pour les deux paramètres s’ajustent à 25 % lorsque l’instance est démarrée.  Si l’instance est mise à l’échelle à DW1000c, les valeurs configurées et effectives pour les deux paramètres sont de 3 %, car 3 % est la valeur minimale prise en charge à ce niveau de service.  Si la mise à l’échelle de l’instance est supérieure à Dw1000c, les valeurs configurées et effectives pour les deux paramètres resteront à 3 %.  Consultez le tableau ci-dessous pour plus d’informations sur les valeurs effectives pour différents niveaux de service.
 
 |Niveau de service|Valeur effective la plus faible pour REQUEST_MIN_RESOURCE_GRANT_PERCENT|Nombre maximal de requêtes simultanées|
 |---|---|---|
@@ -297,9 +297,9 @@ La concurrence prise en charge par chaque niveau de service est la même que lor
 |DW30000c|0,75 %|128|
 ||||
 
-De même, request_min_resource_grant_percent et min_percentage_resource doivent être supérieurs ou égaux à la valeur effective de request_min_resource_grant_percent. Un groupe de charge de travail avec `min_percentage_resource` inférieur à la valeur effective de `min_percentage_resource` a sa valeur définie sur zéro au moment de l’exécution. Quand cela se produit, les ressources configurées pour `min_percentage_resource` peuvent être partagées entre tous les groupes de charge de travail. Par exemple, le groupe de charge de travail `wgAdHoc` avec un `min_percentage_resource` de 10 % exécuté avec DW1000c aura un `min_percentage_resource` effectif de 10 % (3,25 % est la valeur minimale prise en charge par DW1000c). `wgAdhoc` avec DW100c aura un min_percentage_resource effectif de 0 %. Les 10 % configurés pour `wgAdhoc` seront partagés entre tous les groupes de charge de travail.
+Le paramètre `min_percentage_resource` doit être supérieur ou égal au paramètre `request_min_resource_grant_percent`effectif. Un groupe de charge de travail avec `min_percentage_resource` inférieur à la valeur effective de `min_percentage_resource` a sa valeur définie sur zéro au moment de l’exécution. Quand cela se produit, les ressources configurées pour `min_percentage_resource` peuvent être partagées entre tous les groupes de charge de travail. Par exemple, le groupe de charge de travail `wgAdHoc` avec un `min_percentage_resource` de 10 % exécuté avec DW1000c aura un `min_percentage_resource` effectif de 10 % (3 % est la valeur minimale prise en charge par DW1000c). `wgAdhoc` avec DW100c aura un min_percentage_resource effectif de 0 %. Les 10 % configurés pour `wgAdhoc` seront partagés entre tous les groupes de charge de travail.
 
-`cap_percentage_resource` a également une valeur effective. Si un groupe de charge de travail `wgAdhoc` est configuré avec un `cap_percentage_resource` de 100 % et qu’un autre groupe de charge de travail `wgDashboards` est créé avec un `min_percentage_resource` de 25 %, le `cap_percentage_resource` effectif pour `wgAdhoc` devient 75 %.
+Le paramètre `cap_percentage_resource` a également une valeur effective. Si un groupe de charge de travail `wgAdhoc` est configuré avec un `cap_percentage_resource` de 100 % et qu’un autre groupe de charge de travail `wgDashboards` est créé avec un `min_percentage_resource` de 25 %, le `cap_percentage_resource` effectif pour `wgAdhoc` devient 75 %.
 
 Le moyen le plus simple de comprendre les valeurs d’exécution de vos groupes de charge de travail consiste à interroger la vue système [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md).
 

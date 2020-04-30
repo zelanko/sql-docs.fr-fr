@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (préversion)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Utilisez l’instruction COPY dans Azure SQL Data Warehouse pour le chargement à partir de comptes de stockage externes.
-ms.date: 12/13/2019
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631964"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153237"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Cet article explique comment utiliser l’instruction COPY dans Azure SQL Data Warehouse pour le chargement à partir de comptes de stockage externes. L’instruction COPY offre une souplesse maximale pour l’ingestion de données à débit élevé dans SQL Data Warehouse.
+Cet article explique comment utiliser l’instruction COPY dans Azure SQL Data Warehouse pour le chargement à partir de comptes de stockage externes. L’instruction COPY offre une souplesse maximale pour l’ingestion de données à débit élevé dans SQL Data Warehouse. Utilisez COPY pour les fonctionnalités suivantes :
+
+- Utiliser le chargement aux utilisateurs avec privilèges plus restreints, sans avoir besoin d’autorisations CONTROL strictes sur l’entrepôt de données
+- Exécuter uniquement une instruction T-SQL sans avoir à créer d’objets de base de données supplémentaires
+- Analyser et charger correctement les fichiers CSV où les **séparateurs** (chaîne, champ, ligne) **sont** **placés dans une séquence d’échappement dans des colonnes délimitées par des chaînes**
+- Spécifier un meilleur modèle d’autorisation sans exposer les clés de compte de stockage à l’aide de signatures d’accès partagé (SAS)
+- Utiliser un autre compte de stockage pour l’emplacement ERRORFILE (REJECTED_ROW_LOCATION)
+- Personnaliser les valeurs par défaut pour chaque colonne cible et spécifier les champs de données sources à charger dans des colonnes cibles spécifiques
+- Spécifier une marque de fin de ligne personnalisée pour les fichiers CSV
+- Tirer parti des formats de date SQL Server pour les fichiers CSV
+- Spécifier des caractères génériques et plusieurs fichiers dans le chemin de l’emplacement du stockage
 
 > [!NOTE]  
 > L’instruction COPY est actuellement en préversion publique.
@@ -208,21 +218,20 @@ La commande COPY détecte automatiquement le type de compression en fonction de 
 - .deflate - **DefaultCodec**  (Parquet et ORC uniquement)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* s’applique au format CSV et spécifie un caractère unique qui sera utilisé comme guillemet (délimiteur de chaîne) dans le fichier CSV. Si vous ne spécifiez pas cet argument, le caractère guillemet (") servira de guillemet conformément à l’utilisation définie dans la norme RFC 4180. Les caractères ASCII étendus ne sont pas pris en charge avec UTF-8 pour FIELDQUOTE.
+*FIELDQUOTE* s’applique au format CSV et spécifie un caractère unique qui sera utilisé comme guillemet (délimiteur de chaîne) dans le fichier CSV. Si vous ne spécifiez pas cet argument, le caractère guillemet (") servira de guillemet conformément à l’utilisation définie dans la norme RFC 4180. Les caractères ASCII étendus et à plusieurs octets ne sont pas pris en charge avec UTF-8 pour FIELDQUOTE.
 
 > [!NOTE]  
 > Les caractères FIELDQUOTE sont placés dans une séquence d’échappement dans les colonnes de type chaîne qui contiennent un double FIELDQUOTE (délimiteur). 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* s’applique uniquement au format CSV. Spécifie la marque de fin de champ à utiliser dans le fichier CSV. La marque de fin de champ peut être spécifiée en notation hexadécimale. Plusieurs caractères peuvent être utilisés comme marque de fin de champ. La virgule (,) est la marque de fin de champ par défaut.
-Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
+*FIELDTERMINATOR* s’applique uniquement au format CSV. Spécifie la marque de fin de champ à utiliser dans le fichier CSV. La marque de fin de champ peut être spécifiée en notation hexadécimale. Plusieurs caractères peuvent être utilisés comme marque de fin de champ. La virgule (,) est la marque de fin de champ par défaut. Les caractères ASCII étendus et à plusieurs octets et ne sont pas pris en charge avec UTF-8 pour FIELDTERMINATOR.
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* s’applique uniquement au format CSV. Spécifie la marque de fin de ligne à utiliser dans le fichier CSV. La marque de fin de ligne peut être spécifiée en notation hexadécimale. Plusieurs caractères peuvent être utilisés comme marque de fin de ligne. La combinaison de caractères « \r\n » est la marque de fin de ligne par défaut. 
 
 La commande COPY ajoute le caractère \r quand vous spécifiez le caractère \n (nouvelle ligne), ce qui donne \r\n. Pour spécifier le caractère \n uniquement, utilisez sa notation hexadécimale (0x0A). Si vous spécifiez des marques de fin de ligne à plusieurs caractères au format hexadécimal, n’ajoutez pas « 0x » entre chaque caractère.
 
-Consultez cette [documentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) pour obtenir des conseils supplémentaires sur la spécification des marques de fin de ligne.
+Les caractères ASCII étendus et à plusieurs octets ne sont pas pris en charge avec UTF-8 pour ROW TERMINATOR.
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* s’applique au format CSV et spécifie le numéro de ligne qui est lu en premier dans tous les fichiers par la commande COPY. Les valeurs commencent à 1, la valeur par défaut. Si la valeur est définie sur 2, la première ligne de chaque fichier (ligne d’en-tête) est ignorée lorsque les données sont chargées. Les lignes sont ignorées en présence de marques de fin de ligne.
@@ -361,10 +370,10 @@ WITH (
 ## <a name="faq"></a>Questions fréquentes (FAQ)
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Quelles sont les performances de la commande COPY par rapport à Polybase ?
-La commande COPY offre de meilleures performances jusqu’à ce que la fonctionnalité soit en disponibilité générale. Pour obtenir de meilleures performances de chargement pendant la préversion publique, envisagez de fractionner votre entrée en plusieurs fichiers lors du chargement du CSV. Actuellement, la commande COPY est à égalité en termes de performances avec Polybase quand vous utilisez INSERT SELECT. 
+La commande COPY offre de meilleures performances en fonction de votre charge de travail. Pour obtenir de meilleures performances de chargement pendant la préversion publique, envisagez de fractionner votre entrée en plusieurs fichiers lors du chargement du CSV. Partagez vos résultats de performances avec notre équipe pendant la préversion ! sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quelles sont les recommandations de fractionnement de fichiers pour la commande COPY lors du chargement de fichiers CSV ?
-Le tableau ci-dessous indique les nombres de fichiers conseillés. Une fois le nombre de fichiers recommandé atteint, vous obtenez de meilleures performances, plus les fichiers sont volumineux. 
+Le tableau ci-dessous indique les nombres de fichiers conseillés. Une fois le nombre de fichiers recommandé atteint, vous obtenez de meilleures performances, plus les fichiers sont volumineux. Pour une expérience de fractionnement de fichiers simple, reportez-vous à la [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474) suivante. 
 
 | **DWU** | **Nombre de fichiers** |
 | :-----: | :--------: |

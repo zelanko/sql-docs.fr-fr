@@ -2,7 +2,7 @@
 title: Liste des bogues corrigés
 description: Cette page contient la liste des bogues résolus dans chaque version, à partir du pilote Microsoft ODBC 17 pour SQL Server.
 ms.custom: ''
-ms.date: 06/29/2018
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,20 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629719"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153222"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste des bogues corrigés
 
 Cette page contient la liste des bogues résolus dans chaque version, à partir du pilote [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>Correctifs de bogues dans la version 17.5.2.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Alpine Linux uniquement)
+
+- Correction d’un plantage quand Always Encrypted avec enclaves sécurisées est utilisé sur Alpine Linux
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>Correctifs de bogues dans la version 17.5.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

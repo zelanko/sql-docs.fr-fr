@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256926"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087349"
 ---
 # <a name="execution-plans"></a>Plans d’exécution
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Pour pouvoir exécuter des requêtes, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doit analyser l’instruction afin de déterminer la manière la plus efficace d’accéder aux données requises. Cette analyse est gérée par un composant appelé Optimiseur de requête. L’entrée de l’optimiseur de requête est composée de la requête, du schéma de base de données (définitions des tables et des index) et de ses statistiques de base de données. La sortie de l’optimiseur de requête est un plan d’exécution de requête, parfois appelé plan de requête ou plan d’exécution.   
 
@@ -41,13 +41,13 @@ Un plan d'exécution de requête permet de définir :
   Il existe également différentes méthodes d'accès aux données dans chaque table. Si seules quelques lignes ayant des valeurs de clés spécifiques sont nécessaires, le serveur de base de données peut utiliser un index. Si toutes les lignes de la table sont nécessaires, le serveur de base de données peut ignorer les index et procéder à une analyse de la table. Si toutes les lignes de la table sont nécessaires mais qu’il existe un index dont les colonnes clés se trouvent dans une clause `ORDER BY`, l’analyse d’index plutôt que l’analyse de table peut éviter un tri séparé du jeu de résultats. Dans le cas d'une table très petite, les analyses de table peuvent s'avérer plus efficaces pour quasiment tous les accès à la table.
   
 - **Les méthodes utilisées pour effectuer les calculs, et filtrer, agréger et trier les données des différentes tables.**  
-  À mesure que les données sont consultées à partir des tables, différentes méthodes permettent d’effectuer des calculs sur les données, par exemple calculer des valeurs scalaires, et agréger et trier les données comme défini dans le texte de la requête, par exemple en utilisant une clause `GROUP BY` ou `ORDER BY`, et filtrer les données, par exemple en utilisant une clause `WHERE` ou `HAVING`.
+  Il existe différentes méthodes permettant d’effectuer des calculs sur les données des tables (par exemple, calculer les valeurs scalaires), d’agréger et de trier les données comme le définit le texte de la requête (par exemple, en utilisant une clause `GROUP BY` ou `ORDER BY`) et de filtrer les données (par exemple, en utilisant une clause `WHERE` ou `HAVING`).
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose trois options pour afficher les plans d’exécution :        
-> -  Le ***[Plan d’exécution estimé](../../relational-databases/performance/display-the-estimated-execution-plan.md)***, à savoir le plan compilé, produit par l’optimiseur de requête en fonction des estimations.        
-> -  Le ***[Plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md)***, qui correspond au plan compilé avec son [contexte d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse), c’est-à-dire les informations sur l’exécution réelle disponibles à la fin de l’exécution, comme les avertissements d’exécution ou, dans les versions récentes du [!INCLUDE[ssde_md](../../includes/ssde_md.md)], le temps écoulé et le temps processeur utilisés pendant l’exécution.        
-> -  Les ***[Statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md)***, qui sont identiques au plan compilé auquel s’ajoute son contexte d’exécution. Cela inclut les informations d’exécution pendant la progression de l’exécution, lesquelles sont mises à jour chaque seconde. Les informations d’exécution incluent, par exemple, le nombre réel de lignes qui transitent par les opérateurs.       
+> -  Le ***[Plan d’exécution estimé](../../relational-databases/performance/display-the-estimated-execution-plan.md)***, à savoir le plan compilé, produit par l’optimiseur de requête en fonction des estimations. Il s’agit du plan de requête qui est stocké dans le cache du plan.        
+> -  Le ***[Plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md)***, est le plan compilé avec son [contexte d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Il est disponible **une fois l’exécution de la requête terminée**. c’est-à-dire les informations sur l’exécution réelle, comme les avertissements d’exécution ou, dans les versions récentes du [!INCLUDE[ssde_md](../../includes/ssde_md.md)], le temps écoulé et le temps processeur utilisés pendant l’exécution.         
+> -  Les ***[Statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md)*** sont identiques au plan compilé auquel s’ajoute son contexte d’exécution. Ce plan est disponible pour les **exécutions de requêtes à la volée** et est mis à jour toutes les secondes. Cela comprend des informations d’exécution telles que le nombre réel de lignes qui transitent par les [opérateurs](../../relational-databases/showplan-logical-and-physical-operators-reference.md), le temps écoulé et l’estimation de la progression des requêtes.
 
 > [!TIP]
 > Pour plus d’informations sur les plans de traitement et d’exécution des requêtes, consultez les sections [Optimisation des instructions SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) et [Mise en cache et réutilisation des plans d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) du Guide de l’architecture de traitement des requêtes.
@@ -58,7 +58,7 @@ Un plan d'exécution de requête permet de définir :
 [Comparer et analyser des plans d’exécution](../../relational-databases/performance/compare-and-analyze-execution-plans.md)     
 [Repères de plan](../../relational-databases/performance/plan-guides.md)     
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
 [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
 [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)    

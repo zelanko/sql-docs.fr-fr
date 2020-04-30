@@ -1,7 +1,7 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982226"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107984"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "73982226"
 
 Ajoute une ou plusieurs lignes à une table ou une vue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir des exemples, consultez [Exemples](#InsertExamples).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -90,7 +90,7 @@ INSERT
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
 ```  
   
-```  
+```syntaxsql
 -- External tool only syntax  
 
 INSERT   
@@ -119,7 +119,7 @@ INSERT
     [ ( precision [ , scale ] | max ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -295,7 +295,7 @@ Clause OUTPUT
 > [!NOTE]
 >  Une erreur de syntaxe est générée si aucune liste de colonnes n’est fournie.  
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Pour obtenir des informations spécifiques à l’insertion de données dans des tables graphiques SQL, consultez [INSERT (graphe SQL)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## <a name="best-practices"></a>Bonnes pratiques  
@@ -303,37 +303,43 @@ Pour obtenir des informations spécifiques à l’insertion de données dans des
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Recommandations pour l'importation de données en bloc  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Utilisation d’INSERT INTO...SELECT pour importer des données en bloc avec une journalisation minimale  
- Vous pouvez utiliser `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` pour transférer efficacement un grand nombre de lignes d’une table, par exemple une table intermédiaire, vers une autre table avec une journalisation minimale. La journalisation minimale peut améliorer les performances de l'instruction et réduire le risque de voir l'opération remplir l'espace disponible du journal des transactions au cours de la transaction.  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging-and-parallelism"></a>Utilisation d’INSERT INTO...SELECT pour importer des données en bloc avec une journalisation et un parallélisme minimaux 
+Vous pouvez utiliser `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` pour transférer efficacement un grand nombre de lignes d’une table, par exemple une table intermédiaire, vers une autre table avec une journalisation minimale. La journalisation minimale peut améliorer les performances de l'instruction et réduire le risque de voir l'opération remplir l'espace disponible du journal des transactions au cours de la transaction.  
   
- La journalisation minimale pour cette instruction comporte les impératifs suivants :  
-  
+La journalisation minimale pour cette instruction comporte les impératifs suivants :  
 -   Le mode de récupération de la base de données doit correspondre au mode simple ou au mode de récupération utilisant les journaux de transactions.  
-  
 -   La table cible est un segment de mémoire vide ou non vide.  
-  
 -   La table cible n'est pas utilisée dans la réplication.  
-  
--   L'indicateur TABLOCK est spécifié pour la table cible.  
+-   L'indicateur `TABLOCK` est spécifié pour la table cible.  
   
 Les lignes insérées dans un segment de mémoire à la suite d'une action d'insertion dans une instruction MERGE peuvent également être journalisées de façon minimale.  
   
- Contrairement à l’instruction BULK INSERT, qui maintient un verrou de mise à jour en bloc moins restrictif, INSERT INTO...SELECT avec l’indicateur TABLOCK maintient un verrou exclusif (X) sur la table. Cela signifie que vous ne pouvez pas insérer de lignes à l'aide d'opérations d'insertion parallèles.  
+Contrairement à l’instruction `BULK INSERT`, qui maintient un verrou de mise à jour en bloc (BU) moins restrictif, `INSERT INTO … SELECT` avec l’indicateur `TABLOCK` maintient un verrou exclusif (X) sur la table. Cela signifie que vous ne pouvez pas insérer de lignes à l’aide de plusieurs opérations Insert simultanément exécutées. 
+
+Cependant, à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et du niveau de compatibilité de base de données 130, une instruction `INSERT INTO … SELECT` unique peut être exécutée en parallèle lors de l’insertion dans des segments de mémoire ou des index columnstore en cluster (ICC). Les insertions parallèles sont possibles lors de l’utilisation de l’indicateur `TABLOCK`.  
+
+Le parallélisme de l’instruction ci-dessus présente les exigences suivantes, qui sont similaires aux conditions requises pour la journalisation minimale :  
+-   La table cible est un segment de mémoire vide ou non vide.  
+-   La table cible a un index columnstore en cluster (ICC), mais aucun index non cluster.  
+-   La table cible n’a pas de colonne d’identité avec IDENTITY_INSERT défini sur OFF.  
+-   L'indicateur `TABLOCK` est spécifié pour la table cible.
+
+Dans les scénarios où les exigences relatives à la journalisation minimale et à l’insertion en parallèle sont satisfaites, les deux améliorations travaillent ensemble pour garantir un débit maximal de vos opérations de chargement de données.
+
+> [!NOTE]
+> Les insertions dans les tables temporaires locales (identifiées par le préfixe #) et les tables temporaires globales (identifiées par les préfixes ##) sont également activées pour le parallélisme à l’aide de l’indicateur TABLOCK.
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Utilisation d'OPENROWSET et de BULK pour les données d'importation en bloc  
  La fonction OPENROWSET peut accepter les indicateurs de table suivants, lesquels offrent des optimisations de chargement en masse avec l'instruction INSERT :  
   
--   L'indicateur TABLOCK peut réduire le nombre d'enregistrements de journal pour l'opération d'insertion. Le mode de récupération de la base de données doit être le mode simple ou le mode de récupération utilisant les journaux de transactions ; par ailleurs, la table cible ne peut pas être utilisée dans la réplication. Pour plus d’informations, consultez [Conditions requises pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   L'indicateur `TABLOCK` peut réduire le nombre d'enregistrements de journal pour l'opération d'insertion. Le mode de récupération de la base de données doit être le mode simple ou le mode de récupération utilisant les journaux de transactions ; par ailleurs, la table cible ne peut pas être utilisée dans la réplication. Pour plus d’informations, consultez [Conditions requises pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   L’indicateur `TABLOCK` peut activer des opérations d’insertion parallèles. La table cible est un segment de mémoire ou un index columnstore en cluster (ICC) sans index non cluster, et la table cible ne peut pas avoir une colonne d’identité spécifiée.  
+-   L'indicateur `IGNORE_CONSTRAINTS` peut désactiver temporairement la vérification des contraintes FOREIGN KEY et CHECK.  
+-   L'indicateur `IGNORE_TRIGGERS` peut temporairement désactiver l'exécution des déclencheurs.  
+-   L'indicateur `KEEPDEFAULTS` permet l'insertion la valeur par défaut éventuelle d'une colonne de table, à la place de la valeur NULL, lorsqu'il manque une valeur pour la colonne dans l'enregistrement de données.  
+-   L'indicateur `KEEPIDENTITY` permet que les valeurs d'identité figurant dans le fichier de données importé soient utilisées pour la colonne d'identité dans la table cible.  
   
--   L'indicateur IGNORE_CONSTRAINTS peut désactiver temporairement la vérification des contraintes FOREIGN KEY et CHECK.  
-  
--   L'indicateur IGNORE_TRIGGERS peut temporairement désactiver l'exécution des déclencheurs.  
-  
--   L'indicateur KEEPDEFAULTS permet l'insertion la valeur par défaut éventuelle d'une colonne de table, à la place de la valeur NULL, lorsqu'il manque une valeur pour la colonne dans l'enregistrement de données.  
-  
--   L'indicateur KEEPIDENTITY permet que les valeurs d'identité figurant dans le fichier de données importé soient utilisées pour la colonne d'identité dans la table cible.  
-  
-Ces optimisations sont similaires à celles disponibles avec la commande BULK INSERT. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+Ces optimisations sont similaires à celles disponibles avec la commande `BULK INSERT`. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="data-types"></a>Types de données  
  Lorsque vous insérez des lignes, prenez en compte le comportement des types de données suivant :  
@@ -385,7 +391,7 @@ Ces optimisations sont similaires à celles disponibles avec la commande BULK IN
  Lorsqu'une instruction INSERT rencontre une erreur arithmétique (dépassement de capacité, division par zéro ou erreur de domaine) lors de l'évaluation de l'expression, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] gère ces erreurs comme si SET ARITHABORT avait la valeur ON. Le lot est arrêté et un message d'erreur est retourné. Si, au cours de l'évaluation de l'expression, une instruction INSERT, DELETE ou UPDATE rencontre une erreur arithmétique, un dépassement de capacité, une division par zéro ou une erreur de domaine alors que les options SET ARITHABORT et SET ANSI_WARNINGS ont la valeur OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insère ou met à jour une valeur NULL. Si la colonne cible ne peut pas prendre la valeur NULL, l'action d'insertion ou de mise à jour échoue et l'utilisateur reçoit une erreur.  
   
 ## <a name="interoperability"></a>Interopérabilité  
- Lorsqu'un déclencheur INSTEAD OF est défini sur des actions INSERT dans une table ou une vue, il est exécuté au lieu de l'instruction INSERT. Pour plus d’informations sur les déclencheurs INSTEAD OF, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Lorsqu'un déclencheur `INSTEAD OF` est défini sur des actions INSERT dans une table ou une vue, il est exécuté au lieu de l'instruction INSERT. Pour plus d’informations sur les déclencheurs `INSTEAD OF`, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Lorsque vous insérez des valeurs dans des tables distantes et que toutes les valeurs des colonnes ne sont pas spécifiées, vous devez identifier les colonnes dans lesquelles les valeurs spécifiées doivent être insérées.  
@@ -407,9 +413,9 @@ Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CR
 ### <a name="permissions"></a>Autorisations  
  L'autorisation INSERT est obligatoire sur la table cible.  
   
- Les autorisations INSERT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
+ Les autorisations INSERT sont attribuées par défaut aux membres du rôle serveur fixe `sysadmin`, aux membres des rôles de base de données fixes `db_owner` et `db_datawriter` et au propriétaire de la table. Les membres des rôles `sysadmin`, `db_owner` et `db_securityadmin` ainsi que le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
   
- Pour exécuter INSERT avec l’option BULK de la fonction OPENROWSET, vous devez être membre du rôle serveur fixe **sysadmin** ou **bulkadmin**.  
+ Pour exécuter INSERT avec l'option BULK de la fonction OPENROWSET, vous devez être membre du rôle serveur fixe `sysadmin` ou `bulkadmin`.  
   
 ##  <a name="examples"></a><a name="InsertExamples"></a> Exemples  
   
@@ -517,7 +523,6 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. Insertion de données dans des colonnes de type défini par l'utilisateur  
@@ -1011,7 +1016,7 @@ WHERE g.CountryRegionCode = 'FR'
 OPTION ( LABEL = 'Add French Prospects', HASH JOIN);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

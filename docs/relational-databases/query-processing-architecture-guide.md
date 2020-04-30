@@ -1,7 +1,7 @@
 ---
 title: Guide d’architecture de traitement des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2020
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510200"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82108000"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -894,13 +894,13 @@ Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le modèle de prép
 * L'application peut contrôler le moment où le plan d'exécution est créé et réutilisé.
 * Le modèle de préparation et d'exécution peut être transféré à d'autres bases de données, y compris des versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> Détection des paramètres
-La « détection de paramètres » fait référence à un processus par lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] « espionne » les valeurs de paramètres actuelles pendant la compilation ou la recompilation, et les transmet à l’optimiseur de requête afin qu’elles puissent servir à générer des plans d’exécution de requête potentiellement plus efficaces.
+### <a name="parameter-sensitivity"></a><a name="ParamSniffing"></a> Sensibilité du paramètre
+La sensibilité du paramètre, aussi appelée « détection de paramètres », fait référence à un processus par lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] « espionne » les valeurs de paramètres actuelles pendant la compilation ou la recompilation, et les transmet à l’optimiseur de requête afin qu’elles puissent servir à générer des plans d’exécution de requête potentiellement plus efficaces.
 
 Les valeurs de paramètres sont détectées pendant la compilation ou la recompilation pour les types de lots suivants :
 
 -  Procédures stockées
--  Requêtes soumises par l’intermédiaire de sp_executesql 
+-  Requêtes soumises via `sp_executesql` 
 -  Requêtes préparées
 
 Pour plus d’informations sur la résolution des problèmes de détection de paramètre incorrect, consultez [Résoudre les problèmes de requête liés aux plans d’exécution de requête sensibles aux paramètres](/azure/sql-database/sql-database-monitor-tune-overview).
@@ -929,11 +929,35 @@ Les constructions qui empêchent le parallélisme sont les suivantes :
 -   **Requêtes récursives**        
     Pour plus d’informations sur la récursivité, consultez [Principes de définition et d’utilisation des expressions de table communes récursives](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) et [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
 
--   **Fonctions table**        
-    Pour plus d’informations sur les fonctions table, consultez [Créer des fonctions définies par l’utilisateur (moteur de base de données)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-   **Fonctions table à instructions multiples (MSTVF)**         
+    Pour plus d’informations sur les MSTVF, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
 -   **Mot clé TOP**        
     Pour plus d’informations, consultez [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+
+Un plan d’exécution de requête peut contenir l’attribut **NonParallelPlanReason** dans l’élément **QueryPlan** qui décrit pourquoi le parallélisme n’a pas été utilisé.  Les valeurs de cet attribut peuvent notamment être les suivantes :
+
+|NonParallelPlanReason Valeur|Description|
+|----|----|
+|MaxDOPSetToOne|Degré maximal de parallélisme défini sur 1.|
+|EstimatedDOPIsOne|Le degré de parallélisme estimé est de 1.|
+|NoParallelWithRemoteQuery|Le parallélisme n’est pas pris en charge pour les requêtes distantes.|
+|NoParallelDynamicCursor|Plans parallèles non pris en charge pour les curseurs dynamiques.|
+|NoParallelFastForwardCursor|Plans parallèles non pris en charge pour les curseurs d’avance rapide.|
+|NoParallelCursorFetchByBookmark|Plans parallèles non pris en charge pour les curseurs extraits par signet.|
+|NoParallelCreateIndexInNonEnterpriseEdition|La création d’index parallèles n’est pas prise en charge pour les éditions hors Entreprise.|
+|NoParallelPlansInDesktopOrExpressEdition|Plans parallèles non pris en charge pour les éditions Desktop et Express.|
+|NonParallelizableIntrinsicFunction|La requête fait référence à une fonction intrinsèque non parallélisable.|
+|CLRUserDefinedFunctionRequiresDataAccess|Parallélisme non pris en charge pour une fonction CLR définie par l’utilisateur qui requiert l’accès aux données.|
+|TSQLUserDefinedFunctionsNotParallelizable|La requête fait référence à une fonction T-SQL définie par l’utilisateur qui n’était pas parallélisable.|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|Les transactions de variable de table ne prennent pas en charge les transactions imbriquées parallèles.|
+|DMLQueryReturnsOutputToClient|La requête DML retourne la sortie au client et n’est pas parallélisable.|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|Combinaison non prise en charge de plans série et parallèle pour une seule génération d’index en ligne.|
+|CouldNotGenerateValidParallelPlan|Échec de la vérification du plan parallèle, rétablissement en série.|
+|NoParallelForMemoryOptimizedTables|Parallélisme non pris en charge pour les tables OLTP en mémoire référencées.|
+|NoParallelForDmlOnMemoryOptimizedTable|Parallélisme non pris en charge pour DML sur une table OLTP en mémoire.|
+|NoParallelForNativelyCompiledModule|Parallélisme non pris en charge pour les modules référencés compilés en mode natif.|
+|NoRangesResumableCreate|Échec de la génération de la plage pour une opération de création pouvant être reprise.|
 
 Une fois les opérateurs d'échange insérés, vous obtenez un plan d'exécution de requêtes en parallèle. Un plan d’exécution de requêtes en parallèle peut utiliser plusieurs threads de travail. Un plan d’exécution en série utilisé par requête (série) non parallèle n’utilise qu’un seul thread de travail pour son exécution. Le nombre réel de threads de travail utilisés par une requête parallèle est déterminé au moment de l’initialisation de l’exécution du plan de requête et dépend de la complexité et du degré de parallélisme du plan. 
 
@@ -963,7 +987,13 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
  
 Lors de l'exécution, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] détermine si la charge de travail actuelle du système et les informations de configuration décrites ci-dessus permettent une exécution parallèle. Si c’est le cas, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] détermine le nombre optimal de threads de travail et répartit l’exécution du plan parallèle parmi ces derniers. Quand une requête ou une opération d’index commence à s’exécuter en parallèle sur plusieurs threads de travail, un nombre identique de threads de travail est utilisé jusqu’à ce que l’opération soit terminée. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] réexamine le nombre optimal de threads de travail chaque fois qu’un plan d’exécution est récupéré à partir du cache du plan. Par exemple, la première exécution d’une requête peut nécessiter l’utilisation d’un plan série, la deuxième d’un plan parallèle et de trois threads de travail, et la troisième exécution d’un plan parallèle et de quatre threads.
 
-Dans un plan d'exécution parallèle de requêtes, les opérateurs insert, update et delete sont exécutés en série. Cependant, la clause WHERE d'une instruction UPDATE ou DELETE, ou la partie SELECT d'une instruction INSERT peut être exécutée en parallèle. Les modifications réelles des données sont ensuite appliquées en série à la base de données.
+Les opérateurs Update et Delete d’un plan d’exécution de requêtes parallèles sont exécutés en série, mais la clause WHERE d’une instruction UPDATE ou DELETE peut être exécutée en parallèle. Les modifications réelles des données sont ensuite appliquées en série à la base de données.
+
+Jusqu’à [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l’opérateur Insert est également exécuté en série. Toutefois, la partie SELECT d’une instruction INSERT peut être exécutée en parallèle. Les modifications réelles des données sont ensuite appliquées en série à la base de données. 
+
+À partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et du niveau de compatibilité de base de données 110, l’instruction `SELECT … INTO` peut être exécutée en parallèle. D’autres formes d’opérateurs d’insertion fonctionnent de la même façon que celle décrite pour [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
+
+À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] et du niveau de compatibilité de base de données 130, l’instruction `INSERT … SELECT` peut être exécutée en parallèle lors de l’insertion dans des segments de mémoire ou des index columnstore en cluster (ICC) et à l’aide de l’indicateur TABLOCK. Les insertions dans les tables temporaires locales (identifiées par le préfixe #) et les tables temporaires globales (identifiées par les préfixes ##) sont également activées pour le parallélisme à l’aide de l’indicateur TABLOCK. Pour plus d’informations, consultez [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Les curseurs statiques et les curseurs pilotés par jeux de clés peuvent être complétés par des plans d'exécution parallèle. Cependant, le comportement des curseurs dynamiques ne peut être fourni que par une exécution en série. L'optimiseur de requête génère toujours un plan d'exécution en série pour une requête qui fait partie d'un curseur dynamique.
 
@@ -1304,7 +1334,7 @@ Pour améliorer les performances des requêtes qui accèdent à une grande quant
 * Créez un index cluster sur chaque grande table partitionnée pour tirer parti des optimisations d'analyse d'arbre B (B-tree).
 * Appliquez les recommandations mentionnées dans le livre blanc « [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx)» lors du chargement en masse des données dans des tables partitionnées.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 L'exemple suivant crée une base de données de test contenant une table unique avec sept partitions. Utilisez les outils décrits précédemment lors de l'exécution des requêtes dans cet exemple pour afficher des informations de partitionnement pour le plan de compilation et le plan au moment de l'exécution. 
 

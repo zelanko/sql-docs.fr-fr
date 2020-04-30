@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f36ab7571008b73d90cc337e3fe7f5e5fa8523
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298490"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087429"
 ---
 # <a name="smtp-connection-manager"></a>Gestionnaire de connexions SMTP
 
@@ -46,7 +46,7 @@ ms.locfileid: "71298490"
     > [!IMPORTANT]  
     >  Le gestionnaire de connexions SMTP prend en charge uniquement l'authentification anonyme et l'authentification Windows. Il ne prend pas en charge l'authentification de base.  
   
--   Permet d'indiquer si les communications doivent être chiffrées à l'aide de SSL (Secure Sockets Layer) lors de l'envoi de messages électroniques.  
+-   Permet d'indiquer si les communications doivent être chiffrées à l'aide de TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), lors de l'envoi de messages électroniques.  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
@@ -79,5 +79,5 @@ ms.locfileid: "71298490"
 >  Si vous utilisez Microsoft Exchange comme serveur SMTP, vous devrez peut-être définir **Utiliser l'authentification Windows** à **True**. Les serveurs Exchange peuvent être configurés de manière à interdire les connexions SMTP non authentifiées.  
   
  **Activer SSL (Secure Sockets Layer)**  
- Sélectionnez cette option pour chiffrer la communication au moyen de Secure Sockets Layer (SSL) lors de l'envoi de messages électroniques.  
+ Sélectionnez cette option pour chiffrer la communication au moyen de TLS/SSL lors de l'envoi de messages électroniques.  
   

@@ -1,5 +1,6 @@
 ---
-title: Exemple d’application (pilote SQLSRV) | Microsoft Docs
+title: Exemple d’application (pilote SQLSRV)
+description: L’exemple Évaluations de produits AdventureWorks est une application web qui utilise le pilote SQLSRV pour illustrer comment interagir avec une base de données SQL Server à partir de PHP.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82f12dd1a5a50f05f6e831f269ed017e55e46e97
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916635"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728345"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Exemple d’application (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +52,7 @@ L’exemple d’application Évaluations de produits AdventureWorks illustre ce 
 -   Comment envoyer des données sous la forme d’un flux.  
 -   Comment rechercher les erreurs.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple d’application Évaluations de produits AdventureWorks retourne les informations sur les produits à partir de la base de données pour les produits dont les noms contiennent une chaîne entrée par l’utilisateur. Dans la liste des produits retournés, l’utilisateur peut voir les évaluations, voir une image, télécharger une image et rédiger une évaluation pour un produit sélectionné.  
   
 Placez le code suivant dans un fichier nommé adventureworks_demo.php :  
@@ -491,7 +492,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Le script photo.php retourne la photo du produit correspondant au **ProductID**spécifié. Ce script est appelé depuis le script adventureworks_demo.php.  
   
 Placez le code suivant dans un fichier nommé photo.php :  
@@ -555,7 +556,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)
 
 [Comparaison des fonctions d’exécution](../../connect/php/comparing-execution-functions.md)

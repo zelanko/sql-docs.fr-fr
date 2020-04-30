@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257507"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087488"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,9 +142,9 @@ Pour les connexions par canaux nommés et mémoire partagée, un SPN au format *
   
 Les comptes de service peuvent être utilisés comme SPN. Ils sont spécifiés par le biais de l'attribut de connexion pour l'authentification Kerberos et assument les formats suivants :  
   
--   **username@domain** ou **domaine\nom_utilisateur** pour un compte d’utilisateur de domaine  
+-   **nom_utilisateur\@domaine** ou **domaine\nom_utilisateur** pour un compte d’utilisateur de domaine  
   
--   **ordinateur$@domain** ou **hôte\FQDN** pour un compte de domaine d’ordinateur tel que Système Local ou SERVICES RÉSEAU.  
+-   **ordinateur$\@domaine** ou **hôte\FQDN** pour un compte de domaine d’ordinateur tel que Système Local ou SERVICES RÉSEAU.  
   
 Pour déterminer la méthode d'authentification d'une connexion, exécutez la requête suivante.  
   
@@ -174,7 +174,7 @@ WHERE session_id = @@SPID;
   
  Si l'annulation de l'inscription du SPN échoue pendant l'arrêt, cet échec est consigné dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'arrêt se poursuit.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en charge des noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
