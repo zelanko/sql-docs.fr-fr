@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227511"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588088"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Utiliser l’Assistant Table externe avec des sources de données relationnelles
 
@@ -64,7 +64,7 @@ L’étape suivante consiste à configurer les informations d’identification. 
 
 Dans la page suivante, sélectionnez les tables pour lesquelles vous souhaitez créer des vues externes. Quand vous sélectionnez des bases de données parentes, les tables enfants sont également incluses. Une fois les tables sélectionnées, une table de mappage apparaît à droite. Ici, vous pouvez modifier les types. Vous pouvez également changer le nom de la table externe sélectionnée.
 
-![Informations d’identification de la source de données externe](media/data-virtualization/data-table-mapping.png)
+![Informations d’identification de la source de données externe](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Pour changer la vue du mappage, double-cliquez sur une autre table sélectionnée.
