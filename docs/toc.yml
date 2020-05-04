@@ -64,7 +64,7 @@
                   href: big-data-cluster/deploy-install-azdata.md
                 - name: macOS
                   href: big-data-cluster/deploy-install-azdata-macos.md
-                - name: Windows
+                - name: ' Windows'
                   href: big-data-cluster/deploy-install-azdata-installer.md
                 - name: Linux avec apt
                   href: big-data-cluster/deploy-install-azdata-linux-package.md
@@ -145,7 +145,7 @@
             - name: Données HDFS
               items:
                 - name: Virtualiser les données CSV
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: Interroger les données HDFS
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: Hiérarchisation HDFS
@@ -613,10 +613,11 @@
                     - name: SignalAbort
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
     - name: Groupes de disponibilité Always On
-      href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       items:
         - name: Vue d’ensemble
           items:
+            - name: "Qu’est-ce qu’un groupe de disponibilité Always On\_?"
+              href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
             - name: Modes de disponibilité
               href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
             - name: Technologie et fonctionnalités
@@ -945,10 +946,13 @@
                     - name: journal des erreurs de SQL Server
                       href: database-engine/availability-groups/windows/sql-server-error-log-always-on-availability-groups.md
     - name: Instance de cluster de basculement Always On
-      href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
       items:
         - name: Vue d’ensemble
-          href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+          items:
+            - name: "Qu’est-ce qu’une instance de cluster de basculement\_?"
+              href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+            - name: Cluster de basculement Windows Server
+              href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
         - name: Procédures
           items:
             - name: Déploiement
@@ -6759,7 +6763,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: Modifier un schéma
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: Aide sur l'Assistant Gestion de partition via la touche F1
+            - name: Assistant Gestion de partition
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: Repères de plan
           href: relational-databases/performance/plan-guides.md

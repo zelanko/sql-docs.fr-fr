@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075500"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220694"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utiliser les tables inserted et deleted
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68075500"
  Pour définir les conditions du déclencheur, utilisez les tables inserted et deleted de façon appropriée, en fonction de l'action qui a activé le déclencheur. Bien que vous puissiez, sans provoquer d'erreur, référencer la table deleted pendant le test d'une insertion (INSERT) ou la table inserted pendant le test d'une suppression (DELETE), ces tables de test du déclencheur ne contiendront alors aucune ligne.  
   
 > [!NOTE]  
->  Si les actions du déclencheur dépendent du nombre de lignes affectées par une modification de données, utilisez les tests (comme l’examen de @@ROWCOUNT) pour les modifications de données multilignes (une instruction INSERT, DELETE ou UPDATE basée sur une instruction SELECT), puis effectuez les opérations appropriées.  
+>  Si les actions du déclencheur dépendent du nombre de lignes affectées par une modification de données, utilisez les tests (comme l’examen de @@ROWCOUNT) pour les modifications de données multilignes (une instruction INSERT, DELETE ou UPDATE basée sur une instruction SELECT), puis effectuez les opérations appropriées. Pour plus d’informations, consultez [Créer de déclencheurs DML pour gérer plusieurs lignes de données](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] n’autorise pas les références aux colonnes de type **text**, **ntext**ou **image** dans les tables inserted et deleted pour les déclencheurs AFTER. Cependant, ces types de données sont inclus à des fins de compatibilité ascendante uniquement. Pour le stockage des données volumineuses, il est préférable d’utiliser les types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** . Les déclencheurs AFTER et INSTEAD OF prennent en charge les données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** dans les tables inserted et deleted. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68075500"
   
  Les contraintes CHECK pouvant référencer uniquement les colonnes sur lesquelles des contraintes de niveau table ou colonne sont définies, toutes les contraintes entre tables (dans ce cas, des règles de gestion) doivent être définies sous la forme de déclencheurs.  
   
- L'exemple suivant crée un déclencheur DML. Ce déclencheur vérifie que les informations de conditions de crédit du fournisseur sont correctes lors d'une tentative d'insertion d'un nouveau bon de commande dans la table `PurchaseOrderHeader` . Pour obtenir les informations de conditions de crédit du fournisseur correspondant à la commande qui vient d'être insérée, la table `Vendor` doit être référencée et jointe à la table inserted. Si les conditions de crédit sont trop faibles, un message s'affiche et l'insertion n'a pas lieu. Notez que cet exemple n'autorise pas les modifications de données de plusieurs lignes. Pour plus d’informations, consultez [Créer de déclencheurs DML pour gérer plusieurs lignes de données](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ L'exemple suivant crée un déclencheur DML. Ce déclencheur vérifie que les informations de conditions de crédit du fournisseur sont correctes lors d'une tentative d'insertion d'un nouveau bon de commande dans la table `PurchaseOrderHeader` . Pour obtenir les informations de conditions de crédit du fournisseur correspondant à la commande qui vient d'être insérée, la table `Vendor` doit être référencée et jointe à la table inserted. Si les conditions de crédit sont trop faibles, un message s'affiche et l'insertion n'a pas lieu.
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

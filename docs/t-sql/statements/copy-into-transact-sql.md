@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (préversion)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Utilisez l’instruction COPY dans Azure SQL Data Warehouse pour le chargement à partir de comptes de stockage externes.
-ms.date: 04/24/2020
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153237"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619652"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
@@ -140,24 +140,32 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 
 Avec l’authentification à l’aide d’AAD ou auprès d’un compte de stockage public, vous n’êtes pas tenu de spécifier CREDENTIAL. 
 
-- Authentification avec la signature d’accès partagé (SAS) *IDENTITY: constante avec une valeur « Shared Access Signature »* 
-   *SECRET: La* [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) *fournit un accès délégué aux ressources de votre compte de stockage.*
-  Autorisations minimales requises : READ et LIST
-
+- Authentification avec la signature d’accès partagé (SAS)
+  
+  - *IDENTITY : constante avec une valeur « Shared Access Signature »*
+  - *SECRET : La* [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) *fournit un accès délégué aux ressources de votre compte de stockage.*
+  -  Autorisations minimales requises : READ et LIST
+  
 - Authentification avec des [*principaux de service*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
-  *IDENTITY : <ClientID>@<OAuth_2.0_Token_EndPoint>* 
-  *SECRET : Clé du principal de service de l’application AAD* Rôles RBAC minimum requis : Contributeur aux données Blob du stockage, Propriétaire des données Blob du stockage ou Lecteur des données Blob du stockage
+  - *IDENTITY : <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET : clé du principal de service de l’application AAD*
+  -  Rôles RBAC minimum requis : Contributeur aux données Blob du stockage, Propriétaire des données Blob du stockage ou Lecteur des données Blob du stockage
 
-  > [!NOTE]  
-  > Utilisez le point de terminaison de jeton OAuth 2.0 **V1**
-
-- Authentification avec une clé de compte de stockage *IDENTITY : constante avec une valeur « Storage Account Key »* 
-  *SECRET : clé du compte de stockage*
+- Authentification avec une clé de compte de stockage
   
-- Authentification avec une [identité managée](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (points de terminaison du service VNet) *IDENTITY : constante avec une valeur « Managed Identity »* Rôles RBAC minimum requis : Contributeur aux données Blob du stockage, Propriétaire des données Blob du stockage ou Lecteur des données Blob du stockage pour le serveur SQL Database inscrit auprès d’AAD 
+  - *IDENTITY : constante avec une valeur « Storage Account Key »*
+  - *SECRET : clé du compte de stockage*
   
-- Authentification avec un utilisateur AAD *CREDENTIAL n’est pas requis* Rôles RBAC minimum requis : Contributeur aux données Blob du stockage, Propriétaire des données Blob du stockage ou Lecteur des données Blob du stockage pour l’utilisateur AAD
+- Authentification avec une [identité managée](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (points de terminaison du service VNet)
+  
+  - *IDENTITY : constante avec une valeur « Managed Identity »*
+  - Rôles RBAC minimum requis : Contributeur aux données Blob du stockage ou Propriétaire des données Blob du stockage pour le serveur SQL Database inscrit auprès d’AAD
+  
+- Authentification avec un utilisateur AAD
+  
+  - *CREDENTIAL n’est pas requis*
+  - Rôles RBAC minimum requis : Contributeur aux données Blob du stockage ou Propriétaire des données Blob du stockage pour l’utilisateur AAD
 
 *ERRORFILE = emplacement du répertoire*</br>
 *ERRORFILE* s’applique uniquement au format CSV. Spécifie le répertoire dans l’instruction COPY dans lequel les lignes rejetées et le fichier d’erreur correspondant doivent être écrits. Il est possible de spécifier le chemin complet du compte de stockage ou le chemin relatif du conteneur. Si le chemin spécifié n’existe pas, un chemin est créé pour vous. Un répertoire enfant est créé sous le nom « _rejectedrows ». Le caractère «_   » garantit que le répertoire est placé dans une séquence d’échappement pour le traitement d’autres données, sauf s’il est explicitement nommé dans le paramètre d’emplacement. 
