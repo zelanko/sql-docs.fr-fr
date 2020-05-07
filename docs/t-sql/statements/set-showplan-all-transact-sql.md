@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c1daa0270987a558b98e6a42e4f9498c56bfd6ef
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634280"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220364"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Empêche Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Au lieu de cela, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des informations détaillées sur l'exécution des instructions et une estimation des ressources requises pour leur exécution.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,12 +47,12 @@ ms.locfileid: "81634280"
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'option SET SHOWPLAN_ALL est définie lors de l'exécution, et non pas durant l'analyse.  
   
- Si SET SHOWPLAN_ALL a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des informations sur l'exécution de chaque instruction sans toutefois l'exécuter ; les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne sont pas exécutées. Une fois cette option activée, des informations sur toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ultérieures sont retournées, jusqu'à ce que l'option soit de nouveau désactivée. Par exemple, si une instruction CREATE TABLE est exécutée alors que l'option SET SHOWPLAN_ALL est activée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur pour toute instruction SELECT ultérieure se rapportant à cette table, informant les utilisateurs qu'elle n'existe pas. Par conséquent, les prochaines références à cette table échoueront. Lorsque SET SHOWPLAN_ALL a la valeur OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute les instructions sans générer de rapport.  
+ Si `SET SHOWPLAN_ALL` a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des informations sur l’exécution de chaque instruction sans toutefois l’exécuter ; les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne sont pas exécutées. Une fois cette option activée, des informations sur toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ultérieures sont retournées, jusqu'à ce que l'option soit de nouveau désactivée. Par exemple, si une instruction CREATE TABLE est exécutée alors que l’option `SET SHOWPLAN_ALL` a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d’erreur pour toute instruction SELECT ultérieure se rapportant à cette table, informant les utilisateurs qu’elle n’existe pas. Par conséquent, les prochaines références à cette table échoueront. Lorsque SET SHOWPLAN_ALL a la valeur OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute les instructions sans générer de rapport.  
   
- L'option SET SHOWPLAN_ALL est conçue pour être utilisée avec des applications capables de gérer ses résultats. Utilisez SET SHOWPLAN_TEXT pour retourner des résultats pouvant être interprétés par les applications de ligne de commande Microsoft Win32, notamment l’utilitaire **osql**.  
+ L’option `SET SHOWPLAN_ALL` est conçue pour être utilisée avec des applications capables de gérer ses résultats. Utilisez SET SHOWPLAN_TEXT pour retourner des résultats pouvant être interprétés par les applications de ligne de commande Microsoft Win32, notamment l’utilitaire **osql**.  
   
  Les options SET SHOWPLAN_TEXT et SET SHOWPLAN_ALL ne peuvent pas être spécifiées dans une procédure stockée ; elles doivent être les seules instructions dans le traitement.  
   
@@ -74,8 +74,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|Estimation de la taille moyenne (en octets) de la ligne transmise par le biais de cet opérateur.|  
 |**TotalSubtreeCost**|Estimation du coût* (cumulatif) de cette opération et des opérations enfants.|  
 |**OutputList**|Contient la liste des colonnes projetées par l'opération en cours, séparées par des virgules.|  
-|**Avertissements**|Contient la liste des messages d'erreur (séparés par des virgules) relatifs à l'opération en cours. Les messages d'avertissement peuvent inclure la chaîne « NO STATS: () » avec une liste de colonnes. Ce message signifie que l'optimiseur de requêtes a tenté de prendre une décision en se basant sur les statistiques de cette colonne, mais aucune statistique n'était disponible. Par conséquent, l'optimiseur de requête a dû faire une estimation et a pu sélectionner un plan de requête inapproprié. Pour plus d’informations sur la création ou la mise à jour de statistiques de colonnes (qui permettent à l’optimiseur de requête de choisir un plan de requête plus efficace), consultez [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Cette colonne peut parfois inclure la chaîne « MISSING JOIN PREDICATE » qui indique qu'une jointure (portant sur des tables) est réalisée sans prédicat de jointure. Lorsqu'un prédicat de jointure est supprimé accidentellement, l'exécution d'une requête peut prendre beaucoup plus de temps que prévu, et retourner un jeu de résultats énorme. Si cet avertissement s'affiche, vérifiez que tout prédicat de jointure manquant a été intentionnellement supprimé.|  
-|**Type**|Type de nœud. Pour le nœud parent de chaque requête, il s'agit du type d'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, SELECT, INSERT, EXECUTE, etc). Pour les sous-nœuds représentant des plans d'exécution, il s'agit du type PLAN_ROW.|  
+|**:::no-loc text="Warnings":::**|Contient la liste des messages d'erreur (séparés par des virgules) relatifs à l'opération en cours. Les messages d'avertissement peuvent inclure la chaîne « NO STATS: () » avec une liste de colonnes. Ce message signifie que l'optimiseur de requêtes a tenté de prendre une décision en se basant sur les statistiques de cette colonne, mais aucune statistique n'était disponible. Par conséquent, l'optimiseur de requête a dû faire une estimation et a pu sélectionner un plan de requête inapproprié. Pour plus d’informations sur la création ou la mise à jour de statistiques de colonnes (qui permettent à l’optimiseur de requête de choisir un plan de requête plus efficace), consultez [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Cette colonne peut parfois inclure la chaîne « MISSING JOIN PREDICATE » qui indique qu'une jointure (portant sur des tables) est réalisée sans prédicat de jointure. Lorsqu'un prédicat de jointure est supprimé accidentellement, l'exécution d'une requête peut prendre beaucoup plus de temps que prévu, et retourner un jeu de résultats énorme. Si cet avertissement s'affiche, vérifiez que tout prédicat de jointure manquant a été intentionnellement supprimé.|  
+|**:::no-loc text="Type":::**|Type de nœud. Pour le nœud parent de chaque requête, il s'agit du type d'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, SELECT, INSERT, EXECUTE, etc). Pour les sous-nœuds représentant des plans d'exécution, il s'agit du type PLAN_ROW.|  
 |**Parallel**|**0** = L’opérateur n’est pas exécuté en parallèle.<br /><br /> **1** = L’opérateur est exécuté en parallèle.|  
 |**EstimateExecutions**|Estimation du nombre de fois que cet opérateur sera exécuté durant l'exécution de la requête courante.|  
 |||
@@ -121,7 +121,7 @@ SET SHOWPLAN_ALL OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)   
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)  

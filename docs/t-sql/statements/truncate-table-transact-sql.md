@@ -25,19 +25,19 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fea00776176f66f53ec8f20d2420980ba5c0b06
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635451"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643365"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Supprime toutes les lignes d’une table ou des partitions spécifiées d’une table, sans journaliser les suppressions de ligne individuelles. L'instruction TRUNCATE TABLE est semblable à l'instruction DELETE sans la clause WHERE. Cependant, l'instruction TRUNCATE TABLE est plus rapide et utilise moins de ressources système et de ressources du journal des transactions.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,10 +71,10 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  *table_name*  
  Nom de la table à tronquer ou dont toutes les lignes sont supprimées. *table_name* doit être un littéral. *table_name* ne peut pas être la fonction **OBJECT_ID()** ou une variable.  
   
- WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
- Spécifie les partitions à tronquer ou à partir desquelles toutes les lignes sont supprimées. Si la table n’est pas partitionnée, l’argument **WITH PARTITIONS** génère une erreur. Si la clause **WITH PARTITIONS** n’est pas fournie, la totalité de la table est tronquée.  
+ Spécifie les partitions à tronquer ou à partir desquelles toutes les lignes sont supprimées. Si la table n'est pas partitionnée, l'argument `WITH PARTITIONS` génère une erreur. Si la clause `WITH PARTITIONS` n’est pas fournie, la table entière sera tronquée.  
   
  L’argument *\<partition_number_expression>* peut être spécifié des manières suivantes : 
   
@@ -88,33 +88,40 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Pour tronquer une table partitionnée, la table et les index doivent être alignés (partitionnés sur la même fonction de partition).  
   
-## <a name="remarks"></a>Notes  
- Comparée à l'instruction DELETE, l'instruction TRUNCATE TABLE offre les avantages suivants :  
+## <a name="remarks"></a>Notes   
+ Comparée à l’instruction DELETE, `TRUNCATE TABLE` offre les avantages suivants :  
   
 -   Moindre espace du journal des transactions utilisé.  
   
-     L'instruction DELETE supprime une ligne à la fois et enregistre une entrée dans le journal des transactions pour chaque ligne supprimée. L'instruction TRUNCATE TABLE supprime les données en désallouant les pages de données utilisées pour stocker les données de la table. Elle enregistre uniquement les désallocations de page dans le journal des transactions.  
+     L'instruction DELETE supprime une ligne à la fois et enregistre une entrée dans le journal des transactions pour chaque ligne supprimée. `TRUNCATE TABLE` supprime les données en désallouant les pages de données utilisées pour stocker les données de la table et enregistre uniquement les désallocations de page dans le journal des transactions.  
   
 -   Moins de verrous utilisés.  
   
-     Lors de l'exécution de l'instruction DELETE à l'aide d'un verrou de ligne, chaque ligne dans la table est verrouillée pour être supprimée. L'instruction TRUNCATE TABLE verrouille toujours la table (y compris un verrou de schéma SCH-M) et la page, mais pas les lignes.  
+     Lors de l'exécution de l'instruction DELETE à l'aide d'un verrou de ligne, chaque ligne dans la table est verrouillée pour être supprimée. `TRUNCATE TABLE` verrouille toujours la table (y compris un verrou de schéma SCH-M) et la page, mais pas les lignes.  
   
 -   Sans exception, les pages zéros demeurent dans la table.  
   
      Après l'exécution d'une instruction DELETE, la table peut encore contenir des pages vides. Par exemple, des pages vides dans un segment ne peuvent pas être désallouées sans au moins un verrou de table exclusif (LCK_M_X). Si la suppression n'utilise pas de verrou de table, la table (le segment) contiendra beaucoup de pages vides. La suppression peut laisser des pages vides pour les index, bien que ces pages soient désallouées rapidement par un processus de nettoyage en arrière-plan.  
   
- L'instruction TRUNCATE TABLE supprime toutes les lignes d'une table, mais la structure de la table, ses colonnes, contraintes, index et autres éléments sont conservés. Pour supprimer la définition de la table en plus de ses données, utilisez l'instruction DROP TABLE.  
+ `TRUNCATE TABLE` supprime toutes les lignes d’une table, mais la structure de la table et ses colonnes, contraintes, index, etc. sont conservés. Pour supprimer la définition de la table en plus de ses données, utilisez l’instruction `DROP TABLE`.  
   
  Si la table contient une colonne d'identité, le compteur pour celle-ci est redéfini sur sa valeur de départ. Si aucune valeur de départ n'est définie, la valeur par défaut 1 est utilisée. Utilisez plutôt l'instruction DELETE pour conserver le compteur d'identité.  
+ 
+ > [!NOTE]
+ > Une opération `TRUNCATE TABLE` peut être restaurée.
   
 ## <a name="restrictions"></a>Restrictions  
- Vous ne pouvez pas utiliser l'instruction TRUNCATE TABLE sur les tables qui :  
+ Vous ne pouvez pas utiliser `TRUNCATE TABLE` sur des tables qui :  
   
--   sont référencées par une contrainte FOREIGN KEY ; (Vous pouvez tronquer une table qui possède une clé étrangère qui fait référence à elle-même.)  
+-   sont référencées par une contrainte FOREIGN KEY ; Vous pouvez tronquer une table qui a une clé étrangère qui fait référence à elle-même. 
   
 -   participent à une vue indexée ;  
   
 -   sont publiées à l'aide d'une réplication transactionnelle ou de fusion.  
+
+-   sont temporelles avec versions gérées ;
+
+-   sont référencées par une contrainte EDGE.  
   
  Utilisez plutôt l'instruction DELETE pour les tables ayant au moins une de ces caractéristiques.  
   
@@ -122,15 +129,15 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  
  Dans [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[sspdw](../../includes/sspdw-md.md)] :
 
-- L’instruction TRUNCATE TABLE n’est pas autorisée dans l’instruction EXPLAIN.
+- L’instruction `TRUNCATE TABLE` n’est pas autorisée dans l’instruction EXPLAIN.
 
-- L’instruction TRUNCATE TABLE ne peut pas être exécutée à l’intérieur d’une transaction.
+- L’instruction `TRUNCATE TABLE` ne peut pas être exécutée à l’intérieur d’une transaction.
   
 ## <a name="truncating-large-tables"></a>Troncation de grandes tables  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de supprimer ou de tronquer des tables dotées de plus de 128 extensions, sans maintenir de verrous simultanés sur toutes les extensions exigées pour la suppression.  
   
 ## <a name="permissions"></a>Autorisations  
- L’autorisation minimale exigée est ALTER sur *table_name*. Les autorisations TRUNCATE TABLE sont octroyées par défaut au propriétaire de la table, aux membres du rôle serveur fixe sysadmin et des rôles de base de données fixes db_owner et db_ddladmin. Elles ne sont pas transférables. Toutefois, vous pouvez incorporer l’instruction TRUNCATE TABLE dans un module, par exemple une procédure stockée, et accorder les autorisations appropriées au module à l’aide de la clause EXECUTE AS.  
+ L’autorisation minimale exigée est `ALTER` sur *table_name*. Les autorisations `TRUNCATE TABLE` sont accordées par défaut au propriétaire de la table, aux membres du rôle serveur fixe `sysadmin`, aux rôles de base de données fixes `db_owner` et `db_ddladmin` et ne sont pas transférables. Toutefois, vous pouvez incorporer l’instruction `TRUNCATE TABLE` dans un module, par exemple une procédure stockée, et accorder les autorisations appropriées au module à l’aide de la clause `EXECUTE AS`.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -162,7 +169,7 @@ WITH (PARTITIONS (2, 4, 6 TO 8));
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  

@@ -1,5 +1,6 @@
 ---
 title: Restaurer la base de données (page Fichiers) | Microsoft Docs
+description: Lors de la restauration d’une base de données dans SQL Server, utilisez la boîte de dialogue Restaurer la base de données pour gérer les fichiers à restaurer au sein de la base de données.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56ce641b774dabf5e35b5804eba150342fae9034
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944821"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180761"
 ---
 # <a name="restore-database-files-page"></a>Restaurer la base de données (page Fichiers)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "67944821"
  **Restaurer sous**  
  Répertorie les noms de fichier sous lesquels les fichiers restaurés seront enregistrés. Entrez ou recherchez le nom de fichier approprié.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
  [Restaurer la base de données &#40;page Options&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
  [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   

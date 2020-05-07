@@ -1,5 +1,6 @@
 ---
 title: Sauvegarder des fichiers et des groupes de fichiers | Microsoft Docs
+description: Cet article explique comment sauvegarder des fichiers et des groupes de fichiers dans SQL Server à l’aide de SQL Server Management Studio, de Transact-SQL ou de PowerShell.
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48d0581df76c6f6b5c4cd291981cf01e13f5eb79
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708686"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220601"
 ---
 # <a name="back-up-files-and-filegroups"></a>Sauvegarder des fichiers et des groupes de fichiers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -203,7 +204,7 @@ GO
 
 Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   
-Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Files** comme valeur du paramètre **-BackupAction**. Spécifiez également l'un des paramètres suivants :  
+Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Files** comme valeur du paramètre **-BackupAction** . Spécifiez également l'un des paramètres suivants :  
   
 - Pour sauvegarder un fichier spécifique, spécifiez le paramètre _-DatabaseFile_*String* , où *String* représente un ou plusieurs fichiers de base de données à sauvegarder.  
   
@@ -215,7 +216,7 @@ L'exemple suivant crée une sauvegarde complète de tous les fichiers dans les g
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2" 
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

@@ -1,5 +1,6 @@
 ---
 title: Restaurer une sauvegarde de base de données à l’aide de SSMS | Microsoft Docs
+description: Cet article explique comment restaurer une sauvegarde complète de base de données SQL Server en utilisant SQL Server Management Studio.
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a76b91e9f5fd1cab9512cd42f05ce949ccf4d68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70278768"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180832"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restaurer une sauvegarde de base de données à l’aide de SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
         -   Boîte de dialogue**Sélectionner les unités de sauvegarde**  
         
             **Type de support de sauvegarde**  
-         Sélectionnez un type de support dans la liste déroulante **Type de support de sauvegarde** .  Remarque : L’option **Bande** s’affiche uniquement si un lecteur de bande est connecté à l’ordinateur, et l’option **Unité de sauvegarde** seulement si au moins une unité de sauvegarde est connectée.
+         Sélectionnez un type de support dans la liste déroulante **Type de support de sauvegarde** .  Remarque : L'option **Bande** s'affiche uniquement si un lecteur de bande est connecté à l'ordinateur et l'option **Unité de sauvegarde**, seulement si au moins une unité de sauvegarde est connectée.
 
             **Ajouter**  
             En fonction du type de support sélectionné dans la liste déroulante **Support de sauvegarde** , quand vous cliquez sur **Ajouter** , l’une des boîtes de dialogue suivantes s’ouvre. (Si la liste dans la zone de liste **Support de sauvegarde** est pleine, le bouton **Ajouter** n’est pas disponible.)
@@ -93,7 +94,7 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
     
              Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .    
     
-         Dans la zone de liste **Source : Unité : Base de données** , sélectionnez le nom de la base de données à restaurer.    
+         Dans la zone de liste **Source : Appareil : Base de données**, sélectionnez le nom de la base de données à restaurer.    
     
          > [!NOTE]
          > Cette liste n’est disponible que quand **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.    
@@ -146,7 +147,7 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 7.  Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)** .
 
     > [!NOTE]
-    > Si vous ne sélectionnez pas cette option, le message d’erreur suivant risque de s’afficher : « System.Data.SqlClient.SqlError : Le jeu de sauvegarde contient la sauvegarde d’une base de données qui n’est pas la base de données '`Sales`' existante. (Microsoft.SqlServer.SmoExtended) »
+    > Ne pas vérifier cette option peut entraîner le message d’erreur suivant : "System.Data.SqlClient.SqlError: Le jeu de sauvegarde contient la sauvegarde d'une base de données qui n'est pas la base de données '`Sales`' existante. (Microsoft.SqlServer.SmoExtended) »
 
 8.  Dans la section **Sauvegarde de la fin du journal** , décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
 
@@ -158,7 +159,7 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 9.  Dans la section **Connexions au serveur** , sélectionnez **Fermer les connexions existantes à la base de données de destination**.
 
     > [!NOTE]
-    > Si vous ne sélectionnez pas cette option, le message d’erreur suivant risque de s’afficher : « System.Data.SqlClient.SqlError : Impossible d’obtenir l’accès exclusif car la base de données est en cours d’utilisation. (Microsoft.SqlServer.SmoExtended) »
+    > Ne pas vérifier cette option peut entraîner le message d’erreur suivant : "System.Data.SqlClient.SqlError: Impossible d'obtenir l'accès exclusif car la base de données est en cours d'utilisation. (Microsoft.SqlServer.SmoExtended) »
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -181,7 +182,7 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 
     > [!NOTE]
     > Si vous obtenez le message d’erreur suivant :      
-    > « System.Data.SqlClient.SqlError : La fin du journal pour la base de données « `Sales` » n’a pas été sauvegardée. Utilisez `BACKUP LOG WITH NORECOVERY` pour sauvegarder le journal s’il contient des travaux que vous ne voulez pas perdre. Utilisez la clause `WITH REPLACE` ou `WITH STOPAT` de l’instruction `RESTORE` pour remplacer simplement le contenu du journal. (Microsoft.SqlServer.SmoExtended) ».      
+    > "System.Data.SqlClient.SqlError: La fin du journal pour la base de données "`Sales`" n'a pas été sauvegardée. Utilisez `BACKUP LOG WITH NORECOVERY` pour sauvegarder le journal s’il contient des travaux que vous ne voulez pas perdre. Utilisez la clause `WITH REPLACE` ou `WITH STOPAT` de l’instruction `RESTORE` pour remplacer simplement le contenu du journal. (Microsoft.SqlServer.SmoExtended) ».      
     > Cela signifie probablement que n’avez pas entré le nouveau nom de base de données à l’Étape 6 ci-dessus. Généralement, la restauration empêche le remplacement accidentel d'une base de données par une autre. Si la base de données nommée dans l’instruction `RESTORE` existe déjà sur le serveur actif et que le GUID de famille de la base de données spécifié ne correspond pas à celui qui est enregistré dans le jeu de sauvegarde, la base de données n’est pas restaurée. Cette mesure de sécurité est très importante,
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  Restaurer des sauvegardes sur disque antérieures à une limite dans le temps
@@ -251,7 +252,7 @@ La base de données `Sales` sera restaurée dans le conteneur de stockage Micros
 11. Entrez le conteneur, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, dans les zones de texte pour **Dossier des fichiers de données** et **Dossier des fichiers journaux**.
 12. Cliquez sur **OK**.
 
-## <a name="see-also"></a>Voir aussi    
+## <a name="see-also"></a> Voir aussi    
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Restaurer une base de données à un nouvel emplacement &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     

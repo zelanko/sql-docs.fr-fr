@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531095"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178130"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>Prise en main des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>Bien démarrer avec le déploiement de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article présente une vue d’ensemble de la façon de déployer des [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+Cet article présente une vue d’ensemble de la façon de déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. L’article présente les concepts et fournit un cadre pour vous aider à comprendre les scénarios de déploiement. Les étapes de déploiement varient selon la plateforme choisie pour le client et le serveur. Pour une présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
-Pour d’autres scénarios de déploiement, consultez :
+Pour d’autres scénarios de déploiement de SQL Server, consultez :
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Conteneurs Docker](../linux/sql-server-linux-configure-docker.md)
 
-L’article explique les différents concepts qui sont liés à un tel déploiement et fournit un cadre permettant de comprendre les autres articles de déploiement de cette section. Les étapes de déploiement varient selon la plateforme choisie pour le client et le serveur.
-
-> [!TIP]
-> Pour obtenir rapidement un environnement avec Kubernetes et déployer un cluster Big Data afin de vous aider à bénéficier de ses capacités, utilisez l’un des exemples de scripts désignés dans [la section des scripts](#scripts). Après le déploiement, pour gérer le cluster, utilisez les [outils clients](#tools) dans la section suivante.
+## <a name="quick-introduction"></a>Présentation rapide 
 
 Regardez cette vidéo de 9 minutes pour obtenir une vue d’ensemble de la façon de déployer des clusters Big Data :
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> Pour obtenir rapidement un environnement avec Kubernetes et déployer un cluster Big Data afin de vous aider à bénéficier de ses capacités, utilisez l’un des exemples de scripts désignés dans [la section des scripts](#scripts). Après le déploiement, pour gérer le cluster, utilisez les [outils clients](#tools) dans la section suivante.
 
 
 ## <a name="client-tools"></a><a id="tools"></a> Outils clients

@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087329"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619672"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="april-2020-hotfix"></a>Avril 2020 (correctif)
+
+30 avril 2020 &nbsp; / &nbsp; version : 1.17.1
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Correction du bogue 10197 : Impossible de se connecter avec MFA | [10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>Avril 2020
+
+27 avril 2020 &nbsp; / &nbsp; version : 1.17.0
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Page d’accueil améliorée | Mise à jour de l’interface utilisateur dans la page d’accueil pour rendre les actions courantes plus visibles et mettre en évidence les extensions. |
+| Nouvelles fonctionnalités des notebooks | &bull; &nbsp; Ajout de la barre d’outils Markdown lors de la modification de cellules de texte pour faciliter l’écriture avec Markdown <br/> &bull; &nbsp; Restructuration du viewlet Jupyter Books en viewlet Notebooks où vous pouvez gérer à la fois des books et des notebooks Jupyter <br/>&bull; &nbsp; Ajout de la prise en charge des graphiques persistants lors de l’enregistrement d’un notebook <br/> &bull; &nbsp; Ajout de la prise en charge de KQL magic dans les notebooks Python|
+| Tableaux de bord améliorés | Les tableaux de bord dans Azure Data Studio ont été mis à jour avec les derniers modèles de conception, notamment une barre d’outils actions. Ce changement s’applique également à de nombreuses extensions. |
+| Ajout de l’intégration Cloud Shell dans la vue Azure. | |
+| Prise en charge d’Always Encrypted et d’Always Encrypted avec enclaves sécurisées. | |
+| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22) |
+| &nbsp; | &nbsp; |
+| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22) |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>Mars 2020
 
@@ -50,7 +79,7 @@ ms.locfileid: "82087329"
 
 ## <a name="february-2020"></a>Février 2020
 
-13 février 2020 &nbsp; / &nbsp; version : 1.15.0 
+13 février 2020 &nbsp; / &nbsp; version : 1.15.0
 
 &nbsp;
 
@@ -228,7 +257,7 @@ ms.locfileid: "82087329"
 | Modifier | Détails |
 | :----- | :------ |
 | Publication de l’extension des serveurs de gestion centralisée (CMS) | Les serveurs de gestion centralisée stockent une liste d'instances de SQL Server. Cette liste est organisée en un ou plusieurs groupes de serveurs d'administration centralisée. Les utilisateurs peuvent se connecter à leurs propres serveurs CMS existants et gérer leurs serveurs, par exemple avec l’ajout et la suppression de serveurs. Pour en savoir plus, consultez [ceci](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
-| Publication des extensions de l’outil d’administration de base de données pour Windows | Cette extension lance deux des expériences les plus utilisées dans SQL Server Management Studio en provenance de Azure Data Studio. Les utilisateurs peuvent cliquer avec le bouton droit sur de nombreux objets différents (tels que des bases de données, des tables, des colonnes, des vues, etc.) et sélectionner des propriétés pour afficher la boîte de dialogue Propriétés SSMS pour cet objet. En outre, les utilisateurs peuvent cliquer avec le bouton droit sur une base de données et sélectionner Générer des scripts pour lancer l’assistant de génération de scripts SSMS. 
+| Publication des extensions de l’outil d’administration de base de données pour Windows | Cette extension lance deux des expériences les plus utilisées dans SQL Server Management Studio en provenance de Azure Data Studio. Les utilisateurs peuvent cliquer avec le bouton droit sur de nombreux objets différents (tels que des bases de données, des tables, des colonnes, des vues, etc.) et sélectionner des propriétés pour afficher la boîte de dialogue Propriétés SSMS pour cet objet. En outre, les utilisateurs peuvent cliquer avec le bouton droit sur une base de données et sélectionner Générer des scripts pour lancer l’Assistant Génération de scripts SSMS. 
 | Améliorations de la comparaison de schémas | &bull; &nbsp; Options d’exclusion/inclusion ajoutées <br/>&bull; &nbsp; Générer le script ouvre le script après sa génération <br/>&bull; &nbsp; Barres de défilement doubles supprimées  <br/>&bull; &nbsp; Améliorations de la mise en forme et de la mise en page <br/>&bull; &nbsp; Vous trouverez les modifications complètes [ici](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Déplacement de la section Messages dans son propre onglet | Lorsque les utilisateurs exécutaient des requêtes SQL, les résultats et les messages s’affichaient dans des panneaux empilés. Ils se trouvent désormais dans des onglets séparés dans un panneau, comme dans SSMS. |
 | Améliorations du notebook SQL | &bull; &nbsp; Les utilisateurs peuvent désormais choisir d’utiliser leurs propres installations Python 3 ou Anaconda dans les notebooks <br/>&bull; &nbsp; Plusieurs correctifs de stabilité + ajustements/finitions <br/> &bull; &nbsp; Consultez la liste complète des améliorations [ici](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
@@ -247,7 +276,7 @@ ms.locfileid: "82087329"
 - Notebooks
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) Autoriser les utilisateurs à utiliser le Python du système pour les notebooks
 - Comparaison de schémas
-    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Les tâches de comparaison de schémas affichent le menu contextuel d’annulation par défaut, qui ne fait rien
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Les tâches Comparer les schémas affichent le menu contextuel d’annulation par défaut, qui ne fait rien
 
 ## <a name="may-2019"></a>Mai 2019
 
@@ -540,7 +569,7 @@ La *préversion publique de juillet* est axée sur les éléments suivants :
 - Correction du [problème 1749](https://github.com/Microsoft/azuredatastudio/issues/1749) : BOGUE : Les données HTML d’une colonne sont interprétées
 - Correction du [problème 1789](https://github.com/Microsoft/azuredatastudio/issues/1789) : Extensibilité : Si vous ajoutez un fournisseur de connexion, la désinstallation ne le supprimera jamais de la liste
 - Correction du [problème 1791](https://github.com/Microsoft/azuredatastudio/issues/1791) : Extensions Sqlops : queryeditor.connect() se connecte à la base de données cible, mais l’interface utilisateur n’indique pas que l’éditeur est connecté
-- Correction du [problème 1799](https://github.com/Microsoft/azuredatastudio/issues/1799) : Le graphique de Top 10 des tailles de base de données ne fonctionne pas sur les instances sensibles à la casse
+- Correction du [problème 1799](https://github.com/Microsoft/azuredatastudio/issues/1799) : Le graphique de Top 10 des tailles de base de données ne fonctionne pas sur les instances sensibles à la casse
 - Résolution du problème [1814](https://github.com/Microsoft/azuredatastudio/issues/1814) : une faute de frappe dans sqlops.d.ts provoquait une définition de type « any » implicite
 - Correction du [problème 1817](https://github.com/Microsoft/azuredatastudio/issues/1817) : Faute d’orthographe
 - Correction du [problème 1830](https://github.com/Microsoft/azuredatastudio/issues/1830) : La définition d’iconPath dans ButtonComponent après l’appel de component() n’entraîne pas la modification de l’icône
@@ -659,7 +688,7 @@ Un des points notables de la préversion publique d’avril est l’actualisatio
 | [Résultats de recherche horizontaux (préversion)](https://code.visualstudio.com/updates/v1_21#_horizontal-search). | Vous pouvez maintenant afficher les résultats de la recherche dans un volet horizontal. |
 | &nbsp; | &nbsp; |
 
-Pour plus d’informations, consultez les notes de publication de [Visual Studio Code version février](https://code.visualstudio.com/updates/v1_21) et les notes de publication de [Visual Studio Code version janvier](https://code.visualstudio.com/updates/v1_20).
+Pour plus d’informations, consultez les [notes de publication de Visual Studio Code version février](https://code.visualstudio.com/updates/v1_21) et les [notes de publication de Visual Studio Code version janvier](https://code.visualstudio.com/updates/v1_20).
 
 Pour plus d’informations, consultez le [Journal des modifications](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).
 

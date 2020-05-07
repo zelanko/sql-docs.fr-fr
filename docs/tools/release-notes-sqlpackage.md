@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386188"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262128"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notes de version de SqlPackage.exe
 
@@ -34,11 +34,50 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>18.5 sqlpackage
+
+|Plateforme|Téléchargement|Date de publication|Version|Build
+|:---|:---|:---|:---|:---|
+| Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2128142)|28 avril 2020|18.5|15.0.4769.1|
+|macOS .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2128145)|28 avril 2020| 18.5|15.0.4769.1|
+|Linux .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2128144)|28 avril 2020| 18.5|15.0.4769.1|
+|Windows .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2128143)|28 avril 2020| 18.5|15.0.4769.1|
+
+### <a name="features"></a>Fonctionnalités
+| Fonctionnalité | Détails |
+| :------ | :------ |
+| Déploiement | La classification de la sensibilité des données est maintenant prise en charge pour SQL Server 2008 et ultérieur, Azure SQL Database et Azure SQL Data Warehouse |
+| Déploiement | Ajout de la prise en charge des contraintes de table dans Azure SQL Data Warehouse |
+| Déploiement | Ajout de la prise en charge de l’index columnstore en cluster ordonné dans SQL Data Warehouse |
+| Déploiement | Ajout de la prise en charge de la source de données externe (pour Oracle, Teradata, MongoDB/CosmosDB, ODBC, cluster Big Data) et de la table externe pour le cluster Big Data SQL Server 2019 |
+| Déploiement | Ajout de SQL Database Edge comme édition prise en charge |
+| Déploiement | Prise en charge des noms de serveur Managed Instance au format « \<serveur>.\<zonedns>.database.windows.net » |
+| Déploiement | Ajout de la prise en charge de la commande copy dans Azure SQL Data Warehouse |
+| Déploiement | Ajout de l’option de déploiement « IgnoreTablePartitionOptions » durant la publication pour éviter la recréation de la table en cas de modification de la fonction de partition sur la table pour Azure SQL Data Warehouse |
+| .NET Core | Ajout de la prise en charge de Microsoft.Data.SqlClient dans la version .NET Core de sqlpackage |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correctifs
+| Fix | Détails |
+| :-- | :------ |
+| Déploiement | Correction de la publication du package DAC d’une base de données contenant un utilisateur externe qui générait une erreur « La référence d’objet n’a pas la valeur d’une instance d’un objet ». |
+| Déploiement | Correction de l’analyse du chemin JSON en tant qu’expression |
+| Déploiement | Correction de la génération d’instructions GRANT pour les autorisations AlterAnyDatabaseScopedConfiguration et AlterAnySensitivityClassification |
+| Déploiement | Correction d’un problème entraînant la non-reconnaissance d’une autorisation de script externe |
+| Déploiement | Correction de la propriété inline : l’ajout implicite de la propriété ne doit pas apparaître dans la différence, mais une mention explicite doit apparaître dans le script |
+| Déploiement | Résolution d’un problème où la modification d’une table référencée par une vue matérialisée entraîne la génération d’instructions Alter View qui ne sont pas prises en charge dans les vues matérialisées pour Azure SQL Data Warehouse |
+| Déploiement | Correction de l’échec de la publication lors de l’ajout d’une colonne à une table avec des données pour Azure SQL Data Warehouse |
+| Déploiement | Correction du script de mise à jour devant déplacer les données vers une nouvelle table lors de la modification du type de colonne de distribution (scénario de perte de données) pour Azure SQL Data Warehouse |
+| ScriptDom | Correction d’un bogue dans ScriptDom entraînant la non-reconnaissance des contraintes inline définies après un index inline |
+| ScriptDom | Correction dans ScriptDom d’une parenthèse fermante manquante SYSTEM_TIME dans une instruction de traitement par lots |
+| Always Encrypted | Correction de l’échec de la suppression de la table #tmpErrors lorsque sqlpackage se reconnecte et que la table temporaire est déjà supprimée (la table temporaire disparaissant quand la connexion est perdue) |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>sqlpackage 18.4.1
 
 |Plateforme|Téléchargement|Date de publication|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2113703)|13 décembre 2019|18.4.1|15.0.4630.1|
+| Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2113703)|13 décembre 2019|18.4.1|15.0.4630.1|
 |macOS .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2113705)|13 décembre 2019| 18.4.1|15.0.4630.1|
 |Linux .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2113331)|13 décembre 2019| 18.4.1|15.0.4630.1|
 |Windows .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2113704)|13 décembre 2019| 18.4.1|15.0.4630.1|
@@ -60,7 +99,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 |Plateforme|Téléchargement|Date de publication|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2108813)|29 octobre 2019|18.4|15.0.4573.2|
+| Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2108813)|29 octobre 2019|18.4|15.0.4573.2|
 |macOS .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2108815)|29 octobre 2019| 18.4|15.0.4573.2|
 |Linux .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2108814)|29 octobre 2019| 18.4|15.0.4573.2|
 |Windows .NET Core |[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2109019)|29 octobre 2019| 18.4|15.0.4573.2|
@@ -99,7 +138,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 |Plateforme|Téléchargement|Date de publication|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|13 septembre 2019|18.3.1|15.0.4538.1|
+| Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|13 septembre 2019|18.3.1|15.0.4538.1|
 |macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102894)|13 septembre 2019| 18.3.1|15.0.4538.1|
 |Linux .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102978)|13 septembre 2019| 18.3.1|15.0.4538.1|
 |Windows .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2102979)|13 septembre 2019| 18.13.1|15.0.4538.1|
@@ -135,7 +174,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 |Plateforme|Téléchargement|Date de publication|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 avril 2019|18.2|15.0.4384.2|
+| Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 avril 2019|18.2|15.0.4384.2|
 |macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087247)|15 avril 2019 | 18.2 |15.0.4384.2|
 |Linux .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087431)|15 avril 2019 | 18.2 |15.0.4384.2|
 

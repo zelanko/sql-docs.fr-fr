@@ -1,5 +1,6 @@
 ---
 title: Sauvegarder et restaurer des bases de données SQL Server | Microsoft Docs
+description: Cet article décrit les avantages que présente la sauvegarde des bases de données SQL Server, puis il décrit les stratégies de sauvegarde et de restauration, et aborde certains points relatifs à la sécurité.
 ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0bcf8cbc87fc1784a177a9bf58a43f58156fbb96
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bea2f639677de4869b537d3fb6cfbd1faa271134
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487930"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220636"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

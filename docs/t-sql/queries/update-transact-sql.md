@@ -38,19 +38,19 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78176689"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169367"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifie les données existantes d'une table ou d'une vue dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir des exemples, consultez [Exemples](#UpdateExamples).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -203,7 +203,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@** _variable_ = *column* = *expression* affecte à la variable la même valeur que la colonne. Ceci est différent de SET **@** _variable_ = _column_, _column_ = _expression_, qui affecte à la variable la valeur de la colonne avant la mise à jour.  
   
  \<OUTPUT_Clause>  
- Retourne des données mises à jour ou des expressions associées dans le cadre de l'opération UPDATE. La clause OUTPUT n'est pas prise en charge dans les instructions DML, qui ciblent les tables ou les vues distantes. Pour plus d’informations, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Retourne des données mises à jour ou des expressions associées dans le cadre de l'opération UPDATE. La clause OUTPUT n'est pas prise en charge dans les instructions DML, qui ciblent les tables ou les vues distantes. Pour plus d’informations sur les arguments et le comportement de cette clause, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  Spécifie qu'une table, une vue ou une source de table dérivée sont utilisées pour fournir les valeurs destinées à servir de critères en vue de la mise à jour. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
@@ -1215,7 +1215,7 @@ DROP TABLE CTAS_acs
 ;
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Curseurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   

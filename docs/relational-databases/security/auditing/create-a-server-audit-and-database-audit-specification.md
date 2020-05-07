@@ -1,6 +1,6 @@
 ---
-title: Créer une spécification de l’audit du serveur et de la base de données
-description: Découvrez comment créer une spécification de l’audit de SQL Server et de la base de données à l’aide de SQL Server Management Studio ou de Transact-SQL (T-SQL)
+title: Créer une spécification pour l’audit de serveur et l’audit de base de données
+description: Découvrez comment créer une spécification pour l’audit SQL Server et l’audit de base de données en utilisant SQL Server Management Studio ou Transact-SQL (T-SQL).
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,49 +16,35 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55b848cd43e157a9a75670a24aea645c3279f7ea
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557872"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262066"
 ---
-# <a name="create-a-server-audit-and-database-audit-specification"></a>Créer une spécification de l'audit du serveur et de la base de données
+# <a name="create-a-server-audit-and-database-audit-specification"></a>Créer une spécification pour l’audit de serveur et l’audit de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique explique comment créer un audit de serveur et une spécification d'audit de base de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  Cet article explique comment créer une spécification d’audit de serveur et d’audit de base de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- L'*audit* d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et l'enregistrement des événements qui se produisent sur le système. L’objet *Audit SQL Server* recueille une seule instance des actions et des groupes d’actions au niveau du serveur ou de la base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L’objet *Spécification d’audit de niveau base de données* appartient à un audit. Vous pouvez créer une spécification d'audit de base de données par base de données SQL Server et par audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ L’audit d’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et la journalisation des événements qui se produisent sur le système. L’objet *Audit SQL Server* collecte une seule instance des actions et des groupes d’actions au niveau du serveur ou au niveau de la base de données à superviser. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L’objet *Spécification d’audit de niveau base de données* appartient à un audit. Vous pouvez créer une spécification d'audit de base de données par base de données SQL Server et par audit. Pour plus d’informations, consultez [Audit SQL Server &#40;Moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- **Dans cette rubrique**  
-  
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour créer un audit de serveur et une spécification d'audit de base de données, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
+ ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
- Les spécifications d'audit de base de données sont des objets non sécurisables qui résident dans une base de données spécifiée. Lorsqu'une spécification d'audit de base de données est créée, elle se trouve dans un état désactivé.  
+ Les spécifications d'audit de base de données sont des objets non sécurisables qui résident dans une base de données spécifiée. Lorsqu’une spécification d’audit de base de données est créée, elle se trouve dans un état désactivé.  
   
- Lorsque vous créez ou modifiez une spécification de l'audit de la base de données dans une base de données utilisateur, n'incluez pas d'actions d'audit sur des objets dans l'étendue du serveur, tels que les vues système. Sinon, l'audit est créé. Toutefois, les objets dans l'étendue du serveur ne sont pas inclus, et aucune erreur n'est retournée. Pour auditer des objets dans l'étendue du serveur, utilisez une spécification de l'audit de la base de données dans la base de données MASTER.  
+ Lorsque vous créez ou modifiez une spécification d’audit de base de données dans une base de données utilisateur, n’incluez pas d’actions d’audit sur les objets situés dans l’étendue du serveur, tels que les vues système. Si vous le faites, l’audit sera créé. Toutefois, les objets situés dans l’étendue du serveur ne seront pas inclus, et aucune erreur ne sera retournée. Pour auditer les objets situés dans l’étendue du serveur, utilisez une spécification d’audit de base de données dans la base de données MASTER.  
   
- Les spécifications de l’audit de la base de données résident dans la base de données où elles sont créées, à l’exception de la base de données système **tempdb** .  
+ Les spécifications d’audit de base de données résident dans la base de données où elles sont créées, à l’exception de la base de données système **TempDB**.  
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
   
--   Les utilisateurs disposant de l'autorisation ALTER ANY DATABASE AUDIT peuvent créer des spécifications d'audit de base de données et les lier à un audit quelconque.  
+-   Les utilisateurs disposant de l’autorisation ALTER ANY DATABASE AUDIT peuvent créer des spécifications d’audit de base de données et les lier à n’importe quel audit.  
   
--   Une fois qu’une spécification d’audit de la base de données est créée, elle peut être affichée par des principaux disposant des autorisations CONTROL SERVER, ALTER ANY DATABASE AUDIT ou du compte sysadmin.  
+-   Une fois qu’une spécification d’audit de base de données est créée, les principaux qui disposent des autorisations CONTROL SERVER ou ALTER ANY DATABASE AUDIT peuvent la voir. Le compte sysadmin peut également la voir.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -66,55 +52,55 @@ ms.locfileid: "75557872"
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...** . Pour plus d’informations, consultez [Créer un audit du serveur et une spécification d'audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Cliquez avec le bouton droit sur le dossier **Audits**, puis sélectionnez **Nouvel audit**. Pour plus d’informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
-3.  Lorsque vous avez fini de sélectionner les options, cliquez sur **OK**.  
+3.  Lorsque vous avez sélectionné les options, sélectionnez **OK**.  
 
 #### <a name="to-create-a-database-level-audit-specification"></a>Pour créer une spécification d'audit de niveau base de données  
   
-1.  Dans l'Explorateur d'objets, développez la base de données dans laquelle vous souhaitez créer une spécification d'audit.  
+1.  Dans l’Explorateur d’objets, développez la base de données dans laquelle vous souhaitez créer la spécification d’audit.  
   
 2.  Développez le dossier **Sécurité** .  
   
-3.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit de la base de données**, puis sélectionnez **Nouvelle spécification de l’audit de la base de données...** .  
+3.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit de la base de données**, puis sélectionnez **Nouvelle spécification de l’audit de la base de données**.  
   
-     Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit de la base de données** .  
+     Ces options sont disponibles dans la boîte de dialogue **Créer la spécification de l’audit de la base de données** :  
   
      **Nom**  
-     Nom de la spécification de l'audit de la base de données. Le nom est généré automatiquement lorsque vous créez une spécification d'audit du serveur, mais vous pouvez le modifier.  
+     Nom de la spécification de l'audit de la base de données. Un nom est généré automatiquement lorsque vous créez une spécification d’audit de serveur. Le nom est modifiable.  
   
      **Audit**  
      Nom d’un objet d’audit de serveur existant. Tapez le nom de l'audit ou sélectionnez-le dans la liste.  
   
      **Type d'action de l'audit**  
-     Spécifie les groupes d'actions d'audit de niveau base de données et les actions d'audit à capturer. Pour obtenir la liste d’actions d’audit et de groupes d’actions d’audit de niveau base de données, ainsi qu’une description des événements qu’ils contiennent, consultez [Actions et groupes d’actions SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
+     Spécifie les groupes d'actions d'audit de niveau base de données et les actions d'audit à capturer. Pour obtenir la liste d’actions d’audit et de groupes d’actions d’audit au niveau de la base de données, ainsi qu’une description des événements qu’ils contiennent, consultez [Actions et groupes d’actions SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Schéma d'objet**  
      Affiche le schéma du **Nom de l’objet**spécifié.  
   
      **Nom de l’objet**  
-     Nom de l'objet à auditer. Disponible uniquement pour les actions d'audit ; ne s'applique pas aux groupes d'audit.  
+     Nom de l'objet à auditer. Cette option est disponible uniquement pour les actions d’audit. Elle ne s’applique pas aux groupes d’audit.  
   
      **Points de suspension (...)**  
-     Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et sélectionner un objet disponible, en fonction du **Type d'action de l'audit**spécifié.  
+     Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et de sélectionner un objet disponible, en fonction du **Type d’action de l’audit** spécifié.  
   
      **Nom principal**  
      Compte par lequel filtrer l'audit pour l'objet audité.  
   
      **Points de suspension (...)**  
-     Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et sélectionner un objet disponible, en fonction du **Nom de l'objet**spécifié.  
+     Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et de sélectionner un objet disponible, en fonction du **Nom d’objet** spécifié.  
   
-4.  Lorsque vous avez fini de sélectionner l'option, cliquez sur **OK**.  
+4.  Lorsque vous avez sélectionné les options, sélectionnez **OK**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Pour créer un audit de serveur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l'Explorateur d'objets, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+2.  Dans la barre d’outils standard, sélectionnez **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+3.  Collez l’exemple suivant dans la fenêtre de requête, puis sélectionnez **Exécuter**.  
   
     ```  
     USE master ;  
@@ -131,11 +117,11 @@ ms.locfileid: "75557872"
   
 #### <a name="to-create-a-database-level-audit-specification"></a>Pour créer une spécification d'audit de niveau base de données  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l'Explorateur d'objets, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+2.  Dans la barre d’outils standard, sélectionnez **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple crée une spécification d'audit de base de données appelée `Audit_Pay_Tables` qui audite les instructions SELECT et INSERT par l'utilisateur `dbo` , pour la table `HumanResources.EmployeePayHistory` en fonction de l'audit de serveur défini précédemment.  
+3.  Collez l’exemple suivant dans la fenêtre de requête, puis sélectionnez **Exécuter**. Cet exemple crée une spécification d’audit de serveur nommée `Audit_Pay_Tables`. Il audite les instructions SELECT et INSERT de l’utilisateur `dbo` pour la table `HumanResources.EmployeePayHistory`, en fonction de l’audit de serveur défini dans la section précédente.  
   
     ```  
     USE AdventureWorks2012 ;   

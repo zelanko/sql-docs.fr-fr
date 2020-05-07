@@ -1,5 +1,6 @@
 ---
 title: Sauvegarder un journal des transactions | Microsoft Docs
+description: Cet article explique comment sauvegarder un journal des transactions dans SQL Server en utilisant SQL Server Management Studio, Transact-SQL ou PowerShell.
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b40463d35a7d6468e93b2a32b44dffb1aefed182
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708735"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220640"
 ---
 # <a name="back-up-a-transaction-log"></a>Sauvegarder un journal des transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +153,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell
 
-Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Log** comme valeur du paramètre **-BackupAction**.  
+Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Log** comme valeur du paramètre **-BackupAction** .  
   
 L'exemple suivant crée une sauvegarde de fichier journal de la base de données `<myDatabase>` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`.  
   

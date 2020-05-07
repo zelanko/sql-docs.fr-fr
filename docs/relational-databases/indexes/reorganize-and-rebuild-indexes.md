@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138138"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220714"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Remédiez à la fragmentation des index en les réorganisant ou en les regénérant
 
@@ -57,6 +57,9 @@ Qu’est-ce que la fragmentation d’index et pourquoi dois-je m’en soucier :
 
 La première étape pour choisir la méthode de défragmentation d’index à utiliser consiste à analyser l’index pour évaluer son degré de fragmentation. Vous détectez la fragmentation de façon différente pour les index rowstore et les index columnstore.
 
+> [!NOTE]
+> Il est particulièrement important d’examiner la fragmentation de l’index ou du segment de mémoire après avoir supprimé une grande quantité de données. Pour les segments de mémoire, en cas de mises à jour fréquentes, il peut également être nécessaire d’examiner la fragmentation pour éviter la prolifération des enregistrements de transfert. Pour plus d’informations sur les segments de mémoire, consultez [Segments de mémoire (tables sans index cluster)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures). 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>Détection de la fragmentation sur les index rowstore
 
 En utilisant [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), vous pouvez détecter la fragmentation dans un index spécifique, dans tous les index d’une table ou d’une vue indexée, dans tous les index d’une base de données ou dans tous les index de l’ensemble des bases de données. Pour les index partitionnés, **sys.dm_db_index_physical_stats** procure aussi des informations de fragmentation pour chaque partition.
@@ -73,18 +76,22 @@ Une fois le degré de fragmentation connu, utilisez le tableau suivant pour iden
 
 |Valeur**avg_fragmentation_in_percent**|Instruction corrective|
 |-----------------------------------------------|--------------------------|
-|> 5 % et < = 30 %|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5 % et < = 30 % <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30 % <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> La reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne. Pour plus d’informations, consultez [INDEX](#rebuild-an-index) et [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md).
+<sup>1</sup> Ces valeurs vous aident à déterminer le moment auquel vous devez basculer entre `ALTER INDEX REORGANIZE` et `ALTER INDEX REBUILD`. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement.      
 
-Ces valeurs fournissent des directives approximatives pour déterminer le point auquel vous devez basculer entre `ALTER INDEX REORGANIZE` et `ALTER INDEX REBUILD`. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement. Par exemple, si un index donné est principalement utilisé pour les opérations d’analyse, la suppression de la fragmentation peut améliorer les performances de ces opérations. L’avantage en matière de performances est moins perceptible pour les index utilisés principalement pour les opérations de recherche. De même, la suppression de la fragmentation dans un segment de mémoire (une table sans index cluster) est particulièrement utile pour les opérations d’analyse d’index non-cluster, mais n’a que peu d’effet dans les opérations de recherche.
+> [!TIP] 
+> Par exemple, si un index donné est principalement utilisé pour les opérations d’analyse, la suppression de la fragmentation peut améliorer les performances de ces opérations. L’amélioration des performances peut être moins perceptible pour les index qui sont utilisés principalement pour les opérations de recherche.    
+De même, la suppression de la fragmentation dans un segment de mémoire (une table sans index cluster) est particulièrement utile pour les opérations d’analyse d’index non-cluster, mais n’a que peu d’effet dans les opérations de recherche.
 
-Les index avec une fragmentation inférieure ou égale à 5 % n’ont pas besoin d’être défragmentés, car l’avantage de la suppression d’un volume de fragmentation aussi réduit est quasiment toujours largement contrebalancé par le coût de processeur induit pour réorganiser ou regénérer l’index. Par ailleurs, la regénération ou la réorganisation de petits index rowstore ne réduit généralement pas vraiment la fragmentation. Les pages de petits index sont parfois stockées sur des extensions mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après sa réorganisation ou sa reconstruction. Consultez également [Considérations spécifiques à la regénération d’index rowstore](#considerations-specific-to-rebuilding-rowstore-indexes).
+<sup>2</sup> La reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne. Pour plus d’informations, consultez [INDEX](#rebuild-an-index) et [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md).
+
+Les index avec une fragmentation inférieure ou égale à 5 % n’ont pas besoin d’être défragmentés, car l’avantage de la suppression d’un volume de fragmentation aussi réduit est quasiment toujours largement contrebalancé par le coût de processeur induit pour réorganiser ou regénérer l’index. Par ailleurs, la regénération ou la réorganisation de petits index rowstore ne réduit généralement pas vraiment la fragmentation. Jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (compris), le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alloue de l’espace à l’aide d’étendues mixtes. Par conséquent, les pages de petits index sont parfois stockées sur des étendues mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après sa réorganisation ou sa reconstruction. Consultez également [Considérations spécifiques à la regénération d’index rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Pour plus d’informations sur les étendues, consultez [Guide d’architecture des pages et des étendues](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Détection de la fragmentation sur les index columnstore
 
-En utilisant [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), vous pouvez déterminer le pourcentage de lignes supprimées dans un index, ce qui constitue une bonne mesure pour la fragmentation d’un rowgroup dans un index columnstore. Utilisez ces informations pour calculer la fragmentation dans un index spécifique, dans tous les index d’une table, dans tous les index d’une base de données ou dans tous les index de toutes les bases de données.
+En utilisant [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), vous pouvez déterminer le pourcentage de lignes supprimées dans un index, ce qui constitue une mesure raisonnable pour la fragmentation d’un rowgroup dans un index columnstore. Utilisez ces informations pour calculer la fragmentation dans un index spécifique, dans tous les index d’une table, dans tous les index d’une base de données ou dans tous les index de toutes les bases de données.
 
 Le jeu de résultats retourné par **sys.dm_db_column_store_row_group_physical_stats** inclut les colonnes suivantes :
 

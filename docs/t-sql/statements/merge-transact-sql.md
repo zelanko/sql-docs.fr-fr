@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10798009fe69426b0aaa4b035bba0a19eaf36426
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634129"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181092"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 Spécifie le nom ou l'ID d'un ou de plusieurs index sur la table cible pour effectuer une jointure implicite avec la table source. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 \<OUTPUT_Clause>  
-Retourne une ligne pour chaque ligne dans *target_table* qui est mise à jour, insérée ou supprimée, peu importe l’ordre. **$action** peut être spécifié dans la clause de sortie. **$action** est une colonne de type **nvarchar(10)** qui retourne l’une des trois valeurs possibles pour chaque ligne : « INSERT », « UPDATE » ou « DELETE », en fonction de l'action effectuée sur cette ligne. Pour plus d’informations sur les arguments de cette clause, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+Retourne une ligne pour chaque ligne dans *target_table* qui est mise à jour, insérée ou supprimée, peu importe l’ordre. **$action** peut être spécifié dans la clause de sortie. **$action** est une colonne de type **nvarchar(10)** qui retourne l’une des trois valeurs possibles pour chaque ligne : « INSERT », « UPDATE » ou « DELETE », en fonction de l'action effectuée sur cette ligne. Pour plus d’informations sur les arguments et le comportement de cette clause, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Spécifie que des indicateurs de l'optimiseur sont utilisés pour personnaliser la façon dont le moteur de base de données traite l'instruction. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -285,7 +285,7 @@ Spécifie les conditions de recherche utilisées pour spécifier \<merge_search_
 \<graph search pattern>  
 Spécifie le modèle de correspondance de graphe. Pour plus d’informations sur les arguments de cette clause, consultez [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Au moins l'une des trois clauses MATCHED doit être spécifiée, mais cela peut être dans n'importe quel ordre. Une variable ne peut pas être mise à jour plus d'une fois dans la même clause MATCHED.  
   
@@ -631,7 +631,7 @@ WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)

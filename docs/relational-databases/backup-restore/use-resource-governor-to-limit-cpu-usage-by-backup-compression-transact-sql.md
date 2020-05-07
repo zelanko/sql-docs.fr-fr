@@ -1,5 +1,6 @@
 ---
 title: 'Limiter la charge processeur : Utiliser le gouverneur de ressources pour la compression de sauvegarde'
+description: Vous pouvez classifier les sessions d’un utilisateur SQL Server en les mappant à un groupe de charge de travail Resource Governor qui limite l’utilisation du processeur afin de réaliser une sauvegarde avec compression.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65f3000cdc56079d2e55040e4844ce5578998e9e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245413"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180413"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utiliser le gouverneur de ressources pour limiter l'utilisation de l'UC par compression de sauvegarde (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -279,7 +280,7 @@ GO
   
  [&#91;Haut&#93;](#Top)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer et tester une fonction classifieur définie par l’utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)  
   

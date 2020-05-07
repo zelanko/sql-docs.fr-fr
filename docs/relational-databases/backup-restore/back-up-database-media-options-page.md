@@ -1,5 +1,6 @@
 ---
 title: Sauvegarder la base de données (page Options de support) | Microsoft Docs
+description: Dans SQL Server, utilisez les options de support de la boîte de dialogue Sauvegarder la base de données pour afficher ou modifier les options de support comme Remplacer le support, Fiabilité et Journal des transactions.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eff34ba4721f036aceca6c6617177881017744e1
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155558"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220594"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +102,7 @@ ms.locfileid: "70155558"
   
  - **Rembobiner la bande avant de décharger** : la bande est automatiquement libérée et rembobinée avant d’être déchargée. Cette option est activée uniquement si **Décharger la bande après la sauvegarde** est sélectionné.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379b9e74388b9cedad55e3263c823c3d9d276286
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296894"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588165"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) dans un cluster
 
@@ -35,7 +35,7 @@ ms.locfileid: "71296894"
   
 -   **Quand un basculement se produit, les packages en cours d’exécution ne redémarrent pas.**
     
-    Vous pouvez récupérer des échecs de package en redémarrant les packages à partir des points de contrôle. Vous pouvez effectuer le redémarrage à partir des points de contrôle sans configurer le service en tant que ressource de cluster. Pour plus d’informations, consultez [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+    Vous pouvez récupérer des échecs de package en redémarrant les packages à partir des points de contrôle. Vous pouvez effectuer le redémarrage à partir des points de contrôle sans configurer le service en tant que ressource de cluster. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 -   Lorsque vous configurez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans un groupe de ressources différent de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous ne pouvez pas utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] à partir d’ordinateurs clients pour gérer les packages stockés dans la base de données msdb. Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne peut pas déléguer d’informations d’identification dans ce scénario à deux tronçons.  
   
@@ -128,7 +128,7 @@ Pour les clients concluant que les avantages de la configuration du service [!IN
   
 4.  Modifiez la valeur de l’élément **StorePath** pour qu’elle corresponde au chemin complet du dossier **Packages** que vous avez créé sur le disque partagé lors d’une étape précédente.  
   
-5.  Mettez à jour la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** dans le Registre en indiquant le nom et le chemin complet du fichier de configuration du service sur le disque partagé.  
+5.  Sur chaque nœud, mettez à jour la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** dans le Registre en indiquant le nom et le chemin complet du fichier de configuration du service sur le disque partagé.  
   
 ### <a name="to-bring-the-integration-services-service-online"></a>Pour mettre le service Integration Services en ligne  
   

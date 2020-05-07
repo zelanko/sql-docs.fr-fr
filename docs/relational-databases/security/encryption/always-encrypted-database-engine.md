@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e9b3bc3862b39d1332416ed33fdfcea85b7f6ac
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254832"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262040"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ Le serveur calcule le jeu de résultats et, pour toutes les colonnes chiffrées 
 
 Pour plus d’informations sur le développement des applications à l’aide d’Always Encrypted avec des pilotes clients particuliers, consultez [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Le chiffrement et le déchiffrement sont effectués par le biais du pilote client. Cela signifie que certaines actions qui se produisent uniquement côté serveur ne fonctionneront pas en utilisant Always Encrypted. Citons par exemple la copie de données d’une colonne vers une autre à l’aide d’une instruction UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT. 
 
@@ -109,10 +109,10 @@ Pour plus d’informations sur les algorithmes de chiffrement Always Encrypted, 
 
 |Tâche|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Mise en service des clés principales de colonne, des clés de chiffrement de colonne et des clés de chiffrement de colonne chiffrées avec leurs clés principales de colonne correspondantes|Oui|Oui|Non|
+|Mise en service des clés principales de colonne, des clés de chiffrement de colonne et des clés de chiffrement de colonne chiffrées avec leurs clés principales de colonne correspondantes|Oui|Oui|Non |
 |Création des métadonnées de clé dans la base de données|Oui|Oui|Oui|
 |Création de tables avec des colonnes chiffrées|Oui|Oui|Oui|
-|Chiffrement de données existantes dans les colonnes de base de données sélectionnées|Oui|Oui|Non|
+|Chiffrement de données existantes dans les colonnes de base de données sélectionnées|Oui|Oui|Non |
 
 > [!NOTE]
 > [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md), introduit dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], prend en charge le chiffrement des données existantes à l’aide de Transact-SQL. Vous n’avez alors plus besoin de déplacer les données hors de la base de données pour les opérations de chiffrement.
@@ -229,7 +229,7 @@ Spécifications des outils
 -   Dans [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], les autorisations *VIEW* ne sont pas accordées par défaut au rôle de base de données fixe `public`. Cela permet à certains outils hérités (utilisant des versions antérieures de DacFx) de fonctionner correctement. Ainsi, pour travailler avec des colonnes chiffrées (même si vous ne les déchiffrez pas), un administrateur de base de données doit accorder explicitement les deux autorisations *VIEW* .  
 
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Le code [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant crée des métadonnées de clé principale de colonne, des métadonnées de clé de chiffrement de colonne et une table comportant des colonnes chiffrées. Pour plus d’informations sur la façon de créer les clés référencées dans les métadonnées, consultez :
 - [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
@@ -264,7 +264,7 @@ CREATE TABLE Customers (
 GO  
   
 ```  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 - [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)   
 - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
 - [Développer des applications avec Always Encrypted](always-encrypted-client-development.md) 

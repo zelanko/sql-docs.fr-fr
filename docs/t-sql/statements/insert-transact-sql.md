@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107984"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181095"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 Clause OUTPUT  
  Retourne des lignes insérées dans le cadre de l'opération d'insertion. Les résultats peuvent être retournés à l'application de traitement ou être insérés dans une table ou une variable de table pour un traitement ultérieur.  
   
- La [clause OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) n’est pas prise en charge dans les instructions DML qui font référence à des vues partitionnées locales, à des vues partitionnées distribuées, à des tables distantes ou à des instructions INSERT contenant un *execute_statement*. La clause OUTPUT INTO n’est pas prise en charge dans les instructions INSERT qui contiennent une clause \<dml_table_source>. 
+ La clause OUTPUT n’est pas prise en charge dans les instructions DML qui font référence à des vues partitionnées locales, à des vues partitionnées distribuées, à des tables distantes ou à des instructions INSERT contenant un *execute_statement*. La clause OUTPUT INTO n’est pas prise en charge dans les instructions INSERT qui contiennent une clause \<dml_table_source>. Pour plus d’informations sur les arguments et le comportement de cette clause, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Présente la ou les listes de valeurs de données à insérer. Il doit y avoir une valeur de données pour chaque colonne de *column_list* (le cas échéant) ou de la table. La liste de valeurs doit être mise entre parenthèses.  

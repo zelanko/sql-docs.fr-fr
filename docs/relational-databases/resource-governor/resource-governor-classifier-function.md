@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 226100ce85527276f2f1f2b67f9ebb5f43a336d8
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903916"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262111"
 ---
 # <a name="resource-governor-classifier-function"></a>Fonction classifieur du gouverneur de ressources
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "72903916"
   
 1.  authentification des connexions ;  
   
-2.  exécution des déclencheurs LOGON ;  
+2.  Exécution du déclencheur LOGON (se produit uniquement si des déclencheurs LOGON se trouvent dans l’instance)
   
 3.  classification ;  
 
@@ -85,7 +85,7 @@ ms.locfileid: "72903916"
 |----------------------|-----------|  
 |Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Créer et tester une fonction classifieur définie par l’utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

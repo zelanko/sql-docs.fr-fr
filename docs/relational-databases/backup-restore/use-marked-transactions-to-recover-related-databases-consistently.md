@@ -1,5 +1,6 @@
 ---
 title: Restaurer les bases de données jusqu’à une transaction marquée
+description: Si vous effectuez des mises à jour associées sur plusieurs bases de données associées, utilisez des marques de transaction dans SQL Server pour les récupérer à partir d’un point cohérent du point de vue logique.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc572ac7e1272274996b13dfb0886427cebc128e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e251534c777f595b529033cbe9c1f8ea59c6e73
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247437"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180370"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Utiliser les transactions marquées pour récupérer des bases de données associées uniformément
 
@@ -176,7 +177,7 @@ GO
 ## <a name="recovering-to-a-marked-transaction"></a>Récupération jusqu'à une transaction marquée  
  Pour plus d’informations sur la manière de récupérer une base de données qui contient des transactions marquées jusqu’à une marque particulière ou juste avant, consultez [Récupération de bases de données associées contenant une transaction marquée](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   

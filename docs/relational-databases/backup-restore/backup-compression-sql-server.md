@@ -1,5 +1,6 @@
 ---
 title: Compression des sauvegardes (SQL Server) | Microsoft Docs
+description: Découvrez la compression des sauvegardes SQL Server, notamment les restrictions, les compromis à faire au niveau des performances, la configuration de la compression des sauvegardes et le taux de compression.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 735a2a03b869e3171f6e974013c6822ef1c9335c
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940835"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220543"
 ---
 # <a name="backup-compression-sql-server"></a>Compression de sauvegardes (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique décrit la compression des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , notamment les restrictions, les compromis en termes de performances pour la compression des sauvegardes, la configuration pour la compression des sauvegardes et le taux de compression.  La compression de sauvegarde est prise en charge sur les éditions [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Entreprise, Standard et Développeur.  Chaque édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieure peut restaurer une sauvegarde compressée. 
+  Cette rubrique décrit la compression des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , notamment les restrictions, les compromis en termes de performances pour la compression des sauvegardes, la configuration pour la compression des sauvegardes et le taux de compression.  La compression de la sauvegarde est prise en charge uniquement sur les éditions [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Entreprise, Standard et Développeur.  Chaque édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieure peut restaurer une sauvegarde compressée. 
  
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
@@ -107,7 +108,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: Unités de sauvegarde (SQL Server) | Microsoft Docs
+description: Cet article décrit les unités de sauvegarde d’une base de données SQL Server, puis il explique certains termes et aborde l’utilisation des unités de sauvegarde.
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e9bd20f7b0176c3d57bdd032f9c7f47d6729ba6
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909174"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220549"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +92,7 @@ RESTORE DATABASE AdventureWorks2012
   
   
 ##  <a name="specify-the-disk-backup-file-path"></a><a name="BackupFileDiskPath"></a> Spécifier le chemin d’accès du fichier de sauvegarde sur disque 
- Lorsque vous spécifiez un fichier de sauvegarde, entrez son chemin d'accès complet et le nom du fichier. Si vous spécifiez uniquement le nom du fichier ou un chemin d'accès relatif au moment de la sauvegarde d'un fichier, celui-ci est copié dans le répertoire de sauvegarde par défaut. Ce répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, où *n* est le nombre de l'instance du serveur. Par conséquent, pour l’instance de serveur par défaut, le répertoire de sauvegarde par défaut est : C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
+ Lorsque vous spécifiez un fichier de sauvegarde, entrez son chemin d'accès complet et le nom du fichier. Si vous spécifiez uniquement le nom du fichier ou un chemin d'accès relatif au moment de la sauvegarde d'un fichier, celui-ci est copié dans le répertoire de sauvegarde par défaut. Ce répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, où *n* est le numéro de l’instance du serveur. Par conséquent, pour l'instance du serveur par défaut, le répertoire de sauvegarde par défaut est le suivant : C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
   
  Pour éviter toute ambiguïté, en particulier dans les scripts, il est recommandé de spécifier explicitement le chemin d'accès du répertoire de sauvegarde dans chaque clause DISK. Cependant, cette exigence prend moins d'importance si vous utilisez l'Éditeur de requête. Dans ce cas, si vous êtes certain que le fichier de sauvegarde réside dans le répertoire de sauvegarde par défaut, vous pouvez omettre le chemin d'accès d'une clause DISK. Par exemple, l'instruction `BACKUP` suivante sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans le répertoire de sauvegarde par défaut.  
   
@@ -101,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **REMARQUE :** L’emplacement par défaut est stocké dans la clé de Registre **BackupDirectory** sous **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
+> **REMARQUE :** L'emplacement par défaut est stocké dans la clé de Registre **BackupDirectory** sous **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
    
 ###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> Sauvegarder sur un partage de fichiers réseau  
@@ -129,7 +130,7 @@ GO
  
 ##  <a name="using-tape-devices"></a><a name="TapeDevices"></a> Utilisation de périphériques à bandes  
   
-> **REMARQUE :** La prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
+> **REMARQUE :** La prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
    
  La sauvegarde de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur bande exige un lecteur ou des lecteurs de bandes pris en charge par le système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Qui plus est, pour le lecteur de bande en question, nous vous conseillons d'utiliser uniquement des bandes recommandées par le fabricant du lecteur. Pour plus d'informations sur l'installation d'un lecteur de bande, veuillez vous reporter à la documentation du système d'exploitation Windows.  
   
@@ -173,12 +174,12 @@ GO
   
      Vous pouvez contrôler si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] laisse la bande ouverte après l'opération de sauvegarde ou de restauration ou bien libère et rembobine la bande une fois qu'elle est remplie. Le comportement par défaut est de rembobiner la bande (REWIND).  
   
-> **REMARQUE :** Pour plus d’informations sur la syntaxe et les arguments de BACKUP, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Pour plus d’informations sur la syntaxe et les arguments de RESTORE, consultez respectivement [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [RESTORE, arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+> **REMARQUE :** Pour plus d’informations sur la syntaxe et les arguments de BACKUP, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Pour plus d’informations sur la syntaxe et les arguments de RESTORE, consultez respectivement [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [RESTORE, arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a> Gestion de bandes ouvertes  
  Pour afficher une liste des périphériques à bandes ouverts et l’état des demandes de montage, interrogez la vue de gestion dynamique [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Cette vue affiche toutes les bandes ouvertes. Elle inclut les bandes en cours d'utilisation provisoirement inactives et en attente de la prochaine opération BACKUP ou RESTORE.  
   
- Si une bande a été laissée ouverte par erreur, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=** _nom_unité_sauvegarde_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Si une bande a, accidentellement, été laissée ouverte, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-azure-blob-storage-service"></a>Utilisation du service Stockage Blob Azure  
@@ -199,7 +200,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **REMARQUE :** Dans une instruction BACKUP ou RESTORE spécifique, le nom de l’unité de sauvegarde logique et celui de l’unité de sauvegarde physique sont interchangeables.  
+> **REMARQUE :** Dans une instruction BACKUP ou RESTORE spécifique, le nom de l'unité de sauvegarde logique et celui de l'unité de sauvegarde physique sont interchangeables.  
   
  Un avantage de l'unité de sauvegarde logique est sa plus grande simplicité d'utilisation par rapport à un chemin d'accès long. Le recours à une unité de sauvegarde logique peut être utile si vous envisagez d'écrire une série de sauvegardes dans le même chemin d'accès ou sur un lecteur de bande. Les unités de sauvegarde logiques s'avèrent particulièrement utiles pour l'identification des unités de sauvegarde sur bande.  
   
@@ -212,7 +213,7 @@ GO
 ##  <a name="mirrored-backup-media-sets"></a><a name="MirroredMediaSets"></a> Jeux de supports de sauvegarde en miroir  
  La mise en miroir des jeux de supports de sauvegarde permet de réduire l'impact des dysfonctionnements des unités de sauvegarde. Ces dysfonctionnements représentent une menace particulièrement sérieuse car une sauvegarde constitue la dernière protection possible contre une perte de données. À mesure que la taille des bases de données augmente, le risque de perte irrécupérable d'une sauvegarde suite à la défaillance d'une unité ou d'un support de sauvegarde se fait plus présent. La mise en miroir des supports de sauvegarde accroît la fiabilité des sauvegardes en permettant la redondance de l'unité de sauvegarde physique. Pour plus d'informations, consultez [Jeux de supports de sauvegarde en miroir &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
-> **REMARQUE :** Les jeux de supports de sauvegarde en miroir sont uniquement pris en charge dans [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] et versions ultérieures.  
+> **REMARQUE :** Les jeux de supports de sauvegarde en miroir sont uniquement pris en charge dans [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] et versions ultérieures.  
   
   
 ##  <a name="archive-sql-server-backups"></a><a name="Archiving"></a> Archiver des sauvegardes SQL Server  

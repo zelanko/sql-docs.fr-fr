@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 348a4984f7616bb58faa1d6182bc27ae974dde82
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1207f4938c1c3b269cd503e1f7f7f7e279207685
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633197"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169357"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -131,7 +131,7 @@ DELETE
  Spécifie un ou plusieurs indicateurs de table autorisés pour une table cible. Le mot clé WITH et les parenthèses sont obligatoires. NOLOCK et READUNCOMMITTED ne sont pas autorisés. Pour plus d’informations sur les indicateurs de table, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
- Retourne des lignes supprimées ou des expressions basées sur ces lignes au cours de l'exécution de l'opération DELETE. Aucune instruction DML ciblant des vues ou des tables distantes ne prend en charge la clause OUTPUT. Pour plus d’informations, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Retourne des lignes supprimées ou des expressions basées sur ces lignes au cours de l'exécution de l'opération DELETE. Aucune instruction DML ciblant des vues ou des tables distantes ne prend en charge la clause OUTPUT. Pour plus d’informations sur les arguments et le comportement de cette clause, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM *table_source*  
  Spécifie une clause FROM supplémentaire. Cette extension [!INCLUDE[tsql](../../includes/tsql-md.md)] de l’instruction DELETE permet de spécifier des données de \<table_source> et de supprimer les lignes correspondantes de la table référencée dans la première clause FROM.  
@@ -482,7 +482,7 @@ SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 )
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

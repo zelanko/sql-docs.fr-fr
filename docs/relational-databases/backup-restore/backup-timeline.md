@@ -1,5 +1,6 @@
 ---
 title: Chronologie de sauvegarde | Microsoft Docs
+description: Dans SQL Server, la boîte de dialogue Chronologie de sauvegarde vous permet de rechercher et de spécifier des sauvegardes afin de restaurer une base de données vers un point dans le temps.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a0ebd9b51a28acf77020dccadd5fd509f20c488
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081434"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220481"
 ---
 # <a name="backup-timeline"></a>Chronologie de sauvegarde
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "68081434"
  Ligne rouge  
  Peut être positionnée uniquement le long de la chronologie où la restauration est possible. En déplaçant la ligne rouge le long de la chronologie, vous pouvez régler les date et heure affichées dans les zones **Date** et **Heure** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   

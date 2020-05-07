@@ -1,5 +1,6 @@
 ---
 title: Créer des informations d’identification - Authentification Azure Storage
+description: Dans SQL Server, utilisez la page Créer des informations d’identification de la boîte de dialogue Sauvegarder la base de données pour fournir un certificat de gestion Azure en vue de valider votre connexion.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22e7dda1575f1861ad5a86d735e26ec0afd7efc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40ee955b5f8cc683d2ec4f875c688f5575a0a44a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70176247"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179226"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Créer des informations d’identification - Authentification Azure Storage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

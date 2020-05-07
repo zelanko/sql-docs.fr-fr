@@ -1,5 +1,6 @@
 ---
 title: 'Gestion de sauvegarde : configurer les options avancées'
+description: Ce tutoriel explique comment définir des options avancées pour la sauvegarde managée SQL Server vers Microsoft Azure, si les options par défaut ne répondent pas à vos besoins.
 titleSuffix: to Microsoft Azure
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242570"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220472"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurer les options avancées pour la gestion de sauvegarde de SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75242570"
 ## <a name="configure-encryption"></a>Configurer le chiffrement  
  Les étapes suivantes expliquent comment spécifier les paramètres de chiffrement à l’aide de la procédure stockée [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
 
-1.  **Déterminer l'algorithme de chiffrement :** déterminez d’abord le nom de l'algorithme de chiffrement à utiliser. Sélectionnez l'une des algorithmes suivants.  
+1.  **Définir l'algorithme de chiffrement :** Commencez par définir le nom de l'algorithme de chiffrement à utiliser. Sélectionnez l'une des algorithmes suivants.  
   
     -   AES_128  
   
@@ -44,7 +45,7 @@ ms.locfileid: "75242570"
   
     -   NO_ENCRYPTION  
   
-2.  **Créez une clé principale de base de données.** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera enregistrée dans la base de données.  
+2.  **Créer une clé principale de base de données :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données.  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +56,7 @@ ms.locfileid: "75242570"
     GO  
     ```  
   
-3.  **Créer un certificat de sauvegarde ou une clé asymétrique :** vous pouvez utiliser un certificat ou une clé asymétrique pour le chiffrement. L'exemple suivant crée un certificat de sauvegarde à utiliser pour le chiffrement.  
+3.  **Créer un certificat de sauvegarde ou une clé asymétrique :** vous pouvez utiliser un certificat ou une clé asymétrique pour le chiffrement. L'exemple suivant crée un certificat de sauvegarde à utiliser pour le chiffrement.  
   
     ```sql  
     USE Master;  
@@ -65,7 +66,7 @@ ms.locfileid: "75242570"
     GO  
     ```  
   
-4.  **Définir le chiffrement de la sauvegarde managée :** appeler la procédure stockée **managed_backup.sp_backup_config_advanced** avec les valeurs correspondantes. L'exemple suivant configure la base de données `MyDB` pour le chiffrement à l'aide d'un certificat nommé `MyTestDBBackupEncryptCert` et de l’algorithme de chiffrement `AES_128` .  
+4.  **Définir le chiffrement de sauvegarde managé :** appeler la procédure stockée **managed_backup.sp_backup_config_advanced** avec les valeurs correspondantes. L'exemple suivant configure la base de données `MyDB` pour le chiffrement à l'aide d'un certificat nommé `MyTestDBBackupEncryptCert` et de l’algorithme de chiffrement `AES_128` .  
   
     ```  
     USE msdb;  
@@ -84,17 +85,17 @@ ms.locfileid: "75242570"
 ## <a name="configure-a-custom-backup-schedule"></a>Configurer une planification de sauvegarde personnalisée  
  Les étapes suivantes expliquent comment définir une planification personnalisée avec la procédure stockée [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md).  
   
-1.  **Déterminer la fréquence des sauvegardes complètes :** déterminer la fréquence à laquelle effectuer des sauvegardes complètes de la base de données. Vous pouvez choisir entre des sauvegardes complètes « quotidiennes » ou « hebdomadaires ».  
+1.  **Définir la fréquence des sauvegardes complètes :** déterminer la fréquence à laquelle effectuer des sauvegardes complètes de la base de données. Vous pouvez choisir entre des sauvegardes complètes « quotidiennes » ou « hebdomadaires ».  
   
-2.  **Déterminer la fréquence des sauvegardes du journal :** déterminer la fréquence à laquelle effectuer une sauvegarde du journal. Cette valeur est exprimée en minutes ou en heures.  
+2.  **Définir la fréquence des sauvegardes de fichier journal :** définir la fréquence à laquelle effectuer une sauvegarde de fichier journal. Cette valeur est exprimée en minutes ou en heures.  
   
-3.  **Déterminer le jour de la semaine pour les sauvegardes hebdomadaires :** si la sauvegarde est hebdomadaire, choisissez un jour de la semaine pour la sauvegarde complète.  
+3.  **Définir le jour de la semaine où seront effectuées les sauvegardes locales :** si la sauvegarde est hebdomadaire, choisissez un jour de la semaine pour la sauvegarde complète.  
   
-4.  **Déterminer l’heure de début de la sauvegarde :** à l’aide de la notation au format 24 heures, choisissez l’heure de début de la sauvegarde.  
+4.  **Définir l’heure de début de la sauvegarde :** en utilisant la notation sur 24 heures, choisissez une heure de début de la sauvegarde.  
   
-5.  **Déterminer la durée autorisée pour la sauvegarde :** spécifie le délai dans lequel la sauvegarde doit être effectuée.  
+5.  **Définir la longueur de la durée autorisée pour la sauvegarde :** ceci indique la durée pendant laquelle une sauvegarde doit être effectuée.  
   
-6.  **Définir la planification de sauvegarde personnalisée :** la procédure stockée suivante définit une planification personnalisée pour la base de données `MyDB` . Les sauvegardes complètes sont effectuées toutes les semaines le `Monday` à `17:30`. Les sauvegardes du journal sont effectuées toutes les `5` minutes. Les sauvegardes doivent être effectuées en moins de deux heures.  
+6.  **Définir une planification de sauvegarde personnalisée :** la procédure stockée suivante définit une planification personnalisée pour la base de données `MyDB`. Les sauvegardes complètes sont effectuées toutes les semaines le `Monday` à `17:30`. Les sauvegardes du journal sont effectuées toutes les `5` minutes. Les sauvegardes doivent être effectuées en moins de deux heures.  
   
     ```  
     USE msdb;  
@@ -114,7 +115,7 @@ ms.locfileid: "75242570"
 ## <a name="next-steps"></a>Étapes suivantes  
  Après avoir configuré les options avancées et les planifications personnalisées, vous devez activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur la base de données cible ou l’instance SQL Server. Pour plus d'informations, consultez [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde managée de SQL Server vers Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: 'Restauration de base de données : point d’échec – récupération complète'
+description: Cet article explique comment restaurer une base de données SQL Server vers le point de défaillance, à l’aide du mode de récupération complète ou du mode de récupération utilisant les journaux de transactions.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5cf3638c1f79c560abd96c262f4ff2c23e312d09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1980c9911e9b8af8fc305c712be479af15926201
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241859"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180710"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>Restaurer la base de données au point d’échec – récupération complète
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "75241859"
        WITH RECOVERY;  
     ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Avant de pouvoir exécuter cet exemple, vous devez terminer les préparations suivantes :  
   
 1.  Le mode de récupération par défaut de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est le mode de récupération simple. Étant donné que ce mode de récupération ne prend pas en charge la restauration jusqu’au point de défaillance, définissez [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] pour utiliser le mode de restauration complète en exécutant l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) suivante :  
@@ -121,7 +122,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   

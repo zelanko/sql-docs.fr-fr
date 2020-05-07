@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8fde97db271ccd0307d0af75ea0c7d4aacad9703
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 75b459554382b3bc7f73d6b3554a5ba10bf5294a
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634804"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598735"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Lit les valeurs **text**, **ntext** ou **image** d’une colonne **text**, **nte
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] À la place, utilisez la fonction [SUBSTRING](../../t-sql/functions/substring-transact-sql.md).  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ _size_ Est le nombre d’octets lorsque les types de données **text** ou **imag
 HOLDLOCK  
 Demande de verrouiller la valeur texte en lecture jusqu'à la fin de la transaction. Les autres utilisateurs peuvent lire la valeur, mais pas la modifier.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Utilisez la fonction [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) pour obtenir une valeur _text\_ptr_ valide. TEXTPTR retourne un pointeur vers la colonne **text**, **ntext** ou **image** dans la ligne spécifiée. TEXTPRT peut également retourner un pointeur vers la colonne **text**, **ntext** ou **image** dans la dernière ligne que la requête retourne si celle-ci retourne plusieurs lignes. Comme la fonction TEXTPTR retourne une chaîne binaire de 16 octets, il est conseillé de déclarer une variable locale pour stocker le pointeur de texte et utiliser cette variable dans READTEXT. Pour plus d’informations sur la déclaration d’une variable locale, consultez [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il peut exister des pointeurs de texte dans la ligne non valides. Pour plus d’informations sur l’option **text in row**, consultez [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Pour plus d’informations sur l’invalidation des pointeurs de texte, consultez [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
@@ -72,7 +72,7 @@ Les autorisations READTEXT reviennent par défaut aux utilisateurs ayant des aut
 L’exemple suivant lit les données du deuxième au vingt-sixième caractère de la colonne `pr_info` de la table `pub_info`.  
   
 > [!NOTE]  
->  Pour exécuter cet exemple, vous devez installer l’exemple de base de données **pubs**.  
+>  Pour exécuter cet exemple, vous devez installer l’exemple de base de données [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases).  
   
 ```  
 USE pubs;  
@@ -86,7 +86,7 @@ READTEXT pub_info.pr_info @ptrval 1 25;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [@@TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/functions/textsize-transact-sql.md)   
 [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
 [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  

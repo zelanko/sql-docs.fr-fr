@@ -1,5 +1,6 @@
 ---
 title: Jeux de supports, familles de supports et jeux de sauvegarde
+description: Cet article donne une vue d’ensemble des support de sauvegarde, des familles de supports et des jeux de sauvegarde que SQL Server utilise pour la sauvegarde et la récupération.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod_service: backup-restore
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af54a71c97397954db3a4aa86acccd64a9f8afa4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258680"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180214"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
 
