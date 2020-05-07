@@ -3,18 +3,18 @@ title: Installer sur Windows
 description: Découvrez comment installer SQL Server Machine Learning Services sur Windows. Vous pouvez utiliser Machine Learning Services pour exécuter des scripts Python et R en base de données.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 721b6cefdee0a50c79bd2b8a0e3ac4f26202abd5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118412"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588227"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installer SQL Server Machine Learning Services (Python et R) sur Windows
 
@@ -28,7 +28,7 @@ Découvrez comment installer SQL Server Machine Learning Services sur Windows. V
 
 + Pour assurer la continuité de l’activité, Machine Learning Services prend en charge les [groupes de disponibilité Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Installez Machine Learning Services et configurez des packages sur chaque nœud.
 
-+ L’installation de Machine Learning Services n’est *pas prise en charge* sur un cluster de basculement dans SQL Server 2017. Elle est prise en charge avec SQL Server 2019.
++ L’installation de Machine Learning Services *n’est pas prise en charge* sur une [instance de cluster de basculement Always On](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) dans SQL Server 2017. Elle est prise en charge avec SQL Server 2019 et ultérieur.
  
 + N’installez pas Machine Learning Services sur un contrôleur de domaine. La partie du programme d’installation dédiée à Machine Learning Services échouerait.
 

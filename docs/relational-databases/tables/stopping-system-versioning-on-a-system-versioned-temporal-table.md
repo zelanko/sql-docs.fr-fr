@@ -1,7 +1,7 @@
 ---
 title: Arrêt du contrôle de version du système sur une table temporelle avec contrôle de version par le système | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165452"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220388"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Arrêt du versioning du système sur une table temporelle avec contrôle de version par le système
 
@@ -39,6 +39,7 @@ Arrêtez le contrôle de version du système d’exploitation si vous souhaitez 
 - Quand vous définissez **SYSTEM_VERSIONING = OFF** sans supprimer la période **SYSTEM_TIME** , le système continue à mettre à jour les colonnes de période pour chaque opération d’insertion et de mise à jour. Les suppressions effectuées sur la table actuelle sont définitives.
 - Supprimez la période **SYSTEM_TIME** pour supprimer les colonnes de période définitivement.
 - Quand vous définissez **SYSTEM_VERSIONING = OFF**, tous les utilisateurs disposant des autorisations suffisantes peuvent modifier le schéma et le contenu de la table historique, et même supprimer définitivement la table historique.
+- Vous ne pouvez pas définir **SYSTEM_VERSIONING = OFF** si d’autres objets ont été créés avec SCHEMABINDING à l’aide d’extensions de requête temporelles (telles que le référencement de **SYSTEM_TIME**). Cette restriction empêche l’échec de ces objets si vous définissez **SYSTEM_VERSIONING = OFF**.
 
 ### <a name="permanently-remove-system_versioning"></a>Supprimer définitivement SYSTEM_VERSIONING
 

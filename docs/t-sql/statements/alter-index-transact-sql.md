@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138287"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588230"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -257,10 +257,13 @@ PARTITION
  Opération REORGANIZE sur un index **rowstore**  
  Pour les index rowstore, REORGANIZE spécifie la réorganisation du niveau feuille d’index. L’opération REORGANIZE est :  
   
--   Toujours effectuée en ligne. En d'autres termes, les verrous de tables bloquants à long terme ne sont pas conservés, ce qui permet aux requêtes et aux mises à jour de la table sous-jacente de se poursuivre pendant la transaction ALTER INDEX REORGANIZE.  
--   Non autorisée sur un index désactivé  
--   Non autorisée quand ALLOW_PAGE_LOCKS est défini sur OFF  
--   Non restaurée quand elle est effectuée au sein d’une transaction qui, elle, est restaurée.  
+-   Toujours effectuée en ligne. En d'autres termes, les verrous de tables bloquants à long terme ne sont pas conservés, ce qui permet aux requêtes et aux mises à jour de la table sous-jacente de se poursuivre pendant la transaction ALTER INDEX REORGANIZE.
+-   Non autorisée sur un index désactivé.
+-   Non autorisée quand ALLOW_PAGE_LOCKS est OFF.
+-   Non restaurée quand elle est effectuée au sein d’une transaction qui, elle, est restaurée.
+
+> [!NOTE]
+> Quand ALTER INDEX REORGANIZE utilise des transactions explicites (par exemple, ALTER INDEX dans une instruction BEGIN TRAN ... COMMIT/ROLLBACK) au lieu du mode de transaction implicite par défaut, le comportement de verrouillage de REORGANIZE devient plus restrictif et peut entraîner un blocage. Pour plus d’informations sur les transactions implicites, consultez [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).
 
 Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 

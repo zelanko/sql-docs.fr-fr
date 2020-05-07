@@ -1,5 +1,6 @@
 ---
 title: Séquences de restauration (mode de récupération complète) | Microsoft Docs
+description: Découvrez comment planifier et exécuter une séquence de restauration constituée d’instructions RESTORE, pour une base de données SQL Server qui utilise d’ordinaire le mode de récupération complète.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81f8e91f2179fdc0b11747714ab810b801dc5389
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc9a06ed8df330e6129f28260e5ef21890e98976
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258661"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180211"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planifier et exécuter des séquences de restauration (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "75258661"
 ## <a name="restarting-a-restore-sequence"></a>Redémarrage d'une séquence de restauration  
  Si vous rencontrez un problème avec le résultat d'une séquence de restauration, vous pouvez l'arrêter et la redémarrer à partir du début. Par exemple, si vous restaurez accidentellement un trop grand nombre de sauvegardes de journal et allez au-delà du point de récupération souhaité, vous devez redémarrer la séquence de restauration jusqu'à la sauvegarde du journal qui contient le point de récupération cible.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

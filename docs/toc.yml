@@ -10051,6 +10051,8 @@
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Ressources
   items:
+    - name: Documentation SQL Server hors connexion
+      href: sql-server/sql-server-offline-documentation.md
     - name: Découvrir
       items:
         - name: Ressources éducatives
@@ -10101,13 +10103,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: Développement
           href: sql-server/partner-dev-sql-server.md
-    - name: Documentation SQL Server hors connexion
-      href: sql-server/sql-server-offline-documentation.md
 - name: Informations de référence
   items:
-    - name: Contenu archivé (SQL 2005 - 2012) >
-      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
-      href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: Exemples de base de données
       items:
         - name: Vue d’ensemble des exemples

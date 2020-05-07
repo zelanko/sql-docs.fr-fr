@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: Découvrez comment exécuter des scripts Python et R sur l’instance maître de clusters Big Data SQL Server avec Machine Learning Services.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664133"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643337"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Exécuter des scripts Python et R avec Machine Learning Services sur des clusters Big Data SQL Server
 
@@ -36,39 +36,68 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>Activer des groupes de disponibilité Always On
+Vous êtes désormais prêt à exécuter les scripts Python et R sur l’instance maître de clusters Big Data. Consultez les guides de démarrage rapide sous [Étapes suivantes](#next-steps) pour exécuter votre premier script.
 
-Si vous utilisez des clusters Big Data SQL Server avec des [groupes de disponibilité Always On](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), vous devez effectuer quelques étapes supplémentaires pour activer Machine Learning Services.
+>[!NOTE]
+>Le paramètre de configuration ne peut pas être défini sur une connexion d’écouteur de groupe de disponibilité. Si vous déployez des clusters Big Data avec une haute disponibilité, définissez `external scripts enabled` sur chaque réplica. Consultez [Activer sur un cluster haute disponibilité](#enable-on-cluster-with-high-availability).
 
-1. Connectez-vous à l’instance maître, puis exécutez l’instruction suivante :
+## <a name="enable-on-cluster-with-high-availability"></a>Activer sur un cluster haute disponibilité
 
-    ```sql
-    SELECT @@SERVERNAME
-    ```
+Quand vous [déployez un cluster Big Data SQL Server haute disponibilité](deployment-high-availability.md), le déploiement crée un groupe de disponibilité pour l’instance maître. Pour activer Machine Learning Services, définissez `external scripts enabled` sur chaque instance du groupe de disponibilité. Pour un cluster Big Data, vous devez exécuter `sp_configure` sur chaque réplica de l’instance maître SQL Server.
 
-    Notez le nom du serveur. Dans cet exemple, le nom du serveur pour l’instance maître est **master-2**.
+La section suivante décrit comment activer des scripts externes sur chaque instance.
 
-1. Exécutez les commandes `kubectl` suivantes sur chaque réplica du groupe de disponibilité Always On dans le cluster Big Data :
+### <a name="create-an-external-load-balancer-for-each-instance"></a>Créer un équilibreur de charge externe pour chaque instance
 
-    ```
-    kubectl -n bdc expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer
+Pour chaque réplica du groupe de disponibilité, créez un équilibreur de charge pour vous permettre de vous connecter à l’instance. 
 
-    kubectl -n bdc expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer
+`kubectl expose pod <pod-name> --port=<connection port number> --name=<load-balancer-name> --type=LoadBalancer -n <kubernetes namespace>`
 
-    kubectl -n bdc expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer
-    ```
+Nous utilisons les valeurs suivantes dans les exemples de cet article :
 
-    Vous devez voir une sortie similaire à ce qui suit :
-    
-    ```
-    service/mymaster-0 exposed
+- `<pod-name>`: `master-#`
+- `<connection port number>`: `1533`
+- `<load-balancer-name>`: `mymaster-#`
+- `<kubernetes namespace>`: `mssql-cluster`
 
-    service/mymaster-1 exposed
+Mettez à jour le script suivant en fonction de votre environnement et exécutez les commandes suivantes :
 
-    service/mymaster-2 exposed
-    ```
+```bash
+kubectl expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer -n mssql-cluster 
+kubectl expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer -n mssql-cluster
+kubectl expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer -n mssql-cluster 
+```
 
-1. Connectez-vous à chaque point de terminaison de réplica maître, et activez l’exécution du script.
+`kubectl` retourne la sortie suivante.
+
+```bash
+service/mymaster-0 exposed
+service/mymaster-1 exposed
+service/mymaster-2 exposed
+```
+
+Chaque équilibreur de charge est un point de terminaison de réplica maître.
+
+### <a name="enable-script-execution-on-each-replica"></a>Activer l’exécution du script sur chaque réplica
+
+1. Obtenir l’adresse IP du point de terminaison de réplica maître.
+
+   La commande suivante retourne l’adresse IP externe du point de terminaison de réplica. 
+
+   `kubectl get services <load-balancer-name> -n <kubernetes namespace>`
+
+   Pour obtenir l’adresse IP externe de chaque réplica dans ce scénario, exécutez les commandes suivantes :
+
+   ```bash
+   kubectl get services mymaster-0 -n mssql-cluster
+   kubectl get services mymaster-1 -n mssql-cluster
+   kubectl get services mymaster-2 -n mssql-cluster
+   ```
+
+   >[!NOTE]
+   > Vous devrez peut-être attendre un peu avant que l’adresse IP externe ne soit disponible. Exécutez le script précédent régulièrement jusqu’à ce que chaque point de terminaison retourne une adresse IP externe.
+
+1. Connectez-vous au point de terminaison de réplica maître et activez l’exécution du script.
 
     Exécutez l’instruction suivante :
 
@@ -78,7 +107,37 @@ Si vous utilisez des clusters Big Data SQL Server avec des [groupes de disponibi
     GO
     ```
 
-Vous êtes désormais prêt à exécuter les scripts Python et R sur l’instance maître de clusters Big Data. Consultez les guides de démarrage rapide ci-dessous pour exécuter votre premier script.
+   Par exemple, vous pouvez exécuter la commande précédente avec `sqlcmd`. L’exemple suivant se connecte au point de terminaison de réplica maître et permet l’exécution du script. Mettez à jour les valeurs du script en fonction de votre environnement.
+
+   ```bash
+   sqlcmd -S <IP address>,1533 -U <user name> -P <password> -Q "EXEC sp_configure 'external scripts enabled', 1; RECONFIGURE WITH OVERRIDE;"
+   ```
+
+   Répétez l’étape pour chaque réplica.
+
+### <a name="demonstration"></a>Démonstration
+
+L’image suivante illustre ce processus.
+
+[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+
+Vous êtes désormais prêt à exécuter les scripts Python et R sur l’instance maître de clusters Big Data. Consultez les guides de démarrage rapide sous [Étapes suivantes](#next-steps) pour exécuter votre premier script.
+
+### <a name="delete-the-master-replica-endpoints"></a>Supprimer les points de terminaison de réplica maître
+
+Sur le cluster Kubernetes, supprimez le point de terminaison de chaque réplica. Le point de terminaison est exposé dans Kubernetes en tant que service d’équilibrage de charge.
+
+La commande suivante supprime le service d’équilibrage de charge.
+
+`kubectl delete svc <load-balancer-name> -n mssql-cluster`
+
+Pour les exemples de cet article, exécutez les commandes suivantes.
+
+```bash
+kubectl delete svc mymaster-0 -n mssql-cluster
+kubectl delete svc mymaster-1 -n mssql-cluster
+kubectl delete svc mymaster-2 -n mssql-cluster
+```
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -3,17 +3,17 @@ title: Configurer des référentiels Linux pour SQL Server 2017 et 2019
 description: Vérifiez et configurez les référentiels source pour SQL Server 2019 et SQL Server 2017 sur Linux. Le référentiel source affecte la version de SQL Server appliquée lors de l’installation et de la mise à niveau.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301700"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262053"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer les référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
@@ -181,7 +181,7 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 >
 > À compter de SQL Server 2017 CU20, RHEL 8 est pris en charge.
 >
-> Si vous utilisez RHEL 7 ou RHEL 8, vérifiez que les chemins d’accès correspondent à `/rhel/7` ou `/rhel/8`.
+> Si vous utilisez RHEL 7 ou RHEL 8, vérifiez que les chemins d’accès correspondent à `/rhel/7` ou `/rhel/8`. Nos packages sont indépendants des versions mineures de RHEL. Cela signifie que si vous utilisez RHEL 7.6, vous devez utiliser le chemin `/rhel/7` pour configurer votre dépôt.
 
 | Référentiel | Version | Commande |
 |---|---|---|

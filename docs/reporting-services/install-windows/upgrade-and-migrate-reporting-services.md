@@ -10,36 +10,39 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 08/17/2017
-ms.openlocfilehash: 0d0484552bc489231c83062ec00aa4e9f73dcb90
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487258"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719529"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  Cette rubrique propose une vue d’ensemble des options de mise à niveau et de migration pour SQL Server Reporting Services. La mise à niveau d’un déploiement de SQL Server Reporting Services peut se faire selon deux approches générales :  
+  Cette rubrique propose une vue d’ensemble des options de mise à niveau et de migration pour SQL Server Reporting Services. Voici les approches générales à suivre pour mettre à niveau un déploiement de SQL Server Reporting Services :  
  
--   **Mise à niveau :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. C’est ce que l’on appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d’informations, consultez la section « Migration du mode natif au mode SharePoint » plus loin dans ce document.  
+- **Mise à niveau *vers* Reporting Services 2016 et antérieur *à partir de* Reporting Services 2016 et antérieur :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. C’est ce que l’on appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d’informations, consultez la section [Scénarios de mise à niveau et de migration en mode SharePoint](#bkmk_sharePoint_scenarios) plus loin dans ce document.  
+
+- **Mise à niveau *vers* Reporting Services 2017 et ultérieur *à partir de* Reporting Services 2016 et antérieur** : il ne s’agit pas du même scénario de mise à niveau que dans les versions précédentes. Lors de la mise à niveau *vers* Reporting Services 2016 et antérieur, vous pouviez suivre un processus de mise à niveau sur place en utilisant le support d’installation de SQL Server. Lors de la mise à niveau *vers* Reporting Services 2017 et ultérieur *à partir de* Reporting Services 2016 et antérieur, vous ne pouvez pas suivre les mêmes étapes puisque la nouvelle installation de Reporting Services est un produit autonome qui ne figure plus sur le support d’installation de SQL Server. 
+
+    Pour procéder à la mise à niveau de Reporting Services 2016 et antérieur vers Reporting Services 2017 et ultérieur, suivez l’article [Migrer une installation Reporting Services (mode natif)](migrate-a-reporting-services-installation-native-mode.md) avec Reporting Services 2017 ou ultérieur comme instance de destination. 
+
+- **Mise à niveau *à partir de* Reporting Services 2017 vers les versions futures** : il s’agit encore d’un scénario de mise à niveau sur place, car les GUID d’installation du produit sont les mêmes. Exécutez le fichier d’installation SQLServerReportingServices.exe pour commencer la mise à niveau sur place sur le serveur où Reporting Services est actuellement installé.
   
--   **Migration** : vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
-    
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint
+- **Migration** : vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
+
 
 > [!NOTE]
-> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est pas disponible après SQL Server 2016.
    
 ##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> Problèmes connus de mise à niveau et meilleures pratiques  
  Pour obtenir la liste des éditions et versions prises en charge que vous pouvez mettre à niveau, consultez [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Pour obtenir les dernières informations concernant les problèmes relatifs à SQL Server, consultez les ressources suivantes :  
->   
->  -   [Notes de publication de SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  Pour obtenir les dernières informations concernant les problèmes relatifs à SQL Server, consultez les [notes de publication de SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Installations côte à côte  
