@@ -64,7 +64,7 @@
                   href: big-data-cluster/deploy-install-azdata.md
                 - name: macOS
                   href: big-data-cluster/deploy-install-azdata-macos.md
-                - name: ' Windows'
+                - name: Windows
                   href: big-data-cluster/deploy-install-azdata-installer.md
                 - name: Linux avec apt
                   href: big-data-cluster/deploy-install-azdata-linux-package.md
@@ -1710,7 +1710,7 @@
               href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
             - name: Désactiver des contraintes avec INSERT et UPDATE
               href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: Contraintes uniques
+        - name: Contraintes uniques et contraintes de validation
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
             - name: Créer
