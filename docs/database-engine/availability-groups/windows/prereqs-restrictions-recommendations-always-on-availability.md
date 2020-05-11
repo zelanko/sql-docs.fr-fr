@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e2cbdf8467ac119b4fa5831a73a03cf1a54f956c
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831934"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925303"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "76831934"
   
 ##### <a name="related-content-powershell"></a>Contenu connexe (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Clustering et haute disponibilité) (Blog de l’équipe de clustering de basculement et d’équilibrage de la charge réseau)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Clustering et haute disponibilité) (Blog de l’équipe de clustering de basculement et d’équilibrage de la charge réseau)  
   
 -   [Mise en route de Windows PowerShell sur un cluster de basculement](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "76831934"
   
 -   [Configurer les paramètres DNS dans un cluster de basculement multisite](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [Enregistrement DNS avec ressource de nom réseau](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [Enregistrement DNS avec ressource de nom réseau](https://techcommunity.microsoft.com/t5/failover-clustering/dns-registration-with-the-network-name-resource/ba-p/371482)  
   
 
 ##  <a name="sql-server-instance-prerequisites-and-restrictions"></a><a name="ServerInstance"></a> Conditions préalables requises et restrictions pour une instance de SQL Server  
