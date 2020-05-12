@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2bcb7e2af7646059f6cb7ee38a4f136f1a62ae2b
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487988"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924804"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -32,7 +32,7 @@ La haute disponibilité côté Scale Out Master peut aussi être obtenue au moye
 Pour configurer la haute disponibilité côté Scale Out Master à l’aide de la fonctionnalité Always On pour le catalogue SSIS, suivez les étapes ci-dessous :
 
 ## <a name="1-prerequisites"></a>1. Prérequis
-Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installation de la fonctionnalité de cluster de basculement et des outils pour Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
+Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installation de la fonctionnalité de cluster de basculement et des outils pour Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Installer Scale Out Master sur le nœud principal
 Installez les services SQL Server Moteur de base de données, Integration Services et Scale Out Master sur le nœud principal pour Scale Out Master. 

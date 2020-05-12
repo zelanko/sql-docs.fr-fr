@@ -2,7 +2,7 @@
 title: Développeur de données SQL | Microsoft Docs
 description: Utilisez la plateforme de données SQL de Microsoft pour créer des solutions orientées données sur des appareils mobiles et des ordinateurs de bureau pour les serveurs web, les serveurs d’entreprise et le cloud.
 ms.custom: ''
-ms.date: 03/28/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7571287c89589969e3b2d3b8c26677423c1c35b0
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528760"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922303"
 ---
 # <a name="sql-data-developer"></a>Développeur de données SQL
 Utilisez la plateforme de données SQL de Microsoft pour créer des solutions orientées données sur des appareils mobiles et des ordinateurs de bureau pour les serveurs web, les serveurs d’entreprise et le cloud.  
@@ -33,20 +33,17 @@ Utilisez la plateforme de données SQL de Microsoft pour créer des solutions or
 
 ## <a name="sql-data-access"></a>Accès aux données SQL
 * [Pilotes clients SQL](sql-connection-libraries.md) :  utilisez des pilotes SQL pour vous connecter, interroger, mettre à jour, insérer des données dans une base de données SQL ou les en supprimer.
-* [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx) : utilisez Entity Framework pour accéder facilement à des bases de données à l’aide de LINQ, avec un accès direct à SQL Server et l’option permettant de contrôler le mappage entre un modèle Entity Data Model (EDM) et des structures relationnelles brutes. 
-* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx) : utilisez Data Services pour une solution quasiment clé en main, afin de créer et d’utiliser facilement des services OData sur le web et sur l’intranet
-* [Sync Framework](https://msdn.microsoft.com/library/jj839436.aspx) : utilisez Sync Framework pour activer l’accès hors connexion à n’importe quel type de données, n’importe quel magasin de données, tout protocole de transfert et toute topologie de réseau.
-* [Extensions réactives](https://msdn.microsoft.com/library/hh242985.aspx) : Utilisez les extensions réactives (Rx) pour exécuter la programmation de flux d’événements et simplifier la programmation asynchrone à l’aide de séquences observables et d’opérateurs de requête de style LINQ.  Utilisez les extensions réactives pour JavaScript (RxJS) pour simplifier la programmation asynchrone basée sur les rappels et pilotée par les événements sur le web à l’aide de séquences observables.
+* [Entity Framework](/ef/) : utilisez Entity Framework pour accéder facilement à des bases de données à l’aide de LINQ, avec un accès direct à SQL Server et l’option permettant de contrôler le mappage entre un modèle Entity Data Model (EDM) et des structures relationnelles brutes. 
+* [Windows Communication Foundation (WCF)](/dotnet/framework/wcf/) : utilisez Data Services pour une solution quasiment clé en main, afin de créer et d’utiliser facilement des services OData sur le web et sur l’intranet
+* [Sync Framework](/previous-versions/sql/synchronization/mt490616(v=msdn.10)) : utilisez Sync Framework pour activer l’accès hors connexion à n’importe quel type de données, n’importe quel magasin de données, tout protocole de transfert et toute topologie de réseau.
+* [Extensions réactives](https://github.com/dotnet/reactive) : Utilisez les extensions réactives (Rx) pour exécuter la programmation de flux d’événements et simplifier la programmation asynchrone à l’aide de séquences observables et d’opérateurs de requête de style LINQ.  Utilisez les extensions réactives pour JavaScript (RxJS) pour simplifier la programmation asynchrone basée sur les rappels et pilotée par les événements sur le web à l’aide de séquences observables.
 * [Intégration du CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md) :  utilisez l’intégration CLR pour écrire des procédures stockées, des déclencheurs, des types, fonctions et des agrégats définis par l’utilisateur et des fonctions table de diffusion en continu, avec n’importe quel langage .NET Framework, notamment Microsoft Visual Basic .NET ou Microsoft Visual C#. 
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) : utilisez SQLXML 4.0 pour exporter des données relationnelles au format XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Collecte, traitement et visualisation des données
-* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
+* [Analysis Services](/analysis-services/analysis-services-developer-documentation)
 * [Services d’intégration](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
 * [Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
 * [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
-
-
- 

@@ -2,7 +2,7 @@
 title: Utilisation de XA avec le pilote Microsoft ODBC
 description: Microsoft ODBC Driver for SQL Server assure la prise en charge des transactions XA avec le Distributed Transaction Coordinator (DTC) sur Windows, Linux et macOS.
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635555"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886326"
 ---
 # <a name="using-xa-transactions"></a>Utilisation de transactions XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635555"
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Microsoft ODBC Driver for SQL Server à partir de la version 17.3 assure la prise en charge des transactions XA avec le Distributed Transaction Coordinator (DTC) sur Windows, Linux et macOS. L’implémentation XA côté pilote permet à l’application cliente d’envoyer des opérations en série (telles que Démarrer, Valider, Restaurer une branche de transaction, etc.) au gestionnaire de transactions (TM). Ensuite, le Gestionnaire de transactions communique avec le Gestionnaire des ressources (RM) en fonction de ces opérations. Pour plus d’informations sur la spécification XA et l’implémentation de Microsoft pour DTC (MS DTC), consultez [Fonctionnement : SQL Server DTC (transactions MSDTC et XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+Microsoft ODBC Driver for SQL Server à partir de la version 17.3 assure la prise en charge des transactions XA avec le Distributed Transaction Coordinator (DTC) sur Windows, Linux et macOS. L’implémentation XA côté pilote permet à l’application cliente d’envoyer des opérations en série (telles que Démarrer, Valider, Restaurer une branche de transaction, etc.) au gestionnaire de transactions (TM). Ensuite, le Gestionnaire de transactions communique avec le Gestionnaire des ressources (RM) en fonction de ces opérations. Pour plus d’informations sur la spécification XA et l’implémentation de Microsoft pour DTC (MS DTC), consultez [Fonctionnement : SQL Server DTC (transactions MSDTC et XA)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions).
 
 
 
