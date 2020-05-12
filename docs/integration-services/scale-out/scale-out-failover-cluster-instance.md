@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903796"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924843"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Prise en charge de Scale Out pour la haute disponibilité au moyen d’une instance de cluster de basculement SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "77903796"
 Pour configurer la haute disponibilité côté Scale Out Master au moyen d’une instance de cluster de basculement SQL Server, suivez les étapes ci-dessous :
 
 ## <a name="1-prerequisites"></a>1. Prérequis
-Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installation de la fonctionnalité de cluster de basculement et des outils pour Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
+Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installation de la fonctionnalité de cluster de basculement et des outils pour Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Installer un cluster de basculement SQL Server
 Installez un cluster de basculement SQL Server. Pour obtenir des instructions, consultez [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). Durant l’installation, dans la page Sélection de fonctionnalités, sélectionnez Services Moteur de base de données. Notez le nom réseau SQL Server, car vous en aurez besoin ultérieurement pour la configuration.
