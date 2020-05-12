@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b122ee434979bb25c9a1fb0fa1c67887f5cb3eba
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72260160"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826596"
 ---
 # <a name="point-geography-data-type"></a>Point (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,21 +39,21 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>Arguments  
  *Lat*  
- Expression **float** qui représente la coordonnée x du **Point** généré.  
+ Expression **float** qui représente la coordonnée y du **Point** généré.  
   
  *Long*  
- Expression **float** qui représente la coordonnée y du **Point** généré. Pour plus d’informations sur les valeurs de latitude et de longitude valides, consultez [Point](../../relational-databases/spatial/point.md).  
+ Expression **float** qui représente la coordonnée x du **Point** généré. Pour plus d’informations sur les valeurs de latitude et de longitude valides, consultez [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
  Expression **int** qui représente le [SRID (spatial reference identifier)](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) de l’instance **géographique** à retourner.  
+  
+> [!NOTE]  
+>  Les arguments de la méthode Point (geography Data Type) ont des coordonnées inversées, comparées à WKT.  
   
 ## <a name="return-types"></a>Types de retour  
  Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
-  
-> [!NOTE]  
->  Les arguments de la méthode Point (geography Data Type) ont des coordonnées inversées, comparées à WKT.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la méthode `Point()` pour créer une instance `geography`.  
@@ -64,7 +64,5 @@ SET @g = geography::Point(47.65100, -122.34900, 4326)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  

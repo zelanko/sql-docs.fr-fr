@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244382"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925280"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Générer et analyser le fichier CLUSTER.LOG pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75244382"
 ## <a name="generate-cluster-log"></a>Générer le journal de cluster  
  Vous pouvez générer les journaux de cluster de deux manières :  
   
-1.  À l’aide de la commande `cluster /log /g` à partir de l’invite de commandes. Cette commande génère les journaux de cluster dans le répertoire \windows\cluster\reports sur chaque nœud WSFC. L’avantage de cette méthode est que vous pouvez spécifier le niveau de détail dans les journaux générés à l’aide de l’option `/level`. L’inconvénient, c’est que vous ne pouvez pas spécifier le répertoire de destination pour les journaux de cluster générés. Pour plus d’informations, consultez [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx).  
+1.  À l’aide de la commande `cluster /log /g` à partir de l’invite de commandes. Cette commande génère les journaux de cluster dans le répertoire \windows\cluster\reports sur chaque nœud WSFC. L’avantage de cette méthode est que vous pouvez spécifier le niveau de détail dans les journaux générés à l’aide de l’option `/level`. L’inconvénient, c’est que vous ne pouvez pas spécifier le répertoire de destination pour les journaux de cluster générés. Pour plus d’informations, consultez [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
 2.  Utilisez l’applet de commande PowerShell [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx). L’avantage de cette méthode est que vous pouvez générer le journal de cluster de tous les nœuds dans un seul répertoire de destination (sur le nœud où vous exécutez l’applet de commande). L’inconvénient, c’est que vous ne pouvez pas spécifier le niveau de détail dans les journaux générés.  
   
