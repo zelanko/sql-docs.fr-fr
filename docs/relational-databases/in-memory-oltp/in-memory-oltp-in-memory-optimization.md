@@ -14,12 +14,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1546b8fbf4abeafcb9051e17fae7c949babcfc24
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401654"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922120"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>OLTP en mémoire et optimisation de la mémoire
 
@@ -82,7 +82,7 @@ Cette section fournit des liens vers d’autres sites web qui contiennent des in
   
 -   [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Blog OLTP en mémoire](https://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [Blog OLTP en mémoire](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)  
 
 ## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>Vidéo de 17 minutes, indexée
 

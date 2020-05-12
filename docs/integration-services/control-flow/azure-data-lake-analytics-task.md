@@ -4,8 +4,6 @@ description: Vous pouvez soumettre des travaux U-SQL au service Azure Data Lake 
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +11,13 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947355"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763658"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tâche Azure Data Lake Analytics
 
@@ -53,6 +52,7 @@ La configuration U-SQL comporte deux paramètres : **SourceType** et des option
 |**DirectInput**|Spécifie le script U-SQL par le biais de l’éditeur inline. Sélectionnez cette valeur pour afficher l’option dynamique **USQLStatement**.|  
 |**FileConnection**|Spécifie un fichier .usql local contenant le script U-SQL. Sélectionnez cette option pour afficher l’option dynamique **FileConnection**.|  
 |**Variable**|Spécifie une variable SSIS contenant le script U-SQL. Sélectionnez cette valeur pour afficher l'option dynamique **SourceVariable**.|
+| &nbsp; | &nbsp; |
 
 **Options dynamiques SourceType** : spécifient le contenu du script pour la requête U-SQL. 
 
@@ -61,6 +61,7 @@ La configuration U-SQL comporte deux paramètres : **SourceType** et des option
 |**SourceType = DirectInput**|Tapez directement la requête U-SQL à envoyer dans la zone des options, ou sélectionnez le bouton Parcourir (…) pour la taper dans la boîte de dialogue **Entrer une requête U-SQL**.|  
 |**SourceType = FileConnection**|Sélectionnez un gestionnaire de connexions de fichiers existant ou <**Nouvelle connexion…** > pour créer une connexion de fichiers. Pour des informations connexes, consultez : [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md) et [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
 |**SourceType = Variable**|Sélectionnez une variable existante, ou \<**Nouvelle variable...** > pour en créer une. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) et [Ajouter une Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>Configuration des travaux
@@ -78,6 +79,7 @@ La configuration des travaux spécifie les propriétés de soumission des travau
   |-----------|-----------------|
   |True|Le résultat de la tâche dépend du résultat de l’exécution du travail U-SQL. Réussite du travail > la tâche réussit. Échec du travail > la tâche échoue. La tâche réussit ou échoue > la tâche se termine.|
   |False|Le résultat de la tâche dépend du résultat de la soumission et de la préparation du travail U-SQL. L’envoi du travail réussit et la phase de préparation est franchie > la tâche réussit. L’envoi du travail échoue ou le travail échoue lors de la phase de préparation > la tâche échoue. La tâche réussit ou échoue > la tâche se termine.|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut :** délai d’attente en secondes de l’exécution du travail. Si le travail expire, il est annulé et marqué comme ayant échoué. Cette propriété n’est pas disponible si **Synchronous** est défini sur false.
 
@@ -125,6 +127,7 @@ Notez que les chemins d’accès d’entrée et de sortie sont définis dans les
 |-------------|--------------|
 |User: Variable1|\@entrée|
 |User: Variable2|\@sortie| 
+| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>Configuration de la page Expression
 

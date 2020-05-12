@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c702fe57db00fea0c74fa65255063f657ed0197
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286683"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925243"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurer le routage en lecture seule pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ Le routage en lecture seule est disponible dans [!INCLUDE[sssql15](../../../incl
   
          Dans une clause MODIFY REPLICA, ALLOW_CONNECTIONS est facultatif si le réplica est déjà configuré pour autoriser les connexions en lecture seule.  
   
-         Pour plus d’informations, consultez [Calcul de l’URL de routage en lecture seule pour Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
+         Pour plus d’informations, consultez [Calcul de l’URL de routage en lecture seule pour Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
     -   Pour configurer le routage en lecture seule pour le rôle principal, dans la clause ADD REPLICA ou MODIFY REPLICA WITH, spécifiez l'option PRIMARY_ROLE, comme suit :  
   
@@ -168,7 +168,7 @@ GO
   
          où *url* est le nom de domaine complet (FQDN) de la connectivité et le port à utiliser lors de l’acheminement vers le réplica pour les connexions en lecture seule. Par exemple : `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
-         Pour plus d’informations, consultez [Calcul de l’URL de routage en lecture seule pour Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
+         Pour plus d’informations, consultez [Calcul de l’URL de routage en lecture seule pour Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
     -   Pour configurer l’accès à la connexion pour le rôle principal, spécifiez **ReadonlyRoutingList"** _server_ **"** [ **,** ...*n* ], où *server* identifie une instance de serveur qui héberge un réplica secondaire en lecture seule dans le groupe de disponibilité. Par exemple : `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
@@ -248,7 +248,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 **Blogs :**  
   
--    [Calcul de l’URL de routage en lecture seule pour Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
+-    [Calcul de l’URL de routage en lecture seule pour Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)  
   
 -    [Blogs de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
