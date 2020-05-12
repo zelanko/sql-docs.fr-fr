@@ -2,7 +2,7 @@
 title: Ressources de support sur les pilotes Microsoft pour PHP
 description: Ressources utiles lorsque vous développez des applications qui utilisent les pilotes Microsoft pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff0627dc43a0004534294158c1a43c6c1c21b529
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 00e6ce56a5b02f188600297249b1d2dc412fde6a
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635343"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886426"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Ressources de support pour les pilotes Microsoft pour PHP pour SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ Pour obtenir la documentation la plus récente, consultez [Microsoft PHP Driver 
   
 Pour obtenir une aide de la communauté, accédez au [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
-Pour fournir des commentaires, poser des questions ou en savoir plus sur le travail de l’équipe de développement, accédez au [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Blog de l’équipe](https://blogs.msdn.microsoft.com/sqlphp/).  
+Pour fournir des commentaires, poser des questions ou en savoir plus sur le travail de l’équipe de développement, accédez au [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [blog consacré aux pilotes SQL Server](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers).  
   
 [Code source du pilote Microsoft PHP pour SQL Server sur GitHub](https://github.com/Microsoft/msphpsql)  
   
