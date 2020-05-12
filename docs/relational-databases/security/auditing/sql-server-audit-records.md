@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c8728bdea0ce2dd5650a1f3ea8adf224b58424b
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73926031"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922195"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "73926031"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Date/heure auxquelles l'action pouvant être auditée est déclenchée.|**datetime2**|Oui|  
 |**sequence_no**|Assure le suivi de la séquence d'enregistrements dans un enregistrement d'audit unique qui était trop grand pour la mémoire tampon d'écriture pour audits.|**int**|Oui|  
-|**action_id**|ID de l’action<br /><br /> Conseil : pour utiliser **action_id** en tant que prédicat, cette chaîne de caractères doit être convertie en valeur numérique. Pour plus d’informations, consultez [Filtrage de l’audit SQL Server sur le prédicat action_id/class_type](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Oui|  
+|**action_id**|ID de l’action<br /><br /> Conseil : pour utiliser **action_id** en tant que prédicat, cette chaîne de caractères doit être convertie en valeur numérique. Pour plus d’informations, consultez [Filtrage de l’audit SQL Server sur le prédicat action_id/class_type](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Oui|  
 |**succeeded**|Indique si la vérification des autorisations de l’action déclenchant l’événement d’audit a réussi ou échoué. |**bit**<br /> - 1 = Réussite, <br />0 = Échec|Oui|  
 |**permission_bitmask**|Si applicable, présente les autorisations qui ont été octroyées, refusées ou révoquées|**bigint**|Non|  
 |**is_column_permission**|Indicateur qui désigne une autorisation au niveau colonne|**bit** <br />- 1 = True, <br />0 = False|Non|  
