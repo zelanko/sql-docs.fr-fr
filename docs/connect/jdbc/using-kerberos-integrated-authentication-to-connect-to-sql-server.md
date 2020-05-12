@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf1372f11b278e555b7f8110e4517fd5fc616683
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924005"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922310"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Utilisation de l'authentification intégrée Kerberos pour se connecter à SQL Server
 
@@ -73,7 +73,7 @@ Pour plus d'informations sur les noms des principaux du service (SPN), consultez
 
 - [Guide pratique pour utiliser l’authentification Kerberos avec SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Utilisation de Kerberos avec SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Utilisation de Kerberos avec SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Avant la version 6.2 du pilote JDBC, pour utiliser correctement l’approbation de domaine croisé, vous deviez définir explicitement le **serverSpn**.

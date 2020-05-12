@@ -1,7 +1,7 @@
 ---
-title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
+title: ALTER WORKLOAD GROUP (Transact-SQL)
 ms.custom: ''
-ms.date: 08/23/2019
+ms.date: 05/05/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,182 +17,146 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f562d79b13c55a104a1171e85ab79ea16d4c717
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: 6e79848b26d664eeb23a567c41178cc94ee8a3ad
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632209"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886479"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifie une configuration de groupe de charge de travail Resource Governor existante, et éventuellement l’assigne à un pool de ressources Resource Governor.  
+## <a name="click-a-product"></a>Cliquez sur un produit !
+
+Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le clic affiche un contenu différent ici dans cette page web, approprié pour le produit sur lequel vous cliquez.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+|||||
+|---|---|---|---|
+|**_\* SQL Server \*_** &nbsp;||[Instance managée<br />SQL Database](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server et instance managée SQL Database
+
+[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+||||
+|---|---|---|
+|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|**_\* Instance managée<br />SQL Database \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server et instance managée SQL Database
+
+[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+||||
+|---|---|---|
+|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|[Instance managée<br />SQL Database](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|
+||||
+
+&nbsp;
+
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
+
+Modifie un groupe de charge de travail existant.
+
+Pour plus d’informations sur la façon dont `ALTER WORKLOAD GROUP` se comporte sur un système avec des demandes en cours d’exécution et en file d’attente, consultez la section sur le comportement de `ALTER WORKLOAD GROUP` ci-dessous. 
+
+Les restrictions en place pour [CREATE WORKLOAD GROUP](create-workload-group-transact-sql.md) s’appliquent également à `ALTER WORKLOAD GROUP`.  Avant de modifier des paramètres, interrogez [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) pour vérifier que les valeurs se trouvent dans des plages acceptables.
+
+## <a name="syntax"></a>Syntaxe
+
 ```syntaxsql
-ALTER WORKLOAD GROUP { group_name | "default" }  
-[ WITH  
-    ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
-      [ [ , ] REQUEST_MAX_MEMORY_GRANT_PERCENT = value ]  
-      [ [ , ] REQUEST_MAX_CPU_TIME_SEC = value ]  
-      [ [ , ] REQUEST_MEMORY_GRANT_TIMEOUT_SEC = value ]   
-      [ [ , ] MAX_DOP = value ]  
-      [ [ , ] GROUP_MAX_REQUESTS = value ] )  
- ]  
-[ USING { pool_name | "default" } ]  
-[ ; ]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- *group_name* | "**default**"       
- Nom d'un groupe de charge de travail existant défini par l'utilisateur ou du groupe de charge de travail par défaut du gouverneur de ressources.  
-  
-> [!NOTE]  
-> Le gouverneur de ressources crée les groupes « par défaut » et internes lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé.  
-  
- L'option "default" doit être placée entre des guillemets doubles ("") ou des crochets ([]) lorsqu'elle est utilisée avec l'instruction ALTER WORKLOAD GROUP pour éviter tout conflit avec DEFAULT, qui est un mot réservé au système. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
-  
-> [!NOTE]  
-> Les groupes de charges de travail et les pools de ressources prédéfinis utilisent tous des noms en minuscule, tels que « default ». Ce facteur doit être pris en considération pour les serveurs qui utilisent un classement qui respecte la casse. Les serveurs avec un classement qui ne respecte pas la casse, tel que SQL_Latin1_General_CP1_CI_AS, traitent "default" et "Default" comme identiques.  
-  
- IMPORTANCE = { LOW | **MEDIUM** | HIGH }       
- Spécifie l'importance relative d'une demande dans le groupe de charges de travail. Elle prend l'une des valeurs suivantes :  
-  
--   LOW  
--   MEDIUM (valeur par défaut)  
--   HIGH  
-  
-> [!NOTE]  
-> En interne, chaque paramètre d'importance est stocké sous la forme d'un nombre utilisé pour les calculs.  
-  
- Le paramètre IMPORTANCE est local par rapport au pool de ressources : les groupes de charges de travail d'importance différente à l'intérieur du même pool de ressources s'affectent mutuellement, mais n'affectent pas les groupes de charges de travail dans un autre pool de ressources.  
-  
- REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
- Spécifie la quantité de mémoire maximale qu'une requête unique peut prendre du pool. *value* est un pourcentage relatif à la taille du pool de ressources spécifiée par MAX_MEMORY_PERCENT.  
+ALTER WORKLOAD GROUP group_name
+ WITH
+ ([       MIN_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
+  [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ] 
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )
+  [ ; ]
+  ```
 
-*value* est un entier pouvant aller jusqu’à [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et une valeur flottante commençant par [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. La valeur par défaut est 25. La plage autorisée pour *value* est comprise entre 1 et 100.
-  
-> [!NOTE]  
-> La quantité spécifiée fait uniquement référence à la mémoire allouée à l'exécution de la requête.  
-  
-> [!IMPORTANT]
-> L’affectation de la valeur 0 à *value* empêche l’exécution de requêtes avec les opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur.     
->
-> Il est déconseillé d’affecter à *value* une valeur supérieure à 70, car le serveur risque de ne pas pouvoir mettre de côté suffisamment de mémoire disponible si d’autres requêtes simultanées s’exécutent. Cela risque de provoquer l'erreur de délai d'attente de requête 8645.      
-  
-> [!NOTE]  
-> Si les besoins en mémoire de la requête dépassent la limite spécifiée par ce paramètre, le serveur effectue les opérations suivantes :  
->   
-> -  Pour les groupes de charges de travail définis par l'utilisateur, le serveur essaie de réduire le degré de parallélisme de la requête jusqu'à ce que ses besoins en mémoire tombent sous la limite ou jusqu'à ce que le degré de parallélisme soit égal à 1. Si les besoins en mémoire de la requête sont encore supérieurs à la limite, l'erreur 8657 se produit.  
->   
-> -  Pour les groupes de charges de travail internes et par défaut, le serveur autorise la requête à obtenir la mémoire requise.  
->   
-> Sachez toutefois que dans les deux cas, l'erreur de délai d'attente 8645 se produit si le serveur dispose d'une mémoire physique insuffisante.  
-  
- REQUEST_MAX_CPU_TIME_SEC = *value*       
- Spécifie la quantité maximale de temps processeur, en secondes, qu'une demande peut utiliser. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, ce qui signifie illimité.  
-  
-> [!NOTE]  
-> Par défaut, Resource Governor n’empêche pas une demande de continuer si le temps maximal est dépassé. Toutefois, un événement sera généré. Pour plus d’informations, consultez [Classe d’événements CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+## <a name="arguments"></a>Arguments
 
-> [!IMPORTANT]
-> À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 et de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, quand [l’indicateur de trace 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) est utilisé, Resource Governor abandonne une demande en cas de dépassement de la durée maximale.
+group_name  
+Nom du groupe de charge de travail défini par l’utilisateur existant en cours de modification.  group_name ne peut pas être modifié. 
+
+MIN_PERCENTAGE_RESOURCE = valeur  
+La valeur est une plage d’entiers comprise entre 0 et 100.  Lors de la modification de min_percentage_resource, la somme des valeurs min_percentage_resource de tous les groupes de charge de travail ne peut pas dépasser 100.  Quand vous modifiez min_percentage_resource, toutes les requêtes en cours d’exécution doivent être terminées dans le groupe de charge de travail pour que la commande aboutisse.  Pour plus d’informations, consultez la section sur le comportement de ALTER WORKLOAD GROUP dans ce document.
+
+CAP_PERCENTAGE_RESOURCE = valeur  
+La valeur est une plage d’entiers comprise entre 1 et 100.  La valeur de cap_percentage_resource ne peut pas être supérieure à min_percentage_resource.  Quand vous modifiez cap_percentage_resource, toutes les requêtes en cours d’exécution doivent être terminées dans le groupe de charge de travail pour que la commande aboutisse.  Pour plus d’informations, consultez la section sur le comportement de ALTER WORKLOAD GROUP dans ce document. 
+
+REQUEST_MIN_RESOURCE_GRANT_PERCENT = valeur  
+La valeur est un décimal compris entre 0,75 et 100,00.  La valeur de request_min_resource_grant_percent doit être un facteur de min_percentage_resource et être inférieure à cap_percentage_resource. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
- Spécifie la durée maximale, en secondes, pendant laquelle une requête peut attendre que l'allocation de mémoire (mémoire tampon de travail) devienne disponible.  
-  
-> [!NOTE]  
-> Une requête n'échoue pas toujours lorsque le délai d'expiration d'allocation mémoire est atteint. Une requête échoue seulement si le nombre de requêtes exécutées simultanément est trop élevé. Autrement, la requête risque d'obtenir uniquement l'allocation mémoire minimale, d'où une dégradation des performances.  
-  
- *value* doit être un entier positif. La valeur par défaut de *value*, 0, utilise un calcul interne basé sur le coût de requête pour déterminer le délai maximal.  
-  
- MAX_DOP =*value*       
- Spécifie le degré maximal de parallélisme (DOP) pour les demandes parallèles. *value* doit être égal à 0 ou un entier positif compris entre 1 et 255. Quand *value* a la valeur 0, le serveur choisit le degré maximal de parallélisme. Il s’agit de la valeur par défaut et recommandée.  
-  
-> [!NOTE]  
-> La valeur réelle définie par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour MAX_DOP peut être inférieure à la valeur spécifiée. La valeur finale est déterminée par la formule min(255, *nombre d’unités centrales)* .  
-  
-> [!CAUTION]  
-> La modification de MAX_DOP peut affecter de façon négative les performances d'un serveur. Si vous devez modifier MAX_DOP, nous recommandons qu'il soit défini sur une valeur inférieure ou égale au nombre maximal de planificateurs matériels présents dans un nœud NUMA unique. Nous vous recommandons de ne pas affecter à MAX_DOP une valeur supérieure à 8.  
-  
- MAX_DOP est géré comme suit :  
-  
--   MAX_DOP en tant qu'indicateur de requête est honoré tant qu'il ne dépasse pas le groupe de charge de travail MAX_DOP.  
-  
--   MAX_DOP en tant qu'indicateur de requête remplace toujours l'option « max degree of parallelism » de sp_configure.  
-  
--   Le groupe de charge de travail MAX_DOP remplace le degré maximal de parallélisme sp_configure.  
-  
--   Si la requête est marquée comme étant en série (MAX_DOP = 1) au moment de la compilation, elle ne peut être reconvertie en requête parallèle au moment de l’exécution, indépendamment du groupe de charge de travail ou du paramètre sp_configure.  
-  
- Une fois le degré maximal de parallélisme (DOP) configuré, il ne peut être diminué que sous la sollicitation de l'allocation de mémoire. La reconfiguration du groupe de charges de travail n'est pas visible lors de l'attente dans la file d'attente d'allocation de mémoire.  
-  
- GROUP_MAX_REQUESTS = *value*      
- Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value*, 0, autorise un nombre illimité de demandes. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.  
-  
- USING { *pool_name* | "**default**" }      
- Associe le groupe de charge de travail au pool de ressources défini par l’utilisateur et identifié par *pool_name*, ce qui revient en fait à placer le groupe de charge de travail dans le pool de ressources. Si *pool_name* n’est pas fourni, ou si l’argument USING n’est pas utilisé, le groupe de charges de travail est placé dans le pool par défaut Resource Governor prédéfini.  
-  
- L'option "default" doit être placée entre des guillemets doubles ("") ou des crochets ([]) lorsqu'elle est utilisée avec l'instruction ALTER WORKLOAD GROUP pour éviter tout conflit avec DEFAULT, qui est un mot réservé au système. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
-  
-> [!NOTE]  
-> L'option "default" respecte la casse.  
-  
-## <a name="remarks"></a>Notes  
- L'instruction ALTER WORKLOAD GROUP est autorisée sur le groupe par défaut.  
-  
- Les modifications apportées à la configuration du groupe de charge de travail ne sont pas appliquées tant que l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE n'est pas exécutée. Quand vous modifiez un paramètre qui affecte le plan, le nouveau paramètre prend effet uniquement dans les plans précédemment mis en cache après l’exécution de DBCC FREEPROCCACHE (*pool_name*), où *pool_name* est le nom d’un pool de ressources Resource Governor avec lequel le groupe de charges de travail est associé.  
-  
--   Si vous affectez la valeur 1 à MAX_DOP, l’exécution de DBCC FREEPROCCACHE n’est pas obligatoire, car des plans parallèles peuvent s’exécuter en mode série. Toutefois, cela risque de ne pas être aussi efficace qu’un plan compilé en tant que plan en série.  
-  
--   Si vous remplacez la valeur 1 de MAX_DOP par 0 ou une valeur supérieure à 1, l’exécution de DBCC FREEPROCCACHE n’est pas obligatoire. Toutefois, les plans en série ne pouvant pas s’exécuter en parallèle, l’effacement du cache respectif permettra aux nouveaux plans d’être compilés à l’aide du parallélisme.  
-  
-> [!CAUTION]  
-> L’effacement des plans mis en cache à partir d’un pool de ressources associé à plusieurs groupes de charges de travail affecte tous les groupes de charges de travail contenant le pool de ressources défini par l’utilisateur identifié par *pool_name*.  
-  
- Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états Resource Governor. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
-  
- REQUEST_MEMORY_GRANT_PERCENT : dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la création d'index est autorisée à utiliser une mémoire d'espace de travail supérieure à celle qui lui a été initialement allouée, en vue d'améliorer les performances. Cette gestion spéciale est prise en charge par le Gouverneur de ressources dans les versions ultérieures, toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charge de travail.  
-  
- **Création d’un index sur une table partitionnée**  
-  
- La mémoire consommée par la création d'index sur une table partitionnée non alignée est proportionnelle au nombre de partitions impliquées.  Si la mémoire totale requise dépasse la limite par requête (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposée par le paramètre du groupe de charges de travail du Gouverneur de ressources, cette création d'index peut ne pas s'exécuter. Étant donné que le groupe de charge de travail "default" permet à une requête de dépasser la limite par requête avec la mémoire minimale requise pour démarrer la compatibilité [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'utilisateur peut être en mesure d'exécuter la même création d'index dans le groupe de charge de travail "default", si le pool de ressources "default" possède assez de mémoire totale configurée pour exécuter cette requête.  
-  
-## <a name="permissions"></a>Autorisations  
- Nécessite l'autorisation `CONTROL SERVER`.  
-  
-## <a name="examples"></a>Exemples  
- L'exemple suivant indique comment modifier l'importance des demandes dans le groupe par défaut en remplaçant la valeur `MEDIUM` par `LOW`.  
-  
-```sql  
-ALTER WORKLOAD GROUP "default"  
-WITH (IMPORTANCE = LOW);  
-GO  
-ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-```  
-  
- L’exemple suivant indique comment déplacer un groupe de charge de travail du pool dans lequel il est contenu vers le pool par défaut.  
-  
-```sql  
-ALTER WORKLOAD GROUP adHoc  
-USING [default];  
-GO  
-ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
-  
-  
+REQUEST_MAX_RESOURCE_GRANT_PERCENT = valeur  
+La valeur est un décimal et doit être supérieure à request_min_resource_grant_percent.
+
+IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+Modifie l’importance par défaut d’une demande pour le groupe de charge de travail.
+
+QUERY_EXECUTION_TIMEOUT_SEC = valeur  
+Modifie la durée maximale (en secondes) pendant laquelle une requête peut s’exécuter avant d’être annulée. La valeur doit être égale à 0 ou être un entier positif. La valeur par défaut est 0, ce qui signifie qu’elle est illimitée.   
+
+## <a name="permissions"></a>Autorisations
+
+Exige l’autorisation CONTROL DATABASE
+
+## <a name="example"></a>Exemple
+
+L’exemple ci-dessous vérifie les valeurs de l’affichage catalogue pour wgDataLoads et change les valeurs.
+
+```sql
+SELECT *
+FROM sys.workload_management_workload_groups  
+WHERE [name] = 'wgDataLoads'
+
+ALTER WORKLOAD GROUP wgDataLoads WITH
+( MIN_PERCENTAGE_RESOURCE            = 40
+ ,CAP_PERCENTAGE_RESOURCE            = 80
+ ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 10 )
+ ```
+
+## <a name="alter-workload-group-behavior"></a>Comportement de ALTER WORKLOAD GROUP
+
+À tout moment, le système compte 3 types de demandes.
+- Les demandes qui n’ont pas encore été classifiées.
+- Les demandes qui sont classifiées et en attente de verrous d’objets ou de ressources système.
+- Les demandes qui sont classifiées et en cours d’exécution.
+
+En fonction des propriétés d’un groupe de charge de travail en cours de modification, le moment auquel les paramètres prennent effet varie.
+
+**Importance ou query_execution_timeout** Pour les propriétés importance et query_execution_timeout, les demandes non classifiées récupèrent les nouvelles valeurs de configuration.  Les demandes en attente et en cours d’exécution s’exécutent avec l’ancienne configuration.  La demande `ALTER WORKLOAD GROUP` s’exécute immédiatement, qu’il y ait ou non des requêtes en cours d’exécution dans le groupe de charge de travail.
+
+**Request_min_resource_grant_percent ou request_max_resource_grant_percent** Pour request_min_resource_grant_percent et request_max_resource_grant_percent, les demandes en cours d’exécution s’exécutent avec l’ancienne configuration.  Les demandes en attente et celles non classifiées récupèrent les nouvelles valeurs de configuration.  La demande `ALTER WORKLOAD GROUP` s’exécute immédiatement, qu’il y ait ou non des requêtes en cours d’exécution dans le groupe de charge de travail.
+
+**Min_percentage_resource ou cap_percentage_resource** Pour min_percentage_resource et cap_percentage_resource, les demandes en cours d’exécution s’exécutent avec l’ancienne configuration.  Les demandes en attente et celles non classifiées récupèrent les nouvelles valeurs de configuration. 
+
+Le changement de min_percentage_resource et de cap_percentage_resource nécessite le drainage des demandes en cours d’exécution dans le groupe de charge de travail en cours de modification.  Si vous diminuez min_percentage_resource, les ressources libérées sont retournées au pool de partage et accessibles aux demandes d’autres groupes de charge de travail.  Inversement, l’augmentation de min_percentage_resource ne prend effet que lorsque les demandes utilisant uniquement les ressources nécessaires du pool partagé sont terminées.  L’opération ALTER WORKLOAD GROUP a un accès prioritaire aux ressources partagées par rapport aux autres demandes en attente d’exécution sur le pool partagé.  Si la somme de min_percentage_resource dépasse 100 %, la demande ALTER WORKLOAD GROUP échoue immédiatement. 
+
+**Comportement de verrouillage** La modification d’un groupe de charge de travail nécessite un verrou global sur tous les groupes de charge de travail.  Une demande de modification d’un groupe de charge de travail est mise en file d’attente derrière les demandes de création ou de suppression de groupe de charge de travail déjà soumises.  Si plusieurs instructions ALTER sont soumises en même temps, elles sont traitées dans l’ordre de soumission.  
+
+## <a name="see-also"></a>Voir aussi
+
+- [CREATE WORKLOAD GROUP (Transact-SQL)](create-workload-group-transact-sql.md)
+- [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
+- [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
+- [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
+- [Démarrage rapide : Configurer l’isolation de la charge de travail à l’aide de T-SQL](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
+
+::: moniker-end
