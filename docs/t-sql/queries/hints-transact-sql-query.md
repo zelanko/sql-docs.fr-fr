@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 3a2f1aa7394f50d4814141ea383f8832511d0335
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636182"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746386"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -320,7 +320,7 @@ Les noms d’indicateur suivants sont pris en charge :
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    Force l’optimiseur de requête à utiliser le modèle [Estimation de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- Force le comportement de l’optimiseur de requête au niveau de la requête, comme si celle-ci était compilée avec le niveau de compatibilité de la base de données _n_, où _n_ est un niveau pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour _n_.      
+ Force le comportement de l’optimiseur de requête au niveau de la requête, comme si celle-ci était compilée avec le niveau de compatibilité de la base de données _n_, où _n_ est un niveau pris en charge (par exemple 100, 130, etc.). Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour _n_.      
    **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
    > [!NOTE]
@@ -564,7 +564,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Spécification d'indicateurs de table affectant la sémantique  
-L'exemple suivant contient deux indicateurs de table dans la requête : NOLOCK, qui affecte la sémantique, et INDEX, qui n'affecte pas la sémantique. Pour préserver la sémantique de la requête, l'indicateur NOLOCK est spécifié dans la clause OPTIONS du repère de plan. En parallèle de l'indicateur NOLOCK, spécifiez les indicateurs INDEX et FORCESEEK pour remplacer l'indicateur INDEX sans effet sur la sémantique dans la requête lors de la compilation et de l’optimisation de l'instruction. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L’exemple suivant contient deux indicateurs de table dans la requête : NOLOCK, qui affecte la sémantique, et INDEX, qui n’affecte pas la sémantique. Pour préserver la sémantique de la requête, l'indicateur NOLOCK est spécifié dans la clause OPTIONS du repère de plan. En parallèle de l'indicateur NOLOCK, spécifiez les indicateurs INDEX et FORCESEEK pour remplacer l'indicateur INDEX sans effet sur la sémantique dans la requête lors de la compilation et de l’optimisation de l'instruction. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   

@@ -1,5 +1,6 @@
 ---
 title: DropOnlyMode, élément (Assistant Paramétrage de base de données)
+description: Dans l’utilitaire dta, l’élément DropOnlyMode spécifie que l’Assistant Paramétrage du moteur de base de données doit considérer uniquement la suppression des index, des vues indexées ou des partitions existants.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305592"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831546"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode, élément (Assistant Paramétrage de base de données)
 
@@ -43,7 +44,7 @@ Spécifie que l'Assistant Paramétrage du moteur de base de données doit suppri
   
  **Valeur par défaut**  
   
- **Occurrence**: facultatif. Ne peut être utilisé qu’une seule fois pour chaque élément **TuningOptions** . Ne peut pas être utilisé si les éléments suivants sont spécifiés dans l'élément **TuningOptions** :  
+ **Occurrence** : facultatif. Ne peut être utilisé qu’une seule fois pour chaque élément **TuningOptions** . Ne peut pas être utilisé si les éléments suivants sont spécifiés dans l'élément **TuningOptions** :  
   
 -   [FeatureSet, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/featureset-element-dta.md)  
   
@@ -52,7 +53,7 @@ Spécifie que l'Assistant Paramétrage du moteur de base de données doit suppri
 -   [L’élément KeepExisting &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/keepexisting-element-dta.md) est défini sur **ALL**  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
- **Élément parent** : [TuningOptions, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/tuningoptions-element-dta.md)  
+ **Élément parent** : [Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
  **Éléments enfants**  
   

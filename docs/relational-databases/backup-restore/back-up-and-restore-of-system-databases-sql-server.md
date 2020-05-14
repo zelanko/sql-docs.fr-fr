@@ -1,5 +1,6 @@
 ---
 title: 'Sauvegarde et restauration : bases de données système'
+description: SQL Server conserve les bases de données système essentielles au fonctionnement d’une instance de serveur. Plusieurs bases de données système doivent être sauvegardées après chaque mise à jour importante.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 45bfedfe24493221570ccc1bc07202f0b4ed8b1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d16e3159f3881df1a904e9d3a6c39bc04667ce9d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247469"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826489"
 ---
 # <a name="backuprestoresystemdatabases-sql-server"></a>Sauvegarde et restauration : bases de données système (SQL Server)
 
@@ -34,9 +35,9 @@ ms.locfileid: "75247469"
 |Base de données système|Description|Des sauvegardes sont-elles nécessaires ?|mode de récupération|Commentaires|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[master](../../relational-databases/databases/master-database.md)|Base de données qui contient l'intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Oui|Simple|Sauvegardez la base de données **master** aussi souvent que nécessaire pour protéger suffisamment les données en fonction de vos besoins. Nous vous recommandons de définir une planification de sauvegarde régulière complétée d'une sauvegarde supplémentaire après une mise à jour substantielle.|  
-|[model](../../relational-databases/databases/model-database.md)|Modèle de toutes les bases de données créées dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Oui|Configurable par l’utilisateur*|Sauvegardez la base de données **model** aussi souvent que nécessaire en fonction de vos besoins ; par exemple, immédiatement après avoir personnalisé ses options de base de données.<br /><br /> **Méthode recommandée :** Nous recommandons d'effectuer uniquement des sauvegardes complètes de **mode**, selon les besoins. Étant donné que **mode** est petit et change rarement, il n'est pas nécessaire de sauvegarder le journal.|  
+|[model](../../relational-databases/databases/model-database.md)|Modèle de toutes les bases de données créées dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Oui|Configurable par l’utilisateur*|Sauvegardez la base de données **model** aussi souvent que nécessaire en fonction de vos besoins ; par exemple, immédiatement après avoir personnalisé ses options de base de données.<br /><br /> **Bonne pratique :** Nous recommandons d’effectuer uniquement des sauvegardes complètes de **mode**, selon les besoins. Étant donné que **mode** est petit et change rarement, il n'est pas nécessaire de sauvegarder le journal.|  
 |[msdb](../../relational-databases/databases/msdb-database.md)|La base de données est utilisée par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier les alertes et les travaux et pour enregistrer les opérateurs. La base de données**msdb** contient aussi les tables d'historique, telles que les tables d'historique de restauration et de sauvegarde.|Oui|Simple (par défaut)|Sauvegardez la base de données **msdb** chaque fois qu'elle est mise à jour.|  
-|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Base de données en lecture seule qui contient les copies de tous les objets système fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Non|-|La base de données **Resource** réside dans le fichier mssqlsystemresource.mdf, qui contient uniquement du code. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas sauvegarder la base de données **Resource** .<br /><br /> Remarque : vous pouvez effectuer une sauvegarde sur fichiers ou sur disque sur le fichier mssqlsystemresource.mdf en le traitant comme s’il s’agissait d’un fichier binaire (.exe), et non d’un fichier de base de données. Toutefois, vous ne pouvez pas utiliser la restauration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les sauvegardes. La restauration d’une copie de sauvegarde du fichier mssqlsystemresource.mdf peut uniquement être effectuée manuellement et vous devez alors veiller à ne pas remplacer la version actuelle de la base de données **Resource** par une version obsolète ou potentiellement instable.|  
+|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Base de données en lecture seule qui contient les copies de tous les objets système fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Non|-|La base de données **Resource** réside dans le fichier mssqlsystemresource.mdf, qui contient uniquement du code. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas sauvegarder la base de données **Resource** .<br /><br /> Remarque : Vous pouvez effectuer une sauvegarde sur fichiers ou sur disque sur le fichier mssqlsystemresource.mdf en le traitant comme s’il s’agissait d’un fichier binaire (.exe) plutôt que d’un fichier de base de données. Toutefois, vous ne pouvez pas utiliser la restauration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les sauvegardes. La restauration d’une copie de sauvegarde du fichier mssqlsystemresource.mdf peut uniquement être effectuée manuellement et vous devez alors veiller à ne pas remplacer la version actuelle de la base de données **Resource** par une version obsolète ou potentiellement instable.|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|Espace de travail qui contient les ensembles de résultats temporaires et intermédiaires. Cette base de données est recréée chaque fois qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre. Lors de l'arrêt de l'instance du serveur, toutes les données dans **tempdb** sont supprimées définitivement.|Non|Simple|Vous ne pouvez pas sauvegarder la base de données système **tempdb** .|  
 |[Configurer la distribution](../../relational-databases/replication/configure-distribution.md)|Base de données qui existe uniquement si le serveur est configuré comme serveur de distribution de réplication. Cette base de données contient les métadonnées et les données historiques de tous les types de réplications, ainsi que les transactions de la réplication transactionnelle.|Oui|Simple|Pour savoir quand vous devez sauvegarder la base de données **distribution** , consultez [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
   

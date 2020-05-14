@@ -19,26 +19,26 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b83a3dbe28848a335e414a0dd39ef1fafdffff17
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c0b033d43bd2912fe113634af7422b3728c83765
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634914"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987485"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne une chaîne Unicode avec les délimiteurs ajoutés afin que la chaîne d'entrée soit un identificateur délimité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```syntaxsql
+```sql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   
@@ -55,24 +55,33 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ## <a name="examples"></a>Exemples  
  L'exemple suivant prend la chaîne de caractères `abc[]def` et utilise les caractères `[``]` pour créer un identificateur délimité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide.  
   
-```  
-SELECT QUOTENAME('abc[]def');  
+```sql
+SELECT QUOTENAME('abc[]def');
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-[abc[]]def]  
+[abc[]]def]
   
 (1 row(s) affected)  
 ```  
   
  Vous remarquerez que dans la chaîne `abc[]def`, le crochet de droite est doublé pour indiquer un caractère d'échappement.  
+ 
+ L’exemple suivant prépare une chaîne entre guillemets à utiliser pour nommer une colonne.  
+  
+```sql
+DECLARE @columnName NVARCHAR(255)='user''s "custom" name'
+DECLARE @sql NVARCHAR(MAX) = 'SELECT FirstName AS ' + QUOTENAME(@columnName) + ' FROM dbo.DimCustomer'
+
+EXEC sp_executesql @sql
+```
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant prend la chaîne de caractères `abc def` et utilise les caractères `[``]` pour créer un identificateur délimité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide.  
   
-```  
+```sql
 SELECT QUOTENAME('abc def');   
 ```  
   
@@ -96,6 +105,3 @@ SELECT QUOTENAME('abc def');
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-  
-  
-

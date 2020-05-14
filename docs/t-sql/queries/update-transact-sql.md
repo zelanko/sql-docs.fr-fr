@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169367"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872767"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>Comportement du verrouillage  
- Une instruction UPDATE acquiert toujours un verrou exclusif (X) sur la table qu'elle modifie et maintient ce verrou jusqu'à la fin de la transaction. Avec un verrou exclusif, aucune autre transaction ne peut modifier des données. Vous pouvez spécifier des indicateurs de table pour remplacer ce comportement par défaut pour la durée de l'instruction UPDATE en spécifiant une autre méthode de verrouillage ; toutefois, nous vous recommandons de ne recourir aux indicateurs qu'en dernier ressort et seulement si vous êtes un développeur ou un administrateur de base de données expérimenté. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Une instruction UPDATE acquiert un verrou exclusif (X) sur les lignes qu’elle modifie et maintient ces verrous jusqu’à la fin de la transaction. Selon le plan de requête de l’instruction UPDATE, le nombre de lignes modifiées et le niveau d’isolation de la transaction, les verrous peuvent être acquis au niveau de PAGE ou de TABLE plutôt qu’au niveau de ROW. Pour éviter ces verrous de niveau supérieur, scindez les instructions UPDATE qui portent sur des milliers de lignes voire plus en lots et vérifiez que les conditions de jointure et de filtre sont prises en charge par les index. Pour plus d’informations sur les mécanismes de verrouillage dans SQL Server, consultez l’article traitant du [verrouillage dans le moteur de base de données](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine).  
   
 ## <a name="logging-behavior"></a>Comportement de journalisation  
  L’instruction UPDATE est journalisée. Cependant, les mises à jour partielles de données de valeurs élevées avec la clause **\.WRITE** sont journalisées de façon minimale. Pour plus d’informations, consultez « Mise à jour des données de valeurs élevées » de la section précédente « Types de données ».  
@@ -1215,7 +1215,7 @@ DROP TABLE CTAS_acs
 ;
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Curseurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   

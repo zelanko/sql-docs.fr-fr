@@ -1,6 +1,7 @@
 ---
 title: Modifier les comptes de service contrôleurs et clients
 titleSuffix: SQL Server Distributed Replay
+description: Découvrez comment modifier les comptes de service Distributed Replay Controller et Distributed Replay Client, puis à réappliquer les listes de contrôle d’accès.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: c9ac64de75c79f3a614a8448b47e48af00b967b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75238920"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000449"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modifier les comptes de service contrôleurs et clients
 
@@ -37,7 +38,7 @@ Dans cette rubrique, vous apprendrez à modifier les comptes de service Distribu
   
 3.  Dans la fenêtre **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** , sous l'onglet **Ouvrir une session** , sélectionnez **Ce compte**, tapez ou cliquez sur **Parcourir** pour entrer le nouveau compte d'ouverture de session, puis cliquez sur **OK**.  
   
-     **Important**: lorsque vous configurez Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
+     **Important !** Lorsque vous configurez le contrôleur Distributed Replay, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services clients Distributed Replay. Vous trouverez ci-dessous la liste des comptes pris en charge :  
   
     -   Compte d’utilisateur de domaine  
   

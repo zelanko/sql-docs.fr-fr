@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822403"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784638"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Décharger une charge de travail en lecture seule vers un réplica secondaire d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "74822403"
   
 -   L'opération DBCC SHRINKFILE sur les fichiers contenant des tables sur disque peut échouer sur le réplica principal si le fichier contient des enregistrements fantômes qui sont toujours requis par un réplica secondaire.  
   
--   À compter de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], les réplicas secondaires accessibles en lecture peuvent rester en ligne même lorsque le réplica principal est hors connexion en raison d'une action de l'utilisateur ou d'un échec. Toutefois, le routage en lecture seule ne fonctionne pas dans ce cas, car l'écouteur du groupe de disponibilité est également hors connexion. Les clients doivent se connecter directement aux réplicas secondaires en lecture seule pour les charges de travail en lecture seule.  
+-   Depuis [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], les réplicas secondaires accessibles en lecture peuvent rester en ligne même quand le réplica principal est hors connexion en raison d’une action utilisateur ou d’un échec, par exemple, quand la synchronisation a été suspendue en raison d’une commande utilisateur ou d’un échec, ou quand un réplica résout l’état parce que le cluster de basculement Windows Server est hors connexion. Toutefois, le routage en lecture seule ne fonctionne pas dans ce cas, car l'écouteur du groupe de disponibilité est également hors connexion. Les clients doivent se connecter directement aux réplicas secondaires en lecture seule pour les charges de travail en lecture seule.  
   
 > [!NOTE]  
 >  Si vous interrogez la vue de gestion dynamique [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) sur une instance de serveur qui héberge un réplica secondaire accessible en lecture, vous pouvez rencontrer un problème de blocage REDO. Ce problème est dû au fait que la vue de gestion dynamique acquiert un verrou IS sur la table ou la vue utilisateur spécifiée qui peut bloquer les demandes d'un thread de phase de restauration par progression concernant un verrou X sur la table ou vue utilisateur en question.  
@@ -130,7 +130,7 @@ ms.locfileid: "74822403"
  Cela signifie qu'il y a une certaine latence, en général de quelques secondes, entre les réplicas principal et secondaire. Dans des cas exceptionnels, toutefois, par exemple si des problèmes réseau réduisent le débit, la latence peut devenir importante. La latence augmente en cas de survenue de goulots d'étranglement d'E/S et lorsque le déplacement des données est suspendu. Pour surveiller le déplacement des données suspendu, utilisez le [Tableau de bord Always On](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou la vue de gestion dynamique [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Latence des données sur des bases de données avec des tables optimisées en mémoire  
- Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], la latence des données sur les secondaires actifs faisait l’objet de considérations spéciales. consultez [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secondaires actifs : réplicas secondaires accessibles en lecture](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , la latence des données ne fait plus l’objet de considérations spéciales pour les tables optimisées en mémoire. La latence des données attendue pour les tables optimisées en mémoire est comparable à celle des tables sur disque.  
+ Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], la latence des données sur les secondaires actifs faisait l’objet de considérations spéciales. Consultez [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Secondaires actifs : réplicas secondaires accessibles en lecture](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , la latence des données ne fait plus l’objet de considérations spéciales pour les tables optimisées en mémoire. La latence des données attendue pour les tables optimisées en mémoire est comparable à celle des tables sur disque.  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Impact d'une charge de travail en lecture seule  
  Lorsque vous configurez un réplica secondaire pour l'accès en lecture seule, vos charges de travail en lecture seule sur les bases de données secondaires consomment des ressources système, telles que le processeur et les E/S (pour les tables sur disque) des threads de phase de restauration par progression, surtout si les charges de travail en lecture seule sur les tables sur disque nécessitent de nombreuses E/S. Aucun impact n'est à constater sur les E/S lors de l'accès aux tables optimisées en mémoire, car toutes les lignes résident en mémoire.  
@@ -160,7 +160,7 @@ ms.locfileid: "74822403"
   
 -   Supprimez les statistiques temporaires à l'aide de l'instruction [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
--   Analysez les statistiques à l’aide des affichages catalogue **sys.stats** et **sys.stats_columns** . L’affichage**sys_stats** inclut la colonne **is_temporary**pour distinguer les statistiques permanentes des statistiques temporaires.  
+-   Analysez les statistiques à l’aide des vues catalogue **sys.stats** et **sys.stats_columns** . **sys_stats** inclut la colonne **is_temporary**pour distinguer les statistiques permanentes des statistiques temporaires.  
   
  Il n'existe aucune prise en charge de la mise à jour automatique des statistiques pour les tables optimisées en mémoire sur le réplica principal ou secondaire. Vous devez surveiller les performances des requêtes et les plans sur le réplica secondaire et mettre manuellement à jour les statistiques sur le réplica principal quand cela est nécessaire. Toutefois, les statistiques manquantes sont créées automatiquement sur le réplica principal et le réplica secondaire.  
   
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
--   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
