@@ -1,6 +1,6 @@
 ---
 title: Présentation des types de données spatiales | Microsoft Docs
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb9acb0aa03184f038c2dda9be10b36e6ca32ee
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048523"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784674"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Dans le système ellipsoïdal, ou monde sphérique, les coordonnées sont donné
 ### <a name="orientation-of-spatial-data"></a>Orientation des données spatiales  
 Dans le système planaire, l'orientation d'anneau d'un polygone n'est pas un facteur important. Par exemple, un polygone décrit par ((0, 0), (10, 0), (0, 20), (0, 0)) est le même qu'un polygone décrit par ((0, 0), (0, 20), (10, 0), (0, 0)). La spécification OGC Simple Features for SQL ne stipule pas d'ordonnancement d'anneau et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'applique pas d'ordonnancement d'anneau.  
 
-Dans un système ellipsoïdal, un polygone n'a aucune signification, ou est ambigu, sans orientation. Par exemple, un anneau autour de l'équateur décrit-il l'hémisphère Nord ou Sud ? Si nous utilisons le type de données **geography** pour stocker l’instance spatiale, nous devons spécifier l’orientation de l’anneau et décrire précisément l’emplacement de l’instance. L'intérieur du polygone dans un système ellipsoïdal est défini par la règle gauche.  
+Dans un système ellipsoïdal, un polygone n'a aucune signification, ou est ambigu, sans orientation. Par exemple, un anneau autour de l'équateur décrit-il l'hémisphère Nord ou Sud ? Si nous utilisons le type de données **geography** pour stocker l’instance spatiale, nous devons spécifier l’orientation de l’anneau et décrire précisément l’emplacement de l’instance. L’intérieur du polygone dans un système ellipsoïdal est défini par la « règle de gauche » : si vous vous imaginez en train de longer l’anneau formé par un polygone geography en suivant les points dans l’ordre dans lequel ils sont listés, la zone de gauche est considérée comme l’intérieur du polygone et la zone de droite comme l’extérieur.
 
 Quand le niveau de compatibilité est égal ou inférieur à 100 dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , le type de données **geography** présente les restrictions suivantes :  
 -   Chaque instance **geography** doit être contenue à l’intérieur d’un seul hémisphère. Aucun objet spatial plus grand qu'un hémisphère ne peut être stocké.  

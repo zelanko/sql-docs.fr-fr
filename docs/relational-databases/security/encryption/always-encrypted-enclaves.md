@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558025"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999418"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted avec enclaves sécurisées
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ Always Encrypted avec enclaves sécurisées résout certaines limitations d’Al
 - Critères spéciaux (LIKE) et les opérateurs de comparaison sur la colonne chiffrée à l’aide d’un chiffrement aléatoire.
     > [!NOTE]
     > Les opérations ci-dessus sont prises en charge pour les colonnes de chaînes de caractères qui utilisent des classements avec un ordre de tri binary2 (classements BIN2). Les colonnes de chaînes de caractères utilisant des classements autres que BIN2 peuvent être chiffrées avec un chiffrement aléatoire et des clés de chiffrement de colonne prenant en charge les enclaves. Toutefois, la seule fonctionnalité nouvelle activée pour ces colonnes est le chiffrement sur place.
-- Création d’index non cluster sur les colonnes à l’aide d’un chiffrement aléatoire.
+- Création d’index non cluster et de statistiques sur les colonnes en utilisant un chiffrement aléatoire.
 
 Toutes les autres limitations d’Always Encrypted listées dans [Détails de la fonctionnalité](always-encrypted-database-engine.md#feature-details) s’appliquent également à Always Encrypted avec enclaves sécurisées.
 

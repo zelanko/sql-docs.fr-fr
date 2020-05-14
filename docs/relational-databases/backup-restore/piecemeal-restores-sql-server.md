@@ -1,5 +1,6 @@
 ---
 title: Restaurations fragmentaires (SQL Server) | Microsoft Docs
+description: Dans SQL Server, une restauration fragmentaire autorise la restauration/récupération par étapes de bases de données contenant plusieurs groupes de fichiers. La restauration fragmentaire fonctionne avec tous les modes de récupération.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb2e77a9d32e48965e491a2bc0549fb7c9ad400
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72915995"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824087"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurations fragmentaires (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,9 +121,9 @@ ms.locfileid: "72915995"
   
 ### <a name="examples"></a>Exemples  
   
--   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="piecemeal-restore-under-the-full-recovery-model"></a>Restauration fragmentaire en mode de récupération complète  
  En mode de récupération complète ou de récupération utilisant les journaux de transactions, une restauration fragmentaire est disponible pour les bases de données qui contiennent plusieurs groupes de fichiers et vous pouvez restaurer une base de données à n'importe quel point dans le temps. Les séquences de restauration d'une restauration fragmentaire se déroulent comme suit :  
@@ -148,9 +149,9 @@ ms.locfileid: "72915995"
   
 ### <a name="examples"></a>Exemples  
   
--   [Exemple : restauration fragmentaire d’une base de données &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Exemple : restauration fragmentaire d’une base de données &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Exemple : restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Exemple : restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Exécution d'une restauration fragmentaire d'une base de données dont le mode de récupération est passé du mode de récupération complète au mode de récupération simple  
  Vous pouvez effectuer une restauration fragmentaire d'une base de données qui est passée du mode de récupération simple au mode de récupération complète depuis la sauvegarde de base de données complète ou la sauvegarde partielle. Exemple : considérons une base de données sur laquelle vous effectuez les opérations ci-après :  

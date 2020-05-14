@@ -1,5 +1,6 @@
 ---
 title: Column, élément pour les index (Assistant Paramétrage de base de données)
+description: Dans l’utilitaire dta, l’élément Column pour les index spécifie les colonnes dans lesquelles l’index doit être créé pour une configuration spécifiée par l’utilisateur.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307888"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831625"
 ---
 # <a name="column-element-for-index-dta"></a>Column, élément pour les index (Assistant Paramétrage de base de données)
 
@@ -42,7 +43,7 @@ Spécifie les colonnes sur lesquelles l'index est créé pour une configuration 
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
- **Type**: facultatif. Spécifie le type de colonne d'index. Utilisez un type de données **string** pour spécifier cet attribut avec l'une des valeurs autorisées suivantes :  
+ **Type** : facultatif. Spécifie le type de colonne d'index. Utilisez un type de données **string** pour spécifier cet attribut avec l'une des valeurs autorisées suivantes :  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ Spécifie les colonnes sur lesquelles l'index est créé pour une configuration 
   
      Pour plus d’informations sur les colonnes incluses, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
- **SortOrder**: facultatif. Spécifie l'ordre de tri de la colonne. Utilisez un type de données **string** pour spécifier un ordre de tri **"Ascending"** ou **"Descending"** comme suit :  
+ **SortOrder** : facultatif. Spécifie l'ordre de tri de la colonne. Utilisez un type de données **string** pour spécifier un ordre de tri **"Ascending"** ou **"Descending"** comme suit :  
   
 ```  
 <Column SortOrder="Ascending">  

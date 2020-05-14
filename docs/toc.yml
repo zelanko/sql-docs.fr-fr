@@ -3,7 +3,7 @@
 - name: Conseils de navigation dans les docs
   href: sql-server/sql-docs-navigation-guide.md
 - name: Versions précédentes 2005-2014
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
     - name: What's New

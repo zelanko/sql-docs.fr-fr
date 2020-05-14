@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325456"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872788"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installer SQL Server sur Server Core
 
@@ -27,7 +27,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
   
  Pour obtenir la liste des systèmes d’exploitation pris en charge, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 |Condition requise|Procédure d'installation|  
 |-----------------|--------------------|  
@@ -287,13 +287,9 @@ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécut
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>Activer TCP/IP sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Le protocole TCP/IP peut être activé via Windows PowerShell pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core. Procédez comme suit :  
   
-1.  Sur le serveur, lancez le Gestionnaire des tâches.  
+1.  Dans PowerShell : Import-Module SQLPS.  
   
-2.  Dans l'onglet **Applications** , cliquez sur **Nouvelle tâche**.  
-  
-3.  Dans la boîte de dialogue **Créer une nouvelle tâche** , tapez **sqlps.exe** dans le champ **Ouvrir** , puis cliquez sur **OK**. Cela ouvre la fenêtre **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
-  
-4.  Dans la fenêtre **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, exécutez le script suivant pour activer le protocole TCP/IP :  
+2.  Dans la fenêtre **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, exécutez le script suivant pour activer le protocole TCP/IP :  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  

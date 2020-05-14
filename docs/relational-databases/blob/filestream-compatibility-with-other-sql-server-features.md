@@ -1,6 +1,6 @@
 ---
 title: Compatibilité de FILESTREAM | Microsoft Docs
-description: Compatibilité de FILESTREAM avec d’autres fonctionnalités SQL Server
+description: FILESTREAM stocke les données dans le système de fichiers. Découvrez les instructions, les limitations et les conseils que vous devez garder à l’esprit au moment d’utiliser FILESTREAM avec différentes fonctionnalités SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c47e7af592383bee13399c2220fee25fa8ed2c2
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245396"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999786"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilité de FILESTREAM avec d’autres fonctionnalités SQL Server
 
@@ -94,7 +94,7 @@ ms.locfileid: "75245396"
   
     -   Par défaut, la réplication de fusion utilise NEWSEQUENTIALID() car ses performances peuvent être supérieures à celles de NEWID(). Si vous ajoutez une colonne **uniqueidentifier** à une table qui sera publiée pour la réplication de fusion, spécifiez NEWSEQUENTIALID() comme valeur par défaut.  
   
--   La réplication de fusion inclut une optimisation pour répliquer de grands types d'objets. Cette optimisation est contrôlée par le paramètre @stream_blob_columns de [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Si vous définissez l’option de schéma de façon à répliquer l’attribut FILESTREAM, le paramètre @stream_blob_columns a la valeur **true**. Cette optimisation peut être substituée en utilisant [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Cette procédure stockée vous permet d’affecter la valeur @stream_blob_columnsfalse**à**. Si vous ajoutez une colonne FILESTREAM à une table qui est déjà publiée pour la réplication de fusion, nous vous recommandons d’affecter la valeur **true** à l’option en utilisant sp_changemergearticle.  
+-   La réplication de fusion inclut une optimisation pour répliquer de grands types d'objets. Cette optimisation est contrôlée par le paramètre @stream_blob_columns de [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Si vous définissez l’option de schéma de façon à répliquer l’attribut FILESTREAM, le paramètre @stream_blob_columns a la valeur **true**. Cette optimisation peut être substituée en utilisant [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Cette procédure stockée vous permet d’affecter la valeur **false** à @stream_blob_columns. Si vous ajoutez une colonne FILESTREAM à une table qui est déjà publiée pour la réplication de fusion, nous vous recommandons d’affecter la valeur **true** à l’option en utilisant sp_changemergearticle.  
   
 -   L'activation de l'option de schéma pour FILESTREAM après qu'un article a été créé peut provoquer l'échec de la réplication si les données dans une colonne FILESTREAM dépassent 2 Go et qu'il y a un conflit pendant la réplication. Si vous pensez que cette situation surviendra, il est recommandé de supprimer et de recréer l'article de table avec l'option de schéma FILESTREAM appropriée activée au moment de la création.  
   

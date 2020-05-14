@@ -1,7 +1,8 @@
 ---
 title: Notes de publication pour ODBC Driver for SQL Server sur Linux et macOS
+description: Découvrez les nouveautés et les évolutions apportées aux versions publiées de Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 04/24/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153274"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922200"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notes de publication pour Microsoft ODBC Driver for SQL Server sur Linux et macOS
 
@@ -173,6 +174,6 @@ Le pilote ODBC sur SUSE Linux (Preview) prend en charge 64 bits SUSE Linux Enter
 
 Le pilote ODBC sur Linux prend en charge les [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Pour plus d’informations, consultez [Prise en charge par le pilote ODBC pour Linux de la haute disponibilité et de la reprise d’activité](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-Le pilote ODBC sur Linux prend en charge les connexions à Microsoft Azure SQL Database. Pour plus d’informations, consultez [Procédure : se connecter à Azure SQL Database à l'aide d'ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Le pilote ODBC sur Linux prend en charge les connexions à Azure SQL Database.
 
 L’option `-l` (délai d’expiration de la connexion) a été ajoutée à `bcp`. Pour plus d’informations, consultez [Connexion avec **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

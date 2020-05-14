@@ -1,6 +1,7 @@
 ---
 title: Installer Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: Cet article propose des liens vers des informations utiles pour installer la fonctionnalité Distributed Replay dans SQL Server.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e5d1605d9f44cf5e28cd6e49b6a234de44f5c5f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6115e530b0c8f5bd0a2d1ae9c03a3d7f701355
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992130"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999421"
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
 
@@ -32,7 +33,6 @@ Utilisez les rubriques suivantes pour installer la fonctionnalité Distributed R
 |[Suivre les étapes consécutives à l’installation](../../tools/distributed-replay/complete-the-post-installation-steps.md)|Rubrique de procédure indiquant comment exécuter une installation de Distributed Replay.|  
 |[Modifier le compte de contrôleur et les comptes de services clients](../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md)|Rubrique de procédure indiquant comment démarrer et arrêter les services de contrôleur et de client Distributed Replay, et modifier les comptes de service.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Installer SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+-[Installer SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)

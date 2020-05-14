@@ -1,5 +1,6 @@
 ---
 title: Magasin d’objets blob distants (RBS) (SQL Server) | Microsoft Docs
+description: Le Magasin d’objets blob distants (RBS) SQL Server stocke les objets blob dans un stockage universel et non sur le serveur de base de données principal. Découvrez ce composant additionnel.
 ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 383b5739e75d0d7e3ff42d2994e2a70c96842861
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258183"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999689"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Magasin d'objets blob distants (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

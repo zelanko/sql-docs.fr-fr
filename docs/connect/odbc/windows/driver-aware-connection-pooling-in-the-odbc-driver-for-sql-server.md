@@ -1,7 +1,8 @@
 ---
-title: Regroupement de connexions prenant en charge les pilotes dans ODBC Driver for SQL Server | Microsoft Docs
+title: Regroupement de connexions prenant en charge les pilotes dans ODBC Driver
+description: Découvrez les améliorations apportées au regroupement de connexions prenant en charge les pilotes dans Microsoft ODBC Driver for SQL Server sur Windows.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f93f7f5a000016af3c20af08d9eb318851da8c48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928307"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922086"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Regroupement de connexions prenant en charge le pilote dans le pilote ODBC pour SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le [regroupement de connexions prenant en charge les pilotes](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Cette rubrique décrit les améliorations apportées au regroupement de connexions prenant en charge les pilotes dans Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows :  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le [regroupement de connexions prenant en charge les pilotes](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). Cette rubrique décrit les améliorations apportées au regroupement de connexions prenant en charge les pilotes dans Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows :  
   
 -   Quelles que soient les propriétés de connexion, les connexions qui utilisent `SQLDriverConnect` arrivent dans un pool différent des connexions qui utilisent `SQLConnect`.
 - Quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le regroupement de connexions prenant en charge les pilotes, le pilote n’utilise pas le contexte de sécurité de l’utilisateur Windows pour le thread actuel afin de séparer les connexions dans le pool. Autrement dit, si les paramètres des connexions sont équivalents pour les scénarios d’emprunt d’identité Windows avec l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elles utilisent les mêmes informations d’identification pour l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour se connecter au serveur principal, différents utilisateurs Windows peuvent utiliser le même regroupement de connexions. Quand vous utilisez l’authentification Windows et le regroupement de connexions prenant en charge les pilotes, le pilote utilise le contexte de sécurité de l’utilisateur Windows actuel pour séparer les connexions dans le regroupement. Autrement dit, pour les scénarios d’emprunt d’identité Windows, les différents utilisateurs Windows ne partagent pas les connexions même si celles-ci utilisent les mêmes paramètres.

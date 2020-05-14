@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ecfeeafd90d2fd7449ed99c5bacbdff05dff2784
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487111"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746328"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
 
@@ -24,9 +24,9 @@ ms.locfileid: "81487111"
 Cet article décrit comment utiliser des fonctions du package [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) pour installer de nouveaux packages R sur une instance de SQL Server Machine Learning Services ou SQL Server R Services. Les packages que vous installez peuvent être utilisés dans des scripts R exécutés dans la base de données à l’aide de l’instruction T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
 > [!NOTE]
-> La commande `install.packages` R standard n’est pas recommandée pour l’ajout de packages R sur SQL Server. Au lieu de cela, utilisez **sqlmlutils** comme décrit dans cet article.
+> Le package **sqlmlutils** décrit dans cet article permet d’ajouter des packages R à SQL Server 2019 ou version ultérieure. Pour SQL Server 2017 et les versions antérieurs, consultez [Installer des packages avec des outils R](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Installez [R](https://www.r-project.org) et [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) sur l’ordinateur client que vous utilisez pour vous connecter à SQL Server. Vous pouvez utiliser n’importe quel IDE R pour exécuter les scripts, mais cet article part du principe que vous utilisez RStudio.
 

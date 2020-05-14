@@ -18,19 +18,19 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a0385b96c861ae65cae70b332d0117eff97501
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 320dfc27d5582fd46d4ea7d8189e2a6ce4922144
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631834"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925203"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Lève une exception et transfère l’exécution à un bloc CATCH d’une construction TRY...CATCH dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |Si un *msg_id* est passé à RAISERROR, l’ID doit être défini dans sys.messages.|Le paramètre *error_number* ne doit pas être défini dans sys.messages.|  
 |Le paramètre *msg_str* peut contenir des styles de mise en forme **printf**.|Le paramètre *message* n’accepte pas la mise en forme du style **printf**.|  
-|Le paramètre *severity* spécifie la gravité de l'exception.|Il n’y a pas de paramètre *severity*. La gravité d'exception est toujours définie sur 16.|  
+|Le paramètre *severity* spécifie la gravité de l'exception.|Il n’y a pas de paramètre *severity*. Quand THROW est utilisé pour initier l’exception, la gravité est toujours définie à 16. Cependant, quand THROW est utilisé pour lever à nouveau une exception existante, la gravité correspond au niveau de gravité de l’exception.|  
   
 ## <a name="examples"></a>Exemples  
   

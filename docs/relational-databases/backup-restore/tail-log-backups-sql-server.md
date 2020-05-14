@@ -1,5 +1,6 @@
 ---
 title: Sauvegardes de la fin du journal (SQL Server) | Microsoft Docs
+description: Dans SQL Server, une sauvegarde de la fin du journal capture tous les enregistrements de journal qui n’ont pas encore été sauvegardés pour empêcher toute perte de données et préserver la continuité de la séquence de journaux de transactions consécutifs.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 22fda4d5e11b562ea3162ed14766ed085977200e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b719e284c56a1b2a83c4be2dd6db14fa431cc242
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510040"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829781"
 ---
 # <a name="tail-log-backups-sql-server"></a>Sauvegardes de la fin du journal (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

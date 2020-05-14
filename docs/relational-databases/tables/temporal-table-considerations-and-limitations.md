@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487448"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784485"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considérations et limitations liées aux tables temporelles
 
@@ -51,7 +51,7 @@ Prenez les points suivants en compte lorsque vous travaillez avec des tables tem
 
   - **Always On (Toujours active) :** entièrement prise en charge
   - **Capture de données modifiées et suivi des modifications :** uniquement prise en charge sur la table actuelle
-  - **Capture instantanée et réplication transactionnelle** : uniquement prise en charge pour un serveur de publication unique sans activation de Temporal et un abonné avec Temporal activé. Dans ce cas, le serveur de publication est utilisé pour une charge de travail OLTP tandis que l’abonné est utilisé pour le déchargement de rapports (avec l’interrogation « AS OF »). Lorsque l’agent de distribution démarre, il ouvre une transaction qui est maintenue ouverte jusqu’à ce que l’agent de distribution s’arrête. En raison de ce comportement, SysStartTime et SysEndTime sont remplis sur l’heure de la première transaction démarrée par l’agent de distribution. Par conséquent, il peut être préférable d’exécuter l’agent de distribution en suivant une planification plutôt que de l’exécuter en continu. L’utilisation de plusieurs abonnés n’est pas prise en charge, car cela peut entraîner des données temporelles incohérentes en raison de la dépendance sur l’horloge système locale.
+  - **Capture instantanée et réplication transactionnelle** : uniquement prise en charge pour un serveur de publication unique sans activation de Temporal et un abonné avec Temporal activé. Dans ce cas, le serveur de publication est utilisé pour une charge de travail OLTP tandis que l’abonné est utilisé pour le déchargement de rapports (avec l’interrogation « AS OF »). Lorsque l’agent de distribution démarre, il ouvre une transaction qui est maintenue ouverte jusqu’à ce que l’agent de distribution s’arrête. En raison de ce comportement, SysStartTime et SysEndTime sont remplis avec l’heure de début de la première transaction démarrée par l’agent de distribution. Il est peut-être donc préférable d’exécuter l’agent de distribution selon une planification et non en continu comme le veut le comportement par défaut s’il est important pour votre application ou votre organisation que SysStartTime et SysEndTime soient remplis avec une heure proche de l’heure système actuelle. L’utilisation de plusieurs abonnés n’est pas prise en charge, car cela peut entraîner des données temporelles incohérentes en raison de la dépendance sur l’horloge système locale.
   - **Réplication de fusion :** non prise en charge pour les tables temporelles
 
 - Les requêtes régulières affectent uniquement les données dans la table actuelle. Pour interroger des données dans la table d’historique, vous devez utiliser des requêtes temporelles. Ces points sont abordés dans ce document dans la section Interrogation des données temporelles.

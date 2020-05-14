@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65f3000cdc56079d2e55040e4844ce5578998e9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6446ad935f2388f2fd2d8df898232f897e475cc3
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180413"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849807"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utiliser le gouverneur de ressources pour limiter l'utilisation de l'UC par compression de sauvegarde (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,6 @@ USE AdventureWorks2012;
 CREATE USER [domain_name\MAX_CPU] FOR LOGIN [domain_name\MAX_CPU];  
 EXEC sp_addrolemember 'db_backupoperator', 'domain_name\MAX_CPU';  
 GO  
-  
 ```  
   
  [&#91;Haut&#93;](#Top)  
@@ -137,35 +136,33 @@ GO
   
 1.  Émettez une instruction [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) pour créer un pool de ressources. L'exemple de cette procédure utilise la syntaxe suivante :  
   
-     *CREATE RESOURCE POOL nom_du_pool* WITH ( MAX_CPU_PERCENT = *valeur* );  
+    ```sql  
+    CREATE RESOURCE POOL <pool_name> WITH ( MAX_CPU_PERCENT = <value> );
+    ```  
   
-     *Value* est un entier de 1 à 100 qui indique le pourcentage de bande passante processeur moyenne maximale. La valeur appropriée dépend de votre environnement. À des fins d'illustration, l'exemple de cette rubrique utilise 20 % (MAX_CPU_PERCENT = 20.)  
+    *Value* est un entier de 1 à 100 qui indique le pourcentage de bande passante processeur moyenne maximale. La valeur appropriée dépend de votre environnement. À des fins d'illustration, l'exemple de cette rubrique utilise 20 % (MAX_CPU_PERCENT = 20.)  
   
 2.  Émettez une instruction [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) pour créer un groupe de charge de travail pour les opérations de priorité basse dont vous souhaitez régir l’utilisation de l’UC. L'exemple de cette procédure utilise la syntaxe suivante :  
   
-     CREATE WORKLOAD GROUP *nom_du_groupe* USING *nom_du_pool*;  
+    ```sql  
+    CREATE WORKLOAD GROUP <group_name> USING <pool_name>;
+    ```
   
 3.  Émettez une instruction [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) pour créer une fonction classifieur qui mappe le groupe de charge de travail créé à l’étape précédente à l’utilisateur de la connexion de priorité basse. L'exemple de cette procédure utilise la syntaxe suivante :  
   
-     CREATE FUNCTION [*nom_de_schéma*.]*nom_de_fonction*() RETURNS sysname  
+    ```sql 
+    CREATE FUNCTION <schema_name>.<function_name>() RETURNS sysname  
+    WITH SCHEMABINDING  
+    AS  
+    BEGIN  
+        DECLARE @workload_group_name AS <sysname>  
+        IF (SUSER_NAME() = '<user_of_low_priority_login>')  
+        SET @workload_group_name = '<workload_group_name>'  
+        RETURN @workload_group_name  
+    END;
+    ```
   
-     WITH SCHEMABINDING  
-  
-     AS  
-  
-     BEGIN  
-  
-     DECLARE @workload_group_name AS *sysname*  
-  
-     IF (SUSER_NAME() = '*utilisateur_de_connexion_faible_priorité*')  
-  
-     SET @workload_group_name = '*nom_groupe_charge_de_travail*'  
-  
-     RETURN @workload_group_name  
-  
-     END  
-  
-     Pour plus d'informations sur les composants de cette instruction CREATE FUNCTION, consultez :  
+    Pour obtenir des informations sur les composants de cette instruction `CREATE FUNCTION`, consultez :  
   
     -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
@@ -175,14 +172,16 @@ GO
         >  SUSER_NAME est simplement l'une des fonctions système qui peuvent être utilisées dans une fonction classifieur. Pour plus d’informations, consultez [Créer et tester une fonction classifieur définie par l’utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md).  
   
     -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
-  
+      
 4.  Émettez une instruction [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) pour inscrire la fonction classifieur auprès de Resource Governor. L'exemple de cette procédure utilise la syntaxe suivante :  
   
-     ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = *nom_de_schéma*.*nom_de_fonction*);  
+    ```sql  
+    ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = <schema_name>.<function_name>);
+    ```  
   
 5.  Émettez une deuxième instruction ALTER RESOURCE GOVERNOR pour appliquer les modifications à la configuration en mémoire de Resource Governor, comme suit :  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
@@ -204,17 +203,18 @@ GO
   
 ```sql  
 -- Configure Resource Governor.  
-BEGIN TRAN  
 USE master;  
 -- Create a resource pool that sets the MAX_CPU_PERCENT to 20%.   
 CREATE RESOURCE POOL pMAX_CPU_PERCENT_20  
    WITH  
       (MAX_CPU_PERCENT = 20);  
 GO  
+
 -- Create a workload group to use this pool.   
 CREATE WORKLOAD GROUP gMAX_CPU_PERCENT_20  
 USING pMAX_CPU_PERCENT_20;  
 GO  
+
 -- Create a classification function.  
 -- Note that any request that does not get classified goes into   
 -- the 'Default' group.  
@@ -233,10 +233,10 @@ GO
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION= dbo.rgclassifier_MAX_CPU);  
 COMMIT TRAN;  
 GO  
+
 -- Start Resource Governor  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
  [&#91;Haut&#93;](#Top)  
@@ -280,7 +280,7 @@ GO
   
  [&#91;Haut&#93;](#Top)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer et tester une fonction classifieur définie par l’utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)  
   

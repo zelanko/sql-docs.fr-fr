@@ -1,5 +1,6 @@
 ---
 title: Restaurer des pages (SQL Server) | Microsoft Docs
+description: Découvrez comment restaurer des pages dans SQL Server à l’aide de SQL Server Management Studio ou de Transact-SQL. Restaurez des pages endommagées sans restaurer l’ensemble de la base de données.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908826"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823674"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "72908826"
   
     -   Journal des transactions  
   
-    -   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
+    -   Pages d’allocation : pages Global Allocation Map (GAM), pages Shared Global Allocation Map (SGAM) et pages Page Free Space (PFS).  
   
     -   Page 0 de tous les fichiers de données (page de démarrage des fichiers)  
   
@@ -135,8 +136,8 @@ ms.locfileid: "72908826"
     |En-tête|Valeurs|  
     |------------|------------|  
     |**Nom**|Nom du jeu de sauvegarde.|  
-    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour les journaux des transactions).|  
-    |**Type**|Type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.|  
+    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour des journaux de transactions).|  
+    |**Type**|Type de sauvegarde effectuée : **Complète**, **Différentielle** ou **Journal des transactions**.|  
     |**Serveur**|Nom de l'instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du moteur de base de données qui a effectué l'opération de sauvegarde.|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Position**|La position du jeu de sauvegarde dans le volume.|  

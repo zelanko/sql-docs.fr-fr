@@ -1,5 +1,6 @@
 ---
-title: Exemple d’exécution asynchrone (méthode de notification) | Microsoft Docs
+title: Exemple d’exécution asynchrone (méthode de notification)
+description: Exemple de code montrant comment utiliser l’exécution asynchrone (avec la méthode de notification) dans Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ab208859cd0eb560ca72a37db05cd2ff547abad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f0a5a7ea9f252364c200c587e60193366a005f60
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928298"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922283"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Exemple d’exécution asynchrone (méthode de notification)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Les exemples de code inclus dans cette rubrique montrent comment utiliser [l’exécution asynchrone (méthode de notification)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  Les exemples de code inclus dans cette rubrique montrent comment utiliser [l’exécution asynchrone (méthode de notification)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
  Cette fonction utilise la notification asynchrone pour ouvrir cinq connexions et exécute une seule requête sur une instruction de chaque connexion.  
   

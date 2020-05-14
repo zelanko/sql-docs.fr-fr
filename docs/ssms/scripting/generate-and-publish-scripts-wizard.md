@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873135"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825665"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts 
+# <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -157,6 +157,8 @@ Utilisez cette page pour spécifier la façon dont vous souhaitez que cet Assist
 
 - **Ajouter au fichier** - Lorsque cette option a la valeur **True**, ce script est ajouté au bas d’un script existant, spécifié sur la page **Définir les options de script** . Lorsqu'elle a la valeur **False**, le nouveau script remplace un script précédent. La valeur par défaut est **False**.
 
+- **Vérifier l’existence de l’objet** – Quand elle a la valeur **True**, cette option ajoute la vérification d’existence avant de générer l’instruction CREATE pour vos objets SQL. Par exemple : tables, vues, fonctions ou procédures stockées. L’instruction CREATE est incluse dans une instruction IF. Si vous savez que votre cible est propre, le script est beaucoup plus propre. Si vous ne vous attendez pas à ce que les objets existent dans la cible, vous obtenez une erreur. La valeur par défaut est **False**.
+
 - **Continuer l’exécution du script en cas d’erreur** : quand la valeur est **False**, l’exécution du script s’arrête en cas d’erreur. Quand la valeur est **True**, l’exécution du script continue. La valeur par défaut est **False**.
 
 - **Convertir les UDDT en types de base** - Lorsque cette option a la valeur **True**, les types de données définis par l’utilisateur (UDDT) sont convertis en types de données de base sous-jacents, ceux-là même qui ont été utilisés pour les créer. Utilisez **True** lorsque l'UDDT n'existe pas dans la base de données où le script s'exécute. Lorsque cette option a la valeur **False**, les UDDT sont utilisés. La valeur par défaut est **False**.
@@ -229,7 +231,7 @@ Cette page résume les options que vous avez sélectionnées dans cet Assistant.
 
 Utilisez cette page pour contrôler la progression de l'Assistant.
 
-**Détails** - Affiche la colonne **Action** pour voir la progression de l’Assistant. Après avoir généré les scripts, l'Assistant les enregistre dans un fichier ou les utilise pour la publication sur un service Web, selon vos sélections. Lorsque chacune de ces étapes est terminée, sélectionnez la valeur dans la colonne **Résultat** pour afficher le résultat de l'étape correspondante.
+**Détails** - Affiche la colonne **Action** pour voir la progression de l’Assistant. Après avoir généré les scripts, l'Assistant les enregistre dans un fichier ou les utilise pour la publication sur un service Web, selon vos sélections. Quand chacune de ces étapes est terminée, sélectionnez la valeur dans la colonne **Résultat** pour voir le résultat de l’étape correspondante.
 
 **Enregistrer le rapport** - Sélectionnez pour enregistrer les résultats de la progression de l’Assistant dans un fichier.
 

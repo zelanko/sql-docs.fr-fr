@@ -1,7 +1,8 @@
 ---
-title: Accès aux informations de diagnostic dans le journal des événements étendus | Microsoft Docs
+title: Accès aux informations de diagnostic dans le journal des événements étendus
+description: Découvrez comment accéder sur le serveur à des événements étendus liés à des événements de Microsoft JDBC Driver pour SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5f8086c0ccb161bb94e1b878736b55ee306fe4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920346"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922251"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Dans [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], le suivi ([Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md)) a été mis à jour pour faciliter la corrélation des événements clients avec les informations de diagnostic, comme les échecs de connexion, à partir de la mémoire tampon en anneau de connectivité du serveur et des informations relatives aux performances dans le journal des événements étendus. Pour plus d’informations sur la lecture du journal des événements étendus, consultez [Afficher des données de session d’événements](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
+  Dans [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], le suivi ([Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md)) a été mis à jour pour faciliter la corrélation des événements clients avec les informations de diagnostic, comme les échecs de connexion, à partir de la mémoire tampon en anneau de connectivité du serveur et des informations relatives aux performances dans le journal des événements étendus. Pour plus d'informations sur la lecture du journal des événements étendus, consultez [Événements étendus](../../relational-databases/extended-events/extended-events.md).  
   
 ## <a name="details"></a>Détails  
- Pour les opérations de connexion, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] envoie un ID de connexion cliente. Si la connexion échoue, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://go.microsoft.com/fwlink/?LinkId=207752)) et rechercher le champ **ClientConnectionID** pour obtenir les informations de diagnostic sur l’échec de connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant d’envoyer le paquet de préconnexion, un ID de connexion client n’est pas généré.) L'ID de connexion client est un GUID à 16 octets. Vous pouvez également rechercher l’ID de connexion cliente dans la sortie de la cible des événements étendus, si l’action **client_connection_id** est ajoutée aux événements dans une session d’événements étendus. Si vous avez besoin d’une assistance supplémentaire pour diagnostiquer le pilote client, vous pouvez activer le suivi et réexécuter la commande de connexion, puis observer le champ **ClientConnectionID** dans la trace.  
+ Pour les opérations de connexion, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] envoie un ID de connexion cliente. Si la connexion échoue, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) et rechercher le champ **ClientConnectionID** pour obtenir les informations de diagnostic sur l’échec de connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant d’envoyer le paquet de préconnexion, un ID de connexion client n’est pas généré.) L'ID de connexion client est un GUID à 16 octets. Vous pouvez également rechercher l’ID de connexion cliente dans la sortie de la cible des événements étendus, si l’action **client_connection_id** est ajoutée aux événements dans une session d’événements étendus. Si vous avez besoin d’une assistance supplémentaire pour diagnostiquer le pilote client, vous pouvez activer le suivi et réexécuter la commande de connexion, puis observer le champ **ClientConnectionID** dans la trace.  
   
  Vous pouvez obtenir l'ID de connexion du client programmatiquement avec l’[interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID de connexion sera également présent dans toutes les exceptions liées à la connexion.  
   
@@ -51,7 +52,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Diagnostic de problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+[Diagnostic de problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
