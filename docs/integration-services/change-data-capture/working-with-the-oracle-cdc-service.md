@@ -82,7 +82,7 @@ ms.locfileid: "79288233"
 |status|Code d'état utilisé par la table d'état.|  
 |sub_status|Code se sous-état utilisé par la table d'état.|  
 |status_message|Message d'état utilisé par la table d'état.|  
-|source|Nom du composant de capture de données modifiées Oracle qui a généré l'enregistrement de trace.|  
+|target|Nom du composant de capture de données modifiées Oracle qui a généré l'enregistrement de trace.|  
 |text_data|Données texte supplémentaires pour les cas où l'erreur ou l'enregistrement de trace contient une charge utile textuelle.|  
 |binary_data|Données binaires supplémentaires pour les cas où l'erreur ou l'enregistrement de trace contient une charge utile binaire.|  
   
