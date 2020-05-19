@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917361"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754045"
 ---
 # <a name="record-object-ado"></a>Record, objet (ADO)
 Représente une ligne d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) ou du fournisseur de données, ou un objet retourné par un fournisseur de données semi-structuré, tel qu’un fichier ou un répertoire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un objet **Record** représente une ligne de données et présente des similarités conceptuelles avec un **Recordset**d’une seule ligne. Selon les capacités de votre fournisseur, les objets d' **enregistrement** peuvent être retournés directement à partir de votre fournisseur au lieu d’un **Recordset**d’une seule ligne, par exemple lorsqu’une requête SQL qui sélectionne une seule ligne est exécutée. Ou un objet **enregistrement** peut être obtenu directement à partir d’un objet **Recordset** . Ou un **enregistrement** peut être retourné directement d’un fournisseur à des données semi-structurées, telles que le fournisseur de OLE DB Microsoft Exchange.  
   
  Vous pouvez afficher les champs associés à l’objet **Record** par le biais de la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) sur l’objet **Record** . ADO autorise les colonnes à valeurs objet, y compris les valeurs **Recordset**, **SAFEARRAY**et scalaires dans la collection **Fields** des objets **Record** .  
@@ -59,7 +59,7 @@ Représente une ligne d’un [jeu d’enregistrements](../../../ado/reference/ad
   
 -   Indique l’état actuel de l' **enregistrement** avec la propriété [State](../../../ado/reference/ado-api/state-property-ado.md) .  
   
--   Indiquez le type d' **enregistrement** - *simple*, *collection*ou *document structuré* -avec la propriété [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
+-   Indiquez le type d' **enregistrement**  -  *simple*, *collection*ou *document structuré* -avec la propriété [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
   
 -   Arrête l’exécution d’une opération asynchrone avec la méthode [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) .  
   

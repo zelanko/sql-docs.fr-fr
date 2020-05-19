@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchies collection [ADO MD]
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63b8e4491d4d0a561bf5e7f108684570fc550928
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d8605b52ead95433548095015497b6b42220d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949706"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753973"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies, collection (ADO MD)
 Contient le jeu d’objets [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) d’une dimension.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **Hierarchies** est une collection ADO standard. Avec les propriétés et les méthodes d’une collection, vous pouvez effectuer les opérations suivantes :  
   
 -   Obtenez le nombre d’objets dans la collection avec la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) .  

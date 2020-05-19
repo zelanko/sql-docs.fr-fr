@@ -15,24 +15,24 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26691e405defc7b9d73a9ae02a287d81efda8af2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931473"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754010"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount, propriété (ADO)
 
 Indique le nombre d’enregistrements dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
   
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur de **type long** qui indique le nombre d’enregistrements dans le **Recordset**.
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Utilisez la propriété **RecordCount** pour déterminer le nombre d’enregistrements dans un objet **Recordset** . La propriété retourne-1 lorsque ADO ne peut pas déterminer le nombre d’enregistrements ou si le type de fournisseur ou de curseur ne prend pas en charge **RecordCount**. La lecture de la propriété **RecordCount** sur un **jeu d’enregistrements** fermé génère une erreur.
 
