@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468495"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704890"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
   L'interface `IRow` autorise un accès direct aux colonnes d'une ligne unique dans le jeu de résultats. `IRow` est donc une méthode efficace pour extraire des colonnes d'un jeu de résultats avec une seule ligne.  
@@ -26,7 +26,7 @@ ms.locfileid: "62468495"
   
 -   comment extraire un groupe de colonnes (de manière consécutive) ;  
   
--   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur null et que **cbMaxLen** est égal à `IRow` - `>GetColumns()` 0, l’appel à retourne uniquement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler `IRow->GetColumns()` sur la même colonne pour récupérer les données réelles.  
+-   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur null et que **cbMaxLen** est égal à 0, l’appel à `IRow` - `>GetColumns()` retourne uniquement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler `IRow->GetColumns()` sur la même colonne pour récupérer les données réelles.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -517,6 +517,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques "Comment" relatives aux OLE DB](ole-db-how-to-topics.md)  
+ [Rubriques de procédures liées à OLE DB](ole-db-how-to-topics.md)  
   
   

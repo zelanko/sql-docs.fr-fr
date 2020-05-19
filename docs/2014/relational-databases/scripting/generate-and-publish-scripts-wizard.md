@@ -39,15 +39,15 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242112"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703932"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
   Vous pouvez utiliser l’ **Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]vers une autre. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.  
@@ -188,9 +188,9 @@ ms.locfileid: "75242112"
   
 -   **Générer un script pour les autorisations au niveau objet** - Inclut des scripts pour définir l’autorisation sur les objets de la base de données. La valeur par défaut est **False**.  
   
--   **Script Statistics** : lorsqu’elle est définie sur **script Statistics**, `CREATE STATISTICS` cette option comprend l’instruction permettant de recréer des statistiques sur l’objet. L'option **Générer un script des statistiques et des histogrammes** crée également des informations d'histogramme. La valeur par défaut est **Ne pas générer de script des statistiques**. Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+-   **Script Statistics** : lorsqu’elle est définie sur **script Statistics**, cette option comprend l' `CREATE STATISTICS` instruction permettant de recréer des statistiques sur l’objet. L'option **Générer un script des statistiques et des histogrammes** crée également des informations d'histogramme. La valeur par défaut est **Ne pas générer de script des statistiques**. Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Script use Database** -ajoute l' `USE DATABASE` instruction au script. Pour vous assurer que les objets de base de données sont créés dans la base de données correcte, incluez l'instruction `USE DATABASE`. Lorsque le script est censé être utilisé dans une base de données différente, sélectionnez **false** pour `USE DATABASE` omettre l’instruction. La valeur par défaut est **True**. Pour plus d’informations, consultez [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Script use Database** -ajoute l' `USE DATABASE` instruction au script. Pour vous assurer que les objets de base de données sont créés dans la base de données correcte, incluez l'instruction `USE DATABASE`. Lorsque le script est censé être utilisé dans une base de données différente, sélectionnez **false** pour omettre l' `USE DATABASE` instruction. La valeur par défaut est **True**. Pour plus d’informations, consultez [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 -   **Types de données à inclure dans le script** : sélectionne ce qui doit être inclus dans le script : **Données uniquement**, **Schéma uniquement** ou les deux. La valeur par défaut est **Schéma uniquement**.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "75242112"
   
 -   **Générer le script de suivi des modifications** - Génère le script de suivi des modifications s’il est activé sur la base de données d’origine ou sur des tables dans la base de données d’origine. La valeur par défaut est **False**. Pour plus d’informations, consultez [À propos du suivi des modifications &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Contraintes de validation** de script `CHECK` : ajoute des contraintes au script. La valeur par défaut est **True**. Les contraintes `CHECK` exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Contraintes de validation de script** : ajoute des `CHECK` contraintes au script. La valeur par défaut est **True**. Les contraintes `CHECK` exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Générer un script des options de compression de données** - Génère un script des options de compression de données si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. Pour plus d’informations, consultez [Compression de données](../data-compression/data-compression.md). La valeur par défaut est **False**.  
   
@@ -252,9 +252,9 @@ ms.locfileid: "75242112"
   
 7.  **Publier les autorisations au niveau objet** - Inclut les autorisations sur les objets sélectionnés dans la base de données. La valeur par défaut est **False**.  
   
-8.  **Publier les statistiques** -quand elle est configurée pour publier `CREATE STATISTICS` des **statistiques**, comprend l’instruction pour recréer des statistiques sur l’objet. L'option **Publier les statistiques et les histogrammes** crée également des informations d'histogramme. La valeur par défaut est **Ne pas publier les statistiques**. Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+8.  **Publier les statistiques** -quand elle est configurée pour **publier des statistiques**, comprend l' `CREATE STATISTICS` instruction pour recréer des statistiques sur l’objet. L'option **Publier les statistiques et les histogrammes** crée également des informations d'histogramme. La valeur par défaut est **Ne pas publier les statistiques**. Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
-9. **Publier les options vardecimal** -active `vardecimal` le format de table sur la table de base de données cible lorsqu’il est activé sur la table de base de données d’origine. La valeur par défaut est **True**.  
+9. **Publier les options vardecimal** -active le `vardecimal` format de table sur la table de base de données cible lorsqu’il est activé sur la table de base de données d’origine. La valeur par défaut est **True**.  
   
 10. **Noms d’objet de qualification de schéma** - Inclut le nom de schéma dans le nom des objets créés. La valeur par défaut est **True**.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242112"
   
  **Options de table/vue** - Les options suivantes s’appliquent uniquement aux tables et aux vues.  
   
-1.  **Publier les contraintes de validation** : comprend la `CHECK` création de contraintes dans le processus de publication. La valeur par défaut est **True**. Les contraintes `CHECK` exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Publier les contraintes de validation** : comprend la création de `CHECK` contraintes dans le processus de publication. La valeur par défaut est **True**. Les contraintes `CHECK` exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Publier les clés étrangères** - Inclut la création de clés étrangères dans le processus de publication. La valeur par défaut est **True**. Les clés étrangères indiquent et garantissent les relations entre les tables. Pour plus d'informations, consultez [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   

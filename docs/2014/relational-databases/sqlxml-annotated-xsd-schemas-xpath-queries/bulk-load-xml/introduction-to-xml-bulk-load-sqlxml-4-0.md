@@ -13,18 +13,18 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013393"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703371"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Présentation du chargement en masse XML (SQLXML 4.0)
-  Le chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des tables Microsoft.  
+  Le chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables Microsoft.  
   
  Vous pouvez insérer les données XML dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide d'une instruction INSERT et de la fonction OPENXML ; toutefois, l'utilitaire de chargement en masse fournit de meilleures performances lorsque vous avez besoin d'insérer des quantités importantes de données XML.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66013393"
 ## <a name="streaming-of-xml-data"></a>Diffusion en continu de données XML  
  Le document XML source pouvant être volumineux, le document n'est pas lu intégralement en mémoire au cours du traitement de chargement en masse. Au lieu de cela, le chargement en masse XML interprète les données XML en tant que flux et lit ce flux. À mesure que l'utilitaire lit les données, il identifie la ou les tables de base de données, génère le ou les enregistrements appropriés à partir de la source de données XML, puis envoie le ou les enregistrements à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des fins d'insertion.  
   
- Par exemple, le document XML source suivant se compose des ** \<éléments Customer>** et ** \<de l’ordre>** éléments enfants :  
+ Par exemple, le document XML source suivant se compose des éléments ** \< customer>** et de l' ** \< ordre>** éléments enfants :  
   
 ```  
 <Customer ...>  
@@ -56,7 +56,7 @@ ms.locfileid: "66013393"
 ...  
 ```  
   
- À mesure que le chargement en masse XML lit l' ** \<élément Customer>** , il génère un enregistrement pour CustomerTable. Lors de la lecture de la balise de fin ** \</Customer>** , le chargement en masse XML insère cet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]enregistrement dans la table de. De la même façon, lors de la lecture de l’élément ** \<Order>** , le chargement en masse XML génère un enregistrement pour Ordertable, puis insère cet enregistrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la table lors de la lecture de la balise de fin de la ** \<>/Order** .  
+ À mesure que le chargement en masse XML lit l’élément ** \< customer>** , il génère un enregistrement pour CustomerTable. Lors de la lecture de la balise de fin ** \< /Customer>** , le chargement en masse XML insère cet enregistrement dans la table de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . De la même façon, lors de la lecture de l’élément ** \< Order>** , le chargement en masse XML génère un enregistrement pour Ordertable, puis insère cet enregistrement dans la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table lors de la lecture de la balise de fin de la ** \<>/Order** .  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Opérations de chargement en masse XML transactionnelles et non transactionnelles  
  Le chargement en masse XML peut fonctionner en mode transactionnel ou non transactionnel. Les performances sont généralement optimales si vous effectuez un chargement en masse en mode non-. autrement dit, la propriété transaction est définie sur FALSe et l’une ou l’autre des conditions suivantes est vraie :  

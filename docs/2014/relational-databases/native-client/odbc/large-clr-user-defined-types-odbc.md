@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144305"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704283"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
   Cette rubrique traite des modifications apportées à ODBC dans SQL Server Native Client pour prendre en charge les types CLR volumineux définis par l'utilisateur.  
@@ -34,7 +34,7 @@ ms.locfileid: "63144305"
   
  Le tableau suivant montre le mappage des types de données dans les paramètres et les jeux de résultats :  
   
-|Type de données SQL Server|Type de données SQL|Value|  
+|Type de données SQL Server|Type de données SQL|Valeur|  
 |--------------------------|-------------------|-----------|  
 |UDT CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63144305"
   
 |Type de données SQL|Disposition en mémoire|Type de données C|Valeur (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Champs de descripteur pour les paramètres  
  Les informations suivantes sont retournées dans les champs IPD :  
@@ -130,7 +130,7 @@ ms.locfileid: "63144305"
 |Conversion vers et depuis :|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Géré|  
-|SQL_C_BINARY|Pris en charge|  
+|SQL_C_BINARY|Prise en charge|  
 |SQL_C_CHAR|Géré|  
   
  \*Les données binaires sont converties en une chaîne hexadécimale.  
@@ -140,7 +140,7 @@ ms.locfileid: "63144305"
 |Conversion vers et depuis :|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Géré|  
-|SQL_C_BINARY|Pris en charge|  
+|SQL_C_BINARY|Prise en charge|  
 |SQL_C_CHAR|Géré|  
   
  \*La conversion de chaînes hexadécimales en données binaires se produit.  

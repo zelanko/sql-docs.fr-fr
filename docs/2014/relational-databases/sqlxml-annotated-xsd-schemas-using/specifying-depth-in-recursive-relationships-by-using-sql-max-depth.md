@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sql:max-depth
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6eeb8a12980b5c82e0f1d9a90651f54c92cf8d5e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013656"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703512"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth
   Dans les bases de données relationnelles, lorsqu'une table est impliquée dans une relation avec elle-même, on utilise le terme de relation récursive. Par exemple, dans une relation responsable-subalterne, une table qui stocke des enregistrements d'employés est impliquée dans une relation avec elle-même. Dans ce cas, la table d'employés joue un rôle de responsable d'un côté de la relation, et la même table joue un rôle de subalterne de l'autre côté.  
@@ -59,7 +59,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  Dans ce fragment, l'employé 5 est le subalterne de l'employé 4, l'employé 4 est le subalterne de l'employé 3 et les employés 3 et 2 sont les subalternes de l'employé 1.  
   
- Pour produire ce résultat, vous pouvez utiliser le schéma XSD suivant et spécifier une requête XPath contre lui. Le schéma décrit un ** \<élément emp>** de type EmployeeType, constitué d’un ** \<élément enfant EMP>** du même type, EmployeeType. Il s'agit d'une relation récursive (l'élément et son ancêtre sont du même type). En outre, le schéma utilise une ** \<>SQL : Relationship** pour décrire la relation parent-enfant entre le superviseur et le superviseur. Notez que dans ce ** \<SQL : Relationship>**, EMP est à la fois le parent et la table enfant.  
+ Pour produire ce résultat, vous pouvez utiliser le schéma XSD suivant et spécifier une requête XPath contre lui. Le schéma décrit un élément ** \< EMP>** de type EmployeeType, constitué d’un élément enfant ** \< EMP>** du même type, EmployeeType. Il s'agit d'une relation récursive (l'élément et son ancêtre sont du même type). En outre, le schéma utilise une ** \<>SQL : Relationship** pour décrire la relation parent-enfant entre le superviseur et le superviseur. Notez que dans ce ** \< SQL : Relationship>**, EMP est à la fois le parent et la table enfant.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  La relation étant récursive, vous devez trouver un moyen de spécifier la profondeur de récursivité dans le schéma. Sinon, le résultat sera une récursivité sans fin (employé subalterne à employé subalterne à employé, et ainsi de suite). L'annotation `sql:max-depth` vous permet de spécifier la profondeur de récursivité. Dans cet exemple particulier, pour spécifier une valeur pour `sql:max-depth`, vous devez connaître la profondeur de la hiérarchie de direction dans la société.  
   
 > [!NOTE]  
->  Le schéma spécifie l'annotation `sql:limit-field`, mais ne spécifie pas l'annotation `sql:limit-value`. Cela limite le nœud supérieur dans la hiérarchie résultante uniquement aux employés qui ne sont subalternes de personne. (Rendez-vous NULL.) Si `sql:limit-field` vous spécifiez `sql:limit-value` et ne spécifiez pas (dont la valeur par défaut est null), l’annotation effectue cette. Si vous souhaitez que le XML résultant inclue chaque arborescence de direction possible (l'arborescence de direction pour chaque employé dans la table), supprimez l'annotation `sql:limit-field` du schéma.  
+>  Le schéma spécifie l'annotation `sql:limit-field`, mais ne spécifie pas l'annotation `sql:limit-value`. Cela limite le nœud supérieur dans la hiérarchie résultante uniquement aux employés qui ne sont subalternes de personne. (Rendez-vous NULL.) Si `sql:limit-field` vous spécifiez et ne spécifiez pas `sql:limit-value` (dont la valeur par défaut est null), l’annotation effectue cette. Si vous souhaitez que le XML résultant inclue chaque arborescence de direction possible (l'arborescence de direction pour chaque employé dans la table), supprimez l'annotation `sql:limit-field` du schéma.  
   
 > [!NOTE]  
 >  La procédure suivante utilise la base de données tempdb.  
@@ -169,7 +169,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Pour produire différentes profondeurs de hiérarchies dans le résultat, modifiez la valeur de l'annotation `sql:max-depth` dans le schéma et réexécutez le modèle après chaque modification.  
   
- Dans le schéma précédent, tous les éléments ** \<EMP>** avaient exactement le même jeu d’attributs (**EmployeeID**, **FirstName**et **LastName**). Le schéma suivant a été légèrement modifié pour retourner un attribut de **rendez** -vous supplémentaire pour tous les ** \<éléments EMP>** qui sont en rapport avec un responsable.  
+ Dans le schéma précédent, tous les éléments ** \< EMP>** avaient exactement le même jeu d’attributs (**EmployeeID**, **FirstName**et **LastName**). Le schéma suivant a été légèrement modifié pour retourner un attribut de **rendez** -vous supplémentaire pour tous les éléments ** \< EMP>** qui sont en rapport avec un responsable.  
   
  Par exemple, ce fragment XML affiche les subalternes de l'employé 1 :  
   
@@ -241,7 +241,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  L'annotation `sql:max-depth` peut être spécifiée sur tout élément de contenu complexe.  
   
 ### <a name="recursive-elements"></a>Éléments récursifs  
- Si `sql:max-depth` est spécifié sur l'élément parent et sur l'élément enfant dans une relation récursive, l'annotation `sql:max-depth` spécifiée sur le parent est prioritaire. Par exemple, dans le schéma suivant, l'annotation `sql:max-depth` est spécifiée à la fois sur les éléments employés parents et enfants. Dans ce cas, `sql:max-depth=4`, spécifié sur l' ** \<élément emp>** parent (jouent un rôle de superviseur), est prioritaire. La `sql:max-depth` spécifiée sur l’élément ** \<EMP>** enfant (qui jouent un rôle de superviseur) est ignorée.  
+ Si `sql:max-depth` est spécifié sur l'élément parent et sur l'élément enfant dans une relation récursive, l'annotation `sql:max-depth` spécifiée sur le parent est prioritaire. Par exemple, dans le schéma suivant, l'annotation `sql:max-depth` est spécifiée à la fois sur les éléments employés parents et enfants. Dans ce cas, `sql:max-depth=4` , spécifié sur l’élément ** \< EMP>** parent (jouent un rôle de superviseur), est prioritaire. La `sql:max-depth` spécifiée sur l’élément ** \< EMP>** enfant (qui jouent un rôle de superviseur) est ignorée.  
   
 #### <a name="example-b"></a>Exemple B  
   
@@ -281,9 +281,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Pour tester ce schéma, suivez les étapes fournies pour l’exemple A, plus haut dans cette rubrique.  
   
 ### <a name="nonrecursive-elements"></a>Éléments non récursifs  
- Si l'annotation `sql:max-depth` est spécifiée sur un élément dans le schéma qui ne provoque pas de récursivité, elle est ignorée. Dans le schéma suivant, un ** \<élément emp>** se compose d’une ** \<constante>** élément enfant qui, à son tour, possède un ** \<élément enfant>EMP** .  
+ Si l'annotation `sql:max-depth` est spécifiée sur un élément dans le schéma qui ne provoque pas de récursivité, elle est ignorée. Dans le schéma suivant, un élément ** \< EMP>** se compose d’une ** \< constante>** élément enfant qui, à son tour, possède un élément enfant ** \<>EMP** .  
   
- Dans ce schéma, l' `sql:max-depth` annotation spécifiée sur la ** \<constante>** élément est ignorée, car il n’y a pas de récursivité entre le ** \<parent EMP>** et la ** \<constante>** élément enfant. Toutefois, il existe une récurrence entre ** \<EMP>** ancêtre et ** \<EMP>** Child. Le schéma spécifie l'annotation `sql:max-depth` sur les deux. Par conséquent, `sql:max-depth` l’annotation spécifiée sur l’ancêtre (**\<EMP>** dans le rôle superviseur) est prioritaire.  
+ Dans ce schéma, l' `sql:max-depth` annotation spécifiée sur la ** \< constante>** élément est ignorée, car il n’y a pas de récursivité entre le parent ** \< EMP>** et la ** \< constante>** élément enfant. Toutefois, il existe une récurrence entre ** \< EMP>** ancêtre et ** \< EMP>** Child. Le schéma spécifie l'annotation `sql:max-depth` sur les deux. Par conséquent, l' `sql:max-depth` annotation spécifiée sur l’ancêtre (** \< EMP>** dans le rôle superviseur) est prioritaire.  
   
 #### <a name="example-c"></a>Exemple C  
   
@@ -327,11 +327,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Pour tester ce schéma, suivez les étapes fournies pour l'Exemple A, plus haut dans cette rubrique.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Types complexes dérivés par restriction  
- Si vous avez une dérivation de type complexe par ** \<restriction>**, les éléments du type complexe de base correspondant ne `sql:max-depth` peuvent pas spécifier l’annotation. Dans ces cas-là, l'annotation `sql:max-depth` peut être ajoutée à l'élément du type dérivé.  
+ Si vous avez une dérivation de type complexe par ** \< restriction>**, les éléments du type complexe de base correspondant ne peuvent pas spécifier l' `sql:max-depth` annotation. Dans ces cas-là, l'annotation `sql:max-depth` peut être ajoutée à l'élément du type dérivé.  
   
- En revanche, si vous avez une dérivation de type complexe par ** \<extension>**, les éléments du type complexe de base correspondant peuvent spécifier l' `sql:max-depth` annotation.  
+ En revanche, si vous avez une dérivation de type complexe par ** \< extension>**, les éléments du type complexe de base correspondant peuvent spécifier l' `sql:max-depth` annotation.  
   
- Par exemple, le schéma XSD suivant génère une erreur car l'annotation `sql:max-depth` est spécifiée sur le type de base. Cette annotation n’est pas prise en charge sur un type dérivé par ** \<une restriction>** à partir d’un autre type. Pour résoudre ce problème, vous devez modifier le schéma et spécifier l'annotation `sql:max-depth` sur l'élément dans le type dérivé.  
+ Par exemple, le schéma XSD suivant génère une erreur car l'annotation `sql:max-depth` est spécifiée sur le type de base. Cette annotation n’est pas prise en charge sur un type dérivé par une ** \< restriction>** à partir d’un autre type. Pour résoudre ce problème, vous devez modifier le schéma et spécifier l'annotation `sql:max-depth` sur l'élément dans le type dérivé.  
   
 #### <a name="example-d"></a>Exemple D  
   
@@ -375,7 +375,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- Dans le schéma, `sql:max-depth` est spécifié sur un type complexe `CustomerBaseType`. Le schéma spécifie également un `CustomerType` `CustomerBaseType` ** \<élément Customer>** de type, dérivé de. Une requête XPath spécifiée sur un tel schéma génère une erreur car `sql:max-depth` n'est pas pris en charge sur un élément défini dans un type de base de restriction.  
+ Dans le schéma, `sql:max-depth` est spécifié sur un type complexe `CustomerBaseType`. Le schéma spécifie également un élément ** \< customer>** de type `CustomerType` , dérivé de `CustomerBaseType` . Une requête XPath spécifiée sur un tel schéma génère une erreur car `sql:max-depth` n'est pas pris en charge sur un élément défini dans un type de base de restriction.  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>Schémas avec une hiérarchie profonde  
  Vous pouvez avoir un schéma qui inclut une hiérarchie profonde dans laquelle un élément contient un élément enfant, qui à son tour contient un autre élément enfant, et ainsi de suite. Si l'annotation `sql:max-depth` spécifiée dans un tel schéma génère un document XML qui inclut une hiérarchie de plus de 500 niveaux (avec l'élément de niveau supérieur au niveau 1, son enfant au niveau 2, et ainsi de suite), une erreur est retournée.  

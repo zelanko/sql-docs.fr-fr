@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB error handling, about error handling
 - OLE DB error handling
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 434b4251c51809c97744e7aaf954ac1f11c06cfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3979390a58235dbb8ec7c76e7b16478e7d9deb9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050672"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705002"
 ---
 # <a name="errors"></a>Erreurs
   Les objets OLE/COM signalent les erreurs via le code de retour HRESULT des fonctions membres objets. Un valeur HRESULT OLE/COM est une structure de bits comprimée. OLE fournit des macros qui déréférencent les membres de la structure.  
@@ -30,7 +30,7 @@ ms.locfileid: "63050672"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut retourner plusieurs erreurs. Une application peut récupérer les erreurs de serveur une par une en appelant [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630) en combinaison avec ISQLErrorInfo et IErrorRecords.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose les OLE DB les interfaces **IErrorInfo**, personnalisées `ISQLErrorInfo` [et spécifiques au](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) fournisseur.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose les OLE DB les interfaces **IErrorInfo**, personnalisées `ISQLErrorInfo` et spécifiques au fournisseur. [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
  Pour plus d’informations sur le suivi des erreurs, consultez [Suivi de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805). Pour plus d’informations sur les améliorations du suivi des erreurs ajoutées dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], consultez [Accès aux informations de diagnostic dans le journal des événements étendus](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
@@ -38,9 +38,9 @@ ms.locfileid: "63050672"
   
 -   [Codes de retour](return-codes.md)  
   
--   [Informations dans les interfaces d'erreur](information-in-error-interfaces.md)  
+-   [Informations dans les interfaces d’erreur](information-in-error-interfaces.md)  
   
--   [Détail des erreurs SQL Server](sql-server-error-detail.md)  
+-   [Détails des erreurs SQL Server](sql-server-error-detail.md)  
   
 -   [Extraction des informations sur les erreurs](retrieving-error-information.md)  
   

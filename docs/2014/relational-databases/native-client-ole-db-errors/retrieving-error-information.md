@@ -14,18 +14,18 @@ helpviewer_keywords:
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a62997caa5625a901684e2e8da3c5dc8c46a82b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42733a9ebd5d6b6610140d76afb68ca2a3ab7dda
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874590"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704968"
 ---
 # <a name="retrieving-error-information"></a>Extraction des informations sur les erreurs
-  Cet exemple obtient des informations à partir des différentes interfaces d’erreur exposées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le fournisseur de OLE DB Native Client.  
+  Cet exemple obtient des informations à partir des différentes interfaces d’erreur exposées par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  

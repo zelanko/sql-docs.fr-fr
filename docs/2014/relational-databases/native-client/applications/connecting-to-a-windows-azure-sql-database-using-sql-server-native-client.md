@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f154e32b5a7782a083db73de1deef327f44e3ee2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c759cddb5f66f0dbee401e0e58bd6ad8590af8ff
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175409"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704439"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connexion à une base de données Azure SQL à l’aide de SQL Server Native Client
-  Pour obtenir un exemple qui montre comment se connecter à [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’aide de Native Client, consultez [développement : rubriques de procédures (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
+  Pour obtenir un exemple qui montre comment se connecter à à [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] l’aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [développement : rubriques de procédures (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problèmes connus lors de la connexion à une base de données SQL  
  Voici les problèmes connus liés à la connexion à une [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] à l'aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client :  
@@ -30,6 +30,6 @@ ms.locfileid: "70175409"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d'applications avec SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
+ [Génération d’applications avec SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
   
   

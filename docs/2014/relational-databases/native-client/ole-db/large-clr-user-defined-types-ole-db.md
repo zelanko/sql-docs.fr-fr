@@ -9,27 +9,27 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199250"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704257"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Types CLR volumineux définis par l'utilisateur (OLE DB)
   Cette rubrique traite des modifications apportées à OLE DB dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pour prendre en charge les types définis par l'utilisateur (UDT) du CLR (Common Language Runtime) volumineux.  
   
- Pour plus d’informations sur la prise en charge des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT volumineux CLR dans Native Client, consultez [types CLR volumineux définis par l’utilisateur](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Pour un exemple, consultez [Utiliser des types CLR volumineux &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Pour plus d’informations sur la prise en charge des UDT volumineux CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [types CLR volumineux définis par l’utilisateur](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Pour un exemple, consultez [Utiliser des types CLR volumineux &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Format de données  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise ~0 pour représenter la longueur des valeurs qui sont de taille illimitée pour les types d'objets volumineux (LOB). ~0 représente également la taille des types UDT du CLR supérieurs à 8 000 octets.  
   
  Le tableau suivant montre le mappage des types de données dans les paramètres et les ensembles de lignes :  
   
-|Type de données SQL Server|Type de données OLE DB|Disposition en mémoire|Value|  
+|Type de données SQL Server|Type de données OLE DB|Disposition en mémoire|Valeur|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](tableau d’octets\)|132 (oledb.h)|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63199250"
  Le jeu de propriétés DBPROPSET_SQLSERVERCOLUMN prend en charge la création de tables via OLE DB. Pour plus d’informations, consultez [Types CLR définis par l’utilisateur](../features/using-user-defined-types.md).  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Mappage des types de données dans ITableDefinition::CreateTable  
- Les informations suivantes sont utilisées dans `DBCOLUMNDESC` les structures utilisées par ITableDefinition :: CreateTable lorsque des colonnes UDT sont requises :  
+ Les informations suivantes sont utilisées dans les `DBCOLUMNDESC` structures utilisées par ITableDefinition :: CreateTable lorsque des colonnes UDT sont requises :  
   
 |Type de données OLE DB (*wType*)|*pwszTypeName*|Type de données SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
@@ -118,13 +118,13 @@ ms.locfileid: "63199250"
 |Type de données de liaison|UDT vers serveur|Non-UDT vers serveur|UDT à partir du serveur|Non-UDT à partir du serveur|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Pris en charge (5)|Erreur (1)|Pris en charge (5)|Erreur (4)|  
-|DBTYPE_BYTES|Pris en charge (5)|NON APPLICABLE|Pris en charge (5)|NON APPLICABLE|  
-|DBTYPE_WSTR|Pris en charge (2), (5)|NON APPLICABLE|Pris en charge (3), (5), (6)|NON APPLICABLE|  
-|DBTYPE_BSTR|Pris en charge (2), (5)|NON APPLICABLE|Pris en charge (3), (5)|NON APPLICABLE|  
-|DBTYPE_STR|Pris en charge (2), (5)|NON APPLICABLE|Pris en charge (3), (5)|NON APPLICABLE|  
-|DBTYPE_IUNKNOWN|Pris en charge (6)|NON APPLICABLE|Pris en charge (6)|NON APPLICABLE|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|NON APPLICABLE|Pris en charge (3), (5)|NON APPLICABLE|  
-|DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|NON APPLICABLE|N/A|N/A|  
+|DBTYPE_BYTES|Pris en charge (5)|N/A|Pris en charge (5)|N/A|  
+|DBTYPE_WSTR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5), (6)|N/A|  
+|DBTYPE_BSTR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_STR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_IUNKNOWN|Pris en charge (6)|N/A|Pris en charge (6)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>Liste des symboles  
   

@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d503ffad6c8d723bb0d933120a37e9b680a37cd7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638769"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704794"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Définit les propriétés de paramètre pour chaque paramètre par ordinal ou définit des propriétés de paramètre en bloc en spécifiant un tableau de structures SSPARAMPROPS.  
@@ -37,20 +37,20 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>Arguments  
  *cParams*[in]  
- Nombre de structures SSPARAMPROPS dans le tableau *rgParamProperties*. Si ce nombre est égal à `ISSCommandWithParameters::SetParameterProperties` zéro, supprimera toutes les propriétés qui ont pu être spécifiées pour tous les paramètres de la commande.  
+ Nombre de structures SSPARAMPROPS dans le tableau *rgParamProperties*. Si ce nombre est égal à zéro, `ISSCommandWithParameters::SetParameterProperties` supprimera toutes les propriétés qui ont pu être spécifiées pour tous les paramètres de la commande.  
   
  *rgParamProperties*[in]  
  Tableau de structures SSPARAMPROPS à définir.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- La `ISSCommandWithParameters::SetParameterProperties` méthode retourne les mêmes codes d’erreur que la méthode Core OLE DB **ICommandProperties :: SetProperties** .  
+ La `ISSCommandWithParameters::SetParameterProperties` méthode retourne les mêmes codes d’erreur que la méthode core OLE DB **ICommandProperties :: SetProperties** .  
   
 ## <a name="remarks"></a>Notes  
- La définition des propriétés de paramètre avec cette méthode est autorisée pour chaque paramètre par ordinal, ou à l' `ISSCommandWithParameters::SetParameterProperties` aide d’un appel unique une fois que le SSPARAMPROPS a été généré à partir du tableau de propriétés.  
+ La définition des propriétés de paramètre avec cette méthode est autorisée pour chaque paramètre par ordinal, ou à l’aide d’un `ISSCommandWithParameters::SetParameterProperties` appel unique une fois que le SSPARAMPROPS a été généré à partir du tableau de propriétés.  
   
- La méthode **SetParameterInfo** doit être appelée avant d’appeler `ISSCommandWithParameters::SetParameterProperties` la méthode. Le fait d'appeler `SetParameterProperties(0, NULL)` efface toutes les propriétés de paramètre spécifiées, tandis que l'appel de `SetParameterInfo(0,NULL,NULL)` efface toutes les informations sur les paramètres y compris toutes les propriétés qui peuvent être associées à un paramètre.  
+ La méthode **SetParameterInfo** doit être appelée avant d’appeler la `ISSCommandWithParameters::SetParameterProperties` méthode. Le fait d'appeler `SetParameterProperties(0, NULL)` efface toutes les propriétés de paramètre spécifiées, tandis que l'appel de `SetParameterInfo(0,NULL,NULL)` efface toutes les informations sur les paramètres y compris toutes les propriétés qui peuvent être associées à un paramètre.  
   
- L' `ISSCommandWithParameters::SetParameterProperties` appel de pour spécifier des propriétés pour un paramètre qui n’est pas de type DBTYPE_XML ou DBTYPE_UDT retourne DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED, et marque le champ *dwStatus* de tous les DBPROP contenus dans SSPARAMPROPS pour ce paramètre avec DBPROPSTATUS_NOTSET. Le tableau DBPROP de chaque DBPROPSET contenu dans SSPARAMPROPS doit être parcouru pour détecter le paramètre auquel DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED fait référence.  
+ `ISSCommandWithParameters::SetParameterProperties`L’appel de pour spécifier des propriétés pour un paramètre qui n’est pas de type DBTYPE_XML ou DBTYPE_UDT retourne DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED, et marque le champ *dwStatus* de tous les DBPROP contenus dans SSPARAMPROPS pour ce paramètre avec DBPROPSTATUS_NOTSET. Le tableau DBPROP de chaque DBPROPSET contenu dans SSPARAMPROPS doit être parcouru pour détecter le paramètre auquel DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED fait référence.  
   
  Si `ISSCommandWithParameters::SetParameterProperties` est appelé pour spécifier les propriétés des paramètres dont les informations sur les paramètres n’ont pas encore été définies avec **SetParameterInfo**, le fournisseur retourne E_UNEXPECTED avec le message d’erreur suivant :  
   

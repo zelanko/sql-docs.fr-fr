@@ -15,22 +15,22 @@ topic_type:
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226245"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705292"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   La fonction **bcp_setcolfmt** remplace la [bcp_colfmt](bcp-colfmt.md). En spécifiant le classement des colonnes, vous devez utiliser la fonction **bcp_setcolfmt** . [bcp_setbulkmode](bcp-setbulkmode.md) peut être utilisé pour spécifier plusieurs formats de colonne.  
   
  Cette fonction propose une approche souple pour la définition du format des colonnes dans le cadre d'une opération de copie en bloc. Elle est employée pour définir des attributs de format de colonne individuels. Chaque appel à **bcp_setcolfmt** définit un attribut de format de colonne.  
   
- La fonction **bcp_setcolfmt** spécifie le format de la source ou de la cible des données dans un fichier utilisateur. Lorsqu’il est utilisé comme format source, **bcp_setcolfmt** spécifie le format d’un fichier de données existant utilisé comme source de données de données dans une copie en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans une table dans. Lorsqu’il est utilisé comme format cible, le fichier de données est créé à l’aide des formats de colonne spécifiés avec **bcp_setcolfmt**.  
+ La fonction **bcp_setcolfmt** spécifie le format de la source ou de la cible des données dans un fichier utilisateur. Lorsqu’il est utilisé comme format source, **bcp_setcolfmt** spécifie le format d’un fichier de données existant utilisé comme source de données de données dans une copie en bloc dans une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsqu’il est utilisé comme format cible, le fichier de données est créé à l’aide des formats de colonne spécifiés avec **bcp_setcolfmt**.  
   
 ## <a name="syntax"></a>Syntaxe  
   

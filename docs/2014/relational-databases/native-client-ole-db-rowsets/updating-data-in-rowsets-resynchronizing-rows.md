@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resynchronizing rows
 - data updates [SQL Server], OLE DB
 ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7b041dc07afb30fff0c03d96fec9cd8a5d62f965
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39579347453fd7e40e4d8c03fe2ebb8eca3fe5a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63229011"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704722"
 ---
 # <a name="resynchronizing-rows"></a>Resynchronisation des lignes
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IRowsetResynch** uniquement sur les ensembles de lignes pris en charge par les curseurs. **IRowsetResynch** n’est pas disponible à la demande. Le consommateur doit demander l'interface avant d'ouvrir l'ensemble de lignes.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge **IRowsetResynch** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement sur les ensembles de lignes pris en charge par les curseurs. **IRowsetResynch** n’est pas disponible à la demande. Le consommateur doit demander l'interface avant d'ouvrir l'ensemble de lignes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise à jour des données dans les ensembles de lignes](updating-data-in-rowsets.md)  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667377"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704274"
 ---
 # <a name="using-catalog-functions"></a>Utilisation des fonctions de catalogue
   Toutes les bases de données ont une structure contenant les données stockée dans la base de données. Une définition de cette structure, ainsi que d'autres informations comme les autorisations, est stockée dans un catalogue (implémenté comme ensemble de tables système), également appelé dictionnaire de données.  
@@ -43,7 +43,7 @@ ms.locfileid: "62667377"
   
      Retourne la liste des catalogues contenus dans un serveur lié.  
   
- Une fois que vous avez un nom de serveur lié et un nom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de catalogue, le pilote ODBC Native Client prend en charge l’obtention d’informations à partir du catalogue en utilisant un nom en deux parties de _linked_server_name_**.** _catalogue_ pour *nomcatalogue* sur les fonctions de catalogue ODBC suivantes :  
+ Une fois que vous avez un nom de serveur lié et un nom de catalogue, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge l’obtention d’informations à partir du catalogue en utilisant un nom en deux parties de _linked_server_name_**.** _catalogue_ pour *nomcatalogue* sur les fonctions de catalogue ODBC suivantes :  
   
 -   **SQLColumnPrivileges**  
   

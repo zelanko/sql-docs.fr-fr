@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f1c1673e761425969558ecb911f8df92601274
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206806"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705250"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Utiliser des paramètres de données en cours d'exécution (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "68206806"
   
 1.  Quand vous appelez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour lier une mémoire tampon de programme au paramètre d’instruction :  
   
-    -   Pour le dernier paramètre, utilisez SQL_LEN_DATA_AT_EXEC (*longueur*) où *longueur* représente la longueur totale des données `text`du `ntext`paramètre, `image` ou en octets.  
+    -   Pour le dernier paramètre, utilisez SQL_LEN_DATA_AT_EXEC (*longueur*) où *longueur* représente la longueur totale des `text` données du `ntext` paramètre, ou `image` en octets.  
   
     -   Utilisez un `rgbValue` (huitième paramètre) d'un identificateur de paramètre défini par le programme.  
   

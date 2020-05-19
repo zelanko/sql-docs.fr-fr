@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), diagnostic records
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c87e272b339357a18ef9f9a167672c1df4ed96e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93138d3069e9e7205f610bb4bdc9a2090d07137
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62625873"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705183"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>champs d'enregistrement de diagnostic de paramètre table
   Deux nouveaux champs de diagnostic, SQL_DIAG_SS_TABLE_COLUMN_NUMBER et SQL_DIAG_SS_TABLE_ROW_NUMBER, ont été ajoutés aux enregistrements de diagnostic. Ces champs vous permettent de déterminer les valeurs de colonne de paramètre table qui sont associées à des erreurs et à des avertissements.  

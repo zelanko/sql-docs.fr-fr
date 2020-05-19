@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff6e37986378a66d94dc113c4e3fe072fe3c077f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3877e7b8c6ccd0d5364b3aea291facb1799bff7d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062497"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705103"
 ---
 # <a name="ssvariant-structure"></a>Structure SSVARIANT
   La structure `SSVARIANT`, qui est définie dans sqlncli.h, correspond à une valeur DBTYPE_SQLVARIANT dans le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -61,18 +61,18 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |llBigIntVal|DBTYPE_I8|`LARGE_INTEGER`|`VT_SS_I8`|Prend en charge le type de données `bigint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |fltRealVal|DBTYPE_R4|`float`|`VT_SS_R4`|Prend en charge le type de données `real`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |dblFloatVal|DBTYPE_R8|`double`|`VT_SS_R8`|Prend en charge le type de données `float`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|cyMoneyVal|DBTYPE_CY|`LARGE_INTEGER`|**VT_SS_MONEY VT_SS_SMALLMONEY**|Prend en `money` charge les types de données et **smallmoney** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|cyMoneyVal|DBTYPE_CY|`LARGE_INTEGER`|**VT_SS_MONEY VT_SS_SMALLMONEY**|Prend en charge les `money` types de données et **smallmoney** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |fBitVal|DBTYPE_BOOL|`VARIANT_BOOL`|`VT_SS_BIT`|Prend en charge le type de données `bit`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |rgbGuidVal|DBTYPE_GUID|`GUID`|`VT_SS_GUID`|Prend en charge le type de données `uniqueidentifier`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |numNumericVal|DBTYPE_NUMERIC|`DB_NUMERIC`|`VT_SS_NUMERIC`|Prend en charge le type de données `numeric`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |dDateVal|DBTYPE_DATE|`DBDATE`|`VT_SS_DATE`|Prend en charge le type de données `date`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2`|Prend en charge les types de données `smalldatetime`, `datetime` et `datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|Prend en charge le type de données `time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Inclut les membres suivants :<br /><br /> *tTime2Val* (`DBTIME2`)<br /><br /> *bScale* (`BYTE`) spécifie l’échelle pour la valeur *tTime2Val* .|  
-|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|Prend en charge le type de données `datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Inclut les membres suivants :<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`) spécifie l’échelle pour la valeur *tsDataTimeVal* .|  
-|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|Prend en charge le type de données `datetimeoffset`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Inclut les membres suivants :<br /><br /> *tsoDateTimeOffsetVal* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`) spécifie l’échelle pour la valeur *tsoDateTimeOffsetVal* .|  
-|NCharVal|Aucun indicateur de type OLE DB correspondant.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Prend en `nchar` charge les types de données et **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Inclut les membres suivants :<br /><br /> *sActualLength* (`SHORT`) spécifie la longueur réelle de la chaîne vers laquelle *pwchNCharVal* pointe. N'inclut pas le zéro de fin.<br /><br /> *sMaxLength* (`SHORT`) spécifie la longueur maximale de la chaîne à laquelle *pwchNCharVal* pointe.<br /><br /> *pwchNCharVal* pointeur pwchNCharVal`WCHAR` \*() vers la chaîne.<br /><br /> Membres inutilisés : *rgbReserved*, *dwReserved* et *pwchReserved*.|  
-|CharVal|Aucun indicateur de type OLE DB correspondant.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Prend en `char` charge les types de données et **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Inclut les membres suivants :<br /><br /> *sActualLength* (`SHORT`) spécifie la longueur réelle de la chaîne vers laquelle *pchCharVal* pointe. N'inclut pas le zéro de fin.<br /><br /> *sMaxLength* (`SHORT`) spécifie la longueur maximale de la chaîne à laquelle *pchCharVal* pointe.<br /><br /> *pchCharVal* pointeur pchCharVal`CHAR` \*() vers la chaîne.<br /><br /> Membres non utilisés :<br /><br /> *rgbReserved*, *dwReserved* et *pwchReserved*.|  
-|BinaryVal|Aucun indicateur de type OLE DB correspondant.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Prend en `binary` charge les types de données **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et.<br /><br /> Inclut les membres suivants :<br /><br /> *sActualLength* (`SHORT`) spécifie la longueur réelle des données auxquelles *prgbBinaryVal* pointe.<br /><br /> *sMaxLength* (`SHORT`) spécifie la longueur maximale des données auxquelles *prgbBinaryVal* pointe.<br /><br /> *prgbBinaryVal* pointeur prgbBinaryVal`BYTE` \*() vers les données binaires.<br /><br /> Membre inutilisé : *dwReserved*.|  
+|Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|Prend en charge le type de données `time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Inclut les membres suivants :<br /><br /> *tTime2Val* ( `DBTIME2` )<br /><br /> *bScale* ( `BYTE` ) spécifie l’échelle pour la valeur *tTime2Val* .|  
+|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|Prend en charge le type de données `datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Inclut les membres suivants :<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* ( `BYTE` ) spécifie l’échelle pour la valeur *tsDataTimeVal* .|  
+|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|Prend en charge le type de données `datetimeoffset`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Inclut les membres suivants :<br /><br /> *tsoDateTimeOffsetVal* ( `DBTIMESTAMPOFFSET` )<br /><br /> *bScale* ( `BYTE` ) spécifie l’échelle pour la valeur *tsoDateTimeOffsetVal* .|  
+|NCharVal|Aucun indicateur de type OLE DB correspondant.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Prend en charge les `nchar` types de données et **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Inclut les membres suivants :<br /><br /> *sActualLength* ( `SHORT` ) spécifie la longueur réelle de la chaîne vers laquelle *pwchNCharVal* pointe. N'inclut pas le zéro de fin.<br /><br /> *sMaxLength* ( `SHORT` ) spécifie la longueur maximale de la chaîne à laquelle *pwchNCharVal* pointe.<br /><br /> pointeur *pwchNCharVal* ( `WCHAR` \* ) vers la chaîne.<br /><br /> Membres inutilisés : *rgbReserved*, *dwReserved* et *pwchReserved*.|  
+|CharVal|Aucun indicateur de type OLE DB correspondant.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Prend en charge les `char` types de données et **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Inclut les membres suivants :<br /><br /> *sActualLength* ( `SHORT` ) spécifie la longueur réelle de la chaîne vers laquelle *pchCharVal* pointe. N'inclut pas le zéro de fin.<br /><br /> *sMaxLength* ( `SHORT` ) spécifie la longueur maximale de la chaîne à laquelle *pchCharVal* pointe.<br /><br /> pointeur *pchCharVal* ( `CHAR` \* ) vers la chaîne.<br /><br /> Membres non utilisés :<br /><br /> *rgbReserved*, *dwReserved* et *pwchReserved*.|  
+|BinaryVal|Aucun indicateur de type OLE DB correspondant.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Prend en charge les `binary` types de données **varbinary** et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Inclut les membres suivants :<br /><br /> *sActualLength* ( `SHORT` ) spécifie la longueur réelle des données auxquelles *prgbBinaryVal* pointe.<br /><br /> *sMaxLength* ( `SHORT` ) spécifie la longueur maximale des données auxquelles *prgbBinaryVal* pointe.<br /><br /> pointeur *prgbBinaryVal* ( `BYTE` \* ) vers les données binaires.<br /><br /> Membre inutilisé : *dwReserved*.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48f749da0acc21e990954a1198d868c0786d2a72
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244961"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703980"
 ---
 # <a name="database-engine-scripting"></a>Scripts du moteur de base de données
   Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] prend en charge l'environnement de script [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell pour gérer les instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et leurs objets. Vous pouvez également générer et exécuter des requêtes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui contiennent des éléments [!INCLUDE[tsql](../../includes/tsql-md.md)] et XQuery dans des environnements très similaires aux environnements de script.  
@@ -53,7 +53,7 @@ ms.locfileid: "75244961"
   
 -   Vous pouvez, de manière interactive, exécuter et déboguer des requêtes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez coder et déboguer plusieurs instructions en une session, puis enregistrer toutes les instructions dans un même fichier de script.  
   
--   L' `sqlcmd` utilitaire d’invite de commandes vous permet d’exécuter [!INCLUDE[ssDE](../../includes/ssde-md.md)] interactivement des requêtes et [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’exécuter des fichiers de script de requête existants.  
+-   L' `sqlcmd` utilitaire d’invite de commandes vous permet d’exécuter interactivement des [!INCLUDE[ssDE](../../includes/ssde-md.md)] requêtes et d’exécuter des [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichiers de script de requête existants.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Les fichiers de script de requête sont en général codés de manière interactive dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en utilisant l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Le fichier peut par la suite être ouvert dans l'un de ces environnements :  
   

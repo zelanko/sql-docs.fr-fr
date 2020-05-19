@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244942"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703987"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Éditeur de requête du moteur de base de données (SQL Server Management Studio)
   Utilisez l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour créer et exécuter des scripts contenant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’éditeur prend également en charge l’exécution de scripts qui contiennent des commandes **sqlcmd** .  
@@ -56,7 +56,7 @@ ms.locfileid: "75244942"
  **Connexion**  
  Ouvre la boîte de dialogue **Se connecter au serveur** . Utilisez cette boîte de dialogue pour établir une connexion à un serveur.  
   
- **Connect**  
+ **Disconnect**  
  Déconnecte l'éditeur de requête actuel du serveur.  
   
  **Modifier la connexion**  
@@ -71,7 +71,7 @@ ms.locfileid: "75244942"
  **Effectue**  
  Exécute le code sélectionné ou, si aucun code n'est sélectionné, exécute la totalité du code figurant dans l'éditeur de requête.  
   
- **Débogage**  
+ **Déboguer**  
  Active le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce débogueur prend en charge les actions de débogage comme la définition de points d’arrêt, la surveillance de variables et l’exécution pas à pas du code.  
   
  **Annuler l'exécution de la requête**  

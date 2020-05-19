@@ -11,20 +11,20 @@ helpviewer_keywords:
 - sparse columns, SQL Server Native Client
 - sparse columns, OLE DB
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21b79a06acd838278073dee58026269f63b0da04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8d0377bab3abddebe6d2869744dd51def5b5008
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231711"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704332"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Prise en charge des colonnes éparses dans SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les colonnes éparses. Pour plus d’informations sur les colonnes éparses dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Utiliser des colonnes éparses](../../tables/use-sparse-columns.md) et [Utiliser des jeux de colonnes](../../tables/use-column-sets.md).  
   
- Pour plus d’informations sur la prise en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] charge des colonnes éparses dans Native Client, consultez [prise en charge des colonnes éparses &#40;ODBC&#41;](../odbc/sparse-columns-support-odbc.md) et les [colonnes éparses prennent en charge &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md).  
+ Pour plus d’informations sur la prise en charge des colonnes éparses dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [prise en charge des colonnes éparses &#40;ODBC&#41;](../odbc/sparse-columns-support-odbc.md) et les [colonnes éparses prennent en charge &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md).  
   
  Pour plus d’informations sur les exemples d’applications qui illustrent cette fonctionnalité, consultez [Exemples de programmation de données SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
@@ -41,23 +41,23 @@ ms.locfileid: "75231711"
 |Extraire les métadonnées uniquement pour les colonnes qui sont membres d'un `column_set`. De très nombreuses lignes peuvent alors être retournées.|Définissez le champ descripteur SQL_SOPT_SS_NAME_SCOPE sur SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET et appelez SQLColumns (ODBC).<br /><br /> Appelez IDBSchemaRowset :: GetRowset pour l’ensemble de lignes de schéma DBSCHEMA_SPARSE_COLUMN_SET (OLE DB).<br /><br /> Ce scénario n'est pas possible depuis une application qui utilise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à partir d'une version antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Toutefois, une telle application offre la possibilité d'interroger les vues système.|  
 |Déterminer si une colonne est éparse.|Consultez la SS_IS_SPARSE colonne du jeu de résultats SQLColumns (ODBC).<br /><br /> Consultez la colonne SS_IS_SPARSE de l'ensemble de lignes de schéma DBSCHEMA_COLUMNS (OLE DB).<br /><br /> Ce scénario n'est pas possible depuis une application qui utilise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à partir d'une version antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Toutefois, une telle application offre la possibilité d'interroger les vues système.|  
 |Déterminer si une colonne est un `column_set`.|Consultez la colonne SS_IS_COLUMN_SET du jeu de résultats SQLColumns. Ou bien consultez l'attribut de colonne SQL_CA_SS_IS_COLUMN_SET (ODBC) spécifique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Consultez la colonne SS_IS_COLUMN_SET de l'ensemble de lignes de schéma DBSCHEMA_COLUMNS Ou consultez *dwFlags* retourné par IColumnsinfo::GetColumnInfo ou DBCOLUMNFLAGS dans l’ensemble de lignes retourné par IColumnsRowset::GetColumnsRowset. Pour les colonnes `column_set`, DBCOLUMNFLAGS_SS_ISCOLUMNSET est défini (OLE DB).<br /><br /> Ce scénario n'est pas possible depuis une application qui utilise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à partir d'une version antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Toutefois, une telle application offre la possibilité d'interroger les vues système.|  
-|Importation et exportation de colonnes éparses par l’utilitaire BCP pour une `column_set`table sans.|Aucun changement de comportement depuis les précédentes versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
-|Importer et exporter des colonnes éparses via BCP pour une table sans `column_set`.|Le `column_set` est importé et exporté de la même façon que XML ; autrement dit, comme `varbinary(max)` s’il était lié en tant que type binaire `nvarchar(max)` , ou comme s' `char` il était lié en tant que type ou **WCHAR** .<br /><br /> Les colonnes qui sont membres du `column_set` éparse ne sont pas exportées en tant que colonnes distinctes ; elles sont uniquement exportées dans la valeur du `column_set`.|  
+|Importation et exportation de colonnes éparses par l’utilitaire BCP pour une table sans `column_set` .|Aucun changement de comportement depuis les précédentes versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
+|Importer et exporter des colonnes éparses via BCP pour une table sans `column_set`.|Le `column_set` est importé et exporté de la même façon que XML ; autrement dit, comme `varbinary(max)` s’il était lié en tant que type binaire, ou comme s’il était `nvarchar(max)` lié en tant que `char` type ou **WCHAR** .<br /><br /> Les colonnes qui sont membres du `column_set` éparse ne sont pas exportées en tant que colonnes distinctes ; elles sont uniquement exportées dans la valeur du `column_set`.|  
 |Comportement de `queryout` pour BCP.|Aucune modification observée dans la gestion des colonnes explicitement nommées depuis les précédentes versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> Les scénarios impliquant des opérations d'importation et d'exportation entre les tables avec des schémas différents peuvent nécessiter une gestion spéciale.<br /><br /> Pour plus d'informations sur BCP, consultez la section « Prise en charge de la copie en bloc (BCP) pour les colonnes éparses » plus loin dans cette rubrique.|  
   
 ## <a name="down-level-client-behavior"></a>Comportement de client de bas niveau  
- Les clients de niveau inférieure retournent des métadonnées uniquement pour les colonnes qui ne `column_set` sont pas membres du épars pour SQLColumns et DBSCHMA_COLUMNS. Les ensembles de lignes de schéma OLE DB [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] supplémentaires introduits dans Native Client ne seront pas disponibles, ni les modifications apportées à SQLColumns dans ODBC via SQL_SOPT_SS_NAME_SCOPE.  
+ Les clients de niveau inférieure retournent des métadonnées uniquement pour les colonnes qui ne sont pas membres du épars `column_set` pour SQLColumns et DBSCHMA_COLUMNS. Les ensembles de lignes de schéma OLE DB supplémentaires introduits dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client ne seront pas disponibles, ni les modifications apportées à SQLColumns dans ODBC via SQL_SOPT_SS_NAME_SCOPE.  
   
  Les clients de bas niveau peuvent accéder par nom aux colonnes membres du `column_set` épars et la colonne `column_set` sera accessible en tant que colonne XML pour les clients [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Prise en charge de la copie en bloc (BCP) pour les colonnes éparses  
  Que ce soit dans ODBC ou OLE DB, aucune modification de l'API BCP n'a été effectuée pour les colonnes éparses ou les fonctionnalités `column_set`.  
   
- Si une table possède un `column_set`, les colonnes éparses ne sont pas traitées en tant que colonnes distinctes. Les valeurs de toutes les colonnes éparses sont incluses dans la valeur `column_set`de, qui est exportée de la même façon qu’une colonne XML. autrement dit, comme `varbinary(max)` s’il était lié en tant que type binaire `nvarchar(max)` , ou comme s' `char` il était lié en tant que type ou **WCHAR** ). Lors de l'importation, la valeur `column_set` doit être conforme au schéma du `column_set`.  
+ Si une table possède un `column_set`, les colonnes éparses ne sont pas traitées en tant que colonnes distinctes. Les valeurs de toutes les colonnes éparses sont incluses dans la valeur de `column_set` , qui est exportée de la même façon qu’une colonne XML, c’est-à-dire comme si elle était `varbinary(max)` liée en tant que type binaire, ou comme si elle était `nvarchar(max)` liée en tant que `char` type ou **WCHAR** . Lors de l'importation, la valeur `column_set` doit être conforme au schéma du `column_set`.  
   
  Dans le cadre des opérations `queryout`, aucun changement n'intervient dans la manière dont les colonnes explicitement référencées sont gérées. Les colonnes `column_set` affichent le même comportement que les colonnes XML et le caractère éparse n'a aucune incidence sur la gestion des colonnes éparses nommées.  
   
- En revanche, si vous faites appel à `queryout` pour l'exportation et référencez par nom les colonnes éparses membres du jeu de colonnes éparses, vous ne pouvez procéder à aucune importation directe dans une table de structure identique. En effet, BCP utilise des métadonnées cohérentes avec une opération **Select \* ** pour l’importation et ne `column_set` peut pas faire correspondre les colonnes membres avec ces métadonnées. Pour importer individuellement des colonnes membres `column_set`, vous devez définir une vue dans la table qui référence les colonnes `column_set` souhaitées, puis procédez à l'opération d'importation à l'aide de la vue.  
+ En revanche, si vous faites appel à `queryout` pour l'exportation et référencez par nom les colonnes éparses membres du jeu de colonnes éparses, vous ne pouvez procéder à aucune importation directe dans une table de structure identique. En effet, BCP utilise des métadonnées cohérentes avec une opération ** \* Select** pour l’importation et ne peut pas faire correspondre les `column_set` colonnes membres avec ces métadonnées. Pour importer individuellement des colonnes membres `column_set`, vous devez définir une vue dans la table qui référence les colonnes `column_set` souhaitées, puis procédez à l'opération d'importation à l'aide de la vue.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de SQL Server Native Client](../sql-server-native-client-programming.md)  

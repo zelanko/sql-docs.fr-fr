@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ADO [SQL Server Native Client]
 - SQLNCLI, ADO
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f862807f0ca273e4058263efee6ac326a74103e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea1d9d70e8b470277af5641faaaa1767b4f1a6c0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046336"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704385"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Utilisation d'ADO avec SQL Server Native Client
-  Pour tirer parti des nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , telles que mars (Multiple Active Result Sets), les notifications de requêtes, les types définis par l’utilisateur (UDT) ou le nouveau type de données **XML** , les applications existantes qui utilisent ActiveX Data Objects [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ADO) doivent utiliser le fournisseur OLE DB Native Client comme fournisseur d’accès aux données.  
+  Pour tirer parti des nouvelles fonctionnalités introduites dans, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] telles que mars (Multiple Active Result Sets), les notifications de requêtes, les types définis par l’utilisateur (UDT) ou le nouveau type de données **XML** , les applications existantes qui utilisent ActiveX Data Objects (ADO) doivent utiliser le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client comme fournisseur d’accès aux données.  
   
  Si vous n'avez pas besoin d'utiliser ces nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il n'est pas nécessaire d'utiliser le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ; vous pouvez continuer à utiliser votre fournisseur d'accès aux données actuel, qui est en général SQLOLEDB. Si vous améliorez une application existante et que vous devez utiliser les nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vous devez utiliser le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63046336"
   
 -   `DataTypeCompatibility=80`  
   
- Pour plus d’informations sur les mots clés de chaîne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connexions ADO pris en charge dans Native Client, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](using-connection-string-keywords-with-sql-server-native-client.md).  
+ Pour plus d’informations sur les mots clés de chaîne de connexions ADO pris en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](using-connection-string-keywords-with-sql-server-native-client.md).  
   
  L’exemple suivant illustre l’établissement d’une chaîne de connexion ADO entièrement activée pour fonctionner avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, y compris l’activation de la fonctionnalité mars :  
   
@@ -59,7 +59,7 @@ con.Open
 ```  
   
 ## <a name="examples"></a>Exemples  
- Les sections suivantes fournissent des exemples de la façon dont vous pouvez utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ADO avec le fournisseur de OLE DB Native Client.  
+ Les sections suivantes fournissent des exemples de la façon dont vous pouvez utiliser ADO avec le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client.  
   
 ### <a name="retrieving-xml-column-data"></a>Extraction de données de colonnes XML  
  Dans cet exemple, un recordset est utilisé pour récupérer et afficher les données d’une colonne XML dans l’exemple de base de données **AdventureWorks** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -141,7 +141,7 @@ Set con = Nothing
 ```  
   
 ### <a name="enabling-and-using-mars"></a>Activation et utilisation de MARS  
- Dans cet exemple, la chaîne de connexion est construite pour activer MARS par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le biais du fournisseur OLE DB Native Client, puis deux objets Recordset sont créés pour s’exécuter à l’aide de la même connexion.  
+ Dans cet exemple, la chaîne de connexion est construite pour activer MARS par le biais du [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, puis deux objets Recordset sont créés pour s’exécuter à l’aide de la même connexion.  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -165,9 +165,9 @@ con.Close
 Set con = Nothing  
 ```  
   
- Dans les versions antérieures du fournisseur OLE DB, ce code provoquait la création d'une connexion implicite lors de la deuxième exécution car un seul jeu de résultats actif par connexion pouvait être ouvert. La connexion implicite n'étant pas mise dans le pool de connexions OLE DB, cela provoquait une charge supplémentaire. Avec la fonctionnalité MARS exposée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le fournisseur de OLE DB Native Client, vous recevez plusieurs résultats actifs sur une seule connexion.  
+ Dans les versions antérieures du fournisseur OLE DB, ce code provoquait la création d'une connexion implicite lors de la deuxième exécution car un seul jeu de résultats actif par connexion pouvait être ouvert. La connexion implicite n'étant pas mise dans le pool de connexions OLE DB, cela provoquait une charge supplémentaire. Avec la fonctionnalité MARS exposée par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client, vous recevez plusieurs résultats actifs sur une seule connexion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d'applications avec SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
+ [Génération d’applications avec SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
   
   
