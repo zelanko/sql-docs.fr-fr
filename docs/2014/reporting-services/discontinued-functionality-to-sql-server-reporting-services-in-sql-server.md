@@ -6,16 +6,15 @@ manager: kfile
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: reporting-services
-ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 14a5a6e38d4c9fcf306436374d80dd1c1c08b27e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cdec8ed3fbdd539b0c630af2a298ebf9807d6a7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67413042"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755752"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Fonctionnalités supprimées dans SQL Server Reporting Services (SSRS)
 
@@ -29,11 +28,11 @@ ms.locfileid: "67413042"
   
 - [Fonctionnalités supprimées dans SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="sssql14-reporting-services-discontinued-functionality"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services les fonctionnalités supprimées
+##  <a name="sssql14-reporting-services-discontinued-functionality"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]Reporting Services les fonctionnalités supprimées
 
  Aucune fonctionnalité [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'a été supprimée dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="sssql11-reporting-services-discontinued-functionality"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services les fonctionnalités supprimées
+##  <a name="sssql11-reporting-services-discontinued-functionality"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]Reporting Services les fonctionnalités supprimées
 
  Cette section décrit les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supprimées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
@@ -41,7 +40,7 @@ ms.locfileid: "67413042"
   
 ##  <a name="sql-server-2008-r2-reporting-services-discontinued-functionality"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services fonctionnalité abandonnée
 
- Cette section décrit les fonctionnalités supprimées [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]dans.  
+ Cette section décrit les fonctionnalités supprimées dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 > [!NOTE]  
 > SQL Server 2008 R2 étant une mise à niveau de version secondaire de SQL Server 2008, nous vous recommandons d'examiner également le contenu de la section SQL Server 2008.

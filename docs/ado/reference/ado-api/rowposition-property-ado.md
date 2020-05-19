@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f2621e82fef8d7e9baffa9d6cc8c30c65ea476ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931223"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756210"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition, propriété (ADO)
 Obtient ou définit un objet **RowPosition** OLE DB à partir de/sur un objet **ADORecordsetConstruction** . Quand vous utilisez **put_RowPosition** pour définir l’objet **RowPosition** , l’objet **Recordset** résultant utilise l’objet **RowPosition** pour déterminer la ligne actuelle.  
@@ -48,7 +48,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>Valeurs de retour  
  Cette méthode de propriété retourne les valeurs HRESULT standard, y compris S_OK et E_FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Quand cette propriété est définie, si l’objet **rowset** de l’objet **RowPosition** est différent de l’objet **rowset** sur l’objet **Recordset** , le précédent remplace ce dernier. Le même comportement s’applique également au **chapitre** actuel du **RowPosition** .  
   
 ## <a name="applies-to"></a>S'applique à  

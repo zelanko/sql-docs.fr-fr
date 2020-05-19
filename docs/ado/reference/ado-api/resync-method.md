@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917159"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756311"
 ---
 # <a name="resync-method"></a>Resync, méthode
 Actualise les données de la base de données sous-jacente de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) actuel ou de la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -37,10 +37,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Paramètres  
  *AffectRecords*  
- Facultatif. Valeur [AffectEnum](../../../ado/reference/ado-api/affectenum.md) qui détermine le nombre d’enregistrements affectés par la méthode **Resync** . La valeur par défaut est **adAffectAll**. Cette valeur n’est pas disponible avec la méthode **Resync** de la collection **Fields** d’un objet **Record** .  
+ facultatif. Valeur [AffectEnum](../../../ado/reference/ado-api/affectenum.md) qui détermine le nombre d’enregistrements affectés par la méthode **Resync** . La valeur par défaut est **adAffectAll**. Cette valeur n’est pas disponible avec la méthode **Resync** de la collection **Fields** d’un objet **Record** .  
   
  *ResyncValues*  
- Facultatif. Valeur de [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) qui spécifie si les valeurs sous-jacentes sont remplacées. La valeur par défaut est **adResyncAllValues**.  
+ facultatif. Valeur de [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) qui spécifie si les valeurs sous-jacentes sont remplacées. La valeur par défaut est **adResyncAllValues**.  
   
 ## <a name="remarks"></a>Notes  
   
