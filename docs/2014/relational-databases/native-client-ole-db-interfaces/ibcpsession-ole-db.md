@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - IBCPSession interface
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 142f6ac339e437877c485588333fabb04e0bd66b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10165ed57c12b06fc1317bb440dd1635849582f6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241350"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695245"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
   L’interface **IBCPSession** expose la prise en charge des opérations de copie en bloc basées sur des fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'interface **IBCPSession** est exposée dans le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sous le même niveau que Sessions. Dans le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, les objets sources de données sont des fabriques pour les objets Session et les opérations de copie en bloc sont spécifiées dans la propriété de connexion SSPROP_ENABLEBULKCOPY. De plus, la propriété SSPROP_ENABLEFASTLOAD doit avoir la valeur vrai.  
@@ -29,7 +29,7 @@ ms.locfileid: "63241350"
 > [!NOTE]  
 >  Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les opérations de copie en bloc basées sur mémoire par le biais de l'interface [IRowsetFastLoad](irowsetfastload-ole-db.md) .  
   
- Pour plus d’informations sur l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisation du fournisseur de OLE DB Native Client pour les opérations de copie en bloc, consultez [exécution d’opérations de copie en bloc](../native-client/features/performing-bulk-copy-operations.md).  
+ Pour plus d’informations sur l’utilisation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client pour les opérations de copie en bloc, consultez [exécution d’opérations de copie en bloc](../native-client/features/performing-bulk-copy-operations.md).  
   
  Pour obtenir un exemple qui indique comment utiliser l'interface **IBCPSession**, consultez [IBCPSession::BCPDone &#40;OLE DB&#41;](ibcpsession-bcpdone-ole-db.md).  
   

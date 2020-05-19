@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193039"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702261"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
-  Comme décrit dans la rubrique, [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fournit un stockage natif des données XML par `xml` le biais du type de données. Vous pouvez éventuellement associer des schémas XSD à une variable ou une colonne de type `xml` par le biais d’une collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  
+  Comme décrit dans la rubrique, [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fournit un stockage natif des données XML par le biais du `xml` type de données. Vous pouvez éventuellement associer des schémas XSD à une variable ou une colonne de `xml` type par le biais d’une collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  
   
 -   valider des instances XML ;  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63193039"
   
  Le moteur de traitement des requêtes utilise aussi le schéma pour vérifier le type et optimiser les requêtes et la modification des données.  
   
- De plus, SQL Server utilise la collection de schémas XML associée, dans le cas `xml`de type, pour valider l’instance XML. Si l'instance XML est conforme au schéma, la base de données autorise le stockage de l'instance dans le système avec ses informations de type. Sinon, elle rejette l'instance.  
+ De plus, SQL Server utilise la collection de schémas XML associée, dans le cas de type `xml` , pour valider l’instance XML. Si l'instance XML est conforme au schéma, la base de données autorise le stockage de l'instance dans le système avec ses informations de type. Sinon, elle rejette l'instance.  
   
  Vous pouvez utiliser la fonction intrinsèque XML_SCHEMA_NAMESPACE pour récupérer la collection de schémas stockée dans la base de données. Pour plus d’informations, consultez [Afficher une collection de schémas XML stockée](../xml/view-a-stored-xml-schema-collection.md).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "63193039"
   
 -   supprimer la collection de schémas XML ;  
   
--   Utiliser la collection de schémas XML pour `xml` taper des colonnes, des variables et des paramètres de type, ou l’utiliser dans des contraintes de table ou de colonne  
+-   Utiliser la collection de schémas XML pour taper des `xml` colonnes, des variables et des paramètres de type, ou l’utiliser dans des contraintes de table ou de colonne  
   
  Le modèle de sécurité SQL Server accorde l'autorisation CONTROL sur chaque objet. Le bénéficiaire de cette autorisation obtient toutes les autres autorisations sur l'objet. Le propriétaire de l'objet a également toutes les autorisations sur l'objet.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63193039"
   
 -   écrire des requêtes Transact-SQL sur les affichages catalogue appropriés pour les collections de schémas XML ;  
   
--   utiliser la fonction intégrée **XML_SCHEMA_NAMESPACE()** . Vous pouvez appliquer `xml` des méthodes de type de données à la sortie de cette fonction. En revanche, vous ne pouvez pas modifier les schémas XML sous-jacents.  
+-   utiliser la fonction intégrée **XML_SCHEMA_NAMESPACE()** . Vous pouvez appliquer des `xml` méthodes de type de données à la sortie de cette fonction. En revanche, vous ne pouvez pas modifier les schémas XML sous-jacents.  
   
  Ces méthodes sont illustrées dans les exemples ci-après.  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Les schémas XML individuels de la collection peuvent être obtenus en `xml` tant qu’instances de type de données en spécifiant l’espace de noms cible comme troisième argument pour **XML_SCHEMA_NAMESPACE ()**. Cela est illustré par l'exemple suivant.  
+ Les schémas XML individuels de la collection peuvent être obtenus en tant qu' `xml` instances de type de données en spécifiant l’espace de noms cible comme troisième argument pour **XML_SCHEMA_NAMESPACE ()**. Cela est illustré par l'exemple suivant.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : extraction d'un schéma spécifique d'une collection de schémas XML  
  L’instruction suivante extrait le schéma XML dont l’espace de noms cible est « <https://www.microsoft.com/books> » de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  

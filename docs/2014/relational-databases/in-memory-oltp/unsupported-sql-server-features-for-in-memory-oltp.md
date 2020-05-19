@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157241"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702224"
 ---
 # <a name="supported-sql-server-features"></a>Fonctionnalités SQL Server prises en charge
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont prises en charge, et celles qui ne le sont pas, avec les objets mémoire optimisés.  
@@ -59,7 +59,7 @@ ms.locfileid: "63157241"
   
 -   Service Broker, sous certaines conditions. Impossible d'accéder à une file d'attente à partir d'une procédure stockée compilée en mode natif. Impossible d'accéder à une file d'attente dans une base de données distante, dans une transaction qui accède à des tables à mémoire optimisée.  
   
--   Clustering de basculement : dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cadre de l’offre AlwaysOn, les instances de cluster de basculement AlwaysOn tirent parti de la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une instance de cluster de basculement (FCI). Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Clustering de basculement : dans le cadre de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre AlwaysOn, les instances de cluster de basculement AlwaysOn tirent parti de la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une instance de cluster de basculement (FCI). Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Intégration à AlwaysOn : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs options permettant de garantir un haut niveau de disponibilité pour un serveur ou une base de données, y compris AlwaysOn. Pour plus d’informations, consultez [Solutions haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
@@ -107,8 +107,8 @@ ms.locfileid: "63157241"
   
 |Bases de données|Autorisé|Description|  
 |---------------|-------------|-----------------|  
-|Bases de données utilisateur, model et msdb|Non|Les requêtes et transactions de bases de données croisées ne sont pas prises en charge.<br /><br /> Les requêtes et les transactions qui accèdent aux tables mémoire optimisées ou aux procédures stockées compilées en mode natif ne peuvent pas accéder à d'autres bases de données, à l'exception de la base de données système master (accès en lecture seule) et de tempdb.|  
-|Base de données Resource et tempdb|Oui|Il n'y a pas de restrictions appliquées aux transactions de bases de données croisées qui, à part une base de données en mode mono-utilisateur, utilisent uniquement la base de données Resource et tempdb.|  
+|Bases de données utilisateur, model et msdb|No|Les requêtes et transactions de bases de données croisées ne sont pas prises en charge.<br /><br /> Les requêtes et les transactions qui accèdent aux tables mémoire optimisées ou aux procédures stockées compilées en mode natif ne peuvent pas accéder à d'autres bases de données, à l'exception de la base de données système master (accès en lecture seule) et de tempdb.|  
+|Base de données Resource et tempdb|Yes|Il n'y a pas de restrictions appliquées aux transactions de bases de données croisées qui, à part une base de données en mode mono-utilisateur, utilisent uniquement la base de données Resource et tempdb.|  
 |master|en lecture seule|La validation des transactions de bases de données croisées qui impliquent l'OLTP en mémoire et la base de données master échoue si ces transactions incluent des écritures dans la base de données master. Les transactions de bases de données croisées qui n'impliquent que des lectures de la base de données master et utilisent uniquement une base de données mono-utilisateur sont autorisées.|  
   
 ## <a name="see-also"></a>Voir aussi  

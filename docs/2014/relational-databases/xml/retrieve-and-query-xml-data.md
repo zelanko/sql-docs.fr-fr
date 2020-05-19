@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241209"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702521"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Récupérer et interroger des données XML
   Cette rubrique décrit les options de requête que vous devez spécifier pour interroger les données XML. Elle décrit aussi les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.  
@@ -40,7 +40,7 @@ FROM T1
   
  Le résultat est `<doc/>`.  
   
- La déclaration XML, telle que `<?xml version='1.0'?>`, n'est pas conservée en cas de stockage des données XML dans une instance de type de données `xml`. C'est la procédure normale. La déclaration XML () et ses attributs (version/Encoding/stand-alone) sont perdus une fois les données converties en type `xml`. La déclaration XML est traitée comme une directive de l'analyseur XML. Les données XML sont stockées en interne au format ucs-2. Toutes les autres instructions de traitement dans l'instance XML sont conservées.  
+ La déclaration XML, telle que `<?xml version='1.0'?>`, n'est pas conservée en cas de stockage des données XML dans une instance de type de données `xml`. C'est la procédure normale. La déclaration XML () et ses attributs (version/Encoding/stand-alone) sont perdus une fois les données converties en type `xml` . La déclaration XML est traitée comme une directive de l'analyseur XML. Les données XML sont stockées en interne au format ucs-2. Toutes les autres instructions de traitement dans l'instance XML sont conservées.  
   
   
 ### <a name="order-of-attributes"></a>Ordre des attributs  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="setting-required-query-options"></a><a name="query"></a> Définition des options requises de requête  
- Lors de l' `xml` interrogation de colonnes de `xml` type ou de variables à l’aide de méthodes de type de données, les options suivantes doivent être définies comme indiqué.  
+ Lors de l’interrogation de `xml` colonnes de type ou de variables à l’aide de `xml` méthodes de type de données, les options suivantes doivent être définies comme indiqué.  
   
 |Options SET|Valeurs requises|  
 |-----------------|---------------------|  
@@ -99,7 +99,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ACTIVÉ|  
   
- Si les options ne sont pas définies comme indiqué, les requêtes et `xml` les modifications sur les méthodes de type de données échouent.  
+ Si les options ne sont pas définies comme indiqué, les requêtes et les modifications sur les `xml` méthodes de type de données échouent.  
   
   
 ## <a name="see-also"></a>Voir aussi  

@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188686"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702137"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client ne prend pas en charge le modèle de curseur mixte (jeu de clés/dynamique). Les tentatives de définir la taille du jeu de clés à l'aide de SQL_ATTR_KEYSET_SIZE échoue si la valeur définie n'est pas égale à 0.  
@@ -50,7 +50,7 @@ ms.locfileid: "63188686"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Par défaut. Désactive les curseurs avant uniquement et en lecture seule et l’auto-extraction, active **SQLGetData** sur les curseurs avant uniquement et en lecture seule. Lorsque SQL_SOPT_SS_CURSOR_OPTIONS a la valeur SQL_CO_OFF, le type de curseur ne change pas. Autrement dit, le curseur avant uniquement rapide demeure un curseur avant uniquement rapide. Pour modifier le type de curseur, l’application doit maintenant définir un type de curseur `SQLSetStmtAttr`différent à l’aide de/SQL_ATTR_CURSOR_TYPE.|  
+|SQL_CO_OFF|Par défaut. Désactive les curseurs avant uniquement et en lecture seule et l’auto-extraction, active **SQLGetData** sur les curseurs avant uniquement et en lecture seule. Lorsque SQL_SOPT_SS_CURSOR_OPTIONS a la valeur SQL_CO_OFF, le type de curseur ne change pas. Autrement dit, le curseur avant uniquement rapide demeure un curseur avant uniquement rapide. Pour modifier le type de curseur, l’application doit maintenant définir un type de curseur différent à l’aide de `SQLSetStmtAttr` /SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Active les curseurs avant uniquement et en lecture seule, désactive **SQLGetData** sur les curseurs avant uniquement et en lecture seule.|  
 |SQL_CO_AF|Active l'option d'auto-extraction sur tout type de curseur. Lorsque cette option est définie pour un descripteur d’instruction, **SQLExecute** ou **SQLExecDirect** génère une **SQLFetchScroll** implicite (SQL_FIRST). Le curseur est ouvert et le premier lot de lignes est retourné en un seul aller-retour au serveur.|  
 |SQL_CO_FFO_AF|Active les curseurs avant uniquement rapides avec l'option d'auto-extraction. La situation est la même que si SQL_CO_AF et SQL_CO_FFO étaient spécifiés.|  
@@ -131,10 +131,10 @@ ms.locfileid: "63188686"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Par défaut.<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes qui ne `column_set`sont pas des membres de l’épars.|  
+|SQL_SS_NAME_SCOPE_TABLE|Par défaut.<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes qui ne sont pas des membres de l’épars `column_set` .|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indique que l'application requiert les métadonnées pour un type de table, plutôt qu'une table réelle (les fonctions de catalogue doivent retourner les métadonnées pour les types de table). L’application passe ensuite la TYPE_NAME du paramètre table comme paramètre *TableName* .|  
-|SQL_SS_NAME_SCOPE_EXTENDED|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne `column_set` toutes les colonnes, indépendamment de l’appartenance.|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes `column_set`qui sont membres du épars.|  
+|SQL_SS_NAME_SCOPE_EXTENDED|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne toutes les colonnes, indépendamment de l' `column_set` appartenance.|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes qui sont membres du épars `column_set` .|  
 |SQL_SS_NAME_SCOPE_DEFAULT|Identique à SQL_SS_NAME_SCOPE_TABLE.|  
   
  SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME sont respectivement utilisés avec les paramètres *nomcatalogue* et *SchemaName* pour identifier le catalogue et le schéma du paramètre table. Quand une application a fini d'extraire les métadonnées des paramètres table, elle doit redéfinir SQL_SOPT_SS_NAME_SCOPE avec sa valeur par défaut SQL_SS_NAME_SCOPE_TABLE.  

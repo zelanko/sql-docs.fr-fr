@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013806"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703582"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
   Vous pouvez limiter les lignes qui sont retournées à partir d'une requête de base de données et d'après une valeur de limitation. Les annotations `sql:limit-field` et `sql:limit-value` sont utilisées pour identifier la colonne de base de données qui contient les valeurs de limitation et spécifier une valeur de limitation spécifique à utiliser pour filtrer les données retournées.  
@@ -44,7 +44,7 @@ ms.locfileid: "66013806"
   
  Dans ces exemples, les modèles sont utilisés pour spécifier des requêtes XPath par rapport au schéma de mappage XSD.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitation des adresses de clients retournées à un type d'adresse spécifique  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitation des adresses de clients retournées à un type d'adresse spécifique  
  Dans cet exemple, une base de données contient deux tables :  
   
 -   Customer (CustomerID, CompanyName)  
@@ -170,7 +170,7 @@ ms.locfileid: "66013806"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Il s’agit du schéma de mappage dans lequel l’attribut **OrderID** sur les détails de la commande est mappé à la colonne OrderID dans la relation Orders. Les valeurs retournées pour cet attribut sont limitées uniquement à celles qui ont une valeur de 2, 0000000E e-001 (0,2) comme spécifié pour l’attribut **discount** à l' `sql:limit-field` aide `sql:limit-value` des annotations et.  
+ Il s’agit du schéma de mappage dans lequel l’attribut **OrderID** sur les détails de la commande est mappé à la colonne OrderID dans la relation Orders. Les valeurs retournées pour cet attribut sont limitées uniquement à celles qui ont une valeur de 2, 0000000E e-001 (0,2) comme spécifié pour l’attribut **discount** à l’aide des `sql:limit-field` `sql:limit-value` annotations et.  
   
  Voici le schéma :  
   

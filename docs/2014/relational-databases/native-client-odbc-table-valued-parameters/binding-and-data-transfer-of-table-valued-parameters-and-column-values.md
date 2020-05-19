@@ -9,22 +9,22 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5aa061f51d63085cc55e59aca7d7e4d69e1a2e27
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199951"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698738"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Liaison et transfert de données de paramètres table et de valeurs de colonnes
   Les paramètres table, comme d'autres paramètres, doivent être liés avant d'être passés au serveur. L’application lie les paramètres table de la même façon qu’elle lie d’autres paramètres : en utilisant SQLBindParameter ou des appels équivalents à SQLSetDescField ou SQLSetDescRec. Le type de données serveur pour un paramètre table est SQL_SS_TABLE. Le type C peut être spécifié comme SQL_C_DEFAULT ou SQL_C_BINARY.  
   
  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure, seuls les paramètres table d'entrée sont pris en charge. Par conséquent, toute tentative de définition de SQL_DESC_PARAMETER_TYPE à une valeur autre que SQL_PARAM_INPUT retourne SQL_ERROR avec SQLSTATE = HY105 et le message « type de paramètre non valide ».  
   
- Des valeurs par défaut peuvent être assignées à des colonnes de paramètres table entières à l'aide de l'attribut SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Toutefois, il n’est pas possible d’assigner des valeurs par défaut à des valeurs de colonne de paramètre table individuelles à l’aide de SQL_DEFAULT_PARAM dans *StrLen_or_IndPtr* avec SQLBindParameter. Les paramètres table dans leur ensemble ne peuvent pas être définis sur une valeur par défaut à l’aide de SQL_DEFAULT_PARAM dans *StrLen_or_IndPtr* avec SQLBindParameter. Si ces règles ne sont pas suivies, SQLExecute ou SQLExecDirect retourne SQL_ERROR. Un enregistrement de diagnostic est généré avec SQLSTATE = 07S01 et le message « utilisation non valide du paramètre par défaut \<pour le paramètre p> \<», où p> est l’ordinal du TVP dans l’instruction de la requête.  
+ Des valeurs par défaut peuvent être assignées à des colonnes de paramètres table entières à l'aide de l'attribut SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Toutefois, il n’est pas possible d’assigner des valeurs par défaut à des valeurs de colonne de paramètre table individuelles à l’aide de SQL_DEFAULT_PARAM dans *StrLen_or_IndPtr* avec SQLBindParameter. Les paramètres table dans leur ensemble ne peuvent pas être définis sur une valeur par défaut à l’aide de SQL_DEFAULT_PARAM dans *StrLen_or_IndPtr* avec SQLBindParameter. Si ces règles ne sont pas suivies, SQLExecute ou SQLExecDirect retourne SQL_ERROR. Un enregistrement de diagnostic est généré avec SQLSTATE = 07S01 et le message « utilisation non valide du paramètre par défaut pour \< le paramètre p> », où \< p> est l’ordinal du TVP dans l’instruction de la requête.  
   
  Après avoir lié le paramètre table, l'application doit lier chaque colonne de paramètre table. Pour ce faire, l’application appelle d’abord SQLSetStmtAttr pour définir SQL_SOPT_SS_PARAM_FOCUS sur l’ordinal d’un paramètre table. Ensuite, l’application lie les colonnes du paramètre table en appelant les routines suivantes : SQLBindParameter, SQLSetDescRec et SQLSetDescField. L’affectation de la valeur 0 à SQL_SOPT_SS_PARAM_FOCUS restaure l’effet habituel de SQLBindParameter, SQLSetDescRec et SQLSetDescField en opérant sur des paramètres de niveau supérieur normaux.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63199951"
   
 3.  Appelle SQLSetStmtAttr pour affecter la valeur 0 à SQL_SOPT_SS_PARAM_FOCUS. Cela doit être fait avant l’appel de SQLExecute ou SQLExecDirect. Autrement, SQL_ERROR est retourné et un enregistrement de diagnostic est généré avec SQLSTATE=HY024 et le message « Valeur d'attribut non valide, SQL_SOPT_SS_PARAM_FOCUS (doit être égale à zéro au moment de l'exécution) ».  
   
-4.  Définit *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR à SQL_DEFAULT_PARAM pour un paramètre table sans ligne, ou le nombre de lignes à transférer lors de l’appel suivant de SQLExecute ou SQLExecDirect si le paramètre table a des lignes. *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR ne peuvent pas être définis sur SQL_NULL_DATA pour un paramètre table, car les paramètres table ne sont pas nullables (bien que les colonnes constituantes des paramètres table puissent avoir la valeur null). Si cette valeur est définie sur une valeur non valide, SQLExecute ou SQLExecDirect retourne SQL_ERROR, et un enregistrement de diagnostic est généré avec SQLSTATE = HY090 et le message « longueur de chaîne ou \<de mémoire tampon non valide pour le paramètre p> », où p est le numéro du paramètre.  
+4.  Définit *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR à SQL_DEFAULT_PARAM pour un paramètre table sans ligne, ou le nombre de lignes à transférer lors de l’appel suivant de SQLExecute ou SQLExecDirect si le paramètre table a des lignes. *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR ne peuvent pas être définis sur SQL_NULL_DATA pour un paramètre table, car les paramètres table ne sont pas nullables (bien que les colonnes constituantes des paramètres table puissent avoir la valeur null). Si cette valeur est définie sur une valeur non valide, SQLExecute ou SQLExecDirect retourne SQL_ERROR, et un enregistrement de diagnostic est généré avec SQLSTATE = HY090 et le message « longueur de chaîne ou de mémoire tampon non valide pour le paramètre \< p> », où p est le numéro du paramètre.  
   
 5.  Appelle SQLExecute ou SQLExecDirect.  
   

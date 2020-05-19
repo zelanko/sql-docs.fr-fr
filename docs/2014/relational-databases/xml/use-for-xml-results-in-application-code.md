@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193333"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702401"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
   En utilisant des clauses FOR XML avec des requêtes SQL, vous pouvez récupérer et même convertir les résultats de la requête en données XML. Dès lors que les résultats d'une requête FOR XML peuvent être utilisés dans le code de l'application XML, vous pouvez notamment effectuer les opérations suivantes :  
@@ -290,7 +290,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` prise en charge du type de données vous permet de demander que le résultat d’une requête `xml` for XML soit retourné en tant que type de données, et non sous forme de données de type chaîne ou image, en spécifiant la [directive type](type-directive-in-for-xml-queries.md). L’emploi d’une directive TYPE dans les requêtes FOR XML donne automatiquement accès à des résultats FOR XML très similaires à ceux qui sont présentés dans [Utiliser des données XML dans les applications](use-xml-data-in-applications.md).  
+>  La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` prise en charge du type de données vous permet de demander que le résultat d’une requête for XML soit retourné en tant que `xml` type de données, et non sous forme de données de type chaîne ou image, en spécifiant la [directive type](type-directive-in-for-xml-queries.md). L’emploi d’une directive TYPE dans les requêtes FOR XML donne automatiquement accès à des résultats FOR XML très similaires à ceux qui sont présentés dans [Utiliser des données XML dans les applications](use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

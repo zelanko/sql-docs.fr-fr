@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLRowCount function
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adc8dbc8083ec1de98951db618dabad8a145d7d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046604"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702184"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
-  Lorsque des tableaux de valeurs de paramètre sont liés pour l’exécution `SQLRowCount` d’une instruction, retourne SQL_ERROR si une ligne de valeurs de paramètre génère une condition d’erreur dans l’exécution de l’instruction. Aucune valeur n'est retournée via l'argument *RowCountPtr* de la fonction.  
+  Lorsque des tableaux de valeurs de paramètre sont liés pour l’exécution d’une instruction, `SQLRowCount` retourne SQL_ERROR si une ligne de valeurs de paramètre génère une condition d’erreur dans l’exécution de l’instruction. Aucune valeur n'est retournée via l'argument *RowCountPtr* de la fonction.  
   
  L'application peut tirer parti de l'attribut d'instruction SQL_ATTR_PARAMS_PROCESSED_PTR pour capturer le nombre de paramètres traités avant l'erreur.  
   

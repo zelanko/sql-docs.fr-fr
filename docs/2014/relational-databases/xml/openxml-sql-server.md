@@ -20,22 +20,22 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174038"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702569"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, un mot clé [!INCLUDE[tsql](../../includes/tsql-md.md)] , fournit un ensemble de lignes sur des documents XML en mémoire qui est similaire à une table ou à une vue. OPENXML permet l'accès aux données XML comme s'il s'agissait d'un ensemble de lignes relationnelles. Pour cela, il fournit une vue sous forme d'un ensemble de lignes de la représentation interne d'un document XML. Les enregistrements de l'ensemble de lignes peuvent être stockés dans des tables de base de données.
 
  OPENXML peut être utilisé dans des instructions SELECT et SELECT INTO, partout où des fournisseurs d'ensemble de lignes, une vue ou OPENROWSET peuvent apparaître comme source. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).
 
- Pour écrire des requêtes sur un document XML à l’aide d’OPENXML, vous `sp_xml_preparedocument`devez d’abord appeler. Cela permet d'analyser le document XML et de retourner un descripteur au document analysé qui est prêt à être utilisé. Le document analysé est une représentation sous forme d'arborescence de modèle DOM (document model) de différents nœuds dans le document XML. Ce descripteur de document est transmis à OPENXML. OPENXML fournit alors une vue sous forme d'ensemble de lignes du document, en fonction des paramètres transmis.
+ Pour écrire des requêtes sur un document XML à l’aide d’OPENXML, vous devez d’abord appeler `sp_xml_preparedocument` . Cela permet d'analyser le document XML et de retourner un descripteur au document analysé qui est prêt à être utilisé. Le document analysé est une représentation sous forme d'arborescence de modèle DOM (document model) de différents nœuds dans le document XML. Ce descripteur de document est transmis à OPENXML. OPENXML fournit alors une vue sous forme d'ensemble de lignes du document, en fonction des paramètres transmis.
 
 > [!NOTE]
 >  `sp_xml_preparedocument`utilise une version SQL mise à jour de l’analyseur MSXML, fichier msxmlsql. dll. Cette version de l'analyseur MSXML a été conçue pour prendre en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et offre une compatibilité descendante avec MSXML version 2.6.
@@ -110,7 +110,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   Un mappage entre les colonnes de l'ensemble de lignes et les nœuds XML
 
 ### <a name="xml-document-handle-idoc"></a>Descripteur de document XML (idoc)
- Le descripteur de document est `sp_xml_preparedocument` retourné par la procédure stockée.
+ Le descripteur de document est retourné par la `sp_xml_preparedocument` procédure stockée.
 
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>Expression XPath identifiant les nœuds à traiter (rowpattern)
  L'expression XPath spécifiée comme paramètre *rowpattern* identifie un ensemble de nœuds dans le document XML. Chaque nœud identifié par *rowpattern* correspond à une ligne unique de l'ensemble de lignes généré par OPENXML.

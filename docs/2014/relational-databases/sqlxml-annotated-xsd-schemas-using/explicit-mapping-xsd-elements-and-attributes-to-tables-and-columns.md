@@ -25,15 +25,15 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013845"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703609"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage explicite d'éléments et d'attributs XSD avec les tables et les colonnes (SQLXML 4.0)
   Lors de l'utilisation d'un schéma XSD pour fournir une vue XML de la base de données relationnelle, les éléments et les attributs du schéma doivent être mappés avec les tables et les colonnes de la base de données. Les lignes de la table/vue de la base de données seront mappées avec les éléments du document XML. Les valeurs des colonnes de la base de données sont mappées avec les attributs ou les éléments.  
@@ -57,10 +57,10 @@ ms.locfileid: "66013845"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Spécification des annotations sql:relation et sql:field  
- Dans cet exemple, le schéma XSD se compose d’un élément ** \<contact>** d’un type complexe avec ** \<fname>** et ** \<lname>** éléments enfants et l’attribut **ContactID** .  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Spécification des annotations sql:relation et sql:field  
+ Dans cet exemple, le schéma XSD se compose d’un élément ** \< contact>** d’un type complexe avec ** \< fname>** et ** \< lname>** éléments enfants et l’attribut **ContactID** .  
   
- L' `sql:relation` annotation mappe l' ** \<élément Contact>** à la table Person. contact de la base de données AdventureWorks. L' `sql:field` annotation mappe l' ** \<élément>fname** à la colonne FirstName et à l’élément ** \<lname>** à la colonne LastName.  
+ L' `sql:relation` annotation mappe l’élément ** \< contact>** à la table Person. contact de la base de données AdventureWorks. L' `sql:field` annotation mappe l’élément ** \<>fname** à la colonne FirstName et à l’élément ** \< lname>** à la colonne LastName.  
   
  Aucune annotation n’est spécifiée pour l’attribut **ContactID** . Il s'ensuit un mappage par défaut de l'attribut avec la colonne du même nom.  
   

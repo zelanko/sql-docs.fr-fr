@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a82cd2b9261b8f8c26e4e37636423cc27603fcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54cfcdb87e8292f4588360e5a6b8c77f410a1fc9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192414"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695403"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
   Lit les informations de format pour chaque colonne à partir du fichier de format.  
@@ -41,7 +41,7 @@ const wchar_t *pwszFormatFile);
   
  Pour enregistrer un fichier de format, appelez la méthode [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md). Les appels à la méthode **BCPReadFmt** peuvent référencer des formats enregistrés. L'utilitaire**bcp**peut également enregistrer des formats de données définis par l'utilisateur dans des fichiers qui peuvent être référencés par la méthode **BCPReadFmt** .  
   
- La `BCP_OPTION_DELAYREADFMT` valeur du paramètre *eOption* de [IBCPSession :: BCPControl](ibcpsession-bcpcontrol-ole-db.md) modifie le comportement de IBCPSession :: BCPReadFmt.  
+ La `BCP_OPTION_DELAYREADFMT` valeur du paramètre *EOption* de [IBCPSession :: BCPControl](ibcpsession-bcpcontrol-ole-db.md) modifie le comportement de IBCPSession :: BCPReadFmt.  
   
 ## <a name="arguments"></a>Arguments  
  *pwszFormatFile*[in]  

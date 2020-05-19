@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1ac80773b28538f29837973d94f1b50b79f0788
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288879"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702777"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Exemple : Spécification des directives ID et IDREF
   Un attribut d'élément peut être spécifié comme attribut de type `ID` et l'attribut `IDREFS` peut ensuite être utilisé pour y faire référence. Cela permet de créer des liens à l'intérieur du document et est assimilable aux relations entre clés primaires et clés étrangères dans les bases de données relationnelles.  

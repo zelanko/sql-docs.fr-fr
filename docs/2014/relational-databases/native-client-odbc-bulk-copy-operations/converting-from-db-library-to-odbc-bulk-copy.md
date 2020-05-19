@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067622"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702091"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
-  La conversion d’un programme de copie en bloc DB-Library vers ODBC est simple, car les fonctions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de copie en bloc prises en charge par le pilote ODBC native client sont similaires aux fonctions de copie en bloc de DB-Library, avec les exceptions suivantes :  
+  La conversion d’un programme de copie en bloc DB-Library vers ODBC est simple, car les fonctions de copie en bloc prises en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client sont similaires aux fonctions de copie en bloc de DB-Library, avec les exceptions suivantes :  
   
 -   Les applications de bibliothèque de bases de données passent un pointeur à une structure DBPROCESS comme premier paramètre de fonctions de copie en bloc. Dans les applications ODBC, le pointeur DBPROCESS est remplacé par un handle de connexion ODBC.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "63067622"
     |-------------------------|--------------------------------|-------------------------|  
     |Valeurs NULL fournies|0|-1 (SQL_NULL_DATA)|  
     |Données de variables fournies|-1|-10 (SQL_VARLEN_DATA)|  
-    |Caractère de longueur nulle ou chaîne binaire|NA|0|  
+    |Caractère de longueur nulle ou chaîne binaire|N/A|0|  
   
      Dans DB-Library, une valeur *varlen* de-1 indique que les données de longueur variable sont fournies, ce qui, dans le *cbData* ODBC, est interprété comme signifiant que seules les valeurs NULL sont fournies. Modifiez les spécifications *VARLEN* DB-Library de-1 en SQL_VARLEN_DATA et toutes les spécifications *varlen* de 0 à SQL_NULL_DATA.  
   
--   Le fichier **colfmt\_** de la bibliothèque de bases de_fichiers\__ BCP et le [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)ODBC*CbUserData* ont le même problème que les paramètres **bcp_bind**_varlen_ et *cbData* indiqués ci-dessus. Remplacez les spécifications de *FILE_COLLEN* DB-Library de-1 par SQL_VARLEN_DATA et toutes les spécifications de *file_collen* comprises entre 0 et SQL_NULL_DATA.  
+-   Le fichier ** \_ colfmt**de la bibliothèque de bases de fichiers bcp et le [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)ODBC*cbUserData* ont le même problème que les paramètres **bcp_bind**_varlen_ et *cbData* indiqués ci-dessus._ \_ _ Remplacez les spécifications de *FILE_COLLEN* DB-Library de-1 par SQL_VARLEN_DATA et toutes les spécifications de *file_collen* comprises entre 0 et SQL_NULL_DATA.  
   
 -   Le paramètre *iValue* de la fonction [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) ODBC est un pointeur void. Dans DB-Library, *iValue* était un entier. Effectuez un cast des valeurs pour le *IVALUE* ODBC vers void *.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63067622"
   
     -   chaînes de caractères **DateTime** et **smalldatetime** dans n’importe quel format pris en charge par la fonction **DBConvert** de la bibliothèque DB-Library.  
   
-    -   Lorsque la case **utiliser les paramètres internationaux** est cochée sous l’onglet **options** de la bibliothèque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de bases de l’utilitaire réseau client, les fonctions de copie en bloc de la bibliothèque de bases de la bibliothèque acceptent également les dates au format de date régional défini pour les paramètres régionaux du registre de l’ordinateur client.  
+    -   Lorsque la case **utiliser les paramètres internationaux** est cochée sous l’onglet **options** de la bibliothèque de bases de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilitaire réseau client, les fonctions de copie en bloc de la bibliothèque de bases de la bibliothèque acceptent également les dates au format de date régional défini pour les paramètres régionaux du registre de l’ordinateur client.  
   
      Les fonctions de copie en bloc de DB-Library n’acceptent pas les formats **DateTime** et **smalldatetime** ODBC.  
   

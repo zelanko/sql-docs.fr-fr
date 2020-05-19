@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying passwords
 - SQLAllocHandle function
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfda8d23f3be8b37f9eb3876496394fc32660769
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62864996"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702071"
 ---
 # <a name="allocating-a-connection-handle"></a>Allocation d'un handle de connexion
   Pour que l'application puisse se connecter à une source de données ou à un pilote, elle doit auparavant allouer un handle de connexion. Pour ce faire, appelez **SQLAllocHandle** avec le paramètre *comme handletype* défini sur SQL_HANDLE_DBC et *InputHandle* pointant vers un handle d’environnement initialisé.  

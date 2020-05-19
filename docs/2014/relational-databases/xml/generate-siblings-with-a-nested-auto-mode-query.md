@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d1f6540a8be6cc45af4d396daf10ca0d1a7d88
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287360"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702699"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Générer des frères à l'aide d'une requête imbriquée en mode AUTO
   L'exemple suivant indique comment générer des frères à l'aide d'une requête imbriquée en mode AUTO. La seule autre façon de générer ce type de document XML consiste à utiliser le mode EXPLICIT. Toutefois, cette méthode peut s'avérer lourde.  
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   Elle interroge l'ensemble de lignes `SalesOrder`, spécifié dans la clause `FROM`. Le résultat est un document XML possédant un ou plusieurs éléments <`SalesOrder`>.  
   
--   Spécifie le mode `AUTO` et la directive `TYPE` . `AUTO`le mode transforme le résultat de la requête en XML, `TYPE` tandis que la directive `xml` retourne le résultat sous forme de type.  
+-   Spécifie le mode `AUTO` et la directive `TYPE` . `AUTO`le mode transforme le résultat de la requête en XML, tandis `TYPE` que la directive retourne le résultat sous forme de `xml` type.  
   
 -   Elle inclut deux instructions `SELECT` imbriquées séparées par une virgule. La première instruction `SELECT` imbriquée extrait les informations sur la commande, l'en-tête et les détails, tandis que la seconde instruction `SELECT` imbriquée extrait les informations sur le vendeur.  
   

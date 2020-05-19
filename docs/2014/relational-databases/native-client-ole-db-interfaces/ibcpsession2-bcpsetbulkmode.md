@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989987"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694590"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode fournit une alternative à [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) pour spécifier le format de colonne. Contrairement à IBCPSession::BCPColFmt, qui définit des attributs de format de colonne individuels, IBCPSession2::BCPSetBulkMode définit tous les attributs.  
@@ -71,14 +71,14 @@ HRESULT BCPSetBulkMode (
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option-w dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie `BCP_TYPE_SQLNCHAR`sur.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option-N dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie `BCP_TYPE_SQLNCHAR` sur si le type de colonne est une `BCP_TYPE_DEFAULT` chaîne ou s’il ne s’agit pas d’une chaîne.|  
-|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option-n dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie `BCP_TYPE_DEFAULT`sur.|  
+|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option-w dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option-N dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_SQLNCHAR` si le type de colonne est une chaîne ou `BCP_TYPE_DEFAULT` s’il ne s’agit pas d’une chaîne.|  
+|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option-n dans BCP. EXE et IBCPSession :: BCPColFmt avec la propriété *eUserDataType* définie sur `BCP_TYPE_DEFAULT` .|  
   
  Vous pouvez appeler IBCPSession::BCPControl et IBCPSession2::BCPSetBulkMode pour les options IBCPSession::BCPControl qui ne sont pas en conflit avec IBCPSession2::BCPSetBulkMode. Par exemple, vous pouvez appeler IBCPSession :: BCPControl avec `BCP_OPTION_FIRST` et IBCPSession2 :: BCPSetBulkMode.  
   
- Vous ne pouvez pas appeler IBCPSession :: `BCP_OPTION_TEXTFILE` BCPControl avec et IBCPSession2 :: BCPSetBulkMode.  
+ Vous ne pouvez pas appeler IBCPSession :: BCPControl avec `BCP_OPTION_TEXTFILE` et IBCPSession2 :: BCPSetBulkMode.  
   
  Si vous tentez d’appeler IBCPSession2::BCPSetBulkMode avec une séquence d’appels de fonction qui comprend IBCPSession::BCPColFmt, IBCPSession::BCPControl et IBCPSession::BCPReadFmt, l’un des appels de fonction retourne un échec d’erreur de séquence. Si vous choisissez de corriger l’échec, appelez IBCPSession::BCPInit pour réinitialiser les paramètres et recommencer.  
   

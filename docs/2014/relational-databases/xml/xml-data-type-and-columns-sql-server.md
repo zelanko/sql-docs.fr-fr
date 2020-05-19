@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193068"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702241"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Type et colonnes de données XML (SQL Server)
-  Cette rubrique décrit les avantages et les limitations du type de `xml` données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et vous aide à choisir comment stocker des données XML.  
+  Cette rubrique décrit les avantages et les limitations du type de `xml` données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et vous aide à choisir comment stocker des données XML.  
   
 ## <a name="relational-or-xml-data-model"></a>Modèle de données relationnel ou XML  
  Si vos données sont très structurées et s'accompagnent de schémas connus, le modèle relationnel est sans doute le mieux adapté au stockage des données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les fonctionnalités et les outils dont vous pourrez avoir besoin. En revanche, s'il s'agit de données semi-structurées ou non structurées, ou si la structure est inconnue, mieux vaut envisager la modélisation de ces données.  
@@ -61,7 +61,7 @@ ms.locfileid: "63193068"
   
      Les données sont stockées dans une représentation interne qui conserve le contenu XML des données. Cette représentation interne inclut des informations à propos de la hiérarchie de relations contenant-contenu, l'ordre des documents et les valeurs d'éléments et d'attributs. Plus précisément, le contenu InfoSet des données XML est préservé. Pour plus d’informations sur InfoSet, consultez [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Le contenu InfoSet n'est pas une copie conforme du texte XML puisque les éléments suivants ne sont pas conservés : espaces non significatifs, ordre des attributs, préfixes d'espace de noms et déclaration XML.  
   
-     Pour un `xml` type de données typé `xml` , un type de données lié à des schémas XML, le jeu d’informations postérieures à la validation du schéma (PSVI) ajoute des informations de type au jeu d’informations et est encodé dans la représentation interne. L'analyse s'en trouve considérablement accélérée. Pour plus d’informations, consultez les spécifications XML Schema de W3C sur [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) et [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
+     Pour `xml` un type de données typé, un `xml` type de données lié à des schémas XML, le jeu d’informations postérieures à la validation du schéma (PSVI) ajoute des informations de type au jeu d’informations et est encodé dans la représentation interne. L'analyse s'en trouve considérablement accélérée. Pour plus d’informations, consultez les spécifications XML Schema de W3C sur [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) et [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mappage entre stockage XML et relationnel  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63193068"
   
      Une copie conforme des données est stockée. Cela s'avère nécessaire pour des applications spécifiques telles que des documents juridiques. Généralement, les applications ne réclament pas une copie conforme et se satisfont du contenu XML (fidélité de l'InfoSet).  
   
- Dans la plupart des cas, vous aurez probablement à combiner ces deux approches. Vous pouvez, par exemple, stocker vos données XML dans une colonne de type de données `xml` et en promouvoir les propriétés dans des colonnes relationnelles. Vous pouvez également utiliser la technologie de mappage pour stocker des parties non réparties dans des colonnes non-XML et uniquement les parties `xml` récursives dans des colonnes de type de données.  
+ Dans la plupart des cas, vous aurez probablement à combiner ces deux approches. Vous pouvez, par exemple, stocker vos données XML dans une colonne de type de données `xml` et en promouvoir les propriétés dans des colonnes relationnelles. Vous pouvez également utiliser la technologie de mappage pour stocker des parties non réparties dans des colonnes non-XML et uniquement les parties récursives dans des `xml` colonnes de type de données.  
   
 ### <a name="choice-of-xml-technology"></a>Choix de la technologie XML  
  Le choix de la technologie XML, mode XML natif ou vue XML, dépend généralement des facteurs suivants :  
@@ -123,7 +123,7 @@ ms.locfileid: "63193068"
   
  Pour ce qui est des requêtes, convertissez les données en données de type `xml` lors de l'exécution et appliquez-leur une requête Xquery. La conversion lors de l'exécution peut s'avérer onéreuse, surtout si le document est volumineux. Si vous exécutez fréquemment des requêtes, vous pouvez stocker les documents de façon redondante dans une colonne de type de données `xml`, puis indexer cette dernière lorsque vous retournez des copies conformes à partir de la colonne `[n]varchar(max)`.  
   
- La colonne XML peut être une colonne calculée, basée sur la colonne `[n]varchar(max)`. Toutefois, vous ne pouvez pas créer d’index XML sur une colonne XML calculée, ni sur des `[n]varchar(max)` colonnes ou. `varbinary(max)`  
+ La colonne XML peut être une colonne calculée, basée sur la colonne `[n]varchar(max)`. Toutefois, vous ne pouvez pas créer d’index XML sur une colonne XML calculée, ni sur des `[n]varchar(max)` `varbinary(max)` colonnes ou.  
   
 ### <a name="xml-view-technology"></a>Vue XML  
  En définissant un mappage entre vos schémas XML et les tables d'une base de données, vous créez une « vue XML » de vos données persistantes. Le chargement en masse XML peut servir à remplir les tables sous-jacentes d'après la vue XML. Vous pouvez aussi interroger la vue XML en utilisant XPath version 1.0 ; la requête est traduite en requêtes SQL portant sur les tables. De même, les mises à jour peuvent se propager à ces tables.  
@@ -146,7 +146,7 @@ ms.locfileid: "63193068"
  Partons du principe que vous disposez de données relationnelles (clients, commandes et articles) et que vous voulez les gérer sous forme XML. Définissez une vue XML en utilisant AXSD sur les données relationnelles. La vue XML vous permet de charger en masse les données XML dans vos tables, puis d'interroger et de mettre à jour les données relationnelles à l'aide de la vue XML. Ce modèle s'avère très utile si vous avez à échanger des données contenant des balises XML avec d'autres applications alors que les applications SQL fonctionnent sans interruption.  
   
 ### <a name="hybrid-model"></a>Modèle hybride  
- Souvent, une combinaison de colonnes relationnelles `xml` et de colonnes de type de données est appropriée pour la modélisation des données. Certaines valeurs de vos données XML peuvent être stockées dans des colonnes relationnelles alors que le reste (ou la totalité) des valeurs XML sont stockées dans une colonne XML. Vous obtenez ainsi de meilleures performances puisque vous avez une meilleure maîtrise des index créés sur les colonnes relationnelles et sur les caractéristiques des verrous.  
+ Souvent, une combinaison de colonnes relationnelles et de `xml` colonnes de type de données est appropriée pour la modélisation des données. Certaines valeurs de vos données XML peuvent être stockées dans des colonnes relationnelles alors que le reste (ou la totalité) des valeurs XML sont stockées dans une colonne XML. Vous obtenez ainsi de meilleures performances puisque vous avez une meilleure maîtrise des index créés sur les colonnes relationnelles et sur les caractéristiques des verrous.  
   
  Les valeurs à stocker dans les colonnes relationnelles dépendent de votre charge de travail. Par exemple, si vous récupérez toutes les valeurs XML en fonction de l’expression de chemin, /Customer/@CustId, en promouvant la valeur de l’attribut **CustId** dans une colonne relationnelle et en l’indexant, vous pouvez accélérer notablement le traitement des requêtes. En revanche, si vos données XML sont largement décomposées de façon non redondante dans des colonnes relationnelles, le réassemblage risque de s'avérer fort coûteux.  
   

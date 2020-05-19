@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046624"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702201"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  Les restrictions suivantes s’appliquent lors de l’utilisation de SQLPutData pour envoyer plus de 65 535 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] octets de données (pour la version 4.21 a) ou de 400 Ko de données (pour SQL Server version 6,0`text`et ultérieure) pour`ntext`une colonne SQL_LONGVARCHAR (`image`), SQL_WLONGVARCHAR () ou SQL_LONGVARBINARY () :  
+  Les restrictions suivantes s’appliquent lors de l’utilisation de SQLPutData pour envoyer plus de 65 535 octets de données (pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 4.21 a) ou de 400 Ko de données (pour SQL Server version 6,0 et ultérieure) pour une colonne SQL_LONGVARCHAR ( `text` ), SQL_WLONGVARCHAR ( `ntext` ) ou SQL_LONGVARBINARY ( `image` ) :  
   
 -   Le paramètre référencé peut être le *insert_Value* dans une instruction INSERT.  
   
 -   Le paramètre référencé peut être une *expression* dans la clause SET d’une instruction Update.  
   
- L’annulation d’une séquence d’appels SQLPutData qui fournissent des données en blocs à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur exécutant provoque une mise à jour partielle de la valeur de la colonne lors de l’utilisation de la version 6,5 ou d’une version antérieure. La `text`colonne `ntext`, ou `image` référencée quand SQLCancel a été appelé est définie sur une valeur d’espace réservé intermédiaire.  
+ L’annulation d’une séquence d’appels SQLPutData qui fournissent des données en blocs à un serveur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provoque une mise à jour partielle de la valeur de la colonne lors de l’utilisation de la version 6,5 ou d’une version antérieure. La `text` `ntext` colonne, ou `image` référencée quand SQLCancel a été appelé est définie sur une valeur d’espace réservé intermédiaire.  
   
 > [!NOTE]  
 >  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ne prend pas en charge la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 6.5 ou antérieure.  
@@ -36,7 +36,7 @@ ms.locfileid: "63046624"
 ## <a name="diagnostics"></a>Diagnostics  
  Il existe une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE spécifique Native Client pour SQLPutData :  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur|Description|  
 |--------------|-----------|-----------------|  
 |22026|Chaîne de données ou longueur non correspondante|Si la longueur des données en octets à envoyer a été spécifiée par une application, par exemple avec SQL_LEN_DATA_AT_EXEC (*n*) où *n* est supérieur à 0, le nombre total d’octets fournis par l’application via SQLPutData doit correspondre à la longueur spécifiée.|  
   

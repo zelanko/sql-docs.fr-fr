@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689026"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701941"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Retourne le nom de type de SQL pour un jeton de type BCP spécifié.  
@@ -57,7 +57,7 @@ fIsMaxType
   
  Le tableau suivant spécifie les types BCP possibles, s'ils sont ou pas de type max et la sortie attendue.  
   
-|Nom du type BCP|MaxType|Output|  
+|Nom du type BCP|MaxType|Sortie|  
 |-------------------|-------------|------------|  
 |`SQLDECIMAL`|Vous pouvez soit utiliser|**decimal**|  
 |`SQLNUMERIC`|Vous pouvez soit utiliser|**numeric**|  
@@ -69,21 +69,21 @@ fIsMaxType
 |`SQLDATETIME`|Vous pouvez soit utiliser|**datetime**|  
 |`SQLBITN`|Vous pouvez soit utiliser|**bit-null**|  
 |`SQLBIT`|Vous pouvez soit utiliser|**bit**|  
-|`SQLBIGCHAR`|Non|**char**|  
-|`SQLCHARACTER`|Non|**char**|  
-|`SQLBIGVARCHAR`|Non|**varchar**|  
-|`SQLVARCHAR`|Non|**varchar**|  
+|`SQLBIGCHAR`|No|**char**|  
+|`SQLCHARACTER`|No|**char**|  
+|`SQLBIGVARCHAR`|No|**varchar**|  
+|`SQLVARCHAR`|No|**varchar**|  
 |`SQLTEXT`|Vous pouvez soit utiliser|**text**|  
-|`SQLBIGBINARY`|Non|**binary**|  
-|`SQLBINARY`|Non|**Binaire2**|  
-|`SQLBIGVARBINARY`|Non|**Varbinary**|  
-|`SQLVARBINARY`|Non|**Varbinary**|  
+|`SQLBIGBINARY`|No|**binary**|  
+|`SQLBINARY`|No|**Binaire2**|  
+|`SQLBIGVARBINARY`|No|**Varbinary**|  
+|`SQLVARBINARY`|No|**Varbinary**|  
 |`SQLIMAGE`|Vous pouvez soit utiliser|**Image**|  
 |`SQLINTN`|Vous pouvez soit utiliser|**int-null**|  
 |`SQLDATETIMN`|Vous pouvez soit utiliser|**datetime-null**|  
 |`SQLMONEYN`|Vous pouvez soit utiliser|**money-null**|  
 |`SQLFLTN`|Vous pouvez soit utiliser|**float-null**|  
-|`SQLAOPSUM`|Vous pouvez soit utiliser|**SUM**|  
+|`SQLAOPSUM`|Vous pouvez soit utiliser|**Checksum**|  
 |`SQLAOPAVG`|Vous pouvez soit utiliser|**AVG**|  
 |`SQLAOPCNT`|Vous pouvez soit utiliser|**Count**|  
 |`SQLAOPMIN`|Vous pouvez soit utiliser|**Min**|  
@@ -92,22 +92,22 @@ fIsMaxType
 |`SQLMONEY4`|Vous pouvez soit utiliser|**Smallmoney**|  
 |`SQLFLT4`|Vous pouvez soit utiliser|**Non**|  
 |`SQLUNIQUEID`|Vous pouvez soit utiliser|**uniqueidentifier**|  
-|`SQLNCHAR`|Non|**NCHAR**|  
-|`SQLNVARCHAR`|Non|**Nvarchar**|  
+|`SQLNCHAR`|No|**NCHAR**|  
+|`SQLNVARCHAR`|No|**Nvarchar**|  
 |`SQLNTEXT`|Vous pouvez soit utiliser|**Text**|  
 |`SQLVARIANT`|Vous pouvez soit utiliser|**sql_variant**|  
 |`SQLINT8`|Vous pouvez soit utiliser|**Comportant**|  
-|`SQLCHARACTER`|Oui|**varchar(max)**|  
-|`SQLBIGCHAR`|Oui|**varchar(max)**|  
-|`SQLBIGVARCHAR`|Oui|**varchar(max)**|  
-|`SQLVARCHAR`|Oui|**varchar(max)**|  
-|`SQLBINARY`|Oui|**varbinary(max)**|  
-|`SQLBIGBINARY`|Oui|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|Oui|**varbinary(max)**|  
-|`SQLVARBINARY`|Oui|**varbinary(max)**|  
-|`SQLNCHAR`|Oui|**nvarchar(max)**|  
-|`SQLNVARCHAR`|Oui|**nvarchar(max)**|  
-|`SQLXML`|Oui|**Langage**|  
+|`SQLCHARACTER`|Yes|**varchar(max)**|  
+|`SQLBIGCHAR`|Yes|**varchar(max)**|  
+|`SQLBIGVARCHAR`|Yes|**varchar(max)**|  
+|`SQLVARCHAR`|Yes|**varchar(max)**|  
+|`SQLBINARY`|Yes|**varbinary(max)**|  
+|`SQLBIGBINARY`|Yes|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|Yes|**varbinary(max)**|  
+|`SQLVARBINARY`|Yes|**varbinary(max)**|  
+|`SQLNCHAR`|Yes|**nvarchar(max)**|  
+|`SQLNVARCHAR`|Yes|**nvarchar(max)**|  
+|`SQLXML`|Yes|**Langage**|  
 |`SQLUDT`|Vous pouvez soit utiliser|**Assorti**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  

@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631362"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702283"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
   Des index XML peuvent être créés sur des colonnes de type `xml`. L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Le processeur de requêtes utilise l'index XML primaire dans le cas de requêtes mettant en œuvre des [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) et renvoie les valeurs scalaires ou les sous-arborescences XML tirées de l'index primaire lui-même (cet index stocke toutes les informations nécessaires afin de reconstruire l'instance XML).  
   
- Par exemple, la requête suivante retourne des informations de résumé stockées `CatalogDescription``xml` dans la colonne type `ProductModel` de la table. Elle ne renvoie les informations dans la balise <`Summary`> que pour les modèles de produits dont la description de catalogue stocke également la description située dans la balise <`Features`>.  
+ Par exemple, la requête suivante retourne des informations de résumé stockées dans la `CatalogDescription``xml` colonne type de la `ProductModel` table. Elle ne renvoie les informations dans la balise <`Summary`> que pour les modèles de produits dont la description de catalogue stocke également la description située dans la balise <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`, où la requête recherche l'élément <`book`> dont un attribut possède la valeur `"someValue"`.  
   
- La requête suivante renvoie `ContactID` à partir de la table `Contact` . La `WHERE` clause spécifie un filtre qui recherche des valeurs dans `AdditionalContactInfo``xml` la colonne Type. L'ID des contacts n'est renvoyé que si l'objet blob XML relatif aux informations complémentaires sur les contacts correspondants contient un numéro de téléphone spécifique. Puisque l'élément <`telephoneNumber`> peut apparaître n'importe où dans le document XML, l'expression du chemin d'accès indique l'axe descendant-or-self.  
+ La requête suivante renvoie `ContactID` à partir de la table `Contact` . La `WHERE` clause spécifie un filtre qui recherche des valeurs dans la `AdditionalContactInfo``xml` colonne Type. L'ID des contacts n'est renvoyé que si l'objet blob XML relatif aux informations complémentaires sur les contacts correspondants contient un numéro de téléphone spécifique. Puisque l'élément <`telephoneNumber`> peut apparaître n'importe où dans le document XML, l'expression du chemin d'accès indique l'axe descendant-or-self.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Dans ce cas, nous connaissons donc la valeur de recherche correspondant à <`number`> mais elle peut se trouver n'importe où dans l'instance XML en tant qu'enfant de l'élément <`telephoneNumber`>. Ce type de requête pourrait être plus efficace grâce à la recherche d'une valeur précise dans les index.  
   
 ### <a name="property-secondary-index"></a>Index secondaire de type PROPERTY  
- Les requêtes chargées d'extraire plusieurs valeurs d'instances XML distinctes peuvent bénéficier de l'utilisation d'un index de type PROPERTY. Ce scénario se produit lorsque vous récupérez des propriétés d’objet à l’aide de la `xml` méthode **value ()** du type et lorsque la valeur de clé primaire de l’objet est connue.  
+ Les requêtes chargées d'extraire plusieurs valeurs d'instances XML distinctes peuvent bénéficier de l'utilisation d'un index de type PROPERTY. Ce scénario se produit lorsque vous récupérez des propriétés d’objet à l’aide de la méthode **value ()** du `xml` type et lorsque la valeur de clé primaire de l’objet est connue.  
   
  L'index utilisant le paramètre PROPERTY se construit d'après des colonnes (PK pour la clé primaire, Path pour le chemin d'accès, ainsi que la valeur du nœud) issues de l'index XML primaire, où PK correspond à la clé primaire de la table de base.  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- À l’exception des différences décrites plus loin dans cette rubrique, la création d’un`xml` index XML sur une colonne de type est similaire à la création`xml` d’un index sur une colonne qui n’est pas de type. Les instructions DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes permettent de créer et de gérer les index XML :  
+ À l’exception des différences décrites plus loin dans cette rubrique, la création d’un index XML sur une `xml` colonne de type est similaire à la création d’un index sur une colonne qui n’est pas de `xml` type. Les instructions DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes permettent de créer et de gérer les index XML :  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

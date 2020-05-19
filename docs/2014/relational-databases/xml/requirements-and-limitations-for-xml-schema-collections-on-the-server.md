@@ -21,15 +21,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efee2d8c9dea38beda1ba3398230dce8d1163d77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241259"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702533"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Spécifications et limitations relatives aux collections de schémas XML sur le serveur
   La validation XSD (XML Schema Definition Language) des colonnes SQL utilisant le type de données `xml` fait l'objet de certaines limitations, lesquelles sont exposées dans le tableau suivant. Les recommandations à suivre pour modifier un schéma XSD afin qu'il soit compatible avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y sont abordées. Les rubriques de cette section fournissent des informations supplémentaires concernant les limitations spécifiques, ainsi qu'une assistance pour leur utilisation.  
@@ -47,7 +47,7 @@ ms.locfileid: "63241259"
 |Ajout de membres à un groupe de substitution existant|Vous ne pouvez pas ajouter des membres à un groupe de substitution existant dans une collection de schémas XML. Un groupe de substitution dans un schéma XML est restreint en cela que l’élément de tête et tous les éléments membres doivent être définis dans la même instruction {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Formes canoniques et restrictions de modèle|La représentation canonique d'une valeur ne peut enfreindre la restriction de modèle pour son type. Pour plus d’informations, consultez [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md).|  
 |Facettes d'énumération|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les schémas XML avec des types présentant des facettes de modèles ou des énumérations enfreignant ces facettes.|  
-|Longueur de facette|Les facettes **Length**, **minLength**et **MaxLength** sont stockées en tant que `long` type. type codé sur 32 bits. Par conséquent, la plage de valeurs acceptables pour ces valeurs<sup>^</sup>est 2 31.|  
+|Longueur de facette|Les facettes **Length**, **minLength**et **MaxLength** sont stockées en tant que `long` type. type codé sur 32 bits. Par conséquent, la plage de valeurs acceptables pour ces valeurs est 2 <sup>^</sup> 31.|  
 |Attribut d'ID|Chaque composant de schéma XML peut avoir un attribut d'ID. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique l’unicité des déclarations **\<xsd:attribute>** de type **ID**, mais il ne stocke pas ces valeurs. L’étendue pour l’application de l’unicité est l’instruction {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Type ID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge les éléments de type **xs:ID**, **xs:IDREF**ou **xs:IDREFS**. Un schéma peut ne pas déclarer les éléments de ce type, ou les éléments dérivés par restriction ou par extension de ce type.|  
 |Espace de noms local|L’espace de noms local doit être spécifié explicitement pour l’élément **\<xsd:any>** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette les schémas qui utilisent une chaîne vide ("") comme valeur de l’attribut d’espace de noms. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite en lieu et place l'utilisation explicite de « ##local » pour indiquer qu'un élément ou un attribut non qualifié sera utilisé en tant qu'instance du caractère générique.|  

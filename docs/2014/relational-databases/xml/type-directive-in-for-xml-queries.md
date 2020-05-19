@@ -10,18 +10,18 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193288"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702446"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directive TYPE dans les requêtes FOR XML
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la prise en charge du [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql) vous permet éventuellement de demander que le résultat d’une requête for XML soit retourné `xml` en tant que type de données en spécifiant la directive type. Cela vous permet de traiter le résultat d'une requête FOR XML sur le serveur. Par exemple, vous pouvez spécifier une requête XQuery par rapport à celle-ci, `xml` assigner le résultat à une variable de type ou écrire [des requêtes for XML imbriquées](use-nested-for-xml-queries.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la prise en charge du [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql) vous permet éventuellement de demander que le résultat d’une requête for XML soit retourné en tant que `xml` type de données en spécifiant la directive type. Cela vous permet de traiter le résultat d'une requête FOR XML sur le serveur. Par exemple, vous pouvez spécifier une requête XQuery par rapport à celle-ci, assigner le résultat à une `xml` variable de type ou écrire [des requêtes for XML imbriquées](use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie des données d'instance de type de données XML au client comme résultat de différentes constructions de serveur telles que des requêtes FOR XML qui utilisent la directive TYPE ou dans lesquelles le type de données `xml` permet de renvoyer des valeurs de données d'instance XML à partir de paramètres de sortie et de colonnes de table SQL. Dans le code de l'application cliente, le fournisseur ADO.NET demande à ce que ces informations de type de données XML soient envoyées dans un encodage binaire à partir du serveur. Toutefois, si vous utilisez FOR XML sans la directive TYPE, les données XML reviennent en tant que type chaîne. Dans tous les cas, le fournisseur client est toujours en mesure de gérer toute forme XML. Notez qu'une clause FOR XML de premier niveau sans directive TYPE ne peut pas être utilisée avec les curseurs.  
@@ -50,7 +50,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Affectation des résultats de la requête FOR XML à une variable de type xml  
- Dans l'exemple suivant, un résultat FOR XML est affecté à une variable de type `xml`, `@x`. La requête récupère les informations de contact, telles que `BusinessEntityID`, `FirstName` `LastName`, et des numéros de téléphone supplémentaires, à `AdditionalContactInfo` partir de `xml``TYPE`la colonne de. Étant donné que la clause `FOR XML` spécifie la directive `TYPE`, le document XML est renvoyé en tant que type `xml` et affecté à une variable.  
+ Dans l'exemple suivant, un résultat FOR XML est affecté à une variable de type `xml`, `@x`. La requête récupère les informations de contact, telles que `BusinessEntityID` , `FirstName` , `LastName` et des numéros de téléphone supplémentaires, à partir de la `AdditionalContactInfo` colonne de `xml``TYPE` . Étant donné que la clause `FOR XML` spécifie la directive `TYPE`, le document XML est renvoyé en tant que type `xml` et affecté à une variable.  
   
 ```  
 USE AdventureWorks2012;  
