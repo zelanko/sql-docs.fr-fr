@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964516"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748850"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset, méthode (RDS)
 Crée un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)vide et déconnecté.  
@@ -40,7 +40,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Object*  
+ *Dessin*  
  Variable objet qui représente un objet [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) ou [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *ColumnsInfos*  
@@ -67,26 +67,26 @@ object.CreateRecordset(ColumnInfos)
   
 |Longueur|Constant|Number|Substitution|  
 |------------|--------------|------------|------------------|  
-|Résolution|**adTinyInt**|16||  
-|Résolution|**adSmallInt**|2||  
-|Résolution|**adInteger**|3||  
-|Résolution|**adBigInt**|20||  
-|Résolution|**adUnsignedTinyInt**|17||  
-|Résolution|**adUnsignedSmallInt**|18||  
-|Résolution|**adUnsignedInt**|19||  
-|Résolution|**adUnsignedBigInt**|21||  
-|Résolution|**adSingle**|4||  
-|Résolution|**adDouble**|5||  
-|Résolution|**adCurrency**|6||  
-|Résolution|**adDecimal**|14||  
-|Résolution|**adNumeric**|131||  
-|Résolution|**adBoolean**|11||  
-|Résolution|**adError**|10||  
-|Résolution|**adGuid**|72||  
-|Résolution|**adDate**|7||  
-|Résolution|**adDBDate**|133||  
-|Résolution|**adDBTime**|134||  
-|Résolution|**adDBTimestamp**|135|7|  
+|Fixe|**adTinyInt**|16||  
+|Fixe|**adSmallInt**|2||  
+|Fixe|**adInteger**|3||  
+|Fixe|**adBigInt**|20||  
+|Fixe|**adUnsignedTinyInt**|17||  
+|Fixe|**adUnsignedSmallInt**|18||  
+|Fixe|**adUnsignedInt**|19||  
+|Fixe|**adUnsignedBigInt**|21||  
+|Fixe|**adSingle**|4||  
+|Fixe|**adDouble**|5||  
+|Fixe|**adCurrency**|6||  
+|Fixe|**adDecimal**|14||  
+|Fixe|**adNumeric**|131||  
+|Fixe|**adBoolean**|11||  
+|Fixe|**adError**|10||  
+|Fixe|**adGuid**|72||  
+|Fixe|**adDate**|7||  
+|Fixe|**adDBDate**|133||  
+|Fixe|**adDBTime**|134||  
+|Fixe|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
 |Variable|**adChar**|129|200|  
 |Variable|**adVarChar**|200||  
