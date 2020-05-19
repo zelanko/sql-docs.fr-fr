@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949497"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753208"
 ---
 # <a name="member-object-ado-md"></a>Member, objet (ADO MD)
 Représente un membre d’un niveau dans un cube, les enfants d’un membre d’un niveau ou un membre d’une position le long d’un axe d’un ensemble de cellules.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les propriétés d’un **membre** varient en fonction du contexte dans lequel il est utilisé. Un **membre** d’un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) dans un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) a une propriété [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) qui retourne les **membres** au niveau inférieur suivant dans la hiérarchie à partir du **membre**actuel. Pour un **membre** d’une [position](../../../ado/reference/ado-md-api/position-object-ado-md.md), la collection **Children** est toujours vide. En outre, la propriété [type](../../../ado/reference/ado-md-api/type-property-ado-md.md) s’applique uniquement aux **membres** d’un **niveau**.  
   
  Un **membre** de la **position** possède deux propriétés qui sont utiles lors de l’affichage de l' [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) et [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Une erreur se produit si ces propriétés sont accessibles sur un **membre** d’un **niveau**.  

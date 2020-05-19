@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8609c7bac3d701ef6c6cf087f46e8b236842b71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15cc2596022889fe855145cd538d82676620aa13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964379"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752625"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.locfileid: "67964379"
 |[Synchronize21, méthode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchronise le Recordset donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2,1).|  
   
 ## <a name="events"></a>Événements  
- Aucune.  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [DataFactory, objet (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

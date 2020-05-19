@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278603db9930458400c4057a3551f485fffe3fcc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964184"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752544"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions, propriété (RDS)
 Indique si l’exécution asynchrone est activée.  
@@ -37,7 +37,7 @@ Indique si l’exécution asynchrone est activée.
 > [!NOTE]
 >  Chaque fichier exécutable qui utilise ces constantes doit fournir des déclarations pour eux. Vous pouvez couper et coller les déclarations de constantes que vous souhaitez à partir du fichier Adcvbs. Inc, situé dans le dossier d’installation par défaut de la bibliothèque RDS.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si **ExecuteOptions** a la valeur **adcExecAsync**, alors l’appel d' **actualisation** suivant est exécuté de façon asynchrone sur le [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Jeu d’enregistrements**de l’objet DataControl.  
   
  Si vous essayez d’appeler [Reset](../../../ado/reference/rds-api/reset-method-rds.md), [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)ou [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) pendant une autre opération asynchrone qui peut modifier le [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Le **jeu d’enregistrements** de l’objet DataControl est en cours d’exécution, une erreur se produit.  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c4b807bbadb5a9b4c8278be8ae895cd6ce4309c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964733"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752936"
 ---
 # <a name="views-refresh-method-example-vb"></a>Views, exemple de méthode Refresh (VB)
 Le code suivant montre comment actualiser la collection [views](../../../ado/reference/adox-api/views-collection-adox.md) d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md). Cela est nécessaire pour pouvoir accéder aux objets de [vue](../../../ado/reference/adox-api/view-object-adox.md) du **catalogue** .  

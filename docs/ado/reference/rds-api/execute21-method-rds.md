@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964200"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752638"
 ---
 # <a name="execute21-method-rds"></a>Execute21, méthode (RDS)
 Exécute la demande et crée un jeu d’enregistrements ADO à utiliser dans ADO 2,1.  
@@ -41,7 +41,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  La chaîne identifie le gestionnaire à utiliser avec cette exécution. La chaîne contient deux parties. La première partie contient le nom (ProgID) du gestionnaire à utiliser. La deuxième partie de la chaîne contient des arguments à passer au gestionnaire. La façon dont la chaîne d’arguments est interprétée est spécifique au gestionnaire. Les deux parties sont séparées par la première instance d’une virgule dans la chaîne (même si la chaîne d’arguments peut contenir des virgules supplémentaires). Les arguments sont facultatifs.  
   
  *QueryString*  
- Commande dans le langage de commande prise en charge par le fournisseur de OLE DB identifié dans la chaîne de connexion. Pour les fournisseurs basés sur SQL, il peut contenir [!INCLUDE[tsql](../../../includes/tsql-md.md)] une instruction Command, mais pour les fournisseurs non-SQL (par exemple, MSDataShape) il ne s' [!INCLUDE[tsql](../../../includes/tsql-md.md)] agit pas d’une instruction de requête.  
+ Commande dans le langage de commande prise en charge par le fournisseur de OLE DB identifié dans la chaîne de connexion. Pour les fournisseurs basés sur SQL, il peut contenir une [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction Command, mais pour les fournisseurs non-SQL (par exemple, MSDataShape) il ne s’agit pas d’une [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction de requête.  
   
  En outre, si un gestionnaire est utilisé (et qu’il est fortement recommandé d’utiliser un gestionnaire), le gestionnaire peut modifier ou remplacer la valeur spécifiée ici. Par exemple, le gestionnaire remplace généralement *QueryString* par une chaîne de requête de son fichier. ini. Par défaut, le fichier Msdfmap. ini est utilisé.  
   
@@ -69,7 +69,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Variant qui contient un tableau sécurisé de définitions de paramètres. Si l’option *GetInfo* a été spécifiée dans *lExecuteOptions*, ce paramètre est utilisé pour retourner les définitions de paramètres obtenues à partir du fournisseur OLE DB. Dans le cas contraire, ce paramètre peut être vide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le paramètre *HandlerString* peut avoir la valeur null. Ce qui se produit dans ce cas dépend de la configuration du serveur RDS. La chaîne de gestionnaire « MSDFMAP. Handler » indique que le gestionnaire fourni par Microsoft (msdfmap. dll) doit être utilisé. Une chaîne de gestionnaire « MASDFMAP. Handler, Sample. ini » indique que le gestionnaire msdfmap. dll doit être utilisé et que l’argument « Sample. ini » doit être passé au gestionnaire. MSDFMAP. dll interprète l’argument comme une direction pour utiliser le fichier Sample. ini afin de vérifier la connexion et les chaînes de requête.  
   
 > [!NOTE]
