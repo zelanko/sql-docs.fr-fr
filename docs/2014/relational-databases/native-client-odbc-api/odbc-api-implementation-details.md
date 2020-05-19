@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC, SQL Server-specific behaviors
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dae96ba17ee792b703e96ceff2200d1f8f629a01
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62715086"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706406"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   Cette section fournit des informations sur les fonctions ODBC qui présentent des comportements spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsqu'elles sont utilisées avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Toutes les fonctions ODBC ne sont pas documentées ici. Les rubriques individuelles présentent uniquement les problèmes spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une fonction ODBC. Elles ne constituent pas une référence complète pour les fonctions ODBC.  
@@ -133,6 +133,6 @@ ms.locfileid: "62715086"
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de&#41; ODBC SQL Server Native Client &#40;](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
- [Génération d'applications avec SQL Server Native Client](../native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Génération d’applications avec SQL Server Native Client](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

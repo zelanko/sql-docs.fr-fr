@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], Boolean operators
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010632"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717782"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs booléens dans les requêtes XPath (SQLXML 4.0)
   L'exemple suivant montre comment les opérateurs booléens sont spécifiés dans les requêtes XPath. La requête XPath de cet exemple est spécifiée par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "66010632"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>R. Spécifier l'opérateur booléen OR  
- Cette requête XPath retourne le ** \<client>** éléments enfants du nœud de contexte avec la valeur d’attribut **CustomerID** 13 ou 31 :  
+ Cette requête XPath retourne le ** \< client>** éléments enfants du nœud de contexte avec la valeur d’attribut **CustomerID** 13 ou 31 :  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +41,7 @@ ms.locfileid: "66010632"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- Dans le prédicat `attribute` , est l’axe et `CustomerID` est le test de nœud (true si **CustomerID** est un ** \<attribut>** nœud, car l' ** \<attribut>** nœud est le nœud principal de l' `attribute` axe). Le prédicat filtre les éléments du ** \<>client** et retourne uniquement ceux qui répondent à la condition spécifiée dans le prédicat.  
+ Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (true si **CustomerID** est un ** \< attribut>** nœud, car l' ** \< attribut>** nœud est le nœud principal de l' `attribute` axe). Le prédicat filtre les éléments du ** \<>client** et retourne uniquement ceux qui répondent à la condition spécifiée dans le prédicat.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Pour tester les requêtes XPath par rapport au schéma de mappage  
   

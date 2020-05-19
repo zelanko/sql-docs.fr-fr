@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetStmtAttr function
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11c5048cd197643823bb6b0fc8e8247983666d8c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657808"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705981"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client étend SQLGetStmtAttr pour exposer des attributs d’instruction spécifiques au pilote.  
@@ -32,12 +32,12 @@ ms.locfileid: "62657808"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  L'attribut SQL_SOPT_SS_NOCOUNT_STATUS indique le paramètre actif de l'option NOCOUNT, qui contrôle si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] signale le nombre de lignes affectées par une instruction lorsque [SQLRowCount](sqlrowcount.md) est appelé. La valeur de *ValuePtr* est de type SQLLEN.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT a la valeur OFF. SQLRowCount retourne le nombre de lignes affectées.|  
 |SQL_NC_ON|NOCOUNT a la valeur ON. Le nombre de lignes affectées n’est pas retourné par SQLRowCount et la valeur retournée est 0.|  
   
- Si SQLRowCount retourne 0, l’application doit tester SQL_SOPT_SS_NOCOUNT_STATUS. Si SQL_NC_ON est retourné, la valeur 0 de SQLRowCount indique uniquement que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas retourné de nombre de lignes. Si SQL_NC_OFF est retourné, cela signifie que l'option NOCOUNT est désactivée et la valeur 0 de SQLRowCount indique que l'instruction n'a affecté aucune ligne.  
+ Si SQLRowCount retourne 0, l’application doit tester SQL_SOPT_SS_NOCOUNT_STATUS. Si SQL_NC_ON est retourné, la valeur 0 de SQLRowCount indique uniquement que n' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a pas retourné de nombre de lignes. Si SQL_NC_OFF est retourné, cela signifie que l'option NOCOUNT est désactivée et la valeur 0 de SQLRowCount indique que l'instruction n'a affecté aucune ligne.  
   
  Les applications ne doivent pas afficher la valeur de SQLRowCount quand SQL_SOPT_SS_NOCOUNT_STATUS a la valeur SQL_NC_OFF. Les lots ou procédures stockées de grande taille peuvent contenir plusieurs instructions SET NOCOUNT. Il n'est donc pas possible de supposer que SQL_SOPT_SS_NOCOUNT_STATUS reste constant. Cette option doit être testée à chaque fois que SQLRowCount retourne 0.  
   

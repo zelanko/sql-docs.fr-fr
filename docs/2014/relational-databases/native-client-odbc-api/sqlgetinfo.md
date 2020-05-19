@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLGetInfo function
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128654"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706005"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   Le tableau indique les valeurs retournées par **SQLGetInfo**. Ces valeurs peuvent varier en fonction du numéro de version du serveur connecté.  
   
- **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client diffère de **SQLGetInfo** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC (sqlsrv32. DLL) quand **SQLGetInfo** est appelé avec SQL_KEYWORDS et une longueur de mémoire tampon de 0.  Le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS, mais le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne SQL_SUCCESS_WITH_INFO.  Toutefois, en cas d’appel avec une longueur de tampon différente de zéro inférieure à la chaîne de **SQLGetInfo** mot clé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sortie, SQLGetInfo dans Native Client retourne SQL_SUCCESS_WITH_INFO et un SQLSTATE de 01004.  
+ **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client diffère de **SQLGetInfo** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC (sqlsrv32. DLL) quand **SQLGetInfo** est appelé avec SQL_KEYWORDS et une longueur de mémoire tampon de 0.  Le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS, mais le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne SQL_SUCCESS_WITH_INFO.  Toutefois, en cas d’appel avec une longueur de tampon différente de zéro inférieure à la chaîne de mot clé de sortie, **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS_WITH_INFO et un SQLSTATE de 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -33,10 +33,10 @@ ms.locfileid: "63128654"
 |SQL_ACTIVE_CONNECTIONS|Le nombre de connexions est limité par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote retourne 0 pour cette demande **SQLGetInfo** .|  
 |SQL_ACTIVE_ENVIRONMENTS|Le nombre d'environnements n'est pas limité par le pilote. Le pilote retourne 0 pour cette demande **SQLGetInfo** .|  
 |SQL_ACTIVE_STATEMENTS|Le pilote retourne 1 pour cette demande **SQLGetInfo** . Le nombre de descripteurs d'instruction disponibles pour une application n'est pas limité par le pilote, mais l'exécution par défaut sur un descripteur d'instruction bloquera l'exécution sur tout autre descripteur.|  
-|SQL_ALTER_DOMAIN|FALSE|  
+|SQL_ALTER_DOMAIN|FAUX|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
-|SQL_DATETIME_LITERALS|FALSE|  
+|SQL_DATETIME_LITERALS|FAUX|  
 |SQL_ASYNC_MODE|SQL_AM_STATEMENT|  
 |SQL_BATCH_ROW_COUNT|SQL_BRC_EXPLICIT|  
 |SQL_BATCH_SUPPORT|SQL_BS_SELECT_PROC DE SQL_BS_SELECT_EXPLICIT DE SQL_BS_ROW_COUNT_PROC DE SQL_BS_ROW_COUNT_EXPLICIT|  
@@ -49,13 +49,13 @@ ms.locfileid: "63128654"
 |SQL_COLLATION_SEQ|Séquence de classement actuellement affectée pour la connexion et le serveur.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|Aucune prise en charge de la conversion du type de données ODBC SQL_BIGINT. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge le type de données **Decimal (19, 0)** en tant que type ODBC SQL_DECIMAL. Voir SQL_CONVERT_DECIMAL ci-dessous.|  
+|SQL_CONVERT_BIGINT|Aucune prise en charge de la conversion du type de données ODBC SQL_BIGINT. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données **Decimal (19, 0)** en tant que type ODBC SQL_DECIMAL. Voir SQL_CONVERT_DECIMAL ci-dessous.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|Aucune prise en charge de la conversion du type de données ODBC SQL_TYPE_DATE. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge le type de données **DateTime** comme type ODBC SQL_TYPE_TIMESTAMP. Voir SQL_CONVERT_TIMESTAMP ci-dessous.|  
+|SQL_CONVERT_DATE|Aucune prise en charge de la conversion du type de données ODBC SQL_TYPE_DATE. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données **DateTime** comme type ODBC SQL_TYPE_TIMESTAMP. Voir SQL_CONVERT_TIMESTAMP ci-dessous.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|Aucune prise en charge de la conversion du type de données ODBC SQL_DOUBLE. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge le type de données SQL_DOUBLE odbc comme SQL_FLOAT. Voir SQL_CONVERT_FLOAT ci-dessous.|  
+|SQL_CONVERT_DOUBLE|Aucune prise en charge de la conversion du type de données ODBC SQL_DOUBLE. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge le type de données SQL_DOUBLE ODBC comme SQL_FLOAT. Voir SQL_CONVERT_FLOAT ci-dessous.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -66,7 +66,7 @@ ms.locfileid: "63128654"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|Aucune prise en charge de la conversion du type de données ODBC SQL_TYPE_TIME. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]charge le type de données **DateTime** comme type ODBC SQL_TYPE_TIMESTAMP. Voir SQL_CONVERT_TIMESTAMP ci-dessous.|  
+|SQL_CONVERT_TIME|Aucune prise en charge de la conversion du type de données ODBC SQL_TYPE_TIME. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données **DateTime** comme type ODBC SQL_TYPE_TIMESTAMP. Voir SQL_CONVERT_TIMESTAMP ci-dessous.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -75,13 +75,13 @@ ms.locfileid: "63128654"
 |SQL_CONVERT_WLONGVARCHAR|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_WVARCHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
 |SQL_CORRELATION_NAME|SQL_CN_ANY|  
-|SQL_CREATE_ASSERTION|FALSE|  
-|SQL_CREATE_CHARACTER_SET|FALSE|  
-|SQL_CREATE_COLLATION|FALSE|  
-|SQL_CREATE_DOMAIN|FALSE|  
+|SQL_CREATE_ASSERTION|FAUX|  
+|SQL_CREATE_CHARACTER_SET|FAUX|  
+|SQL_CREATE_COLLATION|FAUX|  
+|SQL_CREATE_DOMAIN|FAUX|  
 |SQL_CREATE_SCHEMA|SQL_CS_AUTHORIZATION SQL_CS_CREATE_SCHEMA|  
 |SQL_CREATE_TABLE|SQL_CT_CREATE_TABLE|  
-|SQL_CREATE_TRANSLATION|FALSE|  
+|SQL_CREATE_TRANSLATION|FAUX|  
 |SQL_CREATE_VIEW|SQL_CV_CHECK_OPTION SQL_CV_CREATE_VIEW|  
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
@@ -96,13 +96,13 @@ ms.locfileid: "63128654"
 |SQL_DRIVER_NAME|"sqlncli11.dll"|  
 |SQL_DRIVER_ODBC_VER|Version ODBC prise en charge du pilote.|  
 |SQL_DRIVER_VER|Numéro de version du pilote.|  
-|SQL_DROP_ASSERTION|FALSE|  
-|SQL_DROP_CHARACTER_SET|FALSE|  
-|SQL_DROP_COLLATION|FALSE|  
-|SQL_DROP_DOMAIN|FALSE|  
+|SQL_DROP_ASSERTION|FAUX|  
+|SQL_DROP_CHARACTER_SET|FAUX|  
+|SQL_DROP_COLLATION|FAUX|  
+|SQL_DROP_DOMAIN|FAUX|  
 |SQL_DROP_SCHEMA|DROP SCHEMA n'est pas pris en charge.|  
 |SQL_DROP_TABLE|SQL_DT_DROP_TABLE|  
-|SQL_DROP_TRANSLATION|FALSE|  
+|SQL_DROP_TRANSLATION|FAUX|  
 |SQL_DROP_VIEW|SQL_DV_DROP_VIEW|  
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BULK_ADD SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -180,11 +180,11 @@ ms.locfileid: "63128654"
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|Nom du serveur de la connexion.|  
 |SQL_SPECIAL_CHARACTERS|Dépend du jeu de caractères installé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|SQL_SQL92_DATETIME_FUNCTIONS|FALSE|  
-|SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FALSE|  
-|SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FALSE|  
+|SQL_SQL92_DATETIME_FUNCTIONS|FAUX|  
+|SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FAUX|  
+|SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FAUX|  
 |SQL_SQL92_GRANT|SQL_SG_WITH_GRANT_OPTION|  
-|SQL_SQL92_NUMERIC_VALUE_FUNCTIONS|FALSE|  
+|SQL_SQL92_NUMERIC_VALUE_FUNCTIONS|FAUX|  
 |SQL_SQL92_PREDICATES|SQL_SP_LIKE DE SQL_SP_ISNULL DE SQL_SP_ISNOTNULL DE SQL_SP_EXISTS SQL_SP_IN SQL_SP_BETWEEN SQL_SP_UNIQUE|  
 |SQL_SQL92_RELATIONAL_JOIN_OPERATORS|SQL_SRJO_CROSS_JOIN SQL_SRJO_FULL_OUTER_JOIN SQL_SRJO_INNER_JOIN SQL_SRJO_LEFT_OUTER_JOIN SQL_SRJO_RIGHT_OUTER_JOIN SQL_SRJO_UNION_JOIN|  
 |SQL_SQL92_REVOKE|SQL_SR_GRANT_OPTION_FOR|  

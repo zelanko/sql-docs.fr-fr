@@ -13,14 +13,14 @@ helpviewer_keywords:
 - GetChunk method [ADO], Visual Basic example
 - AppendChunk method [ADO], Visual Basic example
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7183dbc6b54e5560784e5de602a45da8e5a235a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa4c9e41da8d28a0171d0c7ddf3b53d2ee77c174
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920625"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746898"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk et GetChunk, exemple de méthodes (VB)
 Cet exemple utilise les méthodes [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) et [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) pour remplir un champ d’image avec les données d’un autre enregistrement.  

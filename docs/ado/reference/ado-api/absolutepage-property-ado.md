@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0da08a0c51c8d4d89329bbe9c36cacd7979c1e71
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921831"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747548"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage, propriété (ADO)
 Indique sur quelle page se trouve l’enregistrement en cours.  
@@ -30,7 +30,7 @@ Indique sur quelle page se trouve l’enregistrement en cours.
   
  Pour le code 64 bits, utilisez un type de données qui fournit le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser **long** ou une autre valeur qui peut être une longueur de 64 bits telle que DBORDINAL. N’utilisez pas de valeurs **PositionEnum** , car elles sont limitées à une longueur de 32 bits.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette propriété peut être utilisée pour identifier le numéro de la page sur laquelle se trouve l’enregistrement en cours. Elle utilise la propriété [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) pour diviser logiquement le nombre total d’ensembles de lignes de l’objet **Recordset** en une série de pages, dont chacune a le nombre d’enregistrements égal à **pageSize** (à l’exception de la dernière page, qui peut avoir moins d’enregistrements). Le fournisseur doit prendre en charge les fonctionnalités appropriées pour que cette propriété soit disponible.  
   
 -   Lors de l’obtention ou de la définition de la propriété **AbsolutePage** , ADO utilise la propriété [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) et la propriété [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) de la même manière :  

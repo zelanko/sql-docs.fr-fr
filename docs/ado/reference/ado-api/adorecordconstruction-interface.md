@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920806"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747173"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction, interface
 L’interface **ADORecordConstruction**est utilisée pour construire un objet **enregistrement** ADO à partir d’un objet OLE DB **Row** dans une application C/C++.  
@@ -35,13 +35,13 @@ L’interface **ADORecordConstruction**est utilisée pour construire un objet **
 |[Haut](../../../ado/reference/ado-api/row-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet de **ligne** OLE DB à partir de cet objet **enregistrement** ADO.|  
   
 ## <a name="methods"></a>Méthodes  
- Aucune.  
+ Aucun.  
   
 ## <a name="events"></a>Événements  
- Aucune.  
+ Aucun.  
   
-## <a name="remarks"></a>Notes  
- À partir d' **Row** un objet Row`pRow`OLE DB (), la construction d’un objet **Record** ADO (`adoR`) s’élève aux trois opérations de base suivantes :  
+## <a name="remarks"></a>Remarques  
+ À partir d’un objet **Row** OLE DB ( `pRow` ), la construction d’un objet **Record** ADO ( `adoR` ) s’élève aux trois opérations de base suivantes :  
   
 1.  Créez un objet **enregistrement** ADO :  
   
@@ -70,7 +70,7 @@ L’interface **ADORecordConstruction**est utilisée pour construire un objet **
   
  Un objet **Record** ADO peut également être construit à partir du conteneur d’un objet OLE DB **Row** .  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Version :** ADO 2,0 et versions ultérieures  
   
  **Bibliothèque :** msado15. dll  

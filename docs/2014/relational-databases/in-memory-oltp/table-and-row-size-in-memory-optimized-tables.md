@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688900"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718798"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
   Une table mémoire optimisée se compose d'une collection de lignes et d'index qui contiennent des pointeurs vers les lignes. Dans une table mémoire optimisée, les lignes ne peuvent pas dépasser 8 060 octets. La compréhension de la taille d'une table mémoire optimisée vous aidera à comprendre si votre ordinateur dispose de suffisamment de mémoire.  
@@ -77,7 +77,7 @@ Table mémoire optimisée, comportant des index et des lignes.
 |Tableau « offset » pour les colonnes de type profond|Les valeurs possibles sont les suivantes :<br /><br /> 0 s'il n'y a aucune colonne de type profond<br /><br /> 2 + 2 * [nombre de colonnes de type profond] dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Tableau NULL|[nombre de colonnes qui acceptent les valeurs NULL] / 8, arrondi à des octets entiers.|La table comporte un bit pour chaque colonne pouvant avoir la valeur NULL. Cela est arrondi à des octets entiers.|  
 |Remplissage du tableau NULL|Les valeurs possibles sont les suivantes :<br /><br /> 1 s'il y a des colonnes de type profond et la taille du tableau NULL a un nombre impair d'octets.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
-|Remplissage|S'il n'y a aucune colonne de type profond : 0<br /><br /> En présence de colonnes de type profond, 0-7 octets de remplissage sont ajoutés, selon le plus grand alignement requis par une colonne superficielle. Chaque colonne superficielle requiert un alignement égal à sa taille, comme indiqué précédemment, mais les colonnes GUID nécessitent un alignement d'1 octet (et non de 16) et les colonnes numériques requièrent toujours un alignement de 8 octets (jamais de 16). La plus grande spécification d'alignement entre toutes les colonnes superficielles est utilisée, et un remplissage de 0-7 octets est ajouté de sorte que la taille totale (sans les colonnes de type profond) soit un multiple de l'alignement requis.|Les types profonds sont les types (var)binary et (n)(var)char.|  
+|Espacement|S'il n'y a aucune colonne de type profond : 0<br /><br /> En présence de colonnes de type profond, 0-7 octets de remplissage sont ajoutés, selon le plus grand alignement requis par une colonne superficielle. Chaque colonne superficielle requiert un alignement égal à sa taille, comme indiqué précédemment, mais les colonnes GUID nécessitent un alignement d'1 octet (et non de 16) et les colonnes numériques requièrent toujours un alignement de 8 octets (jamais de 16). La plus grande spécification d'alignement entre toutes les colonnes superficielles est utilisée, et un remplissage de 0-7 octets est ajouté de sorte que la taille totale (sans les colonnes de type profond) soit un multiple de l'alignement requis.|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Colonnes de type profond à longueur fixe|SUM([taille des colonnes de type profond à longueur fixe])<br /><br /> La taille de chaque colonne est la suivante :<br /><br /> i pour char(i) et binary(i).<br /><br /> 2 * i pour nchar(i)|Les colonnes de type profond à longueur fixe sont des colonnes de type char(i), nchar(i) ou binary(i).|  
 |Colonnes de type profond à longueur variable [taille calculée]|SUM ([taille calculée des colonnes de type profond à longueur variable])<br /><br /> La taille calculée de chaque colonne est la suivante :<br /><br /> i pour varchar(i) et varbinary(i)<br /><br /> 2 * i pour nvarchar(i)|Cette ligne est uniquement appliquée à la [taille calculée du corps de ligne].<br /><br /> Les colonnes de type profond à longueur variable sont des colonnes de type varchar(i), nvarchar(i), ou varbinary(i). La taille calculée est déterminée par la longueur maximale (i) de la colonne.|  
 |Colonnes de type profond à longueur variable [taille réelle]|SUM ([taille réelle des colonnes de type profond à longueur variable])<br /><br /> La taille réelle de chaque colonne est la suivante :<br /><br /> n, où n est le nombre de caractères stocké dans la colonne, pour varchar(i).<br /><br /> 2 * n, où n est le nombre de caractères stocké dans la colonne, pour nvarchar (i).<br /><br /> n, où n est le nombre d'octets stocké dans la colonne, pour varbinary(i).|Cette ligne est uniquement appliquée à la [taille réelle du corps de ligne].<br /><br /> La taille réelle est déterminée par les données stockées dans les colonnes dans la ligne.|  
@@ -117,16 +117,16 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  Pour un temps supérieur à 200, la table contient les lignes suivantes :  
   
-|Nom|City|  
+|Name|City|  
 |----------|----------|  
-|John|Beijing|  
+|Jean|Beijing|  
 |Jane|Prague|  
   
  Toutefois, toutes les transactions actives avec une heure de début 100 verront la version de la table suivante :  
   
-|Nom|City|  
+|Name|City|  
 |----------|----------|  
-|John|Paris|  
+|Jean|Paris|  
 |Jane|Prague|  
 |Susan|Bogota|  
   
@@ -188,7 +188,7 @@ GO
   
 -   Remplissage du tableau NULL = 1, car la taille du tableau NULL est impaire et il existe une colonne de type profond.  
   
--   Remplissage  
+-   Espacement  
   
     -   8 est la spécification d'alignement maximale.  
   
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables optimisées en mémoire](memory-optimized-tables.md)  
+ [Tables à mémoire optimisée](memory-optimized-tables.md)  
   
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921885"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747601"
 ---
 # <a name="writing-your-own-customized-handler"></a>Écriture d’un gestionnaire personnalisé
 Vous pouvez écrire votre propre gestionnaire si vous êtes un administrateur de serveur IIS qui souhaite la prise en charge de RDS par défaut, mais plus de contrôle sur les demandes utilisateur et les droits d’accès.  
@@ -31,7 +31,7 @@ Vous pouvez écrire votre propre gestionnaire si vous êtes un administrateur de
 ## <a name="idatafactoryhandler-interface"></a>Interface IDataFactoryHandler  
  Cette interface a deux méthodes, **GetRecordSet** et **reconnect**. Les deux méthodes requièrent que la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) soit définie sur **adUseClient**.  
   
- Les deux méthodes acceptent les arguments qui apparaissent après la première virgule dans le mot clé «**handler =**». Par exemple, `"Handler=progid,arg1,arg2;"` passera une chaîne d’arguments de `"arg1,arg2"`et `"Handler=progid"` passera un argument null.  
+ Les deux méthodes acceptent les arguments qui apparaissent après la première virgule dans le mot clé «**handler =**». Par exemple, passera `"Handler=progid,arg1,arg2;"` une chaîne d’arguments de `"arg1,arg2"` et passera `"Handler=progid"` un argument null.  
   
 ## <a name="getrecordset-method"></a>Méthode GetRecordset  
  Cette méthode interroge la source de données et crée un nouvel objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à l’aide des arguments fournis. Le **jeu d’enregistrements** doit être ouvert avec **adLockBatchOptimistic** et ne doit pas être ouvert de façon asynchrone.  

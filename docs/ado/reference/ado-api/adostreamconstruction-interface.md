@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920788"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747056"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction, interface
 L’interface **ADOStreamConstruction** est utilisée pour construire un objet de **flux** ADO à partir d’un objet OLE DB **IStream** dans une application C/C++.  
@@ -32,13 +32,13 @@ L’interface **ADOStreamConstruction** est utilisée pour construire un objet d
 |[Stream, propriété](../../../ado/reference/ado-api/stream-property.md)|Lecture/écriture. Obtient/définit un objet de **flux** OLE DB.|  
   
 ## <a name="methods"></a>Méthodes  
- Aucune.  
+ Aucun.  
   
 ## <a name="events"></a>Événements  
- Aucune.  
+ Aucun.  
   
-## <a name="remarks"></a>Notes  
- Étant donné un **IStream** objet OLE DB IStream`pStream`(), la construction d’un objet de **flux** ADO (`adoStr`) se base sur les trois opérations de base suivantes :  
+## <a name="remarks"></a>Remarques  
+ Étant donné un objet OLE DB **IStream** ( `pStream` ), la construction d’un objet de **flux** ADO ( `adoStr` ) se base sur les trois opérations de base suivantes :  
   
 1.  Créez un objet de **flux** ADO :  
   
@@ -63,9 +63,9 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- L’objet `adoStr` résultant représente maintenant l’objet de **flux** ADO construit à partir de l’objet OLE DB **IStream** .  
+ L' `adoStr` objet résultant représente maintenant l’objet de **flux** ADO construit à partir de l’objet OLE DB **IStream** .  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Version :** ADO 2,0 ou version ultérieure  
   
  **Bibliothèque :** msado15. dll  

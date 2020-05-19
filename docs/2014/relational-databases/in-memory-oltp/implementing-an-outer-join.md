@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158174"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719109"
 ---
 # <a name="implementing-an-outer-join"></a>Implémentation d'une jointure externe
   La jointure externe n'est pas prise en charge avec les procédures stockées compilées en mode natif. L'exemple suivant illustre une méthode permettant d'implémenter les fonctionnalités d'une jointure externe gauche dans une procédure stockée compilée en mode natif.  
   
  Il utilise une variable de table pour simuler un curseur à gauche de la jointure et une variable de table pour construire un seul jeu de résultats, qui n'est appropriée que lors du traitement d'un nombre limité de lignes, car elle implique de créer une copie supplémentaire des lignes de données.  
   
- Une variable (@outer) de type t1_type est utilisée pour effectuer une itération sur les lignes de T1, à l’aide d’une boucle while pour simuler un curseur. La variable @result de type t1t2_join_type est ensuite utilisée pour construire le jeu de résultats.  
+ Une variable ( @outer ) de type t1_type est utilisée pour effectuer une itération sur les lignes de T1, à l’aide d’une boucle while pour simuler un curseur. La variable @result de type t1t2_join_type est ensuite utilisée pour construire le jeu de résultats.  
   
  Vous devez tester les performances de cette solution, pour vous assurer qu'elle s'exécute comme prévu dans votre application.  
   

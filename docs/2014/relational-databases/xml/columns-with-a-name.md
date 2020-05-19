@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a689c29297703e48a1f759643599dbc93843d9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638163"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717225"
 ---
 # <a name="columns-with-a-name"></a>Colonnes avec nom
   Les conditions suivantes sont celles dans lesquelles les colonnes de l'ensemble de lignes avec nom sont mappées, avec respect de la casse, au document XML obtenu :  
@@ -33,7 +33,7 @@ ms.locfileid: "62638163"
 -   Une colonne porte un nom différent.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Le nom de colonne commence par un arobase (\@)  
- Si le nom de colonne commence par un arobase\@() et ne contient pas de barre oblique (/), un attribut de l' `row` élément <> avec la valeur de colonne correspondante est créé. Par exemple, la requête suivante renvoie un ensemble de lignes à deux colonnes (\@PmId, Name). Dans le document XML obtenu, un attribut **PmId** est ajouté à l’élément <`row`> correspondant et une valeur de ProductModelID lui est affectée.  
+ Si le nom de colonne commence par un arobase ( \@ ) et ne contient pas de barre oblique (/), un attribut de l' `row` élément <> avec la valeur de colonne correspondante est créé. Par exemple, la requête suivante renvoie un ensemble de lignes à deux colonnes (\@PmId, Name). Dans le document XML obtenu, un attribut **PmId** est ajouté à l’élément <`row`> correspondant et une valeur de ProductModelID lui est affectée.  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Le nom de colonne ne commence pas par un arobase (\@)  
- Si le nom de colonne ne commence pas par un arobase\@(), qu’il ne s’agit pas de l’un des tests de nœud XPath et qu’il ne contient pas de barre oblique (/), un élément XML qui est un `row` sous-élément de l’élément Row, <> par défaut, est créé.  
+ Si le nom de colonne ne commence pas par un arobase ( \@ ), qu’il ne s’agit pas de l’un des tests de nœud XPath et qu’il ne contient pas de barre oblique (/), un élément XML qui est un sous-élément de l’élément Row, <`row`> par défaut, est créé.  
   
  La requête suivante spécifie le nom de colonne, qui est le résultat. Par conséquent, un élément enfant <`result`> est ajouté à l'élément <`row`>.  
   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Les noms de colonnes sont utilisés comme chemin d'accès dans la construction du document XML en mode PATH. Le nom de colonne qui contient les valeurs d’ID d’employé\@commence par «». Par conséquent, un attribut, **EmpID**, est ajouté à l' `row` élément <>. Le nom de toutes les autres colonnes contient une barre oblique (/) qui indique la hiérarchie. Le document XML obtenu possède l'enfant <`EmpName`> sous l'élément <`row`>, et l'enfant <`EmpName`> possède les éléments enfants <`First`>, <`Middle`> et <`Last`>.  
+ Les noms de colonnes sont utilisés comme chemin d'accès dans la construction du document XML en mode PATH. Le nom de colonne qui contient les valeurs d’ID d’employé commence par « \@ ». Par conséquent, un attribut, **EmpID**, est ajouté à l' `row` élément <>. Le nom de toutes les autres colonnes contient une barre oblique (/) qui indique la hiérarchie. Le document XML obtenu possède l'enfant <`EmpName`> sous l'élément <`row`>, et l'enfant <`EmpName`> possède les éléments enfants <`First`>, <`Middle`> et <`Last`>.  
   
 ```  
 <row EmpID="1">  

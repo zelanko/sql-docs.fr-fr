@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806985"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706423"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tâche Reconstruire l'index (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Reconstruire l’index** pour recréer les index des tables de la base de données en définissant un nouveau facteur de remplissage. Le facteur de remplissage détermine la quantité d'espace disponible sur chaque page de l'index pour permettre l'extension ultérieure de l'index. Au fur et à mesure que des données sont ajoutées à la table, l'espace libre se remplit parce que le facteur de remplissage n'est pas conservé. Réorganiser les pages d'index et les données permet de recouvrer de l'espace libre.  
@@ -31,7 +31,7 @@ ms.locfileid: "62806985"
  **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
- **Nouvelle**  
+ **Nouveau**  
  Crée une nouvelle connexion serveur à utiliser pour exécuter la tâche. La boîte de dialogue **Nouvelle connexion** est décrite ci-dessous.  
   
  **Bases de données**  
@@ -59,7 +59,7 @@ ms.locfileid: "62806985"
  **Dessin**  
  Limite la grille de **Sélection** à l’affichage des tables et/ou des vues.  
   
- **d’un certificat SSTP**  
+ **Sélection**  
  Spécifie les tables ou les index faisant l'objet de cette tâche. Non disponible quand **Tables et vues** est sélectionné dans la zone Objet.  
   
  **Réorganiser les pages avec la quantité d'espace disponible par défaut**  
@@ -69,7 +69,7 @@ ms.locfileid: "62806985"
  Provoque la suppression des index des tables de la base de données et leur recréation avec un nouveau facteur de remplissage calculé automatiquement, la quantité d'espace libre spécifiée étant réservée dans les pages d'index. Plus le pourcentage est élevé, plus il y a d'espace libre réservé dans les pages d'index et plus l'index croît. Les valeurs valides sont comprises entre 0 et 100.  
   
  **Trier les résultats dans tempdb**  
- Utilisez l' `SORT_IN_TEMPDB`option, qui détermine l’emplacement de stockage temporaire des résultats de tri intermédiaires générés pendant la création de l’index. Si aucune opération de tri n’est requise ou si le tri peut être effectué dans la mémoire, l’option `SORT_IN_TEMPDB`est ignorée.  
+ Utilisez l' `SORT_IN_TEMPDB` option, qui détermine l’emplacement de stockage temporaire des résultats de tri intermédiaires générés pendant la création de l’index. Si aucune opération de tri n’est requise ou si le tri peut être effectué dans la mémoire, l’option `SORT_IN_TEMPDB`est ignorée.  
   
  **Conserver l'index en ligne lors de la réindexation**  
  Utilisez l'option `ONLINE` qui permet aux utilisateurs d'accéder à la table sous-jacente ou aux données d'index cluster, ainsi qu'à tous les index non-cluster associés au cours des opérations d'index.  
@@ -115,6 +115,6 @@ ms.locfileid: "62806985"
  [Option SORT_IN_TEMPDB pour les index](../indexes/indexes.md)   
  [Instructions pour les opérations d’index en ligne](../indexes/guidelines-for-online-index-operations.md)   
  [Fonctionnement des opérations d’index en ligne](../indexes/how-online-index-operations-work.md)   
- [Exécuter des opérations d’index en ligne](../indexes/perform-index-operations-online.md)  
+ [Exécuter des opérations en ligne sur les index](../indexes/perform-index-operations-online.md)  
   
   

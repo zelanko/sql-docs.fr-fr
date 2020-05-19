@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067666"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706346"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-  Vous pouvez utiliser `SQLColAttribute` pour récupérer un attribut d’une colonne de jeu de résultats pour les instructions ODBC préparées ou exécutées. L' `SQLColAttribute` appel de sur des instructions préparées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entraîne un aller-retour vers. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client reçoit les données de la colonne de jeu de résultats dans le cadre `SQLColAttribute` de l’exécution de l’instruction, de sorte que l’appel après l’achèvement de **SQLExecute** ou **SQLExecDirect** n’implique pas de boucle de serveur.  
+  Vous pouvez utiliser `SQLColAttribute` pour récupérer un attribut d’une colonne de jeu de résultats pour les instructions ODBC préparées ou exécutées. L’appel `SQLColAttribute` de sur des instructions préparées entraîne un aller-retour vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client reçoit les données de la colonne de jeu de résultats dans le cadre de l’exécution de l’instruction, de sorte que `SQLColAttribute` l’appel après l’achèvement de **SQLExecute** ou **SQLExecDirect** n’implique pas de boucle de serveur.  
   
 > [!NOTE]  
 >  Les attributs de l'identificateur de colonne ODBC ne sont pas disponibles dans tous les jeux de résultats [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "63067666"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le pilote ODBC Native Client utilise l’instruction SET FMTONLY pour réduire la charge `SQLColAttribute` du serveur quand est appelé pour les instructions préparées mais non exécutées.  
   
- Pour les types de valeur `SQLColAttribute` élevée, retourne les valeurs suivantes :  
+ Pour les types de valeur élevée, `SQLColAttribute` retourne les valeurs suivantes :  
   
 |Identificateur de champ|Description de la modification|  
 |----------------------|---------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "63067666"
   
  Pour toutes les versions, les attributs de colonne sont signalés uniquement pour le premier jeu de résultats lorsque plusieurs jeux de résultats sont générés par un lot préparé d'instructions SQL.  
   
- Les attributs de colonne suivants sont des extensions exposées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le pilote ODBC Native Client. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne toutes les valeurs dans le paramètre *NumericAttrPtr* . Les valeurs sont retournées en tant qu'éléments SDWORD (long signé) sauf SQL_CA_SS_COMPUTE_BYLIST qui désigne un pointeur vers un tableau WORD.  
+ Les attributs de colonne suivants sont des extensions exposées par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne toutes les valeurs dans le paramètre *NumericAttrPtr* . Les valeurs sont retournées en tant qu'éléments SDWORD (long signé) sauf SQL_CA_SS_COMPUTE_BYLIST qui désigne un pointeur vers un tableau WORD.  
   
 |Identificateur de champ|Valeur retournée|  
 |----------------------|--------------------|  
@@ -102,7 +102,7 @@ ms.locfileid: "63067666"
  `SQLColAttribute` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Prise en charge SQLColAttribute pour les colonnes éparses  
- SQLColAttribute interroge le nouveau champ de descripteur de ligne d’implémentation (IRD), SQL_CA_SS_IS_COLUMN_SET, pour déterminer `column_set` si une colonne est une colonne.  
+ SQLColAttribute interroge le nouveau champ de descripteur de ligne d’implémentation (IRD), SQL_CA_SS_IS_COLUMN_SET, pour déterminer si une colonne est une `column_set` colonne.  
   
  Pour plus d’informations, consultez la rubrique [prise en charge des colonnes éparses &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   

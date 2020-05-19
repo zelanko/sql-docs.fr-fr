@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fb2078ea3b9515af26df0846ee2f5d92bd9349a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63075192"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706439"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
   L'OLTP en mémoire introduit le concept de compilation native. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut compiler en mode natif des procédures stockées qui accèdent aux tables optimisées en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut également compiler en mode natif des tables optimisées en mémoire. La compilation native permet un accès aux données plus rapide et une exécution des requêtes plus efficace que le [!INCLUDE[tsql](../../includes/tsql-md.md)](traditionnel) interprété. La compilation en mode natif de tables et de procédures stockées produit des DLL.  
@@ -115,12 +115,12 @@ go
  La compilation native des tables et des procédures stockées utilise le compilateur de l'OLTP en mémoire. Ce compilateur génère des fichiers qui sont écrits sur le disque et chargés en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les mécanismes suivants pour restreindre l'accès à ces fichiers.  
   
 ### <a name="native-compiler"></a>Compilateur natif  
- Le fichier exécutable du compilateur, ainsi que les fichiers binaires et les fichiers d'en-tête nécessaires pour la compilation native, sont installés dans le cadre de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le dossier MSSQL\Binn\Xtp. Par conséquent, si l’instance par défaut est installée sous c:\Program Files, les fichiers du compilateur sont installés\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans c:\Program Files \MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
+ Le fichier exécutable du compilateur, ainsi que les fichiers binaires et les fichiers d'en-tête nécessaires pour la compilation native, sont installés dans le cadre de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le dossier MSSQL\Binn\Xtp. Par conséquent, si l’instance par défaut est installée sous c:\Program Files, les fichiers du compilateur sont installés dans c:\Program Files \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  Pour limiter l'accès au compilateur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des listes de contrôle d'accès (ACL) qui permettent de restreindre l'accès aux fichiers binaires. Tous les fichiers binaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont protégés contre la modification ou la falsification via des listes de contrôle d'accès. Les listes de contrôle d'accès du compilateur natif limitent également l'utilisation du compilateur ; seuls le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les administrateurs système disposent des autorisations de lecture et d'exécution des fichiers du compilateur natif.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>Fichiers générés par une compilation native  
- Les fichiers créés lorsqu'une table ou une procédure stockée est compilée sont les fichiers DLL et les fichiers intermédiaires, notamment les fichiers portant les extensions suivantes : .c, .obj, .xml et .pdb. Les fichiers générés sont enregistrés dans un sous-dossier du dossier de données par défaut. Le sous-dossier est appelé Xtp. Lors de l’installation de l’instance par défaut avec le dossier de données par défaut, les fichiers\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]générés sont placés dans C:\Program Files \MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
+ Les fichiers créés lorsqu'une table ou une procédure stockée est compilée sont les fichiers DLL et les fichiers intermédiaires, notamment les fichiers portant les extensions suivantes : .c, .obj, .xml et .pdb. Les fichiers générés sont enregistrés dans un sous-dossier du dossier de données par défaut. Le sous-dossier est appelé Xtp. Lors de l’installation de l’instance par défaut avec le dossier de données par défaut, les fichiers générés sont placés dans C:\Program Files \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] empêche la falsification avec les DLL générées de trois manières :  
   

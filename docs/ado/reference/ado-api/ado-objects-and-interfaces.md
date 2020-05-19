@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe57e31792755aca1dc51b0af50805e853a5bab4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920909"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747237"
 ---
 # <a name="ado-objects-and-interfaces"></a>Objets et interfaces ADO
 Les relations entre ces objets sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -34,7 +34,7 @@ Les relations entre ces objets sont représentées dans le [modèle objet ADO](.
 |[Commande](../../../ado/reference/ado-api/command-object-ado.md)|Définit une commande spécifique que vous avez l’intention d’exécuter sur une source de données.<br /><br /> L’objet **Command** n’est pas sûr pour l’écriture de scripts.|  
 |[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|Représente une connexion ouverte à une source de données.<br /><br /> L’objet de **connexion** est sécurisé pour l’écriture de scripts.|  
 |[IDSOShapeExtensions, interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Obtient l’objet source de données OLEDB sous-jacent pour le fournisseur de formes.|  
-|[Error](../../../ado/reference/ado-api/error-object.md)|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.<br /><br /> L’objet d' **erreur** n’est pas sûr pour l’écriture de scripts.|  
+|[Erreur](../../../ado/reference/ado-api/error-object.md)|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.<br /><br /> L’objet d' **erreur** n’est pas sûr pour l’écriture de scripts.|  
 |[Champ](../../../ado/reference/ado-api/field-object.md)|Représente une colonne de données avec un type de données commun.|  
 |[Paramètre](../../../ado/reference/ado-api/parameter-object.md)|Représente un paramètre ou un argument associé à un objet de **commande** basé sur une requête paramétrable ou une procédure stockée.<br /><br /> L’objet de **paramètre** n’est pas sûr pour l’écriture de scripts.|  
 |[Propriété](../../../ado/reference/ado-api/property-object-ado.md)|Représente une caractéristique dynamique d’un objet ADO qui est défini par le fournisseur.|  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638744"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719176"
 ---
 # <a name="sql-server-extended-events-packages"></a>Packages d’événements étendus SQL Server
   Un package est un conteneur d'objets d'événements étendus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il existe trois sortes de packages Événements étendus :  
@@ -46,7 +46,7 @@ ms.locfileid: "62638744"
   
 -   Prédicats  
   
--   Cartes  
+-   Maps  
   
  Des objets de packages différents peuvent être mélangés dans une session d'événements. Pour plus d’informations, consultez [Sessions Événements étendus SQL Server](sql-server-extended-events-sessions.md).  
   
@@ -77,11 +77,11 @@ ms.locfileid: "62638744"
 |Terme|Définition|  
 |----------|----------------|  
 |Admin|Les événements administratifs sont principalement destinés aux utilisateurs finaux, aux administrateurs et au support technique. Les événements détectés dans les canaux administratifs font référence à un problème avec une solution déterminée qu'un administrateur peut mettre en place. Par exemple, le fait qu'une application ne puisse pas se connecter à une imprimante correspond à un événement administratif. Ces événements font l'objet d'une documentation détaillée ou sont accompagnés d'un message qui indique la procédure à suivre pour résoudre le problème.|  
-|En fonctionnement|Les événements opérationnels permettent d'analyser et de diagnostiquer un problème ou une occurrence. Ils permettent de déclencher des outils ou des tâches en fonction du problème ou de l'occurrence. Par exemple, le fait qu'une imprimante soit ajoutée ou supprimée dans un système correspond à un événement opérationnel.|  
+|Opérationnel|Les événements opérationnels permettent d'analyser et de diagnostiquer un problème ou une occurrence. Ils permettent de déclencher des outils ou des tâches en fonction du problème ou de l'occurrence. Par exemple, le fait qu'une imprimante soit ajoutée ou supprimée dans un système correspond à un événement opérationnel.|  
 |Analytiques|Les événements analytiques sont publiés selon un volume élevé. Ils décrivent le fonctionnement des programmes et sont généralement utilisés dans les enquêtes sur les performances.|  
 |Débogage|Les événements de débogage sont utilisés uniquement par les développeurs pour diagnostiquer un problème afin de le résoudre.<br /><br /> Remarque : les événements du canal de débogage renvoient des données d’État propres à l’implémentation interne. Les schémas et les données renvoyées par les événements sont susceptibles de changer ou de ne plus être compatibles avec les prochaines versions de SQL Server. Par conséquent, les événements du canal de débogage pourront être changés ou supprimés dans les versions à venir de SQL Server sans notification.|  
   
- **Mot**  
+ **Mot clé**  
   
  Un mot clé est spécifique à une application et permet un regroupement plus fin d'événements associés, ce qui vous permet de spécifier et de récupérer plus aisément un événement que vous souhaitez utiliser dans une session. Vous pouvez utiliser la requête suivante pour obtenir des informations sur un mot clé.  
   
@@ -151,7 +151,7 @@ where name = 'keyword_map'
   
  Pour plus d’informations, consultez [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   
-### <a name="maps"></a>Cartes  
+### <a name="maps"></a>Maps  
  Une table de mappage mappe une valeur interne à une chaîne, ce qui permet à un utilisateur de savoir ce que la valeur représente. Au lieu d'obtenir simplement une valeur numérique, un utilisateur peut obtenir une description explicite de la valeur interne. La requête ci-dessous indique comment obtenir les valeurs de mappage.  
   
 ```  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a08c37ae8fbd1b190e3a3cd4f846109d7e8fca2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287770"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716779"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>Exemple : spécification de la directive CDATA
   Si la directive a pour valeur **CDATA**, les données contenues ne sont pas encodées comme une entité, mais placées dans la section CDATA. Les attributs **CDATA** doivent être dépourvus de nom.  

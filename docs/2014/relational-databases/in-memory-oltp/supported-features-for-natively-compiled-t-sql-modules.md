@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155717"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718802"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Constructions prises en charge dans les procédures stockées compilées en mode natif
   Cette rubrique contient la liste des fonctionnalités prises en charge pour les procédures stockées compilées en mode natif ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)) :  
@@ -66,7 +66,7 @@ ms.locfileid: "63155717"
 ##  <a name="supported-operators"></a><a name="so"></a>Opérateurs pris en charge  
  Les opérateurs suivants sont pris en charge :  
   
--   Les [opérateurs de comparaison &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (par exemple, \<>,, >= et <=) sont pris en charge dans les conditions conditionnelles (if, while).  
+-   Les [opérateurs de comparaison &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (par exemple, >, \< , >= et <=) sont pris en charge dans les conditions conditionnelles (if, while).  
   
 -   Opérateurs unaires (+, -).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63155717"
   
 -   Prédicat de filtre IS [NOT] NULL  
   
--   À \<partir de la table mémoire optimisée>  
+-   À partir de la \< table mémoire optimisée>  
   
 -   [Regrouper par &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) est pris en charge, ainsi que les fonctions d’agrégation AVG, COUNT, COUNT_BIG, min, Max et Sum. MIN et MAX ne sont pas pris en charge pour les types nvarchar, char, varchar, varchar, varbinary, et binary. La [clause Order by &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-order-by-clause-transact-sql) est prise en charge avec [GROUP BY &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) si une expression dans la liste order by apparaît textuellement dans la liste Group by. Par exemple, GROUP BY a + b ORDER BY a + b est pris en charge, mais GROUP BY a, b ORDER BY a + b n'est pas pris en charge.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "63155717"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>Limitations sur le tri  
  Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
   
- Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8192 lignes, vous recevez le message d’erreur suivant : **MSG 41398, niveau 16, état 1, NomProcédure de procédure * \<>*, ligne * \<LineNumber>* l’opérateur Top peut retourner au maximum 8192 lignes ; nombre>demandé. * \<* **  
+ Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8192 lignes, vous recevez le message d’erreur suivant : **Msg 41398, niveau 16, état 1, NomProcédure de procédure * \<>*, ligne * \< LineNumber>* l’opérateur Top peut retourner au maximum 8192 lignes ; * \< nombre>* demandé.**  
   
  Si vous n'avez pas de clause TOP, triez les lignes avec ORDER BY.  
   

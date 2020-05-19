@@ -13,23 +13,23 @@ helpviewer_keywords:
 - SqlXmlParameter object
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9c167c4aa94802c7ae80d405c286460015186fb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010758"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717936"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>Objet SqlXmlParameter (classes managées SQLXML)
   L’objet SqlXmlParameter prend en charge les propriétés suivantes :  
   
- Nom  
+ Name  
  Le nom du paramètre. Des paramètres peuvent être passés aux commandes. L’appel de la méthode CreateParameter de l’objet SqlXmlCommand crée l’objet Parameter.  
   
- Value  
+ Valeur  
  Valeur du paramètre. Pour obtenir un exemple fonctionnel, consultez [exécution de requêtes SQL &#40;classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
 ## <a name="see-also"></a>Voir aussi  

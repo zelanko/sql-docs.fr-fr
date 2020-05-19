@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80402567"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706946"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Documentation pour les outils SQL Server 2014 et les composants du complément
     
@@ -25,7 +25,7 @@ ms.locfileid: "80402567"
 |||  
 |-|-|  
 |**Outil**|**Description**|  
-|[Gestionnaire de configuration](../relational-databases/sql-server-configuration-manager.md)|Configuration Manager est un outil qui permet de gérer les services associés à SQL Server, de configurer les protocoles réseau utilisés par SQL Server et de gérer la configuration de la connectivité réseau à partir des ordinateurs clients SQL Server.|  
+|[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|Configuration Manager est un outil qui permet de gérer les services associés à SQL Server, de configurer les protocoles réseau utilisés par SQL Server et de gérer la configuration de la connectivité réseau à partir des ordinateurs clients SQL Server.|  
 |[Conseiller de mise à niveau SQL Server 2014](../sql-server/install/sql-server-2014-upgrade-advisor.md)|Le Conseiller de mise à niveau [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] analyse la configuration des composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installés, puis génère un rapport des problèmes à traiter pour assurer une mise à niveau réussie.|  
 |[Compléments d'exploration de données SQL Server pour Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Compléments d'exploration de données est un ensemble d'outils légers pour l'analyse prédictive qui vous permet d'utiliser les données dans Excel pour générer des modèles d'analyse pour la prédiction, les recommandations ou l'exploration.|  
 |[Concepteur de capture de données modifiées pour Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|Le Concepteur de capture de données modifiées pour oracle permet de développer et gérer les instances Oracle CDC.|  

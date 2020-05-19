@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9749c9df163280e52d691fbf6838196b9ae1e4b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228215"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706997"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -29,9 +29,9 @@ ms.locfileid: "75228215"
 |Programmabilité des données|[sys. endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) ou ASP.NET|Services Web XML natifs|23|  
   
 ### <a name="slipstream-functionality"></a>Effectuer l'installation intégrée d'une fonctionnalité  
- La [fonctionnalité de mise à jour du produit](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN) a été introduite dans SQL Server 2012 en tant qu’extension de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] la fonctionnalité Slipstream qui était disponible dans PCU1. Dans SQL Server 2014, la fonctionnalité de mise à jour de produit est la méthode recommandée pour l’intégration des SQL Server. Par conséquent, les paramètres de ligne de commande,/*PCUSource* et/*CUSource*, associés à la fonctionnalité d’intégration d’origine, ne doivent plus être utilisés. Ces paramètres continuent de fonctionner, mais peuvent être supprimés dans une version ultérieure du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] programme d’installation. Le paramètre recommandé pour utiliser est/*UpdateSource* , qui combine les fonctionnalités des paramètres d’intégration d’origine,/*PCUSource* et/*CUSource*.  
+ La [fonctionnalité de mise à jour du produit](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN) a été introduite dans SQL Server 2012 en tant qu’extension de la fonctionnalité Slipstream qui était disponible dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Dans SQL Server 2014, la fonctionnalité de mise à jour de produit est la méthode recommandée pour l’intégration des SQL Server. Par conséquent, les paramètres de ligne de commande,/*PCUSource* et/*CUSource*, associés à la fonctionnalité d’intégration d’origine, ne doivent plus être utilisés. Ces paramètres continuent de fonctionner, mais peuvent être supprimés dans une version ultérieure du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] programme d’installation. Le paramètre recommandé pour utiliser est/*UpdateSource* , qui combine les fonctionnalités des paramètres d’intégration d’origine,/*PCUSource* et/*CUSource*.  
   
- Pour plus d’informations sur les fonctionnalités d’intégration qui [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] étaient disponibles dans PCU1, consultez [Slipstream a SQL Server Update](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945).  
+ Pour plus d’informations sur les fonctionnalités d’intégration qui étaient disponibles dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, consultez [Slipstream a SQL Server Update](https://go.microsoft.com/fwlink/?LinkId=219945) ( https://go.microsoft.com/fwlink/?LinkId=219945) .  
  Pour plus d’informations sur l’utilisation de/*UpdateSource* pour intégrer SQL Server builds, reportez-vous aux éléments suivants :
  
  - [Procédure de correction du programme d’installation de SQL Server 2012 avec un package d’installation mis à jour (à l’aide de UpdateSource pour obtenir une installation intelligente)](https://blogs.msdn.microsoft.com/jason_howell/2012/08/28/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup/)

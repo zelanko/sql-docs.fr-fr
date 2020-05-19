@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 56b21fe8cddf4d855ec1655a83cea306c0a3000c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921695"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747514"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition, propriété (ADO)
 Indique la position ordinale de l’enregistrement actif d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -30,7 +30,7 @@ Indique la position ordinale de l’enregistrement actif d’un objet [Recordset
   
  Pour le code 64 bits, utilisez un type de données qui fournit le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser long ou une autre valeur dont la longueur est égale à 64 bits, par exemple DBORDINAL. N’utilisez pas de valeurs **PositionEnum** , car elles sont limitées à une longueur de 32 bits.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour définir la propriété **AbsolutePosition** , ADO exige que le fournisseur OLE DB que vous utilisez implémente l’interface [IRowsetLocate : IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) .  
   
  L’accès à la propriété **AbsolutePosition** d’un **jeu d’enregistrements** ouvert avec un curseur avant uniquement ou dynamique génère l’erreur **adErrFeatureNotAvailable**. Avec les autres types de curseurs, la position correcte est retournée tant que le fournisseur OLE DB prend en charge l’interface **IRowsetScroll : IRowsetLocate** . Si le fournisseur ne prend pas en charge l’interface **IRowsetScroll** , la propriété est définie sur **adPosUnknown**. Consultez la documentation de votre fournisseur pour déterminer s’il prend en charge **IRowsetScroll**.  

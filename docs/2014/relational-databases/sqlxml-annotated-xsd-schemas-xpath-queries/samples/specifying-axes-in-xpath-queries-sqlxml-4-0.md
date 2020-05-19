@@ -15,15 +15,15 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8adf10727478344216da05ea982a466daa0eba63
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010715"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717831"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Spécification d'axes dans les requêtes XPath (SQLXML 4.0)
   Les exemples suivants montrent comment spécifier des axes dans les requêtes XPath.  
@@ -33,13 +33,13 @@ ms.locfileid: "66010715"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>R. Récupérer les éléments enfants du nœud de contexte  
- La requête XPath suivante sélectionne tous les ** \<éléments de contact>** enfants du nœud de contexte :  
+ La requête XPath suivante sélectionne tous les éléments de ** \< contact>** enfants du nœud de contexte :  
   
 ```  
 /child::Contact  
 ```  
   
- Dans la requête, `child` est l’axe et `Contact` est le test de nœud (true `Contact` si est un ** \<élément>** nœud, \<parce que l’élément> est le type de nœud `child` principal associé à l’axe).  
+ Dans la requête, `child` est l’axe et `Contact` est le test de nœud (true si `Contact` est un ** \< élément>** nœud, parce que \< l’élément> est le type de nœud principal associé à l' `child` axe).  
   
  L'axe `child` est la valeur par défaut. Par conséquent, la requête peut être écrite sous la forme :  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66010715"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Récupérer les petits-enfants du nœud de contexte  
- La requête XPath suivante sélectionne l’ensemble de la ** \<commande>** éléments enfants du ** \<client>** éléments enfants du nœud de contexte :  
+ La requête XPath suivante sélectionne l’ensemble de la ** \< commande>** éléments enfants du ** \< client>** éléments enfants du nœud de contexte :  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- Dans la requête, `child` est l’axe et `Customer` et `Order` sont les tests de nœud (ces tests de nœuds ont la valeur true si Customer et Order sont des ** \<** nœuds>d’élément, car l' `child` ** \<élément>** nœud est le nœud principal de l’axe). Pour chaque nœud correspondant ** \<>client **, les nœuds correspondant ** \<aux>Orders** sont ajoutés au résultat. Seule ** \<la commande>** est retournée dans le jeu de résultats.  
+ Dans la requête, `child` est l’axe et `Customer` et `Order` sont les tests de nœud (ces tests de nœuds ont la valeur true si Customer et Order sont des nœuds ** \<>d’élément** , car l' ** \< élément>** nœud est le nœud principal de l' `child` axe). Pour chaque nœud correspondant ** \<>client **, les nœuds correspondant aux ** \<>Orders** sont ajoutés au résultat. Seule la ** \< commande>** est retournée dans le jeu de résultats.  
   
  L'axe `child` est la valeur par défaut. Par conséquent, la requête peut être spécifiée sous la forme :  
   
@@ -159,10 +159,10 @@ ms.locfileid: "66010715"
 </ROOT>  
 ```  
   
- Si la requête XPath est spécifiée en `Customer/Order/OrderDetail`tant que, à partir de chaque nœud correspondant ** \<au client>** la requête accède à son ** \<ordre>** éléments. Et pour chaque nœud correspondant ** \<à l’ordre>**, la requête ajoute les nœuds ** \<OrderDetail>** au résultat. Seuls ** \<les>OrderDetail** sont retournées dans le jeu de résultats.  
+ Si la requête XPath est spécifiée en tant que `Customer/Order/OrderDetail` , à partir de chaque nœud correspondant au ** \< client>** la requête accède à son ** \< ordre>** éléments. Et pour chaque nœud correspondant à l' ** \< ordre>**, la requête ajoute les nœuds ** \< OrderDetail>** au résultat. Seuls les ** \<>OrderDetail** sont retournées dans le jeu de résultats.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Utiliser... pour spécifier l'axe parent  
- La requête suivante récupère tous les éléments de ** \<commande>** avec un élément ** \<Customer>** parent dont l’attribut **CustomerID** a la valeur 1. La requête utilise l' `child` axe dans le prédicat pour rechercher le parent de l' ** \<élément Order>** .  
+ La requête suivante récupère tous les éléments de ** \< commande>** avec un élément ** \< Customer>** parent dont l’attribut **CustomerID** a la valeur 1. La requête utilise l' `child` axe dans le prédicat pour rechercher le parent de l’élément ** \< Order>** .  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -181,7 +181,7 @@ ms.locfileid: "66010715"
 ```  
   
 > [!NOTE]  
->  La requête `/Order[../@CustomerID="1"]` XPath retourne une erreur, car il n’existe aucun parent de ** \<commande>**. Bien qu’il puisse y avoir des éléments dans le schéma de mappage qui contiennent ** \<l’ordre>**, le XPath n’a pas commencé sur l’un d’eux ; par conséquent, ** \<Order>** est considéré comme le type d’élément de niveau supérieur dans le document.  
+>  La requête XPath `/Order[../@CustomerID="1"]` retourne une erreur, car il n’existe aucun parent de ** \< commande>**. Bien qu’il puisse y avoir des éléments dans le schéma de mappage qui contiennent l' ** \< ordre>**, le XPath n’a pas commencé sur l’un d’eux ; par conséquent, l' ** \< ordre>** est considéré comme étant le type d’élément de niveau supérieur dans le document.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66010715"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Spécifier l'axe attribute  
- La requête XPath suivante sélectionne tout le ** \<client>** éléments enfants du nœud de contexte avec une valeur d’attribut **CustomerID** de 1 :  
+ La requête XPath suivante sélectionne tout le ** \< client>** éléments enfants du nœud de contexte avec une valeur d’attribut **CustomerID** de 1 :  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- Dans le `attribute::CustomerID`prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (si `CustomerID` est un attribut, le test de nœud a la valeur true, car l' ** \<attribut>** nœud est le nœud principal de l' `attribute` axe).  
+ Dans le prédicat `attribute::CustomerID` , `attribute` est l’axe et `CustomerID` est le test de nœud (si `CustomerID` est un attribut, le test de nœud a la valeur true, car l' ** \< attribut>** nœud est le nœud principal de l' `attribute` axe).  
   
  Il est possible de spécifier un raccourci vers l'axe `attribute` (@), et l'axe `child` étant l'axe par défaut, il peut être omis dans la requête :  
   

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e7fd9cbf18083f05457b99ed5d58e04ebd29d75f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 836423f0a0ac609cd7e4c823afe0be2da1158239
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046704"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705956"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
-  Les améliorations du moteur de base de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] données commencent par allow SQLNumParams pour obtenir des descriptions plus précises des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par SQLNumParams dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versions précédentes de.  
+  Les améliorations du moteur de base de données commencent par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] allow SQLNumParams pour obtenir des descriptions plus précises des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par SQLNumParams dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Pour plus d’informations, consultez [Découverte des métadonnées](../native-client/features/metadata-discovery.md).  
   

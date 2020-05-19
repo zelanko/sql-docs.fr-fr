@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012510"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718055"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Exécution de fichiers modèles à l'aide de la propriété CommandText
   Cet exemple illustre la façon dont les fichiers de modèle qui se composent de requêtes SQL ou XPath peuvent être spécifiés à l’aide de CommandTextproperty. Au lieu de spécifier la requête SQL ou XPath comme valeur de CommandText, vous pouvez spécifier un nom de fichier comme valeur. Dans l’exemple suivant, la propriété CommandType est spécifiée en tant que SqlXmlCommandType. TemplateFile.  
@@ -91,7 +91,7 @@ class Test
   
 5.  À l'invite de commandes, exécutez DocSample.exe.  
   
- Si vous transmettez un paramètre à un modèle, le nom du paramètre doit commencer par arobase (@); par exemple, p.Name = "@ContactID", où p est un objet SqlXmlParameter.  
+ Si vous transmettez un paramètre à un modèle, le nom du paramètre doit commencer par arobase (@); par exemple, p.Name = " @ContactID ", où p est un objet SqlXmlParameter.  
   
  Voici le modèle mis à jour qui prend un paramètre.  
   
