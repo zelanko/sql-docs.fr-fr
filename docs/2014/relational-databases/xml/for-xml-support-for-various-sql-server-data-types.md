@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML clause, data type support
 - data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69fc5b2dcf16ec48b1613dc1e46dcc13bc272d94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205069"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702723"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Prise en charge FOR XML des différents types de données SQL Server
   Les rubriques de cette section décrivent la prise en charge de FOR XML pour les types de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

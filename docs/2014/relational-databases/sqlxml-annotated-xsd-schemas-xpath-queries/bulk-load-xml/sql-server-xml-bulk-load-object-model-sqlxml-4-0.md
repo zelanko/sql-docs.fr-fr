@@ -28,18 +28,18 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013291"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703337"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modèle objet de chargement en masse XML de SQL Server (SQLXML 4.0)
-  Le modèle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet de chargement en masse XML de Microsoft se compose de l’objet SQLXMLBulkLoad. Cet objet prend en charge les méthodes et les propriétés suivantes.  
+  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modèle objet de chargement en masse XML de Microsoft se compose de l’objet SQLXMLBulkLoad. Cet objet prend en charge les méthodes et les propriétés suivantes.  
   
 ## <a name="methods"></a>Méthodes  
  Execute  
@@ -118,7 +118,7 @@ ms.locfileid: "66013291"
  SchemaGen  
  Spécifie si les tables requises doivent être créées avant une opération de chargement en masse. Il s'agit d'une propriété booléenne. Si cette propriété est définie sur TRUE, les tables identifiées dans le schéma de mappage sont créées (la base de données doit exister). Si une ou plusieurs tables existent déjà dans la base de données, la propriété SGDropTables détermine si ces tables préexistantes doivent être supprimées et recréées.  
   
- La valeur par défaut de la propriété SchemaGen est FALSe. SchemaGen ne crée pas de contraintes de clé primaire sur les tables nouvellement créées. Toutefois, SchemaGen crée des contraintes de clé étrangère dans la base de données s’il peut `sql:relationship` trouver `sql:key-fields` des correspondances et des annotations dans le schéma de mappage et si le champ clé se compose d’une seule colonne.  
+ La valeur par défaut de la propriété SchemaGen est FALSe. SchemaGen ne crée pas de contraintes de clé primaire sur les tables nouvellement créées. Toutefois, SchemaGen crée des contraintes de clé étrangère dans la base de données s’il peut trouver des correspondances `sql:relationship` et des `sql:key-fields` annotations dans le schéma de mappage et si le champ clé se compose d’une seule colonne.  
   
  Notez que si vous définissez la propriété SchemaGen sur TRUE, le chargement en masse XML effectue les opérations suivantes :  
   
@@ -132,18 +132,18 @@ ms.locfileid: "66013291"
  La valeur par défaut est FALSE.  
   
  SGUseID  
- Spécifie si l'attribut dans le schéma de mappage identifié comme type `id` peut être utilisé pour créer une contrainte PRIMARY KEY au moment où la table est créée. Utilisez cette propriété lorsque la propriété SchemaGen est définie sur TRUE. Si SGUseID a la valeur TRUE, l’utilitaire SchemaGen utilise un attribut `dt:type="id"` pour lequel est spécifié en tant que colonne de clé primaire et ajoute la contrainte de clé primaire appropriée lors de la création de la table.  
+ Spécifie si l'attribut dans le schéma de mappage identifié comme type `id` peut être utilisé pour créer une contrainte PRIMARY KEY au moment où la table est créée. Utilisez cette propriété lorsque la propriété SchemaGen est définie sur TRUE. Si SGUseID a la valeur TRUE, l’utilitaire SchemaGen utilise un attribut pour lequel `dt:type="id"` est spécifié en tant que colonne de clé primaire et ajoute la contrainte de clé primaire appropriée lors de la création de la table.  
   
  La valeur par défaut est FALSE.  
   
  TempFilePath  
- Spécifie le chemin d'accès où le chargement en masse XML crée les fichiers temporaires pour un chargement en masse transactionnel. (Cette propriété est utile uniquement lorsque la propriété transaction a la valeur TRUE.) Vous devez vous assurer que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le compte utilisé pour le chargement en masse XML a accès à ce chemin d’accès. Si cette propriété n'est pas définie, le chargement en masse XML stocke les fichiers temporaires à l'emplacement spécifié dans la variable d'environnement TEMP.  
+ Spécifie le chemin d'accès où le chargement en masse XML crée les fichiers temporaires pour un chargement en masse transactionnel. (Cette propriété est utile uniquement lorsque la propriété transaction a la valeur TRUE.) Vous devez vous assurer que le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compte utilisé pour le chargement en masse XML a accès à ce chemin d’accès. Si cette propriété n'est pas définie, le chargement en masse XML stocke les fichiers temporaires à l'emplacement spécifié dans la variable d'environnement TEMP.  
   
  Transaction  
  Spécifie si le chargement en masse doit avoir lieu sous la forme d'une transaction, auquel cas la restauration est garantie si le chargement en masse échoue. Il s'agit d'une propriété booléenne. Si la propriété est définie sur TRUE, le chargement en masse intervient dans un contexte transactionnel. La propriété TempFilePath est utile uniquement lorsque transaction a la valeur TRUE.  
   
 > [!NOTE]  
->  Si vous chargez des données binaires (telles que les types de données XML bin. Hex, bin. Base64 dans les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types de données binaires image), la propriété transaction doit avoir la valeur false.  
+>  Si vous chargez des données binaires (telles que les types de données XML bin. Hex, bin. Base64 dans les types de données binaires image [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), la propriété transaction doit avoir la valeur false.  
   
  La valeur par défaut est FALSE.  
   

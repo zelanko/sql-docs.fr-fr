@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], program variables
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f85df61f612cb91d39b15e6c91e2fb8495c2347
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753641"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701928"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copier en bloc des données à partir de variables de programme (ODBC)
   Cet exemple indique comment utiliser des fonctions de copie en bloc pour copier en bloc des données à partir de variables de programme vers SQL Server à l'aide de `bcp_bind` et `bcp_sendrow`. (Le code de contrôle d'erreurs est supprimé afin de simplifier cet exemple.)  
@@ -53,7 +53,7 @@ ms.locfileid: "62753641"
   
 8.  Une fois que toutes les lignes ont été envoyées, appelez [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) pour terminer l’opération.  
   
- Vous pouvez faire varier l’emplacement et la longueur des variables de programme lors d’une opération de copie en bloc en appelant [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) et [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Utilisez [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) pour définir différentes options de copie en bloc. Utilisez [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) pour envoyer `text` `ntext`des données, `image` et en segments au serveur.  
+ Vous pouvez faire varier l’emplacement et la longueur des variables de programme lors d’une opération de copie en bloc en appelant [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) et [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Utilisez [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) pour définir différentes options de copie en bloc. Utilisez [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) pour envoyer `text` `ntext` `image` des données, et en segments au serveur.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple n'est pas pris en charge sur la plateforme IA64.  
