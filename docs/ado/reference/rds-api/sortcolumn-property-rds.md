@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5a9c3f9f50968f3b5e8085052917397bcd90226
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 83975a46087f75d58be304c543f6e6a45b6db7e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963394"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750838"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn, propriété (RDS)
 Indique la colonne dans laquelle trier les enregistrements.  
@@ -43,7 +43,7 @@ DataControl.SortColumn = String
 ## <a name="remarks"></a>Notes  
  Les propriétés **SortColumn**, [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)et [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fournissent des fonctionnalités de tri et de filtrage sur le cache côté client. La fonctionnalité de tri commande les enregistrements par valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble d’enregistrements basés sur des critères de recherche, tandis que le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) complet est conservé dans le cache. La méthode de [réinitialisation](../../../ado/reference/rds-api/reset-method-rds.md) exécute les critères et remplace le **jeu d’enregistrements** actuel par un **jeu d’enregistrements**pouvant être mis à jour.  
   
- Pour effectuer un tri sur un **jeu d’enregistrements**, vous devez d’abord enregistrer toutes les modifications en attente. Si vous utilisez le **RDS. DataControl**, vous pouvez utiliser la méthode [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) . Par exemple, si votre **objet RDS. DataControl** est nommé ADC1, votre code est `ADC1.SubmitChanges`. Si vous utilisez un **jeu d’enregistrements**ADO, vous pouvez utiliser sa méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . L’utilisation de **UpdateBatch** est la méthode recommandée pour les objets **Recordset** créés avec la méthode [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) . Par exemple, votre code peut être `myRS.UpdateBatch` ou `ADC1.Recordset.UpdateBatch`.  
+ Pour effectuer un tri sur un **jeu d’enregistrements**, vous devez d’abord enregistrer toutes les modifications en attente. Si vous utilisez le **RDS. DataControl**, vous pouvez utiliser la méthode [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) . Par exemple, si votre **objet RDS. DataControl** est nommé ADC1, votre code est `ADC1.SubmitChanges` . Si vous utilisez un **jeu d’enregistrements**ADO, vous pouvez utiliser sa méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . L’utilisation de **UpdateBatch** est la méthode recommandée pour les objets **Recordset** créés avec la méthode [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) . Par exemple, votre code peut être `myRS.UpdateBatch` ou `ADC1.Recordset.UpdateBatch` .  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

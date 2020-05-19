@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922797"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749880"
 ---
 # <a name="customization-file-sql-section"></a>Fichier de personnalisation, section SQL
 La section **SQL** peut contenir une nouvelle chaîne SQL qui remplace la chaîne de commande du client. S’il n’existe aucune chaîne SQL dans la section, la section sera ignorée.  
@@ -28,7 +28,7 @@ La section **SQL** peut contenir une nouvelle chaîne SQL qui remplace la chaîn
   
  La nouvelle chaîne SQL peut être *paramétrable*. Autrement dit, les paramètres de la chaîne SQL de la section **SQL** (désignés par le caractère «  ? ») peuvent être remplacés par des arguments correspondants dans un *identificateur* dans la chaîne de commande cliente (désignée par une liste délimitée par des virgules entre parenthèses). L’identificateur et la liste d’arguments se comportent comme un appel de fonction.  
   
- Par exemple, supposons que la chaîne de `"CustomerByID(4)"`commande du client est, que `[SQL CustomerByID]`l’en-tête de la section SQL `"SELECT * FROM Customers WHERE CustomerID = ?".` soit et que la `"SELECT * FROM Customers WHERE CustomerID = 4"` nouvelle chaîne de la section SQL soit le gestionnaire génère et utilise cette chaîne pour interroger la source de données.  
+ Par exemple, supposons que la chaîne de commande du client est `"CustomerByID(4)"` , que l’en-tête de la section SQL soit `[SQL CustomerByID]` et que la nouvelle chaîne de la section SQL soit `"SELECT * FROM Customers WHERE CustomerID = ?".` le gestionnaire génère `"SELECT * FROM Customers WHERE CustomerID = 4"` et utilise cette chaîne pour interroger la source de données.  
   
  Si la nouvelle instruction SQL est la chaîne null (""), la section est ignorée.  
   

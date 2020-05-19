@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922805"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749981"
 ---
 # <a name="customization-file-connect-section"></a>Fichier de personnalisation, section connect
 Le comportement par défaut du gestionnaire consiste à refuser toutes les connexions. La section **Connect** spécifie des exceptions à ce comportement. Par exemple, si toutes les sections **Connect** étaient absentes ou vides, aucune connexion n’a pu être établie par défaut.  
@@ -51,7 +51,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 |Élément|Description|  
 |----------|-----------------|  
@@ -60,7 +60,7 @@ connectionString
 |**y accéder**|Chaîne littérale qui indique qu’il s’agit d’une entrée d’accès.|  
 |**_accessRight_**|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -l’utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** : l’utilisateur peut lire la source de données.<br />-   **ReadWrite** : l’utilisateur peut lire ou écrire dans la source de données.|  
   
- Si vous souhaitez autoriser une connexion (en désactivant le comportement du gestionnaire par défaut), définissez l’entrée d’accès dans la section **connexion par défaut** sur `Access=ReadWrite`, puis supprimez ou commentez toute autre section d' _identificateur_ de **connexion** .  
+ Si vous souhaitez autoriser une connexion (en désactivant le comportement du gestionnaire par défaut), définissez l’entrée d’accès dans la section **connexion par défaut** sur `Access=ReadWrite` , puis supprimez ou commentez toute autre section d' _identificateur_ de **connexion** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Section journaux des fichiers de personnalisation](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

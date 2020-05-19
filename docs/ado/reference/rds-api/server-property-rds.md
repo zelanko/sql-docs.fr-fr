@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963471"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750859"
 ---
 # <a name="server-property-rds"></a>Server, propriété (RDS)
 Indique le nom du Internet Information Services (IIS) et le protocole de communication.  
@@ -111,12 +111,12 @@ DataControl.Server=""
  Valeur de **chaîne** qui contient un chemin d’accès Internet ou intranet, ou un nom d’ordinateur, si le serveur se trouve sur un ordinateur distant ; ou une chaîne vide si le serveur se trouve sur l’ordinateur local.  
   
  *port*  
- Facultatif. Port utilisé pour se connecter à un serveur exécutant IIS. Le numéro de port est défini dans Internet Explorer (dans le menu **affichage** , cliquez sur **options**, puis sélectionnez l’onglet **connexion** ) ou IIS.  
+ facultatif. Port utilisé pour se connecter à un serveur exécutant IIS. Le numéro de port est défini dans Internet Explorer (dans le menu **affichage** , cliquez sur **options**, puis sélectionnez l’onglet **connexion** ) ou IIS.  
   
  *DataControl*  
  Variable objet qui représente un objet **RDS. DataControl** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le serveur est l’emplacement où **RDS. **Demande de DataControl (autrement dit, une requête ou une mise à jour) est traitée. Par défaut, toutes les demandes sont traitées par l’objet [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [msdfmap. ](../../../ado/guide/remote-data-service/datafactory-customization.md)Le composant Handler et le [msdfmap. Fichier INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) sur le serveur spécifié. N’oubliez pas que lorsque vous modifiez des serveurs pour harmoniser les paramètres dans l’ancien et le nouveau **msdfmap. Fichiers INI** . Les incompatibilités peuvent entraîner l’échec des requêtes qui aboutissent sur un serveur sur un autre. Si la propriété de serveur est définie sur la chaîne vide «», ces objets seront utilisés sur l’ordinateur local.  
   
 ## <a name="applies-to"></a>S'applique à  

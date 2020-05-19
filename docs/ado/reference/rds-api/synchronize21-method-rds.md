@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 454b012b8027b86256215721bdfca17122713c75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963252"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750558"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21, méthode (RDS)
 Synchronisez le Recordset donné avec la base de données spécifiée par la chaîne de connexion pour l’utiliser avec ADO 2,1.  
@@ -57,7 +57,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Variant utilisé pour retourner un tableau sécurisé des États de ligne pour les lignes affectées par Synchronize. Non défini si aucune des options de synchronisation suivantes n’est définie : *RefreshWithUpdate*, *Refresh* et *RefreshConflicts*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le paramètre *HandlerString* peut avoir la valeur null. Ce qui se passe dans ce cas dépend de la configuration du serveur RDS. La chaîne de gestionnaire « MSDFMAP. Handler » indique que le gestionnaire fourni par Microsoft (msdfmap. dll) doit être utilisé. Une chaîne de gestionnaire « MASDFMAP. Handler, Sample. ini » indique que le gestionnaire msdfmap. dll doit être utilisé et que l’argument « Sample. ini » doit être passé au gestionnaire. Msdfmap. dll interprète ensuite l’argument comme une direction pour utiliser le fichier Sample. ini afin de vérifier la connexion et les chaînes de requête.  
   
 > [!NOTE]
