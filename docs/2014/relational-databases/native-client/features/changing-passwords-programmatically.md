@@ -18,18 +18,18 @@ helpviewer_keywords:
 - SQL Server Native Client, password expiration
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046251"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707321"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
-  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À compter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Native Client prend en charge la gestion de l’expiration du [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mot de passe par programme via [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le fournisseur OLE DB Native Client et le pilote ODBC Native Client, ainsi que par les modifications apportées aux boîtes de dialogue de **SQL Server connexion** .  
+  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la gestion de l’expiration du mot de passe par programme via le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client et le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client, ainsi que par les modifications apportées aux boîtes de dialogue de **SQL Server connexion** .  
   
 > [!NOTE]  
 >  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../security/strong-passwords.md).  
@@ -98,7 +98,7 @@ ms.locfileid: "63046251"
   
  Si **DriverCompletion** a été défini sur une autre valeur, l’utilisateur voit la boîte de dialogue de **connexion SQL Server** , que le mot de passe ait expiré ou non. L’utilisateur peut cliquer sur le bouton **Options** et cocher **Changer le mot de passe** pour modifier le mot de passe.  
   
- Si l’utilisateur clique sur OK et que le mot [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de passe a expiré, invite à entrer et à confirmer un nouveau mot de passe à l’aide de la boîte de dialogue **modifier le mot de passe SQL Server** .  
+ Si l’utilisateur clique sur OK et que le mot de passe a expiré, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] invite à entrer et à confirmer un nouveau mot de passe à l’aide de la boîte de dialogue **modifier le mot de passe SQL Server** .  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>Comportement d'invite ODBC et comptes verrouillés  
  Les tentatives de connexion peuvent échouer en raison du compte verrouillé. Si cela se produit après l’affichage de la boîte de dialogue de **compte de connexion SQL Server**, le message d’erreur du serveur s’affiche pour l’utilisateur et la tentative de connexion est abandonnée. Cette situation peut aussi avoir lieu après l’affichage de la boîte de dialogue **Changement de mot de passe SQL Server** si l’utilisateur entre une valeur incorrecte pour l’ancien mot de passe. Dans ce cas le même message d'erreur s'affiche et la tentative de connexion est abandonnée.  

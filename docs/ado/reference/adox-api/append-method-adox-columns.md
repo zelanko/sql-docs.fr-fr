@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e69f2510e825a935cf7eb34951051c1e3848bb9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967322"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764040"
 ---
 # <a name="append-method-adox-columns"></a>Append, méthode (colonnes ADOX)
 Ajoute un nouvel objet [Column](../../../ado/reference/adox-api/column-object-adox.md) à la collection [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) .  
@@ -38,10 +38,10 @@ Columns.Append Column [,Type] [,DefinedSize]
  Objet de **colonne** à ajouter ou nom de la colonne à créer et à ajouter.  
   
  *Type*  
- Facultatif. Valeur de type **long** qui spécifie le type de données de la colonne. Le paramètre de *type* correspond à la propriété de [type](../../../ado/reference/adox-api/type-property-column-adox.md) d’un objet de **colonne** .  
+ facultatif. Valeur de type **long** qui spécifie le type de données de la colonne. Le paramètre de *type* correspond à la propriété de [type](../../../ado/reference/adox-api/type-property-column-adox.md) d’un objet de **colonne** .  
   
  *DefinedSize*  
- Facultatif. Valeur de **type long** qui spécifie la taille de la colonne. Le paramètre *DefinedSize* correspond à la propriété [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) d’un objet **Column** .  
+ facultatif. Valeur de **type long** qui spécifie la taille de la colonne. Le paramètre *DefinedSize* correspond à la propriété [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) d’un objet **Column** .  
   
 > [!NOTE]
 >  Une erreur se produit lors de l’ajout d’une **colonne** à la collection **Columns** d’un [index](../../../ado/reference/adox-api/index-object-adox.md) si la **colonne** n’existe pas dans une [table](../../../ado/reference/adox-api/table-object-adox.md) qui est déjà ajoutée à la collection [tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  

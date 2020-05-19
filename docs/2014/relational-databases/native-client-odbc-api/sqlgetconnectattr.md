@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128664"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706084"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit des attributs de connexion spécifiques au pilote. Certains des attributs sont disponibles pour `SQLGetConnectAttr`, et la fonction est utilisée pour signaler leurs paramètres actuels. Les valeurs indiquées pour ces attributs ne sont pas garanties tant qu'une connexion n'a pas été établie ou que l'attribut n'a pas été défini à l'aide de [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit des attributs de connexion spécifiques au pilote. Certains des attributs sont disponibles pour `SQLGetConnectAttr` , et la fonction est utilisée pour signaler leurs paramètres actuels. Les valeurs indiquées pour ces attributs ne sont pas garanties tant qu'une connexion n'a pas été établie ou que l'attribut n'a pas été défini à l'aide de [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
  Cette rubrique dresse la liste des attributs accessibles en lecture seule. Pour plus d'informations sur les autres attributs de connexion spécifiques au pilote de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC, consultez [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63128664"
 > [!NOTE]  
 >  L'attribut de connexion ODBC standard SQL_ATTR_CONNECTION_DEAD retourne l'état le plus récent de la connexion. Cela peut ne pas être l'état actuel de la connexion.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|La connexion au serveur a été perdue.|  
 |SQL_CD_FALSE|La connexion est ouverte et disponible pour le traitement d'instruction.|  
@@ -48,7 +48,7 @@ ms.locfileid: "63128664"
   
  Pour plus d’informations, consultez [accès aux informations de diagnostic dans le journal des événements étendus](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|La connexion a échoué.|  
 |SQL_SUCCESS|La connexion a abouti. L'ID de connexion client se trouve dans le tampon de sortie.|  
@@ -56,7 +56,7 @@ ms.locfileid: "63128664"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  L'attribut SQL_COPT_SS_PERF_DATA retourne un pointeur vers une structure SQLPERF contenant les statistiques actuelles de performances de pilote. `SQLGetConnectAttr`retourne la valeur NULL si la journalisation des performances n’est pas activée. Les statistiques dans la structure SQLPERF ne sont pas mises à jour de manière dynamique par le pilote. Appelez `SQLGetConnectAttr` chaque fois que les statistiques de performances doivent être actualisées.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |NULL|L'enregistrement des performances n'est pas activé.|  
 |Toute autre valeur|Pointeur vers une structure SQLPERF.|  
@@ -67,7 +67,7 @@ ms.locfileid: "63128664"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  L'attribut SQL_COPT_SS_USER_DATA extrait le pointeur de données utilisateur. Les données utilisateur sont stockées dans la mémoire détenue par le client et enregistrées par connexion. Si le pointeur de données utilisateur n'a pas été défini, SQL_UD_NOTSET, un pointeur NULL, est retourné.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Aucun pointeur de données utilisateur n'est défini.|  
 |Toute autre valeur|Pointeur vers les données utilisateur.|  

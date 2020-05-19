@@ -12,22 +12,22 @@ helpviewer_keywords:
 - batches [ODBC]
 - bulk copy [ODBC], batch sizes
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 07f87bf0f231419e4f1345369211ba6ceebf1d12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0657a4b1ab266a1721cf889095ff17f30782f8e7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199175"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705772"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Gestion des tailles de lot de copie en bloc
   L'objectif principal d'un lot dans des opérations de copie en bloc est de définir l'étendue d'une transaction. Si aucune taille de lot n'est définie, les fonctions de copie en bloc considèrent une copie en bloc entière comme une transaction. Si une taille de lot est définie, chaque lot constitue alors une transaction validée à la fin de l'exécution de ce lot.  
   
  Si une copie en bloc est effectuée sans taille de lot et qu'une erreur est détectée, la copie en bloc entière est restaurée. La récupération d'une copie en bloc de longue durée peut prendre un certain temps. Lorsqu'une taille de lot est définie, la copie en bloc considère chaque lot comme une transaction et valide chaque lot. Si une erreur est détectée, seul le dernier lot en attente doit être restauré.  
   
- La taille de lot peut également affecter la surcharge de verrouillage. Lorsque vous effectuez une copie en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bloc sur, l’indicateur TABLOCK peut être spécifié à l’aide de [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) pour acquérir un verrou de table au lieu de verrous de ligne. Le verrou de table unique peut être maintenu avec une charge minimale pour une opération de copie en bloc entière. Si TABLOCK n'est pas spécifié, les verrous sont maintenus sur des lignes individuelles et la charge liée à la maintenance de tous les verrous pour la durée de la copie en bloc peut ralentir les performances. Les verrous étant uniquement maintenus pour la durée d'une transaction, la spécification d'une taille de lot résout ce problème en générant périodiquement une validation qui libère les verrous actuellement maintenus.  
+ La taille de lot peut également affecter la surcharge de verrouillage. Lorsque vous effectuez une copie en bloc sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l’indicateur TABLOCK peut être spécifié à l’aide de [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) pour acquérir un verrou de table au lieu de verrous de ligne. Le verrou de table unique peut être maintenu avec une charge minimale pour une opération de copie en bloc entière. Si TABLOCK n'est pas spécifié, les verrous sont maintenus sur des lignes individuelles et la charge liée à la maintenance de tous les verrous pour la durée de la copie en bloc peut ralentir les performances. Les verrous étant uniquement maintenus pour la durée d'une transaction, la spécification d'une taille de lot résout ce problème en générant périodiquement une validation qui libère les verrous actuellement maintenus.  
   
  Le nombre de lignes constituant un lot peut avoir des effets significatifs sur les performances lors de la copie en bloc d'un grand nombre de lignes. Les recommandations pour la taille de lot varient selon le type de copie en bloc effectuée.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63199175"
   
  Outre la spécification de la taille d'une transaction, les lots affectent également le moment où les lignes sont envoyées au serveur via le réseau. Les fonctions de copie en bloc mettent généralement en cache les lignes de **bcp_sendrow** jusqu’à ce qu’un paquet réseau soit rempli, puis envoie le paquet complet au serveur. Toutefois, lorsqu’une application appelle **bcp_batch**, le paquet en cours est envoyé au serveur, qu’il ait été rempli ou non. Le fait d'utiliser une taille de lot très réduite peut ralentir les performances si cela aboutit à l'envoi de nombreux paquets partiellement remplis au serveur. Par exemple, l’appel de **bcp_batch** après chaque **bcp_sendrow** entraîne l’envoi de chaque ligne dans un paquet distinct et, à moins que les lignes ne soient très volumineuses, gaspille de l’espace dans chaque paquet. La taille par défaut des paquets réseau pour SQL Server est de 4 Ko, bien qu’une application puisse modifier la taille en appelant [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) en spécifiant l’attribut SQL_ATTR_PACKET_SIZE.  
   
- Un autre effet secondaire des lots est que chaque lot est considéré comme un jeu de résultats en suspens jusqu’à ce qu’il soit terminé avec **bcp_batch**. Si d’autres opérations sont tentées sur un handle de connexion alors qu’un lot est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en attente, le pilote ODBC native client émet une erreur avec SQLSTATE = "HY000" et une chaîne de message d’erreur :  
+ Un autre effet secondaire des lots est que chaque lot est considéré comme un jeu de résultats en suspens jusqu’à ce qu’il soit terminé avec **bcp_batch**. Si d’autres opérations sont tentées sur un handle de connexion alors qu’un lot est en attente, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client émet une erreur avec SQLSTATE = "HY000" et une chaîne de message d’erreur :  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  

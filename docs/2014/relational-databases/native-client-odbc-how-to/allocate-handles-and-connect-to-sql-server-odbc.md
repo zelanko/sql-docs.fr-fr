@@ -11,15 +11,15 @@ helpviewer_keywords:
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9237c5a92367769674d585b11f0d930b2d6fbbd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225505"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715033"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allouer des handles et se connecter à SQL Server (ODBC)
     
@@ -31,7 +31,7 @@ ms.locfileid: "63225505"
   
 3.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec un `HandleType` de SQL_HANDLE_ENV pour initialiser ODBC et allouer un handle d’environnement.  
   
-4.  Appelez [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) avec `Attribute` la valeur SQL_ATTR_ODBC_VERSION et `ValuePtr` définissez sur SQL_OV_ODBC3 pour indiquer que l’application utilisera les appels de fonction ODBC 3. x-format.  
+4.  Appelez [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) avec la `Attribute` valeur SQL_ATTR_ODBC_VERSION et `ValuePtr` définissez sur SQL_OV_ODBC3 pour indiquer que l’application utilisera les appels de fonction ODBC 3. x-format.  
   
 5.  Si vous le souhaitez, appelez [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) pour définir d’autres options d’environnement, ou appelez [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) pour accéder aux options d’environnement.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "63225505"
   
 7.  Vous pouvez également appeler [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) pour définir les options de connexion ou appeler [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) pour accéder aux options de connexion.  
   
-8.  Appelez SQLConnect pour utiliser une source de données existante à laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se connecter.  
+8.  Appelez SQLConnect pour utiliser une source de données existante à laquelle se connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     ou  
+     Ou  
   
-     Appelez [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) pour utiliser une chaîne de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Appelez [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) pour utiliser une chaîne de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Une chaîne de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minimale complète revêt l'une des deux formes :  
   
@@ -56,9 +56,9 @@ ms.locfileid: "63225505"
   
      \- ou -  
   
-     Appelez plusieurs fois [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) de manière itérative pour créer la chaîne de connexion et vous connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à.  
+     Appelez plusieurs fois [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) de manière itérative pour créer la chaîne de connexion et vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-9. Vous pouvez également appeler [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) pour obtenir les attributs de pilote et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportement de la source de données.  
+9. Vous pouvez également appeler [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) pour obtenir les attributs de pilote et le comportement de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données.  
   
 10. Allouez et utilisez les instructions.  
   

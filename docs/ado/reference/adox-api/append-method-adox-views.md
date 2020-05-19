@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 540ff52141139f4748cb2cd4c8979f5f8b55b230
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967156"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764000"
 ---
 # <a name="append-method-adox-views"></a>Append, méthode (vues ADOX)
 Crée un objet de [vue](../../../ado/reference/adox-api/view-object-adox.md) et l’ajoute à la collection [views](../../../ado/reference/adox-api/views-collection-adox.md) .  
@@ -40,7 +40,7 @@ Views.Append Name, Command
  *Commande*  
  Objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) ADO qui représente la vue à créer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Crée une vue dans la source de données avec le nom et les attributs spécifiés dans l’objet **Command** .  
   
  Si le texte de la commande que l’utilisateur spécifie représente une procédure plutôt qu’une vue, le comportement dépend du fournisseur. L' **Ajout** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  

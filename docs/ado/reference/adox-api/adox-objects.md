@@ -11,14 +11,14 @@ helpviewer_keywords:
 - objects [ADOX]
 - ADOX, objects
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2969927d6221f45bff027b97f6e6468ab63baa86
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928503"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764110"
 ---
 # <a name="adox-objects"></a>Objets ADOX
 ## <a name="adox-object-summary"></a>Résumé de l’objet ADOX  
@@ -33,7 +33,7 @@ ms.locfileid: "67928503"
 |[Procédures](../../../ado/reference/adox-api/procedure-object-adox.md)|Représente une procédure stockée.|  
 |[Tableau](../../../ado/reference/adox-api/table-object-adox.md)|Représente une table de base de données, y compris des colonnes, des index et des clés.|  
 |[Utilisateur](../../../ado/reference/adox-api/user-object-adox.md)|Représente un compte d’utilisateur qui dispose d’autorisations d’accès au sein d’une base de données sécurisée.|  
-|[Affichage](../../../ado/reference/adox-api/view-object-adox.md)|Représente un jeu d’enregistrements filtré ou une table virtuelle.|  
+|[Afficher](../../../ado/reference/adox-api/view-object-adox.md)|Représente un jeu d’enregistrements filtré ou une table virtuelle.|  
   
  Les relations entre ces objets sont illustrées dans le [modèle objet ADOX](../../../ado/reference/adox-api/adox-object-model.md).  
   

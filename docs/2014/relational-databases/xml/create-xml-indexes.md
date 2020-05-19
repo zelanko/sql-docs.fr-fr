@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8448e133891d375a97010c15d2079335e473c6f1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637759"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717055"
 ---
 # <a name="create-xml-indexes"></a>Créer des index XML
   Cette rubrique décrit comment créer des index XML primaires et secondaires.  
@@ -44,7 +44,7 @@ ms.locfileid: "62637759"
   
 -   Les noms s'appliquant aux index XML primaires sont soumis aux mêmes restrictions que les noms de vues.  
   
- Vous ne pouvez pas créer d’index XML `xml` sur une colonne de type dans une vue, sur une variable `xml` **table** avec des colonnes `xml` de type, ou sur des variables de type.  
+ Vous ne pouvez pas créer d’index XML sur une `xml` colonne de type dans une vue, sur une variable **table** avec des colonnes de type `xml` , ou sur des variables de `xml` type.  
   
 -   Pour modifier une colonne de type `xml` non typé en XML typé ou vice versa par le biais de l'option ALTER TABLE ALTER COLUMN, assurez-vous qu'aucun index XML portant sur la colonne n'existe. Si c'est le cas, il doit être supprimé avant de pouvoir tenter de modifier le type de colonne.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f0ba7f39d3c95fe992d6603707b2a67d6726b7e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637607"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717120"
 ---
 # <a name="create-instances-of-xml-data"></a>Créer des instances de données XML
   Cette rubrique décrit comment générer des instances XML.  
@@ -40,7 +40,7 @@ ms.locfileid: "62637607"
 -   Utilisation du chargement en masse.  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Conversion du type des instances binaires et de chaîne  
- Vous pouvez analyser n’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données de chaîne, comme **[n**]**[var**]**char**, **[n] Text**, **varbinary**et **image**, dans le `xml` type de données en castant (cast) ou en convertissant (Convert) la `xml` chaîne en type de données. Le code XML non typé est vérifié de façon à voir s'il est bien formé. Si un schéma est associé au type, `xml` la validation est également effectuée. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](compare-typed-xml-to-untyped-xml.md).  
+ Vous pouvez analyser n’importe quel type de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données de chaîne, comme **[n**] [**var**]**char**, **[n] Text**, **varbinary**et **image**, dans le `xml` type de données en castant (cast) ou en convertissant (Convert) la chaîne en `xml` type de données. Le code XML non typé est vérifié de façon à voir s'il est bien formé. Si un schéma est associé au `xml` type, la validation est également effectuée. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](compare-typed-xml-to-untyped-xml.md).  
   
  Les documents XML peuvent être encodés à l'aide de différents encodages (par exemple, UTF-8, UTF-16, Windows 1252). Les règles définissant le comportement de l'analyseur et l'interaction entre les types de sources binaires et de chaîne avec l'encodage du document XML sont décrites ici.  
   
@@ -94,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
  Si le paramètre *style* n’est pas utilisé ou s’il a la valeur 0, les espaces non significatifs ne sont pas conservés durant la conversion de l’instance du type de données xml. Pour plus d’informations sur l’utilisation de l’opérateur CONVERT et de son paramètre *style* durant la conversion de données chaîne en instances du type de données xml, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemple : conversion d'une valeur chaîne en xml typé et affectation de cette valeur à une colonne  
- L’exemple suivant convertit une variable chaîne qui contient un fragment XML en `xml` type de données, puis la stocke `xml` dans la colonne de type :  
+ L’exemple suivant convertit une variable chaîne qui contient un fragment XML en `xml` type de données, puis la stocke dans la `xml` colonne de type :  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -122,7 +122,7 @@ INSERT INTO T VALUES (3, convert (xml, @s))
 ```  
   
 ### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemple : conversion d'une valeur chaîne en xml typé et affectation de cette valeur à une variable  
- Dans l’exemple suivant, une chaîne est convertie en `xml` type et assignée à `xml` une variable du type de données :  
+ Dans l’exemple suivant, une chaîne est convertie en `xml` type et assignée à une variable du `xml` type de données :  
   
 ```  
 declare @x xml  
@@ -144,9 +144,9 @@ SET @xmlDoc = (SELECT Column1, Column2
  ...  
 ```  
   
- L’instruction SELECT retourne un fragment XML textuel qui est ensuite analysé au cours de l’assignation à `xml` la variable de type de données.  
+ L’instruction SELECT retourne un fragment XML textuel qui est ensuite analysé au cours de l’assignation à la `xml` variable de type de données.  
   
- Vous pouvez également utiliser la [directive type](type-directive-in-for-xml-queries.md) dans la clause FOR XML qui retourne directement un résultat de requête for XML `xml` en tant que type :  
+ Vous pouvez également utiliser la [directive type](type-directive-in-for-xml-queries.md) dans la clause FOR XML qui retourne directement un résultat de requête for XML en tant que `xml` type :  
   
 ```  
 Declare @xmlDoc xml  
@@ -163,7 +163,7 @@ SELECT @xmlDoc
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
 ```  
   
- Dans l’exemple suivant, le résultat `xml` typé d’une requête for XML est inséré dans une `xml` colonne de type :  
+ Dans l’exemple suivant, le `xml` résultat typé d’une requête for XML est inséré dans une `xml` colonne de type :  
   
 ```  
 CREATE TABLE T1 (c1 int, c2 xml)  
@@ -192,7 +192,7 @@ SET @xmlDoc = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'  
 ```  
   
- L’exemple précédent convertit implicitement la chaîne en `xml` type de données et l’assigne à `xml` une variable de type.  
+ L’exemple précédent convertit implicitement la chaîne en `xml` type de données et l’assigne à une `xml` variable de type.  
   
  L’exemple suivant insère une chaîne constante dans une `xml` colonne de type :  
   
@@ -205,7 +205,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  En cas de XML typé, la conformité du code XML est validée par rapport au schéma spécifié. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="using-bulk-load"></a>Utilisation du chargement en masse  
- La fonctionnalité améliorée [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) vous permet de charger en masse des documents XML dans la base de données. Vous pouvez charger en masse des instances XML à partir `xml` de fichiers dans les colonnes de type de la base de données. Pour obtenir des exemples fonctionnels, consultez [ Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Pour plus d’informations sur le chargement de documents XML, consultez [Charger des données XML](load-xml-data.md).  
+ La fonctionnalité améliorée [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) vous permet de charger en masse des documents XML dans la base de données. Vous pouvez charger en masse des instances XML à partir de fichiers dans les `xml` colonnes de type de la base de données. Pour obtenir des exemples fonctionnels, consultez [ Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Pour plus d’informations sur le chargement de documents XML, consultez [Charger des données XML](load-xml-data.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

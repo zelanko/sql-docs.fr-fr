@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072370"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706535"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
-  Le collecteur de performances [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] de transaction dans vous aide à évaluer si l’OLTP en mémoire améliore les performances de votre application de base de données. Le rapport d'analyse des performances de transaction indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif.  
+  Le collecteur de performances de transaction dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] vous aide à évaluer si l’OLTP en mémoire améliore les performances de votre application de base de données. Le rapport d'analyse des performances de transaction indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif.  
   
  Cette rubrique explique comment :  
   
@@ -44,9 +44,9 @@ ms.locfileid: "63072370"
     > [!IMPORTANT]  
     >  Les performances d'un système de base de données dépendent de différents facteurs, tous ne pouvant pas être observés et mesurés par le collecteur de performances de transaction. Par conséquent, le rapport d'analyse des performances de transaction ne garantit pas que les gains de performances réels correspondront aux prédictions, si des prédictions sont faites.  
   
- Le collecteur de performances de transaction et la capacité à générer un rapport d’analyse des performances de transaction sont installés lorsque vous sélectionnez **outils de gestion-de base** ou **outils de gestion-avancé lors de** l’installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]de.  
+ Le collecteur de performances de transaction et la capacité à générer un rapport d’analyse des performances de transaction sont installés lorsque vous sélectionnez **outils de gestion-de base** ou **outils de gestion-avancé lors de** l’installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
-## <a name="best-practices"></a>Meilleures pratiques  
+## <a name="best-practices"></a>Bonnes pratiques  
  Le flux de travail recommandé est illustré dans l'organigramme suivant. Les nœuds jaunes représentent les procédures facultatives :  
   
  ![Flux de travail AMR](../../database-engine/media/amr-1.gif "Flux de travail AMR")  
@@ -63,7 +63,7 @@ ms.locfileid: "63072370"
   
  Le collecteur de performances de transaction capture les données toutes les 15 minutes. Pour obtenir des résultats utilisables, exécutez le collecteur de performances de transaction pendant au moins une heure. Pour obtenir de meilleurs résultats, exécutez le collecteur de performances de transaction aussi longtemps que nécessaire pour capturer des données pour vos principaux scénarios. Générez un rapport d'évaluation des performances de transaction uniquement après avoir terminé de regrouper les données.  
   
- Configurez le collecteur de performances de transaction de façon à ce qu'il s'exécute sur votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'environnement de production et collecte les données sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans votre environnement de développement (test) pour garantir une charge minimale. Pour plus d’informations sur l’enregistrement de données dans une base de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Warehouse de gestion sur une instance distante, consultez [configurer la collecte de données sur une instance de SQL Server à distance](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configurez le collecteur de performances de transaction de façon à ce qu'il s'exécute sur votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'environnement de production et collecte les données sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans votre environnement de développement (test) pour garantir une charge minimale. Pour plus d’informations sur l’enregistrement de données dans une base de données de Data Warehouse de gestion sur une instance distante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [configurer la collecte de données sur une instance de SQL Server à distance](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Impacts sur les performances  
  Le collecteur de performances de transaction comprend deux jeux d'éléments de collecte de données :  
@@ -102,7 +102,7 @@ ms.locfileid: "63072370"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Configurer la collecte de données sur une instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  La collecte de données requiert le démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous ne devez configurer qu'un collecteur de données sur un serveur.  
   
- Un collecteur de données peut être configuré sur un SQL Server 2012 ou une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]version ultérieure de.  
+ Un collecteur de données peut être configuré sur un SQL Server 2012 ou une version ultérieure de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Pour configurer la collecte de données à télécharger vers une base de données de l'entrepôt de données de gestion sur la même instance, procédez comme suit :  
   
@@ -118,10 +118,10 @@ ms.locfileid: "63072370"
   
 6.  Vérifiez les sélections. Cliquez sur **précédent** pour modifier les paramètres. Cliquez sur **Terminer** lorsque vous avez terminé.  
   
-###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurer la collecte de données sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une instance distante  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurer la collecte de données sur une instance distante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  La collecte de données nécessite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] soit démarré sur l'instance qui va collecter les données.  
   
- Un collecteur de données peut être configuré sur un SQL Server 2012 ou une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]version ultérieure de.  
+ Un collecteur de données peut être configuré sur un SQL Server 2012 ou une version ultérieure de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Vous avez besoin d'un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent créé avec des informations d'identification correctes pour qu'un collecteur de données télécharge des données dans une base de données d'entrepôt de données de gestion sur une instance différente de celle où les transactions seront profilées. Pour activer un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez d'abord créer des informations d'identification avec un nom de connexion spécifique au domaine. La connexion activée pour le domaine doit être membre du groupe `mdw_admin` pour la base de données de l'entrepôt de données de gestion. Pour plus d’informations sur la création d’informations d’identification [, consultez Procédure : créer des informations d’identification (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) .  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967280"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764070"
 ---
 # <a name="append-method-adox-procedures"></a>Append, méthode (procédures ADOX)
 Ajoute un nouvel objet de [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) à la collection [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
@@ -40,7 +40,7 @@ Procedures.Append Name, Command
  *Commande*  
  Objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) ADO qui représente la procédure à créer et à ajouter.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Crée une nouvelle procédure dans la source de données avec le nom et les attributs spécifiés dans l’objet **Command** .  
   
  Si le texte de la commande que l’utilisateur spécifie représente une vue plutôt qu’une procédure, le comportement dépend du fournisseur utilisé. L' **Ajout** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  

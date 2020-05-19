@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112245"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706579"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
   L'OLTP en mémoire introduit les tables mémoire optimisées et les procédures stockées compilées en mode natif dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cet article présente le traitement des requêtes pour les tables mémoire optimisées et les procédures stockées compilées en mode natif.  
@@ -222,7 +222,7 @@ Exécution de procédures stockées compilées en mode natif.
   
  L'appel d'une procédure stockée compilée en mode natif se présente comme suit :  
   
-1.  L’utilisateur émet une `EXEC`instruction *usp_myproc* .  
+1.  L’utilisateur émet une `EXEC` instruction *usp_myproc* .  
   
 2.  L'analyseur extrait le nom et les paramètres de la procédure stockée.  
   
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conserve les statistiques des colonnes pour les tables mémoire optimisées. En outre, le nombre réel de lignes de la table est conservé. Toutefois, contrairement aux tables sur disque, les statistiques des tables mémoire optimisées ne sont pas mises à jour automatiquement. Par conséquent, les statistiques doivent être mises à jour manuellement après des modifications significatives dans les tables. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables optimisées en mémoire](memory-optimized-tables.md)  
+ [Tables à mémoire optimisée](memory-optimized-tables.md)  
   
   

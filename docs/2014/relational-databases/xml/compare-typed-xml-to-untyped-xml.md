@@ -22,15 +22,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637617"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717197"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparer du XML typé et du XML non typé
   Vous pouvez créer des variables, des paramètres et des colonnes du type `xml`. Vous pouvez éventuellement associer une collection de schémas XML à une variable, un paramètre ou une colonne de type `xml`. Dans ce cas, l' `xml` instance de type de données est appelée *typée*. Dans le cas contraire, l'instance XML est dite *non typée*.  
@@ -52,7 +52,7 @@ ms.locfileid: "62637617"
   
 -   Vous avez des schémas, mais vous ne voulez pas que le serveur valide les données. C'est notamment le cas lorsqu'une application effectue la validation côté client avant de stocker les données sur le serveur, ou stocke temporairement les données XML déclarées non valides par rapport au schéma, ou utilise des composants de schéma non pris en charge par le serveur.  
   
- Utilisez le `xml` type de données typé dans les cas suivants :  
+ Utilisez `xml` le type de données typé dans les cas suivants :  
   
 -   Il existe des schémas pour vos données XML et vous souhaitez que le serveur valide les données XML par rapport aux schémas XML.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62637617"
  Des colonnes, paramètres et variables en XML typé peuvent stocker des documents ou du contenu XML. Toutefois, vous devez utiliser un indicateur pour spécifier qu'il s'agit d'un document ou d'un contenu au moment de la déclaration. De plus, vous devez fournir la collection de schémas XML. Spécifiez DOCUMENT si chaque instance XML a un seul et unique élément de premier niveau. Sinon, utilisez CONTENT. Le compilateur de requête utilise l'indicateur DOCUMENT dans les vérifications de type lors de la compilation de la requête pour déduire les éléments singletons de premier niveau.  
   
 ## <a name="creating-typed-xml"></a>Création de XML typé  
- Avant de pouvoir créer des `xml` variables, des paramètres ou des colonnes typés, vous devez d’abord inscrire la collection de schémas XML à l’aide de l' [instruction CREATE xml schema collection &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Vous pouvez ensuite associer la collection de schémas XML aux variables, paramètres ou colonnes typés `xml`.  
+ Avant de pouvoir créer des `xml` variables, des paramètres ou des colonnes typés, vous devez d’abord inscrire la collection de schémas XML à l’aide de l' [instruction CREATE XML schema collection &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Vous pouvez ensuite associer la collection de schémas XML aux variables, paramètres ou colonnes typés `xml`.  
   
  Dans les exemples suivants, une convention d'affectation des noms en deux parties est utilisée pour spécifier le nom de la collection de schémas XML. La première partie est le nom du schéma et la deuxième est le nom de la collection de schémas XML.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemple : association d'une collection de schémas à une variable de type xml  
- L’exemple suivant crée une`xml` variable de type et lui associe une collection de schémas. La collection de schémas spécifiée dans l'exemple est déjà importée dans la base de données **AdventureWorks** .  
+ L’exemple suivant crée une `xml` variable de type et lui associe une collection de schémas. La collection de schémas spécifiée dans l'exemple est déjà importée dans la base de données **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d61fe79fd5daddbf5b256540db960143652640bc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157948"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82714909"
 ---
 # <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>Implémentation de SQL_VARIANT dans une table optimisée en mémoire
   Considérons un exemple de table avec une colonne `SQL_VARIANT` :  

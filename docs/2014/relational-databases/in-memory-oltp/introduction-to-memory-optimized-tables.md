@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157834"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706476"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduction aux tables optimisées en mémoire
   Les tables optimisées en mémoire sont des tables créées à l’aide de [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
@@ -52,13 +52,13 @@ ms.locfileid: "63157834"
   
  Le tableau suivant résume l'accès natif et l'accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété pour différents objets.  
   
-|Fonctionnalité|Accès à l'aide d'une procédure stockée compilée en mode natif|Accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété|Accès CLR|  
+|Caractéristique|Accès à l'aide d'une procédure stockée compilée en mode natif|Accès en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interprété|Accès CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|Tables optimisées en mémoire|Oui|Oui|Non <sup>1</sup>|  
-|[Variables de table mémoire optimisée](../../database-engine/memory-optimized-table-variables.md)|Oui|Oui|Non|  
-|[procédures stockées compilées en mode natif](https://msdn.microsoft.com/library/dn133184.aspx)|Vous ne pouvez pas utiliser l'instruction EXECUTE pour exécuter une procédure stockée à partir d'une procédure stockée compilée en mode natif.|Oui|Non <sup>1</sup>|  
+|Tables optimisées en mémoire|Yes|Oui|Non <sup>1</sup>|  
+|[Variables de table mémoire optimisée](../../database-engine/memory-optimized-table-variables.md)|Yes|Oui|Non|  
+|[procédures stockées compilées en mode natif](https://msdn.microsoft.com/library/dn133184.aspx)|Vous ne pouvez pas utiliser l'instruction EXECUTE pour exécuter une procédure stockée à partir d'une procédure stockée compilée en mode natif.|Yes|Non <sup>1</sup>|  
   
- <sup>1</sup> vous ne pouvez pas accéder à une table optimisée en mémoire ou à une procédure stockée compilée en mode [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] natif à partir de la connexion contextuelle (connexion à partir de lors de l’exécution d’un module CLR). Cependant, vous pouvez créer et ouvrir une autre connexion à partir de laquelle vous accédez aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif. Pour plus d’informations, consultez [connexions régulières et contextuelles](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
+ <sup>1</sup> vous ne pouvez pas accéder à une table optimisée en mémoire ou à une procédure stockée compilée en mode natif à partir de la connexion contextuelle (connexion à partir de lors de l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exécution d’un module CLR). Cependant, vous pouvez créer et ouvrir une autre connexion à partir de laquelle vous accédez aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif. Pour plus d’informations, consultez [connexions régulières et contextuelles](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
 ## <a name="performance-and-scalability"></a>Performances et extensibilité  
  Les facteurs suivants affectent les gains de performance pouvant être obtenus avec l'OLTP en mémoire :  

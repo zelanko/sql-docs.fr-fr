@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 060709db7842173f6f30e78a6384a4b9489dfb3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200315"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712841"
 ---
 # <a name="process-results-odbc"></a>Traiter des résultats (ODBC)
     
@@ -33,7 +33,7 @@ ms.locfileid: "63200315"
   
     -   Si les colonnes dépendantes sont utilisées, utilisez les données à présent disponibles dans les mémoires tampons des colonnes dépendantes.  
   
-    -   Si des colonnes indépendantes sont utilisées, appelez [SQLGetData](../native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendantes après la dernière colonne dépendante. Les appels `SQLGetData` à doivent être dans l’ordre de plus en plus élevé du numéro de colonne.  
+    -   Si des colonnes indépendantes sont utilisées, appelez [SQLGetData](../native-client-odbc-api/sqlgetdata.md) une ou plusieurs fois pour obtenir les données pour les colonnes indépendantes après la dernière colonne dépendante. Les appels à `SQLGetData` doivent être dans l’ordre de plus en plus élevé du numéro de colonne.  
   
     -   Appelez plusieurs fois `SQLGetData` pour obtenir des données à partir d'une colonne text ou image.  
   

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 537a3aaafcc2a0ad4ba2c59ae8d52f8e5ced5868
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205011"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716481"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Prise en charge de FOR XML pour le type de données XML
   Si une requête FOR XML spécifie une colonne de type `xml` dans la clause SELECT, les valeurs de la colonne sont mappées comme éléments dans le code XML retourné, que vous spécifiiez ou non la directive ELEMENTS. Toute déclaration XML dans la colonne de type `xml` n'est pas sérialisée.  
   
- Par exemple, la requête suivante récupère des informations de contact client, telles `BusinessEntityID`que `FirstName`les colonnes `LastName` , et, ainsi que les numéros de `AdditionalContactInfo` téléphone de `xml` la colonne de type.  
+ Par exemple, la requête suivante récupère des informations de contact client, telles que les `BusinessEntityID` `FirstName` colonnes, et `LastName` , ainsi que les numéros de téléphone de la `AdditionalContactInfo` colonne de `xml` type.  
   
 ```  
 USE AdventureWorks2012;  

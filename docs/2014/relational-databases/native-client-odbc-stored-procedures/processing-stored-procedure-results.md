@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, stored procedures
 - stored procedures [ODBC], results
 ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e7ffe8b73a7df4cbe2fddcaa0864e338b039f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18ffd4adb4387d8b7bc4209cd8e8532abdd686ac
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205488"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709542"
 ---
 # <a name="processing-stored-procedure-results"></a>Traitement des résultats des procédures stockées
   Les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent quatre mécanismes pour retourner les données :  
@@ -32,7 +32,7 @@ ms.locfileid: "68205488"
   
 -   La procédure peut avoir un code de retour de type entier.  
   
- Les applications doivent être en mesure de gérer toutes les sorties provenant des procédures stockées. L'instruction CALL ou EXECUTE doit inclure des marqueurs de paramètre pour le code de retour et les paramètres de sortie. Utilisez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour les lier tous en tant que paramètres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sortie et le pilote ODBC Native Client transférera les valeurs de sortie vers les variables liées. Les paramètres de sortie et les codes de retour sont les derniers éléments retournés au client par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; ils ne sont pas retournés à l’application tant que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) n’a pas retourné SQL_NO_DATA.  
+ Les applications doivent être en mesure de gérer toutes les sorties provenant des procédures stockées. L'instruction CALL ou EXECUTE doit inclure des marqueurs de paramètre pour le code de retour et les paramètres de sortie. Utilisez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour les lier tous en tant que paramètres de sortie et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client transférera les valeurs de sortie vers les variables liées. Les paramètres de sortie et les codes de retour sont les derniers éléments retournés au client par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; ils ne sont pas retournés à l’application tant que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) n’a pas retourné SQL_NO_DATA.  
   
  ODBC ne prend pas en charge la liaison des paramètres [!INCLUDE[tsql](../../includes/tsql-md.md)] de type cursor. Comme tous les paramètres de sortie doivent être liés avant d'exécuter une procédure, toute procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] qui contient un paramètre de curseur de sortie ne peut pas être appelée par les applications ODBC.  
   

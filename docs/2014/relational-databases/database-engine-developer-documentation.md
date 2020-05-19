@@ -10,15 +10,15 @@ helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5751cadb999ee3a2c9d8260bee7a6197047d312
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530949"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706848"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guide des&#39;pour les développeurs (Moteur de base de données)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un riche ensemble d'outils pour développer, administrer, et contrôler les applications de base de données.  
@@ -34,7 +34,7 @@ ms.locfileid: "69530949"
  Décrit la version la plus récente de SQLXML, qui propose les mêmes fonctionnalités que SQLXML 3.0, aussi bien que les mises à jour supplémentaires destinées à accueillir les nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], comme le type de données XML.  
   
  [Fournisseur WMI pour les concepts de gestion de configuration](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- Décrit une couche publiée utilisée avec le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] composant logiciel enfichable Configuration Manager pour la console MMC (Microsoft Management Console) et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le Configuration Manager. Il offre une méthode d'interface unifiée avec les appels API qui gèrent les opérations de registre requises par le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il permet également un contrôle et une manipulation avancés des services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sélectionnés.  
+ Décrit une couche publiée utilisée avec le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] composant logiciel enfichable Configuration Manager pour la console MMC (Microsoft Management Console) et le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. Il offre une méthode d'interface unifiée avec les appels API qui gèrent les opérations de registre requises par le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il permet également un contrôle et une manipulation avancés des services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sélectionnés.  
   
  [Fournisseur WMI pour les concepts des événements de serveur](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  Décrit comment utiliser WMI (Windows Management Instrumentation) pour surveiller les événements dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

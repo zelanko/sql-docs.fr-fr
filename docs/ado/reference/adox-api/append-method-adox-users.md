@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c010b291468432544a037d15fbaa790fc3ee789d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967228"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764020"
 ---
 # <a name="append-method-adox-users"></a>Append, méthode (utilisateurs ADOX)
 Ajoute un nouvel objet [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) à la collection [Users](../../../ado/reference/adox-api/users-collection-adox.md) .  
@@ -38,9 +38,9 @@ Users.Append User[,Password]
  Valeur de **type Variant** qui contient l’objet **utilisateur** à ajouter ou le nom de l’utilisateur à créer et à ajouter.  
   
  *Mot de passe*  
- Facultatif. Valeur de **chaîne** qui contient le mot de passe de l’utilisateur. Le paramètre de *mot de passe* correspond à la valeur spécifiée par la méthode [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) d’un objet **utilisateur** .  
+ facultatif. Valeur de **chaîne** qui contient le mot de passe de l’utilisateur. Le paramètre de *mot de passe* correspond à la valeur spécifiée par la méthode [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) d’un objet **utilisateur** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La collection d' **utilisateurs** d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le regroupement **utilisateurs** pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui ont une appartenance au groupe spécifique.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge la création d’utilisateurs.  

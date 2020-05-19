@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5769a59a8deebfa99a00229f1b1227e427e051a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468606"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706571"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accès aux tables optimisées en mémoire à l’aide du Transact-SQL interprété
   À quelques exceptions près, vous accédez aux tables mémoire optimisées à l'aide d'une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'une opération DML (SELECT, INSERT, UPDATE ou DELETE), de lots ad hoc et de modules SQL, tels que des procédures stockées, des fonctions table, des déclencheurs et des vues.  
@@ -36,13 +36,13 @@ ms.locfileid: "62468606"
   
  Les constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes ne sont pas prises en charge dans les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétées qui accèdent aux données dans une table mémoire optimisée.  
   
-|Domaine|Non pris en charge|  
+|Zone|Non pris en charge|  
 |----------|-----------------|  
 |Accès aux tables|TRUNCATE TABLE<br /><br /> MERGE (table mémoire optimisée comme cible).<br /><br /> Curseurs DYNAMIC et KEYSET (dégradés automatiquement en STATIC).<br /><br /> Accédez aux modules CLR à l'aide de la connexion contextuelle.<br /><br /> Référencement d'une table mémoire optimisée à partir d'une vue indexée.|  
 |Bases de données croisées|Requêtes de bases de données croisées<br /><br /> Transactions de bases de données croisées<br /><br /> Serveurs liés|  
   
 ## <a name="table-hints"></a>Indicateurs de table  
- Pour plus d'informations sur les indicateurs de table, consultez. [Indicateurs de Table &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table). L’isolement d’instantané a été [!INCLUDE[hek_2](../../includes/hek-2-md.md)]ajouté pour prendre en charge.  
+ Pour plus d'informations sur les indicateurs de table, consultez. [Indicateurs de Table &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table). L’isolement d’instantané a été ajouté pour prendre en charge [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
  Les indicateurs de table suivants ne sont pas pris en charge lors de l'accès à une table de mémoire optimisée à l'aide du [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété.  
   

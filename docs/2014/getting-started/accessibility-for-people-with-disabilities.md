@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683598"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707024"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accessibilité pour personnes handicapées
   [!INCLUDE[msCoName](../includes/msconame-md.md)] considère qu'il est de son devoir de faire en sorte que ses produits et services soient accessibles et faciles à utiliser par tous. Cette rubrique contient des informations sur les fonctionnalités, produits et services ci-après qui contribuent à rendre les produits de la famille [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server plus accessibles aux personnes handicapées.  
@@ -79,7 +79,7 @@ ms.locfileid: "74683598"
  La documentation pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est disponible en ligne. Pour plus d’informations, consultez [utiliser la documentation du produit pour SQL Server](../2014-toc/index.yml).  
   
 ## <a name="obtaining-documentation-for-additional-msconame-products"></a>Obtention de documentation pour d'autres produits [!INCLUDE[msCoName](../includes/msconame-md.md)]  
- Vous pouvez obtenir de la documentation [!INCLUDE[msCoName](../includes/msconame-md.md)] accessible pour les produits sur le [site Web Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67164).  
+ Vous pouvez obtenir de la documentation accessible pour [!INCLUDE[msCoName](../includes/msconame-md.md)] les produits sur le [site Web Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic Inc.  
  Vous pouvez obtenir des [!INCLUDE[msCoName](../includes/msconame-md.md)] publications supplémentaires auprès de l’enregistrement pour le aveugle & Dyslexic, Inc. Ces documents sont distribués aux membres inscrits et éligibles du service de distribution sur des disquettes de cassettes audio ou. La collection de RFB&amp;D contient plus de 80 000 titres, dont la documentation sur les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] et les ouvrages de [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Pour plus d'informations sur l'accès et la disponibilité de la documentation sur les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] et des ouvrages de [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, contactez :  
@@ -97,7 +97,7 @@ ms.locfileid: "74683598"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>Services clients à l'attention des sourds ou des malentendants  
  Microsoft met à la disposition des sourds et des malentendants un service de télécommunication (modem TTY/TDD) leur permettant d'accéder à toute la gamme des produits et services client [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
-### <a name="customer-service"></a>Service clients  
+### <a name="customer-service"></a>Customer Service  
  Vous pouvez contacter [!INCLUDE[msCoName](../includes/msconame-md.md)] Sales Information Center sur un téléphone texte en vous connectant (800) 892-5234 entre 6:30 h 00. et 17h30, Heure du Pacifique, du lundi au vendredi, sauf les jours fériés.  
   
 ### <a name="technical-help"></a>Assistance technique  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783238"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706555"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modification des tables à mémoire optimisée
   L'exécution d'opérations ALTER sur les tables mémoire optimisées n'est pas prise en charge. Cela comprend les opérations telles que la modification du nombre de compartiments, l'ajout ou la suppression d'un index et l'ajout ou la suppression d'une colonne. Cette rubrique fournit des instructions pour mettre à jour des tables mémoire optimisées.  
@@ -63,13 +63,13 @@ ms.locfileid: "72783238"
     select @permissions  
     ```  
   
-4.  Créez une copie de la table et copiez les données de la table d'origine dans la copie de la table. La copie peut être créée à l’aide [!INCLUDE[tsql](../../includes/tsql-md.md)]du <sup>1</sup>suivant.  
+4.  Créez une copie de la table et copiez les données de la table d'origine dans la copie de la table. La copie peut être créée à l’aide du [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>suivant.  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Si la mémoire disponible est suffisante, `T_copy` peut être une table optimisée en mémoire, ce qui accélère la copie des données. <sup>2</sup>  
+     Si la mémoire disponible est suffisante, `T_copy` peut être une table optimisée en mémoire, ce qui accélère la copie des données.<sup> 2</sup>  
   
 5.  Supprimez les objets liés au schéma référençant la table d'origine.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72783238"
   
  <sup>1</sup> Notez que `T_copy` est conservé sur le disque dans cet exemple. Si une sauvegarde de `T` est disponible, `T_copy` peut être une table temporaire ou non durable.  
   
- <sup>2</sup> il doit y avoir suffisamment de `T_copy`mémoire pour. La mémoire n'est pas libérée immédiatement lors de l'exécution de `DROP TABLE`. Si la table `T_copy` est mémoire optimisée, la mémoire disponible doit être suffisante pour deux copies supplémentaires de la table `T`. Si la table `T_copy` est sur disque, la mémoire disponible doit être suffisante pour une copie supplémentaire de la table `T`, car le garbage collector doit rattraper son retard après suppression de l'ancienne version de `T`.  
+ <sup>2</sup> il doit y avoir suffisamment de mémoire pour `T_copy` . La mémoire n'est pas libérée immédiatement lors de l'exécution de `DROP TABLE`. Si la table `T_copy` est mémoire optimisée, la mémoire disponible doit être suffisante pour deux copies supplémentaires de la table `T`. Si la table `T_copy` est sur disque, la mémoire disponible doit être suffisante pour une copie supplémentaire de la table `T`, car le garbage collector doit rattraper son retard après suppression de l'ancienne version de `T`.  
   
 ## <a name="changing-schema-powershell"></a>Modification du schéma (PowerShell)  
  Les scripts PowerShell suivants préparent et génèrent les modifications de schéma en créant un script des autorisations de table et associées.  
@@ -223,7 +223,7 @@ Write-Host ""
   
  Le script PowerShell suivant exécute les modifications de schéma qui ont fait l'objet d'un script dans l'exemple précédent. Ce script accepte comme argument une table et exécute les scripts de modification de schéma qui ont été générés pour cette table et les procédures stockées associées.  
   
- Utilisation : execute_schema_change. ps1 *SERVER_NAME * * db_name`schema_name`table_name*  
+ Utilisation : execute_schema_change. ps1 *SERVER_NAME * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -294,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables optimisées en mémoire](memory-optimized-tables.md)  
+ [Tables à mémoire optimisée](memory-optimized-tables.md)  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f45aebe59892704e49a2a6d1cd45e5af4ae471
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225328"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707207"
 ---
 # <a name="using-database-mirroring"></a>Utilisation de la mise en miroir de bases de données
     
@@ -60,9 +60,9 @@ ms.locfileid: "63225328"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge la mise en miroir de bases de données via les attributs de connexion et de chaîne de connexion. La propriété SSPROP_INIT_FAILOVERPARTNER a été ajoutée à la propriété DBPROPSET_SQLSERVERDBINIT définie et le mot clé `FailoverPartner` est un nouvel attribut de chaîne de connexion de DBPROP_INIT_PROVIDERSTRING. Pour plus d’informations, consultez [utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Le cache de basculement est conservé tant que le fournisseur est chargé, ce qui est jusqu’à ce que **CoUninitialize** soit appelé ou que l’application ait une référence à un objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] géré par le fournisseur de OLE DB Native Client, tel qu’un objet de source de données.  
+ Le cache de basculement est conservé tant que le fournisseur est chargé, ce qui est jusqu’à ce que **CoUninitialize** soit appelé ou que l’application ait une référence à un objet géré par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client, tel qu’un objet de source de données.  
   
- Pour plus d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] informations sur la prise en charge du fournisseur OLE DB Native Client pour la mise en miroir de bases de données, consultez [propriétés d’initialisation et d’autorisation](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la prise en charge du fournisseur OLE DB Native Client pour la mise en miroir de bases de données, consultez [propriétés d’initialisation et d’autorisation](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge la mise en miroir de bases de données via les attributs de connexion et de chaîne de connexion. Plus précisément, l’attribut SQL_COPT_SS_FAILOVER_PARTNER a été ajouté pour être utilisé avec les fonctions [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) et [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . et le `Failover_Partner` mot clé a été ajouté en tant que nouvel attribut de chaîne de connexion.  

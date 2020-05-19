@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3f06127c2e86060c90518bc24dde512e4259668
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62466082"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706544"
 ---
-# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d’application pour partitionner des tables à mémoire optimisée
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle selon lequel une quantité limitée de données actives est conservée dans une table optimisée en mémoire, tandis que les données auxquelles on accède moins fréquemment sont traitées sur le disque. En général, c'est un scénario où les données sont stockées en fonction d'une clé `datetime`.  
   
  Pour émuler les tables partitionnées avec les tables mémoire optimisées, conservez une table partitionnée et une table mémoire optimisée avec un schéma commun. Les données actives sont insérées et mises à jour dans la table mémoire optimisée, alors que les données les moins fréquemment sollicitées sont conservées dans la table partitionnée traditionnelle.  
@@ -34,7 +34,7 @@ ms.locfileid: "62466082"
   
 -   Ajoutez la partition active.  
   
- ![Basculement de partition](../../database-engine/media/hekaton-partitioned-tables.gif "Basculement de partition.")  
+ ![Basculement de partition.](../../database-engine/media/hekaton-partitioned-tables.gif "Basculement de partition.")  
 Maintenance de données actives  
   
  Les actions qui commencent par Deleting ActiveOrders doivent être effectuées pendant une période de maintenance pour éviter des requêtes sans données pendant l'intervalle entre la suppression des données et le basculement dans la table de mise en lots.  

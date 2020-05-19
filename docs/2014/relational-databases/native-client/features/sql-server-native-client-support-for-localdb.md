@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 503bae580d2bacffbd143a1b4530f83b7c81a269
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225484"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707226"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>Prise en charge de SQL Server Native Client pour LocalDB
   À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], une version légère de SQL Server, appelée LocalDB, sera disponible. Cette rubrique explique comment se connecter à une base de données dans une instance LocalDB.  
@@ -31,7 +31,7 @@ ms.locfileid: "63225484"
   
 -   Utiliser `sqllocaldb.exe i` pour déterminer le nom de l'instance par défaut.  
   
--   Utiliser le mot clé de chaîne de connexion `AttachDBFilename` pour spécifier le fichier de base de données auquel le serveur doit se rattacher. Lorsque vous `AttachDBFilename`utilisez, si vous ne spécifiez pas le nom de la base de données avec le mot clé **de chaîne de connexion de base de données** , la base de données est supprimée de l’instance de base de données locale lorsque l’application se ferme.  
+-   Utiliser le mot clé de chaîne de connexion `AttachDBFilename` pour spécifier le fichier de base de données auquel le serveur doit se rattacher. Lorsque `AttachDBFilename` vous utilisez, si vous ne spécifiez pas le nom de la base de données avec le mot clé **de chaîne de connexion de base de données** , la base de données est supprimée de l’instance de base de données locale lorsque l’application se ferme.  
   
 -   Spécifiez une instance LocalDB dans votre chaîne de connexion :  
   

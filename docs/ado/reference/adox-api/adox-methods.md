@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928544"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764120"
 ---
 # <a name="adox-methods"></a>Méthodes ADOX
 
@@ -38,7 +38,7 @@ ms.locfileid: "67928544"
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retourne le propriétaire d’un objet dans un catalogue.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retourne les autorisations pour un groupe ou un utilisateur sur un objet.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Spécifie le propriétaire d’un objet dans un catalogue.|  
-|[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Spécifie les autorisations pour un groupe ou un utilisateur sur un objet.|  
+|[SetPermissions, exemples](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Spécifie les autorisations pour un groupe ou un utilisateur sur un objet.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur l’API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   

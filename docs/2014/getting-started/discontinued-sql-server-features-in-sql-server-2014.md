@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112224"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706968"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server supprimées dans SQL Server 2014
   Cette rubrique décrit des fonctionnalités qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -40,13 +40,13 @@ ms.locfileid: "79112224"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Fonctionnalités supprimées dans SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Suppression de l'installation de SQL-DMO à partir de SQL Server Express  
- SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été supprimé de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Nous vous recommandons de modifier le plus tôt possible les applications qui utilisent actuellement cette fonction. Si vous devez prendre en charge SQL- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DMO pour Express, installez les composants de compatibilité [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] descendante à partir du Feature Pack à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/). Utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) pour les nouveaux travaux de développement.  
+ SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été supprimé de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Nous vous recommandons de modifier le plus tôt possible les applications qui utilisent actuellement cette fonction. Si vous devez prendre en charge SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installez les composants de compatibilité descendante à partir du [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Feature Pack à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/). Utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) pour les nouveaux travaux de développement.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Suppression de l'option de l'Assistant Web  
  L'option `sp_configure` permettant d'activer l'Assistant Web est supprimée de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nous vous recommandons d'utiliser [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à la place.  
   
 ### <a name="surface-area-configuration-tool"></a>Outil Configuration de la surface d’exposition  
- L’outil Configuration de la surface d’exposition n’est [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]plus disponible pour. La table suivante indique ce que vous pouvez utiliser pour configurer des paramètres, des options et des fonctionnalités de composant dans cette version.  
+ L’outil Configuration de la surface d’exposition n’est plus disponible pour [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] . La table suivante indique ce que vous pouvez utiliser pour configurer des paramètres, des options et des fonctionnalités de composant dans cette version.  
   
 |Paramètres de remplacement et fonctionnalités de composant|Comment configurer|  
 |-------------------------------------------------|----------------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "79112224"
   
  <sup>1</sup> Ces paramètres sont valides uniquement pour l’installation.  
   
- <sup>2</sup> À [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]partir de, spécifiez/action = EditionUpgrade pour mettre à niveau [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] une édition existante de vers une édition différente à tout moment sans utiliser le support d’installation d’origine. Pour plus d'informations sur les mises à niveau des versions et éditions prises en charge, consultez [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> À partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , spécifiez/action = EditionUpgrade pour mettre à niveau une édition existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers une édition différente à tout moment sans utiliser le support d’installation d’origine. Pour plus d'informations sur les mises à niveau des versions et éditions prises en charge, consultez [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Pour plus d’informations, consultez [Installer SQL Server 2014 à partir de l’invite de commandes](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

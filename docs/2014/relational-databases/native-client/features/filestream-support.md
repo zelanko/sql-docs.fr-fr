@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046261"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707293"
 ---
 # <a name="filestream-support"></a>Prise en charge de FILESTREAM
   FILESTREAM permet de stocker et d'accéder à de grandes valeurs binaires, soit par le biais de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], soit par accès direct au système de fichiers Windows. Une grande valeur binaire est une valeur supérieure à 2 gigaoctets (Go). Pour plus d'informations sur la prise en charge FILESTREAM améliorée, consultez [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "63046261"
   
  Les fonctions de catalogue telles que SQLColumns dans ODBC ne signalent pas si une colonne est une colonne FILESTREAM.  
   
- Pour créer des colonnes FILESTREAM ou pour détecter les colonnes existantes qui sont des colonnes FILESTREAM, vous `is_filestream` pouvez utiliser la colonne de l’affichage catalogue [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) .  
+ Pour créer des colonnes FILESTREAM ou pour détecter les colonnes existantes qui sont des colonnes FILESTREAM, vous pouvez utiliser la `is_filestream` colonne de l’affichage catalogue [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) .  
   
  Par exemple :  
   
@@ -56,7 +56,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilité de bas niveau  
- Si votre client a été compilé à l’aide [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la version de native client [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)]fournie `varbinary(max)` avec, le comportement est [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]compatible avec. Autrement dit, la taille maximale des données retournées est limitée à 2 Go. Pour les valeurs de résultat supérieures à 2 Go, une troncation se produit et un avertissement « Troncation à droite de la chaîne de données » est retourné.  
+ Si votre client a été compilé à l’aide de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fournie avec [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)] , le comportement est `varbinary(max)` compatible avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Autrement dit, la taille maximale des données retournées est limitée à 2 Go. Pour les valeurs de résultat supérieures à 2 Go, une troncation se produit et un avertissement « Troncation à droite de la chaîne de données » est retourné.  
   
  Lorsque la compatibilité de type de données est définie à 80, le comportement client est cohérent avec le comportement client de bas niveau.  
   

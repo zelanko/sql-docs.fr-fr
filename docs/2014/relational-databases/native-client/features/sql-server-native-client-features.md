@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a516578a0d72028ec8543d136f571ea62d7520b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225562"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707244"
 ---
 # <a name="sql-server-native-client-features"></a>Fonctionnalités de SQL Server Native Client
   En plus de l'exposition des fonctionnalités Windows (anciennement Microsoft) Data Access Components (WDAC), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implémente plusieurs autres fonctionnalités pour tirer parti des fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "63225562"
  Décrit un changement de comportement à compter de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
  [Utilisation de la mise en miroir de bases de données](using-database-mirroring.md)  
- Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge l’utilisation de bases de données mises en miroir, qui est la possibilité de conserver une copie, ou miroir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , d’une base de données sur un serveur de secours.  
+ Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge l’utilisation de bases de données mises en miroir, qui est la possibilité de conserver une copie, ou miroir, d’une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données sur un serveur de secours.  
   
  [Exécution d'opérations asynchrones](performing-asynchronous-operations.md)  
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les opérations asynchrones, à savoir la capacité d'un retour immédiat sans blocage sur le thread appelant.  
@@ -42,7 +42,7 @@ ms.locfileid: "63225562"
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge le type de données XML, qui peut être utilisé comme type de colonne, type de variable, type de paramètre ou type de retour de fonction.  
   
  [Utilisation des types définis par l'utilisateur](using-user-defined-types.md)  
- Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les types définis par l’utilisateur (UDT), qui étendent le système de type SQL en vous permettant de stocker des objets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des structures de données personnalisées dans une base de données.  
+ Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les types définis par l’utilisateur (UDT), qui étendent le système de type SQL en vous permettant de stocker des objets et des structures de données personnalisées dans une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données.  
   
  [Utilisation de types de valeur élevée](using-large-value-types.md)  
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les types de données de valeur élevée, à savoir les types de données LOB.  
@@ -57,7 +57,7 @@ ms.locfileid: "63225562"
  Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la notification des consommateurs en cas de modification de l'ensemble de lignes.  
   
  [Exécution d'opérations de copie en bloc](performing-bulk-copy-operations.md)  
- Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les opérations de copie en bloc qui permettent le transfert de grandes quantités de données vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou à partir d’une table ou d’une vue.  
+ Explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les opérations de copie en bloc qui permettent le transfert de grandes quantités de données vers ou à partir d’une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table ou d’une vue.  
   
  [Utilisation du chiffrement sans validation](using-encryption-without-validation.md)  
  Explique comment utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pour chiffrer les données envoyées au serveur sans validation du certificat.  
@@ -69,7 +69,7 @@ ms.locfileid: "63225562"
  Explique la prise en charge des types UDT volumineux du CLR.  
   
  [Prise en charge de FILESTREAM](filestream-support.md)  
- Décrit la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prise en charge native client pour la fonctionnalité FileStream améliorée.  
+ Décrit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la prise en charge native client pour la fonctionnalité FileStream améliorée.  
   
  [Prise en charge des noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes](service-principal-name-spn-support-in-client-connections.md)  
  Explique comment la prise en charge des noms de principaux du service a été étendue pour permettre l'authentification mutuelle à travers l'ensemble des protocoles.  

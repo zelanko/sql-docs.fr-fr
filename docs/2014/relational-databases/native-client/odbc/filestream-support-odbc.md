@@ -10,20 +10,20 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], ODBC
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec85083e634123497c707f3028285ec1300ff2d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206592"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707094"
 ---
 # <a name="filestream-support-odbc"></a>Prise en charge de FILESTREAM (ODBC)
   ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la fonctionnalité FILESTREAM améliorée. Pour plus d’informations sur cette fonctionnalité, consultez [prise en charge de FileStream](../features/filestream-support.md). Pour obtenir un exemple illustrant la prise en charge d’ODB pour FILESTREAM, consultez [Envoyer et recevoir des données de façon incrémentielle avec filestream &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Pour envoyer et recevoir `varbinary(max)` des valeurs supérieures à 2 Go, une application doit lier des paramètres à l’aide de SQLBindParameter avec `SQL_SS_LENGTH_UNLIMITED`l’ensemble de *colonnes* défini sur et définir `SQL_DATA_AT_EXEC` le contenu de *StrLen_or_IndPtr* sur avant SQLExecDirect ou SQLExecute.  
+ Pour envoyer et recevoir des `varbinary(max)` valeurs supérieures à 2 Go, une application doit lier des paramètres à l’aide de SQLBindParameter avec l’ensemble de *colonnes* défini sur `SQL_SS_LENGTH_UNLIMITED` et définir le contenu de *StrLen_or_IndPtr* sur `SQL_DATA_AT_EXEC` avant SQLExecDirect ou SQLExecute.  
   
  Comme pour tout paramètre de données en cours d’exécution, les données sont fournies avec SQLParamData et SQLPutData.  
   

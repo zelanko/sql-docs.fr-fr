@@ -11,15 +11,15 @@ helpviewer_keywords:
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782904"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706597"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utiliser le fournisseur PowerShell pour les événements étendus
   Vous pouvez gérer les Événements étendus de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le sous-dossier XEvent est disponible sous le lecteur SQLSERVER. Vous pouvez accéder à ce dossier selon l'une des méthodes suivantes :  
@@ -28,21 +28,21 @@ ms.locfileid: "72782904"
   
 -   Dans l’Explorateur d’objets, développez le nom de l’instance, développez **Gestion**, cliquez avec le bouton droit sur **Événements étendus**, puis cliquez sur **Démarrer PowerShell**. Cela démarre PowerShell selon le chemin d'accès suivant :  
   
-     PS SqlServer : \ XEvent\\*nom_serveur*\\*nom_instance*>  
+     PS SqlServer : \ XEvent \\ *nom_serveur* \\ *nom_instance*>  
   
     > [!NOTE]  
     >  Vous pouvez démarrer PowerShell à partir de n'importe quel nœud sous **Événements étendus**. Par exemple, vous pouvez cliquer avec le bouton droit sur **Sessions**, puis cliquer sur **Démarrer PowerShell**. Cela démarre PowerShell à un niveau plus profond, au niveau du dossier Sessions.  
   
- Vous pouvez parcourir l'arborescence des dossiers XEvent pour consulter les sessions Événements étendus existantes, ainsi que leurs événements, cibles et prédicats associés. Par exemple, à partir du chemin d’accès PS\\SqlServer : \ XEvent*ServerName*\\*nom_instance*>, `cd sessions`si vous tapez, appuyez `dir`sur entrée, tapez, puis appuyez sur entrée, vous pouvez voir la liste des sessions stockées sur cette instance. Vous pouvez également voir si la session est en cours (et si c'est le cas, pour combien de temps), et savoir si elle est configurée pour démarrer en même temps que l'instance.  
+ Vous pouvez parcourir l'arborescence des dossiers XEvent pour consulter les sessions Événements étendus existantes, ainsi que leurs événements, cibles et prédicats associés. Par exemple, à partir du chemin d’accès PS SqlServer : \ XEvent \\ *ServerName* \\ *nom_instance*>, si vous tapez `cd sessions` , appuyez sur entrée, tapez `dir` , puis appuyez sur entrée, vous pouvez voir la liste des sessions stockées sur cette instance. Vous pouvez également voir si la session est en cours (et si c'est le cas, pour combien de temps), et savoir si elle est configurée pour démarrer en même temps que l'instance.  
   
- Pour consulter les événements, leurs prédicats et les cibles associés à une session, vous pouvez attribuer le nom de la session aux répertoires, puis voir le dossier des événements ou des cibles. Par exemple, pour afficher les événements et leurs prédicats associés à la session d’intégrité système par défaut, à partir du chemin d’accès PS\\SqlServer : \ XEvent*ServerName*\\*nom_instance*\Sessions `cd system_health\events,`>, tapez Appuyez `dir`sur entrée, tapez, puis appuyez sur entrée.  
+ Pour consulter les événements, leurs prédicats et les cibles associés à une session, vous pouvez attribuer le nom de la session aux répertoires, puis voir le dossier des événements ou des cibles. Par exemple, pour afficher les événements et leurs prédicats associés à la session d’intégrité système par défaut, à partir du chemin d’accès PS SqlServer : \ XEvent \\ *ServerName* \\ *nom_instance*\Sessions>, tapez `cd system_health\events,` Appuyez sur entrée, tapez `dir` , puis appuyez sur entrée.  
   
  Le fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un outil puissant que vous pouvez utiliser pour créer, modifier et gérer des sessions Événements étendus. La section suivante fournit quelques exemples simples d'utilisation de scripts PowerShell avec des Événements étendus.  
   
 ## <a name="examples"></a>Exemples  
  Dans les exemples ci-après, notez les éléments suivants :  
   
--   Les scripts doivent être exécutés à partir de l'\\ invite PS SQLSERVER :> ( `sqlps` disponible en tapant à l’invite de commandes).  
+-   Les scripts doivent être exécutés à partir de l’invite PS SQLSERVER : \\> (disponible en tapant `sqlps` à l’invite de commandes).  
   
 -   Les scripts utilisent l'instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

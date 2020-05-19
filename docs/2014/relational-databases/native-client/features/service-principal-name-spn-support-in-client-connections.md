@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 42b25dfe8f0a39c577e38c6d1ef21c7f3315a89d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231781"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707249"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
   À partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la prise en charge des noms de principal du service (SPN) a été étendue pour permettre une authentification mutuelle entre tous les protocoles. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les noms de principal du service étaient pris en charge uniquement pour Kerberos sur TCP quand le nom de principal du service par défaut de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] était inscrit auprès d’Active Directory.  
@@ -33,10 +33,10 @@ ms.locfileid: "75231781"
 >  Un nom principal de service spécifié par une application cliente est utilisé uniquement lorsqu'une connexion est établie avec la sécurité intégrée Windows.  
   
 > [!TIP]  
->  **Kerberos Configuration Manager pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est un outil de diagnostic qui permet de résoudre les problèmes liés à la connectivité Kerberos avec. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** est un outil de diagnostic qui permet de dépanner les problèmes de connexion que rencontre Kerberos avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  **Kerberos Configuration Manager pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est un outil de diagnostic qui permet de résoudre les problèmes liés à la connectivité Kerberos avec. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** est un outil de diagnostic qui permet de dépanner les problèmes de connexion que rencontre Kerberos avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Pour plus d'informations sur Kerberos, consultez les articles suivants :  
   
@@ -44,13 +44,13 @@ ms.locfileid: "75231781"
   
 -   [Microsoft Kerberos (en anglais)](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Utilisation  
  Le tableau suivant décrit les scénarios les plus courants dans lesquels les applications clientes peuvent activer l'authentification sécurisée.  
   
 |Scénario|Description|  
 |--------------|-----------------|  
 |Une application héritée ne spécifie pas de nom principal de service.|Ce scénario de compatibilité garantit l'absence de tout changement de comportement dans les applications développées pour les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si aucun nom principal de service n'est spécifié, l'application s'appuie sur les noms principaux de service générés et n'a aucune connaissance de la méthode d'authentification utilisée.|  
-|Une application cliente utilisant la version actuelle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client spécifie un nom principal de service dans la chaîne de connexion en tant que compte d'utilisateur de domaine ou compte d'ordinateur de domaine, en tant que nom principal de service spécifique à une instance ou en tant que chaîne définie par l'utilisateur.|Le mot clé `ServerSPN` peut être utilisé dans une chaîne de fournisseur, une chaîne d'initialisation ou une chaîne de connexion afin d'effectuer les opérations suivantes :<br /><br /> -Spécifiez le compte utilisé par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’instance pour une connexion. Cela simplifie l'accès à l'authentification Kerberos. Si un centre de distribution de clés Kerberos (KDC) est présent et si le compte approprié est spécifié, l'utilisation de l'authentification Kerberos est plus probable que celle de l'authentification NTLM. Le centre de distribution de clés se trouve habituellement sur le même ordinateur que le contrôleur de domaine.<br />-Spécifiez un SPN pour rechercher le compte de service de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’instance. Pour chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], deux noms de principal du service par défaut sont générés et peuvent être utilisés à cette fin. Toutefois, il n'est pas certain que ces clés soient présentes dans Active Directory ; par conséquent, dans cette situation, l'authentification Kerberos n'est pas garantie.<br />-Spécifiez un nom de principal du service qui sera utilisé pour rechercher le compte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de service de l’instance. Il peut s'agir de n'importe quelle chaîne définie par l'utilisateur et mappée au compte de service. Dans ce cas, la clé doit être inscrite manuellement dans le centre de distribution de clés et doit répondre aux exigences relatives à un nom principal de service défini par l'utilisateur.<br /><br /> Le mot clé `FailoverPartnerSPN` peut être utilisé pour spécifier le nom principal de service du serveur partenaire de basculement. La plage des valeurs de comptes et de clés Active Directory est identique à celle des valeurs que vous pouvez spécifier pour le serveur principal.|  
+|Une application cliente utilisant la version actuelle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client spécifie un nom principal de service dans la chaîne de connexion en tant que compte d'utilisateur de domaine ou compte d'ordinateur de domaine, en tant que nom principal de service spécifique à une instance ou en tant que chaîne définie par l'utilisateur.|Le mot clé `ServerSPN` peut être utilisé dans une chaîne de fournisseur, une chaîne d'initialisation ou une chaîne de connexion afin d'effectuer les opérations suivantes :<br /><br /> -Spécifiez le compte utilisé par l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance pour une connexion. Cela simplifie l'accès à l'authentification Kerberos. Si un centre de distribution de clés Kerberos (KDC) est présent et si le compte approprié est spécifié, l'utilisation de l'authentification Kerberos est plus probable que celle de l'authentification NTLM. Le centre de distribution de clés se trouve habituellement sur le même ordinateur que le contrôleur de domaine.<br />-Spécifiez un SPN pour rechercher le compte de service de l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Pour chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], deux noms de principal du service par défaut sont générés et peuvent être utilisés à cette fin. Toutefois, il n'est pas certain que ces clés soient présentes dans Active Directory ; par conséquent, dans cette situation, l'authentification Kerberos n'est pas garantie.<br />-Spécifiez un nom de principal du service qui sera utilisé pour rechercher le compte de service de l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Il peut s'agir de n'importe quelle chaîne définie par l'utilisateur et mappée au compte de service. Dans ce cas, la clé doit être inscrite manuellement dans le centre de distribution de clés et doit répondre aux exigences relatives à un nom principal de service défini par l'utilisateur.<br /><br /> Le mot clé `FailoverPartnerSPN` peut être utilisé pour spécifier le nom principal de service du serveur partenaire de basculement. La plage des valeurs de comptes et de clés Active Directory est identique à celle des valeurs que vous pouvez spécifier pour le serveur principal.|  
 |Une application ODBC spécifie un nom principal de service en tant qu'attribut de connexion pour le serveur principal ou le partenaire de basculement.|L'attribut de connexion `SQL_COPT_SS_SERVER_SPN` peut être utilisé pour spécifier le nom principal de service d'une connexion au serveur principal.<br /><br /> L'attribut de connexion `SQL_COPT_SS_FAILOVER_PARTNER_SPN` peut être utilisé pour spécifier le nom principal de service du serveur partenaire de basculement.|  
 |Une application OLE DB spécifie un nom principal de service en tant que propriété d'initialisation d'une source de données pour le serveur principal ou pour un partenaire de basculement.|La propriété de connexion `SSPROP_INIT_SERVER_SPN` du jeu de propriétés `DBPROPSET_SQLSERVERDBINIT` peut être utilisée pour spécifier le nom principal de service d'une connexion.<br /><br /> La propriété de connexion `SSPROP_INIT_FAILOVER_PARTNER_SPN` dans `DBPROPSET_SQLSERVERDBINIT` peut être utilisée pour spécifier le nom principal de service du serveur partenaire de basculement.|  
 |Un utilisateur spécifie un nom principal de service pour un serveur ou un partenaire de basculement dans un nom de source de données ODBC.|Le nom principal de service peut être spécifié dans un nom de source de données ODBC via les boîtes de dialogue d'installation du nom de la source de données.|  
@@ -94,13 +94,13 @@ ms.locfileid: "75231781"
   
 |Syntaxe|Description|  
 |------------|-----------------|  
-|MSSQLSvc/*FQDN*|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *fqdn* est un nom de domaine complet.|  
+|MSSQLSvc/*FQDN*|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *FQDN* est un nom de domaine complet.|  
 |MSSQLSvc/*fqdn*:*port*|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé.<br /><br /> *port* est un numéro de port TCP.|  
 |MSSQLSvc/*FQDN*:*nom_instance*|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *InstanceName* est le nom d’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Nom principal de service mappé aux comptes d'ordinateur intégrés qui sont inscrits automatiquement par Windows.|  
-|*Domaine du nom d’utilisateur*@*Domain*|Spécification directe d'un compte de domaine.<br /><br /> *Username* est un nom de compte d'utilisateur Windows.<br /><br /> *Domain* est un nom de domaine ou nom de domaine complet Windows.|  
-|*MachineName*$@*Domaine* MachineName|Spécification directe d'un compte d'ordinateur.<br /><br /> (Si le serveur auquel vous vous connectez s’exécute sous les comptes système local ou service réseau, pour accéder à l' `ServerSPN` authentification Kerberos, peut être au format de*domaine* *MachineName*$@.)|  
-|*KDCKey*/*MachineName*|Nom principal de service spécifié par l'utilisateur.<br /><br /> *KDCKey* est une chaîne alphanumérique conforme aux règles d'une clé du centre de distribution de clés.|  
+|*Nom d’utilisateur* @ *Domaine*|Spécification directe d'un compte de domaine.<br /><br /> *Username* est un nom de compte d'utilisateur Windows.<br /><br /> *Domain* est un nom de domaine ou nom de domaine complet Windows.|  
+|*Nomordinateur* $@ *Domaine*|Spécification directe d'un compte d'ordinateur.<br /><br /> (Si le serveur auquel vous vous connectez s’exécute sous les comptes système local ou service réseau, pour accéder à l’authentification Kerberos, `ServerSPN` peut *MachineName*être au format de $@ *domaine* MachineName.)|  
+|*KDCKey* / *Nomordinateur*|Nom principal de service spécifié par l'utilisateur.<br /><br /> *KDCKey* est une chaîne alphanumérique conforme aux règles d'une clé du centre de distribution de clés.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Syntaxe ODBC et OLE DB prenant en charge les noms principaux de service  
  Pour plus d'informations spécifiques à la syntaxe, consultez les rubriques suivantes :  

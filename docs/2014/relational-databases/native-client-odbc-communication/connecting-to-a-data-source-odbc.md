@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data sources
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe7f86c2ca53ef4534abd1024d317eee0c1b3c99
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63075180"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705792"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connexion à une source de données (ODBC)
   Après avoir alloué des handles d'environnement et de connexion et avoir défini tous les attributs de connexion, l'application se connecte à la source de données ou au pilote. Trois fonctions vous permettent de vous connecter :  
@@ -97,7 +97,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- Vous pouvez ignorer les messages 5701 et 5703 ; ils sont fournis uniquement à titre d'information. En revanche, n'ignorez pas le code de retour SQL_SUCCESS_WITH_INFO car des messages autres que 5701 ou 5703 peuvent être retournés. Par exemple, si un pilote se connecte à un serveur exécutant une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance de avec des procédures stockées de catalogue obsolètes, l’une des erreurs retournées via **SQLGetDiagRec** après une SQL_SUCCESS_WITH_INFO est la suivante :  
+ Vous pouvez ignorer les messages 5701 et 5703 ; ils sont fournis uniquement à titre d'information. En revanche, n'ignorez pas le code de retour SQL_SUCCESS_WITH_INFO car des messages autres que 5701 ou 5703 peuvent être retournés. Par exemple, si un pilote se connecte à un serveur exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec des procédures stockées de catalogue obsolètes, l’une des erreurs retournées via **SQLGetDiagRec** après une SQL_SUCCESS_WITH_INFO est la suivante :  
   
 ```  
 SqlState:   01000  
@@ -109,7 +109,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- La fonction de gestion des erreurs d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application pour les connexions doit appeler **SQLGetDiagRec** jusqu’à ce qu’elle retourne SQL_NO_DATA. Il doit ensuite agir sur tous les messages autres que ceux avec un code *pfNative* de 5701 ou 5703.  
+ La fonction de gestion des erreurs d’une application pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions doit appeler **SQLGetDiagRec** jusqu’à ce qu’elle retourne SQL_NO_DATA. Il doit ensuite agir sur tous les messages autres que ceux avec un code *pfNative* de 5701 ou 5703.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Communication avec SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  

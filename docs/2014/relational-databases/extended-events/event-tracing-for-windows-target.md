@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519303"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706835"
 ---
 # <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
   Avant d'utiliser le suivi d'événements pour Windows (ETW) comme cible, il est recommandé d'avoir une connaissance pratique du Suivi d'événements pour Windows. Le suivi ETW est utilisé conjointement avec les Événements étendus ou en tant que consommateur d'événements des Événements étendus. Les liens externes suivants fournissent un point de départ pour obtenir des informations générales sur le suivi ETW :  
@@ -54,7 +54,7 @@ ms.locfileid: "62519303"
 |default_etw_session_logfile_path|Toute chaîne incluant jusqu'à 256 caractères. Cette valeur est facultative.|Chemin d'accès du fichier journal pour la session Événements étendus. Par défaut, il s'agit de %TEMP%\ XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Entier quelconque non signé. Cette valeur est facultative.|Taille du fichier journal, en mégaoctets (Mo), de la session Événements étendus. La valeur par défaut est 20 Mo.|  
 |default_etw_session_buffer_size_kb|Entier quelconque non signé. Cette valeur est facultative.|Taille des tampons en mémoire, en kilo-octets (Ko), pour la session Événements étendus. La valeur par défaut est 128 Ko.|  
-|retries|Entier quelconque non signé.|Nombre de nouvelles tentatives de publication de l'événement dans le sous-système ETW avant la suppression de l'événement. La valeur par défaut est 0.|  
+|retries|Entier quelconque non signé.|Nombre de nouvelles tentatives de publication de l'événement dans le sous-système ETW avant la suppression de l'événement. La valeur par défaut est 0.|  
   
  La configuration de ces paramètres est facultative. La cible ETW utilise les valeurs par défaut de ces paramètres.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62519303"
     > [!IMPORTANT]  
     >  Le chemin d'accès ne peut pas être modifié une fois la première session démarrée.  
   
--   Les fichiers format MOF (MOF) se trouvent dans * \<le chemin d’installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
+-   Les fichiers format MOF (MOF) se trouvent dans * \< le chemin d’installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
  Pour ajouter la cible ETW à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  

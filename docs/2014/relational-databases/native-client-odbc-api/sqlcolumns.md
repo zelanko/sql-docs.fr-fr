@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92f7fbce5917826915186e9782f0f91d51ae8875
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067716"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706334"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns`retourne SQL_SUCCESS si des valeurs existent ou non pour les paramètres *nomcatalogue*, *TableName*ou *ColumnName* . **SQLFetch** retourne SQL_NO_DATA lorsque des valeurs non valides sont utilisées dans ces paramètres.  
@@ -31,7 +31,7 @@ ms.locfileid: "63067716"
   
  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les informations de création de rapport pour les tables des serveurs liés en acceptant un nom en deux parties pour le paramètre *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
- Pour ODBC 2. *x* les applications qui n’utilisent pas *TableName*de caractères `SQLColumns` génériques dans TableName, retourne des informations sur toutes les tables dont les noms correspondent à *TableName* et qui sont détenues par l’utilisateur actuel. Si l’utilisateur actuel ne possède pas de table dont le *TableName* nom correspond au `SQLColumns` paramètre TableName, retourne des informations sur toutes les tables détenues par d’autres utilisateurs où le nom de la table correspond au paramètre *TableName* . Pour ODBC 2. *x* les applications utilisant des caractères `SQLColumns` génériques, retourne toutes les tables dont les noms correspondent à *TableName*. Pour ODBC 3. *x* applications `SQLColumns` retourne toutes les tables dont les noms correspondent à *TableName* , quel que soit le propriétaire ou si des caractères génériques sont utilisés.  
+ Pour ODBC 2. *x* les applications qui n’utilisent pas de caractères génériques dans *TableName*, `SQLColumns` retourne des informations sur toutes les tables dont les noms correspondent à *TableName* et qui sont détenues par l’utilisateur actuel. Si l’utilisateur actuel ne possède pas de table dont le nom correspond au paramètre *TableName* , `SQLColumns` retourne des informations sur toutes les tables détenues par d’autres utilisateurs où le nom de la table correspond au paramètre *TableName* . Pour ODBC 2. *x* les applications utilisant des caractères génériques, `SQLColumns` retourne toutes les tables dont les noms correspondent à *TableName*. Pour ODBC 3. *x* applications `SQLColumns` retourne toutes les tables dont les noms correspondent à *TableName* , quel que soit le propriétaire ou si des caractères génériques sont utilisés.  
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par le jeu de résultats :  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63067716"
 |SS_UDT_SCHEMA_NAME|Nom du schéma contenant le type défini par l’utilisateur.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Nom qualifié de l'assembly du type défini par l'utilisateur (UDT).|  
   
- Pour les UDT, la colonne TYPE_NAME existante est utilisée pour indiquer le nom du type défini par l’utilisateur ; par conséquent, aucune colonne supplémentaire ne doit être ajoutée au jeu de résultats `SQLColumns` de ou [SQLProcedureColumns](sqlprocedurecolumns.md). Le champ DATA_TYPE pour un paramètre ou une colonne de type UDT est SQL_SS_UDT.  
+ Pour les UDT, la colonne TYPE_NAME existante est utilisée pour indiquer le nom du type défini par l’utilisateur ; par conséquent, aucune colonne supplémentaire ne doit être ajoutée au jeu de résultats de `SQLColumns` ou [SQLProcedureColumns](sqlprocedurecolumns.md). Le champ DATA_TYPE pour un paramètre ou une colonne de type UDT est SQL_SS_UDT.  
   
  Pour le type UDT des paramètres, vous pouvez utiliser les nouveaux descripteurs spécifiques au pilote définis ci-dessus pour obtenir ou définir les propriétés de métadonnées supplémentaires d'un UDT, si le serveur retourne ou nécessite ces informations.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63067716"
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns et paramètres table  
  Le jeu de résultats retourné par SQLColumns dépend du paramètre de SQL_SOPT_SS_NAME_SCOPE. Pour plus d’informations, consultez [SQLSetStmtAttr](sqlsetstmtattr.md). Les colonnes suivantes ont été ajoutées pour les paramètres table :  
   
-|Nom de la colonne|Type de données|Contents|  
+|Nom de la colonne|Type de données|Contenu|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Pour une colonne d'un TABLE_TYPE, SQL_TRUE si la colonne est une colonne calculée ; sinon, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE si la colonne est une colonne d'identité ; sinon, SQL_FALSE.|  
@@ -82,7 +82,7 @@ ms.locfileid: "63067716"
 |SS_IS_SPARSE|`Smallint`|Si la colonne est une colonne éparse, SQL_TRUE ; sinon, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|Si la colonne est la colonne `column_set`, SQL_TRUE ; sinon, SQL_FALSE.|  
   
- En conformité avec la spécification ODBC, SS_IS_SPARSE et SS_IS_COLUMN_SET apparaissent avant toutes les colonnes spécifiques au pilote qui ont été ajoutées aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], et après toutes les colonnes mandatées par ODBC lui-même.  
+ En conformité avec la spécification ODBC, SS_IS_SPARSE et SS_IS_COLUMN_SET apparaissent avant toutes les colonnes spécifiques au pilote qui ont été ajoutées aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , et après toutes les colonnes mandatées par ODBC lui-même.  
   
  Le jeu de résultats retourné par SQLColumns dépend du paramètre de SQL_SOPT_SS_NAME_SCOPE. Pour plus d’informations, consultez [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
