@@ -13,20 +13,20 @@ helpviewer_keywords:
 - ODBC cursors, isolation levels
 - row versioning [SQL Server], ODBC
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fef68bfdb62527f7b631b8d7433e095eba4d1c88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c183af3a8db4ad9e08f15083462806244aa8187
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207144"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705560"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Niveau d'isolation des transactions de curseur
   Le comportement de verrouillage complet des curseurs est basé sur une interaction entre les attributs de concurrence et le niveau d'isolation de la transaction défini par le client. Les clients ODBC définissent le niveau d’isolation des transactions à l’aide des attributs [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION ou SQL_COPT_SS_TXN_ISOLATION. Vous pouvez déterminer le comportement de verrouillage d'un environnement de curseur particulier en associant les comportements de verrouillage des options de concurrence et de niveaux d'isolation des transactions.  
   
- Les niveaux d’isolation des transactions de curseurs suivants [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont pris en charge par le pilote ODBC Native Client :  
+ Les niveaux d’isolation des transactions de curseurs suivants sont pris en charge par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client :  
   
 -   Lecture validée (SQL_TXN_READ_COMMITTED)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63207144"
   
 -   Instantané (SQL_TXN_SS_SNAPSHOT)  
   
- Notez que l’API ODBC spécifie des niveaux d’isolation des transactions supplémentaires, mais ceux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -ci [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas pris en charge par ou par le pilote ODBC Native Client.  
+ Notez que l’API ODBC spécifie des niveaux d’isolation des transactions supplémentaires, mais ceux-ci ne sont pas pris en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés de curseur](cursor-properties.md)  

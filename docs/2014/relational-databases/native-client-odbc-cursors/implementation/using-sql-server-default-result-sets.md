@@ -14,15 +14,15 @@ helpviewer_keywords:
 - result sets [ODBC], default
 - ODBC applications, cursors
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d7101cf4775e5280c22cc27ecae009410d231d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe9ecf81abe12da2db3e7183fd517e01947c2942
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511684"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705641"
 ---
 # <a name="using-sql-server-default-result-sets"></a>Utilisation de jeux de résultats SQL Server par défaut
   Les attributs de curseur ODBC par défaut sont les suivants :  
@@ -33,7 +33,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_CONCURRENCY, SQL_CONCUR_READ_ONLY, SQL_IS_INTEGER
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);  
 ```  
   
- Chaque fois que ces attributs sont définis sur leurs valeurs par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] défaut, le pilote ODBC native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client utilise un jeu de résultats par défaut. Les jeux de résultats par défaut peuvent être utilisés pour toute instruction SQL prise en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s'avèrent la méthode de transfert la plus efficace d'un jeu de résultats entier au client.  
+ Chaque fois que ces attributs sont définis sur leurs valeurs par défaut, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client utilise un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jeu de résultats par défaut. Les jeux de résultats par défaut peuvent être utilisés pour toute instruction SQL prise en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s'avèrent la méthode de transfert la plus efficace d'un jeu de résultats entier au client.  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]a introduit la prise en charge de MARS (Multiple Active Result Sets); les applications peuvent désormais avoir plusieurs jeux de résultats par défaut actifs par connexion. MARS n'est pas activé par défaut.  
   

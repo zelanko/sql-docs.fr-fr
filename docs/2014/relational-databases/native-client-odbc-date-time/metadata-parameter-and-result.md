@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032340"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705441"
 ---
 # <a name="parameter-and-result-metadata"></a>Métadonnées de paramètres et de résultats
   Cette rubrique décrit ce qui est retourné dans les champs de descripteur de paramètre d'implémentation (IPD) et de descripteur de ligne d'implémentation (IRD) pour les types de données de date et d'heure.  
@@ -40,7 +40,7 @@ ms.locfileid: "63032340"
 |SQL_DESC_TYPE_NAME|`date`|`time`|`smalldatetime` dans IRD, `datetime2` dans IPD|`datetime` dans IRD, `datetime2` dans IPD|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|NON APPLICABLE|NON APPLICABLE|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|NON APPLICABLE|  
+|SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
   
  Il y a parfois des discontinuités dans les plages de valeurs. Par exemple, 9 est manquant dans 8,10.. 6. Cela est dû à l'ajout d'une virgule décimale lorsque la précision fractionnaire est supérieure à zéro.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63032340"
   
  Lorsque SQL_CA_SS_SERVER_TYPE est défini par un appel à SQLSetDescField, sa valeur doit être SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME ou SQL_SS_TYPE_DATETIME. Dans le cas contraire, SQL_ERROR est retourné et un enregistrement de diagnostic est consigné avec SQLState HY092 et le message « Identificateur d'option/attribut non valide ».  
   
- L'attribut SQL_CA_SS_SERVER_TYPE peut être utilisé par les applications qui dépendent des fonctionnalités prises en charge par `datetime` et `smalldatetime`, mais pas `datetime2`. Par exemple, `datetime2` requiert l’utilisation des fonctions `dateadd` et **datediif** , tandis `datetime` que `smalldatetime` et autorisent également les opérateurs arithmétiques. La plupart des applications n'auront pas besoin d'utiliser cet attribut et son utilisation doit être évitée.  
+ L'attribut SQL_CA_SS_SERVER_TYPE peut être utilisé par les applications qui dépendent des fonctionnalités prises en charge par `datetime` et `smalldatetime`, mais pas `datetime2`. Par exemple, `datetime2` requiert l’utilisation des `dateadd` fonctions et **datediif** , tandis que `datetime` et `smalldatetime` autorisent également les opérateurs arithmétiques. La plupart des applications n'auront pas besoin d'utiliser cet attribut et son utilisation doit être évitée.  
   
 ## <a name="information-returned-in-ird-fields"></a>Informations retournées dans les champs IRD  
  Les informations suivantes sont retournées dans les champs IRD :  

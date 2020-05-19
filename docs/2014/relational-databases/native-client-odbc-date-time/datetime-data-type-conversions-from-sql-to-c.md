@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ef4d3f57f70641b738b21f86d55021e14606d57
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207037"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705482"
 ---
 # <a name="conversions-from-sql-to-c"></a>Conversions de SQL à C
   Le tableau suivant répertorie les aspects à prendre en compte lorsque vous effectuez une conversion de types date/heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en types C.  
@@ -29,16 +29,16 @@ ms.locfileid: "63207037"
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
 |SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13, 23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10, 23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7, 8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|OK|21|16|16|  
+|SQL_TYPE_DATE|Ok|12|13|12|13, 23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|Ok|10, 23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7, 8|Ok|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|Ok|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Liste des symboles  
   
 |Symbole|Signification|  
 |------------|-------------|  
-|OK|Aucun problème de conversion.|  
+|Ok|Aucun problème de conversion.|  
 |1|Les règles antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] s'appliquent.|  
 |2|Les espaces de début et de fin sont ignorés.|  
 |3|La chaîne est analysée en date, time, timezone ou timezoneoffset et autorise jusqu'à neuf chiffres pour les fractions de seconde. Si un timezoneoffset est analysé, l'heure est convertie en fuseau horaire du client. Si une erreur se produit pendant cette conversion, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « DateTime Field overflow ».|  

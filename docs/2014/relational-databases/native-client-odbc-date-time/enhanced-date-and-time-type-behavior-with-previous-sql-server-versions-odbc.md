@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d400faa496740182a1407f89e095ebaccf884b3a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140631"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705473"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportement des types de date et d'heure améliorés avec les versions SQL Server antérieures (ODBC)
   Cette rubrique décrit le comportement attendu lorsqu'une application cliente qui utilise les fonctionnalités améliorées de date et d'heure communique avec une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], et lorsqu'une application cliente qui utilise Microsoft Data Access Components, Windows Data Access Components ou une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client antérieure à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envoie des commandes à un serveur qui prend en charge les fonctionnalités améliorées de date et d'heure.  
@@ -29,23 +29,23 @@ ms.locfileid: "63140631"
   
  Les métadonnées d’instruction retournées par SQLDescribeCol, SQLDescribeParam, SQGetDescField et SQLColAttribute retournent des métadonnées cohérentes avec le type de niveau de détail à tous égards, y compris le nom de type. Un exemple d'un tel type de bas niveau est `nvarchar`.  
   
- Quand une application cliente de bas niveau s’exécute [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sur un serveur (ou version ultérieure) sur lequel des modifications de schéma ont été apportées aux types de date/heure, le comportement attendu est le suivant :  
+ Quand une application cliente de bas niveau s’exécute sur un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] serveur (ou version ultérieure) sur lequel des modifications de schéma ont été apportées aux types de date/heure, le comportement attendu est le suivant :  
   
 |Type SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Type  (ou version ultérieure)|Type de client ODBC|Conversion des résultats (de SQL vers C)|Conversion des paramètres (de C vers SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
+|Datetime|Date|SQL_C_TYPE_DATE|Ok|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Champs d'heure définis à zéro.|OK (2)<br /><br /> Échoue si le champ d'heure n'est pas nul. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
+||Time(0)|SQL_C_TYPE_TIME|Ok|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Champs de date définis à la date actuelle.|OK (2)<br /><br /> La date est ignorée. Échoue si les fractions de seconde ne sont pas égales à zéro. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(7)|SQL_C_TIME|Échec : littéral d’heure non valide.|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Échec : littéral d’heure non valide.|OK (1)|  
-||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|La valeur sera arrondie à 1/300e de seconde par la conversion cliente.|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|Ok|OK (1)|  
+||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|Ok|La valeur sera arrondie à 1/300e de seconde par la conversion cliente.|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|Ok|Ok|  
 |||SQL_C_TYPE_TIMESTAMP|Champs d'heure définis à zéro.|OK (2)<br /><br /> Échoue si le champ d'heure n'est pas nul. Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
+||Time(0)|SQL_C_TYPE_TIME|Ok|Ok|  
 |||SQL_C_TYPE_TIMESTAMP|Champs de date définis à la date actuelle.|OK (2)<br /><br /> La date est ignorée. Échoue si les fractions de seconde ne sont pas nulles.<br /><br /> Fonctionne avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|Ok|Ok|  
   
 ## <a name="key-to-symbols"></a>Liste des symboles  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - implicit cursor conversions
 - cursors [ODBC], implicit cursor conversions
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 300ce02538a59ef043424d866ad4ce49267fcfa4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99395f9a8dbcb812f5a7764634d42489526875af
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711567"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705614"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Conversions de curseurs implicites (ODBC)
   Les applications peuvent demander un type de curseur à l’aide de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) , puis exécuter une instruction SQL qui n’est pas prise en charge par les curseurs côté serveur du type demandé. Un appel à **SQLExecute** ou à **SQLExecDirect** retourne SQL_SUCCESS_WITH_INFO et **SQLGetDiagRec** retourne :  
