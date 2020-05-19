@@ -15,24 +15,24 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920386"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748733"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF, propriétés (ADO)
 -   **BOF** Indique que la position actuelle de l’enregistrement est antérieure au premier enregistrement d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 -   **EOF** Indique que la position actuelle de l’enregistrement est après le dernier enregistrement d’un objet **Recordset** .  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Les propriétés **BOF** et **EOF** retournent des valeurs **booléennes** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez les propriétés **BOF** et **EOF** pour déterminer si un objet **Recordset** contient des enregistrements ou si vous avez dépassé les limites d’un objet **Recordset** lorsque vous passez d’un enregistrement à l’autre.  
   
  La propriété **BOF** retourne **true** (-1) si la position actuelle de l’enregistrement est antérieure au premier enregistrement et **false** (0) si la position actuelle de l’enregistrement est égale ou postérieure au premier enregistrement.  
@@ -49,8 +49,8 @@ ms.locfileid: "67920386"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Déplacer < 0|Déplacer 0|MoveNext<br /><br /> Déplacer > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**true**, **EOF**=**false**|Autorisé|Error|Error|Autorisé|  
-|**BOF**=**false**, **EOF**=**true**|Autorisé|Autorisé|Error|Error|  
+|**BOF** = **True**, **EOF** = **false**|Autorisé|Error|Error|Autorisé|  
+|**BOF** = **False**, **EOF** = **true**|Autorisé|Autorisé|Error|Error|  
 |Les deux sont **vraies**|Error|Error|Error|Error|  
 |Les deux **fausses**|Autorisé|Autorisé|Autorisé|Autorisé|  
   

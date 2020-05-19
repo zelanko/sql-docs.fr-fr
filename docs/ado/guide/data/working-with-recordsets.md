@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923415"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748341"
 ---
 # <a name="working-with-recordsets"></a>Utilisation des recordsets
 L’objet **Recordset** offre des fonctionnalités intégrées qui vous permettent de réorganiser l’ordre des données dans le jeu de résultats, de rechercher un enregistrement spécifique en fonction des critères que vous fournissez, et même d’optimiser ces opérations de recherche à l’aide d’index. Le fait que ces fonctionnalités soient disponibles dépend du fournisseur et, dans certains cas, de la propriété [index](../../../ado/reference/ado-api/index-property.md) (la structure de la source de données elle-même).  
@@ -33,7 +33,7 @@ L’objet **Recordset** offre des fonctionnalités intégrées qui vous permette
   
  Si vous affectez une chaîne vide à la propriété de **Tri** , les lignes sont réinitialisées dans leur ordre d’origine et les index temporaires sont supprimés. Les index existants ne seront pas supprimés.  
   
- Supposons qu’un **Recordset** contienne trois champs nommés *FirstName*, *MiddleInitial*et *LastName*. Définissez la propriété de **Tri** sur la chaîne`lastName DESC, firstName ASC`«», ce qui permet d’ordonner le **jeu d’enregistrements** par nom de famille dans l’ordre décroissant, puis par le prénom dans l’ordre croissant. L’initiale du deuxième prénom est ignorée.  
+ Supposons qu’un **Recordset** contienne trois champs nommés *FirstName*, *MiddleInitial*et *LastName*. Définissez la propriété de **Tri** sur la chaîne « `lastName DESC, firstName ASC` », ce qui permet d’ordonner le **jeu d’enregistrements** par nom de famille dans l’ordre décroissant, puis par le prénom dans l’ordre croissant. L’initiale du deuxième prénom est ignorée.  
   
  Aucun champ référencé dans une chaîne de critères de tri ne peut être nommé « ASC » ou « DESC », car ces noms sont en conflit avec les mots clés **ASC** et **desc**. Donnez à un champ qui a un nom en conflit un alias à l’aide du mot clé **As** dans la requête qui retourne le **Recordset**.  
   
@@ -53,13 +53,13 @@ L’objet **Recordset** offre des fonctionnalités intégrées qui vous permette
   
  Seul un nom de colonne unique peut être spécifié pour le critère. En d’autres termes, cette méthode ne prend pas en charge les recherches multicolonnes.  
   
- L’opérateur de comparaison pour le critère peut être**>**"" (supérieur à),**\<**"" (inférieur à), "=" (égal à), ">=" (supérieur ou égal à), "<=" (inférieur ou égal à), "<>" (différent de) ou "like" (critères spéciaux).  
+ L’opérateur de comparaison pour le critère peut être " **>** " (supérieur à), " **\<** " (inférieur à), "=" (égal à), ">=" (supérieur ou égal à), "<=" (inférieur ou égal à), "<>" (différent de) ou "like" (critères spéciaux).  
   
  La valeur de critère peut être une chaîne, un nombre à virgule flottante ou une date. Les valeurs de chaîne sont délimitées par des guillemets simples ou par des signes dièse (#) (par exemple, "State = 'WA" "ou" state = #WA # "). Les valeurs de date sont délimitées par des signes « # » (dièse) (par exemple, « start_date > #7/22/97 # »).  
   
- Si l’opérateur de comparaison est « like », la valeur de chaîne peut contenir un astérisque (*) pour rechercher une ou plusieurs occurrences de n’importe quel caractère ou sous-chaîne. Par exemple, « État comme «\*m »» correspond à Maine et Massachusetts. Vous pouvez également utiliser des astérisques de début et de fin pour rechercher une sous-chaîne contenue dans les valeurs. Par exemple, « State like\*\*» correspond à Alaska, Arkansas et Massachusetts.  
+ Si l’opérateur de comparaison est « like », la valeur de chaîne peut contenir un astérisque (*) pour rechercher une ou plusieurs occurrences de n’importe quel caractère ou sous-chaîne. Par exemple, « État comme «m » \* » correspond à Maine et Massachusetts. Vous pouvez également utiliser des astérisques de début et de fin pour rechercher une sous-chaîne contenue dans les valeurs. Par exemple, « State like » \* \* correspond à Alaska, Arkansas et Massachusetts.  
   
- Les astérisques peuvent être utilisés uniquement à la fin d’une chaîne de critères, ou au début et à la fin d’une chaîne de critères, comme indiqué plus haut. Vous ne pouvez pas utiliser l’astérisque comme caractère générique de début (« * STR ») ou un\*caractère générique incorporé (r). Cela génère une erreur.  
+ Les astérisques peuvent être utilisés uniquement à la fin d’une chaîne de critères, ou au début et à la fin d’une chaîne de critères, comme indiqué plus haut. Vous ne pouvez pas utiliser l’astérisque comme caractère générique de début (« * STR ») ou un caractère générique incorporé ( \* r). Cela génère une erreur.  
   
 ### <a name="seek-and-index"></a>Recherche et index  
  Utilisez la méthode **Seek** avec la propriété **index** si le fournisseur sous-jacent prend en charge les index sur l’objet **Recordset** . Utilisez la méthode [supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** pour déterminer si le fournisseur sous-jacent prend en charge la **recherche**, et la méthode **prend en charge (adIndex)** pour déterminer si le fournisseur prend en charge les index. (Par exemple, le [fournisseur de OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) prend en charge la **recherche** et l' **indexation**.)  
@@ -83,16 +83,16 @@ L’objet **Recordset** offre des fonctionnalités intégrées qui vous permette
  Pour supprimer un filtre d’un **jeu d’enregistrements**, utilisez la constante **adFilterNone** . La définition de la propriété **Filter** sur une chaîne de longueur nulle ("") a le même effet que l’utilisation de la constante **adFilterNone** .  
   
 ### <a name="filtering-with-a-criteria-string"></a>Filtrage à l’aide d’une chaîne de critères  
- La chaîne de critères est constituée de clauses au format *nom_champ opérateur valeur* (par exemple `"LastName = 'Smith'"`,). Vous pouvez créer des clauses composées en concaténant des clauses individuelles avec **et** ( `"LastName = 'Smith' AND FirstName = 'John'"`par exemple,) et **ou** ( `"LastName = 'Smith' OR LastName = 'Jones'"`par exemple,). Utilisez les instructions suivantes pour les chaînes de critères :  
+ La chaîne de critères est constituée de clauses au format *nom_champ opérateur valeur* (par exemple, `"LastName = 'Smith'"` ). Vous pouvez créer des clauses composées en concaténant des clauses individuelles avec **et** (par exemple, `"LastName = 'Smith' AND FirstName = 'John'"` ) et **ou** (par exemple, `"LastName = 'Smith' OR LastName = 'Jones'"` ). Utilisez les instructions suivantes pour les chaînes de critères :  
   
 -   *FieldName* doit être un nom de champ valide du **Recordset**. Si le nom du champ contient des espaces, vous devez placer le nom entre crochets.  
   
--   *L’opérateur* doit être l’un des suivants **\<**: **>**, ** \< **, **>=**, **<>**, **=**, ou **Like**.  
+-   L' *opérateur* doit être l’un des suivants : **\<** , **>** , **\<=** ,,, **>=** **<>** **=** ou **Like**.  
   
--   La *valeur* est la valeur avec laquelle vous allez comparer les valeurs de champ (par `'Smith'`exemple `#8/24/95#` `12.345`,,, `$50.00`ou). Utilisez des guillemets simples (') avec des chaînes et des`#`signes dièse () avec des dates. Pour les nombres, vous pouvez utiliser des points décimaux, des signes dollar et une notation scientifique. Si l' *opérateur* est **comme**, la *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque (\*) et le signe de pourcentage (%) les caractères génériques sont autorisés et doivent être le dernier caractère de la chaîne. La *valeur* ne peut pas être null.  
+-   La *valeur* est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple,,, `'Smith'` `#8/24/95#` `12.345` ou `$50.00` ). Utilisez des guillemets simples (') avec des chaînes et des signes dièse ( `#` ) avec des dates. Pour les nombres, vous pouvez utiliser des points décimaux, des signes dollar et une notation scientifique. Si l' *opérateur* est **comme**, la *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque ( \* ) et le signe de pourcentage (%) les caractères génériques sont autorisés et doivent être le dernier caractère de la chaîne. La *valeur* ne peut pas être null.  
   
     > [!NOTE]
-    >  Pour inclure des guillemets simples (') dans la *valeur*de filtre, utilisez deux guillemets simples pour en représenter un. Par exemple, pour filtrer sur *O’Malley*, la chaîne de critères doit `"col1 = 'O''Malley'"`être. Pour inclure des guillemets simples à la fois au début et à la fin de la valeur de filtre, mettez la chaîne entre signes dièse (#). Par exemple, pour filtrer sur *« 1 »*, la chaîne de critères doit `"col1 = #'1'#"`être.  
+    >  Pour inclure des guillemets simples (') dans la *valeur*de filtre, utilisez deux guillemets simples pour en représenter un. Par exemple, pour filtrer sur *O’Malley*, la chaîne de critères doit être `"col1 = 'O''Malley'"` . Pour inclure des guillemets simples à la fois au début et à la fin de la valeur de filtre, mettez la chaîne entre signes dièse (#). Par exemple, pour filtrer sur *« 1 »*, la chaîne de critères doit être `"col1 = #'1'#"` .  
   
  Il n’existe aucune priorité entre **and** et **or**. Les clauses peuvent être regroupées entre parenthèses. Toutefois, vous ne pouvez pas regrouper les clauses jointes par **ou** , puis joindre le groupe à une autre clause avec un et, comme suit.  
   
@@ -106,7 +106,7 @@ L’objet **Recordset** offre des fonctionnalités intégrées qui vous permette
 (LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')  
 ```  
   
- Dans une clause **Like** , vous pouvez utiliser un caractère générique au début et à la fin du modèle (par exemple `LastName Like '*mit*'`,) ou uniquement à la fin du modèle (par exemple, `LastName Like 'Smit*'`).  
+ Dans une clause **Like** , vous pouvez utiliser un caractère générique au début et à la fin du modèle (par exemple, `LastName Like '*mit*'` ) ou uniquement à la fin du modèle (par exemple, `LastName Like 'Smit*'` ).  
   
 ### <a name="filtering-with-a-constant"></a>Filtrage avec une constante  
  Les constantes suivantes sont disponibles pour filtrer les **recordsets**.  

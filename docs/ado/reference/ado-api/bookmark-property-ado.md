@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48b1c90b59b220841aa45f618fdfda5ff2db82da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b1c27eb728c3cd368b4d2acc10609785c06514a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920347"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748618"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark, propriété (ADO)
 Indique un signet qui identifie de façon unique l’enregistrement en cours dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou définit l’enregistrement en cours dans un objet **Recordset** sur l’enregistrement identifié par un signet valide.  
@@ -28,7 +28,7 @@ Indique un signet qui identifie de façon unique l’enregistrement en cours dan
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une expression **Variant** qui prend la valeur d’un signet valide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **Bookmark** pour enregistrer la position de l’enregistrement en cours et revenir à cet enregistrement à tout moment. Les signets sont uniquement disponibles dans les objets **Recordset** qui prennent en charge la fonctionnalité de signet.  
   
  Lorsque vous ouvrez un objet **Recordset** , chacun de ses enregistrements a un signet unique. Pour enregistrer le signet de l’enregistrement actif, assignez la valeur de la propriété **Bookmark** à une variable. Pour revenir rapidement à cet enregistrement à tout moment après l’avoir déplacé vers un autre enregistrement, affectez à la propriété **Bookmark** de l’objet **Recordset** la valeur de cette variable.  
