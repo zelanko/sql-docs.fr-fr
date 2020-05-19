@@ -3,22 +3,29 @@ title: Nouveautés de SSMA pour MySQL (MySQLToSql) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 9d5c33bbb9e09a5a833c928547a5ec659fe43c96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 288056843e8868c5738f8f1e101015c0142bb6bd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625550"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220194"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Nouveautés de SSMA pour MySQL (MySQLToSql)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications MySQL dans chaque version.
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+La version v 8.9 de SSMA pour MySQL contient les modifications suivantes :
+
+* Correctif pour la migration de données de types spatiaux
+* Correction du problème avec les caractères spéciaux dans le nom du projet
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -31,7 +38,7 @@ La version v 8.8 de SSMA pour MySQL comprend les éléments suivants :
 
 La version v 8.7 de SSMA pour MySQL présente des correctifs mineurs et des améliorations des performances dans l’interface utilisateur graphique.
 
-En outre, SSMA pour MySQL fournit désormais la conversion `LIMIT` pour la clause lors du ciblage d’Azure SQL.
+En outre, SSMA pour MySQL fournit désormais la conversion pour la `LIMIT` clause lors du ciblage d’Azure SQL.
 
 > [!IMPORTANT]
 > Avec SSMA v 8.5 et versions ultérieures, .NET 4.7.2 est une condition préalable à l’installation. Si vous avez besoin d’installer cette version, vous pouvez télécharger le fichier d’exécution [ici](https://dotnet.microsoft.com/download/dotnet-framework/net472).
@@ -40,7 +47,7 @@ En outre, SSMA pour MySQL fournit désormais la conversion `LIMIT` pour la claus
 
 En plus d’un ensemble ciblé de correctifs conçus pour améliorer la facilité d’utilisation et les performances, la version 8.6 de SSMA pour MySQL a été améliorée en ajoutant un paramètre qui permet aux utilisateurs d’omettre les propriétés étendues SSMA dans le code converti.
 
-Pour tirer parti de ce paramètre, dans SSMA pour MySQL, accédez **à outils** > **paramètres** > du projet**conversion****générale** > , puis sous **divers**, mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui**.
+Pour tirer parti de ce paramètre, dans SSMA pour MySQL, accédez à **Outils**  >  **paramètres du projet**  >  **General**  >  **conversion**générale, puis sous **divers**, mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui**.
 
 ![Paramètre d’omission des propriétés étendues](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -66,7 +73,7 @@ La version v 8.4 de SSMA pour MySQL a été améliorée avec des correctifs cibl
 La version 8.3 de SSMA pour MySQL a été améliorée avec des correctifs ciblés conçus pour améliorer les mesures de qualité et de conversion. En outre, cette version de SSMA pour MySQL fournit des correctifs qui :
 
 * Résoudre les problèmes d’accessibilité.
-* Ajoutez la prise en `hierarchyid` charge de base pour le type dans SQL Server.
+* Ajoutez la prise en charge de base pour le `hierarchyid` type dans SQL Server.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -236,15 +243,15 @@ La version d’avril 2014 de SSMA pour MySQL contient les modifications suivante
 
 La version de juillet 2011 de SSMA pour MySQL contient les modifications suivantes :
   
-* Prise en charge de `LIMIT` la [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET`conversion de en.
+* Prise en charge de la conversion de `LIMIT` en [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET` .
 * Amélioration des rapports d’erreurs lors de la migration des données.
   
 ## <a name="april-2011"></a>2011 avril
 
 La version d’avril 2011 de SSMA pour MySQL contient les modifications suivantes :
   
-* Installation unique de « SSMA pour MySQL », qui prend en [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]charge [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] et Azure SQL.
-* La possibilité de se [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]connecter.
+* Installation unique de « SSMA pour MySQL », qui prend en [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] charge [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] , [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] et Azure SQL.
+* La possibilité de se connecter [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
 * Moteur de migration de données côté client amélioré, prenant en charge la migration parallèle des données.
 * Amélioration des performances de migration des données avec des modes de récupération simple et journalisée en bloc.
 * SSMA pour la version de la console MySQL prend en charge la compatibilité descendante. Vous pouvez ouvrir les projets créés par les versions antérieures à SSMA v 5.0.

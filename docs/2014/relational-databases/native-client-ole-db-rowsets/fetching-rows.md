@@ -13,15 +13,15 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a68c66eaaccfa3ea32a4fb940eba71026d49361
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140468"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694418"
 ---
 # <a name="fetching-rows"></a>Extraction de lignes
   L’interface **IRowset** est l’interface de base des ensembles de lignes. L’interface **IRowset** fournit des méthodes pour récupérer (fetch) les lignes séquentiellement, obtenir les données de ces lignes et gérer les lignes. Les consommateurs utilisent les méthodes de l’interface **IRowset** pour toutes les opérations de base des ensembles de lignes. Ces opérations incluent l'extraction et la libération des lignes, ainsi que l'obtention des valeurs des colonnes.  

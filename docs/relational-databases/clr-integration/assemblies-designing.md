@@ -2,7 +2,7 @@
 title: Conception d’assemblys | Microsoft Docs
 description: Cet article décrit les facteurs à prendre en compte lors de la conception d’un assembly à héberger sur SQL Server, notamment l’empaquetage, la gestion et les restrictions sur les assemblys.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488045"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262057"
 ---
 # <a name="assemblies---designing"></a>Assemblys - Conception
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,19 +102,22 @@ eUI
  Tout assembly référencé par votre assembly personnalisé doit être chargé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de CREATE ASSEMBLY. Les assemblys [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ci-dessous sont déjà chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et peuvent, par conséquent, être référencés par les assemblys personnalisés sans qu'il soit nécessaire d'utiliser CREATE ASSEMBLY.  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

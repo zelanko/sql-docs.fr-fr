@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98752b4eb754bb3f29d8b42eb27d9122d79cd03d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62513224"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693930"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server
 
   Dans une base de données, une mauvaise gestion des transactions conduit souvent à des problèmes de contention et de détérioration des performances dans les systèmes comprenant de nombreux utilisateurs. Plus le nombre d'utilisateurs qui ont accès aux données est grand, plus il est important que les applications utilisent les transactions de manière efficace. Ce guide présente les mécanismes de verrouillage et de contrôle de version de ligne utilisés par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour garantir l'intégrité physique de chaque transaction et contient des informations sur la façon dont les applications peuvent contrôler efficacement les transactions.  
   
-**S’applique à** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] jusqu’à, sauf indication contraire.  
+**S’applique à**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] jusqu’à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sauf indication contraire.  
   
 ##  <a name="in-this-guide"></a><a name="Top"></a>Dans ce guide  
 
@@ -44,7 +44,7 @@ ms.locfileid: "62513224"
  Atomicité  
  Une transaction doit être une unité de travail indivisible ; soit toutes les modifications de données sont effectuées, soit aucune ne l'est.  
   
- Cohérence  
+ Consistency  
  Lorsqu'elle est terminée, une transaction doit laisser les données dans un état cohérent. Dans une base de données relationnelle, toutes les règles doivent être appliquées aux modifications apportées par la transaction, afin de conserver l'intégrité de toutes les données. Toutes les structures de données internes, comme les index B-tree ou les listes à chaînage double, doivent être cohérentes à la fin de la transaction.  
   
  Isolation  
@@ -141,7 +141,7 @@ ms.locfileid: "62513224"
   
  Si une instruction génère une erreur d'exécution (comme une violation de contrainte) dans un traitement, la réaction par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)] est de restaurer seulement l'instruction ayant généré l'erreur. Vous pouvez modifier ce comportement à l'aide de l'instruction SET XACT_ABORT. Après l'exécution de SET XACT_ABORT ON, toute erreur d'exécution causée par une instruction déclenche automatiquement la restauration de la transaction en cours. Les erreurs de compilation, comme les erreurs de syntaxe, ne sont pas affectées par l'option SET XACT_ABORT. Pour plus d’informations, consultez [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
- Quand une erreur se produit, l'action corrective (COMMIT ou ROLLBACK) doit être incluse dans le code de l'application. L’un des outils efficaces pour gérer les erreurs, y compris ceux qui [!INCLUDE[tsql](../includes/tsql-md.md)] se trouvent dans les transactions, est le bloc try... CATCH. Pour plus d’informations et d’exemples portant sur les transactions, consultez [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql). À partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]de, vous pouvez utiliser l’instruction throw pour lever une exception et transférer l’exécution à un bloc catch d’une instruction try... CATCH. Pour plus d’informations, consultez [THROW &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql).  
+ Quand une erreur se produit, l'action corrective (COMMIT ou ROLLBACK) doit être incluse dans le code de l'application. L’un des outils efficaces pour gérer les erreurs, y compris ceux qui se trouvent dans les transactions, est le [!INCLUDE[tsql](../includes/tsql-md.md)] bloc try... CATCH. Pour plus d’informations et d’exemples portant sur les transactions, consultez [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql). À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , vous pouvez utiliser l’instruction throw pour lever une exception et transférer l’exécution à un bloc catch d’une instruction try... CATCH. Pour plus d’informations, consultez [THROW &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Erreurs de compilation et d'exécution en mode de validation automatique  
 
@@ -323,8 +323,8 @@ GO
   
 |Niveau d'isolation|Lecture incorrecte|Lecture non renouvelable|Fantôme|  
 |---------------------|----------------|------------------------|-------------|  
-|**Lecture non validée**|Oui|Oui|Oui|  
-|**Lecture validée**|Non|Oui|Oui|  
+|**Lecture non validée**|Oui|Oui|Yes|  
+|**Lecture validée**|Non|Oui|Yes|  
 |**Lecture renouvelable**|Non|Non|Oui|  
 |**Instantané**|Non|Non|Non|  
 |**Sérialisable**|Non|Non|Non|  
@@ -475,9 +475,9 @@ GO
   
 ||Mode accordé existant||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**Mode requis**|**NON**|**S**|**U**|**IX**|**SEMESTRE**|**X**|  
-|**Intent partagé (IS)**|Oui|Oui|Oui|Oui|Oui|Non|  
-|**Partagé (S)**|Oui|Oui|Oui|Non|Non|Non|  
+|**Mode requis**|**IS**|**S**|**U**|**IX**|**SEMESTRE**|**X**|  
+|**Intent partagé (IS)**|Yes|Yes|Yes|Yes|Oui|No|  
+|**Partagé (S)**|Yes|Yes|Oui|Non|Non|Non|  
 |**Mise à jour (U)**|Oui|Oui|Non|Non|Non|Non|  
 |**Intent exclusif (IX)**|Oui|Non|Non|Oui|Non|Non|  
 |**Partagé avec intent exclusif (SIX)**|Oui|Non|Non|Non|Non|Non|  
@@ -506,7 +506,7 @@ GO
   
 -   La ligne représente le mode de verrouillage protégeant l'entrée de l'index.  
   
--   Le mode représente la combinaison de modes de verrouillage utilisée. Les modes de verrouillage d'étendues de clés comportent deux parties. La première représente le type de verrou utilisé pour verrouiller l’étendue d’index (Range*T*) et la deuxième représente le type de verrou utilisé pour verrouiller une clé spécifique (*K*). Les deux parties sont reliées par un trait d’Union (-), par exemple Range*T*-*K*.  
+-   Le mode représente la combinaison de modes de verrouillage utilisée. Les modes de verrouillage d'étendues de clés comportent deux parties. La première représente le type de verrou utilisé pour verrouiller l’étendue d’index (Range*T*) et la deuxième représente le type de verrou utilisé pour verrouiller une clé spécifique (*K*). Les deux parties sont reliées par un trait d’Union (-), par exemple Range*T* - *K*.  
   
     |Plage|Ligne|Mode|Description|  
     |-----------|---------|----------|-----------------|  
@@ -523,12 +523,12 @@ GO
 ||Mode accordé existant|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Mode requis**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Partagé (S)**|Oui|Oui|Non|Oui|Oui|Oui|Non|  
-|**Mise à jour (U)**|Oui|Non|Non|Oui|Non|Oui|Non|  
-|**Exclusif (X)**|Non|Non|Non|Non|Non|Oui|Non|  
-|**RangeS-S**|Oui|Oui|Non|Oui|Oui|Non|Non|  
+|**Partagé (S)**|Yes|Oui|Non|Oui|Yes|Oui|Non|  
+|**Mise à jour (U)**|Oui|Non|Non|Oui|Non|Oui|No|  
+|**Exclusif (X)**|Non|Non|Non|Non|Non|Oui|No|  
+|**RangeS-S**|Yes|Oui|Non|Oui|Oui|Non|Non|  
 |**RangeS-U**|Oui|Non|Non|Oui|Non|Non|Non|  
-|**RangeI-N**|Oui|Oui|Oui|Non|Non|Oui|Non|  
+|**RangeI-N**|Yes|Yes|Oui|Non|Non|Oui|No|  
 |**RangeX-X**|Non|Non|Non|Non|Non|Non|Non|  
   
 #### <a name="conversion-locks"></a>Verrous de conversion  
@@ -663,7 +663,7 @@ INSERT mytable VALUES ('Dan');
   
  Dans l’illustration, la transaction T1 est dépendante de la transaction T2 pour la ressource de verrou de table **Part**. De même, la transaction T2 est dépendante de T1 pour la ressource de verrou de table **Supplier**. Comme ces dépendances forment un cycle, il y a interblocage entre les transactions T1 et T2.  
   
- Des interblocages peuvent également se produire lorsqu'une table est partitionnée et que le paramètre LOCK_ESCALATION de TABLE ALTER a la valeur AUTO. Lorsque LOCK_ESCALATION a la valeur AUTO, la [!INCLUDE[ssDE](../includes/ssde-md.md)] concurrence augmente en permettant au de verrouiller des partitions de table au niveau de HOBt au lieu du niveau table. Toutefois, lorsque des transactions distinctes maintiennent des verrous de partition dans une table et souhaitent un verrou sur l'autre partition de transactions, cela provoque un interblocage. Ce type d'interblocage peut être évité en affectant à LOCK_ESCALATION la valeur TABLE, bien que ce paramètre réduise la concurrence en forçant les mises à jour volumineuses d'une partition à attendre un verrou de table.  
+ Des interblocages peuvent également se produire lorsqu'une table est partitionnée et que le paramètre LOCK_ESCALATION de TABLE ALTER a la valeur AUTO. Lorsque LOCK_ESCALATION a la valeur AUTO, la concurrence augmente en permettant au [!INCLUDE[ssDE](../includes/ssde-md.md)] de verrouiller des partitions de table au niveau de HOBt au lieu du niveau table. Toutefois, lorsque des transactions distinctes maintiennent des verrous de partition dans une table et souhaitent un verrou sur l'autre partition de transactions, cela provoque un interblocage. Ce type d'interblocage peut être évité en affectant à LOCK_ESCALATION la valeur TABLE, bien que ce paramètre réduise la concurrence en forçant les mises à jour volumineuses d'une partition à attendre un verrou de table.  
   
 #### <a name="detecting-and-ending-deadlocks"></a>Détection et fin des blocages  
 
@@ -745,8 +745,8 @@ INSERT mytable VALUES ('Dan');
 |Propriété|Indicateur de trace 1204 et indicateur de trace 1222|Indicateur de trace 1204 uniquement|Indicateur de trace 1222 uniquement|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |Format de sortie|La sortie est capturée dans le journal des erreurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|Les nœuds impliqués dans le blocage sont privilégiés. Chaque nœud dispose d'une section dédiée, tandis que la section finale décrit la victime du blocage.|Retourne des informations dans un format de type XML, mais non conforme au schéma XSD (XML Schema Definition). Le format possède trois sections principales. La première déclare la victime du blocage. La deuxième décrit chaque processus impliqué dans le blocage. La troisième décrit les ressources synonymes des nœuds de l'indicateur de trace 1204.|  
-|Identification d'attributs|**SPID :\<x> ECID :\<x>.** Identifie le thread de l'ID du processus système en cas de traitements parallèles. L’entrée `SPID:<x> ECID:0`, où \<x> est remplacé par la valeur SPID, représente le thread principal. L’entrée `SPID:<x> ECID:<y>`, où \<x> est remplacé par la valeur SPID et \<l'> y est supérieure à 0, représente les sous-threads du même SPID.<br /><br /> **BatchID** (**sbid** pour l’indicateur de trace 1222). Identifie le traitement à partir duquel l'exécution du code demande ou détient un verrou. Lorsque MARS (Multiple Active Result Sets) est désactivé, la valeur BatchID est 0. Quand MARS est activé, la valeur des lots actifs est 1 pour *n*. Si la session ne comporte pas de traitements actifs, BatchID a pour valeur 0.<br /><br /> **Mode**. Spécifie, pour une ressource particulière, le type de verrou demandé, accordé ou attendu par un thread. Les différents modes sont IS (intent partagé), S (partagé), U (mise à jour), IX (intent exclusif), SIX (partagé avec intent exclusif) et X (exclusif).<br /><br /> **Line #** (**line** pour l’indicateur de trace 1222). Indique le numéro de ligne du traitement qui était en cours d'exécution lorsque le blocage s'est produit.<br /><br /> **Input Buf** (**inputbuf** pour l’indicateur de trace 1222). Dresse la liste de toutes les instructions du traitement en cours.|**Nœud**. Il s'agit du numéro d'entrée dans la chaîne de blocage.<br /><br /> **Liste**. Le propriétaire du verrou peut faire partie des listes suivantes :<br /><br /> **Grant List**. Énumère les propriétaires actuels de la ressource.<br /><br /> **Convert List**. Énumère les propriétaires en cours qui essaient de convertir leurs verrous vers un niveau supérieur.<br /><br /> **Wait List**. Énumère les nouvelles demandes de verrou en cours pour la ressource.<br /><br /> **Statement Type**. Décrit le type d'instructions DML (SELECT, INSERT, UPDATE ou DELETE) sur lesquelles les threads disposent d'autorisations.<br /><br /> **Victim Resource Owner**. Spécifie le thread choisi comme victime par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour rompre le cycle de blocage. Il est alors mis fin au thread choisi et à tous les sous-threads existants.<br /><br /> **Next Branch**. Représente les deux sous-threads (ou plus) du même SPID qui participent au cycle de blocage.|**deadlock victim**. Représente l’adresse de mémoire physique de la tâche (consultez [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)) qui a été sélectionnée comme victime de l’interblocage. Elle est égale à 0 (zéro) en cas de non résolution du blocage. Une tâche en cours d'annulation ne peut pas être choisie comme victime de blocage.<br /><br /> **executionstack**. Représente le code [!INCLUDE[tsql](../includes/tsql-md.md)] en cours d'exécution lorsque le blocage se produit.<br /><br /> **priorité**. Représente la priorité de blocage. Dans certains cas, le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut choisir de modifier la priorité de blocage pendant un bref laps de temps afin de favoriser la concurrence.<br /><br /> **logused**. Espace journal utilisé par la tâche.<br /><br /> **ID du propriétaire**. ID de la transaction qui contrôle la demande.<br /><br /> **État**. État de la tâche. Il prend l'une des valeurs suivantes :<br /><br /> >> **en attente**. En attente d'un thread de travail.<br /><br /> >> **exécutable**. Prêt à s'exécuter, mais en attente d'un quantum.<br /><br /> >> **en cours d’exécution**. En cours d'exécution sur le planificateur.<br /><br /> >> **suspendu**. L'exécution est suspendue.<br /><br /> >> **terminé**. La tâche est achevée.<br /><br /> >> **spinloop**. En attente de libération d'un spinlock.<br /><br /> **waitresource**. Ressource convoitée par la tâche.<br /><br /> **délai**. Délai d'attente de la ressource en millisecondes.<br /><br /> **schedulerid**. Planificateur associé à cette tâche. Consultez [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql).<br /><br /> **nom d’hôte**. Nom de la station de travail.<br /><br /> **IsolationLevel**. Niveau d'isolement des transactions en cours.<br /><br /> **Xactid**. ID de la transaction qui contrôle la demande.<br /><br /> **CurrentDb**. ID de la base de données.<br /><br /> **lastbatchstarted**. Dernière fois qu'un processus client a démarré une exécution de traitement.<br /><br /> **lastbatchcompleted**. Dernière fois qu'un processus client a terminé une exécution de traitement.<br /><br /> **clientoption1 et clientoption2**. Options définies pour cette connexion cliente. Il s'agit d'un masque de bits qui contient des informations sur les options habituellement contrôlées par les instructions SET, telles que SET NOCOUNT et SET XACTABORT.<br /><br /> **associatedObjectId**. Représente l'ID HoBT (Heap or B-tree, segment de mémoire ou arborescence binaire).|  
-|Attributs des ressources|**RID**. Identifie la ligne d'une table pour laquelle un verrou est détenu ou demandé. RID est représenté comme RID : *db_id:file_id:page_no:row_no*. Par exemple, `RID: 6:1:20789:0`.<br /><br /> **Objet**. Identifie la table pour laquelle un verrou est détenu ou demandé. OBJECT est représenté comme OBJECT : *db_id:object_id*. Par exemple, `TAB: 6:2009058193`.<br /><br /> **Clé**. Identifie la plage de clés d'un index pour laquelle un verrou est détenu ou demandé. KEY est représenté comme KEY : *db_id:hobt_id* (*valeur de hachage de la clé d’index*). Par exemple, `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifie la ressource de page pour laquelle un verrou est détenu ou demandé. PAG est représenté comme PAG : *db_id:file_id:page_no*. Par exemple, `PAG: 6:1:20789`.<br /><br /> **Ext**. Identifie la structure d'extension. EXT est représenté comme EXT : *db_id:file_id:extent_no*. Par exemple, `EXT: 6:1:9`.<br /><br /> **Base**de. Identifie le verrou de base de données. **DB est représenté de l’une des manières suivantes :**<br /><br /> DB : *db_id*<br /><br /> DB : *db_id*[BULK-OP-DB], qui identifie le verrou de base de données pris par la base de données de sauvegarde.<br /><br /> DB : *db_id*[BULK-OP-LOG], qui identifie le verrou pris par le journal de sauvegarde pour cette base de données spécifique.<br /><br /> **Application**. Identifie le verrou pris par une ressource d'application. APP est représenté comme APP : *lock_resource*. Par exemple, `APP: Formf370f478`.<br /><br /> **Métadonnées**. Représente les ressources de métadonnées impliquées dans un blocage. Comme METADATA possède de nombreuses sous-ressources, la valeur retournée dépend de la sous-ressource bloquée. Par exemple, METADATA.USER_TYPE retourne `user_type_id =` \<*integer_value*>. Pour plus d’informations sur les ressources et sous-ressources METADATA, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql).<br /><br /> **HoBT**. Représente un segment de mémoire ou d'arbre B (B-Tree) impliqué dans un blocage.|Non exclusif à cet indicateur de trace.|Non exclusif à cet indicateur de trace.|  
+|Identification d'attributs|**SPID : \< x> ECID : \< x>.** Identifie le thread de l'ID du processus système en cas de traitements parallèles. L’entrée `SPID:<x> ECID:0` , où \< x> est remplacé par la valeur SPID, représente le thread principal. L’entrée `SPID:<x> ECID:<y>` , où \< x> est remplacé par la valeur SPID et l' \<> y est supérieure à 0, représente les sous-threads du même SPID.<br /><br /> **BatchID** (**sbid** pour l’indicateur de trace 1222). Identifie le traitement à partir duquel l'exécution du code demande ou détient un verrou. Lorsque MARS (Multiple Active Result Sets) est désactivé, la valeur BatchID est 0. Quand MARS est activé, la valeur des lots actifs est 1 pour *n*. Si la session ne comporte pas de traitements actifs, BatchID a pour valeur 0.<br /><br /> **Mode**. Spécifie, pour une ressource particulière, le type de verrou demandé, accordé ou attendu par un thread. Les différents modes sont IS (intent partagé), S (partagé), U (mise à jour), IX (intent exclusif), SIX (partagé avec intent exclusif) et X (exclusif).<br /><br /> **Line #** (**line** pour l’indicateur de trace 1222). Indique le numéro de ligne du traitement qui était en cours d'exécution lorsque le blocage s'est produit.<br /><br /> **Input Buf** (**inputbuf** pour l’indicateur de trace 1222). Dresse la liste de toutes les instructions du traitement en cours.|**Nœud**. Il s'agit du numéro d'entrée dans la chaîne de blocage.<br /><br /> **Liste**. Le propriétaire du verrou peut faire partie des listes suivantes :<br /><br /> **Grant List**. Énumère les propriétaires actuels de la ressource.<br /><br /> **Convert List**. Énumère les propriétaires en cours qui essaient de convertir leurs verrous vers un niveau supérieur.<br /><br /> **Wait List**. Énumère les nouvelles demandes de verrou en cours pour la ressource.<br /><br /> **Statement Type**. Décrit le type d'instructions DML (SELECT, INSERT, UPDATE ou DELETE) sur lesquelles les threads disposent d'autorisations.<br /><br /> **Victim Resource Owner**. Spécifie le thread choisi comme victime par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour rompre le cycle de blocage. Il est alors mis fin au thread choisi et à tous les sous-threads existants.<br /><br /> **Next Branch**. Représente les deux sous-threads (ou plus) du même SPID qui participent au cycle de blocage.|**deadlock victim**. Représente l’adresse de mémoire physique de la tâche (consultez [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)) qui a été sélectionnée comme victime de l’interblocage. Elle est égale à 0 (zéro) en cas de non résolution du blocage. Une tâche en cours d'annulation ne peut pas être choisie comme victime de blocage.<br /><br /> **executionstack**. Représente le code [!INCLUDE[tsql](../includes/tsql-md.md)] en cours d'exécution lorsque le blocage se produit.<br /><br /> **priorité**. Représente la priorité de blocage. Dans certains cas, le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut choisir de modifier la priorité de blocage pendant un bref laps de temps afin de favoriser la concurrence.<br /><br /> **logused**. Espace journal utilisé par la tâche.<br /><br /> **ID du propriétaire**. ID de la transaction qui contrôle la demande.<br /><br /> **État**. État de la tâche. Il prend l'une des valeurs suivantes :<br /><br /> >> **en attente**. En attente d'un thread de travail.<br /><br /> >> **exécutable**. Prêt à s'exécuter, mais en attente d'un quantum.<br /><br /> >> **en cours d’exécution**. En cours d'exécution sur le planificateur.<br /><br /> >> **suspendu**. L'exécution est suspendue.<br /><br /> >> **terminé**. La tâche est achevée.<br /><br /> >> **spinloop**. En attente de libération d'un spinlock.<br /><br /> **waitresource**. Ressource convoitée par la tâche.<br /><br /> **délai**. Délai d'attente de la ressource en millisecondes.<br /><br /> **schedulerid**. Planificateur associé à cette tâche. Consultez [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql).<br /><br /> **nom d’hôte**. Nom de la station de travail.<br /><br /> **IsolationLevel**. Niveau d'isolement des transactions en cours.<br /><br /> **Xactid**. ID de la transaction qui contrôle la demande.<br /><br /> **CurrentDb**. ID de la base de données.<br /><br /> **lastbatchstarted**. Dernière fois qu'un processus client a démarré une exécution de traitement.<br /><br /> **lastbatchcompleted**. Dernière fois qu'un processus client a terminé une exécution de traitement.<br /><br /> **clientoption1 et clientoption2**. Options définies pour cette connexion cliente. Il s'agit d'un masque de bits qui contient des informations sur les options habituellement contrôlées par les instructions SET, telles que SET NOCOUNT et SET XACTABORT.<br /><br /> **associatedObjectId**. Représente l'ID HoBT (Heap or B-tree, segment de mémoire ou arborescence binaire).|  
+|Attributs des ressources|**RID**. Identifie la ligne d'une table pour laquelle un verrou est détenu ou demandé. RID est représenté comme RID : *db_id:file_id:page_no:row_no*. Par exemple : `RID: 6:1:20789:0`.<br /><br /> **Objet**. Identifie la table pour laquelle un verrou est détenu ou demandé. OBJECT est représenté comme OBJECT : *db_id:object_id*. Par exemple : `TAB: 6:2009058193`.<br /><br /> **Clé**. Identifie la plage de clés d'un index pour laquelle un verrou est détenu ou demandé. KEY est représenté comme KEY : *db_id:hobt_id* (*valeur de hachage de la clé d’index*). Par exemple : `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifie la ressource de page pour laquelle un verrou est détenu ou demandé. PAG est représenté comme PAG : *db_id:file_id:page_no*. Par exemple : `PAG: 6:1:20789`.<br /><br /> **Ext**. Identifie la structure d'extension. EXT est représenté comme EXT : *db_id:file_id:extent_no*. Par exemple : `EXT: 6:1:9`.<br /><br /> **Base**de. Identifie le verrou de base de données. **DB est représenté de l’une des manières suivantes :**<br /><br /> DB : *db_id*<br /><br /> DB : *db_id*[BULK-OP-DB], qui identifie le verrou de base de données pris par la base de données de sauvegarde.<br /><br /> DB : *db_id*[BULK-OP-LOG], qui identifie le verrou pris par le journal de sauvegarde pour cette base de données spécifique.<br /><br /> **Application**. Identifie le verrou pris par une ressource d'application. APP est représenté comme APP : *lock_resource*. Par exemple : `APP: Formf370f478`.<br /><br /> **Métadonnées**. Représente les ressources de métadonnées impliquées dans un blocage. Comme METADATA possède de nombreuses sous-ressources, la valeur retournée dépend de la sous-ressource bloquée. Par exemple, METADATA.USER_TYPE retourne `user_type_id =` \<*integer_value*>. Pour plus d’informations sur les ressources et sous-ressources METADATA, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql).<br /><br /> **HoBT**. Représente un segment de mémoire ou d'arbre B (B-Tree) impliqué dans un blocage.|Non exclusif à cet indicateur de trace.|Non exclusif à cet indicateur de trace.|  
   
 ###### <a name="trace-flag-1204-example"></a>Exemple d'indicateur de trace 1204  
 
@@ -862,7 +862,7 @@ deadlock-list
   
  ![Diagramme de flux logique montrant le blocage de processus utilisateur.](media/udb9-profilerdeadlockgraphc.gif "Diagramme de flux logique montrant le blocage de processus utilisateur.")  
   
- Pour plus d’informations sur l' [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exécution du graphique de blocage, consultez [enregistrer les graphiques d’interblocage &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
+ Pour plus d’informations sur l’exécution du [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] graphique de blocage, consultez [enregistrer les graphiques d’interblocage &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
   
 #### <a name="handling-deadlocks"></a>Gestion des blocages  
 
@@ -1149,7 +1149,7 @@ BEGIN TRANSACTION
 |Manière dont une session demande le type spécifique de contrôle de version de ligne.|Utilisez le niveau d'isolement par défaut (read-committed) ou exécutez l'instruction SET TRANSACTION ISOLATION LEVEL pour spécifier le niveau d'isolement READ COMMITTED. Ceci peut se faire après le début de la transaction.|Requiert l'exécution de l'instruction SET TRANSACTION ISOLATION LEVEL pour spécifier le niveau d'isolement SNAPSHOT avant le début de la transaction.|  
 |La version des données lue par les instructions.|Toutes les données qui ont été validées avant le début de chaque instruction.|Toutes les données qui ont été validées avant le début de chaque transaction.|  
 |Manière dont les mises à jour sont gérées.|Passe des versions de lignes aux données réelles pour sélectionner les lignes à mettre à jour et utilise des verrous de mise à jour sur les lignes sélectionnées. Acquiert des verrous exclusifs sur les lignes à modifier réellement. Pas de détection de conflit de mise à jour.|Utilise les versions de lignes pour sélectionner les lignes à mettre à jour. Essaie d'acquérir un verrou exclusif sur les lignes à modifier réellement et, si les données ont été modifiées par une autre transaction, génère un conflit de mise à jour qui entraîne l'arrêt de la transaction.|  
-|Détection d'un conflit de mise à jour.|Aucune.|Prise en charge intégrée. Ne peut être désactivée.|  
+|Détection d'un conflit de mise à jour.|Aucun.|Prise en charge intégrée. Ne peut être désactivée.|  
   
 ### <a name="row-versioning-resource-usage"></a>Utilisation de la ressource de contrôle de version de ligne  
 
@@ -1309,7 +1309,7 @@ BEGIN TRANSACTION
 
  Les exemples ci-dessous illustrent les différences de comportement entre les transactions d'isolement d'instantané et les transactions validées en écriture qui utilisent le contrôle de version de ligne.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>A. Utilisation du niveau d'isolement d'instantané  
+#### <a name="a-working-with-snapshot-isolation"></a>R. Utilisation du niveau d'isolement d'instantané  
 
  Dans cet exemple, une transaction exécutée sous isolement d'instantané lit des données qui sont ensuite modifiées par une autre transaction. La transaction d'instantané ne bloque pas l'opération de mise à jour exécutée par l'autre transaction et continue de lire les données à partir de la ligne avec version, en ignorant la modification apportée aux données. Toutefois, lorsque la transaction d'instantané tente de modifier des données qui ont déjà été modifiées par l'autre transaction, la transaction d'instantané génère une erreur et est terminée.  
   
@@ -1647,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  L'implémentation d'un gestionnaire d'erreurs qui intercepte le message d'erreur 1222 permet à une application de prendre les mesures conséquentes au délai d'expiration, par exemple soumettre à nouveau l'instruction qui été bloquée ou restaurer toute la transaction.  
   
- Pour déterminer le paramètre de LOCK_TIMEOUT actuel, exécutez la@LOCK_TIMEOUT fonction @ :  
+ Pour déterminer le paramètre de LOCK_TIMEOUT actuel, exécutez la @LOCK_TIMEOUT fonction @ :  
   
 ```  
 SELECT @@lock_timeout;  
@@ -1656,7 +1656,7 @@ GO
   
 ### <a name="customizing-transaction-isolation-level"></a>Personnalisation du niveau d'isolation des transactions  
 
- READ COMMITTED est le niveau d’isolation par [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]défaut pour le. Si une application doit fonctionner à un niveau d'isolation différent, elle peut le définir selon plusieurs méthodes :  
+ READ COMMITTED est le niveau d’isolation par défaut pour le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] . Si une application doit fonctionner à un niveau d'isolation différent, elle peut le définir selon plusieurs méthodes :  
   
 -   Exécuter l’instruction [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
@@ -1833,7 +1833,7 @@ GO
   
  Il n’est pas légal que le paramètre *transaction_name* d’une instruction ROLLBACK TRANSACTION fasse référence aux transactions internes d’un ensemble de transactions imbriquées nommées. *transaction_name* ne peut faire référence qu’au nom de la transaction la plus extérieure. Si une instruction ROLLBACK TRANSACTION *transaction_name* utilisant le nom de la transaction externe est exécutée à n’importe quel niveau d’un ensemble de transactions imbriquées, toutes les transactions imbriquées sont restaurées. Si une instruction ROLLBACK WORK ou ROLLBACK TRANSACTION sans paramètre *transaction_name* est exécutée à n’importe quel niveau d’un ensemble de transactions imbriquées, elle restaure toutes les transactions imbriquées, y compris la transaction la plus externe.  
   
- La fonction@TRANCOUNT @ enregistre le niveau d’imbrication de la transaction actuelle. Chaque BEGIN TRANSACTION instruction incrémente @@TRANCOUNT d’une unité. Chaque instruction COMMIT TRANSACTION ou COMMIT WORK décrémente @@TRANCOUNT d’une unité. Une instruction ROLLBACK WORK ou ROLLBACK TRANSACTION qui n’a pas de nom de transaction restaure toutes les transactions imbriquées et décrémente @@TRANCOUNT à 0. Une TRANSACTION ROLLBACK qui utilise le nom de la transaction la plus à l’extérieur dans un ensemble de transactions imbriquées restaure toutes les transactions imbriquées et décrémente@TRANCOUNT @ à 0. Lorsque vous ne savez pas si vous êtes déjà dans une transaction, sélectionnez @@TRANCOUNT pour déterminer s’il s’agit d’une ou de plusieurs. Si @@TRANCOUNT est égal à 0, cela indique que vous n’êtes pas dans une transaction.  
+ La @TRANCOUNT fonction @ enregistre le niveau d’imbrication de la transaction actuelle. Chaque BEGIN TRANSACTION instruction incrémente @ @TRANCOUNT d’une unité. Chaque instruction COMMIT TRANSACTION ou COMMIT WORK décrémente @ @TRANCOUNT d’une unité. Une instruction ROLLBACK WORK ou ROLLBACK TRANSACTION qui n’a pas de nom de transaction restaure toutes les transactions imbriquées et décrémente @ @TRANCOUNT à 0. Une TRANSACTION ROLLBACK qui utilise le nom de la transaction la plus à l’extérieur dans un ensemble de transactions imbriquées restaure toutes les transactions imbriquées et décrémente @ @TRANCOUNT à 0. Lorsque vous ne savez pas si vous êtes déjà dans une transaction, sélectionnez @ @TRANCOUNT pour déterminer s’il s’agit d’une ou de plusieurs. Si @ @TRANCOUNT est égal à 0, cela indique que vous n’êtes pas dans une transaction.  
   
 ### <a name="using-bound-sessions"></a>Utilisation de sessions associées  
 
