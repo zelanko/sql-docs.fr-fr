@@ -218,7 +218,7 @@ ms.locfileid: "68048732"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Vide  
- Une instance _geometry_**vide** n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon**, **CurvePolygon**et **MultiPolygon** vides est 0.  
+ Une instance **geometry**_vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon**, **CurvePolygon**et **MultiPolygon** vides est 0.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -271,7 +271,7 @@ SELECT @g.STBoundary().ToString();
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Fermeture  
- Une instance _geometry_**fermée** est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
+ Une instance **geometry**_fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
   

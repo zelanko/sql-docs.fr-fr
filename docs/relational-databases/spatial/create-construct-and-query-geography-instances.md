@@ -174,13 +174,13 @@ ms.locfileid: "68048750"
  [STArea &#40;type de données geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Vide  
- Une instance _geography_**vide** n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
+ Une instance **geography**_vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Fermeture  
- Une instance _geography_**fermée** est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
+ Une instance **geography**_fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
   
