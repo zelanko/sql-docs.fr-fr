@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304884"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827650"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_help_fulltext_system_components
 |**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
 |**FullPath**|**nvarchar(256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre du rôle serveur fixe **ServerAdmin** .|  
 |**version**|**nvarchar(30)**|Numéro de version du composant.|  
-|**manufacturer**|**sysname**|Nom du fabricant du composant.|  
+|**fécule**|**sysname**|Nom du fabricant du composant.|  
   
  Le jeu de résultats suivant est retourné uniquement si un ou plusieurs catalogues de texte intégral existent qui utilisent *component_type*.  
   
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Autorisations  
  Requiert l’appartenance au rôle **public** ; Toutefois, les utilisateurs peuvent uniquement afficher des informations sur les catalogues de texte intégral pour lesquels ils disposent de l’autorisation VIEW DEFINITION. Seuls les membres du rôle de serveur fixe **serveradmin** peuvent voir les valeurs de la colonne **fullpath** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode est particulièrement importante lors de la préparation d'une mise à niveau. Exécutez la procédure stockée dans une base de données spécifique et utilisez le résultat afin de déterminer si un catalogue sera affecté par la mise à niveau.  
   
 ## <a name="examples"></a>Exemples  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Détermination de si un analyseur lexical spécifique est inscrit  
- L'exemple suivant répertorie l'analyseur lexical pour la langue turque (LCID = 1055) si celle-ci a été installée sur le système et enregistrée sur l'instance du service. Cet exemple spécifie les noms des paramètres, ** \@component_type** et ** \@param**.  
+ L'exemple suivant répertorie l'analyseur lexical pour la langue turque (LCID = 1055) si celle-ci a été installée sur le système et enregistrée sur l'instance du service. Cet exemple spécifie les noms des paramètres, ** \@ component_type** et ** \@ param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

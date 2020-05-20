@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_pendingchanges
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b360a899ed17f0b1b82a5ebcdfbd664803ed8d93
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124215"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828377"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_fulltext_pendingchanges table_id
 ## <a name="permissions"></a>Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  S'il n'y a pas de modification à traiter, un ensemble de lignes vide est renvoyé.  
   
  Les requêtes de recherche en texte intégral ne retournent pas de ligne avec une valeur **Status** égale à 0. Cela est dû au fait que la ligne a été supprimée de la table de base et attend d'être supprimée de l'index de texte intégral.  

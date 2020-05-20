@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055191"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827723"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Numéro d'identification entier unique de l'instruction.|  
-|**source_server**|**nvarchar(30)**|Nom de l'ordinateur du serveur qui émet l'instruction. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la version 7,0, il s’agit toujours du nom d’ordinateur du serveur maître (MSX).|  
+|**source_server**|**nvarchar(30)**|Nom de l'ordinateur du serveur qui émet l'instruction. Dans la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7,0, il s’agit toujours du nom d’ordinateur du serveur maître (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Code d'opération pour l'instruction.|  
 |**object_name**|**sysname**|Objet affecté par l'instruction.|  
 |**object_id**|**uniqueidentifier**|Numéro d’identification de l’objet affecté par l’instruction (**job_id** pour un objet de traitement, ou 0x00 pour un objet serveur) ou une valeur de données spécifique à l' **operation_code**.|  

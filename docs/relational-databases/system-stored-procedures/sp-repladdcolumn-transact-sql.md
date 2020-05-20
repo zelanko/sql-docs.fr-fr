@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 75c66d1077b111837197957cc845b690b794ea24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771049"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826555"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68771049"
   Ajoute une colonne à un article de table existant qui a été publié. Permet d'ajouter la nouvelle colonne à tous les serveurs de publication, ou à une publication spécifique, qui publient cette table. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!IMPORTANT]
->  Cette procédure stockée est déconseillée ; elle est prise en charge pour des raisons de compatibilité descendante. Elle doit être utilisée uniquement avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] les serveurs [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] de publication et les abonnés de republication. Cette procédure ne doit pas être utilisée sur des colonnes avec des types de données qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieur.  
+>  Cette procédure stockée est déconseillée ; elle est prise en charge pour des raisons de compatibilité descendante. Elle doit être utilisée uniquement avec les serveurs de publication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] et les [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] abonnés de republication. Cette procédure ne doit pas être utilisée sur des colonnes avec des types de données qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieur.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @publication_to_add =] '*publication_to_add*'  
  Nom de la publication à laquelle la nouvelle colonne est ajoutée. *publication_to_add* est de type **nvarchar (4000)**, avec **All**comme valeur par défaut. Si la **totalité**est, toutes les publications contenant cette table sont affectées. Si *publication_to_add* est spécifié, seule la nouvelle colonne est ajoutée à cette publication.  
   
- [ @from_agent = ] *from_agent*  
+ [ @from_agent =] *from_agent*  
  Indique si la procédure stockée est exécutée par un agent de réplication. *from_agent* est de **type int**, avec **0**comme valeur par défaut, où la valeur **1** est utilisée lorsque cette procédure stockée est exécutée par un agent de réplication, et dans tous les autres cas, la valeur par défaut **0**doit être utilisée.  
   
  [ @schema_change_script =] '*schema_change_script*'  
@@ -68,14 +68,14 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
   
 -   Si les procédures stockées personnalisées ne sont pas régénérées automatiquement, *schema_change_script*pouvez les utiliser pour régénérer ces procédures stockées ou pour créer des procédures stockées personnalisées définies par l’utilisateur.  
   
- [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Active ou désactive la possibilité d'invalider un instantané. *force_invalidate_snapshot* est un **bit**, avec **1**comme valeur par défaut.  
   
  **1** indique que les modifications apportées à l’article peuvent entraîner la non-validité de l’instantané. Si tel est le cas, la valeur **1** accorde l’autorisation de se produire pour le nouvel instantané.  
   
  **0** indique que les modifications apportées à l’article n’entraînent pas la non-validité de l’instantané.  
   
- [ @force_reinit_subscription = ] *force_reinit_subscription*  
+ [ @force_reinit_subscription =] *force_reinit_subscription*  
  Active ou désactive la possibilité de réinitialiser l'abonnement. *force_reinit_subscription* est un **bit** avec **0**comme valeur par défaut.  
   
  **0** indique que les modifications apportées à l’article n’entraînent pas la réinitialisation de l’abonnement.  

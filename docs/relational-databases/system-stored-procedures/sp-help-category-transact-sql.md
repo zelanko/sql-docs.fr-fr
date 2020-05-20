@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304807"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827740"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Lorsque ** \@le suffixe** est **0**, **sp_help_category** retourne le jeu de résultats suivant :  
+ Lorsque le ** \@ suffixe** est **0**, **sp_help_category** retourne le jeu de résultats suivant :  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = aucun|  
 |**name**|**sysname**|Nom de la catégorie|  
   
- Lorsque ** \@le suffixe** est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
+ Lorsque le ** \@ suffixe** est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Type de catégorie : Un serveur **local**, **plusieurs serveurs**ou **aucun**|  
 |**name**|**sysname**|Nom de la catégorie|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_category** doit être exécuté à partir de la base de données **msdb** .  
   
  Si aucun paramètre n'est spécifié, le jeu de résultats fournit des informations sur toutes les catégories de travaux.  

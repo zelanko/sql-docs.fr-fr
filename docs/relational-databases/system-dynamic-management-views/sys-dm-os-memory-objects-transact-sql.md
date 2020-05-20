@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983078"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827876"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,16 +54,16 @@ ms.locfileid: "73983078"
 |**contention_factor**|**real**|Valeur qui spécifie la contention sur cet objet mémoire, 0 signifiant aucun conflit. La valeur est mise à jour chaque fois qu’un nombre spécifié d’allocations de mémoire reflétant une contention a été effectué pendant cette période. S’applique uniquement aux objets de mémoire thread-safe.|  
 |**waiting_tasks_count**|**bigint**|Nombre d’attentes sur cet objet mémoire. Ce compteur est incrémenté chaque fois que la mémoire est allouée à partir de cet objet mémoire. L’incrément est le nombre de tâches actuellement en attente d’accès à cet objet mémoire. S’applique uniquement aux objets de mémoire thread-safe. Il s’agit d’une valeur d’effort optimale sans garantie d’exactitude.|  
 |**exclusive_access_count**|**bigint**|Spécifie la fréquence à laquelle cet objet mémoire a fait l’objet d’un accès exclusif. S’applique uniquement aux objets de mémoire thread-safe.  Il s’agit d’une valeur d’effort optimale sans garantie d’exactitude.|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
- **partition_type**, **contention_factor**, **waiting_tasks_count**et **exclusive_access_count** ne sont pas encore implémentées [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]dans.  
+ **partition_type**, **contention_factor**, **waiting_tasks_count**et **exclusive_access_count** ne sont pas encore implémentées dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
   
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les objets mémoire sont des segments. Ils fournissent des allocations qui ont une granularité plus fine que celles fournies par les régisseurs de mémoire. Les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des objets mémoire au lieu de régisseurs de mémoire. Les objets mémoire utilisent l'interface d'allocation de page du régisseur de mémoire pour allouer les pages. Ils n'utilisent pas les interfaces de mémoire virtuelle ou partagée. Selon les modèles d'allocation, les composants peuvent créer différents types d'objets mémoire pour allouer des régions de taille arbitraire.  
   
  La taille de page type pour un objet mémoire est de 8 Ko. Toutefois, les objets mémoire incrémentiels peuvent avoir des tailles de page allant de 512 octets à 8 Ko.  

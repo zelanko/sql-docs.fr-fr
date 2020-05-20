@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381912"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826330"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72381912"
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > Sur [Azure SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server agent sont actuellement prises en charge. Pour plus d’informations, consultez [Azure SQL Database Managed instance les différences T-SQL entre SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+ > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
  
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +57,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_name = ] 'job_name'`Nom du travail. Le nom doit être unique et ne peut pas contenir le**%** caractère de pourcentage (). *job_name*est de type **nvarchar (128)**, sans valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail. Le nom doit être unique et ne peut pas contenir le caractère de pourcentage ( **%** ). *job_name*est de type **nvarchar (128)**, sans valeur par défaut.  
   
 `[ @enabled = ] enabled`Indique l’état de la tâche ajoutée. *Enabled*est de **type tinyint**, avec 1 comme valeur par défaut (activé). Si la **valeur est 0**, le travail n’est pas activé et ne s’exécute pas en fonction de sa planification. Toutefois, elle peut être exécutée manuellement.  
   
@@ -69,7 +69,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id`Mécanisme indépendant du langage permettant de spécifier une catégorie de travaux. *category_id*est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @owner_login_name = ] 'login'`Nom de la connexion propriétaire du travail. *login*est de **type sysname**, avec NULL comme valeur par défaut, qui est interprété comme le nom de connexion actuel. Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir ou modifier la valeur de ** \@owner_login_name**. Si les utilisateurs qui ne sont pas membres du rôle **sysadmin** définissent ou modifient la valeur de ** \@owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
+`[ @owner_login_name = ] 'login'`Nom de la connexion propriétaire du travail. *login*est de **type sysname**, avec NULL comme valeur par défaut, qui est interprété comme le nom de connexion actuel. Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir ou modifier la valeur de ** \@ owner_login_name**. Si les utilisateurs qui ne sont pas membres du rôle **sysadmin** définissent ou modifient la valeur de ** \@ owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
   
 `[ @notify_level_eventlog = ] eventlog_level`Valeur indiquant le moment auquel une entrée doit être placée dans le journal des applications Microsoft Windows pour ce travail. *eventlog_level*est de **type int**et peut prendre l’une des valeurs suivantes.  
   
@@ -106,7 +106,7 @@ sp_add_job [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>Notes  
- originating_server existe dans **sp_add_job,** mais n’est pas listé sous arguments. ** \@** originating_server est réservé à un usage interne. ** \@**  
+ ** \@ originating_server** existe dans **sp_add_job,** mais n’est pas listé sous arguments. ** \@ originating_server** est réservé à un usage interne.  
   
  Une fois que **sp_add_job** a été exécuté pour ajouter un travail, **sp_add_jobstep** peut être utilisé pour ajouter des étapes qui exécutent les activités du travail. **sp_add_jobschedule** peut être utilisé pour créer la planification que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service Agent utilise pour exécuter le travail. Utilisez **sp_add_jobserver** pour définir l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance où le travail s’exécute, et **sp_delete_jobserver** pour supprimer le travail de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
@@ -115,7 +115,7 @@ sp_add_job [ @job_name = ] 'job_name'
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
 ## <a name="permissions"></a>Autorisations  
- Pour exécuter cette procédure stockée, les utilisateurs doivent être membres du rôle serveur fixe **sysadmin** ou disposer de l’un des rôles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données fixes de l’agent suivants, qui résident dans la base de données **msdb** :  
+ Pour exécuter cette procédure stockée, les utilisateurs doivent être membres du rôle serveur fixe **sysadmin** ou disposer de l’un des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôles de base de données fixes de l’agent suivants, qui résident dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -125,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Pour plus d’informations sur les autorisations spécifiques associées à chacun de ces rôles de base de données fixes, consultez [SQL Server Agent des rôles de base de données fixes](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir ou modifier la valeur de ** \@owner_login_name**. Si les utilisateurs qui ne sont pas membres du rôle **sysadmin** définissent ou modifient la valeur de ** \@owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir ou modifier la valeur de ** \@ owner_login_name**. Si les utilisateurs qui ne sont pas membres du rôle **sysadmin** définissent ou modifient la valeur de ** \@ owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
   
 ## <a name="examples"></a>Exemples  
   

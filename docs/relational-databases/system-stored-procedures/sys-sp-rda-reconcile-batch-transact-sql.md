@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 98094273d37bf0622eb903b9ad177817e4bb12d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 40fb2b497f799bc03551ff113c3b779510d1dee1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905097"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827389"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- \@objname = '*\@objname*'  
+ \@objname = '* \@ objname*'  
  Nom de la table de SQL Server prenant en charge Stretch.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert db_owner autorisations.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si vous souhaitez supprimer des données qui ont déjà été migrées vers Azure, effectuez les opérations suivantes.  
   
 1.  Suspendre la migration des données. Pour plus d’informations, consultez [Suspension et reprise de la migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  

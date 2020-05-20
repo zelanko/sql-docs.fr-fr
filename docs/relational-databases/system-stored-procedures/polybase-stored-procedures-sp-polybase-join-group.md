@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278114"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826369"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Arguments  
- head_node_address = N «*head_node_address*» * \@*  
- Nom de l’ordinateur qui héberge le nœud principal SQL Server du groupe de scale-out Polybase. head_node_address est de type nvarchar (255). * \@*  
+ * \@ head_node_address* = N «*head_node_address*»  
+ Nom de l’ordinateur qui héberge le nœud principal SQL Server du groupe de scale-out Polybase. * \@ head_node_address* est de type nvarchar (255).  
   
- * \@dms_control_channel_port* = dms_control_channel_port  
- Port sur lequel le canal de contrôle pour le nœud principal Mouvement de données PolyBase service est en cours d’exécution. dms_control_channel_port est un __int16 non signé. * \@* La valeur par défaut est **16450**.  
+ * \@ dms_control_channel_port* = dms_control_channel_port  
+ Port sur lequel le canal de contrôle pour le nœud principal Mouvement de données PolyBase service est en cours d’exécution. * \@ dms_control_channel_port* est un __int16 non signé. La valeur par défaut est **16450**.  
   
- * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Nom du nœud principal SQL Server instance dans le groupe de montée en puissance parallèle Polybase. head_node_sql_server_instance_name est de type nvarchar (16). * \@*  
+ * \@ head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Nom du nœud principal SQL Server instance dans le groupe de montée en puissance parallèle Polybase. * \@ head_node_sql_server_instance_name* est de type nvarchar (16).  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -55,7 +55,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Après l’exécution de la procédure stockée, arrêtez le moteur Polybase et redémarrez le service Mouvement de données PolyBase sur l’ordinateur. Pour vérifier l’exécution de la DMV suivante sur le nœud principal : **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Exemple  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17271cf5e5f7f3bfafe8b0fbf52ddb77a2746e3f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060374"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824934"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68060374"
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT sur la vue ou l'appartenance dans les rôles de base de données fixes dc_operator, dc_proxy ou dc_admin.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La liste des propriétés disponibles est corrigée et leurs valeurs ne peuvent être modifiées qu'à l'aide de la procédure stockée appropriée. La table suivante décrit les propriétés qui sont exposées par cette vue :  
   
 |Nom de la propriété|Description|  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d849e7d43cc73ca6153375f5e5b3772944af1f7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745381"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828986"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Répertorie des informations sur le serveur de distribution, la base de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données de distribution, le répertoire de travail et le compte d’utilisateur de l’agent. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur n'importe quelle base de données.  
+  Répertorie des informations sur le serveur de distribution, la base de données de distribution, le répertoire de travail et le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte d’utilisateur de l’agent. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur n'importe quelle base de données.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @distributor = ] 'distributor' OUTPUT`Nom du serveur de distribution. Distributor est de **%** **type sysname**, avec la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distributor = ] 'distributor' OUTPUT`Nom du serveur de distribution. Distributor est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`Nom de la base de données de distribution. *distribdb* est de **%** **type sysname**, avec la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distribdb = ] 'distribdb' OUTPUT`Nom de la base de données de distribution. *distribdb* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @directory = ] 'directory' OUTPUT`Est le répertoire de travail. *Directory* est de **%** type **nvarchar (255)**, avec la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @directory = ] 'directory' OUTPUT`Est le répertoire de travail. *Directory* est de type **nvarchar (255)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @account = ] 'account' OUTPUT`Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte d’utilisateur Windows. *Account*est de **%** type **nvarchar (255)**, avec la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @account = ] 'account' OUTPUT`Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte d’utilisateur Windows. *Account*est de type **nvarchar (255)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT`Période de rétention minimale de la distribution, en heures. *min_distretention* est de **type int**, avec **-1**comme valeur par défaut.  
   
@@ -63,17 +63,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT`Période de rétention de l’historique, en heures. *history_retention* est de **type int**, avec **-1**comme valeur par défaut.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Nom de l’agent de nettoyage de l’historique. *history_cleanupagent* est de **%** type **nvarchar (100)**, avec la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Nom de l’agent de nettoyage de l’historique. *history_cleanupagent* est de type **nvarchar (100)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Nom de l’agent de nettoyage de distribution. *distrib_cleanupagent* est de **%** type **nvarchar (100)**, avec la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Nom de l’agent de nettoyage de distribution. *distrib_cleanupagent* est de type **nvarchar (100)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
 `[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 `[ @local = ] 'local'`Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit récupérer les valeurs du serveur local. *local* est de type **nvarchar (5)**, avec NULL comme valeur par défaut.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Nom du serveur qui émet des appels de procédure distante. *rpcsrvname* est de **%** **type sysname**, avec la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Nom du serveur qui émet des appels de procédure distante. *rpcsrvname* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`Type de serveur de publication du serveur de publication. *publisher_type* est de **%** **type sysname**, avec la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT`Type de serveur de publication du serveur de publication. *publisher_type* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -82,7 +82,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**conseiller**|**sysname**|Nom du serveur de distribution.|  
 |**base de données de distribution**|**sysname**|Nom de la base de données de distribution.|  
 |**Directory**|**nvarchar(255)**|Nom du répertoire de travail.|  
-|**Compte**|**nvarchar(255)**|Nom du compte d'utilisateur Windows.|  
+|**account**|**nvarchar(255)**|Nom du compte d'utilisateur Windows.|  
 |**min distrib retention**|**int**|Période de rétention de distribution minimale.|  
 |**max distrib retention**|**int**|Période maximale de rétention de distribution.|  
 |**history retention**|**int**|Période de rétention de l'historique.|  
@@ -95,7 +95,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpdistributor** est utilisé dans tous les types de réplications.  
   
  Si un ou plusieurs paramètres de sortie sont spécifiés lors de l’exécution de **sp_helpdistributor**, tous les paramètres de sortie définis sur null reçoivent des valeurs à la sortie et aucun jeu de résultats n’est retourné. Si aucun paramètre de sortie n'est spécifié, un ensemble de résultats est retourné.  
@@ -111,7 +111,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |history retention|**\@history_retention**|  
 |history cleanup agent|**\@history_cleanupagent**|  
 |distribution cleanup agent|**\@distrib_cleanupagent**|  
-|rpc login name|Aucun|  
+|rpc login name|aucun|  
   
  La colonne de l'ensemble de résultats suivante est retournée aux utilisateurs dans la liste d'accès aux publications sur le serveur de distribution :  
   

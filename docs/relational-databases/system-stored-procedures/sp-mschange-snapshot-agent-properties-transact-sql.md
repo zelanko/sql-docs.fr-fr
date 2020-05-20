@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3348590b002bb0ff5f154d983a56e3b66885073
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75321798"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828857"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifie les propriétés d’un travail de agent d’instantané qui s’exécute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sur un serveur de distribution ou version ultérieure. Cette procédure stockée est utilisée pour modifier des propriétés lorsque le serveur de publication s'exécute sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
+  Modifie les propriétés d’un travail de Agent d’instantané qui s’exécute sur un serveur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] distribution ou version ultérieure. Cette procédure stockée est utilisée pour modifier des propriétés lorsque le serveur de publication s'exécute sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,7 +70,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**1**|Une fois|  
 |**2**|À la demande|  
 |**4**|Quotidien|  
-|**version8**|Hebdomadaire|  
+|**8**|Hebdomadaire|  
 |**10**|Mensuelle|  
 |**20**|Mensuellement, en fonction de l'intervalle de fréquence|  
 |**40**|Au démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -84,7 +84,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, sans valeur par défaut.  
   
@@ -111,14 +111,14 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
-`[ @job_login = ] 'job_login'`Nom de connexion du compte Windows sous lequel l’agent s’exécute. *job_login* est de type **nvarchar (257)**, sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané. *Cela ne peut pas être modifié pour un serveur de publication non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*  
+`[ @job_login = ] 'job_login'`Nom de connexion du compte Windows sous lequel l’agent s’exécute. *job_login* est de type **nvarchar (257)**, sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané. *Cela ne peut pas être modifié pour un non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Serveur de *publication.*  
   
 `[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
-`[ @publisher_type = ] 'publisher_type'`Spécifie le type de serveur de publication lorsque le serveur de publication n' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est pas en cours d’exécution dans une instance de. *publisher_type* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
+`[ @publisher_type = ] 'publisher_type'`Spécifie le type de serveur de publication lorsque le serveur de publication n’est pas en cours d’exécution dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -131,12 +131,12 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_MSchange_snapshot_agent_properties** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
  Vous devez spécifier tous les paramètres lors de l’exécution de **sp_MSchange_snapshot_agent_properties**. Exécutez [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) pour retourner les propriétés actuelles du travail agent d’instantané.  
   
- Quand le serveur de publication s’exécute sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] une instance de ou version ultérieure, vous devez utiliser [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) pour modifier les propriétés d’un travail de agent d’instantané.  
+ Quand le serveur de publication s’exécute sur une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, vous devez utiliser [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) pour modifier les propriétés d’un travail de agent d’instantané.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** sur le serveur de distribution peuvent exécuter **sp_MSchange_snapshot_agent_properties**.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119333"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827358"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68119333"
 |**name**|**nvarchar(128)**|Nom du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**descriptive**|**nvarchar(255)**|Description du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**user_name**|**nvarchar(128)**|Nom de l'utilisateur effectuant la sauvegarde Sa valeur peut être NULL.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] numéro de version principale. Sa valeur peut être NULL.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]numéro de version principale. Sa valeur peut être NULL.|  
 |**software_minor_version**|**tinyint**|Numéro de version secondaire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sa valeur peut être NULL.|  
 |**software_build_version**|**smallint**|Numéro de build de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sa valeur peut être NULL.|  
 |**time_zone**|**smallint**|Différence entre l'heure locale (lieu où l'opération de sauvegarde se déroule) et le temps universel UTC, exprimée en intervalles de 15 minutes. Les valeurs peuvent être comprises entre - 48 et + 48 incluses. La valeur 127 signifie inconnu. Par exemple, -20 correspond à l'heure de l'Est (USA) soit 5 heures après l'heure universelle UTC. Sa valeur peut être NULL.|  
@@ -73,7 +73,7 @@ ms.locfileid: "68119333"
 |**database_name**|**nvarchar(128)**|Nom de la base de données impliquée dans la sauvegarde. Sa valeur peut être NULL.|  
 |**server_name**|**nvarchar(128)**|Nom du serveur exécutant la sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sa valeur peut être NULL.|  
 |**machine_name**|**nvarchar(128)**|Nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est exécuté. Sa valeur peut être NULL.|  
-|**flags**|**int**|Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la colonne d' **indicateurs** est dépréciée et est remplacée par les colonnes de bits suivantes :<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Sa valeur peut être NULL.<br /><br /> Dans des jeux de sauvegarde à partir de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bits d'indicateur :<br />1 = La sauvegarde contient des données consignées de façon minimale. <br />2 = WITH SNAPSHOT a été utilisé. <br />4 = La base de données était accessible en lecture seule au moment de la sauvegarde.<br />8 = La base de données était en mode mono-utilisateur au moment de la sauvegarde.|  
+|**flags**|**int**|Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la colonne d' **indicateurs** est dépréciée et est remplacée par les colonnes de bits suivantes :<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Sa valeur peut être NULL.<br /><br /> Dans des jeux de sauvegarde à partir de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bits d'indicateur :<br />1 = La sauvegarde contient des données consignées de façon minimale. <br />2 = WITH SNAPSHOT a été utilisé. <br />4 = La base de données était accessible en lecture seule au moment de la sauvegarde.<br />8 = La base de données était en mode mono-utilisateur au moment de la sauvegarde.|  
 |**unicode_locale**|**int**|Paramètres régionaux Unicode. Sa valeur peut être NULL.|  
 |**unicode_compare_style**|**int**|Style de comparaison Unicode. Sa valeur peut être NULL.|  
 |**collation_name**|**nvarchar(128)**|Nom du classement. Sa valeur peut être NULL.|  
@@ -101,7 +101,7 @@ ms.locfileid: "68119333"
 |**encryptor_thumbprint**|**varbinary(20)**|Empreinte numérique du chiffreur pouvant être utilisé pour rechercher un certificat ou la clé asymétrique dans la base de données. Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Type de chiffreur utilisé : certificat ou clé asymétrique . Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  RESTORE VERIFYONLY à partir de *backup_device* avec LoadHistory remplit la colonne de la table **backupmediaset** avec les valeurs appropriées de l’en-tête Media-Set.  
   
  Pour réduire le nombre de lignes dans cette table et dans d’autres tables de sauvegarde et d’historique, exécutez la procédure stockée [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
@@ -112,7 +112,7 @@ ms.locfileid: "68119333"
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [Erreurs de support possibles au cours de la sauvegarde et de la restauration &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   

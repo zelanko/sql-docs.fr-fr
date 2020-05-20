@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9fbc18b737c4c901527e6dc1684b75c2f5ddedda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056794"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826060"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication non auquel appartient le travail. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication non auquel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appartient le travail. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -60,7 +60,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpxactsetjob** est utilisé dans la réplication d’instantané et la réplication transactionnelle pour les serveurs de publication Oracle.  
   
  **sp_helpxactsetjob** retourne toujours les paramètres actuels de la tâche Xactset (HREPL_XactSetJob) sur le serveur de publication. Si le travail Xactset est actuellement dans la file d'attente des travaux, il renvoie en outre des attributs du travail à partir de la vue du dictionnaire de données USER_JOB créée sous le compte administrateur sur le serveur de publication Oracle.  

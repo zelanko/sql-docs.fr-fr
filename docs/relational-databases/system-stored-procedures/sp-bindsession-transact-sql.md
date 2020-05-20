@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046026"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828490"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Lie ou dissocie une session à d’autres sessions dans la même instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. La liaison de sessions permet à deux sessions ou plus de participer à la même transaction et d'en partager les verrous jusqu'à l'émission d'une instruction ROLLBACK TRANSACTION ou COMMIT TRANSACTION.  
+  Lie ou dissocie une session à d’autres sessions dans la même instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] . La liaison de sessions permet à deux sessions ou plus de participer à la même transaction et d'en partager les verrous jusqu'à l'émission d'une instruction ROLLBACK TRANSACTION ou COMMIT TRANSACTION.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
@@ -48,12 +48,12 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Deux sessions liées ne partage qu'une transaction et des verrous. Chaque session conserve son propre niveau d'isolation et la définition d'un nouveau niveau d'isolation sur une session n'affecte pas le niveau de l'autre. Chaque session reste identifiée par son compte de sécurité et ne peut accéder qu'aux ressources de la base de données auxquelles le compte est autorisé à accéder.  
   
- **sp_bindsession** utilise un jeton de liaison pour lier deux ou plusieurs sessions clientes existantes. Ces sessions clientes doivent se trouver sur la même instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du à partir de laquelle le jeton de liaison a été obtenu. Une session est un client exécutant une commande. Les sessions de base de données liées partagent une transaction et un espace de verrouillage.  
+ **sp_bindsession** utilise un jeton de liaison pour lier deux ou plusieurs sessions clientes existantes. Ces sessions clientes doivent se trouver sur la même instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à partir de laquelle le jeton de liaison a été obtenu. Une session est un client exécutant une commande. Les sessions de base de données liées partagent une transaction et un espace de verrouillage.  
   
- Un jeton de liaison obtenu à partir d’une [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance du ne peut pas être utilisé pour une session cliente connectée à une autre instance, même pour les transactions DTC. Un jeton de liaison n'est valide que localement dans chaque instance et ne peut pas être partagé par plusieurs instances. Pour lier des sessions clientes sur une autre [!INCLUDE[ssDE](../../includes/ssde-md.md)]instance du, vous devez obtenir un jeton de liaison différent en exécutant **sp_getbindtoken**.  
+ Un jeton de liaison obtenu à partir d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas être utilisé pour une session cliente connectée à une autre instance, même pour les transactions DTC. Un jeton de liaison n'est valide que localement dans chaque instance et ne peut pas être partagé par plusieurs instances. Pour lier des sessions clientes sur une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vous devez obtenir un jeton de liaison différent en exécutant **sp_getbindtoken**.  
   
  **sp_bindsession** échouera avec une erreur si elle utilise un jeton qui n’est pas actif.  
   

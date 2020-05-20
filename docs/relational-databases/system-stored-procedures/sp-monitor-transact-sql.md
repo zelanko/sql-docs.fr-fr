@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55386d32348257db3f89feb81d6a6b0ff7292499
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022317"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828291"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Affiche des statistiques [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur.  
+  Affiche des statistiques sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_monitor
 |-----------------|-----------------|  
 |**last_run**|Heure de la dernière exécution de **sp_monitor** .|  
 |**current_run**|L’heure de **sp_monitor** est en cours d’exécution.|  
-|**durée**|Nombre de secondes écoulées depuis l’exécution de **sp_monitor** .|  
+|**seconds**|Nombre de secondes écoulées depuis l’exécution de **sp_monitor** .|  
 |**cpu_busy**|Nombre de secondes que l'UC de l'ordinateur serveur a consacrées à des tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Nombre de secondes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a consacrées aux opérations d'entrée et de sortie.|  
 |**périodes**|Nombre de secondes pendant lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été inactif.|  
@@ -59,10 +59,10 @@ sp_monitor
 |**total_errors**|Nombre d'erreurs détectées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors des opérations de lecture et d'écriture.|  
 |**connexions**|Nombre de connexions ou de tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure le suivi, par le biais d'une série de fonctions, du volume de son activité. L’exécution de **sp_monitor** affiche les valeurs actuelles retournées par ces fonctions et indique leur nombre modifié depuis la dernière exécution de la procédure.  
   
- Pour chaque colonne, les statistiques sont imprimées au format *Number*(*Number*)-*Number*% ou *Number*(*Number*). Le premier *nombre* fait référence au nombre de secondes (pour **cpu_busy**, **io_busy**et **inactif**) ou au nombre total (pour les autres variables) depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le redémarrage de. Le *nombre* entre parenthèses fait référence au nombre de secondes ou au nombre total depuis la dernière exécution de **sp_monitor** . Le pourcentage est le pourcentage de temps écoulé depuis la dernière exécution de **sp_monitor** . Par exemple, si le rapport indique **cpu_busy** en tant que 4250 (215)-68%, le processeur est occupé 4250 secondes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis le dernier démarrage de, 215 secondes depuis la dernière exécution de **sp_monitor** et 68% du temps total depuis la dernière exécution de **sp_monitor** .  
+ Pour chaque colonne, les statistiques sont imprimées au format *Number*(*Number*)-*Number*% ou *Number*(*Number*). Le premier *nombre* fait référence au nombre de secondes (pour **cpu_busy**, **io_busy**et **inactif**) ou au nombre total (pour les autres variables) depuis le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarrage de. Le *nombre* entre parenthèses fait référence au nombre de secondes ou au nombre total depuis la dernière exécution de **sp_monitor** . Le pourcentage est le pourcentage de temps écoulé depuis la dernière exécution de **sp_monitor** . Par exemple, si le rapport indique **cpu_busy** en tant que 4250 (215)-68%, le processeur est occupé 4250 secondes depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le dernier démarrage de, 215 secondes depuis la dernière exécution de **sp_monitor** et 68% du temps total depuis la dernière exécution de **sp_monitor** .  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
@@ -79,7 +79,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**last_run**|**current_run**|**durée**|  
+|**last_run**|**current_run**|**seconds**|  
 |29 mars 1998 11:55|4 avril 1998 14:22|561|  
   
 ||||  

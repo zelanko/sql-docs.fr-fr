@@ -10,32 +10,32 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75e3f884e09d41c2ae7aa5c7610b0c7ac24691a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048391"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828513"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Contient une ligne pour chaque format de fichier externe de la base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données [!INCLUDE[ssSDS](../../includes/sssds-md.md)]active pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], et.  
+  Contient une ligne pour chaque format de fichier externe de la base de données active pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
- Contient une ligne pour chaque format de fichier externe sur le serveur [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]pour.  
+ Contient une ligne pour chaque format de fichier externe sur le serveur pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|ID d’objet pour le format de fichier externe.||  
-|name|**sysname**|Nom du format de fichier. dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], cela est unique pour la base de données. Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], il est unique pour le serveur.||  
+|name|**sysname**|Nom du format de fichier. dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , cela est unique pour la base de données. Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , il est unique pour le serveur.||  
 |format_type|**tinyint**|Type de format de fichier.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
 |field_terminator|**nvarchar(10**|Pour format_type = DELIMITEDTEXT, il s’agit de l’indicateur de fin de champ.||  
 |string_delimiter|**nvarchar(10**|Pour format_type = DELIMITEDTEXT, il s’agit du délimiteur de chaîne.||  
 |date_format|**nvarchar(50)**|Pour format_type = DELIMITEDTEXT, il s’agit du format de date et d’heure défini par l’utilisateur.||  
-|use_type_default|**bit**|Pour format_type = texte délimité, spécifie comment gérer les valeurs manquantes lorsque Polybase importe des données à partir de fichiers [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]texte HDFS dans.|0-stocker les valeurs manquantes en tant que chaîne « NULL ».<br /><br /> 1-stocker les valeurs manquantes en tant que valeur par défaut de la colonne.|  
+|use_type_default|**bit**|Pour format_type = texte délimité, spécifie comment gérer les valeurs manquantes lorsque Polybase importe des données à partir de fichiers texte HDFS dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .|0-stocker les valeurs manquantes en tant que chaîne « NULL ».<br /><br /> 1-stocker les valeurs manquantes en tant que valeur par défaut de la colonne.|  
 |serde_method|**nvarchar(255)**|Pour format_type = RCFILE, il s’agit de la méthode de sérialisation/désérialisation.||  
 |row_terminator|**nvarchar(10**|Pour format_type = DELIMITEDTEXT, il s’agit de la chaîne de caractères qui termine chaque ligne dans le fichier Hadoop externe.|Toujours' \n'.|  
 |encodage|**nvarchar(10**|Pour format_type = DELIMITEDTEXT, il s’agit de la méthode d’encodage pour le fichier Hadoop externe.|Toujours’UTF8 '.|  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03236c2882cad61e42ffa0fcdeb322d4ada53c2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46193a7fa201dedc9f3936c727ac45d221cdd9da
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910042"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828778"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous devez désactiver le collecteur de données avant de modifier la configuration du répertoire de cache. Cette procédure stockée échoue si le collecteur de données est activé. Pour plus d’informations, consultez [activer ou désactiver la collecte de données](../../relational-databases/data-collection/enable-or-disable-data-collection.md)et gérer la collecte de [données](../../relational-databases/data-collection/manage-data-collection.md).  
   
  Le répertoire spécifié n’a pas besoin d’exister au moment de l’exécution du sp_syscollector_set_cache_directory ; Toutefois, les données ne peuvent pas être mises en cache et téléchargées tant que le répertoire n’a pas été créé. Nous vous recommandons de créer le répertoire avant d'exécuter cette procédure stockée.  
@@ -54,7 +54,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant désactive le collecteur de données, définit le répertoire de cache pour le collecteur `D:\tempdata`de données sur, puis active le collecteur de données.  
+ L’exemple suivant désactive le collecteur de données, définit le répertoire de cache pour le collecteur de données sur `D:\tempdata` , puis active le collecteur de données.  
   
 ```sql  
 USE msdb;  

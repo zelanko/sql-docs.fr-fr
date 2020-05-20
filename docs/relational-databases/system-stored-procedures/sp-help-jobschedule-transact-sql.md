@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054911"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827595"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **Remarque : sp_help_jobschedule** retourne des valeurs à partir des tables système **dbo. sysjobschedules** et **dbo. sysschedules** dans **msdb**. **sysjobschedules** est mis à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les paramètres de **sp_help_jobschedule** peuvent être utilisés uniquement dans certaines combinaisons. Si *schedule_id* est spécifié, ni *job_id* ni *job_name* ne peuvent être spécifiés. Dans le cas contraire, les paramètres *job_id* ou *job_name* peuvent être utilisés avec *schedule_name*.  
   
 ## <a name="permissions"></a>Autorisations  

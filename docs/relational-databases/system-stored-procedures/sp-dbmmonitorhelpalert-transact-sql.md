@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f4d6cb60ab7da7caaed5e0e91859f4bb083b191e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899190"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826175"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dbmmonitorhelpalert database_name
   
  Pour renvoyer un avertissement spécifique, indiquez l'une des valeurs suivantes :  
   
-|Value|Mesure de performance|Seuil d'avertissement|  
+|Valeur|Mesure de performance|Seuil d'avertissement|  
 |-----------|------------------------|-----------------------|  
 |1|Transaction non envoyée la plus ancienne|Spécifie le nombre de minutes de transactions pouvant s'accumuler dans la file d'attente d'envoi avant qu'un avertissement ne soit généré sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de temps et s'avère particulièrement approprié en mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
 |2|Journal non envoyé|Spécifie la quantité de kilo-octets (Ko) de journal non envoyé qui génère un avertissement sur l'instance de serveur principal. Cet avertissement aide à mesurer le risque de perte de données en termes de Ko et il est particulièrement utile pour le mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
@@ -71,7 +71,7 @@ sp_dbmmonitorhelpalert database_name
 |**durée**|**int**|Valeur de seuil de l'avertissement. Si une valeur supérieure à ce seuil est renvoyée lorsque l'état des mises en miroir est mis à jour, une entrée est insérée dans le journal des événements Windows. Cette valeur est exprimée en Ko, minutes ou millisecondes, suivant l'avertissement. Si le seuil n'est pas actuellement défini, la valeur est NULL.<br /><br /> **Remarque :** Pour afficher les valeurs actuelles, exécutez la procédure stockée [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
 |**désactivé**|**bit**|0 = L'événement est désactivé.<br /><br /> 1 = L'événement est activé.<br /><br /> **Remarque :** La période de rétention est toujours activée.|  
   
-|Value|Mesure de performance|Unité|  
+|Valeur|Mesure de performance|Unité|  
 |-----------|------------------------|----------|  
 |1|Transaction non envoyée la plus ancienne|Minutes|  
 |2|Journal non envoyé|Ko|  

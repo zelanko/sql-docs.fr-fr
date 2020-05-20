@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 95660c293ef8a5efcca132407cd930ab0b721d89
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044499"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827419"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**name**|**sysname**|Nom de profil du profil.|  
 |**descriptive**|**nvarchar(256)**|Description du profil.|  
   
-## <a name="remarks"></a>Notes  
- Lorsqu’un nom de profil ou un ID de profil est spécifié, **sysmail_help_profile_sp** retourne des informations sur ce profil. Dans le cas contraire, **sysmail_help_profile_sp** retourne des informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chaque profil de l’instance.  
+## <a name="remarks"></a>Remarques  
+ Lorsqu’un nom de profil ou un ID de profil est spécifié, **sysmail_help_profile_sp** retourne des informations sur ce profil. Dans le cas contraire, **sysmail_help_profile_sp** retourne des informations sur chaque profil de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
  La procédure stockée **sysmail_help_profile_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   

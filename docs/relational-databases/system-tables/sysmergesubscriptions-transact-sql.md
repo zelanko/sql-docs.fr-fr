@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029770"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824774"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68029770"
 |subscriber_server|**sysname**|ID du serveur. Permet de mapper le champ srvid avec la valeur propre au serveur lors de la migration d'une copie de la base de données d'abonnement vers un autre serveur.|  
 |db_name|**sysname**|Nom de la base de données d’abonnement.|  
 |pubid|**uniqueidentifier**|ID de la publication à partir de laquelle l'abonnement actuel a été créé.|  
-|datasource_type|**int**|Type de source de données :<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = OLE DB jet.|  
+|datasource_type|**int**|Type de source de données :<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **2** = OLE DB jet.|  
 |subid|**uniqueidentifier**|Numéro d'identification unique de l'abonnement.|  
 |replnickname|**binary**|Surnom compressé du réplica.|  
 |replicastate|**uniqueidentifier**|Identificateur unique utilisé pour déterminer si la synchronisation précédente a réussi en comparant la valeur sur l'Éditeur à celle sur l'Abonné.|  

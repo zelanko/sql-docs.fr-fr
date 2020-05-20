@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4c1afca8eed465c191fccb4d24e79a7bd95af9aa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122435"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828906"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,17 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID de l’agent.|  
 |**name**|**nvarchar(100**|Nom de l'Agent.|  
-|**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion au serveur de publication. Il peut prendre l'une des valeurs suivantes :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows.|  
+|**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion au serveur de publication. Il peut prendre l'une des valeurs suivantes :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows.|  
 |**publisher_login**|**sysname**|Nom de connexion utilisé lors de la connexion au serveur de publication.|  
-|**publisher_password**|**nvarchar (524)**|Pour des raisons de sécurité, la ** \* \* \* \* \* \* \* \* valeur \* ** est toujours retournée.|  
+|**publisher_password**|**nvarchar (524)**|Pour des raisons de sécurité, la valeur **\*\*\*\*\*\*\*\*\*\*** est toujours retournée.|  
 |**job_id**|**uniqueidentifier**|ID unique du travail de l'Agent.|  
-|**job_login**|**nvarchar(512)**|Compte Windows sous lequel s’exécute l’agent de lecture du journal, qui est retourné au format *domaine*\\*nom d’utilisateur*.|  
-|**job_password**|**sysname**|Pour des raisons de sécurité, la ** \* \* \* \* \* \* \* \* valeur \* ** est toujours retournée.|  
+|**job_login**|**nvarchar(512)**|Compte Windows sous lequel s’exécute l’agent de lecture du journal, qui est retourné au format *domaine* \\ *nom d’utilisateur*.|  
+|**job_password**|**sysname**|Pour des raisons de sécurité, la valeur **\*\*\*\*\*\*\*\*\*\*** est toujours retournée.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helplogreader_agent** est utilisé dans la réplication transactionnelle.  
   
 ## <a name="permissions"></a>Autorisations  

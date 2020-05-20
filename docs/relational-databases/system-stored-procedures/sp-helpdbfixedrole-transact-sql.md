@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdbfixedrole
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d5c34cba36e4427c2f0def227b0641fa2f2fa84
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123831"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828930"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|nom du rôle de base de données fixe.|  
 |**Description**|**nvarchar (70)**|Description de **DbFixedRole.**|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les rôles de base de données fixes, tels que répertoriés dans le tableau ci-dessous, sont définis au niveau de la base de données et possèdent les autorisations leur permettant d'effectuer des opérations d'administration spécifiques au niveau de la base de données. Il est impossible d'ajouter ou de supprimer des rôles de base de données fixes. Les autorisations accordées à un rôle de base de données fixe ne peuvent pas être modifiées.  
   
 |Rôle de base de données fixe|Description|  

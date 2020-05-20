@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 50823db39b3369c5e9f2fe54b8acbbe5dd424fc0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910155"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827171"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "67910155"
 |**stop_at_mark_name**|**nvarchar(128)**|Indique la récupération au point de la transaction contenant la marque nommée. Sa valeur peut être NULL.<br /><br /> Lorsqu'un instantané de base de données est rétabli, cette valeur est NULL.|  
 |**stop_before**|**bit**|Indique si la transaction contenant la marque nommée est incluse dans la récupération :<br /><br /> 0 = Récupération arrêtée avant la transaction marquée<br /><br /> 1 = Transaction marquée incluse dans la récupération<br /><br /> Sa valeur peut être NULL.<br /><br /> Lorsqu'un instantané de base de données est rétabli, cette valeur est NULL.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour réduire le nombre de lignes dans cette table et dans d’autres tables de sauvegarde et d’historique, exécutez la procédure stockée [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
 ## <a name="see-also"></a>Voir aussi  

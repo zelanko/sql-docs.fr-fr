@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030911"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826023"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou supérieur à 0 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les index XML ne sont pas pris en charge. Si un index XML est spécifié ou qu'un nom de table est spécifié sans nom d'index et que la table contient un index XML, l'instruction échoue. Pour définir ces options, utilisez [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) à la place.  
   
  Pour afficher les propriétés de verrouillage de page et de ligne actuelles, utilisez [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) ou l’affichage catalogue [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>R. Définition d'une option sur un index spécifique  
- L’exemple suivant interdit les verrous de page sur `IX_Customer_TerritoryID` l’index sur `Customer` la table.  
+ L’exemple suivant interdit les verrous de page sur l' `IX_Customer_TerritoryID` index sur la `Customer` table.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Définition d'une option sur une table dépourvue d'index cluster  
- L'exemple suivant interdit les verrous de page sur une table dépourvue d'index cluster (un segment de mémoire). L' `sys.indexes` affichage catalogue est interrogé avant et après l’exécution `sp_indexoption` de la procédure pour afficher les résultats de l’instruction.  
+ L'exemple suivant interdit les verrous de page sur une table dépourvue d'index cluster (un segment de mémoire). L' `sys.indexes` affichage catalogue est interrogé avant et après l’exécution de la `sp_indexoption` procédure pour afficher les résultats de l’instruction.  
   
 ```sql  
 USE AdventureWorks2012;  

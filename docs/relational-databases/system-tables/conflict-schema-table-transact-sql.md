@@ -1,5 +1,5 @@
 ---
-title: table&lt;&gt; conflict_&gt;Schema&lt;_ (Transact-SQL) | Microsoft Docs
+title: '&lt;table conflict_ Schema &gt; _ &lt; &gt; (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7986df966f25644a05d63165cc3d87f4be752ec9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084768"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825940"
 ---
-# <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>table&lt;&gt; conflict_&gt;Schema&lt;_ (Transact-SQL)
+# <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>&lt;table conflict_ Schema &gt; _ &lt; &gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le schéma\<conflict_>_\<Table> table contient des informations sur les lignes en conflit dans la réplication d’égal à égal. Il existe une table de conflits pour chaque table répliquée dans une publication, où le nom de la table de conflits est ajouté au nom du schéma et à celui de l'article. Ces tables de conflits spécifiques aux articles existent dans chaque base de données de publication.  
+  Le \< schéma conflict_>_ table \<> table contient des informations sur les lignes en conflit dans la réplication d’égal à égal. Il existe une table de conflits pour chaque table répliquée dans une publication, où le nom de la table de conflits est ajouté au nom du schéma et à celui de l'article. Ces tables de conflits spécifiques aux articles existent dans chaque base de données de publication.  
   
  Pour la réplication d'égal à égal, par défaut, l'Agent de distribution échoue lorsqu'il détecte un conflit. Une erreur de conflit est enregistrée dans le journal des erreurs, mais aucune donnée de conflit n'est enregistrée dans la table de conflits ; par conséquent, la consultation de cette erreur n'est pas possible. Si l'Agent de distribution est autorisé à continuer, un conflit est enregistré localement sur chaque nœud où il a été détecté. Pour plus d'informations, consultez « Gestion des conflits » dans [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   

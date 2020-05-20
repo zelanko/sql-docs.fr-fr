@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060385"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824938"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68060385"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT pour dc_operator, dc_proxy.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L'API du collecteur de données vous permet uniquement de modifier ou de supprimer les jeux d'éléments de collecte que vous créez. Les jeux d'éléments de collecte fournis avec le système ne peuvent pas être modifiés ou supprimés. Toutefois, vous pouvez toujours activer ou désactiver un jeu d'éléments de collecte système et modifier sa configuration.  
   
 ## <a name="see-also"></a>Voir aussi  

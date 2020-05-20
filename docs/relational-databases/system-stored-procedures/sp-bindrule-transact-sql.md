@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046030"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828470"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous pouvez lier une nouvelle règle à une colonne (même si vous préférez utiliser une contrainte CHECK) ou à un type de données alias avec **sp_bindrule** sans dissocier une règle existante. L'ancienne règle est remplacée par la nouvelle. Si une règle est associée à une colonne à l'aide d'une contrainte CHECK existante, toutes les restrictions sont évaluées. Vous ne pouvez pas lier de règle à un type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La règle s'impose lors d'une tentative d'insertion de données (INSERT) et non au moment de la liaison. Vous pouvez lier une règle de caractères à une colonne de type de données **numérique** , bien qu’une telle opération d’insertion ne soit pas valide.  
@@ -86,7 +86,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Liaison d'une règle à un type de données d'alias  
- En supposant l'existence d'une règle nommée `rule_ssn` et d'un type de données d'alias nommé `ssn`, cet exemple lie `rule_ssn` à `ssn`. Toutes les colonnes créées par une instruction CREATE TABLE avec le type de données `ssn` héritent de la règle `rule_ssn`. Les colonnes de type `ssn` existantes héritent `rule_ssn` également de la règle, sauf si **futureonly** est spécifié `ssn` pour *futureonly_flag*ou a une règle liée directement à celle-ci. Les règles liées à des colonnes ont toujours priorité sur les règles liées à des types de données.  
+ En supposant l'existence d'une règle nommée `rule_ssn` et d'un type de données d'alias nommé `ssn`, cet exemple lie `rule_ssn` à `ssn`. Toutes les colonnes créées par une instruction CREATE TABLE avec le type de données `ssn` héritent de la règle `rule_ssn`. Les colonnes de type existantes `ssn` héritent également de la `rule_ssn` règle, sauf si **futureonly** est spécifié pour *futureonly_flag*ou `ssn` a une règle liée directement à celle-ci. Les règles liées à des colonnes ont toujours priorité sur les règles liées à des types de données.  
   
 ```  
 USE master;  

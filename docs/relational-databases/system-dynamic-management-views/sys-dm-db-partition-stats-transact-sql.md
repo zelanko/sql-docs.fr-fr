@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096285"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828030"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68096285"
   Renvoie le nombre de pages et de lignes de chaque partition de la base de données active.  
   
 > [!NOTE]  
->  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_db_partition_stats**. La partition_id dans sys. dm_pdw_nodes_db_partition_stats diffère de la partition_id de l’affichage catalogue sys. partitions pour Azure SQL Data Warehouse.
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_db_partition_stats**. La partition_id dans sys. dm_pdw_nodes_db_partition_stats diffère de la partition_id de l’affichage catalogue sys. partitions pour Azure SQL Data Warehouse.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,13 +48,13 @@ ms.locfileid: "68096285"
 |**lob_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer les colonnes hors ligne **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** dans la partition, que les pages soient utilisées ou non. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB réservés pour le stockage et la gestion d'un index columnstore dans la partition.|  
 |**row_overflow_used_page_count**|**bigint**|Nombre de pages utilisées pour stocker et gérer les colonnes en dépassement de capacité des lignes **varchar**, **nvarchar**, **varbinary** et **sql_variant** de la partition. Les pages IAM sont incluses.<br /><br /> Toujours 0 pour un index columnstore.|  
 |**row_overflow_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer les colonnes en dépassement de capacité des lignes **varchar**, **nvarchar**, **varbinary** et **sql_variant** de la partition, que les pages soient utilisées ou non. Les pages IAM sont incluses.<br /><br /> Toujours 0 pour un index columnstore.|  
-|**used_page_count**|**bigint**|Nombre total de pages utilisées pour la partition. Calculé en tant que **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
-|**reserved_page_count**|**bigint**|Nombre total de pages réservées pour la partition. Calculé en tant que **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
+|**used_page_count**|**bigint**|Nombre total de pages utilisées pour la partition. Calculé en tant que **in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**.|  
+|**reserved_page_count**|**bigint**|Nombre total de pages réservées pour la partition. Calculé en tant que **in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|Nombre approximatif de lignes dans la partition.|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
-|**distribution_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numérique unique associé à la distribution.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**distribution_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numérique unique associé à la distribution.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sys.dm_db_partition_stats** affiche des informations sur l'espace utilisé pour stocker et gérer les données LOB des données dans la ligne et les données en dépassement de capacité des lignes de toutes les partitions d'une base de données. Une seule ligne est affichée par partition.  
   
  Les nombres sur lesquels le résultat est basé sont placés en mémoire cache ou stockés sur disque dans diverses tables système.  

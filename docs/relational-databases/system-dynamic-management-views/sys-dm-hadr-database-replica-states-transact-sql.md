@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83b3c369add51a853078dd64a8861d633ac330ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982278"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827957"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque base de données qui participe à un groupe de disponibilité Always On pour lequel l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale de héberge un réplica de disponibilité. Cette vue de gestion dynamique expose les informations d'état sur les réplicas principaux et secondaires. Sur un réplica secondaire, cette vue retourne une ligne pour chaque base de données secondaire sur l'instance de serveur. Sur le réplica principal, cette vue retourne une ligne pour chaque base de données primaire et une ligne supplémentaire pour la base de données secondaire correspondante.  
+  Retourne une ligne pour chaque base de données qui participe à un groupe de disponibilité Always On pour lequel l’instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] héberge un réplica de disponibilité. Cette vue de gestion dynamique expose les informations d'état sur les réplicas principaux et secondaires. Sur un réplica secondaire, cette vue retourne une ligne pour chaque base de données secondaire sur l'instance de serveur. Sur le réplica principal, cette vue retourne une ligne pour chaque base de données primaire et une ligne supplémentaire pour la base de données secondaire correspondante.  
   
 > [!IMPORTANT]
 > Selon l'action et les états de niveau supérieur, les informations d'état de la base de données peuvent être non disponibles ou obsolètes. En outre, les valeurs ont uniquement une pertinence locale. Par exemple, sur le réplica principal, la valeur de la colonne **last_hardened_lsn** reflète les informations relatives à une base de données secondaire donnée qui est actuellement disponible pour le réplica principal, et non la valeur LSN renforcée réelle que le réplica secondaire peut avoir actuellement.  

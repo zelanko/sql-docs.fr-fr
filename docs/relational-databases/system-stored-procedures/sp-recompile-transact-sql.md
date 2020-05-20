@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002567"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827513"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @objname= ] '*Object*'  
+ [ @objname =] '*objet*'  
  Nom qualifié ou non qualifié d'une procédure stockée, d'un déclencheur, d'une table, d'une vue ou d'une fonction définie par l'utilisateur dans la base de données actuelle. l' *objet* est de type **nvarchar (776)**, sans valeur par défaut. Si *Object* est le nom d’une procédure stockée, d’un déclencheur ou d’une fonction définie par l’utilisateur, la procédure stockée, le déclencheur ou la fonction est recompilé lors de sa prochaine exécution. Si *Object* est le nom d’une table ou d’une vue, toutes les procédures stockées, les déclencheurs ou les fonctions définies par l’utilisateur qui font référence à cette table ou cette vue seront recompilés lors de leur prochaine exécution.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  sp_recompile ne recherche un objet que dans la base de données active.  
   
  Les requêtes utilisées par les procédures stockées ou les déclencheurs et les fonctions définies par l'utilisateur ne sont optimisées que quand elles sont compilées. À mesure que vous ajoutez des index à votre base de données ou que vous y apportez d'autres changements modifiant ses statistiques, les procédures stockées, les déclencheurs et les fonctions définies par l'utilisateur compilés peuvent perdre de leur efficacité. En recompilant les procédures stockées et les déclencheurs qui agissent sur une table, vous pouvez réoptimiser les requêtes.  

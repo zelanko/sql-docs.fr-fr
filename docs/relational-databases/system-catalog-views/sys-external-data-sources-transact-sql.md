@@ -10,22 +10,22 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 152265e072d9f21baae715692cada63ee4f7ab11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bbec44831d7025fd53cafe0248eb1f69b79bf14d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005180"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828163"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Contient une ligne pour chaque source de données externe de la base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données [!INCLUDE[ssSDS](../../includes/sssds-md.md)]active pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], et.  
+  Contient une ligne pour chaque source de données externe de la base de données active pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
- Contient une ligne pour chaque source de données externe sur le serveur [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]pour.  
+ Contient une ligne pour chaque source de données externe sur le serveur pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  

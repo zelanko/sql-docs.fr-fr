@@ -17,19 +17,19 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981836"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828053"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Certaines fonctionnalités du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] modifient la façon dont [!INCLUDE[ssDE](../../includes/ssde-md.md)] les informations sont stockées dans les fichiers de la base de données. Ces fonctionnalités sont limitées à des éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une base de données qui contient ces fonctionnalités ne peut pas être déplacée vers une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne les prend pas en charge. Utilisez la vue de gestion dynamique sys. dm_db_persisted_sku_features pour répertorier les fonctionnalités spécifiques à l’édition de qui sont activées dans la base de données actuelle.
+  Certaines fonctionnalités du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] modifient la façon dont les [!INCLUDE[ssDE](../../includes/ssde-md.md)] informations sont stockées dans les fichiers de la base de données. Ces fonctionnalités sont limitées à des éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une base de données qui contient ces fonctionnalités ne peut pas être déplacée vers une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne les prend pas en charge. Utilisez la vue de gestion dynamique sys. dm_db_persisted_sku_features pour répertorier les fonctionnalités spécifiques à l’édition de qui sont activées dans la base de données actuelle.
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures).
   
@@ -41,18 +41,18 @@ ms.locfileid: "73981836"
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE sur la base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si aucune fonctionnalité pouvant être restreinte par une édition spécifique n’est utilisée par la base de données, la vue ne retourne aucune ligne.  
   
- sys. dm_db_persisted_sku_features peut répertorier les fonctionnalités de modification de base de données suivantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , limitées à des éditions spécifiques :  
+ sys. dm_db_persisted_sku_features peut répertorier les fonctionnalités de modification de base de données suivantes, limitées à des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditions spécifiques :  
   
 -   **ChangeCapture**: indique qu’une capture de données modifiées est activée pour une base de données. Pour supprimer la capture de données modifiées, utilisez la procédure stockée [sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) . Pour plus d’informations, consultez [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
--   **ColumnStoreIndex**: indique qu’au moins une table a un index ColumnStore. Pour permettre le déplacement d’une base de données vers une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] édition de qui ne prend pas en charge cette fonctionnalité, utilisez l’instruction [Drop index](../../t-sql/statements/drop-index-transact-sql.md) ou [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) pour supprimer l’index ColumnStore. Pour plus d’informations, consultez [index ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+-   **ColumnStoreIndex**: indique qu’au moins une table a un index ColumnStore. Pour permettre le déplacement d’une base de données vers une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne prend pas en charge cette fonctionnalité, utilisez l’instruction [Drop index](../../t-sql/statements/drop-index-transact-sql.md) ou [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) pour supprimer l’index ColumnStore. Pour plus d’informations, consultez [index ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
     **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures).  
   
--   **Compression**: indique qu’au moins une table ou un index utilise la compression de données ou le format de stockage vardecimal. Pour permettre le déplacement d’une base de données vers une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] édition de qui ne prend pas en charge cette fonctionnalité, utilisez l’instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) pour supprimer la compression de données. Pour supprimer le format de stockage Vardecimal, exécutez l'instruction sp_tableoption. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).  
+-   **Compression**: indique qu’au moins une table ou un index utilise la compression de données ou le format de stockage vardecimal. Pour permettre le déplacement d’une base de données vers une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne prend pas en charge cette fonctionnalité, utilisez l’instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) pour supprimer la compression de données. Pour supprimer le format de stockage Vardecimal, exécutez l'instruction sp_tableoption. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).  
   
 -   **MultipleFSContainers**: indique que la base de données utilise plusieurs conteneurs FileStream. La base de données a un groupe de fichiers FILESTREAM avec plusieurs conteneurs (fichiers). Pour plus d’informations, consultez [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73981836"
 -   **TransparentDataEncryption.** Indique qu'une base de données est chiffrée à l'aide du chiffrement transparent des données. Pour supprimer le chiffrement transparent des données, exécutez l'instruction ALTER DATABASE. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> À compter [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] de Service Pack 1, ces fonctionnalités, à l’exception de **TransparentDataEncryption.** sont disponibles dans plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditions et ne sont pas limitées aux éditions Enterprise ou Developer.
+> À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, ces fonctionnalités, à l’exception de **TransparentDataEncryption.** sont disponibles dans plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditions et ne sont pas limitées aux éditions Enterprise ou Developer.
 
  Pour déterminer si une base de données utilise des fonctionnalités limitées à des éditions spécifiques, exécutez l'instruction suivante dans la base de données :  
   

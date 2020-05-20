@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ba144f6cf06104f406545e3c7651072784de3c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745451"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824884"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70745451"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificateur de l'élément de messagerie dans la file d'attente des messages.|  
 |**profile_id**|**int**|Identificateur du profil utilisé pour envoyer le message.|  
-|**recipients**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
+|**destinataire**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
 |**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
 |**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
 |**Objet**|**nvarchar (510)**|Ligne d'objet du message.|  
@@ -45,7 +45,7 @@ ms.locfileid: "70745451"
 |**sensibilité**|**varchar (12)**|Paramètre de **sensibilité** du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
 |**attachment_encoding**|**varchar (20)**|Type de pièce jointe.|  
-|**requête**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
+|**query**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
@@ -61,7 +61,7 @@ ms.locfileid: "70745451"
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la vue **sysmail_allitems** pour afficher l’état de tous les messages traités par Database mail. En cas de dépannage de la messagerie de base de données, cette vue peut vous aider à identifier la nature du problème en vous permettant de comparer les attributs des messages qui ont été envoyés aux attributs des messages qui n'ont pas été envoyés.  
   
  Les tables système exposées par cette vue contiennent tous les messages et peuvent entraîner la croissance de la base de données **msdb** . Supprimez périodiquement les anciens messages de la vue afin de réduire la taille de ces tables. Pour plus d’informations, consultez [créer un travail de SQL Server Agent pour archiver les Messages Database mail et les journaux des événements](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

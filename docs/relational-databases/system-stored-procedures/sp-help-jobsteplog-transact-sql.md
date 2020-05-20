@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobsteplog
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 522672192ab955ced5987184ed2f6ea2812a431a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090043"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827553"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne les métadonnées relatives [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un journal d’étapes de travail de l’agent spécifique. **sp_help_jobsteplog** ne retourne pas le journal réel.  
+  Retourne les métadonnées relatives à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Journal d’étapes de travail de l’agent spécifique. **sp_help_jobsteplog** ne retourne pas le journal réel.  
 
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -70,7 +70,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Taille du journal d'étapes du travail, en mégaoctets (Mo).|  
 |**Sign**|**nvarchar(max)**|Sortie du journal d'étapes du travail.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_jobsteplog** se trouve dans la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

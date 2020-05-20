@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997477"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828875"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997477"
   Retourne un rapport contenant des informations sur les autorisations utilisateur concernant un objet ou des autorisations d'instruction, dans la base de données active.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** ne retourne pas d’informations sur les éléments sécurisables introduits [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]dans. Utilisez à la place [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) et [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
+>  **sp_helprotect** ne retourne pas d’informations sur les éléments sécurisables introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Utilisez à la place [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) et [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
   
  Ne répertorie pas les autorisations qui sont toujours affectées aux rôles serveur fixes ou aux rôles de base de données fixes. N'inclut pas les identifiants de connexion ou les utilisateurs qui reçoivent des autorisations en fonction de leur appartenance à un rôle.  
   
@@ -65,14 +65,14 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Propriétaire**|**sysname**|Nom du propriétaire de l’objet.|  
-|**Object**|**sysname**|Nom de l'objet.|  
+|**Dessin**|**sysname**|Nom de l'objet.|  
 |**Voient**|**sysname**|Nom du principal auquel des autorisations sont accordées.|  
 |**Fournisseur**|**sysname**|Nom du principal qui a accordé des autorisations au bénéficiaire spécifié.|  
 |**ProtectType**|**nvarchar(10**|Nom du type de protection :<br /><br /> GRANT REVOKE|  
 |**Action**|**nvarchar(60)**|Nom de l’autorisation. Les instructions valides d'autorisation varient selon le type d'objet.|  
 |**Colonne**|**sysname**|Type d'autorisation :<br /><br /> All = l'autorisation couvre toutes les colonnes en cours de l'objet.<br /><br /> New = l'autorisation couvre toutes les nouvelles colonnes susceptibles d'être modifiées (à l'aide de l'instruction ALTER) pour l'objet ultérieurement.<br /><br /> All+New = combinaison de All et New.<br /><br /> Retourne un point si le type d'autorisation ne s'applique pas aux colonnes.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Tous les paramètres de la procédure ci-dessous sont facultatifs. Si elle est exécutée sans paramètre, la procédure `sp_helprotect` affiche toutes les autorisations qui ont été accordées ou refusées dans la base de données active.  
   
  Si certains paramètres seulement sont spécifiés, utilisez les paramètres nommés pour identifier le paramètre spécifique ou `NULL` comme espace réservé. Par exemple, pour signaler toutes les autorisations du propriétaire de la base de données des fournisseurs (`dbo`), exécutez le code suivant :  
@@ -81,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- ou  
+ Ou  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252116"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828245"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_redirect_publisher
 ## <a name="remarks"></a>Notes  
  **sp_redirect_publisher** est utilisé pour permettre à un serveur de publication de réplication d’être redirigé vers le réplica principal actuel d’un groupe de disponibilité Always on en associant la paire serveur de publication/base de données à l’écouteur d’un groupe de disponibilité. Exécutez **sp_redirect_publisher** une fois que l’écouteur GA a été configuré pour le groupe de disponibilité qui contient la base de données publiée.  
   
- Si la base de données de publication sur le serveur de publication d’origine est supprimée d’un groupe de disponibilité au niveau du réplica principal, exécutez **sp_redirect_publisher** sans spécifier de valeur pour le * \@paramètre redirected_publisher* pour supprimer la redirection pour la paire serveur de publication/base de données. Pour plus d’informations sur la redirection du serveur de publication lorsque, consultez [maintenance d’une base de données de publication Alwayson &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Si la base de données de publication sur le serveur de publication d’origine est supprimée d’un groupe de disponibilité au niveau du réplica principal, exécutez **sp_redirect_publisher** sans spécifier de valeur pour le paramètre * \@ redirected_publisher* pour supprimer la redirection pour la paire serveur de publication/base de données. Pour plus d’informations sur la redirection du serveur de publication lorsque, consultez [maintenance d’une base de données de publication Alwayson &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Autorisations  
  L’appelant doit être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** pour la base de données de distribution, ou être membre d’une liste d’accès à une publication pour une publication définie associée à la base de données du serveur de publication.  

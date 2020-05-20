@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b760e27d7a0b320c0e911a1a485d1e5e9033146a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045943"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824851"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
  L'exemple suivant renvoie des informations sur les catalogues du serveur lié `OLE DB ODBC Linked Server #3`.  
   
 > [!NOTE]  
->  Par **sp_catalogs** pour fournir des informations utiles, `OLE DB ODBC Linked Server #3` le doit déjà exister.  
+>  Par **sp_catalogs** pour fournir des informations utiles, le `OLE DB ODBC Linked Server #3` doit déjà exister.  
   
 ```  
 USE master;  

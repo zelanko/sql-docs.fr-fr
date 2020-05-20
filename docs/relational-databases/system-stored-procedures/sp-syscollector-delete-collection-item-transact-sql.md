@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ecf578b1ce23aa47e9bf71360f1211b5667c08c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000908"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826526"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Identificateur unique de l'élément de collecte. *collection_item_id* est de **type int** avec NULL comme valeur par défaut. *collection_item_id* doit avoir une valeur si le *nom* est null.  
   
- [ @name = ] '*nom*'  
+ [ @name =] '*nom*'  
  Nom de l'élément de collecte. *Name* est de **type sysname** avec NULL comme valeur par défaut. le *nom* doit avoir une valeur si *collection_item_id* a la valeur null.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  sp_syscollector_delete_collection_item doit être exécuté dans le contexte de la base de données système msdb. Il est impossible de supprimer des éléments de collecte de jeux d'éléments de collecte système.  
   
  Le jeu d'éléments de collecte qui contient l'élément de collecte est arrêté puis redémarré au cours de cette opération.  

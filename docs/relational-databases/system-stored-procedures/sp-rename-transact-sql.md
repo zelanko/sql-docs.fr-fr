@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983072"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826561"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Modifie le nom d'un objet créé par l'utilisateur dans la base de données actuelle. Cet objet peut être une table, un index, une colonne, un type de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] données alias ou un type Common Language Runtime (CLR) défini par l’utilisateur.  
+  Modifie le nom d'un objet créé par l'utilisateur dans la base de données actuelle. Cet objet peut être une table, un index, une colonne, un type de données alias ou un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] type Common Language Runtime (CLR) défini par l’utilisateur.  
   
 > [!CAUTION]  
 >  La modification d'une partie du nom de l'objet peut provoquer des problèmes dans des scripts et des procédures stockées. Nous vous recommandons de ne pas utiliser cette instruction pour renommer des procédures stockées, des déclencheurs, des fonctions définies par l'utilisateur ou des vues ; supprimez plutôt l'objet et recréez-le avec le nouveau nom.  
@@ -47,18 +47,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @objname = ] '*object_name*'  
+ [ @objname =] '*object_name*'  
  Nom actuel, complet ou non, de l'objet utilisateur ou du type de données. Si l’objet à renommer est une colonne dans une table, *object_name* doit se présenter sous la forme *table. Column* ou *Schema. table. Column*. Si l’objet à renommer est un index, *object_name* doit se présenter sous la forme *table. index* ou *Schema. table. index*. Si l’objet à renommer est une contrainte, *object_name* doit se présenter sous la forme *Schema. Constraint*.  
   
  Les guillemets ne sont nécessaires que si un nom complet d'objet est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *object_name* est de type **nvarchar (776)**, sans valeur par défaut.  
   
- [ @newname = ] '*new_name*'  
+ [ @newname =] '*new_name*'  
  Nouveau nom de l'objet spécifié. *new_name* doit être un nom en une partie et doit respecter les règles applicables aux identificateurs. *NewName* est de **type sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  Les noms de déclencheurs ne peuvent pas commencer par # ou par ##.  
   
- [ @objtype = ] '*object_type*'  
+ [ @objtype =] '*object_type*'  
  Type d'objet renommé. *object_type* est de type **varchar (13)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
@@ -73,7 +73,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Il n'est possible de modifier le nom d'un objet ou d'un type de données que dans la base de données active. Il est impossible de modifier les noms de la plupart des types de données système et des objets système.  
   
  sp_rename renomme automatiquement l'index associé chaque fois qu'une contrainte PRIMARY KEY ou UNIQUE est renommée. Si un index renommé est lié à une contrainte PRIMARY KEY, cette dernière est également renommée automatiquement par sp_rename.  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Modification du nom d'une colonne  
- L’exemple suivant renomme la `TerritoryID` colonne dans la `SalesTerritory` table en. `TerrID`  
+ L’exemple suivant renomme la `TerritoryID` colonne dans la `SalesTerritory` table en `TerrID` .  
   
 ```  
 USE AdventureWorks2012;  

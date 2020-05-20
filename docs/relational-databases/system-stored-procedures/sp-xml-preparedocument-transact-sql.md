@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950527"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827491"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Spécifie les déclarations d'espaces de noms utilisées dans les expressions XPath de ligne et de colonne sous OPENXML. *xpath_namespaces* est un paramètre de texte **: char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** ou **XML**.  
   
- La valeur par défaut est ** \<racine xmlns : MP = "urn : schemas-microsoft-com : XML-reprop" >**. *xpath_namespaces* fournit les URI d’espace de noms pour les préfixes utilisés dans les expressions XPath dans OpenXml au moyen d’un document XML bien formé. *xpath_namespaces* déclare le préfixe qui doit être utilisé pour faire référence à l’espace de noms **urn : schemas-microsoft-com : XML-reprop**; fournit des métadonnées sur les éléments XML analysés. Bien que cette technique vous permette de redéfinir le préfixe de l'espace de noms des métapropriétés, cet espace de noms n'est pas perdu. Le préfixe **MP** est toujours valide pour **urn : schemas-microsoft-com : XML-reprop** même si *xpath_namespaces* ne contient pas de déclaration de ce type.  
+ La valeur par défaut est ** \< racine xmlns : MP = "urn : schemas-microsoft-com : XML-reprop" >**. *xpath_namespaces* fournit les URI d’espace de noms pour les préfixes utilisés dans les expressions XPath dans OpenXml au moyen d’un document XML bien formé. *xpath_namespaces* déclare le préfixe qui doit être utilisé pour faire référence à l’espace de noms **urn : schemas-microsoft-com : XML-reprop**; fournit des métadonnées sur les éléments XML analysés. Bien que cette technique vous permette de redéfinir le préfixe de l'espace de noms des métapropriétés, cet espace de noms n'est pas perdu. Le préfixe **MP** est toujours valide pour **urn : schemas-microsoft-com : XML-reprop** même si *xpath_namespaces* ne contient pas de déclaration de ce type.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou >0 (échec)  
@@ -127,7 +127,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. Spécification d'un URI d'espace de noms  
- L'exemple suivant retourne un descripteur pour la représentation interne nouvellement créée du document XML fourni en entrée. L’appel à `sp_xml_preparedocument` conserve le `mp` préfixe du mappage d’espace de noms de métapropriété et ajoute `xyz` le préfixe de mappage `urn:MyNamespace`à l’espace de noms.  
+ L'exemple suivant retourne un descripteur pour la représentation interne nouvellement créée du document XML fourni en entrée. L’appel à `sp_xml_preparedocument` conserve le `mp` préfixe du mappage d’espace de noms de métapropriété et ajoute le `xyz` préfixe de mappage à l’espace de noms `urn:MyNamespace` .  
   
 ```  
 DECLARE @hdoc int;  

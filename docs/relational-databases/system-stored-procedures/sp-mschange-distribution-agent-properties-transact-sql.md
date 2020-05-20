@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_distribution_agent_properties
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1a2e2e3c0074c3fcc53298c2556c786c9b7057db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 53b138f923a8ac26c19f6673e3c63233d23fc78f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322263"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828294"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifie les propriétés d’un travail de agent de distribution qui s’exécute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sur un serveur de distribution ou version ultérieure. Cette procédure stockée est utilisée pour modifier des propriétés lorsque le serveur de publication s'exécute sur une instance de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
+  Modifie les propriétés d’un travail de Agent de distribution qui s’exécute sur un serveur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] distribution ou version ultérieure. Cette procédure stockée est utilisée pour modifier des propriétés lorsque le serveur de publication s'exécute sur une instance de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,19 +64,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
 |**distrib_job_password**||Mot de passe du compte Windows sous lequel le travail de l'Agent s'exécute.|  
-|**subscriber_catalog**||Catalogue à utiliser lors d’une connexion au fournisseur OLE DB. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-|**subscriber_datasource**||Nom de la source de données tel qu'il est interprété par le fournisseur OLE DB. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-|**subscriber_location**||Emplacement de la base de données tel qu’il est interprété par le fournisseur OLE DB. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+|**subscriber_catalog**||Catalogue à utiliser lors d’une connexion au fournisseur OLE DB. *Cette propriété n’est valide que pour les non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnés.*|  
+|**subscriber_datasource**||Nom de la source de données tel qu'il est interprété par le fournisseur OLE DB. *Cette propriété n’est valide que pour les non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnés.*|  
+|**subscriber_location**||Emplacement de la base de données tel qu’il est interprété par le fournisseur OLE DB. *Cette propriété n’est valide que pour les non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnés.*|  
 |**subscriber_login**||Nom de connexion à utiliser lors de la connexion à un Abonné pour synchroniser l'abonnement.|  
 |**subscriber_password**||Mot de passe de l’abonné.<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
-|**subscriber_provider**||Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+|**subscriber_provider**||Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *Cette propriété n’est valide que pour les non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnés.*|  
 |**subscriber_providerstring**||Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données. *Cette propriété est uniquement valide pour les Abonnés non-SQL Server.*|  
 |**subscriber_security_mode**|**1**|Authentification Windows.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**|Authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Côté|  
 ||**1**|Serveur de la source de données ODBC.|  
 ||**3**|Fournisseur OLE DB|  
-|**SubscriptionStreams**||Indique le nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. *Non pris en charge pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les serveurs de *publication Oracle ou les abonnements d’égal à égal.*|  
+|**SubscriptionStreams**||Indique le nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. *Non pris en charge pour non* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les abonnés, les serveurs de *publication Oracle ou les abonnements d’égal à égal.*|  
   
 > [!NOTE]  
 >  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
@@ -84,10 +84,10 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_MSchange_distribution_agent_properties** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
- Quand le serveur de publication s’exécute sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] une instance de ou version ultérieure, vous devez utiliser [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) pour modifier les propriétés d’un travail agent de fusion qui synchronise un abonnement par émission de notification qui s’exécute sur le serveur de distribution.  
+ Quand le serveur de publication s’exécute sur une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, vous devez utiliser [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) pour modifier les propriétés d’un travail agent de fusion qui synchronise un abonnement par émission de notification qui s’exécute sur le serveur de distribution.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** sur le serveur de distribution peuvent exécuter **sp_MSchange_distribution_agent_properties**.  

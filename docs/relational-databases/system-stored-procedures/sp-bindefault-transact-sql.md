@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1552f566852f90b3526645313a160f2446b868e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046054"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828481"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous pouvez utiliser **sp_bindefault** pour lier une nouvelle valeur par défaut à une colonne, bien que l’utilisation de la contrainte par défaut soit préférable ou à un type de données alias sans dissocier une valeur par défaut existante. L'ancienne valeur par défaut est remplacée par la nouvelle. Vous ne pouvez pas lier une valeur par défaut à une type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à un type CLR défini par l'utilisateur. En cas d'incompatibilité entre la valeur par défaut et la colonne à laquelle vous l'avez liée, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retourne un message d'erreur quand il essaie d'insérer la valeur par défaut et non au moment de sa liaison.  
   
  Les colonnes existantes du type de données alias héritent de la nouvelle valeur par défaut, sauf si une valeur par défaut est liée directement à ces dernières ou *futureonly_flag* est spécifié comme **futureonly**. Les nouvelles colonnes qui utilisent le type de données d'alias héritent toujours la valeur par défaut.  
@@ -99,7 +99,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. Utilisation d’identificateurs délimités  
- L’exemple suivant montre l’utilisation d’identificateurs délimités, `[t.1]`, dans *object_name*.  
+ L’exemple suivant montre l’utilisation d’identificateurs délimités, `[t.1]` , dans *object_name*.  
   
 ```  
 USE master;  

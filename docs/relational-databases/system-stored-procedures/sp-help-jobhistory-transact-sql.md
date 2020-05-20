@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054929"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827602"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0**|Failed|  
+|**0**|Échec|  
 |**1**|Opération réussie|  
 |**2**|Reprise (étape uniquement)|  
 |**3**|Opération annulée|  
@@ -118,7 +118,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Nombre de reprises de l'étape (0 pour un historique d'étape).|  
 |**serveurs**|**nvarchar(30)**|Serveur sur lequel est exécutée l'étape ou le travail. Est toujours (**local**).|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_jobhistory** retourne un rapport avec l’historique des tâches planifiées spécifiées. Si aucun paramètre n'est précisé, le rapport contient l'historique de tous les travaux planifiés.  
   
 ## <a name="permissions"></a>Autorisations  

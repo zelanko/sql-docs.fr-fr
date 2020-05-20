@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2aa7c30f132f0c0e8774dcb39f31e1a254e8689c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313719"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825118"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "72313719"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID de la base de données à laquelle ce fichier s'applique. Le masterdatabase_id est toujours 1.|  
 |file_id|**int**|ID du fichier dans la base de données. Le file_id principal est toujours 1.|  
-|file_guid|**uniqueidentifier**|Identificateur unique du fichier.<br /><br /> NULL = la base de données a été mise à niveau à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir d’une version antérieure de (valide pour SQL Server 2005 et versions antérieures).|  
+|file_guid|**uniqueidentifier**|Identificateur unique du fichier.<br /><br /> NULL = la base de données a été mise à niveau à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (valide pour SQL Server 2005 et versions antérieures).|  
 |type|**tinyint**|Type de fichier :<br /><br /> 0 = Lignes.<br /><br /> 1 = journal<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Texte intégral (le catalogue de texte intégral antérieur à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ; les catalogues de texte intégral qui sont mis à niveau ou créés dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure signaleront un type de fichier 0.)|  
 |type_desc|**nvarchar(60)**|Description du type de fichier :<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catalogues de texte intégral antérieurs à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].)|  
 |data_space_id|**int**|ID de l'espace de données auquel ce fichier appartient. L'espace de données est un groupe de fichiers.<br /><br /> 0 = fichiers journaux|  
@@ -64,7 +64,7 @@ ms.locfileid: "72313719"
 |redo_target_lsn|**numeric(25,0)**|LSN auquel peut s'arrêter la restauration par progression en ligne sur ce fichier.<br /><br /> A pour valeur NULL sauf si state a pour valeur RESTORING ou RECOVERY_PENDING.|  
 |redo_target_fork_guid|**uniqueidentifier**|Branchement de récupération sur lequel le conteneur peut être récupéré. Associé à redo_target_lsn.|  
 |backup_lsn|**numeric(25,0)**|LSN de la sauvegarde de données ou différentielle du fichier la plus récente.|  
-|credential_id|**int**|`credential_id` À partir `sys.credentials` de utilisé pour stocker le fichier. Par exemple, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur une machine virtuelle Azure et que les fichiers de base de données sont stockés dans le stockage d’objets BLOB Azure, les informations d’identification sont configurées avec les informations d’identification d’accès à l’emplacement de stockage.|  
+|credential_id|**int**|`credential_id`À partir de `sys.credentials` utilisé pour stocker le fichier. Par exemple, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur une machine virtuelle Azure et que les fichiers de base de données sont stockés dans le stockage d’objets BLOB Azure, les informations d’identification sont configurées avec les informations d’identification d’accès à l’emplacement de stockage.|  
   
 > [!NOTE]  
 >  Lorsque vous supprimez ou reconstruisez des index volumineux ou lorsque vous supprimez ou tronquez des tables volumineuses, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations des pages actives et de leurs blocs associés jusqu'à ce que la transaction soit validée. Les opérations de suppression différées ne libèrent pas immédiatement l'espace alloué. Par conséquent, dès qu'un objet volumineux est supprimé ou tronqué, les valeurs retournées par sys.master_files peuvent ne pas refléter l'espace disque réellement disponible.  

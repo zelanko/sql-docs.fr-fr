@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - logmarkhistory system table
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61fcc848f8f962934744d7aaf69e1549a7e33485
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001803"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827270"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "68001803"
 |**mark_time**|**datetime**|Heure de validation de la transaction marquée (heure locale).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Restaure une base de données sur une &#40;de transaction marquée SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
- [Utilisez des transactions marquées pour récupérer des bases de données associées de manière cohérente &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
+ [Restaurer une base de données jusqu’à une transaction marquée &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
+ [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

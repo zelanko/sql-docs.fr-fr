@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_schedule
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce8c1514a0c62eeb11743d86dd6922cf4995c63c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085215"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828396"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification (sur demande).|  
 |**job_count**|**int**|Renvoie le nombre de travaux auxquels la planification fait référence.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Quand aucun paramètre n’est fourni, **sp_help_schedule** répertorie les informations de toutes les planifications de l’instance.  
   
 ## <a name="permissions"></a>Autorisations  

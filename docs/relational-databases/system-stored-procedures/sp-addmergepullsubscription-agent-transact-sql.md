@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07cc514d615c86a90dcf37fbd4748c3ab1776f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81528973"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826294"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -98,7 +98,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la **valeur**est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0, spécifie l’authentification. Si **1**, spécifie l’authentification Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la **valeur est 0**, spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si **1**, spécifie l’authentification Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -116,7 +116,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Mode de sécurité à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la **valeur**est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0, spécifie l’authentification. Si **1**, spécifie l’authentification Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Mode de sécurité à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la **valeur est 0**, spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si **1**, spécifie l’authentification Windows.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. L'Agent de fusion se connecte toujours à l'Abonné local à l'aide de l'authentification Windows. Si une valeur est spécifiée pour ce paramètre, un message d'avertissement est retourné, mais la valeur est ignorée.  
@@ -126,7 +126,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. Si une valeur est spécifiée pour ce paramètre, un message d'avertissement est retourné, mais la valeur est ignorée.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Mot de passe de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné pour l’authentification. *subscriber_password* est requis si *subscriber_security_mode* a la valeur **0**. *subscriber_password* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber_password = ] 'subscriber_password'`Mot de passe de l’abonné pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *subscriber_password* est requis si *subscriber_security_mode* a la valeur **0**. *subscriber_password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. Si une valeur est spécifiée pour ce paramètre, un message d'avertissement est retourné, mais la valeur est ignorée.  
@@ -149,12 +149,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_type = ] frequency_type`Fréquence de planification de l’Agent de fusion. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
 |**4**|Quotidien|  
-|**version8**|Hebdomadaire|  
+|**8**|Hebdomadaire|  
 |**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
@@ -166,7 +166,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval`Jour ou jours d’exécution de l’Agent de fusion. *frequency_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
@@ -175,19 +175,19 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|Jeudi|  
 |**6**|Vendredi|  
 |**7**|Samedi|  
-|**version8**|jour|  
+|**8**|Jour|  
 |**9**|Jours de la semaine|  
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Date de la Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**version8**|Quatrième|  
+|**8**|Quatrième|  
 |**16bits**|Dernier|  
 |NULL (par défaut)||  
   
@@ -195,12 +195,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_subday = ] frequency_subday`Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
 |NULL (par défaut)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
@@ -221,7 +221,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @merge_jobid = ] merge_jobid`Paramètre de sortie de l’ID de travail. *merge_jobid* est de **type Binary (16)**, avec NULL comme valeur par défaut.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Spécifie si l’abonnement peut être synchronisé via le gestionnaire de synchronisation Windows. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Spécifie si l’abonnement peut être synchronisé via le gestionnaire de synchronisation Windows. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut être synchronisé sans démarrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`À des fins de compatibilité descendante uniquement.  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Indique que la synchronisation Web est activée. *use_web_sync* est de **bit**, avec 0 comme valeur par défaut. **1** indique que l’abonnement par extraction peut être synchronisé via Internet à l’aide du protocole http.  
   
-`[ @internet_url = ] 'internet_url'`Est l’emplacement de l’écouteur de réplication (REPLISAPI. DLL) pour la synchronisation Web. *internet_url* est de type **nvarchar (260)**, avec NULL comme valeur par défaut. *internet_url* est une URL complète, au format `http://server.domain.com/directory/replisapi.dll`. Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
+`[ @internet_url = ] 'internet_url'`Est l’emplacement de l’écouteur de réplication (REPLISAPI. DLL) pour la synchronisation Web. *internet_url* est de type **nvarchar (260)**, avec NULL comme valeur par défaut. *internet_url* est une URL complète, au format `http://server.domain.com/directory/replisapi.dll` . Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
   
 `[ @internet_login = ] 'internet_login'`Nom de connexion utilisé par le Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web à l’aide de l’authentification HTTP de base. *internet_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
@@ -266,7 +266,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode`Méthode d’authentification utilisée par le Agent de fusion lors de la connexion au serveur Web pendant la synchronisation Web à l’aide du protocole HTTPs. *internet_security_mode* est de **type int** et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0**|L'authentification de base est utilisée.|  
 |**1** (par défaut)|L'authentification intégrée de Windows est utilisée.|  
@@ -288,7 +288,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_addmergepullsubscription_agent** est utilisé dans la réplication de fusion et utilise des fonctionnalités similaires à [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Pour obtenir un exemple de la façon de spécifier correctement les paramètres de sécurité lors de l’exécution de **sp_addmergepullsubscription_agent**, consultez [créer un abonnement par extraction](../../relational-databases/replication/create-a-pull-subscription.md).  

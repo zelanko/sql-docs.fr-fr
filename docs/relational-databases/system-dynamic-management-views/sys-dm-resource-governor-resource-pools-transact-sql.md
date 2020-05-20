@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7fd97640b048d504dd03599bf991e9ae91929d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982308"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827839"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982308"
   Retourne des informations sur l'état et la configuration actuels des pools de ressources, ainsi que sur leurs statistiques.  
   
 > [!NOTE]  
->  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -76,9 +76,9 @@ ms.locfileid: "73982308"
 |write_io_stall_queued_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Durée totale (en millisecondes) entre l'arrivée des E/S d'écriture et leur émission. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.<br /><br /> Latence introduite par la gouvernance des ressources d'E/S.|  
 |io_issue_violations_total|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Total des violations d'émission d'E/S. Autrement dit, le nombre de fois où la fréquence d'émission d'E/S était inférieure à la fréquence réservée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.|  
 |io_issue_delay_total_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Durée totale (en millisecondes) entre l'émission planifiée et l'émission réelle des E/S. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.|  
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les groupes de charges de travail et les pools de ressources du gouverneur de ressources respectent un mappage de type plusieurs-à-un. De nombreuses statistiques de pool de ressources sont donc dérivées des statistiques de groupe de charges de travail.  
   
  Cette vue de gestion dynamique montre la configuration en mémoire. Pour afficher les métadonnées de configuration stockées, utilisez l’affichage catalogue sys. resource_governor_resource_pools.  

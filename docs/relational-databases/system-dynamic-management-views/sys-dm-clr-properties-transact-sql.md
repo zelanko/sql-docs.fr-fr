@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266064"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824717"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -62,18 +62,18 @@ ms.locfileid: "68266064"
   
  La **version du CLR verrouillé avec** l’État Mscoree peut être affichée là où le CLR hébergé n’est pas utilisé et, par conséquent, il n’a pas encore été initialisé. Le CLR hébergé est initialisé la première fois qu’une instruction DDL (telle que [Create assembly &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) ou un objet de base de données managé est exécuté.  
   
- L’état initialisé par le **CLR** indique que le CLR hébergé a été correctement initialisé. Cela n'indique pas si l'exécution de code CLR utilisateur a été activée. Si l’exécution du code CLR de l’utilisateur est activée pour la première fois [!INCLUDE[tsql](../../includes/tsql-md.md)] , puis désactivée à l’aide de la procédure stockée [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) , la valeur d’État sera toujours **CLR**.  
+ L’état initialisé par le **CLR** indique que le CLR hébergé a été correctement initialisé. Cela n'indique pas si l'exécution de code CLR utilisateur a été activée. Si l’exécution du code CLR de l’utilisateur est activée pour la première fois, puis désactivée à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) , la valeur **d'** État sera toujours CLR.  
   
  L’état **d’échec de l’initialisation du CLR n'** indique pas l’échec de l’initialisation du CLR hébergé. Cela est probablement dû à une insuffisance de mémoire ou à l'échec de la négociation d'hébergement entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR. Si tel est le cas, le message d'erreur 6512 ou 6513 est déclenché.  
   
  L' **État du CLR arrêté** est uniquement visible lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’arrêt.  
   
-## <a name="remarks"></a>Notes  
- Les propriétés et les valeurs de cette vue peuvent changer dans une future version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de en raison des améliorations apportées à la fonctionnalité d’intégration du CLR.  
+## <a name="remarks"></a>Remarques  
+ Les propriétés et les valeurs de cette vue peuvent changer dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en raison des améliorations apportées à la fonctionnalité d’intégration du CLR.  
   
 ## <a name="permissions"></a>Autorisations  
   
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 ## <a name="examples"></a>Exemples  

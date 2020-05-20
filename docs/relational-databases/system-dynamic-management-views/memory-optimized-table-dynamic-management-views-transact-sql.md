@@ -10,20 +10,20 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4981203eb0712eb1989959af38117d12f05bf9cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fed156af798fe13380a576e96ea76416a9bcbfcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412829"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826403"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>Vues de gestion dynamique des tables mémoire optimisées (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Les vues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de gestion dynamique (DMV) suivantes sont utilisées avec l’OLTP en mémoire :  
+  Les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vues de gestion dynamique (DMV) suivantes sont utilisées avec l’OLTP en mémoire :  
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   

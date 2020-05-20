@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7282472dcb916d7122625534cb64f80ce9f4ea6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084866"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827477"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_update_notification
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_update_notification** doit être exécuté à partir de la base de données **msdb** .  
   
  Vous pouvez mettre à jour une notification pour un opérateur qui ne dispose pas des informations d’adresse nécessaires à l’aide de la *notification_method*spécifiée. En cas d'échec de l'envoi d'une notification par courrier électronique ou par radiomessagerie, l'échec est consigné dans le journal des erreurs de l'Agent Microsoft SQL Server.  
@@ -68,7 +68,7 @@ sp_update_notification
  Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant modifie la méthode de notification pour les notifications `François Ajenstat`envoyées à pour `Test Alert`l’alerte.  
+ L’exemple suivant modifie la méthode de notification pour les notifications envoyées à `François Ajenstat` pour l’alerte `Test Alert` .  
   
 ```  
 USE msdb ;  

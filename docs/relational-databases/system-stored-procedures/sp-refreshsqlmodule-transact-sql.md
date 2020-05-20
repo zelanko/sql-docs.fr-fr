@@ -23,15 +23,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982770"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825981"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Arguments  
 `[ @name = ] 'module\_name'`Nom de la procédure stockée, fonction définie par l’utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *module_name* ne peut pas être une procédure stockée Common Language Runtime (CLR) ou une fonction CLR. *module_name* ne peut pas être lié à un schéma. *module_name* est de type **nvarchar**, sans valeur par défaut. *module_name* peut être un identificateur en plusieurs parties, mais ne peut faire référence qu’à des objets de la base de données active.  
   
-`[ , @namespace = ] ' \<class> '`Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL \<, la classe> est requise. >de la **nvarchar**classe est de type nvarchar (20). * \<* Les entrées valides sont :  
+`[ , @namespace = ] ' \<class> '`Classe du module spécifié. Lorsque *module_name* est un déclencheur DDL, la \< classe> est requise. * \<>* de la classe est de type **nvarchar**(20). Les entrées valides sont :  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_refreshsqlmodule** doit être exécutée lorsque des modifications sont apportées aux objets sous-jacents du module qui affectent sa définition. Sinon, le module risque de produire des résultats inattendus en cas d'interrogation ou d'appel. Pour actualiser une vue, vous pouvez utiliser **sp_refreshsqlmodule** ou **sp_refreshview** avec les mêmes résultats.  
   
  **sp_refreshsqlmodule** n’affecte pas les autorisations, les propriétés étendues ou les options SET associées à l’objet.  

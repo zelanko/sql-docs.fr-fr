@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090053"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827563"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Nombre maximum de tentatives de la commande (en cas d'échecs).|  
 |**retry_interval**|**int**|Intervalle (en minutes) entre les tentatives.|  
 |**os_run_priority**|**int**|Réservé.|  
-|**output_file_name**|**nvarchar(200)**|Fichier dans lequel la sortie de la commande doit[!INCLUDE[tsql](../../includes/tsql-md.md)]être écrite (, **CmdExec**et les étapes **PowerShell** uniquement).|  
+|**output_file_name**|**nvarchar(200)**|Fichier dans lequel la sortie de la commande doit être écrite ( [!INCLUDE[tsql](../../includes/tsql-md.md)] , **CmdExec**et les étapes **PowerShell** uniquement).|  
 |**last_run_outcome**|**int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = échec<br /><br /> **1** = réussite<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulé<br /><br /> **5** = inconnu|  
 |**last_run_duration**|**int**|Durée (hhmmss) de l'étape lors de sa dernière exécution.|  
 |**last_run_retries**|**int**|Nombre de tentatives de la commande lors de la dernière exécution de l'étape.|  
@@ -86,7 +86,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Heure de début de la dernière exécution de l'étape.|  
 |**proxy_id**|**int**|Proxy pour les étapes du travail.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_jobstep** se trouve dans la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

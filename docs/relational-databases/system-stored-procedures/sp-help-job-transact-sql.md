@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827640"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspendu.|  
 |**7**|Effectue le travail.|  
   
-`[ @date_comparator = ] 'date_comparison'`Opérateur de comparaison à utiliser dans les comparaisons de *Date_Created* et *Date_Modified*. *date_comparison* est de **type char (1)** et peut être = \<, ou >.  
+`[ @date_comparator = ] 'date_comparison'`Opérateur de comparaison à utiliser dans les comparaisons de *Date_Created* et *Date_Modified*. *date_comparison* est de **type char (1)** et peut être =, \< ou >.  
   
 `[ @date_created = ] date_created`Date à laquelle le travail a été créé. *Date_Created*est de **type DateTime**, avec NULL comme valeur par défaut.  
   
@@ -162,7 +162,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|Nombre de tentatives maximum de la commande (si elle échoue) avant que l'étape soit considérée comme un échec.|  
 |**retry_interval**|**int**|Intervalle (en minutes) entre chaque tentative.|  
 |**os_run_priority**|**varchar (4000)**|Réservé.|  
-|**output_file_name**|**varchar (200)**|Fichier dans lequel la sortie de la commande doit[!INCLUDE[tsql](../../includes/tsql-md.md)] être écrite (et les étapes **CmdExec** uniquement).|  
+|**output_file_name**|**varchar (200)**|Fichier dans lequel la sortie de la commande doit être écrite ( [!INCLUDE[tsql](../../includes/tsql-md.md)] et les étapes **CmdExec** uniquement).|  
 |**last_run_outcome**|**int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = échec<br /><br /> **1** = réussite<br /><br /> **3** = annulé<br /><br /> **5** = inconnu|  
 |**last_run_duration**|**int**|Durée (en secondes) de l'étape lors de sa dernière exécution.|  
 |**last_run_retries**|**int**|Nombre de tentatives de la commande lors de la dernière exécution de l'étape.|  

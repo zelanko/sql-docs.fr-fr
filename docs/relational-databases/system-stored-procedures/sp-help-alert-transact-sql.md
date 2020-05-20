@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08569c2313bfb7c9d992c510ef4c9c7548f51e64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304837"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827741"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +57,13 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Lorsque ** \@legacy_format** a la valeur **0**, **sp_help_alert** produit le jeu de résultats suivant.  
+ Lorsque ** \@ legacy_format** a la valeur **0**, **sp_help_alert** produit le jeu de résultats suivant.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificateur entier unique attribué par le système.|  
 |**name**|**sysname**|Nom de l’alerte (par exemple demo : journal **msdb** complet).|  
-|**event_source**|**nvarchar(100**|Source de l'événement. Il s’agit toujours **MSSQLServer** de MSSQLSERVER [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la version 7,0|  
+|**event_source**|**nvarchar(100**|Source de l'événement. Il s’agit toujours de **MSSQLSERVER** pour la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Numéro du message d'erreur définissant l'alerte (Correspond généralement à un numéro d’erreur dans la table **sysmessages** ). Si le niveau de gravité est utilisé pour définir l’alerte, **message_id** a la valeur **0** ou null.|  
@@ -89,15 +89,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Sera toujours '[Uncategorized]' pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**wmi_namespace**|**sysname**|Si le **type** est **3**, cette colonne indique l’espace de noms pour l’événement WMI.|  
 |**wmi_query**|**nvarchar(512)**|Si le **type** est **3**, cette colonne affiche la requête pour l’événement WMI.|  
-|**type**|**int**|Type de l'événement :<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte d’événement<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de performances<br /><br /> **3** = alerte d’événement WMI|  
+|**type**|**int**|Type de l'événement :<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte d’événement<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de performances<br /><br /> **3** = alerte d’événement WMI|  
   
- Lorsque ** \@legacy_format** a la valeur **1**, **sp_help_alert** produit le jeu de résultats suivant.  
+ Lorsque ** \@ legacy_format** a la valeur **1**, **sp_help_alert** produit le jeu de résultats suivant.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificateur entier unique attribué par le système.|  
 |**name**|**sysname**|Nom de l’alerte (par exemple demo : journal **msdb** complet).|  
-|**event_source**|**nvarchar(100**|Source de l'événement. Il s’agit toujours **MSSQLServer** de MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la version 7,0|  
+|**event_source**|**nvarchar(100**|Source de l'événement. Il s’agit toujours de **MSSQLSERVER** pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Numéro du message d'erreur définissant l'alerte (Correspond généralement à un numéro d’erreur dans la table **sysmessages** ). Si le niveau de gravité est utilisé pour définir l’alerte, **message_id** a la valeur **0** ou null.|  
@@ -121,9 +121,9 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Si le **type** est **2**, cette colonne indique la définition de la condition de performance. Si le **type** est **3**, cette colonne affiche la requête pour l’événement WMI. Dans les autres cas, cette colonne est NULL.|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Sera toujours « [n’appartenant à aucune**catégorie]**» pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
-|**type**|**int**|Type d'alerte :<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte d’événement<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de performances<br /><br /> **3** = alerte d’événement WMI|  
+|**type**|**int**|Type d'alerte :<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte d’événement<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de performances<br /><br /> **3** = alerte d’événement WMI|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_alert** doit être exécuté à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

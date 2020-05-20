@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfca5caa10e36196f38817c828cbd4d062763107
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060217"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824909"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68060217"
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne. Pour les messages électroniques, il s'agit de l'utilisateur qui a envoyé le message. Pour les messages générés par le programme externe de messagerie de base de données, il s'agit du contexte utilisateur du programme.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lors de la résolution des problèmes Database Mail, recherchez dans la vue **sysmail_event_log** des événements liés aux échecs de courrier électronique. Certains messages, comme ceux signalant l'échec du programme externe de messagerie de base de données, ne sont pas associés à des messages électroniques spécifiques. Pour rechercher des erreurs liées à des messages électroniques spécifiques, recherchez la **mailitem_id** du message électronique ayant échoué dans la vue **sysmail_faileditems** puis recherchez dans le **sysmail_event_log** les messages relatifs à ce **mailitem_id**. Lorsqu’une erreur est retournée à partir de **sp_send_dbmail**, le message électronique n’est pas envoyé au système Database mail et l’erreur ne s’affiche pas dans cette vue.  
   
  Lorsque les tentatives de remise d'un compte spécifique échouent, la messagerie de base de données conserve les messages d'erreur pendant les tentatives de reprises de comptes jusqu'à ce que la remise de l'élément de messagerie aboutisse ou échoue. En cas de réussite ultime, toutes les erreurs accumulées sont consignées en tant qu’avertissements séparés, y compris les **account_id**. Il se peut alors que des avertissements s'affichent, bien que le message électronique ait été envoyé. En cas d’échec de remise ultime, tous les avertissements précédents sont consignés sous la forme d’un message d’erreur sans **account_id**, car tous les comptes ont échoué.  

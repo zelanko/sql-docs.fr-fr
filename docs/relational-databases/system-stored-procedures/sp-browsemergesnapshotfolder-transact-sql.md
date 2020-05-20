@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsemergesnapshotfolder
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 92df93d1c14b10aa6587d0eaf13f4de81bc4d7f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a89cf408bd1acdd19ae982dfc0afa92c3c6cbe02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046010"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828444"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar (2000)**|Chemin d'accès complet du répertoire de l'instantané.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_browsemergesnapshotfolder** est utilisé dans la réplication de fusion.  
   
  Si la publication est configurée pour que les fichiers d'instantané soient à la fois générés dans le répertoire de travail du serveur de publication et dans le dossier d'instantanés du serveur de publication, le jeu de résultats contient deux lignes : la première contient le dossier d'instantanés de la publication, la seconde le répertoire de travail du serveur de publication.  

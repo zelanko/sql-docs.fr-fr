@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085279"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828410"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_help_proxy
 |Dts|Exécution de package SSIS|  
 |PowerShell|script PowerShell|  
   
-`[ @name = ] 'name'`Nom d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour laquelle répertorier les proxies. Le nom est de type **nvarchar (256)**, avec NULL comme valeur par défaut. Quand *Name* est spécifié, *subsystem_name* doit également être spécifié.  
+`[ @name = ] 'name'`Nom d’une connexion pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] répertorier les proxies. Le nom est de type **nvarchar (256)**, avec NULL comme valeur par défaut. Quand *Name* est spécifié, *subsystem_name* doit également être spécifié.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -83,7 +83,7 @@ sp_help_proxy
 |**credential_id**|**int**|Identifiant des informations d'identification associées à ce serveur proxy.|  
 |**credential_identity_exists**|**int**|Indique si l'identifiant des informations d'identification existe. { 0 = inexistant, 1 = existant }|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Quand aucun paramètre n’est fourni, **sp_help_proxy** répertorie les informations de tous les proxies de l’instance.  
   
  Pour déterminer les proxys qu’une connexion peut utiliser pour un sous-système donné, spécifiez *Name* et *subsystem_name*. Lorsque ces arguments sont fournis, **sp_help_proxy** répertorie les proxies auxquels la connexion spécifiée peut accéder et qui peut être utilisée pour le sous-système spécifié.  

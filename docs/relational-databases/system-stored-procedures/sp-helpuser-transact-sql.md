@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048161"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826047"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68048161"
   Signale des informations sur les principaux de niveau base de données dans la base de données en cours.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** ne retourne pas d’informations sur les éléments sécurisables introduits [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]dans. Utilisez à la place [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
+>  **sp_helpuser** ne retourne pas d’informations sur les éléments sécurisables introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Utilisez à la place [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,7 +76,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Membre du rôle dans la base de données en cours.|  
 |**IDutilisateur**|**smallint**|ID d'utilisateur du membre du rôle.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour afficher des informations sur l’appartenance aux rôles de base de données, utilisez [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Pour afficher des informations sur les membres du rôle de serveur, utilisez [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)et pour afficher des informations sur les principaux au niveau du serveur, utilisez [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  

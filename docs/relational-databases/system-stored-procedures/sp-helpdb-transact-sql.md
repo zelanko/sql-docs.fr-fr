@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903018"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828953"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**du**|**sysname**|Propriétaire de la base de données, tel que **sa**.|  
 |**dbid**|**smallint**|ID de la base de données.|  
 |**created**|**nvarchar(11)**|Date de création de la base de données.|  
-|**statut**|**nvarchar (600)**|Liste de valeurs, séparées par des virgules, d'options de base de données actuellement définies pour la base de données.<br /><br /> Les options définies par des valeurs booléennes ne sont affichées que si elles sont activées. Les options non booléennes sont répertoriées avec leurs valeurs correspondantes sous la forme d' *option_name*=*valeur*.<br /><br /> Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**statut**|**nvarchar (600)**|Liste de valeurs, séparées par des virgules, d'options de base de données actuellement définies pour la base de données.<br /><br /> Les options définies par des valeurs booléennes ne sont affichées que si elles sont activées. Les options non booléennes sont répertoriées avec leurs valeurs correspondantes sous la forme d' *option_name* = *valeur*.<br /><br /> Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Niveau de compatibilité de la base de données : 60, 65, 70, 80 ou 90.|  
   
  Si *nom* est spécifié, un jeu de résultats supplémentaire indique l’allocation de fichiers pour la base de données spécifiée.  
@@ -69,7 +69,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**future**|**nvarchar (18)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier chaque fois que de l’espace supplémentaire est nécessaire.|  
 |**syntaxe**|**varchar (9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **« données uniquement »** et, pour le fichier journal, la valeur est **« Journal uniquement »**.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La colonne **État** dans le jeu de résultats indique les options qui ont été activées dans la base de données. Toutes les options de base de données ne sont pas signalées par la colonne **État** . Pour afficher la liste complète des paramètres d’option de base de données actuels, utilisez l’affichage catalogue **sys. databases** .  
   
 ## <a name="permissions"></a>Autorisations  

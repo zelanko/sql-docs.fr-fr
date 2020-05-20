@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37f5db39ad610d205a0bd6b268ab701f53c93ffa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032528"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827208"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68032528"
 |**transaction_rate**|**float (53)**|Taux des transactions traitées.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**SubscriberDB**|**sysname**|Nom de la base de données d’abonnement.|  
-|**error_id**|**int**|Si la valeur est différente de zéro, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le nombre représente un message d’erreur.|  
+|**error_id**|**int**|Si la valeur est différente de zéro, le nombre représente un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message d’erreur.|  
 |**timestamp**|**timestamp**|Colonne timestamp de cette table.|  
   
 ## <a name="see-also"></a>Voir aussi  

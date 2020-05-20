@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010560"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828213"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Identificateur unique qui identifie l'élément de collecte. *collection_item_id* est de **type int** avec NULL comme valeur par défaut. *collection_item_id* doit avoir une valeur si le *nom* est null.  
   
- [ @name = ] '*nom*'  
+ [ @name =] '*nom*'  
  Nom de l'élément de collecte. *Name* est de **type sysname** avec NULL comme valeur par défaut. le *nom* doit avoir une valeur si *collection_item_id* a la valeur null.  
   
- [ @new_name = ] '*new_name*'  
+ [ @new_name =] '*new_name*'  
  Nouveau nom pour l'élément de collecte. *new_name* est de **type sysname**et, s’il est utilisé, ne peut pas être une chaîne vide.  
   
  *new_name* doit être unique. Pour obtenir une liste de noms d'élément de collecte actuels, interrogez la vue système syscollector_collection_items.  
   
- [ @frequency = ] *fréquence*  
+ [ @frequency =] *fréquence*  
  Fréquence (en secondes) de la collecte de données par cet élément de collecte. *Frequency* est de **type int**, avec 5 comme valeur par défaut.  
   
- [ @parameters = ] '*Parameters*'  
+ [ @parameters =] '*paramètres*'  
  Paramètres d'entrée pour l'élément de collecte. *Parameters* est de type **XML** avec NULL comme valeur par défaut. Le schéma des *paramètres* doit correspondre au schéma des paramètres du type de collecteur.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si le jeu d'éléments de collecte est défini en mode non mis en cache, la modification de la fréquence est ignorée car ce mode provoque l'exécution de la collecte et du téléchargement des données selon la planification spécifiée pour le jeu d'éléments de collecte. Pour afficher l'état du jeu d'éléments de collecte, exécutez la requête suivante. Remplacez `<collection_item_id>` par l'ID de l'élément de collecte à mettre à jour.  
   
 ```  
@@ -91,7 +91,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>Exemples  
  Les exemples suivants sont basés sur l’élément de collecte créé dans l’exemple défini dans [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>A. Modification de la fréquence de collecte  
+### <a name="a-changing-the-collection-frequency"></a>R. Modification de la fréquence de collecte  
  L'exemple suivant modifie la fréquence de collecte pour l'élément de collecte spécifié.  
   
 ```  

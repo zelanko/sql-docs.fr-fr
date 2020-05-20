@@ -19,21 +19,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.availability_group_listener_ip_addresses catalog view
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 49f7322dc32634631a991d76bab58394a26c491e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997585"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829125"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque adresse IP associée à un écouteur du groupe de disponibilité Always On dans le cluster de clustering de basculement Windows Server (WSFC).  
   
- Clé primaire : **listener_id** + **ip_address** + **ip_sub_mask**  
+ Clé primaire : **listener_id**  +  **ip_address**  +  **ip_sub_mask**  
   
   
 |Nom de la colonne|Type de données|Description|  
@@ -44,7 +44,7 @@ ms.locfileid: "67997585"
 |**is_dhcp**|**bit**|Indique si l'adresse IP est configurée par DHCP, une des valeurs suivantes :<br /><br /> 0 = L'adresse IP n'est pas configurée par DHCP.<br /><br /> 1 = L'adresse IP est configurée par DHCP|  
 |**network_subnet_ip**|**nvarchar (48)**|Adresse IP de sous-réseau de réseau qui spécifie le sous-réseau auquel l'adresse IP appartient.|  
 |**network_subnet_prefix_length**|**int**|Longueur de préfixe de sous-réseau de réseau du sous-réseau auquel l'adresse IP appartient.|  
-|**network_subnet_ipv4_mask**|**nvarchar (45)**|Masque de sous-réseau de réseau du sous-réseau auquel l'adresse IP appartient. **network_subnet_ipv4_mask** pour spécifier les options du <DHCP network_subnet_option> dans une clause with DHCP de l’instruction [Create Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) ou [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = Sous-réseau IPv6|  
+|**network_subnet_ipv4_mask**|**nvarchar (45)**|Masque de sous-réseau de réseau du sous-réseau auquel l'adresse IP appartient. **network_subnet_ipv4_mask** pour spécifier les options du <dhcp network_subnet_option> dans une clause with DHCP de l’instruction [Create Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) ou [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = Sous-réseau IPv6|  
 |**state**|**tinyint**|État de la ressource IP ONLINE/OFFLINE du cluster WSFC, un des suivants :<br /><br /> 1 = En ligne. La ressource IP est en ligne.<br /><br /> 0 = Hors connexion. La ressource IP est hors connexion.<br /><br /> 2 = En ligne en attente. La ressource IP est hors connexion mais est remise en ligne.<br /><br /> 3 = Échec. La ressource IP est remise en ligne mais un échec se produit.|  
 |**state_desc**|**nvarchar(60)**|Description de l' **État**, parmi les suivants :<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   

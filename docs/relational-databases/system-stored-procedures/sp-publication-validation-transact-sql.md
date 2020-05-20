@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056231"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826006"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**0**|Effectue une somme de contrôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Remarque : lorsqu’un article est filtré horizontalement, une opération ROWCOUNT est exécutée à la place d’une opération de somme de contrôle.|  
 |**1** (par défaut)|Effectue un contrôle du nombre de lignes uniquement.|  
-|**2**|Effectue un comptage du nombre de lignes et une somme de contrôle binaire.<br /><br /> Remarque : pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés de la version 7,0, seule une validation du ROWCOUNT est effectuée.|  
+|**2**|Effectue un comptage du nombre de lignes et une somme de contrôle binaire.<br /><br /> Remarque : pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés de la version 7,0, seule une validation du ROWCOUNT est effectuée.|  
   
 `[ @full_or_fast = ] 'full_or_fast'`Méthode utilisée pour calculer le RowCount. *full_or_fast* est de **type tinyint** et peut prendre l’une des valeurs suivantes.  
   
@@ -61,15 +61,15 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @shutdown_agent = ] 'shutdown_agent'`Indique si le Agent de distribution doit s’arrêter immédiatement à la fin de la validation. *shutdown_agent* est de **bit**, avec **0**comme valeur par défaut. Si la **valeur est 0**, l’agent de réplication ne s’arrête pas. Si la taille est **1**, l’agent de réplication s’arrête après la validation du dernier article.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être utilisé lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande de validation sur un serveur de publication.  
+>  l' *éditeur* ne doit pas être utilisé lors de la demande de validation sur un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_publication_validation** est utilisé dans la réplication transactionnelle.  
   
  **sp_publication_validation** peut être appelée à tout moment une fois que les articles associés à la publication ont été activés. La procédure peut être exécutée manuellement (une fois) ou en tant que partie d'une tâche régulièrement planifiée qui valide les données.  

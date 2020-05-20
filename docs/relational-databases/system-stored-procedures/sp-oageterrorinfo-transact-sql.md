@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107915"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828856"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,20 +71,20 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Noms des colonnes|Type de données|Description|  
 |------------------|---------------|-----------------|  
-|**Error**|**binaire (4)**|Représentation binaire du numéro d'erreur.|  
+|**Erreur**|**binaire (4)**|Représentation binaire du numéro d'erreur.|  
 |**Source**|**nvarchar (NN)**|Source de l'erreur.|  
 |**Description**|**nvarchar (NN)**|Description de l'erreur.|  
 |**HelpFile**|**nvarchar (NN)**|Fichier d'aide pour la source.|  
 |**HelpID**|**int**|ID du contexte de l'aide dans le fichier source d'aide.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Chaque appel à une procédure stockée OLE Automation (à l’exception de **sp_OAGetErrorInfo**) réinitialise les informations d’erreur ; par conséquent, **sp_OAGetErrorInfo** obtient des informations d’erreur uniquement pour l’appel de procédure stockée OLE Automation le plus récent. Notez que dans la mesure où **sp_OAGetErrorInfo** ne réinitialise pas les informations d’erreur, il peut être appelé plusieurs fois pour recevoir les mêmes informations d’erreur.  
   
  Le tableau suivant donne la liste des erreurs OLE Automation et leurs causes courantes.  
   
 |Erreur et HRESULT|Cause courante|  
 |-----------------------|------------------|  
-|**Mauvais type de variable (0x80020008)**|Le type de données [!INCLUDE[tsql](../../includes/tsql-md.md)] d’une valeur passée comme paramètre de méthode ne correspond [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] pas au type de données du paramètre de méthode, ou une valeur null a été passée comme paramètre de méthode.|  
+|**Mauvais type de variable (0x80020008)**|Le type de données d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] valeur passée comme paramètre de méthode ne correspond pas au [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] type de données du paramètre de méthode, ou une valeur null a été passée comme paramètre de méthode.|  
 |**Nom inconnu (0x8002006)**|La propriété ou le nom de méthode spécifié n'a pu être trouvé pour l'objet spécifié.|  
 |**Chaîne de classe non valide (0x800401f3)**|Le ProgID ou le CLSID spécifié n'est pas inscrit en tant qu'objet OLE sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les serveurs OLE Automation personnalisés doivent être inscrits avant de pouvoir être instanciés à l’aide de **sp_OACreate**. Pour ce faire, vous pouvez utiliser l’utilitaire regsvr32. exe pour les serveurs in-process (. dll) ou le commutateur de ligne de commande **/regserver** pour les serveurs locaux (. exe).|  
 |**Échec d'exécution du serveur (0x80080005)**|L'objet OLE spécifié est inscrit comme serveur OLE local (fichier .EXE), mais le fichier .EXE ne peut pas être trouvé ou démarré.|  

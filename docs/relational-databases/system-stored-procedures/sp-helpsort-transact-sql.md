@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a9eeca46571b2e61e73f9f5670bfeba0fd5f908
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997355"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826077"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sp_helpsort
 ## <a name="result-sets"></a>Jeux de résultats  
  Renvoie le classement par défaut du serveur.  
   
-## <a name="remarks"></a>Notes  
- Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée avec un classement spécifié comme compatible avec une installation antérieure de, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_helpsort** retourne des résultats vides. Lorsque ce comportement survient, vous pouvez déterminer le classement en créant une requête sur l'objet SERVERPROPERTY, telle que : `SELECT SERVERPROPERTY ('Collation');`.  
+## <a name="remarks"></a>Remarques  
+ Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée avec un classement spécifié comme compatible avec une installation antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_helpsort** retourne des résultats vides. Lorsque ce comportement survient, vous pouvez déterminer le classement en créant une requête sur l'objet SERVERPROPERTY, telle que : `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
