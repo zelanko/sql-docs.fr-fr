@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a0e6ab6c9c633181d72c6916f92606a9c71b177a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770949"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824545"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Est le serveur de publication pour lequel les propriétés sont retournées. *Publisher* est de **%** **type sysname**, avec la valeur par défaut.  
+`[ @publisher = ] 'publisher'`Est le serveur de publication pour lequel les propriétés sont retournées. *Publisher* est de **type sysname**, avec la valeur par défaut **%** .  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -48,13 +48,13 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nom du serveur de publication.|  
 |**bd_distribution**|**sysname**|Base de données de distribution pour le serveur de publication spécifié.|  
-|**security_mode**|**int**|Mode de sécurité utilisé par les Agents de réplication pour se connecter au serveur de publication des abonnements avec mise à jour en attente ou à un serveur de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
+|**security_mode**|**int**|Mode de sécurité utilisé par les Agents de réplication pour se connecter au serveur de publication des abonnements avec mise à jour en attente ou à un serveur de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
 |**connexion**|**sysname**|Nom de connexion utilisé par les Agents de réplication pour se connecter au serveur de publication des abonnements avec mise à jour en attente ou à un serveur de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**mot de passe**|**nvarchar (524)**|Mot de passe renvoyé (sous forme chiffrée simple). Le mot de passe est NULL pour les utilisateurs autres que **sysadmin**.|  
-|**proactive**|**bit**|Indique si un serveur de publication distant utilise le serveur local comme serveur de distribution.<br /><br /> **0** = non<br /><br /> **1** = Oui|  
+|**active**|**bit**|Indique si un serveur de publication distant utilise le serveur local comme serveur de distribution.<br /><br /> **0** = non<br /><br /> **1** = Oui|  
 |**working_directory**|**nvarchar(255)**|Nom du répertoire de travail.|  
 |**trusted**|**bit**|si le mot de passe est requis lorsqu'un serveur de publication se connecte au serveur de distribution. Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, cette valeur doit toujours retourner **0**, ce qui signifie que le mot de passe est requis.|  
-|**thirdparty_flag**|**bit**|Indique si la publication est activée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou par une application tierce :<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle ou serveur de publication Oracle Gateway.<br /><br /> **1** = le serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication a été intégré à l’aide d’une application tierce.|  
+|**thirdparty_flag**|**bit**|Indique si la publication est activée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou par une application tierce :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle ou serveur de publication Oracle Gateway.<br /><br /> **1** = le serveur de publication a été intégré à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’aide d’une application tierce.|  
 |**publisher_type**|**sysname**|Type de serveur de publication ; il peut s'agir d'une des valeurs suivantes :<br /><br /> **MSSQLSERVER**<br /><br /> **SOLUTION**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|Nom de la source de données OLE DB sur le serveur de publication.|  
 |**storage_connection_string**|**nvarchar(4000)**|Clé d’accès de stockage pour le répertoire de travail lorsque le serveur de distribution ou le serveur de publication Azure SQL Database.|  
@@ -62,7 +62,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpdistpublisher** est utilisé dans tous les types de réplications.  
   
  **sp_helpdistpublisher** n’affiche pas la connexion ou le mot de passe du serveur de publication dans le jeu de résultats pour les connexions non-**sysadmin** .  

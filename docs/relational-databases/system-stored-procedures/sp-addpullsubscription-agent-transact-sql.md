@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028951"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820718"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**1**|Ponctuelle|  
 |**2** (par défaut)|À la demande|  
 |**4**|Quotidien|  
-|**version8**|Hebdomadaire|  
+|**8**|Hebdomadaire|  
 |**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
@@ -153,7 +153,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**1** (par défaut)|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**version8**|Quatrième|  
+|**8**|Quatrième|  
 |**16bits**|Dernier|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec **1**comme valeur par défaut.  
@@ -165,7 +165,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**1** (par défaut)|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec **1**comme valeur par défaut.  
   
@@ -181,7 +181,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`La définition de *encrypted_distributor_password* n’est plus prise en charge. Si vous tentez de définir ce paramètre de **bit** sur **1** , une erreur se produit.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indique si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le gestionnaire de synchronisation. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indique si l’abonnement peut être synchronisé via le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestionnaire de synchronisation. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut être synchronisé sans démarrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`À des fins de compatibilité descendante uniquement.  
   
@@ -230,7 +230,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_addpullsubscription_agent** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
 ## <a name="example"></a>Exemple  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc35a4c163642f711810f49a816e6c553855b6d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899175"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826147"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Heure système approximative du principal sur laquelle la base de données miroir est actuellement synchronisée. Cette valeur n'est significative que sur l'instance du serveur principal.|  
 |**local_time**|**datetime**|Heure système sur l'instance du serveur local à laquelle cette ligne a été mise à jour.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_dbmmonitorresults** ne peut être exécutée que dans le contexte de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

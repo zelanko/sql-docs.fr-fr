@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5af8ef828e6d05fc221a410692b057f9fc5054ed
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900255"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820882"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque nœud de la configuration de l'instance de cluster de basculement. Si l’instance actuelle est une instance de cluster de basculement, elle retourne la liste des nœuds sur lesquels cette instance de cluster de basculement (anciennement « Virtual Server ») a été définie. Si l'instance de serveur active n'est pas une instance de cluster de basculement, elle retourne un ensemble de lignes vides.  
   
-> **Remarque :** Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_os_cluster_nodes**.  
+> **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_cluster_nodes**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "67900255"
 |status|**int**|État du nœud dans une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance de cluster de basculement : 0, 1, 2, 3,-1. Pour plus d’informations, consultez [fonction GetClusterNodeState](https://go.microsoft.com/fwlink/?LinkId=204794).|  
 |status_description|**nvarchar(20**|Description de l'état du nœud de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = actif<br /><br /> 1 = inactif<br /><br /> 2 = en pause<br /><br /> 3 = en cours de jointure<br /><br /> -1 = inconnu|  
 |is_current_owner|bit|1 signifie que ce nœud est le propriétaire actuel de la ressource du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque le clustering de basculement est activé, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être exécutée sur n'importe quel nœud du cluster de basculement faisant partie de la configuration de l'instance de cluster de basculement (serveur virtuel) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

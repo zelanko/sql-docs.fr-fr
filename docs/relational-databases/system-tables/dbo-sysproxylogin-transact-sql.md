@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysproxylogin system table
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfa29500a798cdcfe535a377abd8c649972415b0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984877"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825946"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "67984877"
 |**proxy_id**|**int**|Identificateur du compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette valeur correspond à la colonne **proxy_id** de la table **sysproxies** .|  
 |**sid**|**varbinary (85)**|Microsoft Windows *security_identifier* pour la connexion SQL Server.|  
 |**principal_id**|**int**|ID de l'utilisateur ou du groupe qui a l'autorisation d'utiliser le compte proxy pour une étape du sous-système spécifié.|  
-|**flags**|**int**|Type de connexion :<br /><br /> **0** = utilisateur ou groupe Windows, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôle de système fixe<br /><br /> **2** = rôle de base de données**msdb**|  
+|**flags**|**int**|Type de connexion :<br /><br /> **0** = utilisateur ou groupe Windows, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôle de système fixe<br /><br /> **2**  =  rôle de base de données **msdb**|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent accéder à cette table.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a95bd2d98f84c288662838e030961bd4a753cff3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982543"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829304"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982543"
   Retourne la liste de tous les threads du système d'exploitation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécutent sous le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_os_threads**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_threads**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -63,24 +63,24 @@ ms.locfileid: "73982543"
 |fiber_context_address|**varbinary (8)**|Adresse interne du contexte de la fibre. S'applique uniquement lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour le regroupement léger.|  
 |self_address|**varbinary (8)**|Pointeur de cohérence interne.|  
 |processor_group|**smallint**|**S’applique à** : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et versions ultérieures.<br /><br /> ID de groupe de processeurs.|  
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 ## <a name="notes-on-linux-version"></a>Remarques sur la version de Linux
 
-En raison du fonctionnement du moteur SQL dans Linux, certaines de ces informations ne correspondent pas aux données de diagnostic Linux. Par exemple, `os_thread_id` ne correspond pas au résultat d’outils comme `ps`,`top` ou procfs (/Proc/`pid`).  Cela est dû à la couche d’abstraction de la plateforme (SQLPAL), une couche entre les composants SQL Server et le système d’exploitation.
+En raison du fonctionnement du moteur SQL dans Linux, certaines de ces informations ne correspondent pas aux données de diagnostic Linux. Par exemple, `os_thread_id` ne correspond pas au résultat d’outils comme `ps` , `top` ou procfs (/Proc/ `pid` ).  Cela est dû à la couche d’abstraction de la plateforme (SQLPAL), une couche entre les composants SQL Server et le système d’exploitation.
 
 ## <a name="examples"></a>Exemples  
- Au démarrage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre des threads puis leur associe des threads de travail. Cependant, des composants externes (par exemple, une procédure stockée étendue) peuvent démarrer des threads sous le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne contrôle pas ces threads. sys. dm_os_threads peut fournir des informations sur les threads non autorisés qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consomment des ressources dans le processus.  
+ Au démarrage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre des threads puis leur associe des threads de travail. Cependant, des composants externes (par exemple, une procédure stockée étendue) peuvent démarrer des threads sous le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne contrôle pas ces threads. sys. dm_os_threads peut fournir des informations sur les threads non autorisés qui consomment des ressources dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processus.  
   
  La requête suivante permet de rechercher des threads de travail (ainsi que la durée utilisée pour l'exécution) qui exécutent des threads non démarrés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
->  Dans un souci de concision, la requête suivante utilise un astérisque (`*`) dans l'instruction `SELECT`. Évitez d'utiliser l'astérique (*), surtout avec des affichages catalogue, des vues de gestion dynamique et des fonctions table système. Les futures mises à niveau et versions [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de peuvent ajouter des colonnes et modifier l’ordre des colonnes en fonction de ces vues et fonctions. Ces changements entraveront peut-être le fonctionnement des applications qui attendent un ordre et un nombre de colonnes spécifiques.  
+>  Dans un souci de concision, la requête suivante utilise un astérisque (`*`) dans l'instruction `SELECT`. Évitez d'utiliser l'astérique (*), surtout avec des affichages catalogue, des vues de gestion dynamique et des fonctions table système. Les futures mises à niveau et versions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent ajouter des colonnes et modifier l’ordre des colonnes en fonction de ces vues et fonctions. Ces changements entraveront peut-être le fonctionnement des applications qui attendent un ordre et un nombre de colonnes spécifiques.  
   
 ```  
 SELECT *  

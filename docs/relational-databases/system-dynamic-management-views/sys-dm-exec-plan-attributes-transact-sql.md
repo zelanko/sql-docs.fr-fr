@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255601"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829442"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|attribut|**varchar(128)**|Nom de l'attribut associé à ce plan. Le tableau situé juste en dessous de celui-ci répertorie les attributs possibles, leurs types de données et leurs descriptions.|  
+|Attribut|**varchar(128)**|Nom de l'attribut associé à ce plan. Le tableau situé juste en dessous de celui-ci répertorie les attributs possibles, leurs types de données et leurs descriptions.|  
 |value|**sql_variant**|Valeur de l'attribut associé à ce plan.|  
 |is_cache_key|**bit**|Indique si l'attribut est utilisé comme une partie de la clé de recherche en cache pour le plan.|  
 
@@ -80,10 +80,10 @@ Dans le tableau ci-dessus, l' **attribut** peut avoir les valeurs suivantes :
   
 ## <a name="permissions"></a>Autorisations  
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="set-options"></a>Définir les options  
  Les copies du même plan compilé peuvent différer uniquement par la valeur figurant dans la colonne **set_options** . Cela signifie que des connexions différentes font appel à différents jeux d'options SET pour la même requête. L'utilisation de différents jeux d'option n'est pas souhaitable généralement car elle est source de complications supplémentaires, d'une réutilisation insuffisante du plan et d'une augmentation du cache du plan en raison de la présence de plusieurs copies dans le cache.  
@@ -111,7 +111,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
 |DATEFORMAT|32 768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indique que l'option de base de données PARAMETERIZATION avait pour valeur FORCED lorsque le plan a été compilé.|131 072|  
-|ROWCOUNT|**S’applique à :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262 144|  
+|ROWCOUNT|**S’applique à :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] À[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262 144|  
   
 ## <a name="cursors"></a>Curseurs  
  Les curseurs inactifs sont mis en cache dans un plan compilé pour que la mémoire utilisée pour stocker le curseur soit réutilisée par des utilisateurs simultanés des curseurs. Par exemple, supposez qu'un lot déclare et utilise un curseur sans le désallouer. Si deux utilisateurs exécutent le même lot, il y aura deux curseurs actifs. Une fois les curseurs désalloués (éventuellement dans des lots différents), la mémoire utilisée pour stocker le curseur est mise en cache et n'est pas libérée. Cette liste des curseurs inactifs est conservée dans le plan compilé. À la prochaine exécution du lot par un utilisateur, la mémoire de curseur en cache est réutilisée et initialisée correctement comme curseur actif.  

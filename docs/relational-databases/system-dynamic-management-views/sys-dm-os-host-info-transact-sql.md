@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830507"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ Cette vue est similaire à [sys. dm_os_windows_info](../../relational-databases/
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
-L' `SELECT` autorisation sur `sys.dm_os_host_info` est accordée par défaut `public` au rôle. En cas de révocation `VIEW SERVER STATE` , nécessite l’autorisation sur le serveur.   
+L' `SELECT` autorisation sur `sys.dm_os_host_info` est accordée `public` par défaut au rôle. En cas de révocation, nécessite `VIEW SERVER STATE` l’autorisation sur le serveur.   
  
 > [!CAUTION]
->  Depuis la version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1,3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] la version 17 `SELECT` requiert une `sys.dm_os_host_info` autorisation pour se connecter à [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Si `SELECT` l’autorisation est révoquée `public`de, seules les connexions `VIEW SERVER STATE` avec l’autorisation peuvent se connecter à la version la plus récente de SSMS. (D’autres outils, tels `sqlcmd.exe` que, peuvent `SELECT` se connecter `sys.dm_os_host_info`sans autorisation sur.)
+>  Depuis la version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1,3, la [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] version 17 requiert une `SELECT` autorisation pour `sys.dm_os_host_info` se connecter à [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Si `SELECT` l’autorisation est révoquée de `public` , seules les connexions avec `VIEW SERVER STATE` l’autorisation peuvent se connecter à la version la plus récente de SSMS. (D’autres outils, tels que, `sqlcmd.exe` peuvent se connecter sans `SELECT` autorisation sur `sys.dm_os_host_info` .)
 
   
 ## <a name="examples"></a>Exemples  

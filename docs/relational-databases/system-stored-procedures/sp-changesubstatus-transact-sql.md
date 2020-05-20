@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771326"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824054"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **%** **type sysname**, avec la valeur par défaut. Si la *publication* n’est pas spécifiée, toutes les publications sont affectées.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** . Si la *publication* n’est pas spécifiée, toutes les publications sont affectées.  
   
-`[ @article = ] 'article'`Nom de l’article. Doit être unique et propre à la publication. *article* est de **%** **type sysname**, avec la valeur par défaut. Si *l’article* n’est pas spécifié, tous les articles sont affectés.  
+`[ @article = ] 'article'`Nom de l’article. Doit être unique et propre à la publication. *article* est de **type sysname**, avec la valeur par défaut **%** . Si *l’article* n’est pas spécifié, tous les articles sont affectés.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné dont l’État doit être modifié. *Subscriber* est de **%** **type sysname**, avec la valeur par défaut. Si l' *abonné* n’est pas spécifié, l’état de tous les abonnés à l’article spécifié est modifié.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné dont l’État doit être modifié. *Subscriber* est de **type sysname**, avec la valeur par défaut **%** . Si l' *abonné* n’est pas spécifié, l’état de tous les abonnés à l’article spécifié est modifié.  
   
 `[ @status = ] 'status'`État de l’abonnement dans la table **SYSSUBSCRIPTIONS** . *Status* est de **type sysname**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**proactive**|L'abonné est synchronisé et reçoit des données.|  
+|**active**|L'abonné est synchronisé et reçoit des données.|  
 |**inactive**|L'entrée de l'abonné existe, sans abonnement.|  
 |**abonné**|L'abonné demande des données mais n'est pas encore synchronisé.|  
   
 `[ @previous_status = ] 'previous_status'`État précédent de l’abonnement. *previous_status* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre vous permet de modifier les abonnements qui ont actuellement cet État, en autorisant les fonctions de groupe sur un ensemble spécifique d’abonnements (par exemple, en redéfinissant tous les abonnements actifs sur **subscribed**).  
   
-`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **%** **type sysname**, avec la valeur par défaut.  
+`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **type sysname**, avec la valeur par défaut **%** .  
   
 `[ @frequency_type = ] frequency_type`Fréquence de planification de la tâche de distribution. *frequency_type* est de **type int**, avec NULL comme valeur par défaut.  
   
@@ -93,7 +93,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**version8**|Quatrième|  
+|**8**|Quatrième|  
 |**16bits**|Dernier|  
 |NULL (par défaut)||  
   
@@ -106,7 +106,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
 |NULL (par défaut)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
@@ -135,7 +135,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. L’affectation d’une valeur non NULL à *remote_agent_server_name* génère une erreur.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Spécifie le nom du package DTS (Data Transformation Services). *dts_package_name* est de **type sysname**, avec NULL comme valeur par défaut. Par exemple, pour un package nommé **DTSPub_Package** vous devez spécifier `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Spécifie le nom du package DTS (Data Transformation Services). *dts_package_name* est de **type sysname**, avec NULL comme valeur par défaut. Par exemple, pour un package nommé **DTSPub_Package** vous devez spécifier `@dts_package_name = N'DTSPub_Package'` .  
   
 `[ @dts_package_password = ] 'dts_package_password'`Spécifie le mot de passe du package. *dts_package_password* est de **type sysname** , avec NULL comme valeur par défaut, qui spécifie que la propriété de mot de passe doit rester inchangée.  
   
@@ -148,15 +148,15 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @distribution_job_name = ] 'distribution_job_name'`Nom du travail de distribution. *distribution_job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être utilisé lors de la modification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des propriétés d’un article sur un serveur de publication.  
+>  l' *éditeur* ne doit pas être utilisé lors de la modification des propriétés d’un article sur un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_changesubstatus** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
  **sp_changesubstatus** modifie l’état de l’abonné dans la table **SYSSUBSCRIPTIONS** avec l’état modifié. Si nécessaire, elle met à jour l’état de l’article dans la table **sysarticles** pour indiquer qu’elle est active ou inactive. Si nécessaire, il définit l’indicateur de réplication activé ou désactivé dans la table **sysobjects** pour la table répliquée.  

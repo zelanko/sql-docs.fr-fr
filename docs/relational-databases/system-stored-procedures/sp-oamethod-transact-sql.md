@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252195"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828263"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  Pour obtenir la valeur de retour d’un paramètre de sortie, le *paramètre* doit être une variable locale du type de données approprié, et la **sortie** doit être spécifiée. Si un paramètre de constante est spécifié, ou si **Output** n’est pas spécifié, toute valeur de retour d’un paramètre de sortie est ignorée.  
   
- S’il est spécifié, *ParameterName* doit être le nom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] du paramètre nommé. Notez que **@**_parametername_is pas une [!INCLUDE[tsql](../../includes/tsql-md.md)] variable locale. L’arobase (**@**) est supprimée et *ParameterName*est passé à l’objet OLE comme nom de paramètre. Tous les paramètres nommés doivent être spécifiés après tous les paramètres positionnels.  
+ S’il est spécifié, *ParameterName* doit être le nom du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] paramètre nommé. Notez que **@** _parametername_is pas une [!INCLUDE[tsql](../../includes/tsql-md.md)] variable locale. L’arobase ( **@** ) est supprimée et *ParameterName*est passé à l’objet OLE comme nom de paramètre. Tous les paramètres nommés doivent être spécifiés après tous les paramètres positionnels.  
   
  *n*  
  Marque de réservation indiquant que plusieurs paramètres peuvent être spécifiés.  
   
 > [!NOTE]
->  ParameterName peut être un paramètre nommé, car il fait partie de la méthode spécifiée et est passé à l’objet. * \@* Les autres paramètres pour cette procédure stockée sont spécifiés par position, et non par nom.  
+>  * \@ ParameterName* peut être un paramètre nommé, car il fait partie de la méthode spécifiée et est passé à l’objet. Les autres paramètres pour cette procédure stockée sont spécifiés par position, et non par nom.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou un nombre différent de zéro (échec), qui représente la valeur entière de HRESULT renvoyée par l'objet OLE Automation.  
@@ -101,7 +101,7 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous pouvez également utiliser **sp_OAMethod** pour obtenir une valeur de propriété.  
   
 ## <a name="permissions"></a>Autorisations  

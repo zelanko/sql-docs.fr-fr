@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070353"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826267"
 ---
 # <a name="sp_columns-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +51,9 @@ sp_columns [ @table_name = ] object
   
  Si l'utilisateur actuel est propriétaire d'un objet portant le nom spécifié, les colonnes de cet objet sont retournées. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas d’objet avec l' *objet*spécifié, **sp_columns** recherche un objet avec l' *objet* spécifié détenu par le propriétaire de la base de données. S'il en existe un, les colonnes de cet objet sont retournées.  
   
-`[ \@table_qualifier = ] qualifier`Nom du qualificateur de l’objet. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms d’objets en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
+`[ \@table_qualifier = ] qualifier`Nom du qualificateur de l’objet. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms d’objets en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
   
-`[ \@column_name = ] column`Est une colonne unique et est utilisée lorsqu’une seule colonne d’informations de catalogue est souhaitée. la *colonne* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. Si la *colonne* n’est pas spécifiée, toutes les colonnes sont retournées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonne* représente le nom de colonne tel qu’il figure dans la table **syscolumns** . La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard de SQL-92 (caractères génériques % et _).  
+`[ \@column_name = ] column`Est une colonne unique et est utilisée lorsqu’une seule colonne d’informations de catalogue est souhaitée. la *colonne* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. Si la *colonne* n’est pas spécifiée, toutes les colonnes sont retournées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *colonne* représente le nom de colonne tel qu’il figure dans la table **syscolumns** . La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard de SQL-92 (caractères génériques % et _).  
   
 `[ \@ODBCVer = ] ODBCVer`Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int**, avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Pour connaître les différences de comportement entre les versions 2 et 3, consultez la spécification ODBC **SQLColumns** .  
   
@@ -74,7 +74,7 @@ sp_columns [ @table_name = ] object
 |**PRÉCISION**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
 |**LENGTH**|**int**|Taille de transfert des données. <sup>1</sup>|  
 |**ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
-|**RADIX**|**smallint**|Base pour les types de données numériques.|  
+|**DICAUX**|**smallint**|Base pour les types de données numériques.|  
 |**NULLABLE**|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = les valeurs NULL sont autorisées.<br /><br /> 0 = pas de valeur NULL.|  
 |**NOTES**|**varchar (254)**|Ce champ renvoie toujours la valeur NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valeur par défaut de la colonne.|  
@@ -90,7 +90,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Autorisations  
  Requiert des autorisations SELECT et VIEW DEFINITION sur le schéma.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_columns** suit la configuration requise pour les identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Exemples  

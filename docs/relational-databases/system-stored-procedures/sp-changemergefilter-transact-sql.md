@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 32ba968dc5e6ef78ff507b783e6212e4453586d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304946"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829576"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,10 +81,10 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_changemergefilter** est utilisé dans la réplication de fusion.  
   
- La modification d'un filtre sur un article de fusion nécessite de recréer l'instantané, s'il existe. Pour ce faire, affectez la valeur **1**à la ** \@force_invalidate_snapshot** . De même, s'il existe des abonnements à cet article, les abonnements doivent être réinitialisés. Pour ce faire, affectez la valeur **1**à la ** \@force_reinit_subscription** .  
+ La modification d'un filtre sur un article de fusion nécessite de recréer l'instantané, s'il existe. Pour ce faire, affectez la valeur **1**à la ** \@ force_invalidate_snapshot** . De même, s'il existe des abonnements à cet article, les abonnements doivent être réinitialisés. Pour ce faire, affectez la valeur **1**à la ** \@ force_reinit_subscription** .  
   
  Pour utiliser des enregistrements logiques, la publication et les articles doivent répondre à certaines conditions. Pour plus d’informations, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045928"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826649"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si la base de données est correctement configurée, **sp_certify_removable** effectue les opérations suivantes :  
   
 -   Elle met la base de données hors ligne pour permettre la copie des fichiers.  
@@ -73,7 +73,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  Vous pouvez y remédier des deux manières suivantes :  
   
--   Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outils et procédures, puis réexécutez **sp_certify_removable** .  
+-   Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Outils et procédures, puis réexécutez **sp_certify_removable** .  
   
 -   Exécutez simplement **sp_certify_removable** avec la valeur **auto** .  
   
@@ -90,7 +90,7 @@ EXEC sp_certify_removable inventory, AUTO;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détachement et attachement de la base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   

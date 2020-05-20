@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769133"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820699"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**4**|Quotidien|  
-|**version8**|Hebdomadaire|  
+|**8**|Hebdomadaire|  
 |**10**|Mensuelle|  
 |**20**|Mensuellement, en fonction de l'intervalle de fréquence|  
 |**40**|Au démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -111,7 +111,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|Jeudi|  
 |**6**|Vendredi|  
 |**7**|Samedi|  
-|**version8**|jour|  
+|**8**|Jour|  
 |**9**|Jours de la semaine|  
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
@@ -123,7 +123,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**version8**|Quatrième|  
+|**8**|Quatrième|  
 |**16bits**|Dernier|  
 |NULL (par défaut)||  
   
@@ -136,7 +136,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
 |NULL (par défaut)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Fréquence à laquelle *frequency_subday* se produisent entre chaque fusion. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`Brève description de cet abonnement de fusion. *Description*est de type **nvarchar (255)**, avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans la colonne **nom convivial** , qui peut être utilisée pour trier les abonnements pour une publication analysée.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Spécifie si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le gestionnaire de synchronisation Windows. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Spécifie si l’abonnement peut être synchronisé via le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestionnaire de synchronisation Windows. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut être synchronisé sans démarrage [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @offloadagent = ] remote_agent_activation`Spécifie que l’agent peut être activé à distance. *remote_agent_activation* est de **bits** avec **0**comme valeur par défaut.  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`Permet de résoudre les conflits de manière interactive pour tous les articles qui autorisent la résolution interactive. *use_interactive_resolver* est de type **nvarchar (5)**, avec false comme valeur par défaut.  
   
-`[ @merge_job_name = ] 'merge_job_name'`Le * \@paramètre merge_job_name* est déconseillé et ne peut pas être défini. *merge_job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @merge_job_name = ] 'merge_job_name'`Le paramètre * \@ merge_job_name* est déconseillé et ne peut pas être défini. *merge_job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 `[ @hostname = ] 'hostname'`Remplace la valeur retournée par [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) lorsque cette fonction est utilisée dans la clause WHERE d’un filtre paramétré. *Hostname* est de **type sysname**, avec NULL comme valeur par défaut.  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_addmergesubscription** est utilisé dans la réplication de fusion.  
   
- Lorsque **sp_addmergesubscription** est exécuté par un membre du rôle serveur fixe **sysadmin** pour créer un abonnement par émission de type push, le travail agent de fusion est implicitement créé et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sous le compte de service agent. Nous vous recommandons d’exécuter [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) et de spécifier les informations d’identification d’un autre compte Windows spécifique à l’agent pour ** \@job_login** et ** \@job_password**. Pour plus d’informations, consultez [modèle de sécurité de l’agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Lorsque **sp_addmergesubscription** est exécuté par un membre du rôle serveur fixe **sysadmin** pour créer un abonnement par émission de type push, le travail agent de fusion est implicitement créé et s’exécute sous le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service agent. Nous vous recommandons d’exécuter [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) et de spécifier les informations d’identification d’un autre compte Windows spécifique à l’agent pour ** \@ job_login** et ** \@ job_password**. Pour plus d’informations, consultez [modèle de sécurité de l’agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

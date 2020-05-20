@@ -18,19 +18,19 @@ helpviewer_keywords:
 - sp_ backup_master_switch
 - smart_admin.sp_backup_master_switch
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 242ef833cbb5a6a54b52fba0d1f435a7ca475cf0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942066"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830363"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Suspend ou reprend [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Suspend ou reprend [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
  Utilisez cette procédure stockée pour interrompre temporairement et reprendre la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. De cette façon, tous les paramètres de configuration sont conservés et pourront être appliqués à la reprise des opérations. Lorsque la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est interrompue, la période de rétention n'est pas appliquée. Cela signifie qu'il n'y a pas de vérification pour déterminer si les fichiers doivent être supprimés du stockage ou s'il existe des fichiers de sauvegarde corrompus ou une rupture dans la séquence de journaux de transactions consécutifs.  
   
@@ -69,7 +69,7 @@ Go
   
 ```  
   
- L’exemple suivant peut être utilisé pour reprendre [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ L’exemple suivant peut être utilisé pour reprendre [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
 ```  
 Use msdb;  
@@ -79,7 +79,7 @@ Go
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [SQL Server de la sauvegarde managée sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Sauvegarde managée de SQL Server vers Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
