@@ -14,16 +14,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: mashamsft
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8bdf74e6ee774d9a0cc8e3d9128c659b75287511
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ccb2a6e1e8201fe623839fc52f4f0b99b789bbf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79198226"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820828"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -43,7 +43,7 @@ ms.locfileid: "79198226"
 |rôle|**tinyint**|Rôle de géo-réplication, parmi les suivants :<br /><br /> 0 = principal. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Le type secondaire, parmi les suivants :<br /><br /> 0 = aucune connexion directe n’est autorisée dans la base de données secondaire et la base de données n’est pas disponible pour l’accès en lecture.<br /><br /> 2 = toutes les connexions sont autorisées à la base de données dans le réplica secondaire REPL ; ication pour l’accès en lecture seule.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Non<br /><br /> Tous|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tous|  
 |last_commit|**datetimeoffset**|Heure de la dernière transaction validée dans la base de données. S’il est récupéré sur la base de données primaire, il indique l’heure de la dernière validation sur la base de données primaire. S’il est récupéré sur la base de données secondaire, il indique l’heure de la dernière validation sur la base de données secondaire. En cas de récupération sur la base de données secondaire lorsque le réplica principal du lien de réplication est arrêté, il indique jusqu’à quel point la base de données secondaire a été capturée.|
   
 > [!NOTE]  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005972"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820528"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,11 +59,11 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**start_incremental**|Démarre un remplissage incrémentiel pour *fulltext_catalog_name*. Une erreur est affichée si le catalogue n'existe pas. Si une alimentation d'index de recherche en texte intégral est déjà active, un avertissement est affiché, mais aucune opération d'alimentation ne se produit. Avec remplissage incrémentiel, seules les lignes modifiées sont récupérées pour l’indexation de texte intégral, à condition qu’une colonne **timestamp** soit présente dans la table en cours d’indexation de texte intégral.|  
 |**start_full**|Démarre un remplissage complet pour *fulltext_catalog_name*. Même si elle a déjà été indexée, chaque ligne de chaque table associée à ce catalogue de texte intégral est récupérée lors de l'indexation en texte intégral.|  
 |**Stop**|Arrête un remplissage d’index pour *fulltext_catalog_name*. Une erreur est affichée si le catalogue n'existe pas. Aucun avertissement n'est affiché si l'alimentation était déjà arrêtée.|  
-|**Globale**|Reconstruit *fulltext_catalog_name*. Dans ce cas, le catalogue existant est supprimé et un autre catalogue est créé à sa place. Toutes les tables qui comportent des références d'indexation de texte intégral sont associées au nouveau catalogue. La reconstruction redéfinit les métadonnées de texte intégral des tables système de la base de données.<br /><br /> Si le suivi des modifications est désactivé (OFF), la reconstruction ne déclenche pas de réalimentation du catalogue de texte intégral récemment créé. Dans ce cas, pour repeupler, exécutez **sp_fulltext_catalog** avec l’action **start_full** ou **start_incremental** .|  
+|**Recréation**|Reconstruit *fulltext_catalog_name*. Dans ce cas, le catalogue existant est supprimé et un autre catalogue est créé à sa place. Toutes les tables qui comportent des références d'indexation de texte intégral sont associées au nouveau catalogue. La reconstruction redéfinit les métadonnées de texte intégral des tables système de la base de données.<br /><br /> Si le suivi des modifications est désactivé (OFF), la reconstruction ne déclenche pas de réalimentation du catalogue de texte intégral récemment créé. Dans ce cas, pour repeupler, exécutez **sp_fulltext_catalog** avec l’action **start_full** ou **start_incremental** .|  
   
 `[ @path = ] 'root_directory'`Répertoire racine (pas le chemin d’accès physique complet) pour une action de **création** . *root_directory* est de type **nvarchar (100)** et sa valeur par défaut est null, ce qui indique l’utilisation de l’emplacement par défaut spécifié lors de l’installation. Il s’agit du sous-répertoire Ftdata dans le répertoire MSSQL. par exemple, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Le répertoire racine spécifié doit se trouver sur un lecteur du même ordinateur, ne pas être désigné seulement par une lettre de lecteur et ne pas être un chemin d'accès relatif. Les disques réseau et amovibles, les disquettes et chemins UNC ne sont pas pris en charge. Les catalogues de texte intégral doivent être créés sur un lecteur de disque local associé à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- le chemin *action* **d’accès est valide uniquement quand l’action est \@** **créer**. Pour les actions autres que **Create** (**Stop**, **Rebuild**, etc.), ** \@Path** doit avoir la valeur null ou être omis.  
+ le ** \@ chemin d’accès** est valide uniquement quand l' *action* est **créer**. Pour les actions autres que **Create** (**Stop**, **Rebuild**, etc.), ** \@ path** doit avoir la valeur null ou être omis.  
   
  Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un serveur virtuel de cluster, le répertoire de catalogue spécifié doit être installé sur un lecteur de disque partagé dont la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dépend. Si @path n’est pas spécifié, l’emplacement du répertoire de catalogue par défaut se trouve sur le lecteur de disque partagé, dans le répertoire spécifié lors de l’installation du serveur virtuel.  
   
@@ -76,7 +76,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>Notes  
  L’action **start_full** est utilisée pour créer un instantané complet des données de texte intégral dans *fulltext_catalog_name*. L’action **start_incremental** est utilisée pour réindexer uniquement les lignes modifiées dans la base de données. L’alimentation incrémentielle ne peut être appliquée que si la table contient une colonne de type **timestamp**. Si une table du catalogue de texte intégral ne contient pas de colonne de type **timestamp**, la table subit un remplissage complet.  
   
- Les données d'index et de catalogue de texte intégral sont enregistrées dans des fichiers créés dans un répertoire du catalogue de texte intégral. Le répertoire du catalogue de texte intégral est créé en tant que sous-répertoire du répertoire spécifié ** \@dans chemin d’accès** ou dans le répertoire du catalogue de texte intégral par défaut du serveur si ** \@le chemin d’accès** n’est pas spécifié. Le nom du répertoire du catalogue de texte intégral est créé de telle façon qu'il est unique sur le serveur. Par conséquent, tous les répertoires de catalogue de texte intégral peuvent partager le même chemin.  
+ Les données d'index et de catalogue de texte intégral sont enregistrées dans des fichiers créés dans un répertoire du catalogue de texte intégral. Le répertoire du catalogue de texte intégral est créé en tant que sous-répertoire du répertoire spécifié dans ** \@ chemin d’accès** ou dans le répertoire du catalogue de texte intégral par défaut du serveur si le ** \@ chemin d’accès** n’est pas spécifié. Le nom du répertoire du catalogue de texte intégral est créé de telle façon qu'il est unique sur le serveur. Par conséquent, tous les répertoires de catalogue de texte intégral peuvent partager le même chemin.  
   
 ## <a name="permissions"></a>Autorisations  
  L’appelant doit être membre du rôle **db_owner** . En fonction de l’action demandée, l’appelant ne doit pas se voir refuser les autorisations ALTER ou CONTROL (qui **db_owner** a) sur le catalogue de texte intégral cible.  

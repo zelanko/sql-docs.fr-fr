@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108615"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820551"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_createstats
 ## <a name="result-sets"></a>Jeux de résultats  
  Chaque nouvel objet de statistiques porte le même nom que la colonne sur laquelle il est créé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  sp_createstats ne crée pas ou ne met pas à jour les statistiques sur les colonnes qui sont la première colonne d’un objet de statistiques existant ;  Cela comprend la première colonne de statistiques créées pour les index, les colonnes avec des statistiques à une seule colonne générées avec l’option AUTO_CREATE_STATISTICS et la première colonne de statistiques créée avec l’instruction CREATe STATISTICs. sp_createstats ne crée pas de statistiques sur les premières colonnes des index désactivés, sauf si cette colonne est utilisée dans un autre index activé. sp_createstats ne crée pas de statistiques sur les tables avec un index cluster désactivé.  
   
  Lorsque la table contient un jeu de colonnes, sp_createstats ne crée pas de statistiques sur les colonnes éparses. Pour plus d’informations sur les jeux de colonnes et les colonnes éparses, consultez [utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md) et utiliser des [colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).  
@@ -91,7 +91,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Portent](../../relational-databases/statistics/statistics.md)   
  [CRÉER des statistiques &#40;&#41;Transact-SQL](../../t-sql/statements/create-statistics-transact-sql.md)   
- [Options ALTER DATABASE SET &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [METTRE à jour les statistiques &#40;&#41;Transact-SQL](../../t-sql/statements/update-statistics-transact-sql.md)   

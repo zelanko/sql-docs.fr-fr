@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_expired_subscription_cleanup
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fb556a464077092cacd7107a8c2b4b124c6db707
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f739a51e57337628c666ac8e5ccee253785a1df6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124431"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820498"
 ---
 # <a name="sp_expired_subscription_cleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contrôle l'état de tous les abonnements de chaque publication et supprime ceux qui ont expiré. Cette procédure stockée est exécutée sur le serveur de publication sur n’importe quelle base de données ou sur le serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de distribution de la base de données de distribution pour un serveur de publication non-.  
+  Contrôle l'état de tous les abonnements de chaque publication et supprime ceux qui ont expiré. Cette procédure stockée est exécutée sur le serveur de publication sur n’importe quelle base de données ou sur le serveur de distribution de la base de données de distribution pour un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom d’un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Ne spécifiez pas ce paramètre pour un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @publisher = ] 'publisher'`Nom d’un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publication* est de **type sysname**, avec NULL comme valeur par défaut. Ne spécifiez pas ce paramètre pour un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

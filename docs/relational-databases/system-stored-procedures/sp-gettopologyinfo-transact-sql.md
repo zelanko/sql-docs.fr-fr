@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_gettopologyinfo
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 901ad9739966327102ceda6c7d26815daa867888
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f3bb48f4fc219f0bc6d4e46b8073d10fd255f1f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123923"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820468"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ sp_gettopologyinfo [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @request_id= ] *request_id*  
- ID d'une demande de statut de topologie. *request_id* est de **type int**, avec NULL comme valeur par défaut. Pour obtenir un ID, utilisez le @request_id paramètre output de [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) ou interrogez la table système [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) .  
+ [ @request_id =] *request_id*  
+ ID d'une demande de statut de topologie. *request_id* est de **type int**, avec NULL comme valeur par défaut. Pour obtenir un ID, utilisez le @request_id paramètre OUTPUT de [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) ou interrogez la table système [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) .  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  sp_gettopologyinfo retourne un jeu de résultats contenant une seule colonne XML. Les données de la colonne XML sont les mêmes que celles de la table système [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) .  

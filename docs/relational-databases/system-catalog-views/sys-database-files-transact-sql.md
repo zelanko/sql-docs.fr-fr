@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_files catalog view
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983177"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823485"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73983177"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID du fichier dans la base de données.|  
-|**file_guid**|**uniqueidentifier**|GUID du fichier<br /><br /> NULL = la base de données a été mise à niveau à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir d’une version antérieure de (valide pour SQL Server 2005 et versions antérieures).|  
+|**file_guid**|**uniqueidentifier**|GUID du fichier<br /><br /> NULL = la base de données a été mise à niveau à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (valide pour SQL Server 2005 et versions antérieures).|  
 |**type**|**tinyint**|Type de fichier :<br/><br /> 0 = lignes<br /><br/> 1 = journal<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texte intégral|  
 |**type_desc**|**nvarchar(60)**|Description du type de fichier :<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|La valeur peut être supérieure ou égale à 0. La valeur 0 représente le fichier journal de la base de données et une valeur supérieure à 0 représente l'ID du groupe de fichiers où ce fichier de données est stocké.|  
@@ -79,7 +79,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-Pour plus d’informations sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]l’utilisation de, consultez la rubrique [détermination de la taille de base de données dans Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) sur le blog de l’équipe de conseil clientèle SQL.
+Pour plus d’informations sur l’utilisation de [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , consultez la rubrique [détermination de la taille de base de données dans Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) sur le blog de l’équipe de conseil clientèle SQL.
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue de bases de données et de fichiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   

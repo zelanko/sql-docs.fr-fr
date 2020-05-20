@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095939"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820264"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="arguments"></a>Arguments  
 `[ @traceid = ] trace_id`ID de la trace à laquelle le filtre est défini. *trace_id* est de **type int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace.  
   
-`[ @columnid = ] column_id`ID de la colonne sur laquelle le filtre est appliqué. *column_id* est de **type int**, sans valeur par défaut. Si *column_id* a la valeur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] null, efface tous les filtres pour la trace spécifiée.  
+`[ @columnid = ] column_id`ID de la colonne sur laquelle le filtre est appliqué. *column_id* est de **type int**, sans valeur par défaut. Si *column_id* a la valeur null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efface tous les filtres pour la trace spécifiée.  
   
 `[ @logical_operator = ] logical_operator`Spécifie si l’opérateur AND (**0**) ou or (**1**) est appliqué. *logical_operator* est de **type int**, sans valeur par défaut.  
   
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|La fonction n'est pas valide pour cette trace.|  
   
 ## <a name="remarks"></a>Notes  
- **sp_trace_setfilter** est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée qui effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibles dans les versions antérieures de. Utilisez **sp_trace_setfilter** au lieu des procédures stockées étendues du **filtre xp_trace_set\*** pour créer, appliquer, supprimer ou manipuler des filtres sur des traces. Pour plus d’informations, consultez [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md).  
+ **sp_trace_setfilter** est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée qui effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues disponibles dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilisez **sp_trace_setfilter** au lieu des procédures stockées étendues du ** \* filtre xp_trace_set** pour créer, appliquer, supprimer ou manipuler des filtres sur des traces. Pour plus d’informations, consultez [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Tous les filtres d’une colonne particulière doivent être activés ensemble au cours d’une exécution de **sp_trace_setfilter**. Par exemple, si un utilisateur décide d'appliquer deux filtres sur la colonne Nom d'application et un filtre sur la colonne Nom d'utilisateur, il doit spécifier les filtres sur le nom d'application de manière séquentielle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur si l'utilisateur tente de spécifier un filtre sur le nom d'application dans un appel de procédure stockée, suivi d'un filtre sur le nom d'utilisateur, puis d'un autre filtre sur le nom d'application.  
   

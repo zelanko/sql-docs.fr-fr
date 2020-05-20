@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68894041"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820698"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
 |**4**|Quotidien|  
-|**version8**|Hebdomadaire|  
+|**8**|Hebdomadaire|  
 |**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64** (valeur par défaut)|Démarrage automatique|  
@@ -121,7 +121,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1** (par défaut)|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**version8**|Quatrième|  
+|**8**|Quatrième|  
 |**16bits**|Dernier|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec 0 comme valeur par défaut.  
@@ -133,7 +133,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4** (par défaut)|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec 5 comme valeur par défaut.  
   
@@ -154,21 +154,21 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @dts_package_location = ] 'dts_package_location'`Spécifie l’emplacement du package. *dts_package_location* est de type **nvarchar (12)**, avec Distributor comme valeur par défaut. L’emplacement du package peut être **Distributor** ou **Subscriber**.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indique si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le gestionnaire de synchronisation. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indique si l’abonnement peut être synchronisé via le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestionnaire de synchronisation. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut être synchronisé sans démarrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Identificateur programmatique unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *subscriber_provider* est de **type sysname**, avec NULL comme valeur par défaut. *subscriber_provider* doit être unique pour le fournisseur OLE DB installé sur le serveur de distribution. *subscriber_provider* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
+`[ @subscriber_provider = ] 'subscriber_provider'`Identificateur programmatique unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *subscriber_provider* est de **type sysname**, avec NULL comme valeur par défaut. *subscriber_provider* doit être unique pour le fournisseur OLE DB installé sur le serveur de distribution. *subscriber_provider* n’est pris en charge que pour les abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`Nom de la source de données, tel qu’il est interprété par le fournisseur OLE DB. *subscriber_datasrc* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_datasrc* est passé comme DBPROP_INIT_DATASOURCE propriété pour initialiser le fournisseur de OLE DB. *subscriber_datasrc* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'`Nom de la source de données, tel qu’il est interprété par le fournisseur OLE DB. *subscriber_datasrc* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_datasrc* est passé comme DBPROP_INIT_DATASOURCE propriété pour initialiser le fournisseur de OLE DB. *subscriber_datasrc* n’est pris en charge que pour les abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_location = ] 'subscriber_location'`Est l’emplacement de la base de données tel qu’il est interprété par le fournisseur OLE DB. *subscriber_location* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_location* est passé comme DBPROP_INIT_LOCATION propriété pour initialiser le fournisseur de OLE DB. *subscriber_location* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
+`[ @subscriber_location = ] 'subscriber_location'`Est l’emplacement de la base de données tel qu’il est interprété par le fournisseur OLE DB. *subscriber_location* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_location* est passé comme DBPROP_INIT_LOCATION propriété pour initialiser le fournisseur de OLE DB. *subscriber_location* n’est pris en charge que pour les abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`Chaîne de connexion spécifique au fournisseur OLE DB qui identifie la source de données. *subscriber_provider_string* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_provider_string* est passé à IDataInitialize ou défini en tant que propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. *subscriber_provider_string* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'`Chaîne de connexion spécifique au fournisseur OLE DB qui identifie la source de données. *subscriber_provider_string* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. *subscriber_provider_string* est passé à IDataInitialize ou défini en tant que propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB. *subscriber_provider_string* n’est pris en charge que pour les abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`Catalogue à utiliser lors de l’établissement d’une connexion au fournisseur OLE DB. *subscriber_catalog* est de **type sysname**, avec NULL comme valeur par défaut. *subscriber_catalog* est passé comme DBPROP_INIT_CATALOG propriété pour initialiser le fournisseur de OLE DB. *subscriber_catalog* n’est pris en charge que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les abonnés non-.  
+`[ @subscriber_catalog = ] 'subscriber_catalog'`Catalogue à utiliser lors de l’établissement d’une connexion au fournisseur OLE DB. *subscriber_catalog* est de **type sysname**, avec NULL comme valeur par défaut. *subscriber_catalog* est passé comme DBPROP_INIT_CATALOG propriété pour initialiser le fournisseur de OLE DB. *subscriber_catalog* n’est pris en charge que pour les abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124339"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820451"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |**add**|Ajoute *column_name* de *qualified_table_name* à l’index de recherche en texte intégral inactif de la table. Cette action permet d'appliquer à la colonne une indexation de texte intégral.|  
 |**Déplacez**|Supprime *column_name* de *qualified_table_name* de l’index de recherche en texte intégral inactif de la table.|  
   
-`[ @language = ] 'language_term'`Langue des données stockées dans la colonne. Pour obtenir la liste des langues incluses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans, consultez [sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'`Langue des données stockées dans la colonne. Pour obtenir la liste des langues incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [sys. Fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Utilisez l'analyse indépendante lorsqu'une colonne contient des données dans plusieurs langues ou dans une langue non prise en charge. La langue par défaut est spécifiée par l'option de configuration « Default Full-Text Language ».  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124399"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820527"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,10 +44,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @pktable_name=] '*pktable_name*'  
+ [ @pktable_name =] '*pktable_name*'  
  Nom de la table, avec la clé primaire, utilisée pour retourner les informations de catalogue. *pktable_name* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Ce paramètre ou le paramètre *fktable_name* , ou les deux, doivent être fournis.  
   
- [ @pktable_owner=] '*pktable_owner*'  
+ [ @pktable_owner =] '*pktable_owner*'  
  Nom du propriétaire de la table (avec la clé primaire) utilisé pour retourner les informations de catalogue. *pktable_owner* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *pktable_owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *pktable_owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table avec la *pktable_name*spécifiée, la procédure recherche une table avec le *pktable_name* spécifié détenu par le propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
@@ -55,7 +55,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  [ @pktable_qualifier =] '*pktable_qualifier*'  
  Nom du qualificateur de la table (avec la clé primaire). *pktable_qualifier* est de type sysname, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de table en trois parties (*qualifier.Owner.Name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [ @fktable_name=] '*fktable_name*'  
+ [ @fktable_name =] '*fktable_name*'  
  Nom de la table (contenant une clé étrangère) utilisée pour retourner les informations de catalogue. *fktable_name* est de type sysname, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Ce paramètre ou le paramètre *pktable_name* , ou les deux, doivent être fournis.  
   
  [ @fktable_owner =] '*fktable_owner*'  
@@ -63,7 +63,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *fktable_owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table avec la *fktable_name*spécifiée, la procédure recherche une table avec le *fktable_name* spécifié détenu par le propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
   
- [ @fktable_qualifier= ] '*FKTABLE_QUALIFIER*'  
+ [ @fktable_qualifier =] '*FKTABLE_QUALIFIER*'  
  Nom du qualificateur de la table (avec clé étrangère). *FKTABLE_QUALIFIER* est de **type sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 ## <a name="return-code-values"></a>Codet de retour  

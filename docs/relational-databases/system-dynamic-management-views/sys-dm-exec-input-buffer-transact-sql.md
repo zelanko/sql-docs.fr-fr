@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74097874"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821068"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-Retourne des informations sur les instructions soumises à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance de.
+Retourne des informations sur les instructions soumises à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,12 +59,12 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="permissions"></a>Autorisations
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Si l’utilisateur dispose de l’autorisation View Server State, il verra toutes les sessions en cours d’exécution sur l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de ; dans le cas contraire, l’utilisateur verra uniquement la session active.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Si l’utilisateur dispose de l’autorisation View Server State, il verra toutes les sessions en cours d’exécution sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; sinon, l’utilisateur verra uniquement la session active.
 
 > [!IMPORTANT]
 > L’exécution de cette DMV en dehors de SQL Server Management Studio par rapport SQL Server sans les autorisations VIEW SERVER STATE (comme dans un déclencheur, une procédure stockée ou une fonction) lève une erreur d’autorisation sur la base de données Master.
 
-Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si l’utilisateur est le propriétaire de la base de données, l’utilisateur verra toutes les sessions [!INCLUDE[ssSDS](../../includes/sssds-md.md)]en cours d’exécution sur le ; dans le cas contraire, l’utilisateur verra uniquement la session active.
+Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , si l’utilisateur est le propriétaire de la base de données, l’utilisateur verra toutes les sessions en cours d’exécution sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; sinon, l’utilisateur verra uniquement la session active.
 
 > [!IMPORTANT]
 > L’exécution de cette DMV en dehors de SQL Server Management Studio par rapport Azure SQL Database sans autorisations de propriétaire (comme dans un déclencheur, une procédure stockée ou une fonction) lève une erreur d’autorisation sur la base de données Master.

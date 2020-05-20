@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber_schedule
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 22ecb1601108562607d1fdc550daaa945fe72910
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b0b0dbca878d0a30369edf75b2784cfac51ddc62
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770735"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820632"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,10 +72,10 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
   
 `[ @active_end_date = ] active_end_date`Date à laquelle la tâche de distribution cesse d’être planifiée, au format AAAAMMJJ. *active_end_date* est de **type int**, avec **99991231**comme valeur par défaut, ce qui correspond au 31 décembre 9999.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être utilisé lors de la modification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des propriétés d’un article sur un serveur de publication.  
+>  l' *éditeur* ne doit pas être utilisé lors de la modification des propriétés d’un article sur un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

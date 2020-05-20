@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 58f0258843995acc82e84d69a4d2d101594fc313
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900087"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820807"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67900087"
   Retourne une ligne pour chaque module chargé dans l'espace d'adressage du serveur.  
   
 > [!NOTE]  
->  Pour appeler ce à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de, utilisez le nom **sys. dm_pdw_nodes_os_loaded_modules**.  
+>  Pour appeler ce à partir de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_loaded_modules**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

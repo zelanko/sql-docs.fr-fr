@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_unsetapprole
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9cf190198859bb3202dc2bcc62b066e5995d8fed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1925b28a59cd629004a102c85d9a303515186c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305162"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820183"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) et 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une fois qu’un rôle d’application est activé à l’aide de **sp_setapprole**, le rôle reste actif jusqu’à ce que l’utilisateur se déconnecte du serveur ou exécute **sp_unsetapprole**.  
   
  Pour obtenir une vue d’ensemble des rôles d’application, consultez [rôles d’application](../../relational-databases/security/authentication-access/application-roles.md).  

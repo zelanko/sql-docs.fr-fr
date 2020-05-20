@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6e21096971b9a0891d2c51c5fce34c119b454f0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d9a2e99719fc4409d0aa83aae5e625370ff9abff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010588"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820255"
 ---
 # <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @instance_name = ] '*instance_name*'  
+ [ @instance_name =] '*instance_name*'  
  Est le nom de l’instance. *instance_name* est de **type sysname** et sa valeur par défaut est l’instance locale si la valeur est null.  
   
-> **Remarque :**  _instance_name_ doit être le nom complet de l’instance, qui se compose du nom de l’ordinateur et du nom de l’instance, sous la forme *ComputerName*\\*nom_instance*.  
+> **Remarque :**_instance_name_ doit être le nom complet de l’instance, qui se compose du nom de l’ordinateur et du nom de l’instance, sous la forme *ComputerName* \\ *nom_instance*.    
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

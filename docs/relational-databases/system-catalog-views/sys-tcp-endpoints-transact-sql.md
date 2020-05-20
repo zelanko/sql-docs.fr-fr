@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 493bf17904f65b265656e03299fe13f9ea3f6441
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116734"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821536"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68116734"
 |**ip_address**|**nvarchar (45)**|Adresse IP du port d'écoute, telle qu'elle est stipulée par la clause LISTENER_IP. Autorise la valeur NULL.|  
   
 ## <a name="remarks"></a>Notes  
- Pour recueillir des informations sur les points de terminaison et les connexions, exécutez la requête suivante. Les points de terminaison sans connexion active ou sans connexion TCP s'affichent avec des valeurs NULL. Ajoutez la **WHERE** clause `WHERE des.session_id = @@SPID` WHERE pour renvoyer des informations sur la connexion actuelle.  
+ Pour recueillir des informations sur les points de terminaison et les connexions, exécutez la requête suivante. Les points de terminaison sans connexion active ou sans connexion TCP s'affichent avec des valeurs NULL. Ajoutez la **WHERE** clause WHERE `WHERE des.session_id = @@SPID` pour renvoyer des informations sur la connexion actuelle.  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_special_columns
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ceb000826fee3ce4a26472343a6bb68e3636a9b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032844"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820316"
 ---
 # <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_special_columns [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @table_name=] '*table_name*'  
+ [ @table_name =] '*table_name*'  
  Nom de la table utilisée pour renvoyer des informations de catalogue. *Name* est de **type sysname**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge.  
   
- [ @table_owner=] '*TABLE_OWNER*'  
+ [ @table_owner =] '*TABLE_OWNER*'  
  Propriétaire de la table utilisée pour retourner les informations de catalogue. *owner* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom*spécifié, cette procédure recherche une table portant le *nom* spécifié, détenue par le propriétaire de la base de données. Si la table existe, ses colonnes sont retournées.  
   
- [ @qualifier=] '*qualificateur*'  
- Nom du qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de table en trois parties (*qualifier.Owner.Name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+ [ @qualifier =] '*qualificateur*'  
+ Nom du qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de table en trois parties (*qualifier.Owner.Name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [ @col_type=] '*col_type*'  
+ [ @col_type =] '*col_type*'  
  Type de colonne. *col_type* est de type **char (** 1 **)**, avec r comme valeur par défaut. type r retourne la colonne ou le jeu de colonnes optimal qui, en extrayant des valeurs de la ou des colonnes, permet d’identifier de manière unique toutes les lignes de la table spécifiée. Une colonne peut être soit une colonne virtuelle spécifiquement créée à cet effet, soit la ou les colonnes d'un index unique de la table. Le type V fournit la ou les colonnes de la table spécifiée qui, le cas échéant, sont automatiquement mises à jour par la source de données lorsqu'une valeur dans la ligne est mise à jour par une transaction.  
   
- [ @scope=] '*scope*'  
+ [ @scope =] '*portée*'  
  Étendue minimale requise de l'identificateur de ligne ROWID. *scope* est de **type char (** 1 **)**, avec T comme valeur par défaut. l’étendue C spécifie que ROWID n’est valide que lorsqu’il est positionné sur cette ligne. L'étendue T indique que le ROWID est valide pour l'ensemble de la transaction.  
   
- [ @nullable=] '*Nullable*'  
+ [ @nullable =] '*Nullable*'  
  Permet de savoir si les colonnes spéciales peuvent accepter ou non une valeur NULL. *Nullable* est de **type char (** 1 **)**, avec U. O comme valeur par défaut. spécifie des colonnes spéciales qui n’autorisent pas les valeurs NULL. U identifie les colonnes qui acceptent partiellement des valeurs NULL.  
   
- [ @ODBCVer=] «*ODBCVer*»  
+ [ @ODBCVer =] '*ODBCVer*'  
  Version ODBC utilisée. *ODBCVer* est de **type int (** 4 **)**, avec 2 comme valeur par défaut. Cela indique ODBC version 2.0. Pour plus d'informations sur les différences existant entre la version 2.0 et la version 3.0 d'ODBC, consultez la spécification ODBC SQLSpecialColumns pour ODBC version 3.0.  
   
 ## <a name="return-code-values"></a>Codet de retour  

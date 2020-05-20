@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f65d868f7560f1e413b8c28308afac495233102
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c983f72d3ba08f3ffc70991a13e312947ee77378
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769079"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820654"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,11 +71,11 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_addpullsubscription** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
 > [!IMPORTANT]  
->  Pour les abonnements mis à jour en attente, utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les connexions aux abonnés et spécifiez un compte différent pour la connexion à chaque abonné. Lors de la création d'un abonnement par extraction de données prenant en charge la mise à jour en attente, la réplication configure toujours la connexion de manière à ce qu'elle utilise l'authentification Windows (pour les abonnements par extraction de données, la réplication ne peut pas accéder aux métadonnées de l'Abonné qui sont requises pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Dans ce cas, vous devez exécuter [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) pour modifier la connexion afin d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliser l’authentification après la configuration de l’abonnement.  
+>  Pour les abonnements mis à jour en attente, utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les connexions aux abonnés et spécifiez un compte différent pour la connexion à chaque abonné. Lors de la création d'un abonnement par extraction de données prenant en charge la mise à jour en attente, la réplication configure toujours la connexion de manière à ce qu'elle utilise l'authentification Windows (pour les abonnements par extraction de données, la réplication ne peut pas accéder aux métadonnées de l'Abonné qui sont requises pour utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Dans ce cas, vous devez exécuter [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) pour modifier la connexion afin d’utiliser l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification après la configuration de l’abonnement.  
   
  Si le [MSreplication_subscriptions &#40;table Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) n’existe pas sur l’abonné, **sp_addpullsubscription** le crée. Elle ajoute également une ligne à la table [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Pour les abonnements par extraction, [sp_addsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) doivent être appelées au niveau du serveur de publication en premier.  
   

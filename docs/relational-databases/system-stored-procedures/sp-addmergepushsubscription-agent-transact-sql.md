@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769161"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820740"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,16 +68,16 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Mode de sécurité à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la **valeur**est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0, spécifie l’authentification. Si **1**, spécifie l’authentification Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Mode de sécurité à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la **valeur est 0**, spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si **1**, spécifie l’authentification Windows.  
   
 `[ @subscriber_login = ] 'subscriber_login'`Connexion de l’abonné à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_login* est requis si *subscriber_security_mode* a la valeur **0**. *subscriber_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Mot de passe de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné pour l’authentification. *subscriber_password* est requis si *subscriber_security_mode* a la valeur **0**. *subscriber_password* est de **type sysname**, avec NULL comme valeur par défaut. Si un mot de passe d'abonné est utilisé, il est automatiquement chiffré.  
+`[ @subscriber_password = ] 'subscriber_password'`Mot de passe de l’abonné pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *subscriber_password* est requis si *subscriber_security_mode* a la valeur **0**. *subscriber_password* est de **type sysname**, avec NULL comme valeur par défaut. Si un mot de passe d'abonné est utilisé, il est automatiquement chiffré.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la **valeur**est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0, spécifie l’authentification. Si **1**, spécifie l’authentification Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_security_mode* est de **type int**, avec 1 comme valeur par défaut. Si la **valeur est 0**, spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si **1**, spécifie l’authentification Windows.  
   
 `[ @publisher_login = ] 'publisher_login'`Nom de connexion à utiliser lors de la connexion à un serveur de publication lors de la synchronisation. *publisher_login* est de **type sysname**, avec NULL comme valeur par défaut.  
   
@@ -97,12 +97,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_type = ] frequency_type`Fréquence de planification de l’Agent de fusion. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
 |**4**|Quotidien|  
-|**version8**|Hebdomadaire|  
+|**8**|Hebdomadaire|  
 |**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
@@ -114,7 +114,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Jours d’exécution de la Agent de fusion. *frequency_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
@@ -123,19 +123,19 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**5**|Jeudi|  
 |**6**|Vendredi|  
 |**7**|Samedi|  
-|**version8**|jour|  
+|**8**|Jour|  
 |**9**|Jours de la semaine|  
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Date de la Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**version8**|Quatrième|  
+|**8**|Quatrième|  
 |**16bits**|Dernier|  
 |NULL (par défaut)||  
   
@@ -143,12 +143,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
 |NULL (par défaut)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
@@ -161,7 +161,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @active_end_date = ] active_end_date`Date à laquelle le Agent de fusion cesse d’être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Spécifie si l’abonnement peut être synchronisé via le gestionnaire de synchronisation Windows. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]être synchronisé sans démarrage.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Spécifie si l’abonnement peut être synchronisé via le gestionnaire de synchronisation Windows. *enabled_for_syncmgr* est de type **nvarchar (5)**, avec false comme valeur par défaut. Si la **valeur est false**, l’abonnement n’est pas inscrit auprès du gestionnaire de synchronisation. Si la **valeur est true**, l’abonnement est inscrit auprès du gestionnaire de synchronisation et peut être synchronisé sans démarrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

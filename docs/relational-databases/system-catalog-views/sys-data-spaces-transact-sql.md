@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.data_spaces catalog view
 ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 203c16e818d8a53cd025065d9c49ef8c5aeebcfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab7be8ba4aba0241b45800b77e28b44e168ab182
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983194"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823402"
 ---
 # <a name="sysdata_spaces-transact-sql"></a>sys.data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

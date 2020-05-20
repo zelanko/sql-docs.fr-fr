@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fdb8e596405c9e205ec7a8cd907569644f8c9c5c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771489"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820394"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de **%** **type sysname**, avec la valeur par défaut, qui retourne toutes les informations.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations.  
   
 `[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**et sa valeur par défaut est le nom du serveur actuel.  
   
@@ -49,11 +49,11 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**publication**|**sysname**|Nom du serveur de publication.|  
+|**publisher**|**sysname**|Nom du serveur de publication.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
-|**type**|**tinyint**|Type d'Abonné :<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] base de données 1 = source de données ODBC **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**connexion**|**sysname**|ID de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l’authentification.|  
-|**mot de passe**|**sysname**|Mot de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passe pour l’authentification.|  
+|**type**|**tinyint**|Type d'Abonné :<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données **1** = source de données ODBC|  
+|**connexion**|**sysname**|ID de connexion pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
+|**mot de passe**|**sysname**|Mot de passe pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
 |**commit_batch_size**|**int**|Non pris en charge.|  
 |**status_batch_size**|**int**|Non pris en charge.|  
 |**flush_frequency**|**int**|Non pris en charge.|  
@@ -70,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempts**|**int**|Non pris en charge.|  
 |**retrydelay**|**int**|Non pris en charge.|  
 |**descriptive**|**nvarchar(255)**|Texte de description de l'Abonné.|  
-|**security_mode**|**int**|Mode de sécurité implémenté :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows|  
+|**security_mode**|**int**|Mode de sécurité implémenté :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows|  
 |**frequency_type2**|**int**|Fréquence d'exécution de l’Agent de fusion :<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = tous les jours<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
 |**frequency_interval2**|**int**|Valeur appliquée à la fréquence définie par *frequency_type*.|  
 |**frequency_relative_interval2**|**int**|Date du Agent de fusion utilisé lorsque *frequency_type* a la valeur 32 (mensuel relatif) :<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
@@ -85,7 +85,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpsubscriberinfo** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

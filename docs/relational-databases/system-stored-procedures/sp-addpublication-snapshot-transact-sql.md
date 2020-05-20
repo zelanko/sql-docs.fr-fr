@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication_snapshot
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769112"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820682"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|Une seule fois.|  
 |**4** (par défaut)|Tous les jours.|  
-|**version8**|Toutes les semaines.|  
+|**8**|Toutes les semaines.|  
 |**16bits**|Mensuelle:|  
 |**32**|Tous les mois, en fonction de l'intervalle de fréquence.|  
 |**64**|Au démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -77,7 +77,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* n’est pas utilisé.|  
 |**4** (par défaut)|Tous les *frequency_interval* jours, avec une valeur par défaut quotidienne.|  
-|**version8**|*frequency_interval* est une ou plusieurs des valeurs suivantes (combinées avec un opérateur logique [&#124; (or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) ) :<br /><br /> **1** = dimanche &#124;<br /><br /> **2** = lundi &#124;<br /><br /> **4** = mardi &#124;<br /><br /> **8** = mercredi &#124;<br /><br /> **16** = jeudi &#124;<br /><br /> **32** = vendredi &#124;<br /><br /> **64** = samedi|  
+|**8**|*frequency_interval* est une ou plusieurs des valeurs suivantes (combinées avec un opérateur logique [&#124; (or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) ) :<br /><br /> **1** = dimanche &#124;<br /><br /> **2** = lundi &#124;<br /><br /> **4** = mardi &#124;<br /><br /> **8** = mercredi &#124;<br /><br /> **16** = jeudi &#124;<br /><br /> **32** = vendredi &#124;<br /><br /> **64** = samedi|  
 |**16bits**|Le *frequency_interval* jour du mois.|  
 |**32**|*frequency_interval* est l’un des éléments suivants :<br /><br /> **1** = dimanche &#124;<br /><br /> **2** = lundi &#124;<br /><br /> **3** = mardi &#124;<br /><br /> **4** = mercredi &#124;<br /><br /> **5** = jeudi &#124;<br /><br /> **6** = vendredi &#124;<br /><br /> **7** = samedi &#124;<br /><br /> **8** = jour &#124;<br /><br /> **9** = jour de la semaine &#124;<br /><br /> **10** = jour de week-end|  
 |**64**|*frequency_interval* n’est pas utilisé.|  
@@ -90,7 +90,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4** (par défaut)|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec 5 comme valeur par défaut, c’est-à-dire toutes les 5 minutes.  
   
@@ -120,17 +120,17 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @job_login = ] 'job_login'`Nom de connexion du compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance, utilisez un compte SQL Server. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte est toujours utilisé pour les connexions de l’agent au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
   
 > [!NOTE]
->  Pour les serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-, il doit s’agir de la même connexion que celle spécifiée dans [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+>  Pour les serveurs de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il doit s’agir de la même connexion que celle spécifiée dans [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
 `[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être utilisé lors de la création [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un agent d’instantané sur un serveur de publication.  
+>  l' *éditeur* ne doit pas être utilisé lors de la création d’un agent d’instantané sur un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

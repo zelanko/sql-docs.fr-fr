@@ -6,27 +6,27 @@ ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915080"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823523"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Répertorie toutes les définitions de session d’événements qui existent dans la base [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]de données active, dans.  
+  Répertorie toutes les définitions de session d’événements qui existent dans la base de données active, dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
 > [!NOTE]
->  L’affichage de catalogue similaire `sys.server_event_sessions` nommé s’applique [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]uniquement à.  
+>  L’affichage de catalogue similaire nommé `sys.server_event_sessions` s’applique uniquement à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ||  
 |-|  
-|**S’applique à**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]et à toutes les versions ultérieures.|  
+|**S’applique à**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et à toutes les versions ultérieures.|  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "67915080"
 |memory_partition_mode|**nchar(1)**|Emplacement dans la mémoire où les mémoires tampons d'événements sont créées. Le mode de partition par défaut est G. N'accepte pas la valeur Null. memory_partition_mode est l’un des éléments suivants :<br /><br /> G - NONE<br /><br /> C - PER_CPU<br /><br /> N - PER_NODE|  
 |memory_partition_mode_desc|**sysname**|La valeur par défaut est NONE. N'accepte pas la valeur NULL. Prend l'une des valeurs suivantes :<br /><br /> NONE. Un ensemble unique de mémoires tampons est créé dans une instance de SQL Server.<br /><br /> PER_CPU. Un ensemble de mémoires tampons est créé pour chaque UC.<br /><br /> PER_NODE. Un jeu de mémoires tampons est créé pour chaque nœud NUMA (Non-Uniform Memory Access).|  
 |track_causality|**bit**|Activer ou désactiver le suivi de causalité. Si cette option a la valeur 1 (ON), le suivi est activé et les événements associés de différentes connexions au serveur peuvent être corrélés. Le paramètre par défaut est 0 (OFF). N'accepte pas la valeur NULL.|  
-|startup_state|**bit**|Cette valeur détermine si la session est lancée automatiquement au démarrage du serveur. La valeur par défaut est 0. N'accepte pas la valeur NULL. Les valeurs suivantes sont possibles :<br /><br /> 0 (OFF). La session ne se lance pas au démarrage du serveur.<br /><br /> 1 (ON). La session d'événements se lance au démarrage du serveur.|  
+|startup_state|**bit**|Cette valeur détermine si la session est lancée automatiquement au démarrage du serveur. La valeur par défaut est 0. N'accepte pas la valeur NULL. Les valeurs suivantes sont possibles :<br /><br /> 0 (OFF). La session ne se lance pas au démarrage du serveur.<br /><br /> 1 (ON). La session d'événements se lance au démarrage du serveur.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  

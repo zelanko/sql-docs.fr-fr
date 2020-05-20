@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_parameters catalog view
 ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da8d2bb7be2c3da502065d9ee210c4c1ef8c2094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc4c95926f066fbf99bd6975b80c99c1438d8396
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108812"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821318"
 ---
 # <a name="syssystem_parameters-transact-sql"></a>sys.system_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68108812"
 |**scale**|**tinyint**|Échelle du paramètre s'il est de type numérique ; sinon, 0.|  
 |**is_output**|**bit**|1 = le paramètre est renvoyé ; sinon, 0.|  
 |**is_cursor_ref**|**bit**|1 = le paramètre est un paramètre de référence de curseur.|  
-|**has_default_value**|**bit**|1 = Paramètre par défaut.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve seulement les valeurs par défaut des objets CLR dans cet affichage catalogue ; par conséquent, cette colonne a toujours une valeur nulle (0) pour les objets [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour afficher la valeur par défaut d’un paramètre dans [!INCLUDE[tsql](../../includes/tsql-md.md)] un objet, interrogez la colonne de **définition** de l’affichage catalogue [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) , ou utilisez la fonction système [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
+|**has_default_value**|**bit**|1 = Paramètre par défaut.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve seulement les valeurs par défaut des objets CLR dans cet affichage catalogue ; par conséquent, cette colonne a toujours une valeur nulle (0) pour les objets [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour afficher la valeur par défaut d’un paramètre dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] objet, interrogez la colonne de **définition** de l’affichage catalogue [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) , ou utilisez la fonction système [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
 |**is_xml_document**|**bit**|1 = Le contenu est un document XML complet.<br /><br /> 0 = le contenu est un fragment de document ou le type de données de la colonne n’est pas **XML**.|  
 |**default_value**|**sql_variant**|Si **has_default_value** a la valeur 1, la valeur de cette colonne est la valeur par défaut du paramètre ; Sinon, NULL.|  
 |**xml_collection_id**|**int**|Valeur différente de zéro si le type de données du paramètre est **XML** et que le XML est typé. La valeur est l'ID de la collection qui contient l'espace de noms du schéma XML validant pour le paramètre.<br /><br /> 0 = Il n'y a pas de collection de schéma XML.|  

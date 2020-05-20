@@ -16,31 +16,31 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_brokers dynamic management view
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a8e131e2550ffa5078df5e284898ffe936128b7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: db53b27994e7f8b274f441d9dc7f214807a40c80
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265867"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820811"
 ---
 # <a name="sysdm_os_memory_brokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Les allocations qui sont internes à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent le gestionnaire de mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le suivi de la différence entre les compteurs de mémoire de processus de **sys. dm_os_process_memory** et les compteurs internes peut indiquer l’utilisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la mémoire par des composants externes dans l’espace mémoire.  
+  Les allocations qui sont internes à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent le gestionnaire de mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le suivi de la différence entre les compteurs de mémoire de processus de **sys. dm_os_process_memory** et les compteurs internes peut indiquer l’utilisation de la mémoire par des composants externes dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espace mémoire.  
   
  Les gestionnaires d'allocation mémoire répartissent équitablement les allocations de mémoire entre les différents composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en fonction de l'utilisation actuelle et prévue. Ils n'effectuent pas d'allocations. Ils n'effectuent que le suivi des allocations pour calculer la distribution.  
   
  Le tableau suivant fournit des informations sur les gestionnaires d'allocation mémoire.  
   
 > [!NOTE]  
->  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_os_memory_brokers**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_memory_brokers**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|ID du pool de ressources s'il est associé à un pool du gouverneur de ressources.|  
-|**memory_broker_type**|**nvarchar(60)**|Type de gestionnaire d'allocation mémoire. Il existe actuellement trois types de courtiers de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mémoire dans, répertoriés ci-dessous avec leurs descriptions.<br /><br /> **MEMORYBROKER_FOR_CACHE** : mémoire allouée pour être utilisée par les objets mis en cache (et non par le cache du pool de mémoires tampons).<br /><br /> **MEMORYBROKER_FOR_STEAL** : mémoire volée à partir du pool de mémoires tampons. Cette mémoire ne peut pas être réutilisée par d'autres composants tant qu'elle n'est pas libérée par le propriétaire actuel.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : mémoire réservée pour une utilisation future par les demandes en cours d’exécution.|  
+|**memory_broker_type**|**nvarchar(60)**|Type de gestionnaire d'allocation mémoire. Il existe actuellement trois types de courtiers de mémoire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , répertoriés ci-dessous avec leurs descriptions.<br /><br /> **MEMORYBROKER_FOR_CACHE** : mémoire allouée pour être utilisée par les objets mis en cache (et non par le cache du pool de mémoires tampons).<br /><br /> **MEMORYBROKER_FOR_STEAL** : mémoire volée à partir du pool de mémoires tampons. Cette mémoire ne peut pas être réutilisée par d'autres composants tant qu'elle n'est pas libérée par le propriétaire actuel.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : mémoire réservée pour une utilisation future par les demandes en cours d’exécution.|  
 |**allocations_kb**|**bigint**|Quantité de mémoire, en kilo-octets (Ko), allouée à ce type de gestionnaire d'allocation mémoire.|  
 |**allocations_kb_per_sec**|**bigint**|Taux d'allocations de mémoire, en kilo-octets (Ko) par seconde. Cette valeur peut être négative pour les désallocations de mémoire.|  
 |**predicted_allocations_kb**|**bigint**|Quantité prédite de mémoire allouée par le gestionnaire d'allocation mémoire. Cette valeur est basée sur le modèle d'utilisation de la mémoire.|  
@@ -48,11 +48,11 @@ ms.locfileid: "68265867"
 |**future_allocations_kb**|**bigint**|Nombre projeté d'allocations, en kilo-octet (Ko), qui seront effectuées dans les prochaines secondes.|  
 |**overall_limit_kb**|**bigint**|Quantité maximale de mémoire, en kilo-octets (Ko), que le répartiteur peut allouer.|  
 |**last_notification**|**nvarchar(60)**|Recommandation relative à l'utilisation de la mémoire basée sur les paramètres actuels et le modèle d'utilisation. Les valeurs valides sont les suivantes :<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations  
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
 ## <a name="see-also"></a>Voir aussi  

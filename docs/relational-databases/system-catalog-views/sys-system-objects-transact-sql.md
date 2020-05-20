@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_objects catalog view
 ms.assetid: 069e9045-97f2-4463-8e8f-c73855f3ea0a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d0583e5f6447753cc783e9b3047928d77765688
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55af06583571c7b5f0614c8ab415915ca2677c18
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108853"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821346"
 ---
 # <a name="syssystem_objects-transact-sql"></a>sys.system_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contient une ligne pour tous les objets système dont l’étendue est le schéma et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]qui sont inclus dans. Tous les objets système sont contenus dans les schémas nommés sys ou INFORMATION_SCHEMA.  
+  Contient une ligne pour tous les objets système dont l’étendue est le schéma et qui sont inclus dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tous les objets système sont contenus dans les schémas nommés sys ou INFORMATION_SCHEMA.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

@@ -17,27 +17,27 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_process_memory dynamic management view
 ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fcbab4d5dc1bbc86fe9083e9c3407749040a0023
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc8eb11f3b77814ba9cd296cce15bba920f0373a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265702"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821024"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  La plupart des allocations de mémoire qui sont attribuées à l'espace du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont contrôlées par le biais d'interfaces qui permettent le suivi et la comptabilité de ces allocations. Toutefois, les allocations de mémoire peuvent être effectuées dans l'espace d'adressage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ignore les routines de gestion de la mémoire interne. Les valeurs sont obtenues par le biais d'appels au système d'exploitation de base. Elles ne sont pas manipulées par des méthodes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]internes à, sauf lorsqu’elles s’adaptent aux allocations de pages verrouillées ou volumineuses.  
+  La plupart des allocations de mémoire qui sont attribuées à l'espace du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont contrôlées par le biais d'interfaces qui permettent le suivi et la comptabilité de ces allocations. Toutefois, les allocations de mémoire peuvent être effectuées dans l'espace d'adressage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ignore les routines de gestion de la mémoire interne. Les valeurs sont obtenues par le biais d'appels au système d'exploitation de base. Elles ne sont pas manipulées par des méthodes internes à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sauf lorsqu’elles s’adaptent aux allocations de pages verrouillées ou volumineuses.  
   
  Toutes les valeurs retournées qui indiquent des tailles de mémoire sont affichées en kilo-octets (Ko). La **total_virtual_address_space_reserved_kb** de colonne est un doublon de **virtual_memory_in_bytes** à partir de **sys. dm_os_sys_info**.  
   
  Le tableau suivant fournit une illustration complète de l'espace d'adressage de processus.  
   
 > [!NOTE]  
->  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_os_process_memory**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_process_memory**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,12 +53,12 @@ ms.locfileid: "68265702"
 |**available_commit_limit_kb**|**bigint**|Indique la quantité de mémoire disponible pour être validée par le processus. N'accepte pas la valeur NULL.|  
 |**process_physical_memory_low**|**bit**|Indique que le processus répond à une notification de mémoire physique insuffisante. N'accepte pas la valeur NULL.|  
 |**process_virtual_memory_low**|**bit**|Indique qu'une condition de mémoire virtuelle insuffisante a été détectée. N'accepte pas la valeur NULL.|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite l'autorisation VIEW SERVER STATE sur le serveur.  
   
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
 ## <a name="see-also"></a>Voir aussi  

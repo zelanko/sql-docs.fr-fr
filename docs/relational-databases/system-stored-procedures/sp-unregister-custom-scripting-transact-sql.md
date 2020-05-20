@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d54530c7cf6588a6ae07e1e504e3c53e86f8fa5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017900"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820228"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette procédure stockée supprime une procédure stockée personnalisée définie par [!INCLUDE[tsql](../../includes/tsql-md.md)] l’utilisateur ou un fichier de script qui a été enregistré en exécutant [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
+  Cette procédure stockée supprime une procédure stockée personnalisée définie par l’utilisateur ou un [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script qui a été enregistré en exécutant [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Insérer**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction INSERT.|  
-|**mise à jour**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction UPDATE.|  
+|**update**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction UPDATE.|  
 |**delete**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction DELETE.|  
 |**custom_script**|Procédure stockée ou script personnalisé enregistré, exécuté à la fin du déclencheur du langage de définition de données (DDL, Data Definition Language).|  
   
@@ -55,7 +55,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_unregister_custom_scripting** est utilisé dans la réplication transactionnelle et d’instantané.  
   
 ## <a name="permissions"></a>Autorisations  

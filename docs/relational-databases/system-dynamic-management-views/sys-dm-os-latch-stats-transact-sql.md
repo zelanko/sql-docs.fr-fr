@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 16ebdd2ac874784c071fea7aa962d005436aac60
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289907"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820867"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "79289907"
 Retourne des informations sur toutes les attentes de verrou interne, organisées par classe. 
   
 > [!NOTE]  
-> Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_os_latch_stats**.  
+> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_latch_stats**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -39,10 +39,10 @@ Retourne des informations sur toutes les attentes de verrou interne, organisées
 |waiting_requests_count|**bigint**|Nombre d'attentes pour les verrous internes de cette classe. Ce compteur est incrémenté au début d'une attente de verrou interne.|  
 |wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** Cette colonne est mise à jour toutes les cinq minutes pendant l’attente d’un verrou et à la fin de l’attente d’un verrou.|  
 |max_wait_time_ms|**bigint**|Durée maximum d'attente d'un objet de mémoire sur ce verrou interne. Si cette valeur est anormalement élevée, cela peut indiquer un blocage interne.|  
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations  
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
 ## <a name="remarks"></a>Notes  
@@ -61,7 +61,7 @@ GO
 >  Ces statistiques ne sont pas conservées si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre. Toutes les données sont cumulées à partir de la dernière réinitialisation des statistiques ou à partir du démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="latches"></a><a name="latches"></a>Verrous  
- Un verrou est un objet de synchronisation légère interne similaire à un verrou, qui est utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] différents composants. Un verrou est principalement utilisé pour synchroniser des pages de base de données pendant des opérations telles que la mémoire tampon ou l’accès aux fichiers. Chaque verrou interne est associé à une seule unité d'allocation. 
+ Un verrou est un objet de synchronisation légère interne similaire à un verrou, qui est utilisé par différents [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants. Un verrou est principalement utilisé pour synchroniser des pages de base de données pendant des opérations telles que la mémoire tampon ou l’accès aux fichiers. Chaque verrou interne est associé à une seule unité d'allocation. 
   
  Une attente de verrou interne se produit lorsqu'une demande de verrou interne ne peut pas être satisfaite immédiatement parce que le verrou en question est détenu par un autre thread qui crée une situation de conflit. Contrairement aux verrous externes, les verrous internes sont libérés dès la fin de l'opération (y compris dans le cas d'opérations d'écriture).  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032738"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820289"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|Nom du propriétaire de la table. Cette colonne renvoie toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de la table. Cette colonne renvoie toujours une valeur.|  
 |**NON_UNIQUE**|**smallint**|NON NULL.<br /><br /> 0 = Unique<br /><br /> 1 = Non unique|  
-|**INDEX_QUALIFIER**|**sysname**|Nom du propriétaire de l’index. Certains produits SGBD acceptent que des utilisateurs autres que le propriétaire de la table créent des index. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne est toujours identique à **table_name**.|  
+|**INDEX_QUALIFIER**|**sysname**|Nom du propriétaire de l’index. Certains produits SGBD acceptent que des utilisateurs autres que le propriétaire de la table créent des index. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne est toujours identique à **table_name**.|  
 |**INDEX_NAME**|**sysname**|Nom de l'index. Cette colonne renvoie toujours une valeur.|  
 |**TYPE**|**smallint**|Cette colonne renvoie toujours une valeur :<br /><br /> 0 = Statistiques pour une table<br /><br /> 1 = Clustered<br /><br /> 2 = Haché<br /><br /> 3 = non cluster|  
 |**SEQ_IN_INDEX**|**smallint**|Position de la colonne dans l'index|  
@@ -98,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="example-sssdwfull-and-sspdw"></a>Exemple : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant retourne des informations sur `DimEmployee` la table.  
+ L’exemple suivant retourne des informations sur la `DimEmployee` table.  
   
 ```  
 -- Uses AdventureWorks  

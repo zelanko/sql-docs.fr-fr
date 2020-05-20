@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962377"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820374"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Affiche ou modifie les propriétés du serveur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication qui ne sont pas des serveurs de publication. Cette procédure stockée est exécutée sur le serveur de distribution.  
+  Affiche ou modifie les propriétés du serveur de publication qui ne sont pas des serveurs de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication. Cette procédure stockée est exécutée sur le serveur de distribution.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,8 +64,8 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
- **sp_publisherproperty** est utilisé dans la réplication transactionnelle pour les serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-.  
+## <a name="remarks"></a>Remarques  
+ **sp_publisherproperty** est utilisé dans la réplication transactionnelle pour les serveurs de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Lorsque seul le serveur de *publication* est spécifié, le jeu de résultats comprend les paramètres actuels de toutes les propriétés qui peuvent être définies.  
   

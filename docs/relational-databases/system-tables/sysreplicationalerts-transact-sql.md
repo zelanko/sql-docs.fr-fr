@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 163b5aba5f676f14afd26b962c856b325ccc4dc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029743"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819919"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "68029743"
 |**error_id**|**int**|ID de l’erreur stockée dans **MSrepl_errors**.|  
 |**alert_error_code**|**int**|ID de message de l'alerte déclenchée lors de l'écriture de cet enregistrement dans le journal.|  
 |**time**|**datetime**|Date et heure d'insertion de l'enregistrement.|  
-|**publication**|**sysname**|Nom du serveur de publication associé à l'Agent qui a déclenché l'alerte.|  
+|**publisher**|**sysname**|Nom du serveur de publication associé à l'Agent qui a déclenché l'alerte.|  
 |**publisher_db**|**sysname**|Base de données du serveur de publication associée à l'Agent qui a déclenché l'alerte.|  
 |**édition**|**sysname**|Publication associée à l'Agent qui a déclenché l'alerte.|  
 |**publication_type**|**int**|Type de publication :<br /><br /> **0** = instantané.<br /><br /> **1** = transactionnelle.<br /><br /> **2** = fusion.|  
 |**côté**|**sysname**|Nom de l'Abonné associé à l'Agent qui a déclenché l'alerte.|  
 |**subscriber_db**|**sysname**|Nom de la base de données de l'Abonné associée à l'Agent qui a déclenché l'alerte.|  
-|**-**|**sysname**|Nom de l'article associé à l'Agent qui a déclenché l'alerte.|  
+|**article**|**sysname**|Nom de l'article associé à l'Agent qui a déclenché l'alerte.|  
 |**destination_object**|**sysname**|Nom de la table d'abonnement associée à l'alerte.|  
 |**source_object**|**sysname**|Nom de la table publiée associée à l'alerte.|  
 |**alert_error_text**|**ntext**|Texte de l'alerte.|  
