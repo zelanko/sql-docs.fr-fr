@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923611"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763050"
 ---
 # <a name="using-bookmarks"></a>Utilisation de signets
 Il est souvent utile de revenir directement à un enregistrement spécifique après l’avoir déplacé dans le **Recordset** sans avoir à faire défiler chaque enregistrement et à comparer des valeurs. Par exemple, si vous tentez de rechercher un enregistrement à l’aide de la méthode **Find** alors que la recherche ne retourne aucun enregistrement, vous êtes automatiquement placé à chaque extrémité du **Recordset**. Si votre fournisseur les prend en charge, vous pouvez utiliser des signets pour marquer votre lieu avant d’utiliser la méthode **Find** afin de pouvoir revenir à votre emplacement. Un signet est une valeur de type **Variant** qui identifie de façon unique un enregistrement dans un objet **Recordset** .  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1bdd16d8e98bd1c038c5bc6c761305e87b65b765
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932227"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762510"
 ---
 # <a name="mode-property-ado"></a>Mode, propriété (ADO)
 Indique les autorisations disponibles pour la modification des données dans une [connexion](../../../ado/reference/ado-api/connection-object-ado.md), un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md)ou un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  

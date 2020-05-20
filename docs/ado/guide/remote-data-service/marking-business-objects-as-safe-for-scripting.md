@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6655b1bba274a9dc5079c7c996b58da6ba8ae0f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922608"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763600"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marquage d’objets métier comme sûrs pour l’écriture de scripts
 > [!IMPORTANT]
@@ -43,6 +43,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  À la dernière étape, l’Assistant Installation de l’application crée un fichier. htm et un fichier. cab. Vous pouvez ensuite copier ces deux fichiers sur l’ordinateur cible et double-cliquer sur le fichier. htm pour charger la page et inscrire correctement le serveur.  
   
- Étant donné>\\que l’objet métier sera installé par défaut dans le répertoire Windows\System32\Occache, déplacez-le vers le répertoire Windows\System32 et modifiez la clé de Registre **HKEY_CLASSES_ROOT \CLSID\\**\<*MyActiveXGUID***InprocServer32** pour qu’elle corresponde au chemin d’accès correct.
+ Étant donné que l’objet métier sera installé par défaut dans le répertoire Windows\System32\Occache, déplacez-le vers le répertoire Windows\System32 et modifiez la clé de Registre **HKEY_CLASSES_ROOT \CLSID \\ ** \< *MyActiveXGUID* > \\ **InprocServer32** pour qu’elle corresponde au chemin d’accès correct.
 
 

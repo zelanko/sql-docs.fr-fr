@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931863"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762100"
 ---
 # <a name="openschema-method"></a>OpenSchema, méthode
 Obtient des informations de schéma de base de données à partir du fournisseur.  
@@ -41,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Toute valeur [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) qui représente le type de requête de schéma à exécuter.  
   
  *Critères*  
- Facultatif. Tableau de contraintes de requête pour chaque option *QueryType* , comme indiqué dans [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ facultatif. Tableau de contraintes de requête pour chaque option *QueryType* , comme indiqué dans [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  GUID d’une requête de schéma de fournisseur non définie par la spécification OLE DB. Ce paramètre est obligatoire si *QueryType* est défini sur **adSchemaProviderSpecific**; dans le cas contraire, il n’est pas utilisé.  

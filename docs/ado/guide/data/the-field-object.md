@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923983"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763090"
 ---
 # <a name="the-field-object"></a>Field, objet
 Chaque objet de **champ** correspond généralement à une colonne dans une table de base de données. Toutefois, un **champ** peut également représenter un pointeur vers un autre **Recordset**, appelé un chapitre. Les exceptions, telles que les colonnes de chapitre, seront abordées plus loin dans ce guide.  
@@ -68,9 +68,9 @@ Chaque objet de **champ** correspond généralement à une colonne dans une tabl
 ### <a name="getting-more-field-information"></a>Obtenir plus d’informations sur les champs  
  Les objets ADO ont deux types de propriétés : intégré et dynamique. À ce stade, seules les propriétés intégrées de l’objet **Field** ont été discutées.  
   
- Les propriétés intégrées sont les propriétés implémentées dans ADO et immédiatement disponibles pour tout nouvel objet, à l' `MyObject.Property` aide de la syntaxe. Ils n’apparaissent pas en tant qu’objets de **propriété** dans la collection de **Propriétés** d’un objet.  
+ Les propriétés intégrées sont les propriétés implémentées dans ADO et immédiatement disponibles pour tout nouvel objet, à l’aide de la `MyObject.Property` syntaxe. Ils n’apparaissent pas en tant qu’objets de **propriété** dans la collection de **Propriétés** d’un objet.  
   
- Les propriétés dynamiques sont définies par le fournisseur de données sous-jacent et s’affichent dans la collection **Properties** pour l’objet ADO approprié. Par exemple, une propriété spécifique au fournisseur peut indiquer si un objet **Recordset** prend en charge les transactions ou la mise à jour. Ces propriétés supplémentaires s’affichent sous la forme d’objets de **propriété** dans la collection de **Propriétés** de cet objet **Recordset** . Les propriétés dynamiques peuvent être référencées uniquement par l’intermédiaire de la collection `MyObject.Properties(0)` , `MyObject.Properties("Name")`à l’aide de la syntaxe ou.  
+ Les propriétés dynamiques sont définies par le fournisseur de données sous-jacent et s’affichent dans la collection **Properties** pour l’objet ADO approprié. Par exemple, une propriété spécifique au fournisseur peut indiquer si un objet **Recordset** prend en charge les transactions ou la mise à jour. Ces propriétés supplémentaires s’affichent sous la forme d’objets de **propriété** dans la collection de **Propriétés** de cet objet **Recordset** . Les propriétés dynamiques peuvent être référencées uniquement par l’intermédiaire de la collection, à l’aide de la syntaxe `MyObject.Properties(0)` ou `MyObject.Properties("Name")` .  
   
  Vous ne pouvez pas supprimer un type de propriété.  
   

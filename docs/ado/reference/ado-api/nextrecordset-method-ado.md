@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6eaf12308db09c81b426b33f0002cd4664f62b8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932034"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762390"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset, méthode (ADO)
 Efface l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) actuel et retourne le **jeu d’enregistrements** suivant en progressant dans une série de commandes.  
@@ -39,13 +39,13 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Paramètres  
  *RecordsAffected*  
- Facultatif. Variable de **type long** à laquelle le fournisseur retourne le nombre d’enregistrements affectés par l’opération en cours.  
+ facultatif. Variable de **type long** à laquelle le fournisseur retourne le nombre d’enregistrements affectés par l’opération en cours.  
   
 > [!NOTE]
 >  Ce paramètre retourne uniquement le nombre d’enregistrements affectés par une opération. elle ne retourne pas un nombre d’enregistrements à partir d’une instruction SELECT utilisée pour générer le **Recordset**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la méthode **NextRecordset** pour retourner les résultats de la commande suivante dans une instruction de commande composée ou une procédure stockée qui retourne plusieurs résultats. Si vous ouvrez un objet **Recordset** basé sur une instruction de commande composée (par exemple, « \* SELECT FROM table1 ; SELECT \* from table2») à l’aide de la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) sur une [commande](../../../ado/reference/ado-api/command-object-ado.md) ou de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) sur un **Recordset**, ADO exécute uniquement la première commande et retourne les résultats à *Recordset*. Pour accéder aux résultats des commandes suivantes dans l’instruction, appelez la méthode **NextRecordset** .  
+ Utilisez la méthode **NextRecordset** pour retourner les résultats de la commande suivante dans une instruction de commande composée ou une procédure stockée qui retourne plusieurs résultats. Si vous ouvrez un objet **Recordset** basé sur une instruction de commande composée (par exemple, «SELECT \* FROM table1 ; SELECT \* from table2») à l’aide de la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) sur une [commande](../../../ado/reference/ado-api/command-object-ado.md) ou de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) sur un **Recordset**, ADO exécute uniquement la première commande et retourne les résultats à *Recordset*. Pour accéder aux résultats des commandes suivantes dans l’instruction, appelez la méthode **NextRecordset** .  
   
  Tant qu’il existe des résultats supplémentaires et que le **jeu d’enregistrements** contenant les instructions composées n’est pas déconnecté ou marshalé entre les limites de processus, la méthode **NextRecordset** continue à retourner des objets **Recordset** . Si une commande de retour de ligne s’exécute correctement mais ne retourne aucun enregistrement, l’objet **Recordset** retourné est ouvert, mais vide. Pour tester ce cas, vérifiez que les propriétés [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) sont toutes les deux **vraies**. Si une commande qui ne retourne pas de lignes s’exécute correctement, l’objet **Recordset** retourné est fermé, ce que vous pouvez vérifier en testant la propriété [State](../../../ado/reference/ado-api/state-property-ado.md) sur le **Recordset**. Lorsqu’il n’y a plus de résultats, *Recordset* prend la valeur *Nothing*.  
   

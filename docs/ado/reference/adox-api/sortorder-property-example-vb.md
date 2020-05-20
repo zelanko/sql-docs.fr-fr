@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bd58cb2ec579586b25365abab9d6ff8b2b9c6617
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965190"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762770"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder, exemple de propriété (VB)
 Cet exemple illustre la propriété [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajoutée à la collection [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne country de la table **Employees** , puis affiche les enregistrements. Ensuite, le code ajoute un index décroissant à la colonne country dans la table **Employees** et affiche à nouveau les enregistrements. La différence entre les index croissant et décroissant est indiquée.  

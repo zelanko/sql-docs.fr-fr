@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926645"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763210"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour Microsoft Jet
 Le fournisseur OLE DB pour Microsoft Jet permet à ADO d’accéder aux bases de données Microsoft Jet.
@@ -45,8 +45,8 @@ Microsoft.Jet.OLEDB.4.0
 |Mot clé|Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur de OLE DB pour Microsoft Jet.|
-|**Source de données**|Spécifie le chemin d’accès et le nom de fichier `c:\Northwind.mdb`de la base de données (par exemple,).|
-|**ID d'utilisateur**|Spécifie le nom d'utilisateur. Si ce mot clé n’est pas spécifié, la chaîne`admin`, "", est utilisée par défaut.|
+|**Source de données**|Spécifie le chemin d’accès et le nom de fichier de la base de données (par exemple, `c:\Northwind.mdb` ).|
+|**ID d'utilisateur**|Spécifie le nom d'utilisateur. Si ce mot clé n’est pas spécifié, la chaîne, " `admin` ", est utilisée par défaut.|
 |**Mot de passe**|Spécifie le mot de passe de l’utilisateur. Si ce mot clé n’est pas spécifié, la chaîne vide ("") est utilisée par défaut.|
 
 > [!NOTE]

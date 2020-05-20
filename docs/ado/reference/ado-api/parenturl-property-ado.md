@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931643"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761987"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL, propriété (ADO)
 Indique une chaîne d’URL absolue qui pointe vers l' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) parent de l’objet **enregistrement** actif.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **chaîne** qui indique l’URL de l' **enregistrement**parent.  
   
 ## <a name="remarks"></a>Notes  
@@ -38,9 +38,9 @@ record.ActiveConnection = "https://first"
 record.Open "second"  
 ```  
   
- À présent, la valeur `the` de la propriété `"https://first"` **ParentURL** est, identique à **ActiveConnection**.  
+ À présent, la valeur de la `the` propriété **ParentURL** est `"https://first"` , identique à **ActiveConnection**.  
   
- La source peut également être une URL absolue telle que, `"https://first/second"`. La propriété **ParentURL** est ensuite `"https://first"`le niveau ci- `"second"`dessus.  
+ La source peut également être une URL absolue telle que, `"https://first/second"` . La propriété **ParentURL** est ensuite `"https://first"` le niveau ci-dessus `"second"` .  
   
  Cette propriété peut être une valeur null si :  
   

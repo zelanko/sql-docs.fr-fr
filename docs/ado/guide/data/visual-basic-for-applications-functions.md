@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923462"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763010"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Fonctions Visual Basic pour Applications
 Les fonctions de Visual Basic pour Applications suivantes peuvent être utilisées dans les expressions CALC de mise en forme des données :  
@@ -31,19 +31,19 @@ Les fonctions de Visual Basic pour Applications suivantes peuvent être utilisé
 |CDate|CDbl|Chr|ChrB|ChrW|Caract$|  
 |ChrB $|CEnt|CLong|Cos|CSmpl|CChaîne|  
 |CVar|CVDate|CVErr|Date|Date$|AjDate|  
-|DiffDate|PartDate|SérieDate|ValDate|jour|DDB|  
-|Error|Error$|Exp|Fix|Format|Format$|  
+|DiffDate|PartDate|SérieDate|ValDate|Jour|DDB|  
+|Erreur|Error$|Exp|Fix|Format|Format$|  
 |VC|Hex|Hex$|Heure|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|Minuscule|Minuscule$|Gauche|  
 |GAUCHEB|Gauche$|GAUCHEB $|NbCar|Journal|SupprGauche|  
 |SupprGauche$|ExtracChaîne|ExtracChaîne$|Minute|MIRR|Month|  
 |maintenant|NPer|NPV|Oct|Oct$|Vpm|  
-|PPmt|PV|RVBC|Tarif|RGB|Right|  
+|PPmt|PV|RVBC|Tarif|RGB|Droit|  
 |RightB|Droite$|RightB $|Aléat|SupprDroite|RTrim $|  
 |Seconde|Sgn|Sin|AmorLin|Espace|Espace$|  
 |Racine|NumChaîne|Str$|CompChaîne|ConvChaîne|String|  
-|Chaîne$|SYD|Tan|Heure|Temps$|Minuterie|  
+|Chaîne$|SYD|Tan|Temps|Temps$|Minuterie|  
 |SérieHeure|VHeure|SupprEspace|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Jour de la semaine|Year||  
   

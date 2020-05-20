@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931906"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762177"
 ---
 # <a name="open-method-ado-recordset"></a>Open, méthode (objet Recordset ADO)
 Ouvre un curseur sur un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -35,19 +35,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. **Variante** qui prend la valeur d’un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) valide, d’une instruction SQL, d’un nom de table, d’un appel de procédure stockée, d’une URL ou du nom d’un fichier ou d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) contenant un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)stocké de façon permanente.  
+ facultatif. **Variante** qui prend la valeur d’un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) valide, d’une instruction SQL, d’un nom de table, d’un appel de procédure stockée, d’une URL ou du nom d’un fichier ou d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) contenant un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)stocké de façon permanente.  
   
  *ActiveConnection*  
- Facultatif. Valeur **Variant** qui prend la valeur d’un nom de variable objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) valide, ou **chaîne** qui contient les paramètres [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
+ facultatif. Valeur **Variant** qui prend la valeur d’un nom de variable objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) valide, ou **chaîne** qui contient les paramètres [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
  *CursorType*  
- Facultatif. Valeur [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) qui détermine le type de curseur que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adOpenForwardOnly**.  
+ facultatif. Valeur [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) qui détermine le type de curseur que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adOpenForwardOnly**.  
   
  *Verrou*  
- Facultatif. Valeur [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) qui détermine le type de verrouillage (accès concurrentiel) que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adLockReadOnly**.  
+ facultatif. Valeur [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) qui détermine le type de verrouillage (accès concurrentiel) que le fournisseur doit utiliser lors de l’ouverture du **Recordset**. La valeur par défaut est **adLockReadOnly**.  
   
  *Options*  
- Facultatif. Valeur de **type long** qui indique comment le fournisseur doit évaluer l’argument *source* s’il représente autre chose qu’un objet **Command** ou si le **jeu d’enregistrements** doit être restauré à partir d’un fichier dans lequel il a été précédemment enregistré. Il peut s’agir d’une ou plusieurs valeurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) , qui peuvent être combinées avec un opérateur or au niveau du bit.  
+ facultatif. Valeur de **type long** qui indique comment le fournisseur doit évaluer l’argument *source* s’il représente autre chose qu’un objet **Command** ou si le **jeu d’enregistrements** doit être restauré à partir d’un fichier dans lequel il a été précédemment enregistré. Il peut s’agir d’une ou plusieurs valeurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) , qui peuvent être combinées avec un opérateur or au niveau du bit.  
   
 > [!NOTE]
 >  Si vous ouvrez un **jeu d’enregistrements** à partir d’un **flux** contenant un **Recordset**persistant, l’utilisation d’une valeur [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) de **adAsyncFetchNonBlocking** n’aura aucun effet. l’extraction est synchrone et bloque.  
@@ -60,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  L’utilisation de la méthode **Open** sur un objet **Recordset** ouvre un curseur qui représente les enregistrements d’une table de base, les résultats d’une requête ou un **Recordset**précédemment enregistré.  
   
- Utilisez l’argument *source* facultatif pour spécifier une source de données à l’aide d’un des éléments suivants : une variable d’objet de **commande** , une instruction SQL, une procédure stockée, un nom de table, une URL ou un nom de chemin d’accès complet au fichier. Si *source* est un nom de chemin d’accès de fichier, il peut s’agir d’un chemin d’accès complet (« c:\dir\file.RST »), d’un chemin d’accès relatif («.. \File.RST ") ou une URL ("<https://files/file.rst>").  
+ Utilisez l’argument *source* facultatif pour spécifier une source de données à l’aide d’un des éléments suivants : une variable d’objet de **commande** , une instruction SQL, une procédure stockée, un nom de table, une URL ou un nom de chemin d’accès complet au fichier. Si *source* est un nom de chemin d’accès de fichier, il peut s’agir d’un chemin d’accès complet (« c:\dir\file.RST »), d’un chemin d’accès relatif («.. \File.RST ") ou une URL (" <https://files/file.rst> ").  
   
  Il n’est pas judicieux d’utiliser l’argument *source* de la méthode **Open** pour exécuter une requête d’action qui ne retourne pas d’enregistrements, car il n’existe aucun moyen simple de déterminer si l’appel a réussi. Le **jeu d’enregistrements** renvoyé par une telle requête sera fermé. Pour exécuter une requête qui ne retourne pas d’enregistrements, telle qu’une instruction SQL INSERT, appelez la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) d’un objet **Command** ou la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) d’un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) à la place.  
   

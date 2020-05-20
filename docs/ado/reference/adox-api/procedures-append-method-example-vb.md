@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Append method [ADOX], Visual Basic example
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b522521da7737f935ac64ab07126cab6b5cd0294
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965425"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763670"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures, exemple de méthode Append (VB)
 Le code suivant montre comment utiliser un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) et la méthode [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) de la collection [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) pour créer une nouvelle procédure dans la source de données sous-jacente.  

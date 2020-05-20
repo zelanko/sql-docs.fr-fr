@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - PersistFormatEnum enumeration [ADO]
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a26fd370e80cb288ee62b0fc53ed6670300172e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 909fd5a292f5f071ec287aba9c8e3f6dc3881ef3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917616"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763360"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 Spécifie le format d’enregistrement d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constant|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Indique le format Microsoft Advanced Data TableGram (ADTG).|  
 |**adPersistADO**|1|Indique que le format XML (XML) Extensible Markup Language est utilisé par ADO. Cette valeur est identique à adPersistXML et est incluse à des fins de compatibilité descendante.|  

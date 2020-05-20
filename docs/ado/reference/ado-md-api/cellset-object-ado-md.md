@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928645"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761767"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset, objet (ADO MD)
 Représente les résultats d’une requête multidimensionnelle. Il s’agit d’une collection de cellules sélectionnées à partir de cubes ou d’autres cellules.  
   
 ## <a name="remarks"></a>Notes  
- Les données d’un ensemble de **cellules** sont récupérées à l’aide d’un accès direct de type tableau. Vous pouvez accéder à un membre spécifique pour obtenir des informations sur ce membre. Par exemple, le code suivant retourne la légende du premier membre de la première position sur le premier axe d’un CellSet nommé `cst`:  
+ Les données d’un ensemble de **cellules** sont récupérées à l’aide d’un accès direct de type tableau. Vous pouvez accéder à un membre spécifique pour obtenir des informations sur ce membre. Par exemple, le code suivant retourne la légende du premier membre de la première position sur le premier axe d’un CellSet nommé `cst` :  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  

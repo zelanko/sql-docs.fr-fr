@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b639cafe2f37b365c733f4aabc269f5f09c27918
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920535"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762917"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributes et Name, exemple de propriétés (VC + +)
 Cet exemple affiche la valeur de la propriété [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) pour les objets de [connexion](../../../ado/reference/ado-api/connection-object-ado.md), de [champ](../../../ado/reference/ado-api/field-object.md)et de [propriété](../../../ado/reference/ado-api/property-object-ado.md) . Elle utilise la propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) pour afficher le nom de chaque objet **Field** et **Property** .  

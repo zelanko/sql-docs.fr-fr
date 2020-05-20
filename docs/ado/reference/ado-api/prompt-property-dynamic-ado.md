@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Prompt property [ADO]
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e99273a94fc38779b50203d3dd5b78106f6a90c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931580"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761917"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt, propriété dynamique (ADO)
 Spécifie si le fournisseur de OLE DB doit inviter l’utilisateur à fournir des informations d’initialisation.  
@@ -34,7 +34,7 @@ Spécifie si le fournisseur de OLE DB doit inviter l’utilisateur à fournir de
 > [!NOTE]
 >  Ne spécifiez pas que le fournisseur doit inviter l’utilisateur dans les scénarios où l’utilisateur ne sera pas en mesure de répondre à la boîte de dialogue. Par exemple, l’utilisateur ne peut pas répondre si l’application s’exécute sur un système serveur plutôt que sur le client de l’utilisateur, ou si l’application s’exécute sur un système sans utilisateur connecté. Dans ce cas, l’application attend indéfiniment une réponse et semble être verrouillée.  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Utilisation  
   
 ```  
 Set cn = New Connection  

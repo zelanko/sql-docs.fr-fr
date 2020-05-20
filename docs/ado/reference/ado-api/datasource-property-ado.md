@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cbaff4a2bf03e524018c0c8d1b163925aa40b3ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933246"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763470"
 ---
 # <a name="datasource-property-ado"></a>DataSource, propriété (ADO)
 Indique un objet qui contient les données à représenter sous la forme d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -32,7 +32,7 @@ Indique un objet qui contient les données à représenter sous la forme d’un 
   
  L’objet référencé doit implémenter l’interface **IDataSource** et doit contenir une interface **IRowset** .  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Utilisation  
   
 ```  
 Dim rs as New ADODB.Recordset  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 943e36057478cbb6acfcabc0fa2ad713b4e43ac5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911580"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761777"
 ---
 # <a name="cellset-example-vb"></a>Exemple avec Cellset (VB)
 Ce projet de Visual Basic montre les bases de l’utilisation de ADO MD pour accéder aux données du cube. Elle affiche des légendes de membre pour les en-têtes de colonne et de ligne, puis affiche les valeurs mises en forme de cellules spécifiques dans l’objet CellSet.  

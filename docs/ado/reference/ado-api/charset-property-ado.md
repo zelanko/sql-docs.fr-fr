@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5750364a745cda43459ecba69ba42cbf6f3da40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920084"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763140"
 ---
 # <a name="charset-property-ado"></a>Charset, propriété (ADO)
 Indique le jeu de caractères dans lequel le contenu d’un [flux](../../../ado/reference/ado-api/stream-object-ado.md) de texte doit être traduit pour le stockage dans la mémoire tampon interne de l’objet de **flux** .  

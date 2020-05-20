@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Chapter property [ADO]
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04991b5246b338b89008e0188463dee580f81e3e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920108"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763150"
 ---
 # <a name="chapter-property-ado"></a>Chapter, propriété (ADO)
 Obtient ou définit un objet OLE DB **chapitre** à partir de/sur un objet d' [interface ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) . Lorsque vous utilisez **put_Chapter** pour définir l’objet **Chapter** , un sous-ensemble de lignes est converti en objet [objet Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ADO. Cela définit le chapitre actuel de l’objet **rowset**. Cette propriété est en lecture/écriture.  

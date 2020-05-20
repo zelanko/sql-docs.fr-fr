@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1fc60383f0862c845ee70be11a051b9da48b36a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922426"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763570"
 ---
 # <a name="rds-tutorial-vbscript"></a>Tutoriel RDS (VBScript)
 Il s’agit du didacticiel RDS, écrit dans Microsoft Visual Basic Scripting Edition. Pour obtenir une description de l’objectif de ce didacticiel, consultez le didacticiel sur les [services Bureau à distance](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -27,7 +27,7 @@ Il s’agit du didacticiel RDS, écrit dans Microsoft Visual Basic Scripting Edi
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Dans ce didacticiel, [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) et [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) sont créés au moment de la conception, c’est-à-dire qu’ils sont définis avec des balises d’objet `<OBJECT>...</OBJECT>`, comme suit :. Elles peuvent également être créées au moment de l’exécution à l’aide de la méthode [CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) . Par exemple, le **RDS. **L’objet DataControl a pu être créé comme suit :  
+ Dans ce didacticiel, [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) et [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) sont créés au moment de la conception, c’est-à-dire qu’ils sont définis avec des balises d’objet, comme suit : `<OBJECT>...</OBJECT>` . Elles peuvent également être créées au moment de l’exécution à l’aide de la méthode [CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) . Par exemple, le **RDS. **L’objet DataControl a pu être créé comme suit :  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  

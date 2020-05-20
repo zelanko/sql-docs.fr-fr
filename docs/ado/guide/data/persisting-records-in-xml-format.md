@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924595"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763610"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistance des enregistrements au format XML
 À l’instar du format ADTG, la persistance des **recordsets** au format XML est implémentée avec le fournisseur de persistance Microsoft OLE DB. Ce fournisseur génère un ensemble de lignes avant uniquement et en lecture seule à partir d’un fichier ou d’un flux XML enregistré qui contient les informations de schéma générées par ADO. De même, il peut utiliser un **jeu d’enregistrements**ADO, générer du code XML et l’enregistrer dans un fichier ou tout objet qui implémente l’interface com **IStream** . (En fait, un fichier est simplement un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2,5 et ultérieures, ADO s’appuie sur l’analyseur XML de Microsoft (MSXML) pour charger le code XML dans le **jeu d’enregistrements**; par conséquent, MSXML. dll est requis.  
@@ -59,7 +59,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO conserve toujours l’objet **Recordset** entier. Si vous souhaitez conserver un sous-ensemble de lignes de l’objet **Recordset** , utilisez la méthode **Filter** pour limiter les lignes ou modifier votre clause de sélection. Toutefois, vous devez ouvrir un objet **Recordset** avec un curseur côté client (**CursorLocation** = **adUseClient**) pour utiliser la méthode **Filter** pour l’enregistrement d’un sous-ensemble de lignes. Par exemple, pour récupérer des titres qui commencent par la lettre « b », vous pouvez appliquer un filtre à un objet **Recordset** ouvert :  
+ ADO conserve toujours l’objet **Recordset** entier. Si vous souhaitez conserver un sous-ensemble de lignes de l’objet **Recordset** , utilisez la méthode **Filter** pour limiter les lignes ou modifier votre clause de sélection. Toutefois, vous devez ouvrir un objet **Recordset** avec un curseur côté client (**CursorLocation**  =  **adUseClient**) pour utiliser la méthode **Filter** pour l’enregistrement d’un sous-ensemble de lignes. Par exemple, pour récupérer des titres qui commencent par la lettre « b », vous pouvez appliquer un filtre à un objet **Recordset** ouvert :  
   
 ```  
 rs.Filter "title_id like 'B*'"  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918032"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762420"
 ---
 # <a name="name-property-ado"></a>Name, propriété (ADO)
 Indique le nom d’un objet.  
@@ -38,7 +38,7 @@ Indique le nom d’un objet.
   
  Pour les objets de **paramètre** qui n’ont pas encore été ajoutés à la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) , la propriété **Name** est en lecture/écriture. Pour les objets de **paramètre** ajoutés et tous les autres objets, la propriété **Name** est en lecture seule. Les noms ne doivent pas nécessairement être uniques dans une collection.  
   
- Vous pouvez récupérer la propriété **Name** d’un objet à l’aide d’une référence ordinale, après laquelle vous pouvez faire référence à l’objet directement par son nom. Par exemple, si `rstMain.Properties(20).Name` donne `Updatability`, vous pouvez ensuite faire référence à cette propriété en `rstMain.Properties("Updatability")`tant que.  
+ Vous pouvez récupérer la propriété **Name** d’un objet à l’aide d’une référence ordinale, après laquelle vous pouvez faire référence à l’objet directement par son nom. Par exemple, si `rstMain.Properties(20).Name` donne `Updatability` , vous pouvez ensuite faire référence à cette propriété en tant que `rstMain.Properties("Updatability")` .  
   
 ## <a name="applies-to"></a>S'applique à  
   

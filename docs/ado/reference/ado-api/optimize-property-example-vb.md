@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 70bb3e20b36faff0358fe91ea51f85ba125207d1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917814"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762052"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize, exemple de propriété (VB)
 Cet exemple illustre la propriété d' **optimisation** dynamique de l’objet [Field](../../../ado/reference/ado-api/field-object.md) . Le champ ***zip*** de la table ***Authors*** de la base de données ***pubs*** n’est pas indexé. L’affectation de la **valeur true** à la propriété [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) du champ ***zip*** autorise ADO à générer un index qui améliore les performances de la méthode [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
