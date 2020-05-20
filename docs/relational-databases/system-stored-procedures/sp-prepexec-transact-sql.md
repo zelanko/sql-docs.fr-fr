@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9e291a0ff8b2fc14e7bc249ceea8320facedf9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68794718"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830979"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Prépare et exécute une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction paramétrable. sp_prepexec combine les fonctions de sp_prepare et de sp_execute. Cette action est appelée par ID = 13 dans un paquet tabular data stream (TDS).  
+  Prépare et exécute une instruction paramétrable [!INCLUDE[tsql](../../includes/tsql-md.md)] . sp_prepexec combine les fonctions de sp_prepare et de sp_execute. Cette action est appelée par ID = 13 dans un paquet tabular data stream (TDS).  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>Arguments  
  *traitée*  
- Identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de *handle* généré par. *handle* est un paramètre obligatoire avec une valeur de retour **int** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Identificateur de *handle* généré par. *handle* est un paramètre obligatoire avec une valeur de retour **int** .  
   
  *params*  
  Identifie des instructions paramétrables. La définition *params* des variables est substituée aux marqueurs de paramètres dans l’instruction. *params* est un paramètre obligatoire qui requiert une valeur d’entrée **ntext**, **nchar**ou **nvarchar** . Entrez une valeur NULL si l'instruction n'est pas paramétrable.  

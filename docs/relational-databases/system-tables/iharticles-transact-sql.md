@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056212"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829892"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68056212"
 |**objid**|**int**|Cette colonne n’est pas utilisée et est incluse uniquement pour rendre la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) de la table **IHarticles** compatible avec la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilisée pour SQL Server Articles ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Cette colonne n’est pas utilisée et est incluse uniquement pour rendre la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) de la table **IHarticles** compatible avec la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilisée pour SQL Server Articles ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**descriptive**|**nvarchar(255)**|Entrée descriptive de l’article.|  
-|**publisher_status**|**int**|Est utilisé pour indiquer si la vue qui définit l’article publié a été définie en appelant [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) a été appelé.<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) n’a pas été appelé.|  
+|**publisher_status**|**int**|Est utilisé pour indiquer si la vue qui définit l’article publié a été définie en appelant [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **0**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) a été appelée.<br /><br /> **1**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) n’a pas été appelé.|  
 |**article_view_owner**|**nvarchar(255)**|Propriétaire de l'objet de synchronisation sur le serveur de publication utilisé par l'Agent de lecture du journal.|  
 |**article_view**|**nvarchar(255)**|Objet de synchronisation sur le serveur de publication utilisé par l'Agent de lecture du journal.|  
 |**ins_scripting_proc**|**int**|Cette colonne n’est pas utilisée et est incluse uniquement pour rendre la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) de la table **IHarticles** compatible avec la vue [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilisée pour SQL Server Articles ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  

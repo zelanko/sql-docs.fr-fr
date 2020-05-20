@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 963fa56dfba33c13eb2ce4d317f69a22b5cdd259
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053112"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830248"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_describe_cursor_columns
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @cursor_return= ] *output_cursor_variable* SORTIE  
+ [ @cursor_return =] sortie *output_cursor_variable*  
  Nom d'une variable de curseur déclarée devant recevoir la sortie du curseur. *output_cursor_variable* est **Cursor**, sans valeur par défaut, et ne doit pas être associé à des curseurs au moment où sp_describe_cursor_columns est appelé. Le curseur retourné est un curseur en lecture seule, dynamique et permettant les défilements.  
   
- [ @cursor_source= ] {N’local' | N’global' | N’variable'}  
+ [ @cursor_source =] {N’local' | N’global' | N’variable'}  
  Indique si le curseur qui fait l'objet du rapport est défini en utilisant le nom d'un curseur local, d'un curseur global ou d'une variable de curseur. Le paramètre est de type **nvarchar (30)**.  
   
- [ @cursor_identity= ] N'*local_cursor_name*'  
+ [ @cursor_identity =] N'*local_cursor_name*'  
  Nom d'un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé LOCAL, soit celui défini par défaut pour LOCAL. *local_cursor_name* est **de type nvarchar (128)**.  
   
- [ @cursor_identity= ] N'*global_cursor_name*'  
+ [ @cursor_identity =] N'*global_cursor_name*'  
  Nom d’un curseur créé par une instruction DECLARE CURSOR qui possède soit le mot clé GLOBAL, soit celui défini par défaut sur GLOBAL. *global_cursor_name* est **de type nvarchar (128)**.  
   
  *global_cursor_name* peut également être le nom d’un curseur côté serveur d’API ouvert par une application ODBC, puis nommé en appelant SQLSetCursorName.  
   
- [ @cursor_identity= ] N'*input_cursor_variable*'  
+ [ @cursor_identity =] N'*input_cursor_variable*'  
  Nom d'une variable de curseur associée à un curseur ouvert. *input_cursor_variable* est **de type nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  None  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
- sp_describe_cursor_columns encapsule son rapport sous la [!INCLUDE[tsql](../../includes/tsql-md.md)] forme d’un paramètre de sortie de **curseur** . Cela permet aux lots, procédures stockées et déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] de travailler sur une seule ligne de sortie à la fois. Cela signifie également que la procédure ne peut pas être appelée directement à partir des fonctions API de base de données. Le paramètre de sortie **Cursor** doit être lié à une variable de programme, mais les API de base de données ne prennent pas en charge la liaison de paramètres ou de variables de **curseur** .  
+ sp_describe_cursor_columns encapsule son rapport sous la forme d’un paramètre de sortie de [!INCLUDE[tsql](../../includes/tsql-md.md)] **curseur** . Cela permet aux lots, procédures stockées et déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] de travailler sur une seule ligne de sortie à la fois. Cela signifie également que la procédure ne peut pas être appelée directement à partir des fonctions API de base de données. Le paramètre de sortie **Cursor** doit être lié à une variable de programme, mais les API de base de données ne prennent pas en charge la liaison de paramètres ou de variables de **curseur** .  
   
  Vous trouverez dans le tableau suivant une présentation du format de curseur renvoyé par sp_describe_cursor_columns.  
   

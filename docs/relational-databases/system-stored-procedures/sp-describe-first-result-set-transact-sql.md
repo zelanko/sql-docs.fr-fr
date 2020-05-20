@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053051"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831179"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Retourne les métadonnées pour le premier jeu de résultats possible [!INCLUDE[tsql](../../includes/tsql-md.md)] du lot. Retourne un jeu de résultats vide si le lot ne retourne pas de résultats. Génère une erreur si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas déterminer les métadonnées de la première requête qui sera exécutée en effectuant une analyse statique. La vue de gestion dynamique [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retourne les mêmes informations.  
+  Retourne les métadonnées pour le premier jeu de résultats possible du [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. Retourne un jeu de résultats vide si le lot ne retourne pas de résultats. Génère une erreur si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas déterminer les métadonnées de la première requête qui sera exécutée en effectuant une analyse statique. La vue de gestion dynamique [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retourne les mêmes informations.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 `[ \@params = ] N'parameters'`\@params fournit une chaîne de déclaration pour les paramètres du [!INCLUDE[tsql](../../includes/tsql-md.md)] lot, qui est similaire à sp_executesql. Les paramètres peuvent être de type **nvarchar (n)** ou **nvarchar (max)**.  
   
- Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés [!INCLUDE[tsql](../../includes/tsql-md.md)]dans le *_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans \@params. Si l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans l’instruction ne contient pas de \@paramètres, params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
+ Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans \@ params. Si l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans l’instruction ne contient pas de paramètres, \@ params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
 `[ \@browse_information_mode = ] tinyint`Spécifie si des colonnes clés supplémentaires et des informations de table source sont retournées. Si la valeur 1 est définie, chaque requête est analysée comme si elle incluait une option FOR BROWSE sur la requête. Des colonnes clés supplémentaires et les informations de table source sont retournées.  
   
@@ -113,17 +113,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** retourne une erreur dans l’un des cas suivants.  
   
--   Si l’entrée \@TSQL n’est pas un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot valide. La validité est déterminée en analysant et en [!INCLUDE[tsql](../../includes/tsql-md.md)] analysant le lot. Les erreurs provoquées par le lot pendant l’optimisation de la requête ou lors de l’exécution ne [!INCLUDE[tsql](../../includes/tsql-md.md)] sont pas prises en compte pour déterminer si le lot est valide.  
+-   Si l’entrée \@ tsql n’est pas un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot valide. La validité est déterminée en analysant et en analysant le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. Les erreurs provoquées par le lot pendant l’optimisation de la requête ou lors de l’exécution ne sont pas prises en compte pour déterminer si le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot est valide.  
   
--   Si \@params n’a pas la valeur null et contient une chaîne qui n’est pas une chaîne de déclaration valide syntaxiquement pour les paramètres, ou si elle contient une chaîne qui déclare un paramètre plus d’une fois.  
+-   Si \@ params n’a pas la valeur null et contient une chaîne qui n’est pas une chaîne de déclaration valide syntaxiquement pour les paramètres, ou si elle contient une chaîne qui déclare un paramètre plus d’une fois.  
   
--   Si le lot [!INCLUDE[tsql](../../includes/tsql-md.md)] d’entrée déclare une variable locale du même nom qu’un paramètre déclaré dans \@params.  
+-   Si le lot d’entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] déclare une variable locale du même nom qu’un paramètre déclaré dans \@ params.  
   
 -   Si l'instruction utilise une table temporaire.  
   
 -   La requête inclut la création d'une table permanente qui est alors interrogée.  
   
- Si tous les autres contrôles réussissent, tous les chemins d'accès de flux de contrôle possibles à l'intérieur du lot d'entrée sont pris en compte. Cela prend en compte toutes les instructions de contrôle de workflow (GOTO, IF/ELSE, [!INCLUDE[tsql](../../includes/tsql-md.md)] while et try/catch), ainsi que toutes les [!INCLUDE[tsql](../../includes/tsql-md.md)] procédures, les lots dynamiques ou les déclencheurs appelés à partir du lot d’entrée par une instruction EXEC, une instruction DDL qui provoque le déclenchement des déclencheurs DDL, ou une instruction DML qui entraîne le déclenchement des déclencheurs sur une table cible ou sur une table modifiée en raison d’une action en cascade sur une contrainte de clé étrangère. Dans le cas de nombreux chemins d'accès de contrôle possibles, un algorithme s'arrête à un point donné.  
+ Si tous les autres contrôles réussissent, tous les chemins d'accès de flux de contrôle possibles à l'intérieur du lot d'entrée sont pris en compte. Cela prend en compte toutes les instructions de contrôle de workflow (GOTO, IF/ELSE, WHILe et [!INCLUDE[tsql](../../includes/tsql-md.md)] try/catch), ainsi que toutes les procédures, les [!INCLUDE[tsql](../../includes/tsql-md.md)] lots dynamiques ou les déclencheurs appelés à partir du lot d’entrée par une instruction EXEC, une instruction DDL qui provoque le déclenchement des déclencheurs DDL, ou une instruction DML qui entraîne le déclenchement des déclencheurs sur une table cible ou sur une table modifiée en raison d’une action en cascade sur une contrainte de clé étrangère. Dans le cas de nombreux chemins d'accès de contrôle possibles, un algorithme s'arrête à un point donné.  
   
  Pour chaque chemin d’accès de workflow de contrôle, la première instruction (le cas échéant) qui retourne un jeu de résultats est déterminée par **sp_describe_first_result_set**.  
   
@@ -152,13 +152,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** ne prend pas en charge la récursivité indirecte.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’autorisation d’exécuter \@l’argument TSQL.  
+ Nécessite l’autorisation d’exécuter l' \@ argument TSQL.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="typical-examples"></a>Exemples types  
   
-#### <a name="a-simple-example"></a>A. Exemple simple  
+#### <a name="a-simple-example"></a>R. Exemple simple  
  L'exemple suivant décrit le jeu de résultats retourné par une requête unique.  
   
 ```  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Résultat : \<nom de colonne inconnu> **varchar (20) null**  
+ Résultat : \< nom de colonne inconnu> **varchar (20) null**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nom de colonne forcé à être identique par crénelage  
  Identique à l'exemple précédent, mais les colonnes ont le même nom via le crénelage de colonne.  

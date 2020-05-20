@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278181"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830223"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Spécifie que le fichier d’index de recherche en texte intégral associé à la base de données en cours de détachement ne sera pas supprimé pendant l’opération de détachement de la base de données. *Keepfulltextindexfile* est une valeur **nvarchar (10)** avec **true**comme valeur par défaut. Si *keepfulltextindexfile* a la **valeur false**, tous les fichiers d’index de recherche en texte intégral associés à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si la valeur est NULL ou **true**, les métadonnées associées au texte intégral sont conservées.  
   
 > [!IMPORTANT]
->  Le ** \@paramètre keepfulltextindexfile** sera supprimé dans une future version de. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Évitez d'utiliser ce paramètre dans de nouveaux travaux de développement, et modifiez dès que possible les applications qui utilisent actuellement ce paramètre.  
+>  Le paramètre ** \@ keepfulltextindexfile** sera supprimé dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Évitez d'utiliser ce paramètre dans de nouveaux travaux de développement, et modifiez dès que possible les applications qui utilisent actuellement ce paramètre.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Avant d'affecter la valeur SINGLE_USER à la base de données, vérifiez que l'option AUTO_UPDATE_STATISTICS_ASYNC a la valeur OFF. Si la valeur de cette option est ON, le thread d'arrière-plan utilisé pour mettre à jour les statistiques se connecte à la base de données et vous ne pourrez pas accéder à celle-ci en mode mono-utilisateur. Pour plus d’informations, consultez [définir une base de données en mode mono-utilisateur](../databases/set-a-database-to-single-user-mode.md).
 
- Par exemple, l’instruction `ALTER DATABASE` suivante obtient un accès exclusif à la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données une fois que tous les utilisateurs actuels se sont déconnectés de la base de données.  
+ Par exemple, l' `ALTER DATABASE` instruction suivante obtient un accès exclusif à la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données une fois que tous les utilisateurs actuels se sont déconnectés de la base de données.  
   
 ```  
 USE master;  
@@ -134,9 +134,9 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Détachement et attachement de la base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Détacher une base de données](../../relational-databases/databases/detach-a-database.md)  
   

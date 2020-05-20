@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f9adbc21b0c226746c879bf1b32377c93b2d76c1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68072650"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829254"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68072650"
 |**publisher_id**|**smallint**|ID du serveur de publication.|  
 |**publisher_db**|**nvarchar(128)**|Nom de la base de données de publication.|  
 |**édition**|**nvarchar(128)**|Nom de la publication.|  
-|**-**|**nvarchar(128)**|Nom de l’article.|  
+|**article**|**nvarchar(128)**|Nom de l’article.|  
 |**côté**|**nvarchar(128)**|Nom de l'Abonné.|  
 |**subscriber_db**|**nvarchar(128)**|Nom de la base de données d’abonnement.|  
 |**is_pub_range**|**bit**|Indique si la plage d'identité est affectée à un serveur de publication.|  

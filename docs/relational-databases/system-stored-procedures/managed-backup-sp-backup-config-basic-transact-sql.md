@@ -18,19 +18,19 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_basic
 - sp_backup_config_basic
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e3b3c547453c41dff6d32d1cafcd62746a2f194f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 684a538030aae91cd50125c82d4a5aee401764eb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305262"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830373"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Configure les [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] paramètres de base pour une base de données spécifique ou pour une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance de.  
+  Configure les [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] paramètres de base pour une base de données spécifique ou pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Cette procédure peut être appelée seule pour créer une configuration de sauvegarde managée de base. Toutefois, si vous envisagez d’ajouter des fonctionnalités avancées ou un calendrier personnalisé, commencez par configurer ces paramètres à l’aide de [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) et [managed_backup. sp_backup_config_schedule &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) avant d’activer la sauvegarde managée avec cette procédure.  
@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  @enable_backup  
- Activez ou désactivez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données spécifiée. Est @enable_backup un **bit**. Paramètre requis lors de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration de pour la première [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance de. Si vous modifiez une configuration existante [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , ce paramètre est facultatif. Dans ce cas, toutes les valeurs de configuration non spécifiées conservent leurs valeurs existantes.  
+ Activez ou désactivez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données spécifiée. @enable_backupEst un **bit**. Paramètre requis lors de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] la configuration de pour la première instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous modifiez une configuration existante [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , ce paramètre est facultatif. Dans ce cas, toutes les valeurs de configuration non spécifiées conservent leurs valeurs existantes.  
   
  @database_name  
  Nom de la base de données pour activer la sauvegarde managée sur une base de données spécifique.  
@@ -59,13 +59,13 @@ EXEC managed_backup.sp_backup_config_basic
 >  Pour l’instant, seule une URL SAS est prise en charge pour ce paramètre.  
   
  @retention_days  
- Période de rétention en jours des fichiers de sauvegarde. Est @storage_url de type int. Il s’agit d’un paramètre obligatoire quand [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] vous configurez pour la première fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur l’instance de. Lors de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] modification de la configuration, ce paramètre est facultatif. S'il n'est pas spécifié, les valeurs de configuration existantes sont retenues.  
+ Période de rétention en jours des fichiers de sauvegarde. @storage_urlEst de type int. Il s’agit d’un paramètre obligatoire quand vous configurez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la première fois sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lors de la modification de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, ce paramètre est facultatif. S'il n'est pas spécifié, les valeurs de configuration existantes sont retenues.  
   
  @credential_name  
  Nom des informations d’identification SQL utilisées pour l’authentification auprès du compte de stockage Azure. @credentail_nameest de **type sysname**. Lorsque cette valeur est spécifiée, la sauvegarde est stockée dans un objet blob de pages. Si ce paramètre a la valeur NULL, la sauvegarde est stockée en tant qu’objet blob de blocs. La sauvegarde vers l’objet blob de pages est dépréciée. il est donc préférable d’utiliser la nouvelle fonctionnalité de sauvegarde des objets BLOB de blocs. Lorsqu'il est utilisé pour modifier la configuration de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], ce paramètre est facultatif. S’il n’est pas spécifié, les valeurs de configuration existantes sont conservées.  
   
 > [!WARNING]
->  Le paramètre ** \@credential_name** n’est pas pris en charge pour l’instant. Seule la sauvegarde sur un objet blob de blocs est prise en charge, ce qui requiert la valeur NULL pour ce paramètre.  
+>  Le paramètre ** \@ credential_name** n’est pas pris en charge pour l’instant. Seule la sauvegarde sur un objet blob de blocs est prise en charge, ce qui requiert la valeur NULL pour ce paramètre.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  
@@ -84,7 +84,7 @@ New-AzureStorageContainer -Name mycontainer -Context $context
 New-AzureStorageContainerSASToken -Name mycontainer -Permission rwdl -FullUri -Context $context  
 ```  
   
- L’exemple suivant active [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] l’instance de SQL Server sur laquelle il est exécuté, définit la stratégie de rétention sur 30 jours, définit la destination sur un conteneur nommé « mycontainer » dans un compte de stockage nommé « mystorageaccount ».  
+ L’exemple suivant active l' [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] instance de SQL Server sur laquelle il est exécuté, définit la stratégie de rétention sur 30 jours, définit la destination sur un conteneur nommé « mycontainer » dans un compte de stockage nommé « mystorageaccount ».  
   
 ```Transact-SQL 
 Use msdb;  

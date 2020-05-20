@@ -16,19 +16,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], deleting
 - sp_dropdevice
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 998794fd2e5fe5521587ebbb2a88c61c80cff39e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d9176624f661cb012fe8ed3124a1b868ec72195
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927825"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830193"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime une unité de base de données ou une unité de sauvegarde [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]d’une instance du, en supprimant l’entrée de **Master. dbo. sysdevices**.  
+  Supprime une unité de base de données ou une unité de sauvegarde d’une instance du [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , en supprimant l’entrée de **Master. dbo. sysdevices**.  
    
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ sp_dropdevice [ @logicalname = ] 'device'
  Nécessite l'appartenance au rôle serveur fixe **diskadmin** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant supprime l' `tapedump1` unité de vidage sur bande [!INCLUDE[ssDE](../../includes/ssde-md.md)]de l'.  
+ L’exemple suivant supprime l' `tapedump1` unité de vidage sur bande de l' [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ```  
 EXEC sp_dropdevice 'tapedump1';  

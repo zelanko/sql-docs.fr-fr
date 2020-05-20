@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771008"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829976"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  Les clients qui tentent d’exécuter des **sp_replcmds** au sein de la même base de données reçoivent l’erreur 18752 jusqu’à ce que le premier client se déconnecte. Une fois que le premier client se déconnecte, un autre client peut exécuter **sp_replcmds**et devient le nouveau lecteur de journal.  
   
- Un message d’avertissement numéro 18759 est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajouté au journal des erreurs et au [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows si **sp_replcmds** ne parvient pas à répliquer une commande de texte parce que le pointeur de texte n’a pas été récupéré dans la même transaction.  
+ Un message d’avertissement numéro 18759 est ajouté au [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Journal des erreurs et au [!INCLUDE[msCoName](../../includes/msconame-md.md)] Journal des applications Windows si **sp_replcmds** ne parvient pas à répliquer une commande de texte parce que le pointeur de texte n’a pas été récupéré dans la même transaction.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_replcmds**.  

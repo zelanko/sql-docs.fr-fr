@@ -18,21 +18,21 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155398"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830441"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Demande la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour effectuer une sauvegarde de la base de données spécifiée.  
   
- Utilisez cette procédure stockée pour effectuer des sauvegardes ad hoc d'une base de données configurée avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Cela empêche toute interruption dans la chaîne de sauvegarde [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] et les processus sont pris en charge et la sauvegarde est stockée dans le même conteneur de stockage d’objets BLOB Azure.  
+ Utilisez cette procédure stockée pour effectuer des sauvegardes ad hoc d'une base de données configurée avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Cela empêche toute interruption dans la chaîne de sauvegarde et [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] les processus sont pris en charge et la sauvegarde est stockée dans le même conteneur de stockage d’objets BLOB Azure.  
   
  À la fin de la sauvegarde, le chemin de fichier de sauvegarde complet est retourné. Il comprend le nom et l'emplacement du nouveau fichier de sauvegarde résultant de l'opération de sauvegarde.  
   
@@ -50,7 +50,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  @database_name  
- Nom de la base de données sur laquelle la sauvegarde doit être effectuée. Est @database_name de **type sysname**.  
+ Nom de la base de données sur laquelle la sauvegarde doit être effectuée. @database_nameEst de **type sysname**.  
   
  @type  
  Type de sauvegarde à effectuer : base de données ou journal. Le @type paramètre est de type **nvarchar (32)**.  

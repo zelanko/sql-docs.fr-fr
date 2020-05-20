@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae75aa570b20a21c31d75b66ddf5c01635eee51
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900421"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830563"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67900421"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|ID unique du groupe de disponibilité en tant que ressource dans le WSFC.|  
-|**instance_name**|**nvarchar(256)**|Nom-*server*/*instance*de serveur : d’une instance de serveur qui héberge un réplica pour le groupe de disponibilité.|  
+|**instance_name**|**nvarchar(256)**|Nom-*server* / *instance*de serveur : d’une instance de serveur qui héberge un réplica pour le groupe de disponibilité.|  
 |**node_name**|**nvarchar(256)**|Nom du nœud WSFC.|  
   
 ## <a name="permissions"></a>Autorisations  

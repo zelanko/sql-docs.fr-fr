@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67aeb7243b52ef4675b9effea27d3c81c1078538
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768947"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829619"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
 |**4**|Quotidien|  
-|**version8**|Hebdomadaire|  
+|**8**|Hebdomadaire|  
 |**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
@@ -82,7 +82,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|Jeudi|  
 |**6**|Vendredi|  
 |**7**|Samedi|  
-|**version8**|jour|  
+|**8**|Jour|  
 |**9**|Jours de la semaine|  
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
@@ -94,7 +94,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
 |NULL (par défaut)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
@@ -106,7 +106,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**version8**|Quatrième|  
+|**8**|Quatrième|  
 |**16bits**|Dernier|  
 |NULL (par défaut)||  
   
@@ -120,7 +120,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`Heure de la journée à laquelle le Agent de fusion cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @job_login = ] 'job_login'`Compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel le agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut.  
+`[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]Compte Windows sous lequel le agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut.  
   
 `[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel le Agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_password* est de type **nvarchar (257)**, avec NULL comme valeur par défaut.  
   
@@ -130,7 +130,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_changedynamicsnapshot_job** est utilisé dans la réplication de fusion pour les publications avec des filtres de lignes paramétrables.  
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2df4786147a5301e4e9167cbe121b9151e72190f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 43f5c110aaf9b492d70eb7220b6eccc249222609
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099160"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830896"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68099160"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Identificateur de la connexion. Accepte la valeur NULL.|  
-|**transport_stream_id**|**uniqueidentifier**|Identificateur de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’interface réseau (SNI) utilisée par cette connexion pour les communications TCP/IP. Accepte la valeur NULL.|  
+|**transport_stream_id**|**uniqueidentifier**|Identificateur de la connexion de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interface réseau (SNI) utilisée par cette connexion pour les communications TCP/IP. Accepte la valeur NULL.|  
 |**state**|**smallint**|État actuel de la connexion. Accepte la valeur NULL. Valeurs possibles :<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = FERMÉ|  
 |**state_desc**|**nvarchar(60)**|État actuel de la connexion. Accepte la valeur NULL. Valeurs possibles :<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Date et heure d'ouverture de la connexion. Accepte la valeur NULL.|  

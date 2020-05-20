@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3d107b78c9b982285c19b678bebbc027facebe1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942046"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830401"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Retourne les événements étendus enregistrés par Smart Admin.  
   
- Utilisez cette procédure stockée pour surveiller les événements étendus enregistrés par Smart admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] les événements sont enregistrés dans ce système et peuvent être examinés et surveillés à l’aide de cette procédure stockée.  
+ Utilisez cette procédure stockée pour surveiller les événements étendus enregistrés par Smart admin. les [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] événements sont enregistrés dans ce système et peuvent être examinés et surveillés à l’aide de cette procédure stockée.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
  @xevent_channel  
- Type d'événement étendu. La valeur par défaut retourne tous les événements enregistrés au cours des 30 dernières minutes. Les événements enregistrés dépendent des types d'événements étendus activés. Vous pouvez utiliser ce paramètre pour filtrer la procédure stockée et afficher uniquement les événements d'un type spécifique. Vous pouvez spécifier le nom complet de l’événement ou spécifier une sous-chaîne telle que : **« admin**», « Analytics **»**, **« Operational »** et **« Debug »**. Est @event_channel de type **varchar (255)**.  
+ Type d'événement étendu. La valeur par défaut retourne tous les événements enregistrés au cours des 30 dernières minutes. Les événements enregistrés dépendent des types d'événements étendus activés. Vous pouvez utiliser ce paramètre pour filtrer la procédure stockée et afficher uniquement les événements d'un type spécifique. Vous pouvez spécifier le nom complet de l’événement ou spécifier une sous-chaîne telle que : **« admin**», « Analytics **»**, **« Operational »** et **« Debug »**. Est de type @event_channel **VARCHAR (255)**.  
   
  Pour obtenir la liste des types d’événements actuellement activés, utilisez la fonction **managed_backup. fn_get_current_xevent_settings** .  
   

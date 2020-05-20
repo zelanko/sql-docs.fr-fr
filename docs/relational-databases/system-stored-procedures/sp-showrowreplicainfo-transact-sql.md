@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032896"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830943"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nom de la base de données qui a effectué cette entrée.|  
 |**db_nickname**|**binary(6)**|Surnom de la base de données qui a effectué cette entrée.|  
 |**version**|**int**|Version de l'entrée.|  
-|**current_state**|**nvarchar (9)**|Retourne des informations sur l'état actuel de la ligne.<br /><br /> les données de ligne **y** représentent l’état actuel de la ligne.<br /><br /> les données de **n** lignes ne représentent pas l’état actuel de la ligne.<br /><br /> n/a>-non applicable. ** \<**<br /><br /> >inconnu-l’état actuel ne peut pas être déterminé. ** \<**|  
+|**current_state**|**nvarchar (9)**|Retourne des informations sur l'état actuel de la ligne.<br /><br /> les données de ligne **y** représentent l’état actuel de la ligne.<br /><br /> les données de **n** lignes ne représentent pas l’état actuel de la ligne.<br /><br /> ** \< n/a>** -non applicable.<br /><br /> ** \<>inconnu** -l’état actuel ne peut pas être déterminé.|  
 |**rowversion_table**|**nchar (17)**|Indique si les versions de ligne sont stockées dans la table [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) ou dans la table [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**Commentaire**|**nvarchar(255)**|Informations supplémentaires concernant l'entrée de version de cette ligne. En général, ce champ est vide.|  
   

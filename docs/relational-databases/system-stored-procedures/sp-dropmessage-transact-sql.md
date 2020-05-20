@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933864"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830009"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un message d’erreur défini par l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]utilisateur spécifié d’une instance du. Les messages définis par l’utilisateur peuvent être affichés à l’aide de l’affichage catalogue **sys. messages** .  
+  Supprime un message d’erreur défini par l’utilisateur spécifié d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Les messages définis par l’utilisateur peuvent être affichés à l’aide de l’affichage catalogue **sys. messages** .  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_dropmessage [ @msgnum = ] message_number
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune.  
+ Aucun.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance aux rôles serveur fixes **sysadmin** et **ServerAdmin** .  
@@ -59,7 +59,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-dropping-a-user-defined-message"></a>R. Suppression d'un message défini par l'utilisateur  
- L’exemple suivant supprime un message défini par l’utilisateur, `50001`Number, de **sys. messages**.  
+ L’exemple suivant supprime un message défini par l’utilisateur, Number `50001` , de **sys. messages**.  
   
 ```  
 USE master;  

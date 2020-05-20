@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165913"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831711"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Opération réussie|  
+|0|Succès|  
 |0x0001|Échec|  
 |1FF6|Impossible de retourner des métadonnées.<br /><br /> Remarque : Ceci est dû au fait que l’instruction ne produit pas un jeu de résultats ; par exemple, il s’agit d’une instruction INSERT ou DDL.|  
   
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  Quand *stmt* est paramétré et que la valeur de PARAMETERIZED_STMT *scrollopt* est on, le format de la chaîne est le suivant :  
   
- { * \<nom de la variable locale>\<* * type de données>* } [ ,... *n* ]  
+ {nom de la * \< variable locale> * * \< type de données>* } [,... *n* ]  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

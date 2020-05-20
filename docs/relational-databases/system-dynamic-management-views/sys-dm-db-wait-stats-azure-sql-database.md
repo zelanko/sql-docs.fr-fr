@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090876"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830853"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "68090876"
   
  Bien que le thread ne soit plus en train d'attendre, il n'a pas à redémarrer immédiatement. En effet, ce type de thread est d'abord placé dans la file d'attente des travaux pouvant s'exécuter et doit attendre qu'un quantum s'exécute sur le planificateur.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les compteurs de temps d’attente sont des valeurs **bigint** et, par conséquent, ne sont pas aussi sujets à la substitution de compteur que les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]compteurs équivalents dans les versions antérieures de.  
+ Dans, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les compteurs de temps d’attente sont des valeurs **bigint** et, par conséquent, ne sont pas aussi sujets à la substitution de compteur que les compteurs équivalents dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Le tableau suivant récapitule les types d'attente que rencontrent les tâches.  
   

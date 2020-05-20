@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c12e117682fe2e5286a6f4a1c650878ae0827010
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108140"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831633"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,10 +91,10 @@ sp_dbmmonitorchangealert database_name
   
 |*alert_id*|Mesure de performance|Seuil d'avertissement|Indique si l'avertissement est activé.|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
-|1|Transaction non envoyée la plus ancienne|30 minutes|Oui|  
-|2|Journal non envoyé|10 000 Ko|Oui|  
-|3|Journal non restauré|10 000 Ko|Oui|  
-|4|Charge de validation par le serveur miroir|1 000 millisecondes|Non|  
+|1|Transaction non envoyée la plus ancienne|30 minutes|Yes|  
+|2|Journal non envoyé|10 000 Ko|Yes|  
+|3|Journal non restauré|10 000 Ko|Yes|  
+|4|Charge de validation par le serveur miroir|1 000 millisecondes|No|  
 |5|Période de rétention|8 heures|Oui|  
   
 ```  

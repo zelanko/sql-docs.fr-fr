@@ -16,14 +16,14 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37c6a32b7970d8bfb0a44eaf407914c5de27f593
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71682138"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831091"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "71682138"
   Retourne la taille actuelle de l'objet demandé et estime la taille de l'objet pour l'état de compression demandé. La compression peut être évaluée pour des tables entières ou des parties de tables. Cela comprend les tas, les index cluster, les index non cluster, les index ColumnStore, les vues indexées et les partitions de table et d’index. Les objets peuvent être compressés à l’aide de la compression d’archive Row, page, ColumnStore ou ColumnStore. Si la table, l'index ou la partition sont déjà compressés, vous pouvez utiliser cette procédure pour estimer la taille de la table, de l'index ou de la partition s'ils sont décompressés.  
   
 > [!NOTE]
-> La compression et les **sp_estimate_data_compression_savings** ne sont pas disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]toutes les éditions de. Pour obtenir la liste des fonctionnalités prises en charge par les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> La compression et les **sp_estimate_data_compression_savings** ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Pour estimer la taille de l'objet s'il devait utiliser le paramètre de compression demandé, cette procédure stockée échantillonne l'objet source et charge ces données dans une table et un index équivalents, créés dans tempdb. La table ou l'index créés dans tempdb sont ensuite compressés au paramètre demandé et les gains de compression estimés sont calculés.  
   
@@ -55,21 +55,21 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @schema_name= ] '*schema_name*'  
+ [ @schema_name =] '*schema_name*'  
  Nom du schéma de base de données qui contient la table ou la vue indexée. *schema_name* est de **type sysname**. Si *schema_name* a la valeur null, le schéma par défaut de l’utilisateur actuel est utilisé.  
   
- [ @object_name= ] '*object_name*'  
+ [ @object_name =] '*object_name*'  
  Nom du schéma de la table ou de la vue indexée sur laquelle se trouve l'index. *object_name* est de type **sysname**.  
   
- [ @index_id= ] *index_id*  
+ [ @index_id =] *index_id*  
  Identificateur de l’index. *index_id* est de **type int**et peut prendre l’une des valeurs suivantes : le numéro d’ID d’un index, NULL ou 0 si *object_id* est un segment de mémoire. Pour retourner des informations sur tous les index d'une table de base ou d'une vue, spécifiez la valeur NULL. Si vous spécifiez NULL, vous devez également spécifier NULL pour *partition_number*.  
   
- [ @partition_number= ] *partition_number*  
+ [ @partition_number =] *partition_number*  
  Numéro de partition dans l'objet. *partition_number* est de **type int**et peut prendre l’une des valeurs suivantes : le numéro de partition d’un index ou d’un segment de mémoire, null ou 1 pour un index ou un segment de mémoire non partitionné.  
   
  Pour spécifier la partition, vous pouvez également spécifier la fonction [$partition](../../t-sql/functions/partition-transact-sql.md) . Pour retourner des informations pour toutes les partitions de l'objet propriétaire, spécifiez NULL.  
   
- [ @data_compression= ] '*DATA_COMPRESSION*'  
+ [ @data_compression =] '*DATA_COMPRESSION*'  
  Type de compression à évaluer. *DATA_COMPRESSION* peut prendre l’une des valeurs suivantes : None, Row, page, COLUMNSTORE ou COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -109,10 +109,10 @@ sp_estimate_data_compression_savings
  Avant SQL Server 2019, cette procédure ne s’appliquait pas aux index ColumnStore et n’acceptait donc pas les paramètres de compression de données COLUMNSTORE et COLUMNSTORE_ARCHIVE.  À compter de SQL Server 2019, les index ColumnStore peuvent être utilisés à la fois comme un objet source pour l’estimation et comme type de compression demandé.
 
  > [!IMPORTANT]
- > Lorsque [les métadonnées tempdb à mémoire optimisée](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) sont activées dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la création d’index ColumnStore sur des tables temporaires n’est pas prise en charge. En raison de cette limitation, sp_estimate_data_compression_savings n’est pas prise en charge avec les paramètres de compression de données COLUMNSTORE et COLUMNSTORE_ARCHIVE lorsque les métadonnées TempDB mémoire optimisées sont activées.
+ > Lorsque [les métadonnées tempdb à mémoire optimisée](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) sont activées dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , la création d’index ColumnStore sur des tables temporaires n’est pas prise en charge. En raison de cette limitation, sp_estimate_data_compression_savings n’est pas prise en charge avec les paramètres de compression de données COLUMNSTORE et COLUMNSTORE_ARCHIVE lorsque les métadonnées TempDB mémoire optimisées sont activées.
 
 ## <a name="considerations-for-columnstore-indexes"></a>Remarques pour les index columnstore
- À compter [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]de `sp_estimate_compression_savings` , prend en charge l’estimation de la compression d’archive ColumnStore et ColumnStore. Contrairement à la compression de page et de ligne, l’application de la compression ColumnStore à un objet requiert la création d’un nouvel index ColumnStore. Pour cette raison, lorsque vous utilisez les options COLUMNSTORE et COLUMNSTORE_ARCHIVE de cette procédure, le type de l’objet source fourni à la procédure détermine le type d’index COLUMNSTORE utilisé pour l’estimation de la taille compressée. Le tableau suivant illustre les objets de référence utilisés pour estimer les économies de compression pour chaque type d’objet @data_compression source lorsque le paramètre est défini sur COLUMNSTORE ou COLUMNSTORE_ARCHIVE.
+ À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , `sp_estimate_compression_savings` prend en charge l’estimation de la compression d’archive ColumnStore et ColumnStore. Contrairement à la compression de page et de ligne, l’application de la compression ColumnStore à un objet requiert la création d’un nouvel index ColumnStore. Pour cette raison, lorsque vous utilisez les options COLUMNSTORE et COLUMNSTORE_ARCHIVE de cette procédure, le type de l’objet source fourni à la procédure détermine le type d’index COLUMNSTORE utilisé pour l’estimation de la taille compressée. Le tableau suivant illustre les objets de référence utilisés pour estimer les économies de compression pour chaque type d’objet source lorsque le @data_compression paramètre est défini sur COLUMNSTORE ou COLUMNSTORE_ARCHIVE.
 
  |Objet source|Objet de référence|
  |-----------------|---------------|
@@ -125,7 +125,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > Lorsque vous évaluez la compression ColumnStore à partir d’un objet source rowstore (index cluster, index non cluster ou segment de mémoire), si des colonnes de l’objet source ont un type de données qui n’est pas pris en charge dans un index ColumnStore, sp_estimate_compression_savings échoue avec une erreur.
 
- De même, lorsque le `@data_compression` paramètre a la valeur `NONE`, `ROW`ou `PAGE` et que l’objet source est un index ColumnStore, le tableau suivant présente les objets de référence utilisés.
+ De même, lorsque le `@data_compression` paramètre a la valeur `NONE` , `ROW` ou `PAGE` et que l’objet source est un index ColumnStore, le tableau suivant présente les objets de référence utilisés.
 
  |Objet source|Objet de référence|
  |-----------------|---------------|

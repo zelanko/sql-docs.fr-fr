@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097843"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830639"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|Indique si le curseur est ouvert.|  
 |**is_async_population**|**bit**|Spécifie si le thread d'arrière-plan remplit toujours de manière asynchrone un curseur KEYSET ou STATIC.|  
 |**is_close_on_commit**|**bit**|Spécifie si le curseur a été déclaré à l'aide de CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = Le curseur est fermé à la fin de la transaction.|  
-|**fetch_status**|**int**|Retourne le dernier état d'extraction du curseur. Il s’agit de la dernière@FETCH_STATUS valeur @ retournée.|  
+|**fetch_status**|**int**|Retourne le dernier état d'extraction du curseur. Il s’agit de la dernière valeur @ retournée @FETCH_STATUS .|  
 |**fetch_buffer_size**|**int**|Retourne des informations sur la taille du tampon d'extraction.<br /><br /> 1 = Curseurs Transact-SQL. Il est possible de définir une valeur supérieure pour les curseurs des API.|  
 |**fetch_buffer_start**|**int**|Pour les curseurs FAST_FORWARD et DYNAMIC, retourne 0 si le curseur n'est pas ouvert ou s'il est positionné devant la première ligne. Sinon, retourne -1.<br /><br /> Pour les curseurs STATIC et KEYSET, retourne 0 si le curseur n'est pas ouvert et -1 si le curseur est positionné au-delà de la dernière ligne.<br /><br /> Sinon, retourne le numéro de la ligne où il est positionné.|  
 |**ansi_position**|**int**|Position du curseur dans le tampon d'extraction.|  

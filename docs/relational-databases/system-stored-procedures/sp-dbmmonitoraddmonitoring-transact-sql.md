@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108151"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831646"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>Notes  
  Cette procédure ne fonctionne que si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est autorisé à s'exécuter sur l'instance du serveur. En outre, le travail de surveillance de la mise en miroir de bases de données ne peut s'exécuter que si l'agent est lui-même en cours d'exécution.  
   
- Si la mise en miroir de bases [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de données est démarrée à partir de, la procédure **sp_dbmmonitoraddmonitoring** est exécutée automatiquement. Si vous démarrez la mise en miroir manuellement à l’aide des instructions ALTER DATABASE, pour surveiller la base de données mise en miroir sur l’instance de serveur, vous devez exécuter **sp_dbmmonitoraddmonitoring** manuellement.  
+ Si la mise en miroir de bases de données est démarrée à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , la procédure **sp_dbmmonitoraddmonitoring** est exécutée automatiquement. Si vous démarrez la mise en miroir manuellement à l’aide des instructions ALTER DATABASE, pour surveiller la base de données mise en miroir sur l’instance de serveur, vous devez exécuter **sp_dbmmonitoraddmonitoring** manuellement.  
   
 > [!NOTE]  
 >  Si vous exécutez **sp_dbmmonitoraddmonitoring** avant de configurer la mise en miroir de bases de données, le travail de surveillance s’exécute mais ne met pas à jour la table d’État dans laquelle l’historique du moniteur de mise en miroir de bases de données est stocké.  

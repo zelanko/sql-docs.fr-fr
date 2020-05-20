@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 207b27a4d7006f8181cbfe7a6cb6e072ee741d82
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942468"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829663"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +46,28 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  GUID du jeu d'éléments de collecte. *collection_set_uid* est de type **uniqueidentifier**, sans valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collection_sets dans la base de données msdb.  
   
- [ @machine_name = ] '*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  Nom du serveur sur lequel réside le jeu d'éléments de collecte. *machine_name* est de **type sysname** et n’a pas de valeur par défaut.  
   
- [ @named_instance = ] '*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  Nom de l'instance pour le jeu d'éléments de collecte. *named_instance* est de **type sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
->  *named_instance* doit être le nom complet de l’instance, qui se compose du nom de l’ordinateur et du nom de l’instance, sous la forme *ComputerName*\\*nom_instance*.  
+>  *named_instance* doit être le nom complet de l’instance, qui se compose du nom de l’ordinateur et du nom de l’instance, sous la forme *ComputerName* \\ *nom_instance*.  
   
- [ @days_until_expiration = ] *days_until_expiration*  
+ [ @days_until_expiration =] *days_until_expiration*  
  Nombre de jours restants dans la période de rétention des données d'instantanés. *days_until_expiration* est de type **smallint**.  
   
- [ @source_id = ] *source_id*  
+ [ @source_id =] *source_id*  
  Identificateur unique de la source de la mise à jour. *source_id* est de **type int** et est retourné en tant que sortie.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Chaque fois qu'un package de téléchargement commence à télécharger des données dans l'entrepôt de données de gestion, le composant runtime du collecteur de données appelle core.sp_update_data_source. La table core.source_info_internal est mise à jour si l'une des modifications suivantes a été apportée depuis le dernier téléchargement :  
   
 -   Un nouveau jeu d'éléments de collecte a été ajouté.  

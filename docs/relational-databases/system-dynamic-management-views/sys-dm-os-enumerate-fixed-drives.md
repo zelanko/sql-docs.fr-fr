@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_enumerate_fixed_drives dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c45db91b29c85d6ffced4e31e01fb8f24f338c16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342514"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830525"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-SQL)
 
@@ -29,11 +29,11 @@ ms.locfileid: "71342514"
 
 Introduite dans SQL Server 2019.
 
-Énumère les volumes montés sur des lettres `C:\`de lecteur, par exemple.
+Énumère les volumes montés sur des lettres de lecteur, par exemple `C:\` .
 
 |Nom de la colonne|Type de données|Description|
 |-----------------|---------------|-----------------|  
-|`fixed_drive_path`|`nvarchar(512)`|Chemin d’accès au volume, `C:\`par exemple.|  
+|`fixed_drive_path`|`nvarchar(512)`|Chemin d’accès au volume, par exemple `C:\` .|  
 |`drive_type`|`int`|Code pour le type de lecteur. Consultez [ `GetDriveTypeW` Function](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`drive_type_desc`|`nvarchar(512)`|Description du type de lecteur. Consultez [ `GetDriveTypeW` Function](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`free_space_in_bytes`|`bigint`|Espace libre du disque en octets.|

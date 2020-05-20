@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropuser
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42628ab49e30a4c6dada2eafb505435b8b389de6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124723"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831133"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un utilisateur de base de données de la base de données active. **sp_dropuser** assure la compatibilité avec les versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]antérieures de.  
+  Supprime un utilisateur de base de données de la base de données active. **sp_dropuser** assure la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) .  
@@ -54,7 +54,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  Lorsqu'un utilisateur de base de données est supprimé, les alias affectés à cet utilisateur sont également supprimés. Si l'utilisateur possède un schéma vide dont le nom est identique à celui de l'utilisateur, le schéma est supprimé. Si l'utilisateur possède d'autres éléments sécurisables dans la base de données, il n'est pas supprimé. La propriété des objets doit être auparavant transmise à un autre principal. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). La suppression d'un utilisateur de base de données entraîne également la suppression automatique des autorisations associées à cet utilisateur ainsi que tous les rôles de base de données dont l'utilisateur est membre.  
   
- **sp_dropuser** ne peut pas être utilisé pour supprimer le propriétaire de la base de données (**dbo**) **INFORMATION_SCHEMA** les utilisateurs ou l’utilisateur **invité** des bases de données **Master** ou **tempdb** . Dans les bases de données non `EXEC sp_dropuser 'guest'` -système, révoque l’autorisation Connect de l’utilisateur **invité**. Cependant, l'utilisateur lui-même n'est pas supprimé.  
+ **sp_dropuser** ne peut pas être utilisé pour supprimer le propriétaire de la base de données (**dbo**) **INFORMATION_SCHEMA** les utilisateurs ou l’utilisateur **invité** des bases de données **Master** ou **tempdb** . Dans les bases de données non-système, `EXEC sp_dropuser 'guest'` révoque l’autorisation Connect de l’utilisateur **invité**. Cependant, l'utilisateur lui-même n'est pas supprimé.  
   
  **sp_dropuser** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   

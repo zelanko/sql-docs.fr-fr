@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 417f2c7d63b129fda187068325702b9ff9768895
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053073"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831195"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @cursor_return= ] *output_cursor_variable* SORTIE  
+ [ @cursor_return =] sortie *output_cursor_variable*  
  Nom d'une variable de curseur déclarée devant recevoir la sortie du curseur. *output_cursor_variable* est **Cursor**, sans valeur par défaut, et ne doit pas être associé à des curseurs au moment où sp_describe_cursor est appelé. Le curseur retourné est un curseur en lecture seule, dynamique et permettant les défilements.  
   
- [ @cursor_source= ] {N’local' | N’global' | N’variable'}  
+ [ @cursor_source =] {N’local' | N’global' | N’variable'}  
  Indique si le curseur qui fait l'objet du rapport est défini en utilisant le nom d'un curseur local, d'un curseur global ou d'une variable de curseur. Le paramètre est de type **nvarchar (30)**.  
   
- [ @cursor_identity= ] N'*local_cursor_name*']  
+ [ @cursor_identity =] N'*local_cursor_name*']  
  Nom d'un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé LOCAL, soit celui défini par défaut pour LOCAL. *local_cursor_name* est **de type nvarchar (128)**.  
   
- [ @cursor_identity= ] N'*global_cursor_name*']  
+ [ @cursor_identity =] N'*global_cursor_name*']  
  Nom d’un curseur créé par une instruction DECLARE CURSOR qui possède soit le mot clé GLOBAL, soit celui défini par défaut sur GLOBAL. *global_cursor_name* est **de type nvarchar (128)**.  
   
  *global_cursor_name* peut également être le nom d’un curseur côté serveur d’API ouvert par une application ODBC nommée en appelant SQLSetCursorName.  
   
- [ @cursor_identity= ] N'*input_cursor_variable*']  
+ [ @cursor_identity =] N'*input_cursor_variable*']  
  Nom d'une variable de curseur associée à un curseur ouvert. *input_cursor_variable* est **de type nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  None  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
- sp_describe_cursor encapsule son jeu de résultats dans [!INCLUDE[tsql](../../includes/tsql-md.md)] un paramètre de sortie de **curseur** . Cela permet aux lots, procédures stockées et déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] de travailler sur une seule ligne de sortie à la fois. Cela signifie également que la procédure ne peut pas être appelée directement à partir des fonctions API de base de données. Le paramètre de sortie **Cursor** doit être lié à une variable de programme, mais les API de base de données ne prennent pas en charge la liaison de paramètres ou de variables de **curseur** .  
+ sp_describe_cursor encapsule son jeu de résultats dans un paramètre de sortie de [!INCLUDE[tsql](../../includes/tsql-md.md)] **curseur** . Cela permet aux lots, procédures stockées et déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] de travailler sur une seule ligne de sortie à la fois. Cela signifie également que la procédure ne peut pas être appelée directement à partir des fonctions API de base de données. Le paramètre de sortie **Cursor** doit être lié à une variable de programme, mais les API de base de données ne prennent pas en charge la liaison de paramètres ou de variables de **curseur** .  
   
  La table suivante indique le format du curseur qui est retourné en utilisant sp_describe_cursor. C'est le même format que celui qui est retourné par sp_cursor_list.  
   

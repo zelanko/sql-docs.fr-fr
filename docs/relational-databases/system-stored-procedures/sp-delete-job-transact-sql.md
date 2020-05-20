@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 53bb2daacf55bf86693f2e083262083d7cbff22b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72306273"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831241"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 `[ @delete_history = ] delete_history`Spécifie s’il faut supprimer l’historique du travail. *delete_history* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_history* est **1**, l’historique des travaux du travail est supprimé. Lorsque *delete_history* a la **valeur 0**, l’historique des travaux n’est pas supprimé.  
   
- Notez que lorsqu’un travail est supprimé et que l’historique n’est pas supprimé, les informations d’historique du travail ne s' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affichent pas dans l’historique des travaux de l’interface graphique de l’agent, mais les informations se trouvent toujours dans la table **sysjobhistory** de la base de données **msdb** .  
+ Notez que lorsqu’un travail est supprimé et que l’historique n’est pas supprimé, les informations d’historique du travail ne s’affichent pas dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] historique des travaux de l’interface graphique de l’agent, mais les informations se trouvent toujours dans la table **sysjobhistory** de la base de données **msdb** .  
   
 `[ @delete_unused_schedule = ] delete_unused_schedule`Spécifie s’il faut supprimer les planifications attachées à ce travail s’ils ne sont attachés à aucun autre travail. *delete_unused_schedule* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_unused_schedule* a la valeur **1**, les planifications associées à ce travail sont supprimées si aucune autre tâche ne fait référence à la planification. Lorsque *delete_unused_schedule* a la **valeur 0**, les planifications ne sont pas supprimées.  
   
@@ -64,9 +64,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="remarks"></a>Notes  
- L’argument ** \@originating_server** est réservé à un usage interne.  
+ L’argument ** \@ originating_server** est réservé à un usage interne.  
   
- L' ** \@argument delete_unused_schedule** fournit une compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont associées à aucun travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas attachées à un travail, vous devez fournir la valeur **0** comme argument ** \@delete_unused_schedule** .  
+ L’argument ** \@ delete_unused_schedule** fournit une compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont associées à aucun travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas attachées à un travail, vous devez fournir la valeur **0** comme argument ** \@ delete_unused_schedule** .  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   

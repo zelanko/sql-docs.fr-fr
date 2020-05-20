@@ -16,14 +16,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942284"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830396"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Plusieurs appels de cette procédure stockée peuvent être exécutés simultan�
 
 En raison des opérations en 2 phases, la procédure stockée doit être exécutée deux fois pour supprimer les fichiers FILESTREAM sous-jacents.  
 
-Le garbage collection (GC) s’appuie sur la troncation du journal. Par conséquent, si des fichiers ont été supprimés récemment sur une base de données à l’aide du mode de récupération complète, ils sont GC uniquement après une sauvegarde de fichier journal de ces portions du journal des transactions et la partie du journal est marquée comme inactive. Sur une base de données utilisant le mode de récupération simple, une troncation `CHECKPOINT` du journal se produit après l’émission d’un sur la base de données.  
+Le garbage collection (GC) s’appuie sur la troncation du journal. Par conséquent, si des fichiers ont été supprimés récemment sur une base de données à l’aide du mode de récupération complète, ils sont GC uniquement après une sauvegarde de fichier journal de ces portions du journal des transactions et la partie du journal est marquée comme inactive. Sur une base de données utilisant le mode de récupération simple, une troncation du journal se produit après `CHECKPOINT` l’émission d’un sur la base de données.  
 
 
 ## <a name="permissions"></a>Autorisations  
@@ -88,7 +88,7 @@ Le garbage collection (GC) s’appuie sur la troncation du journal. Par conséqu
 ## <a name="examples"></a>Exemples  
  Les exemples suivants exécutent le garbage collector pour les conteneurs FILESTREAM dans la base de données `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>A. Absence de spécification d'un conteneur  
+### <a name="a-specifying-no-container"></a>R. Absence de spécification d'un conteneur  
   
 ```sql  
 USE FSDB;  

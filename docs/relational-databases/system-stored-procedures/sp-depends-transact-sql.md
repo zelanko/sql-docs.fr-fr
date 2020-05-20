@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053103"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830229"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +63,17 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_depends** affiche deux jeux de résultats.  
   
- Le jeu de résultats suivant affiche les objets dont dépend l' * \<objet>* .  
+ Le jeu de résultats suivant affiche les objets dont dépend l' * \< objet>* .  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
 |**type**|**nvarchar (16)**|Type de l’élément.|  
-|**mettre**|**nvarchar (7)**|Indique si l'élément est mis à jour.|  
-|**activé**|**nvarchar(8)**|Indique si l'objet est utilisé dans une instruction SELECT.|  
-|**chronique**|**sysname**|Colonne ou paramètre sur lequel repose la dépendance.|  
+|**date de mise à jour**|**nvarchar (7)**|Indique si l'élément est mis à jour.|  
+|**sélectionné**|**nvarchar(8)**|Indique si l'objet est utilisé dans une instruction SELECT.|  
+|**column**|**sysname**|Colonne ou paramètre sur lequel repose la dépendance.|  
   
- Le jeu de résultats suivant affiche les objets qui dépendent de * \<l’objet>*.  
+ Le jeu de résultats suivant affiche les objets qui dépendent de l' * \< objet>*.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

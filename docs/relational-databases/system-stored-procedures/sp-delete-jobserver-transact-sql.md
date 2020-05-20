@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4499183a8cf5019fe7a4ce10bdb9ffc83726551a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130637"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831198"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Pour exécuter cette procédure stockée, les utilisateurs doivent être membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant supprime le serveur `SEATTLE2` du traitement du `Weekly Sales Backups`travail.  
+ L’exemple suivant supprime le serveur du `SEATTLE2` traitement du `Weekly Sales Backups` travail.  
   
 > [!NOTE]  
 >  Cet exemple suppose la création préalable du travail `Weekly Sales Backups`.  

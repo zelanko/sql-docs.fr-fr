@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108511"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831783"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  :   Si aucune ligne n'est retournée, le contenu de la mémoire tampon reste inchangé.  
   
-|*\<>rowNum*|Paramètre à définir sur |  
+|*\<>rowNum*|Définir sur|  
 |------------------|------------|  
 |Si le curseur n'est pas ouvert|0|  
 |Si le curseur est positionné avant le jeu de résultats|0|  
@@ -90,7 +90,7 @@ sp_cursorfetch cursor
 |Pour les curseurs DYNAMIC|1|  
 |Pour ABSOLUTE|-1 retourne la dernière ligne dans un jeu.<br /><br /> -2 retourne la deuxième à la dernière ligne dans un jeu, et ainsi de suite.<br /><br /> Remarque : si plusieurs lignes sont demandées pour extraction dans ce cas, les deux dernières lignes du jeu de résultats sont retournées.|  
   
-|*\<nrows>*|Paramètre à définir sur |  
+|*\<nrows>*|Définir sur|  
 |-----------------|------------|  
 |Si le curseur n'est pas ouvert|0|  
 |Pour les curseurs KEYSET et STATIC|En général, taille du jeu de clés actuel.<br /><br /> **-m** si le curseur est en création asynchrone avec *m* lignes trouvées à ce point.|  

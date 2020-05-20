@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20967420eeb22a1c6418d06a9be3fc728106c141
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078157"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830996"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`Nom de l’article dans la publication. *article* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @column = ] 'column'`Identifie les colonnes sur lesquelles la partition verticale doit être créée. *Column* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. la *colonne* ne peut pas être NULL lorsque l' *opération* est définie sur **Drop**. Pour exclure des colonnes d’un article, **exécutez sp_mergearticlecolumn** et spécifiez `@operation = N'drop'` la *colonne* et pour chaque colonne à supprimer de l' *article*spécifié.  
+`[ @column = ] 'column'`Identifie les colonnes sur lesquelles la partition verticale doit être créée. *Column* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. la *colonne* ne peut pas être NULL lorsque l' *opération* est définie sur **Drop**. Pour exclure des colonnes d’un article, exécutez **sp_mergearticlecolumn** et spécifiez la *colonne* et `@operation = N'drop'` pour chaque colonne à supprimer de l' *article*spécifié.  
   
 `[ @operation = ] 'operation'`État de la réplication. *operation* est de type **nvarchar (4)**, avec Add comme valeur par défaut. **Ajouter** marque la colonne pour la réplication. **Drop** efface la colonne.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097684"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829597"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Les enregistrements en conflit sont stockés sur le serveur qui est sorti perdant de la résolution du conflit. Vous devez réinitialiser les abonnés existants si vous modifiez cette propriété.|  
 |**compress_snapshot**|**true**|L'instantané se trouvant dans un dossier d'instantané de remplacement est compressé au format CAB. L'instantané se trouvant dans le dossier d'instantané par défaut ne peut pas être compressé. La modification de cette propriété requiert un nouvel instantané.|  
 ||**false**|L'instantané n'est pas compressé par défaut. La modification de cette propriété requiert un nouvel instantané.|  
-|**conflict_logging**|**publication**|Les enregistrements en conflit sont stockés sur le serveur de publication.|  
-||**côté**|Les enregistrements en conflit sont stockés dans l'Abonné à l'origine du conflit. Non pris en [!INCLUDE[ssEW](../../includes/ssew-md.md)] charge pour les abonnés *.*|  
+|**conflict_logging**|**publisher**|Les enregistrements en conflit sont stockés sur le serveur de publication.|  
+||**côté**|Les enregistrements en conflit sont stockés dans l'Abonné à l'origine du conflit. Non pris en charge pour les [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés *.*|  
 ||**versions**|Les enregistrements en conflit sont stockés dans le serveur de publication et l'Abonné.|  
 |**conflict_retention**||**Entier** qui spécifie la période de rétention, en jours, pendant laquelle les conflits sont conservés. La définition de *conflict_retention* sur **0** signifie qu’aucun nettoyage de conflit n’est nécessaire.|  
 |**descriptive**||Description de la publication.|  
@@ -110,7 +110,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Les fichiers d’instantanés sont stockés dans l’autre emplacement spécifié par *alt_snapshot_folder*. Cette combinaison indique que les fichiers d'instantané sont stockés dans les emplacements par défaut et de remplacement.|  
 |**snapshot_ready**|**true**|L'instantané de la publication est disponible.|  
 ||**false**|L'instantané de la publication n'est pas disponible.|  
-|**statut**|**proactive**|La publication est dans un état actif.|  
+|**statut**|**active**|La publication est dans un état actif.|  
 ||**inactive**|La publication est dans un état inactif.|  
 |**sync_mode**|**natif** ou<br /><br /> **BCP natif**|La sortie programme de la copie en bloc en mode natif de toutes les tables est utilisée pour l'instantané initial.|  
 ||**symbole**<br /><br /> ou **caractère BCP**|La sortie programme de la copie en bloc en mode caractère de toutes les tables est utilisée pour l'instantané initial, ce qui est requis pour tous les Abonnés non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -139,7 +139,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_changemergepublication** est utilisé dans la réplication de fusion.  
   
  La modification des propriétés suivantes requiert qu'un nouvel instantané soit généré. Vous devez spécifier la valeur **1** pour le paramètre *force_invalidate_snapshot* .  
@@ -178,7 +178,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- Pour répertorier les objets de publication à Active Directory *publish_to_active_directory*à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’publish_to_Active_Directory, l’objet doit déjà être créé dans Active Directory.  
+ Pour répertorier les objets de publication à Active Directory à l’aide de l' *publish_to_Active_Directory*, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet doit déjà être créé dans Active Directory.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  

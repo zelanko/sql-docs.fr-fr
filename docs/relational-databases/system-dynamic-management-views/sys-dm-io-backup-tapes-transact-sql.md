@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98902f096bb960436d764416e2563af5056f00dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874152"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830531"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "70874152"
 |**media_sequence_number**|**int**|Index du volume au sein d’une famille de supports (1...* n*). Autorise la valeur NULL.|  
 |**tape_operation**|**int**|Opération sur bande en cours d’exécution :<br /><br /> 1 = Lecture<br /><br /> 2 = Formatage<br /><br /> 3 = Initialisation<br /><br /> 4 = Ajout<br /><br /> Autorise la valeur NULL.|  
 |**tape_operation_desc**|**nvarchar(120)**|Opération en cours sur la bande :<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> APPEND<br /><br /> Autorise la valeur NULL.|  
-|**mount_request_type**|**int**|Type de la demande de montage :<br /><br /> 1 = Bande spécifique. La bande identifiée par les champs **media_\* ** est requise.<br /><br /> 2 = Famille de supports suivante. Demande la famille de supports non encore restaurée suivante. S'utilise lorsque la restauration s'effectue à partir d'un nombre de périphériques inférieur au nombre de familles de supports.<br /><br /> 3 = Bandes magnétiques de sauvegarde consécutives. La famille de supports est étendue et il faut ajouter une bande consécutive.<br /><br /> Autorise la valeur NULL.|  
+|**mount_request_type**|**int**|Type de la demande de montage :<br /><br /> 1 = Bande spécifique. La bande identifiée par les champs **media_ \* ** est requise.<br /><br /> 2 = Famille de supports suivante. Demande la famille de supports non encore restaurée suivante. S'utilise lorsque la restauration s'effectue à partir d'un nombre de périphériques inférieur au nombre de familles de supports.<br /><br /> 3 = Bandes magnétiques de sauvegarde consécutives. La famille de supports est étendue et il faut ajouter une bande consécutive.<br /><br /> Autorise la valeur NULL.|  
 |**mount_request_type_desc**|**nvarchar(120)**|Type de la demande de montage :<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Autorise la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

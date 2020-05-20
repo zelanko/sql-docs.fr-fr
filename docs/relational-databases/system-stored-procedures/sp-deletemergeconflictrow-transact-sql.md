@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111959"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830276"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @conflict_table = ] 'conflict_table'`Nom de la table de conflits. *conflict_table* est de **%** **type sysname**, avec la valeur par défaut. Si le *conflict_table* est spécifié comme null ou **%**, il est supposé qu’il s’agit d’un conflit de suppression et que la ligne qui correspond à *rowguid* et à *origin_datasource* et à *Source_object* est supprimée de la table [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
+`[ @conflict_table = ] 'conflict_table'`Nom de la table de conflits. *conflict_table* est de **type sysname**, avec la valeur par défaut **%** . Si le *conflict_table* est spécifié comme null ou **%** , il est supposé qu’il s’agit d’un conflit de suppression et que la ligne qui correspond à *rowguid* et à *origin_datasource* et à *source_object* est supprimée de la table [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
   
 `[ @source_object = ] 'source_object'`Nom de la table source. *source_object* est de type **nvarchar (386)**, avec NULL comme valeur par défaut.  
   
