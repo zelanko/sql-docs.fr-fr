@@ -58,7 +58,7 @@ Pour définir la propriété :
 
 1. Ouvrez SQL Server Data Tools (SSDT).
 1. Dans la zone **Gestionnaires de connexions**, cliquez avec le bouton droit sur **Gestionnaire de connexions Teradata**, puis sélectionnez **Propriétés**.
-1. Dans le volet **Propriétés**, sélectionnez `UseUTF8CharSet`Vrai*ou*Faux*pour la propriété*.
+1. Dans le volet **Propriétés**, sélectionnez *Vrai* ou *Faux* pour la propriété `UseUTF8CharSet`.
 
 ## <a name="troubleshoot-the-teradata-connection-manager"></a>Résoudre les problèmes liés au gestionnaire de connexions Teradata
 

@@ -85,7 +85,7 @@ Vous créez un groupe de disponibilité par amorçage automatique avec Transact-
 
 ![Sélectionner la synchronisation de données initiale][1]
 
-L’exemple suivant crée un groupe de disponibilité avec amorçage automatique à l’aide de Transact-SQL. Consultez aussi la rubrique [Créer un groupe de disponibilité (Transact-SQL)](create-an-availability-group-transact-sql.md). L’amorçage est activé sur un réplica secondaire en affectant la valeur `SEEDING_MODE` à l’option `AUTOMATIC`. Le comportement par défaut est `MANUAL`, qui est le comportement des versions antérieures à SQL Server 2016 nécessitant la réalisation d’une sauvegarde de la base de données sur le réplica principal, la copie du fichier de sauvegarde sur le réplica secondaire et la restauration de la sauvegarde `WITH NORECOVERY`.
+L’exemple suivant crée un groupe de disponibilité avec amorçage automatique à l’aide de Transact-SQL. Consultez aussi la rubrique [Créer un groupe de disponibilité (Transact-SQL)](create-an-availability-group-transact-sql.md). L’amorçage est activé sur un réplica secondaire en affectant la valeur `AUTOMATIC` à l’option `SEEDING_MODE`. Le comportement par défaut est `MANUAL`, qui est le comportement des versions antérieures à SQL Server 2016 nécessitant la réalisation d’une sauvegarde de la base de données sur le réplica principal, la copie du fichier de sauvegarde sur le réplica secondaire et la restauration de la sauvegarde `WITH NORECOVERY`.
 
 ```sql
 CREATE AVAILABILITY GROUP [<AGName>]
