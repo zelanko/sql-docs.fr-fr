@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815750"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922012"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On (SQL Server)
   Le modèle d'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] évalue un ensemble de stratégies de gestion basées sur des stratégies prédéfinies. Vous pouvez les utiliser pour afficher l'intégrité d'un groupe de disponibilité AlwaysOn et de ses réplicas de disponibilité et bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -86,7 +86,7 @@ ms.locfileid: "62815750"
   
  Une stratégie définie par l'utilisateur peut utiliser les facettes PBM disponibles, notamment celles utilisées par les stratégies prédéfinies AlwaysOn (consultez [Stratégies prédéfinies et problèmes rencontrés](#AlwaysOnPBM), précédemment dans cette rubrique). La facette serveur fournit les propriétés suivantes pour la surveillance de l'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] :  (`IsHadrEnabled` et `HadrManagerStatus`). La facette serveur fournit également les propriétés des stratégies suivantes pour la surveillance de la configuration du cluster WSFC : `ClusterQuorumType` et `ClusterQuorumState`.  
   
- Pour plus d'informations, consultez [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (blog de l'équipe de SQL Server AlwaysOn).  
+ Pour plus d'informations, consultez [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (blog de l'équipe de SQL Server AlwaysOn).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62815750"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
--   [Modèle d'intégrité AlwaysOn Partie 1 -- Architecture du modèle d'intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Modèle d'intégrité AlwaysOn Partie 1 -- Architecture du modèle d'intégrité](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
 -   [Guide de solutions Microsoft SQL Server AlwaysOn pour la haute disponibilité et la récupération d'urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

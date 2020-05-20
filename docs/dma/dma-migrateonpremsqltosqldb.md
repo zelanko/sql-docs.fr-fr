@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056613"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885926"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrer des SQL Server locaux ou des SQL Server sur des machines virtuelles Azure vers Azure SQL Database à l’aide de la Assistant Migration de données
 
@@ -120,6 +120,6 @@ Le dernier écran montre l’état global.
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Assistant Migration de données (DMA)](../dma/dma-overview.md)
+* [Assistant Migration de données (DMA)](../dma/dma-overview.md)
 * [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)
 * [Assistant Migration de données : meilleures pratiques](../dma/dma-bestpractices.md)

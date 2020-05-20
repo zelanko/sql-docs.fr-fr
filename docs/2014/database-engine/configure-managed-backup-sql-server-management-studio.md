@@ -1,5 +1,6 @@
 ---
 title: Configurer la sauvegarde managée (SQL Server Management Studio) | Microsoft Docs
+description: Utilisez la boîte de dialogue sauvegarde managée pour configurer le paramètre SQL Server sauvegarde managée sur Azure par défaut. En savoir plus sur les options que vous devez prendre en compte.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
@@ -12,12 +13,12 @@ ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154342"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849437"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configuration de la sauvegarde managée (SQL Server Management Studio)
   La boîte de dialogue **sauvegarde managée** permet de configurer les valeurs [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] par défaut pour l'instance. Cette rubrique explique comment utiliser cette boîte de dialogue pour configurer les paramètres [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] par défaut de l'instance et les options à prendre en compte. Lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est configuré pour l'instance, les paramètres sont appliqués aux nouvelles bases de données créées par la suite.  
@@ -68,17 +69,17 @@ ms.locfileid: "70154342"
   
  Spécifiez l' **URL de stockage** pour le compte de stockage Azure, les informations d’identification SQL qui stockent les informations d’authentification pour le compte de stockage et la période de rétention pour les fichiers de sauvegarde.  
   
- Le format de l’URL de stockage\<est : https://StorageAccount>. blob.Core.Windows.net/  
+ Le format de l’URL de stockage est : https:// \< StorageAccount>. blob.Core.Windows.net/  
   
  Pour définir les paramètres de chiffrement au niveau de l'instance, cochez l’option **Chiffrement de la sauvegarde** et spécifiez l'algorithme de chiffrement et le certificat ou la clé asymétrique à utiliser pour le chiffrement.  Cette valeur définie au niveau de l'instance est utilisée pour toutes les nouvelles bases de données créées une fois cette configuration appliquée.  
   
 > [!WARNING]  
 >  Cette boîte de dialogue ne peut pas être utilisée pour spécifier les options de chiffrement sans configuration de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Ces options de chiffrement s'appliquent uniquement aux opérations [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Pour utiliser le chiffrement pour d’autres procédures de sauvegarde, consultez [chiffrement](../relational-databases/backup-restore/backup-encryption.md)de la sauvegarde.  
   
-### <a name="considerations"></a>Éléments à prendre en considération  
+### <a name="considerations"></a>Considérations  
  Si vous configurez [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de l'instance, les paramètres sont appliqués aux nouvelles bases de données créées par la suite.  Toutefois, une base de données existante n’hérite pas automatiquement de ces paramètres. Pour configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur des bases de données existantes, vous devez configurer spécifiquement chaque base de données. Pour plus d’informations, consultez [activer et configurer SQL Server sauvegarde managée sur Azure pour une base de données](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
   
- Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a été suspendu à l’aide `smart_admin.sp_backup_master_switch`de, vous verrez un message d’avertissement « la sauvegarde managée est désactivée et les configurations actuelles ne prendront pas effet... » Lorsque vous essayez d’effectuer la configuration. Utilisez le `smart_admin.sp_backup_master_switch` stocké et définissez @new_state= 1. Cela relance les services [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] et les paramètres de configuration prennent effet. Pour plus d’informations sur la procédure stockée, consultez [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
+ Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a été suspendu à l’aide de `smart_admin.sp_backup_master_switch` , vous verrez un message d’avertissement « la sauvegarde managée est désactivée et les configurations actuelles ne prendront pas effet... » Lorsque vous essayez d’effectuer la configuration. Utilisez le `smart_admin.sp_backup_master_switch` stocké et définissez @new_state = 1. Cela relance les services [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] et les paramètres de configuration prennent effet. Pour plus d’informations sur la procédure stockée, consultez [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sauvegarde managée SQL Server sur Azure : Interopérabilité et coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002641"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834451"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **%** **type sysname**, avec la valeur par défaut. La publication doit déjà exister et se conformer aux règles applicables aux identificateurs. Si la valeur **%** est null ou, des informations sur toutes les publications de fusion et les abonnements de la base de données en cours sont retournées.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** . La publication doit déjà exister et se conformer aux règles applicables aux identificateurs. Si la valeur **%** est null ou, des informations sur toutes les publications de fusion et les abonnements de la base de données en cours sont retournées.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de **%** **type sysname**, avec la valeur par défaut. Si le paramètre a la valeur NULL ou %, des informations sur tous les abonnements à la publication donnée sont renvoyées.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de **type sysname**, avec la valeur par défaut **%** . Si le paramètre a la valeur NULL ou %, des informations sur tous les abonnements à la publication donnée sont renvoyées.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db*est de **type sysname**, avec la **%** valeur par défaut, qui retourne des informations sur toutes les bases de données d’abonnement.  
+`[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db*est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur toutes les bases de données d’abonnement.  
   
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. Le serveur de publication doit être un serveur valide. *Publisher*est de **type sysname**, avec **%** la valeur par défaut, qui retourne des informations sur tous les serveurs de publication.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. Le serveur de publication doit être un serveur valide. *Publisher*est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les serveurs de publication.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db*est de **type sysname**, avec la **%** valeur par défaut, qui retourne des informations sur toutes les bases de données du serveur de publication.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db*est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur toutes les bases de données du serveur de publication.  
   
 `[ @subscription_type = ] 'subscription_type'`Type d’abonnement. *subscription_type*est de type **nvarchar (15)** et peut prendre l’une des valeurs suivantes.  
   
@@ -69,7 +69,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Nom de l'abonnement.|  
 |**édition**|**sysname**|Nom de la publication.|  
-|**publication**|**sysname**|Nom du serveur de publication.|  
+|**publisher**|**sysname**|Nom du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**subscriber_db**|**sysname**|Nom de la base de données d'abonnement.|  
@@ -85,9 +85,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_server**|**sysname**|Nom du serveur sur lequel s'exécute l'Agent.|  
 |**use_interactive_resolver**|**int**|Indique si le composant résolveur interactif est utilisé ou non au cours de la réconciliation. Si la **valeur est 0**, le programme de résolution interactif n’est pas utilisé.|  
 |**hostname**|**sysname**|Valeur fournie lorsqu’un abonnement est filtré par la valeur de la fonction [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
-|**subscriber_security_mode**|**smallint**|Est le mode de sécurité de l’abonné, où **1** correspond à l’authentification Windows et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** à l’authentification.|  
+|**subscriber_security_mode**|**smallint**|Est le mode de sécurité de l’abonné, où **1** correspond à l’authentification Windows et **0** à l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.|  
 |**subscriber_login**|**sysname**|Nom de connexion sur l'Abonné.|  
-|**subscriber_password**|**sysname**|Le mot de passe réel de l'Abonné n'est jamais renvoyé. Le résultat est masqué par une chaîne «**\*\*\*\*\***».|  
+|**subscriber_password**|**sysname**|Le mot de passe réel de l'Abonné n'est jamais renvoyé. Le résultat est masqué par une chaîne « **\*\*\*\*\*\*** ».|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

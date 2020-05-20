@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 00d27decc533d33056a7cc0cb19c2584fea564fb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056535"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885867"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Mettre à niveau SQL Server à l’aide de la Assistant Migration de données
 
@@ -109,6 +109,6 @@ Vous pouvez surveiller la progression de la migration dans la page **afficher le
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Assistant Migration de données (DMA)](../dma/dma-overview.md)
+- [Assistant Migration de données (DMA)](../dma/dma-overview.md)
 - [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)
 - [Assistant Migration de données : meilleures pratiques](../dma/dma-bestpractices.md)

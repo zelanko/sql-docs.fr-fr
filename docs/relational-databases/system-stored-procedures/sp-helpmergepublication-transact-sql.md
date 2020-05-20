@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137651"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834474"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Arguments  
  [ @publication **=** ] **«**_publication_**»**  
- Nom de la publication. *publication*est de **type sysname**, avec la **%** valeur par défaut, qui retourne des informations sur toutes les publications de fusion dans la base de données active.  
+ Nom de la publication. *publication*est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur toutes les publications de fusion dans la base de données active.  
   
- sortie @found **=** de [] *****trouvée*****  
+ sortie de [ @found **=** ] *****trouvée*****  
  Indicateur qui signale le retour de lignes. *valeur*de **type int** et paramètre de sortie, avec NULL comme valeur par défaut. **1** indique que la publication est trouvée. **0** indique que la publication est introuvable.  
   
- sortie @publication_id **=** de [] **'***publication_id***'**  
+ sortie de [ @publication_id **=** ] **'***publication_id***'**  
  Numéro d'identification de la publication. *publication_id* est de type **uniqueidentifier** et un paramètre OUTPUT, avec NULL comme valeur par défaut.  
   
- [ @reserved **=**] **'***reserved***'**  
+ [ @reserved **=** ] **'***reserved***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*reserved* est de type **nvarchar (20)**, avec NULL comme valeur par défaut.  
   
  [ @publisher **=** ] **« serveur de***publication***»**  
  Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [ @publisher_db **=** ] **'***publisher_db***'**  
  Nom de la base de données de publication. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -79,14 +79,14 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |publication_type|**int**|Type de publication :<br /><br /> **0** = instantané.<br /><br /> **1** = transactionnelle.<br /><br /> **2** = fusion.|  
 |pubid|**uniqueidentifier**|Identificateur unique de la publication.|  
 |snapshot_jobid|**Binary(16**|ID de travail de l'Agent d'instantané. Pour obtenir l’entrée pour le travail d’instantané dans la table système [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) , vous devez convertir cette valeur hexadécimale en **uniqueidentifier**.|  
-|enabled_for_internet|**int**|Détermine si la publication est activée pour Internet. Si la condition est **1**, les fichiers de synchronisation de la publication `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` sont placés dans le répertoire. L'utilisateur doit créer le répertoire FTP (File Transfer Protocol). Si la **valeur est 0**, la publication n’est pas activée pour l’accès Internet.|  
+|enabled_for_internet|**int**|Détermine si la publication est activée pour Internet. Si la condition est **1**, les fichiers de synchronisation de la publication sont placés dans le `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` répertoire. L'utilisateur doit créer le répertoire FTP (File Transfer Protocol). Si la **valeur est 0**, la publication n’est pas activée pour l’accès Internet.|  
 |dynamic_filter|**int**|Indique si un filtre de lignes paramétrable est utilisé. **0** signifie qu’un filtre de lignes paramétrable n’est pas utilisé.|  
 |has_subscription|**bit**|Indique si la publication comporte des abonnements. **0** signifie qu’il n’y a actuellement aucun abonnement à cette publication.|  
 |snapshot_in_default_folder|**bit**|Spécifie si les fichiers d’instantanés sont stockés dans le dossier par défaut.<br /><br /> Si la valeur est **1**, les fichiers d’instantanés se trouvent dans le dossier par défaut.<br /><br /> Si la **valeur est 0**, les fichiers d’instantané sont stockés à l’emplacement secondaire spécifié par **alt_snapshot_folder**. Les emplacements secondaires peuvent se trouver sur un autre serveur, un lecteur réseau ou un support amovible (tel qu'un CD-ROM ou des disques amovibles). Vous pouvez également enregistrer les fichiers d'instantané sur un site FTP, pour permettre à l'Abonné de les extraire plus tard.<br /><br /> Remarque : ce paramètre peut avoir la valeur true et disposer toujours d’un emplacement dans le paramètre **alt_snapshot_folder** . Cette combinaison spécifie que les fichiers d'instantané sont stockés à la fois dans l'emplacement par défaut et dans l'emplacement secondaire.|  
 |alt_snapshot_folder|**nvarchar(255)**|Indique l'emplacement du dossier de remplacement pour l'instantané.|  
 |pre_snapshot_script|**nvarchar(255)**|Spécifie un pointeur vers un fichier **. SQL** que le agent de fusion exécute avant tout script d’objet répliqué lors de l’application de l’instantané sur un abonné.|  
 |post_snapshot_script|**nvarchar(255)**|Spécifie un pointeur vers un fichier **. SQL** que le agent de fusion exécute une fois que tous les autres scripts et données d’objet répliqués ont été appliqués lors d’une synchronisation initiale.|  
-|compress_snapshot|**bit**|Spécifie que l’instantané écrit dans le **alt_snapshot_folder** emplacement est compressé au format [!INCLUDE[msCoName](../../includes/msconame-md.md)] cab.|  
+|compress_snapshot|**bit**|Spécifie que l’instantané écrit dans le **alt_snapshot_folder** emplacement est compressé au [!INCLUDE[msCoName](../../includes/msconame-md.md)] format cab.|  
 |ftp_address|**sysname**|Adresse réseau du service FTP du serveur de distribution. Spécifie l'emplacement à partir duquel l'Agent fusion peut extraire les fichiers d'instantané de la publication.|  
 |ftp_port|**int**|Numéro de port du service FTP du serveur de distribution. **ftp_port** a la valeur par défaut **21**. Spécifie l'emplacement où l'Agent de fusion peut accéder aux fichiers d'instantané de la publication.|  
 |ftp_subdirectory|**nvarchar(255)**|Spécifie l'emplacement où l'Agent de fusion peut accéder aux fichiers d'instantanés lorsque l'instantané est envoyé via FTP.|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Spécifie si la possibilité de copier les bases de données d'abonnement qui s'abonnent à cette publication a été activée. La valeur **0** signifie que la copie n’est pas autorisée.|  
 |allow_synctoalternate|**int**|Spécifie si un partenaire de synchronisation différent est autorisé pour se synchroniser avec le serveur de publication. La valeur **0** signifie qu’un partenaire de synchronisation n’est pas autorisé.|  
 |validate_subscriber_info|**nvarchar (500)**|Donne la liste des fonctions utilisées pour extraire les informations d'Abonné et valider les critères de filtre de lignes paramétrable sur l'Abonné. Permet de vérifier la cohérence du partitionnement des informations avec chaque fusion.|  
-|backward_comp_level|**int**|Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Spécifie si les informations de publication sont publiées dans Active Directory. La valeur **0** signifie que les informations de publication ne sont pas disponibles à partir de Active Directory.<br /><br /> Ce paramètre est déconseillé et il n'est pris en charge que pour la compatibilité descendante des scripts. Vous ne pouvez plus ajouter d'informations de publication dans Active Directory.|  
 |max_concurrent_merge|**int**|Nombre de processus de fusion simultanés. Si la **valeur est 0**, il n’y a aucune limite au nombre de processus de fusion simultanés en cours d’exécution à un moment donné.|  
 |max_concurrent_dynamic_snapshots|**int**|Nombre maximal de sessions d'instantané filtrée pouvant être exécutées simultanément par rapport à la publication de fusion. Si la **valeur est 0**, le nombre maximal de sessions d’instantanés de données filtrées simultanées pouvant être exécutées simultanément sur la publication n’est pas limité à un moment donné.|  
@@ -123,10 +123,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Autorisations  
  Les membres de la liste d'accès à la publication d'une publication peuvent exécuter sp_helpmergepublication pour cette publication. Les membres du rôle de base de données fixe db_owner de la base de données de publication peuvent exécuter sp_helpmergepublication pour obtenir des informations sur toutes les publications.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  [!code-sql[HowTo#sp_helpmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-helpmergepublication-_1.sql)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   

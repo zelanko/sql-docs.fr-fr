@@ -10,17 +10,17 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175457"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922069"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Leçon 7 : Déplacer vos fichiers de données dans le Stockage Azure
   Dans cette leçon, vous allez apprendre à déplacer vos fichiers de données vers le stockage Azure (mais pas votre instance SQL Server). Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5 et 6.  
   
- Pour déplacer vos fichiers de données vers le stockage Azure, vous pouvez `ALTER DATABASE` utiliser l’instruction, car elle permet de modifier l’emplacement des fichiers de données.  
+ Pour déplacer vos fichiers de données vers le stockage Azure, vous pouvez utiliser l' `ALTER DATABASE` instruction, car elle permet de modifier l’emplacement des fichiers de données.  
   
  Cette leçon suppose que vous avez déjà effectué les étapes suivantes :  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70175457"
   
     ```  
   
-5.  À présent, vous devez copier les fichiers de données vers le stockage Azure à l’aide de l’une des méthodes suivantes : [outil AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [page put](https://msdn.microsoft.com/library/azure/ee691975.aspx), référence de la [bibliothèque cliente de stockage](https://msdn.microsoft.com/library/azure/dn261237.aspx)ou outil d’exploration de stockage tiers.  
+5.  À présent, vous devez copier les fichiers de données vers le stockage Azure à l’aide de l’une des méthodes suivantes : [outil AzCopy](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs), [page put](https://msdn.microsoft.com/library/azure/ee691975.aspx), référence de la [bibliothèque cliente de stockage](https://msdn.microsoft.com/library/azure/dn261237.aspx)ou outil d’exploration de stockage tiers.  
   
      **Important :** Lorsque vous utilisez cette nouvelle amélioration, veillez toujours à créer un objet blob de pages et non un objet blob de blocs.  
   

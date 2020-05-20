@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3498032da616658785d2ff33262ed57fa5736f1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228181"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921833"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Surveiller et dépanner la fusion de paires de fichiers de données et de fichiers delta
   L'OLTP en mémoire utilise une stratégie de fusion pour fusionner des paires de fichiers de données et delta automatiquement. Vous ne pouvez pas désactiver l'activité de fusion.  
@@ -47,7 +47,7 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  Supposez que les trois paires de fichiers de données et delta comportent chacune 15 836 lignes et 5 279 lignes supprimées. Une fois la fusion terminée, le nouveau fichier de données contient 31 872 lignes et 0 ligne supprimée. La taille du nouveau fichier de données peut être beaucoup plus volumineuse que la taille initialement allouée de 128 Mo. Cela est dû au fait que la fusion manuelle remplace la stratégie de fusion et force la fusion des fichiers demandés.  
   
- La [transition de l’état du blog des fichiers de point de contrôle dans les bases de données avec des tables mémoire optimisées](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) décrit la transition d’état des paires de fichiers de données et Delta de la création à la garbage collection.  
+ La [transition de l’état du blog des fichiers de point de contrôle dans les bases de données avec des tables mémoire optimisées](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/) décrit la transition d’état des paires de fichiers de données et Delta de la création à la garbage collection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création et gestion du stockage des objets mémoire optimisés](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

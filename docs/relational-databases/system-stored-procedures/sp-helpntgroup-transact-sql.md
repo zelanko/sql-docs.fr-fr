@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fcc4a42307ccb11923460bb9c01c5cf7bdd8f8df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 76da15896b5947d0fb66c717fcaeadcab045326e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133678"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834430"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**HasDbAccess**|**int**|1 = le groupe Windows a une autorisation d'accès à la base de données.|  
   
 ## <a name="remarks"></a>Notes  
- Pour afficher la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liste des rôles dans la base de données active, utilisez **sp_helprole**.  
+ Pour afficher la liste des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôles dans la base de données active, utilisez **sp_helprole**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  

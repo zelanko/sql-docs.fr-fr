@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf93b6f3045a9eb48c64e50c789e0ce79dec7f4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771504"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834401"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>Arguments  
 `[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être utilisé lors de l’ajout [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un article à un serveur de publication.  
+>  l' *éditeur* ne doit pas être utilisé lors de l’ajout d’un article à un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -51,12 +51,12 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID de l'Agent d'instantané|  
 |**name**|**nvarchar(100**|Nom de l'Agent d'instantané|  
-|**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion au serveur de publication. Il peut prendre l'une des valeurs suivantes :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows.|  
+|**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion au serveur de publication. Il peut prendre l'une des valeurs suivantes :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows.|  
 |**publisher_login**|**sysname**|Nom de connexion utilisé lors de la connexion au serveur de publication.|  
-|**publisher_password**|**nvarchar (524)**|Pour des raisons de sécurité, la ** \* \* \* \* \* \* \* \* valeur \* ** est toujours retournée.|  
+|**publisher_password**|**nvarchar (524)**|Pour des raisons de sécurité, la valeur **\*\*\*\*\*\*\*\*\*\*** est toujours retournée.|  
 |**job_id**|**uniqueidentifier**|ID unique du travail de l'Agent.|  
-|**job_login**|**nvarchar(512)**|Compte Windows sous lequel l’agent d’instantané s’exécute, qui est retourné au format *domaine*\\*nom d’utilisateur*.|  
-|**job_password**|**sysname**|Pour des raisons de sécurité, la ** \* \* \* \* \* \* \* \* valeur \* ** est toujours retournée.|  
+|**job_login**|**nvarchar(512)**|Compte Windows sous lequel l’agent d’instantané s’exécute, qui est retourné au format *domaine* \\ *nom d’utilisateur*.|  
+|**job_password**|**sysname**|Pour des raisons de sécurité, la valeur **\*\*\*\*\*\*\*\*\*\*** est toujours retournée.|  
 |**schedule_name**|**sysname**|Nom de la planification utilisée pour ce travail d'Agent.|  
 |**frequency_type**|**int**|Fréquence à laquelle l'Agent s'exécute. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = tous les jours<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
 |**frequency_interval**|**int**|Jours d'exécution de l'Agent. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **3** = mardi<br /><br /> **4** = mercredi<br /><br /> **5** = jeudi<br /><br /> **6** = vendredi<br /><br /> **7** = samedi<br /><br /> **8** = jour<br /><br /> **9** = jours de la semaine<br /><br /> **10** = jours de week-end|  

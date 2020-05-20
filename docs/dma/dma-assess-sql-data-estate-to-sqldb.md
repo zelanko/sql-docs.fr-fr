@@ -12,16 +12,16 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253512"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886186"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Évaluer la préparation d’un SQL Server de données qui migrent vers Azure SQL Database à l’aide de la Assistant Migration de données
 
@@ -60,7 +60,7 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
 
     | **Zone géographique**  | **Région de l’emplacement de stockage** |
     | ------------- | ------------- |
-    | Asia | Asie Sud-Est ou Asie Est |
+    | Asie | Asie Sud-Est ou Asie Est |
     | Europe | Europe Sud ou Europe Ouest |
     | Royaume-Uni | Royaume-Uni Sud ou Royaume-Uni Ouest |
     | États-Unis | USA Centre ou USA Ouest 2 |
@@ -84,7 +84,7 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
 
     ![Onglet Azure Migrate-passer en revue + ajouter un ou plusieurs outils](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-tools.png)
 
-    Après avoir créé le projet, vous pouvez sélectionner des outils supplémentaires pour l’évaluation et la migration des serveurs et charges de travail, bases de données et applications Web.
+    Après avoir créé le projet, vous pouvez sélectionner des outils supplémentaires pour l’évaluation et la migration des serveurs, des charges de travail, des bases de données et des applications web.
 
 ## <a name="assess-and-upload-assessment-results"></a>Évaluer et télécharger les résultats de l’évaluation
 
@@ -127,7 +127,7 @@ Une fois que vous avez créé un projet de migration, sous **Outils d’évaluat
    > [!NOTE]
    > Vous pouvez supprimer plusieurs bases de données en les sélectionnant tout en maintenant la touche Maj ou CTRL enfoncée, puis en cliquant sur supprimer les sources. Vous pouvez également ajouter des bases de données à partir de plusieurs instances de SQL Server à l’aide du bouton Ajouter des sources.
 
-4. Sélectionnez **suivant** pour démarrer l’évaluation.
+4. Sélectionnez **Suivant** pour démarrer l’évaluation.
 
    ![Écran de sélection des sources Azure Migrate Assistant Migration de données](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-select-sources-screen.png)
 
@@ -181,6 +181,6 @@ Une fois que vous avez créé un projet de migration, sous **Outils d’évaluat
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Assistant Migration de données (DMA)](../dma/dma-overview.md)
+* [Assistant Migration de données (DMA)](../dma/dma-overview.md)
 * [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)
 * [Assistant Migration de données : meilleures pratiques](../dma/dma-bestpractices.md)

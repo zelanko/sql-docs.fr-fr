@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139896"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834381"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68139896"
 >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
->  Dans certaines conditions, cette procédure stockée peut échouer si l’abonné [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] exécute Service Pack 1 ou version ultérieure, et que le serveur de publication exécute une version antérieure. Si la procédure stockée échoue dans ce scénario, mettez à niveau l'Éditeur vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou version ultérieure.  
+>  Dans certaines conditions, cette procédure stockée peut échouer si l’abonné exécute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou version ultérieure, et que le serveur de publication exécute une version antérieure. Si la procédure stockée échoue dans ce scénario, mettez à niveau l'Éditeur vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou version ultérieure.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification avec la connexion spécifiée dans cette procédure stockée en tant que *connexion* et *mot de passe*.<br /><br /> Remarque : dans les versions précédentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, cette option était utilisée pour spécifier un appel de procédure distante dynamique (RPC).|  
+|**0**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification avec la connexion spécifiée dans cette procédure stockée en tant que *connexion* et *mot de passe*.<br /><br /> Remarque : dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette option était utilisée pour spécifier un appel de procédure distante dynamique (RPC).|  
 |**1**|Utilise le contexte de sécurité (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows) de l'utilisateur apportant la modification sur l'Abonné.<br /><br /> Remarque : ce compte doit également exister sur le serveur de publication avec des privilèges suffisants. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.|  
 |**2**|Utilise une connexion de serveur lié existante, définie par l’utilisateur et créée à l’aide de **sp_link_publication**.|  
   
@@ -79,7 +79,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
  Pour les abonnements par émission de type push, l’entrée peut être nettoyée par [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Pour les abonnements par extraction, l’entrée peut être nettoyée par [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) ou [sp_subscription_cleanup &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Vous pouvez également appeler **sp_link_publication** avec un mot de passe Null pour effacer l’entrée de la table système [MSsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) pour des questions de sécurité.  
   
- Le mode par défaut utilisé par un Abonné de mise à jour immédiate lors de sa connexion au serveur de publication n'autorise pas l'utilisation de l'authentification Windows. La connexion avec un mode d'authentification Windows suppose qu'un serveur lié a été configuré au niveau du serveur de publication, et l'Abonné de mise à jour immédiate doit utiliser cette connexion lors de la mise à jour de l'Abonné. Pour cela, le **sp_link_publication** doit être exécuté avec *security_mode* = **2**. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.  
+ Le mode par défaut utilisé par un Abonné de mise à jour immédiate lors de sa connexion au serveur de publication n'autorise pas l'utilisation de l'authentification Windows. La connexion avec un mode d'authentification Windows suppose qu'un serveur lié a été configuré au niveau du serveur de publication, et l'Abonné de mise à jour immédiate doit utiliser cette connexion lors de la mise à jour de l'Abonné. Pour cela, le **sp_link_publication** doit être exécuté avec *security_mode*  =  **2**. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  

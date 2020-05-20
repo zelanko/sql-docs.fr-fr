@@ -1,5 +1,6 @@
 ---
 title: Surveiller SQL Server sauvegarde gérée sur Azure | Microsoft Docs
+description: Cet article décrit les outils que vous pouvez utiliser pour déterminer l’intégrité globale des sauvegardes à l’aide d’SQL Server sauvegarde gérée sur Azure et identifier les erreurs.
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798038"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849608"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Surveiller la sauvegarde managée de SQL Server vers Azure
   La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] possède des mesures intégrées permettant d'identifier les problèmes et les erreurs pendant les processus de sauvegarde et les corrige lorsque cela est possible.  Toutefois, dans certaines situations, l'intervention de l'utilisateur est requise. Cette rubrique décrit les outils que vous pouvez utiliser pour déterminer l'état d'intégrité général des sauvegardes, et identifier les erreurs qui doivent être corrigées.  
@@ -108,13 +109,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>Nombre agrégé d'erreurs/état d'intégrité  
- La fonction **smart_admin. fn_get_health_status** retourne une table de nombres d’erreurs agrégés pour chaque catégorie qui peut être utilisée pour surveiller l’état d' [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]intégrité de. Cette même fonction est également utilisée par le mécanisme de notification par courrier électronique configuré au niveau du système, décrit plus loin dans cette rubrique.   
+ La fonction **smart_admin. fn_get_health_status** retourne une table de nombres d’erreurs agrégés pour chaque catégorie qui peut être utilisée pour surveiller l’état d’intégrité de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . Cette même fonction est également utilisée par le mécanisme de notification par courrier électronique configuré au niveau du système, décrit plus loin dans cette rubrique.   
 Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou que l'événement ne fonctionne pas correctement. Les colonnes contenant des erreurs peuvent indiquer des problèmes et les journaux des événements étendus doivent être consultés pour en découvrir la cause. Vous pouvez également appeler la procédure stockée **smart_admin. sp_get_backup_diagnostics** pour rechercher les détails de l’erreur.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Utiliser la notification de l'agent pour déterminer l'état de sauvegarde et d'intégrité  
  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] comprend un mécanisme de notification utilisant les stratégies de gestion basées sur la stratégie SQL Server.  
   
- **Conditions préalables**  
+ **Configuration requise :**  
   
 -   Une messagerie de base de données est requise pour utiliser cette fonctionnalité. Pour plus d’informations sur l’activation de la messagerie de base de données pour l’instance de SQL Server, consultez [configurer des Database mail](../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -203,7 +204,7 @@ $policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies
 $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
   
- Le script suivant retourne un rapport détaillé des erreurs et des avertissements pour l’instance par défaut`\SQL\COMPUTER\DEFAULT`() :  
+ Le script suivant retourne un rapport détaillé des erreurs et des avertissements pour l’instance par défaut ( `\SQL\COMPUTER\DEFAULT` ) :  
   
 ```powershell
 (Get-SqlSmartAdmin ).EnumHealthStatus()  
@@ -248,7 +249,7 @@ smart_backup_files;
   
 -   **Échec de la copie-F :** Comme pour la copie en cours, il s’agit de bases de données du groupe de disponibilité t spécifiques. Si le processus de copie échoue, l'état est marqué comme F.  
   
--   **Endommagé-C :** Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] le n’est pas en mesure de vérifier le fichier de sauvegarde dans le stockage en exécutant une commande restore HEADER_ONLY même après plusieurs tentatives, il marque ce fichier comme endommagé. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] planifiera une sauvegarde pour s'assurer que le fichier endommagé n'entraîne pas une interruption de la séquence de sauvegarde.  
+-   **Endommagé-C :** Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] le n’est pas en mesure de vérifier le fichier de sauvegarde dans le stockage en exécutant une commande RESTORE HEADER_ONLY même après plusieurs tentatives, il marque ce fichier comme endommagé. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] planifiera une sauvegarde pour s'assurer que le fichier endommagé n'entraîne pas une interruption de la séquence de sauvegarde.  
   
 -   **Supprimé-D :** Le fichier correspondant est introuvable dans le stockage Azure. La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] planifiera une sauvegarde si le fichier supprimé entraîne une interruption dans la séquence de sauvegarde.  
   

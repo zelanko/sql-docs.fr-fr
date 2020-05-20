@@ -18,12 +18,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902438"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921597"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
   Quand des données entrent dans un flux de données dans un package, la source qui extrait les données les convertit en type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les données numériques se voient attribuer le type de données numeric, les données chaînes le type de données character et les dates le type de données date. Le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] approprié est également affecté aux autres données, comme les GUID et les BLOB (Binary Large Object Blocks). Si le type des données ne peut pas être converti en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une erreur se produit.  
@@ -62,7 +62,7 @@ ms.locfileid: "62902438"
 |DT_WSTR|Chaîne de caractères Unicode se terminant par une valeur Null avec une longueur maximale de 4 000 caractères. (Si une valeur de colonne contient des indicateurs de fin Null, la chaîne apparaît tronquée dès la première valeur Null.)|  
 |DT_IMAGE|Valeur binaire avec une taille maximale de 2<sup>31</sup>-1 (2 147 483 647) octets. .|  
 |DT_NTEXT|Chaîne de caractères Unicode d’une longueur maximale de 2<sup>30</sup> -1 (1 073 741 823) caractères.|  
-|DT_TEXT|Chaîne [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]de caractères/MBCS d’une longueur maximale de 2<sup>31</sup>-1 (2 147 483 647) caractères.|  
+|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]Chaîne de caractères/MBCS d’une longueur maximale de 2<sup>31</sup>-1 (2 147 483 647) caractères.|  
   
 ## <a name="conversion-of-data-types"></a>Conversion de types de données  
  Si les données d'une colonne n'ont pas besoin de toute la largeur qui leur est allouée par le type de données source, vous voudrez peut-être changer le type de données de la colonne. La réduction de la longueur de chaque ligne de données permet d'optimiser les performances lors du transfert de données car plus la ligne est courte, plus les données sont transférées rapidement de la source vers la destination.  
@@ -253,7 +253,7 @@ ms.locfileid: "62902438"
  Pour plus d’informations sur le mappage des types de données dans le flux de données, consultez [Utilisation de types de données dans le flux de données](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [Comparaison des performances des différentes techniques de conversion de type de données dans SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), sur blogs.msdn.com.  
+ Entrée de blog, [Comparaison des performances des différentes techniques de conversion de type de données dans SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035), sur blogs.msdn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Données dans des flux de données](data-in-data-flows.md)  

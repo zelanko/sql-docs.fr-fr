@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75321617"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834283"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Durée**|**int**|Durée de la session de l'Agent.|  
 |**Insère**|**int**|Nombre d'insertions dans une session.|  
 |**Mises à jour**|**int**|Nombre de mises à jour dans une session.|  
-|**Supprime**|**int**|Nombre de suppressions dans une session.|  
+|**Suppressions**|**int**|Nombre de suppressions dans une session.|  
 |**Conflits**|**int**|Nombre de conflits qui se sont produits dans une session.|  
 |**ErrorID**|**int**|ID d'une erreur de session.|  
 |**SeqNo**|**int**|Ordre des sessions dans le jeu de résultats.|  

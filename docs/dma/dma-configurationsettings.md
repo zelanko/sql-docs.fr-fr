@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056539"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885996"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurer les paramètres de Assistant Migration de données
 
@@ -29,11 +29,11 @@ Vous pouvez trouver le fichier DMA. exe. config pour l’application de bureau A
 
 - Application de bureau
 
-  % ProgramFiles%\\Assistant Migration de données Microsoft\\DMA. exe. config
+  % ProgramFiles% \\ Assistant Migration de données Microsoft \\ DMA. exe. config
 
 - Utilitaire de ligne de commande
 
-  % ProgramFiles%\\Assistant Migration de données Microsoft\\dmacmd. exe. config 
+  % ProgramFiles% \\ Assistant Migration de données Microsoft \\ dmacmd. exe. config 
 
 Veillez à enregistrer une copie du fichier de configuration d’origine avant d’apporter des modifications. Après avoir apporté des modifications, redémarrez Assistant Migration de données pour que les nouvelles valeurs de configuration prennent effet.
 
@@ -82,7 +82,7 @@ Assistant Migration de données migre plusieurs bases de données en parallèle 
 Pendant l’évaluation, Assistant Migration de données extrait l’application de la couche données (dacpac) pour comprendre le schéma de la base de données. Cette opération peut échouer avec des délais d’attente pour les bases de données très volumineuses, ou si le serveur est en cours de chargement. À partir de la migration de données v 1.0, vous pouvez modifier les valeurs de configuration suivantes pour éviter les erreurs. 
 
 > [!NOTE]
-> La totalité &lt;de&gt; l’entrée dacfx est commentée par défaut. Supprimez les commentaires, puis modifiez la valeur si nécessaire.
+> La totalité de l' &lt; &gt; entrée dacfx est commentée par défaut. Supprimez les commentaires, puis modifiez la valeur si nécessaire.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Pendant l’évaluation, Assistant Migration de données extrait l’application
 
 - databaseLockTimeout
 
-   Ce paramètre équivaut à définir le délai d’expiration du délai d’attente du [verrou\_\_](../t-sql/statements/set-lock-timeout-transact-sql.md) en *millisecondes*.(Valeur par défaut = 5000)
+   Ce paramètre équivaut à définir le délai d’expiration du délai d’attente du [verrou \_ \_ ](../t-sql/statements/set-lock-timeout-transact-sql.md) en *millisecondes*.(Valeur par défaut = 5000)
 
 - maxDataReaderDegreeOfParallelism
 

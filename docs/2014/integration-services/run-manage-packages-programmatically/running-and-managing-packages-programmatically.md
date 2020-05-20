@@ -10,12 +10,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077460ed71e42cdbecb6ac67b3e6bb1a3b49860c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766824"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922059"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Exécution et gestion de packages par programme
   Si vous devez gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] hors de l'environnement de développement, vous pouvez manipuler les packages par programme. Cette méthode vous offre un choix d'options :  
@@ -35,7 +35,7 @@ ms.locfileid: "62766824"
 ## <a name="running-packages-on-the-integration-services-server"></a>Exécution de packages sur le serveur Integration Services  
  Lorsque vous déployez des packages sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez exécuter les packages par programme à l'aide de l'espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices>. L'assembly Microsoft.SqlServer.Management.IntegrationServices est compilé avec le .NET Framework 3.5. Si vous générez une application .NET Framework 4.0, vous devrez peut-être ajouter la référence d'assembly directement dans votre fichier projet.  
   
- Vous pouvez également utiliser l'espace de noms pour déployer et gérer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour obtenir une vue d'ensemble de l'espace de noms et des extraits de code, consultez l'entrée de blog, [Aperçu du modèle d'objet géré du catalogue SSIS](https://go.microsoft.com/fwlink/?LinkId=253122), sur blogs.msdn.com.  
+ Vous pouvez également utiliser l'espace de noms pour déployer et gérer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour obtenir une vue d'ensemble de l'espace de noms et des extraits de code, consultez l'entrée de blog, [Aperçu du modèle d'objet géré du catalogue SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892), sur blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  

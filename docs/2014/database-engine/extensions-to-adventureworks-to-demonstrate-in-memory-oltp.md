@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228468"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921730"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensions à AdventureWorks pour présenter l'OLTP en mémoire
     
@@ -35,7 +35,7 @@ ms.locfileid: "75228468"
   
 -   Instructions pour [Installation de l’exemple In-Memory OLTP basé sur AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Description des exemples de tables et de procédures](#Descriptionofthesampletablesandprocedures) : il s’agit des descriptions des tables et des procédures ajoutées à [!INCLUDE[hek_2](../includes/hek-2-md.md)] AdventureWorks par l’exemple, ainsi que des considérations relatives à la migration de certaines tables AdventureWorks d’origine vers des tables optimisées en mémoire  
+-   [Description des exemples de tables et de procédures](#Descriptionofthesampletablesandprocedures) : il s’agit des descriptions des tables et des procédures ajoutées à AdventureWorks par l' [!INCLUDE[hek_2](../includes/hek-2-md.md)] exemple, ainsi que des considérations relatives à la migration de certaines tables AdventureWorks d’origine vers des tables optimisées en mémoire  
   
 -   Instructions pour effectuer des [Mesures de performance à l’aide de la charge de travail de démonstration](#PerformanceMeasurementsusingtheDemoWorkload) : inclut des instructions pour installer et exécuter Ostress, un outil de pilotage de la charge de travail, et pour exécuter la charge de travail de démonstration elle-même  
   
@@ -45,14 +45,14 @@ ms.locfileid: "75228468"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-version d’évaluation, Developer ou Enterprise  
   
--   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d'au moins 16 Go de mémoire disponible sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir des recommandations générales sur [!INCLUDE[hek_2](../includes/hek-2-md.md)]le matériel pour, consultez le billet de blog suivant :[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d'au moins 16 Go de mémoire disponible sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir des recommandations générales sur [!INCLUDE[hek_2](../includes/hek-2-md.md)] le matériel pour, consultez le billet de blog suivant :[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
-##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Installation de [!INCLUDE[hek_2](../includes/hek-2-md.md)] l’exemple basé sur AdventureWorks  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Installation de l' [!INCLUDE[hek_2](../includes/hek-2-md.md)] exemple basé sur AdventureWorks  
  Procédez comme suit pour installer l'exemple :  
   
 1.  Téléchargez l'archive pour la sauvegarde complète de la base de données AdventureWorks2014 :  
   
-    1.  Ouvrez la commande suivante [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661):.  
+    1.  Ouvrez la commande suivante : [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) .  
   
     2.  À l'invite, enregistrez le fichier dans un dossier local.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228468"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Téléchargez l’exemple de script[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] « [!INCLUDE[hek_2](../includes/hek-2-md.md)] RTM Sample. SQL » à partir de l' [exemple d’OLTP en mémoire SQL Server 2014 RTM](https://go.microsoft.com/fwlink/?LinkID=396372) dans un dossier local.  
+5.  Téléchargez l’exemple de script « [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL » à partir de l' [exemple d’OLTP en mémoire SQL Server 2014 RTM](https://go.microsoft.com/fwlink/?LinkID=396372) dans un dossier local.  
   
-6.  Mettez à jour la valeur de la variable « checkpoint_files_location » dans le[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] script [!INCLUDE[hek_2](../includes/hek-2-md.md)] « RTM Sample. SQL » pour pointer vers l’emplacement cible [!INCLUDE[hek_2](../includes/hek-2-md.md)] des fichiers de point de contrôle. Les fichiers de point de contrôle doivent être placés sur un lecteur avec de bonnes performances d'E/S séquentielles.  
+6.  Mettez à jour la valeur de la variable « checkpoint_files_location » dans le script « [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL » pour pointer vers l’emplacement cible des [!INCLUDE[hek_2](../includes/hek-2-md.md)] fichiers de point de contrôle. Les fichiers de point de contrôle doivent être placés sur un lecteur avec de bonnes performances d'E/S séquentielles.  
   
      Mettez à jour la valeur pour la variable 'database_name' afin qu'elle pointe vers la base de données AdventureWorks2014.  
   
-    1.  Veillez à inclure la barre oblique\' inverse «en tant que partie du nom du chemin d’accès  
+    1.  Veillez à inclure la barre oblique inverse « \' en tant que partie du nom du chemin d’accès  
   
     2.  Exemple :  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228468"
   
     2.  En utilisant Management Studio :  
   
-        1.  Ouvrez le script «[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL » dans une fenêtre de requête  
+        1.  Ouvrez le script « [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL » dans une fenêtre de requête  
   
         2.  Connectez-vous au serveur cible qui contient la base de données AdventureWorks2014.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228468"
   
 -   *Types définis par l’utilisateur (UDT) alias* : la table d’origine utilise le type de données défini par l’utilisateur dbo.Flag, qui est équivalent au bit de type de données système. La table migrée utilise le type de données bit à la place.  
   
--   *Classement BIN2* : les colonnes Name et ProductNumber sont incluses dans les clés d’index, et doivent donc avoir des classements [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]BIN2 dans. Ici, l'hypothèse est que l'application ne tient pas compte des spécificités du classement, comme le non-respect de la casse.  
+-   *Classement BIN2* : les colonnes Name et ProductNumber sont incluses dans les clés d’index, et doivent donc avoir des classements BIN2 dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Ici, l'hypothèse est que l'application ne tient pas compte des spécificités du classement, comme le non-respect de la casse.  
   
 -   *Rowguid* : la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
   
@@ -412,7 +412,7 @@ ms.locfileid: "75228468"
   
 -   -S Nom de l’instance [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle se connecter  
   
--   -E utiliser l’authentification Windows pour se connecter (par défaut); Si vous utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l’authentification, utilisez les options-u et-P pour spécifier le nom d’utilisateur et le mot de passe, respectivement.  
+-   -E utiliser l’authentification Windows pour se connecter (par défaut); Si vous utilisez l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentification, utilisez les options-u et-P pour spécifier le nom d’utilisateur et le mot de passe, respectivement.  
   
 -   -d Nom de la base de données, pour cet exemple AdventureWorks2014  
   
@@ -462,7 +462,7 @@ END
  Nous utiliserons l'outil Ostress pour exécuter des scripts utilisant plusieurs connexions simultanées. Nous utiliserons le paramètre « -n » pour contrôler le nombre de connexions, et le paramètre « r » pour contrôler le nombre de fois où le script est exécuté sur chaque connexion.  
   
 #### <a name="functional-validation-of-the-workload"></a>Validation fonctionnelle de la charge de travail  
- Pour vérifier que tout fonctionne, nous allons commencer par un exemple de test, en utilisant 10 connexions simultanées et 5 itérations, en insérant un \* total de 10 * 5 20 = 1000 commande client.  
+ Pour vérifier que tout fonctionne, nous allons commencer par un exemple de test, en utilisant 10 connexions simultanées et 5 itérations, en insérant un total de 10 * 5 \* 20 = 1000 commande client.  
   
  Dans la commande ci-dessous, nous supposons que l'instance par défaut est utilisée sur l'ordinateur local. Si vous utilisez une instance nommée ou un serveur distant, remplacez le nom du serveur en conséquence, en utilisant le paramètre -S.  
   
@@ -519,7 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  Sur un serveur de test avec un nombre total de 8 noyaux physiques (16 logiques), ceci a nécessité 41 minutes et 25 secondes. Sur un second serveur de test avec 24 noyaux physiques (48 logiques), ceci a nécessité 52 minutes et 16 secondes.  
   
- La raison principale de la différence de performances entre les tables optimisées en mémoire et les tables sur disque pendant ce test, est que lorsque vous utilisez des tables sur disque, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'utilise pas entièrement l'UC. Cela est dû à une contention de verrou : les transactions simultanées tentent d'écrire dans la même page de données ; les verrous sont utilisés pour garantir qu'une seule transaction à la fois écrit sur une page. Le moteur d' [!INCLUDE[hek_2](../includes/hek-2-md.md)] n'a pas de verrous, et les lignes de données ne sont pas organisées en pages. Par conséquent, les transactions simultanées ne bloquent pas les insertions [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réciproques, ce qui permet à d’utiliser pleinement l’UC.  
+ La raison principale de la différence de performances entre les tables optimisées en mémoire et les tables sur disque pendant ce test, est que lorsque vous utilisez des tables sur disque, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'utilise pas entièrement l'UC. Cela est dû à une contention de verrou : les transactions simultanées tentent d'écrire dans la même page de données ; les verrous sont utilisés pour garantir qu'une seule transaction à la fois écrit sur une page. Le moteur d' [!INCLUDE[hek_2](../includes/hek-2-md.md)] n'a pas de verrous, et les lignes de données ne sont pas organisées en pages. Par conséquent, les transactions simultanées ne bloquent pas les insertions réciproques, ce qui permet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à d’utiliser pleinement l’UC.  
   
  Observez l'utilisation de l'UC pendant que la charge de travail est exécutée, par exemple via le Gestionnaire des tâches. Vous verrez qu'avec les tables sur disque, l'utilisation de l'UC est loin d'être de 100 %. Dans une configuration de test avec 16 processeurs logiques, l'utilisation serait d'environ 24 %.  
   
@@ -569,10 +569,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Par défaut|94|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Par défaut|0|  
-|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Les régisseurs de mémoire par défaut contiennent les structures de mémoire à l'échelle du système et sont relativement petits. Le régisseur de mémoire de la base de données utilisateur, dans ce cas la base de données dont l'ID est 5, a une taille d'environ 900 Mo.  
   
@@ -618,10 +618,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Par défaut|146|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Par défaut|0|  
-|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Comme vous pouvez le voir, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un bit sous 8 Go pour les tables optimisées en mémoire et les index dans l'exemple de base de données.  
   
@@ -664,10 +664,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Par défaut|2261|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Par défaut|0|  
-|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  C'est le comportement attendu : la mémoire est récupérée lorsque la charge de travail transactionnelle s'exécute.  
   
@@ -683,10 +683,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Par défaut|1863|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Par défaut|0|  
-|MEMORYCLERK_XTP|Par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Utilisation du disque pour les tables optimisées en mémoire  
  La taille globale sur disque des fichiers de point de contrôle d'une base de données à un moment donné peut être récupérée à l'aide de la requête :  

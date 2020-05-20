@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137710"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834496"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argument  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **%** **type sysname**, avec la valeur par défaut. Si *publication* la publication **%** est, les informations sur toutes les publications de fusion et tous les abonnements de la base de données actuelle sont retournées.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** . Si la *publication* est **%** , les informations sur toutes les publications de fusion et tous les abonnements de la base de données actuelle sont retournées.  
   
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher*est de **%** **type sysname**, avec la valeur par défaut.  
+`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher*est de **type sysname**, avec la valeur par défaut **%** .  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db*est de **%** **type sysname**, avec la valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db*est de **type sysname**, avec la valeur par défaut **%** .  
   
 `[ @subscription_type = ] 'subscription_type'`Indique s’il faut afficher les abonnements par extraction. *subscription_type*est de type **nvarchar (10)**, avec **« pull »** comme valeur par défaut. Les valeurs valides sont **'push'**, **'pull'** ou **'both'**.  
   
@@ -54,7 +54,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|Nom de l'abonnement.|  
 |**édition**|**sysname**|Nom de la publication.|  
-|**publication**|**sysname**|Nom du serveur de publication.|  
+|**publisher**|**sysname**|Nom du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**subscription_db**|**sysname**|Nom de la base de données d'abonnement.|  
@@ -69,11 +69,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_updated**|**nvarchar (26)**|Date et heure de la dernière synchronisation de l'abonnement effectuée par l'Agent de fusion.|  
 |**publisher_login**|**sysname**|Nom de connexion de l’éditeur.|  
 |**publisher_password**|**sysname**|Mot de passe de l’éditeur.|  
-|**publisher_security_mode**|**int**|Spécifie le mode de sécurité du serveur de publication :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
+|**publisher_security_mode**|**int**|Spécifie le mode de sécurité du serveur de publication :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
 |**conseiller**|**sysname**|Nom du serveur de distribution.|  
 |**distributor_login**|**sysname**|Nom de connexion du serveur de distribution.|  
 |**distributor_password**|**sysname**|Mot de passe du serveur de distribution.|  
-|**distributor_security_mode**|**int**|Spécifie le mode de sécurité du serveur de distribution :<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
+|**distributor_security_mode**|**int**|Spécifie le mode de sécurité du serveur de distribution :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification<br /><br /> **1** = authentification Windows|  
 |**ftp_address**|**sysname**|Disponible pour compatibilité descendante uniquement. Adresse réseau du service FTP (File Transfer Protocol) pour le serveur de distribution.|  
 |**ftp_port**|**int**|Disponible pour compatibilité descendante uniquement. Numéro de port du service FTP du serveur de distribution.|  
 |**ftp_login**|**sysname**|Disponible pour compatibilité descendante uniquement. Nom d’utilisateur utilisé pour la connexion au service FTP.|  
@@ -95,8 +95,8 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_security_mode**|**int**|Mode d'authentification utilisé pour se connecter au serveur Web hôte de la synchronisation Web. La valeur **1** signifie l’authentification Windows et la valeur **0** signifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
 |**internet_timeout**|**int**|Délai en secondes avant l'expiration d'une demande de synchronisation Web.|  
 |**hostname**|**nvarchar(128)**|Spécifie une valeur surchargée pour [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) lorsque cette fonction est utilisée dans la clause WHERE d’un filtre de lignes paramétrable.|  
-|**job_login**|**nvarchar(512)**|Compte Windows sous lequel l’agent de fusion s’exécute, qui est retourné au format *domaine*\\*nom d’utilisateur*.|  
-|**job_password**|**sysname**|Pour des raisons de sécurité, la valeur**\*\*\*\*\*\*\*\*\***«» est toujours retournée.|  
+|**job_login**|**nvarchar(512)**|Compte Windows sous lequel l’agent de fusion s’exécute, qui est retourné au format *domaine* \\ *nom d’utilisateur*.|  
+|**job_password**|**sysname**|Pour des raisons de sécurité, la valeur « **\*\*\*\*\*\*\*\*\*\*** » est toujours retournée.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

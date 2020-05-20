@@ -13,12 +13,12 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1793032a72ae1dd150caa5ddd1739f7f5620bce1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f1da20eb1c23176036dad0847d5b420a498e83e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62790193"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922000"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>Surveillance des groupes de disponibilité (SQL Server)
   Pour surveiller les propriétés et l'état d'un groupe de disponibilité AlwaysOn, vous pouvez utiliser les outils suivants.  
@@ -36,19 +36,19 @@ ms.locfileid: "62790193"
   
 -   **Blogs :**  
   
-     [Modèle d'intégrité AlwaysOn Partie 1 -- Architecture du modèle d'intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)  
+     [Modèle d'intégrité AlwaysOn Partie 1 -- Architecture du modèle d'intégrité](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
-     [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+     [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
-     [Surveillance de l'intégrité AlwaysOn avec PowerShell - Partie 1 : Vue d'ensemble des applets de commande de base](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+     [Surveillance de l'intégrité AlwaysOn avec PowerShell - Partie 1 : Vue d'ensemble des applets de commande de base](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
-     [Surveillance de l'intégrité AlwaysOn avec PowerShell - Partie 2 : Utilisation des applets de commande avancées](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+     [Surveillance de l'intégrité AlwaysOn avec PowerShell - Partie 2 : Utilisation des applets de commande avancées](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
   
-     [Surveillance de l'intégrité AlwaysOn avec PowerShell - Partie 3 : Application de surveillance simple](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+     [Surveillance de l'intégrité AlwaysOn avec PowerShell - Partie 3 : Application de surveillance simple](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
   
-     [Surveillance de l'intégrité AlwaysOn avec PowerShell - Partie 4 : Intégration à l'Agent SQL Server](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+     [Surveillance de l'intégrité AlwaysOn avec PowerShell - Partie 4 : Intégration à l'Agent SQL Server](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
   
-     [Blogs de l'équipe de SQL Server AlwaysOn : Blog officiel de l'équipe de SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs de l'équipe de SQL Server AlwaysOn : Blog officiel de l'équipe de SQL Server AlwaysOn](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   

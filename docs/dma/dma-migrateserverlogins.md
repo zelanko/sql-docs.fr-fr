@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f721800de13d11eefa1cabdd2f23fda838db9396
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056478"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885786"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrer des connexions SQL Server avec Assistant Migration de données
 
@@ -34,7 +34,7 @@ Cet article fournit une vue d’ensemble de la migration des connexions SQL Serv
 
 - Assistant Migration de données ne prend actuellement pas en charge les connexions associées à un certificat de sécurité autonome (connexions mappées au certificat), une clé asymétrique autonome (connexions mappées à une clé asymétrique) et des connexions mappées à des informations d’identification.
 
-- Assistant Migration de données ne déplace pas la connexion **sa** et les principes du serveur avec les noms encadrés\#\#de doubles signes dièse (), qui sont destinés à un usage interne uniquement.
+- Assistant Migration de données ne déplace pas la connexion **sa** et les principes du serveur avec les noms encadrés de doubles signes dièse ( \# \# ), qui sont destinés à un usage interne uniquement.
 
 - Par défaut, Assistant Migration de données sélectionne toutes les connexions qualifiées à migrer. Si vous le souhaitez, vous pouvez sélectionner des connexions spécifiques à migrer. Lorsque Assistant Migration de données migre toutes les connexions qualifiées, le mappage de l’utilisateur de connexion reste intact dans les bases de données qui sont migrées.
 
@@ -54,6 +54,6 @@ Cet article fournit une vue d’ensemble de la migration des connexions SQL Serv
 
 ## <a name="resources"></a>Ressources
 
-[Assistant Migration de données (DMA)](../dma/dma-overview.md)
+[Assistant Migration de données (DMA)](../dma/dma-overview.md)
 
 [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)

@@ -1,5 +1,6 @@
 ---
 title: 'SQL Server la gestion de sauvegarde sur Azure : interopérabilité et coexistence | Microsoft Docs'
+description: Cet article décrit SQL Server la sauvegarde managée pour Microsoft Azure l’interopérabilité et la coexistence avec plusieurs fonctionnalités dans SQL Server 2014.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +11,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcfa6636e5fc4391b42d2077bd55e0811dc0ca39
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176067"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849827"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Sauvegarde managée SQL Server sur Azure : Interopérabilité et coexistence
   Cette rubrique présente l'interopérabilité et la coexistence de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avec plusieurs fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Ces fonctionnalités sont les suivantes : les groupes de disponibilité AlwaysOn, la mise en miroir de bases de données, les plans de maintenance de sauvegarde, la copie des journaux de transactions, les sauvegardes ad hoc, le détachement d'une base de données et la suppression d'une base de données.  
   
 ### <a name="alwayson-availability-groups"></a>Groupes de disponibilité AlwaysOn  
- Groupes de disponibilité AlwaysOn configurés en tant que solution Azure uniquement prise en charge [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]pour. Les configurations de groupes de disponibilité AlwaysOn locaux ou hybrides ne sont pas prises en charge. Pour plus d’informations et d’autres éléments à prendre en considération, consultez [configuration d’SQL Server gestion de la sauvegarde sur Azure pour les groupes de disponibilité](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ Groupes de disponibilité AlwaysOn configurés en tant que solution Azure uniquement prise en charge pour [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . Les configurations de groupes de disponibilité AlwaysOn locaux ou hybrides ne sont pas prises en charge. Pour plus d’informations et d’autres éléments à prendre en considération, consultez [configuration d’SQL Server gestion de la sauvegarde sur Azure pour les groupes de disponibilité](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Mise en miroir de bases de données  
  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est prise en charge uniquement sur la base de données principale. Si la base de données principale et le miroir sont configurés pour utiliser la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], la base de données mise en miroir est ignorée et ne sera pas sauvegardée. Toutefois, en cas de basculement, la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] commence le processus de sauvegarde après que le miroir a terminé de permuter le rôle, et est en ligne. Dans ce cas, les sauvegardes seront restaurées dans un nouveau conteneur. Si le miroir n'est pas configuré pour utiliser la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], en cas de basculement, aucune sauvegarde n'est effectuée. Nous vous recommandons de configurer la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur le serveur principal et le miroir de façon à ce que les sauvegardes continuent en cas de basculement.  
@@ -39,14 +40,14 @@ ms.locfileid: "70176067"
  Vous ne pouvez pas configurer la copie des journaux de transactions et la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] simultanément pour la même base de données. Cela affecte la récupérabilité de la base de données de l'une ou l'autre fonctionnalité.  
   
 ### <a name="ad-hoc-backups-using-transact-sql-and-sql-server-management-studio"></a>Sauvegardes ad hoc à l'aide de Transact-SQL et SQL Server Management Studio  
- Les sauvegardes ad hoc ou uniques créées hors de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avec Transact-SQL ou SQL Server Management Studio peuvent affecter le processus de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] en fonction du type de sauvegarde et du support de stockage utilisé. Les sauvegardes de journaux vers un autre compte de stockage [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Azure que celui qui utilise, ou toute autre destination que le service de stockage d’objets BLOB Azure, entraînent une rupture de la séquence de journaux. Nous vous recommandons d’utiliser l' [smart_admin. sp_backup_on_demand &#40;procédure stockée Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) pour lancer une sauvegarde sur les bases de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] données qui ont activé. Effectuez une sauvegarde de base de données complète ou bien une sauvegarde de fichier journal en utilisant cette procédure stockée.  
+ Les sauvegardes ad hoc ou uniques créées hors de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avec Transact-SQL ou SQL Server Management Studio peuvent affecter le processus de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] en fonction du type de sauvegarde et du support de stockage utilisé. Les sauvegardes de journaux vers un autre compte de stockage Azure que celui qui [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] utilise, ou toute autre destination que le service de stockage d’objets BLOB Azure, entraînent une rupture de la séquence de journaux. Nous vous recommandons d’utiliser l' [smart_admin. sp_backup_on_demand &#40;procédure stockée Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) pour lancer une sauvegarde sur les bases de données qui ont [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] activé. Effectuez une sauvegarde de base de données complète ou bien une sauvegarde de fichier journal en utilisant cette procédure stockée.  
   
 ### <a name="drop-database-and-detach-database"></a>Supprimer et détacher une base de données  
  Si une base de données activée pour la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est supprimée ou détachée, bien qu'aucune sauvegarde ne soit plus possible, les sauvegardes précédentes restent dans le stockage jusqu'à l'expiration de la période de rétention, après quoi, elles seront purgées.  
   
 ### <a name="changes-to-recovery-model"></a>Changements apportés au modèle de récupération  
   
--   Si vous modifiez le mode de récupération d’une base de données de **simple** à **complet** ou **journalisé en bloc**, vous avez la possibilité [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] de configurer pour la base de données. La base de données sera considérée comme une nouvelle base de données par la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+-   Si vous modifiez le mode de récupération d’une base de données de **simple** à **complet** ou **journalisé en bloc**, vous avez la possibilité de configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour la base de données. La base de données sera considérée comme une nouvelle base de données par la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
 -   Si vous modifiez le mode de récupération d’une base de données **complète** ou de la **journalisation en bloc** en **simple**, qui est [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] activée, les opérations de sauvegarde ne seront plus planifiées. Le paramètre de période de rétention continue d'être appliqué et les fichiers de sauvegarde resteront dans le compte de stockage jusqu'à l'expiration de la période de rétention. Si vous souhaitez conserver les sauvegardes, nous vous recommandons de télécharger les fichiers dans un compte de stockage différent ou dans un emplacement local. Les paramètres de configuration sont conservés et peuvent être réutilisés si le mode de récupération est de nouveau défini sur **complet** ou **journalisé en bloc** .  
   
@@ -55,7 +56,7 @@ ms.locfileid: "70176067"
   
  **Sauvegardes basées sur Data Protection Manager (DPM) :** Microsoft Data Protection Manager vous permet d’effectuer des sauvegardes complètes et incrémentielles. Les sauvegardes incrémentielles sont des sauvegardes de fichier journal qui effectuent une troncation de journal après la création d'une sauvegarde de fichier journal T. Par conséquent, la configuration de DPM et de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour la même base de données n'est pas prise en charge.  
   
- **Outils tiers ou scripts :** Les outils tiers ou les scripts qui effectuent des sauvegardes de journaux provoquant la troncation [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]du journal ne sont pas compatibles avec et ne sont pas pris en charge.  
+ **Outils tiers ou scripts :** Les outils tiers ou les scripts qui effectuent des sauvegardes de journaux provoquant la troncation du journal ne sont pas compatibles avec [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] et ne sont pas pris en charge.  
   
  Si vous avez [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] activé la pour une instance de base de données et que vous souhaitez effectuer une sauvegarde ad hoc, vous pouvez utiliser l' [smart_admin. sp_backup_on_demand &#40;procédure stockée Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) , comme décrit dans la section précédente. Si vous avez également besoin de planifier des sauvegardes régulièrement en dehors la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], utilisez la sauvegarde de copie uniquement.  Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
