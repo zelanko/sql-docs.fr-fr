@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_top_version_generators dynamic management view
 ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 552ca2de9ac8077beb25b9ad77f259790b92a1be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262611"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819013"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68262611"
   Renvoie une table virtuelle pour les objets qui génèrent la majorité des versions d'un magasin de versions. **sys. dm_tran_top_version_generators** retourne les 256 premières longueurs d’enregistrements agrégés regroupées par le **database_id** et **rowset_id**. **sys. dm_tran_top_version_generators** récupère les données en interrogeant la table virtuelle **dm_tran_version_store** . **sys. dm_tran_top_version_generators** est une vue inefficace à exécuter, car cette vue interroge la Banque des versions et la Banque des versions peut être très volumineuse. Nous vous recommandons d'utiliser cette fonction pour rechercher les clients les plus volumineux de la banque des versions.  
   
 > [!NOTE]  
->  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_tran_top_version_generators**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,14 +49,14 @@ sys.dm_tran_top_version_generators
 |**database_id**|**int**|ID de la base de données.|  
 |**rowset_id**|**bigint**|ID de l'ensemble de lignes.|  
 |**aggregated_record_length_in_bytes**|**int**|Somme des longueurs d’enregistrements pour chaque paire **database_id** et **rowset_id** dans la Banque des versions.|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Étant donné que **sys. dm_tran_top_version_generators** peut avoir besoin de lire de nombreuses pages au cours de l’analyse de l’intégralité de la Banque des versions, l’exécution de **sys. dm_tran_top_version_generators** peut interférer avec les performances du système.  
   
 ## <a name="examples"></a>Exemples  
@@ -89,7 +89,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- La sortie indique que toutes les versions sont créées `database_id``9` par et que les versions sont générées à partir de deux tables.  
+ La sortie indique que toutes les versions sont créées par `database_id``9` et que les versions sont générées à partir de deux tables.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1eb85c3b94de765a15fc60c2641730b6911ffcf5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd9339c8d0ef678b021c3c2887963c487681eeac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80873155"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819157"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "80873155"
  Les colonnes du jeu de résultats sont réparties en deux groupes principaux : ressource et demande. Le groupe ressource décrit la ressource sur laquelle la demande de verrou a lieu ; le groupe demande décrit la demande de verrou.  
   
 > [!NOTE]  
-> Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_tran_locks**.  
+> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_tran_locks**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -58,13 +58,13 @@ ms.locfileid: "80873155"
 |**request_owner_guid**|**uniqueidentifier**|GUID du propriétaire spécifique de cette demande. Cette valeur est utilisée uniquement par une transaction distribuée dans laquelle la valeur correspond au GUID MS DTC de cette transaction.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Cette valeur représente l'ID de l'espace de verrouillage du demandeur. Cet ID détermine si deux demandeurs sont mutuellement compatibles et s'il est possible de leur accorder des verrous dans des modes conflictuels.|  
 |**lock_owner_address**|**varbinary (8)**|Adresse mémoire de la structure des données internes utilisées pour suivre cette demande. Cette colonne peut être jointe à la colonne **resource_address** dans **sys.dm_os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
  
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un état de demande autorisée indique qu'un verrou a été accordé au demandeur sur une ressource. Une demande en attente indique que la demande n'est pas encore autorisée. La colonne **request_status** retourne les types de demandes en attente suivants :  
   
 -   Une demande de conversion indique que le demandeur a déjà reçu l'autorisation pour la ressource et attend l'autorisation de mise à jour de la demande initiale.  
@@ -206,7 +206,7 @@ Des verrous sont placés sur les ressources [!INCLUDE[ssNoVersion](../../include
 |KEY|<hash_value>|Représente un hachage des colonnes clés de la ligne représentée par cette ressource.|  
 |EXTENT|<file_id>:<page_in_file>|Représente le fichier et l'ID de la page de l'étendue représentée par cette ressource. L'ID d'étendue est identique à l'ID de la première page de l'étendue.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Représente l'ID de page et l'ID de ligne représentée par cette ressource. Remarquez que si l'ID de l'objet associé est égal à 99, cette ressource représente l'une des huit pages mélangées de la première page IAM d'une chaîne IAM.|  
-|APPLICATION|\<DbPrincipalId> :\<jusqu’à 32 caractères> :(<hash_value>)|Représente l'ID du principal de base de données qui est utilisé pour fixer l'étendue de la ressource des verrous sur l'application. Jusqu'à 32 caractères de la chaîne des ressources correspondent à cette ressource de verrous pour l'application. Dans certains cas, il est possible d'afficher seulement 2 caractères du fait que la chaîne complète n'est plus disponible ; cela se produit uniquement lors de la récupération d'une base de données pour les verrous d'application qui sont repris au cours de la récupération. La valeur de hachage représente un hachage de l'ensemble de la chaîne de ressource qui correspond à cette ressource de verrous pour l'application.|  
+|APPLICATION|\<DbPrincipalId> : jusqu’à \< 32 caractères> :(<hash_value>)|Représente l'ID du principal de base de données qui est utilisé pour fixer l'étendue de la ressource des verrous sur l'application. Jusqu'à 32 caractères de la chaîne des ressources correspondent à cette ressource de verrous pour l'application. Dans certains cas, il est possible d'afficher seulement 2 caractères du fait que la chaîne complète n'est plus disponible ; cela se produit uniquement lors de la récupération d'une base de données pour les verrous d'application qui sont repris au cours de la récupération. La valeur de hachage représente un hachage de l'ensemble de la chaîne de ressource qui correspond à cette ressource de verrous pour l'application.|  
 |HOBT|Non applicable|l'ID HoBt est inclus en tant que **resource_associated_entity_id**.|  
 |ALLOCATION_UNIT|Non applicable|L'ID d'unité d'allocation est inclus en tant que **resource_associated_entity_id**.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
