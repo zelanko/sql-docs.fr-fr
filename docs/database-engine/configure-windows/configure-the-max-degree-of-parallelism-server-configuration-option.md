@@ -1,6 +1,5 @@
 ---
 title: Configurer l’option de configuration de serveur max degree of parallelism | Microsoft Docs
-ms.custom: ''
 ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94f8c87e0b996be0b9485cbe5a43038e33420fe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: contperfq4
+ms.openlocfilehash: 41c65a001047a32e51580633bd82366b7783a2aa
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288723"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606803"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurer l'option de configuration de serveur max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "79288723"
 -   En plus des requêtes et des opérations d'index, cette option gère également le parallélisme de DBCC CHECKTABLE, DBCC CHECKDB et DBCC CHECKFILEGROUP. Vous pouvez désactiver les plans d'exécution parallèle pour ces instructions en utilisant l'indicateur de trace 2528. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Pour définir cette option au niveau de la requête, utilisez l’**indicateur de requête** [MAXDOP](../../t-sql/queries/hints-transact-sql-query.md).     
-> Pour le faire au niveau de la base de données, utilisez la **configuration étendue à la base de données** [MAXDOP](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
-> Pour ce faire au niveau de la charge de travail, utilisez l’**option de configuration de groupe de charge de travail Resource Governor** [MAX_DOP](../../t-sql/statements/create-workload-group-transact-sql.md).      
+> Pour définir cette option au niveau de la requête, utilisez l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.     
+> Pour le faire au niveau de la base de données, utilisez la [configuration étendue à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.      
+> Pour ce faire au niveau de la charge de travail, utilisez l’[option de configuration de groupe de charge de travail Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.      
 
 ###  <a name="guidelines"></a><a name="Guidelines"></a> Instructions  
 Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], lors du démarrage du service, si [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte plus de huit cœurs physiques par socket ou nœud NUMA au démarrage, des nœuds soft-NUMA sont créés automatiquement par défaut. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] place les processeurs logiques du même cœur physique dans différents nœuds soft-NUMA. Les recommandations contenues dans le tableau ci-dessous ont pour but de conserver tous les threads de travail d’une requête parallèle au sein du même nœud soft-NUMA. Cela améliorera les performances des requêtes et la distribution des threads de travail entre les nœuds NUMA pour la charge de travail. Pour plus d’informations, consultez [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
@@ -121,14 +121,12 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a> Suivi : Après avoir configuré l'option max degree of parallelism  
+##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a> Suivi : Après avoir configuré l’option max degree of parallelism  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)      
- [Recommandations et directives pour l’option de configuration Degré maximal de parallélisme dans SQL Server](https://support.microsoft.com/help/2806535)     
- [affinity mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)        
+ [affinity mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)      
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#DOP)       
@@ -136,3 +134,8 @@ GO
  [Configurer des opérations d'index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md)    
  [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)     
  [Définir les options d’index](../../relational-databases/indexes/set-index-options.md)     
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+[Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)

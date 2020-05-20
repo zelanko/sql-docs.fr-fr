@@ -1,32 +1,34 @@
 ### YamlMime:Landing
-title: Documentation sur SQL Server Machine Learning Services (Python et R)
-summary: Découvrez comment utiliser SQL Server Machine Learning Services pour exécuter des scripts Python et R sur des données relationnelles. Des tutoriels, des exemples de code, des guides d’installation et d’autres documents vous expliquent comment faire.
+title: Documentation sur le machine learning SQL
+summary: Découvrez comment utiliser le machine learning sur SQL pour exécuter Python et R sur des données relationnelles, localement et dans le cloud. Des tutoriels, des exemples de code, des guides d’installation et d’autres documentations vous montrent comment utiliser le machine learning SQL.
 metadata:
-  title: Documentation sur SQL Server Machine Learning Services (Python, R) - Tutoriels, guides de démarrage rapide et guides d’installation
-  description: Découvrez comment utiliser SQL Server Machine Learning Services pour exécuter des scripts Python et R sur des données relationnelles. Des tutoriels, des exemples de code, des guides d’installation et d’autres documents vous expliquent comment faire.
+  title: Documentation sur le machine learning SQL - Tutoriels et guides d’installation
+  description: Découvrez comment utiliser le machine learning sur SQL pour exécuter Python et R sur des données relationnelles, localement et dans le cloud. Des tutoriels, des exemples de code, des guides d’installation et d’autres documentations vous montrent comment utiliser le machine learning SQL.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 09/12/2019
-  ms.openlocfilehash: 94675074f4c9399f3192253a294ff8df8bd6c722
-  ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+  ms.date: 04/24/2020
+  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
+  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 04/16/2020
-  ms.locfileid: "81487520"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83606823"
 landingContent:
-- title: À propos de Machine Learning Services
+- title: Machine learning sur SQL Server
   linkLists:
   - linkListType: overview
     links:
-    - text: Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?
+    - text: Qu’est-ce que SQL Server Machine Learning Services avec Python et R ?
       url: sql-server-machine-learning-services.md
-  - linkListType: whats-new
+  - linkListType: get-started
     links:
-    - text: Nouveautés de Machine Learning Services
-      url: what-s-new-in-sql-server-machine-learning-services.md
+    - text: Installer Machine Learning Services sur Windows
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: Installer Machine Learning Services sur Linux
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
   - linkListType: video
     links:
     - text: Comment exécuter R/Python dans SQL Server avec Machine Learning Services
@@ -35,11 +37,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Exécuter un script Python « Hello World » sur SQL Server
+    - text: Exécuter des scripts Python simples
       url: tutorials/quickstart-python-create-script.md
     - text: Gérer les entrées et les sorties
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
-    - text: Utiliser des structures de données Python dans SQL Server
+    - text: Utiliser des structures de données Python dans SQL
       url: tutorials/quickstart-python-data-structures.md
     - text: Entraîner et utiliser votre premier modèle
       url: tutorials/quickstart-python-train-score-model.md
@@ -53,11 +55,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Exécuter un script R « Hello World » sur SQL Server
+    - text: Exécuter des scripts R simples
       url: tutorials/quickstart-r-create-script.md
     - text: Gérer les entrées et les sorties
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
-    - text: Utiliser des structures de données R dans SQL Server
+    - text: Utiliser des structures de données R dans SQL
       url: tutorials/quickstart-r-data-types-and-objects.md
     - text: Entraîner et utiliser votre premier modèle
       url: tutorials/quickstart-r-train-score-model.md
@@ -67,43 +69,45 @@ landingContent:
       url: tutorials/sqldev-in-database-r-for-sql-developers.md
     - text: Utiliser Machine Learning Services dans les outils R
       url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: Installer Machine Learning Services
+- title: ML sur des clusters Big Data
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Que sont les clusters Big Data SQL Server ?
+      url: ../big-data-cluster/big-data-cluster-overview.md
   - linkListType: get-started
     links:
-    - text: Installer Machine Learning Services sur Windows
-      url: install/sql-machine-learning-services-windows-install.md
-    - text: Installer Machine Learning Services sur Linux
-      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+    - text: Activer Machine Learning Services sur des clusters Big Data SQL Server
+      url: ../big-data-cluster/machine-learning-services.md
   - linkListType: how-to-guide
     links:
-    - text: Configurer un client Python
-      url: python/setup-python-client-tools-sql.md
-    - text: Configurer un client R
-      url: r/set-up-a-data-science-client.md
-- title: Architecture et sécurité
+    - text: Modèles Machine Learning Spark avec MLeap
+      url: ../big-data-cluster/spark-create-machine-learning-model.md
+    - text: Sparklyr dans un cluster Big Data SQL Server
+      url: ../big-data-cluster/sparklyr-from-rstudio.md
+    - text: Intégrer Spark à SQL Server
+      url: ../big-data-cluster/spark-mssql-connector.md
+- title: ML sur Azure Synapse Analytics
   linkLists:
-  - linkListType: architecture
+  - linkListType: overview
     links:
-    - text: Framework d’extensibilité
-      url: concepts/extensibility-framework.md
-    - text: Extension Python
-      url: concepts/extension-python.md
-    - text: Extension R
-      url: concepts/extension-r.md
-  - linkListType: concept
+    - text: Qu’est-ce qu’Azure Synapse Analytics ?
+      url: /azure/synapse-analytics/overview-what-is
+  - linkListType: tutorial
     links:
-    - text: Sécurité du framework d’extensibilité
-      url: concepts/security.md
-- title: Gérer les packages Python et R
-  linkLists:
+    - text: Créer une application de machine learning avec Apache Spark MLlib et Azure Synapse Analytics
+      url: /azure/synapse-analytics/spark/apache-spark-machine-learning-mllib-notebook
   - linkListType: how-to-guide
     links:
-    - text: Obtenir des informations sur les packages Python
-      url: package-management/python-package-information.md
-    - text: Installer des packages Python avec sqlmlutils
-      url: package-management/install-additional-python-packages-on-sql-server.md
-    - text: Obtenir des informations sur les packages R
-      url: package-management/r-package-information.md
-    - text: Installer de nouveaux packages R avec sqlmlutils
-      url: package-management/install-additional-r-packages-on-sql-server.md
+    - text: Créer, développer et gérer des notebooks Azure Synapse Studio
+      url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
+- title: ML sur Azure SQL Database Edge
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Machine learning et IA avec ONNX dans SQL Database Edge
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: Déployer et faire des prédictions avec un modèle ONNX dans SQL Database Edge
+      url: /azure/sql-database-edge/deploy-onnx
