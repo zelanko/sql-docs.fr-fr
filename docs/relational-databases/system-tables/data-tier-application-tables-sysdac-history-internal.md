@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084761"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833107"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tables d’applications de la couche Données - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "68084761"
 |**sequence_id**|**int**|Identifie une étape dans une action.|  
 |**instance_id**|**uniqueidentifier**|Identificateur de l'instance DAC. Cette colonne peut être jointe à la colonne **instance_id** dans [dbo. Sysdac_instances &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Identificateur du type d'action :<br /><br /> **0** = déploiement<br /><br /> **1** = créer<br /><br /> **2** = renommer<br /><br /> **3** = détacher<br /><br /> **4** = suppression|  
-|**action_type_name**|**varchar (19)**|Nom du type d'action :<br /><br /> **déployer**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **dissocié**<br /><br /> **delete**|  
+|**action_type_name**|**varchar (19)**|Nom du type d'action :<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **dissocié**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificateur du type d'objet affecté par l'action :<br /><br /> **0** = dacpac<br /><br /> **1** = connexion<br /><br /> **2** = base de données|  
 |**dac_object_type_name**|**varchar (8)**|Nom du type d'objet affecté par l'action :<br /><br /> **dacpac** = instance DAC<br /><br /> **connexion**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code qui identifie l'état actuel de l'action :<br /><br /> **0** = en attente<br /><br /> **1** = réussite<br /><br /> **2** = échec|  
-|**action_status_name**|**varchar (11)**|État actuel de l'action :<br /><br /> **instance**<br /><br /> **fructueux**<br /><br /> **Échec**|  
-|**Obligatoire**|**bit**|Utilisé par lors [!INCLUDE[ssDE](../../includes/ssde-md.md)] de la restauration d’une opération DAC.|  
+|**action_status_name**|**varchar (11)**|État actuel de l'action :<br /><br /> **en attente**<br /><br /> **fructueux**<br /><br /> **incident**|  
+|**Obligatoire**|**bit**|Utilisé par lors de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] restauration d’une opération DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nom de l'objet avant la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**dac_object_name_posttran**|**sysname**|Nom de l'objet après la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] qui implémente une action sur une base de données ou connexion.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68084761"
 |12|2|create|database|  
 |12|3|renommer|database|  
   
- Les opérations DAC, telles que Delete, ne suppriment pas les lignes de **sysdac_history_internal**. Vous pouvez utiliser la requête suivante pour supprimer manuellement les lignes de DAC qui ne sont plus déployées sur une [!INCLUDE[ssDE](../../includes/ssde-md.md)]instance du :  
+ Les opérations DAC, telles que Delete, ne suppriment pas les lignes de **sysdac_history_internal**. Vous pouvez utiliser la requête suivante pour supprimer manuellement les lignes de DAC qui ne sont plus déployées sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] :  
   
 ```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
@@ -74,7 +74,7 @@ WHERE instance_id NOT IN
  La suppression de lignes pour les opérations DAC actives n'a aucune incidence sur les opérations DAC, si ce n'est que vous ne pourrez pas créer de rapport sur l'historique complet de l'opérations DAC.  
   
 > [!NOTE]  
->  Actuellement, il n’existe aucun mécanisme pour supprimer **sysdac_history_internal** lignes [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]sur.  
+>  Actuellement, il n’existe aucun mécanisme pour supprimer **sysdac_history_internal** lignes sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe sysadmin. L’accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant d’autorisations pour se connecter à la base de données Master.  

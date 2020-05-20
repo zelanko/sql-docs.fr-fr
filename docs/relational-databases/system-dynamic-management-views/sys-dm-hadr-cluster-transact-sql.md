@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b4e2b27e9c284676c576586c125309fa8116531d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900659"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833783"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Si le nœud de clustering de basculement Windows Server (WSFC) qui héberge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une instance de activée [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] pour possède un quorum WSFC, **sys. dm_hadr_cluster** retourne une ligne qui expose le nom du cluster et des informations sur le quorum. Si le nœud WSFC n’a aucun quorum, aucune ligne n’est retournée.  
+  Si le nœud de clustering de basculement Windows Server (WSFC) qui héberge une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activée pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] possède un quorum WSFC, **sys. dm_hadr_cluster** retourne une ligne qui expose le nom du cluster et des informations sur le quorum. Si le nœud WSFC n’a aucun quorum, aucune ligne n’est retournée.  
  > [!TIP]
- > À compter [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]de, cette vue de gestion dynamique prend en charge les instances de cluster de basculement Always on en plus des groupes de disponibilité Always on.
+ > À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , cette vue de gestion dynamique prend en charge les instances de cluster de basculement Always on en plus des groupes de disponibilité Always on.
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

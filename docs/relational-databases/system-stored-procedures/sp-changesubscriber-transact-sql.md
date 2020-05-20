@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762778"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833396"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>Arguments  
 `[ @subscriber = ] 'subscriber'`Nom de l’abonné sur lequel modifier les options. *Subscriber* est de **type sysname**, sans valeur par défaut.  
   
-`[ @type = ] type`Type d’abonné. *type* est de type **tinyint**, avec NULL comme valeur par défaut. **0** indique un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné. **1** spécifie un abonné [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de serveur de source de données ODBC qui n’est pas ou.  
+`[ @type = ] type`Type d’abonné. *type* est de type **tinyint**, avec NULL comme valeur par défaut. **0** indique un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné. **1** spécifie un abonné de serveur de source de données ODBC qui n’est pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou.  
   
 `[ @login = ] 'login'`ID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’authentification. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @password = ] 'password'`Mot de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passe d’authentification. *Password* est de **%** **type sysname**, avec la valeur par défaut. **%** indique qu’il n’y a aucune modification de la propriété de mot de passe.  
+`[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Mot de passe d’authentification. *Password* est de **type sysname**, avec la valeur par défaut **%** . **%** indique qu’il n’y a aucune modification de la propriété de mot de passe.  
   
 `[ @commit_batch_size = ] commit_batch_size`Pris en charge pour la compatibilité descendante uniquement.  
   
@@ -77,7 +77,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Ponctuelle|  
 |**2**|À la demande|  
 |**4**|Quotidien|  
-|**version8**|Hebdomadaire|  
+|**8**|Hebdomadaire|  
 |**16bits**|Mensuelle|  
 |**32**|Mensuelle relative|  
 |**64**|Démarrage automatique|  
@@ -92,7 +92,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Troisième|  
-|**version8**|Quatrième|  
+|**8**|Quatrième|  
 |**16bits**|Dernier|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fréquence de répétition de la tâche de distribution au cours de la *frequency_type*définie. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
@@ -104,7 +104,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Une fois|  
 |**2**|Seconde|  
 |**4**|Minute|  
-|**version8**|Heure|  
+|**8**|Heure|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequence_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
   
@@ -125,10 +125,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentification|  
 |**1**|Authentification Windows|  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être utilisé lors de la modification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des propriétés d’un article sur un serveur de publication.  
+>  l' *éditeur* ne doit pas être utilisé lors de la modification des propriétés d’un article sur un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

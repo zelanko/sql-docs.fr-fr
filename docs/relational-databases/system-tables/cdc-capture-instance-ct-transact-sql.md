@@ -1,5 +1,5 @@
 ---
-title: CDC. &lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
+title: CDC. &lt; capture_instance &gt; _CT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72908393"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833091"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt;_CT&gt;CAPTURE_INSTANCE (Transact-SQL)
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Table de modifications créée lorsque la capture de données modifiées est activée sur une table source. La table retourne une ligne pour chaque opération d'insertion et de suppression effectuée sur la table source, et deux lignes pour chaque opération de mise à jour effectuée sur la table source. Lorsque le nom de la table de modifications n'est pas spécifié au moment de l'activation de la table source, le nom est dérivé. Le format du nom est CDC. *capture_instance*_CT où *capture_instance* est le nom de schéma de la table source et le nom de la table source au format *schema_table*. Par exemple, si la table **Person. Address** dans l’exemple de base de données **AdventureWorks** est activée pour la capture de données modifiées, le nom de la table de modifications dérivée serait **CDC. Person_Address_CT**.  
@@ -45,7 +45,7 @@ ms.locfileid: "72908393"
   
 ## <a name="remarks"></a>Notes  
 
-La `__$command_id` colonne a été introduite dans une mise à jour cumulative des versions 2012 à 2016. Pour obtenir des informations sur la version et le téléchargement, consultez l’article 3030352 de la base de connaissances à [l’adresse suivante : la table de modifications n’est pas correctement ordonnée pour les lignes mises à jour après activation de la capture de données modifiées pour une base de données Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Pour plus d’informations, consultez les fonctionnalités de capture de données [modifiées peuvent s’arrêter après la mise à niveau vers la dernière mise à jour cumulative pour SQL Server 2012, 2014 et 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+La colonne `__$command_id` a été introduite dans une mise à jour cumulative des versions 2012 à 2016. Pour obtenir des informations sur la version et le téléchargement, consultez l’article 3030352 de la base de connaissances à [l’adresse suivante : la table de modifications n’est pas correctement ordonnée pour les lignes mises à jour après activation de la capture de données modifiées pour une base de données Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Pour plus d’informations, consultez les fonctionnalités de capture de données [modifiées peuvent s’arrêter après la mise à niveau vers la dernière mise à jour cumulative pour SQL Server 2012, 2014 et 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 ## <a name="captured-column-data-types"></a>Types de données de la colonne capturée.  
  Les colonnes capturées incluses dans cette table ont les mêmes type de données et valeur que leurs colonnes sources correspondantes avec les exceptions suivantes :  
@@ -57,7 +57,7 @@ La `__$command_id` colonne a été introduite dans une mise à jour cumulative d
  Toutefois, les valeurs dans ces colonnes sont les mêmes que celles des colonnes sources.  
   
 ### <a name="large-object-data-types"></a>Types de données des objets importants  
- Les colonnes de type de données **image**, **Text**et **ntext** reçoivent toujours une valeur **null** lorsque _ _ $ Operation = 1 \_ \_ou $Operation = 3. Une valeur **null** \_ \_est assignée aux colonnes de type de données **varbinary (max)**, **varchar (max)** ou **nvarchar (max)** si $Operation = 3, sauf si la colonne a été modifiée au cours de la mise à jour. Lorsque \_ \_$Operation = 1, la valeur de ces colonnes est affectée au moment de la suppression. Les colonnes calculées incluses dans une instance de capture ont toujours une valeur **null**.  
+ Les colonnes de type de données **image**, **Text**et **ntext** reçoivent toujours une valeur **null** lorsque _ _ $ Operation = 1 ou \_ \_ $operation = 3. Une valeur **null** est assignée aux colonnes de type de données **varbinary (max)**, **varchar (max)** ou **nvarchar (max)** si \_ \_ $operation = 3, sauf si la colonne a été modifiée au cours de la mise à jour. Lorsque \_ \_ $operation = 1, la valeur de ces colonnes est affectée au moment de la suppression. Les colonnes calculées incluses dans une instance de capture ont toujours une valeur **null**.  
   
  Par défaut, la taille maximale qui peut être ajoutée à une colonne capturée dans une seule instruction INSERT, UPDATE, WRITETEXT ou UPDATETEXT est de 65 536 octets ou 64 Ko. Pour augmenter cette taille afin de prendre en charge des données LOB plus volumineuses, utilisez l' [option de configuration de serveur configurer l’option max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) pour spécifier une taille maximale supérieure. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   

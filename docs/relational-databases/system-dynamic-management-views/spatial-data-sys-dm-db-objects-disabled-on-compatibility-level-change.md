@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 300b988ce74a22dad3384920bb93fd45191128e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809903"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832620"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Données spatiales-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**int**|1 = contraintes<br /><br /> 7 = index et segments|  
+|**type**|**int**|1 = contraintes<br /><br /> 7 = index et segments|  
 |**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN pour les contraintes<br /><br /> INDEX pour les index et les segments|  
 |**major_id**|**int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
 |**minor_id**|**int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
@@ -113,7 +113,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Comportement des objets désactivés  
  **Index**  
   
- Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est générée : « le processeur de requêtes ne peut pas créer de plan car l’index «% ». \*ls’sur la table ou la vue'%. \*ls’est désactivé. " Pour réactiver ces objets, reconstruisez les index après la mise à niveau en appelant **ALTER index on... Régénération**.  
+ Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est générée : « le processeur de requêtes ne peut pas créer de plan car l’index «% ». \* ls’sur la table ou la vue'%. \* ls’est désactivé. " Pour réactiver ces objets, reconstruisez les index après la mise à niveau en appelant **ALTER index on... Régénération**.  
   
  **Tas**  
   

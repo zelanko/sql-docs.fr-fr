@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017719"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832500"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifie les paramètres de configuration de la messagerie de base de données. Les paramètres de configuration spécifiés avec **sysmail_configure_sp** s’appliquent à l’ensemble [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’instance.  
+  Modifie les paramètres de configuration de la messagerie de base de données. Les paramètres de configuration spécifiés avec **sysmail_configure_sp** s’appliquent à l’ensemble de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@parameter_name** = ] **'**_parameter_name_**'**  
+ [ **@parameter_name** =] **'**_parameter_name_**'**  
  Nom du paramètre à modifier.  
   
- [**@parameter_value** = ] **'**_parameter_value_**'**  
+ [ **@parameter_value** =] **'**_parameter_value_**'**  
  Nouvelle valeur du paramètre.  
   
- [**@description** = ] **'**_Description_**'**  
+ [ **@description** =] **'**_Description_**'**  
  Description du paramètre.  
   
 ## <a name="return-code-values"></a>Codet de retour  

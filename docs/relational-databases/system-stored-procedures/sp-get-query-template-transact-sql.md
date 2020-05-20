@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124079"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833226"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Arguments  
  '*query_text*'  
- Requête dont la version paramétrable doit être générée. '*query_text*'doit être placé entre guillemets simples et être précédé par le spécificateur Unicode N. N'*query_text*'est la valeur assignée @querytext au paramètre. Il s’agit du type **nvarchar (max)**.  
+ Requête dont la version paramétrable doit être générée. '*query_text*'doit être placé entre guillemets simples et être précédé par le spécificateur Unicode N. N'*query_text*'est la valeur assignée au @querytext paramètre. Il s’agit du type **nvarchar (max)**.  
   
  @templatetext  
  Paramètre de sortie de type **nvarchar (max)**, fourni comme indiqué, pour recevoir la forme paramétrable de *query_text* en tant que littéral de chaîne.  
   
  @parameters  
- Paramètre de sortie de type **nvarchar (max)**, fourni comme indiqué, pour recevoir un littéral de chaîne des noms de paramètres et des types de données qui ont été paramétrés dans @templatetext.  
+ Paramètre de sortie de type **nvarchar (max)**, fourni comme indiqué, pour recevoir un littéral de chaîne des noms de paramètres et des types de données qui ont été paramétrés dans @templatetext .  
   
 ## <a name="remarks"></a>Notes  
  sp_get_query_template retourne une erreur dans les cas suivants :  
@@ -58,7 +58,7 @@ sp_get_query_template
   
 -   *query_text* a la valeur null, n’est pas une chaîne Unicode, n’est pas valide ou ne peut pas être compilée.  
   
- Si sp_get_query_template retourne une erreur, elle ne modifie pas les valeurs des paramètres @templatetext de @parameters sortie et.  
+ Si sp_get_query_template retourne une erreur, elle ne modifie pas les valeurs des @templatetext paramètres de @parameters sortie et.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données public.  

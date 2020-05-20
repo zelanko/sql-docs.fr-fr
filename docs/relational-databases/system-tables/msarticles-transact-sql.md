@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSarticles system table
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98bd5295aadbe75928b4a05e7ec882235fb47313
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132097"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832365"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68132097"
 |**publisher_id**|**smallint**|ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**publication_id**|**int**|ID de la publication.|  
-|**-**|**sysname**|Nom de l’article.|  
+|**article**|**sysname**|Nom de l’article.|  
 |**article_id**|**int**|ID de l’article.|  
 |**destination_object**|**sysname**|Nom de la table créée sur l'Abonné.|  
 |**source_owner**|**sysname**|Nom du schéma de la table source hébergée sur le serveur de publication.|  

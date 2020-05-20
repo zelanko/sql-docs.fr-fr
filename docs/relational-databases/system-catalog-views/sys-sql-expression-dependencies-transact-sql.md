@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69561128"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833954"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contient une ligne pour chaque dépendance par nom sur une entité définie par l'utilisateur dans la base de données actuelle. Cela comprend les dépendances entre les fonctions scalaires définies par l’utilisateur compilées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode natif et d’autres modules. Une dépendance entre deux entités est créée lorsqu’une entité, appelée *entité référencée*, apparaît par nom dans une expression SQL rendue persistante d’une autre entité, appelée *entité de référence*. Par exemple, lorsqu'une table est référencée dans la définition d'une vue, la vue, comme entité de référence, dépend de la table, l'entité référencée. Si la table est supprimée, la vue est inutilisable.  
+  Contient une ligne pour chaque dépendance par nom sur une entité définie par l'utilisateur dans la base de données actuelle. Cela comprend les dépendances entre les fonctions scalaires définies par l’utilisateur compilées en mode natif et d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modules. Une dépendance entre deux entités est créée lorsqu’une entité, appelée *entité référencée*, apparaît par nom dans une expression SQL rendue persistante d’une autre entité, appelée *entité de référence*. Par exemple, lorsqu'une table est référencée dans la définition d'une vue, la vue, comme entité de référence, dépend de la table, l'entité référencée. Si la table est supprimée, la vue est inutilisable.  
   
  Pour plus d’informations, consultez [Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -72,18 +72,18 @@ ms.locfileid: "69561128"
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table de charge de travail|Oui*|Oui|  
-|Affichage|Oui|Oui|  
-|Index filtré|Oui**|Non|  
-|Statistiques filtrées|Oui**|Non|  
-|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Oui|Oui|  
+|Table|Oui*|Yes|  
+|Affichage|Yes|Yes|  
+|Index filtré|Oui**|No|  
+|Statistiques filtrées|Oui**|No|  
+|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Yes|Yes|  
 |Procédure stockée CLR|Non|Oui|  
-|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
+|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Yes|Yes|  
 |Fonction CLR définie par l'utilisateur|Non|Oui|  
 |Déclencheur CLR (DML et DDL)|Non|Non|  
-|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
-|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
-|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
+|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
+|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
 |Procédures stockées étendues|Non|Oui|  
 |File d'attente|Non|Oui|  
 |Synonyme|Non|Oui|  
@@ -91,7 +91,7 @@ ms.locfileid: "69561128"
 |Collection de schémas XML|Non|Oui|  
 |Fonction de partition|Non|Oui|  
   
- \*Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait [!INCLUDE[tsql](../../includes/tsql-md.md)] référence à un module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
+ \*Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
   
  ** Chaque colonne utilisée dans le prédicat de filtre est suivie en tant qu'entité de référence.  
   

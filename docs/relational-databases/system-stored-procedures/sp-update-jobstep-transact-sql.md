@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084877"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833112"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ sp_update_jobstep
   
 `[ @database_name = ] 'database'`Nom de la base de données dans laquelle exécuter une [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *Database est de* **type sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
-`[ @database_user_name = ] 'user'`Nom du compte d’utilisateur à utiliser lors de l’exécution d' [!INCLUDE[tsql](../../includes/tsql-md.md)] une étape. *User*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @database_user_name = ] 'user'`Nom du compte d’utilisateur à utiliser lors de l’exécution d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *User*est de **type sysname**, avec NULL comme valeur par défaut.  
   
 `[ @retry_attempts = ] retry_attempts`Nombre de nouvelles tentatives à utiliser en cas d’échec de cette étape. *retry_attempts*est de **type int**, avec NULL comme valeur par défaut.  
   
@@ -124,12 +124,12 @@ sp_update_jobstep
 |**0** (valeur par défaut)|Écrasement du fichier de sortie.|  
 |**2**|Ajout au fichier de sortie|  
 |**4**|Écriture de la sortie de l'étape d'un travail Transact-SQL dans l'historique des étapes.|  
-|**version8**|Écriture du journal dans la table (remplace l'historique existant)|  
+|**8**|Écriture du journal dans la table (remplace l'historique existant)|  
 |**16bits**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
   
-`[ @proxy_id = ] proxy_id`Numéro d’identification du proxy sous lequel l’étape de travail s’exécute. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
+`[ @proxy_id = ] proxy_id`Numéro d’identification du proxy sous lequel l’étape de travail s’exécute. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent.  
   
-`[ @proxy_name = ] 'proxy_name'`Nom du proxy sous lequel l’étape de travail s’exécute. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
+`[ @proxy_name = ] 'proxy_name'`Nom du proxy sous lequel l’étape de travail s’exécute. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -152,7 +152,7 @@ sp_update_jobstep
   
  Seuls les membres de **sysadmin** peuvent mettre à jour une étape de travail appartenant à un autre utilisateur.  
   
- Si l'étape d'un travail nécessite un accès à un proxy, le créateur de l'étape doit avoir accès au proxy pour l'étape du travail. Tous les sous-systèmes, excepté Transact-SQL, requièrent un compte proxy. Les membres de **sysadmin** ont accès à tous les proxies et peuvent utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service agent pour le proxy.  
+ Si l'étape d'un travail nécessite un accès à un proxy, le créateur de l'étape doit avoir accès au proxy pour l'étape du travail. Tous les sous-systèmes, excepté Transact-SQL, requièrent un compte proxy. Les membres de **sysadmin** ont accès à tous les proxies et peuvent utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service agent pour le proxy.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant modifie le nombre de tentatives de reprises pour la première étape du travail `Weekly Sales Data Backup`. À la fin de l'exemple, ce nombre s'élève à `10`.  

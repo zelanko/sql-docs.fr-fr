@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995518"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833451"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @column = ] 'column'`Nom de la colonne dont le mappage de type de données doit être modifié. *Column* est de **type sysname**, sans valeur par défaut.  
   
-`[ @type = ] 'type'`Nom du type de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données dans la colonne de destination. *type* est de type **sysname**, avec NULL comme valeur par défaut.  
+`[ @type = ] 'type'`Nom du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données dans la colonne de destination. *type* est de type **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @length = ] length`Longueur du type de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données dans la colonne de destination. *Length* est de type **bigint**, avec NULL comme valeur par défaut.  
+`[ @length = ] length`Longueur du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données dans la colonne de destination. *Length* est de type **bigint**, avec NULL comme valeur par défaut.  
   
-`[ @precision = ] precision`Précision du type de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données dans la colonne de destination. *PRECISION* est de type **bigint**, avec NULL comme valeur par défaut.  
+`[ @precision = ] precision`Précision du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données dans la colonne de destination. *PRECISION* est de type **bigint**, avec NULL comme valeur par défaut.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **Sp_changearticlecolumndatatype** est utilisé pour remplacer les mappages de type de données par défaut entre les types de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de publication pris en charge (Oracle et). Pour afficher ces mappages de type de données par défaut, exécutez [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
+ **Sp_changearticlecolumndatatype** est utilisé pour remplacer les mappages de type de données par défaut entre les types de serveur de publication pris en charge (Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Pour afficher ces mappages de type de données par défaut, exécutez [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
  **sp_changearticlecolumndatatype** est pris en charge uniquement pour les serveurs de publication Oracle. L'exécution de cette procédure stockée sur une publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entraîne une erreur.  
   

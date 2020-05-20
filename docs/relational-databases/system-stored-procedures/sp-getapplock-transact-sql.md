@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72717261"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833241"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @Resource= ] '*resource_name*'  
+ [ @Resource =] '*resource_name*'  
  Chaîne de caractères qui indique le nom qui identifie la ressource de verrou. L'application doit vérifier que le nom de ressource est unique. Le nom spécifié est haché en interne en une valeur qui peut être stockée dans le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* est de type **nvarchar (255)** et n’a pas de valeur par défaut. Si une chaîne de ressource est plus longue que **nvarchar (255)**, elle sera tronquée à **nvarchar (255)**.  
   
  *resource_name* est comparé en binaire et respecte donc la casse, quels que soient les paramètres de classement de la base de données actuelle.  
@@ -54,16 +54,16 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 > [!NOTE]  
 >  Une fois qu'un verrou d'application a été acquis, seuls les 32 premiers caractères peuvent être récupérés sous forme de texte brut ; les autres caractères sont hachés.  
   
- [ @LockMode= ] '*lock_mode*'  
+ [ @LockMode =] '*lock_mode*'  
  Mode de verrouillage à obtenir pour une ressource spécifique. L’argument *lock_mode* est de type **nvarchar(32)** et n’a pas de valeur par défaut. La valeur peut être l’une des suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **exclusive**. Pour plus d’informations, consultez [modes de verrouillage](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
- [ @LockOwner= ] '*lock_owner*'  
+ [ @LockOwner =] '*lock_owner*'  
  Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque la valeur de *lock_owner* est **transaction**, par défaut ou explicitement spécifiée, sp_getapplock doit être exécutée à partir d’une transaction.  
   
- [ @LockTimeout= ] '*valeur*'  
- Valeur de délai d'attente de verrou, en millisecondes. La valeur par défaut est la même que la valeur retournée@LOCK_TIMEOUTpar @. Pour indiquer qu’une demande de verrou doit retourner un code de retour de-1 au lieu d’attendre le verrou quand la demande ne peut pas être accordée immédiatement, spécifiez 0.  
+ [ @LockTimeout =] '*valeur*'  
+ Valeur de délai d'attente de verrou, en millisecondes. La valeur par défaut est la même que la valeur retournée par @ @LOCK_TIMEOUT . Pour indiquer qu’une demande de verrou doit retourner un code de retour de-1 au lieu d’attendre le verrou quand la demande ne peut pas être accordée immédiatement, spécifiez 0.  
   
- [ @DbPrincipal= ] '*database_principal*'  
+ [ @DbPrincipal =] '*database_principal*'  
  Utilisateur, rôle ou rôle d'application qui dispose d'autorisations sur un objet d'une base de données. L’appelant de la fonction doit être membre de *database_principal*, dbo ou du rôle de base de données fixe db_owner pour appeler la fonction avec succès. La valeur par défaut est public.  
   
 ## <a name="return-code-values"></a>Codet de retour  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e3c380f5508897a25327be20e05b22984d3bd4e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022452"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833673"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_addscriptexec [ @publication = ] publication
   
  **1** = l’agent continue le script et ignore l’erreur.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être utilisé lors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la publication à partir d’un serveur de publication.  
+>  l' *éditeur* ne doit pas être utilisé lors de la publication à partir d’un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -65,14 +65,14 @@ sp_addscriptexec [ @publication = ] publication
   
  Pour utiliser **sp_addscriptexec**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service doit disposer d’autorisations en lecture et en écriture sur l’emplacement de l’instantané, ainsi que des autorisations de lecture sur l’emplacement où sont stockés les scripts.  
   
- L' [utilitaire sqlcmd](../../tools/sqlcmd-utility.md) est utilisé pour exécuter le script sur l’abonné, et le script est exécuté dans le contexte de sécurité utilisé par le Agent de distribution ou agent de fusion lors de la connexion à la base de données d’abonnement. Lorsque l’agent est exécuté sur une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l' [utilitaire osql](../../tools/osql-utility.md) est utilisé à la place de [sqlcmd](../../tools/sqlcmd-utility.md).  
+ L' [utilitaire sqlcmd](../../tools/sqlcmd-utility.md) est utilisé pour exécuter le script sur l’abonné, et le script est exécuté dans le contexte de sécurité utilisé par le Agent de distribution ou agent de fusion lors de la connexion à la base de données d’abonnement. Lorsque l’agent est exécuté sur une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l' [utilitaire osql](../../tools/osql-utility.md) est utilisé à la place de [sqlcmd](../../tools/sqlcmd-utility.md).  
   
  **sp_addscriptexec** est utile pour appliquer des scripts aux abonnés et utilise [sqlcmd](../../tools/sqlcmd-utility.md) pour appliquer le contenu du script à l’abonné. Toutefois, dans la mesure où les configurations des Abonnés peuvent varier, des scripts testés avant la publication sur le serveur de publication peuvent toujours provoquer des erreurs sur un Abonné. *SkipError* offre la possibilité de faire en sorte que les Agent de distribution ou agent de fusion ignorent les erreurs et continuent sur. Utilisez [sqlcmd](../../tools/sqlcmd-utility.md) pour tester les scripts avant d’exécuter **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Les erreurs ignorées sont toujours consignées dans l'historique de l'Agent à titre de référence.  
   
- L’utilisation de **sp_addscriptexec** pour poster un fichier de script pour les publications à l’aide de FTP [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la remise d’instantané est prise en charge uniquement pour les abonnés.  
+ L’utilisation de **sp_addscriptexec** pour poster un fichier de script pour les publications à l’aide de FTP pour la remise d’instantané est prise en charge uniquement pour les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_addscriptexec**.  

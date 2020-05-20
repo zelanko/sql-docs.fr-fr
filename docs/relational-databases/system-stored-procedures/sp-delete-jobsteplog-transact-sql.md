@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56f2c544f168dbcedc0424f26818aad2e3c2c79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305096"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833343"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **Remarque :** *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id`Numéro d’identification de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. Si ce n’est pas le cas, tous les journaux d’étapes de travail du travail sont supprimés, sauf si ** \@older_than** ou ** \@larger_than** sont spécifiés. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id`Numéro d’identification de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. Si ce n’est pas le cas, tous les journaux d’étapes de travail du travail sont supprimés, sauf si ** \@ older_than** ou ** \@ larger_than** sont spécifiés. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
 `[ @step_name = ] 'step_name'`Nom de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > **Remarque :** *Step_id* ou *step_name* peuvent être spécifiés, mais ils ne peuvent pas être spécifiés.  
   
-`[ @older_than = ] 'date'`Date et heure du journal d’étapes de travail le plus ancien que vous souhaitez conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *Date* est de **type DateTime**, avec NULL comme valeur par défaut. Older_than et ** \@larger_than** peuvent être spécifiés. ** \@**  
+`[ @older_than = ] 'date'`Date et heure du journal d’étapes de travail le plus ancien que vous souhaitez conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *Date* est de **type DateTime**, avec NULL comme valeur par défaut. ** \@ Older_than** et ** \@ larger_than** peuvent être spécifiés.  
   
-`[ @larger_than = ] 'size_in_bytes'`Taille en octets du journal d’étapes de travail le plus volumineux que vous souhaitez conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. Larger_than et ** \@older_than** peuvent être spécifiés. ** \@**  
+`[ @larger_than = ] 'size_in_bytes'`Taille en octets du journal d’étapes de travail le plus volumineux que vous souhaitez conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. ** \@ Larger_than** et ** \@ older_than** peuvent être spécifiés.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -68,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Notes  
  **sp_delete_jobsteplog** se trouve dans la base de données **msdb** .  
   
- Si aucun argument n' ** \@** est spécifié, à l’exception de job_id ou ** \@job_name** , tous les journaux d’étapes de travail du travail spécifié sont supprimés.  
+ Si aucun argument n’est spécifié, à l’exception de ** \@ job_id** ou ** \@ job_name** , tous les journaux d’étapes de travail du travail spécifié sont supprimés.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  

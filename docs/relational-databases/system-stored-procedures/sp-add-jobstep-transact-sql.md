@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412847"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833684"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412847"
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > Sur [Azure SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des types de tâches SQL Server agent ne sont pas pris en charge. Pour plus d’informations, consultez [Azure SQL Database Managed instance les différences T-SQL entre SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+  > Sur [Azure SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des types de tâches SQL Server agent ne sont pas pris en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +77,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|«**ACTIVESCRIPTING**»|Script actif<br /><br /> ** \* Important \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|«**ACTIVESCRIPTING**»|Script actif<br /><br /> ** \* \* \* Important \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Commande du système d'exécution ou programme exécutable|  
 |«**Distribution**»|Travail de l'Agent de distribution de réplication|  
 |«**Instantané**»|Travail de l'Agent d'instantané de réplication|  
@@ -134,7 +134,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @database_name = ] 'database'`Nom de la base de données dans laquelle exécuter une [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *Database est de* **type sysname**, avec NULL comme valeur par défaut. dans ce cas, la base de données **Master** est utilisée. Les noms placés entre crochets ([ ]) ne sont pas autorisés. Pour une étape de travail ActiveX, la *base de données* est le nom du langage de script que l’étape utilise.  
   
-`[ @database_user_name = ] 'user'`Nom du compte d’utilisateur à utiliser lors de l’exécution d' [!INCLUDE[tsql](../../includes/tsql-md.md)] une étape. *User* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *User* a la valeur null, l’étape s’exécute dans le contexte utilisateur du propriétaire de la tâche sur la *base de données*.  L'Agent SQL Server inclut ce paramètre uniquement si le propriétaire du travail est un sysadmin SQL Server. Dans ce cas, l'étape Transact-SQL donnée est exécutée dans le contexte du nom d'utilisateur SQL Server spécifié. Si le propriétaire du travail n’est pas un SQL Server sysadmin, l’étape Transact-SQL est toujours exécutée dans le contexte de la connexion qui détient ce travail, et @database_user_name le paramètre est ignoré.  
+`[ @database_user_name = ] 'user'`Nom du compte d’utilisateur à utiliser lors de l’exécution d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *User* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *User* a la valeur null, l’étape s’exécute dans le contexte utilisateur du propriétaire de la tâche sur la *base de données*.  L'Agent SQL Server inclut ce paramètre uniquement si le propriétaire du travail est un sysadmin SQL Server. Dans ce cas, l'étape Transact-SQL donnée est exécutée dans le contexte du nom d'utilisateur SQL Server spécifié. Si le propriétaire du travail n’est pas un SQL Server sysadmin, l’étape Transact-SQL est toujours exécutée dans le contexte de la connexion qui détient ce travail, et le @database_user_name paramètre est ignoré.  
   
 `[ @retry_attempts = ] retry_attempts`Nombre de nouvelles tentatives à utiliser en cas d’échec de cette étape. *retry_attempts* est de **type int**, avec **0**comme valeur par défaut, qui n’indique aucune nouvelle tentative.  
   
@@ -142,7 +142,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`Réservé.  
   
-`[ @output_file_name = ] 'file_name'`Nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est de type **nvarchar (200)**, avec NULL comme valeur par défaut. *file_name* pouvez inclure un ou plusieurs des jetons listés sous *Command*. Ce paramètre est valide uniquement avec les commandes qui s' [!INCLUDE[tsql](../../includes/tsql-md.md)]exécutent sur les sous [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-systèmes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , **CmdExec**, **PowerShell**, ou.  
+`[ @output_file_name = ] 'file_name'`Nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est de type **nvarchar (200)**, avec NULL comme valeur par défaut. *file_name* pouvez inclure un ou plusieurs des jetons listés sous *Command*. Ce paramètre est valide uniquement avec les commandes qui s’exécutent sur les sous [!INCLUDE[tsql](../../includes/tsql-md.md)] -systèmes, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 `[ @flags = ] flags`Est une option qui contrôle le comportement. *Flags* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
@@ -151,14 +151,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**0** (valeur par défaut)|Écrasement du fichier de sortie|  
 |**2**|Ajout au fichier de sortie|  
 |**4**|Écriture de la sortie de l'étape d'un travail [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l'historique des étapes.|  
-|**version8**|Écriture du journal dans la table (remplace l'historique existant)|  
+|**8**|Écriture du journal dans la table (remplace l'historique existant)|  
 |**16bits**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
 |**32**|Écriture de toute la sortie dans l'historique des travaux|  
 |**64**|Création d'un événement Windows à utiliser comme signal pour l'étape de travail Cmd à abandonner|  
   
-`[ @proxy_id = ] proxy_id`Numéro d’identification du proxy sous lequel l’étape de travail s’exécute. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
+`[ @proxy_id = ] proxy_id`Numéro d’identification du proxy sous lequel l’étape de travail s’exécute. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent.  
   
-`[ @proxy_name = ] 'proxy_name'`Nom du proxy sous lequel l’étape de travail s’exécute. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que compte de service pour l’agent.  
+`[ @proxy_name = ] 'proxy_name'`Nom du proxy sous lequel l’étape de travail s’exécute. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* n’est spécifié, aucun *proxy_name* n’est spécifié et aucun *user_name* n’est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -171,7 +171,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  SQL Server Management Studio offre un moyen simple et graphique de gérer les tâches, et est recommandé pour la création et la gestion de l'infrastructure de travail.  
   
- Par défaut, une étape de travail s’exécute en tant que compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de service pour l’agent, sauf si un autre proxy est spécifié. Une exigence de ce compte doit être un membre du rôle de sécurité fixe **sysadmin** .
+ Par défaut, une étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent, sauf si un autre proxy est spécifié. Une exigence de ce compte doit être un membre du rôle de sécurité fixe **sysadmin** .
   
  Un proxy peut être identifié par *proxy_name* ou *proxy_id*.  
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c0cc477647150a11fc644378196f97cfc21007ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056766"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832509"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  Lorsque *Continuous* = 0, le travail **sp_cdc_scan** s’exécute jusqu’à *max_scans* analyses du journal, en traitant jusqu’à *max_trans* transactions pendant chaque analyse, puis se ferme.  
   
- Si ** \@Continuous** est modifié de 1 à 0, ** \@PollingInterval** a automatiquement la valeur 0. Une valeur spécifiée pour ** \@PollingInterval** différente de 0 est ignorée.  
+ Si ** \@ Continuous** est modifié de 1 à 0, ** \@ PollingInterval** a automatiquement la valeur 0. Une valeur spécifiée pour ** \@ PollingInterval** différente de 0 est ignorée.  
   
- Si ** \@Continuous** est omis ou a explicitement la valeur null et ** \@PollingInterval** est explicitement défini sur une valeur supérieure à 0, ** \@Continuous** prend automatiquement la valeur 1.  
+ Si ** \@ Continuous** est omis ou a explicitement la valeur null et ** \@ PollingInterval** est explicitement défini sur une valeur supérieure à 0, ** \@ Continuous** prend automatiquement la valeur 1.  
   
  *Continuous* est valide uniquement pour les travaux de capture.  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-changing-a-capture-job"></a>R. Modification d'un travail de capture  
- L’exemple suivant met à jour les `@job_type`paramètres `@maxscans`, et `@maxtrans` d’un travail de capture dans la `AdventureWorks2012` base de données. Les autres paramètres valides pour un travail de capture, `@continuous` et `@pollinginterval`, sont omis ; leurs valeurs ne sont pas modifiées.  
+ L’exemple suivant met à jour les `@job_type` `@maxscans` paramètres, et `@maxtrans` d’un travail de capture dans la `AdventureWorks2012` base de données. Les autres paramètres valides pour un travail de capture, `@continuous` et `@pollinginterval`, sont omis ; leurs valeurs ne sont pas modifiées.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Modification d'un travail de nettoyage  
- L'exemple suivant met à jour un travail de nettoyage dans la base de données `AdventureWorks2012`. Tous les paramètres valides pour ce type de ** \@** tâche, à l’exception du seuil, sont spécifiés. La valeur du ** \@seuil** n’est pas modifiée.  
+ L'exemple suivant met à jour un travail de nettoyage dans la base de données `AdventureWorks2012`. Tous les paramètres valides pour ce type de tâche, à l’exception du ** \@ seuil**, sont spécifiés. La valeur du ** \@ seuil** n’est pas modifiée.  
   
 ```  
 USE AdventureWorks2012;  

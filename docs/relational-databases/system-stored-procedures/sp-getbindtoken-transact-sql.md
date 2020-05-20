@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124004"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833202"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [@out_token=] '*return_value*'  
+ [ @out_token =] '*return_value*'  
  Jeton à utiliser pour lier les sessions. *return_value* est de type **varchar (255)** et n’a pas de valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -52,7 +52,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  None  
   
 ## <a name="remarks"></a>Notes  
- sp_getbindtoken retourne un jeton valide uniquement lorsque la procédure stockée est exécutée dans une transaction active. Dans le cas [!INCLUDE[ssDE](../../includes/ssde-md.md)] contraire, le retourne un message d’erreur. Par exemple :  
+ sp_getbindtoken retourne un jeton valide uniquement lorsque la procédure stockée est exécutée dans une transaction active. Dans le cas contraire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne un message d’erreur. Par exemple :  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Lorsque sp_getbindtoken est utilisé pour inscrire une connexion de transaction distribuée dans une transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ouverte, retourne le même jeton. Par exemple :  
+ Lorsque sp_getbindtoken est utilisé pour inscrire une connexion de transaction distribuée dans une transaction ouverte, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le même jeton. Par exemple :  
   
 ```  
 USE AdventureWorks2012;  
@@ -97,7 +97,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 (1 row(s_) affected)  
 ```  
   
- Le jeton de liaison peut être utilisé avec sp_bindsession afin de lier de nouvelles sessions à la même transaction. Le jeton de liaison n’est valide que localement dans chaque instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du et ne peut pas être partagé entre plusieurs instances.  
+ Le jeton de liaison peut être utilisé avec sp_bindsession afin de lier de nouvelles sessions à la même transaction. Le jeton de liaison n’est valide que localement dans chaque instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et ne peut pas être partagé entre plusieurs instances.  
   
  Pour obtenir et passer un jeton de liaison, vous devez exécuter sp_getbindtoken avant d'utiliser sp_bindsession afin de partager le même espace de verrouillage. Si vous disposez d'un jeton de liaison, sp_bindsession sera exécuté correctement.  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab49a6572bfe8b2879b832642eeb1cf692177bb6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022425"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833643"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Arguments  
  [ @loginame **=** ] **«**_connexion_**»**  
- Nom de la connexion ajoutée au rôle serveur fixe. *login* est de **type sysname**, sans valeur par défaut. la *connexion* peut être [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une connexion ou une connexion Windows. Si la connexion Windows n'a pas encore été autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle l'est automatiquement.  
+ Nom de la connexion ajoutée au rôle serveur fixe. *login* est de **type sysname**, sans valeur par défaut. la *connexion* peut être une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une connexion Windows. Si la connexion Windows n'a pas encore été autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle l'est automatiquement.  
   
  [ @rolename **=** ] **«**_role_**»**  
  Nom du rôle serveur fixe auquel est ajoutée la connexion. *role* est de **type sysname**, avec NULL comme valeur par défaut et doit avoir l’une des valeurs suivantes :  
@@ -81,7 +81,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  Il faut appartenir au rôle auquel le nouveau membre est ajouté.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant ajoute la connexion `Corporate\HelenS` Windows au rôle `sysadmin` serveur fixe.  
+ L’exemple suivant ajoute la connexion Windows `Corporate\HelenS` au `sysadmin` rôle serveur fixe.  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  

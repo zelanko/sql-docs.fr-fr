@@ -17,15 +17,15 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061386"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831997"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -76,7 +76,7 @@ ms.locfileid: "68061386"
 |**connectivité**|**connection_failed**|9|**reconfiguration**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La connexion a échoué car la base de données était en cours de reconfiguration.|  
 |**connectivité**|**connection_terminated**|0|**idle_connection_timeout**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La connexion est restée inactive plus longtemps que ne l'autorise le seuil défini pour le système.|  
 |**connectivité**|**connection_terminated**|1|**reconfiguration**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été interrompue en raison d'une reconfiguration de la base de données.|  
-|**connectivité**|**limitation**|*\<Code de raison>*|**reason_code**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La demande est limitée.  Code de raison de la limitation : * \<code motif>*. Pour plus d’informations, consultez [limitation du moteur](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**connectivité**|**limitation**|*\<Code de raison>*|**reason_code**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La demande est limitée.  Code de raison de la limitation : code * \< motif>*. Pour plus d’informations, consultez [limitation du moteur](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40549|**long_transaction**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin, car elle contient une transaction à long terme. Essayez de diminuer la durée de la transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin car elle a acquis trop de verrous. Essayez de lire ou de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée en raison d’une utilisation excessive de TEMPDB. Essayez de modifier votre requête afin de réduire l'utilisation de l'espace de table temporaire. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
@@ -125,7 +125,7 @@ start_time                    end_time
  Cette vue peut ne pas inclure toutes les informations de connexion et d'erreur :  
   
 - Cette vue ne contient pas toutes les erreurs de base de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)] qui peuvent se produire, mais seulement celles spécifiées dans la section [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) de cette rubrique.  
-- En cas de défaillance d’un ordinateur dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] le centre de données, il est possible qu’il manque une petite quantité de données dans la table d’événements.  
+- En cas de défaillance d’un ordinateur dans le centre de données, il est possible qu’il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] manque une petite quantité de données dans la table d’événements.  
 - Si une adresse IP a été bloquée par DoSGuard, les événements de tentative de connexion à partir de cette adresse IP ne peuvent pas être collectés et n'apparaitront pas dans cette vue.  
   
 ## <a name="examples"></a>Exemples  

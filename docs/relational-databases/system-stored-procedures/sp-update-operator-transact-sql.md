@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084840"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832520"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,56 +53,56 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @name=] '*nom*'  
+ [ @name =] '*nom*'  
  Nom de l'opérateur à modifier. *Name* est de **type sysname**, sans valeur par défaut.  
   
- [ @new_name=] '*new_name*'  
+ [ @new_name =] '*new_name*'  
  Nouveau nom de l'opérateur. Ce nom doit être unique. *new_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [ @enabled=] *activé*  
+ [ @enabled =] *activé*  
  Nombre indiquant l’état actuel de l’opérateur (**1** s’il est actuellement activé, **0** dans le cas contraire). *Enabled* est de **type tinyint**, avec NULL comme valeur par défaut. S'il n'est pas activé, l'opérateur ne recevra pas de notifications d'alerte.  
   
- [ @email_address=] '*email_address*'  
+ [ @email_address =] '*email_address*'  
  Adresse de courrier électronique de l'opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *email_address* est de type **nvarchar (100)**, avec NULL comme valeur par défaut.  
   
- [ @pager_address=] '*pager_number*'  
+ [ @pager_address =] '*pager_number*'  
  Adresse de radiomessagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *pager_number* est de type **nvarchar (100)**, avec NULL comme valeur par défaut.  
   
- [ @weekday_pager_start_time=] *weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée à cet opérateur sur son récepteur de radiomessagerie, du lundi au vendredi. *weekday_pager_start_time*est de **type int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @weekday_pager_end_time=] *weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  Indique l'heure à partir de laquelle une notification ne peut pas être envoyée à l'opérateur spécifié sur son récepteur de radiomessagerie, du lundi au vendredi. *weekday_pager_end_time*est de **type int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @saturday_pager_start_time=] *saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée le samedi à l'opérateur spécifié sur son récepteur de radiomessagerie. *saturday_pager_start_time*est de **type int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @saturday_pager_end_time=] *saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  Indique l'heure à partir de laquelle une notification ne peut pas être envoyée le samedi à l'opérateur spécifié sur son récepteur de radiomessagerie. *saturday_pager_end_time*est de **type int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @sunday_pager_start_time=] *sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée le dimanche à l'opérateur spécifié sur son récepteur de radiomessagerie. *sunday_pager_start_time*est de **type int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @sunday_pager_end_time=] *sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  Indique l'heure à partir de laquelle une notification ne peut pas être envoyée le dimanche à l'opérateur spécifié sur son récepteur de radiomessagerie. *sunday_pager_end_time*est de **type int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @pager_days=] *pager_days*  
- Indique les jours où l'opérateur est en mesure de recevoir des notifications par radiomessagerie (en fonction des heures de début/fin précisées). *pager_days*est de **type tinyint**, avec NULL comme valeur par défaut et doit être une valeur comprise entre **0** et **127**. *pager_days* est calculé en ajoutant les valeurs individuelles pour les jours requis. Par exemple, du lundi au vendredi, il s’agit de **2**+**4**+**8**+**16**+**32** = **64**.  
+ [ @pager_days =] *pager_days*  
+ Indique les jours où l'opérateur est en mesure de recevoir des notifications par radiomessagerie (en fonction des heures de début/fin précisées). *pager_days*est de **type tinyint**, avec NULL comme valeur par défaut et doit être une valeur comprise entre **0** et **127**. *pager_days* est calculé en ajoutant les valeurs individuelles pour les jours requis. Par exemple, du lundi au vendredi, il s’agit de **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
 |**4**|Mardi|  
-|**version8**|Mercredi|  
+|**8**|Mercredi|  
 |**16bits**|Jeudi|  
 |**32**|Vendredi|  
 |**64**|Samedi|  
   
- [ @netsend_address=] '*netsend_address*'  
+ [ @netsend_address =] '*netsend_address*'  
  Adresse réseau de l'opérateur à qui est envoyé le message réseau. *netsend_address*est de type **nvarchar (100)**, avec NULL comme valeur par défaut.  
   
- [ @category_name=] «*Category*»  
+ [ @category_name =] '*catégorie*'  
  Nom de la catégorie pour cette alerte. *Category* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  

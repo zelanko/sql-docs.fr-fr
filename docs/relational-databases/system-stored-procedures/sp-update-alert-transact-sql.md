@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890844"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832543"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ sp_update_alert
   
 `[ @notification_message = ] 'notification_message'`Texte révisé d’un message supplémentaire envoyé à l’opérateur dans le cadre de la notification par courrier électronique, **net send**ou radiomessagerie. *notification_message* est de type **nvarchar (512)**, avec NULL comme valeur par défaut.  
   
-`[ @include_event_description_in = ] include_event_description_in`Spécifie si la description de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’erreur du journal des applications Windows doit être incluse dans le message de notification. *include_event_description_in* est de **type tinyint**, avec NULL comme valeur par défaut et peut prendre une ou plusieurs des valeurs suivantes.  
+`[ @include_event_description_in = ] include_event_description_in`Spécifie si la description de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erreur du journal des applications Windows doit être incluse dans le message de notification. *include_event_description_in* est de **type tinyint**, avec NULL comme valeur par défaut et peut prendre une ou plusieurs des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -115,7 +115,7 @@ sp_update_alert
 |Élément de format|Description|  
 |--------------------|-----------------|  
 |*Item*|Objet de performances, compteur de performances ou instance nommée du compteur.|  
-|*Comparaison*|L’un des opérateurs suivants **>**: **<**,,**=**|  
+|*Comparaison*|L’un des opérateurs suivants : **>** , **<** ,**=**|  
 |*Valeur*|Valeur numérique du compteur.|  
   
 `[ @category_name = ] 'category'`Nom de la catégorie d’alerte. *Category* est de **type sysname** , avec NULL comme valeur par défaut.  
@@ -128,7 +128,7 @@ sp_update_alert
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Seul **sysmessages** écrit dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows peut déclencher une alerte.  
+ Seul **sysmessages** écrit dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Journal des applications Windows peut déclencher une alerte.  
   
  **sp_update_alert** modifie uniquement les paramètres d’alerte pour lesquels des valeurs de paramètre sont fournies. Si un paramètre est manquant, la valeur actuelle est retenue.  
   

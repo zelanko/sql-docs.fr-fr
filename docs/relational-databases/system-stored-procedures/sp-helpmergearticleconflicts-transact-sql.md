@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8657fda01875b6c0ec78ecad0334f9f74b3e7eab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122326"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833163"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication de fusion. *publication* est de **%** **type sysname**, avec la valeur par défaut, qui retourne tous les Articles de la base de données qui ont des conflits.  
+`[ @publication = ] 'publication'`Nom de la publication de fusion. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne tous les Articles de la base de données qui ont des conflits.  
   
 `[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
@@ -49,7 +49,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**-**|**sysname**|Nom de l'article.|  
+|**article**|**sysname**|Nom de l'article.|  
 |**source_owner**|**sysname**|Propriétaire de l'objet source.|  
 |**source_object**|**nvarchar(386**|Nom de l'objet source.|  
 |**conflict_table**|**nvarchar(258)**|Nom de la table stockant les conflits d'insertion ou de mise à jour.|  

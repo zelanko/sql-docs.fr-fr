@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b82585e75be46cc38372564a68661815430c2be4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907412"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833077"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ ms.locfileid: "67907412"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|Date et heure de création de l'Agent de distribution ou de l'Agent de fusion|  
-|**queue_id**|**sysname**|Identificateur permettant de localiser la file d'attente pour les abonnements de mise à jour en attente. Pour les abonnements qui ne sont pas en attente, la valeur est NULL. Pour les publications [!INCLUDE[msCoName](../../includes/msconame-md.md)] basées sur Message Queuing, la valeur est un GUID qui identifie de manière unique la file d'attente à utiliser pour l'abonnement. Pour les publications de files d’attente basées sur SQL Server, la colonne contient la valeur **SQL**.<br /><br /> Remarque : l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilisation de Message Queuing est dépréciée et n’est plus prise en charge.|  
+|**queue_id**|**sysname**|Identificateur permettant de localiser la file d'attente pour les abonnements de mise à jour en attente. Pour les abonnements qui ne sont pas en attente, la valeur est NULL. Pour les publications [!INCLUDE[msCoName](../../includes/msconame-md.md)] basées sur Message Queuing, la valeur est un GUID qui identifie de manière unique la file d'attente à utiliser pour l'abonnement. Pour les publications de files d’attente basées sur SQL Server, la colonne contient la valeur **SQL**.<br /><br /> Remarque : l’utilisation [!INCLUDE[msCoName](../../includes/msconame-md.md)] de Message Queuing est dépréciée et n’est plus prise en charge.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Indique si l’agent peut être activé à distance.<br /><br /> **0** indique que l’agent ne peut pas être activé à distance.<br /><br /> **1** indique que l’agent sera activé à distance et sur l’ordinateur distant spécifié dans la propriété *offload_server* .|  
 |**offload_server**|**sysname**|Nom de réseau du serveur à utiliser pour l'activation de l'agent à distance|  
-|**dts_package_name**|**sysname**|Nom du package DTS. Par exemple, pour un package nommé **DTSPub_Package**, spécifiez `@dts_package_name = N'DTSPub_Package'`.|  
+|**dts_package_name**|**sysname**|Nom du package DTS. Par exemple, pour un package nommé **DTSPub_Package**, spécifiez `@dts_package_name = N'DTSPub_Package'` .|  
 |**dts_package_password**|**nvarchar (524)**|Mot de passe du package.|  
 |**dts_package_location**|**int**|Emplacement du package. L’emplacement du package peut être **Distributor** ou **Subscriber**.|  
 |**sid**|**varbinary (85)**|Numéro d'identification de sécurité (SID) de l'Agent de distribution ou de fusion lors de sa première exécution.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion à l'Abonné. Les valeurs possibles sont les suivantes :<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification SQL Server<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
+|**subscriber_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion à l'Abonné. Les valeurs possibles sont les suivantes :<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification SQL Server<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] authentification Windows.|  
 |**subscriber_login**|**sysname**|Nom de connexion utilisé lors de la connexion à l'Abonné.|  
 |**subscriber_password**|**nvarchar (524)**|Indique la valeur chiffrée du mot de passe qui est utilisé lors de la connexion à l'Abonné.|  
 |**reset_partial_snapshot_progress**|**bit**|Indique si un instantané partiellement téléchargée sera annulée pour que la totalité du processus d'instantané puisse recommencer.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4949307cdaf2cc712e56525e872381c2af8256fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 804e5723732f4879451c885a0aa719d6822925a1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304792"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833560"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@message_id =** ] *message_number*  
+ [** @message_id =** ] *message_number*  
  Numéro d’erreur du message à modifier à partir de **sys. messages**. *message_number* est de **type int** sans valeur par défaut.  
   
-`[ @parameter = ] 'write\_to\_log_'`Est utilisé avec ** \@parameter_value** pour indiquer que le message doit être écrit dans le journal [!INCLUDE[msCoName](../../includes/msconame-md.md)] des applications Windows. *write_to_log* est de **type sysname** et n’a pas de valeur par défaut. *write_to_log* doit avoir la valeur WITH_LOG ou null. Si *write_to_log* a la valeur WITH_LOG ou null et que la valeur de ** \@parameter_value** est **true**, le message est écrit dans le journal des applications Windows. Si *write_to_log* a la valeur WITH_LOG ou null et que la valeur de ** \@parameter_value** est **false**, le message n’est pas toujours écrit dans le journal des applications Windows, mais peut être écrit en fonction de la façon dont l’erreur a été générée. Si *write_to_log* est spécifié, la valeur de ** \@parameter_value** doit également être spécifiée.  
+`[ @parameter = ] 'write\_to\_log_'`Est utilisé avec ** \@ parameter_value** pour indiquer que le message doit être écrit dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Journal des applications Windows. *write_to_log* est de **type sysname** et n’a pas de valeur par défaut. *write_to_log* doit avoir la valeur WITH_LOG ou null. Si *write_to_log* a la valeur WITH_LOG ou null et que la valeur de ** \@ parameter_value** est **true**, le message est écrit dans le journal des applications Windows. Si *write_to_log* a la valeur WITH_LOG ou null et que la valeur de ** \@ parameter_value** est **false**, le message n’est pas toujours écrit dans le journal des applications Windows, mais peut être écrit en fonction de la façon dont l’erreur a été générée. Si *write_to_log* est spécifié, la valeur de ** \@ parameter_value** doit également être spécifiée.  
   
 > [!NOTE]  
->  Si un message est écrit dans le journal des applications Windows, il est également écrit dans [!INCLUDE[ssDE](../../includes/ssde-md.md)] le fichier journal des erreurs.  
+>  Si un message est écrit dans le journal des applications Windows, il est également écrit dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichier journal des erreurs.  
   
-`[ @parameter_value = ]'value_'`Est utilisé avec ** \@le paramètre** pour indiquer que l’erreur doit être écrite dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows. la *valeur* est de type **varchar (5)**, sans valeur par défaut. Si la **valeur est true**, l’erreur est toujours écrite dans le journal des applications Windows. Si la **valeur est false**, l’erreur n’est pas toujours écrite dans le journal des applications Windows, mais elle peut être écrite en fonction de la façon dont l’erreur a été générée. Si la *valeur* est spécifiée, *write_to_log* doit également être spécifié pour ** \@le paramètre** .  
+`[ @parameter_value = ]'value_'`Est utilisé avec le ** \@ paramètre** pour indiquer que l’erreur doit être écrite dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Journal des applications Windows. la *valeur* est de type **varchar (5)**, sans valeur par défaut. Si la **valeur est true**, l’erreur est toujours écrite dans le journal des applications Windows. Si la **valeur est false**, l’erreur n’est pas toujours écrite dans le journal des applications Windows, mais elle peut être écrite en fonction de la façon dont l’erreur a été générée. Si la *valeur* est spécifiée, *write_to_log* doit également être spécifié pour le ** \@ paramètre** .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

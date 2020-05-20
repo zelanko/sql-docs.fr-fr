@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771364"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833422"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Propriété|Valeurs|Description|  
 |--------------|------------|-----------------|  
-|**proactive**|**true**|Active le serveur de publication.|  
+|**active**|**true**|Active le serveur de publication.|  
 ||**false**|Désactive le serveur de publication.|  
 |**bd_distribution**||Nom de la base de données de distribution.|  
 |**connexion**||Nom de connexion.|  
 |**mot de passe**||Mot de passe fort pour le nom de connexion fourni.|  
-|**security_mode**|**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour un serveur de publication non-* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour un serveur de publication non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+|**security_mode**|**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour un non-* [!INCLUDE[msCoName](../../includes/msconame-md.md)] serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publication.*|  
+||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour un non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de *publication.*|  
 |**working_directory**||Répertoire de travail utilisé pour stocker les fichiers de données et de schéma de la publication.|  
 |NULL (par défaut)||Toutes les options de *propriété* disponibles sont imprimées.| 
 |**storage_connection_string**| Clé d’accès | La clé d’accès pour le répertoire de travail lorsque la base de données est Azure SQL Database Managed Instance. 

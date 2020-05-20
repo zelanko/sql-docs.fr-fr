@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942490"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833702"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ core.sp_purge_data
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [@retention_days =] *retention_days*  
+ [ @retention_days =] *retention_days*  
  Nombre de jours pendant lesquels conserver des données dans les tables de l'entrepôt de données de gestion. Les données avec un horodatage antérieur à *retention_days* sont supprimées. *retention_days* est de type **smallint**, avec NULL comme valeur par défaut. Si elle est spécifiée, la valeur doit être positive. Lorsqu'elle est NULL, la valeur dans la colonne valid_through de la vue core.snapshots détermine les lignes qui sont éligibles pour la suppression.  
   
- [@instance_name = ] '*instance_name*'  
+ [ @instance_name =] '*instance_name*'  
  Nom de l'instance pour le jeu d'éléments de collecte. *instance_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- *instance_name* doit être le nom complet de l’instance, qui se compose du nom de l’ordinateur et du nom de l’instance, sous la forme *ComputerName*\\*nom_instance*. Lorsque la valeur est NULL, l'instance par défaut sur le serveur local est utilisée.  
+ *instance_name* doit être le nom complet de l’instance, qui se compose du nom de l’ordinateur et du nom de l’instance, sous la forme *ComputerName* \\ *nom_instance*. Lorsque la valeur est NULL, l'instance par défaut sur le serveur local est utilisée.  
   
- [@collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  GUID du jeu d'éléments de collecte. *collection_set_uid* est de type **uniqueidentifier**, avec NULL comme valeur par défaut. Lorsque la valeur est NULL, les lignes éligibles de tous les jeux d'éléments de collecte sont supprimées. Pour obtenir cette valeur, interrogez l'affichage catalogue syscollector_collection_sets.  
   
- [@duration = ] *durée*  
+ [ @duration =] *durée*  
  Nombre maximal de minutes pendant lesquelles l'opération de vidage doit s'exécuter. *Duration* est de type **smallint**, avec NULL comme valeur par défaut. Si elle est spécifiée, la valeur doit être zéro ou un entier positif. Lorsque NULL, l'opération s'exécute jusqu'à ce que toutes les lignes éligibles soient supprimées ou que l'opération soit arrêtée manuellement.  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -66,7 +66,7 @@ core.sp_purge_data
 ## <a name="remarks"></a>Notes  
  Cette procédure sélectionne des lignes dans la vue core.snapshots qui sont éligibles pour la suppression en fonction d'une période de rétention. Toutes les lignes éligibles pour la suppression sont supprimées de la table core.snapshots_internal. La suppression des lignes précédentes déclenche une action de suppression en cascade dans toutes les tables de l'entrepôt de données de gestion. Cette opération est effectuée en utilisant la clause ON DELETE CASCADE, qui est définie pour toutes les tables stockant des données collectées.  
   
- Chaque instantané et ses données associées sont supprimés dans une transaction explicite, puis validés. Par conséquent, si l’opération de vidage est arrêtée manuellement ou si la valeur @duration spécifiée pour est dépassée, seules les données non validées sont conservées. Ces données peuvent être supprimées lors de la prochaine exécution du travail.  
+ Chaque instantané et ses données associées sont supprimés dans une transaction explicite, puis validés. Par conséquent, si l’opération de vidage est arrêtée manuellement ou si la valeur spécifiée pour @duration est dépassée, seules les données non validées sont conservées. Ces données peuvent être supprimées lors de la prochaine exécution du travail.  
   
  La procédure doit être exécutée dans le contexte de la base de données d'entrepôt de données de gestion.  
   
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. Spécification d'un nom d'instance et d'un jeu d'éléments de collecte  
- L'exemple suivant supprime des données de l'entrepôt de données de gestion pour un jeu d'éléments de collecte donné sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant @retention_days donné que n’est pas spécifié, la valeur dans la colonne valid_through de la vue Core. Snapshots est utilisée pour déterminer les lignes du jeu d’collections pouvant être supprimées.  
+ L'exemple suivant supprime des données de l'entrepôt de données de gestion pour un jeu d'éléments de collecte donné sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que @retention_days n’est pas spécifié, la valeur dans la colonne valid_through de la vue Core. Snapshots est utilisée pour déterminer les lignes du jeu d’collections pouvant être supprimées.  
   
 ```  
 USE <management_data_warehouse>;  

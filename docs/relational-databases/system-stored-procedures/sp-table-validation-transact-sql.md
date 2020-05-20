@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173555"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834210"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @rowcount_only = ] type_of_check_requested`Spécifie le type de somme de contrôle ou de RowCount à effectuer. *type_of_check_requested* est de type **smallint**, avec **1**comme valeur par défaut.  
   
- Si la **valeur est 0**, effectuez un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comptage de lignes et une somme de contrôle compatible 7,0.  
+ Si la **valeur est 0**, effectuez un comptage de lignes et une somme de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrôle compatible 7,0.  
   
  Si **1**, effectuez une vérification du ROWCOUNT uniquement.  
   
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`Si le Agent de distribution exécute **sp_table_validation**, spécifie si le agent de distribution doit s’arrêter immédiatement à la fin de la validation. *shutdown_agent* est de **bit**, avec **0**comme valeur par défaut. Si la **valeur est 0**, l’agent de réplication ne s’arrête pas. Si la valeur est **1**, l’erreur 20578 est déclenchée et l’agent de réplication est signalé pour s’arrêter. Ce paramètre est ignoré lorsque **sp_table_validation** est exécutée directement par un utilisateur.  
   
-`[ @table_name = ] table_name`Nom de la table de la vue utilisée pour les messages de sortie. *table_name* est de ** \@** **type sysname**, avec table comme valeur par défaut.  
+`[ @table_name = ] table_name`Nom de la table de la vue utilisée pour les messages de sortie. *table_name* est de **type sysname**, avec ** \@ table**comme valeur par défaut.  
   
 `[ @column_list = ] 'column_list'`Liste des colonnes à utiliser dans la fonction de somme de contrôle. *column_list* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. Active la validation d'articles de fusion pour spécifier une liste de colonnes excluant les colonnes calculées et les colonnes timestamp.  
   
@@ -87,7 +87,7 @@ sp_table_validation [ @table = ] 'table'
   
  Lors d'une somme de contrôle, la structure de la table doit être identique sur les deux serveurs ; les tables doivent posséder les mêmes colonnes, dans le même ordre, les mêmes types et longueurs de données et les mêmes conditions NULL/NOT NULL. Par exemple, si le serveur de publication a exécuté une instruction CREATE TABLE, puis une instruction ALTER TABLE pour ajouter des colonnes, mais que le script appliqué au niveau de l'Abonné est une simple CREATE TABLE, la structure n'est PAS la même. Si vous n’êtes pas certain que la structure des deux tables est identique, examinez [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) et vérifiez que le décalage de chaque table est identique.  
   
- Les valeurs à virgule flottante sont susceptibles de générer des différences de somme de contrôle si l' **utilitaire bcp** en mode caractère a été utilisé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ce qui est le cas si la publication a des abonnés non-. Cela est dû à des erreurs mineures et inévitables de précision lors de la conversion vers le mode caractère et à partir de ce mode.  
+ Les valeurs à virgule flottante sont susceptibles de générer des différences de somme de contrôle si l' **utilitaire bcp** en mode caractère a été utilisé, ce qui est le cas si la publication a des abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela est dû à des erreurs mineures et inévitables de précision lors de la conversion vers le mode caractère et à partir de ce mode.  
   
 ## <a name="permissions"></a>Autorisations  
  Pour exécuter **sp_table_validation**, vous devez disposer des autorisations SELECT sur la table en cours de validation.  

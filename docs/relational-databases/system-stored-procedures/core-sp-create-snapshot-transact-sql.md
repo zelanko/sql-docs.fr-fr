@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078219"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831849"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  GUID du jeu d'éléments de collecte. *collection_set_uid* est de type **uniqueidentifier** et n’a pas de valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collection_sets dans la base de données msdb.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  GUID d'un type de collecteur. *collector_type_uid* est de type **uniqueidentifier** et n’a pas de valeur par défaut. Pour obtenir le GUID, interrogez la vue dbo.syscollector_collector_types dans la base de données msdb.  
   
- [ @machine_name= ] '*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  Nom du serveur sur lequel réside le jeu d'éléments de collecte. *machine_name* est de **type sysname**, sans valeur par défaut.  
   
- [ @named_instance= ] '*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  Nom de l'instance pour le jeu d'éléments de collecte. *named_instance* est de **type sysname**, sans valeur par défaut.  
   
- [ @log_id = ] *log_id*  
+ [ @log_id =] *log_id*  
  Identificateur unique mappé au journal des événements de jeu d'éléments de collecte sur le serveur qui a collecté les données. *log_id* est de type **bigint** sans valeur par défaut. Pour obtenir la valeur de *log_id*, interrogez la vue dbo. syscollector_execution_log dans la base de données msdb.  
   
- [ @snapshot_id = ] *snapshot_id*  
+ [ @snapshot_id =] *snapshot_id*  
  Identificateur unique d’une ligne qui est insérée dans la vue Core. snapshots. *snapshot_id* est de **type int** et est retourné en tant que sortie.  
   
 ## <a name="return-code-values"></a>Codet de retour  
