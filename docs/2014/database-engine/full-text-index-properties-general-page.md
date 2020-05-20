@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778940"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000939"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriétés d'index de recherche en texte intégral (page Général)
   **Pour afficher ou changer les propriétés modifiables d'un index de recherche en texte intégral**  
@@ -31,7 +31,7 @@ ms.locfileid: "62778940"
  **Sauvegarde de la base de données**  
  Affiche le nom de la base de données dans laquelle réside l'index de recherche en texte intégral.  
   
- **Table de charge de travail**  
+ **Tableau**  
  Affiche le nom de la table dans laquelle est défini l'index de recherche en texte intégral.  
   
  **Clé d'index de recherche en texte intégral**  
@@ -65,7 +65,7 @@ ms.locfileid: "62778940"
  Le groupe de fichiers auquel l'index de recherche en texte intégral appartient.  
   
  **Liste de mots vides de l’index de recherche en texte intégral**  
- La liste de mots vides actuellement associée à l'index de recherche en texte intégral. Une liste de mots vides est une liste de [mots vides](../relational-databases/search/full-text-search.md). La liste de mots vides associée à un index de recherche en texte intégral, s'applique aux requêtes de texte intégral sur cet index. Vous pouvez supprimer la liste de mots vides de l’index en sélectionnant ** \<dés>** dans la liste, ou vous pouvez sélectionner une autre liste de mots vides ;>système indique la STOPLIST du système. ** \<**  
+ La liste de mots vides actuellement associée à l'index de recherche en texte intégral. Une liste de mots vides est une liste de [mots vides](../relational-databases/search/full-text-search.md). La liste de mots vides associée à un index de recherche en texte intégral, s'applique aux requêtes de texte intégral sur cet index. Vous pouvez supprimer la liste de mots vides de l’index en sélectionnant ** \< dés>** dans la liste, ou vous pouvez sélectionner une autre liste de mots vides ; ** \<>système** indique la STOPLIST du système.  
   
  **Pour créer une liste de mots vides**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62778940"
  **Liste de propriétés de recherche**  
  Liste de propriétés de recherche actuellement associée à l'index de recherche en texte intégral, le cas échéant. Une liste de propriétés de recherche spécifie un ensemble de propriétés du document incluses dans l'index de recherche en texte intégral associé, s'il est rempli. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- OFF>indique qu’il n’existe actuellement aucune liste de propriétés de recherche associée à l’index. ** \<** Vous pouvez supprimer la liste de propriétés de recherche actuelle de l’index en sélectionnant ** \<dés>** dans la liste, ou vous pouvez sélectionner une autre liste de propriétés de recherche dans la liste. Seules les listes des propriétés de recherche de la base de données actuelle sont répertoriées ici.  
+ ** \< Off>** indique qu’il n’existe actuellement aucune liste de propriétés de recherche associée à l’index. Vous pouvez supprimer la liste de propriétés de recherche actuelle de l’index en sélectionnant ** \< dés>** dans la liste, ou vous pouvez sélectionner une autre liste de propriétés de recherche dans la liste. Seules les listes des propriétés de recherche de la base de données actuelle sont répertoriées ici.  
   
 > [!NOTE]  
 >  Vous pouvez associer une liste de propriétés de recherche donnée à plusieurs index de recherche en texte intégral dans la même base de données.  
@@ -119,7 +119,7 @@ ms.locfileid: "62778940"
   
 |||  
 |-|-|  
-|**:**|Activé|  
+|**:**|activé|  
 |**Fausses**|Désactivé|  
   
  **Suivi des modifications**  
@@ -140,7 +140,7 @@ ms.locfileid: "62778940"
 |-|-|  
 |**Complète**|Au cours d'un remplissage complet d'une table, les entrées d'index sont créées pour toutes les lignes.|  
 |**Incrémentielle**|Le remplissage incrémentiel permet de mettre à jour l'index de recherche en texte intégral pour les lignes ajoutées, supprimées ou modifiées après le dernier remplissage ou pendant l'exécution de ce dernier. Pour effectuer un remplissage incrémentiel, il est nécessaire que la table de base contienne une colonne du type de données `timestamp`.|  
-|**Mise à jour**|L'index de recherche en texte intégral est mis à jour chaque fois que les données de la table de base sont modifiées.|  
+|**Mettre à jour**|L'index de recherche en texte intégral est mis à jour chaque fois que les données de la table de base sont modifiées.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Commencer à utiliser la recherche en texte intégral](../relational-databases/search/get-started-with-full-text-search.md)  

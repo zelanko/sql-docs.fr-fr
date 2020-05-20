@@ -1,6 +1,7 @@
 ---
 title: Préparer les données de trace d'entrée
 titleSuffix: SQL Server Distributed Replay
+description: Avant de pouvoir démarrer une relecture distribuée avec SQL Server Distributed Replay, préparez les données de trace d’entrée en lançant l’étape de prétraitement.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 514d11ded0761cd4719b3d3a44b7c91d08d97e04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4bb84ab2f8df17bba52b41d115b2c67d47931eb3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307006"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152205"
 ---
 # <a name="prepare-the-input-trace-data"></a>Préparer les données de trace d'entrée
 
@@ -33,7 +34,7 @@ Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!I
   
 ### <a name="to-prepare-the-input-trace-data"></a>Pour préparer les données de trace d'entrée  
   
-1.  **(Facultatif) Modifier les paramètres de configuration du prétraitement**: si vous voulez modifier les paramètres de configuration du prétraitement, tels que filtrer ou non les sessions système ou configurer la durée d’inactivité maximale, vous devez modifier l’élément `<PreprocessModifiers>` du fichier de configuration de prétraitement XML, `DReplay.exe.preprocess.config`. Si vous modifiez le fichier de configuration de prétraitement, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
+1.  **Modifier les paramètres de configuration de l’appareil (facultatif)**  : si vous voulez modifier les paramètres de configuration du prétraitement, tels que filtrer ou non les sessions système ou configurer la durée d’inactivité maximale, vous devez modifier l’élément `<PreprocessModifiers>` du fichier de configuration de prétraitement XML, `DReplay.exe.preprocess.config`. Si vous modifiez le fichier de configuration de prétraitement, nous vous recommandons de modifier une copie plutôt que l'original. Pour modifier des paramètres, suivez la procédure suivante :  
   
     1.  Faites une copie du fichier par défaut de configuration de prétraitement, `DReplay.exe.preprocess.config`, et renommez le nouveau fichier. Le fichier par défaut de configuration de prétraitement se trouve dans le dossier d'installation de l'outil d'administration.  
   
@@ -43,7 +44,7 @@ Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!I
   
      Pour plus d'informations sur le fichier de configuration de prétraitement, consultez [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-2.  **Initialiser l’étape de prétraitement**: pour préparer les données de trace d’entrée, vous devez exécuter l’outil d’administration avec l’option **preprocess** . Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Initialiser l'étape de prétraitement** : pour préparer les données de trace d'entrée, vous devez exécuter l'outil d'administration avec l'option **prétraiter**. Pour plus d’informations, consultez [Option preprocess &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Ouvrez l’utilitaire d’invite de commandes Windows (**CMD.exe**) et accédez à l’emplacement d’installation de l’outil d’administration Distributed Replay (**DReplay.exe**).  
   

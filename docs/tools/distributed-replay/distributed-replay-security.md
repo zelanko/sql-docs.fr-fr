@@ -1,6 +1,7 @@
 ---
 title: Sécurité Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: Cet article décrit les étapes de configuration de la sécurité pour SQL Server Distributed Replay et des considérations importantes concernant les étapes de protection et de suppression des données.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a9d29f7c546064d6069caa3770e1ddc1e7ebe53f
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 25bc62c6ea0785cf9abb05909fdc2f2563932b07
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087441"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151106"
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
 
@@ -132,7 +133,7 @@ Avant d’installer et d’utiliser la fonctionnalité [!INCLUDE[msCoName](../..
   
 -   Supprimez tous les fichiers de trace, intermédiaires, de distribution et de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés pour le test. Les fichiers intermédiaires et de distribution sont stockés dans le répertoire de travail sur le contrôleur et le client, respectivement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Install Distributed Replay - Présentation](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   

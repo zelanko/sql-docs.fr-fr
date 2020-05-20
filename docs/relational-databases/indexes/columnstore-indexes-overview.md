@@ -1,7 +1,7 @@
 ---
-title: 'Index columnstore : vue d’ensemble | Microsoft Docs'
+title: 'Index columnstore : vue d’ensemble | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48139f3da39cb280a95ccff8ab9aca2efc67a13b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009403"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269484"
 ---
-# <a name="columnstore-indexes-overview"></a>Index columnstore : vue d’ensemble
+# <a name="columnstore-indexes-overview"></a>Index columnstore : Vue d’ensemble
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Les index columnstore sont la norme pour le stockage et l’interrogation des tables de faits d’entreposage de données de grande taille. Ils utilisent un stockage de données en colonnes et un traitement des requêtes allant jusqu’à **multiplier par 10 les performances des requêtes** dans l’entrepôt de données par rapport au stockage orienté lignes classique. Vous pouvez également atteindre une **compression de données jusqu’à 10 fois plus importante** que la taille des données non compressées. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], les index columnstore sont compatibles avec l’analytique opérationnelle, qui permet d’exécuter des analyses en temps réel performantes sur une charge de travail transactionnelle.  
+Les index columnstore sont la norme pour le stockage et l’interrogation des tables de faits d’entreposage de données de grande taille. Ils utilisent un stockage de données en colonnes et un traitement des requêtes allant jusqu’à multiplier par 10 les performances des requêtes dans l’entrepôt de données par rapport au stockage orienté lignes classique. Vous pouvez également obtenir jusqu’à 10 fois la compression de données par rapport à la taille des données décompressées. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, les index columnstore sont compatibles avec l’analytique opérationnelle, qui permet d’exécuter des analyses en temps réel performantes sur une charge de travail transactionnelle.  
   
 Voici un scénario connexe :  
   
@@ -55,6 +55,16 @@ Un rowgroup est un groupe de lignes compressées simultanément au format column
   
 Dans un souci de haute performance et de taux de compression élevés, l’index columnstore découpe la table en rowgroups, puis compresse chaque rowgroup en colonnes. Le nombre de lignes dans le groupe de lignes doit être assez grand pour améliorer le taux de compression et assez petit pour tirer parti des opérations en mémoire.    
 
+Un rowgroup à partir duquel toutes les données ont été supprimées passe de l’état COMPRESSED à l’état TOMBSTONE, et est ensuite supprimé par un processus en arrière-plan nommé moteur de tuple. Pour plus d’informations sur les états de rowgroup, consultez [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md).
+
+> [!TIP]
+> Avoir un trop grand nombre de rowgroups de petite taille réduit la qualité de l’index columnstore. Jusqu’à [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], une opération de réorganisation est nécessaire pour fusionner des rowgroups COMPRESSED plus petits, suite à une stratégie de seuil interne qui détermine comment supprimer les lignes supprimées et combiner les rowgroups compressés.    
+> À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], une tâche de fusion en arrière-plan fonctionne également pour fusionner les rowgroups COMPRESSED à partir desquels un grand nombre de lignes a été supprimé.     
+> Après la fusion de plusieurs rowgroups plus petits, la qualité de l’index doit être améliorée. 
+
+> [!NOTE]
+> À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], le moteur de tuple est aidé par une tâche de fusion en arrière-plan qui compresse automatiquement les rowgroups delta OPEN plus petits qui existent depuis un certain temps, tel que déterminé par un seuil interne, ou qui fusionne les rowgroups COMPRESSED à partir desquels un grand nombre de lignes a été supprimé. Cela améliore la qualité de l’index columnstore dans le temps.         
+
 #### <a name="column-segment"></a>segment de colonne
 Un segment de colonne est une colonne de données issue du rowgroup.  
   
@@ -71,9 +81,16 @@ Un index columnstore cluster représente le stockage physique de la totalité de
 Pour réduire la fragmentation des segments de colonne et améliorer les performances, l’index columnstore est susceptible de stocker temporairement des données dans un index cluster appelé *deltastore*, ainsi que la liste btree des ID des lignes supprimées. Les opérations deltastore sont effectuées en coulisse. Pour retourner des résultats de requête corrects, l'index columnstore cluster associe les résultats de columnstore et de deltastore.  
   
 #### <a name="delta-rowgroup"></a>Rowgroup delta
-Un rowgroup delta est un index cluster utilisé uniquement avec des index columnstore. Il améliore la compression columnstore et les performances en stockant des lignes jusqu’à ce que leur nombre atteigne un certain seuil et qu’elles soient alors déplacées dans le columnstore.  
+Un rowgroup delta est un index B-tree en cluster utilisé uniquement avec des index columnstore. Il améliore la compression columnstore et les performances en stockant des lignes jusqu’à ce que leur nombre atteigne un certain seuil (1 048 576 lignes) et qu’elles soient alors déplacées dans le columnstore.  
 
-Lorsqu’un rowgroup delta atteint le nombre maximal de lignes, il est fermé. Un processus de déplacement de tuple vérifie les groupes de lignes fermés. Lorsqu'il trouve un rowgroup fermé, il le compresse et le stocke dans le columnstore.  
+Lorsqu’un rowgroup delta atteint le nombre maximal de lignes, il passe de l’état OPEN à l’état CLOSED. Un processus en arrière-plan nommé moteur de tuple vérifie les groupes de lignes fermés. Lorsqu’il trouve un rowgroup fermé, il compresse le rowgroup delta et le stocke dans le columnstore en tant que rowgroup COMPRESSED. 
+
+Quand un rowgroup delta a été compressé, le rowgroup delta existant passe à l’état TOMBSTONE pour être supprimé ultérieurement par le moteur de tuple lorsqu’il n’y a aucune référence à celui-ci. 
+
+Pour plus d’informations sur les états de rowgroup, consultez [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!NOTE]
+> À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], le moteur de tuple est aidé par une tâche de fusion en arrière-plan qui compresse automatiquement les rowgroups delta OPEN plus petits qui existent depuis un certain temps, tel que déterminé par un seuil interne, ou qui fusionne les rowgroups COMPRESSED à partir desquels un grand nombre de lignes a été supprimé. Cela améliore la qualité de l’index columnstore dans le temps.         
   
 #### <a name="deltastore"></a>Deltastore
 Un index columnstore peut avoir plusieurs rowgroups delta, qui sont appelés collectivement le deltastore.   

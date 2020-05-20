@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76516268"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151961"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "76516268"
   
  Les vues de gestion dynamique sys. dm_exec_connections, sys. dm_exec_sessions et sys. dm_exec_requests sont mappées à la table système [sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
-> **Remarque :** Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_exec_sessions**.  
+> **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_exec_sessions**.  
   
 |Nom de la colonne|Type de données|Description et informations spécifiques à la version|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifie la session associée à chaque connexion principale active. N'accepte pas la valeur NULL.|  
-|login_time|**datetime**|Heure à laquelle la session a été établie. N'accepte pas la valeur NULL.|  
+|login_time|**datetime**|Heure à laquelle la session a été établie. N'accepte pas la valeur NULL. Les sessions qui n’ont pas terminé la connexion au moment de l’interrogation de cette vue de gestion dynamique sont affichées avec une heure de connexion de `1900-01-01` .|  
 |host_name|**nvarchar(128)**|Nom de la station de travail cliente spécifique à une session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.<br /><br /> **Remarque relative à la sécurité :** L’application cliente fournit le nom de la station de travail et peut fournir des données inexactes. Ne vous fiez pas à HOST_NAME pour garantir la sécurité.|  
 |program_name|**nvarchar(128)**|Nom du programme client qui a lancé la session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
 |host_process_id|**int**|ID de processus du programme client qui a lancé la session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
 |client_version|**int**|Version du protocole TDS de l'interface utilisée par le client pour se connecter au serveur. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
 |client_interface_name|**nvarchar(32)**|Nom de la bibliothèque/du pilote utilisé par le client pour communiquer avec le serveur. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
 |security_id|**varbinary (85)**|ID de sécurité Microsoft Windows associé à la connexion. N'accepte pas la valeur NULL.|  
-|login_name|**nvarchar(128)**|Nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous lequel la session s'exécute actuellement. Pour connaître le nom de connexion d'origine qui a créé la session, consulez original_login_name. Il peut s' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agir d’un nom de connexion authentifié ou d’un nom d’utilisateur de domaine authentifié Windows. N'accepte pas la valeur NULL.|  
+|login_name|**nvarchar(128)**|Nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous lequel la session s'exécute actuellement. Pour connaître le nom de connexion d'origine qui a créé la session, consulez original_login_name. Il peut s’agir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom de connexion authentifié ou d’un nom d’utilisateur de domaine authentifié Windows. N'accepte pas la valeur NULL.|  
 |nt_domain|**nvarchar(128)**|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> Domaine Windows du client si la session utilise l'authentification Windows ou une connexion approuvée. La valeur est NULL pour les sessions internes et les utilisateurs qui n'appartiennent pas à un domaine. Autorise la valeur NULL.|  
 |nt_user_name|**nvarchar(128)**|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> Nom d'utilisateur Windows du client si la session utilise l'authentification Windows ou une connexion approuvée. La valeur est NULL pour les sessions internes et les utilisateurs qui n'appartiennent pas à un domaine. Autorise la valeur NULL.|  
 |status|**nvarchar(30)**|État de la session. Valeurs possibles :<br /><br /> **Running** - une ou plusieurs demandes sont en cours d'exécution<br /><br /> **Sleeping** - aucune demande n'est en cours d'exécution<br /><br /> **Dormant** -la session a été réinitialisée en raison d’un regroupement de connexions et est désormais dans un état de préconnexion.<br /><br /> **Preconnect** - la session est dans le classifieur du gouverneur de ressources.<br /><br /> N'accepte pas la valeur NULL.|  
@@ -88,13 +88,13 @@ ms.locfileid: "76516268"
 |database_id|**smallint**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> ID de la base de données active pour chaque session.|  
 |authenticating_database_id|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> ID de la base de données authentifiant le principal. Pour les comptes de connexion, la valeur sera de 0. Pour les utilisateurs de base de données non autonome, la valeur sera l'ID de la base de données autonome.|  
 |open_transaction_count|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Nombre de transactions ouvertes par session.|  
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
 |page_server_reads|**bigint**|**S’applique à**: Azure SQL Database hyperscale<br /><br /> Nombre de lectures du serveur de pages effectuées, par demandes dans cette session, au cours de cette session. N'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
 Tout le monde peut voir ses propres informations de session.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Nécessite `VIEW SERVER STATE` l’autorisation [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sur pour voir toutes les sessions sur le serveur.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Nécessite `VIEW DATABASE STATE` de voir toutes les connexions à la base de données actuelle. `VIEW DATABASE STATE`ne peut pas être accordé `master` dans la base de données. 
+** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** Nécessite `VIEW SERVER STATE` l’autorisation sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pour voir toutes les sessions sur le serveur.  
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Nécessite `VIEW DATABASE STATE` de voir toutes les connexions à la base de données actuelle. `VIEW DATABASE STATE`ne peut pas être accordé dans la `master` base de données. 
   
   
 ## <a name="remarks"></a>Notes  

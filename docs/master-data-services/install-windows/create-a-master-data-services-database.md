@@ -1,5 +1,6 @@
 ---
 title: Créer une base de données Master Data Services
+description: Créez une base de données Master Data Services lorsque vous avez besoin d’une nouvelle base de données pour prendre en charge l’application Web Data Manager principale et le service Web Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3e3993816d0811f7e23563b758ab2169240dc48
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728118"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606831"
 ---
 # <a name="create-a-master-data-services-database"></a>Créer une base de données Master Data Services
 

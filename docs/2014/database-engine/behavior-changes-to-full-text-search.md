@@ -11,15 +11,15 @@ helpviewer_keywords:
 - behavior changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813192"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001069"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Changements de comportement pour la recherche en texte intégral
   Cette rubrique décrit les changements de comportement de la recherche en texte intégral. Les modifications de comportement affectent le mode de fonctionnement ou d'interaction des fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -79,7 +79,7 @@ ms.locfileid: "62813192"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Changements de comportement de la recherche en texte intégral dans SQL Server 2008  
  Dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures, le moteur de texte intégral est intégré en tant que service de base de données dans la base de données relationnelle dans le cadre de l’infrastructure de requête et de moteur de stockage du serveur. La nouvelle architecture de recherche en texte intégral réalise les objectifs suivants :  
   
--   Stockage et gestion intégrés : la recherche en texte intégral est désormais directement intégrée aux fonctionnalités de stockage et de gestion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]inhérentes de, et le service MSFTESQL n’existe plus.  
+-   Stockage et gestion intégrés : la recherche en texte intégral est désormais directement intégrée aux fonctionnalités de stockage et de gestion inhérentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , et le service MSFTESQL n’existe plus.  
   
     -   Les index de recherche en texte intégral sont stockés dans les groupes de fichiers de la base de données, et non dans le système de fichiers. Les opérations d'administration sur une base de données, telles que la création d'une sauvegarde, affectent automatiquement les index de recherche en texte intégral.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62813192"
   
 -   Les mots vides et les listes de mots vides ont remplacé les mots parasites et les fichiers de mots parasites. Une liste de mots vides est un objet de base de données qui facilite les tâches gestion des mots vides et améliore l'intégrité entre instances de serveur différentes et environnements. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures contiennent de nouveaux analyseurs lexicaux pour un grand nombre des langues prises en charge par [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Seuls les analyseurs lexicaux pour l'anglais, le coréen, le thaï et le chinois (traditionnel et simplifié) restent inchangés. Pour les autres langues, si un catalogue de texte intégral a été importé [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] lors de la mise à niveau [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] d’une base de données vers ou version ultérieure, une ou plusieurs langues utilisées par les index de recherche en texte intégral dans le catalogue de texte intégral peuvent maintenant être associées à de nouveaux analyseurs lexicaux qui peuvent se comporter légèrement différemment des analyseurs lexicaux importés. Pour plus d’informations sur la façon de garantir la cohérence entre les requêtes et le contenu de l’index de recherche en texte intégral, consultez [mise à niveau de la recherche en texte intégral](../relational-databases/search/upgrade-full-text-search.md).  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures contiennent de nouveaux analyseurs lexicaux pour un grand nombre des langues prises en charge par [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Seuls les analyseurs lexicaux pour l'anglais, le coréen, le thaï et le chinois (traditionnel et simplifié) restent inchangés. Pour les autres langues, si un catalogue de texte intégral a été importé lors de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] mise à niveau d’une base de données vers [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ou version ultérieure, une ou plusieurs langues utilisées par les index de recherche en texte intégral dans le catalogue de texte intégral peuvent maintenant être associées à de nouveaux analyseurs lexicaux qui peuvent se comporter légèrement différemment des analyseurs lexicaux importés. Pour plus d’informations sur la façon de garantir la cohérence entre les requêtes et le contenu de l’index de recherche en texte intégral, consultez [mise à niveau de la recherche en texte intégral](../relational-databases/search/upgrade-full-text-search.md).  
   
 -   Un nouveau service de lancement FDHOST (MSSQLFDLauncher) a été ajouté. Pour plus d’informations, consultez [prise en main de la recherche en texte intégral](../relational-databases/search/get-started-with-full-text-search.md).  
   

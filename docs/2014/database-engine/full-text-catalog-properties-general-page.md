@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779662"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000959"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriétés du catalogue de texte intégral (page Général)
   Cette section présente les options et fonctions disponibles dans la page **Général** de la boîte de dialogue **Propriétés du catalogue de texte intégral** .  
@@ -34,7 +34,7 @@ ms.locfileid: "62779662"
  **État du remplissage**  
  Indique l'état du catalogue. Les valeurs possibles sont les suivantes :  
   
--   **Idle**  
+-   **Inactif**  
   
 -   **Analyse en cours**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62779662"
  Nom du catalogue de texte intégral.  
   
  **Respecter les accents**  
- Affichez ou modifiez si le catalogue est sensible aux marques diacritiques, telles qu’un tilde (**~**), un accent aigu (**́**) ou un tréma (**̈**). Les valeurs autorisées sont :  
+ Affichez ou modifiez si le catalogue est sensible aux marques diacritiques, telles qu’un tilde ( **~** ), un accent aigu (**́**) ou un tréma (**̈**). Les valeurs autorisées sont :  
   
 -   **Non**  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089859"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000693"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Éditeur de texte - Texte brut - Page Onglets)
   Utilisez cette boîte de dialogue pour modifier le comportement de tabulation de l'Éditeur de texte, qui permet de modifier un document non associé à un langage de développement particulier. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez **Éditeur de texte**, puis **Texte brut**, et cliquez ensuite sur **Tabulations**.  
@@ -29,13 +29,13 @@ ms.locfileid: "66089859"
  **Aucun**  
  Ne met pas en retrait la nouvelle ligne créée en appuyant sur Entrée. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
   
- **Plage**  
+ **Bloquer**  
  Met en retrait la nouvelle ligne créée en appuyant sur Entrée, exactement à la même distance que la ligne précédente.  
   
  **Intelligente**  
  L'éditeur de texte brut ne prend pas en charge ce type de mise en forme.  
   
-## <a name="tabs"></a>Onglets  
+## <a name="tabs"></a>Tabulations  
  **Taille des tabulation**  
  Définit la distance en espaces entre les taquets de tabulation. La valeur par défaut est quatre espaces.  
   

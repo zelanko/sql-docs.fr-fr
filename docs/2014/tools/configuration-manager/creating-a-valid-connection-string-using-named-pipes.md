@@ -13,18 +13,18 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065547"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001029"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Création d'une chaîne de connexion valide à l'aide de canaux nommés
-  Sauf modification par l’utilisateur, lorsque l’instance par défaut [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de écoute le protocole des canaux nommés, elle `\\.\pipe\sql\query` utilise comme nom de canal. Le point indique que l’ordinateur est l’ordinateur local, `pipe` indique que la connexion est un canal nommé et `sql\query` est le nom du canal. Pour se connecter au canal par défaut, l'alias doit avoir `\\<computer_name>\pipe\sql\query` comme nom de canal. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été configuré de manière à être à l'écoute sur un autre canal, le nom de canal doit correspondre à ce canal. Par exemple, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise `\\.\pipe\unit\app` comme canal, l'alias doit utiliser `\\<computer_name>\pipe\unit\app` comme nom de canal.  
+  Sauf modification par l’utilisateur, lorsque l’instance par défaut de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute le protocole des canaux nommés, elle utilise `\\.\pipe\sql\query` comme nom de canal. Le point indique que l’ordinateur est l’ordinateur local, `pipe` indique que la connexion est un canal nommé et `sql\query` est le nom du canal. Pour se connecter au canal par défaut, l'alias doit avoir `\\<computer_name>\pipe\sql\query` comme nom de canal. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été configuré de manière à être à l'écoute sur un autre canal, le nom de canal doit correspondre à ce canal. Par exemple, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise `\\.\pipe\unit\app` comme canal, l'alias doit utiliser `\\<computer_name>\pipe\unit\app` comme nom de canal.  
   
  Pour créer un nom de canal valide, vous devez procéder comme suit :  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63065547"
   
 -   Spécifiez un **serveur**. Pour une instance nommée, vous pouvez indiquer un nom de serveur et un nom d'instance.  
   
- Au moment de la connexion, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composant Native Client lit dans le registre les valeurs de serveur, protocole et nom de canal pour le nom d’alias spécifié et crée un nom de canal au `np:\\<computer_name>\pipe\<pipename>` format `np:\\<IPAddress>\pipe\<pipename>`ou. Pour une instance nommée, le nom du canal par `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`défaut est.  
+ Au moment de la connexion, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composant Native Client lit dans le registre les valeurs de serveur, protocole et nom de canal pour le nom d’alias spécifié et crée un nom de canal au format `np:\\<computer_name>\pipe\<pipename>` ou `np:\\<IPAddress>\pipe\<pipename>` . Pour une instance nommée, le nom du canal par défaut est `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query` .  
   
 > [!NOTE]  
 >  Le Pare-feu [!INCLUDE[msCoName](../../includes/msconame-md.md)] ferme le port 445 par défaut. Comme [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communique par le biais du port 445, vous devez ouvrir de nouveau le port si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour être à l'écoute des connexions clientes entrantes utilisant des canaux nommés. Pour plus d'informations sur la configuration d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à SQL Server » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou passez en revue la documentation de votre pare-feu.  
@@ -116,7 +116,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Pour spécifier le protocole réseau en tant que paramètre **sqlcmd** , consultez « Procédure : se connecter au moteur de base de données à l’aide de sqlcmd. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exe » dans la documentation en ligne de.  
+>  Pour spécifier le protocole réseau en tant que paramètre **sqlcmd** , consultez « Procédure : se connecter au moteur de base de données à l’aide de sqlcmd. exe » dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentation en ligne de.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une chaîne de connexion valide à l’aide du protocole de mémoire partagée](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

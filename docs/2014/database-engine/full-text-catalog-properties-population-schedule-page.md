@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778821"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000931"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Propriétés du catalogue de texte intégral (page Planification du remplissage)
   Cette boîte de dialogue vous permet d'ajouter et de modifier des planifications qui déterminent quand le catalogue de texte intégral sera rempli ou rempli à nouveau.  
@@ -37,7 +37,7 @@ ms.locfileid: "62778821"
  **Description**  
  Description de l'opération planifiée.  
   
- **Nouvelle**  
+ **Nouveau**  
  Cliquez sur ce bouton pour créer une nouvelle planification d'indexation. Ce bouton permet d'afficher la boîte de dialogue **Nouvelle planification de catalogue d'indexation de texte intégral** .  
   
  **Modifier**  

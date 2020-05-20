@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fe7a6cd5d42c73307462df8c711fdac57e7febb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9579c639e1c731c30a145a856a889796795c90b8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633230"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151523"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "81633230"
 
 Crée les informations d’identification d’une base de données. Les informations d’identification d’une base de données ne sont pas mappées à un compte de connexion de serveur ou à un utilisateur de la base de données. Les informations d’identification sont utilisées par la base de données pour accéder à l’emplacement externe chaque fois que la base de données effectue une opération nécessitant un accès.
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,7 +50,10 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* : Spécifie le nom des informations d’identification délimitées à la base de données à créer. *credential_name* ne peut pas commencer par le signe dièse (#). Les informations d'identification système commencent avec ##.
 
-IDENTITY **=’** _identity\_name_ **’**  : Spécifie le nom du compte à utiliser lors d’une connexion en dehors du serveur. Pour importer un fichier à partir du stockage Blob Azure avec une clé de partage, le nom de l’identité doit être `SHARED ACCESS SIGNATURE`. Pour charger des données dans SQL DW, n’importe quelle valeur valide peut être utilisée pour l’identité. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+IDENTITY **=’** _identity\_name_ **’**  : Spécifie le nom du compte à utiliser lors d’une connexion en dehors du serveur. Pour importer un fichier à partir du stockage Blob Azure avec une clé partagée, le nom de l’identité doit être `SHARED ACCESS SIGNATURE`. Pour charger des données dans SQL DW, n’importe quelle valeur valide peut être utilisée pour l’identité. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+
+> [!NOTE]
+WITH IDENTITY n’est pas requis si le conteneur dans le stockage Blob Azure est activé pour l’accès anonyme. Pour obtenir un exemple d’interrogation du stockage Blob Azure, consultez [Importation dans une table à partir d’un fichier stocké dans le stockage Blob Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
 
 SECRET **=’** _secret_ **’**  : Spécifie le secret nécessaire pour l’authentification sortante. `SECRET` est obligatoire pour importer un fichier à partir du stockage Blob Azure. Pour effectuer le chargement du Stockage Blob Azure vers SQL DW ou Parallel Data Warehouse, le secret doit être la clé de stockage Azure.
 > [!WARNING]

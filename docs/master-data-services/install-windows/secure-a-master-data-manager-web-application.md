@@ -1,5 +1,6 @@
 ---
 title: Sécuriser une application Web Master Data Manager
+description: Dans SQL Server, vous pouvez sécuriser l’application Web principale Data Manager avec HTTPs. Vous devez être administrateur et MDS doit être installé sur le serveur Web.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728501"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606511"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Sécuriser une application Web Master Data Manager
 
@@ -40,7 +41,7 @@ ms.locfileid: "81728501"
   
 3.  Dans le volet **Actions**, cliquez sur **Liaisons**.  
   
-4.  Cliquez sur **Ajouter**.  
+4.  Cliquez sur **Add**.  
   
 5.  Dans la liste, sélectionnez **https**.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "81728501"
   
 7.  Cliquez sur **OK**.  
   
-8.  Facultatif. Pour supprimer HTTP afin que les utilisateurs puissent accéder au site avec HTTPS uniquement, dans la liste, cliquez sur la ligne avec **http**. Cliquez sur **Supprimer** et dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
+8.  facultatif. Pour supprimer HTTP afin que les utilisateurs puissent accéder au site avec HTTPS uniquement, dans la liste, cliquez sur la ligne avec **http**. Cliquez sur **Supprimer** et dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
   
     > [!IMPORTANT]  
     >  Vous devez changer les configurations basicHttp et wsHttpBinding après avoir supprimé HTTP.  

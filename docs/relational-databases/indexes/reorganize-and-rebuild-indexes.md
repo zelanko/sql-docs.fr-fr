@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220714"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152033"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Remédiez à la fragmentation des index en les réorganisant ou en les regénérant
 
@@ -223,6 +223,7 @@ Pour défragmenter un index fragmenté, utilisez l’une des méthodes suivantes
 La réorganisation d’un index utilise des ressources système minimes et est une opération en ligne. En d’autres termes, les verrous de tables bloquants à long terme ne sont pas conservés, ce qui permet aux requêtes et aux mises à jour de la table sous-jacente de se poursuivre pendant la transaction `ALTER INDEX REORGANIZE`.
 
 - Pour les [index rowstore](clustered-and-nonclustered-indexes-described.md), [!INCLUDE[ssde_md](../../includes/ssde_md.md)] défragmente le niveau feuille des index cluster et non cluster sur les tables et les vues en réorganisant physiquement les pages de niveau feuille afin de suivre l’ordre logique des nœuds terminaux (de gauche à droite). La réorganisation compacte également les pages d’index en fonction de la valeur du facteur de remplissage de l’index. Pour afficher le paramètre du facteur de remplissage, utilisez [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Pour obtenir des exemples de syntaxe, consultez [Exemples : réorganisation d’index rowstore](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
+
 - Lors de l’utilisation des [index columnstore](columnstore-indexes-overview.md), le deltastore peut se retrouver avec plusieurs petits rowgroups après l’insertion, la mise à jour et la suppression des données au fil du temps. La réorganisation d’un index columnstore force tous les rowgroups dans le columnstore, puis combine les rowgroups en un plus petit nombre de rowgroups avec davantage de lignes. L’opération de réorganisation supprime également les lignes qui ont été supprimées du columnstore. La réorganisation nécessite initialement des ressources processeur supplémentaires pour compresser les données, ce qui peut ralentir les performances globales du système. Toutefois, dès que les données sont compressées, les performances des requêtes s’améliorent. Pour obtenir des exemples de syntaxe, consultez [Exemples : réorganisation d’index columnstore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### <a name="rebuild-an-index"></a>Regénérer un index
@@ -230,7 +231,13 @@ La réorganisation d’un index utilise des ressources système minimes et est u
 La reconstruction d'un index entraîne sa suppression puis sa recréation. En fonction du type d’index et de la version de [!INCLUDE[ssde_md](../../includes/ssde_md.md)], une opération de regénération peut être effectuée en ligne ou hors connexion. Pour la syntaxe T-SQL, consultez [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - Pour les [index rowstore](clustered-and-nonclustered-indexes-described.md), la regénération permet d’éviter toute fragmentation, de libérer de l’espace disque en compactant les pages d’après le paramètre du facteur de remplissage spécifié ou déjà existant et de réorganiser les lignes de l’index en pages contiguës. Si `ALL` est précisé, tous les index sur la table sont supprimés puis reconstruits en une seule transaction. Il n’est pas nécessaire de supprimer les contraintes de clé étrangère au préalable. Lorsque de la reconstruction d'index contenant au moins 128 étendues, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations de pages ainsi que les verrous qui y sont associés jusqu'à ce que la transaction soit validée. Pour obtenir des exemples de syntaxe, consultez [Exemples : réorganisation d’index rowstore](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
-- Pour les [index columnstore](columnstore-indexes-overview.md), la regénération permet d’éviter toute fragmentation, de déplacer toutes les lignes dans le columnstore et de libérer de l’espace disque en supprimant physiquement les lignes qui ont été logiquement supprimées de la table. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la régénération de l’index columnstore n’est généralement pas nécessaire, car `REORGANIZE` effectue l’essentiel de la régénération en arrière-plan sous la forme d’une opération en ligne. Pour obtenir des exemples de syntaxe, consultez [Exemples : réorganisation d’index columnstore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
+
+- Pour les [index columnstore](columnstore-indexes-overview.md), la regénération permet d’éviter toute fragmentation, de déplacer toutes les lignes dans le columnstore et de libérer de l’espace disque en supprimant physiquement les lignes qui ont été logiquement supprimées de la table. 
+  
+  > [!TIP]
+  > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la régénération de l’index columnstore n’est généralement pas nécessaire, car `REORGANIZE` effectue l’essentiel de la régénération en arrière-plan sous la forme d’une opération en ligne. 
+  
+  Pour obtenir des exemples de syntaxe, consultez [Exemples : régénérer ColumnStore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
@@ -254,9 +261,6 @@ Nécessite l’autorisation `ALTER` sur la table ou la vue. L’utilisateur doit
 6. Dans la boîte de dialogue **Réorganiser les index** , vérifiez que l'index correct figure dans la grille **Index à réorganiser** , puis cliquez sur **OK**.
 7. Cochez la case **Compacter les données de la colonne d’objets volumineux** pour indiquer que toutes les pages qui contiennent des données LOB seront aussi compactées.
 8. Cliquez sur **OK**.
-
-> [!NOTE]
-> La réorganisation d’un index columnstore à l’aide de [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] combine `COMPRESSED` rowgroups ensemble, mais ne force pas tous les rowgroups à être compressés dans le columnstore. Les rowgroups CLOSED sont compressés, mais les rowgroups OPEN ne sont pas compressés dans le columnstore. Pour compresser toutes les rowgroups, utilisez l’exemple [!INCLUDE[tsql](../../includes/tsql-md.md)][ci-dessous](#TsqlProcedureReorg).
 
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>Pour réorganiser tous les index d'une table
 
@@ -357,6 +361,13 @@ Si `ALL` est spécifié avec l’instruction `ALTER INDEX`, les index relationne
 
 Lors de la régénération d’un index columnstore, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] lit toutes les données de ’'index columnstore d’origine, y compris le magasin delta. Associe les données dans de nouveaux rowgroups, et compresse les rowgroups dans le columnstore. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] défragmente le columnstore en supprimant physiquement les lignes qui ont été logiquement supprimées de la table. Les octets supprimés sont récupérés sur le disque.
 
+> [!NOTE]
+> La réorganisation d’un index columnstore à l’aide de [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] combine COMPRESSED rowgroups ensemble, mais ne force pas tous les rowgroups à être compressés dans le columnstore. Les rowgroups CLOSED sont compressés, mais les rowgroups OPEN ne sont pas compressés dans le columnstore. Pour compresser de force toutes les rowgroups, utilisez l’exemple [!INCLUDE[tsql](../../includes/tsql-md.md)][ci-dessous](#TsqlProcedureReorg).
+
+> [!NOTE]
+> À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], le moteur de tuple est aidé par une tâche de fusion en arrière-plan qui compresse automatiquement les rowgroups delta OPEN plus petits qui existent depuis un certain temps, tel que déterminé par un seuil interne, ou qui fusionne les rowgroups COMPRESSED à partir desquels un grand nombre de lignes a été supprimé. Cela améliore la qualité de l’index columnstore dans le temps.    
+> Pour plus d’informations sur les termes et les concepts columnstore, consultez [Index Columnstore : Vue d’ensemble](../../relational-databases/indexes/columnstore-indexes-overview.md).
+
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>Regénérer une partition au lieu de la table entière
 
 - Reconstruire un index columnstore cluster entier prend beaucoup de temps si l'index est volumineux, et cela nécessite suffisamment d'espace disque pour stocker une copie supplémentaire de l'index pendant la reconstruction. Généralement il est nécessaire de reconstruire que la dernière partition utilisée.
@@ -375,7 +386,9 @@ La regénération d’une partition après le chargement des données garantit q
 Lors de la réorganisation des index columnstore, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compresse chaque rowgroup delta CLOSED dans le columnstore en tant que rowgroup compressé. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la commande `REORGANIZE` effectue les optimisations de défragmentation supplémentaires suivantes en ligne :
 
 - Supprime physiquement les lignes d’un rowgroup quand au moins 10 % des lignes ont été supprimées de façon logique. Les octets supprimés sont récupérés sur le support physique. Par exemple, si un rowgroup compressé de 1 million de lignes a 100 000 lignes supprimées, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efface les lignes supprimées et recompresse le rowgroup avec 900 000 lignes. Il économise du stockage en effaçant les lignes supprimées.
+
 - Associe un ou plusieurs rowgroups compressés pour augmenter les lignes par rowgroup jusqu’à la valeur maximale de 1 048 576 lignes. Par exemple, si vous importez en bloc 5 lots de 102 400 lignes, vous obtenez 5 rowgroups compressés. Si vous exécutez REORGANIZE, ces rowgroups sont fusionnés dans 1 rowgroup compressé de 512 000 lignes. Cela suppose qu’il n’existe aucune limitation de mémoire ni de taille de dictionnaire.
+
 - Pour les rowgroups dans lesquels au moins 10 % des lignes ont été supprimées de manière logique, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tente d’associer ce rowgroup à un ou plusieurs rowgroups. Par exemple, le rowgroup 1 est compressé avec 500 000 lignes et le rowgroup 21 est compressé avec un maximum de 1 048 576 lignes. Le rowgroup 21 a 60 % des lignes supprimées, ce qui laisse 409 830 lignes. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] favorise la combinaison de ces deux rowgroups pour compresser un nouveau rowgroup qui contient 909 830 lignes.
 
 Après avoir exécuté des charges de données, vous pouvez avoir plusieurs petits rowgroups dans le magasin delta. Vous pouvez utiliser l’instruction `ALTER INDEX REORGANIZE` pour forcer tous les rowgroups dans le columnstore, puis pour combiner les rowgroups en un plus petit nombre de rowgroups avec plusieurs lignes. L’opération de réorganisation supprimera également les lignes qui ont été supprimées du columnstore.
@@ -400,11 +413,11 @@ Statistiques :
 Un index ne peut pas être réorganisé lorsque `ALLOW_PAGE_LOCKS` est désactivé (OFF).
 
 Jusqu’à [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], la régénération d’un index columnstore en cluster est une opération hors connexion. Le moteur de base de données doit acquérir un verrou exclusif sur la table ou la partition lorsque la regénération se produit. Les données sont hors connexion et indisponibles pendant la régénération, même si vous utilisez `NOLOCK`, l’isolation de capture instantanée de lecture validée (RCSI) ou l’isolation de capture instantanée.
-À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], un index columnstore en cluster peut être régénéré à l’aide de l’option `ONLINE=ON`.
+À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], un index columnstore en cluster peut être régénéré à l’aide de l’option `ONLINE = ON`.
 
-Pour une table Azure Synapse Analytics (anciennement Azure SQL Data Warehouse) avec un index columnstore cluster ordonné, `ALTER INDEX REBUILD` trie à nouveau les données à l’aide de TempDB. Analysez TempDB pendant les opérations de régénération. Si vous avez besoin de davantage d’espace TempDB, vous pouvez effectuer une montée en puissance de l’entrepôt de données. Réeffectuez un scale down une fois la reconstruction d’index terminée.
+Pour une table Azure Synapse Analytics (anciennement [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) avec un index columnstore cluster ordonné, `ALTER INDEX REBUILD` trie à nouveau les données à l’aide de TempDB. Analysez TempDB pendant les opérations de régénération. Si vous avez besoin de davantage d’espace TempDB, vous pouvez effectuer une montée en puissance de l’entrepôt de données. Réeffectuez un scale down une fois la reconstruction d’index terminée.
 
-Pour une table Azure Synapse Analytics (anciennement Azure SQL Data Warehouse) avec un index columnstore cluster ordonné, `ALTER INDEX REORGANIZE` ne trie pas à nouveau les données. Pour trier à nouveau l’utilisation de données `ALTER INDEX REBUILD`.
+Pour une table Azure Synapse Analytics (anciennement [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) avec un index columnstore cluster ordonné, `ALTER INDEX REORGANIZE` ne trie pas à nouveau les données. Pour trier à nouveau l’utilisation de données `ALTER INDEX REBUILD`.
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>Utilisation d’INDEX REBUILD pour récupérer suite à des défaillances matérielles
 

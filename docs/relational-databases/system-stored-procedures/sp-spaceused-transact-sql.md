@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0bd2f253dede1c427eda826eba0e998a144736
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252024"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152136"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +44,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>Arguments  
 
-Pour [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] et [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` doit spécifier des paramètres nommés (par `sp_spaceused (@objname= N'Table1');` exemple, au lieu de s’appuyer sur la position ordinale des paramètres. 
+Pour [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] et [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] , `sp_spaceused` doit spécifier des paramètres nommés (par exemple, `sp_spaceused (@objname= N'Table1');` au lieu de s’appuyer sur la position ordinale des paramètres. 
 
 `[ @objname = ] 'objname'`
    
@@ -63,7 +63,7 @@ Si *nom_d’nom_d* 'n’est pas spécifié, les résultats sont retournés pour 
 |Valeur|Description|  
 |-----------|-----------------|  
 |ALL|Retourne les statistiques de stockage de l’objet ou de la base de données, y compris la partie locale et la partie distante.|  
-|LOCAL_ONLY|Retourne les statistiques de stockage de la partie locale de l’objet ou de la base de données. Si l’objet ou la base de données ne prend pas en charge Stretch, retourne les @mode mêmes statistiques que quand = All.|  
+|LOCAL_ONLY|Retourne les statistiques de stockage de la partie locale de l’objet ou de la base de données. Si l’objet ou la base de données ne prend pas en charge Stretch, retourne les mêmes statistiques que quand @mode = All.|  
 |REMOTE_ONLY|Retourne les statistiques de stockage de la partie distante uniquement de l’objet ou de la base de données. Cette option génère une erreur lorsque l’une des conditions suivantes est remplie :<br /><br /> La table n’est pas activée pour Stretch.<br /><br /> La table est activée pour Stretch, mais vous n’avez jamais activé la migration des données. Dans ce cas, la table distante n’a pas encore de schéma.<br /><br /> L’utilisateur a supprimé manuellement la table distante.<br /><br /> L’approvisionnement de l’archive de données distante a retourné un état de réussite, mais en fait, elle a échoué.|  
   
  le *mode* est **varchar (11)**, avec **n’All**comme valeur par défaut.  
@@ -72,15 +72,15 @@ Si *nom_d’nom_d* 'n’est pas spécifié, les résultats sont retournés pour 
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Quand * \@nomobj* a la valeur null ou qu’il n’est pas spécifié, deux jeux de résultats sont retournés. Deux jeux de résultats sont le comportement par défaut.|  
-|1|Quand * \@nomobj* = null ou n’est pas spécifié, un seul jeu de résultats est retourné.|  
+|0|Quand * \@ nomobj* a la valeur null ou qu’il n’est pas spécifié, deux jeux de résultats sont retournés. Deux jeux de résultats sont le comportement par défaut.|  
+|1|Quand * \@ nomobj* = null ou n’est pas spécifié, un seul jeu de résultats est retourné.|  
   
  *oneresultset* est de valeur de **bit**, avec **0**comme valeur par défaut.  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
-**S’applique à :** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+**S’applique à :** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] , [!INCLUDE[sssds-md](../../includes/sssds-md.md)] .  
   
- Lorsque @oneresultset= 1, le paramètre @include_total_xtp_storage détermine si le jeu de résultats unique comprend des colonnes pour le stockage MEMORY_OPTIMIZED_DATA. La valeur par défaut est 0, autrement dit, par défaut (si le paramètre est omis), les colonnes XTP ne sont pas incluses dans le jeu de résultats.  
+ Lorsque @oneresultset = 1, le paramètre @include_total_xtp_storage détermine si le jeu de résultats unique comprend des colonnes pour le stockage MEMORY_OPTIMIZED_DATA. La valeur par défaut est 0, autrement dit, par défaut (si le paramètre est omis), les colonnes XTP ne sont pas incluses dans le jeu de résultats.  
 
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -160,18 +160,18 @@ Si *nom_d* 'objet est omis, la valeur de oneresultset est 1, et *include_total_x
 |**data**|**varchar (18)**|Quantité totale d'espace qu'occupent les données.|  
 |**index_size**|**varchar (18)**|Quantité totale d'espace qu'occupent les index.|  
 |**inutilisé**|**varchar (18)**|Quantité totale d'espace réservée pour les objets dans la base de données, mais non encore utilisé.|
-|**xtp_precreated**|**varchar (18)**|Taille totale des fichiers de point de contrôle dont l’État est précréé, en Ko. Cela compte dans l’ensemble de l’espace non alloué dans la base de données. Retourne NULL si la base de données n’a pas de groupe de fichiers memory_optimized_data avec au moins un conteneur. *Cette colonne est incluse uniquement si @include_total_xtp_storage= 1*.| 
-|**xtp_used**|**varchar (18)**|Taille totale des fichiers de point de contrôle avec les États sous CONSTRUCTION, ACTIVE et cible de fusion, en Ko. Il s’agit de l’espace disque activement utilisé pour les données dans les tables optimisées en mémoire. Retourne NULL si la base de données n’a pas de groupe de fichiers memory_optimized_data avec au moins un conteneur. *Cette colonne est incluse uniquement si @include_total_xtp_storage= 1*.| 
-|**xtp_pending_truncation**|**varchar (18)**|Taille totale des fichiers de point de contrôle avec l’État WAITING_FOR_LOG_TRUNCATION, en Ko. Il s’agit de l’espace disque utilisé pour les fichiers de point de contrôle en attente de nettoyage. une fois la troncation du journal effectuée. Retourne NULL si la base de données n’a pas de groupe de fichiers memory_optimized_data avec au moins un conteneur. Cette colonne est incluse uniquement si `@include_total_xtp_storage=1`.|
+|**xtp_precreated**|**varchar (18)**|Taille totale des fichiers de point de contrôle dont l’État est précréé, en Ko. Cela compte dans l’ensemble de l’espace non alloué dans la base de données. Retourne NULL si la base de données n’a pas de groupe de fichiers memory_optimized_data avec au moins un conteneur. *Cette colonne est incluse uniquement si @include_total_xtp_storage = 1*.| 
+|**xtp_used**|**varchar (18)**|Taille totale des fichiers de point de contrôle avec les États sous CONSTRUCTION, ACTIVE et cible de fusion, en Ko. Il s’agit de l’espace disque activement utilisé pour les données dans les tables optimisées en mémoire. Retourne NULL si la base de données n’a pas de groupe de fichiers memory_optimized_data avec au moins un conteneur. *Cette colonne est incluse uniquement si @include_total_xtp_storage = 1*.| 
+|**xtp_pending_truncation**|**varchar (18)**|Taille totale des fichiers de point de contrôle avec l’État WAITING_FOR_LOG_TRUNCATION, en Ko. Il s’agit de l’espace disque utilisé pour les fichiers de point de contrôle en attente de nettoyage. une fois la troncation du journal effectuée. Retourne NULL si la base de données n’a pas de groupe de fichiers memory_optimized_data avec au moins un conteneur. Cette colonne est incluse uniquement si `@include_total_xtp_storage=1` .|
 
 ## <a name="remarks"></a>Notes  
- **database_size** est toujours plus grand que la somme de l'**espace non alloué** **réservé** + , car elle comprend la taille des fichiers journaux, mais **réservée** et **unallocated_space** prendre en compte uniquement les pages de données.  
+ la valeur de **database_size** est généralement supérieure à la somme de l' **reserved**  +  **espace non alloué** réservé, car elle comprend la taille des fichiers journaux, mais **réservée** et **unallocated_space** prendre en compte uniquement les pages de données. Dans certains cas, avec Azure Synapse Analytics, cette instruction ne peut pas être vraie. 
   
  Les pages utilisées par les index XML et les index de recherche en texte intégral sont incluses dans **index_size** pour les deux jeux de résultats. Lorsque *nom_d* 'objet est spécifié, les pages des index XML et des index de recherche en texte intégral de l’objet sont également comptées dans le résultat total **réservé** et **index_size** .  
   
  Si l’utilisation de l’espace est calculée pour une base de données ou un objet qui a un index spatial, les colonnes de taille d’espace, telles que **database_size**, **réservé**et **index_size**, incluent la taille de l’index spatial.  
   
- Lorsque la valeur *UPDATEUSAGE* est spécifiée [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , le analyse les pages de données de la base de données et effectue toutes les corrections nécessaires dans les affichages catalogue **sys. allocation_units** et **sys. partitions** concernant l’espace de stockage utilisé par chaque table. Il existe des cas, par exemple après la suppression d'un index, où les informations d'espace de la table peuvent ne plus être à jour. *UPDATEUSAGE* peut prendre un certain temps pour s’exécuter sur de grandes tables ou bases de données. Utilisez *UPDATEUSAGE* uniquement lorsque vous suspectez que des valeurs incorrectes sont retournées et lorsque le processus n’aura pas d’effet négatif sur d’autres utilisateurs ou processus de la base de données. Il est également possible d'exécuter DBCC UPDATEUSAGE séparément.  
+ Lorsque la valeur *UPDATEUSAGE* est spécifiée, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] analyse les pages de données de la base de données et effectue toutes les corrections nécessaires dans les affichages catalogue **sys. allocation_units** et **sys. partitions** concernant l’espace de stockage utilisé par chaque table. Il existe des cas, par exemple après la suppression d'un index, où les informations d'espace de la table peuvent ne plus être à jour. *UPDATEUSAGE* peut prendre un certain temps pour s’exécuter sur de grandes tables ou bases de données. Utilisez *UPDATEUSAGE* uniquement lorsque vous suspectez que des valeurs incorrectes sont retournées et lorsque le processus n’aura pas d’effet négatif sur d’autres utilisateurs ou processus de la base de données. Il est également possible d'exécuter DBCC UPDATEUSAGE séparément.  
   
 > [!NOTE]  
 >  Lorsque vous supprimez ou reconstruisez des index volumineux ou lorsque vous supprimez ou tronquez des tables volumineuses, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations des pages actives et de leurs blocs associés jusqu'à ce que la transaction soit validée. Les opérations de suppression différées ne libèrent pas immédiatement l'espace alloué. Par conséquent, les valeurs retournées par **sp_spaceused** immédiatement après la suppression ou la troncation d’un objet volumineux peuvent ne pas refléter l’espace disque réellement disponible.  
@@ -202,7 +202,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. Affichage des informations sur l’utilisation de l’espace de la table distante associée à une table avec extension Stretch  
- L’exemple suivant résume l’espace utilisé par la table distante associée à une table avec extension Stretch à l' ** \@** aide de l’argument Mode pour spécifier la cible distante. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+ L’exemple suivant résume l’espace utilisé par la table distante associée à une table avec extension Stretch à l’aide de l’argument ** \@ mode** pour spécifier la cible distante. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
 USE StretchedAdventureWorks2016  

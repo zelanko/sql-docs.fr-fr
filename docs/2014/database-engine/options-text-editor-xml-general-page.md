@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089197"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001041"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Éditeur de texte - XML - Page Général)
   Utilisez cette boîte de dialogue pour modifier le comportement d'édition général de l'Éditeur XML, qui permet de modifier des documents XML. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez le sous-dossier **XML** , puis cliquez sur **Général**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Définition d'options en plusieurs emplacements  
- Les options de l'Éditeur XML peuvent également être définies dans la boîte de dialogue **Tous les langages Général** . Si vous utilisez les boîtes de dialogue **tous les langages** pour définir des options [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] différentes pour les autres éditeurs, comme les éditeurs DMX ou MDX, vous devez réinitialiser les options de l’éditeur XML à l’aide de cette boîte de dialogue.  
+ Les options de l'Éditeur XML peuvent également être définies dans la boîte de dialogue **Tous les langages Général** . Si vous utilisez les boîtes de dialogue **tous les langages** pour définir des options différentes pour les autres [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] éditeurs, comme les éditeurs DMX ou MDX, vous devez réinitialiser les options de l’éditeur XML à l’aide de cette boîte de dialogue.  
   
 ## <a name="statement-completion"></a>Compléter automatiquement les instructions  
  **Répertorier automatiquement les membres**  

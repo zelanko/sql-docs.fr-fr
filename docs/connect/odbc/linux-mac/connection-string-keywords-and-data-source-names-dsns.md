@@ -2,7 +2,7 @@
 title: Connexion avec ODBC
 description: Découvrez comment créer une connexion à une base de données à partir de Linux ou macOS à l’aide de Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632802"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152048"
 ---
 # <a name="connecting-to-sql-server"></a>Connexion à SQL Server
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Cette rubrique explique comment créer une connexion à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -36,22 +37,27 @@ Consultez [Attributs et mots clés de chaîne de connexion et DSN](../dsn-connec
   
 La valeur passée au mot clé **Pilote** peut être :  
   
--   le nom que vous avez utilisé quand vous avez installé le pilote,
+- le nom que vous avez utilisé quand vous avez installé le pilote,
 
--   le chemin de la bibliothèque du pilote, spécifié dans le fichier .ini du modèle utilisé pour installer le pilote.  
+- le chemin de la bibliothèque du pilote, spécifié dans le fichier .ini du modèle utilisé pour installer le pilote.  
 
-Pour créer un DSN, créez (si nécessaire) et modifiez le fichier **~/.odbc.ini** (`.odbc.ini` dans votre répertoire de départ) pour un DSN utilisateur uniquement accessible à l’utilisateur actuel, ou `/etc/odbc.ini` pour un DSN système (privilèges d’administrateur requis). Voici un exemple de fichier qui montre les entrées minimales exigées pour un nom de source de données :  
+Les DSN sont facultatifs. Vous pouvez utiliser un DSN pour définir des mots clés de la chaîne de connexion sous un nom `DSN` que vous pouvez ensuite référencer dans la chaîne de connexion. Pour créer un DSN, créez (si nécessaire) et modifiez le fichier **~/.odbc.ini** (`.odbc.ini` dans votre répertoire de départ) pour un DSN utilisateur uniquement accessible à l’utilisateur actuel, ou `/etc/odbc.ini` pour un DSN système (privilèges d’administrateur requis). Voici un exemple de fichier qui montre les entrées minimales exigées pour un nom de source de données :  
 
-```  
+```ini
+# [DSN name]
 [MSSQLTest]  
-Driver = ODBC Driver 13 for SQL Server  
-Server = [protocol:]server[,port]  
-#   
+Driver = ODBC Driver 17 for SQL Server  
+# Server = [protocol:]server[,port]  
+Server = tcp:localhost,1433
+#
 # Note:  
 # Port is not a valid keyword in the odbc.ini file  
 # for the Microsoft ODBC driver on Linux or macOS
 #  
 ```  
+
+Pour vous connecter à l’aide du DSN ci-dessus dans une chaîne de connexion, vous devez spécifier le mot clé `DSN` comme suit : `DSN=MSSQLTest;UID=my_username;PWD=my_password`  
+La chaîne de connexion ci-dessus équivaut à spécifier une chaîne de connexion sans le mot clé `DSN` comme suit : `Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`
 
 Vous pouvez éventuellement spécifier le protocole et le port à connecter au serveur. Par exemple, **Server=tcp:** _servername_ **,12345**. Notez que le seul protocole pris en charge par les pilotes Linux et macOS est `tcp`.
 
@@ -59,11 +65,12 @@ Pour vous connecter à une instance nommée sur un port statique, utilisez <b>Se
 
 Éventuellement, vous pouvez ajouter les informations de nom de source de données à un fichier de modèle, puis exécuter la commande suivante pour l’ajouter à `~/.odbc.ini` :
  - **odbcinst -i -s -f** _template_file_  
- 
+
 Vous pouvez vérifier que votre pilote fonctionne en utilisant `isql` pour tester la connexion, ou en exécutant cette commande :
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-tlsssl"></a>Utilisation de TLS/SSL  
+
 Vous pouvez utiliser le protocole TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), pour chiffrer les connexions à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le protocole TLS protège les noms d’utilisateur et mots de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le réseau. Il vérifie également l’identité du serveur à des fins de protection contre les attaques de l’intercepteur (« man-in-the-middle »).  
 
 L’activation du chiffrement renforce la sécurité au détriment des performances.
@@ -79,7 +86,7 @@ Quels que soient les paramètres pour **Encrypt** et **TrustServerCertificate**,
 
 Par défaut, les connexions chiffrées vérifient toujours le certificat du serveur. Toutefois, si vous vous connectez à un serveur qui possède un certificat auto-signé, ajoutez également l’option `TrustServerCertificate` pour contourner la vérification du certificat par rapport à la liste des autorités de certification approuvées :  
 
-```  
+```
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   

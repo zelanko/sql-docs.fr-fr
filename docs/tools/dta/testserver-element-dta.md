@@ -1,5 +1,6 @@
 ---
 title: TestServer, élément (Assistant Paramétrage de base de données)
+description: Dans l’utilitaire dta, l’élément TestServer spécifie le serveur de test à utiliser lors du paramétrage d’un serveur de production.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 7d861ec513297bf5c9abe6bf3654731008960c3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6cba5afd8d53396e3e35012d132f95730a8f3b75
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307033"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151503"
 ---
 # <a name="testserver-element-dta"></a>TestServer, élément (Assistant Paramétrage de base de données)
 

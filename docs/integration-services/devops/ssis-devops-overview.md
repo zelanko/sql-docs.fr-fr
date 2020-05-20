@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987203"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152166"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps Tools (préversion)
+# <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps Tools
 
 L’extension [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) est disponible dans la Place de Marché **Azure DevOps**.
 
@@ -344,6 +344,12 @@ Le schéma JSON de configuration comporte trois couches :
 |sensible|Détermine si la valeur de la variable d’environnement est sensible.|Les entrées valides sont : <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Notes de publication
+
+### <a name="version-101"></a>Version 1.0.1
+
+Date de publication : 9 mai 2020
+
+- Correction d’un problème dans lequel la tâche de génération SSIS génère toujours l’ensemble de la solution, même si un seul fichier dtproj est spécifié en tant que chemin du projet.
 
 ### <a name="version-100"></a>Version 1.0.0
 

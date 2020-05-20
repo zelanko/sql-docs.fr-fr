@@ -1,5 +1,6 @@
 ---
 title: Table, élément pour les schémas (Assistant Paramétrage de base de données)
+description: Dans l’utilitaire dta, l’élément Table pour les schémas spécifie la table pour le paramétrage. Cet article décrit cet élément.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 419420c9d1ecec501ca8a7d92ef6a23a658db713
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7c6e1c260d91f5c835117463ac82495ec7873f8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307860"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151513"
 ---
 # <a name="table-element-for-schema-dta"></a>Table, élément pour les schémas (Assistant Paramétrage de base de données)
 

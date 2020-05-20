@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779190"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000949"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propriétés du catalogue de texte intégral (page Tables et vues)
   Utilisez cette page de dialogue pour consulter ou modifier les tables et les vues qui sont attribuées au catalogue de texte intégral.  
@@ -45,7 +45,7 @@ ms.locfileid: "62779190"
 |-|-|  
 |**Colonnes disponibles**|Affiche toutes les colonnes qui sont indexées en texte intégral. Activez une case à cocher pour ajouter une colonne à l'index de texte intégral.|  
 |**Langue pour l'analyseur lexical**|Affiche le langage de l'analyseur lexical.|  
-|**Colonne de type de données**|Répertorie le nom de la colonne dans la table qui contient le type de document de la colonne répertoriée dans **colonnes disponibles** si la `varbinary(max)` colonne `image` est une colonne ou.|  
+|**Colonne de type de données**|Répertorie le nom de la colonne dans la table qui contient le type de document de la colonne répertoriée dans **colonnes disponibles** si la colonne est une `varbinary(max)` `image` colonne ou.|  
 |**Sémantique statistique**|Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Si vous sélectionnez une **langue** avant de sélectionner **Sémantique statistique**, et que la langue sélectionnée n'est pas associée à un modèle linguistique sémantique, la case à cocher **Sémantique statistique** est désactivée. Si vous sélectionnez **Sémantique statistique** avant de sélectionner une **langue**, les langues disponibles dans la zone de liste déroulante sont limitées à celles pour lesquelles il existe une prise en charge de modèle linguistique sémantique.|  
   
 ## <a name="track-changes"></a>Suivi des modifications  

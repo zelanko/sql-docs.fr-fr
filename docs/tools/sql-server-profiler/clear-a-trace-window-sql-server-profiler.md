@@ -1,6 +1,7 @@
 ---
 title: Effacer une fenêtre de trace
 titleSuffix: SQL Server Profiler
+description: Découvrez comment effacer la fenêtre de trace qui capture les données d’événement dans SQL Server Profiler sans effacer les fichiers ou les tables de trace.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1158a2409c078c58a8d48cb4d5780b6d08643aea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 451e678c2e8a7f0d238e46b99370b7002dd14abc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307353"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151940"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>Effacer une fenêtre de trace (SQL Server Profiler)
 

@@ -1,5 +1,6 @@
 ---
 title: Associer la base de données et l’application Web
+description: Dans SQL Server, vous pouvez associer une application Web maître Data Manager à une base de données Master Data Services pour spécifier la base de données à utiliser pour les opérations Web.
 ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d82bee5e275365b72adb3700cae8c11e6e67c9e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 685758e8671455103c0510db254381eecefaf676
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253085"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606761"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Associer une base de données Master Data Services et une application Web
 

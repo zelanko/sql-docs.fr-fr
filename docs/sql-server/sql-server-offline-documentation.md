@@ -1,5 +1,5 @@
 ---
-title: Installer des versions antérieures de la documentation SQL Server hors connexion
+title: Installer la documentation SQL Server pour l’afficher hors connexion
 description: Découvrez comment installer la documentation hors connexion pour SQL Server 2019, 2017, 2016, 2014 et 2012. Utilisez SQL Server Management Studio (SSMS) pour afficher le contenu hors connexion.
 ms.prod: sql
 ms.technology: install
@@ -8,15 +8,15 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/05/2020
-ms.openlocfilehash: d505a8435dc222e1ef9c76539e5a7b37e891778e
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.date: 05/08/2020
+ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849679"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151547"
 ---
-# <a name="install-previous-versions-of-sql-server-documentation-to-view-offline-in-ssms"></a>Installer des versions antérieures de la documentation SQL Server pour un affichage hors connexion dans SSMS
+# <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Installer la documentation SQL Server pour l’afficher hors connexion dans SSMS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -97,6 +97,9 @@ Les étapes suivantes expliquent comment charger le contenu hors connexion de SQ
 
    ![Livres SQL Server 2014 automatiquement mis à jour](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
+> [!Tip]
+> Le contenu Transact-SQL de SQL 2014 est uniquement disponible hors connexion.
+
 ## <a name="sql-server-2012-offline-content"></a>Contenu hors connexion SQL Server 2012
 
 Les étapes suivantes expliquent comment charger le contenu hors connexion de SQL Server 2012
@@ -167,7 +170,7 @@ Consultez le cycle de vie des produits Microsoft pour plus d’informations sur 
 
 Pour en savoir plus sur le contenu archivé et la visionneuse d’aide, reportez-vous aux liens ci-dessous.
 
-- [Lien direct vers les versions précédentes de la documentation SQL Server](https://docs.microsoft.com/previous-versions/sql/)
-- [Microsoft Help Viewer - Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)
-- [Documentation SQL Server, bien démarrer](../sql-server/index.yml?view=sql-server-2016)
+- [Documentation SQL Server](../sql-server/index.yml?view=sql-server-2016)
+- [Documentation de SQL Server 2014](../2014/database-engine/install-windows/installation-for-sql-server.md)
+- [Documentation sur les versions antérieures de SQL Server](https://docs.microsoft.com/previous-versions/sql/)
 - [Système de gestion des versions dans la documentation SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

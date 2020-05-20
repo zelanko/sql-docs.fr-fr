@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787757"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001019"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Modifications importantes apportées à la recherche en texte intégral
   Cette rubrique décrit les modifications importantes apportées à la recherche en texte intégral. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes lors d'une mise à niveau. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "62787757"
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Dernières modifications dans la recherche en texte intégral dans SQL Server 2008  
  Les modifications décrites ci-dessous s'appliquent à la recherche en texte intégral entre [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] et [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures.  
   
-|Fonctionnalité|Scénario|SQL Server 2005|SQL Server 2008 et versions ultérieures|  
+|Caractéristique|Scénario|SQL Server 2005|SQL Server 2008 et versions ultérieures|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) avec des types définis par l’utilisateur (UDT)|La clé de texte intégral est un type défini par l'utilisateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], par exemple `MyType = char(1)`.|La clé retournée est du type assigné au type défini par l'utilisateur.<br /><br /> Dans l’exemple, il s’agit de **char (1)**.|La clé retournée est du type défini par l'utilisateur. Dans l’exemple, il s’agit de **MyType**.|  
 |paramètre *top_n_by_rank* (des instructions CONTAINSTABLE et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] )|*top_n_by_rank* des requêtes en utilisant 0 comme paramètre.|Échec avec un message d'erreur qui signale que vous devez utiliser une valeur supérieure à zéro.|Réussite, retourne zéro ligne.|  
@@ -50,7 +50,7 @@ ms.locfileid: "62787757"
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|Activation ou désactivation de la recherche en texte intégral à l'aide de sp_fulltext_database.|Aucun résultat n'est retourné pour les requêtes de texte intégral. Si le texte intégral est désactivé pour la base de données, les opérations de texte intégral ne sont pas autorisées.|Retourne des résultats pour les requêtes de texte intégral et les opérations de texte intégral sont autorisées même si le texte intégral est désactivé pour la base de données.|  
 |Mots vides spécifiques aux paramètres régionaux|Interroge les variantes spécifiques aux paramètres régionaux d’une langue parente, telles que le français belge et le français canadien.|Requêtes les variantes spécifiques aux paramètres régionaux sont traitées par les composants (analyseurs lexicaux, générateurs de formes dérivées et mots vides) de leur langue parente. Par exemple, les composants Français (France) sont utilisés pour analyser le Français (Belgique).|Vous devez ajouter des mots vides de manière explicite pour chaque identificateur de paramètres régionaux (LCID). Par exemple, vous devriez spécifier un LCID pour la Belgique, le Canada et la France.|  
 |Processus d'indexation par radicaux du dictionnaire des synonymes|Utilisation du dictionnaire des synonymes et des formes flexionnelles (indexation par radicaux).|Un mot du dictionnaire des synonymes est ramené automatiquement à son radical après son expansion.|Si vous souhaitez que la forme radicale figure dans l'expansion, vous devez l'ajouter de manière explicite.|  
-|Chemin d'accès au catalogue de texte intégral et groupe de fichiers|Utilisation des catalogues de texte intégral.|Chaque catalogue de texte intégral a un chemin d'accès physique et appartient à un groupe de fichiers. Il est traité en tant que fichier de base de données.|Un catalogue de texte intégral est un objet virtuel qui n'appartient à aucun groupe de fichiers. Un catalogue de texte intégral est un concept logique qui fait référence à un groupe d'index de recherche en texte intégral.<br /><br /> Remarque : [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] les instructions DDL qui spécifient des catalogues de texte intégral fonctionnent correctement.|  
+|Chemin d'accès au catalogue de texte intégral et groupe de fichiers|Utilisation des catalogues de texte intégral.|Chaque catalogue de texte intégral a un chemin d'accès physique et appartient à un groupe de fichiers. Il est traité en tant que fichier de base de données.|Un catalogue de texte intégral est un objet virtuel qui n'appartient à aucun groupe de fichiers. Un catalogue de texte intégral est un concept logique qui fait référence à un groupe d'index de recherche en texte intégral.<br /><br /> Remarque : les [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] instructions DDL qui spécifient des catalogues de texte intégral fonctionnent correctement.|  
 |[sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)|Utilisation du chemin d'accès, data_space_id et file_id de cet affichage catalogue.|Ces colonnes retournent une valeur spécifique.|Ces colonnes retournent NULL car le catalogue de texte intégral ne se trouve plus dans le système de fichiers.|  
 |[sys.sysfulltextcatalogs](/sql/relational-databases/system-compatibility-views/sys-sysfulltextcatalogs-transact-sql)|Utilisation de la colonne de chemin d'accès de cette table système déconseillée.|Retourne le chemin d'accès de système de fichiers du catalogue de texte intégral.|Retourne NULL car le catalogue de texte intégral ne se trouve plus dans le système de fichiers.|  
 |[sp_help_fulltext_catalogs](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql)<br /><br /> [sp_help_fulltext_catalogs_cursor](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql)|Utilisation de la colonne PATH de ces procédures stockées déconseillées.|Retourne le chemin d'accès de système de fichiers du catalogue de texte intégral.|Retourne NULL car le catalogue de texte intégral ne se trouve plus dans le système de fichiers.|  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de736c48763973b48be41d4d63f5237a10b3fff6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775041"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000879"
 ---
 # <a name="manage-full-text-indexes"></a>Gérer les index de recherche en texte intégral
      
@@ -37,7 +37,7 @@ ms.locfileid: "62775041"
     |----------|-----------------|  
     |**Généralités**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Liste de mots vides de l’index de recherche en texte intégral**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**<br /><br /> <br /><br /> Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Général&#41;](full-text-index-properties-general-page.md).|  
     |**Colonnes**|Affiche les colonnes de table qui sont disponibles pour l'indexation de texte intégral. La ou les colonnes sélectionnées sont indexées en texte intégral. Vous pouvez sélectionner autant de colonnes disponibles que vous souhaitez inclure dans l'index de recherche en texte intégral. Pour plus d’informations, consultez [Propriétés d’index de recherche en texte intégral &#40;page Colonnes&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../relational-databases/indexes/indexes.md).<br /><br /> <strong> \* Important \* \* </strong> Une fois que vous avez fermé la boîte de dialogue Propriétés de l' **index de recherche en texte intégral** , toutes les planifications nouvellement créées sont associées à un travail de SQL Server Agent (démarrer le remplissage incrémentiel de la Table sur *database_name*.* table_name*).|  
+    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../relational-databases/indexes/indexes.md).<br /><br /> <strong> \* \* Important \* une \* </strong> fois que vous avez fermé la boîte de dialogue Propriétés de l' **index de recherche en texte intégral** , toutes les planifications nouvellement créées sont associées à un travail de SQL Server Agent (démarrer le remplissage incrémentiel de la table sur *database_name*.* table_name*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62775041"
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Pour déterminer si un index unique donné est utilisé comme colonne clés de texte intégral  
   
-1.  Utilisez une instruction [SELECT](/sql/t-sql/queries/select-transact-sql) pour appeler la fonction [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql). Dans l’appel de fonction, utilisez la fonction OBJECT_ID pour convertir le nom de la table (*table_name*) en ID de table, spécifiez le nom d’un index unique pour la table et `IsFulltextKey` spécifiez la propriété d’index, comme suit :  
+1.  Utilisez une instruction [SELECT](/sql/t-sql/queries/select-transact-sql) pour appeler la fonction [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql). Dans l’appel de fonction, utilisez la fonction OBJECT_ID pour convertir le nom de la table (*table_name*) en ID de table, spécifiez le nom d’un index unique pour la table et spécifiez la `IsFulltextKey` propriété d’index, comme suit :  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -92,7 +92,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 1.  Chaque table activée pour la recherche en texte intégral comporte une colonne qui est utilisée pour garantir l’unicité des lignes de la table (*colonne de clés**unique*). La propriété `TableFulltextKeyColumn`, obtenue à l'aide de la fonction OBJECTPROPERTYEX, contient l'ID de colonne de la colonne clé unique.  
   
-     Pour obtenir cet identificateur, vous pouvez utiliser une instruction SELECT afin d'appeler la fonction OBJECTPROPERTYEX. Utilisez la fonction OBJECT_ID pour convertir le nom de la table (*table_name*) en ID de table et spécifiez `TableFulltextKeyColumn` la propriété, comme suit :  
+     Pour obtenir cet identificateur, vous pouvez utiliser une instruction SELECT afin d'appeler la fonction OBJECTPROPERTYEX. Utilisez la fonction OBJECT_ID pour convertir le nom de la table (*table_name*) en ID de table et spécifiez la `TableFulltextKeyColumn` propriété, comme suit :  
   
     ```  
     SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  

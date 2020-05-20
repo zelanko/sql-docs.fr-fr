@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
 - F1 Help [SQL Server Database Engine]
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 844795b57c69fa003140fb42453cb59b138ffcc7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064829"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001009"
 ---
 # <a name="feature-reference-database-engine"></a>Références relatives aux fonctionnalités (moteur de base de données)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] contient plusieurs outils et applications qui permettent de créer, gérer et afficher des données et des objets de base de données. En outre, vous pouvez utiliser certains outils pour surveiller et résoudre les problèmes relatifs aux performances du serveur et de la base de données, activer et désactiver des fonctionnalités, des services et des protocoles réseaux. Les rubriques de cette section décrivent les boîtes de dialogue de ces outils et applications.  
@@ -26,7 +26,7 @@ ms.locfileid: "66064829"
  Pour accéder à une rubrique de l'interface utilisateur pendant l'exécution de l'outil ou de l'application, appuyez sur F1 ou cliquez sur Aide lorsque la boîte de dialogue, la page Web ou l'Assistant est ouvert.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../relational-databases/performance/database-engine-tuning-advisor.md)  
  Fournit une aide pour l'Assistant Paramétrage du [!INCLUDE[ssDE](../includes/ssde-md.md)] et les boîtes de dialogue connexes.  
   
  Fournit une aide pour les outils, les Assistants et les services fournis avec [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  

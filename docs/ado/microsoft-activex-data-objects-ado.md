@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921870"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606611"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
-ADO est utilisé dans les programmes C++ pour se connecter à SQL Server. Bien entendu, il fonctionne également pour se connecter à Azure SQL Database dans le Cloud.
+ActiveX Data Objects est un modèle de programmation, ce qui signifie qu’il ne dépend d’aucun moteur principal donné. À l’heure actuelle, toutefois, le seul moteur prenant en charge le modèle ADO est OLE-DB. Il existe de nombreux fournisseurs OLE DB natifs, ainsi qu’un fournisseur OLE DB pour ODBC. ADO est utilisé dans les programmes C++ et Visual Basic pour se connecter à SQL Server et à d’autres bases de données. Bien entendu, il fonctionne également pour se connecter à Azure SQL Database dans le Cloud.
 
 Chaque section de cet article décrit un composant d’ADO.
 
@@ -61,7 +61,7 @@ Chaque section de cet article décrit un composant d’ADO.
   
  [Glossaire ADO](../ado/ado-glossary.md)  
   
-## <a name="support"></a>Support  
+## <a name="support"></a>Assistance  
  Pour obtenir une aide gratuite sur les problèmes liés à ADO, essayez de publier dans le groupe de discussion public ADO. Ce groupe de discussion est surveillé par les professionnels du support technique Microsoft qui couvrent ADO et par d’autres développeurs ADO expérimentés.  
   
  Vous trouverez plus d'informations sur les options de support sur le site Web Aide et support Microsoft.

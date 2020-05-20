@@ -11,15 +11,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552e7cd3212d8fb65100c6bd8efbaca91af43c4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089169"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000675"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Options (éditeur de texte-Transact-SQL-page général)
   Utilisez la boîte de dialogue d’options **Général** pour modifier le comportement d’édition général de l’Éditeur de requête [!INCLUDE[ssDE](../includes/ssde-md.md)], qui permet de modifier des scripts [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils**, développez le sous-dossier **Transact-SQL**, puis cliquez sur **Général**.  

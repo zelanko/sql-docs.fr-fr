@@ -12,12 +12,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b3d5780daea40f229ed7d4d86438be814dfe7d29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06970a9e21169af3959d69ba934417065621e855
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844524"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605721"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse
 
@@ -26,7 +26,7 @@ ms.locfileid: "73844524"
  Cette rubrique répertorie [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] les [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] affichages catalogue et.  
   
 ## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] affichages catalogue  
- Les affichages catalogue suivants s' [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appliquent [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]à et à :  
+ Les affichages catalogue suivants s’appliquent à [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] :  
   
  [sys. pdw_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
   
@@ -62,11 +62,11 @@ ms.locfileid: "73844524"
 
 ## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Affichages catalogue
 
- Les affichages catalogue suivants s' [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appliquent uniquement à :
+ Les affichages catalogue suivants s’appliquent [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] uniquement à :
 
- [sys. pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest) (version préliminaire)
+ [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest) 
 
- [sys. pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) (version préliminaire)
+ [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
 
  [sys. pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (version préliminaire)
 
@@ -74,12 +74,12 @@ ms.locfileid: "73844524"
   
  [sys. workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
   
- [sys. workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) (version préliminaire)
+ [sys. workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
 
 
 ## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Affichages catalogue
 
- Les affichages catalogue suivants s' [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliquent uniquement à :
+ Les affichages catalogue suivants s’appliquent [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] uniquement à :
 
  [sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

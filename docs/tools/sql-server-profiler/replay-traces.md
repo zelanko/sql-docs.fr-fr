@@ -1,6 +1,7 @@
 ---
 title: Relire des traces
 titleSuffix: SQL Server Profiler
+description: Découvrez comment effectuer la relecture des données de SQL Server Profiler à partir d’un seul ordinateur et comment utiliser des points d’arrêt et des connexions utilisateur simulées dans la relecture pour résoudre les problèmes.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 50ef296f7ce7198dc0e233aca08e33c5f1cf7af0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 46d8a93d917917c0b0dec57e26633f564b9c1d01
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307459"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151711"
 ---
 # <a name="replay-traces"></a>Relire des traces
 

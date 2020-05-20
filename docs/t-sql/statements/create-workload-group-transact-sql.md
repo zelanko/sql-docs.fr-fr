@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 84685f8e9d75d75d65255292b2b45b2b0c990cac
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 6744a4590c0f1d893f79bbe93db189b96cb7b4c0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886509"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606421"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -137,7 +137,7 @@ L’importance définie pour le groupe de charge de travail est l’importance p
 *QUERY_EXECUTION_TIMEOUT_SEC* = valeur</br>     
 Spécifie la durée maximale (en secondes) pendant laquelle une requête peut s’exécuter avant d’être annulée. *value* doit être égal à 0 ou un entier positif. Le paramètre par défaut de la valeur est 0, ce qui signifie que la requête n’expire jamais. Le délai QUERY_EXECUTION_TIMEOUT_SEC démarre une fois que la requête est en cours d’exécution, pas quand elle est mise en file d’attente.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les groupes de charge de travail correspondant aux classes de ressources sont créés automatiquement pour permettre une compatibilité descendante. Ces groupes de charge de travail définis par le système ne peuvent pas être supprimés. Il est possible de créer 8 autres groupes de charge de travail définis par l’utilisateur.
 
@@ -181,7 +181,8 @@ Nécessite l’autorisation `CONTROL DATABASE`
 
 ## <a name="see-also"></a>Voir aussi
 
-- [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
+- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](alter-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
 - [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
 - [Démarrage rapide : Configurer l’isolation de la charge de travail à l’aide de T-SQL](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)

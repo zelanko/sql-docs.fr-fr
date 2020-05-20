@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af057cffd0382364488076086f77af03376d64fd
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528753"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151888"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -205,6 +206,8 @@ distrib [-?]
 -   La valeur **MessageInterval** est atteinte après la journalisation du dernier événement d’historique.  
   
  Si aucune transaction répliquée n'est disponible à la source, l'agent signale un message de non-transaction au serveur de distribution. Cette option spécifie combien de temps l'agent doit attendre avant de signaler un autre message de non-transaction. Les agents signalent toujours un message de non-transaction lorsqu'ils détectent qu'aucune transaction n'est disponible à la source après avoir précédemment traité des transactions répliquées. La valeur par défaut est 60 secondes.  
+
+**-MultiSubnetFailover** Spécifie si la propriété MultiSubnetFailover est activée ou non. Si votre application se connecte à un groupe de disponibilité AlwaysOn sur des sous-réseaux différents, la définition de MultiSubnetFailover=true permet de détecter plus rapidement le serveur actif (actuellement) et de s’y connecter plus rapidement également.
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Spécifie la taille minimale des données des objets blob, en octets, au-delà de laquelle les données seront liées sous la forme d'un flux. Vous devez spécifier **-UseOledbStreaming** pour utiliser ce paramètre. Les valeurs peuvent être comprises entre 400 et 1 048 576 octets, la valeur par défaut étant de 16 384 octets.  
@@ -299,6 +302,7 @@ distrib [-?]
 |Mise à jour du contenu|  
 |---------------------|  
 |Ajout du paramètre **ExtendedEventConfigFile** .|  
+|Ajout du paramètre **-MultiSubnetFailover**.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  

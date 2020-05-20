@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, managing services
 ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93235916075c02f1aa1f756a0f3f6affe6ea6e10
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064640"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000869"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Rubriques de procédures concernant la gestion des services (Gestionnaire de configuration SQL Server)
   Le [!INCLUDE[ssDE](../includes/ssde-md.md)] et l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont exécutés en tant que services sous les systèmes d'exploitation [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Pour plus d’informations sur les services, consultez [Gérer les services du moteur de base de données](configure-windows/manage-the-database-engine-services.md).  
