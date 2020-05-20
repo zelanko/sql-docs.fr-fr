@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9b611546b63dec8484785ba855f299925933e89e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919355"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760235"
 ---
 # <a name="count-property-ado"></a>Count, propriété (ADO)
 Indique le nombre d’objets dans une collection.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **type long** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **Count** pour déterminer le nombre d’objets dans une collection donnée.  
   
  Étant donné que la numérotation des membres d’une collection commence par zéro, vous devez toujours coder les boucles en commençant par le membre zéro et en terminant par la valeur de la propriété **Count** moins 1. Si vous utilisez Microsoft Visual Basic et souhaitez parcourir les membres d’une collection sans vérifier la propriété Count, utilisez l' **argument** **for each... Commande suivante** .  

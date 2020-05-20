@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursor service for ole db [ADO]
 - cursors [ADO], cursor service for OLE DB
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aeac8c848f01f01e8969f94c571ad15f5e7f615a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3b36ebd9ce3af6769e87dbc4cf826713288b722
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923916"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759085"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>Service de curseur Microsoft pour OLE DB
 Lorsque vous sélectionnez un curseur côté client ou affectez à la propriété **CursorLocation** la valeur **adUseClient**, vous appelez le service de curseur Microsoft pour OLE DB. Vous pouvez également voir des références au « moteur de curseur client », qui est essentiellement la même chose dans le contexte d’ADO. Ce service complète les fonctions de prise en charge des curseurs des fournisseurs de données. Par conséquent, vous pouvez percevoir des fonctionnalités relativement uniformes de tous les fournisseurs de données.  

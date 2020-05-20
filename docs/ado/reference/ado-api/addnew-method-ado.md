@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921327"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760725"
 ---
 # <a name="addnew-method-ado"></a>AddNew, méthode (ADO)
 Crée un nouvel enregistrement pour un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pouvant être mis à jour.  
@@ -38,12 +38,12 @@ recordset.AddNew FieldList, Values
  Objet **Recordset** .  
   
  *FieldList*  
- Facultatif. Un nom unique, ou un tableau de noms ou de positions ordinales des champs dans le nouvel enregistrement.  
+ facultatif. Un nom unique, ou un tableau de noms ou de positions ordinales des champs dans le nouvel enregistrement.  
   
  *Valeurs*  
- Facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *FieldList* est un tableau, les *valeurs* doivent également être un tableau avec le même nombre de membres ; dans le cas contraire, une erreur se produit. L’ordre des noms de champs doit correspondre à l’ordre des valeurs de champ dans chaque tableau.  
+ facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *FieldList* est un tableau, les *valeurs* doivent également être un tableau avec le même nombre de membres ; dans le cas contraire, une erreur se produit. L’ordre des noms de champs doit correspondre à l’ordre des valeurs de champ dans chaque tableau.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la méthode **AddNew** pour créer et initialiser un nouvel enregistrement. Utilisez la méthode [supports](../../../ado/reference/ado-api/supports-method.md) avec **adAddNew** (une valeur [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) ) pour vérifier si vous pouvez ajouter des enregistrements à l’objet **Recordset** actuel.  
   
  Une fois que vous avez appelé la méthode **AddNew** , le nouvel enregistrement devient l’enregistrement actif et reste actif après l’appel de la méthode [Update](../../../ado/reference/ado-api/update-method.md) . Étant donné que le nouvel enregistrement est ajouté au **Recordset**, un appel à **MoveNext** après la mise à jour se déplacera au-delà de la fin de l’ensemble d' **enregistrements**, ce qui rend **EOF** true. Si l’objet **Recordset** ne prend pas en charge les signets, vous risquez de ne pas pouvoir accéder au nouvel enregistrement après l’avoir déplacé vers un autre enregistrement. Selon le type de curseur, vous devrez peut-être appeler la méthode [Requery](../../../ado/reference/ado-api/requery-method.md) pour rendre le nouvel enregistrement accessible.  

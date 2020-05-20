@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4559a8d46852f37f2e828ce8f4abbd0e40845744
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e7bd2e7f536cceb3a70ab70f0deda1bfe427fa45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966702"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759295"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VB)
 L’affectation de la valeur **Nothing** à la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) doit fermer la connexion au catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais une tentative de lecture des propriétés nécessitant un appel au fournisseur échouera.  

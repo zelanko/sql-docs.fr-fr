@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924117"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760825"
 ---
 # <a name="static-cursors"></a>Curseurs statiques
 Le curseur statique affiche toujours l’ensemble de résultats tel qu’il était au moment où le curseur a été ouvert pour la première fois. En fonction de l’implémentation, les curseurs statiques sont en lecture seule ou en lecture/écriture, et permettent de faire défiler vers l’avant et vers l’arrière. Le curseur statique ne détecte généralement pas les modifications apportées à l’appartenance, à l’ordre ou aux valeurs du jeu de résultats après l’ouverture du curseur. Les curseurs statiques peuvent détecter leurs propres mises à jour, suppressions et insertions, bien qu’ils ne soient pas obligés de le faire.  

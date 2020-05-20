@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925766"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761145"
 ---
 # <a name="creating-a-connection-string"></a>Création d’une chaîne de connexion
 Une chaîne de connexion se compose d’une liste de paires argument/valeur (c’est-à-dire des paramètres), séparées par des points-virgules. Par exemple :  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- Dans cette chaîne de connexion, ADO reconnaît uniquement `"Provider=SQLOLEDB"` le paramètre, qui spécifie le fournisseur Microsoft OLE DB pour SQL Server comme source de données ADO. Le reste des paires argument/valeur, `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`, est passé textuellement à ce fournisseur. Le type et la validité de ces paramètres sont spécifiques au fournisseur. Pour plus d’informations sur les paramètres valides qui peuvent être transmis dans la chaîne de connexion, consultez la documentation de chaque fournisseur.  
+ Dans cette chaîne de connexion, ADO reconnaît uniquement le `"Provider=SQLOLEDB"` paramètre, qui spécifie le fournisseur Microsoft OLE DB pour SQL Server comme source de données ADO. Le reste des paires argument/valeur, `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` , est passé textuellement à ce fournisseur. Le type et la validité de ces paramètres sont spécifiques au fournisseur. Pour plus d’informations sur les paramètres valides qui peuvent être transmis dans la chaîne de connexion, consultez la documentation de chaque fournisseur.  
   
  Selon la documentation du fournisseur de OLE DB pour SQL Server, vous pouvez remplacer le paramètre de *source de données* « Server » par « Server » par le paramètre de *catalogue initial* . Ainsi, la chaîne de connexion suivante produit des résultats identiques à ceux ci-dessus :  
   

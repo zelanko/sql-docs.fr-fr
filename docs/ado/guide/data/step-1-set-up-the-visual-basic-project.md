@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12c31fcd18918b05626dc1dda817bb524bca9449
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924072"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760805"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>Étape 1 : Configurer le projet Visual Basic
 Dans ce scénario, il est supposé que vous avez Microsoft Visual Basic 6,0, ADO 2,5 ou version ultérieure et le fournisseur Microsoft OLE DB pour la publication Internet installée sur votre système. Vous allez d’abord créer un nouveau projet, puis ajouter des contrôles au formulaire par défaut dans le projet.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925565"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761085"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Détection et résolution des conflits
 Si vous traitez votre Recordset en mode immédiat, il y a beaucoup moins de risques de problèmes d’accès concurrentiel. En revanche, si votre application utilise la mise à jour en mode batch, il peut y avoir de bonnes chances qu’un utilisateur modifie un enregistrement avant que les modifications apportées par un autre utilisateur modifiant le même enregistrement soient enregistrées. Dans ce cas, vous souhaiterez que votre application gère correctement le conflit. Il se peut que vous souhaitiez que la dernière personne envoie une mise à jour au serveur « WINS ». Vous pouvez également permettre à l’utilisateur le plus récent de décider quelle mise à jour doit être prioritaire en lui fournissant un choix entre les deux valeurs conflictuelles.  

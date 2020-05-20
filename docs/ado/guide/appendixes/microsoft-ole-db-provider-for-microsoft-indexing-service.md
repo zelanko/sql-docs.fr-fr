@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926664"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760475"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour le service d’indexation Microsoft
 Le fournisseur Microsoft OLE DB pour le service d’indexation Microsoft fournit un accès par programmation en lecture seule au système de fichiers et aux données Web indexées par le service d’indexation Microsoft. Les applications ADO peuvent émettre des requêtes SQL pour récupérer du contenu et des informations sur les propriétés de fichier.
@@ -95,23 +95,23 @@ MSIDXS
 
 |Méthode|Disponible ?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Non|
-|[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Oui|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Non|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Non|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Oui|
-|[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|
-|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Non|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|
-|[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Oui|
-|[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|
-|[Resynchroniser](../../../ado/reference/ado-api/resync-method.md)|Oui|
-|[Permet](../../../ado/reference/ado-api/supports-method.md)|Oui|
-|[Mise à jour](../../../ado/reference/ado-api/update-method.md)|Non|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Non|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|
+|[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Yes|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Yes|
+|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|
+|[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Yes|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Yes|
+|[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|
+|[Resynchroniser](../../../ado/reference/ado-api/resync-method.md)|Yes|
+|[Permet](../../../ado/reference/ado-api/supports-method.md)|Yes|
+|[Mettre à jour](../../../ado/reference/ado-api/update-method.md)|No|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
 
  Pour obtenir des détails d’implémentation spécifiques et des informations fonctionnelles sur le fournisseur Microsoft OLE DB pour le service d’indexation Microsoft, consultez le [Guide du programmeur OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)ou visitez la page services Web du site Web Windows NT Server.
 

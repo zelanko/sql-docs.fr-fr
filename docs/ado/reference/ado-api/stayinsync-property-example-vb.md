@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fa4c09a56f164ca8c0d2b6d6222b9d827c1ee45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930815"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759675"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync, exemple de propriété (VB)
 Cet exemple montre comment la propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilite l’accès aux lignes d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)hiérarchique.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DateCreated property [ADOX], Visual Basic example
 - DateModified property [ADOX], Visual Basic example
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 96ca853100baddd94d29331416215278d493388f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c78010e98c82f5c43484fe39bbbec506c77b45e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966596"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759235"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated et DateModified, exemples de propriétés (VB)
 Cet exemple illustre les propriétés [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) en ajoutant une nouvelle [colonne](../../../ado/reference/adox-api/column-object-adox.md) à une [table](../../../ado/reference/adox-api/table-object-adox.md) existante et en créant une nouvelle **table**. La procédure DateOutput est requise pour que cet exemple s’exécute.  

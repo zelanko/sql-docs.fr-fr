@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9a2bbb889bc0277ab01f29896d4f60eebd8236cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966224"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759165"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions, méthode (ADOX)
 Retourne les autorisations pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) ou un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) sur un objet ou un conteneur d’objets.  
@@ -46,7 +46,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  Valeur de type **long** qui peut être l’une des constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , qui spécifie le type de l’objet pour lequel obtenir des autorisations.  
   
  *ObjectTypeId*  
- Facultatif. Valeur de **type Variant** qui spécifie le GUID pour un type d’objet fournisseur non défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; dans le cas contraire, il n’est pas utilisé.  
+ facultatif. Valeur de **type Variant** qui spécifie le GUID pour un type d’objet fournisseur non défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; dans le cas contraire, il n’est pas utilisé.  
   
 ## <a name="applies-to"></a>S'applique à  
   

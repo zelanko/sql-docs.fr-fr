@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b55ebbe5a167b7d70cf606fc4e37e7ede36b486
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95b000db970bc3da925319bbe6e273557a8787ca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916904"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759825"
 ---
 # <a name="source-property-ado-error"></a>Source, propriété (objet Error ADO)
 Indique le nom de l’objet ou de l’application qui a généré à l’origine une erreur.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **chaîne** qui indique le nom d’un objet ou d’une application.  
   
 ## <a name="remarks"></a>Notes  

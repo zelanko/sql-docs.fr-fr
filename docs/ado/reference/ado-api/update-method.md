@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938840"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759495"
 ---
 # <a name="update-method"></a>Update, méthode
 Enregistre les modifications apportées à la ligne actuelle d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou à la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -35,10 +35,10 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Paramètres  
  *Fields*  
- Facultatif. Valeur de **type Variant** qui représente un nom unique ou un tableau de **variants** qui représente des noms ou des positions ordinales du ou des champs que vous souhaitez modifier.  
+ facultatif. Valeur de **type Variant** qui représente un nom unique ou un tableau de **variants** qui représente des noms ou des positions ordinales du ou des champs que vous souhaitez modifier.  
   
  *Valeurs*  
- Facultatif. **Variant** qui représente une valeur unique ou un tableau de **variants** qui représente des valeurs pour le ou les champs dans le nouvel enregistrement.  
+ facultatif. **Variant** qui représente une valeur unique ou un tableau de **variants** qui représente des valeurs pour le ou les champs dans le nouvel enregistrement.  
   
 ## <a name="remarks"></a>Notes  
   

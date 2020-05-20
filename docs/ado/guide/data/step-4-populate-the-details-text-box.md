@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924065"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760785"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Étape 4 : Remplir la zone de texte Détails
 Pour remplir la zone de texte détails, créez une sous-routine nommée **recFields** et insérez le code suivant :  
@@ -44,7 +44,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Ce code est rempli `lstDetails` avec les champs et les valeurs de l’enregistrement simple passé `recFields`à. Si la ressource est un fichier texte, un flux de texte est ouvert à partir de l’enregistrement de ressource. Le code détermine si le jeu de caractères est ASCII et copie le contenu du `txtDetails`flux dans.  
+ Ce code est rempli `lstDetails` avec les champs et les valeurs de l’enregistrement simple passé à `recFields` . Si la ressource est un fichier texte, un flux de texte est ouvert à partir de l’enregistrement de ressource. Le code détermine si le jeu de caractères est ASCII et copie le contenu du flux dans `txtDetails` .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 980b0eb874781c50f8881f2dc5e4b295d6ba2a87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa016c166bc2459c61c34a5ca40f8c1444811782
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910506"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759275"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VC++)
 La définition de la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) sur **Nothing** doit « fermer » le catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais la tentative de lecture des propriétés qui nécessitent un appel du fournisseur échouera.  

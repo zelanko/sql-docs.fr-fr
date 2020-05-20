@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924254"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760885"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Envoi des mises à jour : UpdateBatch, méthode
 Le code suivant ouvre un Recordset en mode batch en affectant à la propriété LockType la valeur adLockBatchOptimistic et à l’option CursorLocation la valeur adUseClient. Il ajoute deux nouveaux enregistrements et modifie la valeur d’un champ dans un enregistrement existant, en enregistrant les valeurs d’origine, puis appelle UpdateBatch pour renvoyer les modifications à la source de données.  

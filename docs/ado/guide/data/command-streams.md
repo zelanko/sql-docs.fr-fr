@@ -11,14 +11,14 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925843"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761205"
 ---
 # <a name="command-streams"></a>Flux de commandes
 ADO a toujours pris en charge l’entrée de commande dans un format de chaîne spécifié par la propriété **CommandText** . En guise d’alternative, avec ADO 2,7 ou une version ultérieure, vous pouvez également utiliser un flux d’informations pour l’entrée de commande en affectant le flux à la propriété **CommandStream** . Vous pouvez assigner un objet de **flux** ADO ou tout objet qui prend en charge l’interface com **IStream** .  
@@ -40,7 +40,7 @@ adoStreamQuery.Open
   
  Le contenu du flux de requête est une requête de modèle XML.  
   
- La requête de modèle requiert une référence à l’espace de noms XML identifié par le préfixe \<SQL : de la balise de> SQL : Query. Une instruction SQL SELECT est incluse en tant que contenu du modèle XML et affectée à une variable de chaîne comme suit :  
+ La requête de modèle requiert une référence à l’espace de noms XML identifié par le préfixe SQL : de la \< balise de> SQL : Query. Une instruction SQL SELECT est incluse en tant que contenu du modèle XML et affectée à une variable de chaîne comme suit :  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

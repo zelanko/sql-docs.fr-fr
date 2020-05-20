@@ -11,14 +11,14 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b4a1289755d04c2d9f861fbdcb704fad3d8707d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f9c3e853910f0be04b8cd483f5a21264ca096e9e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926867"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760525"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Annexe D : exemples ADO dans le SDK Windows
 Le SDK Windows contient plusieurs exemples d’applications qui illustrent l’utilisation du code ADO et RDS. Ces exemples sont destinés à vous aider à apprendre à utiliser ADO et RDS, mais ils ne sont pas destinés à être déployés sur des serveurs de production.

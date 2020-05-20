@@ -11,14 +11,14 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d69ff29f0baabc770da8a62b56962bdc44619b1e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924749"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759125"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Fonctionnement des commandes non paramétrées
 Pour les commandes non paramétrées, toutes les commandes du fournisseur sont exécutées et les **jeux d’enregistrements** sont créés lors de l’exécution de la commande. Si la commande est exécutée de façon synchrone, tous les **jeux d’enregistrements** sont entièrement remplis. Si un mode de remplissage asynchrone a été sélectionné, l’état rempli des **recordsets** dépend du mode de remplissage et de la taille des jeux d' **enregistrements**.  

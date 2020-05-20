@@ -13,14 +13,14 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923891"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759065"
 ---
 # <a name="the-significance-of-cursor-location"></a>Signification de l’emplacement du curseur
 Chaque curseur utilise des ressources temporaires pour stocker ses données. Ces ressources peuvent être de la mémoire, un fichier d’échange de disque, des fichiers de disque temporaire ou même un stockage temporaire dans la base de données. Le curseur est appelé curseur *côté client* lorsque ces ressources se trouvent sur l’ordinateur client. Le curseur est appelé curseur *côté serveur* lorsque ces ressources se trouvent sur le serveur.  

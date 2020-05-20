@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924146"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760845"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
 Une clause COMPUTE Shape génère un **jeu d’enregistrements**parent, dont les colonnes se composent d’une référence à l' **objet Recordset**enfant ; les colonnes facultatives dont le contenu est un chapitre, une nouvelle colonne ou des colonnes calculées, ou le résultat de l’exécution des fonctions d’agrégation sur le **jeu d’enregistrements** enfant ou sur un **jeu d’enregistrements**précédemment mis en forme ; et toutes les colonnes de l' **objet Recordset** enfant qui sont listées dans la clause facultative by.  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
  *commande enfant*  
  Se compose de l’un des éléments suivants :  
   
--   Commande de requête entre accolades ("{}") qui retourne un objet **Recordset** enfant. La commande est émise pour le fournisseur de données sous-jacent, et sa syntaxe dépend des spécifications de ce fournisseur. Il s’agit généralement du langage SQL, bien qu’ADO ne nécessite pas de langage de requête particulier.  
+-   Commande de requête entre accolades (" {} ") qui retourne un objet **Recordset** enfant. La commande est émise pour le fournisseur de données sous-jacent, et sa syntaxe dépend des spécifications de ce fournisseur. Il s’agit généralement du langage SQL, bien qu’ADO ne nécessite pas de langage de requête particulier.  
   
 -   Nom d’un **jeu d’enregistrements**mis en forme existant.  
   
@@ -94,7 +94,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Cette commande ouvre un **Recordset** mis en forme avec deux niveaux. Le niveau parent est un **Recordset** généré avec une colonne d’agrégation`SUM(rs.population)`(), une colonne qui fait référence à l'`rs` **objet Recordset** enfant () et une colonne pour le regroupement du`state` **Recordset** enfant (). Le niveau enfant est le **jeu d’enregistrements** retourné par la commande de`select * from demographics`requête ().  
+ Cette commande ouvre un **Recordset** mis en forme avec deux niveaux. Le niveau parent est un **Recordset** généré avec une colonne d’agrégation ( `SUM(rs.population)` ), une colonne qui fait référence à l' **objet Recordset** enfant ( `rs` ) et une colonne pour le regroupement du **Recordset** enfant ( `state` ). Le niveau enfant est le **jeu d’enregistrements** retourné par la commande de requête ( `select * from demographics` ).  
   
  Les lignes de détail de l' **objet Recordset** enfant sont regroupées par État, mais dans aucun ordre particulier. Autrement dit, les groupes ne seront pas classés par ordre alphabétique ou numérique. Si vous souhaitez que le **jeu d’enregistrements** parent soit ordonné, vous pouvez utiliser la méthode de tri de l’ensemble d' **enregistrements** pour trier le **jeu d'** enregistrements parent.  
   

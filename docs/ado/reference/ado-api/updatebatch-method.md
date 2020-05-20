@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9572bf6b50f359a5193dbe1b23034f1503afb1fc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937842"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759455"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch, méthode
 Écrit toutes les mises à jour par lots en attente sur le disque.  
@@ -35,12 +35,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Paramètres  
  *AffectRecords*  
- Facultatif. Valeur [AffectEnum](../../../ado/reference/ado-api/affectenum.md) qui indique le nombre d’enregistrements affectés par la méthode **UpdateBatch** .  
+ facultatif. Valeur [AffectEnum](../../../ado/reference/ado-api/affectenum.md) qui indique le nombre d’enregistrements affectés par la méthode **UpdateBatch** .  
   
  *PreserveStatus*  
- Facultatif. Valeur **booléenne** qui spécifie si les modifications locales, comme indiqué par la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) , doivent être validées. Si cette valeur est définie sur **true**, la propriété **Status** de chaque enregistrement reste inchangée une fois la mise à jour terminée.  
+ facultatif. Valeur **booléenne** qui spécifie si les modifications locales, comme indiqué par la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) , doivent être validées. Si cette valeur est définie sur **true**, la propriété **Status** de chaque enregistrement reste inchangée une fois la mise à jour terminée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la méthode **UpdateBatch** lors de la modification d’un objet **Recordset** en mode de mise à jour par lot pour transmettre toutes les modifications apportées à un objet **Recordset** à la base de données sous-jacente.  
   
  Si l’objet **Recordset** prend en charge la mise à jour par lot, vous pouvez mettre en cache plusieurs modifications dans un ou plusieurs enregistrements localement jusqu’à ce que vous appeliez la méthode **UpdateBatch** . Si vous modifiez l’enregistrement en cours ou si vous ajoutez un nouvel enregistrement lorsque vous appelez la méthode **UpdateBatch** , ADO appelle automatiquement la méthode [Update](../../../ado/reference/ado-api/update-method.md) pour enregistrer toutes les modifications en attente dans l’enregistrement en cours avant de transmettre les modifications par lot au fournisseur. Vous devez utiliser la mise à jour par lot avec un curseur de jeu de clés ou statique uniquement.  

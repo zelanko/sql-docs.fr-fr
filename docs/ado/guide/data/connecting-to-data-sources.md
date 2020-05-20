@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ef641bbfb94b8fde5f12af6cadd03f13fbfa91f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925796"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761165"
 ---
 # <a name="connecting-to-data-sources"></a>Connexion à des sources de données
 Un objet de **connexion** ADO représente une session unique avec une source de données, y compris un SGBD, un magasin de fichiers ou un fichier texte délimité par des virgules. Dans le cas d’un système de base de données client/serveur, la connexion ADO peut être une véritable connexion réseau au serveur.  

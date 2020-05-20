@@ -1,10 +1,8 @@
 ---
 title: Vue d’ensemble de l’Assistant Expérimentation de base de données
 description: Vue d’ensemble de l’Assistant Expérimentation de base de données
-ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
@@ -12,12 +10,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247124"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759155"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Vue d’ensemble de l’Assistant Expérimentation de base de données
 
@@ -94,7 +93,7 @@ Pour plus d’informations, consultez le [Forum aux questions sur les rapports d
 
 ## <a name="set-up-telemetry"></a>Configurer la télémétrie
 
-La DEA dispose d’une fonctionnalité Internet qui peut envoyer des informations de télémétrie à Microsoft pour une utilisation dans l’amélioration de l’expérience du produit. Les informations collectées sont également enregistrées sur votre ordinateur pour un audit local. vous pouvez donc toujours voir ce qui est collecté. Tous les fichiers journaux de DEA sont enregistrés dans le dossier\\% Temp% DEA.
+La DEA dispose d’une fonctionnalité Internet qui peut envoyer des informations de télémétrie à Microsoft pour une utilisation dans l’amélioration de l’expérience du produit. Les informations collectées sont également enregistrées sur votre ordinateur pour un audit local. vous pouvez donc toujours voir ce qui est collecté. Tous les fichiers journaux de DEA sont enregistrés dans le dossier% Temp% \\ DEA.
 
 Les données de télémétrie peuvent être collectées sur quatre types d’événements :
 
@@ -105,7 +104,7 @@ Les données de télémétrie peuvent être collectées sur quatre types d’év
 
 La collecte et l’envoi de données de télémétrie sont facultatifs. Pour spécifier les événements qui sont collectés et si les événements collectés sont envoyés à Microsoft, procédez comme suit :
 
-1. Accédez à l’emplacement dans lequel la DEA est installée (par exemple, C\\: Program Files (x86\\) Microsoft\\Corporation Assistant expérimentation de base de données).
+1. Accédez à l’emplacement dans lequel la DEA est installée (par exemple, C : \\ Program Files (x86) \\ Microsoft Corporation \\ Assistant expérimentation de base de données).
 2. Ouvrez et modifiez les fichiers. config de **DEA. exe. config** (pour l’application) et **DEACmd. exe. config** (pour l’interface CLI) afin de résoudre votre scénario en fonction des besoins :
     - Pour arrêter la collecte d’un type d’événement, définissez la valeur de l' *événement* (par exemple, **TraceEvent**) sur **false**. Pour recommencer la collecte de l’événement, définissez la valeur sur **true**.
     - Pour arrêter l’enregistrement des copies locales des événements, affectez la valeur **false**à **TraceLoggerEnabled** . Pour recommencer à enregistrer les copies locales, définissez la valeur sur **true**.

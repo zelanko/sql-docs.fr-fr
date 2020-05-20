@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924544"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760995"
 ---
 # <a name="provider-errors"></a>Erreurs du fournisseur
 Lorsqu’une erreur de fournisseur se produit, une erreur d’exécution de-2147467259 est retournée. Lorsque vous recevez cette erreur, vérifiez la collection d' **Erreurs** de l’objet de **connexion** actif, qui contient une ou plusieurs erreurs décrivant ce qui s’est produit.  

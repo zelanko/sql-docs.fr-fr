@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924181"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760865"
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de la commande SHAPE
 La clause APPEND de la commande SHAPE ajoute une ou plusieurs colonnes à un **Recordset**. Souvent, ces colonnes sont des colonnes de chapitres, qui font référence à un **jeu d’enregistrements**enfant.  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *commande parente*  
  Zéro ou l’un des éléments suivants (vous pouvez omettre complètement la *commande parente* ) :  
   
--   Commande de fournisseur placée entre accolades ("{}") qui retourne un objet **Recordset** . La commande est émise pour le fournisseur de données sous-jacent, et sa syntaxe dépend des spécifications de ce fournisseur. Il s’agit généralement du langage SQL, bien qu’ADO ne nécessite pas de langage de requête particulier.  
+-   Commande de fournisseur placée entre accolades (" {} ") qui retourne un objet **Recordset** . La commande est émise pour le fournisseur de données sous-jacent, et sa syntaxe dépend des spécifications de ce fournisseur. Il s’agit généralement du langage SQL, bien qu’ADO ne nécessite pas de langage de requête particulier.  
   
 -   Autre commande de forme incorporée entre parenthèses.  
   
@@ -66,7 +66,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>Notes  
  *child-recordset*  
- -   Commande de fournisseur placée entre accolades ("{}") qui retourne un objet **Recordset** . La commande est émise pour le fournisseur de données sous-jacent, et sa syntaxe dépend des spécifications de ce fournisseur. Il s’agit généralement du langage SQL, bien qu’ADO ne nécessite pas de langage de requête particulier.  
+ -   Commande de fournisseur placée entre accolades (" {} ") qui retourne un objet **Recordset** . La commande est émise pour le fournisseur de données sous-jacent, et sa syntaxe dépend des spécifications de ce fournisseur. Il s’agit généralement du langage SQL, bien qu’ADO ne nécessite pas de langage de requête particulier.  
   
 -   Autre commande de forme incorporée entre parenthèses.  
   
@@ -102,13 +102,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE exécutera deux commandes : `select * from t1` et (`select * from t2 RELATE k1 TO k2)`. Si l’utilisateur fournit une commande composée composée de plusieurs commandes fournisseur séparées par des points-virgules, la forme n’est pas en mesure de distinguer la différence. Par conséquent, dans la commande SHAPE suivante,  
+ SHAPE exécutera deux commandes : `select * from t1` et ( `select * from t2 RELATE k1 TO k2)` . Si l’utilisateur fournit une commande composée composée de plusieurs commandes fournisseur séparées par des points-virgules, la forme n’est pas en mesure de distinguer la différence. Par conséquent, dans la commande SHAPE suivante,  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE s’exécute `select * from t1; drop table t1` et (`select * from t2 RELATE k1 TO k2),` sans réaliser qu' `drop table t1` il s’agit d’un distinct et dans ce cas, une commande de fournisseur dangereuse. Les applications doivent toujours valider l’entrée utilisateur pour empêcher l’apparition de telles attaques potentielles de pirates.  
+ SHAPE s’exécute `select * from t1; drop table t1` et ( `select * from t2 RELATE k1 TO k2),` sans réaliser qu’il `drop table t1` s’agit d’un distinct et dans ce cas, une commande de fournisseur dangereuse. Les applications doivent toujours valider l’entrée utilisateur pour empêcher l’apparition de telles attaques potentielles de pirates.  
   
  Cette section contient les rubriques suivantes :  
   

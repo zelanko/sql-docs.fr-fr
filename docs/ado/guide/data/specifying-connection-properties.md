@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection properties [ADO]
 - connections [ADO]
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6fee9745bca206f00603b32a6c4cd29faab34eca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924139"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760835"
 ---
 # <a name="specifying-connection-properties"></a>Spécification des propriétés d’une connexion
 Vous pouvez fournir une grande partie des informations spécifiées par une [chaîne de connexion](../../../ado/guide/data/creating-a-connection-string.md) en définissant les propriétés de l’objet de **connexion** avant d’ouvrir la connexion. Par exemple, vous pouvez obtenir le même effet que la chaîne de connexion décrite dans [création d’une chaîne de connexion](../../../ado/guide/data/creating-a-connection-string.md) à l’aide du code suivant.  

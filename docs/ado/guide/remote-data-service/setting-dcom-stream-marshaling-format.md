@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dcom stream marshaling format in rds [ADO]
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 29bf8d19b9e3c9ec9b4072edd9575add9947c8f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f3e7dd82d54b20ccceec73c0917f4f81c3cf16dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922215"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758955"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Définition du format pour le marshaling de flux DCOM
 Un ordinateur client utilisant des composants de RDS 1,5 ou version antérieure n’est pas compatible avec un serveur utilisant des composants de RDS 2,0 ou version ultérieure. Lors de l’utilisation de DCOM comme protocole sous-jacent, la prise en charge de RDS 2,0 ou version ultérieure est plus efficace dans le transport d’objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Si votre client exécute des composants de RDS 1,5 ou version antérieure, vous pouvez configurer votre serveur pour qu’il fonctionne avec la prise en charge de RDS précédente (appelée RDS 1,0) ou la prise en charge de RDS la plus récente (appelée RDS 2,0 ou version ultérieure). Définissez l’une des entrées de Registre suivantes :  

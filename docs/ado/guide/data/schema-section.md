@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924293"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760895"
 ---
 # <a name="schema-section"></a>Section de schéma
 La section du schéma est obligatoire. Comme le montre l’exemple précédent, ADO écrit des métadonnées détaillées sur chaque colonne pour conserver la sémantique des valeurs de données le plus possible pour la mise à jour. Toutefois, pour charger dans le XML, ADO requiert uniquement les noms des colonnes et l’ensemble de lignes auquel ils appartiennent. Voici un exemple de schéma minimal :  
@@ -95,7 +95,7 @@ La section du schéma est obligatoire. Comme le montre l’exemple précédent, 
 </rs:data>  
 ```  
   
- De même, étant donné qu’aucun alias n’est `CompanyName` défini pour dans l’exemple `CompanyName` précédent, doit être utilisé de manière cohérente dans tout le document.  
+ De même, étant donné qu’aucun alias n’est défini pour `CompanyName` dans l’exemple précédent, `CompanyName` doit être utilisé de manière cohérente dans tout le document.  
   
 ## <a name="data-types"></a>Types de données  
  Vous pouvez appliquer un type de données à une colonne avec l’attribut dt : type. Pour obtenir le guide définitif sur les types XML autorisés, consultez la section types de données de la [spécification W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Vous pouvez spécifier un type de données de deux façons : spécifiez l’attribut dt : type directement sur la définition de colonne elle-même ou utilisez la construction s :DataType comme élément imbriqué de la définition de colonne. Par exemple,  
@@ -152,7 +152,7 @@ La section du schéma est obligatoire. Comme le montre l’exemple précédent, 
 </s:AttributeType>  
 ```  
   
- La définition autorise `CompanyName` la valeur null, mais `ShipperID` elle ne peut pas contenir de valeur null. Si la section de données contient la ligne suivante, le fournisseur de persistance définit l’état des données de la `CompanyName` colonne sur la constante d’état OLE DB DBSTATUS_S_ISNULL :  
+ La définition autorise la valeur `CompanyName` null, mais elle `ShipperID` ne peut pas contenir de valeur null. Si la section de données contient la ligne suivante, le fournisseur de persistance définit l’état des données de la `CompanyName` colonne sur la constante d’état OLE DB DBSTATUS_S_ISNULL :  
   
 ```  
 <z:row ShipperID="1"/>  
@@ -170,7 +170,7 @@ La section du schéma est obligatoire. Comme le montre l’exemple précédent, 
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- Pour la ligne précédente, le fournisseur de persistance retourne un état de OLE DB de DBSTATUS_S_OK pour les deux colonnes. `CompanyName` Dans ce cas, il s’agit simplement de «» (une chaîne de longueur nulle).  
+ Pour la ligne précédente, le fournisseur de persistance retourne un état de OLE DB de DBSTATUS_S_OK pour les deux colonnes. `CompanyName`Dans ce cas, il s’agit simplement de «» (une chaîne de longueur nulle).  
   
  Pour plus d’informations sur les constructions de OLE DB disponibles pour une utilisation dans le schéma d’un document XML pour OLE DB, consultez la définition de « urn : schemas-microsoft-com : rowset » et le Guide du programmeur OLE DB.  
   

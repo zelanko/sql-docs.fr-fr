@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 732563fc2c4e1cc93beac8712d845b960ae56aaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abda9d7a275ce100636efa58430009dd430fac0b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68661275"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760945"
 ---
 # <a name="required-providers-for-data-shaping"></a>Fournisseurs nécessaires pour la mise en forme des données
 La mise en forme des données nécessite généralement deux fournisseurs. Le fournisseur de services, [Data Shaping Service pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fournit les fonctionnalités de mise en forme des données, et un fournisseur de données, tel que le fournisseur OLE DB pour SQL Server, fournit des lignes de données pour remplir le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)mis en forme.  
@@ -29,7 +29,7 @@ La mise en forme des données nécessite généralement deux fournisseurs. Le fo
   
  Aucun fournisseur de données n’est requis si le **jeu d’enregistrements** n’est pas rempli (par exemple, comme dans un **Recordset** fabriqué où des colonnes sont créées avec le nouveau mot clé). Dans ce cas, spécifiez «**fournisseur de données =** None ; ».  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -37,7 +37,7 @@ cnn.Provider = "MSDataShape"
 cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
  [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
  [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)
