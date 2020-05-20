@@ -18,19 +18,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b70d87a6f1a72662c1ca466a532d3050b4fe58ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5f70fa8b486688a6c83133781b63d188742e345
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942589"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816111"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque unité de sauvegarde inscrite à **sp_addumpdevice** l’aide de sp_addumpdevice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou créée dans.  
+  Contient une ligne pour chaque unité de sauvegarde inscrite à l’aide de **sp_addumpdevice** ou créée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

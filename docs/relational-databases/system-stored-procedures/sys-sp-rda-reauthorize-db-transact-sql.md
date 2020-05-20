@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68267f07c125e05f235c1a0bcb4c7f855274bc86
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251261"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814734"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,17 +38,17 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Arguments  
- @credential= * \@informations d’identification*  
+ @credential= * \@ informations d’identification*  
  Informations d’identification délimitées à la base de données associées à la base de données Stretch locale.  
   
- @with_copy= * \@with_copy*  
- Spécifie s’il faut effectuer une copie des données distantes et se connecter à la copie (recommandé). with_copy est de bits. * \@*  
+ @with_copy= * \@ with_copy*  
+ Spécifie s’il faut effectuer une copie des données distantes et se connecter à la copie (recommandé). * \@ with_copy* est de bits.  
   
- @azure_servername= * \@azure_servername*  
- Spécifie le nom du serveur Azure qui contient les données distantes. azure_servername est de type sysname. * \@*  
+ @azure_servername= * \@ azure_servername*  
+ Spécifie le nom du serveur Azure qui contient les données distantes. * \@ azure_servername* est de type sysname.  
   
- @azure_databasename= * \@azure_databasename*  
- Spécifie le nom de la base de données Azure qui contient les données distantes. azure_databasename est de type sysname. * \@*  
+ @azure_databasename= * \@ azure_databasename*  
+ Spécifie le nom de la base de données Azure qui contient les données distantes. * \@ azure_databasename* est de type sysname.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou >0 (échec)  
@@ -56,7 +56,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>Autorisations  
  Requiert db_owner autorisations.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque vous exécutez [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) pour vous reconnecter à la base de données Azure distante, cette opération réinitialise automatiquement le mode de requête sur LOCAL_AND_REMOTE, qui est le comportement par défaut pour Stretch Database. Autrement dit, les requêtes retournent des résultats à partir de données locales et distantes.  
   
 ## <a name="example"></a>Exemple  

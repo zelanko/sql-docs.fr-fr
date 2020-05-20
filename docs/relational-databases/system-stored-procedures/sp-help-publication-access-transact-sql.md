@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770992"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815752"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="arguments"></a>Arguments  
 `[ @publication = ] 'publication'`Nom de la publication à laquelle accéder. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @return_granted = ] 'return_granted'`ID de connexion. *return_granted* est de **bits**, avec 1 comme valeur par défaut. Si la **valeur 0** est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée et que l’authentification est utilisée, les connexions disponibles qui s’affichent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si la **valeur 0** est spécifiée et que l’authentification Windows est utilisée, les connexions qui n’ont pas spécifiquement refusé l’accès au serveur de publication ou au serveur de distribution sont retournées.  
+`[ @return_granted = ] 'return_granted'`ID de connexion. *return_granted* est de **bits**, avec 1 comme valeur par défaut. Si la **valeur 0** est spécifiée et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que l’authentification est utilisée, les connexions disponibles qui s’affichent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si la **valeur 0** est spécifiée et que l’authentification Windows est utilisée, les connexions qui n’ont pas spécifiquement refusé l’accès au serveur de publication ou au serveur de distribution sont retournées.  
   
-`[ @login = ] 'login'`ID de connexion de sécurité standard. *login* est de **%** **type sysname**, avec la valeur par défaut.  
+`[ @login = ] 'login'`ID de connexion de sécurité standard. *login* est de **type sysname**, avec la valeur par défaut **%** .  
   
 `[ @initial_list = ] initial_list`Spécifie s’il faut retourner tous les membres avec un accès à la publication ou uniquement ceux qui ont accès avant l’ajout de nouveaux membres à la liste. *initial_list* est de bit, avec **0**comme valeur par défaut.  
   
@@ -63,7 +63,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_help_publication_access** est utilisé dans tous les types de réplications.  
   
  Quand **Isntname** et **Isntgroup** dans le jeu de résultats sont **0**, il est supposé que la connexion est une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  

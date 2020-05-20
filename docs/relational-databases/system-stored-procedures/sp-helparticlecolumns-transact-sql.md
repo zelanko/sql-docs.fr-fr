@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771090"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815843"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`Nom de l’article dont les colonnes sont retournées. *article* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être spécifié lorsque l’article demandé est publié [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par un serveur de publication.  
+>  l' *éditeur* ne doit pas être spécifié lorsque l’article demandé est publié par un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (colonnes qui ne sont pas publiées) ou **1** (colonnes publiées)  
@@ -56,12 +56,12 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ID de colonne**|**int**|Identificateur de la colonne.|  
-|**chronique**|**sysname**|Nom de la colonne.|  
-|**published**|**bit**|Indique si la colonne est publiée :<br /><br /> **0** = non<br /><br /> **1** = Oui|  
+|**column**|**sysname**|Nom de la colonne.|  
+|**publié**|**bit**|Indique si la colonne est publiée :<br /><br /> **0** = non<br /><br /> **1** = Oui|  
 |**type de serveur de publication**|**sysname**|Type de données de la colonne sur le serveur de publication.|  
 |**type d’abonné**|**sysname**|Type de données de la colonne sur l'Abonné.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helparticlecolumns** est utilisé dans la réplication transactionnelle et d’instantané.  
   
  **sp_helparticlecolumns** est utile pour la vérification d’une partition verticale.  

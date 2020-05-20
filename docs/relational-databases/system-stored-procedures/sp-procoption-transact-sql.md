@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 94a5983701bdb7370c389f970d0c75af11a7779c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67896596"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815255"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Définit ou désactive l'exécution automatique d'une procédure stockée. Une procédure stockée qui a la valeur exécution automatique s’exécute chaque fois qu' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une instance de est démarrée.  
+  Définit ou désactive l'exécution automatique d'une procédure stockée. Une procédure stockée qui a la valeur exécution automatique s’exécute chaque fois qu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarrée.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_procoption [ @ProcName = ] 'procedure'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou numéro d'erreur (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les procédures de démarrage doivent se trouver dans la base de données **Master** et ne peuvent pas contenir de paramètres d’entrée ou de sortie. L'exécution des procédures stockées démarre lorsque toutes les bases de données sont récupérées et le message « Récupération terminée » est enregistré au démarrage.  
   
 ## <a name="permissions"></a>Autorisations  

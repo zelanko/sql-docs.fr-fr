@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528408"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814135"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**nom du serveur**|**sysname**|Nom du serveur de messagerie pour le compte.|  
 |**port**|**int**|Numéro de port utilisé par le serveur de messagerie.|  
 |**username**|**nvarchar(128)**|Nom d'utilisateur à utiliser pour se connecter au serveur de messagerie, si ce serveur utilise l'authentification. Lorsque **username** a la valeur NULL, Database mail n’utilise pas l’authentification pour ce compte.|  
-|**use_default_credentials**|**bit**|Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque ce paramètre est 1, Database Mail utilise les informations d’identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Lorsque ce paramètre a la valeur 0, Database mail utilise le ** \@nom d’utilisateur** et ** \@le mot de passe** pour l’authentification sur le serveur SMTP. Si ** \@le nom d’utilisateur** et ** \@le mot de passe** sont NULL, Database mail utilise l’authentification anonyme. Consultez l’administrateur SMTP avant de spécifier ce paramètre.|  
+|**use_default_credentials**|**bit**|Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de bits, sans valeur par défaut. Lorsque ce paramètre est 1, Database Mail utilise les informations d’identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Lorsque ce paramètre a la valeur 0, Database Mail utilise le ** \@ nom d’utilisateur** et le ** \@ mot de passe** pour l’authentification sur le serveur SMTP. Si le ** \@ nom d’utilisateur** et le ** \@ mot de passe** sont NULL, Database mail utilise l’authentification anonyme. Consultez l’administrateur SMTP avant de spécifier ce paramètre.|  
 |**enable_ssl**|**bit**|Spécifie si Database Mail chiffre les communications à l’aide du protocole TLS (Transport Layer Security), précédemment connu sous le nom de protocole SSL (SSL). Utilisez cette option si TLS est requis sur votre serveur SMTP. **enable_ssl** est de bits, sans valeur par défaut. 1 indique Database Mail chiffre les communications à l’aide de TLS. 0 indique Database Mail envoie le courrier sans chiffrement TLS.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Quand aucun *account_id* ou *account_name* n’est fourni, **sysmail_help_account** répertorie des informations sur tous les comptes de Database mail de l’instance Microsoft SQL Server.  
   
  La procédure stockée **sysmail_help_account_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
