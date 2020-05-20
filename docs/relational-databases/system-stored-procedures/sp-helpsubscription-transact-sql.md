@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771572"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824435"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication associée. *publication* est de **%** **type sysname**, avec la valeur par défaut, qui retourne toutes les informations d’abonnement pour ce serveur.  
+`[ @publication = ] 'publication'`Nom de la publication associée. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour ce serveur.  
   
-`[ @article = ] 'article'`Nom de l’article. *article* est de **%** **type sysname**, avec la valeur par défaut, qui retourne toutes les informations d’abonnement pour les publications et les abonnés sélectionnés. Si la valeur est **All**, une seule entrée est retournée pour l’abonnement complet sur une publication.  
+`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour les publications et les abonnés sélectionnés. Si la valeur est **All**, une seule entrée est retournée pour l’abonnement complet sur une publication.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné sur lequel les informations d’abonnement sont obtenues. *Subscriber* est de **%** **type sysname**, avec la valeur par défaut, qui retourne toutes les informations d’abonnement pour les publications et les articles sélectionnés.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné sur lequel les informations d’abonnement sont obtenues. *Subscriber* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour les publications et les articles sélectionnés.  
   
-`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **%** **type sysname**, avec la valeur par défaut.  
+`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **type sysname**, avec la valeur par défaut **%** .  
   
 `[ @found = ] 'found'OUTPUT`Indicateur qui signale le retour de lignes. *valeur*de **type int** et paramètre de sortie, avec la valeur par défaut 23456.  
   
@@ -67,7 +67,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**édition**|**sysname**|Nom de la publication.|  
-|**-**|**sysname**|Nom de l'article.|  
+|**article**|**sysname**|Nom de l'article.|  
 |**base de données de destination**|**sysname**|Nom de la base de données de destination où sont placées les données répliquées.|  
 |**État de l’abonnement**|**tinyint**|État de l'abonnement :<br /><br /> **0** = inactif<br /><br /> **1** = abonné<br /><br /> **2** = actif|  
 |**type de synchronisation**|**tinyint**|Type de synchronisation d'abonnement :<br /><br /> **1** = automatique<br /><br /> **2** = aucun|  
@@ -81,7 +81,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**offload_server**|**sysname**|Nom du serveur activé pour l'activation d'Agent à distance. Si la valeur est NULL, le offload_server actuel listé dans [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) table est utilisé.|  
 |**dts_package_name**|**sysname**|Spécifie le nom du package DTS (Data Transformation Services).|  
 |**dts_package_location**|**int**|Emplacement du package DTS (si un lot est affecté à l'abonnement). S’il existe un package, la valeur **0** spécifie l’emplacement du package sur le serveur de **distribution**. La valeur **1** spécifie l' **abonné**.|  
-|**subscriber_security_mode**|**smallint**|Est le mode de sécurité de l’abonné, où **1** correspond à l’authentification Windows et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** à l’authentification.|  
+|**subscriber_security_mode**|**smallint**|Est le mode de sécurité de l’abonné, où **1** correspond à l’authentification Windows et **0** à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.|  
 |**subscriber_login**|**sysname**|Nom de connexion sur l'Abonné.|  
 |**subscriber_password**||Le mot de passe réel de l'Abonné n'est jamais renvoyé. Le résultat est masqué par une chaîne «**&#42;&#42;&#42;&#42;&#42;&#42;**».|  
 |**job_login**|**sysname**|Nom du compte Windows sous lequel l'Agent de distribution s'exécute.|  
@@ -97,7 +97,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpsubscription** est utilisé dans la réplication transactionnelle et d’instantané.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e4260d05e0ed2967e9fbf151faeb53007080c21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251246"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824032"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@tabid =** ] «*n »*  
+ [** @tabid =** *] « n »*  
  ID d'objet de la table dans laquelle les déclencheurs de mise à jour immédiate sont recherchés. *est de* **type int** , sans valeur par défaut.  
   
- [**@trigger_op =** ] sortie «*trigger_output_parameters*»  
+ sortie de [** @trigger_op =** ] '*trigger_output_parameters*'  
  Spécifie si le paramètre de sortie doit renvoyer le type du déclencheur à partir duquel il est appelé. *trigger_output_parameters* est de **type char (10)** et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
@@ -55,9 +55,9 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher`Spécifie l’emplacement où la procédure stockée est exécutée. *fonpublisher* est de **bits**, avec 0 comme valeur par défaut. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- 0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’il est appelé dans le contexte d’un déclencheur de mise à jour immédiate et est le type de déclencheur retourné dans * \@trigger_op*.  
+ 0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’il est appelé dans le contexte d’un déclencheur de mise à jour immédiate et est le type de déclencheur retourné dans * \@ trigger_op*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_check_for_sync_trigger** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
  **sp_check_for_sync_trigger** est utilisé pour coordonner la réplication et les déclencheurs définis par l’utilisateur. Cette procédure stockée détermine si elle est appelée dans le contexte d'un déclencheur de réplication. Par exemple, vous pouvez appeler la procédure **sp_check_for_sync_trigger** dans le corps d’un déclencheur défini par l’utilisateur. Si **sp_check_for_sync_trigger** retourne la **valeur 0**, le déclencheur défini par l’utilisateur continue le traitement. Si **sp_check_for_sync_trigger** retourne la valeur **1**, le déclencheur défini par l’utilisateur se termine. Vous êtes ainsi assuré que le déclencheur défini par l'utilisateur ne s'active pas lorsque le déclencheur de réplication met à jour la table.  

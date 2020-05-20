@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982232"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824294"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,21 +56,21 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**Famille**|Le déclencheur est activé en dernier.|  
 |**Aucun**|L'ordre d'activation du déclencheur n'est pas défini.|  
   
-`[ @stmttype = ] 'statement_type'`Spécifie l’instruction SQL qui déclenche le déclencheur. *statement_type* est de type **varchar (50)** et peut être insertion, mise à jour, suppression, [!INCLUDE[tsql](../../includes/tsql-md.md)] ouverture de session ou n’importe quel événement d’instruction listé dans des [événements DDL](../../relational-databases/triggers/ddl-events.md). Les groupes d'événements ne peuvent pas être spécifiés.  
+`[ @stmttype = ] 'statement_type'`Spécifie l’instruction SQL qui déclenche le déclencheur. *statement_type* est de type **varchar (50)** et peut être insertion, mise à jour, suppression, ouverture de session ou n’importe quel [!INCLUDE[tsql](../../includes/tsql-md.md)] événement d’instruction listé dans des [événements DDL](../../relational-databases/triggers/ddl-events.md). Les groupes d'événements ne peuvent pas être spécifiés.  
   
  Un déclencheur peut être désigné comme **premier** ou **dernier** déclencheur pour un type d’instruction uniquement après que ce déclencheur a été défini en tant que déclencheur pour ce type d’instruction. Par exemple, le déclencheur **TR1** peut être désigné en **premier** pour l’insertion sur la table **T1** si **TR1** est défini en tant que déclencheur INSERT. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne une erreur si **TR1**, qui a été défini uniquement comme déclencheur d’insertion, est défini en tant que déclencheur **First**ou **Last**pour une instruction Update. Pour plus d'informations, consultez la section Notes.  
   
- espace de |  **noms = {'base de données' 'serveur \@** **'** | **'DATABASE'** NUL  
- Quand *triggername* est un déclencheur DDL ** \@** , l’espace de noms spécifie si *triggername* a été créé avec une étendue de base de données ou de serveur. Si *triggername* est un déclencheur LOGON, le serveur doit être spécifié. Pour plus d’informations sur la portée du déclencheur DDL, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md). S’il n’est pas spécifié, ou si NULL est spécifié, *triggername* est un déclencheur DML.  
+ ** \@ espace de noms =** { **'base de données**'  |  **'serveur'** | NUL  
+ Quand *triggername* est un déclencheur DDL, l' ** \@ espace de noms** spécifie si *triggername* a été créé avec une étendue de base de données ou de serveur. Si *triggername* est un déclencheur LOGON, le serveur doit être spécifié. Pour plus d’informations sur la portée du déclencheur DDL, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md). S’il n’est pas spécifié, ou si NULL est spécifié, *triggername* est un déclencheur DML.  
   
 ||  
 |-|  
-|Le serveur s’applique [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à : et versions ultérieures.|  
+|Le serveur s’applique à : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) et 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="dml-triggers"></a>Déclencheurs DML  
  Il ne peut y avoir qu’un seul **premier** et **dernier** déclencheur pour chaque instruction sur une table unique.  

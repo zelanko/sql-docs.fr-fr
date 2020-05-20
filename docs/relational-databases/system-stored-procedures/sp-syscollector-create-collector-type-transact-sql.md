@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032634"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824284"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée un type de collecteur pour le collecteur de données. Un type de collecteur est un wrapper logique [!INCLUDE[ssIS](../../includes/ssis-md.md)] autour des packages qui fournissent le mécanisme réel pour la collecte des données et leur téléchargement dans l’entrepôt de données de gestion.  
+  Crée un type de collecteur pour le collecteur de données. Un type de collecteur est un wrapper logique autour des [!INCLUDE[ssIS](../../includes/ssis-md.md)] packages qui fournissent le mécanisme réel pour la collecte des données et leur téléchargement dans l’entrepôt de données de gestion.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +46,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  GUID du type de collecteur. *collector_type_uid* est de type **uniqueidentifier** et, s’il a la valeur null, il est automatiquement créé et retourné comme sortie.  
   
- [ @name = ] '*nom*'  
+ [ @name =] '*nom*'  
  Nom du type de collecteur. *Name* est de **type sysname** et doit être spécifié.  
   
- [ @parameter_schema = ] '*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*'  
  Schéma XML pour ce type de collecteur. *parameter_schema* est de type **XML** avec NULL comme valeur par défaut.  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  Modèle à utiliser pour transformer le XML utilisé dans la page de propriétés du jeu d'éléments de collecte. *parameter_formatter* est de type **XML** avec NULL comme valeur par défaut.  
   
- [@collection_package_id = ] *collection_package_id*  
+ [ @collection_package_id =] *collection_package_id*  
  Identificateur unique local qui pointe vers le package de collection [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *collection_package_id* est **uniqueidentifer** et est obligatoire.  
   
- [@upload_package_id = ] *upload_package_id*  
+ [ @upload_package_id =] *upload_package_id*  
  Identificateur unique local qui pointe vers le package de téléchargement [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *upload_package_id* est de type **uniqueidentifier** et est requis.  
   
 ## <a name="return-code-values"></a>Codet de retour  

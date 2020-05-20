@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c88e0f545a19c1f486c5c6927c11fd2707112963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770669"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824085"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,29 +64,29 @@ sp_changesubscription [ @publication = ] 'publication'
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
 |**distrib_job_password**||Mot de passe du compte Windows sous lequel l’agent s’exécute.|  
-|**subscriber_catalog**||Catalogue à utiliser lors d’une connexion au fournisseur OLE DB. Cette propriété n’est valide que pour les[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés non-.|  
-|**subscriber_datasource**||Nom de la source de données tel qu'il est interprété par le fournisseur OLE DB. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-|**subscriber_location**||Emplacement de la base de données tel qu’il est interprété par le fournisseur OLE DB. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+|**subscriber_catalog**||Catalogue à utiliser lors d’une connexion au fournisseur OLE DB. Cette propriété n’est valide que pour les abonnés non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**subscriber_datasource**||Nom de la source de données tel qu'il est interprété par le fournisseur OLE DB. *Cette propriété n’est valide que pour les non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnés.*|  
+|**subscriber_location**||Emplacement de la base de données tel qu’il est interprété par le fournisseur OLE DB. *Cette propriété n’est valide que pour les non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnés.*|  
 |**subscriber_login**||Nom de la connexion du côté Abonné.|  
 |**subscriber_password**||Mot de passe fort pour le nom de connexion fourni.|  
 |**subscriber_security_mode**|**1**|Utilise l'authentification Windows pour la connexion à l'Abonné.|  
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion à l'Abonné.|  
-|**subscriber_provider**||Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-|**subscriber_providerstring**||Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données. *Cette propriété n’est valide que pour les abonnés non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-|**SubscriptionStreams**||Nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. Une plage de valeurs comprises **64** entre **1** et 64 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est prise en charge pour les serveurs de publication. Cette propriété doit être **égale à 0** pour[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés non-, les serveurs de publication Oracle ou les abonnements d’égal à égal.|  
+|**subscriber_provider**||Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *Cette propriété n’est valide que pour les non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnés.*|  
+|**subscriber_providerstring**||Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données. *Cette propriété n’est valide que pour les non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnés.*|  
+|**SubscriptionStreams**||Nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. Une plage de valeurs comprises entre **1** et **64** est prise en charge pour les serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication. Cette propriété doit être **égale à 0** pour les abonnés non-, les serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication Oracle ou les abonnements d’égal à égal.|  
 |**subscriber_type**|**1**|Serveur de la source de données ODBC.|  
 ||**3**|Fournisseur OLE DB|  
 |**memory_optimized**|**bit**|Indique que l’abonnement prend en charge les tables optimisées en mémoire. *memory_optimized* est de **bits**, où 1 est égal à true (l’abonnement prend en charge les tables optimisées en mémoire).|  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  l' *éditeur* ne doit pas être spécifié [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour un serveur de publication.  
+>  l' *éditeur* ne doit pas être spécifié pour un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_changesubscription** est utilisé dans la réplication transactionnelle et d’instantané.  
   
  **sp_changesubscription** ne peut être utilisé que pour modifier les propriétés des abonnements par émission de type push ou des abonnements par extraction impliqués dans la réplication transactionnelle de mise à jour en attente. Pour modifier les propriétés de tous les autres types d’abonnements par extraction, utilisez [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771531"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824436"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'`Nom de la base de données. *dbname* est de **%** **type sysname**, avec la valeur par défaut. Si **%** la valeur est, le jeu de résultats contient toutes les bases de données sur le serveur de publication, dans le cas contraire, seules les informations sur la base de données spécifiée sont retournées. Aucune information n'est retournée sur les bases de données pour lesquelles l'utilisateur ne possède pas les autorisations appropriées, comme décrit ci-dessous.  
+`[ @dbname = ] 'dbname'`Nom de la base de données. *dbname* est de **type sysname**, avec la valeur par défaut **%** . Si **%** la valeur est, le jeu de résultats contient toutes les bases de données sur le serveur de publication, dans le cas contraire, seules les informations sur la base de données spécifiée sont retournées. Aucune information n'est retournée sur les bases de données pour lesquelles l'utilisateur ne possède pas les autorisations appropriées, comme décrit ci-dessous.  
   
 `[ @type = ] 'type'`Limite le jeu de résultats à contenir uniquement les bases de données sur lesquelles la valeur de *type* d’option de réplication spécifiée a été activée. *type* est de type **sysname**et peut prendre l’une des valeurs suivantes.  
   
@@ -67,7 +67,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpreplicationdboption** est utilisé dans les réplications d’instantané, transactionnelles et de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771062"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824524"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les mappages de types de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données définis entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les systèmes de gestion de base de données (SGBD). Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
+  Retourne des informations sur les mappages de types de données définis entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] systèmes de gestion de base de données (SGBD). Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,8 +83,8 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
- **sp_helpdatatypemap** définit les mappages de types de données à partir des serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication non SQL Server et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des serveurs de publication vers des abonnés non-.  
+## <a name="remarks"></a>Remarques  
+ **sp_helpdatatypemap** définit les mappages de types de données à partir des serveurs de publication non SQL Server et des serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication vers des abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Lorsque la combinaison spécifiée de SGBD source et de destination n’est pas prise en charge, **sp_helpdatatypemap** retourne un jeu de résultats vide.  
   

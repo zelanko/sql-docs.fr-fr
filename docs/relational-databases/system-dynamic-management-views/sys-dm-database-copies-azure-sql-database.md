@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005085"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824624"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -59,6 +59,6 @@ Pour renvoyer des informations sur les liens de géo-réplication, utilisez les 
  Cette vue est disponible uniquement dans la base de données **Master** à la connexion du principal au niveau du serveur.  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez utiliser la vue **sys. dm_database_copies** dans la base de données **Master** du serveur source [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou cible. Lorsque la copie de base de données s'achève avec succès et que la nouvelle base de données devient ONLINE, la ligne dans la vue **sys.dm_database_copies** est supprimée automatiquement.  
+ Vous pouvez utiliser la vue **sys. dm_database_copies** dans la base de données **Master** du serveur source ou cible [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Lorsque la copie de base de données s'achève avec succès et que la nouvelle base de données devient ONLINE, la ligne dans la vue **sys.dm_database_copies** est supprimée automatiquement.  
   
   

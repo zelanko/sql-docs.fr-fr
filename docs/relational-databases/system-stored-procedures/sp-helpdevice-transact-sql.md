@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdevice
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59b7f4a0cf0c3ba3335a181b35560af8847fca8b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67902990"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824512"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**cntrltype**|**smallint**|Type de contrôleur du périphérique :<br /><br /> 2 = unité de disque<br /><br /> 5 = périphérique à bandes|  
 |**size**|**int**|Taille du périphérique (en pages de 2 Ko).|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si le *nom* est spécifié, **sp_helpdevice** affiche des informations sur l’unité de vidage spécifiée. Si le *nom* n’est pas spécifié, **sp_helpdevice** affiche des informations sur tous les périphériques de vidage dans l’affichage catalogue **sys. backup_devices** .  
   
  Les périphériques de vidage sont ajoutés au système à l’aide de **sp_addumpdevice**.  
