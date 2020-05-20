@@ -10,15 +10,15 @@ f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095085"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000201"
 ---
 # <a name="full-text-search-upgrade-options"></a>Options de mise à niveau de recherche en texte intégral
   Utilisez la page des options de mise à niveau de recherche en texte intégral de l'Assistant Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour sélectionner l'option de mise à niveau de recherche en texte intégral à utiliser pour les bases de données que vous mettez actuellement à niveau.  
@@ -38,7 +38,7 @@ ms.locfileid: "66095085"
   
  Pour plus d'informations sur l'impact de l'importation de l'index de recherche en texte intégral, consultez « Considérations relatives au choix d'une option de mise à niveau », plus loin dans cette rubrique.  
   
- **Globale**  
+ **Recréation**  
  Les catalogues de texte intégral sont reconstruits à l'aide des analyseurs lexicaux nouveaux et améliorés. La reconstruction des index peut prendre beaucoup de temps, et une quantité importante de ressources en termes d'UC et de mémoire peut être requise après la mise à niveau.  
   
  **Réinitialiser**  

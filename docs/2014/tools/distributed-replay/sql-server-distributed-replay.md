@@ -13,12 +13,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 583af6e77d699c88e7712ac03053467138bd5a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 021e37ee7efb8d525cdbc16d2f7b1111045ea7a6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177349"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925043"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   La fonctionnalité [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay vous aide à évaluer l’impact de futures mises à niveau de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez également l’utiliser pour évaluer l’impact des mises à niveau du matériel et du système d’exploitation, ainsi que des paramétrages de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
@@ -47,7 +47,7 @@ ms.locfileid: "78177349"
 ## <a name="distributed-replay-concepts"></a>Concepts de Distributed Replay
  Les composants suivants constituent l'environnement de Distributed Replay :
 
--   **Outil d’administration de Distributed Replay**: application console `DReplay.exe`,, utilisée pour communiquer avec le contrôleur Distributed Replay. Utilisez l'outil d'administration pour contrôler la relecture distribuée.
+-   **Outil d’administration de Distributed Replay**: application console, `DReplay.exe` , utilisée pour communiquer avec le contrôleur Distributed Replay. Utilisez l'outil d'administration pour contrôler la relecture distribuée.
 
 -   **Contrôleur Distributed Replay**: un ordinateur exécutant le service Windows nommé contrôleur Distributed Replay de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le contrôleur Distributed Replay orchestre les actions des clients de relecture distribuée. Chaque environnement Distributed Replay ne doit contenir qu'une seule instance de contrôleur.
 
@@ -72,6 +72,6 @@ ms.locfileid: "78177349"
 |Décrit comment utiliser l’outil d’administration pour lancer, surveiller et annuler des opérations sur le contrôleur.|[Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|
 
 ## <a name="see-also"></a>Voir aussi
- [SQL Server Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/) [de Distributed Replay à l’aide de Distributed Replay pour effectuer un test de charge de votre SQL Server-partie 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) [à l’aide de Distributed Replay pour tester le chargement de votre SQL Server-partie 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ [SQL Server Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/) [de Distributed Replay à l’aide de Distributed Replay pour effectuer un test de charge de votre SQL Server-partie 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) [à l’aide de Distributed Replay pour tester le chargement de votre SQL Server-partie 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

@@ -10,23 +10,23 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721162"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000467"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Leçon 1 : Création de comptes Windows pour la réplication
   Dans cette leçon, vous allez créer des comptes Windows pour exécuter les agents de réplication. Vous allez créer un compte Windows distinct sur le serveur local pour les agents suivants :  
   
 |Agent|Emplacement|Nom du compte|  
 |-----------|--------------|------------------|  
-|Agent d'instantané|Éditeur|\<*nom_ordinateur*>\repl_snapshot|  
-|l'Agent de lecture du journal ;|Éditeur|\<*nom_ordinateur*>\repl_logreader|  
+|Agent d'instantané|Publisher|\<*nom_ordinateur*>\repl_snapshot|  
+|l'Agent de lecture du journal ;|Publisher|\<*nom_ordinateur*>\repl_logreader|  
 |Agent de distribution|Serveur de publication et Abonné|\<*nom_ordinateur*>\repl_distribution|  
 |Agent de fusion|Serveur de publication et Abonné|\<*nom_ordinateur*>\repl_merge|  
   

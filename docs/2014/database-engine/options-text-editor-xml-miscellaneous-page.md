@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089207"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000589"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Options (Éditeur de texte - XML - Page Divers)
 
@@ -44,4 +44,4 @@ La boîte de dialogue **Options** vous permet de modifier les paramètres de sai
   
 ## <a name="caching"></a>Mise en cache  
  **Schémas**  
- Indique l'emplacement du cache des schémas. Le bouton Parcourir (...) ouvre l'emplacement actuel du cache des schémas dans une nouvelle fenêtre. L’emplacement par défaut est * \<Management Studio répertoire d’installation>* \Xml\Schemas.  
+ Indique l'emplacement du cache des schémas. Le bouton Parcourir (...) ouvre l'emplacement actuel du cache des schémas dans une nouvelle fenêtre. L’emplacement par défaut est * \< Management Studio répertoire d’installation>* \Xml\Schemas.  

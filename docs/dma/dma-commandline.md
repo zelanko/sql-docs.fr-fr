@@ -12,18 +12,18 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056624"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925353"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécuter Assistant Migration de données à partir de la ligne de commande
 
-Avec la version 2,1 et versions ultérieures, lorsque vous installez Assistant Migration de données, il installe également dmacmd. exe dans *% ProgramFiles%\\\\Assistant Migration de données Microsoft*. Utilisez dmacmd. exe pour évaluer vos bases de données en mode sans assistance et générer le résultat dans un fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou de bases de données volumineuses. 
+Avec la version 2,1 et versions ultérieures, lorsque vous installez Assistant Migration de données, il installe également dmacmd. exe dans *% ProgramFiles% \\ Assistant Migration de données Microsoft \\ *. Utilisez dmacmd. exe pour évaluer vos bases de données en mode sans assistance et générer le résultat dans un fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou de bases de données volumineuses. 
 
 > [!NOTE]
 > Dmacmd. exe prend en charge l’exécution des évaluations uniquement. Les migrations ne sont pas prises en charge pour le moment.
@@ -53,11 +53,20 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentOverwriteResult`     | Remplacer le fichier de résultats    | N
 |`/AssessmentResultJson`     | Chemin d’accès complet au fichier de résultats JSON     | O <br> (AssessmentResultJson ou AssessmentResultCsv est requis)
 |`/AssessmentResultCsv`    | Chemin d’accès complet au fichier de résultats CSV   | O <br> (AssessmentResultJson ou AssessmentResultCsv est requis)
-|`/Action`    | Utilisez SkuRecommendation pour connaître les recommandations relatives aux références SKU, utilisez AssessTargetReadiness pour effectuer l’évaluation de la disponibilité cible.   | N
+|`/AssessmentResultDma`    | Chemin d’accès complet au fichier de résultats DMA   | N
+|`/Action`    | Utilisez SkuRecommendation pour afficher les recommandations relatives aux références SKU. <br> Utilisez AssessTargetReadiness pour effectuer l’évaluation de la disponibilité cible. <br> Utilisez AzureMigrateUpload pour charger tous les fichiers d’évaluation DMA dans le AzzessmentResultInputFolder pour effectuer un chargement en bloc vers Azure Migrate. utilisation du type d’action/action = AzureMigrateUpload   | N
 |`/SourceConnections`    | Liste de chaînes de connexion, délimitée par des espaces. Le nom de la base de données (catalogue initial) est facultatif. Si aucun nom de base de données n’est fourni, toutes les bases de données de la source sont évaluées.   | O <br> (Obligatoire si action est « AssessTargetReadiness »)
 |`/TargetReadinessConfiguration`    | Chemin d’accès complet au fichier XML décrivant les valeurs pour le nom, les connexions source et le fichier de résultats.   | O <br> (TargetReadinessConfiguration ou SourceConnections est requis)
 |`/FeatureDiscoveryReportJson`    | Chemin d’accès au rapport JSON de détection de fonctionnalités. Si ce fichier est généré, il peut être utilisé pour exécuter à nouveau l’évaluation de la disponibilité cible sans se connecter à la source. | N
 |`/ImportFeatureDiscoveryReportJson`    | Chemin d’accès au rapport JSON de détection de fonctionnalités créé précédemment. Au lieu de connexions source, ce fichier sera utilisé.   | N
+|`/EnableAssessmentUploadToAzureMigrate`    | Permet le téléchargement et la publication des résultats d’évaluation dans Azure Migrate   | N
+|`/AzureCloudEnvironment`    |Sélectionne l’environnement Cloud Azure auquel se connecter. par défaut, il s’agit du cloud public Azure. Valeurs prises en charge : Azure (par défaut), AzureChina, AzureGermany, AzureUSGovernment.   | N 
+|`/SubscriptionId`    |ID d’abonnement Azure.   | O <br> (Obligatoire si l’argument EnableAssessmentUploadToAzureMigrate est spécifié)
+|`/AzureMigrateProjectName`    |Nom du projet Azure Migrate dans lequel télécharger les résultats de l’évaluation.   | O <br> (Obligatoire si l’argument EnableAssessmentUploadToAzureMigrate est spécifié)
+|`/ResourceGroupName`    |Nom du groupe de ressources Azure Migrate.   | O <br> (Obligatoire si l’argument EnableAssessmentUploadToAzureMigrate est spécifié)
+|`/AssessmentResultInputFolder`    |Chemin d’accès du dossier d’entrée contenant. Fichiers d’évaluation DMA à charger sur Azure Migrate.   | O <br> (Obligatoire si l’action est AzureMigrateUpload)
+
+
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Exemples d’évaluations à l’aide de l’interface CLI
 
@@ -208,7 +217,7 @@ Contenu du fichier de configuration lors de l’utilisation de connexions source
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
-<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
   <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
@@ -234,7 +243,40 @@ Contenu du fichier de configuration lors de l’importation du rapport de décou
   <OverwriteResult>true</OverwriteResult><!-- or false -->
 </TargetReadinessConfiguration>
 ```
+**Évaluer et télécharger vers Azure Migrate dans le cloud public Azure (par défaut)**
+```
+DmaCmd.exe
+/Action="Assess" 
+/AssessmentSourcePlatform=SqlOnPrem 
+/AssessmentTargetPlatform=ManagedSqlServer
+/AssessmentEvaluateCompatibilityIssues 
+/AssessmentEvaluateRecommendations 
+/AssessmentEvaluateFeatureParity 
+/AssessmentOverwriteResult 
+/AssessmentName="assess-myDatabase"
+/AssessmentDatabases="Server=myServer;Initial Catalog=myDatabase;Integrated Security=true" 
+/AssessmentResultDma="C:\assessments\results\assess-1.dma"
+/SubscriptionId="Subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project ame" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
 
+```
+**Charger par lot les fichiers d’évaluation DMA à Azure Migrate dans le cloud public Azure (par défaut)**
+```
+DmaCmd.exe 
+/Action="AzureMigrateUpload" 
+/AssessmentResultInputFolder="C:\assessments\results" 
+/SubscriptionId="subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project name" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
+
+```
 ## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Recommandations relatives aux références SKU d’instance gérée/Azure SQL Database à l’aide de l’interface CLI
 
 Ces commandes prennent en charge des recommandations pour les deux Azure SQL Database options de déploiement de base de données unique et d’instance gérée.

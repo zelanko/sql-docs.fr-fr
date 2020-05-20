@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78896804"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924623"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de Data Migration Assistant
 
 Cet article répertorie les ajouts dans chaque version de Assistant Migration de données.
+
+## <a name="data-migration-assistant-v-52"></a>Assistant Migration de données v 5,2
+La version 5.2 du Assistant Migration de données prend en charge les éléments suivants :
+- Le chargement des évaluations sur Azure Migrate avec la prise en charge des Azure Government et des clouds nationaux (offre souveraine).  Cette fonctionnalité permet d’évaluer la préparation de la migration de SQL Server données vers Azure SQL.
+- La prise en charge de la ligne de commande pour le chargement des évaluations sur Azure Migrate avec la prise en charge de Azure Government et des clouds nationaux.  À présent, vous pouvez automatiser complètement le chargement des évaluations dans le projet Azure Migrate pour obtenir un rapport consolidé Azure SQL Readiness. 
 
 ## <a name="data-migration-assistant-v-50"></a>Assistant Migration de données v 5,0
 
@@ -176,7 +181,7 @@ La version v 2.0 de Assistant Migration de données comprend des recommandations
 La version v 1.0 de Assistant Migration de données est la version initiale, et elle fournit pour :
 
 - Détection des problèmes qui peuvent affecter une mise à niveau vers une version locale de SQL Server. Toutes les découvertes sont décrites comme des problèmes de compatibilité et sont classées dans les domaines suivants :
-  - Changements cassants
+  - Modifications avec rupture
   - Changements de comportement
   - Fonctionnalités dépréciées
 - Découverte de nouvelles fonctionnalités de la plateforme de SQL Server cible dont la base de données peut bénéficier après une mise à niveau. Toutes les découvertes sont décrites comme des recommandations relatives aux fonctionnalités et sont classées dans les domaines suivants :

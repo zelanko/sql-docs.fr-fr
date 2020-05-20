@@ -15,21 +15,21 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245623"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922147"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
-  Le service d’jetons Revendications vers Windows SharePoint (c2WTS) est requis [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avec le mode SharePoint si vous souhaitez utiliser l’authentification Windows pour les sources de données qui se trouvent en dehors de la batterie de serveurs SharePoint. Ceci s'applique même si les utilisateurs accèdent aux sources de données à l'aide de l'authentification Windows, car la communication entre le serveur Web frontal (WFE) et le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se fera toujours via l'authentification basée sur les revendications.  
+  Le service d’jetons Revendications vers Windows SharePoint (c2WTS) est requis avec le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint si vous souhaitez utiliser l’authentification Windows pour les sources de données qui se trouvent en dehors de la batterie de serveurs SharePoint. Ceci s'applique même si les utilisateurs accèdent aux sources de données à l'aide de l'authentification Windows, car la communication entre le serveur Web frontal (WFE) et le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se fera toujours via l'authentification basée sur les revendications.  
   
  C2WTS est nécessaire même si votre ou vos sources de données résident sur le même ordinateur que le service partagé. Toutefois dans ce scénario, la délégation contrainte n'est pas nécessaire.  
   
  Les jetons créés par C2WTS ne fonctionnent qu’avec la délégation contrainte (pour certains services uniquement) et l’option de configuration « avec n’importe quel protocole d’authentification ». Comme indiqué précédemment, si vos sources de données sont sur le même ordinateur que le service partagé, la délégation contrainte n'est pas nécessaire.  
   
- Si votre environnement utilise la délégation contrainte Kerberos, le service SharePoint server et les sources de données externes doivent résider dans le même domaine Windows. Tout service qui s’appuie sur le service d’émission de jetons Revendications vers Windows (C2WTS) doit utiliser la délégation **contrainte** Kerberos pour permettre à C2WTS d’utiliser une transition de protocole Kerberos dans la conversion de revendications en informations d’identification Windows. Ces exigences s'appliquent à tous les services partagés SharePoint. Pour plus d’informations, consultez [vue d’ensemble de l’authentification Kerberos pour leshttps://technet.microsoft.com/library/gg502594.aspx)produits Microsoft SharePoint 2010 (](https://technet.microsoft.com/library/gg502594.aspx).  
+ Si votre environnement utilise la délégation contrainte Kerberos, le service SharePoint server et les sources de données externes doivent résider dans le même domaine Windows. Tout service qui s’appuie sur le service d’émission de jetons Revendications vers Windows (C2WTS) doit utiliser la délégation **contrainte** Kerberos pour permettre à C2WTS d’utiliser une transition de protocole Kerberos dans la conversion de revendications en informations d’identification Windows. Ces exigences s'appliquent à tous les services partagés SharePoint. Pour plus d’informations, consultez [vue d’ensemble de l’authentification Kerberos pour les https://technet.microsoft.com/library/gg502594.aspx) produits Microsoft SharePoint 2010 (](https://technet.microsoft.com/library/gg502594.aspx).  
   
  La procédure est résumée dans cette rubrique.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75245623"
   
         -   Sélectionnez « utiliser n’importe quel protocole d’authentification »  
   
-         Pour plus d’informations, consultez la section « configurer la délégation Kerberos autorisée pour les ordinateurs et les comptes de service » dans le livre blanc suivant : configuration de l' [authentification Kerberos pour les produits SharePoint 2010 et SQL Server 2008 R2](https://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
+         Pour plus d’informations, consultez la section « configurer la délégation Kerberos autorisée pour les ordinateurs et les comptes de service » dans le livre blanc suivant : configuration de l' [authentification Kerberos pour les produits SharePoint 2010 et SQL Server 2008 R2](https://docs.microsoft.com/archive/blogs/tothesharepoint/white-paper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products)  
   
 2.  Configurer c2WTS « AllowedCallers »  
   

@@ -20,12 +20,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2175ae19218592a2742aa1404ffa6620da333846
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921017"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925083"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
   Pour récupérer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suite à une erreur, un administrateur de base de données doit restaurer un jeu de sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une séquence de restauration correcte du point de vue logique et explicite. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la restauration de données à partir de sauvegardes d'une base de données entière, d'un fichier de données ou d'une page de données, comme suit :  
@@ -46,7 +46,7 @@ ms.locfileid: "62921017"
   
  **Dans cette rubrique :**  
   
--   [Présentation des scénarios de restauration](#RestoreScenariosOv)  
+-   [Vue d’ensemble des scénarios de restauration](#RestoreScenariosOv)  
   
 -   [Modes de récupération et opérations de restauration prises en charge](#RMsAndSupportedRestoreOps)  
   
@@ -54,11 +54,11 @@ ms.locfileid: "62921017"
   
 -   [Restauration en mode de récupération utilisant les journaux de transactions](#RMblogRestore)  
   
--   [Assistant de récupération de base de données (SQL Server Management Studio)](#DRA)  
+-   [Assistant récupération de base de données (SQL Server Management Studio)](#DRA)  
   
 -   [Contenu connexe](#RelatedContent)  
   
-##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a>Vue d’ensemble des scénarios de restauration  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> Présentation des scénarios de restauration  
  Un *scénario de restauration* dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est le processus de restauration des données à partir d'une ou de plusieurs sauvegardes, puis de récupération de la base de données. Les scénarios de restauration pris en charge dépendent du mode de récupération de la base de données et de l'édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le tableau suivant présente les scénarios de restauration possibles pris en charge pour différents modes de récupération.  
@@ -66,11 +66,11 @@ ms.locfileid: "62921017"
 |scénario de restauration|En mode de récupération simple|En modes de restauration complète et de récupération utilisant les journaux de transactions|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |restauration de base de données complète|Il s'agit de la stratégie de restauration de base. Une restauration complète de base de données peut impliquer simplement la restauration et la récupération d'une sauvegarde complète de base de données. Une restauration complète de base de données peut également impliquer la restauration d'une sauvegarde complète de base de données suivie de la restauration et de la récupération d'une sauvegarde différentielle.<br /><br /> Pour plus d’informations, consultez [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](complete-database-restores-simple-recovery-model.md).|Il s'agit de la stratégie de restauration de base. Une restauration complète de base de données inclut la restauration d'une sauvegarde complète, et éventuellement d'une sauvegarde différentielle (le cas échéant), suivie par la restauration de toutes les sauvegardes de journal consécutives (en séquence). La restauration de base de données complète s'achève par la récupération de la dernière sauvegarde de journal ainsi que sa restauration (RESTORE WITH RECOVERY).<br /><br /> Pour plus d’informations, consultez [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](complete-database-restores-full-recovery-model.md).|  
-|Restauration de fichiers**\***|Restaure un ou plusieurs fichiers endommagés en lecture seule, sans restaurer toute la base de données. La restauration de fichiers est uniquement disponible si la base de données comporte au moins un groupe de fichiers en lecture seule.|Restaure un ou plusieurs fichiers, sans restaurer la totalité de la base de données. La restauration de fichiers peut être effectuée lorsque la base de données est hors connexion ou, pour certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], alors que la base de données reste en ligne. Pendant une restauration de fichiers, les groupes de fichiers contenant les fichiers à restaurer restent toujours hors connexion.|  
+|File restore **\***|Restaure un ou plusieurs fichiers endommagés en lecture seule, sans restaurer toute la base de données. La restauration de fichiers est uniquement disponible si la base de données comporte au moins un groupe de fichiers en lecture seule.|Restaure un ou plusieurs fichiers, sans restaurer la totalité de la base de données. La restauration de fichiers peut être effectuée lorsque la base de données est hors connexion ou, pour certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], alors que la base de données reste en ligne. Pendant une restauration de fichiers, les groupes de fichiers contenant les fichiers à restaurer restent toujours hors connexion.|  
 |Restauration de pages|Non applicable|Restaure une ou plusieurs pages endommagées. La restauration de pages peut être effectuée lorsque la base de données est hors connexion ou, pour certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], alors que la base de données reste en ligne. Pendant une restauration de pages, les pages en cours de restauration restent toujours hors connexion.<br /><br /> Une chaîne ininterrompue de sauvegardes de journaux doit être disponible, jusqu'au fichier journal actuel, et elles doivent toutes être appliquées pour mettre la page à jour par rapport au fichier journal actuel.<br /><br /> Pour plus d’informations, consultez [Restaurer des pages &#40;SQL Server&#41;](restore-pages-sql-server.md).|  
-|Restauration fragmentaire**\***|Restaure et récupère la base de données par phases au niveau du groupe de fichiers, en commençant par les groupes de fichiers primaires et tous les groupes de fichiers secondaires en lecture-écriture.|Restaure et récupère la base de données par étapes au niveau du groupe de fichiers, en commençant par le groupe de fichiers primaire.|  
+|Restauration fragmentaire **\***|Restaure et récupère la base de données par phases au niveau du groupe de fichiers, en commençant par les groupes de fichiers primaires et tous les groupes de fichiers secondaires en lecture-écriture.|Restaure et récupère la base de données par étapes au niveau du groupe de fichiers, en commençant par le groupe de fichiers primaire.|  
   
- **\*** La restauration en ligne est prise en charge uniquement dans l’édition Enterprise.  
+ **\*** La restauration en ligne est prise en charge uniquement dans l'édition Enterprise.  
   
  Indépendamment du mode de restauration des données, avant de pouvoir récupérer une base de données, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] garantit la cohérence logique de l'intégralité de la base de données. Par exemple, si vous restaurez un fichier, vous ne pouvez pas le récupérer et le mettre en ligne tant qu'il n'a pas été restauré par progression suffisamment pour être cohérent avec la base de données.  
   
@@ -88,13 +88,13 @@ ms.locfileid: "62921017"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Récupération de données|Récupération complète (si le journal est disponible).|Risque de perte de données.|Les données postérieures à la dernière sauvegarde différentielle ou complète sont perdues.|  
 |Restauration dans le temps|Toute heure couverte par les sauvegardes de fichiers journaux.|Non autorisé si la sauvegarde de fichier journal contient des modifications journalisées en bloc.|Non pris en charge.|  
-|Restauration de fichiers**\***|Prise en charge complète.|Que.**\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
-|Restauration de pages**\***|Prise en charge complète.|Que.**\*\***|Aucune.|  
-|Restauration fragmentaire (au niveau du groupe de fichiers)**\***|Prise en charge complète.|Que.**\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
+|File restore **\***|Prise en charge complète.|Parfois. **\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
+|Page restore **\***|Prise en charge complète.|Parfois. **\*\***|Aucun.|  
+|Restauration fragmentaire (niveau groupe de fichiers) **\***|Prise en charge complète.|Parfois. **\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
   
- **\*** Disponible uniquement dans l’édition Enterprise de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ **\*** Disponible uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- **\*\*** Pour les conditions requises, consultez [restrictions de restauration en mode de récupération simple](#RMsimpleScenarios), plus loin dans cette rubrique.  
+ **\*\*** Pour les conditions requises, consultez [Restrictions de restauration en mode de récupération simple](#RMsimpleScenarios), plus loin dans cette rubrique.  
   
 > [!IMPORTANT]  
 >  Quel que soit le mode de récupération d'une base de données, une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être restaurée par une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à la version qui a créé la sauvegarde.  
@@ -113,7 +113,7 @@ ms.locfileid: "62921017"
 > [!IMPORTANT]  
 >  Quel que soit le mode de récupération d'une base de données, une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être restaurée par une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à la version qui a créé la sauvegarde.  
   
-##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a>Restauration en mode de récupération utilisant les journaux de transactions  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> Restauration en mode de récupération utilisant les journaux de transactions  
  Cette section traite de considérations relatives à la restauration qui sont propres au mode de récupération utilisant les journaux de transactions et qui vient en complément d'une utilisation exclusive du mode de restauration complète.  
   
 > [!NOTE]  
@@ -140,18 +140,18 @@ ms.locfileid: "62921017"
   
  Pour plus d’informations sur l’exécution d’une restauration en ligne, consultez [Restauration en ligne &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a>Assistant récupération de base de données (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Assistant de récupération de base de données (SQL Server Management Studio)  
  L'Assistant Récupération de base de données permet de créer des plans de restauration qui implémentent des séquences de restauration correctes et optimales. De nombreux problèmes connus, liés à la restauration de la base de données, et améliorations demandées par les clients ont été pris en considération. Les améliorations importantes introduites par l'Assistant Récupération de base de données sont les suivantes :  
   
--   **Algorithme de plan de restauration :**  l’algorithme utilisé pour créer des plans de restauration a été amélioré considérablement, en particulier pour les scénarios de restauration complexes. Nombre de cas limites, notamment la réplication de scénarios dans les restaurations ponctuelles, sont gérés plus efficacement que dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algorithme de plan de restauration :**  l’algorithme utilisé pour créer des plans de restauration a été amélioré considérablement, en particulier pour les scénarios de restauration complexes. Nombre de cas limites, notamment la réplication de scénarios dans les restaurations ponctuelles, sont gérés plus efficacement que dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Restaurations dans le temps :**  l’Assistant Récupération de base de données simplifie considérablement la restauration d’une base de données à un moment donné. Une chronologie visuelle de sauvegarde améliore considérablement la prise en charge des restaurations dans le temps. La chronologie visuelle vous permet d'identifier un point possible comme point de récupération cible pour restaurer une base de données. La chronologie permet de parcourir un chemin de récupération ramifié (un chemin d'accès qui couvre les branchements de récupération). Un plan spécifique de restauration dans le temps inclut automatiquement les sauvegardes pertinentes pour la restauration à un point cible (date et heure). Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Restaurations dans le temps :**  l’Assistant Récupération de base de données simplifie considérablement la restauration d’une base de données à un moment donné. Une chronologie visuelle de sauvegarde améliore considérablement la prise en charge des restaurations dans le temps. La chronologie visuelle vous permet d'identifier un point possible comme point de récupération cible pour restaurer une base de données. La chronologie permet de parcourir un chemin de récupération ramifié (un chemin d'accès qui couvre les branchements de récupération). Un plan spécifique de restauration dans le temps inclut automatiquement les sauvegardes pertinentes pour la restauration à un point cible (date et heure). Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  Pour plus d'informations sur l'Assistant Récupération de base de données, consultez les blogs de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants :  
   
--   [Assistant Récupération : introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Assistant Récupération : introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
  Aucun.  

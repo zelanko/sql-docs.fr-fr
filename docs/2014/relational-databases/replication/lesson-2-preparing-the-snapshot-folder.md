@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721020"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000405"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Leçon 2 : Préparation du dossier d'instantanés
   Dans cette leçon, vous allez apprendre à configurer le dossier d'instantanés utilisé pour créer et stocker l'instantané des publications.  
@@ -36,9 +36,9 @@ ms.locfileid: "62721020"
   
 6.  Sur l'onglet **Sécurité** , cliquez sur **Modifier**.  
   
-7.  Dans la boîte de dialogue **Autorisations** , cliquez sur **Ajouter**. Dans la zone de texte **Sélectionner les utilisateurs, les ordinateurs, le compte de service ou les groupes** , tapez le nom du compte agent d’instantané créé au \<cours de la leçon 1, comme _Machine_Name>_ **\ repl_snapshot**, où \< *Machine_Name>* est le nom du serveur de publication. Cliquez sur **Vérifier les noms**, puis sur **OK**.  
+7.  Dans la boîte de dialogue **Autorisations** , cliquez sur **Ajouter**. Dans la zone de texte **Sélectionner les utilisateurs, les ordinateurs, le compte de service ou les groupes** , tapez le nom du compte agent d’instantané créé au cours de la leçon 1, comme \< _Machine_Name>_ **\ repl_snapshot**, où \< *Machine_Name>* est le nom du serveur de publication. Cliquez sur **Vérifier les noms**, puis sur **OK**.  
   
-8.  Répétez l’étape précédente pour ajouter des autorisations pour le agent de distribution \<, comme _Machine_Name>_ **\ repl_distribution**, et pour le \< _agent de fusion en tant que Machine_Name>_ **\ repl_merge**.  
+8.  Répétez l’étape précédente pour ajouter des autorisations pour le Agent de distribution, comme \< _Machine_Name>_ **\ repl_distribution**, et pour le agent de fusion en tant que Machine_Name>\< _ _ **\ repl_merge**.  
   
 9. Vérifiez que les autorisations suivantes sont accordées :  
   

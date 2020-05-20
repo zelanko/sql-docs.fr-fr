@@ -12,12 +12,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238389"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922144"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
   La fonctionnalité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit vous permet d'effectuer l'audit d'événements et de groupes d'événements au niveau du serveur et au niveau de la base de données. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -26,32 +26,32 @@ ms.locfileid: "63238389"
   
 |Nom de la colonne|Description|Type|Toujours disponible|  
 |-----------------|-----------------|----------|----------------------|  
-|**event_time**|Date/heure auxquelles l'action pouvant être auditée est déclenchée.|`datetime2`|Oui|  
-|**sequence_no**|Assure le suivi de la séquence d'enregistrements dans un enregistrement d'audit unique qui était trop grand pour la mémoire tampon d'écriture pour audits.|`int`|Oui|  
-|**action_id**|ID de l’action<br /><br /> Conseil : pour utiliser **action_id** en tant que prédicat, cette chaîne de caractères doit être convertie en valeur numérique. Pour plus d’informations, consultez [Filtrage de l’audit SQL Server sur le prédicat action_id/class_type](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|Oui|  
-|**a réussi**|Indique si l'action qui a déclenché l'événement a réussi.|`bit`-1 = succès, 0 = échec|Oui|  
-|**permission_bitmask**|Si applicable, présente les autorisations qui ont été octroyées, refusées ou révoquées|`bigint`|Non|  
-|**is_column_permission**|Indicateur qui désigne une autorisation au niveau colonne|`bit`-1 = true, 0 = faux|Non|  
-|**session_id**|ID de la session au cours de laquelle l'événement s'est produit.|`int`|Oui|  
-|**server_principal_id**|ID du contexte de connexion dans lequel l'action est effectuée.|`int`|Oui|  
-|**database_principal_id**|ID du contexte de l'utilisateur de base de données dans lequel l'action est effectuée.|`int`|Non|  
-|**ID de object_**|ID principal de l'entité sur laquelle l'audit s'est produit. Cela comprend les éléments suivants :<br /><br /> Des objets de serveur<br /><br /> databases<br /><br /> objets de base de données<br /><br /> Des objets de schéma|`int`|Non|  
-|**target_server_principal_id**|Principal du serveur auquel s'applique l'action pouvant être auditée.|`int`|Oui|  
-|**target_database_principal_id**|Principal de la base de données auquel s'applique l'action pouvant être auditée.|`int`|Non|  
-|**class_type**|Type d'entité pouvant être auditée sur laquelle l'audit se produit.|`varchar(2)`|Oui|  
-|**session_server_principal_name**|Principal du serveur pour la session.|`sysname`|Oui|  
-|**server_principal_name**|Connexion actuelle.|`sysname`|Oui|  
-|**server_principal_sid**|SID de la connexion actuelle.|`varbinary`|Oui|  
-|**database_principal_name**|Utilisateur actuel.|`sysname`|Non|  
-|**target_server_principal_name**|Connexion cible de l'action.|`sysname`|Non|  
-|**target_server_principal_sid**|SID de la connexion cible.|`varbinary`|Non|  
-|**target_database_principal_name**|Utilisateur cible de l'action.|`sysname`|Non|  
-|**server_instance_name**|Nom de l'instance de serveur où l'audit s'est produit. Utilise le format standard ordinateur\instance.|`nvarchar(120)`|Oui|  
-|**database_name**|Contexte de base de données dans lequel l'action s'est produite.|`sysname`|Non|  
+|**event_time**|Date/heure auxquelles l'action pouvant être auditée est déclenchée.|`datetime2`|Yes|  
+|**sequence_no**|Assure le suivi de la séquence d'enregistrements dans un enregistrement d'audit unique qui était trop grand pour la mémoire tampon d'écriture pour audits.|`int`|Yes|  
+|**action_id**|ID de l’action<br /><br /> Conseil : pour utiliser **action_id** en tant que prédicat, cette chaîne de caractères doit être convertie en valeur numérique. Pour plus d’informations, consultez [Filtrage de l’audit SQL Server sur le prédicat action_id/class_type](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|`varchar(4)`|Yes|  
+|**a réussi**|Indique si l'action qui a déclenché l'événement a réussi.|`bit`-1 = succès, 0 = échec|Yes|  
+|**permission_bitmask**|Si applicable, présente les autorisations qui ont été octroyées, refusées ou révoquées|`bigint`|No|  
+|**is_column_permission**|Indicateur qui désigne une autorisation au niveau colonne|`bit`-1 = true, 0 = faux|No|  
+|**session_id**|ID de la session au cours de laquelle l'événement s'est produit.|`int`|Yes|  
+|**server_principal_id**|ID du contexte de connexion dans lequel l'action est effectuée.|`int`|Yes|  
+|**database_principal_id**|ID du contexte de l'utilisateur de base de données dans lequel l'action est effectuée.|`int`|No|  
+|**ID de object_**|ID principal de l'entité sur laquelle l'audit s'est produit. notamment :<br /><br /> Des objets de serveur<br /><br /> databases<br /><br /> objets de base de données<br /><br /> Des objets de schéma|`int`|No|  
+|**target_server_principal_id**|Principal du serveur auquel s'applique l'action pouvant être auditée.|`int`|Yes|  
+|**target_database_principal_id**|Principal de la base de données auquel s'applique l'action pouvant être auditée.|`int`|No|  
+|**class_type**|Type d'entité pouvant être auditée sur laquelle l'audit se produit.|`varchar(2)`|Yes|  
+|**session_server_principal_name**|Principal du serveur pour la session.|`sysname`|Yes|  
+|**server_principal_name**|Connexion actuelle.|`sysname`|Yes|  
+|**server_principal_sid**|SID de la connexion actuelle.|`varbinary`|Yes|  
+|**database_principal_name**|Utilisateur actuel.|`sysname`|No|  
+|**target_server_principal_name**|Connexion cible de l'action.|`sysname`|No|  
+|**target_server_principal_sid**|SID de la connexion cible.|`varbinary`|No|  
+|**target_database_principal_name**|Utilisateur cible de l'action.|`sysname`|No|  
+|**server_instance_name**|Nom de l'instance de serveur où l'audit s'est produit. Utilise le format standard ordinateur\instance.|`nvarchar(120)`|Yes|  
+|**database_name**|Contexte de base de données dans lequel l'action s'est produite.|`sysname`|No|  
 |**schema_name**|Contexte du schéma dans lequel l’action s’est produite.|`sysname`|Non|  
-|**object_name**|Nom de l’entité sur laquelle l’audit s’est produit. Cela comprend les éléments suivants :<br /><br /> Des objets de serveur<br /><br /> databases<br /><br /> objets de base de données<br /><br /> Des objets de schéma<br /><br /> l'instruction TSQL (le cas échéant).|`sysname`|Non|  
+|**object_name**|Nom de l’entité sur laquelle l’audit s’est produit. notamment :<br /><br /> Des objets de serveur<br /><br /> databases<br /><br /> objets de base de données<br /><br /> Des objets de schéma<br /><br /> l'instruction TSQL (le cas échéant).|`sysname`|No|  
 |**gestion**|l'instruction TSQL (le cas échéant).|`nvarchar(4000)`|Non|  
-|**additional_information**|Toute information supplémentaire à propos de l'événement, stockée au format XML.|`nvarchar(4000)`|Non|  
+|**additional_information**|Toute information supplémentaire à propos de l'événement, stockée au format XML.|`nvarchar(4000)`|No|  
   
 ## <a name="remarks"></a>Notes  
  Certaines actions ne remplissent pas la valeur d'une colonne car elles peuvent ne pas être applicables à l'action.  
@@ -71,9 +71,9 @@ ms.locfileid: "63238389"
 ## <a name="related-content"></a>Contenu associé  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   

@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
-ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1acbc2c75a7cd0dc45c0f9dd329951e073f8120
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656586"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925073"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparer les fonctionnalités de Business Intelligence dans différents environnements Microsoft
 
@@ -26,7 +26,7 @@ Pour plus d'informations sur la comparaison de SharePoint Server avec SharePoint
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online – Plan 2|Power BI pour Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Sites BI|Galerie [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|Non|Sites Power BI|  
+|Sites BI|Galerie [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|No|Sites Power BI|  
 |Gestion des données, et partage et gestion des requêtes|Non|Non|Oui ** <sup>1</sup>**|  
 |Intégration avec Master Data Services (MDS) et Data Quality Services (DQS)|Oui|Non|Non|  
 |Actualisation des données de planification|Oui, mais ne prend pas en charge des classeurs contenant des données Power Query|Non|Oui|  
@@ -44,7 +44,7 @@ Pour plus d'informations sur la comparaison de SharePoint Server avec SharePoint
   
  **<sup>2</sup>**  [Power bi Q&a : optimiser un classeur Power bi (modélisation Cloud)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
- **<sup>3</sup>**  [Présentation des nouvelles capacités de prévision de Power View pour Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
+ **<sup>3</sup>**  [Présentation des nouvelles capacités de prévision de Power View pour Office 365](https://powerbi.microsoft.com/blog/introducing-new-forecasting-capabilities-in-power-view-for-office-365/).  
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>Afficher et parcourir les données, les rapports et les tableaux de bord BI  
   
@@ -63,7 +63,7 @@ Pour plus d'informations sur la comparaison de SharePoint Server avec SharePoint
   
  **<sup>3</sup>**  [prise en charge mobile sur les outils décisionnels (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) et [planification de la prise en charge des navigateurs Reporting Services et Power View (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   
-## <a name="more-information"></a>Autres informations  
+## <a name="more-information"></a>Informations complémentaires  
   
 - [Fonctionnalités bi dans Excel et Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   

@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 087ca52acea1cace7eb218cc33ce31cd21e10cc8
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82086881"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922240"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
   Ce didacticiel vous apprend comment créer deux types de rapports : un rapport d'extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. L'illustration suivante montre les rapports que vous allez créer.  
@@ -81,7 +81,7 @@ ms.locfileid: "82086881"
   
  Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour suivre ce didacticiel, vous avez besoin d'accéder au cube Contoso Sales. Cette condition s'applique à la fois aux rapports principal et d'extraction. Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. créer un rapport d’extraction à partir de l’Assistant tableau ou matrice  
@@ -89,7 +89,7 @@ ms.locfileid: "82086881"
   
 #### <a name="to-create-a-new-report"></a>Pour créer un rapport  
   
-1.  Cliquez sur **Démarrer**, pointez sur **programmes**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] sur **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
+1.  Cliquez sur **Démarrer**, pointez sur **programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
   
      La boîte de dialogue **Mise en route** s’ouvre. S’il n’apparaît pas, à partir du bouton **Générateur de rapports** , cliquez sur **nouveau**.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "82086881"
   
 1.  Dans le volet des données de rapport, développez **Paramètres**.  
   
-2.  Cliquez avec le \@bouton droit sur ProductProductCategoryName, puis cliquez sur **Propriétés du paramètre**.  
+2.  Cliquez avec le bouton droit sur \@ ProductProductCategoryName, puis cliquez sur **Propriétés du paramètre**.  
   
     > [!NOTE]  
     >  Le caractère \@ à côté du nom indique qu'il s'agit d'un paramètre.  
@@ -376,7 +376,7 @@ ms.locfileid: "82086881"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  Cliquez sur **Save**.  
+4.  Cliquez sur **Enregistrer**.  
   
      La liste**Sites et serveurs récents** répertorie les bibliothèques sur le site SharePoint.  
   
@@ -387,14 +387,14 @@ ms.locfileid: "82086881"
     > [!NOTE]  
     >  Vous allez enregistrer le rapport principal au même emplacement. Si vous souhaitez enregistrer les rapports principal et d’extraction dans des bibliothèques ou des sites différents, vous devez mettre à jour le chemin de l’action **Atteindre le rapport** dans le rapport principal.  
   
-7.  Cliquez sur **Save**.  
+7.  Cliquez sur **Enregistrer**.  
   
 ##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. créer un rapport à partir de l’Assistant tableau ou matrice  
  Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l’aide de **l’Assistant Tableau ou matrice**.  
   
 #### <a name="to-create-a-new-report"></a>Pour créer un rapport  
   
-1.  Cliquez sur **Démarrer**, pointez sur **programmes**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] sur **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
+1.  Cliquez sur **Démarrer**, pointez sur **programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Générateur de rapports**, puis cliquez sur **Générateur de rapports**.  
   
 2.  Dans la boîte de dialogue **Prise en main** , vérifiez que **Nouveau rapport** est sélectionné, puis cliquez sur **Assistant Tableau ou matrice**.  
   
@@ -413,7 +413,7 @@ ms.locfileid: "82086881"
   
 5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  Dans **nom du serveur**, tapez le nom d’un serveur sur lequel une [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance de est installée.  
+6.  Dans **nom du serveur**, tapez le nom d’un serveur sur lequel une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est installée.  
   
 7.  Dans **Sélectionner ou entrer un nom de base de données**, sélectionnez le cube Contoso.  
   
@@ -447,7 +447,7 @@ ms.locfileid: "82086881"
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
     > [!TIP]  
-    >  Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur l’icône ![Passer en mode Création](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passer en mode Création"), basculez le concepteur de requêtes en mode Requête, collez la requête MDX complète dans le concepteur de requêtes, puis passez à l’étape 5 de la section [Pour créer le jeu de données](#MSkip).  
+    >  Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur l’icône ![Passer en mode Création](media/rsqdicon-designmode.gif "Passer en mode Création"), basculez le concepteur de requêtes en mode Requête, collez la requête MDX complète dans le concepteur de requêtes, puis passez à l’étape 5 de la section [Pour créer le jeu de données](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -716,7 +716,7 @@ ms.locfileid: "82086881"
     > [!IMPORTANT]  
     >  Enregistrez le rapport principal au même emplacement que celui où vous avez enregistré le rapport d'extraction. Pour enregistrer les rapports principal et d’extraction dans des bibliothèques ou des sites différents, confirmez que l’action **Atteindre le rapport** du rapport principal pointe vers l’emplacement correct du rapport d’extraction.  
   
-7.  Cliquez sur **Save**.  
+7.  Cliquez sur **Enregistrer**.  
   
 ##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. exécuter les rapports principal et d’extraction  
  Exécutez le rapport principal, puis cliquez sur des valeurs dans la colonne de catégorie de produit afin d'exécuter le rapport d'extraction.  

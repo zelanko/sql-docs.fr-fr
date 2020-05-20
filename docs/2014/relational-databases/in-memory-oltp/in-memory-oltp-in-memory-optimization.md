@@ -10,15 +10,15 @@ helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175918"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922098"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
 
@@ -26,7 +26,7 @@ ms.locfileid: "78175918"
 
 |||
 |-|-|
-|![Machine virtuelle Azure](../../master-data-services/media/azure-virtual-machine.png "Machine virtuelle Azure")|Voulez-vous essayer SQL Server 2016 ? Inscrivez-vous à Microsoft Azure, puis cliquez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** pour mettre en place une machine virtuelle sur laquelle SQL Server 2016 est déjà installé. Vous pouvez supprimer la machine virtuelle une fois que vous avez terminé.|
+|![Machine virtuelle Azure](../../master-data-services/media/azure-virtual-machine.png "Machine virtuelle Azure")|Voulez-vous essayer SQL Server 2016 ? Inscrivez-vous à Microsoft Azure, puis cliquez **[ici](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** pour mettre en place une machine virtuelle sur laquelle SQL Server 2016 est déjà installé. Vous pouvez supprimer la machine virtuelle une fois que vous avez terminé.|
 
  Pour utiliser l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], vous définissez une table très sollicitée comme étant optimisée en mémoire. Les tables optimisées en mémoire sont transactionnelles, durables et accessibles via [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la même manière que les tables sur disque. Une requête peut faire référence à des tables optimisées en mémoire et des tables sur disque. Une transaction peut mettre à jour des données dans des tables optimisées en mémoire et des tables sur disque. Les procédures stockées qui font référence uniquement aux tables optimisées en mémoire peuvent être compilées de façon native en code machine pour améliorer les performances. Le moteur de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] est conçu pour prendre en charge des accès concurrentiels très nombreux de transactions de type OLTP qui sont gérés par une couche intermédiaire mise à l'échelle. Pour cela, il utilise des structures de données sans verrou et un contrôle d'accès concurrentiel optimiste et multiversion. Le résultat est une latence prévisible inférieure à une milliseconde et un débit élevé avec une mise à l'échelle linéaire pour les transactions de base de données. Le gain réel au niveau des performances dépend de plusieurs facteurs, mais une amélioration des performances de 5 à 20 fois est souvent obtenue.
 
@@ -40,7 +40,7 @@ ms.locfileid: "78175918"
 |Faible latence.|Transactions d'entreprise à faible latence, ce que les solutions de base de données traditionnelles ne proposent pas.|Supprimer la contention.<br /><br /> Réduire le temps d'exécution du code.<br /><br /> Exécution du code à faible latence.<br /><br /> Récupération efficace des données.|
 |Gestion de l'état de session.|Insertion, mise à jour et recherches de point fréquentes.<br /><br /> Charge élevée de nombreux serveurs web sans état.|Supprimer la contention.<br /><br /> Récupération efficace des données.<br /><br /> Réduction ou suppression des E/S facultative, lors de l'utilisation de tables non durables|
 
- Pour plus d’informations sur les [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] scénarios dans lesquels entraînent des gains de performances optimaux, consultez [OLTP en mémoire-modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).
+ Pour plus d’informations sur les scénarios dans lesquels entraînent des [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] gains de performances optimaux, consultez [OLTP en mémoire-modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).
 
  L'[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] améliorera davantage les performances dans l'OLTP avec des transactions à exécution courte.
 
@@ -71,7 +71,7 @@ ms.locfileid: "78175918"
 |[Conditions requises pour l'utilisation des tables optimisées en mémoire](memory-optimized-tables.md)|Décrit les configurations matérielle et logicielle requises et fournit des instructions pour l'utilisation des tables optimisées en mémoire.|
 |[Utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Décrit l'utilisation de l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] dans un environnement virtualisé.|
 |[Exemples de code OLTP en mémoire](in-memory-oltp-code-samples.md)|Contient des exemples de code qui montrent comment créer et utiliser une table optimisée en mémoire.|
-|[Tables optimisées en mémoire](memory-optimized-tables.md)|Présente les tables optimisées en mémoire.|
+|[Tables à mémoire optimisée](memory-optimized-tables.md)|Présente les tables optimisées en mémoire.|
 |[Variables de table mémoire optimisée](../../database-engine/memory-optimized-table-variables.md)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|
 |[Index sur les tables optimisées en mémoire](../../database-engine/indexes-on-memory-optimized-tables.md)|Présente les index optimisés en mémoire.|
 |[procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)|Présente les procédures stockées compilées en mode natif.|
@@ -87,7 +87,7 @@ ms.locfileid: "78175918"
 
 -   [Microsoft ? SQL Server?? Guide produit 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)
 
--   [Blog OLTP en mémoire](https://go.microsoft.com/fwlink/?LinkId=311696)
+-   [Blog OLTP en mémoire](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)
 
 -   [OLTP en mémoire-modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx)
 

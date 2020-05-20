@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475984"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000502"
 ---
 # <a name="sql-server-index-design-guide"></a>Guide de conception d'index SQL Server
 
   L'engorgement des applications de base de données est souvent imputable à des index mal conçus ou en nombre insuffisant. La conception d'index efficaces est primordiale pour le bon fonctionnement des bases de données et des applications. Ce guide de conception d'index SQL Server contient les informations et les meilleures pratiques nécessaires à la création d'index efficaces pour répondre aux besoins de votre application.  
   
-**S’applique à** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] jusqu’à, sauf indication contraire.  
+**S’applique à**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] jusqu’à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sauf indication contraire.  
   
  Ce guide suppose que le lecteur connaît les types d'index disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir description générale des types d'index, consultez [Types d'index](../relational-databases/indexes/indexes.md).  
   
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Les colonnes sujettes à des modifications fréquentes.  
   
-     La ligne tout entière est ainsi déplacée, car le [!INCLUDE[ssDE](../includes/ssde-md.md)] doit conserver les valeurs des données de la ligne dans l'ordre physique. Cette observation est importante dans les systèmes de traitement transactionnel à haut volume où les données sont en général éphémères.  
+     Cela entraîne le déplacement de la ligne entière, car le [!INCLUDE[ssDE](../includes/ssde-md.md)] doit conserver les valeurs de données d’une ligne dans l’ordre physique. Cette observation est importante dans les systèmes de traitement transactionnel à haut volume où les données sont en général éphémères.  
   
 -   Les clés étendues.  
   
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Lorsque vous créez une contrainte PRIMARY KEY ou UNIQUE, vous créez automatiquement un index unique sur les colonnes spécifiées. Il n'y a pas de différences significatives entre la création d'une contrainte UNIQUE et la création d'un index unique indépendant d'une contrainte. La validation des données se produit de la même manière et l'optimiseur de requête considère un index unique de la même façon, qu'il soit créé par une contrainte or manuellement. Toutefois, vous devez créer une contrainte UNIQUE ou PRIMARY KEY sur la colonne lorsque votre objectif est de préserver l'intégrité des données. Cette opération met en évidence la finalité de l'index.  
   
-### <a name="considerations"></a>Éléments à prendre en considération  
+### <a name="considerations"></a>Considérations  
   
 -   Un index unique, une contrainte UNIQUE ou une contrainte PRIMARY KEY ne peuvent pas être créés si les données comportent des valeurs de clé dupliquées.  
   
@@ -628,7 +628,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>Lecture supplémentaire  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecture supplémentaire  
 
  [Amélioration des performances avec les vues indexées SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
