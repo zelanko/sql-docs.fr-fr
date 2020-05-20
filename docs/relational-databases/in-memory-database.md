@@ -57,7 +57,7 @@ L’[OLTP en mémoire](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] explique comment configurer la mémoire persistante (PMEM) à l’aide de la `ndctl`mémoire persistante[ de l’utilitaire ](../linux/sql-server-linux-configure-pmem.md).
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] explique comment configurer la mémoire persistante (PMEM) à l’aide de la [mémoire persistante](../linux/sql-server-linux-configure-pmem.md) de l’utilitaire `ndctl`.
 
 ## <a name="persisted-log-buffer"></a>Mémoire tampon du journal persistant
 

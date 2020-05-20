@@ -62,7 +62,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent affecter des alerte
   
 4.  Cliquez avec le bouton droit sur l’opérateur auquel vous souhaitez affecter une alerte et sélectionnez **Propriétés**, puis la page **Notifications** .  
   
-5.  Dans la boîte de dialogue _Propriétés\__ nom**opérateur**, sous **Sélectionner une page**, sélectionnez **Notifications**.  
+5.  Dans la boîte de dialogue **Propriétés**_nom\_opérateur_, sous **Sélectionner une page**, sélectionnez **Notifications**.  
   
 6.  Sous **Afficher les notifications envoyées à cet utilisateur par**, sélectionnez **Alertes** pour afficher la liste des alertes envoyées à cet opérateur, ou sélectionnez **Travaux** pour afficher la liste des travaux qui envoient des notifications à cet opérateur. Cochez une ou plusieurs cases parmi les suivantes pour définir, en fonction de vos besoins, la méthode de notification pour chaque notification : **Messagerie électronique**, **Radiomessagerie**ou **Net send**.  
   

@@ -36,7 +36,7 @@ ms.locfileid: "68051207"
 >  Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
 > [!NOTE]  
->  Lorsque vous ajoutez des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les paramètres de rapport d'utilisation existants sont appliqués aux fonctionnalités ajoutées récemment. Pour modifier ces paramètres, utilisez l’outil **Rapports d’erreurs et d’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** du menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
+>  Lorsque vous ajoutez des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les paramètres de rapport d'utilisation existants sont appliqués aux fonctionnalités ajoutées récemment. Pour modifier ces paramètres, utilisez l’outil **Rapports d’erreurs et d’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** du menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
   
 ## <a name="procedures"></a>Procédures  
   

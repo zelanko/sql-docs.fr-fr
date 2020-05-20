@@ -59,7 +59,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir la répons
   
 4.  Cliquez avec le bouton droit sur l'alerte dont vous voulez définir une réponse, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue _Propriétés de l’alerte\__ nom**alerte**, sous **Sélectionner une page**, sélectionnez **Réponse**.  
+5.  Dans la boîte de dialogue **Propriétés de l’alerte**_nom\_alerte_, sous **Sélectionner une page**, sélectionnez **Réponse**.  
   
 6.  Sélectionnez la case à cocher **Exécuter le travail** , puis dans la liste figurant sous la case à cocher **Exécuter le travail** , sélectionnez un travail à exécuter quand une alerte se produit. Vous pouvez créer un nouveau travail en cliquant sur **Nouveau travail**. Vous pouvez afficher plus d'informations sur le travail en cliquant sur **Afficher le travail**. Pour plus d’informations sur les options disponibles dans les boîtes de dialogue **Nouveau travail** et **Propriétés du travail**_nom\_travail_, consultez [Créer un travail](../../ssms/agent/create-a-job.md) et [Afficher un travail](../../ssms/agent/view-a-job.md).  
   

@@ -97,7 +97,7 @@ Pour plus d'informations sur les conditions de création d'objets de base de don
   
 3.  Cliquez avec le bouton droit sur la table Suppliers et sélectionnez **Afficher les données**.  
   
-4.  Entrez **5** pour le champ **id**, **Contoso** pour **nom**, laissez le champ**Adresse** vide et entrez **425 3122 1222** pour le champ **téléphone**. Accédez par tabulation à un champ autre que le champ **téléphone** et notez qu'un message s'affiche, indiquant que l'instruction `INSERT` est en conflit avec votre contrainte de validation existante, qui valide l'entrée du champ **téléphone** à l'aide d'un modèle de numéro de téléphone prédéfini.  
+4.  Entrez **5** pour le champ **id**, **Contoso** pour **nom**, laissez le champ**Adresse** vide et entrez **425 3122 1222** pour le champ **téléphone**. Accédez par tabulation à un champ autre que le champ **téléphone`INSERT` et notez qu'un message s'affiche, indiquant que l'instruction ** est en conflit avec votre contrainte de validation existante, qui valide l'entrée du champ **téléphone** à l'aide d'un modèle de numéro de téléphone prédéfini.  
   
 5.  Remplacez l'entrée par **425 312 1222** et accédez par tabulation à un autre champ. Notez que cette fois-ci, l'entrée est acceptée.  
   

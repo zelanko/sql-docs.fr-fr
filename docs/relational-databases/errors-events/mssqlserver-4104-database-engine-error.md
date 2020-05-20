@@ -79,7 +79,7 @@ L'erreur 4104 indique que l'identificateur en plusieurs parties spécifié n'a p
     SELECT a.c2 FROM a, b;   
     ```  
   
-    En supposant que l’UDT `myudt2`ne dispose pas d’une propriété nommée `c2`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas déterminer si l’identificateur `a.c2` fait référence à la colonne `c2` dans la table `a` ou à la colonne `a`, propriété `c2` dans la table `b`.  
+    En supposant que l’UDT `myudt2`ne dispose pas d’une propriété nommée `c2`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas déterminer si l’identificateur `a.c2` fait référence à la colonne `c2` dans la table `a` ou à la colonne `b`, propriété `a` dans la table `c2`.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
   

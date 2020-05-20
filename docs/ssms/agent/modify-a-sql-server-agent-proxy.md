@@ -60,7 +60,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer, modifier ou
   
 5.  Cliquez avec le bouton droit sur le compte proxy que vous voulez modifier, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue _Propriétés du compte proxy\__ nom**proxy**, apportez des modifications au compte proxy selon les besoins. Pour plus d’informations sur les options de cette boîte de dialogue, consultez [Créer un proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+6.  Dans la boîte de dialogue **Propriétés du compte proxy**_nom\_proxy_, apportez des modifications au compte proxy selon les besoins. Pour plus d’informations sur les options de cette boîte de dialogue, consultez [Créer un proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

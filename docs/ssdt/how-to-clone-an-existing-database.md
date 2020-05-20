@@ -48,7 +48,7 @@ Ces étapes vous permettront de créer facilement une base de données de dével
   
 4.  Dans le menu déroulant **Base de données** en regard des boutons **Connecter**/**Déconnecter**, sélectionnez **TradeDev**. Cette opération est semblable à l'instruction Transact\-SQL`USE` et garantit que le script dans l'éditeur de code sera exécuté par rapport à la base de données **TradeDev**.  
   
-5.  Cliquez sur le bouton **Exécuter la requête** pour exécuter les instructions `INSERT`. Ainsi, toutes les lignes de la table `Suppliers` de la base de données `Trade` sont insérées dans la table `Suppliers` de la base de données `TradeDev`.  
+5.  Cliquez sur le bouton **Exécuter la requête`INSERT` pour exécuter les instructions **. Ainsi, toutes les lignes de la table `Suppliers` de la base de données `Trade` sont insérées dans la table `Suppliers` de la base de données `TradeDev`.  
   
 6.  Répétez les étapes ci-dessus pour toutes les tables de la base de donnés `Trade`, de façon à les répliquer dans la base de données `TradeDev`.  
   

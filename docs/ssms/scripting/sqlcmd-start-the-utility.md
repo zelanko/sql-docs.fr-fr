@@ -42,7 +42,7 @@ ms.locfileid: "75243474"
   
 ### <a name="start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>Démarrer l’utilitaire sqlcmd et établir une connexion à une instance nommée de SQL Server  
   
-1.  Ouvrez une fenêtre d’invite de commandes, puis tapez **sqlcmd -S**_mon_serveur\nom_instance_. Remplacez *mon_serveur\nom_instance* par le nom de l’ordinateur et de l’instance de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous souhaitez vous connecter.  
+1.  Ouvrez une fenêtre d’invite de commandes, puis tapez **sqlcmd -S**_mon_serveur\nom_instance_. Remplacez *mon_serveur\nom_instance[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le nom de l’ordinateur et de l’instance de* à laquelle vous souhaitez vous connecter.  
   
 2.  Appuyez sur Entrée.  
   

@@ -31,7 +31,7 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
   
 ### <a name="to-create-a-snapshot"></a>Pour créer un instantané  
   
-1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez**Application de la couche Données (\*.dacpac)...** .  
+1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez**Application de la couche Données (\*.dacpac)...**.  
   
 2.  SSDT tentera de générer le projet en premier. Si aucune erreur de build n'est détectée, un dossier **Instantané** est créé dans l'**Explorateur de solutions**. Dans ce dossier, SSDT crée un fichier .dacpac au format de nom « <Project Name>_YYYYMMDD_HH-MM-SS.dacpac ».  
   

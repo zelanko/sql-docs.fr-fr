@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c63f54756d3bde1ab3c79a0beee9cc06b709d05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771549"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808558"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 `[ @password = ] 'password'`Mot de passe de l’administrateur système à utiliser lors de la création d’objets système dans la base de données de distribution. *Password* est de **type sysname**, avec **«»** comme valeur par défaut (chaîne vide). Ce paramètre n’est pas requis si *security_mode* a la valeur **1**, ce qui correspond à l’authentification Windows.  
   
 > [!NOTE]  
->  Ce paramètre est ignoré lorsque vous effectuez une mise à niveau [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers SQL et versions ultérieures.  
+>  Ce paramètre est ignoré lorsque vous effectuez une mise à niveau vers SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
   
 `[ @ver_old = ] 'old_version'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -57,7 +57,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'`Mode de sécurité de connexion à utiliser lors de la création d’objets système dans la base de données de distribution. *security_mode* est de **bits** avec **0**comme valeur par défaut. Si la valeur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est **0**, l’authentification est utilisée. Si la condition est **1**, l’authentification Windows sera utilisée.  
+`[ @security_mode = ] 'security_mode'`Mode de sécurité de connexion à utiliser lors de la création d’objets système dans la base de données de distribution. *security_mode* est de **bits** avec **0**comme valeur par défaut. Si la **valeur est 0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification est utilisée. Si la condition est **1**, l’authentification Windows sera utilisée.  
   
 > [!NOTE]  
 >  Ce paramètre est ignoré lorsque vous effectuez une mise à niveau vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
@@ -65,7 +65,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_vupgrade_replication** est utilisé lors de la mise à niveau de tous les types de réplication.  
   
 ## <a name="permissions"></a>Autorisations  

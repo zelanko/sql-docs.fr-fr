@@ -43,5 +43,5 @@ Vous pouvez consulter, modifier et supprimer des données d'une table existante 
   
 6.  Pour afficher vos modifications sous la forme d'un script, cliquez sur le bouton **Script** dans la barre d'outils. Vous pouvez aussi utiliser le bouton **Générer un script dans un fichier** pour les enregistrer dans un fichier de script .sql à exécuter ultérieurement.  
   
-7.  Dans l’**Explorateur d'objets SQL Server**, cliquez avec le bouton droit sur **Trade** et sélectionnez **Nouvelle requête**. Dans l'éditeur, tapez `select * from dbo.PerishableFruits` et cliquez sur le bouton **Exécuter la requête** pour revenir aux données représentées par l'affichage `PerishableFruits`.  
+7.  Dans l’**Explorateur d'objets SQL Server**, cliquez avec le bouton droit sur **Trade** et sélectionnez **Nouvelle requête**. Dans l'éditeur, tapez `select * from dbo.PerishableFruits` et cliquez sur le bouton **Exécuter la requête`PerishableFruits` pour revenir aux données représentées par l'affichage **.  
   

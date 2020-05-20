@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 98796b89486ce59b289c83a74e5c466a6522b557
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 06690f79bf2cc708a83ec272906b3f4be09fe03d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278323"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807791"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sys. sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @mode = ] * \@mode*  
+ [ @mode =] * \@ mode*  
  Est l’une des valeurs suivantes.  
   
 -   **Désactivé** Toutes les requêtes sur les tables compatibles Stretch échouent.  
@@ -48,7 +48,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE** Les requêtes sur les tables compatibles avec Stretch retournent les données locales et distantes. Il s'agit du comportement par défaut.  
   
- [ @force = ]  * \@force*  
+ [ @force =] * \@ force*  
  Est une valeur de bit facultative que vous pouvez définir sur 1 si vous souhaitez modifier le mode de requête sans validation.  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -57,7 +57,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="permissions"></a>Autorisations  
  Requiert db_owner autorisations.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les procédures stockées étendues suivantes définissent également le mode de requête pour une base de données Stretch.  
   
 -   **sp_rda_deauthorize_db**  

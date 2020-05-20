@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6a0ca36329c8ddb68c9727fe1b9d2cf17674c93a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72006103"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808848"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**\@publication =**] **«***publication***»**  
+ [** \@ publication =**] **'***publication***'**  
  Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
 `[ @level = ] level`Type de validation à effectuer. *Level* est de **type tinyint**, sans valeur par défaut. Le paramètre « level » peut avoir l'une des valeurs suivantes :  
@@ -46,13 +46,13 @@ sp_validatemergepublication [@publication=] 'publication'
 |Valeur de level (niveau)|Description|  
 |-----------------|-----------------|  
 |**1**|Validation du décompte de lignes uniquement.|  
-|**2**|Validation du nombre de lignes et de la somme de contrôle. Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]les abonnés, cette valeur est automatiquement définie sur **3**.|  
+|**2**|Validation du nombre de lignes et de la somme de contrôle. Pour les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] abonnés, cette valeur est automatiquement définie sur **3**.|  
 |**3**|Il s'agit de la valeur recommandée.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_validatemergepublication** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

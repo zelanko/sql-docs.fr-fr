@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905176"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807970"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne la configuration de capture de données modifiées pour chaque table activée pour la capture de données modifiées dans la base de données actuelle. Jusqu'à deux lignes peuvent être retournées pour chaque table source, une ligne pour chaque instance de capture. La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Retourne la configuration de capture de données modifiées pour chaque table activée pour la capture de données modifiées dans la base de données actuelle. Jusqu'à deux lignes peuvent être retournées pour chaque table source, une ligne pour chaque instance de capture. La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +45,14 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @source_schema = ] '*source_schema*'  
+ [ @source_schema =] '*source_schema*'  
  Nom du schéma auquel appartient la table source. *source_schema* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *source_schema* est spécifié, *source_name* doit également être spécifié.  
   
  Si la valeur est non NULL, *source_schema* doit exister dans la base de données active.  
   
  Si *source_schema* est non null, *source_name* doit également être non null.  
   
- [ @source_name = ] '*source_name*'  
+ [ @source_name =] '*source_name*'  
  Nom de la table source. *source_name* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *source_name* est spécifié, *source_schema* doit également être spécifié.  
   
  Si la valeur est non NULL, *source_name* doit exister dans la base de données active.  
@@ -82,7 +82,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Liste des colonnes d'index utilisées pour identifier de façon unique des lignes dans la table source.|  
 |captured_column_list|**nvarchar(max)**|Liste des colonnes sources capturées.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si *source_schema* et *source_name* par défaut la valeur null, ou si la valeur null est explicitement définie, cette procédure stockée retourne des informations pour toutes les instances de capture de base de données pour lesquelles l’appelant a un accès SELECT. Lorsque *source_schema* et *source_name* n’ont pas la valeur null, seules les informations sur la table nommée activée spécifique sont retournées.  
   
 ## <a name="permissions"></a>Autorisations  

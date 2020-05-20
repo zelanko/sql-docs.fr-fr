@@ -59,7 +59,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opéra
   
 4.  Cliquez avec le bouton droit sur l’opérateur que vous souhaitez modifier, puis sélectionnez **Propriétés**.  
   
-    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de\__ nom**opérateur**, consultez :  
+    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue **Propriétés de**_nom\_opérateur_, consultez :  
   
     -   [Propriétés des opérateurs - Nouvel opérateur &#40;page Général&#41;$$$](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

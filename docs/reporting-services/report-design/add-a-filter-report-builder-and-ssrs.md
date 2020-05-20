@@ -31,7 +31,7 @@ ms.locfileid: "77080751"
   
 1.  Ouvrez un rapport en mode **Conception** .  
   
-2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur _Properties de\<_ **région_de_données>** . Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue _Propriétés de\<_ **région_de_données>** s’ouvre.  
+2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur **Properties de**_\<région_de_données>_. Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue **Propriétés de**_\<région_de_données>_ s’ouvre.  
   
     > [!NOTE]  
     >  Dans une région de données de tableau matriciel, cliquez avec le bouton droit sur la cellule d’angle ou sur une poignée de ligne ou de colonne, puis cliquez sur **Propriétés du tableau matriciel**.  

@@ -53,7 +53,7 @@ Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent afficher des
   
 4.  Cliquez avec le bouton droit sur l'alerte comportant les informations que vous voulez afficher, puis sélectionnez **Propriétés**.  
   
-    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de l’alerte\__ nom**alerte**, consultez :  
+    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue **Propriétés de l’alerte**_nom\_alerte_, consultez :  
   
     -   [Propriétés de l’alerte - Nouvelle alerte &#40;page Général&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

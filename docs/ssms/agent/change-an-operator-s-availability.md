@@ -58,7 +58,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opéra
   
 4.  Cliquez avec le bouton droit sur l’opérateur que vous souhaitez activer ou désactiver et sélectionnez **Propriétés**, puis cliquez sur l’onglet **Général** .  
   
-5.  Dans la boîte de dialogue _Propriétés de\__ nom**opérateur**, cochez ou décochez la case **Activé**.  
+5.  Dans la boîte de dialogue **Propriétés de**_nom\_opérateur_, cochez ou décochez la case **Activé**.  
   
 6.  Cliquez sur **OK**.  
   

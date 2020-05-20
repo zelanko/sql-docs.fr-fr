@@ -65,7 +65,7 @@ ms.locfileid: "68123471"
 3.  Dans la boîte de dialogue **Supprimer l'objet** , cliquez sur **OK**.  
   
     > [!IMPORTANT]  
-    >  Cliquez sur **Afficher les dépendances** dans la boîte de dialogue **Supprimer un objet** pour ouvrir la boîte de dialogue _Dépendances de\__ nom**vue**. Cette opération affiche tous les objets qui dépendent de la vue et tous les objets dont la vue dépend.  
+    >  Cliquez sur **Afficher les dépendances** dans la boîte de dialogue **Supprimer un objet** pour ouvrir la boîte de dialogue **Dépendances de**_nom\_vue_. Cette opération affiche tous les objets qui dépendent de la vue et tous les objets dont la vue dépend.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

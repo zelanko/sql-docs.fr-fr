@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8a29933568cec147dc27ff7c9b5f026d62856e5b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056163"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807720"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @parameter_name = ] 'parameter_name'`Nom du paramètre de configuration à récupérer. Lorsqu’il est spécifié, la valeur du paramètre de configuration est retournée dans le ** \@** paramètre de sortie parameter_value. Quand aucun ** \@parameter_name** n’est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration Database mail de l’instance.  
+`[ @parameter_name = ] 'parameter_name'`Nom du paramètre de configuration à récupérer. Lorsqu’il est spécifié, la valeur du paramètre de configuration est retournée dans le paramètre de sortie ** \@ parameter_value** . Quand aucun ** \@ parameter_name** n’est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration Database mail de l’instance.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Quand aucun ** \@parameter_name** n’est spécifié, retourne un jeu de résultats avec les colonnes suivantes.  
+ Quand aucun ** \@ parameter_name** n’est spécifié, retourne un jeu de résultats avec les colonnes suivantes.  
   
 ||||  
 |-|-|-|  
@@ -54,10 +54,10 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**valeur paramValue**|**nvarchar(256)**|Valeur du paramètre de configuration.|  
 |**descriptive**|**nvarchar(256)**|Description du paramètre de configuration.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La procédure stockée **sysmail_help_configure_sp** répertorie les paramètres de configuration de Database mail actuels pour l’instance.  
   
- Lorsqu’un ** \@parameter_name** est spécifié, mais qu’aucun paramètre de sortie n’est fourni pour ** \@parameter_value**, cette procédure stockée ne produit aucune sortie.  
+ Lorsqu’un ** \@ parameter_name** est spécifié, mais qu’aucun paramètre de sortie n’est fourni pour ** \@ parameter_value**, cette procédure stockée ne produit aucune sortie.  
   
  La procédure stockée **sysmail_help_configure_sp** se trouve dans la base de données **msdb** et appartient au schéma **dbo** . La procédure doit être appelée avec un nom en trois parties si la base de données active n’est pas **msdb**.  
   

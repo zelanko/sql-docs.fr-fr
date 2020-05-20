@@ -50,7 +50,7 @@ Pour mettre à jour les références de projet :
   
 8.  Dans le menu **Projet**, cliquez sur **Décharger le projet**.  
   
-9. Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le **Projet**, puis sélectionnez **Modifier**`project_name` **.csproj**.  
+9. Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le **Projet**, puis sélectionnez **Modifier**`project_name`**.csproj**.  
   
 10. Ajoutez l'instruction Import suivante après l'importation de élément `Microsoft.CSharp.targets` :  
   

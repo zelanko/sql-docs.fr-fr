@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0bc087c6e55418a501459076a1f3f7862112a056
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083740"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808263"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les métadonnées de capture de données modifiées pour les colonnes sources capturées suivies par l'instance de capture spécifiée. La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Retourne des informations sur les métadonnées de capture de données modifiées pour les colonnes sources capturées suivies par l'instance de capture spécifiée. La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sys.sp_cdc_get_captured_columns
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  Nom de l'instance de capture associée à une table source. *capture_instance* est de **type sysname** et ne peut pas avoir la valeur null.  
   
  Pour générer un rapport sur les instances de capture pour la table, exécutez la procédure stockée [sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
@@ -69,7 +69,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|Échelle de la colonne si elle est numérique ; sinon, NULL.|  
 |datetime_precision|**smallint**|Précision de la colonne si elle est basée sur datetime ; sinon, NULL.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez sys. sp_cdc_get_captured_columns pour obtenir des informations sur les colonnes capturées retournées en interrogeant les fonctions de requête d’instance de capture [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) ou [CDC. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>. Les noms de colonnes, ID et position restent constants pendant la vie de l'instance de capture. Seul le type de données de colonne change lorsque le type de données de la colonne source sous-jacente dans la table faisant l'objet d'un suivi change. Les colonnes qui sont ajoutées ou supprimées dans une table source n'ont aucun impact sur les colonnes capturées des instances de capture existantes.  
   
  Utilisez [sys. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) pour obtenir des informations sur les instructions DDL (Data Definition Language) appliquées à une table source. Toute modification DDL qui a modifié la structure d'une colonne source faisant l'objet d'un suivi est retournée dans le jeu de résultats.  

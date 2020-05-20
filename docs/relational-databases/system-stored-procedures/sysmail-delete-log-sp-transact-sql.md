@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a4cfa0178b04a53c3d5ea8419d063d636507a39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1aa837168c5aaff963a0b475596f4e6a4d3ff85f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68019927"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807534"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la procédure stockée **sysmail_delete_log_sp** pour supprimer définitivement des entrées du journal des Database mail. Un argument facultatif vous permet de supprimer uniquement les enregistrements les plus anciens en fournissant une date et une heure. Les événements antérieurs à cet argument sont alors supprimés. Un argument facultatif vous permet de supprimer uniquement les événements d’un certain type, spécifiés comme argument **event_type** .  
   
  La suppression d'entrées dans le journal de la messagerie de base de données n'entraîne pas la suppression d'entrées de messages électroniques dans les tables de la messagerie de base de données. Utilisez [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) pour supprimer le courrier électronique des tables Database mail.  
