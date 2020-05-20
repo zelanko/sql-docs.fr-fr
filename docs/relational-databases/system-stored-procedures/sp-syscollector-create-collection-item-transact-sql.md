@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032667"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810115"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,32 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est de **type int**.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  GUID qui identifie le type de collecteur à utiliser pour cet élément *collector_type_uid* est de type **uniqueidentifier** et n’a pas de valeur par défaut. Pour obtenir une liste de types de collecteurs, interrogez la vue système syscollector_collector_types.  
   
- [ @name = ] '*nom*'  
+ [ @name =] '*nom*'  
  Nom de l'élément de collecte. *Name* est de **type sysname** et ne peut pas être une chaîne vide ou avoir la valeur null.  
   
  le *nom* doit être unique. Pour obtenir une liste de noms d'élément de collecte actuels, interrogez la vue système syscollector_collection_items.  
   
- [ @frequency = ] *fréquence*  
+ [ @frequency =] *fréquence*  
  Permet de spécifier (en secondes) la fréquence de collecte des données par cet élément de collecte. *Frequency* est de **type int**, avec 5 comme valeur par défaut. La valeur minimale pouvant être spécifiée est de 5 secondes.  
   
  Si le jeu d'éléments de collecte est défini en mode non mis en cache, la fréquence est ignorée car ce mode provoque l'exécution de la collecte et du téléchargement des données selon la planification spécifiée pour le jeu d'éléments de collecte. Pour afficher le mode de collecte du jeu d’ensembles de collectes, interrogez la vue système [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
- [ @parameters = ] '*Parameters*'  
+ [ @parameters =] '*paramètres*'  
  Les paramètres d'entrée pour le type de collecteur. *Parameters* est de type **XML** avec NULL comme valeur par défaut. Le schéma des *paramètres* doit correspondre au schéma des paramètres du type de collecteur.  
   
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Identificateur unique qui identifie l'élément du jeu d'éléments de collecte. *collection_item_id* est de **type int** et a une sortie.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  sp_syscollector_create_collection_item doit être exécuté dans le contexte de la base de données système msdb.  
   
  Le jeu d'éléments de collecte auquel l'élément de collecte est ajouté doit être arrêté avant que ce dernier ne soit créé. Il est impossible d'ajouter des éléments de collecte à des jeux d'éléments de collecte système.  

@@ -7,20 +7,20 @@ ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90531889d3e510d342ff39abdf069f75f3c371aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b96946a45affa82d4d2e0512b40417e69f3c664
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401713"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811388"
 ---
 # <a name="sysdm_pdw_component_health_active_alerts-transact-sql"></a>sys. dm_pdw_component_health_active_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Stocke les alertes [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] actives sur les composants.  
+  Stocke les alertes actives sur les [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] composants.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
@@ -33,7 +33,7 @@ ms.locfileid: "74401713"
 |previous_value|**nvarchar(255)**|Utilisé lorsque l’alerte est de type StatusChange. Il s’agit de l’état du composant précédent. La valeur est NULL pour les alertes de type Threshold. Pour obtenir la liste des types d’alerte, consultez [sys. pdw_health_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) .|NULL|  
 |create_time|**datetime**|Heure et date de génération de l’alerte.|NOT NULL|  
   
- Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez « valeurs minimales [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]et maximales » dans le.  
+ Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez « valeurs minimales et maximales » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

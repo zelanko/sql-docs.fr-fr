@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982116"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810517"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
-|**component_type**|**sysname**|Indique si la ligne contient des informations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le composant au niveau de l’instance ou pour un groupe de disponibilité Always On :<br /><br /> instance<br /><br /> Always On : AvailabilityGroup|  
+|**component_type**|**sysname**|Indique si la ligne contient des informations pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composant au niveau de l’instance ou pour un groupe de disponibilité Always On :<br /><br /> instance<br /><br /> Always On : AvailabilityGroup|  
 |**component_name**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> événements<br /><br /> *\<nom du groupe de disponibilité>*|  
 |**state**|**int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : Inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : AVERTISSEMENT<br /><br /> 3 : erreur|  
@@ -77,14 +77,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **événements**: collecte des données et des surfaces via la procédure stockée sur les erreurs et événements d’intérêt enregistrés par le serveur, y compris des détails sur les exceptions de mémoire tampon en anneau, les événements de mémoire tampon en anneau sur le répartiteur de mémoire, la mémoire insuffisante, le moniteur du planificateur, le pool de mémoires tampons, les verrouillages spinlock et la connectivité. Les événements afficheront toujours 0 comme état.  
   
--   **nom du groupe de disponibilité> : collecte les données pour le groupe de disponibilité spécifié (si component_type = "Always On : AvailabilityGroup"). \< **  
+-   ** \< nom du groupe de disponibilité>**: collecte les données pour le groupe de disponibilité spécifié (si component_type = "Always On : AvailabilityGroup").  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Du point de vue d'un échec, les composant system, resource et query_processing seront exploités pour la détection de pannes, tandis que les composants io_subsystem et events le seront uniquement à des fins de diagnostics.  
   
 Le tableau suivant mappe les composants à leurs états d'intégrité associés.  
   
-|Components|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
+|Composants|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |système|x|x|x||  
 |resource|x|x|x||  

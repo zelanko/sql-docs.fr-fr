@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090675"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811273"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne une ligne pour chaque entité définie par l’utilisateur référencée par nom dans la définition de l’entité de référence spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une dépendance entre deux entités est créée lorsqu’une entité définie par l’utilisateur, appelée *entité référencée*, apparaît par nom dans une expression SQL rendue persistante d’une autre entité définie par l’utilisateur, appelée *entité de référence*. Par exemple, si une procédure stockée est l'entité de référence spécifiée, cette fonction retourne toutes les entités définies par l'utilisateur qui sont référencées dans la procédure stockée, telles que les tables, vues, types définis par l'utilisateur ou autres procédures stockées.  
+Retourne une ligne pour chaque entité définie par l’utilisateur référencée par nom dans la définition de l’entité de référence spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Une dépendance entre deux entités est créée lorsqu’une entité définie par l’utilisateur, appelée *entité référencée*, apparaît par nom dans une expression SQL rendue persistante d’une autre entité définie par l’utilisateur, appelée *entité de référence*. Par exemple, si une procédure stockée est l'entité de référence spécifiée, cette fonction retourne toutes les entités définies par l'utilisateur qui sont référencées dans la procédure stockée, telles que les tables, vues, types définis par l'utilisateur ou autres procédures stockées.  
   
  Vous pouvez utiliser cette fonction de gestion dynamique pour établir des rapports sur les types suivants d'entités référencées par l'entité de référence indiquée :  
   
@@ -114,23 +114,23 @@ sys.dm_sql_referenced_entities (
   
  Retourne l'erreur 2020 lorsque des dépendances de colonnes ne peuvent pas être résolues. Cette erreur n'empêche pas la requête de retourner des dépendances au niveau objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction peut être exécutée dans le contexte de n'importe quelle base de données pour retourner les entités qui référencent un déclencheur DDL au niveau du serveur.  
   
  Le tableau suivant répertorie les types des entités pour lesquelles les informations de dépendance sont créées et gérées. Les informations de dépendance ne sont pas créées ni gérées pour les règles, les valeurs par défaut, les tables temporaires, les procédures stockées temporaires ou les objets système.  
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table de charge de travail|Oui*|Oui|  
-|Affichage|Oui|Oui|  
-|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
+|Table|Oui*|Yes|  
+|Affichage|Yes|Yes|  
+|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
 |Procédure stockée CLR|Non|Oui|  
-|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
+|Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Yes|Yes|  
 |Fonction CLR définie par l'utilisateur|Non|Oui|  
 |Déclencheur CLR (DML et DDL)|Non|Non|  
-|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
-|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
-|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
+|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
+|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|No|  
 |Procédures stockées étendues|Non|Oui|  
 |File d'attente|Non|Oui|  
 |Synonyme|Non|Oui|  
@@ -139,7 +139,7 @@ sys.dm_sql_referenced_entities (
 |Fonction de partition|Non|Oui|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait [!INCLUDE[tsql](../../includes/tsql-md.md)] référence à un module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
+ \*Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
   
  ** Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu'entité de référence ou référencée.  
   
@@ -268,7 +268,7 @@ The dependencies reported for entity "dbo.Proc1" might not include
 
 Cet exemple E suppose que l’exemple D a été exécuté. L’exemple E indique que les dépendances sont gérées dynamiquement. L’exemple effectue les opérations suivantes :
 
-1. Recrée `Table1`, qui a été supprimée dans l’exemple D.
+1. Recrée `Table1` , qui a été supprimée dans l’exemple D.
 2. Exécuter ensuite `sys.dm_sql_referenced_entities` est réexécutée avec la procédure stockée spécifiée comme entité de référence.
 
 Le jeu de résultats montre que les deux tables et leurs colonnes respectives définies dans la procédure stockée sont retournées. En outre, la colonne `is_all_columns_found` retourne 1 pour tous les objets et colonnes.
@@ -304,7 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Obtenir l'utilisation de l'objet ou de la colonne  
- L'exemple suivant permet d'obtenir les dépendances d'objet et de colonne de la procédure stockée `HumanResources.uspUpdateEmployeePersonalInfo`. Cette procédure met à jour les colonnes `NationalIDNumber`, `BirthDate,``MaritalStatus`et `Gender` de la `Employee` table en fonction d’une valeur `BusinessEntityID` spécifiée. Une autre procédure stockée, `upsLogError` est définie dans une tentative... CATCH pour capturer les erreurs d’exécution. Les colonnes `is_selected`, `is_updated` et `is_select_all` retournent des informations sur la façon dont ces objets et colonnes sont utilisés dans l'objet de référence. La table et les colonnes qui sont modifiées sont indiquées par un 1 dans la colonne is_updated. Seule la colonne `BusinessEntityID` est sélectionnée et la procédure stockée `uspLogError` n'est ni sélectionnée ni modifiée.  
+ L'exemple suivant permet d'obtenir les dépendances d'objet et de colonne de la procédure stockée `HumanResources.uspUpdateEmployeePersonalInfo`. Cette procédure met à jour les colonnes `NationalIDNumber` , `BirthDate,``MaritalStatus` et `Gender` de la `Employee` table en fonction d’une `BusinessEntityID` valeur spécifiée. Une autre procédure stockée, `upsLogError` est définie dans une tentative... CATCH pour capturer les erreurs d’exécution. Les colonnes `is_selected`, `is_updated` et `is_select_all` retournent des informations sur la façon dont ces objets et colonnes sont utilisés dans l'objet de référence. La table et les colonnes qui sont modifiées sont indiquées par un 1 dans la colonne is_updated. Seule la colonne `BusinessEntityID` est sélectionnée et la procédure stockée `uspLogError` n'est ni sélectionnée ni modifiée.  
 
 ```sql  
 USE AdventureWorks2012;

@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770977"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810619"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est **%** de **type sysname**, avec la valeur par défaut, qui retourne des informations sur tous les travaux d’instantané de données filtrées qui correspondent aux *dynamic_snapshot_jobid*et *dynamic_snapshot_jobname*spécifiés pour toutes les publications.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les travaux d’instantané de données filtrées qui correspondent aux *dynamic_snapshot_jobid*et *dynamic_snapshot_jobname*spécifiés pour toutes les publications.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nom d’un travail d’instantané de données filtrées. *dynamic_snapshot_jobname*est de **%** **type sysname**, avec', par défaut, qui retourne toutes les tâches dynamiques pour une publication avec le *dynamic_snapshot_jobid*spécifié. Si aucun nom de travail n'est défini explicitement lors de la création du travail, le nom du travail a le format suivant :  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nom d’un travail d’instantané de données filtrées. *dynamic_snapshot_jobname*est de **type sysname**, avec **%** ', par défaut, qui retourne toutes les tâches dynamiques pour une publication avec le *dynamic_snapshot_jobid*spécifié. Si aucun nom de travail n'est défini explicitement lors de la création du travail, le nom du travail a le format suivant :  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -79,7 +79,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_helpdynamicsnapshot_job** est utilisé dans la réplication de fusion.  
   
  Si toutes les valeurs par défaut des paramètres sont utilisées, les informations sur tous les travaux d'instantané de données partitionnées pour l'ensemble de la base de données de publication sont renvoyées.  
