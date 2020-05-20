@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d678b5643c4288c07ff7576bfced5cd9f0655d1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139921"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817799"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,22 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @table_server= ] '*table_server*'  
+ [ @table_server =] '*table_server*'  
  Nom du serveur lié exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lequel les informations de table sont demandées. *table_server* est de **type sysname**, sans valeur par défaut.  
   
- [ @table_name= ] '*table_name*'  
+ [ @table_name =] '*table_name*'  
  Nom de la table distante pour laquelle les informations d'index sont demandées. *table_name* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur de cet argument est NULL, toutes les tables de la base de données spécifiée sont retournées.  
   
- [ @table_schema= ] '*TABLE_SCHEMA*'  
+ [ @table_schema =] '*TABLE_SCHEMA*'  
  Spécifie le schéma de la table. Dans l'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ceci correspond au propriétaire de la table. *TABLE_SCHEMA* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [ @table_catalog= ] '*table_db*'  
+ [ @table_catalog =] '*table_db*'  
  Nom de la base de données dans laquelle *table_name* réside. *table_db* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, *table_db* est défini par défaut sur **Master**.  
   
- [ @index_name= ] '*index_name*'  
+ [ @index_name =] '*index_name*'  
  Nom de l'index pour lequel les informations sont demandées. *index* est de **type sysname**, avec NULL comme valeur par défaut.  
   
- [ @is_unique= ] '*is_unique*'  
+ [ @is_unique =] '*is_unique*'  
  Type d'index pour lequel les informations sont demandées. *is_unique* est de type **bit**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
@@ -76,7 +76,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_SCHEM|**sysname**|Schéma pour la table.|  
 |TABLE_NAME|**sysname**|Nom de la table distante.|  
 |NON_UNIQUE|**smallint**|Indique si l'index est unique ou non :<br /><br /> 0 = Unique<br /><br /> 1 = Non unique|  
-|INDEX_QUALIFIER|**sysname**|Nom du propriétaire de l'index. Certains produits SGBD acceptent que des utilisateurs autres que le propriétaire de la table créent des index. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne est toujours identique à **table_name**.|  
+|INDEX_QUALIFIER|**sysname**|Nom du propriétaire de l'index. Certains produits SGBD acceptent que des utilisateurs autres que le propriétaire de la table créent des index. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne est toujours identique à **table_name**.|  
 |INDEX_NAME|**sysname**|Nom de l'index.|  
 |TYPE|**smallint**|Type de l'index :<br /><br /> 0 = Statistiques pour une table<br /><br /> 1 = Clustered<br /><br /> 2 = Haché<br /><br /> 3 = autre|  
 |ORDINAL_POSITION|**int**|Numéro d'ordre de la colonne dans l'index. La première colonne dans l'index est 1. Cette colonne renvoie toujours une valeur.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122450"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818184"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nom de connexion.|  
 |**SID**|**varbinary (85)**|ID de sécurité de la connexion (SID).|  
-|**DefDBName**|**sysname**|Base de données par défaut utilisée par **LoginName** lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connexion à une instance de.|  
+|**DefDBName**|**sysname**|Base de données par défaut utilisée par **LoginName** lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|Langue par défaut utilisée par **LoginName**.|  
 |**Auser**|**Char (5)**|Oui = **LoginName** a un nom d’utilisateur associé dans une base de données.<br /><br /> Non = **LoginName** n’a pas de nom d’utilisateur associé.|  
 |**ARemote**|**Char (7)**|Oui = **LoginName** a une connexion distante associée.<br /><br /> Non = **LoginName** n’a pas de connexion associée.|  
@@ -61,11 +61,11 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nom de connexion.|  
-|**@**|**sysname**|Base de données par défaut utilisée par **LoginName** lors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connexion à une instance de.|  
+|**@**|**sysname**|Base de données par défaut utilisée par **LoginName** lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Nom d’utilisateur**|**sysname**|Compte d’utilisateur auquel **LoginName** est mappé dans **dbname**et les rôles dont **LoginName** est membre dans **dbname**.|  
 |**UserOrAlias**|**Char (8)**|MemberOf = **username** est un rôle.<br /><br /> User = **username** est un compte d’utilisateur.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Avant de supprimer une connexion, utilisez **sp_helplogins** pour identifier les comptes d’utilisateur mappés à la connexion.  
   
 ## <a name="permissions"></a>Autorisations  

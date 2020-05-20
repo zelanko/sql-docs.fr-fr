@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c9e0a996728c6bf0b352afc9615808773eefec0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122459"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818369"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="arguments"></a>Arguments  
 `[ @rmtsrvname = ] 'rmtsrvname'`Nom du serveur lié auquel s’applique le mappage de connexion. *rmtsrvname* est de **type sysname**, avec NULL comme valeur par défaut. Si cet argument a la valeur NULL, tous les mappages de connexions précisés sur les serveurs liés définis sur l'ordinateur local exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont renvoyés.  
   
-`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nom de connexion sur le serveur local qui a un mappage au serveur lié *rmtsrvname*. *LocalLogin* est de **type sysname**, avec NULL comme valeur par défaut. NULL spécifie que tous les mappages de connexion définis sur *rmtsrvname* sont retournés. Si la valeur n’est pas NULL, un mappage de *LocalLogin* à *rmtsrvname* doit déjà exister. la connexion *locale* peut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] être une connexion ou un utilisateur Windows. L'utilisateur Windows doit avoir une autorisation d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directe ou par son appartenance à un groupe Windows qui possède une autorisation d'accès.  
+`[ @locallogin = ] 'locallogin'`Nom de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion sur le serveur local qui a un mappage au serveur lié *rmtsrvname*. *LocalLogin* est de **type sysname**, avec NULL comme valeur par défaut. NULL spécifie que tous les mappages de connexion définis sur *rmtsrvname* sont retournés. Si la valeur n’est pas NULL, un mappage de *LocalLogin* à *rmtsrvname* doit déjà exister. la connexion *locale* peut être une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur Windows. L'utilisateur Windows doit avoir une autorisation d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directe ou par son appartenance à un groupe Windows qui possède une autorisation d'accès.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -56,7 +56,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Is Self Mapping**|**smallint**|0 = la **connexion locale** est mappée à **session à distance** lors de la connexion au **serveur lié**.<br /><br /> 1 = la **connexion locale** est mappée à la même connexion et au même mot de passe lors de la connexion au **serveur lié**.|  
 |**Remote Login**|**sysname**|Nom de connexion sur le **LinkedServer** mappé à **LocalLogin** quand **IsSelfMapping** est égal à 0. Si **IsSelfMapping** a la valeur 1, **RemoteLogin** a la valeur null.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Avant de supprimer les mappages de connexion, utilisez **sp_helplinkedsrvlogin** pour déterminer les serveurs liés qui sont impliqués.  
   
 ## <a name="permissions"></a>Autorisations  

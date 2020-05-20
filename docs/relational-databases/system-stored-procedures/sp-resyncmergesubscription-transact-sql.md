@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a20fd73874ddb93af5224c3ce6c86383c0e15ace
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041033"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816837"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **sp_resyncmergesubscription** est utilisé dans la réplication de fusion.  
   
  La valeur **0** pour le paramètre *resync_type* , qui réapplique toutes les modifications depuis l’instantané initial, peut nécessiter de nombreuses ressources, mais peut-être beaucoup moins qu’une réinitialisation complète. Par exemple, si l'instantané initial a été fourni un mois auparavant, cette valeur provoque la réapplication des données du mois écoulé. Si l'instantané contient 1 gigaoctet (Go) de données et que le nombre de modifications depuis le mois dernier correspond à 2 mégaoctets (Mo) de données, il est plus efficace de réappliquer les données que de réappliquer l'ensemble de l'instantané de 1 Go.  

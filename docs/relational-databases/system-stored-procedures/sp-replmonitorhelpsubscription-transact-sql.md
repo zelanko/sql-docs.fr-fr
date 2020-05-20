@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3eaaeb7715086bf5b411a016239bb24d147fcda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68764353"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817315"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -83,13 +83,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**statut**|**int**|Examine l'état de tous les agents de réplication associés à la publication, puis retourne l'état le plus élevé dans l'ordre suivant :<br /><br /> **6** = échec<br /><br /> **5** = nouvelle tentative<br /><br /> **2** = arrêté<br /><br /> **4** = inactif<br /><br /> **3** = en cours<br /><br /> **1** = démarré|  
-|**warning**|**int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration-un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **8** = mergefastrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
+|**tres**|**int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration-un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **8** = mergefastrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**subscriber_db**|**sysname**|Nom de la base de données utilisée pour l'abonnement.|  
 |**publisher_db**|**sysname**|Nom de la base de données de publication.|  
 |**édition**|**sysname**|Nom d'une publication.|  
 |**publication_type**|**int**|Type de publication, qui peut prendre l’une des valeurs suivantes :<br /><br /> **0** = publication transactionnelle<br /><br /> **1** = publication d’instantané<br /><br /> **2** = publication de fusion|  
-|**sous-type**|**int**|Type d'abonnement, qui peut prendre l'une des valeurs suivantes :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
+|**subtype**|**int**|Type d'abonnement, qui peut prendre l'une des valeurs suivantes :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
 |**latence**|**int**|Latence maximale, en secondes, des modifications de données propagées par l'Agent de lecture du journal ou l'Agent de distribution pour une publication transactionnelle.|  
 |**latencythreshold**|**int**|Latence maximale de la publication transactionnelle au-delà de laquelle un avertissement est déclenché.|  
 |**agentnotrunning**|**int**|Durée, en heures, pendant laquelle l'Agent n'a pas été exécuté.|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_releaseapplock
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ad6ca284f99a777b8909d2f96ea68ff83c9f467
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075632"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817988"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @Resource= ] '*resource_name*'  
+ [ @Resource =] '*resource_name*'  
  Nom de ressource de verrou spécifié par l'application cliente. L'application doit veiller à ce que la ressource soit unique. Le nom spécifié est haché en interne en une valeur qui peut être stockée dans le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* est de type **nvarchar (255)** et n’a pas de valeur par défaut. *resource_name* est comparé en binaire, respecte donc la casse, quels que soient les paramètres de classement de la base de données actuelle.  
   
- [ @LockOwner= ] '*lock_owner*'  
+ [ @LockOwner =] '*lock_owner*'  
  Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque la valeur de *lock_owner* est **transaction**, par défaut ou explicitement spécifiée, sp_getapplock doit être exécutée à partir d’une transaction.  
   
- [ @DbPrincipal= ] '*database_principal*'  
+ [ @DbPrincipal =] '*database_principal*'  
  Utilisateur, rôle ou rôle d'application qui dispose d'autorisations sur un objet d'une base de données. L’appelant de la fonction doit être membre du rôle de base de données fixe *database_principal*, dbo ou db_owner pour pouvoir appeler la fonction avec succès. La valeur par défaut est public.  
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -60,7 +60,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 |0|Le verrou a été libéré avec succès.|  
 |-999|Indique la validation de paramètre ou une autre erreur d'appel.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si une application utilise plusieurs fois sp_getapplock pour appeler la même ressource de verrou, sp_releaseapplock doit être appelée autant de fois pour libérer le verrou.  
   
  Lorsque le serveur s'interrompt pour une raison quelconque, les verrous sont libérés.  

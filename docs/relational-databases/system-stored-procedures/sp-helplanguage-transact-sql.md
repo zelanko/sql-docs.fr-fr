@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_helplanguage
 - default languages
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122511"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818469"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**DATEFIRST**|**tinyint**|Premier jour de la semaine : 1 pour lundi, 2 pour mardi, etc., jusqu'à 7 pour dimanche.|  
 |**installation**|**int**|Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la dernière mise à niveau pour cette langue.|  
 |**name**|**sysname**|Nom de la langue.|  
-|**affecté**|**sysname**|Nom de remplacement de la langue.|  
+|**alias**|**sysname**|Nom de remplacement de la langue.|  
 |**months**|**nvarchar(372)**|Noms des mois.|  
 |**mois courts**|**nvarchar(132)**|Abréviations des noms des mois.|  
-|**days**|**nvarchar(217)**|Noms des jours.|  
+|**précédant**|**nvarchar(217)**|Noms des jours.|  
 |**lcid**|**int**|ID de paramètres régionaux Windows pour la langue.|  
 |**msglangid**|**smallint**|ID du groupe de messages du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   

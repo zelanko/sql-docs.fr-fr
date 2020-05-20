@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e75d1d43c37d0e758b02025df4f601c87f44f2e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104401"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816672"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Définit les noms réseau dans **sys. Servers** sur leurs noms d’ordinateurs réseau réels pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instances distantes de. Cette procédure peut être utilisée pour activer l'exécution d'appels de procédures stockées distantes à des ordinateurs dont le nom réseau contient des identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non valides.  
+  Définit les noms réseau dans **sys. Servers** sur leurs noms d’ordinateurs réseau réels pour les instances distantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette procédure peut être utilisée pour activer l'exécution d'appels de procédures stockées distantes à des ordinateurs dont le nom réseau contient des identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non valides.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *server* ** @server = '** serveur **'**  
+ ** @server = '** *serveur* **'**  
  Nom du serveur distant tel qu'il est référencé dans la syntaxe RPC codée par l'utilisateur. Une seule ligne dans **sys. Servers** doit déjà exister pour utiliser ce *serveur*. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
- *network_name* ** @netname = '** network_name **'**  
+ ** @netname = '** *network_name* **'**  
  Nom réseau de l'ordinateur auquel les appels de procédures stockées distantes sont effectuées. *network_name* est de **type sysname**, sans valeur par défaut.  
   
  Ce nom doit correspondre au nom d'ordinateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et peut comprendre des caractères non autorisés dans les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
