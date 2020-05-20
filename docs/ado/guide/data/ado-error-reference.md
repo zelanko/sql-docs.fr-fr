@@ -12,14 +12,14 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926246"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761385"
 ---
 # <a name="ado-errors"></a>Erreurs ADO
 La constante **ErrorValueEnum** décrit les valeurs d’erreur ADO. Pour obtenir la liste complète de ces constantes énumérées, y compris les valeurs, consultez l' [annexe B : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Cette section examine certaines des erreurs les plus intéressantes et explique certaines situations spécifiques qui peuvent les déclencher, ou des solutions pour résoudre le problème. La constante **ErrorValueEnum** et le nombre décimal positif bref sont répertoriés.
@@ -63,7 +63,7 @@ La constante **ErrorValueEnum** décrit les valeurs d’erreur ADO. Pour obtenir
 |**3724**|**adErrCantConvertvalue**|La valeur des données ne peut pas être convertie pour des raisons autres que l’incompatibilité de signe ou le dépassement de données. Par exemple, la conversion aurait des données tronquées.|
 |**3725**|**adErrCantCreate**|Impossible de définir ou de récupérer la valeur des données, car le type de données du champ est inconnu ou le fournisseur ne dispose pas de ressources suffisantes pour effectuer l’opération.|
 |**3726**|**adErrColumnNotOnThisRow**|L’enregistrement ne contient pas ce champ. Un nom de champ incorrect a été spécifié ou un champ qui n’est pas dans la collection de **champs** de l’enregistrement en cours a été référencé.|
-|**3727**|**adErrURLDoesNotExist**|L’URL source ou le parent de l’URL de destination n’existe pas. Il y a une erreur typographique dans l’URL source ou de destination. Vous avez peut `https://mysite/photo/myphoto.jpg` -être besoin à la `https://mysite/photos/myphoto.jpg` place de. L’erreur typographique dans l’URL parente (dans ce cas, *photo* au lieu de *photos*) a provoqué l’erreur.|
+|**3727**|**adErrURLDoesNotExist**|L’URL source ou le parent de l’URL de destination n’existe pas. Il y a une erreur typographique dans l’URL source ou de destination. Vous avez peut-être besoin à la `https://mysite/photo/myphoto.jpg` `https://mysite/photos/myphoto.jpg` place de. L’erreur typographique dans l’URL parente (dans ce cas, *photo* au lieu de *photos*) a provoqué l’erreur.|
 |**3728**|**adErrTreePermissionDenied**|Les autorisations sont insuffisantes pour accéder à l’arborescence ou à la sous-arborescence. L’utilisateur nommé dans la chaîne de connexion ne dispose pas des autorisations appropriées.|
 |**3729**|**adErrInvalidURL**|L’URL contient des caractères non valides. Assurez-vous que l’URL est correctement tapée. L’URL suit le schéma inscrit au fournisseur actuel (par exemple, le fournisseur de publication Internet est inscrit pour http).|
 |**3730**|**adErrResourceLocked**|L’objet représenté par l’URL spécifiée est verrouillé par un ou plusieurs autres processus. Attendez que le processus soit terminé, puis recommencez l’opération. L’objet auquel vous essayez d’accéder a été verrouillé par un autre utilisateur ou par un autre processus dans votre application. Cela peut se produire dans un environnement multi-utilisateur.|

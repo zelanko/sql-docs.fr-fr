@@ -11,14 +11,14 @@ helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2eacfa8122589dbf594040f3279d466ef9c113cd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926356"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761487"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accès aux lignes d’un jeu d’enregistrements hiérarchique (exemple)
 L’exemple suivant montre les étapes nécessaires pour accéder aux lignes d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)hiérarchique :
@@ -33,7 +33,7 @@ L’exemple suivant montre les étapes nécessaires pour accéder aux lignes d�
 
  La propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) a la valeur **false** à des fins d’illustration, afin que vous puissiez voir le chapitre changer explicitement dans chaque itération de la boucle externe. Pour améliorer l’efficacité de l’exemple de code, vous pouvez déplacer l’affectation à l’étape 3 avant la première ligne de l’étape 2, afin que l’assignation ne soit exécutée qu’une seule fois. Affectez ensuite la valeur **true**à la propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) , afin que *rstTitleAuthor* passe implicitement et automatiquement au chapitre correspondant chaque fois que *RST* passe à une nouvelle ligne.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```
 Sub datashape()
@@ -67,5 +67,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
  [Vue d’ensemble](../../../ado/guide/data/data-shaping-overview.md) de la mise en forme des données collection de champs d' [objets de champ](../../../ado/reference/ado-api/field-object.md) [(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service pour OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [fournisseurs requis pour](../../../ado/guide/data/required-providers-for-data-shaping.md) la mise en forme des données commande de la forme [Ajouter](../../../ado/guide/data/shape-append-clause.md) une clause [dans](../../../ado/guide/data/shape-commands-in-general.md) la [clause COMPUTE Shape](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic pour applications Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md)

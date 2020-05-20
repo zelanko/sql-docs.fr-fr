@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926422"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761527"
 ---
 # <a name="visual-c-ado-programming"></a>Programmation ADO Visual C++
 Les informations de référence sur l’API ADO décrivent les fonctionnalités de l’interface de programmation d’applications (API) ADO à l’aide d’une syntaxe similaire à celle de Microsoft Visual Basic. Bien que le public visé soit l’un de tous les utilisateurs, les programmeurs ADO utilisent différents langages, tels que Visual Basic, Visual C++ (avec et sans la directive **#import** ) et Visual J++ (avec le package de classe ADO/WFC).  
@@ -64,7 +64,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- Le compilateur génère l’appel de_propriété_ **obtenir**_-_, **put**ou **PutRef**approprié en fonction de la syntaxe de remplacement déclarée et de la lecture ou de l’écriture de la propriété.  
+ Le compilateur génère l’appel de **Get** _-_ _propriété_ obtenir, **put**ou **PutRef**approprié en fonction de la syntaxe de remplacement déclarée et de la lecture ou de l’écriture de la propriété.  
   
  La directive de compilateur **__declspec (Property...)** peut uniquement déclarer une syntaxe d' **extraction** **, d'** extraction ou d' **extraction** et de **placement** pour une fonction. Les opérations en lecture seule ont uniquement une déclaration d' **extraction** ; les opérations en écriture seule ont uniquement une déclaration **put** . les opérations qui sont à la fois en lecture et en écriture ont **des déclarations d’extraction et d'** **extraction** .  
   
@@ -84,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- Par exemple, affectez une valeur à un champ d’un objet **Recordset** , nommé **_RS_**, dérivé de la table **Authors** de la base de données **pubs** . Utilisez la propriété **Item ()** pour accéder au troisième **champ** de la collection de **champs** de l’objet **Recordset** (les collections sont indexées à partir de zéro ; Supposons que le troisième champ est nommé au- **_\_fname_**). Appelez ensuite la méthode **value ()** sur l’objet de **champ** pour assigner une valeur de chaîne.  
+ Par exemple, affectez une valeur à un champ d’un objet **Recordset** , nommé **_RS_**, dérivé de la table **Authors** de la base de données **pubs** . Utilisez la propriété **Item ()** pour accéder au troisième **champ** de la collection de **champs** de l’objet **Recordset** (les collections sont indexées à partir de zéro ; Supposons que le troisième champ est nommé au- **_ \_ fname_**). Appelez ensuite la méthode **value ()** sur l’objet de **champ** pour assigner une valeur de chaîne.  
   
  Cela peut être exprimé en Visual Basic des quatre façons suivantes (les deux dernières formes sont uniques à Visual Basic ; les autres langages n’ont pas d’équivalents) :  
   
@@ -150,16 +150,16 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  L' `ActiveConnection` argument prend une référence à un **_variant_t**, que vous pouvez coder comme une chaîne de connexion ou un pointeur vers un objet de **connexion** ouvert.  
   
- La **_variant_t** correcte est construite implicitement si vous transmettez une chaîne telle que «`DSN=pubs;uid=MyUserName;pwd=MyPassword;`» ou un pointeur tel que «`(IDispatch *) pConn`».  
+ La **_variant_t** correcte est construite implicitement si vous transmettez une chaîne telle que « `DSN=pubs;uid=MyUserName;pwd=MyPassword;` » ou un pointeur tel que « `(IDispatch *) pConn` ».  
   
 > [!NOTE]
 >  Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = Yes** ou **Integrated Security = SSPI** à la place des informations d’ID d’utilisateur et de mot de passe dans la chaîne de connexion.  
   
- Vous pouvez également coder explicitement un **_variant_t** contenant un pointeur tel que «`_variant_t((IDispatch *) pConn, true)`». Le cast, `(IDispatch *)`, résout l’ambiguïté avec un autre constructeur qui accepte un pointeur vers une interface IUnknown.  
+ Vous pouvez également coder explicitement un **_variant_t** contenant un pointeur tel que « `_variant_t((IDispatch *) pConn, true)` ». Le cast, `(IDispatch *)` , résout l’ambiguïté avec un autre constructeur qui accepte un pointeur vers une interface IUnknown.  
   
  Il s’agit d’un facteur crucial, bien que rarement mentionné, qu’ADO soit une interface IDispatch. Chaque fois qu’un pointeur vers un objet ADO doit être passé en tant que **Variant**, ce pointeur doit être casté en tant que pointeur vers une interface IDispatch.  
   
- Le dernier cas code explicitement le deuxième argument booléen du constructeur avec sa valeur par défaut facultative `true`. Cet argument fait en sorte que le constructeur **Variant** appelle sa méthode **AddRef**(), qui compense l’appel automatique de la méthode **_variant_t :: Release**() par ADO lorsque l’appel de la méthode ou de la propriété ADO est terminé.  
+ Le dernier cas code explicitement le deuxième argument booléen du constructeur avec sa valeur par défaut facultative `true` . Cet argument fait en sorte que le constructeur **Variant** appelle sa méthode **AddRef**(), qui compense l’appel automatique de la méthode **_variant_t :: Release**() par ADO lorsque l’appel de la méthode ou de la propriété ADO est terminé.  
   
 ### <a name="safearray"></a>SafeArray  
  Un **SAFEARRAY** est un type de données structurées qui contient un tableau d’autres types de données. Un **SAFEARRAY** est appelé *Safe* , car il contient des informations sur les limites de chaque dimension de tableau et limite l’accès aux éléments de tableau dans ces limites.  
@@ -187,7 +187,7 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * Record
   
  Les paramètres, *RecordsAffected* et *Parameters*, sont des pointeurs vers un **Variant**. *Parameters* est un paramètre d’entrée qui spécifie l’adresse d’un **Variant** contenant un seul paramètre, ou un tableau de paramètres, qui modifiera la commande en cours d’exécution. *RecordsAffected* est un paramètre de sortie qui spécifie l’adresse d’un **Variant**, où le nombre de lignes affectées par la méthode est retourné.  
   
- Dans la méthode **Execute** de l’objet **Command** , indiquez qu’aucun paramètre n’est spécifié en `&vtMissing` définissant les *paramètres* sur (ce qui est recommandé) ou sur le pointeur null (autrement dit, **null** ou zéro (0)). Si *Parameters* a la valeur du pointeur null, la méthode remplace en interne l’équivalent de **vtMissing**, puis termine l’opération.  
+ Dans la méthode **Execute** de l’objet **Command** , indiquez qu’aucun paramètre n’est spécifié en définissant les *paramètres* sur `&vtMissing` (ce qui est recommandé) ou sur le pointeur null (autrement dit, **null** ou zéro (0)). Si *Parameters* a la valeur du pointeur null, la méthode remplace en interne l’équivalent de **vtMissing**, puis termine l’opération.  
   
  Dans toutes les méthodes, indiquez que le nombre d’enregistrements affectés ne doit pas être retourné en affectant à *RecordsAffected* le pointeur null. Dans ce cas, le pointeur NULL n’est pas tellement un paramètre manquant pour indiquer que la méthode doit ignorer le nombre d’enregistrements affectés.  
   
@@ -200,7 +200,7 @@ pRecordset->NextRecordset(NULL);
 ```
   
 ## <a name="error-handling"></a>Gestion des erreurs  
- Dans COM, la plupart des opérations retournent un code de retour HRESULT qui indique si une fonction s’est terminée avec succès. La directive **#import** génère du code wrapper autour de chaque méthode ou propriété « brute » et vérifie le HRESULT retourné. Si le HRESULT indique un échec, le code wrapper lève une erreur COM en appelant _com_issue_errorex () avec le code de retour HRESULT comme argument. Les objets d’erreur com peuvent être interceptés dans un bloc **try**-**catch** . (Pour des raisons d’efficacité, interceptez une référence à un objet **_com_error** .)  
+ Dans COM, la plupart des opérations retournent un code de retour HRESULT qui indique si une fonction s’est terminée avec succès. La directive **#import** génère du code wrapper autour de chaque méthode ou propriété « brute » et vérifie le HRESULT retourné. Si le HRESULT indique un échec, le code wrapper lève une erreur COM en appelant _com_issue_errorex () avec le code de retour HRESULT comme argument. Les objets d’erreur com peuvent être interceptés dans un bloc **try** - **catch** . (Pour des raisons d’efficacité, interceptez une référence à un objet **_com_error** .)  
   
  N’oubliez pas qu’il s’agit d’erreurs ADO : elles résultent de l’échec de l’opération ADO. Les erreurs retournées par le fournisseur sous-jacent apparaissent en tant qu’objets d' **erreur** dans la collection d' **Erreurs** de l’objet de **connexion** .  
   
@@ -216,7 +216,7 @@ pRecordset->NextRecordset(NULL);
 Dim rst As ADODB.Recordset  
 ```
   
- La clause, "`ADODB.Recordset`", est le ProgID de l’objet **Recordset** tel que défini dans le registre. Une nouvelle instance d’un objet **Record** est déclarée comme suit :  
+ La clause, " `ADODB.Recordset` ", est le ProgID de l’objet **Recordset** tel que défini dans le registre. Une nouvelle instance d’un objet **Record** est déclarée comme suit :  
   
 ```vb
 Dim rst As New ADODB.Recordset  
@@ -261,9 +261,9 @@ rs.CreateInstance(__uuidof(_Recordset));
 rs->Open(...);  
 ```
   
- Notez que dans un cas, l’opérateur`.`« » est utilisé comme si la variable était une instance d’une classe (`rs.CreateInstance`) et dans un autre cas, l’opérateur`->`« » est utilisé comme si la variable était un pointeur vers une interface (`rs->Open`).  
+ Notez que dans un cas, l' `.` opérateur « » est utilisé comme si la variable était une instance d’une classe ( `rs.CreateInstance` ) et dans un autre cas, l' `->` opérateur « » est utilisé comme si la variable était un pointeur vers une interface ( `rs->Open` ).  
   
- Une variable peut être utilisée de deux façons, car l'`->`opérateur «» est surchargé pour permettre à une instance d’une classe de se comporter comme un pointeur vers une interface. Un membre de classe privé de la variable d’instance contient un pointeur vers l’interface **_Recordset** ; l’opérateur`->`«» retourne ce pointeur ; et le pointeur retourné accède aux membres de l’objet **_Recordset** .  
+ Une variable peut être utilisée de deux façons, car l' `->` opérateur «» est surchargé pour permettre à une instance d’une classe de se comporter comme un pointeur vers une interface. Un membre de classe privé de la variable d’instance contient un pointeur vers l’interface **_Recordset** ; l' `->` opérateur «» retourne ce pointeur ; et le pointeur retourné accède aux membres de l’objet **_Recordset** .  
   
 ### <a name="coding-a-missing-parameter---string"></a>Codage d’une chaîne de paramètre manquante  
  Lorsque vous devez coder un opérande de **chaîne** manquant dans Visual Basic, il vous suffit d’omettre l’opérande. Vous devez spécifier l’opérande dans Visual C++. Code un **_bstr_t** qui a une chaîne vide en tant que valeur.  
@@ -344,7 +344,7 @@ End Sub
   
      Le **jeu d’enregistrements** retourné est constitué de plusieurs colonnes, dont un sous-ensemble est constitué des colonnes de contrainte. Les valeurs des colonnes de contrainte pour chaque ligne retournée doivent être les mêmes que les valeurs de contrainte correspondantes.  
   
-4.  Les utilisateurs habitués à **SAFEARRAY** peuvent être surpris de savoir que **SafeArrayDestroy**() n’est pas appelé avant la sortie. En fait, l’appel de **SafeArrayDestroy**() dans ce cas entraîne une exception Runtime. La raison est que le destructeur `vtCriteria` de appelle **VariantClear**() lorsque le **_variant_t** est hors de portée, ce qui libère le **SAFEARRAY**. L’appel de **SafeArrayDestroy**, sans effacer manuellement le **_variant_t**, amène le destructeur à tenter de supprimer un pointeur **SAFEARRAY** non valide.  
+4.  Les utilisateurs habitués à **SAFEARRAY** peuvent être surpris de savoir que **SafeArrayDestroy**() n’est pas appelé avant la sortie. En fait, l’appel de **SafeArrayDestroy**() dans ce cas entraîne une exception Runtime. La raison est que le destructeur de `vtCriteria` appelle **VariantClear**() lorsque le **_variant_t** est hors de portée, ce qui libère le **SAFEARRAY**. L’appel de **SafeArrayDestroy**, sans effacer manuellement le **_variant_t**, amène le destructeur à tenter de supprimer un pointeur **SAFEARRAY** non valide.  
   
      Si **SafeArrayDestroy** est appelé, le code ressemble à ceci :  
   
@@ -433,14 +433,14 @@ cn.Close
 End Sub  
 ```
   
- Cet exemple de Visual C++ illustre la_propriété_ **obten**/**put**/**PutRef**.  
+ Cet exemple de Visual C++ illustre **Get**la propriété obten / **put** / **PutRef**_Property_.  
   
 #### <a name="notes"></a>Notes  
  Les remarques suivantes correspondent aux sections commentées dans l’exemple de code.  
   
 1.  Cet exemple utilise deux formes d’un argument de chaîne manquant : une constante explicite, **strMissing**et une chaîne que le compilateur utilisera pour créer un **_bstr_t** temporaire qui existera pour la portée de la méthode **ouverte** .  
   
-2.  Il n’est pas nécessaire d’effectuer un cast `rs->PutRefActiveConnection(cn)` de `(IDispatch *)` l’opérande de en, car le type `(IDispatch *)`de l’opérande est déjà.  
+2.  Il n’est pas nécessaire d’effectuer un cast de l’opérande de `rs->PutRefActiveConnection(cn)` en `(IDispatch *)` , car le type de l’opérande est déjà `(IDispatch *)` .  
   
 ```cpp
 // Visual_CPP_ado_prog_2.cpp  
@@ -557,11 +557,11 @@ void main() {
 #### <a name="notes"></a>Notes  
  Les remarques suivantes correspondent aux sections commentées dans l’exemple de code.  
   
-1.  Spécifiez un objet de **connexion** ouvert dans une **variante**codée explicitement. Effectuez un cast de celui \*-ci avec (IDispatch) pour que le constructeur correct soit appelé. De même, définissez explicitement le deuxième paramètre **_variant_t** sur la valeur par défaut **true**, afin que le nombre de références d’objet soit correct lorsque l’opération **Recordset :: Open** se termine.  
+1.  Spécifiez un objet de **connexion** ouvert dans une **variante**codée explicitement. Effectuez un cast de celui-ci avec (IDispatch \* ) pour que le constructeur correct soit appelé. De même, définissez explicitement le deuxième paramètre **_variant_t** sur la valeur par défaut **true**, afin que le nombre de références d’objet soit correct lorsque l’opération **Recordset :: Open** se termine.  
   
-2.  L’expression, `(_bstr_t)`, n’est pas un cast, mais un opérateur **_variant_t** qui extrait une chaîne **_Bstr_t** à partir de la **variante** retournée par **value**.  
+2.  L’expression, `(_bstr_t)` , n’est pas un cast, mais un opérateur **_variant_t** qui extrait une chaîne **_bstr_t** à partir de la **variante** retournée par **value**.  
   
- L’expression, `(char*)`, n’est pas un cast, mais un opérateur **_bstr_t** qui extrait un pointeur vers la chaîne encapsulée dans un objet **_bstr_t** .  
+ L’expression, `(char*)` , n’est pas un cast, mais un opérateur **_bstr_t** qui extrait un pointeur vers la chaîne encapsulée dans un objet **_bstr_t** .  
   
  Cette section de code illustre certains des comportements utiles des opérateurs **_variant_t** et **_bstr_t** .  
   

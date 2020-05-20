@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926060"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761295"
 ---
 # <a name="ado-fundamentals"></a>Concepts de base d’ADO
 ADO offre aux développeurs un modèle d’objet logique puissant pour accéder, modifier et mettre à jour les données à partir d’un large éventail de sources de données via des interfaces système OLE DB. L’utilisation la plus courante d’ADO est d’interroger une table ou des tables dans une base de données relationnelle, de récupérer et d’afficher les résultats dans une application, et peut-être de permettre aux utilisateurs de créer et d’enregistrer les modifications apportées aux données. Les autres tâches sont les suivantes :  

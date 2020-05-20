@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927015"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761657"
 ---
 # <a name="products-and-technologies-table"></a>Tableau produits et technologies
 Le tableau suivant répertorie les produits, outils et technologies Microsoft présentés dans le Guide du programmeur ADO. Il fournit des liens, dans la mesure du possible, vers des rubriques pertinentes dans le guide.
 
-|Produits ou technologies Microsoft|References|
+|Produits ou technologies Microsoft|Références|
 |-------------------------------------|----------------|
 |Access/Jet|[Utilisation des recordsets](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [Concepts de base d’ADOX](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Fournisseur Microsoft OLE DB pour Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Interfaces de service Active Directory (ADSI)|[Fournisseur Microsoft OLE DB pour le service Microsoft Active Directory](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|

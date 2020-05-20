@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a051329efa32a155cc368d3d01c38b40593b8898
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926450"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761547"
 ---
 # <a name="visual-c-extensions"></a>Extensions de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>Interface IADORecordBinding
@@ -118,9 +118,9 @@ Update(CADORecordBinding *binding)
 |*Mémoire tampon*|Nom de la variable C/C++ dans laquelle le champ du **Recordset** sera stocké.|
 |*Taille*|Taille maximale, en octets, de la *mémoire tampon*. Si *buffer* contient une chaîne de longueur variable, autorisez l’espace pour un zéro de fin.|
 |*État*|Nom d’une variable qui indique si le contenu de la *mémoire tampon* est valide et si la conversion du champ en *type de données* a réussi.<br /><br /> Les deux valeurs les plus importantes pour cette variable sont **adFldOK**, ce qui signifie que la conversion a réussi ; et **adFldNull**, ce qui signifie que la valeur du champ serait un variant de type VT_NULL et non simplement vide.<br /><br /> Les valeurs possibles de l' *État* sont répertoriées dans le tableau suivant, « valeurs d’État ».|
-|*Modify*|Indicateur booléen ; Si la valeur est TRUE, le champ ADO est autorisé à mettre à jour le champ **Recordset** correspondant avec la valeur contenue dans *buffer*.<br /><br /> Définissez le paramètre de *modification* BOOLÉENNE sur true pour permettre à ADO de mettre à jour le champ lié, et false si vous souhaitez examiner le champ, mais pas le modifier.|
+|*Modification*|Indicateur booléen ; Si la valeur est TRUE, le champ ADO est autorisé à mettre à jour le champ **Recordset** correspondant avec la valeur contenue dans *buffer*.<br /><br /> Définissez le paramètre de *modification* BOOLÉENNE sur true pour permettre à ADO de mettre à jour le champ lié, et false si vous souhaitez examiner le champ, mais pas le modifier.|
 |*Précision*|Nombre de chiffres qui peuvent être représentés dans une variable numérique.|
-|*Mettre à l'échelle*|Nombre de décimales dans une variable numérique.|
+|*Mettre à l’échelle*|Nombre de décimales dans une variable numérique.|
 |*Longueur*|Nom d’une variable de 4 octets qui doit contenir la longueur réelle des données dans la *mémoire tampon*.|
 
 ## <a name="status-values"></a>Valeurs d'état

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, security
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8dde159e0b04b319b978e9a3743d866d05c64253
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927036"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761677"
 ---
 # <a name="ado-security-design-features"></a>Fonctionnalités de conception de la sécurité ADO
 Les sections suivantes décrivent les fonctionnalités de conception de sécurité de ActiveX Data Objects (ADO) 2,8 et versions ultérieures. Ces modifications ont été apportées dans ADO 2,8 pour améliorer la sécurité. ADO 6,0, qui est inclus dans Windows DAC 6,0 dans Windows Vista, est fonctionnellement équivalent à ADO 2,8, qui était inclus dans MDAC 2,8 dans Windows XP et Windows Server 2003. Cette rubrique fournit des informations sur la façon de sécuriser au mieux vos applications dans ADO 2,8 ou une version ultérieure.

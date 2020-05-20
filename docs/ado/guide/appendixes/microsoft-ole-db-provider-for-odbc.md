@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926635"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761627"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour ODBC
 Pour un programmeur ADO ou RDS, un monde idéal serait celui dans lequel chaque source de données expose une interface OLE DB, afin qu’ADO puisse appeler directement dans la source de données. Bien que de plus en plus de fournisseurs de bases de données implémentent des interfaces OLE DB, certaines sources de données ne sont pas encore exposées de cette façon. Toutefois, la plupart des systèmes SGBD en cours d’utilisation sont accessibles via ODBC.
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilité des propriétés standard du **Recordset** ADO :
 
-|Propriété|ForwardOnly|Dynamique|Keyset|Statique|
+|Propriété|ForwardOnly|Dynamique|Keyset|statique|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|non disponible|non disponible|lecture/écriture|lecture/écriture|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|non disponible|non disponible|lecture/écriture|lecture/écriture|
@@ -198,28 +198,28 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilité des méthodes de l’ensemble d' **enregistrements** ADO standard :
 
-|Méthode|ForwardOnly|Dynamique|Keyset|Statique|
+|Méthode|ForwardOnly|Dynamique|Keyset|statique|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Oui|Oui|Oui|Oui|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Oui|Oui|Oui|Oui|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Non|Non|Oui|Oui|
-|[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|Oui|Oui|Oui|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|Oui|Oui|Oui|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Non|Oui|Oui|Oui|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|Oui|Oui|Oui|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Non|Oui|Oui|Oui|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Oui|Oui|Oui|Oui|
-|[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|Oui|Oui|Oui|
-|[Resynchroniser](../../../ado/reference/ado-api/resync-method.md)|Non|Non|Oui|Oui|
-|[Permet](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Oui|
-|[Mise à jour](../../../ado/reference/ado-api/update-method.md)|Oui|Oui|Oui|Oui|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Oui|Oui|Oui|Oui|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Oui|Oui|Oui|Yes|
+|[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Oui|Oui|Oui|Yes|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Oui|Oui|Oui|Yes|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Oui|Oui|Oui|Yes|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Non|Non|Oui|Yes|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Oui|Oui|Oui|Yes|
+|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Oui|Oui|Oui|Yes|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|Oui|Oui|Yes|
+|[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|Oui|Oui|Yes|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|Oui|Oui|Yes|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Non|Oui|Oui|Yes|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|Oui|Oui|Yes|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Non|Oui|Oui|Yes|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Oui|Oui|Oui|Yes|
+|[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|Oui|Oui|Yes|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|Oui|Oui|Yes|
+|[Resynchroniser](../../../ado/reference/ado-api/resync-method.md)|Non|Non|Oui|Yes|
+|[Permet](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Yes|
+|[Mettre à jour](../../../ado/reference/ado-api/update-method.md)|Oui|Oui|Oui|Yes|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Oui|Oui|Oui|Yes|
 
  * Non pris en charge pour les bases de données Microsoft Access.
 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 998bda7d2c940b16f298fdfe436a2d60b27f09ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925865"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761215"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Appel d’une procédure stockée avec une commande
 Vous pouvez utiliser une commande pour appeler une procédure stockée. L’exemple de code à la fin de cette rubrique fait référence à une procédure stockée dans l’exemple de base de données Northwind, appelée CustOrdersOrders, qui est définie comme suit.  
@@ -40,7 +40,7 @@ ORDER BY OrderID
   
  D’autres différences importantes existent entre l’exemple de code suivant et le code dans les paramètres de l' [objet de commande](../../../ado/guide/data/command-object-parameters.md), où les paramètres ont été entrés manuellement. Tout d’abord, ce code n’affecte pas la **valeur true** à la propriété **Prepared** , car il s’agit d’une procédure stockée SQL Server qui est précompilée par définition. Deuxièmement, la propriété **CommandType** de l’objet **Command** est passée à **adCmdStoredProc** dans le deuxième exemple pour informer ADO que la commande était une procédure stockée.  
   
- Enfin, dans le deuxième exemple, le paramètre doit être référencé par index lors de la définition de la valeur, car vous ne connaissez peut-être pas le nom du paramètre au moment de la conception. Si vous connaissez le nom du paramètre, vous pouvez définir la nouvelle propriété [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) de l’objet de **commande** sur true et faire référence au nom de la propriété. Vous vous demandez peut-être pourquoi la position du premier paramètre mentionné dans la procédure@CustomerIDstockée () est 1 au`objCmd(1) = "ALFKI"`lieu de 0 (). Cela est dû au fait que le paramètre 0 contient une valeur de retour de la procédure stockée SQL Server.  
+ Enfin, dans le deuxième exemple, le paramètre doit être référencé par index lors de la définition de la valeur, car vous ne connaissez peut-être pas le nom du paramètre au moment de la conception. Si vous connaissez le nom du paramètre, vous pouvez définir la nouvelle propriété [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) de l’objet de **commande** sur true et faire référence au nom de la propriété. Vous vous demandez peut-être pourquoi la position du premier paramètre mentionné dans la procédure stockée ( @CustomerID ) est 1 au lieu de 0 ( `objCmd(1) = "ALFKI"` ). Cela est dû au fait que le paramètre 0 contient une valeur de retour de la procédure stockée SQL Server.  
   
 ```  
 'BeginAutoParamCmd  

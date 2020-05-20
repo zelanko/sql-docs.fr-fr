@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926468"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761557"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Utilisation du SDK Microsoft pour Java
 
@@ -29,7 +29,7 @@ Le kit de développement logiciel (SDK) Microsoft pour Java est le kit de dével
   
  L’utilitaire JActiveX. exe génère des classes à partir d’une bibliothèque de types, mais ne peut être appelé que sur la ligne de commande. Cette fonctionnalité n’est pas intégrée à l’environnement de développement Visual J++. Contrairement aux classes générées par l’Assistant bibliothèque de types Java, vous pouvez effectuer un pas à pas détaillé dans les wrappers de classe créés par le kit de développement logiciel (SDK). Cela est utile pour déboguer la façon dont votre code utilise les classes wrapper ADO.  
   
- Ce mécanisme lit la bibliothèque de types ADO et génère des classes que vous pouvez instancier dans votre application. Il génère ces classes à l’emplacement suivant : \\<répertoire\>Windows \Java\trustlib\msado15.  
+ Ce mécanisme lit la bibliothèque de types ADO et génère des classes que vous pouvez instancier dans votre application. Il génère ces classes à l’emplacement suivant : \\<répertoire Windows \> \Java\trustlib\msado15.  
   
  La création d’une application ADO en Java à l’aide du kit de développement logiciel (SDK) Microsoft pour Java est fondamentalement identique, du point de vue du code source, à l’utilisation de l’Assistant bibliothèque de types Java. Pour obtenir un exemple de code, consultez [wrappers de classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). La seule différence réelle réside dans la façon dont vous générez les classes wrapper en premier lieu, comme illustré dans les étapes suivantes.  
   

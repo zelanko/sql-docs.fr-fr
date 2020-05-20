@@ -12,14 +12,14 @@ helpviewer_keywords:
 - editing data [ADO], sql statements
 - ADO, SQL statements
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f41ef7f0641877056a6e2f3d85fd6a40ff7826db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f1e80dd692b234b88d2b63ed0a43d956152e2e2b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925992"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761265"
 ---
 # <a name="alternatives-using-sql-statements"></a>Alternatives : Utilisation d’instructions SQL
 ADO permet également d’utiliser des commandes comme alternatives à ses propriétés et méthodes intégrées pour la modification des données. Selon votre fournisseur, toutes les opérations mentionnées dans cette section peuvent également être accomplies en passant des commandes à votre source de données. Par exemple, les instructions SQL UPDATE peuvent être utilisées pour modifier des données sans utiliser la propriété **value** d’un **champ**. Les instructions SQL INSERT peuvent être utilisées pour ajouter de nouveaux enregistrements à une source de données, plutôt que dans la méthode ADO **AddNew**. Pour plus d’informations sur SQL ou le langage de manipulation de données de votre fournisseur, consultez la documentation de votre source de données.  

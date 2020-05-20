@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926367"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761477"
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
 Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local ou en réseau. La cible peut être un fichier, un répertoire, une page HTML, une image, un programme, et ainsi de suite.  
@@ -32,7 +32,7 @@ Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local
   
  Une URL relative se compose généralement du *chemin d’accès*et, éventuellement, de la *ressource*, mais pas d’un *schéma* ou d’un *serveur*. Les tableaux suivants définissent les parties individuelles du format d’URL complet.  
   
- *mode*  
+ *scheme*  
  Spécifie le mode d’accès à la *ressource* .  
   
  *serveurs*  
@@ -70,13 +70,13 @@ Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- L’URL absolue dans la chaîne de connexion spécifie le`YourServer`serveur () et le`Winnt`chemin d’accès (). Cette URL définit également le contexte.  
+ L’URL absolue dans la chaîne de connexion spécifie le serveur ( `YourServer` ) et le chemin d’accès ( `Winnt` ). Cette URL définit également le contexte.  
   
- L’URL relative dans le texte de la commande utilise l’URL absolue comme point de départ et spécifie le reste du`system32`chemin d’accès () et le`Readme25.txt`fichier à ouvrir ().  
+ L’URL relative dans le texte de la commande utilise l’URL absolue comme point de départ et spécifie le reste du chemin d’accès ( `system32` ) et le fichier à ouvrir ( `Readme25.txt` ).  
   
- Le champ d’options`adCmdTableDirect`() indique que le type de commande est une URL relative.  
+ Le champ d’options ( `adCmdTableDirect` ) indique que le type de commande est une URL relative.  
   
- En guise d’autre exemple, le code suivant ouvre un **jeu d’enregistrements** sur le `Winnt` contenu du répertoire :  
+ En guise d’autre exemple, le code suivant ouvre un **jeu d’enregistrements** sur le contenu du `Winnt` répertoire :  
   
 ```  
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

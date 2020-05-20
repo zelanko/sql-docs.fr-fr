@@ -12,14 +12,14 @@ helpviewer_keywords:
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7e4ce2e8928ac7b4225ae58b25c6610c64832f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925954"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761245"
 ---
 # <a name="batch-mode"></a>Mode Lot
 Le mode batch est activé lorsque la propriété **LockType** est définie sur **adLockBatchOptimistic** et que la mise à jour par lot est prise en charge par le fournisseur. Certains paramètres de type de verrou ne sont pas disponibles en fonction de l’emplacement du curseur. Par exemple, un type de verrou pessimiste n’est pas disponible lorsque **CursorLocation** a la valeur **adUseClient**. À l’inverse, un fournisseur ne peut pas prendre en charge un verrou optimiste par lot lorsque l’emplacement du curseur se trouve sur le serveur. Vous devez utiliser la mise à jour par lot avec un curseur de jeu de clés ou statique uniquement.  

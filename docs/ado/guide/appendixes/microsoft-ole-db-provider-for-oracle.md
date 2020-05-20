@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926620"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761637"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Présentation de Fournisseur Microsoft OLE DB pour Oracle
 > [!IMPORTANT]
@@ -67,7 +67,7 @@ MSDAORA
 |**Handle de la fenêtre**|Indique le handle de fenêtre à utiliser pour demander des informations supplémentaires.|
 |**Identificateur de paramètres régionaux**|Indique un nombre 32 bits unique (par exemple, 1033) qui spécifie les préférences relatives à la langue de l’utilisateur. Ces préférences indiquent comment les dates et les heures sont mises en forme, les éléments sont triés par ordre alphabétique, les chaînes sont comparées, et ainsi de suite.|
 |**Services OLE DB**|Indique un masque de masque qui spécifie OLE DB services à activer ou à désactiver.|
-|**Prompt**|Indique s’il faut inviter l’utilisateur lors de l’établissement d’une connexion.|
+|**Demander**|Indique s’il faut inviter l’utilisateur lors de l’établissement d’une connexion.|
 |**Propriétés étendues**|Chaîne contenant des informations de connexion étendues spécifiques au fournisseur. Utilisez cette propriété uniquement pour les informations de connexion spécifiques au fournisseur qui ne peuvent pas être décrites par le biais du mécanisme de propriété.|
 
 ## <a name="see-also"></a>Voir aussi

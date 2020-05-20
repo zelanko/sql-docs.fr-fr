@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926597"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761607"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB Remoting
 Le fournisseur Microsoft OLE DB Remoting permet à un utilisateur local sur un ordinateur client d’appeler des fournisseurs de données sur un ordinateur distant. Spécifiez les paramètres du fournisseur de données pour la machine distante comme vous le feriez pour un utilisateur local sur l’ordinateur distant. Spécifiez ensuite les paramètres utilisés par le fournisseur de communication à distance pour accéder à la machine distante. Vous pouvez ensuite accéder à la machine distante comme si vous étiez un utilisateur local.
