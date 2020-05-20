@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Position object [ADO MD]
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46d619f268816b356e115a60d07a48fbe7e1d758
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765030"
 ---
 # <a name="position-object-ado-md"></a>Position, objet (ADO MD)
 Représente un ensemble d’un ou plusieurs membres de dimensions différentes qui définissent un point le long d’un axe.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Avec les propriétés et les collections d’un objet **position** , vous pouvez effectuer les opérations suivantes :  
   
 -   Utilisez la propriété **ordinal** pour retourner la position ordinale de la **position** le long de l' [axe](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  

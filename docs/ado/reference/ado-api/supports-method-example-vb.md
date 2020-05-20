@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911707"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765380"
 ---
 # <a name="supports-method-example-vb"></a>Supports, exemple de méthode (VB)
 Cet exemple utilise la méthode [supports](../../../ado/reference/ado-api/supports-method.md) pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La procédure DisplaySupport est requise pour l’exécution de cette procédure.  

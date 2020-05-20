@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d5b475600ef211d8203a64a1a2c6d917bb99914
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938536"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764300"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension, objet (ADO MD)
 Représente l’une des dimensions d’un cube multidimensionnel, contenant une ou plusieurs hiérarchies de membres.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Avec les collections et les propriétés d’un objet **dimension** , vous pouvez effectuer les opérations suivantes :  
   
 -   Identifiez la **dimension** avec les propriétés [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) et [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  

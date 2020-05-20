@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921510"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764570"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection, propriété (ADO)
 Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) la [commande](../../../ado/reference/ado-api/command-object-ado.md), le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)ou l’objet d' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) spécifiés appartiennent actuellement.  
@@ -30,7 +30,7 @@ Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-o
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **chaîne** qui contient une définition pour une connexion si la connexion est fermée ou un **Variant** contenant l’objet de **connexion** actuel si la connexion est ouverte. La valeur par défaut est une référence d’objet null. Consultez la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **ActiveConnection** pour déterminer l’objet de **connexion** sur lequel l’objet de **commande** spécifié s’exécutera ou l’objet **Recordset** spécifié sera ouvert.  
   
 ## <a name="command"></a>Commande  
@@ -40,7 +40,7 @@ Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-o
   
  Si un objet de **connexion** est affecté à la propriété **ActiveConnection** , l’objet doit être ouvert. L’attribution d’un objet de connexion fermé provoque une erreur.  
   
-### <a name="note"></a>Remarque  
+### <a name="note"></a>Notes  
  **Visual Basic Microsoft** L’affectation de la valeur *Nothing* à la propriété **ActiveConnection** dissocie l’objet **Command** de la **connexion** actuelle et oblige le fournisseur à libérer toutes les ressources associées sur la source de données. Vous pouvez ensuite associer l’objet de **commande** à la même ou à un autre objet de **connexion** . Certains fournisseurs vous permettent de modifier le paramètre de propriété d’une **connexion** à une autre, sans devoir d’abord affecter la valeur *Nothing*à la propriété.  
   
  Si la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) de l’objet **Command** contient des paramètres fournis par le fournisseur, la collection est effacée si vous définissez la propriété **ActiveConnection** sur *Nothing* ou sur un autre objet **Connection** . Si vous créez manuellement des objets de [paramètre](../../../ado/reference/ado-api/parameter-object.md) et que vous les utilisez pour remplir la collection de **paramètres** de l’objet de **commande** , la définition de la propriété **ActiveConnection** sur *Nothing* ou sur un autre objet de **connexion** laisse la collection **Parameters** intacte.  

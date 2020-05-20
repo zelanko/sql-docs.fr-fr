@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO MD]
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c11bb74b62d54b1e2489cba5dd7cd35ee376a41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9722bdc585920fb5dcc70ac95afcf2e854a0fa50
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949155"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764980"
 ---
 # <a name="state-property-ado-md"></a>State, propriété (ADO MD)
 Indique l’état actuel du CellSet.  
@@ -29,7 +29,7 @@ Indique l’état actuel du CellSet.
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un entier **long** indiquant la condition actuelle de l’objet [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) et est en lecture seule. Les valeurs suivantes sont valides : **adStateClosed** (0) et **adStateOpen** (1).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour utiliser les noms de constantes [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) , vous devez disposer de la bibliothèque de types ADO référencée dans votre projet. Pour plus d’informations, consultez [utilisation d’ADO avec ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md) .  
   
 ## <a name="applies-to"></a>S'applique à  

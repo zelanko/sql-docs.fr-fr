@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - FilterAxis property [ADO MD]
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d44ac908c04338f80c18699319f75a068370c3e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7f9b34757970ce98dedaa9601340cad533ad002
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938455"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764230"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis, propriété (ADO MD)
 Indique les informations de filtre relatives à l' [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)actuel.  
@@ -29,7 +29,7 @@ Indique les informations de filtre relatives à l' [Cellset](../../../ado/refere
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un objet [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) , et est en lecture seule.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **FilterAxis** pour retourner des informations sur les dimensions qui ont été utilisées pour découper les données. La propriété [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) de l' **axe** retourne le nombre de dimensions de découpage. Cet axe n’a généralement qu’une seule ligne.  
   
  L' **axe** retourné par **FilterAxis** n’est pas contenu dans la collection [axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) d’un objet [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  

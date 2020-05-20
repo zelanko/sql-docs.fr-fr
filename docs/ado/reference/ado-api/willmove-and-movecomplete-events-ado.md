@@ -17,14 +17,14 @@ helpviewer_keywords:
 - MoveComplete event [ADO]
 - WillMove event [ADO]
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a714b0c8f6d41060dfe66e898f01d7ce1037e516
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945912"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764440"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove et MoveComplete, événements (ADO)
 L’événement **WillMove** est appelé avant qu’une opération en attente modifie la position actuelle dans l’ensemble [d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md). L’événement **MoveComplete** est appelé après la modification de la position actuelle dans le **jeu d’enregistrements** .  
@@ -58,7 +58,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . **Jeu d’enregistrements** pour lequel cet événement s’est produit.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un événement **WillMove** ou **MoveComplete** peut se produire en raison des opérations suivantes sur les **jeux d’enregistrements** : [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)et [Requery](../../../ado/reference/ado-api/requery-method.md). Ces événements peuvent se produire en raison des propriétés suivantes : [filtre](../../../ado/reference/ado-api/filter-property.md), [index](../../../ado/reference/ado-api/index-property.md), [signet](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)et [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Ces événements se produisent également si un **jeu d'** enregistrements enfant contient des événements **Recordset** connectés et que le **jeu d’enregistrements** parent est déplacé.  
   
  Vous devez définir le paramètre *adStatus* sur **adStatusUnwantedEvent** pour chaque valeur *adReason* possible afin d’arrêter complètement la notification d’événement pour tout événement qui comprend un paramètre *adReason* .  

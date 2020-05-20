@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924736"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764800"
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
 Si vous utilisez un **jeu d’enregistrements**enfant volumineux, en particulier par rapport à la taille du **Recordset**parent, mais que vous n’avez besoin d’accéder qu’à quelques chapitres enfants, il peut s’avérer plus efficace d’utiliser une commande paramétrable.  
@@ -86,7 +86,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  Cet exemple exploite la plus grande flexibilité de la clause SQL WHERE pour obtenir le résultat dont vous avez besoin.  
   
 > [!NOTE]
->  Lorsque vous utilisez des clauses WHERE, les paramètres ne peuvent pas utiliser les types de données SQL pour Text, ntext et image, sinon une erreur se produit `Invalid operator for data type`, contenant la description suivante :.  
+>  Lorsque vous utilisez des clauses WHERE, les paramètres ne peuvent pas utiliser les types de données SQL pour Text, ntext et image, sinon une erreur se produit, contenant la description suivante : `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 717a3af4bec62725cc4cf5da8621163f24c2ab3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932962"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764530"
 ---
 # <a name="error-object"></a>Error, objet
 Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Toute opération impliquant des objets ADO peut générer une ou plusieurs erreurs de fournisseur. À mesure que chaque erreur se produit, un ou plusieurs objets **Error** sont placés dans la collection [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) de l’objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Lorsqu’une autre opération ADO génère une erreur, la collection **Errors** est désactivée et le nouvel ensemble d’objets **Error** est placé dans la collection **Errors** .  
   
 > [!NOTE]

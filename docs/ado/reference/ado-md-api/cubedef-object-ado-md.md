@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949786"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764350"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef, objet (ADO MD)
 Représente un cube à partir d’un schéma multidimensionnel, contenant un ensemble de dimensions associées.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Avec les collections et les propriétés d’un objet **CubeDef** , vous pouvez effectuer les opérations suivantes :  
   
 -   Identifiez un **CubeDef** avec la propriété [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  

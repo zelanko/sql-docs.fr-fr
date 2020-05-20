@@ -13,25 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1cbe93a06eb6521b2210edc08cdca421cd5de982
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918981"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765570"
 ---
 # <a name="editmode-property"></a>EditMode, propriété
 Indique l’état de modification de l’enregistrement en cours.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  ADO gère un tampon d’édition associé à l’enregistrement actif. Cette propriété indique si des modifications ont été apportées à cette mémoire tampon ou si un nouvel enregistrement a été créé. Utilisez la propriété **EditMode** pour déterminer l’état de modification de l’enregistrement en cours. Vous pouvez tester les modifications en attente si un processus de modification a été interrompu et déterminer si vous devez utiliser la méthode [Update](../../../ado/reference/ado-api/update-method.md) ou [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
- En *mode de mise à jour immédiate* , la propriété **EditMode** est réinitialisée à **adEditNone** après l’appel d’un appel à la méthode **Update** . Lorsqu’un appel à [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) ne supprime pas correctement l’enregistrement ou les enregistrements dans la source de données (par exemple, en raison de violations d’intégrité référentielle), le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) reste en mode édition (**EditMode** = **adEditInProgress**). Par conséquent, **CancelUpdate** doit être appelé avant de quitter l’enregistrement actif (par exemple, avec [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)ou [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
+ En *mode de mise à jour immédiate* , la propriété **EditMode** est réinitialisée à **adEditNone** après l’appel d’un appel à la méthode **Update** . Lorsqu’un appel à [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) ne supprime pas correctement l’enregistrement ou les enregistrements dans la source de données (par exemple, en raison de violations d’intégrité référentielle), le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) reste en mode édition (**EditMode**  =  **adEditInProgress**). Par conséquent, **CancelUpdate** doit être appelé avant de quitter l’enregistrement actif (par exemple, avec [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)ou [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
   
  En *mode de mise à jour par lot* (dans lequel le fournisseur met en cache plusieurs modifications et les écrit dans la source de données sous-jacente uniquement lorsque vous appelez la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) ), la valeur de la propriété **EditMode** est modifiée lorsque la première opération est exécutée et n’est pas réinitialisée par un appel à la méthode **Update** . Les opérations ultérieures ne modifient pas la valeur de la propriété **EditMode** , même si différentes opérations sont effectuées. Par exemple, si la première opération consiste à ajouter un nouvel enregistrement et que la seconde modifie un enregistrement existant, la propriété de **EditMode** est toujours **adEditAdd**. La propriété **EditMode** n’est pas réinitialisée à **adEditNone** tant que l’appel à **UpdateBatch**n’a pas été effectué. Pour déterminer les opérations qui ont été effectuées, définissez la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) sur [adFilterPending](../../../ado/reference/ado-api/filtergroupenum.md) afin que seuls les enregistrements avec des modifications en attente soient visibles et examinez la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de chaque enregistrement pour déterminer les modifications apportées aux données.  
   

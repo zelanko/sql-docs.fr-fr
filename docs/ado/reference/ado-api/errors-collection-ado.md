@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3c8f981d4dc40a4a6f618f3cca387379d51def9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c8f60951646e635d6124c9fe0fd4290c261c959
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932979"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765490"
 ---
 # <a name="errors-collection-ado"></a>Errors, collection (ADO)
 Contient tous les objets d' [erreur](../../../ado/reference/ado-api/error-object.md) créés en réponse à un échec lié à un fournisseur unique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Toute opération impliquant des objets ADO peut générer une ou plusieurs erreurs de fournisseur. À mesure que chaque erreur se produit, un ou plusieurs objets **Error** peuvent être placés dans la collection **Errors** de l’objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Lorsqu’une autre opération ADO génère une erreur, la collection **Errors** est désactivée et le nouvel ensemble d’objets **Error** peut être placé dans la collection **Errors** .  
   
  Chaque objet **Error** représente une erreur de fournisseur spécifique, et non une erreur ADO. Les erreurs ADO sont exposées au mécanisme de gestion des exceptions au moment de l’exécution. Par exemple, dans Microsoft Visual Basic, l’occurrence d’une erreur spécifique à ADO déclenchera un événement [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) et apparaîtra dans l’objet **Err** .  

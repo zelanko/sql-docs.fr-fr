@@ -11,14 +11,14 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924517"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764790"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs fournis par le fournisseur
 Lorsqu’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) est ouvert, sa source peut être la ligne actuelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)ouvert, une URL absolue ou une URL relative avec un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ouvert.  
@@ -63,7 +63,7 @@ Lorsqu’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) 
 |RESOURCE_ISHIDDEN|AdBoolean|True si la ressource est masquée. Aucune ligne n’est retournée, sauf si la commande qui crée l’ensemble de lignes sélectionne explicitement les lignes où RESOURCE_ISHIDDEN a la valeur true.|  
 |RESOURCE_ISREADONLY|AdBoolean|True si la ressource est en lecture seule. Tente d’ouvrir cette ressource avec DBBINDFLAG_WRITE et échoue avec DB_E_READONLY. Cette propriété peut être modifiée même lorsque la ressource n’a été ouverte que pour la lecture.|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|Indique l’utilisation probable du document (par exemple, un résumé d’avocat). Cela peut correspondre au modèle Office utilisé pour créer le document.|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|Indique le type MIME du document, indiquant le format tel que «`text/html`».|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|Indique le type MIME du document, indiquant le format tel que « `text/html` ».|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indique la langue dans laquelle le contenu est stocké.|  
 |RESOURCE_CREATIONTIME|adFileTime|Lecture seule. Indique une structure FILETIME qui contient l’heure à laquelle la ressource a été créée. L’heure est indiquée au format de temps universel coordonné (UTC, Coordinated Universal Time).|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|Lecture seule. Indique une structure FILETIME qui contient l’heure du dernier accès à la ressource. L’heure est au format UTC. Les membres FILETIME sont nuls si le fournisseur ne prend pas en charge ce membre de temps.|  
@@ -72,7 +72,7 @@ Lorsqu’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) 
 |RESOURCE_ISCOLLECTION|AdBoolean|Lecture seule. True si la ressource est une collection, telle qu’un répertoire. False si la ressource est un fichier simple.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True si la ressource est un document structuré. False si la ressource n’est pas un document structuré. Il peut s’agir d’une collection ou d’un fichier simple.|  
 |DEFAULT_DOCUMENT|AdVarWChar|Lecture seule. Indique que cette ressource contient une URL vers le document simple par défaut d’un dossier ou d’un document structuré. Utilisé lorsque le flux par défaut est demandé à partir d’une ressource. Cette propriété est vide pour un fichier simple.|  
-|CHAPTERED_CHILDREN|AdChapter|Lecture seule. Facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur de OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
+|CHAPTERED_CHILDREN|AdChapter|Lecture seule. facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur de OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Lecture seule. Indique le nom complet de la ressource.|  
 |RESOURCE_ISROOT|AdBoolean|Lecture seule. True si la ressource est la racine d’une collection ou d’un document structuré.|  
   

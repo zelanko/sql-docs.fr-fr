@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2b6e7b7669e0976cf47e5b4d5d2c827a824f919
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966186"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764850"
 ---
 # <a name="groups-collection-adox"></a>Groups, collection (ADOX)
 Contient tous les objets de [groupe](../../../ado/reference/adox-api/group-object-adox.md) stockés d’un catalogue ou d’un utilisateur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La collection **groups** d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les comptes de groupe du catalogue. La collection **groups** pour un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) représente uniquement le groupe auquel appartient l’utilisateur.  
   
  La méthode [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) d’une collection **groups** est unique pour ADOX. Vous pouvez :  

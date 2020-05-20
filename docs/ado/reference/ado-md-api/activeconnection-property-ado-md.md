@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a24320f7b49d8d2a0e1341bff2d9a4cca575dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911593"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765310"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection, propriété (ADO MD)
 Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ADO appartient actuellement le catalogue ou l’CellSet actuel.  
@@ -30,7 +30,7 @@ Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-o
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **type Variant** qui contient une chaîne définissant une connexion ou un objet de **connexion** . La valeur par défaut est vide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous pouvez définir cette propriété sur un objet de **connexion** ADO valide ou une chaîne de connexion valide. Quand cette propriété est définie sur une chaîne de connexion, le fournisseur crée un objet de **connexion** à l’aide de cette définition et ouvre la connexion.  
   
  Si vous utilisez l’argument *ActiveConnection* de la méthode [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) pour ouvrir un objet [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) , la propriété **ActiveConnection** héritera de la valeur de l’argument.  

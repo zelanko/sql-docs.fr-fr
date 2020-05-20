@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8eb0aa12a31337340854f941237d673abd1c601c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 242b9888239ee2261014e47a13a347cb3bfcd421
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936713"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765370"
 ---
 # <a name="supports-method-example-vc"></a>Supports, exemple de méthode (VC++)
 Cet exemple utilise la méthode [supports](../../../ado/reference/ado-api/supports-method.md) pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La fonction DisplaySupport est requise pour que cet exemple s’exécute.  

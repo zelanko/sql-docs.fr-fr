@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Depth property [ADO MD]
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 249ab4a4a4f82e5fd6eebfd326c71971f401bcc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 146e845e7f0867f19ccd90e4260dd3abf01ba3ac
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952198"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764320"
 ---
 # <a name="depth-property-ado-md"></a>Depth, propriété (ADO MD)
 Indique le nombre de niveaux entre le [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) et la racine de la hiérarchie.  
@@ -29,7 +29,7 @@ Indique le nombre de niveaux entre le [niveau](../../../ado/reference/ado-md-api
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un entier, et est en lecture seule.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un **niveau** à la racine d’une hiérarchie a une valeur de **profondeur** égale à zéro (0).  
   
 ## <a name="applies-to"></a>S'applique à  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b630d589cf20039a72091fb526302d3652f8ed31
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924826"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765610"
 ---
 # <a name="named-commands"></a>Commandes nommées
 [La création et l’exécution d’une commande simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md) montrent une façon d’exécuter une commande. Il existe une autre méthode : vous pouvez en faire une commande nommée, puis appeler cette commande nommée directement sur l’objet de **connexion** (affecté à la propriété **ActiveConnection** de l’objet **Command** ). L’attribution d’un nom à une commande implique l’attribution d’un nom à la propriété **Name** d’un objet **Command** . Par exemple,  

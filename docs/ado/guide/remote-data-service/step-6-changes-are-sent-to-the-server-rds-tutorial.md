@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], changes sent to server
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a48b9c54496100bfe502bd496b12f35ced9ea8ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2094562f03f768ad6c98feccd0ed4a1e932a8fca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922046"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764640"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Étape 6 : Les changements sont envoyés au serveur (tutoriel RDS)
 Si l’objet **Recordset** est modifié, toute modification (c’est-à-dire les lignes ajoutées, modifiées ou supprimées) peut être renvoyée au serveur.  

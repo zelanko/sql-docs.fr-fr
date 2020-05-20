@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3fbfbf28c430fb698f5e024fe3359027c84512c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936705"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765360"
 ---
 # <a name="supports-method"></a>Supports, méthode
 Détermine si un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) spécifié prend en charge un type particulier de fonctionnalité.  
@@ -40,7 +40,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  Expression **longue** qui se compose d’une ou de plusieurs valeurs [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la méthode **prend en charge** pour déterminer les types de fonctionnalités qu’un objet **Recordset** prend en charge. Si l’objet **Recordset** prend en charge les fonctionnalités dont les constantes correspondantes se trouvent dans *CursorOptions*, la méthode **supports** retourne la **valeur true**. Sinon, elle retourne **false**.  
   
 > [!NOTE]

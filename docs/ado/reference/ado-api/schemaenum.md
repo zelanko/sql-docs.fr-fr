@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931111"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765430"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous trouverez des informations supplémentaires sur la fonction et les colonnes retournées pour chaque constante ADO dans les rubriques de l' [annexe B : ensembles de lignes de schéma](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de la OLE DB Guide de référence du programmeur. Le nom de chaque rubrique est indiqué entre parenthèses dans la section Description du tableau suivant.  
   
  Vous trouverez des informations supplémentaires sur la fonction et les colonnes retournées pour chaque ADO MD constante dans les rubriques dans [OLE DB pour les objets OLAP et les ensembles de lignes de schéma](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) dans le OLE DB pour la documentation sur le traitement analytique en ligne (OLAP). Le nom de chaque rubrique est indiqué entre parenthèses dans la colonne Description du tableau suivant.  

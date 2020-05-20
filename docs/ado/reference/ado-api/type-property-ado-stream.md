@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO Stream]
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: de61f4877dc6adcdfaa9644f5f266cd827a1d096
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938237"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765340"
 ---
 # <a name="type-property-ado-stream"></a>Type, propriété (objet Stream ADO)
 Indique le type de données contenues dans le [flux](../../../ado/reference/ado-api/stream-object-ado.md) (binaire ou texte).  
@@ -30,7 +30,7 @@ Indique le type de données contenues dans le [flux](../../../ado/reference/ado-
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) qui spécifie le type de données contenu dans l’objet de **flux** . La valeur par défaut est **adTypeText**. Toutefois, si des données binaires sont écrites initialement dans un nouveau **flux**vide, le **type** sera remplacé par **adTypeBinary**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La propriété de **type** est en lecture/écriture uniquement lorsque la position actuelle est au début du **flux** ([position](../../../ado/reference/ado-api/position-property-ado.md) est 0) et en lecture seule à n’importe quelle autre position.  
   
  La propriété de**type** détermine les méthodes qui doivent être utilisées pour lire et écrire dans le **flux**. Pour les **flux**de texte, utilisez [READTEXT](../../../ado/reference/ado-api/readtext-method.md) et [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md). Pour les **flux**binaires, utilisez [Read](../../../ado/reference/ado-api/read-method.md) et [Write](../../../ado/reference/ado-api/write-method.md).  

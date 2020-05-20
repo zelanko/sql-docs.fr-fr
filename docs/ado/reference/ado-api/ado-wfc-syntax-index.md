@@ -12,14 +12,14 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2ae2ddf07e2e687aec0b507b9ff9f2640087ef74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920814"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764540"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - Index de la syntaxe WFC
 La référence du langage ADO utilise le langage de programmation Microsoft Visual Basic pour illustrer la syntaxe des propriétés et des méthodes ADO. Cet index est une référence croisée aux rubriques de référence du langage ADO, basée sur ADO pour Windows Foundation classes (ADO/WFC). Lorsque des différences de syntaxe se produisent, utilisez les signatures de fonction dans cet index, par opposition aux listes de syntaxe dans la rubrique de référence du langage.  

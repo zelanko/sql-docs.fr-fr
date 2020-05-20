@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930573"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765250"
 ---
 # <a name="ado-md-objects"></a>Objets ADO MD
 
@@ -32,8 +32,8 @@ ms.locfileid: "67930573"
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Représente l’une des dimensions d’un cube multidimensionnel, contenant une ou plusieurs hiérarchies de membres.|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Représente une façon dont les membres d’une dimension peuvent être agrégés ou « cumulés ». Une dimension peut être agrégée avec une ou plusieurs hiérarchies.|  
 |[Niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contient un ensemble de membres, chacun ayant le même rang dans une hiérarchie.|  
-|[Membre](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Représente un membre d’un niveau dans un cube, les enfants d’un membre d’un niveau ou un membre d’une position le long d’un axe d’un ensemble de cellules.|  
-|[Endroit](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Représente un ensemble d’un ou plusieurs membres de dimensions différentes qui définissent un point le long d’un axe.|  
+|[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Représente un membre d’un niveau dans un cube, les enfants d’un membre d’un niveau ou un membre d’une position le long d’un axe d’un ensemble de cellules.|  
+|[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Représente un ensemble d’un ou plusieurs membres de dimensions différentes qui définissent un point le long d’un axe.|  
   
  En outre, l’objet **catalogue** est connecté à un objet de **connexion** ADO, qui est inclus dans la bibliothèque ADO standard :  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d68fb018e3b72e193127f8f49160813c06a1332
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924887"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764810"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Autres méthodes de déplacement dans un recordset
 Les quatre méthodes suivantes permettent de se déplacer ou de faire défiler dans le **jeu d’enregistrements**: [MoveFirst, MoveLast, MoveNext et MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Certaines de ces méthodes ne sont pas disponibles sur les curseurs avant uniquement.)  
@@ -46,7 +46,7 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- Dans les cas où l' **objet Recordset** a été filtré ou trié et que les données de l’enregistrement actif sont modifiées, la position peut également changer. Dans ce cas, la méthode **MoveNext** fonctionne normalement, mais sachez que la position est déplacée d’un enregistrement vers l’avant à partir de la nouvelle position, et non de l’ancienne position. Par exemple, la modification des données dans l’enregistrement actif, de sorte que l’enregistrement soit déplacé à la fin de l’ensemble d' **enregistrements**trié, signifie que l’appel de **MoveNext** entraîne la définition par ADO de l’enregistrement actif à la position qui suit le dernier enregistrement dans le **jeu d’enregistrements** (**EOF** = **true**).  
+ Dans les cas où l' **objet Recordset** a été filtré ou trié et que les données de l’enregistrement actif sont modifiées, la position peut également changer. Dans ce cas, la méthode **MoveNext** fonctionne normalement, mais sachez que la position est déplacée d’un enregistrement vers l’avant à partir de la nouvelle position, et non de l’ancienne position. Par exemple, la modification des données dans l’enregistrement actif, de sorte que l’enregistrement soit déplacé à la fin de l’ensemble d' **enregistrements**trié, signifie que l’appel de **MoveNext** entraîne la définition par ADO de l’enregistrement actif à la position qui suit le dernier enregistrement dans le **jeu d’enregistrements** (**EOF**  =  **true**).  
   
  Le comportement des différentes méthodes Move de l’objet **Recordset** dépend, dans une certaine mesure, des données contenues dans le **jeu d’enregistrements**. Les nouveaux enregistrements ajoutés au **Recordset** sont initialement ajoutés dans un ordre particulier, qui est défini par la source de données et peuvent être dépendants implicitement ou explicitement sur les données du nouvel enregistrement. Par exemple, si un tri ou une jointure est effectué dans la requête qui remplit le **Recordset**, le nouvel enregistrement est inséré à l’emplacement approprié dans le **jeu d’enregistrements**. Si le classement n’est pas spécifié explicitement lors de la création du **Recordset**, les modifications apportées à l’implémentation de la source de données peuvent entraîner la modification de l’ordre des lignes retournées par inadvertance. En outre, les fonctions de tri, de filtrage et de modification de l’ensemble d' **enregistrements** peuvent affecter l’ordre et, éventuellement, les lignes de l’ensemble d’enregistrements qui seront visibles.  
   

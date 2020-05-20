@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925597"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765300"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.  
@@ -49,7 +49,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  Mappage entre un champ d’une table et une variable. Dans les extensions de Visual C++ ADO, les champs du **Recordset** sont mappés à des variables C/C++.  
   
  binaire  
- Valeur numérique destinée à une comparaison de valeurs bit par bit avec d’autres valeurs numériques, généralement pour marquer des options dans des valeurs de paramètre ou de retour. En général, cette comparaison est effectuée à l’aide d’opérateurs logiques au niveau du bit **&** , tels que **and** et **or** dans Visual Basic, et **&#124;** en C++.  
+ Valeur numérique destinée à une comparaison de valeurs bit par bit avec d’autres valeurs numériques, généralement pour marquer des options dans des valeurs de paramètre ou de retour. En général, cette comparaison est effectuée à l’aide d’opérateurs logiques au niveau du bit, tels que **and** et **or** dans Visual Basic, **&** et **&#124;** en C++.  
   
  Par exemple, les valeurs ADO **FieldAttributeEnum** peuvent être utilisées comme masques de masques pour déterminer les attributs d’un champ. Supposons que vous souhaitiez déterminer si un champ était modifiable. Vous pouvez le tester avec l’expression suivante dans Visual Basic :`Field.Attributes AND adFldUpdatable`  
   
@@ -100,7 +100,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  opérateur de comparaison  
  Opérateur qui compare deux expressions et retourne une valeur booléenne.  
   
- Paramètre de critère qui peut être exprimé sous la forme « > » (supérieur à)\<, « » (inférieur à), «= » (égal à), « >= » (supérieur ou égal à), « <= » (inférieur ou égal à), « <> » (différent de) ou « like » (critères spéciaux).  
+ Paramètre de critère qui peut être exprimé sous la forme « > » (supérieur à), « \< » (inférieur à), « = » (égal à), « >= » (supérieur ou égal à), « <= » (inférieur ou égal à), « <> » (différent de) ou « like » (critères spéciaux).  
   
  component  
  Objet qui encapsule les données et le code, et fournit un ensemble bien spécifié de services disponibles publiquement.  
@@ -186,7 +186,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  ISAPI (Internet Server Application Programming Interface)  
  Ensemble de fonctions pour les serveurs Internet, tels qu’un serveur Windows NT® Server/Windows 2000 exécutant Microsoft® Internet Information Services (IIS).  
   
- Clé  
+ Clé :  
  Colonne ou colonnes dans une table qui identifie de façon unique une ligne ; souvent utilisée pour indexer une table.  
   
 ## <a name="m"></a>M  

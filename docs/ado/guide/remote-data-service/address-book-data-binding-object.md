@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922976"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764730"
 ---
 # <a name="address-book-data-binding-object"></a>Objet de liaison de données de l’application Carnet d’adresses
 L’application Carnet d’adresses utilise le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) pour lier les données de la base de données SQL Server à un objet visuel (dans ce cas, un tableau DHTML) dans la page HTML cliente de l’application. La logique du programme VBScript piloté par les événements utilise le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) à :  
@@ -60,7 +60,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[SERVEURS](../../../ado/reference/rds-api/server-property-rds.md)|Si vous utilisez le protocole HTTP, la valeur est le nom de l’ordinateur serveur précédé de `https://`.|  
+|[SERVEURS](../../../ado/reference/rds-api/server-property-rds.md)|Si vous utilisez le protocole HTTP, la valeur est le nom de l’ordinateur serveur précédé de `https://` .|  
 |[ENTRE](../../../ado/reference/rds-api/connect-property-rds.md)|Fournit les informations de connexion nécessaires pour le **RDS. DataControl** pour la connexion à SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Définit ou retourne la chaîne de requête utilisée pour récupérer le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   

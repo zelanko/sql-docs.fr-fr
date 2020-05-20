@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920898"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764560"
 ---
 # <a name="ado-properties"></a>Propriétés ADO
 
@@ -72,7 +72,7 @@ ms.locfileid: "67920898"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Indique le nombre d’enregistrements qui représentent une page dans le **jeu d’enregistrements**.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Définit le conteneur d’un objet OLE DB **Row** sur un objet **ADORecordConstruction** , de sorte que le parent de la ligne soit converti en objet ADO **Record** .|  
 |[ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)|Indique une chaîne d’URL absolue qui pointe vers l' **enregistrement** parent de l’objet **enregistrement** actif.|  
-|[Endroit](../../../ado/reference/ado-api/position-property-ado.md)|Indique la position actuelle dans un objet de **flux** .|  
+|[Position](../../../ado/reference/ado-api/position-property-ado.md)|Indique la position actuelle dans un objet de **flux** .|  
 |[Précision](../../../ado/reference/ado-api/precision-property-ado.md)|Indique le degré de précision des valeurs numériques dans un objet de **paramètre** ou pour les objets de **champ** numérique.|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|Indique s’il faut enregistrer une version compilée d’une commande avant l’exécution.|  
 |[Fournisseur](../../../ado/reference/ado-api/provider-property-ado.md)|Indique le nom du fournisseur pour un objet de **connexion** .|  
