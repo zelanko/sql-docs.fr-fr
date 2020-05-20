@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c935a83c3c3fdd9fa577a3232e46caed7865c1c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e869cd092dd242caff859298b97502693abe2116
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745366"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812051"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70745366"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificateur de l'élément de messagerie dans la file d'attente des messages.|  
 |**profile_id**|**int**|Identificateur du profil utilisé pour envoyer le message.|  
-|**recipients**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
+|**destinataire**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
 |**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
 |**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
 |**Objet**|**nvarchar (510)**|Ligne d'objet du message.|  
@@ -45,7 +45,7 @@ ms.locfileid: "70745366"
 |**sensibilité**|**varchar (12)**|Paramètre de **sensibilité** du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
 |**attachment_encoding**|**varchar (20)**|Type de pièce jointe.|  
-|**requête**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
+|**query**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
@@ -61,7 +61,7 @@ ms.locfileid: "70745366"
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  En cas de dépannage de la messagerie de base de données, cette vue peut vous aider à identifier la nature du problème en vous montrant les attributs des messages qui ont été correctement envoyés. La messagerie de base de données marque les messages comme envoyés ('sent') lorsqu'ils sont soumis avec succès à un serveur de messagerie SMTP. En principe, le message est reçu en l'espace de quelques minutes, mais il peut être retardé en raison de problèmes avec le serveur SMTP. La messagerie de base de données marque le message comme envoyé lorsque celui-ci est accepté par le serveur de messagerie SMTP. Les erreurs qui se produisent sur le serveur de messagerie SMTP, par exemple lorsque le message ne peut pas être remis à l'adresse de messagerie du destinataire, ne sont pas renvoyées à la messagerie de base de données. Ces messages sont donc considérés comme envoyés, bien qu'ils n'aient pas été remis. Vous devez résoudre ce type d'erreur sur le serveur SMTP. Le serveur de messagerie SMTP peut également envoyer un avis de non remise à l'adresse de réponse d'un compte de messagerie de base de données.  
   
 ## <a name="permissions"></a>Autorisations  

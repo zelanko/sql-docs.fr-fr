@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5c69ac9d3169b3cb407c98c76b1890c5a35188b4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990057"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813197"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "67990057"
 |**log_time**|**datetime**|Date et heure de création de l'enregistrement.|  
 |**log_time_utc**|**datetime**|Date et heure de création de l'enregistrement, exprimée en heure UTC.|  
 |**message**|**nvarchar**|Texte du message.|  
-|**code**|**nvarchar**|Source du message d'erreur ou de l'événement.|  
+|**source**|**nvarchar**|Source du message d'erreur ou de l'événement.|  
 |**help_url**|**nvarchar**|URL, si elle est disponible, qui permet de consulter des informations complémentaires à propos de l'erreur.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette table contient le détail des erreurs des agents de copie des journaux de transaction. Chaque erreur est enregistrée sous la forme d'une séquence d'exceptions. Il peut y avoir plusieurs erreurs (séquences) pour chaque session d'agent.  
   
  En plus d’être stockées sur le serveur moniteur distant, les informations relatives au serveur principal sont stockées sur le serveur principal dans la table **log_shipping_monitor_error_detail** , et les informations relatives à un serveur secondaire sont également stockées sur le serveur secondaire dans sa table **log_shipping_monitor_error_detail** .  

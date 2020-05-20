@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9f8bb7ab3cd8eb03bd0b8d3a41b5afa17c1c77a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190351"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811761"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,11 +42,11 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
 |wait_time_ms|**bigint**|Temps d'attente total en millisecondes pour ce type d'attente. Ce temps comprend signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
-|pdw_node_id|**int**|Identificateur du nœud sur lequel cette distribution se trouve. <br/> **S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|Identificateur du nœud sur lequel cette distribution se trouve. <br/> **S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 ##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Types d’attente  
@@ -70,7 +70,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
   
  Bien que le thread ne soit plus en train d'attendre, il n'a pas à redémarrer immédiatement. En effet, ce type de thread est d'abord placé dans la file d'attente des travaux pouvant s'exécuter et doit attendre qu'un quantum s'exécute sur le planificateur.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les compteurs de temps d’attente sont des valeurs **bigint** et, par conséquent, ne sont pas aussi sujets à la substitution de compteur que les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]compteurs équivalents dans les versions antérieures de.  
+ Dans, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les compteurs de temps d’attente sont des valeurs **bigint** et, par conséquent, ne sont pas aussi sujets à la substitution de compteur que les compteurs équivalents dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Des types spécifiques de temps d'attente pendant l'exécution des requêtes peuvent indiquer des goulots d'étranglement ou des points de blocage dans la requête. De la même façon, des temps d'attente élevés, ou des nombres d'attente à l'échelle du serveur peuvent indiquer des goulots d'étranglement ou des zones réactives en interaction avec l'instance du serveur. Par exemple, des attentes de verrou indiquent une contention de données par les requêtes ; des attentes de verrou interne d'E/S de page indiquent des temps de réponse E/S lents ; des attentes de mise à jour de verrous internes de page indiquent une mise en page de fichier incorrecte.  
   
@@ -167,8 +167,8 @@ Cette commande remet tous les compteurs à 0.
 |CONNECTION_ENDPOINT_LOCK |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures.| 
 |COUNTRECOVERYMGR |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |CREATE_DATINISERVICE |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
-|CXCONSUMER |Se produit avec des plans de requête parallèles lorsqu’un thread de consommateur attend qu’un thread de producteur envoie des lignes. Il s’agit d’une partie normale de l’exécution des requêtes parallèles. <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] SP2, CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Se produit avec des plans de requête parallèles lors de la synchronisation de l’itérateur d’échange du processeur de requêtes, et lors de la production et de la consommation de lignes. Si l'attente est excessive et ne peut pas être réduite en ajustant la requête (en ajoutant des index, par exemple), pensez à affiner le seuil de coût pour le parallélisme ou à baisser le degré de parallélisme.<br /> **Remarque :** À compter [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] de SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET fait uniquement référence à la synchronisation de l’itérateur d’échange du processeur de requêtes et à la production de lignes pour les threads de consommateur. Les threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
+|CXCONSUMER |Se produit avec des plans de requête parallèles lorsqu’un thread de consommateur attend qu’un thread de producteur envoie des lignes. Il s’agit d’une partie normale de l’exécution des requêtes parallèles. <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Se produit avec des plans de requête parallèles lors de la synchronisation de l’itérateur d’échange du processeur de requêtes, et lors de la production et de la consommation de lignes. Si l'attente est excessive et ne peut pas être réduite en ajustant la requête (en ajoutant des index, par exemple), pensez à affiner le seuil de coût pour le parallélisme ou à baisser le degré de parallélisme.<br /> **Remarque :** À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , CXPACKET fait uniquement référence à la synchronisation de l’itérateur d’échange du processeur de requêtes et à la production de lignes pour les threads de consommateur. Les threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
 |CXROWSET_SYNC |Se produit pendant une analyse de plage parallèle.| 
 |DAC_INIT |Se produit alors que la connexion administrateur dédiée est en cours d'initialisation.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
@@ -372,7 +372,7 @@ Cette commande remet tous les compteurs à 0.
 |INSTANCE_LOG_RATE_GOVERNOR |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures.| 
 |INTERNAL_TESTING |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
 |IO_AUDIT_MUTEX |Se produit durant la synchronisation des mémoires tampons d'événements de trace.| 
-|IO_COMPLETION |Se produit durant l'attente de l'exécution des opérations d'E/S. Ce type d'attente représente en général des entrées/sorties de page qui ne sont pas des données. Les attentes d’exécution d’e/s de page de\_ \* données apparaissent en tant qu’attentes PAGEIOLATCH.| 
+|IO_COMPLETION |Se produit durant l'attente de l'exécution des opérations d'E/S. Ce type d'attente représente en général des entrées/sorties de page qui ne sont pas des données. Les attentes d’exécution d’e/s de page de données apparaissent en tant qu' \_ \* attentes PAGEIOLATCH.| 
 |IO_QUEUE_LIMIT |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures.| 
 |IO_RETRY |Se produit lorsqu'une opération d'E/S telle qu'une lecture ou une écriture sur disque échoue en raison de ressources insuffisantes, puis est retentée.| 
 |IOAFF_RANGE_QUEUE |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
@@ -380,12 +380,12 @@ Cette commande remet tous les compteurs à 0.
 |KTM_ENLISTMENT |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
 |KTM_RECOVERY_MANAGER |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
 |KTM_RECOVERY_RESOLUTION |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
-|LATCH_DT |Se produit pendant l'attente d'un verrou en mode de destruction. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes\_ \* de verrous est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
-|LATCH_EX |Se produit pendant l'attente d'un verrou exclusif. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes\_ \* de verrous est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
-|LATCH_KP |Se produit pendant l'attente d'un verrou de maintien. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes\_ \* de verrous est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_DT |Se produit pendant l'attente d'un verrou en mode de destruction. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_EX |Se produit pendant l'attente d'un verrou exclusif. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_KP |Se produit pendant l'attente d'un verrou de maintien. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
 |LATCH_NL |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
-|LATCH_SH |Se produit pendant l'attente d'un verrou de partage. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes\_ \* de verrous est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
-|LATCH_UP |Se produit pendant l'attente d'un verrou de mise à jour. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes\_ \* de verrous est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_SH |Se produit pendant l'attente d'un verrou de partage. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_UP |Se produit pendant l'attente d'un verrou de mise à jour. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
 |LAZYWRITER_SLEEP |Se produit lorsque des tâches d’écriture différée sont suspendues. Il s'agit d'une mesure de la durée consacrée aux tâches en arrière-plan qui attendent. Ne considérez pas cet état lorsque vous cherchez des blocages d'utilisateur.| 
 |LCK_M_BU |Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour en bloc.| 
 |LCK_M_BU_ABORT_BLOCKERS |Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour en bloc avec des blocages d'abandon. (En relation avec l’option d’attente basse priorité de ALTER TABLE et ALTER INDEX.), <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 

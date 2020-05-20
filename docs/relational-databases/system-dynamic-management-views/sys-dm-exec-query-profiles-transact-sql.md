@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165505"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812026"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74165505"
 Contrôle la progression en temps réel lorsqu'une requête est en cours d'exécution. Par exemple, utilisez cette vue de gestion dynamique pour déterminer la partie de la requête qui est lente. Joignez cette vue de gestion dynamique à d'autres vues de gestion dynamique système identifiées dans le champ de description. Ou bien, joignez cette vue de gestion dynamique à d'autres compteurs de performances (tels que l'analyseur de performances, xperf) à l'aide de colonnes timestamp.  
   
 ## <a name="table-returned"></a>Table retournée  
-Les compteurs retournés sont par opérateur par thread. Les résultats sont dynamiques et ne correspondent pas aux résultats des options existantes, telles `SET STATISTICS XML ON` que la création d’une sortie uniquement lorsque la requête est terminée.  
+Les compteurs retournés sont par opérateur par thread. Les résultats sont dynamiques et ne correspondent pas aux résultats des options existantes, telles que la création d’une `SET STATISTICS XML ON` sortie uniquement lorsque la requête est terminée.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -72,7 +72,7 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |segment_read_count|**int**|Nombre de lectures anticipées de segment jusqu'à présent.|  
 |segment_skip_count|**int**|Nombre de segments ignorés jusqu'à présent.| 
 |actual_read_row_count|**bigint**|Nombre de lignes lues par un opérateur avant l’application du prédicat résiduel.| 
-|estimated_read_row_count|**bigint**|**S’applique à :** À partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] de SP1. <br/>Nombre de lignes dont la lecture est estimée par un opérateur avant l’application du prédicat résiduel.|  
+|estimated_read_row_count|**bigint**|**S’applique à :** À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes dont la lecture est estimée par un opérateur avant l’application du prédicat résiduel.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Si le nœud de plan de requête n’a pas d’e/s, tous les compteurs d’e/s sont définis sur NULL.  
@@ -83,17 +83,17 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
   
 -   En cas d'analyse parallèle, cette vue de gestion dynamique indique des compteurs pour chaque threads parallèles de l'analyse.
  
-À compter [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] de SP1, l' *infrastructure de profilage des statistiques d’exécution de requête standard* existe côte à côte avec une *infrastructure de profilage des statistiques d’exécution de requête légère*. `SET STATISTICS XML ON`et `SET STATISTICS PROFILE ON` utilisent toujours l' *infrastructure de profilage des statistiques d’exécution de requête standard*. Pour `sys.dm_exec_query_profiles` que soit rempli, l’une des infrastructures de profilage de requête doit être activée. Pour plus d’informations, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).    
+À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastructure de profilage des statistiques d’exécution de requête standard* existe côte à côte avec une infrastructure de *profilage des statistiques d’exécution de requête légère*. `SET STATISTICS XML ON`et `SET STATISTICS PROFILE ON` utilisent toujours l' *infrastructure de profilage des statistiques d’exécution de requête standard*. Pour `sys.dm_exec_query_profiles` que soit rempli, l’une des infrastructures de profilage de requête doit être activée. Pour plus d’informations, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> La requête en cours d’investigation doit démarrer **après** l’activation de l’infrastructure de profilage de la requête. l’activation de la requête après `sys.dm_exec_query_profiles`le démarrage de la requête ne produira pas de résultats dans. Pour plus d’informations sur la façon d’activer les infrastructures de profilage de requête, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).
+> La requête en cours d’investigation doit démarrer **après** l’activation de l’infrastructure de profilage de la requête. l’activation de la requête après le démarrage de la requête ne produira pas de résultats dans `sys.dm_exec_query_profiles` . Pour plus d’informations sur la façon d’activer les infrastructures de profilage de requête, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Autorisations  
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed instance `VIEW DATABASE STATE` , requiert l’autorisation et `db_owner` l’appartenance du rôle de base de données.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed instance, requiert `VIEW DATABASE STATE` l’autorisation et l’appartenance du `db_owner` rôle de base de données.   
 Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
    
 ## <a name="examples"></a>Exemples  
- Étape 1 : Connectez-vous à une session dans laquelle vous envisagez d’exécuter la requête `sys.dm_exec_query_profiles`que vous allez analyser avec. Pour configurer la requête pour le profilage `SET STATISTICS PROFILE ON`, utilisez. Exécutez votre requête dans la même session.  
+ Étape 1 : Connectez-vous à une session dans laquelle vous envisagez d’exécuter la requête que vous allez analyser avec `sys.dm_exec_query_profiles` . Pour configurer la requête pour le profilage `SET STATISTICS PROFILE ON` , utilisez. Exécutez votre requête dans la même session.  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
