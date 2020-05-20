@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761833"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807070"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Cette table est stockée dans la base de données **msdb** .
 |**serveurs**|**sysname**|Nom du serveur sur lequel le travail a été exécuté.|  
   
   ## <a name="example"></a>Exemple
- La requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante convertit les colonnes **run_time** et **run_duration** dans un format plus convivial.  Exécutez le script dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+ La [!INCLUDE[tsql](../../includes/tsql-md.md)] requête suivante convertit les colonnes **run_time** et **run_duration** dans un format plus convivial.  Exécutez le script dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .
  
  ```sql
  SET NOCOUNT ON;

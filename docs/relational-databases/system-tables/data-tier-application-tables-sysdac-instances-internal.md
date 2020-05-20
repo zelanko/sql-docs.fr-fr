@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_instances_internal
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5fcc3527880383e6a42a4c5530e2e1aeacc055b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084741"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807180"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tables d’applications de la couche Données - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Affiche une ligne pour chaque instance d’application de la couche données (DAC) déployée sur une [!INCLUDE[ssDE](../../includes/ssde-md.md)]instance du. Cette table est stockée dans le schéma dbo de la base de données msdb.  
+  Affiche une ligne pour chaque instance d’application de la couche données (DAC) déployée sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Cette table est stockée dans le schéma dbo de la base de données msdb.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "68084741"
 |date_created|**datetime**|Date et heure de création de l'instance DAC.|  
 |created_by|**sysname**|Connexion qui a créé l'instance DAC|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant d’autorisations pour se connecter à la base de données Master.  
   
 ## <a name="permissions"></a>Autorisations  

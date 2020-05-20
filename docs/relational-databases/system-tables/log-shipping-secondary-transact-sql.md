@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary system table
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 687f9f7441b7d77ea191047ef22491728ba81047
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5debab1572bc2f788c0dc13773d0dc140c693108
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095822"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805935"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "68095822"
 |**file_retention_period**|**int**|Durée, en minutes, de conservation d'un fichier de sauvegarde sur le serveur secondaire avant sa suppression.|  
 |**copy_job_id**|**uniqueidentifier**|ID associé au travail de copie sur le serveur secondaire.|  
 |**restore_job_id**|**uniqueidentifier**|ID associé au travail de restauration sur le serveur secondaire.|  
-|**monitor_server**|**sysname**|Nom de l’instance du utilisé comme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serveur moniteur dans la configuration de la copie des journaux de session.|  
+|**monitor_server**|**sysname**|Nom de l’instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilisé comme serveur moniteur dans la configuration de la copie des journaux de session.|  
 |**monitor_server_security_mode**|**bit**|Mode de sécurité utilisé pour la connexion au serveur moniteur.<br /><br /> 1 = Authentification Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification.|  
 |**last_copied_file**|**nvarchar (500)**|Nom de fichier du dernier fichier de sauvegarde copié sur le serveur secondaire.|  
 |**last_copied_date**|**datetime**|Heure et date de la dernière copie sur le serveur secondaire.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Plusieurs bases de données secondaires sur le même serveur secondaire pour une base de données primaire donnée partagent certains paramètres dans la table **log_shipping_secondary** . En cas de modification d'un paramètre partagé pour l'une d'entre elles, ce paramètre est modifié pour toutes.  
   
 ## <a name="see-also"></a>Voir aussi  
