@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Dialect property
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3b5c5709a63183bf4c92963dafecb2cf234e2d92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b09f6d254bab0d7829042bdbb80a0bf9beca1b5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918995"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757185"
 ---
 # <a name="dialect-property"></a>Dialect, propriété
 Indique le dialecte des propriétés [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) . Le dialecte définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.  

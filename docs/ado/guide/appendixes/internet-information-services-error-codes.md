@@ -11,14 +11,14 @@ helpviewer_keywords:
 - errors [ADO], IIS
 - IIS errors [ADO]
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5aa425cd6035a51f7856cc27b5d53f3144854c5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a49e136f7d67c5d0713087aa225cee6e1aa3791e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926824"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758515"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Codes d’erreur Internet Information Services pour le service de données distant
 Le tableau suivant répertorie les codes d’erreur Microsoft® Internet Information Services (IIS) relatifs à l’utilisation du service de données à distance. La traduction décimale positive des deux octets de poids faible, la traduction décimale négative du code d’erreur complet et les valeurs hexadécimales sont affichées.

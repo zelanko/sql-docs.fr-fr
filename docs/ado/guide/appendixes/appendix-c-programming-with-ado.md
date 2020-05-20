@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ed57bb3087378ac6529fc5bd8c8a0aa01e06cfa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926876"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758525"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Annexe C : programmation avec ADO dans les environnements de développement
 ADO est un composant d’interface Automation COM qui peut être utilisé avec de nombreux langages de programmation, notamment Microsoft Visual Basic, VBScript, JScript et Visual C++. Une version d’ADO est installée avec chacun de ces outils et d’autres applications, par exemple Microsoft Office et Microsoft SQL Server.
 
- La bibliothèque pour ADO est msado15. dll et le préfixe de l’ID de programme (ProgID) est « ADODB ». Par exemple, pour faire explicitement référence à un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)ADO `ADODB.Recordset`, utilisez.
+ La bibliothèque pour ADO est msado15. dll et le préfixe de l’ID de programme (ProgID) est « ADODB ». Par exemple, pour faire explicitement référence à un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)ADO, utilisez `ADODB.Recordset` .
 
  Pour plus d’informations sur la programmation avec ADO dans différents environnements de développement, consultez les rubriques suivantes :
 

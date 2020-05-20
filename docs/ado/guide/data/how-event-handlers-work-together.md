@@ -15,14 +15,14 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925042"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758105"
 ---
 # <a name="how-event-handlers-work-together"></a>Fonctionnement conjoint des gestionnaires d’événements
 À moins que vous ne programmiez dans Visual Basic, tous les gestionnaires d’événements pour les événements **Connection** et **Recordset** doivent être implémentés, que vous soyez en fait en train de traiter tous les événements. La quantité de travail d’implémentation que vous devez effectuer dépend de votre langage de programmation. Pour plus d’informations, consultez [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

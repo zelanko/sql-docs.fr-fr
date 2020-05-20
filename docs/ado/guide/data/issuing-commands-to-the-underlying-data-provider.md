@@ -12,14 +12,14 @@ helpviewer_keywords:
 - underlying providers [ADO]
 - data shaping [ADO], commands
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bc30f35ebfe2ddc59e9ef1404253e9bc99d62e0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924947"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757805"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Émission de commandes vers le fournisseur de données sous-jacent
 Toute commande qui ne commence pas par SHAPE est transmise au fournisseur de données. Cela équivaut à émettre une commande de forme sous la forme « SHAPE {Provider Command} ». Il n’est *pas* nécessaire que ces commandes produisent un **jeu d’enregistrements**. Par exemple, «la forme {DROP TABLE MyTable} est une commande de forme parfaitement valide, en supposant que le fournisseur de données prend en charge DROP TABLE.  

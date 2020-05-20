@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926794"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758505"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Vue d’ensemble du service de curseur Microsoft pour OLE DB
 Le service de curseur Microsoft pour OLE DB complète les fonctions de prise en charge de curseur des fournisseurs de données. Par conséquent, l’utilisateur perçoit des fonctionnalités relativement uniformes de tous les fournisseurs de données.

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925136"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758825"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData : une application ADO simple
 Cette simple application passe par chacune des quatre principales opérations ADO : obtention, examen, modification et mise à jour des données. Ces opérations sont effectuées sur l’exemple de base de données Northwind inclus avec Microsoft® SQL Server. Pour vous concentrer sur les notions de base d’ADO et pour empêcher l’encombrement du code, la gestion des erreurs dans l’exemple est minime.  
@@ -44,17 +44,17 @@ Cette simple application passe par chacune des quatre principales opérations AD
   
 |Type de contrôle|Propriété|Valeur|  
 |------------------|--------------|-----------|  
-|Formulaire|Nom|Form1|  
+|Formulaire|Name|Form1|  
 ||Hauteur|6500|  
 ||Largeur|6500|  
-|MS DataGrid|Nom|grdDisplay1|  
-|TextBox|Nom|txtDisplay1|  
+|MS DataGrid|Name|grdDisplay1|  
+|TextBox|Name|txtDisplay1|  
 ||Multiline|true|  
-|Bouton de commande|Nom|cmdGetData|  
+|Bouton de commande|Name|cmdGetData|  
 ||Caption|Get Data|  
-|Bouton de commande|Nom|cmdExamineData|  
+|Bouton de commande|Name|cmdExamineData|  
 ||Caption|Examiner les données|  
-|Bouton de commande|Nom|cmdEditData|  
+|Bouton de commande|Name|cmdEditData|  
 ||Caption| Modification des données|  
-|Bouton de commande|Nom|cmdUpdateData|  
+|Bouton de commande|Name|cmdUpdateData|  
 ||Caption|Données mises à jour|

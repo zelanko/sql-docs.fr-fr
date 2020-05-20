@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9db49905b6548e5cb21cca976683c8b387017d32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 691ad580825e4d22cef8bea4f30c737415cfc6b3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919131"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757385"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Delete, méthode (collection Fields ADO)
 Supprime un objet de la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) .  
@@ -37,7 +37,7 @@ Fields.Delete Field
  *Champ*  
  **Variante** qui désigne l’objet de [champ](../../../ado/reference/ado-api/field-object.md) à supprimer. Ce paramètre peut être le nom de l’objet de **champ** ou la position ordinale de l’objet de **champ** lui-même.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’appel de la méthode **Fields. Delete** sur un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ouvert provoque une erreur au moment de l’exécution.  
   
 ## <a name="applies-to"></a>S'applique à  

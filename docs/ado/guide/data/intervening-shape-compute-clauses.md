@@ -12,14 +12,14 @@ helpviewer_keywords:
 - COMPUTE clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3a5694613d3830b057204c89d2173eea4375519
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4db8d9be4bb797bffd4fc3b033dfc7e5693c1f88
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924955"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757815"
 ---
 # <a name="intervening-shape-compute-clauses"></a>Clauses COMPUTE intermédiaires de la commande SHAPE
 Il est possible d’incorporer une ou plusieurs clauses Compute entre le parent et l’enfant dans une commande SHAPE paramétrable, comme dans l’exemple suivant :  

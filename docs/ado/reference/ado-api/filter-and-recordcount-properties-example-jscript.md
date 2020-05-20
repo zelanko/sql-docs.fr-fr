@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 339a605e926b88dae5cee515af9579152613692c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932658"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756795"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter et RecordCount, exemple de propriétés (JScript)
 Cet exemple ouvre un **jeu d’enregistrements** dans la table Companies de la base de données Northwind, puis utilise la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) pour limiter les enregistrements visibles à ceux dont le champ CompanyName commence par la lettre D. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **FilterJS. asp**.  

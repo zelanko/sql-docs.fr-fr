@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917147"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756479"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command, propriété dynamique (ADO)
 Spécifie une chaîne de commande fournie par l’utilisateur que la méthode de [resynchronisation](../../../ado/reference/ado-api/resync-method.md) émet pour actualiser les données de la table nommée dans la propriété dynamique de la [table unique](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
@@ -33,7 +33,7 @@ Spécifie une chaîne de commande fournie par l’utilisateur que la méthode de
   
  Voici deux exemples basés sur SQL :  
   
- 1\) le **jeu d’enregistrements** est défini par une commande :  
+ 1 \) le **jeu d’enregistrements** est défini par une commande :  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  La **table unique** est *Orders* et sa clé primaire, *OrderID*, est paramétrable. La sous-sélection offre un moyen simple de vérifier par programmation que le même nombre et l’ordre des colonnes sont retournés comme par la commande d’origine.  
   
- 2\) le **Recordset** est défini par une procédure stockée :  
+ 2 \) le **Recordset** est défini par une procédure stockée :  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c7a12d1579af407bca77c9fa61d660a84a09f04e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3df797be676961227687117e1fd7bdb748370efd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924916"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757745"
 ---
 # <a name="keyset-cursors"></a>Curseurs de jeu de clés
 Le curseur de jeu de clés fournit les fonctionnalités entre un curseur statique et un curseur dynamique dans sa capacité à détecter les modifications. Comme un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et à l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte les modifications apportées aux valeurs des lignes dans le jeu de résultats.  

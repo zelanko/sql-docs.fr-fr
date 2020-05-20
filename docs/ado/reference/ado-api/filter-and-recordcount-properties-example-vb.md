@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756770"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter et RecordCount, exemple de propriétés (VB)
 Cet exemple ouvre un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) sur la table Publishers dans la base de données ***pubs*** . Il utilise ensuite la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) pour limiter le nombre d’enregistrements visibles à ces serveurs de publication dans un pays ou une région spécifique. La propriété **RecordCount** est utilisée pour afficher la différence entre les recordsets filtrés et non filtrés.  

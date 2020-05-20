@@ -12,14 +12,14 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925015"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757905"
 ---
 # <a name="immediate-mode"></a>Mode immédiat
 Le mode immédiat est activé lorsque la propriété **LockType** est définie sur **adLockOptimistic** ou **adLockPessimistic**. En mode immédiat, les modifications apportées à un enregistrement sont propagées à la source de données dès que vous déclarez le travail sur une ligne terminée en appelant la méthode **Update** .  

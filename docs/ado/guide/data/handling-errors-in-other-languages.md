@@ -8,14 +8,14 @@ ms.date: 02/14/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 83d9430dc368a3dc9eb93719f9698b0d39b1385b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 498de75e624528a2d2bd9ab5aa4225c9d22f11db
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925168"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758835"
 ---
 # <a name="handling-errors-in-other-languages"></a>Gestion des erreurs dans d’autres langages
 Jusqu’à présent, cette section a abordé les erreurs d’un point de vue Microsoft® Visual Basic® point de vue. Le reste de cette section vous donne une vue d’ensemble de la gestion des erreurs dans les langages autres que Visual Basic.  

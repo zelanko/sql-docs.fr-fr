@@ -15,14 +15,14 @@ helpviewer_keywords:
 - MoveFirst method [ADO], Visual Basic example
 - MoveNext method [ADO], Visual Basic example
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ade95659b1e7111ff2f3c27a04008e859ded605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4f0d0394e660bc691b4e13a2971d9d3181bbcee
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932080"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758625"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst, MoveLast, MoveNext et MovePrevious, exemple de méthodes (VB)
 Cet exemple utilise les méthodes [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)et [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) pour déplacer le pointeur d’enregistrement d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) en fonction de la commande fournie. La procédure MoveAny est requise pour l’exécution de cette procédure.  

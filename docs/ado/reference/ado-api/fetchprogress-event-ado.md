@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - FetchProgress event [ADO]
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab93d8117a5fb3d2bbc95ea33bbacdc7fba3f151
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5e75dd96a77261bfee44da0db9025fb02af6871
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932828"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757115"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress, événement (ADO)
 L’événement **FetchProgress**est appelé régulièrement au cours d’une longue opération asynchrone pour signaler le nombre de lignes qui ont été récupérées actuellement dans le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -46,7 +46,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *pRecordset*  
  Objet **Recordset** qui est l’objet pour lequel les enregistrements sont récupérés.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque vous utilisez **FetchProgress** avec un **Recordset**enfant, sachez que les valeurs de paramètre *Progress* et *MaxProgress* sont dérivées de l’ensemble de lignes de [service de curseur](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) sous-jacent. Les valeurs retournées représentent le nombre total d’enregistrements dans l’ensemble de lignes sous-jacent, et pas seulement le nombre d’enregistrements dans le chapitre actuel.  
   
 > [!NOTE]
