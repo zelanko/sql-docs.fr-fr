@@ -1,7 +1,7 @@
 ---
 title: Configurer la hiérarchisation HDFS
 titleSuffix: SQL Server big data clusters
-description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers Azure Data Lake Storage externe dans HDFS sur un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers Azure Data Lake Storage externe dans HDFS sur un cluster Big Data SQL Server 2019.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c156e117b3a26c09feb5afb3bb2f3ee1c594c43b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190403"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606601"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configurer la hiérarchisation HDFS sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -43,7 +43,7 @@ Les sections suivantes fournissent un exemple de configuration de la hiérarchis
 
 La hiérarchisation HDFS prend en charge l’actualisation. Actualisez un montage existant pour la dernière capture instantanée des données distantes.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - [Cluster Big Data déployé](deployment-guidance.md)
 - [Outils Big Data](deploy-big-data-tools.md)

@@ -3,24 +3,31 @@ title: 'Démarrage rapide : Fonctions Python'
 description: Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de Python avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 577bb4e6d956c53182a20f0e363642946c33c92c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487318"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606703"
 ---
 # <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>Démarrage rapide : Fonctions Python avancées avec SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de Python avec SQL Server Machine Learning Services. Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en Python avec seulement quelques lignes de code.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de Python avec [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md). Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en Python avec seulement quelques lignes de code.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de Python avec [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en Python avec seulement quelques lignes de code.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -28,7 +35,7 @@ Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions ma
 
   Votre instance SQL Server peut se trouver sur une machine virtuelle Azure ou être locale. Sachez simplement que la fonctionnalité de script externe est désactivée par défaut. Avant de commencer, vous serez donc peut-être amené à [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que le **service SQL Server Launchpad** est en cours d’exécution.
 
-- Vous avez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts Python. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Vous avez également besoin d’un outil pour exécuter des requêtes SQL qui contiennent des scripts Python. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce guide de démarrage rapide utilise [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Créer une procédure stockée pour générer des nombres aléatoires
 

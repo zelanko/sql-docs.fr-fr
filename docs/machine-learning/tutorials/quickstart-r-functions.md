@@ -1,38 +1,55 @@
 ---
 title: 'Démarrage rapide : Fonctions R'
-description: Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de R avec SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de R avec l’apprentissage automatique SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fd3c3326fe0b186ade24cbcf95f587abba1cb6bc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487278"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606659"
 ---
-# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Démarrage rapide : Fonctions R avancées avec SQL Server Machine Learning Services
+# <a name="quickstart-r-functions-with-sql-machine-learning"></a>Démarrage rapide : Fonctions R avec l’apprentissage automatique SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de R avec SQL Server Machine Learning Services. Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en R avec seulement quelques lignes de code.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de R avec [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md). Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en R avec seulement quelques lignes de code.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de R avec [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en R avec seulement quelques lignes de code.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Dans ce guide de démarrage rapide, vous apprendrez à utiliser les fonctions mathématiques et utilitaires de R avec [SQL Server R Services](../r/sql-server-r-services.md). Les fonctions statistiques sont souvent complexes à implémenter dans T-SQL, mais elles peuvent l’être en R avec seulement quelques lignes de code.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Ce démarrage rapide nécessite un accès à une instance de SQL Server sur laquelle [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) est installé avec le langage R.
+Pour effectuer ce démarrage rapide, vous avez besoin de ce qui suit.
 
-  Votre instance SQL Server peut se trouver sur une machine virtuelle Azure ou être locale. Sachez simplement que la fonctionnalité de script externe est désactivée par défaut. Avant de commencer, vous serez donc peut-être amené à [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifier que le **service SQL Server Launchpad** est en cours d’exécution.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Pour savoir comment installer Machine Learning Services, consultez le [Guide d’installation Windows](../install/sql-machine-learning-services-windows-install.md) ou le [Guide d’installation Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Vous pouvez également [activer Machine Learning Services sur des clusters Big Data SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Pour savoir comment installer Machine Learning Services, consultez le [Guide d’installation Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Pour plus d’informations sur l’installation de R Services, consultez le [Guide d’installation Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
 
-- Vous aurez aussi besoin d’un outil pour exécuter les requêtes SQL qui contiennent des scripts R. Vous pouvez exécuter ces scripts à l’aide de n’importe quel outil de gestion de base de données ou de requête, à condition qu’il puisse se connecter à une instance de SQL Server et exécuter une requête T-SQL ou une procédure stockée. Ce démarrage rapide utilise [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Un outil pour exécuter les requêtes SQL qui contiennent des scripts R. Ce guide de démarrage rapide utilise [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Créer une procédure stockée pour générer des nombres aléatoires
 
-Pour plus de simplicité, nous allons utiliser le package `stats` R qui est installé et chargé par défaut dans SQL Server Machine Learning Services avec R installé. Le package contient des centaines de fonctions qui permettent d’effectuer des tâches statistiques courantes, notamment la fonction `rnorm`, qui génère un nombre spécifié de nombres aléatoires en utilisant la distribution normale, avec un écart type et une moyenne donnés.
+Pour plus de simplicité, nous allons utiliser le package R `stats`, qui est installé et chargé par défaut. Le package contient des centaines de fonctions qui permettent d’effectuer des tâches statistiques courantes, notamment la fonction `rnorm`, qui génère un nombre spécifié de nombres aléatoires en utilisant la distribution normale, avec un écart type et une moyenne donnés.
 
 Par exemple, le code R suivant retourne 100 nombres sur une moyenne de 50, compte tenu d’un écart type de 3.
 
@@ -53,7 +70,7 @@ EXECUTE sp_execute_external_script
 
 Que se passe-t-il si vous voulez simplifier la génération d’un autre ensemble de nombres alétaoires ?
 
-C’est facile lorsqu’il est combiné avec SQL Server. Vous définissez une procédure stockée qui obtient les arguments de l’utilisateur, puis transmettez ces arguments dans le script R en tant que variables.
+Rien de plus facile avec une combinaison avec T-SQL. Vous définissez une procédure stockée qui obtient les arguments de l’utilisateur, puis transmettez ces arguments dans le script R en tant que variables.
 
 ```sql
 CREATE PROCEDURE MyRNorm (
@@ -107,11 +124,7 @@ WITH RESULT SETS (([Col1] int not null));
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour créer un modèle Machine Learning à l’aide de R dans SQL Server, suivez ce démarrage rapide :
+Pour créer un modèle Machine Learning à l’aide de R avec l’apprentissage automatique SQL, suivez ce démarrage rapide :
 
 > [!div class="nextstepaction"]
-> [Créer et scorer un modèle prédictif dans R avec SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
-
-Pour plus d’informations sur SQL Server Machine Learning Services, consultez :
-
-- [Qu’est-ce que SQL Server Machine Learning Services (Python et R) ?](../sql-server-machine-learning-services.md)
+> [Créer et scorer un modèle prédictif dans R avec l’apprentissage automatique SQL](quickstart-r-train-score-model.md)

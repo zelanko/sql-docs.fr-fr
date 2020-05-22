@@ -1,51 +1,52 @@
 ---
-title: 'Tutoriel Python : Catégoriser les clients'
-titleSuffix: SQL machine learning
-description: Dans la quatrième partie de cette série de tutoriels, vous allez effectuer un clustering de clients à l’aide de K-moyennes dans une base de données en Python avec l’apprentissage automatique SQL.
+title: 'Tutoriel : Développer un modèle de clustering en R'
+titleSuffix: SQL Machine Learning
+description: Dans cette série de tutoriels en quatre parties, vous allez développer un modèle pour effectuer le clustering dans R avec le Machine Learning SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.devlang: python
-ms.date: 04/15/2020
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b3be490a6da01d34f8c762bf9c6cae1a35dbe40
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 558d6b9aaa47288de7c75e61ee38d379a3fc1e68
 ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606544"
+ms.locfileid: "83607102"
 ---
-# <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Tutoriel Python : Catégoriser des clients à l’aide de k-moyennes avec l’apprentissage automatique SQL
+# <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Tutoriel : Préparer des données pour effectuer le clustering dans R avec le Machine Learning SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Dans ce tutoriel en quatre parties, vous allez utiliser Python pour développer et déployer un modèle de clustering k-moyennes dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [Clusters Big Data](../../big-data-cluster/machine-learning-services.md) pour catégoriser les données clients.
+Dans cette série de tutoriels en quatre parties, vous allez utiliser R pour développer et déployer un modèle de clustering k-moyennes dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [Clusters Big Data](../../big-data-cluster/machine-learning-services.md) pour classer les données clients par catégorie.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Dans ce tutoriel en quatre parties, vous allez utiliser Python pour développer et déployer un modèle de clustering k-moyennes dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) pour clusteriser les données clients.
+Dans cette série de tutoriels en quatre parties, vous allez utiliser R pour développer et déployer un modèle de clustering k-moyennes dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) pour clusteriser les données clients.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Dans cette série de tutoriels en quatre parties, vous allez utiliser R pour développer et déployer un modèle de clustering k-moyennes dans [SQL Server R Services](../r/sql-server-r-services.md) pour clusteriser les données clients.
 ::: moniker-end
 
-Dans la première partie de cette série, vous allez configurer les conditions préalables pour le tutoriel, puis restaurer un exemple de jeu de données dans une base de données. Plus loin dans cette série, vous utiliserez ces données pour effectuer l’apprentissage et le déploiement d’un modèle de clustering dans Python avec l’apprentissage automatique SQL.
-
-Dans les parties 2 et 3 de cette série, vous allez développer des scripts Python dans un notebook Azure Data Studio pour analyser et préparer vos données et effectuer l’apprentissage d’un modèle Machine Learning. Ensuite, dans la quatrième partie, vous exécuterez ces scripts Python à l’intérieur d’une base de données à l’aide de procédures stockées.
+Dans la première partie de cette série, vous allez configurer les prérequis pour le tutoriel, puis restaurer un exemple de jeu de données dans une base de données. Dans les parties 2 et 3, vous allez développer des scripts R dans un notebook Azure Data Studio pour analyser et préparer ces exemples de données et effectuer l’apprentissage d’un modèle Machine Learning. Puis, dans la quatrième partie, vous exécuterez ces scripts R à l’intérieur d’une base de données à l’aide de procédures stockées.
 
 Le *clustering* permet d’organiser les données dans des groupes dont les membres sont similaires. Pour cette série de tutoriels, imaginez que vous êtes une entreprise de vente au détail. Vous allez utiliser l’algorithme **K-moyennes** pour effectuer le clustering des clients dans un jeu de données d’achats et de retours de produits. Lorsque vous effectuez le clustering de clients, vous pouvez concentrer plus efficacement vos efforts marketing en ciblant des groupes spécifiques. Le clustering K-myennes est un algorithme *d’apprentissage non supervisé* qui recherche des modèles dans les données en fonction de similarités.
+
 
 Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Restaurer un exemple de base de données
+> 
+Dans la [deuxième partie](r-clustering-model-prepare-data.md), vous allez préparer les données à partir d’une base de données pour effectuer le clustering.
 
-Dans la [deuxième partie](python-clustering-model-prepare-data.md), vous allez préparer les données d’une base de données pour effectuer le clustering.
+Dans la [troisième partie](r-clustering-model-build.md), vous apprendrez à créer et à effectuer l’apprentissage d’un modèle de clustering k-moyennes dans R.
 
-Dans la [troisième partie](python-clustering-model-build.md), vous apprendrez à créer et à effectuer l’apprentissage d’un modèle de clustering dans Python.
-
-Dans la [quatrième partie](python-clustering-model-deploy.md), vous allez créer une procédure stockée dans une base de données capable d’effectuer un clustering en Python sur la base des nouvelles données.
+Dans la [quatrième partie](r-clustering-model-deploy.md), vous allez créer une procédure stockée dans une base de données capable d’effectuer un clustering dans R en fonction de nouvelles données.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -53,22 +54,14 @@ Dans la [quatrième partie](python-clustering-model-deploy.md), vous allez crée
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) avec option de langage Python. Suivez les instructions d’installation du [Guide d’installation de Windows](../install/sql-machine-learning-services-windows-install.md) ou du [Guide d’installation de Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15). Vous pouvez également [activer Machine Learning Services sur des clusters Big Data SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) avec option de langage Python. Suivez les instructions d’installation du [Guide d’installation de Windows](../install/sql-machine-learning-services-windows-install.md).
+* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) avec option de langage R. Suivez les instructions d’installation du [Guide d’installation de Windows](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md) Vous allez utiliser un notebook dans Azure Data Studio pour Python et SQL. Pour plus d’informations sur les notebooks, consultez [Guide pratique pour utiliser des notebooks dans Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+* [Azure Data Studio](../../azure-data-studio/what-is.md) Vous allez utiliser un notebook dans Azure Data Studio pour SQL. Pour plus d’informations sur les notebooks, consultez [Guide pratique pour utiliser des notebooks dans Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).
 
-* Packages Python supplémentaires : les exemples de cette série de tutoriel utilisent des packages Python qui peuvent déjà être installés.
+* R IDE : ce tutoriel utilise [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
 
-  Ouvrez une **invite de commandes** et accédez au chemin d’installation de la version de Python que vous utilisez dans Azure Data Studio. Par exemple : `cd %LocalAppData%\Programs\Python\Python37-32`. Exécutez ensuite les commandes suivantes pour installer les packages qui ne sont pas déjà installés.
-
-  ```console
-  pip install matplotlib
-  pip install pandas
-  pip install pyodbc
-  pip install scipy
-  pip install sklearn
-  ```
+* RODBC : ce pilote est utilisé dans les scripts R que vous allez développer à l’aide de ce tutoriel. S’il n’est pas déjà installé, installez-le à l’aide de la commande R `install.packages("RODBC")`. Pour plus d’informations sur RODBC, consultez [CRAN - Package RODBC](https://CRAN.R-project.org/package=RODBC).
 
 ## <a name="restore-the-sample-database"></a>Restaurer les exemples de base de données
 
@@ -101,9 +94,10 @@ Si vous ne poursuivez pas ce tutoriel, supprimez la base de données tpcxbb_1gb.
 
 Dans la première partie de cette série de tutoriels, vous avez effectué les étapes suivantes :
 
-* Restaurer un exemple de base de données
+* Installer les prérequis
+* Restaurer un exemple de base de données dans SQL Server
 
 Pour préparer les données pour le modèle Machine Learning, suivez la deuxième partie de cette série de tutoriels :
 
 > [!div class="nextstepaction"]
-> [Tutoriel Python : Préparer des données pour effectuer un clustering](python-clustering-model-prepare-data.md)
+> [Préparer des données pour effectuer un clustering](r-clustering-model-prepare-data.md)

@@ -1,28 +1,34 @@
 ---
 title: 'Tutoriel Python : Créer un modèle de cluster'
-description: Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez créer un modèle K-moyennes pour effectuer le clustering dans Python avec SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez créer un modèle K-moyennes pour effectuer le clustering dans Python avec l’apprentissage automatique SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/14/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6e0aa1bcbf1bc79b6f77fc0b564d840194ffa8ec
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116592"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606435"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutoriel : Créer un modèle dans Python pour classer les clients par catégorie avec SQL Server Machine Learning Services
+# <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutoriel Python : Créer un modèle pour classer les clients par catégorie avec l’apprentissage automatique SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez créer un modèle K-moyennes dans Python pour effectuer le clustering. Dans la prochaine partie de cette série, vous déploierez ce modèle dans une base de données SQL avec SQL Server Machine Learning Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez créer un modèle K-moyennes dans Python pour effectuer le clustering. Dans la prochaine partie de cette série, vous déploierez ce modèle dans une base de données avec SQL Server Machine Learning Services ou sur des clusters Big Data.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez créer un modèle K-moyennes dans Python pour effectuer le clustering. Dans la prochaine partie de cette série, vous déploierez ce modèle dans une base de données avec SQL Server Machine Learning Services.
+::: moniker-end
 
 Dans cet article, vous allez apprendre à :
 
@@ -33,9 +39,9 @@ Dans cet article, vous allez apprendre à :
 
 Dans la [première partie](python-clustering-model.md), vous avez installé les prérequis et restauré l’exemple de base de données.
 
-Dans la [deuxième partie](python-clustering-model-prepare-data.md), vous avez préparé les données d’une base de données SQL pour effectuer le clustering.
+Dans la [deuxième partie](python-clustering-model-prepare-data.md), vous avez préparé les données d’une base de données pour effectuer le clustering.
 
-Dans la [quatrième partie](python-clustering-model-deploy.md), vous allez créer une procédure stockée dans une base de données SQL capable d’effectuer un clustering en Python sur la base des nouvelles données.
+Dans la [quatrième partie](python-clustering-model-deploy.md), vous allez créer une procédure stockée dans une base de données capable d’effectuer un clustering en Python sur la base des nouvelles données.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -147,7 +153,7 @@ Le cluster 0 est un ensemble de clients qui ne sont manifestement pas actifs. P
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
-Si vous ne poursuivez pas ce tutoriel, supprimez la base de données tpcxbb_1gb de SQL Server.
+Si vous ne poursuivez pas ce tutoriel, supprimez la base de données tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -160,4 +166,4 @@ Dans la troisième partie de cette série de tutoriels, vous avez effectué les 
 Pour déployer le modèle de Machine Learning que vous avez créé, suivez la quatrième partie de cette série de tutoriels :
 
 > [!div class="nextstepaction"]
-> [Tutoriel : Déployer un modèle de clustering dans Python avec SQL Server Machine Learning Services](python-clustering-model-deploy.md)
+> [Tutoriel Python : Déployer un modèle de clustering](python-clustering-model-deploy.md)

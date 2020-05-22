@@ -1,7 +1,7 @@
 ---
 title: 'Interroger les données HDFS : pool de stockage'
 titleSuffix: SQL Server Big Data Clusters
-description: Ce tutoriel montre comment interroger des données HDFS dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Vous créez une table externe sur les données dans le pool de stockage, puis exécutez une requête.
+description: Ce tutoriel montre comment interroger les données HDFS dans un cluster Big Data SQL Server 2019. Vous créez une table externe sur les données dans le pool de stockage, puis exécutez une requête.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f0e9e6c84d1c465e05aab5ac7f47f9218888159
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226479"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605811"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutoriel : Interroger HDFS dans un cluster Big Data SQL Server
 

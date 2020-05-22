@@ -1,7 +1,7 @@
 ---
 title: Monter S3 pour la hiérarchisation HDFS
 titleSuffix: SQL Server big data clusters
-description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers S3 externe dans HDFS sur un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers S3 externe dans HDFS sur un cluster Big Data SQL Server 2019.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fce89b5c2ee40fc7229c0c330fefe9e253a4fdc6
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652307"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606588"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Guide pratique pour monter S3 pour la hiérarchisation HDFS dans un cluster Big Data
 
 Les sections suivantes fournissent un exemple de configuration de la hiérarchisation HDFS avec une source de données de stockage S3.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - [Cluster Big Data déployé](deployment-guidance.md)
 - [Outils Big Data](deploy-big-data-tools.md)

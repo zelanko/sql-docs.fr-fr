@@ -1,7 +1,7 @@
 ---
 title: Configurer Kubernetes avec kubeadm
 titleSuffix: SQL Server Big Data Clusters
-description: Découvrez comment configurer Kubernetes sur plusieurs machines (physiques ou virtuelles) Ubuntu 16.04 ou 18.04 pour les déploiements [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Découvrez comment configurer Kubernetes sur plusieurs machines (physiques ou virtuelles) Ubuntu 16.04 ou 18.04 pour les déploiements sur un cluster Big Data SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d5478df68f6f88d638aaafc88c92f2a5730b9f7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 83f66841c4894d3c61ff8196eb52f3ac84fe42f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269458"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606545"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurer Kubernetes sur plusieurs machines pour les déploiements de cluster Big Data SQL Server
 
@@ -26,7 +26,7 @@ Cet article fournit un exemple d’utilisation de **kubeadm** permettant de conf
 > Pour obtenir des exemples de scripts de configuration de Kubernetes, consultez [Créer un cluster Kubernetes à l’aide de Kubeadm sur Ubuntu 16.04 LTS ou 18.04 LTS.](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)
 Consultez également [cette](deployment-script-single-node-kubeadm.md) rubrique pour obtenir un exemple de script qui automatise le déploiement d’un seul nœud kubeadm sur une machine virtuelle, puis déploie une configuration par défaut du cluster Big Data par-dessus.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - Au minimum, 3 machines physiques ou machines virtuelles Linux
 - Configuration recommandée par machine :

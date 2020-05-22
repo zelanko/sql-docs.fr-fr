@@ -1,7 +1,7 @@
 ---
 title: Déployer des applications avec azdata
 titleSuffix: SQL Server Big Data Clusters
-description: Déployez un script Python ou R en tant qu’application sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Déployez un script Python ou R en tant qu’application sur le cluster Big Data SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab28a6bbe7bbf108305f065dcdf7b870c0f76602
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253146"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606621"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Guide pratique pour déployer une application sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ Les types d’applications suivants sont pris en charge :
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - [Cluster Big Data SQL Server 2019](deployment-guidance.md)
 - [Utilitaire de ligne de commande azdata](deploy-install-azdata.md)

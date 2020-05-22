@@ -1,7 +1,7 @@
 ---
 title: Résoudre les problèmes liés à Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Cet article fournit des commandes pratiques pour la supervision et la résolution des problèmes d’un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Cet article fournit des commandes utiles pour la supervision et la résolution des problèmes d’un cluster Big Data SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664183"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606401"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Résoudre les problèmes liés à [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 

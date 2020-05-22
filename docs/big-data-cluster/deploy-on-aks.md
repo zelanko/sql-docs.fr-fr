@@ -1,7 +1,7 @@
 ---
 title: Configurer Azure Kubernetes Service
 titleSuffix: SQL Server Big Data Clusters
-description: Découvrez comment configurer Azure Kubernetes Service (AKS) pour les déploiements [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Découvrez comment configurer Azure Kubernetes Service (AKS) pour les déploiements de clusters Big Data SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 39bebccfc01d379a2c3839fcd7f8fd8824aa18e4
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 6a725cdbc5424da3820e5cd404306465482b3d94
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531104"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606931"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster Big Data SQL Server
 
@@ -30,7 +30,7 @@ Cet article décrit les étapes de déploiement de Kubernetes sur AKS avec Azure
 > [!TIP]
 > Vous pouvez également créer un script pour déployer AKS et un cluster Big Data en une seule étape. Pour plus d’informations, consultez la procédure à suivre dans un [script Python](quickstart-big-data-cluster-deploy.md) ou dans un [notebook](notebooks-deploy.md) Azure Data Studio.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 - [Déployer les outils Big Data SQL Server 2019](deploy-big-data-tools.md) :
    - **Kubectl**
