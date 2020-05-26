@@ -82,7 +82,7 @@ ms.locfileid: "79288233"
 |status|Code d'état utilisé par la table d'état.|  
 |sub_status|Code se sous-état utilisé par la table d'état.|  
 |status_message|Message d'état utilisé par la table d'état.|  
-|target|Nom du composant de capture de données modifiées Oracle qui a généré l'enregistrement de trace.|  
+|source|Nom du composant de capture de données modifiées Oracle qui a généré l'enregistrement de trace.|  
 |text_data|Données texte supplémentaires pour les cas où l'erreur ou l'enregistrement de trace contient une charge utile textuelle.|  
 |binary_data|Données binaires supplémentaires pour les cas où l'erreur ou l'enregistrement de trace contient une charge utile binaire.|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "79288233"
 |name|Nom de la base de données Oracle dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Horodateur (UTC) pour la dernière modification de la table **xdbcdc_config** de base de données CDC correspondante ou horodateur (UTC) pour la ligne actuelle dans cette table.<br /><br /> Le déclencheur UPDATE applique la valeur GETUTCDATE() pour cet élément. **config_version** permet au service de capture de données modifiées d’identifier l’instance de capture de données modifiées qui doit être examinée pour la modification de configuration ou pour l’activation/désactivation.|  
 |cdc_service_name|Cet élément détermine le service de capture de données modifiées Oracle qui gère la base de données Oracle sélectionnée.|  
-|enabled|Indique si l'instance Oracle CDC est activée (1) ou désactivée (0). Lorsque le service de capture de données modifiées Oracle démarre, seules les instances marquées comme étant activées (1) sont démarrées.<br /><br /> **Remarque**: Une instance Oracle CDC peut être désactivée en raison d’une erreur qui n’est pas renouvelable. Dans ce cas, l'instance doit être redémarrée manuellement une fois l'erreur corrigée.|  
+|enabled|Indique si l'instance Oracle CDC est activée (1) ou désactivée (0). Lorsque le service de capture de données modifiées Oracle démarre, seules les instances marquées comme étant activées (1) sont démarrées.<br /><br /> **Remarque** : Une instance Oracle CDC peut être désactivée en raison d’une erreur qui n’est pas renouvelable. Dans ce cas, l'instance doit être redémarrée manuellement une fois l'erreur corrigée.|  
   
 ###  <a name="dboxdbcdc_services"></a><a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  Ce tableau répertorie les services de capture de données modifiées associés à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hôte. Cette table est utilisée par la console du concepteur CDC pour déterminer la liste des services de capture de données modifiées configurés pour l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale. Elle est également utilisée par le service de capture de données modifiées pour garantir qu'un seul service Windows en cours de exécution gère un nom donné de service de capture de données modifiées Oracle.  
@@ -221,7 +221,7 @@ ms.locfileid: "79288233"
   
  **sql-username**, **sql-password** sont les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mises à jour. Si sqlacct a un nom d'utilisateur vide et un mot de passe vide, le service de capture de données modifiées Oracle se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows.  
   
- **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
+ **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
   
 ###  <a name="create"></a><a name="BKMK_create"></a> Créer  
  Utilisez `Create` pour créer un service de capture de données modifiées Oracle à partir d'un script. La commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Create` :  
@@ -247,7 +247,7 @@ ms.locfileid: "79288233"
   
  **sql-username**, **sql-password** sont le nom et le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés pour se connecter à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si ces deux paramètres sont vides, le service de capture de données modifiées pour Oracle se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows.  
   
- **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
+ **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
   
 ###  <a name="delete"></a><a name="BKMK_delete"></a> Supprimer  
  Utilisez `Delete` pour supprimer correctement le service de capture de données modifiées Oracle à partir d'un script. Cette commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Delete` .  
@@ -262,7 +262,7 @@ ms.locfileid: "79288233"
   
  **cdc-service-name** est le nom du service de capture de données modifiées (CDC) à supprimer.  
   
- **Remarque**: Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
+ **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
