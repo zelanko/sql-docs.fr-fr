@@ -107,7 +107,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>R. Révocation de l'autorisation VIEW DEFINITION sur un groupe de disponibilité  
- L'exemple suivant révoque l'autorisation `VIEW DEFINITION` sur le groupe de disponibilité `MyAg` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de `ZArifin`.  
+ L'exemple suivant révoque l'autorisation `VIEW DEFINITION` sur le groupe de disponibilité `MyAg` sur la connexion `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  

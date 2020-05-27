@@ -48,7 +48,7 @@ public java.sql.Time getTime(int index)
 ## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
- Pour savoir quels sont les types de données [ récupérables avec cette méthode, consultez le graphe intitulé « Conversions de méthodes getter » de la rubrique ](../../../connect/jdbc/understanding-data-type-conversions.md)Comprendre les conversions de types de données[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Pour savoir quels sont les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] récupérables avec cette méthode, consultez le graphe intitulé « Conversions de méthodes getter » de la rubrique [Comprendre les conversions de types de données](../../../connect/jdbc/understanding-data-type-conversions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

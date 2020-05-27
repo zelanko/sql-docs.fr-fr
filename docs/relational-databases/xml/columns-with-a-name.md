@@ -36,7 +36,7 @@ Les conditions suivantes sont celles dans lesquelles les colonnes de l'ensemble 
 -   Une colonne porte un nom différent.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Le nom de colonne commence par un arobase (\@)  
- Si le nom de colonne commence par un arobase (\@) et qu’il ne contient pas de barre oblique (/), un attribut de l’élément `row` possédant la valeur de colonne correspondante est créé. Par exemple, la requête suivante renvoie un ensemble de lignes à deux colonnes (\@PmId, Name). Dans le document XML obtenu, un attribut **PmId** est ajouté à l’élément `row` correspondant et une valeur de ProductModelID lui est affectée.  
+ Si le nom de colonne commence par un arobase (`row`) et qu’il ne contient pas de barre oblique (/), un attribut de l’élément \@ possédant la valeur de colonne correspondante est créé. Par exemple, la requête suivante renvoie un ensemble de lignes à deux colonnes (\@PmId, Name). Dans le document XML obtenu, un attribut **PmId** est ajouté à l’élément `row` correspondant et une valeur de ProductModelID lui est affectée.  
   
 ```sql
 SELECT ProductModelID as "@PmId",  

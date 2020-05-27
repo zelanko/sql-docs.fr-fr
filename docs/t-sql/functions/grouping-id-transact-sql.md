@@ -63,7 +63,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-grouping_id-"></a>Définition technique de GROUPING_ID ()  
- Chaque argument GROUPING_ID doit être un élément de la liste GROUP BY. GROUPING_ID () retourne une bitmap **integer** dont les N bits les plus bas peuvent être activés. Un **bit** activé indique que l’argument correspondant n’est pas une colonne de regroupement pour la ligne de sortie donnée. Le **bit** d’ordre le plus bas correspond à l’argument N, et le <sup>bit</sup> d’ordre le plus bas N-1**e** correspond à l’argument 1.  
+ Chaque argument GROUPING_ID doit être un élément de la liste GROUP BY. GROUPING_ID () retourne une bitmap **integer** dont les N bits les plus bas peuvent être activés. Un **bit** activé indique que l’argument correspondant n’est pas une colonne de regroupement pour la ligne de sortie donnée. Le **bit** d’ordre le plus bas correspond à l’argument N, et le **bit** d’ordre le plus bas N-1<sup>e</sup> correspond à l’argument 1.  
   
 ## <a name="grouping_id--equivalents"></a>Équivalents de GROUPING_ID ()  
  Pour une requête de regroupement unique, GROUPING (\<column_expression>) est équivalent à GROUPING_ID (\<column_expression>), et les deux fonctions retournent 0.  

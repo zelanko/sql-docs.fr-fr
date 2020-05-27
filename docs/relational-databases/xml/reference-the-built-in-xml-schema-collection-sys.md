@@ -148,7 +148,7 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- L’expression `instance of sqltypes:varchar?` retourne TRUE, car la valeur de l’élément &lt;`root`&gt; est d’un type dérivé de **varchar** d’après le schéma associé à la variable`@var` .  
+ L’expression `instance of sqltypes:varchar?` retourne TRUE, car la valeur de l’élément &lt;`root`&gt; est d’un type dérivé de **varchar`@var` d’après le schéma associé à la variable** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

@@ -79,7 +79,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-Pour obtenir un exemple plus complexe qui utilise [CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) et **CERTENCODED** afin de copier un certificat dans une autre base de données, consultez l’exemple B de la rubrique **CERTENCODED &#40;Transact-SQL&#41;** .
+Pour obtenir un exemple plus complexe qui utilise **CERTPRIVATEKEY** et **CERTENCODED** afin de copier un certificat dans une autre base de données, consultez l’exemple B de la rubrique [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).
   
 ## <a name="see-also"></a>Voir aussi
 [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

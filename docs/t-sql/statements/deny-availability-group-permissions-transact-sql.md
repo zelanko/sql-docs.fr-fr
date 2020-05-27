@@ -98,7 +98,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>R. Refus de l'autorisation VIEW DEFINITION sur un groupe de disponibilité  
- L'exemple suivant refuse l'autorisation `VIEW DEFINITION` sur le groupe de disponibilité `MyAg` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de `ZArifin`.  
+ L'exemple suivant refuse l'autorisation `VIEW DEFINITION` sur le groupe de disponibilité `MyAg` sur la connexion `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  

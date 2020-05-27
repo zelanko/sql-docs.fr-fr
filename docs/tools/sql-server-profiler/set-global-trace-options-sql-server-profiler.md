@@ -64,7 +64,7 @@ Cette rubrique décrit la définition des options qui s'appliquent à toutes les
   
         |Valeur|Description|  
         |-----------|-----------------|  
-        |**1**|Valeur minimale. **1** signifie que[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] interroge les processus de blocage une fois par seconde.|  
+        |**1**|Valeur minimale. **1[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] signifie que** interroge les processus de blocage une fois par seconde.|  
         |**60**|Valeur par défaut. Interroge les processus de blocage une fois par minute.|  
         |**86400**|Valeur maximale. Interroge les processus de blocage une fois toutes les **86400** secondes (une fois par jour).|  
   

@@ -64,7 +64,7 @@ La valeur par défaut est `OFF`.
 
 ## <a name="examples"></a>Exemples
 
-L’exemple de code Transact-SQL suivant affecte la valeur `FMTONLY` à `ON`. Ce paramètre fait en sorte que SQL Server retourne uniquement les informations de métadonnées sur les colonnes sélectionnées. Plus précisément, les noms de colonnes sont retournés. Aucune ligne de données n’est retournée.
+L’exemple de code Transact-SQL suivant affecte la valeur `ON` à `FMTONLY`. Ce paramètre fait en sorte que SQL Server retourne uniquement les informations de métadonnées sur les colonnes sélectionnées. Plus précisément, les noms de colonnes sont retournés. Aucune ligne de données n’est retournée.
 
 Dans l’exemple, l’exécution test de la procédure stockée `prc_gm29` retourne ce qui suit :
 

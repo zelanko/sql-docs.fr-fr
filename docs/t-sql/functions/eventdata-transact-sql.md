@@ -77,7 +77,7 @@ EVENTDATA renvoie une valeur dont le type de données est **xml**. Par défaut, 
   
 La page web [Schémas XML Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=31850) comporte également le schéma d’événement.  
   
-Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_<event_type>`. Par exemple, pour extraire le schéma de l’événement `DROP_TABLE`, recherchez `EVENT_INSTANCE_DROP_TABLE` dans le schéma.  
+Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_<event_type>`. Par exemple, pour extraire le schéma de l’événement `EVENT_INSTANCE_DROP_TABLE`, recherchez `DROP_TABLE` dans le schéma.  
   
 ## <a name="examples"></a>Exemples  
   

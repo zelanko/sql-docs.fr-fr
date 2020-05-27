@@ -58,7 +58,7 @@ Ne nécessite aucune autorisation particulière. Les vues système suivantes sto
 - **sys.sysprocesses**
   
 ## <a name="examples"></a>Exemples  
-Cet exemple simple attribue à **la valeur**context_info`0x1256698456`, puis utilise la fonction `CONTEXT_INFO` pour extraire la valeur.
+Cet exemple simple attribue à `0x1256698456` la valeur **context_info**, puis utilise la fonction `CONTEXT_INFO` pour extraire la valeur.
   
 ```sql
 SET CONTEXT_INFO 0x1256698456;  

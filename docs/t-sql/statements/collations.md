@@ -150,7 +150,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>B. Exemples supplémentaires
 
-Pour voir d’autres exemples d’utilisation de **COLLATE**, consultez l’exemple [G. Créer une base de données et spécifier un nom et des options de classement](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) de la rubrique **CREATE DATABASE** et l’exemple [V. Modifier le classement des colonnes](../../t-sql/statements/alter-table-transact-sql.md#alter_column) de la rubrique **ALTER TABLE**.
+Pour voir d’autres exemples d’utilisation de **COLLATE**, consultez l’exemple **G. Créer une base de données et spécifier un nom et des options de classement** de la rubrique [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) et l’exemple **V. Modifier le classement des colonnes** de la rubrique [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
 
 ## <a name="see-also"></a>Voir aussi
 
