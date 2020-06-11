@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082799"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520417"
 ---
 # <a name="testing-and-validation-data-mining"></a>Test et validation (exploration de données)
   La validation est le processus consistant à évaluer les performances de vos modèles d'exploration de données sur des données réelles. Il est important de valider les modèles d'exploration de données en comprenant leurs qualité et caractéristiques avant de les déployer dans un environnement de production.  
   
- Cette section présente des concepts de base liés à la qualité du modèle et décrit les stratégies de validation de modèle fournies [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dans. Pour obtenir une vue d’ensemble de la façon dont la validation de modèle s’adapte à des processus d’exploration de données plus importants, consultez [Solutions d’exploration de données](data-mining-solutions.md).  
+ Cette section présente des concepts de base liés à la qualité du modèle et décrit les stratégies de validation de modèle fournies dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour obtenir une vue d’ensemble de la façon dont la validation de modèle s’adapte à des processus d’exploration de données plus importants, consultez [Solutions d’exploration de données](data-mining-solutions.md).  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>Méthodes de test et de validation des modèles d'exploration de données  
  De nombreuses approches permettent d'évaluer la qualité et les caractéristiques d'un modèle d'exploration de données.  

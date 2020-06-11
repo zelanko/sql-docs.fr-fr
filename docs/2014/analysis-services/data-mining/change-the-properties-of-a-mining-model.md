@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44313ce14beee0390f12ed0e6566502327b17795
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085879"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525035"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Modifier les propriétés d'un modèle d'exploration de données
   Certaines propriétés du modèle d'exploration de données s'appliquent au modèle dans son ensemble, et d'autres propriétés de modèle s'appliquent à des colonnes individuelles. La propriété `Drillthrough`, qui spécifie si les données de cas doivent être disponibles pour l'interrogation, et la propriété `Description` sont des exemples de propriétés qui s'appliquent à l'ensemble du modèle. Les propriétés qui s'appliquent à la colonne incluent `Usage` et `ModelingFlags`, qui contrôlent l'utilisation des données de la colonne dans le modèle.  
@@ -46,7 +45,7 @@ ms.locfileid: "66085879"
 2.  Dans la fenêtre **Propriétés** à droite de l’écran, mettez en surbrillance la valeur qui correspond à la propriété à modifier, puis entrez la nouvelle valeur.  
   
     > [!NOTE]  
-    >  Si l’utilisation de la colonne est `Ignore`définie sur, la fenêtre **Propriétés** de la colonne est vide.  
+    >  Si l’utilisation de la colonne est définie sur `Ignore` , la fenêtre **Propriétés** de la colonne est vide.  
   
      La nouvelle valeur est appliquée lorsque vous sélectionnez un élément différent dans le concepteur.  
   

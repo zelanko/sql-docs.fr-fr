@@ -1,5 +1,6 @@
 ---
 title: Tables de réplication (Transact-SQL) | Microsoft Docs
+description: Les tables système de réplication prennent en charge une topologie de réplication. La réplication ajoute des tables système à une base de données configurée en tant que serveur de publication ou abonné.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58fb3b54989dec45a56c057cb472e1107e9e4e48
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05ddadf1089969a2e345bbfdb638c9dea8b71676
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834165"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808142"
 ---
 # <a name="replication-tables-transact-sql"></a>Tables de réplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

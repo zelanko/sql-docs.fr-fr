@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083365"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521072"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Syntaxe de filtre de modèle et exemples (Analysis Services - Exploration de données)
   Cette section fournit des informations détaillées sur la syntaxe des filtres de modèle, avec quelques exemples d'expressions.  
@@ -238,9 +237,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> Exemple 7 : Combinaisons de filtres complexes  
- Le scénario de ce modèle ressemble à celui de l'Exemple 4, mais il est beaucoup plus complexe. La table imbriquée, **ProductsOnSale**, a la `(OnSale)` condition de filtre, ce qui signifie que la valeur de **onsale** doit être `true` pour le produit listé dans **ProductName**. Ici, **OnSale** est une colonne de structure.  
+ Le scénario de ce modèle ressemble à celui de l'Exemple 4, mais il est beaucoup plus complexe. La table imbriquée, **ProductsOnSale**, a la condition de filtre, ce `(OnSale)` qui signifie que la valeur de **onsale** doit être `true` pour le produit listé dans **ProductName**. Ici, **OnSale** est une colonne de structure.  
   
- La deuxième partie du filtre, pour **ProductsNotOnSale**, répète cette syntaxe, mais filtre les produits pour lesquels la valeur de **onsale** est `not true``(!OnSale)`.  
+ La deuxième partie du filtre, pour **ProductsNotOnSale**, répète cette syntaxe, mais filtre les produits pour lesquels la valeur de **onsale** est `not true``(!OnSale)` .  
   
  Pour finir, les conditions sont combinées et une restriction supplémentaire est ajoutée à la table de cas. Le résultat est la prédiction des achats de produits dans la liste **ProductsNotOnSale** , en fonction des cas inclus dans la liste **ProductsOnSale** , pour tous les clients dont l'âge est supérieur à 25.  
   

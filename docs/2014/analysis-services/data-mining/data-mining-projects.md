@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5979ed2e4733609a504d852b5a0bcc8d7660b87
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112152"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523177"
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
   Un projet d'exploration de données fait partie d'une solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pendant le processus de conception, les objets que vous créez dans ce projet sont disponibles à des fins de test et d'interrogation dans le cadre d'une base de données d'espace de travail. Lorsque vous souhaitez que les utilisateurs puissent interroger ou parcourir les objets dans le projet, vous devez déployer le projet sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel.  
@@ -86,7 +85,7 @@ ms.locfileid: "79112152"
   
 
   
-###  <a name="data-source-views"></a><a name="bkmk_DSV"></a> Data Source Views  
+###  <a name="data-source-views"></a><a name="bkmk_DSV"></a>Vues de sources de données  
  Après avoir défini cette connexion vers une source de données, vous pouvez créer une vue qui identifie les données spécifiques se rapportant à votre modèle.  
   
  La vue de source de données permet également de personnaliser la manière dont les données de la source sont fournies au modèle d'exploration de données. Vous pouvez modifier la structure des données pour la rendre plus pertinente par rapport à votre projet ou ne choisir que certains types de données.  

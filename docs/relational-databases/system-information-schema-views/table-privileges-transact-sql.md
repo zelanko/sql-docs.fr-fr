@@ -19,12 +19,12 @@ ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db49815f367c9fe0100189e418db90e0bcddd9ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25706317e628e0f6d5eb864deaac8deb3656e35c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078457"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670318"
 ---
 # <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68078457"
 |**GRANTOR**|**nvarchar (** 128 **)**|Personne qui accorde le privilège|  
 |**GRANTEE**|**nvarchar (** 128 **)**|Personne qui reçoit le privilège|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la table.<br /><br /> <strong> \* Important \* \* </strong> N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la table.<br /><br /> Important la seule façon fiable de trouver le schéma d’un objet est d’interroger l’affichage catalogue sys. Objects. <strong> \* \* \* \* </strong>|  
 |**TABLE_NAME**|**sysname**|Nom de la table.|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Type de privilège|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indique si le bénéficiaire peut accorder des autorisations à d'autres personnes.|  

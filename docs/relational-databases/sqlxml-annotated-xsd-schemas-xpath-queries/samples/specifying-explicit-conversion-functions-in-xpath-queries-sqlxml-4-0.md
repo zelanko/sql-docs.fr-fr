@@ -1,5 +1,6 @@
 ---
 title: Utiliser des fonctions de conversion dans des requêtes XPath (SQLXML)
+description: Découvrez comment spécifier les fonctions de conversion explicite String () et Number () dans les requêtes XPath SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252556"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529889"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Spécification de fonctions de conversion explicite dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75252556"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>R. Utiliser la fonction de conversion explicite number()  
  La fonction **Number ()** convertit un argument en nombre.  
   
- En supposant que la valeur de **ContactID** n’est pas numérique, la requête suivante convertit **ContactID** en nombre et le compare à la valeur 4. La requête retourne ensuite tous ** \<** les enfants de>élément du nœud de contexte avec l’attribut **ContactID** qui a une valeur numérique de 4 :  
+ En supposant que la valeur de **ContactID** n’est pas numérique, la requête suivante convertit **ContactID** en nombre et le compare à la valeur 4. La requête retourne ensuite tous les **\<Employee>** éléments enfants du nœud de contexte avec l’attribut **ContactID** qui a une valeur numérique de 4 :  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -81,7 +82,7 @@ ms.locfileid: "75252556"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utiliser la fonction de conversion explicite string()  
  La fonction **String ()** convertit un argument en chaîne.  
   
- La requête suivante convertit **ContactID** en une chaîne et le compare à la valeur de chaîne « 4 ». La requête retourne tous ** \<** les enfants de l’élément>d’un employé du nœud de contexte avec un **ContactID** avec une valeur de chaîne de « 4 » :  
+ La requête suivante convertit **ContactID** en une chaîne et le compare à la valeur de chaîne « 4 ». La requête retourne tous les **\<Employee>** éléments enfants du nœud de contexte avec un **ContactID** avec une valeur de chaîne de « 4 » :  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

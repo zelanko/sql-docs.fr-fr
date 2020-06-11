@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603d5ea6f1e71abd469738b9f116927ca0b69e7d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088288"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527595"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Calculs (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez l’onglet **Calculs** dans le Concepteur de cube pour afficher ou modifier les calculs, y compris les membres calculés, les jeux nommés et les commandes de script MDX (Multidimensional Expressions) du cube sélectionné.  
@@ -34,7 +33,7 @@ ms.locfileid: "66088288"
      Pour les utilisateurs avancés, cette vue affiche l'ensemble du script MDX associé au cube, ainsi que les métadonnées, les fonctions et les outils disponibles pour le cube.  
   
 ## <a name="panes"></a>Volets  
- **Barre**  
+ **Barre d’outils**  
  Utilisez la barre d’outils en mode formulaire et script pour effectuer des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;l’onglet calculs, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Organisateur de script**  

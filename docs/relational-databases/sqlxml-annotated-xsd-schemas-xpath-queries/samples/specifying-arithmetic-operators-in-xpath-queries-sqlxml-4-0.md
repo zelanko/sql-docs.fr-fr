@@ -1,5 +1,6 @@
 ---
 title: Utiliser des opérateurs arithmétiques dans les requêtes XPath (SQLXML)
+description: Découvrez comment spécifier des opérateurs arithmétiques dans des requêtes XPath SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64b13492b7359fa6baad7cee21dfb291f655cdea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252632"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529878"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs arithmétiques dans des requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252632"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>R. Spécifier l'opérateur arithmétique *  
- Cette requête XPath retourne ** \<les éléments OrderDetail>** qui satisfont au prédicat spécifié :  
+ Cette requête XPath retourne **\<OrderDetail>** des éléments qui répondent au prédicat spécifié :  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Dans la requête, `child` est l’axe et `OrderDetail` est le test de nœud (true si **OrderDetail** est un nœud d' ** \<élément>**, car l' ** \<élément>** nœud est le nœud principal de l’axe **enfant** ). Pour tous les ** \<** nœuds d’élément OrderDetail>, le test dans le prédicat est appliqué, et seuls les nœuds qui satisfont à la condition sont retournés.  
+ Dans la requête, `child` est l’axe et `OrderDetail` est le test de nœud (true si **OrderDetail** est un **\<element node>** , car le **\<element>** nœud est le nœud principal de l’axe **enfant** ). Pour tous les **\<OrderDetail>** nœuds d’élément, le test dans le prédicat est appliqué, et seuls les nœuds qui satisfont à la condition sont retournés.  
   
 > [!NOTE]  
 >  Dans XPath, les nombres sont des nombres à virgule flottante double précision et la comparaison de nombres à virgule flottante comme dans l'exemple entraîne un arrondi.  

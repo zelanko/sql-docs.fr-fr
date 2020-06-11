@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889764"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669841"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Expression qui retourne une table, telle qu’une référence \<de colonne de table>, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’une \< référence de colonne de table>, ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
  \<expression de table>  
   
 ## <a name="remarks"></a>Notes  
- La fonction **BottomSum** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de \<l’expression de classement> argument pour chaque ligne, de telle sorte que \<la somme de l’expression de classement> valeurs soit au moins égale au total \<spécifié par l’argument Sum>. **BottomSum** retourne le plus petit nombre d’éléments possible tout en continuant à répondre à la valeur de somme spécifiée.  
+ La fonction **BottomSum** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de l' \< expression de classement> argument pour chaque ligne, de telle sorte que la somme de l' \< expression de classement> valeurs soit au moins égale au total spécifié par l' \< argument Sum>. **BottomSum** retourne le plus petit nombre d’éléments possible tout en continuant à répondre à la valeur de somme spécifiée.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

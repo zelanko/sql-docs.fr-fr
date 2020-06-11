@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7befaa35fb520bda23cfe8cd216df521090cce58
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077606"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537336"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Déplacer la table, boîte de dialogue (SSAS)
   La boîte de dialogue **Déplacer la table** vous permet de modifier l’ordre des tables dans le Générateur de modèles. Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur l’onglet situé en bas de la table à déplacer, puis sélectionnez **Déplacer**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Déplacer la table sélectionnée avant la table**  
  La table viendra se placer avant la table que vous sélectionnez dans cette liste. Si vous souhaitez déplacer une table à la fin de l’ensemble de tables, choisissez **(déplacer à la fin)**.  
   

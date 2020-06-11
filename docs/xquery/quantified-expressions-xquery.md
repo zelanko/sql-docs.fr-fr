@@ -1,5 +1,6 @@
 ---
 title: Expressions quantifiées (XQuery) | Microsoft Docs
+description: Découvrez comment utiliser des expressions quantifiées dans XQuery pour appliquer une quantification existentiel ou universelle à une expression sur une ou plusieurs séquences.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7c79cd185b88b8681460d2811f0d0ac4c20557
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946373"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215251"
 ---
 # <a name="quantified-expressions-xquery"></a>Expressions quantifiées (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "67946373"
   
  Vous pouvez utiliser ces expressions dans une requête pour appliquer explicitement une quantification existentielle ou universelle à une expression sur une ou plusieurs séquences. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'expression de la clause `satisfies` doit aboutir à l'un des résultats suivants : une séquence de nœuds, une séquence vide ou une valeur booléenne. La valeur booléenne effective du résultat de cette expression est utilisée dans la quantification. La quantification existentiel qui utilise **some** retourne la valeur true si au moins une des valeurs liées par le quantificateur a un résultat true dans l’expression de satisfaction. La quantification universelle qui utilise **chaque** doit avoir la valeur true pour toutes les valeurs liées par le quantificateur.  
   
- Par exemple, la requête suivante vérifie chaque \<emplacement> élément pour voir s’il a un attribut LocationID.  
+ Par exemple, la requête suivante vérifie chaque \<Location> élément pour voir s’il a un attribut LocationID.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Étant donné que LocationID est un attribut requis \<de l’emplacement> élément, vous obtenez le résultat attendu :  
+ Étant donné que LocationID est un attribut requis de l' \<Location> élément, vous obtenez le résultat attendu :  
   
 ```  
 <Result>All work centers have Location ID</Result>   

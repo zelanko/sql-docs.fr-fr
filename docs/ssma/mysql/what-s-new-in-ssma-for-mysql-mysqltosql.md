@@ -1,24 +1,29 @@
 ---
 title: Nouveautés de SSMA pour MySQL (MySQLToSql) | Microsoft Docs
+description: Découvrez les modifications apportées à Assistant Migration SQL Server (SSMA) pour MySQL (MySQLToSQL) pour chaque version.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 288056843e8868c5738f8f1e101015c0142bb6bd
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 46f7cd640c0ad3767594122cc34536b925be7bb8
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220194"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293886"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Nouveautés de SSMA pour MySQL (MySQLToSql)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications MySQL dans chaque version.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+La version v 8.10 de SSMA pour MySQL contient des améliorations mineures en matière de performances et des correctifs de bogues.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -206,11 +211,11 @@ La version 2016 de SSMA pour MySQL contient les modifications suivantes :
 * Le chargement d’objets MsSql fixes.
 * Correction du bogue dans les paramètres globaux.
 
-## <a name="march-2016"></a>Mars 2016
+## <a name="march-2016"></a>Mars 2016
 
 La version préliminaire de de SSMA pour MySQL de mars 2016 ajoute la prise en charge de la migration vers SQL Server 2016.
   
-## <a name="january-2016"></a>Janvier 2016
+## <a name="january-2016"></a>Janvier 2016
 
 La version de maintenance de SSMA pour MySQL de janvier 2016 contient les modifications suivantes :
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83b42da3e676a291bb021c02ee52e9a810207397
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782805"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535101"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Configuration de PowerPivot à l'aide de Windows PowerShell
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclut des applets de commande Windows PowerShell que vous pouvez utiliser pour configurer une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. La configuration complète d'une installation avec PowerShell requiert l'utilisation des applets de commande SharePoint et PowerPivot pour SharePoint. La majorité des configurations peut être effectuée avec un des outils de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d'informations sur les outils, consultez [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
@@ -27,13 +26,13 @@ ms.locfileid: "72782805"
  Générez des fichiers de script Windows PowerShell (.ps1) pour automatiser les tâches de configuration. Cette approche est recommandée si vous avez besoin d'une installation à base de script et d'étapes de configuration que vous pouvez exécuter sur n'importe quel serveur. Vous pouvez avoir besoin d'un tel script dans le cadre d'un plan de récupération d'urgence afin de reconstruire un serveur en cas de défaillance matérielle.  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>Afficher une liste des applets de commande PowerPivot sur un serveur  
- Pour afficher le [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contenu et des exemples des applets de commande, consultez [référence PowerShell pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
+ Pour afficher le contenu et des exemples des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] applets de commande, consultez [référence PowerShell pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
  Pour utiliser PowerShell pour afficher une liste des applets de commande PowerPivot :  
   
 1.  Ouvrez SharePoint Management Shell à l'aide de l'option **Exécuter en tant qu'administrateur** .  
   
-2.  Entrez la commande suivante :  
+2.  Entrez la commande suivante :  
   
     ```powershell
     Get-Help *powerpivot*  
@@ -45,7 +44,7 @@ ms.locfileid: "72782805"
   
     -   17 applets de commande avec le serveur SQL Server 2012 Analysis Services configuré en mode SharePoint et SharePoint 2010.  
   
-     Si aucune commande n’est retournée dans la liste ou si vous voyez un message d'`get-help could not find *powerpivot* in a help file in this session.`erreur semblable à «», consultez la section suivante de cette rubrique pour obtenir des instructions sur l’activation des applets de commande PowerPivot sur le serveur.  
+     Si aucune commande n’est retournée dans la liste ou si vous voyez un message d’erreur semblable à « `get-help could not find *powerpivot* in a help file in this session.` », consultez la section suivante de cette rubrique pour obtenir des instructions sur l’activation des applets de commande PowerPivot sur le serveur.  
   
      Toutes les applets de commande intègrent un système d'aide en ligne. L'exemple suivant montre comment afficher l'aide en ligne pour l'applet de commande `New-PowerPivotServiceApplication` :  
   

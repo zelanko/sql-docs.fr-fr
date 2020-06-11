@@ -1,5 +1,6 @@
 ---
 title: Chargement des objets de base de données convertis dans SQL Server (OracleToSQL) | Microsoft Docs
+description: Découvrez comment charger les objets de base de données que vous avez convertis à partir d’Oracle dans l’instance de SQL Server à l’aide de SSMA pour Oracle.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262986"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293846"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Chargement d’objets de base de données convertis dans SQL Server (OracleToSQL)
 Après avoir converti les schémas Oracle en SQL Server, vous pouvez charger les objets de base de données résultants dans SQL Server. Vous pouvez faire en sorte que SSMA crée les objets, ou vous pouvez générer un script pour les objets et exécuter les scripts vous-même. En outre, SSMA vous permet de mettre à jour les métadonnées cibles avec le contenu réel de SQL Server base de données.  
@@ -26,7 +27,7 @@ Après avoir converti les schémas Oracle en SQL Server, vous pouvez charger les
 ## <a name="choosing-between-synchronization-and-scripts"></a>Choix entre la synchronisation et les scripts  
 Si vous souhaitez charger les objets de base de données convertis dans SQL Server sans modification, vous pouvez demander à SSMA de créer ou de recréer directement les objets de base de données. Cette méthode est rapide et facile, mais elle n’autorise pas la personnalisation du [!INCLUDE[tsql](../../includes/tsql-md.md)] code qui définit les objets SQL Server, à l’exception des procédures stockées.  
   
-Si vous souhaitez modifier le utilisé [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des objets, ou si vous souhaitez davantage de contrôle sur la création d’objets, utilisez SSMA pour créer des scripts. Vous pouvez ensuite modifier ces scripts, créer chaque objet individuellement et même utiliser SQL Server Agent pour planifier la création de ces objets.  
+Si vous souhaitez modifier le [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisé pour créer des objets, ou si vous souhaitez davantage de contrôle sur la création d’objets, utilisez SSMA pour créer des scripts. Vous pouvez ensuite modifier ces scripts, créer chaque objet individuellement et même utiliser SQL Server Agent pour planifier la création de ces objets.  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Utilisation de SSMA pour synchroniser des objets avec SQL Server  
 Pour utiliser SSMA pour créer SQL Server objets de base de données, sélectionnez les objets dans SQL Server Explorateur de métadonnées, puis synchronisez les objets avec SQL Server, comme indiqué dans la procédure suivante. Par défaut, si les objets existent déjà dans SQL Server, et si les métadonnées SSMA sont plus récentes que l’objet dans SQL Server, SSMA modifie les définitions d’objets dans SQL Server. Vous pouvez modifier le comportement par défaut en modifiant les **paramètres du projet**.  
@@ -61,7 +62,7 @@ Pour utiliser SSMA pour créer SQL Server objets de base de données, sélection
 Cliquez sur le signe action pour modifier l’État. La synchronisation réelle est effectuée lorsque vous cliquez sur le bouton **OK** de la boîte de dialogue **synchroniser avec la base de données** .  
   
 ## <a name="scripting-objects"></a>Scripts d’objets  
-Pour enregistrer [!INCLUDE[tsql](../../includes/tsql-md.md)] les définitions des objets de base de données convertis, ou pour modifier les définitions d’objet et exécuter vous-même les scripts, vous pouvez [!INCLUDE[tsql](../../includes/tsql-md.md)] enregistrer les définitions d’objet de base de données converties dans des scripts.  
+Pour enregistrer les définitions [!INCLUDE[tsql](../../includes/tsql-md.md)] des objets de base de données convertis, ou pour modifier les définitions d’objet et exécuter vous-même les scripts, vous pouvez enregistrer les définitions d’objet de base de données converties dans des [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
   
 **Pour enregistrer des objets en tant que scripts**  
   
@@ -72,7 +73,7 @@ Pour enregistrer [!INCLUDE[tsql](../../includes/tsql-md.md)] les définitions de
 2.  Dans la boîte de dialogue **Enregistrer sous** , localisez le dossier dans lequel vous souhaitez enregistrer le script, entrez un nom de fichier dans la zone **nom de fichier** , puis cliquez sur OK. l’extension de nom de fichier. SQL est alors ajoutée.  
   
 ### <a name="modifying-scripts"></a>Modification de scripts  
-Une fois que vous avez enregistré les définitions d’objets SQL Server sous la forme d’un ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de plusieurs scripts, vous pouvez utiliser pour afficher et modifier les scripts.  
+Une fois que vous avez enregistré les définitions d’objets SQL Server sous la forme d’un ou de plusieurs scripts, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour afficher et modifier les scripts.  
   
 **Pour modifier un script**  
   
@@ -87,7 +88,7 @@ Une fois que vous avez enregistré les définitions d’objets SQL Server sous l
 4.  Pour enregistrer le script, dans le menu fichier, cliquez sur **Enregistrer**.  
   
 ### <a name="running-scripts"></a>Exécution de scripts  
-Vous pouvez exécuter un script ou des instructions individuelles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Vous pouvez exécuter un script ou des instructions individuelles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **Pour exécuter un script**  
   
@@ -99,7 +100,7 @@ Vous pouvez exécuter un script ou des instructions individuelles dans [!INCLUDE
   
 4.  Pour exécuter un ensemble d’instructions, sélectionnez les instructions dans la fenêtre de l’éditeur de requête, puis appuyez sur la touche **F5** .  
   
-Pour plus d’informations sur l’utilisation de l’éditeur de requête pour exécuter des scripts [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez « requête » dans documentation en ligne de SQL Server.  
+Pour plus d’informations sur l’utilisation de l’éditeur de requête pour exécuter des scripts, consultez « [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] requête » dans documentation en ligne de SQL Server.  
   
 Vous pouvez également exécuter des scripts à partir de la ligne de commande à l’aide de l’utilitaire **sqlcmd** et à partir de l’SQL Server Agent. Pour plus d’informations sur **sqlcmd**, consultez « utilitaire sqlcmd » dans documentation en ligne de SQL Server. Pour plus d’informations sur les SQL Server Agent, consultez « automatisation des tâches d’administration (SQL Server Agent) » dans Documentation en ligne de SQL Server.  
   

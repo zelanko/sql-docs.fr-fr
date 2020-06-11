@@ -12,26 +12,26 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000939"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858671"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriétés d'index de recherche en texte intégral (page Général)
   **Pour afficher ou changer les propriétés modifiables d'un index de recherche en texte intégral**  
   
 -   [Gérer les index de recherche en texte intégral](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Catalogue de texte intégral**  
  Affiche le nom du catalogue de texte intégral auquel l'index de recherche en texte intégral est associé.  
   
  **Sauvegarde de la base de données**  
  Affiche le nom de la base de données dans laquelle réside l'index de recherche en texte intégral.  
   
- **Tableau**  
+ **Table**  
  Affiche le nom de la table dans laquelle est défini l'index de recherche en texte intégral.  
   
  **Clé d'index de recherche en texte intégral**  
@@ -57,9 +57,9 @@ ms.locfileid: "83000939"
  **Index de recherche en texte intégral actif**  
  Indique si la table possède un index de recherche en texte intégral actif.  
   
- 1 = True  
+ 1 = Vrai  
   
- 0 = False  
+ 0 = Faux  
   
  **Groupe de fichiers d'un index de recherche en texte intégral**  
  Le groupe de fichiers auquel l'index de recherche en texte intégral appartient.  
@@ -129,7 +129,7 @@ ms.locfileid: "83000939"
   
 |||  
 |-|-|  
-|**Désactivé**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
+|**Off**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
 |**Manuel**|L'index de recherche en texte intégral n'est pas mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes. Toutefois, les modifications apportées aux données sous-jacentes sont conservées et vous pouvez les propager à l'index de recherche en texte intégral soit de manière planifiée à l'aide de l'Agent SQL Server, soit de façon manuelle.|  
 |**Automatique**|L'index de recherche en texte intégral est mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes dans la table de base.|  
   

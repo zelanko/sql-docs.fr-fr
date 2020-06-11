@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bbcb718005b1a0b3c657aef339b97bd60010b62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 476e1e231d3bb33eec37fdd21fa81571831fb7ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81219338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528005"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Didacticiels sur Analysis Services (SSAS)
   Cette section contient des didacticiels pour [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  
@@ -27,7 +26,7 @@ ms.locfileid: "81219338"
  Il vous apprend les techniques et les concepts fondamentaux de la modélisation multidimensionnelle dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Lorsque vous aurez terminé, vous disposerez d'une base de données de cube contenant des données Adventure Works auxquelles vous pourrez accéder via Excel, Reporting Services ou toute autre application cliente qui se connecte à Analysis Services.  
   
  [Exemples de bases de données AdventureWorks sur GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)  
- Ce lien vous amène à la page de téléchargement de GitHub qui contient les exemples de bases [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]de données AdventureWorks pour.  
+ Ce lien vous amène à la page de téléchargement de GitHub qui contient les exemples de bases de données AdventureWorks pour [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
  [Didacticiels de SQL Server 2008 R2](https://go.microsoft.com/fwlink/?linkID=220944)  
  La plupart des didacticiels SQL Server 2008 R2 fonctionnent sur un serveur [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Si vous découvrez l'exploration de données, utilisez ce lien pour rechercher les didacticiels expliquant l'exploration de données dans SQL Server 2008 R2 et dans une instance [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] d'Analysis Services.  

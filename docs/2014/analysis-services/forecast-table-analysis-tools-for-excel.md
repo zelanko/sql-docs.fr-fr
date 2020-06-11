@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a08cdf759ad3accd1f3c1405cefff9cde6b5319f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544476"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Prévisions (Outils d'analyse de table pour Excel)
   ![Bouton Prévisions sur le ruban des outils d'analyse de table](media/tat-forecast.gif "Bouton Prévisions sur le ruban des outils d'analyse de table")  
@@ -41,17 +40,17 @@ ms.locfileid: "66081046"
   
 3.  Spécifiez les colonnes à prévoir. L’outil sélectionne automatiquement des colonnes dans les données qui ont un type de données prévisible, c’est-à-dire des données numériques continues. L'outil ne peut pas sélectionner certaines colonnes qui contiennent des données numériques continues si ces colonnes contiennent de nombreuses valeurs null ou égales à zéro, car les données manquantes peuvent affecter les résultats. Dans ce cas, vous pouvez corriger les données à l’aide de l’outil [réétiqueter le &#40;SQL Server&#41;des compléments d’exploration de données](relabel-sql-server-data-mining-add-ins.md) .  
   
-4.  Spécifiez la colonne qui contient la date, l'heure ou un autre identificateur pour la série. Si vous sélectionnez l’option ** \<aucun horodatage>** l’outil crée une série basée sur la séquence de lignes dans les données sources.  
+4.  Spécifiez la colonne qui contient la date, l'heure ou un autre identificateur pour la série. Si vous sélectionnez l’option **\<no time stamp>** , l’outil crée une série basée sur la séquence de lignes dans les données sources.  
   
 5.  Spécifiez le nombre de prédictions à faire.  
   
-6.  Vous pouvez également fournir un indicateur à l'algorithme sur la fréquence de vos données, hebdomadaires, mensuelles ou autres fréquences. Si vos données ne correspondent à aucun des modèles donnés ou si vous ignorez les modèles, sélectionnez ** \<détecter automatiquement les>** pour que l’outil recherche les périodes de répétition.  
+6.  Vous pouvez également fournir un indicateur à l'algorithme sur la fréquence de vos données, hebdomadaires, mensuelles ou autres fréquences. Si vos données ne correspondent à aucun des modèles donnés ou si vous ignorez les modèles, sélectionnez **\<detect automatically>** cette option pour que l’outil recherche les intervalles de temps répétés.  
   
 7.  L'Assistant ajoute les prédictions au tableau source et crée un rapport de prévisions dans une nouvelle feuille de calcul.  
   
 8.  Pour ajouter les nouvelles valeur au graphique de prédiction, étendez la série chronologique pour inclure les valeurs projetées.  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Les colonnes que vous prévoyez doivent contenir des données numériques continues (devise ou autres nombres).  
   
  Si possible, vos données doivent également inclure une colonne qui contient une série de dates ou d'heures. Vous pouvez utiliser une série numérique (1, 2, 3...) au lieu de données de date et d’heure. Cependant, les valeurs dans la colonne de série doivent être uniques. Une erreur se produit si l’outil **prévision** recherche des valeurs en double dans la colonne de série.  
@@ -83,7 +82,7 @@ ms.locfileid: "66081046"
 ## <a name="related-tools"></a>Outils connexes  
  Le Client d'exploration de données pour Excel, complément séparé qui fournit d'autres fonctionnalités d'exploration de données plus avancées, contient aussi un Assistant pour la prévision.  
   
- L’outil **prévision** (dans les outils d’analyse de table pour Excel) et l’Assistant **prévision** (dans le client d’exploration de données pour Excel [!INCLUDE[msCoName](../includes/msconame-md.md)] ) utilisent l’algorithme MTS (Time Series).  
+ L’outil **prévision** (dans les outils d’analyse de table pour Excel) et l’Assistant **prévision** (dans le client d’exploration de données pour Excel) utilisent l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme MTS (Time Series).  
   
 -   L’outil **prévision** est plus facile à utiliser, car il configure automatiquement l’algorithme pour utiliser les paramètres qui conviennent le mieux à vos données.  
   

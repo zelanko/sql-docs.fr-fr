@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12a32140b2586b440fabcadc8385ab801963280a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082177"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528835"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Définir le référencement pour les devises locales (Assistant Business Intelligence)
   La page **Définir le référencement pour les devises locales** permet de définir les devises locales de la fonctionnalité de conversion de devise qui couvre les types de conversion plusieurs-à-plusieurs ou plusieurs-à-un définis dans la page **Sélectionner le type de conversion** . Une devise locale est une devise dans laquelle les transactions des mesures sélectionnées dans **Sélectionnez les mesures** sont stockées.  
@@ -27,12 +26,12 @@ ms.locfileid: "66082177"
   
 ## <a name="options"></a>Options  
  **Identificateurs dans la table de faits**  
- Sélectionnez cette option pour définir un attribut qui fournit des identificateurs pour les devises locales dans une dimension de devise référencée par la table de faits qui contient les mesures sélectionnées dans la page **Sélectionnez les mesures** . (Une dimension monétaire dans une dimension `Type` dont la propriété a la valeur *Currency*.)  
+ Sélectionnez cette option pour définir un attribut qui fournit des identificateurs pour les devises locales dans une dimension de devise référencée par la table de faits qui contient les mesures sélectionnées dans la page **Sélectionnez les mesures** . (Une dimension monétaire dans une dimension dont la `Type` propriété a la valeur *Currency*.)  
   
- Utilisez cette option lorsque la transaction elle-même détermine la devise locale de la transaction. Par exemple, dans l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] exemple de base[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]de données, le groupe de mesures Internet Sales a une relation de dimension régulière avec la dimension monétaire. La table de faits pour ce groupe de mesures contient une colonne clé étrangère qui fait référence aux identificateurs de devises dans la table de dimensions pour cette dimension.  
+ Utilisez cette option lorsque la transaction elle-même détermine la devise locale de la transaction. Par exemple, dans l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] exemple de base de données [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] , le groupe de mesures Internet Sales a une relation de dimension régulière avec la dimension monétaire. La table de faits pour ce groupe de mesures contient une colonne clé étrangère qui fait référence aux identificateurs de devises dans la table de dimensions pour cette dimension.  
   
  **Dimension et attribut de devise référencés par les données de faits**  
- Sélectionnez l'attribut de devise dans une dimension de devise dont les membres représentent des identificateurs de devises locales. (Un attribut Currency est un attribut `Type` dont la propriété a la valeur *Currency*.)  
+ Sélectionnez l'attribut de devise dans une dimension de devise dont les membres représentent des identificateurs de devises locales. (Un attribut Currency est un attribut dont la `Type` propriété a la valeur *Currency*.)  
   
 > [!NOTE]  
 >   Cette option n'est pas disponible si l'option **Identificateurs dans la table de faits** n'est pas sélectionnée.  
@@ -40,7 +39,7 @@ ms.locfileid: "66082177"
  **Attributs de la table de dimension**  
  Sélectionnez cette option pour définir un attribut depuis une dimension associée au groupe de mesures qui contient des identificateurs de devises locales.  
   
- Utilisez cette option lorsque la relation entre une transaction et une autre entité commerciale, comme un emplacement, détermine la devise locale de la transaction. Par exemple, dans l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] exemple de base[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]de données, le groupe de mesures Financial Reporting a une relation de dimension référencée avec la dimension monétaire via la dimension organisation. À savoir, la table de faits du groupe de mesures Financial Reporting contient une colonne clé étrangère qui fait référence à des membres dans la table de la dimension Organisation. La table de dimensions pour la dimension Organization, à son tour, contient une colonne clé étrangère qui fait référence aux identificateurs de devises dans la table de dimensions pour la dimension Currency.  
+ Utilisez cette option lorsque la relation entre une transaction et une autre entité commerciale, comme un emplacement, détermine la devise locale de la transaction. Par exemple, dans l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] exemple de base de données [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] , le groupe de mesures Financial Reporting a une relation de dimension référencée avec la dimension monétaire via la dimension organisation. À savoir, la table de faits du groupe de mesures Financial Reporting contient une colonne clé étrangère qui fait référence à des membres dans la table de la dimension Organisation. La table de dimensions pour la dimension Organization, à son tour, contient une colonne clé étrangère qui fait référence aux identificateurs de devises dans la table de dimensions pour la dimension Currency.  
   
  **Attribut de dimension qui référence la devise**  
  Sélectionnez l'attribut dans une dimension dont les membres font référence aux identificateurs de devises locales.  

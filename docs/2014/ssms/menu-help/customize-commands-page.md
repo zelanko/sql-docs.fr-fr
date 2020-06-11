@@ -12,17 +12,17 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56df884317c13b860ba19d66d9680c79356c9080
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470016"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859241"
 ---
 # <a name="customize-commands-page"></a>Personnaliser (page Commandes)
   Cette boîte de dialogue vous permet d'ajouter des commandes à des barres d'outils et à des menus et d'en supprimer, ainsi que de modifier les images utilisées pour représenter les boutons des barres d'outils ou les commandes des menus. Vous pouvez accéder à la page **Commandes** en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Commandes**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Catégories**  
  Spécifie l’ensemble des commandes affichées dans la zone de liste **Commandes** . Les catégories de commandes sont basées sur des titres de menu fournis par les outils et les concepteurs que l'environnement prend actuellement en charge. Cette liste de titres est dynamique, afin que l'ordre des catégories et les titres de menu soient modifiés selon les outils et le concepteur, ainsi que selon toute personnalisation apportée. Il est donc possible que deux menus provenant de concepteurs différents aient le même nom. Le même titre apparaît alors à deux reprises, mais propose des ensembles de commandes différents.  
   

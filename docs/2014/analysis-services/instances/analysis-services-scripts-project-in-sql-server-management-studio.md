@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dc10280e2ee957cd2245bb6a4993d7dcf536680
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080355"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544116"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Projet de script Analysis Services dans SQL Server Management Studio
   Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez créer un projet Scripts Analysis Server dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour regrouper des scripts liés destinés au développement, à la gestion et au contrôle de code source. Si aucune solution n’est chargée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], la création d’un nouveau projet Scripts Analysis Server crée automatiquement une solution. Vous pouvez également ajouter le projet Scripts du serveur d'analyse à la solution existante ou le créer dans une nouvelle solution.  
@@ -54,7 +53,7 @@ ms.locfileid: "66080355"
 |Fichier de script XMLA (.xmla)|Contient un script XMLA inclus dans le projet.|  
   
 ## <a name="analysis-services-templates"></a>Modèles Analysis Services  
- Si vous ajoutez des scripts MDX, DMX ou XMLA à un projet Scripts Analysis Server, vous pouvez utiliser l’Explorateur de modèles pour rechercher les modèles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , qui sont constitués d’un ensemble de scripts ou d’instructions prédéfinis qui montrent comment effectuer une action spécifique. L’Explorateur de modèles est disponible dans le menu **affichage** et comprend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]modèles pour [!INCLUDE[ssEW](../../includes/ssew-md.md)], et. Pour plus d’informations, consultez [Utiliser des modèles Analysis Services dans SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
+ Si vous ajoutez des scripts MDX, DMX ou XMLA à un projet Scripts Analysis Server, vous pouvez utiliser l’Explorateur de modèles pour rechercher les modèles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , qui sont constitués d’un ensemble de scripts ou d’instructions prédéfinis qui montrent comment effectuer une action spécifique. L’Explorateur de modèles est disponible dans le menu **affichage** et comprend des modèles pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssEW](../../includes/ssew-md.md)] . Pour plus d’informations, consultez [Utiliser des modèles Analysis Services dans SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création de modèles multidimensionnels à l’aide de SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   

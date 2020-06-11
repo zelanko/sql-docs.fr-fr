@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92c7e91e090b8e82e2844cf1999328c6ef7a8684
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080752"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544271"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Analyse d'impact (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Analyse d'impact** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour identifier et éventuellement traiter les objets dépendants affectés si les objets figurant dans la boîte de dialogue **Traiter** sont traités. Pour afficher la boîte de dialogue **Analyse d'impact** , cliquez sur **Analyse d'impact** dans la boîte de dialogue **Traiter** .  
@@ -41,7 +40,7 @@ ms.locfileid: "66080752"
 |Impact|Message|  
 |------------|-------------|  
 |L'objet sera exclu (non traité)|Avertissement|  
-|L'objet serait non valide|Error|  
+|L'objet serait non valide|Erreur|  
 |L'agrégation serait supprimée|Avertissement|  
 |L'agrégation flexible serait supprimée|Avertissement|  
 |Les index vont être supprimés|Avertissement|  

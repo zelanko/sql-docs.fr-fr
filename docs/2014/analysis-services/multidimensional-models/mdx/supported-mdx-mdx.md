@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93baa6beffcb75e11c0ac389b7f0f5172c30d770
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17e8df6a2aa6da6b88a07a2abdef99d6ea03d8eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073867"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546157"
 ---
 # <a name="supported-mdx-mdx"></a>Éléments MDX (MDX) pris en charge
   Les instructions et les fonctions suivantes sont prises en charge avec les scripts MDX (Multidimensional Expressions) :  
@@ -53,7 +52,7 @@ ms.locfileid: "66073867"
  [This &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX prend en charge l'assignation aux propriétés de cellule suivantes : `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` et `FONT_SIZE`. Pour plus d’informations, consultez [Utilisation des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX prend également en charge l' `NON_EMPTY_BEHAVIOR` assignation à la propriété de l’instruction [Create Member](/sql/mdx/mdx-data-definition-create-member) .  
+>  MDX prend en charge l'assignation aux propriétés de cellule suivantes : `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` et `FONT_SIZE`. Pour plus d’informations, consultez [Utilisation des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX prend également en charge l’assignation à la `NON_EMPTY_BEHAVIOR` propriété de l’instruction [Create Member](/sql/mdx/mdx-data-definition-create-member) .  
   
  [Instruction SCOPE &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   

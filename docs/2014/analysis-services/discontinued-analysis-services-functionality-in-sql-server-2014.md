@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39406be1-9819-4629-9c29-b32fb20bab2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 616c39d03ff8081c209a80dcca912d831bcef1ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5414344eb65c907593c9077ee2ba5610b8b397c0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081674"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528535"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>Fonctionnalités Analysis Services abandonnées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "66081674"
 |Cube locaux|Propriété de chaîne de connexion INSERTINTO|La syntaxe de la chaîne de connexion d'origine pour le remplissage de cubes locaux est remplacée par l'instruction CREATE GLOBAL CUBE. Pour plus d’informations, consultez [Create global cube, instruction &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
 |Cube locaux|Propriété de chaîne de connexion CREATECUBE|La syntaxe de la chaîne de connexion d'origine pour le remplissage de cubes locaux est remplacée par l'instruction CREATE GLOBAL CUBE. Pour plus d’informations, consultez [Create global cube, instruction &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
 |Exploration de données|SQL Server 2000 PMML|La fonctionnalité de SQL Server 2000 PMML produisait un formulaire de PMML qui avait des extensions exclusives permettant de prendre en charge les fonctionnalités uniques fournies par les algorithmes d'exploration de données qui n'étaient pas disponibles dans la spécification PMML. Dans SQL Server 2005, Analysis Services a mis à jour la fonctionnalité PMML avec le nouveau standard PMML 2.1. Par conséquent, les extensions exclusives ajoutées dans SQL Server 2000 ne sont plus exigées, bien qu'elles soient encore prises en charge dans cette version.|  
-|Instruction MDX|Instruction CREATE ACTION|Cette instruction est comprise pour des raisons de compatibilité descendante. Elle est remplacée par l'objet Action. Pour plus d’informations sur la création d’actions dans les versions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]récentes de, consultez [actions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).|  
+|Instruction MDX|Instruction CREATE ACTION|Cette instruction est comprise pour des raisons de compatibilité descendante. Elle est remplacée par l'objet Action. Pour plus d’informations sur la création d’actions dans les versions récentes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [actions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).|  
   
 ## <a name="discontinued-features-in-previous-releases"></a>Fonctionnalités abandonnées dans les versions précédentes  
  L'Assistant Migration, utilisé pour migrer des bases de données SQL Server 2000 Analysis Services vers des versions plus récentes, est supprimé, car SQL Server 2000 n'est plus pris en charge.  

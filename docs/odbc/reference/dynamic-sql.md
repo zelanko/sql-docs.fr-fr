@@ -1,7 +1,7 @@
 ---
 title: SQL dynamique | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306687"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423253"
 ---
 # <a name="dynamic-sql"></a>SQL dynamique
 Bien que SQL statique fonctionne bien dans de nombreux cas, il existe une classe d’applications dans laquelle l’accès aux données ne peut pas être déterminé à l’avance. Par exemple, supposons qu’une feuille de calcul permette à un utilisateur d’entrer une requête, que la feuille de calcul envoie ensuite au SGBD pour récupérer des données. Le contenu de cette requête ne peut évidemment pas être connu du programmeur lors de l’écriture du programme de feuille de calcul.  
@@ -39,4 +39,4 @@ Bien que SQL statique fonctionne bien dans de nombreux cas, il existe une classe
   
 3.  Le programme peut utiliser l’instruction EXECUTe à plusieurs reprises, en fournissant des valeurs de paramètre différentes chaque fois que l’instruction dynamique est exécutée.  
   
- L’exécution préparée n’est toujours pas la même que SQL statique. Dans le SQL statique, les quatre premières étapes du traitement d’une instruction SQL sont effectuées au moment de la compilation. Dans l’exécution préparée, ces étapes ont toujours lieu au moment de l’exécution, mais elles ne sont exécutées qu’une seule fois. l’exécution du plan n’a lieu que lorsque l’instruction EXECUTE est appelée. Cela permet d’éliminer certains des inconvénients en matière de performances inhérents à l’architecture du SQL dynamique. L’illustration suivante montre les différences entre le SQL statique, le SQL dynamique avec exécution immédiate et le SQL dynamique avec une exécution préparée.
+ L’exécution préparée n’est toujours pas la même que SQL statique. Dans le SQL statique, les quatre premières étapes du traitement d’une instruction SQL sont effectuées au moment de la compilation. Dans l’exécution préparée, ces étapes ont toujours lieu au moment de l’exécution, mais elles ne sont exécutées qu’une seule fois. l’exécution du plan n’a lieu que lorsque l’instruction EXECUTE est appelée. Cela permet d’éliminer certains des inconvénients en matière de performances inhérents à l’architecture du SQL dynamique.

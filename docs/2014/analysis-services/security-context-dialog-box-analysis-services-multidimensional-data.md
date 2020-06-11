@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab210a7763569a018e0283a3b74d708fcbfe456b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069848"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538841"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Contexte de sécurité (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Contexte de sécurité** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] permet de modifier l'utilisateur et le rôle utilisé pour analyser les données ou métadonnées d'un objet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour afficher la boîte de dialogue **Contexte de sécurité** , cliquez sur **Contexte de sécurité** dans le volet **Barre d'outils** soit de l'onglet **Calculs** , soit de l'onglet **Navigateur** du Concepteur de cube.  
@@ -31,7 +30,7 @@ ms.locfileid: "66069848"
   
  Le domaine et nom de l'utilisateur ou groupe arborent le format suivant :  
   
- Nom de **\\** domaine>* \<nom du compte d’utilisateur>* * \<*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  **Rôles**  
  Permet d'utiliser un ou plusieurs rôles spécifiés lors de l'affichage des données et métadonnées de l'objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez sélectionner les rôles à utiliser si plusieurs rôles sont définis dans la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

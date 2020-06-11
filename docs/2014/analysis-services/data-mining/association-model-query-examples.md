@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a19eb2302639c7f13d48a8778969bbeca4fee18d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525399"
 ---
 # <a name="association-model-query-examples"></a>Exemples de requêtes de modèle d'association
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu qui fournit des détails sur les règles et les jeux d'éléments découverts au cours de l'analyse, soit créer une requête de prédiction qui utilise les associations découvertes dans les données pour faire des prédictions. En général, pour un modèle d'association, les prédictions sont basées sur des règles et peuvent être utilisées pour faire des recommandations, tandis que les interrogations sur du contenu explorent la relation entre les jeux d'éléments. Vous pouvez aussi récupérer des métadonnées sur le modèle.  

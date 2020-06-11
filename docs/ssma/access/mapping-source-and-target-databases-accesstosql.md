@@ -1,5 +1,6 @@
 ---
 title: Mappage des bases de données source et cible (AccessToSQL) | Microsoft Docs
+description: Apprenez à spécifier une base de données cible pour la migration de base de données Access vers SQL Server ou Azure SQL Database, y compris plusieurs bases de données dans plusieurs bases de données.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 894dec18ab2d487eca22a65542e1d77d6c2e2f77
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907155"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293747"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Mappage des bases de données source et cible (AccessToSQL)
-Lorsque vous vous connectez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à ou SQL Azure, vous devez spécifier une base de données cible pour la migration. Si vous disposez de plusieurs bases de données Access, vous pouvez les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapper à plusieurs bases de données (ou schémas) ou à plusieurs schémas sous la base de données SQL Azure connectée.  
+Lorsque vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez spécifier une base de données cible pour la migration. Si vous disposez de plusieurs bases de données Access, vous pouvez les mapper à plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données (ou schémas) ou à plusieurs schémas sous la base de données SQL Azure connectée.  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server ou SQL Azure des schémas de base de données  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les bases de données utilisent le concept de schéma pour séparer les objets d’une base de données en groupes logiques. Par exemple, une base de données de bibliothèque peut utiliser trois schémas nommés **livres**, **audio**et **vidéo** pour séparer les objets de livre, audio et vidéo les uns des autres. Par défaut, la base de données Access est mappée à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Master** et au schéma **dbo** dans et à la base de données connectée et au schéma **dbo** dans SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les bases de données utilisent le concept de schéma pour séparer les objets d’une base de données en groupes logiques. Par exemple, une base de données de bibliothèque peut utiliser trois schémas nommés **livres**, **audio**et **vidéo** pour séparer les objets de livre, audio et vidéo les uns des autres. Par défaut, la base de données Access est mappée à la base de données **Master** et au schéma **dbo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à la base de données connectée et au schéma **dbo** dans SQL Azure.  
   
-À moins que vous ne personnalisiez le mappage entre chaque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données Access et la base de données et le schéma, SSMA migre tous les schémas et données associés à la base de données Access vers la base de données par défaut mappée.  
+À moins que vous ne personnalisiez le mappage entre chaque base de données Access et la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et le schéma, SSMA migre tous les schémas et données associés à la base de données Access vers la base de données par défaut mappée.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modification de la base de données et du schéma cibles  
-SSMA vous permet de mapper chaque base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données Access à ou SQL Azure base de données et au schéma. La procédure suivante décrit comment personnaliser le mappage par base de données.  
+SSMA vous permet de mapper chaque base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure base de données et au schéma. La procédure suivante décrit comment personnaliser le mappage par base de données.  
   
 **Pour modifier la base de données et le schéma cibles**  
   
@@ -53,14 +54,14 @@ SSMA vous permet de mapper chaque base de [!INCLUDE[ssNoVersion](../../includes/
   
 -   Mappage à SQL Server  
   
-Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mappée à la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’existe pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur, vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
+Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est mappée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’existe pas sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
   
 -   Mappage à SQL Azure  
   
-Vous pouvez mapper la base de données source à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données cible connectée ou au schéma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’importe quel schéma dans la base de données cible connectée. Si vous mappez le schéma source à un schéma non existant dans une base de données cible connectée, vous êtes invité à entrer un message **«le schéma n’existe pas dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ? «** Cliquez sur Oui.  
+Vous pouvez mapper la base de données source à la base de données cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou au schéma de n’importe quel schéma dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données cible connectée. Si vous mappez le schéma source à un schéma non existant dans une base de données cible connectée, vous êtes invité à entrer un message **«le schéma n’existe pas dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ? «** Cliquez sur Oui.  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>Rétablissement de la base de données et du schéma initiaux  
-Si vous personnalisez le mappage entre une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access et un ou SQL Azure base de données et un schéma, vous pouvez rétablir le mappage à la base de données que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous avez spécifiée lorsque vous vous êtes connecté à ou SQL Azure.  
+Si vous personnalisez le mappage entre une base de données Access et un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure base de données et un schéma, vous pouvez rétablir le mappage à la base de données que vous avez spécifiée lorsque vous vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 **Pour rétablir la base de données et le schéma par défaut**  
   

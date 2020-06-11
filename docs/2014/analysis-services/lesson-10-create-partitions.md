@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 545c6f45339047d3a632f9e18d69108f3c8b5111
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079198"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543581"
 ---
 # <a name="lesson-11-create-partitions"></a>Leçon 11 : Créer des partitions
   Dans cette leçon, vous allez créer des partitions pour diviser la table Internet Sales en parties logiques plus petites pouvant être traitées (actualisées) indépendamment d'autres partitions. Par défaut, chaque table que vous incluez dans votre modèle a une partition qui inclut toutes les colonnes et lignes de la table. Pour la table Internet Sales, nous souhaitons diviser les données par année. une partition pour chacune des cinq années de la table.  Chaque partition peut ensuite être traitée indépendamment. Pour plus d’informations, consultez [Partitions &#40;SSAS Tabulaire&#41;](tabular-models/partitions-ssas-tabular.md).  
@@ -35,7 +34,7 @@ ms.locfileid: "66079198"
   
 2.  Dans la boîte de dialogue **Gestionnaire de partition** , dans **partitions**, cliquez sur la partition **Internet Sales** .  
   
-3.  Dans **nom**de la partition, remplacez le `Internet Sales 2005`nom par.  
+3.  Dans **nom**de la partition, remplacez le nom par `Internet Sales 2005` .  
   
     > [!TIP]  
     >  Avant de passer à l'étape suivante, notez que les noms des colonnes dans la fenêtre d'aperçu de la table affichent les colonnes incluses dans la table modèle (activée) avec les noms des colonnes de la source. Cela est dû au fait que la fenêtre d'aperçu de la table affiche les colonnes de la table source, pas de la table modèle.  
@@ -83,9 +82,9 @@ ms.locfileid: "66079198"
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Pour créer une partition pour l’année 2006 dans la table Internet Sales  
   
-1.  Dans la boîte de dialogue **Gestionnaire de partition** , dans **partitions**, cliquez `Internet Sales 2005` sur la partition que vous venez de créer, puis sur **copier**.  
+1.  Dans la boîte de dialogue **Gestionnaire de partition** , dans **partitions**, cliquez sur la `Internet Sales 2005` partition que vous venez de créer, puis sur **copier**.  
   
-2.  Dans **nom**de la partition `Internet Sales 2006`, tapez.  
+2.  Dans **nom**de la partition, tapez `Internet Sales 2006` .  
   
 3.  Dans l’instruction SQL, pour que la partition inclue uniquement les lignes de l’année 2006, remplacez la clause WHERE par ce qui suit :  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66079198"
   
 1.  Dans la boîte de dialogue **Gestionnaire de partition** , cliquez sur **Copier**.  
   
-2.  Dans **nom**de la partition `Internet Sales 2007`, tapez.  
+2.  Dans **nom**de la partition, tapez `Internet Sales 2007` .  
   
 3.  Dans **basculer vers**, sélectionnez **éditeur de requête**.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "66079198"
   
 1.  Dans la boîte de dialogue **Gestionnaire de partition** , cliquez sur **Nouveau**.  
   
-2.  Dans **nom**de la partition `Internet Sales 2008`, tapez.  
+2.  Dans **nom**de la partition, tapez `Internet Sales 2008` .  
   
 3.  Dans **basculer vers**, sélectionnez **éditeur de requête**.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66079198"
   
 1.  Dans la boîte de dialogue **Gestionnaire de partition** , cliquez sur **Nouveau**.  
   
-2.  Dans **nom**de la partition `Internet Sales 2009`, tapez.  
+2.  Dans **nom**de la partition, tapez `Internet Sales 2009` .  
   
 3.  Dans **basculer vers**, sélectionnez **éditeur de requête**.  
   

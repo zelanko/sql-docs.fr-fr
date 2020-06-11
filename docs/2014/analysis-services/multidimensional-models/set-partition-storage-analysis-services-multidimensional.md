@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072988"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545641"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Définir un stockage de partitions (Analysis Services - Multidimensionnel)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs configurations de stockage standard pour les modes de stockage et les options de mise en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cache. Celles-ci fournissent des configurations fréquemment utilisées pour la notification des mises à jour, la latence et la reconstruction des données.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs configurations de stockage standard pour les modes de stockage et les options de mise en cache. Celles-ci fournissent des configurations fréquemment utilisées pour la notification des mises à jour, la latence et la reconstruction des données.  
   
  Vous pouvez spécifier le stockage de partitions dans l'onglet Partitions du cube dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou dans la page de propriétés de partition de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

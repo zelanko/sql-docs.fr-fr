@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 341468d521cebe1fda33d73ea999f3b6571cb01e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546351"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Utilisation de la fonction RollupChildren (MDX)
   La fonction d’expressions multidimensionnelles (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [script pour la fonction de recherche et de remplacement] regroupe les enfants d’un membre, en appliquant un opérateur unaire différent à chaque enfant, et retourne la valeur de ce cumul sous la forme d’un nombre. L'opérateur unaire peut être fourni par une propriété de membre associée au membre enfant, ou être une expression de type chaîne directement fournie à la fonction.  
@@ -41,7 +40,7 @@ ms.locfileid: "66074264"
 ### <a name="using-a-custom-member-property"></a>Utilisation d'une propriété de membre personnalisée  
  Si le calcul de cumuls est appelé à être souvent utilisé, une méthode consiste à créer pour une fonction donnée une propriété de membre qui stocke les opérateurs à utiliser pour chaque enfant. Le tableau suivant présente les opérateurs unaires corrects et décrit le résultat attendu.  
   
-|Opérateur|Résultats|  
+|Opérateur|Résultat|  
 |--------------|------------|  
 |+|total = total + enfant actuel|  
 |-|total = total - enfant actuel|  
@@ -64,7 +63,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  Lorsque la fonction est appelée, la valeur de chaque enfant s'applique à un total à l'aide de l'opérateur stocké dans la propriété de membre. Les membres correspondant aux invendus réalisés sur le marché national et à l'étranger sont ignorés, et le total du cumul renvoyé par la fonction `RollupChildren` est multiplié par 1,1.  
   
 ### <a name="using-the-iif-function"></a>Utilisation de la fonction IIf  
- Si l’opération d’exemple n’est pas courante ou si l’opération ne s’applique qu’à une [IIf](/sql/mdx/iif-mdx) seule requête MDX, la fonction IIF `RollupChildren` peut être utilisée avec la fonction pour fournir le même résultat. La requête MDX suivante fournit le même résultat que l'instruction MDX précédente, mais sans avoir recours à une propriété de membre personnalisée :  
+ Si l’opération d’exemple n’est pas courante ou si l’opération ne s’applique qu’à une seule requête MDX, la fonction [IIf](/sql/mdx/iif-mdx) peut être utilisée avec la `RollupChildren` fonction pour fournir le même résultat. La requête MDX suivante fournit le même résultat que l'instruction MDX précédente, mais sans avoir recours à une propriété de membre personnalisée :  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

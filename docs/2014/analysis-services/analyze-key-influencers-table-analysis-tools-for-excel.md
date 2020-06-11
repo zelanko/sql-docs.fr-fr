@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a349ea881e463043aea5bb069d3ed34be74a78b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062260"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527985"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analyser les facteurs d'influence clés (Outils d'analyse de table pour Excel)
   ![Bouton Analyser les facteurs d'influence clés du ruban](media/tat-aki.gif "Bouton Analyser les facteurs d'influence clés du ruban")  
@@ -46,7 +45,7 @@ ms.locfileid: "66062260"
   
 6.  Si aucune séquence n'est détectée, l'Assistant crée une nouvelle feuille de calcul qui contient une description du problème.  
   
-7.  Si des séquences sont détectées, l'Assistant crée un rapport sur une nouvelle feuille de calcul qui affiche les séquences. Le rapport est nommé **influenceurs clés pour \<la colonne>**. Vous pouvez personnaliser le rapport comme indiqué dans la procédure suivante.  
+7.  Si des séquences sont détectées, l'Assistant crée un rapport sur une nouvelle feuille de calcul qui affiche les séquences. Le rapport est nommé **influenceurs clés pour \<column> **. Vous pouvez personnaliser le rapport comme indiqué dans la procédure suivante.  
   
 #### <a name="create-a-custom-report"></a>Créer un rapport personnalisé  
   
@@ -100,8 +99,8 @@ ms.locfileid: "66062260"
   
 -   Il crée un rapport décrivant les facteurs d'influence clés, classés par scores de confiance.  
   
-### <a name="requirements"></a>Conditions requises  
- Si la colonne cible contient des valeurs numériques continues, l'outil segmente automatiquement les valeurs numériques dans des groupes. Ces regroupements représentent des clusters de cas possédant des caractéristiques similaires. Cependant, les valeurs numériques ne peuvent pas être divisées en groupes conviviaux. Par exemple, le rapport peut contenir un regroupement tel que «\<12,85701 », tandis que les utilisateurs du rapport souhaitent généralement voir des regroupements qui utilisent des nombres entiers, tels que 10-19, 20-29, etc.  
+### <a name="requirements"></a>Spécifications  
+ Si la colonne cible contient des valeurs numériques continues, l'outil segmente automatiquement les valeurs numériques dans des groupes. Ces regroupements représentent des clusters de cas possédant des caractéristiques similaires. Cependant, les valeurs numériques ne peuvent pas être divisées en groupes conviviaux. Par exemple, le rapport peut contenir un regroupement tel que « \< 12,85701 », tandis que les utilisateurs du rapport souhaitent généralement voir des regroupements qui utilisent des nombres entiers, tels que 10-19, 20-29, etc.  
   
  Si vous voulez regrouper vos données numériques d'une autre manière, vous devez segmenter les données comme vous le souhaitez avant de créer l'analyse. Par exemple, vous pouvez utiliser l’outil [réétiqueter](relabel-sql-server-data-mining-add-ins.md) du client d’exploration de données pour Excel pour créer une nouvelle étiquette de regroupement dans une colonne distincte, puis utiliser uniquement cette nouvelle colonne dans l’analyse.  
   

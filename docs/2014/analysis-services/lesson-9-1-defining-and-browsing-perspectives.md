@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e55e6833b1fdeb600ddecdbf70f615565a38bb05
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493775"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542261"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Définition et exploration de perspectives
   Une perspective peut simplifier l'affichage d'un cube à des fins spécifiques. Par défaut, les utilisateurs peuvent voir tous les éléments d'un cube auquel ils sont autorisés à accéder. Ce que les utilisateurs voient lorsqu'ils affichent l'intégralité d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est la perspective par défaut du cube. Il peut s'avérer très difficile de naviguer à travers une vue du cube tout entier, surtout pour les utilisateurs auxquels il suffit d'interagir avec une petite partie du cube pour satisfaire leurs besoins en matière de décisionnel et de rapports.  
@@ -41,7 +40,7 @@ ms.locfileid: "69493775"
   
      ![Nouvelle perspective dans la colonne Nom de perspective](../../2014/tutorials/media/l9-perspectives-2.gif "Nouvelle perspective dans la colonne Nom de perspective")  
   
-3.  Remplacez le nom de la `Internet Sales`perspective par.  
+3.  Remplacez le nom de la perspective par `Internet Sales` .  
   
 4.  Sur la ligne suivante, affectez à DefaultMeasure la valeur **Internet Sales-Sales Amount**.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "69493775"
   
 1.  Dans la barre d’outils de l’onglet **Perspectives** , cliquez sur **Nouvelle perspective** .  
   
-2.  Remplacez le nom de la nouvelle perspective par `Reseller Sales`.  
+2.  Remplacez le nom de la nouvelle perspective par `Reseller Sales` .  
   
 3.  Définissez **Reseller Sales-Sales Amount** comme mesure par défaut.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "69493775"
   
 1.  Dans la barre d’outils de l’onglet **Perspectives** , cliquez sur **Nouvelle perspective** .  
   
-2.  Remplacez le nom de la nouvelle perspective par `Sales Summary`.  
+2.  Remplacez le nom de la nouvelle perspective par `Sales Summary` .  
   
     > [!NOTE]  
     >  Vous ne pouvez pas spécifier une mesure calculée comme mesure par défaut.  

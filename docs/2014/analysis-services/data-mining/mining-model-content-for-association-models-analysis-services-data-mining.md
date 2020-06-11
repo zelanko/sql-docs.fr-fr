@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1836cb414e8ea7f6e0bedbf0b4fb75cf0bfa264e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083689"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521584"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles d'association (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d’exploration qui est spécifique aux modèles utilisant l’algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -63,7 +62,7 @@ ms.locfileid: "66083689"
 |ID du type de nœud|Type|  
 |------------------|----------|  
 |1 (Modèle)|Nœud racine ou parent.|  
-|7 (Jeu d'éléments)|Jeu d'éléments ou collection de paires attribut/valeur. Exemples :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> ou<br /><br /> `Gender = Male`.|  
+|7 (Jeu d'éléments)|Jeu d'éléments ou collection de paires attribut/valeur. Exemples :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> or<br /><br /> `Gender = Male`.|  
 |8 (Règle)|Règle définissant la façon dont les éléments sont liés les uns aux autres.<br /><br /> Exemple :<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  

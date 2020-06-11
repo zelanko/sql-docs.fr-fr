@@ -10,19 +10,19 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c4f3a480b039b4853c112831341b6448a7d6a7
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211258"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859379"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>Options (Environnement : page Polices et couleurs)
   La boîte de dialogue **Options** vous permet de définir un modèle personnalisé de polices et de couleurs pour différents éléments de l’interface utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dans le menu **Outils** , cliquez sur **Options** , développez le dossier **Environnement** et sélectionnez **Polices et couleurs**.  
   
  Les modifications apportées à un modèle de couleurs ne sont pas prises en compte lors de la session au cours de laquelle vous avez effectué ces changements. Vous pouvez évaluer les changements de couleurs en ouvrant une autre instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et en reproduisant les conditions dans lesquelles vous souhaitez appliquer ces modifications.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Afficher les paramètres de**  
  Répertorie tous les éléments de l'interface utilisateur dont vous pouvez modifier les modèles de polices et de couleurs. Après avoir sélectionné un élément dans cette liste, vous pouvez personnaliser les paramètres de couleurs de l’élément sélectionné dans **Éléments affichés**.  
   

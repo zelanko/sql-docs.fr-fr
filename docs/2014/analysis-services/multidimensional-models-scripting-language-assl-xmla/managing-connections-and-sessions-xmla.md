@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701998"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544941"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestion des connexions et des sessions (XMLA)
   *Conservation* est une condition au cours de laquelle le serveur conserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon* est une condition au cours de laquelle le serveur ne se souvient pas de l’identité et du contexte d’un client après la fin d’un appel de méthode.  
@@ -45,7 +44,7 @@ ms.locfileid: "62701998"
 |-----------------|-----------------|  
 |BeginSession|Cet en-tête demande au fournisseur de créer une nouvelle session. Le fournisseur doit répondre en construisant une nouvelle session et en retournant l'ID de session dans l'en-tête Session de la réponse SOAP.|  
 |SessionId|La zone des valeurs contient l'ID de session qui doit être utilisé dans chaque appel de méthode pour le reste de la session. Le fournisseur spécifié dans la réponse SOAP envoie cette balise et le client doit également envoyer cet attribut avec chaque élément d'en-tête Session.|  
-|session|Pour chaque appel de méthode qui se produit dans la session, cet en-tête doit être utilisé, et l'ID de session doit être inclus dans la zone des valeurs de l'en-tête.|  
+|Session|Pour chaque appel de méthode qui se produit dans la session, cet en-tête doit être utilisé, et l'ID de session doit être inclus dans la zone des valeurs de l'en-tête.|  
 |EndSession|Pour mettre fin à la session, utilisez cet en-tête. L'ID de session doit être inclus avec la zone des valeurs.|  
   
 > [!NOTE]  
@@ -72,7 +71,7 @@ ms.locfileid: "62701998"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Le message de réponse SOAP du fournisseur comprend l’ID de session dans la zone d’en-tête de retour, \<à l’aide de la balise d’en-tête XMLA SessionID>.  
+2.  Le message de réponse SOAP du fournisseur comprend l’ID de session dans la zone d’en-tête de retour, à l’aide de la balise d’en-tête XMLA \<SessionId> .  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701998"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Une fois la session terminée, la \<balise EndSession> est utilisée, contenant la valeur d’ID de session associée.  
+4.  Une fois la session terminée, la \<EndSession> balise est utilisée, contenant la valeur d’ID de session associée.  
   
     ```  
     <SOAP-ENV:Header>  

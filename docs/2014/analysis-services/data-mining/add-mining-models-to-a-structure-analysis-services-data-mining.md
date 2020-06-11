@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1284d160ca828f75ec39112d614640fcb3ab1cb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086248"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525696"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Ajouter des modèles d'exploration de données à une structure (Analysis Services - Exploration de données)
   Une structure d'exploration de données est destinée à prendre en charge plusieurs modèles d'exploration de données. Par conséquent, une fois l'exécution de l'Assistant terminée, vous pouvez ouvrir la structure et ajouter de nouveaux modèles d'exploration de données. Chaque fois que vous créez un modèle, vous pouvez utiliser un algorithme différent, modifier les paramètres, ou appliquer des filtres pour utiliser un autre sous-ensemble des données.  

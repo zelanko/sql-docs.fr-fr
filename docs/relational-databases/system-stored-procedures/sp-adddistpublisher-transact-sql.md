@@ -1,7 +1,7 @@
 ---
 title: sp_adddistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771389"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627144"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,12 +48,15 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>Arguments  
 `[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
+
+> [!NOTE]
+> Le nom du serveur peut être spécifié sous la forme `<Hostname>,<PortNumber>` . Vous devrez peut-être spécifier le numéro de port de votre connexion lorsque SQL Server est déployé sur Linux ou Windows avec un port personnalisé, et que le service Browser est désactivé.
   
 `[ @distribution_db = ] 'distribution_db'`Nom de la base de données de distribution. *distributor_db* est de **type sysname**, sans valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
   
-`[ @security_mode = ] security_mode`Est le mode de sécurité implémenté. Ce paramètre est utilisé uniquement par les agents de réplication pour se connecter au serveur de publication pour les abonnements de mise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à jour en attente ou avec un serveur de publication non-. *security_mode* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @security_mode = ] security_mode`Est le mode de sécurité implémenté. Ce paramètre est utilisé uniquement par les agents de réplication pour se connecter au serveur de publication pour les abonnements de mise à jour en attente ou avec un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *security_mode* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Les Agents de réplication situés sur le serveur de distribution utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour se connecter au serveur de publication.|  
 |**1** (par défaut)|Les agents de réplication situés sur le serveur de distribution utilisent l'authentification Windows pour se connecter au serveur de publication.|  
@@ -65,9 +68,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort.  
   
-`[ @working_directory = ] 'working_directory'`Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma de la publication. *working_directory* est de type **nvarchar (255)**, et par défaut le dossier repldata pour cette instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, par `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`exemple. Le nom doit être indiqué au format UNC.  
+`[ @working_directory = ] 'working_directory'`Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma de la publication. *working_directory* est de type **nvarchar (255)**, et par défaut le dossier repldata pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , par exemple `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` . Le nom doit être indiqué au format UNC.  
 
- Pour Azure SQL Database, utilisez `\\<storage_account>.file.core.windows.net\<share>`.
+ Pour Azure SQL Database, utilisez `\\<storage_account>.file.core.windows.net\<share>` .
 
 `[ @storage_connection_string = ] 'storage_connection_string'`Est requis pour SQL Database. Utilisez la clé d’accès du portail Azure sous paramètres de > de stockage.
 
@@ -77,16 +80,16 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`La définition de *encrypted_password* n’est plus prise en charge. Si vous tentez de définir ce paramètre de **bit** sur **1** , une erreur se produit.  
   
-`[ @thirdparty_flag = ] thirdparty_flag`Est lorsque le serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]publication est. *thirdparty_flag* est de **bits**et peut prendre l’une des valeurs suivantes.  
+`[ @thirdparty_flag = ] thirdparty_flag`Est lorsque le serveur de publication est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* est de **bits**et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0** (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Database.|  
 |**1**|Base de données autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
-`[ @publisher_type = ] 'publisher_type'`Spécifie le type de serveur de publication lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le serveur de publication n’est pas. *publisher_type* est de type sysname et peut prendre l’une des valeurs suivantes.  
+`[ @publisher_type = ] 'publisher_type'`Spécifie le type de serveur de publication lorsque le serveur de publication n’est pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* est de type sysname et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (par défaut)|Spécifie un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**SOLUTION**|Spécifie un serveur de publication Oracle standard.|  

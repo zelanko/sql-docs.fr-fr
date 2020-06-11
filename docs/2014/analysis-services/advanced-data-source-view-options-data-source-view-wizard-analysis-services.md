@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9512d0986b862b5865f8873b75a607f549cdac39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062844"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528185"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Boîte de dialogue Options avancées des vues de source de données (Assistant Vue de source de données) (Analysis Services)
   La boîte de dialogue **Options avancées des vues de source de données** vous permet de mieux contrôler la façon dont la vue de source de données extrait les schémas et relations à partir de la source de données afin de générer la vue.  

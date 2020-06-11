@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83ba32e732a590881803d87c73d9853ee6c20abf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086031"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525425"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MNB (Microsoft Naive Bayes)
-  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse Naive Bayes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans affiche les modèles d’exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] générés à l’aide de l’algorithme Bayes Naive. L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes est un algorithme de classification qui est fortement adaptable aux tâches de modélisation prédictive. Pour plus d’informations sur cet algorithme, consultez [Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md).  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse Naive Bayes dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données générés à l’aide de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Bayes Naive. L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes est un algorithme de classification qui est fortement adaptable aux tâches de modélisation prédictive. Pour plus d’informations sur cet algorithme, consultez [Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md).  
   
  Comme l’une des principales finalités d’un modèle Naive Bayes est de fournir un moyen rapide d’explorer les données d’un dataset, la Visionneuse de l’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) propose plusieurs méthodes d’affichage de l’interaction entre les attributs prédictibles et les attributs d’entrée.  
   
@@ -80,10 +79,10 @@ ms.locfileid: "66086031"
  **Valeurs**  
  Affiche la valeur de l’attribut dans la colonne**Attribut**.  
   
- **Privilégie \<la valeur 1>**  
+ **Privilégie\<value 1>**  
  Affiche une barre de couleur qui indique à quel degré la valeur d’attribut favorise la valeur d’attribut prédictible affichée dans **Valeur 1**.  
   
- **Privilégie \<la valeur 2>**  
+ **Privilégie\<value 2>**  
  Affiche une barre de couleur qui indique à quel degré la valeur d’attribut favorise la valeur d’attribut prédictible affichée dans **Valeur 2**.  
   
  [Retour au début](#BKMK_ViewerTabs)  

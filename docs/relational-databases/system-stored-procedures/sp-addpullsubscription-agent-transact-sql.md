@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0704ff7d6764ca06c7de37d0d02bfbcb9148ce7
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820718"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627428"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,6 +80,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Arguments  
 `[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
+
+> [!NOTE]
+> Le nom du serveur peut être spécifié sous la forme `<Hostname>,<PortNumber>` . Vous devrez peut-être spécifier le numéro de port de votre connexion lorsque SQL Server est déployé sur Linux ou Windows avec un port personnalisé, et que le service Browser est désactivé.
   
 `[ @publisher_db = ] 'publisher_db'_`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut. *publisher_db* est ignorée par les serveurs de publication Oracle.  
   
@@ -230,7 +233,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_addpullsubscription_agent** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
 ## <a name="example"></a>Exemple  

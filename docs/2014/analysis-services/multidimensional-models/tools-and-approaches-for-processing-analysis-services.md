@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b28ecf29adc8240f76ec9888f9d4cb06dda887
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547321"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Outils et approches de traitement (Analysis Services)
   Le traitement est une opération selon laquelle Analysis Services interroge les données provenant d'une source de données relationnelle et remplit des objets Analysis Services à l'aide de ces données.  

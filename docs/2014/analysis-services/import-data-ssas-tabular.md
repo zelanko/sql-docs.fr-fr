@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96948f8a256b90429e45ac6ce1068cf3d88baa9a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544211"
 ---
 # <a name="import-data-ssas-tabular"></a>Importer des données (SSAS Tabulaire)
   Vous pouvez importer des données dans un modèle tabulaire à partir d'une grande diversité de sources. Les rubriques de cette section décrivent l'utilisation de l'Assistant Importation de données pour vous connecter à des données et les sélectionner afin de les importer dans un projet de modèle.  
@@ -27,7 +26,7 @@ ms.locfileid: "66080614"
   
 |**Source de données**|**Description**|  
 |---------------------|---------------------|  
-|**Bases de données relationnelles**|Les sources de données relationnelles incluent :<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server Parallel Data Warehouse<br /><br /> Microsoft Access<br /><br /> Oracle<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
+|**Bases de données relationnelles**|Les sources de données relationnelles incluent :<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server Parallel Data Warehouse<br /><br /> Microsoft Access<br /><br /> Oracle<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
 |**Sources multidimensionnelles**|Cube Microsoft SQL Server Analysis Services|  
 |**Flux de données**|Les flux de données incluent :<br /><br /> Rapport Microsoft Reporting Services<br /><br /> Dataset Azure DataMarket<br /><br /> Flux Atom d'un fournisseur public ou d'entreprise|  
 |**Fichiers texte**|Les fichiers texte incluent :<br /><br /> Fichiers Excel (.xlsx)<br /><br /> Fichier texte (.txt)|  

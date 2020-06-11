@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546421"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>LANGUAGE et FORMAT_STRING sur FORMATED_VALUE
   La propriété FORMATTED_VALUE est basée sur les interactions des propriétés VALUE, FORMAT_STRING et LANGUAGE de la cellule. Cette rubrique explique comment ces propriétés interagissent pour générer la propriété FORMATTED_VALUE.  

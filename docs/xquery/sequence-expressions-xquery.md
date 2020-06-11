@@ -1,5 +1,6 @@
 ---
 title: Expressions de séquence (XQuery) | Microsoft Docs
+description: En savoir plus sur les expressions de séquence XQuery qui construisent, filtrent et combinent une séquence d’éléments.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946307"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529763"
 ---
 # <a name="sequence-expressions-xquery"></a>Expressions de séquence (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Exemple C  
- La requête suivante est spécifiée par rapport à la colonne AdditionalContactInfo du type **XML** dans la table contact. Cette colonne stocke les informations supplémentaires des contacts tels qu'un ou plusieurs numéros de téléphone, numéros de pager et adresses supplémentaires. Le \<> telephoneNumber, \<le> de pagineur et d’autres nœuds peuvent apparaître n’importe où dans le document. La requête construit une séquence qui contient tous les \<enfants de la> du nœud de contexte, suivis du \<pagineur> enfants. Notez l'utilisation de l'opérateur de séquence comma (virgule) dans l'expression de renvoi, `($a//act:telephoneNumber, $a//act:pager)`.  
+ La requête suivante est spécifiée par rapport à la colonne AdditionalContactInfo du type **XML** dans la table contact. Cette colonne stocke les informations supplémentaires des contacts tels qu'un ou plusieurs numéros de téléphone, numéros de pager et adresses supplémentaires. Les \<telephoneNumber> \<pager> nœuds, et peuvent apparaître n’importe où dans le document. La requête construit une séquence qui contient tous les \<telephoneNumber> enfants du nœud de contexte, suivis par les \<pager> enfants. Notez l'utilisation de l'opérateur de séquence comma (virgule) dans l'expression de renvoi, `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Pour récupérer uniquement <`a` éléments> qui ont l’attribut attra, vous pouvez spécifier un filtre dans le prédicat. La séquence résultante n’aura qu’un `a` seul <élément>.  
+ Pour récupérer uniquement <`a` éléments> qui ont l’attribut attra, vous pouvez spécifier un filtre dans le prédicat. La séquence résultante n’aura qu’un seul <`a` élément>.  
   
 ```  
 declare @x xml  
@@ -202,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- L'exemple suivant applique un filtre de prédicat. L’expression recherche des éléments `a` <> et `b` <> qui contiennent des `c` <d’élément>.  
+ L'exemple suivant applique un filtre de prédicat. L’expression recherche des éléments <`a`> et <> qui contiennent des <d' `b` élément> `c` .  
   
 ```  
 declare @x xml  

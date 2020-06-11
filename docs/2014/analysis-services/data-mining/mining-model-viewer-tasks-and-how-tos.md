@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b6eb40999ca009184d438e0c0dc514d2c3f009
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083482"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521203"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tâches de la visionneuse de modèle d'exploration de données et procédures
   Le concepteur d’exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contient des outils que vous pouvez utiliser pour explorer les modèles d’exploration de données. Les rubriques suivantes expliquent en détail comment exécuter les tâches spécifiques à l’utilisation de l’onglet **Visionneuse de modèle d’exploration** du Concepteur.  

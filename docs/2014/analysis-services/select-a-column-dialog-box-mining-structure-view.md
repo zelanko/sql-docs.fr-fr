@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55270f44c15fad735b4252ee9d6b5342f4c4a4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538441"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Boîte de dialogue Sélectionner une colonne (vue Structure d'exploration de données)
   Utilisez la boîte de dialogue **Sélectionner une colonne** pour ajouter des colonnes à la structure d'exploration de données. Cette boîte de dialogue contient différentes options, selon que vous utilisez un modèle d'exploration de données OLAP ou relationnel.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfd8e0dcb72850dccb2cc6840f3e68baf37528b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543088"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Tri des membres d'attribut sur la base d'un attribut secondaire
   Au cours de la leçon 3, vous avez appris à trier les membres d'attribut en fonction de leur nom ou de la valeur de leur clé. Vous avez également appris à utiliser une clé de membre composite pour modifier les membres d'attribut et l'ordre de tri. Pour plus d’informations, consultez [Modification de la dimension Date](lesson-3-4-modifying-the-date-dimension.md). Toutefois, si ni le nom ni la clé de l'attribut principal ne fournissent l'ordre de tri que vous souhaitez, vous pouvez utiliser un attribut secondaire pour obtenir l'ordre de tri désiré. En définissant une relation entre les attributs, vous pouvez utiliser le deuxième attribut pour trier les membres du premier attribut.  

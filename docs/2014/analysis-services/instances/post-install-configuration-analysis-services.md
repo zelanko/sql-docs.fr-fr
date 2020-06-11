@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5299fb250858a0c75ea3f80e254bd143e49df2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079655"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543791"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuration consécutive à l'installation (Analysis Services)
   Après avoir installé Analysis Services, des tâches de configuration supplémentaires sont requises pour rendre le serveur complètement opérationnel et disponible en vue d'une utilisation générale. Cette section présente les autres tâches qui complètent l'installation. Selon les exigences en matière de connexion, vous devrez peut-être aussi configurer l’authentification (consultez [Se connecter à Analysis Services](connect-to-analysis-services.md)).  
@@ -34,7 +33,7 @@ ms.locfileid: "66079655"
 |[Configurer les comptes de service &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Pendant l'installation, le compte de service Analysis Services a été configuré avec les autorisations appropriées pour permettre l'accès contrôlé aux fichiers exécutables du programme et aux fichiers de la base de données. En tant que tâche consécutive à l'installation, vous devez déterminer s'il faut autoriser l'utilisation du compte de service lors de l'exécution de tâches supplémentaires. Les charges de travail de traitement et de requête peuvent être exécutées sous le compte de service. Ces opérations réussissent uniquement quand le compte de service dispose des autorisations appropriées.|  
 |[Inscrire une instance Analysis Services dans un groupe de serveurs](register-an-analysis-services-instance-in-a-server-group.md)|SQL Server Management Studio (SSMS) permet de créer des groupes de serveurs pour organiser vos instances de SQL Server. Il est plus facile de gérer des déploiements évolutif constitués de plusieurs instances de serveurs au sein de groupes de serveurs. Utilisez les informations de cette rubrique pour organiser les instances d'Analysis Services en groupes dans SSMS.|  
 |[Déterminer le mode serveur d'une instance Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)|Pendant l'installation, vous deviez sélectionner un mode serveur pour déterminer le type de modèle (multidimensionnel ou tabulaire) s'exécutant sur le serveur. Si vous avez des doutes quant au mode serveur, utilisez les informations de cette rubrique pour déterminer le mode qui a été installé.|  
-|[Renommer une instance d'Analysis Services](rename-an-analysis-services-instance.md)|Un nom descriptif peut vous aider à faire la distinction entre plusieurs instances ayant des modes serveur différents, ou entre des instances principalement utilisées par des services ou des équipes de votre organisation. Si vous souhaitez remplacer le nom de l'instance par un nom qui vous aide à mieux gérer vos installations, utilisez les informations de cette rubrique pour savoir comment procéder.|  
+|[Renommer une instance de Analysis Services](rename-an-analysis-services-instance.md)|Un nom descriptif peut vous aider à faire la distinction entre plusieurs instances ayant des modes serveur différents, ou entre des instances principalement utilisées par des services ou des équipes de votre organisation. Si vous souhaitez remplacer le nom de l'instance par un nom qui vous aide à mieux gérer vos installations, utilisez les informations de cette rubrique pour savoir comment procéder.|  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Découvrez comment se connecter à Analysis Services depuis des applications Microsoft ou des applications personnalisées à l'aide de bibliothèques clientes. Selon les besoins de votre solution, vous devrez peut-être également configurer le service pour l'authentification Kerberos. Les connexions s'établissant au-delà des limites de domaine nécessitent l'accès HTTP. Consultez [Connect to Analysis Services](connect-to-analysis-services.md) pour obtenir des instructions concernant les étapes suivantes.  

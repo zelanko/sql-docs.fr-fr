@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889865"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669872"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,10 +55,10 @@ USING <algorithm> [(<parameter list>)]
  Nom d'un algorithme d'exploration de données, tel que défini par le fournisseur.  
   
 > [!NOTE]  
->  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [DMSCHEMA_MINING_SERVICES ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Pour afficher les algorithmes pris en charge dans l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]actuelle de, consultez [propriétés d’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [DMSCHEMA_MINING_SERVICES ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [propriétés d’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *liste de paramètres*  
- Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *critères de filtre*  
  Expression de filtre appliquée aux colonnes dans la table de cas.  
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Exemple 2 : ajouter un modèle filtré à une structure  
- L’exemple suivant ajoute un modèle d’exploration `Naive Bayes Women`de données,, à la nouvelle structure d’exploration de données de **publipostage** . Le nouveau modèle a la même structure de base que le modèle d'exploration de données ajouté dans l'exemple 1, à la différence près que ce modèle restreint les cas de la structure d'exploration de données aux clients qui sont des femmes de plus de 50 ans.  
+ L’exemple suivant ajoute un modèle d’exploration `Naive Bayes Women` de données,, à la **nouvelle** structure d’exploration de données de publipostage. Le nouveau modèle a la même structure de base que le modèle d'exploration de données ajouté dans l'exemple 1, à la différence près que ce modèle restreint les cas de la structure d'exploration de données aux clients qui sont des femmes de plus de 50 ans.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eadc6bc2f0bf6f318f20ad42a5cc9e7a5afa5e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086689"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526275"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Création et utilisation de valeurs de propriétés (MDX)
   La syntaxe MDX (Multidimensional Expressions) prend en charge des propriétés intrinsèques et définies par l'utilisateur pour les dimensions, les niveaux, les membres et les cellules. Les propriétés intrinsèques permettent de définir des noms uniques, des légendes et même une mise en forme et une taille de caractères pour des cellules individuelles. Pour leur part, les propriétés définies par l'utilisateur permettent de fournir presque n'importe quel type d'attribut supplémentaire aux membres.  

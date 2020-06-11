@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079383"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543658"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Langues et classements (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les langues et les classements fournis par les systèmes d'exploitation [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Les propriétés `Language` et `Collation` sont initialement définies au niveau de l'instance pendant l'installation, mais peuvent être modifiées ultérieurement à différents niveaux de la hiérarchie d'objets.  
@@ -51,7 +50,7 @@ ms.locfileid: "66079383"
 -   [Prise en charge de GB18030 dans Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>Objets qui prennent en charge les propriétés de langue et de classement  
- `Language`les `Collation` propriétés et sont souvent exposées ensemble, où vous pouvez `Language`définir, vous pouvez également `Collation`définir.  
+ `Language`les `Collation` Propriétés et sont souvent exposées ensemble, où vous pouvez définir `Language` , vous pouvez également définir `Collation` .  
   
  Vous pouvez définir `Language` et `Collation` sur ces objets :  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079383"
   
      Quels que soient la langue et le classement que vous définissez sur le cube, ils sont utilisés par toutes les mesures et les dimensions contenues dans le cube. La seule façon de définir des propriétés de classement plus fines consiste à créer des traductions sur un attribut de dimension. Sinon, en supposant qu'il n'existe aucune traduction au niveau des attributs, il existe un classement par cube.  
   
- En outre, vous pouvez définir `Language`, par lui-même, sur un objet de **traduction** .  
+ En outre, vous pouvez définir `Language` , par lui-même, sur un objet de **traduction** .  
   
  Un objet de traduction est créé lorsque vous ajoutez des traductions à un cube ou à une dimension. `Language`fait partie de la définition de la traduction. La propriété `Collation`, quant à elle, est définie sur le cube ou plus haut et elle est partagée par toutes les traductions. Ceci est évident dans le code XMLA d'un cube contenant des traductions, où figurent plusieurs propriétés de langue (une pour chaque traduction), mais un seul classement. Notez qu'il existe une exception pour les traductions d'attributs de dimension, où vous pouvez remplacer le classement de cube pour spécifier un classement d'attribut qui correspond à la colonne source (le moteur de base de données prend en charge la définition du classement sur des colonnes spécifiques et il est courant de configurer des traductions pour obtenir des données de membres à partir de colonnes sources différentes). Mais sinon, pour toutes les autres traductions, la propriété `Language` est utilisée seule, sans corollaire `Collation`. Pour plus d’informations, consultez [Traductions &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66079383"
   
  Bien qu'Analysis Services répertorie les langues par nom, la valeur réelle stockée pour la propriété est un LCID. Quand vous définissez une propriété de langue par programmation ou via le fichier msmdsrv.ini, utilisez [l’identificateur de paramètres régionaux (LCID)](http://en.wikipedia.org/wiki/Locale) comme valeur. Un LCID est une valeur 32 bits constituée d'un ID de langue, d'un ID de tri et de bits réservés qui identifient une langue particulière. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise les LCID pour spécifier la langue sélectionnée pour les instances et les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- Vous pouvez définir le LCID au format hexadécimal ou décimal. Voici quelques exemples de valeurs valides pour `Language` la propriété :  
+ Vous pouvez définir le LCID au format hexadécimal ou décimal. Voici quelques exemples de valeurs valides pour la `Language` propriété :  
   
 -   0x0409 ou 1033 pour **Anglais (États-Unis)**  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079383"
   
 -   Retraitement des partitions et des dimensions une fois le classement mis à jour.  
   
- Vous pouvez utiliser SQL Server Management Studio ou PowerShell AMO pour modifier la langue ou le classement par défaut au niveau du serveur. Vous pouvez également modifier les ** \<paramètres de langue>** et ** \<CollationName>** dans le fichier msmdsrv. ini, en spécifiant le LCID de la langue.  
+ Vous pouvez utiliser SQL Server Management Studio ou PowerShell AMO pour modifier la langue ou le classement par défaut au niveau du serveur. Vous pouvez également modifier les **\<Language>** **\<CollationName>** paramètres et dans le fichier msmdsrv.ini, en spécifiant le LCID de la langue.  
   
-1.  Dans Management Studio, cliquez avec le bouton droit sur le nom du serveur | **Properties** | **Langue/classement**des propriétés.  
+1.  Dans Management Studio, cliquez avec le bouton droit sur le nom du serveur | **Propriétés**  |  de **Langue/classement**.  
   
 2.  Choix des options de tri. Pour sélectionner **Binaire** ou **Binaire 2**, décochez d'abord la case **Respecter les accents**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079383"
   
  Avant d'utiliser XMLA pour modifier une base de données existante, assurez-vous de ne pas introduire d'incohérences entre la base de données et les fichiers sources utilisés pour la générer. Par exemple, vous souhaiterez peut-être utiliser XMLA pour modifier rapidement la langue ou le classement à des fins de test de preuve de concept, mais apporter ensuite des modifications au fichier source (consultez [Modifier la langue ou le classement d’un cube](#bkmk_cube)) et redéployer la solution à l’aide des procédures opérationnelles déjà en place.  
   
-1.  Dans Management Studio, cliquez avec le bouton droit sur la base de données | **Base de données de script en tant que** | **modification de** | la**nouvelle fenêtre**de l’éditeur de requête.  
+1.  Dans Management Studio, cliquez avec le bouton droit sur la base de données | **Base de données de script en tant que**  |  **Modifier en**  |  **Nouvelle fenêtre de l’éditeur de requête**.  
   
 2.  Recherchez et remplacez la langue ou le classement existant par une autre valeur.  
   

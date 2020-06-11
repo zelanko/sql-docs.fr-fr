@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7ac877a1-0f29-46b9-9a51-73b02172bef1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3be28b0a402743e4d9c26b346386202127c5f74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc14281cebe3a8e5e401acb7b84367f1688ad0ea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081568"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528499"
 ---
 # <a name="dmx-query-editor-analysis-services---data-mining"></a>Éditeur de requête DMX (Analysis Services – Exploration de données)
   Utilisez l'Éditeur de requête DMX pour créer et exécuter des instructions écrites en langage DMX (Data Mining Extensions).  
@@ -40,7 +39,7 @@ ms.locfileid: "66081568"
 |Terme|Définition|  
 |----------|----------------|  
 |**Connexion**|Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance Analysis Services.|  
-|**Connect**|Déconnecte l'Éditeur de requête DMX d'une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Déconnecter**|Déconnecte l'Éditeur de requête DMX d'une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Modifier la connexion**|Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] différente.|  
 |**Nouvelle requête avec la connexion actuelle**|Ouvre la fenêtre Éditeur de requête DMX en utilisant les informations de connexion de la fenêtre Éditeur de requête DMX actuelle.|  
 |**Bases de données disponibles**|Se connecte à une base de données différente [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur la même instance.|  
@@ -53,7 +52,7 @@ ms.locfileid: "66081568"
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Fenêtre d'éditeur de requête**|Tapez les instructions DMX et les scripts que doit exécuter l'Éditeur de requête DMX.<br /><br /> Le menu contextuel de l'éditeur de requête contient les options suivantes :<br /><br /> **Couper**: copie la sélection actuelle dans le presse-papiers et supprime la sélection de la fenêtre de l’éditeur de requête.<br /><br /> **Copier**: Copie la sélection actuelle dans le Presse-papiers.<br /><br /> **Coller**: colle le contenu du presse-papiers dans la sélection actuelle.<br /><br /> **Se connecter**: ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Déconnecter**: déconnecte l’éditeur de requête actuel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’une instance.<br /><br /> Déconnecter **toutes les requêtes**: déconnecte tous les éditeurs de requête ouverts.<br /><br /> **Modifier la connexion**: ouvre la boîte de dialogue **se connecter au serveur** pour établir une connexion à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] une autre instance.<br /><br /> **Ouvrir le serveur dans l’Explorateur d’objets**: ouvre l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance à laquelle l’éditeur de requête actuel est connecté dans l' **Explorateur d’objets**.<br /><br /> **Execute**: exécute le code sélectionné, ou si aucun code n’est sélectionné, exécute l’ensemble du code dans l’éditeur de requête actuel.<br /><br /> **Fenêtre Propriétés**: affiche la fenêtre **Propriétés** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour la fenêtre de requête actuelle.<br /><br /> **Options de requête**: affiche la boîte de dialogue **options de requête** .|  
+|**Fenêtre d'éditeur de requête**|Tapez les instructions DMX et les scripts que doit exécuter l'Éditeur de requête DMX.<br /><br /> Le menu contextuel de l'éditeur de requête contient les options suivantes :<br /><br /> **Couper**: copie la sélection actuelle dans le presse-papiers et supprime la sélection de la fenêtre de l’éditeur de requête.<br /><br /> **Copier**: Copie la sélection actuelle dans le Presse-papiers.<br /><br /> **Coller**: colle le contenu du presse-papiers dans la sélection actuelle.<br /><br /> **Se connecter**: ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Déconnecter**: déconnecte l’éditeur de requête actuel d’une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.<br /><br /> Déconnecter **toutes les requêtes**: déconnecte tous les éditeurs de requête ouverts.<br /><br /> **Modifier la connexion**: ouvre la boîte de dialogue **se connecter au serveur** pour établir une connexion à une autre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.<br /><br /> **Ouvrir le serveur dans l’Explorateur d’objets**: ouvre l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance à laquelle l’éditeur de requête actuel est connecté dans l' **Explorateur d’objets**.<br /><br /> **Execute**: exécute le code sélectionné, ou si aucun code n’est sélectionné, exécute l’ensemble du code dans l’éditeur de requête actuel.<br /><br /> **Fenêtre Propriétés**: affiche la fenêtre **Propriétés** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour la fenêtre de requête actuelle.<br /><br /> **Options de requête**: affiche la boîte de dialogue **options de requête** .|  
 |**Fenêtre des métadonnées**|Affiche les métadonnées de la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connectée.|  
 |**Dernier**|Sélectionnez un cube dans la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] connectée pour afficher les métadonnées associées au cube dans l'onglet **Métadonnées** .|  
 |**Métadonnées**|Affiche les métadonnées du cube sélectionné dans **Cube**, notamment les groupes de mesures et les mesures, les indicateurs de performances clés, les dimensions, les hiérarchies, les niveaux, les membres et les propriétés des membres. Pour extraire la clé qualifiée complète d'un objet, procédez de l'une des manières suivantes :<br /><br /> Faites glisser l'objet de l'onglet **Métadonnées** vers le volet de requête.<br /><br /> Ou :<br /><br /> Cliquez avec le bouton droit sur l’objet et sélectionnez **Copier**, puis cliquez avec le bouton droit sur le volet de requête et sélectionnez **Coller**.|  

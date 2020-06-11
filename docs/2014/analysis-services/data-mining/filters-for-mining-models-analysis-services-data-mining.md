@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7695bef91ace5eb6ff8d642c51b379343fb0b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084429"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522346"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtres pour les modèles d'exploration de données (Analysis Services - Exploration de données)
   Le filtrage de modèle basé sur les données est utile pour créer des modèles d'exploration de données qui utilisent les sous-ensembles de données d'une structure d'exploration de données. Le filtrage offre une certaine souplesse lorsque vous concevez vos structures d'exploration de données et sources de données, car vous pouvez créer une structure d'exploration de données unique basée sur une vue détaillée de la source de données. Vous pouvez créer ensuite des filtres pour utiliser uniquement une partie de ces données à des fins de formation et de test de divers modèles, au lieu de générer une structure différente et un modèle associé pour chaque sous-ensemble de données.  
@@ -43,14 +42,14 @@ ms.locfileid: "66084429"
   
 -   En utilisant l’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données pour générer les conditions à l’aide des boîtes de dialogue de l’Éditeur de filtre.  
   
--   Saisie directe d’une expression de filtre `Filter` dans la propriété du modèle d’exploration de données.  
+-   Saisie directe d’une expression de filtre dans la `Filter` propriété du modèle d’exploration de données.  
   
 -   En définissant des conditions de filtrage sur un modèle par programmation, à l’aide d’AMO.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Création des filtres de modèle à l'aide du Concepteur d'exploration de données  
  Vous filtrez un modèle dans le Concepteur d'exploration de données en modifiant la propriété `Filter` du modèle d'exploration de données. Vous pouvez taper directement une expression de filtre dans le volet **Propriétés** ou ouvrir une boîte de dialogue de filtre pour créer des conditions.  
   
- Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l' `AND` / `OR` aide d’opérateurs. Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, vous pouvez utiliser les opérateurs `greater than` et `less than` avec les valeurs continues. Toutefois, vous pouvez utiliser uniquement les opérateurs `= (equal to)`, `!= (not equal to)` et `is null` avec les valeurs discrètes.  
+ Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l’aide d' `AND` / `OR` opérateurs. Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, vous pouvez utiliser les opérateurs `greater than` et `less than` avec les valeurs continues. Toutefois, vous pouvez utiliser uniquement les opérateurs `= (equal to)`, `!= (not equal to)` et `is null` avec les valeurs discrètes.  
   
 > [!NOTE]  
 >  Le mot clé `LIKE` n'est pas pris en charge. Si vous souhaitez inclure plusieurs attributs discrets, vous devez créer des conditions séparées et les lier avec l'opérateur `OR`.  

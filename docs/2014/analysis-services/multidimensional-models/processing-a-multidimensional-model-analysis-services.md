@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caf111b2d78032b0a127f978562b2e0138df0109
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073363"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545792"
 ---
 # <a name="multidimensional-model-object-processing"></a>Traitement des objets de modèles multidimensionnels
   Le traitement est l'étape, ou la série d'étapes, dans lesquelles Analysis Services charge des données d'une source de données relationnelle dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  
@@ -35,7 +34,7 @@ ms.locfileid: "66073363"
   
  Cette rubrique contient les sections suivantes :  
   
- [Conditions préalables](#bkmk_prereq)  
+ [Composants requis](#bkmk_prereq)  
   
  [Choix d'un outil ou d'une approche](#bkmk_tool)  
   

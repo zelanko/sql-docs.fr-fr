@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083292"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520893"
 ---
 # <a name="neural-network-model-query-examples"></a>Exemples de requêtes de modèle de réseau neuronal
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de réseau neuronal peut extraire des métadonnées du modèle telles que le nombre de couches masquées. Une requête de prédiction peut également suggérer des classifications selon une entrée et fournir éventuellement des probabilités pour chaque classification.  
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a>Exemple de requête 5 : création d’une prédiction Singleton  
  La façon la plus simple de générer une requête de prédiction sur un modèle de réseau neuronal est d'utiliser le Générateur de requêtes de prédiction, disponible sur l'onglet **Prédiction d'exploration de données** du Concepteur d'exploration de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez parcourir le modèle dans la Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) pour filtrer des attributs présentant un intérêt et voir les tendances, puis basculer vers l'onglet **Prédiction d'exploration de données** pour créer une requête et prédire de nouvelles valeurs pour ces tendances.  
   
- Par exemple, vous pouvez parcourir le modèle de centre d'appels pour voir les corrélations entre les volumes de commandes et d'autres attributs. Pour ce faire, ouvrez le modèle dans la visionneuse, puis, pour **entrée**, sélectionnez ** \<tous les>**.  Ensuite, pour **Sortie**, sélectionnez **Nombre de commandes**. Pour **Valeur 1,** sélectionnez la plage qui représente le plus de commandes et pour **Valeur 2**, sélectionnez la plage qui représente le moins de commandes. Vous pouvez ensuite voir d'un seul coup d'œil tous les attributs que le modèle met en corrélation avec le volume de commandes.  
+ Par exemple, vous pouvez parcourir le modèle de centre d'appels pour voir les corrélations entre les volumes de commandes et d'autres attributs. Pour ce faire, ouvrez le modèle dans la visionneuse, puis, pour **entrée**, sélectionnez **\<All>** .  Ensuite, pour **Sortie**, sélectionnez **Nombre de commandes**. Pour **Valeur 1,** sélectionnez la plage qui représente le plus de commandes et pour **Valeur 2**, sélectionnez la plage qui représente le moins de commandes. Vous pouvez ensuite voir d'un seul coup d'œil tous les attributs que le modèle met en corrélation avec le volume de commandes.  
   
  En parcourant les résultats dans la visionneuse, vous découvrez que certains jours de la semaine se caractérisent par des volumes de commandes bas et qu'une augmentation du nombre d'opérateurs semble correspondre à des ventes plus élevées. Vous pouvez alors utiliser une requête de prédiction sur le modèle pour tester une hypothèse de simulation et chercher à savoir si l'augmentation du nombre d'opérateurs de niveau 2 un jour de volume bas permettrait d'augmenter les commandes. Pour cela, créez une requête telle que la suivante :  
   

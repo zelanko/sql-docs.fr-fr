@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afba038563ec5934a874811c804dd7a4aa9fff1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523075"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Services d'exploration de données et sources de données
   L'exploration de données requiert une connexion à une instance de SQL Server Analysis Services. Les données d’un cube ne sont pas nécessaires pour l’exploration de données et l’utilisation de sources relationnelles est recommandée. Toutefois, l’exploration de données utilise des composants fournis par le moteur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -23,7 +22,7 @@ ms.locfileid: "79217129"
  Cette rubrique fournit les informations à connaître pour établir une connexion à une instance de SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de créer, traiter, déployer ou interroger des modèles d’exploration de données.  
   
 ## <a name="data-mining-services"></a>Services d'exploration de données  
- Le composant serveur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est l’application msmdsrv. exe, qui s’exécute habituellement en tant que service Windows. Cette application intègre des composants de sécurité, un composant d'écoute XMLA (XML for Analysis), un composant processeur de requêtes et de nombreux autres composants internes qui permettent d'effectuer les actions suivantes :  
+ Le composant serveur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est l’application msmdsrv.exe, qui s’exécute habituellement en tant que service Windows. Cette application intègre des composants de sécurité, un composant d'écoute XMLA (XML for Analysis), un composant processeur de requêtes et de nombreux autres composants internes qui permettent d'effectuer les actions suivantes :  
   
 -   Analyser des instructions reçues des clients  
   
@@ -44,13 +43,13 @@ ms.locfileid: "79217129"
 -   Gérer des ressources du serveur  
   
 ### <a name="xmla-listener"></a>Écouteur XMLA  
- Le composant écouteur XMLA gère toutes les communications XMLA entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et ses clients. Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` paramètre de configuration dans le fichier msmdsrv. ini peut être utilisé pour spécifier un port sur lequel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] une instance écoute. La valeur 0 dans ce fichier indique qu' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute sur le port par défaut. Sauf spécification contraire, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise par défaut les ports TCP suivants :  
+ Le composant écouteur XMLA gère toutes les communications XMLA entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et ses clients. Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` paramètre de configuration dans le fichier msmdsrv.ini peut être utilisé pour spécifier un port sur lequel une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance écoute. La valeur 0 dans ce fichier indique qu' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute sur le port par défaut. Sauf spécification contraire, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise par défaut les ports TCP suivants :  
   
 |Port|Description|  
 |----------|-----------------|  
-|2383|Instance par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de.|  
-|2382|Redirecteur pour d’autres instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de.|  
-|Affectation dynamique au démarrage du serveur|Instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|2383|Instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|2382|Redirecteur pour d’autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|Affectation dynamique au démarrage du serveur|Instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
  Pour plus d’informations sur le contrôle des ports utilisés par ce service, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "79217129"
  Vous pouvez également définir des propriétés qui vous permettent de régler le serveur et contrôler la sécurité pour l'utilisation des clients. Pour plus d’informations, consultez [Propriétés de fonctionnalité](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur la prise en charge des algorithmes de plug- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in par les éditions de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Pour plus d’informations sur la prise en charge des algorithmes de plug-in par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Accès par programmation aux objets d'exploration de données  
  Vous pouvez utiliser les modèles d'objet suivants pour créer une connexion à une base de données Analysis Services et utiliser des objets d'exploration de données :  

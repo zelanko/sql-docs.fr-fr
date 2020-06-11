@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5884cd7315ce7d2ab88a38900f9bb8b5ae22508
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082379"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528965"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Sources de données d'objets existants (Assistant Source de données) (Analysis Services)
   Utilisez la page **Sources de données d'objets existants** pour spécifier une source de données ou un projet existant sur laquelle (ou lequel) baser la nouvelle source de données.  
@@ -26,11 +25,11 @@ ms.locfileid: "66082379"
  **Créer une source de données basée sur une source de données existante dans votre solution**  
  Choisissez de baser la nouvelle source de données sur une source de données existant dans la solution. Lors de la construction, de l'actualisation ou du déploiement d'un projet qui utilise une nouvelle source de données, celle-ci adopte les paramètres de la source de données que vous spécifiez lorsque vous sélectionnez cette option.  
   
- **Sources de données**  
+ **Source de données**  
  Dans la liste des sources de données regroupées par projet, sélectionnez une source de données sur laquelle vous voulez baser la nouvelle source de données.  
   
  **Créer une source de données basée sur un projet Analysis Services**  
- Sélectionnez cette option pour créer une nouvelle source de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui référence un autre projet dans la solution actuelle. La nouvelle source de données adopte les paramètres des propriétés `TargetServer` et `TargetDatabase` du projet sélectionné. Lors de la construction, de l'actualisation ou du déploiement d'un projet qui utilise une nouvelle source de données, celle-ci adopte les paramètres de la source de données que vous spécifiez lorsque vous sélectionnez cette option.  
+ Sélectionnez cette option pour créer une nouvelle source de données qui référence un autre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet dans la solution actuelle. La nouvelle source de données adopte les paramètres des propriétés `TargetServer` et `TargetDatabase` du projet sélectionné. Lors de la construction, de l'actualisation ou du déploiement d'un projet qui utilise une nouvelle source de données, celle-ci adopte les paramètres de la source de données que vous spécifiez lorsque vous sélectionnez cette option.  
   
  **Projet**  
  Sélectionnez le projet que vous voulez référencer dans la nouvelle source de données.  

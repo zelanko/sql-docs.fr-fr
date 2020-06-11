@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088027"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527585"
 ---
 # <a name="choosing-data-for-data-mining"></a>Choisir les données pour l'exploration de données
   Lorsque vous démarrez l’exploration de données, vous pouvez demander « quelle quantité de données ai-je besoin ? » ou « existe-t-il des exigences spéciales à connaître lors du nettoyage ou de la mise en forme de mes données ? »  
@@ -205,7 +204,7 @@ ms.locfileid: "66088027"
   
  En général la colonne clé est un identificateur numérique ou texte qui ne doit pas être utilisé pour l'analyse, uniquement pour le suivi des enregistrements. Les exceptions sont les clés de série chronologique et les clés de séquence.  
   
- Les**clés de tables imbriquées** s'utilisent uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour plus d’informations sur les tables imbriquées [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx), consultez :  
+ Les**clés de tables imbriquées** s'utilisent uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour plus d’informations sur les tables imbriquées, consultez [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) :  
   
  Ce type de contenu peut être utilisé avec les types de données suivants : `Date`, `Double`, `Long` et `Text`.  
   
@@ -219,7 +218,7 @@ ms.locfileid: "66088027"
   
  Ce type de contenu est pris en charge par les types de données suivants : `Double`, `Long` et `Date`.  
   
- **Table de charge de travail**  
+ **Table**  
  Ce type de contenu s'utilise uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Cela signifie que chaque ligne de données contient réellement une table de données imbriquée, avec une ou plusieurs colonnes et une ou plusieurs lignes.  

@@ -15,17 +15,17 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61351e04ef5100e203ff0be098eddecb0500663a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916501"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859261"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Valeur de la propriété étendue (boîte de dialogue)
   Utilisez la boîte de dialogue **Valeur de** *\<nom de propriété>* pour entrer ou afficher une valeur. Il s'agit d'une boîte de dialogue commune qui peut être ouverte à partir de plusieurs emplacements.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nom de la propriété étendue**  
  Nom de la propriété étendue actuellement affichée ou définie.  
   

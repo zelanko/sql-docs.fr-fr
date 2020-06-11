@@ -1,5 +1,6 @@
 ---
 title: namespace-URI-from-QName (XQuery) | Microsoft Docs
+description: Découvrez comment utiliser la fonction namespace-URI-from-QName pour récupérer l’URI d’espace de noms d’un QName.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96edefd5409520109e2b2155507dd8879ed4b0d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0967e9dfd9392513da3925725930111a97da0c9
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946636"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689547"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Fonctions relatives aux QName : namespace-uri-from-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. Récupération d'un URI d'espace de noms à partir d'un QName  
+### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>R. Récupération d'un URI d'espace de noms à partir d'un QName  
  Pour obtenir un exemple fonctionnel, consultez [local-name-from-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  

@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107614"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858591"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Boîte de dialogue Options du Générateur de rapports, Paramètres (Générateur de rapports)
   Cliquez sur le bouton **Générateur de rapports** , puis sur **options** pour définir les options d’indication des fichiers et des connexions récents. Vous pouvez également modifier le serveur de rapports par défaut ou en ajouter un si vous n'en avez pas déjà spécifié un.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Utiliser ce serveur de rapports ou site SharePoint par défaut**  
  Il se peut que votre administrateur ait configuré ce paramètre. Sa valeur peut être une URL bien formée commençant par http:// ou https://. Ce paramètre détermine les connexions de source de données qui s'affichent par défaut dans les Assistants Tableau/Matrice et Graphique. Sachez par ailleurs que vos rapports seront traités sur ce serveur et que vous pouvez faire référence à des ressources provenant de ce serveur.  
   

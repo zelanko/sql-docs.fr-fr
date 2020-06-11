@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 498d1af6f96791b9ee3912c09a3667e139f30ff0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac29fc0d1539ae75ca5f54ad48f1779692b9a6df
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081284"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528407"
 ---
 # <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Activer/désactiver l’écriture différée (Analysis Services-données multidimensionnelles)
   La boîte de dialogue **Activer/Désactiver l’écriture différée** permet d’activer ou de désactiver l’écriture différée pour un groupe de mesures dans un cube. L'activation de l'écriture différée dans un groupe de mesures définit une partition d'écriture différée et crée une table d'écriture différée pour le groupe de mesures. La désactivation de l'écriture différée dans un groupe de mesures supprime la partition d'écriture différée, mais ne supprime pas la table d'écriture différée pour éviter les pertes de données imprévues. Pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** :  
@@ -33,13 +32,13 @@ ms.locfileid: "66081284"
 > [!NOTE]  
 >  Cette option est désactivée si l'écriture différée n'est pas active.  
   
- **Sources de données**  
+ **Source de données**  
  Sélectionne la source de données qui contiendra la table d'écriture différée.  
   
 > [!NOTE]  
 >  Cette option est désactivée si l'écriture différée n'est pas active.  
   
- **Nouvelle**  
+ **Nouveau**  
  Cliquez sur cette option pour afficher la boîte de dialogue **Gestionnaire de connexions** et définir une nouvelle source de données qui accueillera la table d’écriture différée.  
   
 > [!NOTE]  

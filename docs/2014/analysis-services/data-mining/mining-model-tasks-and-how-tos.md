@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee288cccb64535454a3ccfbbc271c4919c220c65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083484"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521217"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tâches du modèle d'exploration de données et procédures
   L’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] permet de gérer et de traiter les modèles d’exploration de données dans une structure d’exploration de données.  
@@ -58,6 +57,6 @@ ms.locfileid: "66083484"
 ## <a name="see-also"></a>Voir aussi  
  [Tâches de la structure d’exploration de données et procédures](mining-structure-tasks-and-how-tos.md)   
  [Modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Concepts d'exploration de données](data-mining-concepts.md)  
+ [Concepts d’exploration de données](data-mining-concepts.md)  
   
   

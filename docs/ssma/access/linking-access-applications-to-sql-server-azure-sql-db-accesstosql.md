@@ -1,5 +1,6 @@
 ---
 title: Lier des applications d’accès à SQL Server-Azure SQL DB | Microsoft Docs
+description: Découvrez comment lier vos tables Access aux tables migrées afin de pouvoir utiliser vos applications Access existantes avec SQL Server ou Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -23,21 +24,21 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112063"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293766"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Liaison d’applications Access à SQL Server-Azure SQL DB (AccessToSQL)
-Si vous souhaitez utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez lier vos tables Access d’origine aux tables migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La liaison modifie votre base de données Access afin que vos requêtes, formulaires, rapports et pages d’accès aux données utilisent les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données de la base de données ou SQL Azure au lieu des données de votre base de données Access.  
+Si vous souhaitez utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez lier vos tables Access d’origine aux tables migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La liaison modifie votre base de données Access afin que vos requêtes, formulaires, rapports et pages d’accès aux données utilisent les données de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou SQL Azure au lieu des données de votre base de données Access.  
   
 > [!NOTE]  
-> Les tables Access restent dans Access, mais elles ne sont pas mises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à jour avec ou SQL Azure mises à jour. Après avoir lié les tables et vérifié les fonctionnalités, vous souhaiterez peut-être supprimer vos tables Access.  
+> Les tables Access restent dans Access, mais elles ne sont pas mises à jour avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure mises à jour. Après avoir lié les tables et vérifié les fonctionnalités, vous souhaiterez peut-être supprimer vos tables Access.  
   
 ## <a name="linking-access-and-sql-server-tables"></a>Liaison des tables d’accès et de SQL Server  
-Lorsque vous liez une table Access à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table ou SQL Azure, le moteur de base de données Jet stocke les informations de connexion et les métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de table, mais les données sont stockées dans ou SQL Azure. Cette liaison permet à vos applications Access de fonctionner sur les tables Access même si les tables et les données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réelles sont dans ou SQL Azure.  
+Lorsque vous liez une table Access à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table ou SQL Azure, le moteur de base de données Jet stocke les informations de connexion et les métadonnées de table, mais les données sont stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Cette liaison permet à vos applications Access de fonctionner sur les tables Access même si les tables et les données réelles sont dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 > [!NOTE]  
 > Si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, votre mot de passe est stocké en texte clair sur les tables d’accès liées. Nous vous recommandons d’utiliser l’authentification Windows.  
@@ -59,7 +60,7 @@ Lorsque vous ouvrez une table dans Access, les données sont récupérées à l�
 > Vous pouvez obtenir la dernière version de SNAC à partir de [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## <a name="unlinking-access-tables"></a>Dissociation des tables d’accès  
-Lorsque vous dissociez une table Access d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une table ou SQL Azure, SSMA restaure la table Access d’origine et ses données.  
+Lorsque vous dissociez une table Access d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table ou SQL Azure, SSMA restaure la table Access d’origine et ses données.  
   
 **Pour dissocier des tables**  
   
@@ -78,7 +79,7 @@ Si vous avez lié les tables Access à une SQL Server instance et que vous souha
   
 3.  Cliquez sur le bouton **reconnecter à SQL Server** .  
   
-4.  Connectez-vous à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance de ou SQL Azure à laquelle vous souhaitez lier les tables Access.  
+4.  Connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure à laquelle vous souhaitez lier les tables Access.  
   
 5.  Dans l’Explorateur de métadonnées Access, sélectionnez les tables que vous souhaitez lier.  
   
@@ -98,7 +99,7 @@ Si les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définitions de
 4.  Activez la case à cocher en regard de chaque table liée que vous souhaitez mettre à jour, puis cliquez sur **OK**.  
   
 ## <a name="possible-post-migration-issues"></a>Problèmes de postconnexion éventuels  
-Les sections suivantes répertorient les problèmes qui peuvent se produire dans les applications Access existantes après la migration des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données d’accès à ou SQL Azure, puis lier les tables, ainsi que les causes et les résolutions.  
+Les sections suivantes répertorient les problèmes qui peuvent se produire dans les applications Access existantes après la migration des bases de données d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, puis lier les tables, ainsi que les causes et les résolutions.  
   
 ### <a name="slow-performance-with-linked-tables"></a>Ralentissement des performances avec les tables liées  
 **Cause :** Certaines requêtes peuvent être lentes après le dimensionnement pour les raisons suivantes :  
@@ -114,7 +115,7 @@ Les sections suivantes répertorient les problèmes qui peuvent se produire dans
 -   Certaines requêtes nécessitent une entrée d’utilisateur, mais les requêtes directes ne prennent pas en charge l’entrée d’utilisateur. Les entrées utilisateur peuvent être obtenues par Visual Basic pour Applications Code (VBA) qui demande des paramètres ou par un formulaire utilisé comme contrôle d’entrée. Dans les deux cas, le code VBA soumet la requête avec l’entrée utilisateur au serveur.  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>Les colonnes à incrémentation automatique ne sont pas mises à jour tant que l’enregistrement n’est pas mis à jour  
-**Cause :** Après avoir appelé Recordset. AddNew dans Jet, la colonne d’incrémentation automatique est disponible avant la mise à jour de l’enregistrement. Ce n’est pas le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cas dans ou SQL Azure. La nouvelle valeur de la colonne d’identité nouvelle valeur n’est disponible qu’après l’enregistrement du nouvel enregistrement.  
+**Cause :** Après avoir appelé Recordset. AddNew dans Jet, la colonne d’incrémentation automatique est disponible avant la mise à jour de l’enregistrement. Ce n’est pas le cas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La nouvelle valeur de la colonne d’identité nouvelle valeur n’est disponible qu’après l’enregistrement du nouvel enregistrement.  
   
 **Résolution :** Exécutez le code de Visual Basic pour Applications (VBA) suivant avant d’accéder au champ d’identité :  
   
@@ -125,7 +126,7 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>Les nouveaux enregistrements ne sont pas disponibles  
-**Cause :** Lorsque vous ajoutez un enregistrement à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table ou SQL Azure à l’aide de VBA, si le champ d’index unique de la table a une valeur par défaut et que vous n’affectez pas de valeur à ce champ, le nouvel enregistrement n’apparaît pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que vous n’avez pas rouvert la table dans ou SQL Azure. Si vous essayez d’obtenir une valeur à partir du nouvel enregistrement, vous recevez le message d’erreur suivant :  
+**Cause :** Lorsque vous ajoutez un enregistrement à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table ou SQL Azure à l’aide de VBA, si le champ d’index unique de la table a une valeur par défaut et que vous n’affectez pas de valeur à ce champ, le nouvel enregistrement n’apparaît pas tant que vous n’avez pas rouvert la table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Si vous essayez d’obtenir une valeur à partir du nouvel enregistrement, vous recevez le message d’erreur suivant :  
   
 `Run-time error '3167' Record is deleted.`  
   
@@ -141,7 +142,7 @@ Recordset.LastModified
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>Vous ne pouvez pas modifier un schéma de table lié avec accès  
 **Cause :** Après la migration des données et la liaison des tables, l’utilisateur ne peut pas modifier le schéma d’une table dans Access.  
   
-**Résolution :** Modifiez le schéma de la table [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]à l’aide de, puis mettez à jour le lien dans Access.  
+**Résolution :** Modifiez le schéma de la table à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , puis mettez à jour le lien dans Access.  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>La fonctionnalité de lien hypertexte est perdue après la migration des données  
 **Cause :** Après la migration des données, les liens hypertexte dans les colonnes perdent leur fonctionnalité et deviennent des colonnes **nvarchar (max)** simples.  
@@ -149,7 +150,7 @@ Recordset.LastModified
 **Résolution :** Aucune.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Certains types de données SQL Server ne sont pas pris en charge par Access  
-**Cause :** Si, par la suite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous mettez à jour vos tables ou SQL Azure pour qu’elles contiennent des types de données qui ne sont pas pris en charge par Access, vous ne pouvez pas ouvrir la table dans Access.  
+**Cause :** Si, par la suite, vous mettez à jour vos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables ou SQL Azure pour qu’elles contiennent des types de données qui ne sont pas pris en charge par Access, vous ne pouvez pas ouvrir la table dans Access.  
   
 **Résolution :** Vous pouvez définir une requête Access qui ne retourne que les lignes avec des types de données pris en charge.  
   

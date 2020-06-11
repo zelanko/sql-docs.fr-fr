@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546071"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestion des assemblys de modèles multidimensionnels
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un grand nombre de fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et DMX (Data Mining Extensions), conçus pour effectuer toutes les opérations, des calculs statistiques standard au parcours des membres d’une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un grand nombre de fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et DMX (Data Mining Extensions), conçus pour effectuer toutes les opérations, des calculs statistiques standard au parcours des membres d’une hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
   
  Par conséquent, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet d'ajouter des assemblys à une base de données ou à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les assemblys vous permettent de créer des fonctions externes définies par l'utilisateur à l'aide de tout langage CLR (Common Language Runtime), tel que Microsoft Visual Basic .NET ou Microsoft Visual C#. Vous pouvez aussi utiliser des langages d'automatisation COM (Component Object Model) tels que Microsoft Visual Basic ou Microsoft Visual C++.  
   
