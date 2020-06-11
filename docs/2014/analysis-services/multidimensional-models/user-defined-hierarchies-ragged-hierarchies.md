@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889322"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535621"
 ---
 # <a name="ragged-hierarchies"></a>Hiérarchies déséquilibrées
   Une hiérarchie déséquilibrée est une hiérarchie définie par l'utilisateur qui a un nombre de niveaux impair. Voici quelques exemples : un organigramme où un responsable hiérarchique a comme subordonnés directs des cadres du service et des non cadres, ou des hiérarchies avec des attributs Country-Region-City, où certaines villes n'ont pas d'état (State) ou de province (Province) parent, notamment Washington D.C., l’État de la Cité du Vatican ou New Dehli.  
@@ -56,7 +55,7 @@ ms.locfileid: "68889322"
   
     |Paramètre de HideMemberIf|Description|  
     |--------------------------|-----------------|  
-    |`Never`|Les membres de ce niveau ne sont jamais masqués. Il s'agit de la valeur par défaut.|  
+    |`Never`|Les membres de ce niveau ne sont jamais masqués. Il s’agit de la valeur par défaut.|  
     |**OnlyChildWithNoName**|Un membre de ce niveau est masqué quand il est le seul enfant de son parent et qu'il a pour nom la valeur NULL ou une chaîne vide.|  
     |**OnlyChildWithParentName**|Un membre de ce niveau est masqué quand il est le seul enfant de son parent et qu'il porte le même nom que son parent.|  
     |**NoName**|Un membre de ce niveau est masqué lorsque son nom est vide.|  

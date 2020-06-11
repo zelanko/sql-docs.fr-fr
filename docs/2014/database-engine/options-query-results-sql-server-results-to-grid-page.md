@@ -12,17 +12,17 @@ ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 914daa6a44df3410224616efbe8285598c95dbd3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9bde39c64fdf2fbabaec85772d4bfa44d86fd1da
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000759"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856615"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>Options (résultats de la requête-SQL Server-résultats dans la page de grille)
   Cette page vous permet de spécifier les options d'affichage du jeu de résultats d'une requête au format grille. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes en cours, cliquez sur **options de requête** dans le menu **requête** ou cliquez avec le bouton droit dans la fenêtre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requête et sélectionnez **options de requête**. Dans le volet gauche de la boîte de dialogue **Options de requête** , cliquez sur **Grille**sous **Résultats**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Inclure la requête dans l'ensemble de résultats**  
  Retourne le texte de la requête dans la sortie.  
   

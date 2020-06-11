@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 093aa1043744381848db1c9ec8c46c992d32801b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077668"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537436"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Vue Structure d'exploration de données (Concepteur de modèle d'exploration de données)
   Utilisez les vues **Structure d'exploration de données** pour modifier les structures d'exploration de données et pour traiter une structure d'exploration de données et tous ses modèles d'exploration de données associés.  

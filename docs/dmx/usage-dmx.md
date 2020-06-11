@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893113"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670368"
 ---
 # <a name="usage-dmx"></a>Utilisation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Lorsque vous utilisez les extensions DMX (Data Mining Extensions) pour définir un nouveau modèle d' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]exploration de données dans, vous devez spécifier comment l’algorithme d’exploration de données qui génère le modèle utilisera chaque colonne. Vous pouvez spécifier une colonne comme étant l'un des types suivants :  
+  Lorsque vous utilisez les extensions DMX (Data Mining Extensions) pour définir un nouveau modèle d’exploration de données dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous devez spécifier comment l’algorithme d’exploration de données qui génère le modèle utilisera chaque colonne. Vous pouvez spécifier une colonne comme étant l'un des types suivants :  
   
 -   **Clé**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68893113"
   
  Les colonnes spécifiées en tant que type de **prédiction** sont utilisées comme colonnes d’entrée et de sortie. Les colonnes spécifiées en tant que **PredictOnly** sont utilisées uniquement comme colonnes de sortie. Il est possible que des algorithmes spécifiques considèrent les colonnes de type Predict différemment.  
   
- Pour plus d’informations sur les types d’utilisation [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de colonne pris en charge par, consultez [colonnes de modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Pour plus d’informations sur les types d’utilisation de colonne [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pris en charge par, consultez [colonnes de modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

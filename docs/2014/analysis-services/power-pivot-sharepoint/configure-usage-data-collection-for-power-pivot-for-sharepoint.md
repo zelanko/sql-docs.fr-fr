@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b62bcdd7bb492a877572621bd7cfe9a3b150d04
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071743"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547521"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurer la collecte des données d'utilisation (PowerPivot pour SharePoint)
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. Le service PowerPivot pour SharePoint utilise et étend ce système pour fournir des rapports intégrés dans le tableau de bord de gestion PowerPivot qui indiquent la manière dont les données et services PowerPivot sont utilisés. Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie doit activer la journalisation de l'utilisation pour créer les données d'utilisation qui s'affichent dans le tableau de bord de gestion PowerPivot.  
@@ -181,7 +180,7 @@ ms.locfileid: "66071743"
   
 |Paramètre|Valeur par défaut|Type|Plage valide|  
 |-------------|-------------------|----------|-----------------|  
-|**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<> activé|Boolean|Ces valeurs sont activées ou désactivées.|  
+|**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<enabled>|Boolean|Ces valeurs sont activées ou désactivées.|  
 |**Intervalle de création de rapports de requête**|300 (en secondes)|Integer|Comprise entre 1 et n'importe quel entier positif. La valeur par défaut est 5 minutes.|  
 |**Historique des données d'utilisation**|365 (en jours)|Integer|La valeur 0 spécifie une durée illimitée, mais vous pouvez également définir une limite supérieure pour l'expiration des données d'historique qui sont alors automatiquement supprimées. Les valeurs valides pour une période de rétention limitée sont comprises entre 1 et 5 000 (en jours).|  
 |Limite supérieure de réponse triviale|500 (en millisecondes)|Integer|Définit une limite maximale qui définit un échange requête-réponse triviale. Toute demande dont la durée d'exécution est comprise entre 0 et 500 millisecondes est une demande triviale ; elle est ignorée à des fins de création de rapports.|  

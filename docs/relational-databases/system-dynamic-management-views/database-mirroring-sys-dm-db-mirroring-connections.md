@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bbb92c73f29c55cf30dde68e59489e64859a2267
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b5bf53dae1a86b41ac1a04435f02547fe7bb002
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819612"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203256"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>Mise en miroir de bases de données-sys. dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "82819612"
 |**encryption_algorithm**|**smallint**|Algorithme de chiffrement utilisé pour cette connexion. Accepte la valeur NULL. Valeurs possibles :<br /><br /> **Valeur :** 0<br /><br /> **Description :** None<br /><br /> **Option DDL :** Activée<br /><br /> **Valeur :** 1<br /><br /> **Description :** RC4<br /><br /> **Option DDL :** {required &#124; algorithme RC4}<br /><br /> **Valeur :** 2<br /><br /> **Description :** CHIFFRE<br /><br /> **Option DDL :** Algorithme obligatoire AES<br /><br /> **Valeur :** 3<br /><br /> **Description :** Aucun, RC4<br /><br /> **Option DDL :** {pris en charge &#124; algorithme RC4}<br /><br /> **Valeur :** 4<br /><br /> **Description :** aucune, AES<br /><br /> **Option DDL :** Algorithme RC4 pris en charge<br /><br /> **Valeur :** 5<br /><br /> **Description :** RC4, AES<br /><br /> **Option DDL :** Algorithme obligatoire RC4 AES<br /><br /> **Valeur :** 6<br /><br /> **Description :** AES, RC4<br /><br /> **Option DDL :** Algorithme obligatoire AES RC4<br /><br /> **Valeur :** 7<br /><br /> **Description :** AUCUN, RC4, AES<br /><br /> **Option DDL :** Algorithme RC4 AES pris en charge<br /><br /> **Valeur :** 8<br /><br /> **Description :** NONE, AES, RC4<br /><br /> **Option DDL :** Algorithme AES RC4 pris en charge<br /><br /> **Remarque :** L’algorithme RC4 est uniquement pris en charge pour la compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, le matériel chiffré à l’aide de RC4 ou de RC4_128 peut être déchiffré dans n’importe quel niveau de compatibilité.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Représentation textuelle de l'algorithme de chiffrement. Accepte la valeur NULL. Valeurs possibles :<br /><br /> **Description :** None<br /><br /> **Option DDL :** Activée<br /><br /> **Description :** RC4<br /><br /> **Option DDL :** {required &#124; algorithme RC4}<br /><br /> **Description :** CHIFFRE<br /><br /> **Option DDL :** Algorithme obligatoire AES<br /><br /> **Description :** AUCUN, RC4<br /><br /> **Option DDL :** {pris en charge &#124; algorithme RC4}<br /><br /> **Description :** AUCUN, AES<br /><br /> **Option DDL :** Algorithme RC4 pris en charge<br /><br /> **Description :** RC4, AES<br /><br /> **Option DDL :** Algorithme obligatoire RC4 AES<br /><br /> **Description :** AES, RC4<br /><br /> **Option DDL :** Algorithme obligatoire AES RC4<br /><br /> **Description :** AUCUN, RC4, AES<br /><br /> **Option DDL :** Algorithme RC4 AES pris en charge<br /><br /> **Description :** NONE, AES, RC4<br /><br /> **Option DDL :** Algorithme AES RC4 pris en charge|  
 |**receives_posted**|**smallint**|Nombre de réceptions asynchrones sur le réseau qui ne sont pas encore terminées pour cette connexion.|  
-|**is_receive_flow_controlled**|**bit**|Indique si les réceptions sur le réseau ont été retardées en raison du contrôle de flux car le réseau est occupé.<br /><br /> 1 = True|  
+|**is_receive_flow_controlled**|**bit**|Indique si les réceptions sur le réseau ont été retardées en raison du contrôle de flux car le réseau est occupé.<br /><br /> 1 = Vrai|  
 |**sends_posted**|**smallint**|Nombre d'envois asynchrones sur le réseau qui ne sont pas encore terminés pour cette connexion.|  
-|**is_send_flow_controlled**|**bit**|Indique si les envois sur le réseau ont été retardés en raison du contrôle de flux sur le réseau et parce que ce dernier est occupé.<br /><br /> 1 = True|  
+|**is_send_flow_controlled**|**bit**|Indique si les envois sur le réseau ont été retardés en raison du contrôle de flux sur le réseau et parce que ce dernier est occupé.<br /><br /> 1 = Vrai|  
 |**total_bytes_sent**|**bigint**|Nombre total d'octets envoyés par cette connexion.|  
 |**total_bytes_received**|**bigint**|Nombre total d’octets reçus par cette connexion.|  
 |**total_fragments_sent**|**bigint**|Nombre total de fragments de messages de mise en miroir de la base de données envoyés par cette connexion.|  

@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 834e31fcc9d8e0887929dae356c7b2068aeeff2d
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071054"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669340"
 ---
 # <a name="comments-dmx"></a>Commentaires (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Les commentaires dans les extensions DMX (Data Mining Extensions) sont des chaînes de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] texte dans le code de programme qui ne s’exécute pas. Les commentaires sont également appelés remarques. Vous pouvez utiliser les commentaires pour documenter du code ou pour désactiver temporairement les composants d'une instruction ou d'un script DMX lorsque vous analysez le code.  
+  Les commentaires dans les extensions DMX (Data Mining Extensions) sont des chaînes de texte dans le code de programme qui [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne s’exécute pas. Les commentaires sont également appelés remarques. Vous pouvez utiliser les commentaires pour documenter du code ou pour désactiver temporairement les composants d'une instruction ou d'un script DMX lorsque vous analysez le code.  
   
  L'utilisation des commentaires pour documenter votre code programme facilitera la gestion du code.  En effet, les commentaires permettent d'enregistrer des détails tels que le nom du programme, le nom du développeur qui a écrit le code, et les dates des principales modifications du code. Vous pouvez également aussi les utiliser pour décrire des calculs complexes ou pour commenter une méthode de programmation.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68071054"
   
 -   **--(double trait d’Union).** Ces caractères de commentaire permettent d'écrire un commentaire sur la même ligne que le code à exécuter, ou d'écrire un commentaire sur une ligne séparée. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère tout ce qui est situé à partir du double trait d'union jusqu'à la fin de la ligne comme étant le commentaire. Pour créer un commentaire sur plusieurs lignes, utilisez le double trait d'union au début de chaque ligne de commentaire. Pour plus d’informations sur ce caractère de commentaire, consultez [--&#40;comment&#41; &#40;DMX&#41; Summary](../dmx/comment-dmx-summary.md).  
   
--   **/\*... \*/(paires de caractères barre oblique-astérisque).** Ces caractères de commentaire permettent d'écrire un commentaire sur la même ligne que le code à exécuter, d'écrire un commentaire sur une ligne séparée ou même d'écrire des commentaires dans du code exécutable. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]évalue tous les éléments de la paire de commentaires ouverts (/*) à la paire\*de commentaires de fermeture (/) dans le cadre du commentaire. Pour créer un commentaire sur plusieurs lignes, commencez le commentaire par la paire de caractères de commentaire ouvert (\*/) et terminez le commentaire par la paire de caractères de fermeture\*de commentaire (/). Aucun autre caractère de commentaire ne doit être inclus dans les lignes de commentaire. Pour plus d’informations sur ce caractère de commentaire, consultez [barre oblique &#40;commentaire&#41; &#40;&#41;DMX ](../dmx/slash-star-comment-dmx.md).  
+-   **/\*... \* /(paires de caractères barre oblique-astérisque).** Ces caractères de commentaire permettent d'écrire un commentaire sur la même ligne que le code à exécuter, d'écrire un commentaire sur une ligne séparée ou même d'écrire des commentaires dans du code exécutable. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]évalue tous les éléments de la paire de commentaires ouverts (/*) à la paire de commentaires de fermeture ( \* /) dans le cadre du commentaire. Pour créer un commentaire sur plusieurs lignes, commencez le commentaire par la paire de caractères de commentaire ouvert (/ \* ) et terminez le commentaire par la paire de caractères de fermeture de commentaire ( \* /). Aucun autre caractère de commentaire ne doit être inclus dans les lignes de commentaire. Pour plus d’informations sur ce caractère de commentaire, consultez [barre oblique &#40;commentaire&#41; &#40;&#41;DMX ](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   

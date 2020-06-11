@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7c3764d18d26d739023bbbb744236273e5cfd1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb289f4825dfbfdf55fdacb72229355f8cb815b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086157"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525337"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)
-  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse de règles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’association dans affiche les modèles d’exploration [!INCLUDE[msCoName](../../includes/msconame-md.md)] de données générés avec l’algorithme d’association. L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est un algorithme d'association conçu pour la création de modèles d'exploration de données permettant d'effectuer des analyses de panier d'achat. Pour plus d'informations sur cet algorithme, consultez [Microsoft Association Algorithm](microsoft-association-algorithm.md).  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse de règles d’association dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données générés avec l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme d’association. L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est un algorithme d'association conçu pour la création de modèles d'exploration de données permettant d'effectuer des analyses de panier d'achat. Pour plus d'informations sur cet algorithme, consultez [Microsoft Association Algorithm](microsoft-association-algorithm.md).  
   
  Voici les principales raisons pour lesquelles vous utilisez l'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) :  
   

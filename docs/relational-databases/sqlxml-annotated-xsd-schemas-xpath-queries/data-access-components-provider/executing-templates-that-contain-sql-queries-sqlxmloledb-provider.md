@@ -1,5 +1,6 @@
 ---
 title: Exécuter des modèles avec des requêtes SQL (SQLXMLOLEDB)
+description: Affichez un exemple d’application ADO côté client à l’aide du fournisseur SQLXMLOLEDB pour exécuter un modèle XML côté serveur contenant une requête SQL.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a1df48e97877aeca05e1aa72a248ec5bbcf659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82f770d8b17ee1ec93e33efa07b6658363b0de2d
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246669"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215660"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Exécution de modèles contenant des requêtes SQL (fournisseur SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,12 +31,12 @@ ms.locfileid: "75246669"
   
  Étant donné que la propriété ClientSideXML a la valeur true, l’instruction SELECT sans la clause FOR XML est envoyée au serveur. Le serveur exécute la requête et retourne un ensemble de lignes au client. Le client applique ensuite la transformation FOR XML à l'ensemble de lignes et génère un document XML.  
   
- Le modèle XML fournit un élément racine unique de niveau supérieur (\<> racine) pour le document XML généré ; par conséquent, la propriété racine XML n’est pas fournie.  
+ Le modèle XML fournit un seul élément racine de niveau supérieur ( \<ROOT> ) pour le document XML qui est généré ; par conséquent, la propriété racine XML n’est pas fournie.  
   
  Pour exécuter des modèles XML, le dialecte {5d531cb2-e6ed-11d2-b252-00c04f681b71} doit être spécifié.  
   
 > [!NOTE]  
->  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de Native Client (SQLNCLI11) pour le fournisseur de données qui requiert l’installation d’un logiciel client réseau supplémentaire. Pour plus d’informations, consultez [Configuration système requise pour SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) pour le fournisseur de données qui requiert l’installation d’un logiciel client réseau supplémentaire. Pour plus d’informations, consultez [Configuration système requise pour SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

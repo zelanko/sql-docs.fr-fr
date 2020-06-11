@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23845118c4c202db781fe325c4afc2402ceee271
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8905ba7019ba85d8e9e0711b1102bf37e1185d42
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072201"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541057"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Notifications (boîte de dialogue Options de stockage) (Analysis Services - Données multidimensionnelles)
   Utilisez l'onglet **Notifications** de la boîte de dialogue **Options de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir la méthode de notification et les paramètres associés d'une dimension, d'un cube, d'un groupe de mesures ou d'une partition.  
@@ -31,7 +30,7 @@ ms.locfileid: "66072201"
 |----------|----------------|  
 |**Mode de stockage**|Sélectionne le mode de stockage à utiliser pour l'objet.<br /><br /> **MOLAP**<br /> L'objet utilise le mode OLAP multidimensionnel (MOLAP).<br /><br /> **HOLAP**<br /> L'objet utilise le mode OLAP hybride (HOLAP).<br /><br /> **ROLAP**<br /> L'objet utilise le mode OLAP relationnel (ROLAP).|  
 |**Activer la mise en cache proactive**|Active la mise en cache proactive.<br /><br /> Remarque : si cette option n’est pas sélectionnée, toutes les options sont désactivées à l’exception de **Mode de stockage**.|  
-|**SQL Server**|Utilise un mécanisme de trace spécialisé [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur pour identifier les modifications apportées aux tables sous-jacentes de l’objet.|  
+|**SQL Server**|Utilise un mécanisme de trace spécialisé sur [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour identifier les modifications apportées aux tables sous-jacentes de l’objet.|  
 |**Spécifier les tables de suivi**|Définissez les tables sous-jacentes à suivre de l’objet, puis tapez la liste des tables délimitées par un point-virgule (;), ou cliquez sur le bouton avec des points de suspension (**...**) pour ouvrir la boîte de dialogue **Objets relationnels** et choisissez les tables à suivre. Pour plus d’informations, consultez [Boîte de dialogue Objets relationnels &#40;Analysis Services - Données multidimensionnelles&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Si vous ne sélectionnez pas cette option, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tente de déterminer les tables sous-jacentes à suivre de l'objet, si certaines conditions sont remplies. Pour plus d’informations sur ces conditions requises, consultez [Mise en cache proactive &#40;partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Client initié**|Sélectionnez la commande XML for Analysis (XMLA), `NotifyTableChange` pour identifier les modifications apportées aux tables sous-jacentes de l'objet. Cette option est généralement utilisée si vous envisagez d'utiliser un processus de notification client.|  
 |**Spécifier les tables de suivi**|Sélectionnez cette option pour définir les tables sous-jacentes à suivre de l’objet, puis tapez la liste des tables délimitées par un point-virgule (;) ou cliquez sur le bouton avec des points de suspension (**...**) pour ouvrir la boîte de dialogue **Objets relationnels** et choisissez les tables à suivre. Pour plus d’informations, consultez [Boîte de dialogue Objets relationnels &#40;Analysis Services - Données multidimensionnelles&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Si vous ne sélectionnez pas cette option, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tente de déterminer les tables sous-jacentes à suivre de l'objet, si certaines conditions sont remplies. Pour plus d’informations sur ces conditions requises, consultez [Mise en cache proactive &#40;partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  

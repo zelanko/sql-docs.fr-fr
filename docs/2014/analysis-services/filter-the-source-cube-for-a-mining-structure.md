@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081148"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544451"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrer le cube source d'une structure d'exploration de données
   Lorsque vous créez une structure d’exploration de données basée sur des données dans un modèle multidimensionnel (un cube OLAP), vous pouvez *découper* le cube sur lequel la structure d’exploration de données est basée. Le découpage vous permet de créer des sous-ensembles de données, comme un genre de filtre sur les données utilisées pour l'apprentissage du modèle d'exploration de données.  
   
 ### <a name="to-slice-a-cube"></a>Pour découper un cube  
   
-1.  Dans le concepteur d’exploration [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]de données de, sélectionnez l’onglet **structure d’exploration** de données ou l’onglet **modèles d’exploration** de données.  
+1.  Dans le concepteur d’exploration de données de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , sélectionnez l’onglet **structure d’exploration** de données ou l’onglet **modèles d’exploration** de données.  
   
 2.  Dans le menu **modèle d’exploration de données** , sélectionnez définir la structure d’exploration de **données tranche de cube**.  
   

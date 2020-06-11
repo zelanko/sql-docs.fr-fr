@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79dd1eca0d12061cef0ab5453933df08f78954d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069770"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538351"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Boîte de dialogue Sélectionner la colonne clé de table imbriquée (vue Structure d'exploration de données)
   Utilisez la boîte de dialogue **Sélectionner la colonne de clé de table imbriquée** pour désigner une colonne qui sera la clé de la nouvelle table imbriquée. Lorsque vous fermez cette boîte de dialogue, une nouvelle table est ajoutée à la structure d'exploration de données qui contient la colonne clé désignée. Vous pouvez ajouter des colonnes supplémentaires à la table imbriquée en cliquant avec le bouton droit sur la structure et en sélectionnant **Ajouter une colonne**. Cette boîte de dialogue contient différentes options, selon que vous utilisez un modèle d'exploration de données OLAP ou relationnel.  

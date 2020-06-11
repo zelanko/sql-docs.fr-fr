@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63cfc1fc4b5bcc3e1c468bbb456a660587757f2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078928"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543441"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modification de la dimension Customer
   Il existe différents moyens de rendre les dimensions d'un cube plus conviviales et plus fonctionnelles. Dans les tâches dans cette rubrique, vous modifiez la dimension Customer.  
@@ -27,7 +26,7 @@ ms.locfileid: "66078928"
   
 1.  Basculez vers le **Concepteur de dimensions** pour la dimension Customer dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour cela, double-cliquez sur la dimension **Customer** du nœud **Dimensions** de l’Explorateur de solutions.  
   
-2.  Dans le volet **Attributs** , cliquez avec le bouton droit sur **English Country Region Name**et cliquez sur **Renommer**. Remplacez le nom de l’attribut par `Country-Region`.  
+2.  Dans le volet **Attributs** , cliquez avec le bouton droit sur **English Country Region Name**et cliquez sur **Renommer**. Remplacez le nom de l’attribut par `Country-Region` .  
   
 3.  Modifiez les noms des attributs suivants de la même manière :  
   
@@ -44,15 +43,15 @@ ms.locfileid: "66078928"
   
 #### <a name="to-create-a-hierarchy"></a>Pour créer une hiérarchie  
   
-1.  Faites glisser `Country-Region` l’attribut du volet **attributs** vers le volet **hiérarchies** .  
+1.  Faites glisser l' `Country-Region` attribut du volet **attributs** vers le volet **hiérarchies** .  
   
-2.  Faites glisser `State-Province` l’attribut du volet **attributs** vers le ** \<nouveau niveau>** cellule dans le volet **hiérarchies** , sous `Country-Region` le niveau.  
+2.  Faites glisser l' `State-Province` attribut du volet **attributs** vers la **\<new level>** cellule dans le volet **hiérarchies** , sous le `Country-Region` niveau.  
   
-3.  Faites glisser l’attribut **City** du volet **attributs** vers le ** \<nouveau niveau>** cellule dans le volet **hiérarchies** , sous `State-Province` le niveau.  
+3.  Faites glisser l’attribut **City** du volet **attributs** vers la **\<new level>** cellule dans le **volet Hiérarchies** , sous le `State-Province` niveau.  
   
-4.  Dans le volet **hiérarchies** de l’onglet **structure de dimension** , cliquez avec le bouton droit sur la barre de titre de la hiérarchie **hiérarchie** , sélectionnez `Customer Geography` **Renommer**, puis tapez.  
+4.  Dans le volet **hiérarchies** de l’onglet **structure de dimension** , cliquez avec le bouton droit sur la barre de titre de la hiérarchie **hiérarchie** , sélectionnez **Renommer**, puis tapez `Customer Geography` .  
   
-     Le nom de la hiérarchie est maintenant `Customer Geography`.  
+     Le nom de la hiérarchie est maintenant `Customer Geography` .  
   
 5.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -61,11 +60,11 @@ ms.locfileid: "66078928"
   
 #### <a name="to-add-a-named-calculation"></a>Pour ajouter un calcul nommé  
   
-1.  Ouvrez la ** [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] ** vue de source de données DW 2012 en double-cliquant dessus dans le dossier **vues des sources de données** de Explorateur de solutions.  
+1.  Ouvrez la vue de source de données ** [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012** en double-cliquant dessus dans le dossier **vues des sources de données** de Explorateur de solutions.  
   
 2.  Dans le volet **Tables** à gauche, cliquez avec le bouton droit sur **Customer**, puis cliquez sur **Nouveau calcul nommé**.  
   
-3.  Dans la boîte de dialogue **créer un calcul nommé** , `FullName` tapez dans la zone nom de la **colonne** , puis tapez ou copiez `CASE` -collez l’instruction suivante dans la zone **expression** :  
+3.  Dans la boîte de dialogue **créer un calcul nommé** , tapez `FullName` dans la zone **nom** de la colonne, puis tapez ou copiez-collez l' `CASE` instruction suivante dans la zone **expression** :  
   
     ```  
     CASE  
@@ -103,13 +102,13 @@ ms.locfileid: "66078928"
   
 3.  Ouvrez la fenêtre Propriétés et cliquez sur le bouton **Masquer automatiquement** de la barre de titre pour qu’elle reste ouverte.  
   
-4.  Dans le champ **nom** de la propriété `Full Name`, tapez.  
+4.  Dans le champ **nom** de la propriété, tapez `Full Name` .  
   
 5.  Cliquez dans le champ de propriété **NameColumn** en bas, puis cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **colonne de nom** .  
   
 6.  Sélectionnez `FullName` au bas de la liste **colonne source** , puis cliquez sur **OK**.  
   
-7.  Dans l’onglet structure de dimension, faites `Full Name` glisser l’attribut du volet **attributs** vers ** \<le nouveau niveau>** cellule dans le volet **hiérarchies** , sous le niveau **City** .  
+7.  Dans l’onglet structure de dimension, faites glisser l' `Full Name` attribut du volet **attributs** vers la **\<new level>** cellule dans le volet **hiérarchies** , sous le niveau **City** .  
   
 8.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
@@ -130,9 +129,9 @@ ms.locfileid: "66078928"
   
     -   `State-Province`  
   
-3.  Dans la Fenêtre Propriétés, cliquez sur le champ de propriété **AttributeHierarchyDisplayFolder** en haut (vous devrez peut-être pointer dessus pour afficher le nom complet), puis `Location`tapez.  
+3.  Dans la Fenêtre Propriétés, cliquez sur le champ de propriété **AttributeHierarchyDisplayFolder** en haut (vous devrez peut-être pointer dessus pour afficher le nom complet), puis tapez `Location` .  
   
-4.  Dans le volet **hiérarchies** , `Customer Geography`cliquez sur, puis dans le fenêtre Propriétés à droite, sélectionnez `Location` comme valeur de la propriété **DisplayFolder** .  
+4.  Dans le volet **hiérarchies** , cliquez sur `Customer Geography` , puis dans le fenêtre Propriétés à droite, sélectionnez `Location` comme valeur de la propriété **DisplayFolder** .  
   
 5.  Dans le volet **Attributs** , sélectionnez les attributs suivants en maintenant la touche Ctrl enfoncée pendant que vous cliquez sur chacun d’eux :  
   
@@ -156,20 +155,20 @@ ms.locfileid: "66078928"
   
     -   **Yearly Income**  
   
-6.  Dans la Fenêtre Propriétés, cliquez sur le champ de propriété **AttributeHierarchyDisplayFolder** en haut, puis tapez `Demographic`.  
+6.  Dans la Fenêtre Propriétés, cliquez sur le champ de propriété **AttributeHierarchyDisplayFolder** en haut, puis tapez `Demographic` .  
   
 7.  Dans le volet **Attributs** , sélectionnez les attributs suivants en maintenant la touche Ctrl enfoncée pendant que vous cliquez sur chacun d’eux :  
   
-    -   **Adresse de messagerie**  
+    -   **Adresse e-mail**  
   
     -   **Téléphone**  
   
-8.  Dans l’Fenêtre Propriétés, cliquez sur **AttributeHierarchyDisplayFolder** le champ de propriété AttributeHierarchyDisplayFolder `Contacts`et tapez.  
+8.  Dans l’Fenêtre Propriétés, cliquez sur le champ de propriété **AttributeHierarchyDisplayFolder** et tapez `Contacts` .  
   
 9. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="defining-composite-keycolumns"></a>Définition de KeyColumns composite  
- La propriété **KeyColumns** contient la colonne ou les colonnes qui représentent la clé pour l’attribut. Dans cette leçon, vous allez créer une clé composite **City** pour la `State-Province` ville et les attributs. Les clés composites peuvent être utiles lorsque vous devez identifier un attribut de façon unique. Par exemple, lorsque vous définissez des relations d’attributs plus loin dans ce didacticiel, un attribut **City** doit identifier `State-Province` un attribut de façon unique. Toutefois, il peut y avoir plusieurs villes avec le même nom dans différents états. Pour cette raison, vous allez créer une clé composite composée des colonnes **StateProvinceName** et **City** pour l’attribut **City** . Pour plus d’informations, consultez [Modifier la propriété KeyColumn d’un attribut](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
+ La propriété **KeyColumns** contient la colonne ou les colonnes qui représentent la clé pour l’attribut. Dans cette leçon, vous allez créer une clé composite pour la **ville** et les `State-Province` attributs. Les clés composites peuvent être utiles lorsque vous devez identifier un attribut de façon unique. Par exemple, lorsque vous définissez des relations d’attributs plus loin dans ce didacticiel, un attribut **City** doit identifier un attribut de façon unique `State-Province` . Toutefois, il peut y avoir plusieurs villes avec le même nom dans différents états. Pour cette raison, vous allez créer une clé composite composée des colonnes **StateProvinceName** et **City** pour l’attribut **City** . Pour plus d’informations, consultez [Modifier la propriété KeyColumn d’un attribut](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>Pour définir KeyColumns composite pour l'attribut Ville  
   
@@ -195,7 +194,7 @@ ms.locfileid: "66078928"
   
 1.  Vérifiez que l’onglet **Structure de dimension** de la dimension Customer est ouvert.  
   
-2.  Dans le volet **attributs** , cliquez sur `State-Province` l’attribut.  
+2.  Dans le volet **attributs** , cliquez sur l' `State-Province` attribut.  
   
 3.  Dans la fenêtre **Propriétés** , cliquez dans le champ **KeyColumns** , puis cliquez sur le bouton Parcourir (**...**).  
   
@@ -220,7 +219,7 @@ ms.locfileid: "66078928"
   
 2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **City** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **City**. Affectez à `State-Province`l' **attribut associé** la valeur.  
+3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **City**. Affectez à l' **attribut associé** la valeur `State-Province` .  
   
 4.  Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
@@ -228,9 +227,9 @@ ms.locfileid: "66078928"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Dans le diagramme, cliquez avec le bouton `State-Province` droit sur l’attribut, puis sélectionnez **nouvelle relation d’attribut**.  
+6.  Dans le diagramme, cliquez avec le bouton droit sur l' `State-Province` attribut, puis sélectionnez **nouvelle relation d’attribut**.  
   
-7.  Dans la boîte de dialogue **créer une relation d’attribut** , l' `State-Province` **attribut source** est. Affectez à `Country-Region`l' **attribut associé** la valeur.  
+7.  Dans la boîte de dialogue **créer une relation d’attribut** , l' **attribut source** est `State-Province` . Affectez à l' **attribut associé** la valeur `Country-Region` .  
   
 8.  Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   

@@ -12,17 +12,17 @@ ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f862f2067a1a85663754ab795822f2859b6c416a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: defc499412d059542262ec978d47f4c93c8bac23
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000599"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858611"
 ---
 # <a name="query-options-execution-general-page"></a>Options de requête – Exécution (page Général)
   Cette page vous permet de spécifier les options d'exécution des requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur le corps d’une fenêtre de l’éditeur de requête, puis cliquez sur **Options de requête**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **SET ROWCOUNT**  
  La valeur par défaut 0 indique que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] attend les résultats, tant que tous les résultats ne sont pas reçus. Spécifiez une valeur supérieure à 0 pour que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] arrête la requête après avoir obtenu le nombre de lignes spécifié. Pour désactiver cette option, de manière à renvoyer toutes les lignes, spécifiez SET ROWCOUNT 0.  
   

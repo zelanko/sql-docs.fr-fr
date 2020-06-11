@@ -21,12 +21,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "77507519"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668392"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     Cet argument doit inclure à la fois un chemin d'accès (lettre de lecteur ou partage réseau) et un nom de fichier qui peut inclure un caractère générique. Un seul astérisque (*) peut être utilisé pour collecter plusieurs fichiers à partir d’un jeu de fichiers d’audit. Par exemple :  
   
-    -   **chemin d' \\ accès> : collecte tous les fichiers d’audit à l’emplacement spécifié. \<**  
+    -   ** \< chemin d' \\ \* accès>** : collecte tous les fichiers d’audit à l’emplacement spécifié.  
   
-    -   **chemin d’accès> \ LoginsAudit_ {GUID}-collecter tous les fichiers d’audit qui ont le nom et la paire de GUID spécifiés. \<**  
+    -   ** \< chemin d’accès> \ LOGINSAUDIT_ {GUID}***-collecter tous les fichiers d’audit qui ont le nom et la paire de GUID spécifiés.  
   
-    -   **chemin d’accès> \ LoginsAudit_ {GUID} _00_29384. sqlaudit-collecte d’un fichier d’audit spécifique. \<**  
+    -   ** \< chemin d’accès> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -collecte d’un fichier d’audit spécifique.  
   
  - **Azure SQL Database**:
  
     Cet argument est utilisé pour spécifier une URL d’objet BLOB (y compris le point de terminaison de stockage et le conteneur). Bien qu’il ne prenne pas en charge un caractère générique astérisque, vous pouvez utiliser un préfixe de nom de fichier partiel (au lieu du nom complet de l’objet BLOB) pour collecter plusieurs fichiers (objets BLOB) qui commencent par ce préfixe. Par exemple :
  
-      - **/\> Storage_endpoint\>\<conteneur\>ServerName\>-collecte tous les fichiers d’audit (objets BLOB) pour la base de données/\</ \<\<**    
+      - ** \< Storage_endpoint \> / \< conteneur \> / \< ServerName \> / \< databasename \> - / ** collecte tous les fichiers d’audit (objets BLOB) pour la base de données spécifique.    
       
-      - **\>Storage_endpoint\>\<conteneur\>ServerName\>DatabaseName\<AuditName CreationDate filename\>Xel-collecte un fichier d’audit spécifique (objet BLOB).\>//\</\>//\</\< \<\<**
+      - ** \< Storage_endpoint \> / \< conteneur \> / \< ServerName \> / \< databasename \> / \< AuditName \> / \< CreationDate \> / \< filename \> . Xel** -collecte un fichier d’audit spécifique (objet BLOB).
   
 > [!NOTE]  
 >  Le passage d'un chemin d'accès sans modèle de nom de fichier génère une erreur.  
@@ -86,12 +86,12 @@ fn_get_audit_file ( file_pattern,
 | Nom de la colonne | Type | Description |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID de l'action. N'accepte pas la valeur NULL. |  
-| additional_information | **nvarchar(4000)** | Les informations uniques qui s'appliquent seulement à un événement unique sont retournées au format XML. Un petit nombre d'actions pouvant être auditées contient ce type d'informations.<br /><br /> Un niveau de pile TSQL est affiché au format XML pour les actions auxquelles la pile TSQL est associée. Le format XML est le suivant :<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Niveau_imbrication_cadre indique le niveau d'imbrication actuel du cadre. Le nom du module est représenté dans un format en trois parties (nom_base_de_données, nom_schéma et nom_objet).  Le nom du module sera analysé pour échapper les caractères XML non valides `'>'`, `'/'`tels `'_x'`que `'\<'`,,,. Elles seront placées dans une `_xHHHH\_`séquence d’échappement sous la forme. HHHH représente le code UCS-2 hexadécimal à quatre chiffres du caractère.<br /><br /> Autorise la valeur NULL. Retourne NULL lorsqu'il n'y a pas d'informations supplémentaires signalées par l'événement. |
+| additional_information | **nvarchar(4000)** | Les informations uniques qui s'appliquent seulement à un événement unique sont retournées au format XML. Un petit nombre d'actions pouvant être auditées contient ce type d'informations.<br /><br /> Un niveau de pile TSQL est affiché au format XML pour les actions auxquelles la pile TSQL est associée. Le format XML est le suivant :<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Niveau_imbrication_cadre indique le niveau d'imbrication actuel du cadre. Le nom du module est représenté dans un format en trois parties (nom_base_de_données, nom_schéma et nom_objet).  Le nom du module sera analysé pour échapper les caractères XML non valides, tels que `'\<'` , `'>'` , `'/'` , `'_x'` . Elles seront placées dans une séquence d’échappement sous la forme `_xHHHH\_` . HHHH représente le code UCS-2 hexadécimal à quatre chiffres du caractère.<br /><br /> Autorise la valeur NULL. Retourne NULL lorsqu'il n'y a pas d'informations supplémentaires signalées par l'événement. |
 | affected_rows | **bigint** | **S’applique à**: Azure SQL DB uniquement<br /><br /> Nombre de lignes affectées par l’instruction exécutée. |  
 | application_name | **nvarchar(128)** | **S’applique à**: Azure SQL DB + SQL Server (à partir de 2017)<br /><br /> Nom de l’application cliente qui a exécuté l’instruction qui a provoqué l’événement d’audit |  
 | audit_file_offset | **bigint** | **S’applique à**: SQL Server uniquement<br /><br /> Offset de la mémoire tampon dans le fichier qui contient l'enregistrement d'audit. N'accepte pas la valeur NULL. |  
 | audit_schema_version | **int** | Toujours 1 |  
-| class_type | **varchar (2)** | Type d'entité pouvant être auditée sur laquelle l'audit se produit. N'accepte pas la valeur NULL. |  
+| class_type | **varchar(2)** | Type d'entité pouvant être auditée sur laquelle l'audit se produit. N'accepte pas la valeur NULL. |  
 | client_ip | **nvarchar(128)** | **S’applique à**: Azure SQL DB + SQL Server (à partir de 2017)<br /><br />    Adresse IP source de l’application cliente |  
 | connection_id | GUID | **S’applique à**: Azure SQL DB et Managed instance<br /><br /> ID de la connexion dans le serveur |
 | data_sensitivity_information | nvarchar(4000) | **S’applique à**: Azure SQL DB uniquement<br /><br /> Types des informations et étiquettes de sensibilité renvoyées par la requête auditée, en fonction des colonnes classifiées dans la base de données. En savoir plus sur [la découverte et la classification des données Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
@@ -102,8 +102,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | Date et heure auxquelles l'action pouvant être auditée est déclenchée. N'accepte pas la valeur NULL. |  
 | file_name | **varchar(260)** | Chemin d'accès et nom du fichier journal d'audit d'où provenait l'enregistrement. N'accepte pas la valeur NULL. |
 | is_column_permission | **bit** | Indicateur précisant s’il s’agit d’une autorisation au niveau de la colonne. N'accepte pas la valeur NULL. Retourne 0 lorsque le permission_bitmask = 0.<br /> 1 = vrai<br /> 0 = faux |
-| object_id | **int** | ID de l’entité sur laquelle l’audit s’est produit. Notamment :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> N'accepte pas la valeur NULL. Retourne 0 si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification. |  
-| object_name | **sysname** | Nom de l’entité sur laquelle l’audit s’est produit. Notamment :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> Autorise la valeur NULL. Retourne NULL si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification. |
+| object_id | **int** | ID de l’entité sur laquelle l’audit s’est produit. Ce dernier est détaillé ci-après :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> N'accepte pas la valeur NULL. Retourne 0 si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification. |  
+| object_name | **sysname** | Nom de l’entité sur laquelle l’audit s’est produit. Ce dernier est détaillé ci-après :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> Autorise la valeur NULL. Retourne NULL si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification. |
 | permission_bitmask | **varbinary(16)** | Dans certaines actions, il s'agit des autorisations qui ont été accordées, refusées ou révoquées. |
 | response_rows | **bigint** | **S’applique à**: Azure SQL DB et Managed instance<br /><br /> Nombre de lignes retournées dans le jeu de résultats. |  
 | schema_name | **sysname** | Contexte du schéma dans lequel l’action s’est produite. Autorise la valeur NULL. Retourne NULL pour les audits qui se produisent en dehors d’un schéma. |  
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL Database**
 
-  Cet exemple lit à partir d’un fichier nommé `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
+  Cet exemple lit à partir d’un fichier nommé `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` :  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
@@ -167,7 +167,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  Cet exemple lit tous les journaux d’audit des serveurs qui `Sh`commencent par : 
+  Cet exemple lit tous les journaux d’audit des serveurs qui commencent par `Sh` : 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
@@ -198,6 +198,6 @@ Pour plus d’informations sur la configuration de l’audit de Azure SQL Databa
  [sys. dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys. dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
- [Créer un audit du serveur et une spécification d'audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [Créer un audit du serveur et une spécification d’audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

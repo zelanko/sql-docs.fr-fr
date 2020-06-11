@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription (Transact-SQL) | Microsoft Docs
-ms.date: 10/28/2015
+description: Ajoute un abonnement à une publication et définit l'état de l'abonné. Cette procédure stockée s’exécute sur le serveur de publication de la base de données de publication.
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833626"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627620"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] «*abonné*»  
  Nom de l'Abonné. *Subscriber* est de **type sysname**, avec NULL comme valeur par défaut.  
+
+> [!NOTE]
+> Le nom du serveur peut être spécifié sous la forme `<Hostname>,<PortNumber>` . Vous devrez peut-être spécifier le numéro de port de votre connexion lorsque SQL Server est déployé sur Linux ou Windows avec un port personnalisé, et que le service Browser est désactivé.
   
  [ @destination_db =] '*destination_db*'  
  Nom de la base de données de destination dans laquelle les données répliquées seront placées. *destination_db* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, *destination_db* est défini sur le nom de la base de données de publication. Pour les serveurs de publication Oracle, *destination_db* doit être spécifié. Pour un abonné non-SQL Server, spécifiez la valeur (destination par défaut) pour *destination_db*.  
@@ -92,7 +96,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|aucun|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : cette option est dépréciée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
+|Aucun|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : cette option est dépréciée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
 |automatic (valeur par défaut)|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
 |replication support only|Fournit une génération automatique au niveau de l'Abonné des procédures stockées personnalisées de l'article et des déclencheurs qui prennent en charge les abonnements de mise à jour, le cas échéant. Considère que l'Abonné dispose déjà du schéma et des données initiales pour les tables publiées. Lors de la configuration d'une topologie de réplication transactionnelle d'égal à égal, veillez à ce que les données de tous les nœuds de la topologie soient identiques. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Non pris en charge pour les abonnements à des publications non-SQL Server.*|  
 |initialize with backup|Le schéma et les données initiales destinées aux tables publiées proviennent d'une sauvegarde de la base de données de publication. L'abonné est censé avoir accès à une sauvegarde de la base de données de publication. L’emplacement de la sauvegarde et le type de support pour la sauvegarde sont spécifiés par *backupdevicename* et *BackupDeviceType*. Lors de l'utilisation de cette option, il n'est pas nécessaire de suspendre la topologie de réplication transactionnelle d'égal à égal pendant la configuration.<br /><br /> *Non pris en charge pour les abonnements à des publications non-SQL Server.*|  
@@ -255,7 +259,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =] '*mot_de_passe*'  
- Indique un mot de passe pour la sauvegarde, si un mot de passe a été défini lors de la création de celle-ci. *Password*est de **type sysname**, avec NULL comme valeur par défaut.  
+ Indique un mot de passe pour la sauvegarde, si un mot de passe a été défini lors de la création de celle-ci. *Password* est de **type sysname**, avec NULL comme valeur par défaut.  
   
  [ @fileidhint =] *fileidhint –*  
  Identifie une valeur ordinale du jeu de sauvegarde à restaurer. *fileidhint –* est de **type int**, avec NULL comme valeur par défaut.  

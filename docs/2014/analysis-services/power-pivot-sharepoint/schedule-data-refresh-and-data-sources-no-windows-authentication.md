@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f291020e77bf557a352c07451665172f9c4bb225
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071154"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547791"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualisation planifiée des données et sources de données qui ne prennent pas en charge l'authentification Windows (PowerPivot pour SharePoint)
   Cette rubrique décrit un flux de travail d’actualisation planifiée des données PowerPivot pour SharePoint qui peut utiliser des sources de données qui **NE PRENNENT PAS EN CHARGE** l’authentification Windows. Par exemple, des sources de données Oracle ou IDM DB2. Les illustrations et les étapes figurant dans cette rubrique font référence à des sources de données Oracle, mais le même flux de travail s'applique aux autres sources de données.  
@@ -100,9 +99,9 @@ ms.locfileid: "66071154"
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **informations d’identification** , remplacez le nom du premier `Oracle User ID` champ par, puis remplacez le `User Name`type de **champ** par.  
+6.  Dans la page **informations d’identification** , remplacez le nom du premier champ par `Oracle User ID` , puis remplacez le **type de champ** par `User Name` .  
   
-     Remplacez le deuxième nom de champ `Oracle Password` par et le **type** de `Password`champ par.  
+     Remplacez le deuxième nom de champ par `Oracle Password` et le **type de champ** par `Password` .  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66071154"
   
 11. Tapez l'ID d'utilisateur Oracle, ainsi que le mot de passe Oracle, puis cliquez sur **OK**.  
   
- Pour plus d’informations, consultez la section « pour créer une application cible pour l’authentification SQL Server » dans utiliser la Banque d’informations [sécurisées avec l’authentification SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
+ Pour plus d’informations, consultez la section « pour créer une application cible pour l’authentification SQL Server » dans utiliser la Banque d’informations [sécurisées avec l’authentification SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) ( https://technet.microsoft.com/library/gg298949.aspx) .  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Pour configurer l'application de service PowerPivot  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66071154"
   
 3.  Cliquez sur **Configurer les paramètres d'application de service** dans la section Actions.  
   
-4.  Dans la **section actualisation des données** , définissez le compte d’actualisation des **données PowerPivot sans assistance**sur`PowerPivotDataRefresh` , puis cliquez sur **OK**.  
+4.  Dans la section **actualisation des données** , définissez le compte d’actualisation des **données PowerPivot sans assistance**sur `PowerPivotDataRefresh` , puis cliquez sur **OK**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
@@ -148,7 +147,7 @@ ms.locfileid: "66071154"
   
 9. Sélectionnez **Connectez-vous à l'aide des informations d'identification enregistrées dans le service Banque d'informations sécurisé (SSS) pour la connexion à la source de données. Entrez l’ID utilisé pour consulter les informations d’identification dans la zone Identification SSS**.  
   
-10. Dans la zone **ID :** , tapez `OracleAuthentication`.  
+10. Dans la zone **ID :** , tapez `OracleAuthentication` .  
   
 11. Cliquez sur **OK**.  
   

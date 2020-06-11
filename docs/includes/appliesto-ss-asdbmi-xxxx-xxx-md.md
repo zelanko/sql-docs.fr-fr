@@ -1,1 +1,1 @@
-<Token>**S’APPLIQUE À :** ![Oui](media/yes-icon.png)SQL Server ![Oui](media/yes-icon.png)Azure SQL Database (Managed Instance uniquement) ![Non](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![Non](media/no-icon.png)Parallel Data Warehouse </Token>
+<Token>**s’applique à :** ![ Oui ](media/yes-icon.png) SQL Server ![ Oui ](media/yes-icon.png) Azure SQL Managed instance ![ pas d' ](media/no-icon.png) Azure Synapse Analytics (SQL DW) ![ pas de ](media/no-icon.png) Data Warehouse parallèle</Token>

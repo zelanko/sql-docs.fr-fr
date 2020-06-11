@@ -15,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c88fb6beda0bef5a9e3d1980c1ffa78ed4944b70
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b4ee09b1cd960a58dbf26ecc1b1cc898af4fad96
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718409"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857841"
 ---
 # <a name="error-list-window-management-studio"></a>Fenêtre Liste d'erreurs (Management Studio)
   La [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Liste d’erreurs**de** répertorie les erreurs syntaxiques et sémantiques générées par le code IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "82718409"
 > [!NOTE]  
 >  La **Liste d’erreurs** affiche uniquement les erreurs de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; elle n’affiche pas les erreurs des éditeurs MDX, DMX ni XML/A. Toutes les erreurs MDX, DMX et XML/A sont affichées sous l’onglet **Messages** de ces éditeurs.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  Lorsque la **Liste d'erreurs** est ouverte, les informations sont affichées dans les colonnes suivantes :  
   
  **Ordre par défaut**  

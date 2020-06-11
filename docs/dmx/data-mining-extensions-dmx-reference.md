@@ -4,24 +4,24 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892881"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670400"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Guide de référence du langage DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  DMX (Data Mining Extensions) est un langage que vous pouvez utiliser pour créer et utiliser des modèles d’exploration de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]données dans. Vous pouvez utiliser DMX pour créer la structure de nouveaux modèles d'exploration de données, pour l'apprentissage de ces modèles et pour les explorer, les gérer et y effectuer des prévisions. Le langage DMX se compose d'instructions DDL (langage de définition de données), d'instructions DML (langage de manipulation de données), de fonctions et d'opérateurs.  
+  DMX (Data Mining Extensions) est un langage que vous pouvez utiliser pour créer et utiliser des modèles d’exploration de données dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez utiliser DMX pour créer la structure de nouveaux modèles d'exploration de données, pour l'apprentissage de ces modèles et pour les explorer, les gérer et y effectuer des prévisions. Le langage DMX se compose d'instructions DDL (langage de définition de données), d'instructions DML (langage de manipulation de données), de fonctions et d'opérateurs.  
   
 ## <a name="microsoft-ole-db-for-data-mining-specification"></a>Spécification Microsoft OLE DB pour l'exploration de données  
- Les fonctionnalités d’exploration de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données de sont conçues pour se conformer aux OLE DB pour la [!INCLUDE[msCoName](../includes/msconame-md.md)] spécification d’exploration de données.  
+ Les fonctionnalités d’exploration de données de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sont conçues pour se conformer aux [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB pour la spécification d’exploration de données.  
   
  La [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB pour la spécification d’exploration de données définit les éléments suivants :  
   

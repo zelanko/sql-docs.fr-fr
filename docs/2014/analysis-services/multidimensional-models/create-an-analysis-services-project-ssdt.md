@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c215d2967fdea20cd6828d41bd4c96a70ff4b35e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076238"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536339"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Créer un projet Analysis Services (SSDT)
   Vous pouvez définir un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l’aide du modèle de projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou de l’Assistant Importation de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour lire le contenu d’une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si aucune solution n'est chargée actuellement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la création d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée automatiquement une solution. Sinon, le nouveau projet de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sera ajouté à la solution existante. Meilleures pratiques pour un appel de développement de solutions afin de créer des projets distincts pour différents types de données d'application, à l'aide d'une seule solution si les projets sont liés. Par exemple, vous pouvez avoir une seule solution qui contient des projets distincts pour les packages Integration Services, les bases de données Analysis Services et les rapports Reporting Services qui sont tous utilisés par la même application de gestion.  

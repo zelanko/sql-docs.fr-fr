@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080754"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544291"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Mettre en surbrillance les exceptions (Outils d'analyse de table pour Excel)
   ![Bouton Mettre en surbrillance les exceptions sur le ruban](media/tat-highlightex.gif "Bouton Mettre en surbrillance les exceptions sur le ruban")  
@@ -39,11 +38,11 @@ ms.locfileid: "66080754"
   
 3.  Cliquez sur **Exécuter**.  
   
-4.  Ouvrez la feuille de calcul \<intitulée nom de la table> valeurs hors norme pour afficher un résumé des valeurs hors norme qui ont été trouvées.  
+4.  Ouvrez la feuille de calcul intitulée valeurs hors norme \<table name> pour afficher un résumé des valeurs hors norme qui ont été trouvées.  
   
 5.  Pour modifier le nombre de mises en surbrillance, cliquez sur les flèches vers le haut et vers le bas dans la ligne **seuil d’exception** du **rapport mettre en surbrillance les exceptions**.  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Vous pouvez inclure des colonnes qui ne contiennent pas des valeurs incorrectes si ces valeurs contiennent des informations pouvant être utiles pour la prédiction d'autres lignes. Cependant, vous devez désélectionner les colonnes susceptibles de contenir des valeurs manquantes ou nulles.  
   
  Dans la mesure où toutes les colonnes sélectionnées sont utilisées pour créer une séquence générale, vous devez éviter d'utiliser les colonnes d'entrée contenant des informations médiocres, telles que les suivantes :  
@@ -76,7 +75,7 @@ ms.locfileid: "66080754"
 ## <a name="related-tools"></a>Outils connexes  
  Lorsque vous nettoyez ou vérifiez des données en prévision de l'exploration de données, vous pouvez également tester les fonctionnalités d'exploration de données du Client d'exploration de données pour Excel. Ce complément fournit des outils avancés qui vous permettront de déceler les observations aberrantes, de réétiqueter les données ou d'afficher la distribution des données. Pour plus d’informations sur les outils d’exploration de données dans le client d’exploration de données pour Excel, consultez [exploration et nettoyage des données](exploring-and-cleaning-data.md).  
   
- L’outil **mettre en surbrillance les exceptions** utilise l’algorithme de [!INCLUDE[msCoName](../includes/msconame-md.md)] clustering. Un modèle de clustering détecte les groupes de lignes qui partagent des caractéristiques communes. Le client d’exploration de données pour Excel fournit une fenêtre **Parcourir** qui utilise des graphiques et des profils caractéristiques pour vous permettre d’explorer les modèles d’exploration de données créés par le clustering. Pour plus d’informations sur la façon de parcourir le modèle de clustering créé par l’outil **mettre en surbrillance les exceptions** , consultez [Parcourir les modèles (client d’exploration de données pour Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
+ L’outil **mettre en surbrillance les exceptions** utilise l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de clustering. Un modèle de clustering détecte les groupes de lignes qui partagent des caractéristiques communes. Le client d’exploration de données pour Excel fournit une fenêtre **Parcourir** qui utilise des graphiques et des profils caractéristiques pour vous permettre d’explorer les modèles d’exploration de données créés par le clustering. Pour plus d’informations sur la façon de parcourir le modèle de clustering créé par l’outil **mettre en surbrillance les exceptions** , consultez [Parcourir les modèles (client d’exploration de données pour Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
   
  Pour plus d'informations sur l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering, consultez la rubrique « Algorithme de gestion de clusters Microsoft » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

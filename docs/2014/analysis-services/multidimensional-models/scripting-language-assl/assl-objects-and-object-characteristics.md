@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76d57bb421a7f486983476a6549a5121ce88ee9b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545691"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objets ASSL et caractéristiques des objets
   Dans le langage ASSL (Analysis Services Scripting Language), les objets suivent des recommandations spécifiques en ce qui concerne les groupes d'objets, l'héritage, l'affectation de noms, l'expansion et le traitement.  
   
 ## <a name="object-groups"></a>Groupes d'objets  
- Tous [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] les objets ont une représentation XML. Les objets se répartissent en deux groupes :  
+ Tous les [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets ont une représentation XML. Les objets se répartissent en deux groupes :  
   
  **Objets principaux**  
  Les objets principaux peuvent être créés, modifiés et supprimés de manière indépendante. Les objets principaux sont représentés par les éléments suivants :  
@@ -47,7 +46,7 @@ ms.locfileid: "62736613"
   
 -   Partitions  
   
--   perspectives  
+-   Perspectives  
   
 -   Modèles d'exploration de données  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62736613"
   
 -   Attributs  
   
--   mesures  
+-   Mesures  
   
 -   Colonnes de modèle d'exploration de données  
   
@@ -86,12 +85,12 @@ ms.locfileid: "62736613"
 ## <a name="object-expansion"></a>Expansion d'objet  
  La restriction `ObjectExpansion` peut être utilisée pour contrôler le degré d'expansion des éléments XML ASSL retournés par le serveur. Cette restriction propose les options répertoriées dans le tableau suivant.  
   
-|Valeur d'énumération|Autorisé pour \<ALTER>|Description|  
+|Valeur d'énumération|Autorisé pour\<Alter>|Description|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|non|Retourne uniquement le nom, l'ID et l'horodateur pour l'objet demandé et tous les objets principaux qu'il contient de manière récursive.|  
-|*ObjectProperties*|oui|Développe l'objet demandé et les objets secondaires qu'il contient, mais ne retourne pas les objets principaux qu'il contient.|  
+|*ObjectProperties*|Oui|Développe l'objet demandé et les objets secondaires qu'il contient, mais ne retourne pas les objets principaux qu'il contient.|  
 |*ExpandObject*|non|Identique à *ObjectProperties*, mais retourne également le nom, l'ID et l'horodateur pour les objets principaux contenus.|  
-|*ExpandFull*|oui|Développe entièrement l'objet demandé et touts les objets qu'il contient de manière récursive.|  
+|*ExpandFull*|Oui|Développe entièrement l'objet demandé et touts les objets qu'il contient de manière récursive.|  
   
  Cette section de référence ASSL décrit la représentation *ExpandFull* . Tous les autres niveaux `ObjectExpansion` sont dérivés de ce niveau.  
   

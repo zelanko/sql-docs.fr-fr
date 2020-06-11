@@ -1,28 +1,28 @@
 ---
-title: Sélectionnez à &lt;partir&gt;de la structure. CAS | Microsoft Docs
+title: Sélectionnez à partir de la &lt; structure &gt; . CAS | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928293"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670106"
 ---
-# <a name="select-from-ltstructuregtcases"></a>Sélectionnez à &lt;partir&gt;de la structure. PARFOIS
+# <a name="select-from-ltstructuregtcases"></a>Sélectionnez à partir de la &lt; structure &gt; . PARFOIS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne les cas utilisés pour créer la structure d'exploration de données.  
   
  Si l'extraction n'est pas activée sur la structure, l'instruction échoue. Par ailleurs, l'instruction échoue si l'utilisateur ne dispose pas d'autorisations d'extraction sur la structure d'exploration de données.  
   
- Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], l’extraction sur les nouvelles structures d’exploration de données est activée par défaut. Pour vérifier si l’extraction est activée pour une structure particulière, vérifiez si la valeur de la propriété **CacheMode** est définie sur **KeepTrainingCases**.  
+ Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l’extraction sur les nouvelles structures d’exploration de données est activée par défaut. Pour vérifier si l’extraction est activée pour une structure particulière, vérifiez si la valeur de la propriété **CacheMode** est définie sur **KeepTrainingCases**.  
   
  Si la valeur de **CacheMode** est remplacée par **ClearAfterProcessing**, les cas de structure sont effacés du cache et vous ne pouvez pas utiliser l’extraction.  
   
@@ -39,7 +39,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste d'expressions séparées par des virgules.  
@@ -53,7 +53,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Facultatif. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Si l'extraction est activée à la fois sur le modèle et sur la structure, les membres d'un rôle qui dispose d'autorisations d'extraction sur la structure d'exploration de données et le modèle d'exploration de données peuvent retourner des colonnes de structure qui n'étaient pas incluses dans le modèle en utilisant la syntaxe suivante :  
@@ -65,7 +65,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Par conséquent, pour protéger des données sensibles ou des informations personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder l’autorisation **AllowDrillThrough** sur une structure d’exploration de données ou un modèle d’exploration de données uniquement lorsque cela est nécessaire.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants sont basés sur la structure d’exploration de données, le publipostage ciblé, qui [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] est basé sur la base de données et les modèles d’exploration de données associés. Pour plus d’informations, consultez le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Les exemples suivants sont basés sur la structure d’exploration de données, le publipostage ciblé, qui est basé sur la [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] base de données et les modèles d’exploration de données associés. Pour plus d’informations, consultez le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Exemple 1 : Extraction dans des cas de structure  
  L'exemple suivant retourne une liste des 500 clients les plus anciens dans la structure d'exploration de données Targeted Mailing. La requête retourne toutes les colonnes dans le modèle d'exploration de données, mais restreint les lignes aux clients qui ont acheté un vélo et les classe par âge. Vous pouvez aussi modifier la liste d'expressions pour retourner uniquement les colonnes dont vous avez besoin.  

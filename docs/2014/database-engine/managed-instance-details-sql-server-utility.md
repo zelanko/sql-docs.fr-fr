@@ -10,17 +10,17 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89f962ead45c4c0670cd5adfb5da0be9373c4097
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774341"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858934"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Détails de l'instance gérée (utilitaire SQL Server)
   Les informations de la vue Instances managées de l’Explorateur de l’utilitaire fournissent des données d’utilisation pour les instances individuelles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], un historique d’utilisation du processeur, les détails de l’utilisation du stockage au niveau du fichier, et la possibilité d’afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pour un ordinateur, pour les fichiers de base de données et les fichiers journaux, ainsi qu’au niveau des volumes de stockage. Vous pouvez également consulter les détails des propriétés des instances managées individuelles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  Mode Liste  
  Le mode Liste, dans le volet supérieur, affiche des données sur les instances individuelles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] répertoriées dans les lignes par ComputerName\InstanceName.  
   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18e988f55f68717f4e2054ec5c38869efba74ab1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893927"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668191"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  La valeur de retour contient la probabilité brute du cas, qui est le produit des probabilités des attributs de cas.  
   
 ## <a name="applies-to"></a>S'applique à  
- Modèles générés à l’aide des [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes de [!INCLUDE[msCoName](../includes/msconame-md.md)] clustering et Sequence Clustering.  
+ Modèles générés à l’aide des [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes de clustering et [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering.  
   
 ## <a name="return-type"></a>Type de retour  
  Nombre à virgule flottante double précision compris entre 0 et 1. Un nombre plus proche de 1 indique que le cas a une probabilité plus élevée de se produire dans ce modèle. Un nombre plus proche de 0 indique qu'il est moins probable que le cas se produise dans ce modèle.  

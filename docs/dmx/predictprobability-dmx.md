@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bd8365b2d3aac82c184af549ef21952fd4c8e649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893902"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666953"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,8 +33,8 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Type de retour  
  Valeur scalaire.  
   
-## <a name="remarks"></a>Notes  
- Si l'état prédit est omis, l'état ayant la probabilité la plus élevée est utilisé, à l'exception du compartiment des états manquants. Pour inclure le compartiment des États manquants, \<définissez l’état prédit> sur **INCLUDE_NULL**. Pour retourner la probabilité pour les États manquants, définissez \<l’état prédit> sur null.  
+## <a name="remarks"></a>Remarques  
+ Si l'état prédit est omis, l'état ayant la probabilité la plus élevée est utilisé, à l'exception du compartiment des états manquants. Pour inclure le compartiment des États manquants, définissez l' \< État prédit> sur **INCLUDE_NULL**. Pour retourner la probabilité pour les États manquants, définissez l' \< État prédit> sur null.  
   
 > [!NOTE]  
 >  Certains modèles d'exploration de données ne fournissent pas de valeurs de probabilité et ne peuvent donc pas utiliser cette fonction. De plus, les valeurs de probabilité des valeurs cibles spécifiques sont calculées différemment ou peuvent avoir une interprétation différente selon le type de modèle que vous interrogez. Pour plus d’informations sur la façon dont la probabilité est calculée pour un type de modèle particulier, consultez la rubrique relative à l’algorithme dans [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

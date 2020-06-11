@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f92fdd7ea01cb9a373bafc3357de65fd2e622add
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543781"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renommer une instance d'Analysis Services
   Vous pouvez renommer une instance existante de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de la boîte de dialogue **Renommer l’instance** .  
@@ -35,7 +34,7 @@ ms.locfileid: "66079621"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Pour renommer une instance d'Analysis Services  
   
-1.  Lancez l’outil **modification du nom d’instance** , **asinstancerename. exe**, à partir de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Lancez l’outil **modification du nom d’instance** , **asinstancerename.exe**, à partir de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  Dans la boîte de dialogue **Renommer l’instance** , sélectionnez dans la liste **Instance à renommer** l’instance que vous souhaitez renommer.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66079621"
   
      L'exemple suivant en est l'illustration. Supposons que vous avez installé un serveur en mode tabulaire en tant qu’instance nommée « Tabular » à l’aide du compte virtuel par défaut, ce qui entraîne la configuration suivante :  
   
-    1.  Nom de l' \<instance = serveur> \tabular  
+    1.  Nom de l’instance = \<server> \TABULAR  
   
     2.  Nom du service = MSOLAP$TABULAR  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079621"
   
      Supposons à présent que vous renommez l’instance en « TAB2 ». Suite au changement de nom, la configuration se présente à présent comme suit :  
   
-    1.  Nom de l' \<instance = serveur> \tab2  
+    1.  Nom de l’instance = \<server> \TAB2  
   
     2.  Nom du service = MSOLAP$TAB2  
   

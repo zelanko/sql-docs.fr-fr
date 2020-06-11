@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e33fbc80dc7253ee67dc55235765bcd1e6250c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071227"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535186"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Actualisation des données PowerPivot avec SharePoint 2013
-  La conception de l’actualisation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] des modèles de données dans SharePoint 2013 utilise Excel Services en tant que composant principal pour charger et actualiser les modèles de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] données sur une instance de qui s’exécute en mode SharePoint. Le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute en externe sur la batterie de serveurs SharePoint.  
+  La conception de l’actualisation des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modèles de données dans SharePoint 2013 utilise Excel Services en tant que composant principal pour charger et actualiser les modèles de données sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s’exécute en mode SharePoint. Le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute en externe sur la batterie de serveurs SharePoint.  
   
  L'architecture d'actualisation des données précédente reposait exclusivement sur le service système PowerPivot pour charger et actualiser les modèles de données sur une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint. L'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutait localement sur le serveur d'applications PowerPivot. La nouvelle architecture intègre également une nouvelle méthode de gestion des informations de planification en tant que métadonnées de l'élément de classeur dans la bibliothèque de documents. L'architecture d'Excel Services dans SharePoint 2013 prend en charge l' **actualisation interactive des données** et l' **actualisation planifiée des données**.  
   
@@ -38,8 +37,8 @@ ms.locfileid: "66071227"
   
 -   [Plus d’informations](#bkmk_moreinformation)  
   
-## <a name="background"></a>Contexte  
- SharePoint Server 2013 Excel Services gère l’actualisation des données pour les classeurs Excel 2013 et déclenche le traitement du modèle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de données sur un serveur qui s’exécute en mode SharePoint. Pour les classeurs Excel 2010, Excel Services gère également le chargement et l'enregistrement des classeurs et des modèles de données. Toutefois, Excel Services repose sur le service système PowerPivot pour envoyer des commandes de traitement de données. Le tableau suivant récapitule les composants qui envoient des commandes de traitement pour l'actualisation des données en fonction de la version du classeur. L'environnement donné est une batterie de serveurs SharePoint 2013 configurée pour utiliser un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server qui s'exécute en mode SharePoint.  
+## <a name="background"></a>Arrière-plan  
+ SharePoint Server 2013 Excel Services gère l’actualisation des données pour les classeurs Excel 2013 et déclenche le traitement du modèle de données sur un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] serveur qui s’exécute en mode SharePoint. Pour les classeurs Excel 2010, Excel Services gère également le chargement et l'enregistrement des classeurs et des modèles de données. Toutefois, Excel Services repose sur le service système PowerPivot pour envoyer des commandes de traitement de données. Le tableau suivant récapitule les composants qui envoient des commandes de traitement pour l'actualisation des données en fonction de la version du classeur. L'environnement donné est une batterie de serveurs SharePoint 2013 configurée pour utiliser un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server qui s'exécute en mode SharePoint.  
   
 ||||  
 |-|-|-|  
@@ -53,13 +52,13 @@ ms.locfileid: "66071227"
   
  Le tableau suivant récapitule les fonctionnalités d'actualisation prises en charge dans une batterie de serveurs SharePoint 2013 configurée pour utiliser un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server s'exécutant en mode SharePoint :  
   
-|Classeur créé dans|actualisation planifiée des données|Actualisation interactive|  
+|Classeur créé dans|Actualisation planifiée des données|Actualisation interactive|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 PowerPivot pour Excel|Non pris en charge. Mettre à niveau le classeur **(\*)**|Non pris en charge. Mettre à niveau le classeur **(\*)**|  
-|2012 PowerPivot pour Excel|Pris en charge|Non pris en charge. Mettre à niveau le classeur **(\*)**|  
-|Excel 2013|Pris en charge|Pris en charge|  
+|2008 R2 PowerPivot pour Excel|Non pris en charge. Mettre à niveau le classeur **( \* )**|Non pris en charge. Mettre à niveau le classeur **( \* )**|  
+|2012 PowerPivot pour Excel|Prise en charge|Non pris en charge. Mettre à niveau le classeur **( \* )**|  
+|Excel 2013|Prise en charge|Prise en charge|  
   
- **(\*)** Pour plus d’informations sur les mises à niveau de classeurs, consultez [mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+ **( \* )** Pour plus d’informations sur les mises à niveau de classeurs, consultez [mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="interactive-data-refresh"></a><a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  L'actualisation des données interactive ou manuelle dans SharePoint Server 2013 Excel Services permet d'actualiser les modèles de données avec les données de la source de données d'origine. L'actualisation interactive des données est disponible après avoir configuré une application Excel Services lorsque vous inscrivez un serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécuté en mode SharePoint. Pour plus d’informations, consultez [Gérer les paramètres de modèle de données Excel Services (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
@@ -94,7 +93,7 @@ ms.locfileid: "66071227"
   
  Expérience utilisateur typique : lorsqu’un client sélectionne « actualiser toutes les connexions » dans un classeur Excel 2013 qui contient un modèle PowerPivot, il voit un message d’erreur semblable à ce qui suit :  
   
--   **Échec de l’actualisation des données externes :** une erreur s’est produite lors de l’utilisation du modèle de données dans le classeur. Réessayez. Nous n’avons pas pu actualiser une ou plusieurs connexions de données dans ce classeur.  
+-   **Échec de l’actualisation des données externes :** une erreur s’est produite lors de l’utilisation du modèle de données dans le classeur. Recommencez. Nous n’avons pas pu actualiser une ou plusieurs connexions de données dans ce classeur.  
   
  Selon le fournisseur de données que vous utilisez, vous pouvez voir des messages semblables aux suivants dans le journal ULS.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66071227"
   
 1.  Sur le serveur Analysis Services s’exécutant en mode SharePoint, ajoutez le compte de service Analysis Services au privilège «**agir en tant que partie du système d’exploitation**» :  
   
-    1.  Exécuter «`secpol.msc`»  
+    1.  Exécuter « `secpol.msc` »  
   
     2.  Cliquez sur **Stratégie de sécurité locale**, puis sur **Stratégies locales**, et sur **Attribution des droits utilisateur**.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66071227"
   
  Pour plus d’informations, consultez [agir en tant que partie du système d’exploitation](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx).  
   
-##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
+##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a>Actualisation des données planifiée  
  **Points clés de l'actualisation planifiée des données :**  
   
 -   Nécessite le déploiement du complément PowerPivot pour SharePoint. Pour plus d’informations, consultez [installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
@@ -166,7 +165,7 @@ ms.locfileid: "66071227"
  ![Menu contextuel Gérer l'actualisation des données](../media/as-manage-datarefresh-sharepoint2013.gif "Menu contextuel Gérer l'actualisation des données")  
   
 > [!TIP]  
->  Pour plus d’informations sur l’actualisation des classeurs à partir de SharePoint Online, consultez [actualisation des classeurs Excel avec les modèles PowerPivot incorporés à partir de SharePoint Online (livre blanc)](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx).  
+>  Pour plus d’informations sur l’actualisation des classeurs à partir de SharePoint Online, consultez [actualisation des classeurs Excel avec les modèles PowerPivot incorporés à partir de SharePoint Online (livre blanc)](https://technet.microsoft.com/library/jj992650.aspx) ( https://technet.microsoft.com/library/jj992650.aspx) .  
   
 ##  <a name="scheduled-data-refresh-architecture-in-sharepoint-2013"></a><a name="bkmk_refresh_architecture"></a>Architecture d’actualisation des données planifiée dans SharePoint 2013  
  L'illustration suivante présente l'architecture d'actualisation des données dans SharePoint 2013 et SQL Server 2012 SP1.  
@@ -229,7 +228,7 @@ ms.locfileid: "66071227"
   
  Pour plus d'informations sur l'authentification de l'actualisation des données et l'utilisation des informations d'identification, consultez la publication de blog [Actualisation des données PowerPivot dans SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx).  
   
-##  <a name="more-information"></a><a name="bkmk_moreinformation"></a> Plus d’informations  
+##  <a name="more-information"></a><a name="bkmk_moreinformation"></a> Informations supplémentaires  
  [Résolution des problèmes d'actualisation des données PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  [Excel Services dans SharePoint 2013](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/). 

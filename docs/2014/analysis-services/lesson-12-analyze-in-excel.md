@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 509f44565a1535e1502cb3862250cf04f654711e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079188"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543541"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Leçon 13 : Analyser dans Excel
   Dans cette leçon, vous allez utiliser la fonction Analyser dans Excel dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour ouvrir Microsoft Excel, créer automatiquement une connexion de source de données à l'espace de travail du modèle et ajouter automatiquement un tableau croisé dynamique à la feuille de calcul. La fonctionnalité Analyser dans Excel est destinée à fournir un moyen simple et rapide de tester l’efficacité de la conception de votre modèle avant de déployer ce dernier. Vous n'allez exécuter aucune analyse de données dans cette leçon. L’objectif de cette leçon est de vous familiariser, en tant qu’auteur de modèle, avec les outils que vous pouvez utiliser pour tester la conception de votre modèle. Contrairement à la fonctionnalité Analyser dans Excel, qui est destinée aux auteurs de modèle, les utilisateurs finaux utilisent les applications de création de rapports clientes, par exemple Excel ou [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , pour se connecter aux données du modèle déployé et les parcourir.  

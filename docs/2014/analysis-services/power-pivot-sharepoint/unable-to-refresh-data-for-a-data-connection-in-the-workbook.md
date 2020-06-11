@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81a72e0009659e06fd27e9c402f17ddab259d228
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070941"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540171"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Échec de l'actualisation des connexions suivantes : Données PowerPivot
   Pour les classeurs Excel qui contiennent des données PowerPivot, Excel Services retourne cette erreur en cas de demande de connexion à un serveur PowerPivot qui échoue.  
@@ -40,7 +39,7 @@ ms.locfileid: "66070941"
   
  Le classeur que vous essayez d'ouvrir peut avoir été créé dans la version SQL Server 2008 R2 de PowerPivot pour Excel. Très probablement, le fournisseur de données Analysis Services qui est spécifié dans la chaîne de connexion de données n'est pas présent sur l'ordinateur qui gère la demande.  
   
- Si c’est le cas, vous trouverez ce message dans le Journal ULS : « échec de l’actualisation pour les données PowerPivot dans l'\<URL du classeur vers le classeur> « », suivi de « impossible d’obtenir une connexion ».  
+ Si c’est le cas, vous trouverez ce message dans le Journal ULS : « échec de l’actualisation des données PowerPivot dans le classeur' \<URL to workbook> ' », suivi de « impossible d’obtenir une connexion ».  
   
  Pour déterminer la version du classeur, ouvrez-le dans Excel et vérifiez quel fournisseur de données est spécifié dans la chaîne de connexion. Un classeur SQL Server 2008 R2 utilise MSOLAP.4 comme fournisseur de données.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66070941"
   
  Pour contourner ce problème, joignez l'ordinateur au même domaine que le serveur PowerPivot ou installez un contrôleur de domaine sur votre ordinateur local. La deuxième solution, l'installation du contrôleur de domaine, oblige à créer des comptes de domaine locaux pour tous les services et utilisateurs. Vous devrez configurer des comptes de service et des autorisations SharePoint pour les comptes que vous définissez.  
   
- L'installation d'un contrôleur de domaine sur votre ordinateur est utile si votre objectif est d'utiliser PowerPivot pour SharePoint hors connexion. Pour obtenir des instructions détaillées sur l’utilisation de PowerPivot en mode hors connexion, consultez le billet de blog « placement de votre serveur [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)PowerPivot hors du réseau » sur.  
+ L'installation d'un contrôleur de domaine sur votre ordinateur est utile si votre objectif est d'utiliser PowerPivot pour SharePoint hors connexion. Pour obtenir des instructions détaillées sur l’utilisation de PowerPivot en mode hors connexion, consultez le billet de blog « placement de votre serveur PowerPivot hors du réseau » sur [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241) .  
   
  **Scénario 4 : serveur instable**  
   

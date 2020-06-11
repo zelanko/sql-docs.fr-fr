@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938069"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669991"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Structure et utilisation des requêtes de prédiction DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser la requête de prédiction dans les extensions DMX (Data Mining Extensions) pour prédire les valeurs de colonnes inconnues dans un nouveau jeu de données, en fonction des résultats d’un modèle d’exploration de données.  
+  Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous pouvez utiliser la requête de prédiction dans les extensions DMX (Data Mining Extensions) pour prédire les valeurs de colonnes inconnues dans un nouveau jeu de données, en fonction des résultats d’un modèle d’exploration de données.  
   
  Le type de requête utilisé dépend des informations que vous souhaitez obtenir d'un modèle. Si vous voulez créer des prédictions simples en temps réel, par exemple pour savoir si un éventuel client sur un site Web correspond au personnage de l'acheteur de bicyclette, vous utilisez une requête singleton. En revanche, si vous souhaitez créer un lot de prédictions à partir d'un ensemble de cas figurant dans une source de données, vous devez utiliser une requête de prédiction standard.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "67938069"
   
 -   **TOP**  
   
--   **À partir du***\<modèle>* **PREDICTION JOIN**      
+-   **À partir du*** \< modèle>* **PREDICTION JOIN**      
   
--   **ACTIVÉ**  
+-   **ON**  
   
 -   **WHERE**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938069"
   
 -   Des fonctions retournant une colonne de données.  
   
- L’élément **from** * \<Model>* **PREDICTION JOIN** définit les données sources à utiliser pour créer la prédiction. Pour une requête singleton, c'est une série de valeurs affectées aux colonnes. Pour une jointure de prédiction vide, l'élément est vide.  
+ L’élément **from** * \< Model>* **PREDICTION JOIN** définit les données sources à utiliser pour créer la prédiction. Pour une requête singleton, c'est une série de valeurs affectées aux colonnes. Pour une jointure de prédiction vide, l'élément est vide.  
   
  L’élément **on** mappe les colonnes définies dans le modèle d’exploration de données aux colonnes d’un DataSet externe. Il est inutile d'inclure cet élément si vous créez une requête de jointure de prédiction vide ou une jointure de prédiction naturelle.  
   

@@ -16,17 +16,17 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eb7ac1830554180b1de1ee67b6bc6f11fd2463f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0f21a845b6db79390a31c4b26197547a041e76de
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000792"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856598"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Options (résultats de la requête-SQL Server-page général)
   Utilisez cette page pour déterminer le comportement par défaut du volet Résultats de la requête. Pour afficher ces paramètres, dans le menu **Outils**, cliquez sur **Options**, développez le dossier **Résultats de la requête**, sélectionnez **SQL Server**, puis cliquez sur **Général**. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes actuelles, cliquez sur **Options de requête** dans le menu **Requête** ou, dans une fenêtre de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cliquez avec le bouton droit et sélectionnez **Options de requête**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Destination par défaut des résultats**  
  Permet de définir la destination par défaut des jeux de résultats soit sous forme de texte ou de grille dans le volet de résultats, soit dans un fichier.  
   

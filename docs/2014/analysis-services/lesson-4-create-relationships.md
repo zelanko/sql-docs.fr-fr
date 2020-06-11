@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63fe9b7d83eea026a9a0f61213e2ccd30bba3591
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078578"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542905"
 ---
 # <a name="lesson-5-create-relationships"></a>Leçon 5 : Créer des relations
   Dans cette leçon, vous allez vérifier les relations qui ont été créées automatiquement lorsque vous avez importé des données, et vous allez ajouter de nouvelles relations entre les tables. Une relation est une connexion entre deux tables qui établit le mode de corrélation des données dans les deux tables. Par exemple, la table Product et la table Product Subcategory ont une relation basée sur le fait que chaque produit appartient à une sous-catégorie. Pour en savoir plus, consultez [Relations &#40;SSAS Tabulaire&#41;](tabular-models/relationships-ssas-tabular.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071846"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547581"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics (PowerPivot pour SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont enregistrés dans les fichiers journaux SharePoint. Utilisez les informations de cette rubrique pour configurer les niveaux de journalisation et afficher les informations du fichier journal. Vous pouvez contrôler les événements du serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont enregistrés dans le fichier. Vous pouvez également contrôler la gravité des messages enregistrés. Pour plus d’informations, consultez [configurer la collecte des données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -119,10 +118,10 @@ ms.locfileid: "66071846"
 |Process|Domaine|Category|Level|Message|Détails|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Service PowerPivot|Usage|Commentaires|There are no current request statistics, nothing to log.|À intervalles prédéfinis, le service fournit les statistiques de réponse aux requêtes en tant qu'événement d'utilisation au système de collecte des données d'utilisation. Ce message indique qu'il n'existe aucune statistique sur les requêtes à signaler.|  
-|w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Démarrage de la localisation d’un serveur d’applications pour\<Data source =*path*>|Lorsqu'il reçoit une demande de connexion, le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifie un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponible pour gérer la demande. Si la batterie de serveurs ne contient qu'un seul serveur, le serveur local accepte toujours la demande.|  
+|w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Démarrage de la localisation d’un serveur d’applications pour la source de données =\<*path*>|Lorsqu'il reçoit une demande de connexion, le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifie un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponible pour gérer la demande. Si la batterie de serveurs ne contient qu'un seul serveur, le serveur local accepte toujours la demande.|  
 |w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Locating the application server succeeded.|La requête a été allouée à une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Redirection de la demande pour \<la *source PowerPivotdata*> vers [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]le.|La demande a été envoyée au [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Service PowerPivot|Traitement des demandes|Commentaires|Redirection de la demande de\<nom d'*utilisateur SharePoint*> à la base de données|Une connexion avec emprunt d'identité à la source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a été créée au nom de l'utilisateur SharePoint.|  
+|w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Redirection de la requête pour l' \<*PowerPivotdata source*> vers le [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|La demande a été envoyée au [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|Service PowerPivot|Traitement des demandes|Commentaires|Redirection de la demande de nom d’utilisateur \<*SharePoint user*> vers la base de données|Une connexion avec emprunt d'identité à la source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a été créée au nom de l'utilisateur SharePoint.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collecte des données d’utilisation PowerPivot](power-pivot-usage-data-collection.md)   

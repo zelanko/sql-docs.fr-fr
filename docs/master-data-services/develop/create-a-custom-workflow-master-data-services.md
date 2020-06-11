@@ -5,17 +5,17 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5d4d302aae5bbfe813bcda328989440b118dee3
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729331"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83730732"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Créer un flux de travail personnalisé (Master Data Services)
 
@@ -121,7 +121,7 @@ ms.locfileid: "73729331"
   
  Créez une règle d'entreprise qui démarre un flux de travail personnalisé dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en suivant ces étapes :  
   
-1.  Dans l’éditeur des règles d' [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]entreprise de, après avoir spécifié les conditions de votre règle d’entreprise, faites glisser l’action **Démarrer le flux de travail** de la liste **actions externes** vers l’étiquette **action** du volet **Then** .  
+1.  Dans l’éditeur des règles d’entreprise de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , après avoir spécifié les conditions de votre règle d’entreprise, faites glisser l’action **Démarrer le flux de travail** de la liste **actions externes** vers l’étiquette **action** du volet **Then** .  
   
 2.  Dans le volet **Modifier l’action**, dans la zone **Type de flux de travail**, tapez la balise qui identifie l’assembly de gestionnaire de flux de travail. Il s'agit de la balise que vous avez spécifiée dans le fichier de configuration pour votre assembly, par exemple, TEST.  
   

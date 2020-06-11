@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84f857105cd2bb5695fbcc0d0337d028e3fa297
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077590"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544891"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Actions (Analysis Services - Données multidimensionnelles)
   Les actions peuvent être de types différents et doivent être créées en conséquence. Les actions peuvent être :  
@@ -42,7 +41,7 @@ ms.locfileid: "66077590"
   
  Le type est la nature de l'action à exécuter. <xref:Microsoft.AnalysisServices.Action> est une classe abstraite. Par conséquent, pour l’utiliser, vous devez utiliser l’une des classes dérivées. Deux types d'actions sont prédéfinis : extraction et rapport. Ces messages ont des classes dérivées correspondantes : <xref:Microsoft.AnalysisServices.DrillThroughAction> et <xref:Microsoft.AnalysisServices.ReportAction>. D’autres actions sont couvertes dans la classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une action est une instruction MDX stockée qui peut être présentée à des applications clientes et utilisées par celles-ci. En d'autres termes, une action est une commande de client qui est définie et stockée sur le serveur. Une action contient également des informations qui spécifient comment l'application cliente doit afficher et traiter l'instruction MDX et à quel moment. L'opération spécifiée par l'action peut démarrer une application en utilisant les informations de l'action comme paramètre ou elle peut extraire les informations en fonction des critères fournis par l'action.  
+ Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , une action est une instruction MDX stockée qui peut être présentée à des applications clientes et utilisées par celles-ci. En d'autres termes, une action est une commande de client qui est définie et stockée sur le serveur. Une action contient également des informations qui spécifient comment l'application cliente doit afficher et traiter l'instruction MDX et à quel moment. L'opération spécifiée par l'action peut démarrer une application en utilisant les informations de l'action comme paramètre ou elle peut extraire les informations en fonction des critères fournis par l'action.  
   
  Les actions permettent aux utilisateurs professionnels d'agir dès la parution des résultats de leurs analyses. En enregistrant et en réutilisant les actions, les utilisateurs finaux peuvent aller au-delà de l'analyse traditionnelle, qui se termine généralement par la présentation des données, et lancer des solutions aux problèmes et aux carences découverts, ce qui permet d'étendre l'application de décisionnel au-delà du cube. Dépassant le stade de l'outil complexe de présentation des données, les applications clientes peuvent, grâce aux actions, devenir des éléments à part entière du système opérationnel de l'entreprise. Au lieu de se concentrer sur la transmission des données en entrée à des applications opérationnelles, les utilisateurs finaux peuvent « boucler la boucle » dans le processus décisionnel. Cette capacité à transformer des données analytiques en décisions est cruciale pour le succès de l'application de décisionnel.  
   

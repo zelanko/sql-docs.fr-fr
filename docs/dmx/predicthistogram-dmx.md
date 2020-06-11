@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893849"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666792"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Un histogramme génère des colonnes statistiques. La structure de colonne de l’histogramme retourné dépend du type de référence de colonne utilisé avec la fonction **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Colonnes scalaires  
- Pour une \<référence de colonne scalaire>, l’histogramme retourné par la fonction **PredictHistogram** se compose des colonnes suivantes :  
+ Pour une \< référence de colonne scalaire>, l’histogramme retourné par la fonction **PredictHistogram** se compose des colonnes suivantes :  
   
 -   La valeur actuellement en cours de prévision  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      La colonne **$AdjustedProbability** est une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extension de la [!INCLUDE[msCoName](../includes/msconame-md.md)] spécification OLE DB pour l’exploration de données.  
   
 ## <a name="cluster-columns"></a>Colonnes de cluster  
- L’histogramme retourné par la fonction **PredictHistogram** pour une \<référence de colonne de cluster> se compose des colonnes suivantes :  
+ L’histogramme retourné par la fonction **PredictHistogram** pour une \< référence de colonne de cluster> se compose des colonnes suivantes :  
   
 -   **$Cluster** (représente le nom du cluster)  
   

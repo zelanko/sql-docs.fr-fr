@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 51fe8dc2a7ec38c9e2a71d9b2678e7c3e4ba6f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fea2cc5315bc7e2daca21b4de5b1e305e02e4f7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078289"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542291"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Leçon 7 : Définition d'indicateurs de performance clés
   Dans cette leçon, vous allez apprendre à définir des indicateurs de performance clés (KPI, Key Performance Indicator) dans votre projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Les indicateurs de performance clés fournissent une infrastructure pour définir des calculs côté serveur qui mesurent votre activité, et ils standardisent la façon d'afficher les informations résultantes. Les indicateurs de performance clés peuvent être affichés dans des rapports, des portails et des tableaux de bord, à travers des API d'accès aux données, des outils [!INCLUDE[msCoName](../includes/msconame-md.md)] et des outils de fournisseurs tiers. Les indicateurs de performance clés sont des wrappers de métadonnées autour de mesures ordinaires et d'autres expressions MDX (Multidimensional Expressions). Pour plus d’informations, consultez [Indicateurs de performance clés &#40;KPI&#41; dans les modèles multidimensionnels](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbac2e675a08bbcdba6a43727e3de6896a52e56c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076540"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536901"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurer le stockage de chaînes pour des dimensions et des partitions
   Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
@@ -24,7 +23,7 @@ ms.locfileid: "66076540"
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1050**|Spécifie l'architecture de stockage de chaînes par défaut, assujettie à une limite de taille de fichier de 4 Go par magasin.|  
 |**1100**|Spécifie le stockage de chaînes plus important, prend en charge jusqu'à 4 milliards de chaînes uniques par magasin.|  
@@ -36,7 +35,7 @@ ms.locfileid: "66076540"
   
 -   [À propos des magasins de chaînes](#bkmk_background)  
   
--   [Conditions préalables](#bkmk_prereq)  
+-   [Composants requis](#bkmk_prereq)  
   
 -   [Étape 1 : définir la propriété StringStoreCompatiblityLevel dans les outils de données SQL Server](#bkmk_step1)  
   

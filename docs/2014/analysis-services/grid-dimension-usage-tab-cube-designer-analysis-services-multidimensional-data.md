@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d14dced8054edc2f744d309e6c8f0d8d4966c79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080807"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544284"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grille (onglet Utilisation de la dimension, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Grille** de l'onglet **Utilisation de la dimension** du Concepteur de cube pour afficher et modifier les relations de dimension entre des dimensions d'un cube et des groupes de mesures. Chaque relation de dimension est représentée sous forme d'une cellule d'une grille dans laquelle les groupes de mesures figurent en colonnes et les dimensions en lignes.  

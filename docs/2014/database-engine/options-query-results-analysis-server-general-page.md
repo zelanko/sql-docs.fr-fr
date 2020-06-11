@@ -12,17 +12,17 @@ ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 0f5588e897c730663540ba2e4aa1fa60bbb3fe13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caef9e71dedb4b974f05e1e7fbca861ec51f3585
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089319"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856511"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>Options (résultats de la requête-Analysis Server-page général)
   Cette page permet de déterminer le comportement par défaut de la fenêtre des résultats des requêtes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour afficher ces paramètres, sélectionnez **Options** dans le menu **Outils** . Dans le dossier **Résultats de la requête** , développez le sous-dossier **Serveur d'analyse** , puis cliquez sur **Général**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Afficher les grilles dans des onglets séparés**  
  Les jeux de résultats multiples apparaissent en tant que documents séparés accessibles par le biais des onglets de la fenêtre du document, plutôt que sous forme de documents séquentiels dans le volet des résultats.  
   

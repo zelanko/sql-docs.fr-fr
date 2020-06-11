@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b437016cc29b2e4a85f781e3a422fb40c70f37c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5601a3ddfa7075ed53330e12c260af88648db990
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546391"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Utilisation de l'instruction DRILLTHROUGH pour récupérer des données sources (MDX)
   L’instruction MDX (Multidimensional Expressions) utilise l’instruction [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)pour récupérer un ensemble de lignes à partir des données sources d’une cellule d’un cube.  

@@ -10,12 +10,12 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44282a8495bdefc9c817de1bd8340bca1379944c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678473"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857741"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Propriétés de SQL Server (onglet Haute disponibilité AlwaysOn)
   Utilisez l'onglet **Haute disponibilité AlwaysOn** de la boîte de dialogue **Propriétés de SQL Server** du Gestionnaire de configurations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour activer ou désactiver la fonctionnalité Groupes de disponibilité AlwaysOn de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'activation de Groupes de disponibilité AlwaysOn est une condition préalable nécessaire pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour utiliser les groupes de disponibilité comme solution de haute disponibilité et de récupération d'urgence.  
@@ -48,7 +48,7 @@ ms.locfileid: "62678473"
     > [!TIP]  
     >  Après avoir désactivé Groupes de disponibilité AlwaysOn, supprimez les réplicas de disponibilité locales de l'instance de serveur. Si vous supprimez la dernière réplica d'un groupe de disponibilité donné, supprimez également le groupe.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
   
 > [!NOTE]  
 >  Pour plus d'informations sur le suivi après la désactivation de Groupes de disponibilité AlwaysOn et la procédure à suivre pour créer et configurer des groupes de disponibilité, consultez la documentation en ligne de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86057c14655b3fd2f0322387beb16a4a94717b68
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545261"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partitions (Analysis Services - Données multidimensionnelles)
   Une partition est un conteneur d'une portion des données d'un groupe de mesures. Les partitions ne sont pas considérées comme des requêtes MDX ; toutes les requêtes reflètent le contenu entier du groupe de mesures, indépendamment du nombre de partitions défini pour le groupe de mesures. Le contenu des données d'une partition est défini par les liaisons de requête de la partition et par l'expression de découpage.  

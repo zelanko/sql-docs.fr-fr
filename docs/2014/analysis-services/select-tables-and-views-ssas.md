@@ -12,12 +12,12 @@ ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf29721888fb672c242baa8a5984da4de40cd020
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069239"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858135"
 ---
 # <a name="select-tables-and-views-ssas"></a>Sélectionner des tables et des vues (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de sélectionner les tables et les vues à partir desquelles vous voulez importer des données. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -26,7 +26,7 @@ ms.locfileid: "66069239"
   
  Pour les sources de données qui utilisent l'Authentification Windows, les informations d'identification de l'utilisateur actuel sont utilisées pour extraire les tables et les vues dans la boîte de dialogue Sélectionner des tables et des vues. Pour d'autres sources de données, les informations d'identification fournies dans la chaîne de connexion sont utilisées pour extraire les données.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Serveur**  
  Affiche le serveur auquel vous êtes connecté.  
   

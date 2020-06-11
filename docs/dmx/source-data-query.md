@@ -1,24 +1,24 @@
 ---
-title: '&lt;requête&gt; de données source | Microsoft Docs'
+title: '&lt;requête de données source &gt; | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892342"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670014"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;requête de données sources&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Pour effectuer l’apprentissage d’un modèle d’exploration de données et créer des prédictions à partir d’un modèle d’exploration de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données, vous devez accéder aux données qui sont externes à la base de données. Vous utilisez la \<clause de> de requête de données source dans les extensions DMX (Data Mining Extensions) pour définir ces données externes. L' [insertion dans &#40;&#41;DMX ](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), et [Select from Natural PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) States use ** \<source Data Query>**.  
+  Pour effectuer l’apprentissage d’un modèle d’exploration de données et créer des prédictions à partir d’un modèle d’exploration de données, vous devez accéder aux données qui sont externes à la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Vous utilisez la \< clause de> de requête de données source dans les extensions DMX (Data Mining Extensions) pour définir ces données externes. L' [insertion dans &#40;&#41;DMX ](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), et [Select from Natural PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) states use ** \< source Data Query>**.  
   
 ## <a name="query-types"></a>Types de requêtes  
  Les trois méthodes les plus courantes pour spécifier les données source sont :  

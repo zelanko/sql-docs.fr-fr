@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad5674f576f7a6cf42b396d3e76db457f068e1ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077250"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544761"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modifier la propriété KeyColumn d'un attribut
   Vous pouvez modifier la propriété **KeyColumns** d'un attribut. Par exemple, vous souhaiterez peut-être spécifier une clé composite plutôt qu'une clé unique comme clé de l'attribut.  
@@ -34,7 +33,7 @@ ms.locfileid: "66077250"
   
          -ou-  
   
-    -   Dans le concepteur de cube, sous l’onglet **structure de cube** , développez la dimension de cube dans le volet **dimensions** , puis cliquez sur ** \<modifier la dimension>**.  
+    -   Dans le concepteur de cube, sous l’onglet **structure de cube** , développez la dimension de cube dans le volet **dimensions** , puis cliquez sur **modifier \<dimension> **.  
   
 3.  Sous l'onglet **Structure de dimension** , dans le volet **Attributs** , cliquez sur l'attribut dont vous souhaitez modifier la propriété **KeyColumns** .  
   

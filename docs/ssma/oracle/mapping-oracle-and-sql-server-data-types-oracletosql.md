@@ -1,5 +1,6 @@
 ---
 title: Mappage de types de données Oracle et SQL Server (OracleToSQL) | Microsoft Docs
+description: Découvrez comment personnaliser les mappages SSMA pour Oracle entre les types de données Oracle et SQL Server ou accepter la valeur par défaut.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262959"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293833"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mappage de types de données Oracle et SQL Server (OracleToSQL)
-Les types de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données Oracle diffèrent des types de base de données. Lorsque vous convertissez des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données Oracle en objets, vous devez spécifier comment mapper des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]types de données d’Oracle vers. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
+Les types de base de données Oracle diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier comment mapper des types de données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
 SSMA possède un ensemble de mappages de types de données par défaut. Pour obtenir la liste des mappages par défaut, consultez [paramètres du projet &#40;mappage de Type&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -51,7 +52,7 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
 2.  Pour ajouter un nouveau mappage, procédez comme suit :  
   
-    1.  Cliquez sur **Ajouter**.  
+    1.  Cliquez sur **Add**.  
   
     2.  Sous **type de source**, sélectionnez le type de données Oracle à mapper.  
   

@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771321"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627177"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Crée une entrée dans la table [sys. sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) (le cas échéant), marque l’entrée de serveur en tant que serveur de distribution et stocke les informations de propriété. Cette procédure stockée est exécutée sur la base de données master du serveur de distribution pour enregistrer et marquer le serveur en tant que serveur de distribution. Dans le cas d'un serveur de distribution distant, la procédure stockée est également exécutée sur le serveur de publication à partir de la base de données master.  
+  Crée une entrée dans la table [sys.sys](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) Servers (le cas échéant), marque l’entrée de serveur en tant que serveur de distribution et stocke les informations de propriété. Cette procédure stockée est exécutée sur la base de données master du serveur de distribution pour enregistrer et marquer le serveur en tant que serveur de distribution. Dans le cas d'un serveur de distribution distant, la procédure stockée est également exécutée sur le serveur de publication à partir de la base de données master.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,10 @@ sp_adddistributor [ @distributor= ] 'distributor'
   
 ## <a name="arguments"></a>Arguments  
 `[ @distributor = ] 'distributor'`Nom du serveur de distribution. *Distributor* est de **type sysname**, sans valeur par défaut. Ce paramètre est uniquement utilisé lors de la configuration d'un serveur de distribution distant. Elle ajoute des entrées pour les propriétés du serveur de distribution dans la base de données **msdb. Table MSdistributor** .  
-  
+
+> [!NOTE]
+> Le nom du serveur peut être spécifié sous la forme `<Hostname>,<PortNumber>` . Vous devrez peut-être spécifier le numéro de port de votre connexion lorsque SQL Server est déployé sur Linux ou Windows avec un port personnalisé, et que le service Browser est désactivé.
+
 `[ @heartbeat_interval = ] heartbeat_interval`Nombre maximal de minutes pendant lesquelles un agent peut se connecter sans enregistrer de message de progression. *heartbeat_interval* est de **type int**, avec une valeur par défaut de 10 minutes. Un travail de l'Agent SQL Server est créé et s'exécute pendant cet intervalle de temps pour contrôler l'état des agents de réplication en cours d'exécution.  
   
 `[ @password = ] 'password']`Mot de passe de la connexion **distributor_admin** . *Password* est de **type sysname**, avec NULL comme valeur par défaut. Si le mot de passe est NULL ou est une chaîne vide, une valeur aléatoire est redéfinie pour lui. Le mot de passe doit être configuré lors de l'ajout du premier serveur de distribution distant. **distributor_admin** connexion et le *mot de passe* sont stockés pour l’entrée de serveur lié utilisée pour une connexion RPC du serveur de *distribution* , y compris les connexions locales. Si le serveur de *distribution* est local, le mot de passe de **distributor_admin** est défini sur une nouvelle valeur. Pour les serveurs de publication disposant d’un serveur de distribution distant, la même valeur de *mot de passe* doit être spécifiée lors de l’exécution de **sp_adddistributor** sur le serveur de publication et le serveur de distribution. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) peut être utilisé pour modifier le mot de passe du serveur de distribution.  

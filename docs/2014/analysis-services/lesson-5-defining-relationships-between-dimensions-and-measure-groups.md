@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 250c1ec9e384eaac7613cb15ae51d0bf9c982245
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078419"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542701"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures
   Au cours des leçons précédentes de ce didacticiel, vous avez appris que des dimensions de base de données ajoutées à un cube pouvaient être utilisées comme base pour une ou plusieurs dimensions de cube. Au cours de cette leçon, vous allez apprendre à définir différents types de relations entre des dimensions de cube et des groupes de mesures et à spécifier les propriétés de ces relations.  

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893107"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669949"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Expression qui retourne une table, telle qu’une référence \<de colonne de table>, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’une \< référence de colonne de table>, ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
  \<expression de table>  
   
 ## <a name="remarks"></a>Notes  
- La valeur fournie par l' \<expression de classement> argument détermine l’ordre de classement décroissant des lignes fournies dans l' \<expression de table> argument, et le nombre de lignes supérieures spécifié dans l' \<argument Count> est retourné.  
+ La valeur fournie par l’expression de \< classement> argument détermine l’ordre de classement décroissant des lignes fournies dans l' \< expression de table> argument, et le nombre de lignes supérieures spécifié dans l' \< argument Count> est retourné.  
   
  La fonction TopCount a été introduite à l’origine pour activer les prédictions associatives et, en général, produit les mêmes résultats qu’une instruction qui comprend des clauses **SELECT TOP** et **order by** . Vous obtiendrez de meilleures performances pour les prédictions associatives si vous utilisez la fonction **Predict (DMX)** , qui prend en charge la spécification d’un certain nombre de prédictions à retourner.  
   

@@ -1,7 +1,7 @@
 ---
 title: sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22957ce497f47c56ace0f264cc2068014a2f43af
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820698"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627378"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 `[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
 `[ @subscriber = ] 'subscriber'`Nom de l’instance de l’abonné ou nom de l’écouteur GA si la base de données de l’abonné est un groupe de disponibilité. *Subscriber* est de **type sysname**, avec NULL comme valeur par défaut. 
-  
+
+> [!NOTE]
+> Le nom du serveur peut être spécifié sous la forme `<Hostname>,<PortNumber>` . Vous devrez peut-être spécifier le numéro de port de votre connexion lorsque SQL Server est déployé sur Linux ou Windows avec un port personnalisé, et que le service Browser est désactivé.
+
 `[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db* est de **type sysname**, avec NULL comme valeur par défaut. Pour un abonné non-SQL Server, spécifiez la valeur **(destination par défaut)** pour *subscriber_db*.  
   
 `[ @subscriber_security_mode = ] subscriber_security_mode`Mode de sécurité à utiliser lors de la connexion à un abonné au cours d’une synchronisation. *subscriber_security_mode* est de **type int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. **1** spécifie l’authentification Windows.  

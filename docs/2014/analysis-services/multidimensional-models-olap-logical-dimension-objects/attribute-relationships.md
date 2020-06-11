@@ -23,16 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 122638a2728a8a85ee58661196797383da20eef8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728515"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545202"
 ---
 # <a name="attribute-relationships"></a>Relations d’attributs
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les attributs d’une dimension sont toujours liés directement ou indirectement à l’attribut de clé. Quand vous définissez une dimension basée sur un schéma en étoile, c'est-à-dire quand tous les attributs de la dimension sont dérivés de la même table relationnelle, une relation d'attribut est automatiquement définie entre l'attribut clé et chaque attribut non-clé de la dimension. Quand vous définissez une dimension basée sur un schéma en flocon, où les attributs de la dimension sont dérivés de plusieurs tables liées, une relation d'attribut est automatiquement définie comme suit :  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les attributs d’une dimension sont toujours liés directement ou indirectement à l’attribut de clé. Quand vous définissez une dimension basée sur un schéma en étoile, c'est-à-dire quand tous les attributs de la dimension sont dérivés de la même table relationnelle, une relation d'attribut est automatiquement définie entre l'attribut clé et chaque attribut non-clé de la dimension. Quand vous définissez une dimension basée sur un schéma en flocon, où les attributs de la dimension sont dérivés de plusieurs tables liées, une relation d'attribut est automatiquement définie comme suit :  
   
 -   entre l'attribut clé et chaque attribut non-clé lié aux colonnes de la table de dimension principale ;  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62728515"
   
 -   Sexe  
   
--   Courrier électronique  
+-   E-mail  
   
 -   City  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62728515"
   
  La propriété `SourceAttribute` d'un niveau détermine l'attribut utilisé pour décrire le niveau. La propriété `KeyColumns` de l'attribut spécifie la colonne de la vue de source de données qui fournit les membres. La propriété `NameColumn` de l'attribut peut spécifier une colonne de nom différente pour les membres.  
   
- Pour définir un niveau dans une hiérarchie définie par l’utilisateur [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]à l’aide de, le **Concepteur de dimensions** vous permet de sélectionner un attribut de dimension, une colonne dans une table de dimension ou une colonne d’une table associée incluse dans la vue de source de données pour le cube. Pour plus d’informations sur la création de hiérarchies définies par l’utilisateur, consultez [créer des hiérarchies définies par l’utilisateur](../multidimensional-models/user-defined-hierarchies-create.md).  
+ Pour définir un niveau dans une hiérarchie définie par l’utilisateur à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , le **Concepteur de dimensions** vous permet de sélectionner un attribut de dimension, une colonne dans une table de dimension ou une colonne d’une table associée incluse dans la vue de source de données pour le cube. Pour plus d’informations sur la création de hiérarchies définies par l’utilisateur, consultez [créer des hiérarchies définies par l’utilisateur](../multidimensional-models/user-defined-hierarchies-create.md).  
   
  Dans Analysis Services, une hypothèse est généralement faite à propos du contenu des membres. Les membres feuilles n'ont pas de descendants et contiennent des données dérivées des sources de données sous-jacentes. Les membres non-feuilles ont des descendants et contiennent des données dérivées des agrégations effectuées sur les membres enfants. Dans les niveaux agrégés, les membres sont basés sur les agrégations des niveaux inférieurs. Par conséquent, quand la propriété `IsAggregatable` est définie à `False` sur un attribut source pour un niveau, aucun attribut pouvant faire l'objet d'une agrégation ne peut être ajouté en tant que niveau au dessus de cet attribut.  
   

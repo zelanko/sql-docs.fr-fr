@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7288979fdba0752149d8bdc6491e8c51cdebedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071677"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547511"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Connecter une application de service PowerPivot à une application Web SharePoint dans l'Administration centrale
   Une application de service PowerPivot peut être utilisée par les applications Web SharePoint de la batterie de serveurs. Pour rendre une application de service PowerPivot disponible, vous devez l'ajouter à une liste d'association de services.  
@@ -57,7 +56,7 @@ ms.locfileid: "66071677"
   
 6.  Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer et configurer une application de service PowerPivot dans l’administration centrale](create-and-configure-power-pivot-service-application-in-ca.md)   
  [Configuration initiale &#40;PowerPivot pour SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   

@@ -12,17 +12,17 @@ ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8af37661cb3676eaeb13db0c35b1e70b2f23ec1a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 49dca5c5bc2f1f4f9d84a17a57035b0d9e553ac1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000781"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856839"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Options (exécution de la requête-Analysis Server-page général)
   Cette page vous permet de spécifier les options d'exécution des requêtes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour afficher ces paramètres, dans le menu **Outils** , cliquez sur **Options**. Sous **Exécution de la requête** , développez le dossier **Serveur d'analyse** , puis cliquez sur **Général**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Délai d’exécution**  
  Définit la valeur par défaut dans la boîte de dialogue **Nouvelle connexion** . Cette zone spécifie le nombre de secondes à attendre avant d'annuler la requête. La valeur 0 indique une attente infinie ou aucun délai d’attente. Cette valeur est 0 sur une nouvelle installation.  
   

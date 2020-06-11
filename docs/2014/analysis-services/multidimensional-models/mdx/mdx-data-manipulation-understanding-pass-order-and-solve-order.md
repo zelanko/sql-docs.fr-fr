@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92ccd9d1eeb05272a95c6f429f8c756bcb0022e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229428"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546371"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Présentation des concepts d'ordre de passage et d'ordre de résolution (MDX)
   Lorsqu'un cube est calculé dans le cadre d'un script MDX, il peut subir de nombreuses étapes de calcul, en fonction de l'utilisation de diverses fonctionnalités liées au calcul. Chacune de ces étapes porte le nom de test de calcul.  

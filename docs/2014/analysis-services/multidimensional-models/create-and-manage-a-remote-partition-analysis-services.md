@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076254"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536121"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Créer et gérer une partition distante (Analysis Services)
   Lorsque vous partitionnez un groupe de mesures, vous pouvez configurer une base de données secondaire sur une instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme stockage de partition.  
@@ -80,7 +79,7 @@ ms.locfileid: "66076254"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Définir la propriété de base de données MasterDataSourceID sur le serveur distant (dans SSMS)  
   
-1.  Sur le serveur subordonné : cliquez avec le bouton droit sur la base de données de stockage, DB-Storage, pointez sur créer une **base de données de script en tant que** | **modifier** | la fenêtre de l'**éditeur de requête**.  
+1.  Sur le serveur subordonné : cliquez avec le bouton droit sur la base de données de stockage, DB-Storage, pointez sur créer une **base de données de script en tant que**  |  **modifier**la fenêtre de l'  |  **éditeur de requête**.  
   
 2.  Ajoutez **MasterDataSourceID** à XMLA, puis spécifiez l’ID de la base de données de cube, db-master, comme valeur. Le code XMLA doit ressembler à ce qui suit.  
   
