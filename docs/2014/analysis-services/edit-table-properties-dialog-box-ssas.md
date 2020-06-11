@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bb8afc256881c96f70a3dd53a31e75c8fa2b5ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081438"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528445"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Modifier les propriétés de la table, boîte de dialogue (SSAS)
   La boîte de dialogue **Modifier les propriétés de la table** vous permet d'afficher et de modifier les propriétés des tables importées dans le générateur de modèles à l'aide de l'Assistant Importation de table. Pour accéder à cette boîte de dialogue, dans le générateur de modèles, sélectionnez une table, puis cliquez sur le menu **Table** , puis sur **Propriétés de la table**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  Les options proposées dans cette boîte de dialogue diffèrent selon que vous avez initialement importé les données en sélectionnant des tables dans une liste ou en utilisant une requête SQL.  
   
 ## <a name="table-preview-mode"></a>Mode Aperçu de la table  
@@ -47,7 +46,7 @@ ms.locfileid: "66081438"
  |||  
 |-|-|  
 |**Source**|Sélectionnez cette option pour remplacer les noms de colonnes actuels par les noms de colonnes de la table source sélectionnée.|  
-|**Modélisation**|Sélectionnez cette option pour utiliser les noms de colonne actuels tels qu'ils existent dans le modèle.|  
+|**Modèle**|Sélectionnez cette option pour utiliser les noms de colonne actuels tels qu'ils existent dans le modèle.|  
   
  **Actualiser l'aperçu**  
  Cliquez pour examiner les colonnes de données dans la table source actuellement sélectionnée.  
@@ -89,7 +88,7 @@ ms.locfileid: "66081438"
  **Instruction SQL**  
  Affiche l'instruction SQL émise sur la source de données actuelle afin de récupérer des lignes. Par défaut, toutes les lignes sont récupérées, mais vous pouvez récupérer un sous-ensemble de lignes, soit en concevant un filtre, soit en modifiant manuellement l'instruction SQL.  
   
- **Vérification**  
+ **Procéder à la validation**  
  Cliquez pour vérifier que l'instruction est syntaxiquement correcte pour le fournisseur et la source de données sélectionnés.  
   
  **Conception**  

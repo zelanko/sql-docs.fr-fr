@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3232e4344b94e0b812df72ddebdc9a8d389d9f05
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083623"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521365"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression logistique (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR (Microsoft Logistic Regression). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -51,7 +50,7 @@ ms.locfileid: "66083623"
  ATTRIBUTE_NAME  
  Noms de l’attribut correspondant à ce nœud.  
   
-|Nœud|Contenu|  
+|Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -89,7 +88,7 @@ ms.locfileid: "66083623"
  CHILDREN_CARDINALITY  
  Estimation du nombre d'enfants du nœud.  
   
-|Nœud|Contenu|  
+|Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Indique le nombre de nœuds enfants, qui inclut au moins un réseau, un nœud marginal requis et une couche d'entrée requise. Par exemple, si la valeur est égale à 5, il y a trois sous-réseaux.|  
 |Statistiques marginales|Toujours 0.|  
@@ -107,7 +106,7 @@ ms.locfileid: "66083623"
  NODE_DESCRIPTION  
  Description conviviale du nœud.  
   
-|Nœud|Contenu|  
+|Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -120,7 +119,7 @@ ms.locfileid: "66083623"
  NODE_RULE  
  Description XML de la règle incorporée dans le nœud.  
   
-|Nœud|Contenu|  
+|Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -151,7 +150,7 @@ ms.locfileid: "66083623"
  Pour recevoir des informations sur la prise en charge dans les cas d'apprentissage pour des valeurs spécifiques, consultez le nœud des statistiques marginales.  
   
  MSOLAP_MODEL_COLUMN  
- |Nœud|Contenu|  
+ |Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  

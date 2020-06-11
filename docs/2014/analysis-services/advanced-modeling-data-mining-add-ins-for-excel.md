@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6de68fe97c61d90372f77f0fa318221f8f6e3ba7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062737"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528235"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modélisation avancée (Compléments d'exploration de données pour Excel)
   Vous pouvez utiliser les options de modélisation **avancée** des données pour créer des modèles et des structures d’exploration de données personnalisés avec des paramètres différents de ceux créés par les assistants. Les deux Assistants décrits de cette section vous aident à créer une nouvelle structure d'exploration de données et un nouveau modèle d'exploration de données à appliquer à une structure d'exploration de données existante.  
@@ -48,7 +47,7 @@ ms.locfileid: "66062737"
   
 -   Analyse d'association sur les jeux de données imbriqués  
   
- Pour voir quels types de structures d’exploration de données sont disponibles, vous pouvez parcourir les modèles et [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] les structures stockés dans en cliquant sur **gérer les modèles** ou sur **Parcourir**.  
+ Pour voir quels types de structures d’exploration de données sont disponibles, vous pouvez parcourir les modèles et les structures stockés dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en cliquant sur **gérer les modèles** ou sur **Parcourir**.  
   
  Vous êtes limité aux structures d'exploration de données qui ont été créées pendant la session active, ou aux structures d'exploration de données qui ont été enregistrées dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   

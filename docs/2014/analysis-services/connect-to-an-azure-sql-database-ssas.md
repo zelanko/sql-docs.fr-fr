@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9032249e880f11f27edd53e23d4ca54a47b920db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73b15dd890f9bd6e00d61fa0507546c561425d8a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087150"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527045"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Connexion à une base de données Azure SQL Database (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de vous connecter à un [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -30,7 +29,7 @@ ms.locfileid: "66087150"
 > [!NOTE]  
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'une base de données sur cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   

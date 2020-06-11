@@ -1,5 +1,6 @@
 ---
 title: Utiliser des fonctions booléennes dans des requêtes XPath (SQLXML)
+description: Découvrez comment les fonctions booléennes SQLXML 4,0 true (), false () et not () sont spécifiées dans les requêtes XPath.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1839d9bbf5776457828d39ab4a9242ae8d86631
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252587"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529876"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Spécification de fonctions booléennes dans des requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252587"
 ## <a name="examples"></a>Exemples  
   
 ## <a name="a-specify-the-not-boolean-function"></a>R. Spécifier la fonction booléenne not()  
- Cette requête retourne tous les ** \<éléments enfants>client** du nœud de contexte qui n’ont ** \<pas d’ordre>** éléments enfants :  
+ Cette requête retourne tous les **\<Customer>** éléments enfants du nœud de contexte qui n’ont pas d' **\<Order>** éléments enfants :  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -79,7 +80,7 @@ ms.locfileid: "75252587"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Spécifier les fonctions booléennes true() et false()  
- Cette requête retourne tous les ** \<éléments Customer>** élément enfants du nœud de contexte qui n’ont ** \<pas d’ordre>** les éléments enfants. En termes relationnels, cette requête retourne tous les clients qui n'ont pas passé de commandes.  
+ Cette requête retourne tous les éléments **\<Customer>** enfants du nœud de contexte qui n’ont pas d' **\<Order>** éléments enfants. En termes relationnels, cette requête retourne tous les clients qui n'ont pas passé de commandes.  
   
 ```  
 /child::Customer[child::Order=false()]  

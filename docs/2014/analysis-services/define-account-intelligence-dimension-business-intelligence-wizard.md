@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7976b3a6711425aa9f0e0a454eee74cdfdfaf526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99836d3b224b0c4d07d454d994df684d49d3325a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082173"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528841"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>Définir l'intelligence comptable (Dimension) (Assistant Business Intelligence)
   Utilisez cette page pour sélectionner la dimension, y compris les paramètres de type de dimension et d'attribut, la définition des mesures semi-additives et les autres fonctions, à laquelle vous voulez appliquer l'intelligence comptable.  

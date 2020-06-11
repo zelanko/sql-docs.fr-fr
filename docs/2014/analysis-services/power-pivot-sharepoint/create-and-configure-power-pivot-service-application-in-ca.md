@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a48211455a8ac3de9ef0f4b0c7e2fb3cba5f473
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071581"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540502"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Créer et configurer une application de service PowerPivot dans l'Administration centrale
   Une application de service PowerPivot est une instance de service partagé du service système PowerPivot. Chaque application de service possède une identité d'application, des paramètres de configuration, des propriétés et un système de stockage des données internes qui lui sont propres.  
@@ -57,13 +56,13 @@ ms.locfileid: "66071581"
   
 3.  Sélectionnez **SQL Server application de service PowerPivot**. Si cette option ne s'affiche pas dans la liste, cela signifie que PowerPivot pour SharePoint n'est pas installé ou configuré correctement.  
   
-4.  Dans la page **créer une application de service PowerPivot** , entrez un nom pour l’application. La valeur par défaut\<est PowerPivotServiceApplication Number>. Si vous créez plusieurs applications de service PowerPivot, il est utile d'entrer un nom descriptif pour permettre aux autres administrateurs de savoir comment l'application est utilisée.  
+4.  Dans la page **créer une application de service PowerPivot** , entrez un nom pour l’application. La valeur par défaut est PowerPivotServiceApplication \<number> . Si vous créez plusieurs applications de service PowerPivot, il est utile d'entrer un nom descriptif pour permettre aux autres administrateurs de savoir comment l'application est utilisée.  
   
 5.  Dans Pool d'applications, créez un nouveau pool d'applications pour l'application (recommandé). Sélectionnez ou créez un compte géré pour le pool d'applications. Veillez à spécifier un compte d'utilisateur de domaine. Un compte d'utilisateur de domaine permet l'utilisation de la fonctionnalité Compte géré de SharePoint, qui vous permet de mettre à jour des mots de passe et des informations sur le compte dans un seul emplacement. Des comptes de domaine sont requis si vous prévoyez une montée en puissance parallèle du déploiement incluant des instances de service supplémentaires qui s'exécuteront sous la même identité.  
   
 6.  Dans **Serveur de base de données**, la valeur par défaut est l'instance du moteur de base de données SQL Server qui héberge les bases de données de configuration de la batterie de serveurs. Vous pouvez utiliser ce serveur ou choisir un autre serveur SQL Server.  
   
-7.  Dans **nom de la base de données**, la\<valeur par défaut est PowerPivotServiceApplication1_ GUID>. Vous devez créer une base de données unique pour chaque application de service PowerPivot. Le nom de la base de données par défaut correspond au nom par défaut de l'application de service. Si vous avez entré un nom d'application de service unique, suivez une convention d'affectation des noms similaire pour la base de données afin de pouvoir les gérer ensemble.  
+7.  Dans **nom de la base de données**, la valeur par défaut est PowerPivotServiceApplication1_ \<guid> . Vous devez créer une base de données unique pour chaque application de service PowerPivot. Le nom de la base de données par défaut correspond au nom par défaut de l'application de service. Si vous avez entré un nom d'application de service unique, suivez une convention d'affectation des noms similaire pour la base de données afin de pouvoir les gérer ensemble.  
   
 8.  Dans **Authentification de la base de données**, la valeur par défaut est Authentification Windows. Si vous choisissez **Authentification SQL**, reportez-vous au guide de l'administrateur SharePoint pour des recommandations concernant l'utilisation de ce type d'authentification dans un déploiement SharePoint.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66071581"
   
 4.  Dans **délai de chargement de la base de données**, augmentez ou diminuez la valeur pour modifier la durée pendant laquelle le service PowerPivot attend une réponse de l’instance de SQL Server Analysis Services (PowerPivot) à laquelle il a transféré une demande de chargement de données. Étant donné que l'acheminement sur le réseau des datasets très volumineux prend du temps, vous devez accorder à l'instance de service PowerPivot suffisamment de temps pour récupérer le classeur Excel et déplacer les données PowerPivot vers une instance d'Analysis Services pour le traitement de la requête. Étant donné que les données PowerPivot peuvent être particulièrement volumineuses, la valeur par défaut est 30 minutes.  
   
-5.  Dans **Délai d'attente du pool de connexions**, augmentez ou diminuez la valeur afin de modifier le nombre de minutes pendant lesquelles une connexion de données inactive restera ouverte. La valeur par défaut est 30 minutes. Durant ce laps de temps, le service PowerPivot réutilise une connexion de données inactive pour les demandes en lecture seule provenant du même utilisateur SharePoint pour les mêmes données PowerPivot. Si aucune demande supplémentaire n'est reçue pour ces données pendant la période spécifiée, la connexion est supprimée du pool. Les valeurs valides sont comprises entre 1 et 3600 secondes. Pour plus d’informations sur les pools de connexions, consultez [référence des paramètres de Configuration &#40;PowerPivot pour SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md).  
+5.  Dans **Délai d'attente du pool de connexions**, augmentez ou diminuez la valeur afin de modifier le nombre de minutes pendant lesquelles une connexion de données inactive restera ouverte. La valeur par défaut est de 30 minutes. Durant ce laps de temps, le service PowerPivot réutilise une connexion de données inactive pour les demandes en lecture seule provenant du même utilisateur SharePoint pour les mêmes données PowerPivot. Si aucune demande supplémentaire n'est reçue pour ces données pendant la période spécifiée, la connexion est supprimée du pool. Les valeurs valides sont comprises entre 1 et 3600 secondes. Pour plus d’informations sur les pools de connexions, consultez [référence des paramètres de Configuration &#40;PowerPivot pour SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md).  
   
 6.  Dans **taille maximale du pool**de connexions utilisateur, augmentez ou diminuez la valeur pour modifier le nombre maximal de connexions inactives que le service PowerPivot créera dans les pools de connexions pour chaque utilisateur SharePoint, DataSet PowerPivot et combinaisons de versions.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "66071581"
   
 4.  Dans **modifier le groupe d’associations suivant**, sélectionnez **par défaut** ou **[personnalisé]**.  
   
-5.  Pour **[personnalisé]**, activez la case à cocher en regard de chaque connexion d’application de service que vous souhaitez utiliser. Si vous avez plusieurs applications de service PowerPivot (indiquées par type défini `PowerPivot Service Application Proxy`sur), veillez à en choisir une seule.  
+5.  Pour **[personnalisé]**, activez la case à cocher en regard de chaque connexion d’application de service que vous souhaitez utiliser. Si vous avez plusieurs applications de service PowerPivot (indiquées par type défini sur `PowerPivot Service Application Proxy` ), veillez à en choisir une seule.  
   
 6.  Cliquez sur **OK**.  
   

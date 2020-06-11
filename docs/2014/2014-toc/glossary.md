@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f55c4388fdc75eb531e74ffb6ffc5f24804c163
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67412694"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528295"
 ---
 # <a name="glossary"></a>Glossaire
 
@@ -52,7 +51,7 @@ ms.technology:
 |ADOMD.NET|Fournisseur de données managées .NET qui permet d'accéder à des sources de données multidimensionnelles, par exemple Microsoft SQL Server Analysis Services.|  
 |fonction d'agrégation|Fonction qui effectue un calcul sur plusieurs valeurs et retourne une valeur unique.|  
 |requête d'agrégation|Requête (instruction SQL) qui synthétise les informations de plusieurs lignes en incluant une fonction d'agrégation telle que Sum ou Avg.|  
-|agrégation|Table ou structure qui contient des données précalculées pour un cube de traitement analytique en ligne (OLAP). Les agrégations prennent en charge l'interrogation rapide et efficace d'une base de données multidimensionnelle.|  
+|aggregation|Table ou structure qui contient des données précalculées pour un cube de traitement analytique en ligne (OLAP). Les agrégations prennent en charge l'interrogation rapide et efficace d'une base de données multidimensionnelle.|  
 |préfixe d'agrégation|Chaîne associée à un identificateur défini par le système afin de créer le nom unique de la table d'agrégation d'une partition.|  
 |wrapper d'agrégation|Wrapper qui encapsule un objet COM dans un autre objet COM.|  
 |alias|Autre étiquette pour certains objets, tels qu'un fichier ou une collection de données.|  
@@ -81,7 +80,7 @@ ms.technology:
 |tableau associatif|Tableau composé d'une collection de clés et d'une collection de valeurs, où chaque clé est associée à une seule valeur. Les clés et valeurs peuvent être de n'importe quel type.|  
 |flux Atom|Structure XML qui contient des métadonnées relatives au contenu, telles que la version linguistique et la date de dernière modification du contenu, et qui est envoyée aux abonnés à l'aide du protocole de publication Atom (AtomPub).|  
 |atomique|Qui concerne une opération dans laquelle toutes les modifications de données de transaction doivent être effectuées ; toutes les modifications de données de transaction sont effectuées ou aucune ne l'est.|  
-|attribut|Caractéristique unique ou information supplémentaire (financière ou non financière) qui existe dans une base de données.|  
+|Attribut|Caractéristique unique ou information supplémentaire (financière ou non financière) qui existe dans une base de données.|  
 |hiérarchie d'attribut|Hiérarchie plate (ayant généralement un niveau Tous et un niveau membre) qui contient un attribut unique. Elle est créée à partir d'une colonne d'une table de dimension, si elle est prise en charge par le cube.|  
 |relation d'attribut|Hiérarchie associée à un attribut qui contient un niveau unique en fonction de la colonne correspondante dans une table de dimension.|  
 |type d'attribut|Type d'informations contenues par un attribut, telles que les trimestres ou les mois dans une dimension de temps, qui peut permettre un traitement spécifique par le serveur et les applications clientes.|  
@@ -111,7 +110,7 @@ ms.technology:
 |block|Instruction Transact-SQL délimitée par BEGIN et END.|  
 |curseur de bloc|Curseur dont la taille d'ensemble de lignes est supérieure à 1.|  
 |transaction bloquante|Transaction qui provoque l'échec d'une autre transaction.|  
-|expression booléenne|Expression qui donne une valeur booléenne (true ou false). De telles expressions peuvent impliquer des comparaisons (testant l’égalité des valeurs ou, pour les valeurs \< non booléennes, la relation [inférieur à] ou > [supérieur à]) et la combinaison logique (à l’aide d’opérateurs booléens tels que and, or et XOR) d’expressions booléennes.|  
+|expression booléenne|Expression qui donne une valeur booléenne (true ou false). De telles expressions peuvent impliquer des comparaisons (testant l’égalité des valeurs ou, pour les valeurs non booléennes, la \< [less than] or > relation [supérieur à]) et la combinaison logique (à l’aide d’opérateurs booléens tels que and, or et XOR) d’expressions booléennes.|  
 |opérateur booléen|Opérateur conçu pour fonctionner avec des valeurs booléennes. Les quatre opérateurs booléens les plus courants en programmation sont AND (conjonction logique), OR (inclusion logique), XOR (OR exclusif) et NOT (négation logique).|  
 |flux de données dépendant|Flux d'événements qui contient toutes les informations nécessaires pour produire des événements. Les informations sont une source de données déjà instanciée, ou les informations sont suffisantes pour permettre au serveur StreamInsight de démarrer la source de données.|  
 |cadre englobant|Zone rectangulaire la plus petite autour d'un tracé, d'une forme ou d'un groupe d'objets.|  
@@ -163,7 +162,7 @@ ms.technology:
 |vue Carrousel|Dans la Galerie PowerPivot, vue spécialisée où la zone d'aperçu est centrée et où les miniatures qui précèdent et suivent immédiatement la miniature actuelle sont adjacentes à la zone d'aperçu.|  
 |suppression en cascade|Pour les relations qui appliquent l'intégrité référentielle entre les tables, suppression de tous les enregistrements associés dans la ou les tables associées lorsqu'un enregistrement dans la table primaire est supprimé.|  
 |mise à jour en cascade|Pour les relations qui appliquent l'intégrité référentielle entre les tables, mise à jour de tous les enregistrements associés dans la ou les tables associées lorsqu'un enregistrement dans la table primaire est modifié.|  
-|cas|Vue abstraite des données caractérisée par des attributs et des relations avec d'autres cas.|  
+|casse|Vue abstraite des données caractérisée par des attributs et des relations avec d'autres cas.|  
 |clé de cas|Élément d'un cas permettant de référencer le cas dans un ensemble de cas.|  
 |affichages catalogue|Vues intégrées formant le catalogue système de SQL Server.|  
 |erreur grave|Erreur qui provoque l'échec soudain du système ou d'un programme sans espoir de récupération. Une exception non interceptée qui ne peut pas être gérée est un exemple d'erreur irrécupérable.|  
@@ -296,7 +295,7 @@ ms.technology:
 |conflit de concurrence|Conflit qui se produit lorsque le même élément ou la même unité de modification est modifié sur deux réplicas différents qui sont ensuite synchronisés.|  
 |modèle de concurrence|Moyen par lequel une application peut être conçue pour prendre en compte des opérations simultanées qui utilisent les mêmes données en mémoire cache. Windows Server AppFabric prend en charge les modèles de concurrence optimistes et pessimistes.|  
 |opération simultanée|Opération de l'ordinateur dans laquelle au moins deux processus (programmes) ont accès au temps du microprocesseur et sont, par conséquent, effectués presque simultanément. Étant donné qu'un microprocesseur peut fonctionner avec des unités de temps beaucoup plus petites que ce que les gens peuvent percevoir, les processus simultanés semblent avoir lieu simultanément mais ce n'est en réalité pas le cas.|  
-|expression conditionnelle|Expression qui donne une valeur booléenne (true ou false). De telles expressions peuvent impliquer des comparaisons (testant l’égalité des valeurs ou, pour les valeurs \< non booléennes, la relation [inférieur à] ou > [supérieur à]) et la combinaison logique (à l’aide d’opérateurs booléens tels que and, or et XOR) d’expressions booléennes.|  
+|expression conditionnelle|Expression qui donne une valeur booléenne (true ou false). De telles expressions peuvent impliquer des comparaisons (testant l’égalité des valeurs ou, pour les valeurs non booléennes, la \< [less than] or > relation [supérieur à]) et la combinaison logique (à l’aide d’opérateurs booléens tels que and, or et XOR) d’expressions booléennes.|  
 |fractionnement conditionnel|Restauration d'une sauvegarde de base de données complète, de la sauvegarde de base de données différentielle la plus récente (le cas échéant) et des sauvegardes de fichiers journaux (le cas échéant) effectuées depuis la sauvegarde de base de données complète.|  
 |fichier config|Fichier qui contient les spécifications de fonctionnement destinées à l'ordinateur d'un composant matériel ou logiciel, ou qui contient des informations sur un autre fichier ou sur un utilisateur spécifique, telles que l'ID de connexion de l'utilisateur.|  
 |configuration|En référence à un micro-ordinateur unique, somme des composants internes et externes d'un système, y compris la mémoire, les lecteurs de disques, le clavier, la vidéo et le matériel additionnel habituellement moins critique, tel qu'une souris, un modem ou une imprimante. Des logiciels (système d'exploitation et différents pilotes de périphériques), des choix de l'utilisateur établis via des fichiers de configuration tels que les fichiers AUTOEXEC.BAT et CONFIG.SYS sur les PC IBM et compatibles, et parfois du matériel (commutateurs et cavaliers), sont nécessaires pour « configurer la configuration » afin que l'ordinateur fonctionne correctement. Bien que la configuration du système puisse être modifiée, comme en ajoutant plus de mémoire ou de capacité du disque, la structure de base du système (son architecture) reste inchangée.|  
@@ -559,7 +558,7 @@ ms.technology:
 |événement session|Événement dont la charge utile d'événement est valide pour un intervalle donné ; toutefois, seule l'heure de début est connue à l'arrivée sur le serveur CEP. L'heure de fin valide de l'événement est fournie ultérieurement dans un événement session distinct.|  
 |stratégie actuelle|Ensemble de stratégies activées pour une cible.|  
 |courrier électronique|Échange de messages texte et de fichiers d'ordinateur via un réseau de communication, tel qu'un réseau local ou Internet.|  
-|le chiffrement|Processus de conversion de données lisibles (texte en clair) en un format codé (texte chiffré) pour empêcher leur lecture par une partie non autorisée.|  
+|chiffrement|Processus de conversion de données lisibles (texte en clair) en un format codé (texte chiffré) pour empêcher leur lecture par une partie non autorisée.|  
 |clé de chiffrement|Chaîne binaire utilisée en association avec un algorithme de chiffrement pour chiffrer et déchiffrer des données.|  
 |extrémité de fin|Pour les tracés qui contiennent des fins non connectées, telles que des lignes, fin d'un trait. Vous pouvez modifier l'apparence du trait à chaque extrémité en appliquant l'un de quatre styles d'extrémité de fin : extrémité plate, extrémité arrondie, extrémité carrée et extrémité triangulaire.|  
 |endpoint|Fournisseur de synchronisation et son réplica associé.|  
@@ -585,7 +584,7 @@ ms.technology:
 |catégorie d'événement|Dans Trace SQL, regroupement de classes d'événements semblables et associées de façon logique.|  
 |chronique d'événements|Table qui stocke des informations sur l'état des événements.|  
 |règle de chronique d'événements|Une ou plusieurs instructions Transact-SQL qui gèrent les données dans la chronique d'événements.|  
-|classe d'événements|Dans Trace SQL, collection de propriétés qui définissent un événement.|  
+|event, classe|Dans Trace SQL, collection de propriétés qui définissent un événement.|  
 |classification des événements|Moyen de différencier des types des événements qui se produisent sur le client de cache et sur l'hôte de cache. Les récepteurs de journaux Windows Server AppFabric suivent la classification établie avec l'énumération System.Diagnostics.TraceLevel.|  
 |procédures stockées de collection d'événements|Procédures stockées générées par le système qu'une application peut appeler pour soumettre des événements à la table d'événement de la base de données d'application.|  
 |gestionnaire d'événements|Routine logicielle qui s'exécute en réponse à un événement.|  
@@ -817,7 +816,7 @@ ms.technology:
 |événement intervalle|Événement dont la charge utile est valide pour une période de temps donnée. Les métadonnées de l'événement intervalle requièrent que l'heure de début et l'heure de fin de l'intervalle soient toutes les deux fournies. Les événements intervalle sont uniquement valides pour cet intervalle spécifique.|  
 |modèle d'événement intervalle|Modèle d'événement d'un événement intervalle.|  
 |opération d'appel|Opération de domaine qui est exécutée sans suivi ou exécution différée.|  
-|Adresse IP|Nombre binaire qui identifie de façon unique un hôte (ordinateur) connecté à Internet auprès d'autres hôtes Internet, pour les besoins d'une communication via le transfert de paquets.|  
+|Adresse IP|Nombre binaire qui identifie de façon unique un hôte (ordinateur) connecté à Internet auprès d'autres hôtes Internet, pour les besoins d'une communication via le transfert de paquets.|  
 |IPC|Capacité d'une tâche ou d'un processus à communiquer avec une autre tâche ou un autre processus dans un système d'exploitation multitâche. Parmi les méthodes courantes figurent des canaux, les sémaphores, la mémoire partagée, les files d'attente, les signaux et les boîtes aux lettres.|  
 |IPsec|Ensemble de services et protocoles standard basés sur le chiffrement, qui contribuent à protéger les données sur un réseau.|  
 |niveau d'isolement|Propriété d'une transaction qui détermine le degré d'isolement des données, en vue de leur utilisation par un processus, et de protection contre toute interférence avec d'autres processus.|  
@@ -971,7 +970,7 @@ ms.technology:
 |algorithme MSC (Microsoft Sequence Clustering)|Algorithme combinant l'analyse et le clustering des séquences, ce qui permet d'identifier les clusters d'événements classés de façon semblable dans une séquence. Les clusters peuvent être utilisés pour prédire le classement d'événements dans une séquence selon des caractéristiques connues.|  
 |Importation des données d'utilisation de Microsoft SharePoint Foundation|Travail du minuteur par défaut pour SharePoint Foundation qui importe les fichiers journaux d'utilisation dans la base de données de journalisation.|  
 |Microsoft SharePoint Server|Famille de serveurs portail d'entreprise Microsoft, basée sur Windows SharePoint Services, utilisée pour agréger des sites, des informations et des applications SharePoint dans un seul portail.|  
-|Microsoft SQL Server|Famille de systèmes de gestion et d'analyse de base de données relationnelle Microsoft pour les solutions de commerce électronique, métier et d'entreposage de données.|  
+|Microsoft SQL Server|Famille de systèmes de gestion et d'analyse de base de données relationnelle Microsoft pour les solutions de commerce électronique, métier et d'entreposage de données.|  
 |Microsoft SQL Server 2008 Express|Version allégée et intégrable de Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Système de conception et de gestion de base de données relationnelle Microsoft pour les solutions de commerce électronique, métier et d'entreposage de données.|  
 |Microsoft SQL Server 2008 Express with Tools|Version gratuite et conviviale de la plateforme de données SQL Server Express qui inclut l'outil de gestion graphique SQL Server Management Studio (SMSS) Express.|  
@@ -1340,7 +1339,7 @@ ms.technology:
 |schéma Repository SQL|Jeu de tables standard utilisées par le moteur de base de données de référentiel pour gérer tous les objets de base de données de référentiel, les relations et les collections.|  
 |modèle d'architecture RTIM (Repository Type Information Model)|Modèle objet principal qui représente des définitions de type de référentiel pour Meta Data Services.|  
 |serveur de republication|Abonné qui publie des données reçues d'un serveur de publication.|  
-|caractère réservé|Caractère de clavier ayant une signification spéciale pour un programme et qui, par conséquent, ne peut généralement pas être utilisé pour affecter des noms à des fichiers, documents et autres outils générés par utilisateur, tels que des macros. Les caractères communément réservés pour des utilisations spéciales incluent l’astérisque (*), la barre oblique (/)\\, la barre oblique inverse (), le point d’interrogation ( ?) et la barre verticale (&#124;).|  
+|caractère réservé|Caractère de clavier ayant une signification spéciale pour un programme et qui, par conséquent, ne peut généralement pas être utilisé pour affecter des noms à des fichiers, documents et autres outils générés par utilisateur, tels que des macros. Les caractères communément réservés pour des utilisations spéciales incluent l’astérisque (*), la barre oblique (/), la barre oblique inverse (), le point d' \\ interrogation ( ?) et la barre verticale (&#124;).|  
 |stratégie de résolution|Ensemble de critères évalués de façon séquentielle par le moteur de référentiel pour la sélection d'un objet lorsque plusieurs versions existent et qu'aucune information de version n'est spécifiée dans le programme appelant.|  
 |resource|Variable spéciale qui contient une référence à une connexion de base de données ou une instruction.|  
 |resource|Tout élément dans une base de données du serveur de rapports qui n'est pas un rapport, un dossier ni un élément de source de données partagée.|  
@@ -1542,7 +1541,7 @@ ms.technology:
 |SQL Server Master Data Services|Application de gestion des données de référence permettant de définir et de gérer de manière cohérente les entités de données critiques d'une organisation.|  
 |SQL Server PowerPivot pour Excel|Complément SQL Server pour Excel.|  
 |SQL Server Profiler|Interface graphique utilisateur pour surveiller une instance du moteur de base de données SQL Server ou une instance d'Analysis Services.|  
-|SQL Server Reporting Services|Environnement de génération de rapports de serveur pour des fonctionnalités Web de création de rapports d'entreprise qui permettent d'extraire du contenu d'une large gamme de sources de données, de publier des rapports dans différents formats et de gérer de façon centralisée la sécurité et les abonnements.|  
+|SQL Server Reporting Services|Environnement de génération de rapports de serveur pour des fonctionnalités Web de création de rapports d'entreprise qui permettent d'extraire du contenu d'une large gamme de sources de données, de publier des rapports dans différents formats et de gérer de façon centralisée la sécurité et les abonnements.|  
 |SQL Server Service Broker|Technologie qui permet aux développeurs de créer des applications de base de données évolutives et sécurisées.|  
 |SQL Server Store pour les applications Office|Fonctionnalité SQL Server qui permet le stockage des données d'une application Office sur un serveur SQL.|  
 |Trace SQL Server|Procédures stockées système Transact-SQL définies pour créer des traces sur une instance du moteur de base de données SQL Server.|  

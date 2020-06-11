@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e2322553eef361f0131e3558cd591bc32525ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637524"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522150"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)
   L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme hybride qui incorpore des méthodes différentes pour créer une arborescence et prend en charge plusieurs tâches analytiques, dont la régression, la classification et l'association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
@@ -99,7 +98,7 @@ ms.locfileid: "73637524"
  L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) prend en charge des paramètres qui affectent les performances et la précision du modèle d'exploration de données résultant. Vous pouvez également définir des indicateurs de modélisation sur les colonnes du modèle ou de la structure d'exploration de données pour contrôler le mode de traitement des données.  
   
 > [!NOTE]  
->  L'algorithme MDT est disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; toutefois, certains paramètres avancés permettant de personnaliser le comportement de l'algorithme MDT sont disponibles uniquement dans les éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  L'algorithme MDT est disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; toutefois, certains paramètres avancés permettant de personnaliser le comportement de l'algorithme MDT sont disponibles uniquement dans les éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ### <a name="setting-algorithm-parameters"></a>Définition des paramètres de l'algorithme  
  Le tableau suivant décrit les paramètres que vous pouvez utiliser avec l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees).  
@@ -149,7 +148,7 @@ ms.locfileid: "73637524"
  *SCORE_METHOD*  
  Spécifie la méthode utilisée pour calculer le résultat de la division. Les options suivantes sont disponibles :  
   
-|ID|Nom|  
+|id|Nom|  
 |--------|----------|  
 |1|Entropie|  
 |3|Bayésien avec a priori K2|  
@@ -162,7 +161,7 @@ ms.locfileid: "73637524"
  *SPLIT_METHOD*  
  Spécifie la méthode utilisée pour fractionner le nœud. Les options suivantes sont disponibles :  
   
-|ID|Nom|  
+|id|Nom|  
 |--------|----------|  
 |1|**Binary:** Indique qu'indépendamment du nombre réel de valeurs pour l'attribut, l'arborescence doit être fractionnée en deux branches.|  
 |2|**Complete:** Indique que l'arborescence peut créer autant de divisions qu'il y a de valeurs d'attribut.|  
@@ -183,11 +182,11 @@ ms.locfileid: "73637524"
   
  Il est inutile de spécifier qu'une colonne de données numériques continues représente un régresseur. L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) utilise automatiquement la colonne en tant que régresseur potentiel et partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l'indicateur REGRESSOR sur la colonne.  
   
- Toutefois, vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé uniquement avec les [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithmes MDT et [!INCLUDE[msCoName](../../includes/msconame-md.md)] MLR. Lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de rechercher des équations de régression de la forme a *\*C1 + b C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
+ Toutefois, vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé uniquement avec les [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithmes MDT et [!INCLUDE[msCoName](../../includes/msconame-md.md)] MLR. Lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de rechercher des équations de régression de la forme a * C1 + b \* C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
   
  Par exemple, si vous prédisez le comportement d'achat de vos clients en utilisant **Income** comme attribut et que vous définissez l'indicateur de modélisation REGRESSOR sur la colonne, l'algorithme essaie tout d'abord de faire tenir les valeurs **Income** en utilisant une formule de régression standard. Si l'écart est trop grand, la formule de régression est abandonnée et l'arbre est fractionné sur un autre attribut. L'algorithme MDT essaie ensuite de faire tenir un régresseur pour le revenu dans chacune des branches après le fractionnement.  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Un modèle d'arbre de décision doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  

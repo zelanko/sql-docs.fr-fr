@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bfc4b3a0890ebf662fd5a4ac2697aa3c63464c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079084"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543521"
 ---
 # <a name="defining-a-dimension"></a>Définition d'une dimension
   Dans la tâche suivante, vous allez utiliser l'Assistant Dimension pour générer une dimension Date.  
@@ -45,13 +44,13 @@ ms.locfileid: "66079084"
   
     -   **English Month Name**  
   
-    -   **Calendar Quarter**  
+    -   **Trimestre civil**  
   
-    -   **Calendar Year**  
+    -   **Année civile**  
   
     -   **Calendar Semester**  
   
-8.  Modifiez le paramètre de la colonne **Type d’attribut** de l’attribut **Full Date Alternate Key** de **Regular** en **Date**. Pour cela, cliquez sur **Regular** dans la colonne **Type d’attribut** . Puis, cliquez sur la flèche pour développer les options. Ensuite, cliquez sur **Date** > **calendrier** > **Date**. Cliquez sur **OK**. Répétez ces étapes pour modifier le type d’attribut des attributs suivants comme suit :  
+8.  Modifiez le paramètre de la colonne **Type d’attribut** de l’attribut **Full Date Alternate Key** de **Regular** en **Date**. Pour cela, cliquez sur **Regular** dans la colonne **Type d’attribut** . Puis, cliquez sur la flèche pour développer les options. Ensuite, cliquez sur **Date**  >  **calendrier**  >  **Date**. Cliquez sur **OK**. Répétez ces étapes pour modifier le type d’attribut des attributs suivants comme suit :  
   
     -   **English Month Name** en **Month**  
   
@@ -77,6 +76,6 @@ ms.locfileid: "66079084"
 ## <a name="see-also"></a>Voir aussi  
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Créer une dimension à l’aide d’une table existante](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Créer une dimension à l’aide de l’Assistant Dimension](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
+ [Créer une dimension à l'aide de l'Assistant Dimension](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

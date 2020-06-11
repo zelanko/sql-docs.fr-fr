@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058248b5b2cb66a73124d8632ad6426ee9f3ad59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541585"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Groupes de mesures (onglet Partitions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Groupes de mesures** de l’onglet **Partitions** du Concepteur de cube permet de gérer les partitions associées à chaque groupe de mesures du cube.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4e5bb10700ebcac08ca576d07c196163db0f637
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085525"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523985"
 ---
 # <a name="create-a-cross-validation-report"></a>Créer un rapport de validation croisée
   Cette rubrique vous guide tout au long de la création d'un rapport de validation croisée à l'aide de l'onglet Graphique d'analyse de précision dans le Concepteur d'exploration de données. Pour obtenir des informations d’ordre général sur l’apparence du rapport de validation croisée et sur les mesures statistiques qu’il inclut, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md).  

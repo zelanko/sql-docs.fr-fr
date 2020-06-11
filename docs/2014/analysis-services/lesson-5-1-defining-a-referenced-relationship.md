@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08c0eeb1315b9ca7ab63a870e2e31ad4896b2d59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542921"
 ---
 # <a name="defining-a-referenced-relationship"></a>Définition d'une relation référencée
   Jusqu'à présent, vous avez défini dans ce didacticiel des dimensions de cube basées sur une table directement liée à la table de faits d'un groupe de mesures par une relation clé primaire/clé étrangère. Au cours des tâches de cette rubrique, vous allez lier la dimension **Geography** à la table de faits pour les ventes de revendeurs par le biais de la dimension **Reseller** , qui est appelée *dimension de référence*. Cela permet aux utilisateurs de dimensionner les ventes des revendeurs par zone géographique. Pour plus d’informations, consultez [Définir une relation référencée et des propriétés de relation référencée](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).
@@ -88,7 +87,7 @@ ms.locfileid: "78175298"
 
      L'attribut Geography Key de la dimension Reseller sera utilisé uniquement pour lier la dimension Geography à la table de faits Reseller Sales. Étant donné que la hiérarchie d'attributs ne sera pas utilisée pour des recherches, cela ne présente pas d'intérêt de la définir comme hiérarchie visible. En outre, le classement et l'optimisation de la hiérarchie d'attributs nuit aux performances. Toutefois, l'attribut doit être activé pour servir de lien entre les deux dimensions.
 
-4.  Basculez vers le concepteur de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube pour le cube du didacticiel, cliquez sur l’onglet utilisation de la **dimension** , puis cliquez sur le bouton de sélection (**...**) à l’intersection du groupe de mesures **Reseller Sales** et de la dimension de cube **Geography** .
+4.  Basculez vers le concepteur de cube pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube du didacticiel, cliquez sur l’onglet utilisation de la **dimension** , puis cliquez sur le bouton de sélection (**...**) à l’intersection du groupe de mesures **Reseller Sales** et de la dimension de cube **Geography** .
 
 5.  Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.
 
@@ -104,7 +103,7 @@ ms.locfileid: "78175298"
 
 9. Dans la liste **Dimensions** de l’onglet **Utilisation de la dimension** , cliquez avec le bouton droit sur **Geography**et choisissez **Renommer**.
 
-10. Remplacez le nom de cette dimension de cube `Reseller Geography`par.
+10. Remplacez le nom de cette dimension de cube par `Reseller Geography` .
 
      Cette dimension de cube étant maintenant liée au groupe de mesures **Reseller Sales** , les utilisateurs pourront définir explicitement son utilisation dans le cube, pour éviter toute confusion.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78175298"
 
 2.  Une fois le déploiement terminé, cliquez sur l’onglet **Navigateur** dans le Concepteur de cube pour le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis cliquez sur **Reconnexion** .
 
-3.  Dans le volet métadonnées, `Reseller Geography`développez, cliquez avec le bouton droit sur zones **géographiques**, puis cliquez sur **Ajouter à la zone de lignes**.
+3.  Dans le volet métadonnées, développez `Reseller Geography` , cliquez avec le bouton droit sur zones **géographiques**, puis cliquez sur **Ajouter à la zone de lignes**.
 
      Notez que la mesure **Reseller Sales-Sales Amount** est désormais dimensionnée correctement par l’attribut **Country-Region** de la hiérarchie **Geographies** définie par l’utilisateur, comme le montre l’illustration suivante.
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0afdf5f795303eaa8bb672aa80e68e0f1f891607
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086379"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525706"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Ajouter un modèle d'exploration de données à une structure d'exploration de données existante
   Vous pouvez ajouter des modèles d'exploration de données à une structure d'exploration de données après avoir ajouté un premier modèle. Chaque modèle doit contenir des colonnes qui existent dans la structure, mais vous pouvez définir l'utilisation des colonnes différemment pour chaque modèle d'exploration de données. Pour plus d’informations sur la définition des colonnes des modèles d’exploration de données, consultez [Colonnes de modèle d’exploration de données](mining-model-columns.md).  

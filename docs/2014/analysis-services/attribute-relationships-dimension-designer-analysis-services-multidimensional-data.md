@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5113ec1a554f2ae74c3f024fd6cbe8f6398d8bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063187"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527875"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Relations d'attributs (Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   L'onglet **Relations d'attributs** dans le Concepteur de dimensions permet de créer, de modifier ou de supprimer les relations d'attributs de la dimension sélectionnée.  
@@ -25,7 +24,7 @@ ms.locfileid: "66063187"
 ## <a name="panes"></a>Volets  
  La page **Relations d'attributs** comporte les volets suivants :  
   
- [Barre](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barre d’outils](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  La barre d’outils permet d’effectuer des opérations sous l’onglet **Relations d’attributs** du Concepteur de dimensions.  
   
  [Diagramme des relations d'attributs](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

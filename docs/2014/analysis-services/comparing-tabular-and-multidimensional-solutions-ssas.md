@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087770"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527425"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparaison des solutions tabulaires et multidimensionnelles (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]fournit deux approches distinctes pour la modélisation des données : tabulaire et multidimensionnel. Bien qu'elles présentent de nombreux points communs, elles ont aussi d'importantes différences qui guideront votre choix. Dans cette rubrique, nous comparons les fonctionnalités et décrivons la façon dont chaque approche répond aux besoins communs des projets. Par exemple, si la prise en charge d'une source de données spécifique est prioritaire, la section sur les sources de données peut vous aider à choisir l'approche de modélisation qui convient.  
@@ -101,16 +100,16 @@ ms.locfileid: "66087770"
 |Objets d'agrégation|[Oui](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Non|  
 |Mesures calculées|[Oui](multidimensional-models/create-calculated-members.md)|Oui|  
 |Assemblys personnalisés|[Oui](multidimensional-models/multidimensional-model-assemblies-management.md)|Non|  
-|Cumuls personnalisés|Oui|Non|  
+|Cumuls personnalisés|Oui|Non |  
 |Distinct Count|[Oui](multidimensional-models/use-aggregate-functions.md)|Oui (via DAX) *|  
 |Extraction|[Oui](multidimensional-models/actions-in-multidimensional-models.md)|Oui|  
-|Hierarchies|[Oui](multidimensional-models/user-defined-hierarchies-create.md)|Oui|  
+|Hiérarchies|[Oui](multidimensional-models/user-defined-hierarchies-create.md)|Oui|  
 |Indicateurs de performance clés|[Oui](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Oui|  
 |Groupes de mesures liés|[Oui](multidimensional-models/linked-measure-groups.md)|Non|  
-|Relations plusieurs-à-plusieurs|[Oui](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Non|  
+|Relations Plusieurs-à-plusieurs|[Oui](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Non|  
 |Hiérarchies parent-enfant|[Oui](multidimensional-models/parent-child-dimension.md)|Oui (via DAX)|  
 |Partitions|[Oui](tabular-models/partitions-ssas-tabular.md)|  
-|perspectives|[Oui](multidimensional-models/perspectives-in-multidimensional-models.md)|[Oui](tabular-models/partitions-ssas-tabular.md)|  
+|Perspectives|[Oui](multidimensional-models/perspectives-in-multidimensional-models.md)|[Oui](tabular-models/partitions-ssas-tabular.md)|  
 |Mesures semi-additives|[Oui](multidimensional-models/define-semiadditive-behavior.md)|Oui (via DAX)|  
 |Translations|[Oui](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Non|  
 |Hiérarchies définies par l'utilisateur|[Oui](multidimensional-models/user-defined-hierarchies-create.md)|Oui|  

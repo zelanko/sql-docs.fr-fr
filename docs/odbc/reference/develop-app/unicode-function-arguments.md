@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a25dd6fe0a77aad5c5ec9ba15eaf12bd2ec3fc18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40ef9f63345572b5613942c1174ceeecadd146ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284289"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529738"
 ---
 # <a name="unicode-function-arguments"></a>Arguments des fonctions Unicode
 Le gestionnaire de pilotes ODBC 3,5 (ou version ultérieure) prend en charge les versions ANSI et Unicode de toutes les fonctions qui acceptent des pointeurs vers des chaînes de caractères ou des SQLPOINTER dans leurs arguments. Les fonctions Unicode sont implémentées en tant que fonctions (avec un suffixe *W*), et non pas en tant que macros. Les fonctions ANSI (qui peuvent être appelées avec ou sans suffixe *) sont*identiques aux fonctions de l’API ODBC en cours.  
   
 ## <a name="remarks"></a>Notes  
- Les fonctions Unicode qui renvoient ou prennent toujours des chaînes ou des arguments de longueur sont passées en tant que nombre de caractères. Pour les fonctions qui retournent des informations de longueur pour les données du serveur, la taille et la précision d’affichage sont décrites en nombre de caractères. Quand une longueur (taille de transfert des données) peut faire référence à des données de type chaîne ou non, la longueur est décrite en octets. Par exemple, **SQLGetInfoW** prend toujours la longueur comme nombre d’octets, mais **SQLExecDirectW** utilise le nombre de caractères.  
+ Pour les fonctions Unicode qui retournent ou acceptent toujours des chaînes ou des arguments de longueur, les arguments sont passés en tant que nombre de caractères. Pour les fonctions qui retournent des informations de longueur pour les données du serveur, la taille et la précision d’affichage sont décrites en nombre de caractères. Quand une longueur (taille de transfert des données) peut faire référence à des données de type chaîne ou non, la longueur est décrite en octets. Par exemple, **SQLGetInfoW** prend toujours la longueur comme nombre d’octets, mais **SQLExecDirectW** utilise le nombre de caractères.  
   
  Nombre de caractères fait référence au nombre d’octets (octets) pour les fonctions ANSI et au nombre de WCHAR (mots 16 bits) pour les fonctions UNICODE. En particulier, une séquence de caractères codés sur deux octets (DBCS) ou une séquence de caractères multioctets (MBCS) peut être composée de plusieurs octets. Une séquence de caractères Unicode UTF-16 peut être composée de plusieurs WCHARs.  
   

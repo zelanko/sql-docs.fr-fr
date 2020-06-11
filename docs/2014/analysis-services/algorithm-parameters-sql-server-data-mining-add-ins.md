@@ -46,20 +46,19 @@ helpviewer_keywords:
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d89f8e1724875268e27a29c2df9053704f0883d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528125"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Paramètres d'algorithme (Compléments d'exploration de données SQL Server)
   Lorsque vous effectuez l'exploration de données à l'aide des outils d'analyse de table pour Excel, vous n'avez pas besoin de configurer l'algorithme ou les paramètres d'exploration de données ; chaque outil analyse vos données et sélectionne automatiquement les paramètres optimums. Toutefois, si vous souhaitez modifier le modèle ou créer un modèle d'exploration de données de toutes pièces, le client d'exploration de données pour Excel vous propose plusieurs options de personnalisation.  
   
 -   Créez un modèle d’exploration de données manuellement en cliquant sur **avancé** , puis sur **Ajouter le modèle à la structure**.  
   
--   Utilisez l’un des assistants de modélisation du client d’exploration de données, puis cliquez sur **paramètres** pour contrôler le [!INCLUDE[msCoName](../includes/msconame-md.md)] comportement des algorithmes d’exploration de données.  
+-   Utilisez l’un des assistants de modélisation du client d’exploration de données, puis cliquez sur **paramètres** pour contrôler le comportement des [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes d’exploration de données.  
   
 -   Cliquez sur **requête** pour ouvrir l’Assistant modèle de requête, puis cliquez sur **avancé** pour ouvrir l **'éditeur de requêtes avancé d’exploration de données**. Dans cet éditeur, vous pouvez générer des modèles en utilisant les modèles DMX.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66062597"
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Algorithme MTS (Microsoft Time Series)|Spécifie une valeur numérique comprise entre 0 et 1 utilisée pour détecter la périodicité. Une valeur proche de 1 favorise la découverte de nombreux modèles quasi-périodiques et la génération automatique d'indications de périodicité. Le traitement d'un grand nombre d'indications de périodicité est susceptible d'allonger de façon significative les durées d'apprentissage des modèles et de produire des modèles plus précis. Si la valeur est proche de 0, la périodicité n'est détectée que pour les données fortement périodiques.<br /><br /> La valeur par défaut est 0,6.|  
 |CLUSTER_COUNT|Algorithme de clustering Microsoft<br /><br /> Algorithme MSC (Microsoft Sequence Clustering)|Spécifie le nombre approximatif de clusters que l'algorithme doit générer. S'il est impossible de générer ce nombre approximatif de clusters à partir des données, l'algorithme génère autant de clusters que possible. Si le paramètre CLUSTER_COUNT est défini à 0, l'algorithme utilise des valeurs heuristiques pour déterminer de manière optimale le nombre de clusters à générer.<br /><br /> La valeur par défaut est de 10.|  
-|CLUSTER_SEED|Algorithme de clustering Microsoft|Spécifie la valeur de départ utilisée pour générer de façon aléatoire des clusters pour le stade initial de construction d'un modèle.<br /><br /> La valeur par défaut est 0.|  
+|CLUSTER_SEED|Algorithme de clustering Microsoft|Spécifie la valeur de départ utilisée pour générer de façon aléatoire des clusters pour le stade initial de construction d'un modèle.<br /><br /> La valeur par défaut est 0.|  
 |CLUSTERING_METHOD|Algorithme de clustering Microsoft|Spécifie la méthode de clustering que doit utiliser l'algorithme. Les méthodes de clustering disponibles sont les suivantes : EM évolutif (1), EM non évolutif (2), K-means évolutif (3) ou K-means non évolutif (4).<br /><br /> La valeur par défaut est 1.|  
 |COMPLEXITY_PENALTY|Algorithme MDT (Microsoft Decision Trees)<br /><br /> Algorithme MTS (Microsoft Time Series)|Contrôle la croissance de l'arbre de décision. Une valeur faible entraîne l'augmentation du nombre de fractionnements, alors qu'une valeur élevée entraîne la diminution du nombre de fractionnements. La valeur par défaut dépend du nombre d'attributs pour un modèle particulier, comme cela est décrit dans la liste suivante :<br /><br /> De 1 à 9 attributs, la valeur par défaut est égale à 0,5.<br /><br /> De 10 à 99 attributs, la valeur par défaut est égale à 0,9.<br /><br /> À partir de 100 attributs, la valeur par défaut est égale à 0,99.<br /><br /> Remarque : dans les modèles de série chronologique, ce paramètre s’applique uniquement aux modèles générés à l’aide de l’algorithme ARTxp ou aux modèles mixtes.|  
 |FORCED_REGRESSOR|Algorithme MDT (Microsoft Decision Trees)<br /><br /> Algorithme MLR (Microsoft Linear Regression)|Force l'algorithme à utiliser les colonnes indiquées comme régresseurs, quelle que soit leur importance, telle que calculée par l'algorithme.<br /><br /> Remarque : ce paramètre est utilisé uniquement pour les arbres de décision qui prédisent un attribut continu. Par définition, un modèle de régression linéaire est un cas spécial d'arbres de décision qui prédit des attributs continus. Toutefois, un modèle d'arbre de décision peut contenir un nœud qui représente une formule de régression linéaire.|  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 534b27d024feb521be133329c7fe0aef06d9814a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085390"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523875"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>créer une structure d'exploration de données relationnelle
-  Utilisez l’Assistant Exploration de données pour créer une nouvelle structure d’exploration de données, en utilisant les données d’une base de données relationnelle ou d’une autre source, puis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enregistrer la structure et tous les modèles associés dans une base de données.  
+  Utilisez l’Assistant Exploration de données pour créer une nouvelle structure d’exploration de données, en utilisant les données d’une base de données relationnelle ou d’une autre source, puis enregistrer la structure et tous les modèles associés dans une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données.  
   
 ### <a name="to-create-a-relational-mining-structure"></a>Pour créer une structure d'exploration de données relationnelle  
   

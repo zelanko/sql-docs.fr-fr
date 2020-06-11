@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0f0212795adcaed220806f8cc1349f95c2a6f3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070478"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539571"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Requête (Compléments d'exploration de données SQL Server)
   ![Bouton Modèle de requête, ruban Exploration de données](media/dmc-query.gif "Bouton Modèle de requête, ruban Exploration de données")  
@@ -47,7 +46,7 @@ ms.locfileid: "66070478"
   
  Vous pouvez à tout moment cliquer sur **Avancé** pour basculer vers l' **Éditeur de requêtes avancé d'exploration de données**qui vous permet de contrôler davantage chaque partie de l'instruction DMX. Pour plus d’informations sur l’utilisation des outils avancés de modification de requêtes, consultez [éditeur de requêtes d’exploration de données avancé](advanced-data-mining-query-editor.md).  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Pour utiliser l'Assistant **Requête** , vous devez être connecté à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Qui plus est, le serveur doit contenir au moins un modèle d'exploration de données d'un type approprié. Si aucun modèle d'exploration de données n'est disponible, vous pouvez en créer un à l'aide des Assistants fournis dans le Client d'exploration de données pour Excel. Pour plus d’informations sur la création d’un nouveau mode d’exploration de données à l’aide d’un Assistant, consultez [création d’un modèle d’exploration de données](creating-a-data-mining-model.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073647"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546081"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Fusionner des partitions dans Analysis Services (SSAS - Multidimensionnel)
   Vous pouvez fusionner des partitions dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante pour consolider les données de faits de plusieurs partitions du même groupe de mesures.  
@@ -117,7 +116,7 @@ ms.locfileid: "66073647"
   
 1.  Dans l’Explorateur d’objets, développez le nœud **Groupes de mesures** du cube contenant les partitions à fusionner, développez **Partitions**, cliquez avec le bouton droit sur la partition correspondant à la cible ou à la destination de la fusion. Par exemple, si vous déplacez des données de faits trimestrielles vers une partition qui stocke des données de faits annuelles, sélectionnez la partition qui contient les données de faits annuelles.  
   
-2.  Cliquez sur **fusionner des partitions** pour ouvrir la boîte de dialogue>le nom de la ** \<partition de fusion** .  
+2.  Cliquez sur **fusionner des partitions** pour ouvrir la boîte de dialogue **fusionner une \<partition name> partition** .  
   
 3.  Sous **Partitions sources**, cochez la case à côté de chaque partition source que vous voulez fusionner avec la partition cible, puis cliquez sur **OK**.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66073647"
   
 4.  Cliquez avec le bouton droit sur la partition contenant les données cumulées et sélectionnez **Propriétés**.  
   
-5.  Ouvrez la `Source` propriété et modifiez la clause WHERE pour qu’elle inclue les données de partition que vous venez de fusionner. Souvenez- `Source` vous que la propriété n’est pas mise à jour automatiquement. Si vous retraitez sans commencer par mettre `Source`à jour le, vous risquez de ne pas recevoir toutes les données attendues.  
+5.  Ouvrez la `Source` propriété et modifiez la clause WHERE pour qu’elle inclue les données de partition que vous venez de fusionner. Souvenez-vous que la `Source` propriété n’est pas mise à jour automatiquement. Si vous retraitez sans commencer par mettre à jour le `Source` , vous risquez de ne pas recevoir toutes les données attendues.  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Procédure pour fusionner des partitions à l'aide de XMLA  
  Pour plus d’informations, consultez [Fusion de partitions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  

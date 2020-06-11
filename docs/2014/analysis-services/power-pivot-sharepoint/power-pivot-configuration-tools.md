@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de11cdaf304b3010dcf21725edd2d3cbfa84ae0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175658"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540248"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  Configurez, réparez ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] supprimez un avec les outils de configuration de PowerPivot.
+  Configurez, réparez ou supprimez un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] avec les outils de configuration de PowerPivot.
 
  L'Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2010 et un outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013. Cette rubrique décrit l'utilisation générale des outils et ce qui les différencie.
 
@@ -91,7 +90,7 @@ ms.locfileid: "78175658"
 
 1.  Dans l’écran **Démarrer** , tapez`powerpivot`
 
-     Dans l’écran **Démarrer** , tapez `powerpivot` ou dans le menu **Démarrer** , cliquez sur **tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur outils de **configuration**, puis sur l’une des options suivantes :
+     Dans l’écran **Démarrer** , tapez `powerpivot` ou dans le menu **Démarrer** , cliquez sur **tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , sur **outils de configuration**, puis sur l’une des options suivantes :
 
     -   **Outil de configuration de PowerPivot**.
 

@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd1a4bc6-57b5-47df-8619-09f921aa6351
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4826be0fd38118e94921f63e02882935132a4d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c320145be2073c741498bed0f10732ac8d528e9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072478"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535551"
 ---
 # <a name="view-the-xml-for-an-analysis-services-project-ssdt"></a>Afficher le code XML d'un projet Analysis Services (SSDT)
   Si vous utilisez une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode projet, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée une définition XML pour chaque objet dans le dossier du projet. Vous pouvez afficher le contenu du fichier XML pour chaque objet dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également modifier le fichier XML directement. Toutefois, nous vous déconseillons de procéder ainsi, car certaines modifications peuvent rendre le fichier XML illisible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Vous ne pouvez pas afficher le code XML d'un projet complet. Cependant, vous pouvez afficher le code de chaque objet car il existe un fichier distinct pour chaque objet. La seule façon d’afficher le code pour un projet entier est de générer le projet et d’afficher le code ASSL dans \<le nom du projet> fichier. asdatabase.  
+>  Vous ne pouvez pas afficher le code XML d'un projet complet. Cependant, vous pouvez afficher le code de chaque objet car il existe un fichier distinct pour chaque objet. La seule façon d’afficher le code pour un projet entier est de générer le projet et d’afficher le code ASSL dans le \<project name> fichier. asdatabase.  
   
 ### <a name="to-view-the-xml-code-for-an-object"></a>Pour afficher le code XML d'un objet  
   

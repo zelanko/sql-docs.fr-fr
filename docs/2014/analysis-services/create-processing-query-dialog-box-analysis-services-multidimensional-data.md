@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 185ea27c344ccb9e06f914507faca3fea9554dae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086765"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526428"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer la requête de traitement (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer la requête de traitement** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête de traitement dans l'onglet **Notifications** de la boîte de dialogue **Options de stockage**. Une requête de traitement retourne un ensemble de lignes qui contient les modifications apportées à une table associée à un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] depuis la dernière interrogation de la table de façon à effectuer une mise à jour incrémentielle de la mémoire cache OLAP multidimensionnelle (MOLAP) de l'objet. Analysis Services utilise une autre requête, baptisée requête d'interrogation, pour interroger une table associée à un objet et déterminer si la table a été modifiée. Les requêtes de traitement ne sont pas nécessaires lors de la mise à jour complète de la mémoire cache MOLAP de l'objet.  
@@ -56,10 +55,10 @@ ms.locfileid: "66086765"
  **Définition de la requête**  
  La définition de la requête propose une barre d'outils et des volets dans lesquels il est possible de définir et de tester la requête en fonction de la vue sélectionnée.  
   
- **Barre**  
+ **Barre d’outils**  
  Utilisez la barre d'outils pour gérer les datasets, sélectionner les volets à afficher et contrôler diverses fonctions de requête.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Basculer vers le générateur de requêtes générique**|Sélectionnez cette option pour afficher uniquement les options disponibles dans la vue Générateur de requêtes générique. Seules les options suivantes sont affichées :<br /><br /> **Volet SQL**<br /><br /> **Volet résultats**<br /><br /> **Barre d'outils**qui contient uniquement les commandes **Basculer vers le générateur de requêtes VDT** et **Exécuter**<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
 |**Basculer vers le générateur de requêtes VDT**|Sélectionnez cette option pour afficher toutes les options disponibles dans la vue Générateur de requête Outils Visual Database (VDT).<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes générique** est sélectionné.|  

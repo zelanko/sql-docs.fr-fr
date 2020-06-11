@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083569"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521271"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles Sequence Clustering (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MSC (Microsoft Sequence Clustering). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -154,7 +153,7 @@ ms.locfileid: "66083569"
 ###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>Table NODE_DISTRIBUTION  
  La table NODE_DISTRIBUTION fournit des informations détaillées sur la probabilité et la prise en charge pour les transitions et les séquences d'un cluster spécifique.  
   
- Une ligne est toujours ajoutée à la table de transitions pour représenter les valeurs `Missing` possibles. Pour plus d’informations sur `Missing` la signification de la valeur et sur la façon dont elle affecte les calculs, consultez [valeurs manquantes &#40;Analysis Services-exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Une ligne est toujours ajoutée à la table de transitions pour représenter les valeurs `Missing` possibles. Pour plus d’informations sur la signification de la `Missing` valeur et sur la façon dont elle affecte les calculs, consultez [valeurs manquantes &#40;Analysis Services-exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
  Les calculs de prise en charge et de probabilité diffèrent selon que le calcul s'applique aux cas d'apprentissage ou au modèle fini. Cela est dû au fait que la méthode de clustering par défaut EM (Expectation Maximization) suppose que tout cas peut appartenir à plusieurs clusters. Lors du calcul de prise en charge pour les cas du modèle, il est possible d'utiliser des probabilités et des nombres bruts. Toutefois, les probabilités d'une séquence donnée d'un cluster doivent être pondérées par la somme de toutes les combinaisons de séquence et de cluster possibles.  
   

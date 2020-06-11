@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9027ff3928f40d43f16bb31b52e0c1d52e072847
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084798"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522727"
 ---
 # <a name="data-types-data-mining"></a>Types de données (Exploration de données)
-  Lorsque vous créez un modèle d’exploration de données ou une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]structure d’exploration de données dans, vous devez définir les types de données pour chacune des colonnes de la structure d’exploration de données. Le type de données indique au moteur d'exploration de données si les données dans la source de données sont numériques ou de texte, et comment elles doivent être traitées. Par exemple, si vos données sources contiennent des données numériques, vous pouvez spécifier si les nombres doivent être traités en tant qu'entiers ou en utilisant des décimales.  
+  Lorsque vous créez un modèle d’exploration de données ou une structure d’exploration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] données dans, vous devez définir les types de données pour chacune des colonnes de la structure d’exploration de données. Le type de données indique au moteur d'exploration de données si les données dans la source de données sont numériques ou de texte, et comment elles doivent être traitées. Par exemple, si vos données sources contiennent des données numériques, vous pouvez spécifier si les nombres doivent être traités en tant qu'entiers ou en utilisant des décimales.  
   
  Chaque type de données prend en charge un ou plusieurs types de contenu. En définissant le type de contenu, vous pouvez personnaliser la façon dont les données de la colonne sont traitées ou calculées dans le modèle d'exploration de données.  
   

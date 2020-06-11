@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 488911c34df2722d4a4144df173a2975ae0f16f1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064459"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527779"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Parcourir la vue des sources de données (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue Parcourir la vue des sources de données affiche un diagramme simple de la vue de la source de données sélectionnée. Le nom de la vue de source de données apparaît en tant que titre de la boîte de dialogue.  
@@ -31,7 +30,7 @@ ms.locfileid: "66064459"
  **Zoom**  
  Sélectionnez le pourcentage de zoom à utiliser pour redimensionner les objets à la surface du diagramme.  
   
- **Fermer**  
+ **Close**  
  Permet de fermer la boîte de dialogue.  
   
   

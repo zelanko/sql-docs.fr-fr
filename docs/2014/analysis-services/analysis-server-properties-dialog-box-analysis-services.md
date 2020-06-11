@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a876a11f51731fdd7ff6de679f80cdb8d62fff94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062623"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528098"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Boîte de dialogue Propriétés de Analysis Server (Analysis Services)
   Utilisez la boîte de dialogue **Propriétés de Analysis Server** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les paramètres généraux, de langue/classement et de sécurité d’une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour afficher la boîte de dialogue **Propriétés de Analysis Server** , cliquez avec le bouton droit de la souris sur une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans **l’Explorateur d’objets** , puis sélectionnez **Propriétés** dans le menu contextuel. Cette boîte de dialogue **Propriétés de Analysis Server** contient les propriétés suivantes.  
@@ -43,7 +42,7 @@ ms.locfileid: "66062623"
   
 -   [Propriétés générales](server-properties/general-properties.md)  
   
--   [Propriétés de l'exploration de données](server-properties/data-mining-properties.md)  
+-   [Propriétés d’exploration de données](server-properties/data-mining-properties.md)  
   
 -   [Propriétés de fonctionnalité](server-properties/feature-properties.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66062623"
   
 -   [Propriétés du journal](server-properties/log-properties.md)  
   
--   [Propriétés de mémoire](server-properties/memory-properties.md)  
+-   [Propriétés de la mémoire](server-properties/memory-properties.md)  
   
 -   [Propriétés du réseau](server-properties/network-properties.md)  
   

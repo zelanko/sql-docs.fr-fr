@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fb624116ca42f32ab20615d1c34fcb786d150a1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493782"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542241"
 ---
 # <a name="defining-and-browsing-translations"></a>Définition et exploration de traductions
   Une traduction est la représentation de noms d'objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans un langage spécifique. Les objets incluent les groupes de mesures, mesures, dimensions, attributs, hiérarchies, indicateurs de performance clé, actions et membres calculés. Les traductions permettent au serveur de prendre en charge les applications clientes qui autorisent l'emploi de plusieurs langues. Un tel client transmet l'identificateur des paramètres régionaux locaux (LCID, Locale Identifier) à l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], qui l'utilise pour déterminer le jeu de traductions à employer lorsqu'elle fournit des métadonnées pour des objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne contient pas de traduction pour cette langue ou ne contient pas de traduction pour un objet spécifié, la langue par défaut est utilisée pour renvoyer les métadonnées d'objets au client. Par exemple, si un utilisateur situé en France accède à un cube à partir d'une station de travail utilisant les paramètres régionaux français, l'utilisateur en question voit les légendes des membres et les valeurs de leurs propriétés en français si une traduction française est disponible. Cependant, si un utilisateur situé en Allemagne accède au même cube à partir d'une station de travail utilisant des paramètres régionaux allemands, cet utilisateur voit les noms des légendes et les valeurs des propriétés de membre en allemand. Pour plus d’informations, consultez [traductions de dimension](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), traductions de [Cube](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traductions &#40;Analysis Services&#41;](translations-analysis-services.md).  
@@ -42,7 +41,7 @@ ms.locfileid: "69493782"
   
 5.  Dans la ligne de l’objet **Caption** pour la dimension **Date** , tapez `Fecha` dans la colonne de traduction **espagnol (Espagne)** et `Temps` dans la colonne de traduction **français (France)** .  
   
-6.  Dans la ligne de l' **objet Caption** de l' **attribut Month Name** , tapez `Mes del Año` dans la colonne de traduction **espagnol (Espagne)** et `Mois d'Année` dans la colonne de traduction **français (France)** .  
+6.  Dans la ligne de l’objet **Caption** de l’attribut **Month Name** , tapez `Mes del Año` dans la colonne de traduction **espagnol (Espagne)** et `Mois d'Année` dans la colonne de traduction **français (France)** .  
   
      Notez que lorsque vous entrez ces traductions, des points de suspension (**...**) s’affichent. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "69493782"
   
 5.  Dans la ligne de l’objet **Caption** pour la dimension **Date** , tapez `Fecha` dans la colonne de traduction **espagnol (Espagne)** et `Temps` dans la colonne de traduction **français (France)** .  
   
-6.  Dans la ligne de l' **objet Caption** pour le groupe de mesures **Internet Sales** , `Ventas del lnternet` tapez dans la colonne de traduction **espagnol (Espagne)** et `Ventes D'Internet` dans la colonne de traduction **français (France)** .  
+6.  Dans la ligne de l’objet **Caption** pour le groupe de mesures **Internet Sales** , tapez `Ventas del lnternet` dans la colonne de traduction **espagnol (Espagne)** et `Ventes D'Internet` dans la colonne de traduction **français (France)** .  
   
 7.  Dans la ligne de l’objet **Caption** pour la mesure Internet Sales-Sales Amount, tapez `Cantidad de las Ventas del Internet` dans la colonne de traduction **espagnol (Espagne)** et `Quantité de Ventes d'Internet` dans la colonne de traduction **français (France)** .  
   
@@ -102,13 +101,13 @@ ms.locfileid: "69493782"
   
 5.  Dans la barre d’outils, sélectionnez **Espagnol (Espagne)** dans la liste **Langue** .  
   
-     Observez que les éléments du volet Métadonnées sont remplis à nouveau. Une fois les éléments du volet Métadonnées actualisés, observez que la mesure Internet Sales-Sales Amount ne figure plus dans le dossier d'affichage Internet Sales. Au lieu de cela, elle apparaît en espagnol dans un nouveau `Ventas del lnternet`dossier d’affichage nommé, comme illustré dans l’image suivante.  
+     Observez que les éléments du volet Métadonnées sont remplis à nouveau. Une fois les éléments du volet Métadonnées actualisés, observez que la mesure Internet Sales-Sales Amount ne figure plus dans le dossier d'affichage Internet Sales. Au lieu de cela, elle apparaît en espagnol dans un nouveau dossier d’affichage nommé `Ventas del lnternet` , comme illustré dans l’image suivante.  
   
      ![Volet de métadonnées rempli à nouveau](../../2014/tutorials/media/l9-translations-6.gif "Volet de métadonnées rempli à nouveau")  
   
-6.  Dans le volet métadonnées, cliquez `Cantidad de las Ventas del Internet` avec le bouton droit, puis sélectionnez **Ajouter à la requête**.  
+6.  Dans le volet métadonnées, cliquez avec le bouton droit, `Cantidad de las Ventas del Internet` puis sélectionnez **Ajouter à la requête**.  
   
-7.  Dans le volet métadonnées, `Fecha`développez, développez **Fecha. Calendar Date**, cliquez avec le bouton droit sur **Fecha. Calendar Date**, puis sélectionnez **Ajouter au filtre**.  
+7.  Dans le volet métadonnées, développez `Fecha` , développez **Fecha. Calendar Date**, cliquez avec le bouton droit sur **Fecha. Calendar Date**, puis sélectionnez **Ajouter au filtre**.  
   
 8.  Dans le volet **Filtre** , sélectionnez **CY 2007** comme expression de filtre.  
   

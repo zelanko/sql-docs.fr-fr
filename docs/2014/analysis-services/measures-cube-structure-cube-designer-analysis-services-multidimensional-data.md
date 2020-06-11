@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc38d7977e13fb76c33a0399fd6a7325783abb1e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541584"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Mesures (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Mesures** pour manipuler des groupes de mesures et des membres de l'onglet **Structure de cube** le Concepteur de cube.  
   
 ## <a name="options"></a>Options  
- mesures  
+ Mesures  
  Affiche les groupes de mesures et les mesures figurant dans le cube en fonction de la vue sélectionnée :  
   
  Arborescence  
@@ -63,7 +62,7 @@ ms.locfileid: "66077921"
 |Option|Définition|  
 |------------|----------------|  
 |**Arbres**|Affiche les groupes et les mesures sous forme d'arborescence.|  
-|**Grille**|Affiche les groupes et les mesures sous forme de tableau.|  
+|**Grid**|Affiche les groupes et les mesures sous forme de tableau.|  
   
  **Renommer**  
  Sélectionnez cette option pour renommer la mesure ou le groupe de mesures sélectionné.  

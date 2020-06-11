@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5578bed4ce59ffb3c431c30e33418abe693a4165
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079865"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543841"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Vérifier une installation PowerPivot pour SharePoint
   Une instance de PowerPivot pour SharePoint que vous installez dans une batterie de serveurs SharePoint est administrée via l'Administration centrale de SharePoint. Au minimum, vous pouvez vérifier des pages dans l'Administration centrale et sur les sites SharePoint pour vérifier que les composants et fonctionnalités du serveur PowerPivot sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d'un classeur PowerPivot que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d'une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d'exemple contenant déjà des données PowerPivot et l'utiliser pour confirmer que l'intégration SharePoint est correctement configurée.  
@@ -59,7 +58,7 @@ ms.locfileid: "66079865"
 ## <a name="verify-integration-at-the-site-level"></a>Vérifiez l'intégration au niveau du site  
  Pour vérifier l'intégration de PowerPivot avec un site SharePoint, procédez comme suit :  
   
-1.  Dans un navigateur, ouvrez l'application Web que vous avez créée. Si vous avez utilisé des valeurs par défaut, vous\<pouvez spécifier http://le nom de votre ordinateur> dans l’adresse URL.  
+1.  Dans un navigateur, ouvrez l'application Web que vous avez créée. Si vous avez utilisé des valeurs par défaut, vous pouvez spécifier http:// \<your computer name> dans l’adresse URL.  
   
 2.  Vérifiez que l'accès aux données et les fonctionnalités de traitement de PowerPivot sont disponibles dans l'application. Pour cela, vous pouvez vérifier la présence de modèles de bibliothèque fournis par PowerPivot :  
   
@@ -84,14 +83,14 @@ ms.locfileid: "66079865"
   
 6.  Démarrez SQL Server Management Studio à partir du groupe de programmes [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] dans le menu Démarrer. Si cet outil n'est pas installé sur votre serveur, vous pouvez passer à la dernière étape pour confirmer la présence de fichiers mis en cache.  
   
-7.  Dans Type de serveur, sélectionnez **Analysis Services**.  
+7.  Dans type de serveur, sélectionnez **Analysis Services**.  
   
-8.  Dans nom du serveur, entrez ** \<Server-Name> \powerpivot**, où ** \<Server-Name>** correspond au nom de l’ordinateur sur lequel est installé le PowerPivot pour SharePoint.  
+8.  Dans nom du serveur, entrez ** \<server-name> \powerpivot**, où **\<server-name>** est le nom de l’ordinateur sur lequel est installé le PowerPivot pour SharePoint.  
   
 9. Cliquez sur **Connecter**. Le programme vérifie que le serveur Analysis Services est disponible.  
   
 10. Dans l’Explorateur d’objets, vous pouvez cliquer sur **bases de données** pour afficher la liste des fichiers de données PowerPivot qui sont chargés.  
   
-11. Sur le système de fichiers de l'ordinateur, vérifiez le dossier suivant pour déterminer si les fichiers sont mis en cache sur disque. La présence de fichiers mis en cache est une vérification supplémentaire que votre déploiement est opérationnel. Pour afficher le cache de fichiers, accédez au \<lecteur> : \Program Files\Microsoft SQL Server\MSAS11. Dossier d’application de service PowerPivot Powerpivot\olap\backup\sandboxes\dossier. Chaque base de données mise en cache est stockée dans son propre dossier, en utilisant une convention d'affectation de noms basés sur les GUID pour garantir un nom unique.  
+11. Sur le système de fichiers de l'ordinateur, vérifiez le dossier suivant pour déterminer si les fichiers sont mis en cache sur disque. La présence de fichiers mis en cache est une vérification supplémentaire que votre déploiement est opérationnel. Pour afficher le cache de fichiers, accédez au \<drive> dossier : \Program Files\Microsoft SQL Server\MSAS11. Dossier d’application de service PowerPivot Powerpivot\olap\backup\sandboxes\dossier. Chaque base de données mise en cache est stockée dans son propre dossier, en utilisant une convention d'affectation de noms basés sur les GUID pour garantir un nom unique.  
   
   

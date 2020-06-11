@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4931c3aff70758113b6a0250319d6dec722d8650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082000"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528755"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Définir le comportement semi-additif (Assistant Business Intelligence)
   Utilisez la page **Définir le comportement semi-additif** pour activer ou désactiver le comportement semi-additif sur les mesures. Celui-ci détermine comment les mesures sont contenues dans un cube sont agrégées sur une dimension de temps.  
@@ -29,7 +28,7 @@ ms.locfileid: "66082000"
  **Désactiver le comportement semi-additif**  
  Désactive le comportement semi-additif dans toutes les mesures contenues dans le cube.  
   
- **L’Assistant a détecté le \<nom de la dimension> dimension de compte, qui contient des membres semi-additifs. Le serveur agrégera les membres de cette dimension en fonction du comportement semi-additif spécifié pour chaque type de compte.**  
+ **L’Assistant a détecté la \<dimension name> dimension Account, qui contient des membres semi-additifs. Le serveur agrégera les membres de cette dimension en fonction du comportement semi-additif spécifié pour chaque type de compte.**  
  Active le comportement semi-additif pour les dimensions de compte qui contiennent des membres semi-additifs. Cette option configure la fonction d'agrégation de toutes les mesures dans des groupes qui font référence à la dimension de compte `ByAccount`.  
   
  Pour plus d’informations sur les dimensions de compte, consultez [Créer un compte Finance de la dimension de type parent-enfant](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
@@ -37,13 +36,13 @@ ms.locfileid: "66082000"
  **Définir le comportement semi-additif pour les membres individuels**  
  Active le comportement semi-additif et spécifie la fonction d'agrégation semi-additive pour des mesures données. Cette fonction s'applique à toutes les dimensions référencées par le groupe de mesures qui contiennent la mesure.  
   
- **mesures**  
+ **Mesures**  
  Affiche le nom d'une mesure contenue dans le cube.  
   
  **Fonction semi-additive**  
  Sélectionnez le type d'agrégation de la mesure sélectionnée. Le tableau suivant répertorie les fonctions d'agrégation disponibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Agrégation réalisée en retournant la moyenne des enfants de la mesure.|  
 |`ByAccount`|Agrégation réalisée par la fonction d'agrégation associée au type de compte spécifié d'un attribut dans une dimension de compte.|  

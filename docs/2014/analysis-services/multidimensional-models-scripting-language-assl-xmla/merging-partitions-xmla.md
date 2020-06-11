@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65840066d3e95571db511a2015a1bee64aa8d922
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702042"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544951"
 ---
 # <a name="merging-partitions-xmla"></a>Fusion de partitions (XMLA)
   Si les partitions ont la même conception d’agrégation et la même structure, vous pouvez fusionner la partition à l’aide de la commande [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) dans XML for Analysis (XMLA). Dans le cadre de la gestion des partitions, il est important de fusionner les partitions, plus particulièrement les partitions qui contiennent des données historiques partitionnées par date.  
@@ -46,7 +45,7 @@ ms.locfileid: "62702042"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="description"></a>Description  
- L’exemple suivant fusionne toutes les partitions du groupe de **mesures Customer Counts** du **cube Adventure Works** de l’exemple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données **Adventure Works DW** dans la partition **Customers_2004** .  
+ L’exemple suivant fusionne toutes les partitions du groupe de mesures **Customer Counts** du cube **Adventure Works** de l’exemple de base de données **Adventure Works DW** dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la partition **Customers_2004** .  
   
 ### <a name="code"></a>Code  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 301642f2e9ca7e1542a60c45f352bae6fe59712c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072267"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541054"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Boîte de dialogue Nouveau groupe de mesures (Concepteur de cube)
   Utilisez la boîte de dialogue **Nouveau groupe de mesures** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour ajouter un nouveau groupe de mesures à un cube dans le Concepteur de cube. Vous pouvez afficher la boîte de dialogue **Nouveau groupe de mesures** en :  

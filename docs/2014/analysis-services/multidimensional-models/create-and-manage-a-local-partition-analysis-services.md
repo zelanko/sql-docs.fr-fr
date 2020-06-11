@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7251f9e9422a79c214d27d913112a28ff43d56b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175788"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536231"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Créer et gérer une partition locale (Analysis Services)
   Vous pouvez créer des partitions supplémentaires pour un groupe de mesures afin d'améliorer les performances de traitement. Le fait de disposer de plusieurs partitions permet d'allouer des données de faits sur un nombre correspondant de fichiers de données physiques sur les serveurs locaux, ainsi que sur les serveurs distants. Dans Analysis Services, les partitions peuvent être traitées indépendamment et en parallèle, ce qui vous permet de contrôler davantage le traitement des charges de travail sur le serveur.
@@ -27,7 +26,7 @@ ms.locfileid: "78175788"
  Les partitions peuvent être créées dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pendant la conception de modèle, ou une fois que la solution est déployée à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de XMLA. Nous vous recommandons de choisir une seule approche uniquement. Si vous passez d'un outil à un autre, vous allez peut-être constater que les modifications apportées à une base de données déployée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sont remplacées lorsque vous redéployez ultérieurement la solution depuis [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].
 
 ## <a name="before-you-start"></a>Avant de commencer
- Vérifiez si vous disposez de la version Business Intelligence Edition ou Enterprise Edition. L'édition Standard ne prend pas en charge plusieurs partitions. Pour vérifier l’édition, cliquez avec le bouton droit sur le [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nœud du serveur dans et choisissez **rapports** | **général**. Pour plus d’informations sur la disponibilité des fonctionnalités, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ Vérifiez si vous disposez de la version Business Intelligence Edition ou Enterprise Edition. L'édition Standard ne prend pas en charge plusieurs partitions. Pour vérifier l’édition, cliquez avec le bouton droit sur le nœud du serveur dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et choisissez **rapports**  |  **général**. Pour plus d’informations sur la disponibilité des fonctionnalités, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
  Dès le départ, il est important de comprendre que les partitions doivent partager la même conception d'agrégation si vous voulez les fusionner ultérieurement. Les partitions peuvent être fusionnées uniquement si elles ont des modes de stockage et des conceptions d'agrégation identiques.
 

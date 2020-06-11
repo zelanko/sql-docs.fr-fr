@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b942210e653bc3e0a7309a98a4e75e84c5f82168
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062611"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528135"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Boîte de dialogue Paramètres d'algorithme (Vue Modèles d'exploration de données)
   Utilisez la boîte de dialogue **Paramètres d’algorithme** pour ajuster les paramètres d’algorithme spécifiques du modèle sélectionné. Lorsque vous modifiez un paramètre d'algorithme, vous modifiez habituellement les résultats du modèle d'exploration de données. L'influence de chaque paramètre sur les résultats dépend de l'algorithme que vous utilisez et de vos données. Pour plus d’informations, consultez [Personnaliser les modèles et les structures d’exploration de données](data-mining/customize-mining-models-and-structure.md).  
   
 ## <a name="options"></a>Options  
- **Parameters**  
+ **Paramètres**  
  Affiche la liste des paramètres disponibles pour le modèle d'exploration de données sélectionné.  
   
  La liste suivante décrit les colonnes disponibles.  
@@ -43,7 +42,7 @@ ms.locfileid: "66062611"
  **Ajouter**  
  Cliquez sur cet élément pour ajouter à la liste des paramètres supplémentaires spécifiques de l'algorithme. Après avoir ajouté le paramètre, vous pouvez entrer le nom correct dans la colonne **Paramètre** et donner une valeur dans la colonne **Valeur** .  
   
- **Remove**  
+ **Supprimer**  
  Cliquez sur cet élément pour supprimer un paramètre personnalisé de la liste.  
   
  Si vous supprimez l'un des paramètres d'algorithme Analysis Services standard de la liste, le paramètre continue d'être utilisé dans le modèle, mais avec ses valeurs par défaut. Le paramètre n'est pas supprimé définitivement et apparaîtra la prochaine fois que vous ouvrirez la boîte de dialogue.  

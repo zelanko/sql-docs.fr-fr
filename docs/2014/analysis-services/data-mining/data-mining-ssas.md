@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 447b350aae97ded341788dd4b398441d6b1efdb2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084821"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522641"
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une plateforme intégrée pour les solutions qui intègrent l'exploration de données. Vous pouvez utiliser des données de cube ou relationnelles pour créer des solutions décisionnelles avec des analyses prévisionnelles.  
@@ -49,7 +48,7 @@ ms.locfileid: "66084821"
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de cette section présentent les principales fonctionnalités de l'exploration de données et des tâches associées de SQL Server.  
   
--   [Concepts d'exploration de données](data-mining-concepts.md)  
+-   [Concepts d’exploration de données](data-mining-concepts.md)  
   
 -   [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   

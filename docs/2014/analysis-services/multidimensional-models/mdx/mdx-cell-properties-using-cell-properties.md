@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8888414e3ceefa237cb4f2317d3d78926765d691
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074340"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546451"
 ---
 # <a name="using-cell-properties-mdx"></a>Utilisation des propriétés de cellule (MDX)
   Les propriétés de cellule dans les expressions multidimensionnelles (MDX, Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules appartenant à une source de données multidimensionnelles, par exemple un cube.  
@@ -63,7 +62,7 @@ SELECT [<axis_specification>
 |`UPDATEABLE`|Valeur indiquant si la cellule peut être mise à jour. Cette propriété peut prendre les valeurs suivantes :<br /><br /> `MD_MASK_ENABLED`(0x00000000) la cellule peut être mise à jour.<br /><br /> `MD_MASK_NOT_ENABLED`(0x10000000) la cellule ne peut pas être mise à jour.<br /><br /> `CELL_UPDATE_ENABLED`(0x00000001) la cellule peut être mise à jour dans l’CellSet.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`(0x00000002) la cellule peut être mise à jour avec une instruction Update. La mise à jour peut échouer si une cellule feuille non activée en écriture est mise à jour.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`(0x10000001) la cellule ne peut pas être mise à jour parce que la cellule a un membre calculé parmi ses coordonnées ; la cellule a été récupérée avec un jeu dans la clause WHERE. Une cellule peut être mise à jour même si une formule affecte sa valeur (se trouve à un certain endroit sur le chemin d'agrégation) ou si une cellule calculée se trouve dessus. Dans ce scénario, la valeur finale de la cellule ne peut pas être la valeur mise à jour, car le calcul affectera le résultat.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`(0x10000002) la cellule ne peut pas être mise à jour, car les mesures qui ne sont pas des sommes (Count, min, Max, distinct Count, semi-additive) ne peuvent pas être mises à jour.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`(0x10000003) la cellule ne peut pas être mise à jour, car elle n’existe pas, car elle se trouve à l’intersection d’une mesure et d’un membre de dimension qui n’est pas lié au groupe de mesures de la mesure.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`(0x10000005) la cellule ne peut pas être mise à jour parce que la cellule est sécurisée.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`(0x10000006) réservé pour une utilisation ultérieure.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`(0x10000007) la cellule ne peut pas être mise à jour pour des raisons internes.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`(0x10000009) la cellule ne peut pas être mise à jour car la mise à jour n’est pas prise en charge dans les dimensions de modèle d’exploration de données, indirect ou d’exploration de données.|  
 |`VALUE`|Valeur sans mise en forme de la cellule.|  
   
- Seules les propriétés de cellule `CELL_ORDINAL`, `FORMATTED_VALUE` et `VALUE` sont obligatoires. Toutes les propriétés de cellule, intrinsèques ou propres aux fournisseurs, sont définies dans le jeu de lignes du schéma `PROPERTIES`, notamment les types de données et la prise en charge par un fournisseur. Pour plus d’informations sur `PROPERTIES` l’ensemble de lignes de schéma, consultez [MDSCHEMA_PROPERTIES rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
+ Seules les propriétés de cellule `CELL_ORDINAL`, `FORMATTED_VALUE` et `VALUE` sont obligatoires. Toutes les propriétés de cellule, intrinsèques ou propres aux fournisseurs, sont définies dans le jeu de lignes du schéma `PROPERTIES`, notamment les types de données et la prise en charge par un fournisseur. Pour plus d’informations sur l' `PROPERTIES` ensemble de lignes de schéma, consultez [MDSCHEMA_PROPERTIES rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  Par défaut, si le mot clé `CELL PROPERTIES` n'est pas utilisé, les propriétés de cellule retournées sont, dans l'ordre : `VALUE`, `FORMATTED_VALUE` et `CELL_ORDINAL`. Si le mot clé `CELL PROPERTIES` est utilisé, seules les propriétés de cellule explicitement spécifiées avec le mot clé sont retournées.  
   
@@ -80,7 +79,7 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORMAT_STRING, FORE_COLOR, BACK_COLOR
  Les requêtes MDX qui retournent des jeux de lignes réduits ne retournent pas de propriétés de cellule ; dans ce cas, chaque cellule est représentée comme si seule la propriété de cellule `FORMATTED_VALUE` était retournée.  
   
 ## <a name="setting-cell-properties"></a>Définition de propriétés de cellule  
- Les propriétés de cellule peuvent être [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] définies dans à différents endroits. Par exemple, la propriété de chaîne de format peut être définie pour des mesures ordinaires sous l’onglet Structure de cube de l’éditeur de cube dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]; cette même propriété peut être définie pour des mesures calculées définies sur le cube sous l’onglet Calculs de l’éditeur de cube ; c’est également à cet emplacement que la chaîne de format des mesures calculées définies dans la clause WITH d’une requête est définie. La requête suivante montre comment les propriétés de cellule peuvent être définies sur une mesure calculée :  
+ Les propriétés de cellule peuvent être définies dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] à différents endroits. Par exemple, la propriété de chaîne de format peut être définie pour des mesures ordinaires sous l’onglet Structure de cube de l’éditeur de cube dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]; cette même propriété peut être définie pour des mesures calculées définies sur le cube sous l’onglet Calculs de l’éditeur de cube ; c’est également à cet emplacement que la chaîne de format des mesures calculées définies dans la clause WITH d’une requête est définie. La requête suivante montre comment les propriétés de cellule peuvent être définies sur une mesure calculée :  
   
 ```  
 WITH MEMBER MEASURES.CELLPROPERTYDEMO AS [Measures].[Internet Sales Amount]  

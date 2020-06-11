@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070317"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539361"
 ---
 # <a name="lesson-3-rename-columns"></a>Leçon 3 : Renommer des colonnes
   Dans cette leçon, vous allez renommer plusieurs colonnes dans chaque table que vous avez importée. En renommant les colonnes, elles seront plus faciles à identifier et à parcourir dans le concepteur de modèles mais aussi via les champs de sélection dans une application cliente. Pour plus d’informations, consultez [Renommer une table ou une colonne &#40;SSAS Tabulaire&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "66070317"
   
      Quand vous cliquez sur un onglet, la table correspondante devient active dans la fenêtre du concepteur de modèles.  
   
-2.  Double-cliquez **CustomerKey** sur le nom de la colonne `Customer  Id`CustomerKey, tapez, puis appuyez sur entrée.  
+2.  Double-cliquez sur le nom de la colonne **CustomerKey** , tapez `Customer  Id` , puis appuyez sur entrée.  
   
     > [!TIP]  
     >  Vous pouvez également renommer une colonne dans la propriété nom de la **colonne** dans la fenêtre **Propriétés** de la colonne, ou dans la vue de diagramme.  
@@ -124,7 +123,7 @@ ms.locfileid: "66070317"
     |EnglishDescription|Description|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
-    |État|Product Status|  
+    |Statut|Product Status|  
   
      **Catégorie de produit**  
   

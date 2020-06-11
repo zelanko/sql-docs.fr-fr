@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be4a5f265d83c9346756e82f04d25616551b1af3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086830"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526495"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer la requête d'interrogation (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer la requête d'interrogation** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête d'interrogation sous l'onglet **Notifications** de la boîte de dialogue **Options de stockage**. En règle générale, une requête d'interrogation est une requête singleton qui retourne une valeur que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut utiliser pour déterminer si les modifications ont été apportées à une table ou à un autre objet relationnel. Vous pouvez afficher la boîte de dialogue **Créer la requête d'interrogation** en cliquant sur le bouton qui contient des points de suspension (**...**) dans la colonne **Requête d'interrogation** de la grille de l'option **Interrogation planifiée** sous l'onglet **Notifications** de la boîte de dialogue **Options de stockage**. Pour plus d’informations sur l’onglet **Notifications** de la boîte de dialogue **Options de stockage**, consultez [Notifications &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
@@ -54,10 +53,10 @@ ms.locfileid: "66086830"
  **Définition de la requête**  
  La définition de la requête propose une barre d'outils et des volets dans lesquels il est possible de définir et de tester la requête en fonction de la vue sélectionnée.  
   
- **Barre**  
+ **Barre d’outils**  
  Utilisez la barre d'outils pour gérer les datasets, sélectionner les volets à afficher et contrôler diverses fonctions de requête.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Basculer vers le générateur de requêtes générique**|Sélectionnez cette option pour afficher uniquement les options disponibles dans la vue Générateur de requêtes générique. Seules les options suivantes sont affichées :<br /><br /> **Volet SQL**<br /><br /> **Volet résultats**<br /><br /> **Barre d'outils**qui contient uniquement les commandes **Basculer vers le générateur de requêtes VDT** et **Exécuter**<br /><br /> <br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
 |**Basculer vers le générateur de requêtes VDT**|Sélectionnez cette option pour afficher toutes les options disponibles dans la vue Générateur de requête Outils Visual Database (VDT).<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes générique** est sélectionné.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37ce07dd3ae9cbd46a6ddd1860c3178fe154513a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071661"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535171"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Créer une connexion de modèle sémantique BI à une base de données model tabulaire
   Utilisez les informations de cette rubrique pour configurer une connexion de modèle sémantique BI qui redirige vers une base de données model tabulaire qui s'exécute sur une instance Analysis Services en dehors de la batterie SharePoint.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071661"
   
  Cette rubrique comprend les sections suivantes. Effectuez chaque tâche dans l'ordre indiqué.  
   
- [Vérifier les conditions préalables](#bkmk_prereq)  
+ [Examiner la configuration requise](#bkmk_prereq)  
   
  [Accorder les autorisations d'administration Analysis Services aux applications de services partagés](#bkmk_ssas)  
   

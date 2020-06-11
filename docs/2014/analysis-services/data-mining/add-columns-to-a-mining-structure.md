@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13a8343fe83b29499c9fc52f40a7800884cd86cf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086225"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525615"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>ajouter des colonnes à une structure d'exploration de données
   Utilisez le Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour ajouter des colonnes à une structure d'exploration de données après l'avoir définie dans l'Assistant Exploration de données. Vous pouvez ajouter n'importe quelle colonne qui existe dans la vue de source de données utilisée pour définir la structure d'exploration de données.  

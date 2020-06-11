@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db6a51b44e9b467881c4aeaa8e0a63f48b617a22
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538321"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Sélectionner des calendriers (Assistant Dimension)
   La page **Sélectionner des calendriers** permet de créer des hiérarchies supplémentaires représentant les calendriers fiscaux, de rapports, de fabrication ou ISO (International Standards Organization) 8601 de la dimension de temps.  
@@ -58,7 +57,7 @@ ms.locfileid: "66069691"
   
  Le tableau suivant répertorie les options disponibles pour le modèle de semaine du mois.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Semaine 445**|Le premier mois du trimestre compte 4 semaines, le deuxième mois en compte 4, et le troisième mois en compte 5.|  
 |**Semaine 454**|Le premier mois du trimestre compte 4 semaines, le deuxième mois en compte 5, et le troisième mois en compte 4.|  

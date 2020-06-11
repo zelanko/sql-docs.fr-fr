@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 226b8c52fde4c9c4190c9c6c0c1e91c578643f53
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084891"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522726"
 ---
 # <a name="data-mining-solutions"></a>Solutions d'exploration de données
   Une solution d'exploration de données est une solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient un ou plusieurs projets d'exploration de données.  
   
- Les rubriques de cette section fournissent des informations sur la conception et l’implémentation d’une solution d’exploration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]données intégrée à l’aide de. Pour une présentation du processus de conception d’exploration de données et des outils connexes, consultez [Concepts d’exploration de données](data-mining-concepts.md).  
+ Les rubriques de cette section fournissent des informations sur la conception et l’implémentation d’une solution d’exploration de données intégrée à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour une présentation du processus de conception d’exploration de données et des outils connexes, consultez [Concepts d’exploration de données](data-mining-concepts.md).  
   
  Pour plus d’informations sur d’autres types de projets qui sont utiles pour l’exploration de données, consultez [Projets connexes pour des solutions d’exploration de données](data-mining-solutions.md).  
   

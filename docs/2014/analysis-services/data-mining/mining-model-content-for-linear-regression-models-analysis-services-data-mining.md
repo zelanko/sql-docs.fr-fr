@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4ee781a5c15e38676ca11c4385f271988ba615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083642"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521576"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression linéaire (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -180,7 +179,7 @@ ms.locfileid: "66083642"
 #### <a name="intercept"></a>Intercepter  
  Normalement, *l’interception* (VALUETYPE = 11) ou le *résiduel* d’une équation de régression indique la valeur de l’attribut prédictible à l’endroit où l’attribut d’entrée est 0. Dans de nombreux cas, cela ne se produit pas, ce qui peut mener à des résultats non intuitifs.  
   
- Par exemple, il est inutile de connaître le revenu à l’âge 0 dans un modèle qui prédit le revenu selon l’âge. Dans la pratique, il est généralement plus utile de connaître le comportement de la ligne par rapport aux valeurs moyennes. Par conséquent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , modifie l’interception pour exprimer chaque régression dans une relation avec la moyenne.  
+ Par exemple, il est inutile de connaître le revenu à l’âge 0 dans un modèle qui prédit le revenu selon l’âge. Dans la pratique, il est généralement plus utile de connaître le comportement de la ligne par rapport aux valeurs moyennes. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifie l’interception pour exprimer chaque régression dans une relation avec la moyenne.  
   
  Cet ajustement est difficilement visible dans le contenu du modèle d’exploration de données, mais il apparaît si vous affichez l’équation complète dans la **Légende d’exploration de données** de la **Visionneuse d’arborescences Microsoft**. La formule de régression passe du point 0 au point représentant la moyenne. Cela présente une vue qui est plus intuitive en considérant les données actuelles.  
   

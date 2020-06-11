@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071808"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547553"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurer l'utilisation de l'espace disque (PowerPivot pour SharePoint)
   Un déploiement PowerPivot pour SharePoint utilise l'espace disque de l'ordinateur hôte pour mettre en cache des bases de données PowerPivot afin d'accélérer les rechargements. Chaque base de données PowerPivot chargée en mémoire est d'abord mise en cache sur disque afin qu'elle puisse être rechargée rapidement par la suite pour de nouvelles interrogations de données. Par défaut, PowerPivot pour SharePoint utilise tout l'espace disque disponible pour mettre en cache ses bases de données, mais peut modifier ce comportement en définissant des propriétés qui limitent la quantité d'espace disque utilisée.  
@@ -42,7 +41,7 @@ ms.locfileid: "66071808"
   
  Le dossier de sauvegarde fournit le stockage du cache commun pour une base de données PowerPivot chargée en mémoire sur l'ordinateur local. Si plusieurs applications de service PowerPivot sont définies dans votre batterie de serveurs, n'importe laquelle d'entre elles peut utiliser le serveur local pour charger et mettre en cache par la suite les données PowerPivot. Le chargement et la mise en cache des données sont des opérations de serveur Analysis Services. Ainsi, l'utilisation de l'espace disque total est gérée au niveau de l'instance Analysis Services, dans le dossier de sauvegarde. Des paramètres de configuration qui limitent l'utilisation de l'espace disque sont par conséquent définis sur l'instance unique de SQL Server Analysis Services qui s'exécute sur un serveur d'applications SharePoint.  
   
- Le cache contient uniquement des bases de données PowerPivot. Les bases de données PowerPivot sont stockées dans plusieurs fichiers sous un dossier parent unique (le dossier de sauvegarde). Étant donné que les bases de données PowerPivot sont destinées à être utilisées comme données internes dans un classeur Excel, les noms de la base de données sont basés sur GUID plutôt que descriptifs. Un dossier GUID sous ** \<serviceApplicationName>** est le dossier parent d’une base de données PowerPivot. Lorsque les bases de données PowerPivot sont chargées sur le serveur, des dossiers supplémentaires sont créés pour chaque base de données.  
+ Le cache contient uniquement des bases de données PowerPivot. Les bases de données PowerPivot sont stockées dans plusieurs fichiers sous un dossier parent unique (le dossier de sauvegarde). Étant donné que les bases de données PowerPivot sont destinées à être utilisées comme données internes dans un classeur Excel, les noms de la base de données sont basés sur GUID plutôt que descriptifs. Un dossier GUID sous **\<serviceApplicationName>** est le dossier parent d’une base de données PowerPivot. Lorsque les bases de données PowerPivot sont chargées sur le serveur, des dossiers supplémentaires sont créés pour chaque base de données.  
   
  Étant donné que les données PowerPivot peuvent être chargées sur toute instance Analysis Services dans une batterie, les mêmes données peuvent également être mises en cache sur plusieurs ordinateurs dans la batterie. Cette pratique améliore les performances en ce qui concerne l'utilisation de l'espace disque, mais présente l'inconvénient de ralentir l'accès aux données, car celui-ci est plus rapide si les informations sont déjà disponibles sur le disque.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071808"
   
  Au niveau du système, vous pouvez créer des alertes par courrier électronique qui vous informent lorsque l'espace disque est faible. Microsoft System Center inclut une fonctionnalité d'alerte par courrier électronique. Vous pouvez également utiliser le Gestionnaire de ressources du serveur de fichiers, le Planificateur de tâches ou un script PowerShell pour configurer des alertes. Les liens suivants fournissent des informations utiles pour la définition de notifications relatives à l'espace disque insuffisant :  
   
--   [Nouveautés des gestionnaire des ressources de serveur de fichiers](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
+-   [Nouveautés des gestionnaire des ressources de serveur de fichiers](https://technet.microsoft.com/library/hh831746.aspx) ( https://technet.microsoft.com/library/hh831746.aspx) .  
   
--   [Le serveur de fichiers gestionnaire des ressources Guide pas à pas pour Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Le serveur de fichiers gestionnaire des ressources Guide pas à pas pour Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) ( https://go.microsoft.com/fwlink/?LinkID=204875) .  
   
--   [Définition des alertes d’espace disque faible sur Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Définition des alertes d’espace disque faible sur Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870) .  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Comment limiter la quantité d'espace disque utilisée pour le stockage des fichiers mis en cache  
   

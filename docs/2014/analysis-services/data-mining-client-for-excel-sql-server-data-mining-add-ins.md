@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41ffd3091ccf38498f1484d9a1bf5a908e50e39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086429"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525936"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Client d'exploration de données pour Excel (Compléments d'exploration de données SQL Server)
   Le client d'exploration de données pour Excel est un ensemble d'outils qui vous permettent d'effectuer des tâches courantes d'exploration de données, allant du nettoyage des données à la génération de modèle et de requêtes de prédiction. Utilisez les données dans des tableaux ou des plages Excel, ou accédez à des sources de données externes.  
@@ -140,15 +139,15 @@ ms.locfileid: "66086429"
  Si vous bénéficiez des autorisations nécessaires, vous pouvez supprimer, modifier, renommer ou traiter les structures et modèles d'exploration de données existants sans quitter Excel.  
   
  [Trace &#40;client d’exploration de données pour Excel&#41;](trace-data-mining-client-for-excel.md)  
- Cliquez sur **trace** pour afficher une capture en continu de l’interaction entre le client Excel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le serveur. Toutes les activités sont stockées sous forme d'instructions DMX ou XMLA ; vous pouvez donc résoudre les problèmes de votre session d'exploration de données ou enregistrer les informations en vue de les utiliser ultérieurement.  
+ Cliquez sur **trace** pour afficher une capture en continu de l’interaction entre le client Excel et le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] serveur. Toutes les activités sont stockées sous forme d'instructions DMX ou XMLA ; vous pouvez donc résoudre les problèmes de votre session d'exploration de données ou enregistrer les informations en vue de les utiliser ultérieurement.  
   
  [Connexion à un serveur d'exploration de données](connect-to-a-data-mining-server.md)  
  Pour pouvoir utiliser Excel comme client pour l'exploration de données, vous devez établir une connexion à une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La connexion vous permet d'accéder au moteur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Si vous disposez des autorisations nécessaires, la connexion vous permet également de stocker les séquences que vous avez découvertes et de modifier des objets d'exploration de données existants.  
   
- La barre d’outils **connexions** fournit des assistants pour gérer les connexions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]à une instance de. Pour pouvoir utiliser les algorithmes et les outils d'exploration de données, vous devez définir une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez créer la connexion lorsque vous installez le complément, ou vous pouvez ajouter une connexion par la suite.  
+ La barre d’outils **connexions** fournit des assistants pour gérer les connexions à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour pouvoir utiliser les algorithmes et les outils d'exploration de données, vous devez définir une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez créer la connexion lorsque vous installez le complément, ou vous pouvez ajouter une connexion par la suite.  
   
  **Prise en main**  
- Cliquez sur le bouton **prise en main** pour démarrer un assistant de configuration qui vous guide tout au long du processus de création d’une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]connexion à une instance de et d’obtention des autorisations nécessaires pour effectuer l’exploration de données.  
+ Cliquez sur le bouton **prise en main** pour démarrer un assistant de configuration qui vous guide tout au long du processus de création d’une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et d’obtention des autorisations nécessaires pour effectuer l’exploration de données.  
   
  **Aide**  
  Le menu déroulant **aide** fournit des liens vers l’aide en ligne, les sites Web et un Assistant Configuration pour vous aider à terminer l’installation et à démarrer l’exploration de données.  

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072716"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541281"
 ---
 # <a name="use-aggregate-functions"></a>Utiliser des fonctions d'agrégation
   Lorsqu'une dimension est utilisée pour segmenter une mesure, celle-ci est résumée en fonction des hiérarchies contenues dans la dimension. Le comportement de sommation dépend de la fonction d'agrégation spécifiée pour la mesure. Pour la plupart des mesures contenant des données numériques, `Sum` est la fonction d'agrégation à utiliser. La valeur de la mesure est la somme de montants différents selon le niveau auquel la hiérarchie est active.  
   
- Dans Analysis Services, chaque mesure que vous créez s'appuie sur une fonction d'agrégation qui détermine l'opération associée à la mesure. Les types `Sum`d’agrégation prédéfinis incluent `Max`, `Count` `Min`,,, **compte distinct**et plusieurs autres fonctions plus spécialisées. Si vous avez besoin d'agrégations basées sur des formules complexes ou personnalisées, vous pouvez aussi créer un calcul MDX au lieu d'utiliser une fonction d'agrégation prédéfinie. Par exemple, si vous souhaitez définir une mesure pour une valeur de pourcentage, utilisez une mesure calculée dans MDX. Consultez [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ Dans Analysis Services, chaque mesure que vous créez s'appuie sur une fonction d'agrégation qui détermine l'opération associée à la mesure. Les types d’agrégation prédéfinis incluent `Sum` , `Min` , `Max` , `Count` , **compte distinct**et plusieurs autres fonctions plus spécialisées. Si vous avez besoin d'agrégations basées sur des formules complexes ou personnalisées, vous pouvez aussi créer un calcul MDX au lieu d'utiliser une fonction d'agrégation prédéfinie. Par exemple, si vous souhaitez définir une mesure pour une valeur de pourcentage, utilisez une mesure calculée dans MDX. Consultez [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
  Les mesures créées à l'aide de l'Assistant Cube sont affectées à un type d'agrégation au moment de leur définition. Le type d'agrégation est toujours `Sum` (en supposant que la colonne source contient des données numériques). Le type `Sum` est utilisé quel que soit le type de données de la colonne source. Par exemple, si vous avez utilisé l'Assistant Cube pour créer des mesures et que vous avez extrait toutes les colonnes d'une table de faits, vous remarquerez que toutes les mesures obtenues comportent une agrégation de la fonction `Sum`, même si la colonne source est de type date/heure. Examinez toujours les méthodes d'agrégation prédéfinies pour les mesures créées via l'Assistant pour vous assurer que la fonction d'agrégation est appropriée.  
   

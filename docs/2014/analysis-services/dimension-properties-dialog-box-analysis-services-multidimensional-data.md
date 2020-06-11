@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49513fd41e3167adcc9d39a8e680dd25bccb24a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0523220c76c11280165bc825c5c00c5eb9e23be6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081835"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528595"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Propriétés de la dimension (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Propriétés de la dimension** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'une dimension dans la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez afficher la boîte de dialogue **Propriétés de la dimension** en cliquant avec le bouton droit sur une dimension dans l’Explorateur d'objets et en sélectionnant **Propriétés**.  

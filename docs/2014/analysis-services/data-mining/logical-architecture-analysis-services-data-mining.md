@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084265"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522316"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Architecture logique (Analysis Services - Exploration de données)
   L'exploration de données est un processus qui implique l'interaction de plusieurs composants.  
@@ -41,7 +40,7 @@ ms.locfileid: "66084265"
 ##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a>Données sources de l’exploration de données  
  Les données utilisées dans l'exploration de données ne sont pas stockées dans la solution d'exploration de données ; seules les liaisons sont stockées. Les données peuvent résider dans une base de données créée dans une version précédente de SQL Server, un système CRM, ou même un fichier plat. Lors de l'apprentissage de la structure ou du modèle par traitement, un résumé statistiques des données est créé et stocké dans un cache qui peut être rendu persistant pour une utilisation dans des opérations ultérieures, ou supprimé après le traitement. Pour plus d’informations, consultez [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Vous combinez des données disparates dans l’objet de vue de source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , qui fournit une couche d’abstraction sur votre source de données. Vous pouvez spécifier des jointures entre les tables ou ajouter des tables qui ont une relation plusieurs-à-un pour créer des colonnes de table imbriquée. La définition de ces objets, la source de données et la vue de source de données sont stockées dans la solution avec les extensions de noms de fichiers *.ds et \*.dsv. Pour plus d’informations sur la création [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et l’utilisation de sources de données et de vues de sources de données, consultez [sources de données prises en charge &#40;&#41;multidimensionnels SSAS ](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Vous combinez des données disparates dans l’objet de vue de source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , qui fournit une couche d’abstraction sur votre source de données. Vous pouvez spécifier des jointures entre les tables ou ajouter des tables qui ont une relation plusieurs-à-un pour créer des colonnes de table imbriquée. La définition de ces objets, la source de données et la vue de source de données sont stockées dans la solution avec les extensions de noms de fichiers *.ds et \*.dsv. Pour plus d’informations sur la création et l’utilisation de sources de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et de vues de sources de données, consultez [sources de données prises en charge &#40;&#41;multidimensionnels SSAS ](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  Vous pouvez également définir et modifier des sources de données et des vues de source de données en utilisant AMO ou XMLA. Pour plus d’informations sur l’utilisation de ces objets par programmation, consultez [Vue d’ensemble de l’architecture logique &#40;Analysis Services - Données multidimensionnelles&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   

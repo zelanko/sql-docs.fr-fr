@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175218"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528705"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Détecter les catégories (Outils d'analyse de table pour Excel)
   ![Bouton Détecter les catégories sur le ruban](media/tat-detectcat.gif "Bouton Détecter les catégories sur le ruban")
@@ -78,13 +77,13 @@ ms.locfileid: "78175218"
 >  Lorsque vous utilisez l’outil **détecter les catégories** , il crée une nouvelle colonne, catégorie, dans la table de données d’origine. Si vous laissez cette colonne dans la table de données et que vous effectuez ensuite d'autres opérations d'exploration de données, la présence de cette colonne peut affecter vos résultats. Pour éviter que cela n'arrive, nous vous recommandons de faire une copie de la table de données sans la colonne Catégorie avant d'utiliser d'autres outils d'exploration de données.
 
 ## <a name="related-tools"></a>Outils connexes
- Lorsque l’outil **détecter les catégories** analyse vos données, il crée une structure d’exploration de données et un modèle d’exploration [!INCLUDE[msCoName](../includes/msconame-md.md)] de données à l’aide de l’algorithme de clustering.
+ Lorsque l’outil **détecter les catégories** analyse vos données, il crée une structure d’exploration de données et un modèle d’exploration de données à l’aide de l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de clustering.
 
  Une fois que vous avez créé un modèle d’exploration de données à l’aide de l’outil **analyser les influenceurs clés** , vous pouvez utiliser le client d’exploration de données pour Excel pour parcourir le modèle et explorer les relations de manière plus détaillée. Le client d'exploration de données pour Excel est un complément séparé qui fournit des fonctionnalités d'exploration de données plus avancées. Pour plus d’informations, consultez [navigation dans les modèles dans Excel &#40;SQL Server les compléments d’exploration de données&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).
 
  Pour plus d’informations sur l’utilisation des fonctionnalités de modélisation des données dans le client d’exploration de données pour Excel, consultez [création d’un modèle d’exploration de données](creating-a-data-mining-model.md).
 
- Pour plus d’informations sur l’algorithme utilisé par l’outil **détecter les catégories** , consultez la rubrique « algorithme de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clustering Microsoft » dans la documentation en ligne de.
+ Pour plus d’informations sur l’algorithme utilisé par l’outil **détecter les catégories** , consultez la rubrique « algorithme de clustering Microsoft » dans la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation en ligne de.
 
 ## <a name="see-also"></a>Voir aussi
  [Outils d'analyse de table pour Excel](table-analysis-tools-for-excel.md)

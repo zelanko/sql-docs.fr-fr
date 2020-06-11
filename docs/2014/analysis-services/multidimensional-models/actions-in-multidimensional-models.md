@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077500"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544873"
 ---
 # <a name="actions-in-multidimensional-models"></a>Actions dans les modèles multidimensionnels
   Une action est une opération réalisée par un utilisateur final sur un cube (ou portion de cube) sélectionné. Cette opération peut soit démarrer une application en prenant comme paramètre l'élément sélectionné, soit extraire des informations relatives à l'élément sélectionné. Pour plus d’informations sur les d’actions, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -72,10 +71,10 @@ ms.locfileid: "66077500"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Invocation**|Détermine le mode d'exécution de l'action. Le mode interactif, qui est celui par défaut, spécifie que l'action est exécutée lorsqu'un utilisateur accède à un objet. Les paramètres possibles sont :<br /><br /> Batch<br /><br /> Interactive (Interactif)<br /><br /> À l’ouverture|  
+|**Invocation**|Détermine le mode d'exécution de l'action. Le mode interactif, qui est celui par défaut, spécifie que l'action est exécutée lorsqu'un utilisateur accède à un objet. Les paramètres possibles sont :<br /><br /> Batch<br /><br /> Interactive<br /><br /> À l’ouverture|  
 |**Application**|Décrit l'application de l'action.|  
 |**Description**|Décrit l'action.|  
-|**-**|Fournit une légende qui s'affiche pour l'action. Si la légende est MDX, spécifiez `True` pour **Caption est MDX**.|  
+|**Caption**|Fournit une légende qui s'affiche pour l'action. Si la légende est MDX, spécifiez `True` pour **Caption est MDX**.|  
 |**La légende est MDX**|Spécifiez `True` si la légende est au format MDX ou `False` si ce n'est pas le cas.|  
   
 > [!NOTE]  

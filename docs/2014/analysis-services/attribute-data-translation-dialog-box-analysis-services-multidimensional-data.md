@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af68a7f9668b46a55a3bf28f9cf07dd64766aa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063068"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527925"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Traduction de données d'attribut (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Traduction de données d’attribut** pour configurer la colonne qui contient les données de sous-titre de traduction, ainsi que l’ordre de classement et de tri à utiliser avec les données traduites. Pour afficher la boîte de dialogue **Traduction de données d’attribut** , vous pouvez :  
@@ -32,7 +31,7 @@ ms.locfileid: "66063068"
  **Attribut**  
  Affiche l'attribut sélectionné.  
   
- **Langage**  
+ **Langue**  
  Affiche la langue sélectionnée.  
   
  **Légende traduite**  
@@ -44,7 +43,7 @@ ms.locfileid: "66063068"
  **Indicateur de classement**  
  Définit l'indicateur de classement pour l'attribut sélectionné. Le classement Windows est sélectionné par défaut. Cliquez sur la flèche vers le bas pour effectuer votre sélection parmi les classements disponibles.  
   
- **Binaire2**  
+ **Binaire**  
  Sélectionnez cette option pour trier et comparer les données en fonction des modèles des bits définis pour chaque caractère. L'ordre de tri binaire respecte la casse, c'est-à-dire que les minuscules précèdent les majuscules ; il respecte également les accents. Il s'agit de l'ordre de tri le plus rapide.  
   
  Si cette option n'est pas activée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecte les règles de tri et de comparaison définies dans les dictionnaires pour la langue ou l'alphabet associé.  

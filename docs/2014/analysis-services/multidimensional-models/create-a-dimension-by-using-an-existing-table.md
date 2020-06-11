@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef89ce093e9cf97926ceae3cc75e17941594e7ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076418"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536641"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Créer une dimension à l'aide d'une table existante
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser l’Assistant dimension dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension à partir d’une table existante. Pour cela, sélectionnez l’option **Utiliser une table existante** de la page **Sélectionner la méthode de création** de l’Assistant. Si vous sélectionnez cette option, l'Assistant base la structure de la dimension sur les tables de dimension, leurs colonnes et toutes les relations entre ces colonnes d'une vue de source de données existante. L'Assistant échantillonne des données dans la table source et les tables associées. Il utilise ces données pour définir des colonnes d’attributs basées sur les colonnes dans les tables de dimension et pour définir des hiérarchies d’attributs (nommées hiérarchies *définies par l’utilisateur* ). Une fois que vous avez utilisé l'Assistant Dimension pour créer votre dimension, vous pouvez utiliser le Concepteur de dimensions pour ajouter, supprimer et configurer des attributs et des hiérarchies dans la dimension.  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous pouvez utiliser l’Assistant dimension dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension à partir d’une table existante. Pour cela, sélectionnez l’option **Utiliser une table existante** de la page **Sélectionner la méthode de création** de l’Assistant. Si vous sélectionnez cette option, l'Assistant base la structure de la dimension sur les tables de dimension, leurs colonnes et toutes les relations entre ces colonnes d'une vue de source de données existante. L'Assistant échantillonne des données dans la table source et les tables associées. Il utilise ces données pour définir des colonnes d’attributs basées sur les colonnes dans les tables de dimension et pour définir des hiérarchies d’attributs (nommées hiérarchies *définies par l’utilisateur* ). Une fois que vous avez utilisé l'Assistant Dimension pour créer votre dimension, vous pouvez utiliser le Concepteur de dimensions pour ajouter, supprimer et configurer des attributs et des hiérarchies dans la dimension.  
   
  Lorsque vous utilisez une table existante pour créer une dimension, l'Assistant Dimension vous guide à travers les étapes suivantes :  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076418"
 ## <a name="selecting-dimension-attributes"></a>Sélection des attributs de dimension  
  Après avoir sélectionné les tables de dimension, utilisez la page **Sélectionner les attributs de la dimension** pour sélectionner les attributs que vous souhaitez inclure dans la dimension à partir de ces tables. Toutes les colonnes sous-jacentes de toutes ces tables sont disponibles comme attributs de dimension potentiels. L'attribut de clé de la dimension doit être sélectionné et activé pour l'exploration.  
   
- Par défaut, l'Assistant affecte la valeur `Regular` au type d'un attribut. Toutefois, vous souhaiterez peut-être mapper des attributs spécifiques sur un autre type d'attribut qui représente mieux les données. Par exemple, la table dbo.DimAccount dans l'exemple de base de données DW [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] contient une colonne AccountCodeAlternateKey qui fournit le numéro de compte. Au lieu de définir le type `Regular` sur pour cet attribut, vous souhaiterez peut-être mapper cet `Account Number` attribut au type.  
+ Par défaut, l'Assistant affecte la valeur `Regular` au type d'un attribut. Toutefois, vous souhaiterez peut-être mapper des attributs spécifiques sur un autre type d'attribut qui représente mieux les données. Par exemple, la table dbo.DimAccount dans l'exemple de base de données DW [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] contient une colonne AccountCodeAlternateKey qui fournit le numéro de compte. Au lieu de définir le type sur `Regular` pour cet attribut, vous souhaiterez peut-être mapper cet attribut au `Account Number` type.  
   
 > [!NOTE]  
 >  Si le type de dimension et les types d'attribut standard ne sont pas définis lorsque vous créez la dimension, utilisez l'Assistant Business Intelligence pour définir ces valeurs après avoir créé la dimension. Pour plus d’informations, consultez [Ajouter de l’intelligence de dimensions à une dimension](bi-wizard-add-dimension-intelligence-to-a-dimension.md) ou (pour une dimension de type Comptes) [Ajouter de l’intelligence comptable à une dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  

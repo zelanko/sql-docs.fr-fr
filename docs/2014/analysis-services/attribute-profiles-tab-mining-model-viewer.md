@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df97455d2fae8cb3375967a8e37a2329a7509fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063169"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527910"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Onglet Profils d'attribut (Visionneuse de modèle d'exploration de données)
   Utilisez l’onglet **Profils d’attribut** pour voir comment la distribution des valeurs d’entrée dans un état de modèle Naive Bayes contribue à chaque état de l’attribut de résultat. La distribution de valeurs est affichée sous la forme d'un histogramme coloré, toutes les distributions étant présentées dans un format tabulaire, afin de faciliter la comparaison des valeurs.  
@@ -46,10 +45,10 @@ ms.locfileid: "66063169"
  **Profils d'attribut**  
  Le tableau contient les colonnes suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Attributs**|Affiche la liste des colonnes contenues dans le modèle d'exploration de données.|  
-|**États**|Colonne facultative qui décrit l'état que représente la couleur de la ligne correspondante d'attributs. Ajoutez-la ou supprimez-la à l’aide de la case à cocher **Afficher la légende** .|  
+|**Déclare**|Colonne facultative qui décrit l'état que représente la couleur de la ligne correspondante d'attributs. Ajoutez-la ou supprimez-la à l’aide de la case à cocher **Afficher la légende** .|  
 |**Habitants**|Affiche la répartition de l'attribut dans l'ensemble du dataset.|  
 |**Colonne pour les états d'attribut prédictible**|Affiche une colonne pour chaque état de la colonne prédictible, chaque ligne correspondant à un attribut d'entrée du modèle.|  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99f98507289acd8f8fd0f2ff9ef8fed49813d80f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081330"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528435"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Activer l'écriture différée de la dimension (Dimension) (Assistant Business Intelligence)
   Utilisez la page **Activer l'écriture différée de la dimension** pour sélectionner une dimension pour laquelle l'Assistant Business Intelligence activera l'écriture différée.  

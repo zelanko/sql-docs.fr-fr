@@ -4,23 +4,23 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938116"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670001"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;requête&gt; de données source-forme
+# <a name="ltsource-data-querygt---shape"></a>&lt;requête de données source &gt; -forme
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Associe les requêtes de plusieurs sources de données à une table hiérarchique unique (c'est-à-dire une table avec des tables imbriquées), qui devient la table de cas du modèle d'exploration de données.  
   
- La syntaxe complète de la commande **Shape** est documentée dans [!INCLUDE[msCoName](../includes/msconame-md.md)] le kit de développement logiciel (SDK) de Data Access Components (MDAC).  
+ La syntaxe complète de la commande **Shape** est documentée dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] Kit de développement logiciel (SDK) de Data Access Components (MDAC).  
   
 ## <a name="syntax"></a>Syntaxe  
   

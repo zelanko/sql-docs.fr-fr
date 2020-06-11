@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 1c81185b-c20a-4df4-b10f-066a255af27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74dbfad1126f344c20179459feaf8932a03f6d0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de40178e39dbb110715e162f122e9310f8252c4b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087827"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527415"
 ---
 # <a name="column-width-dialog-box-ssas"></a>Largeur de colonne, boîte de dialogue (SSAS)
   La boîte de dialogue **Largeur de colonne** vous permet de spécifier la largeur d’une colonne dans le concepteur de modèles. Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur une colonne, puis cliquez sur **Largeur de colonne**. Vous pouvez également faire en sorte que la colonne s’ajuste automatiquement à la taille de son contenu en double-cliquant sur le quadrillage sur le bord droit de la colonne.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Largeur de colonne**  
  Tapez le nombre de pixels pour la largeur de colonne.  
   

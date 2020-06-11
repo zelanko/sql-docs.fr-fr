@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6a5db00e6b25741cb9367d0b4a42101ca06650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084515"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522478"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Modifier la vue de source de données utilisée pour une structure d'exploration de données
   Vous pouvez ouvrir une vue de source de données dans le Concepteur d'exploration de données pour la modifier.  

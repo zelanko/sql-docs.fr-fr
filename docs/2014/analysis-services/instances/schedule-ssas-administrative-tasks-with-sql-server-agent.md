@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079683"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543771"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planifier des tâches administratives SSAS avec SQL Server Agent
   Le service SQL Server Agent vous permet de planifier des tâches administratives [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à exécuter dans l’ordre et au moment que vous précisez. Les tâches planifiées vous aident à automatiser les processus qui s’exécutent selon des cycles réguliers ou prévisibles. Vous pouvez planifier l'exécution de tâches administratives, telles que le traitement de cubes, durant les périodes de faible activité. Vous pouvez également déterminer l'ordre dans lequel les tâches s'exécutent en créant des étapes de travail au sein d'un travail de l'Agent SQL Server. Par exemple, vous pouvez traiter un cube, puis effectuer une sauvegarde de ce cube.  
@@ -27,7 +26,7 @@ ms.locfileid: "66079683"
 ## <a name="prerequisites"></a>Prérequis  
  Le service Agent SQL Server doit être installé.  
   
- Par défaut, les travaux s'exécutent sous le compte de service. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le compte par défaut de SQL Server Agent est NT Service\SQLAgent\<$ nom_instance>. Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Par défaut, les travaux s'exécutent sous le compte de service. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , le compte par défaut de SQL Server Agent est NT Service\SQLAgent $ \<instancename> . Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [installer des exemples de données et de projets pour le Analysis Services didacticiel sur la modélisation multidimensionnelle](../install-sample-data-and-projects.md).  
   
@@ -81,9 +80,9 @@ ms.locfileid: "66079683"
   
 6.  Dans la boîte de dialogue **Nouvelle étape de travail** , tapez un nom pour l'étape dans **Nom de l'étape**.  
   
-7.  Dans **Serveur**, tapez **localhost** pour une instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et **localhost\\**\<*nom_instance*> pour une instance nommée.  
+7.  Dans **serveur**, tapez **localhost** pour une instance par défaut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de **et \\ localhost** \<*instance name*> pour une instance nommée.  
   
-     Si vous allez exécuter le travail à partir d'un ordinateur distant, utilisez le nom du serveur et le nom de l'instance où le travail s'exécutera. Utilisez le format \< *nom du serveur*> pour une instance par défaut \<, et nom du *serveur*>\\<nom de l'*instance*> pour une instance nommée.  
+     Si vous allez exécuter le travail à partir d'un ordinateur distant, utilisez le nom du serveur et le nom de l'instance où le travail s'exécutera. Utilisez le format \<*server name*> d’une instance par défaut et le \<*server name*> \\ < *nom d’instance*> pour une instance nommée.  
   
 8.  Dans **Type**, sélectionnez **Commande SQL Server Analysis Services**.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b5ace027c052090e2f0ce5bca77e02df9516da4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174468"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527265"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurer ou réparer PowerPivot pour SharePoint 2010 (outil de configuration de PowerPivot)
   Utilisez l'Outil de configuration de PowerPivot pour configurer ou réparer une installation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot pour SharePoint 2010. L'outil de configuration commence par analyser le système, puis retourne une liste d'actions nécessaires pour achever ou réparer votre installation. L'Assistant Installation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] installe l'outil de configuration de PowerPivot pour SharePoint 2010 et un outil de configuration de PowerPivot pour SharePoint 2013. Cette rubrique décrit l'outil de configuration de PowerPivot pour SharePoint 2010. Pour plus d’informations sur SharePoint 2010, consultez [configurer ou réparer PowerPivot pour SharePoint 2013 &#40;outil de configuration de PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).
@@ -96,9 +95,9 @@ ms.locfileid: "78174468"
 ||Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Si la batterie de serveurs n'est pas configurée, l'outil fournit des options pour la création de la batterie de serveurs, notamment pour la création d'un point de terminaison HTTP dans l'Administration centrale. Il choisit par défaut un numéro de port généré de manière aléatoire qui n'est pas encore utilisé.|
 |**Configurer une nouvelle batterie de serveurs**|Serveur de base de données<br /><br /> Compte de batterie de serveurs<br /><br /> Phrase secrète<br /><br /> Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Valeur par défaut de paramètres que vous avez entrés dans dans la page principale.|
 |**Configurer une instance de service locale**|Mot de passe du compte de service Analysis Services|Entrée utilisateur|Vous devez taper le mot de passe du compte de service Analysis Services dans la page **inscrire SQL Server Analysis Services (PowerPivot) sur le serveur local** .<br /><br /> Le compte de service a été spécifié pendant l'installation. Vous devez maintenant taper le mot de passe comme entrée pour inscrire l'instance de service local avec SharePoint.|
-|**Créer une application de service PowerPivot**|Nom de l'application de service PowerPivot|Par défaut|Le nom par défaut est celui de l'application de service PowerPivot par défaut. Vous pouvez le remplacer par une valeur différente dans l'outil.|
-||Serveur de base de données d'application de service PowerPivot|Par défaut|Serveur de base de données qui héberge la base de données d'application de service PowerPivot. Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez le remplacer par une valeur différente dans l'outil.|
-||Nom de la base de données d'application de service PowerPivot|Par défaut|Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|
+|**Créer une application de service PowerPivot**|Nom de l'application de service PowerPivot|Default|Le nom par défaut est celui de l'application de service PowerPivot par défaut. Vous pouvez le remplacer par une valeur différente dans l'outil.|
+||Serveur de base de données d'application de service PowerPivot|Default|Serveur de base de données qui héberge la base de données d'application de service PowerPivot. Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez le remplacer par une valeur différente dans l'outil.|
+||Nom de la base de données d'application de service PowerPivot|Default|Le nom de la base de données par défaut est basé sur le nom de l'application de service, suivi d'un GUID pour garantir un nom unique. Vous pouvez le remplacer par une valeur différente dans l'outil.|
 ||Mettre les classeurs à niveau pour activer l'actualisation des données|Entrée utilisateur|L'actualisation des données échoue et n'est pas prise en charge pour les classeurs SQL Server 2008 R2 PowerPivot. L’option **mettre à niveau les classeurs pour activer l’actualisation des données** met à niveau les classeurs vers SQL Server version PowerPivot 2012.|
 |**Créer une application Web par défaut**|Nom de l'application Web|Par défaut, si nécessaire|S'il n'existe aucune application Web, l'outil en crée une. L’application Web sera configurée pour l’authentification en mode classique et pour écouter sur le **port 80**. La taille maximale de téléchargement de fichier a la valeur 2047 Mo, qui est la valeur maximale autorisée par SharePoint. La taille maximale de téléchargement de fichiers est adaptée aux fichiers PowerPivot volumineux.|
 ||URL|Par défaut, si nécessaire|L'outil crée une URL basée sur le nom du serveur, en respectant les mêmes conventions d'affectation de noms de fichier que SharePoint.|
@@ -181,7 +180,7 @@ ms.locfileid: "78174468"
  Avec le temps, si vous déterminez que des capacités supplémentaires de stockage et de traitement des données sont nécessaires, ajoutez une deuxième instance de serveur PowerPivot pour SharePoint à la batterie de serveurs. Pour obtenir des instructions, consultez [liste de vérification du déploiement : montée en puissance parallèle en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint 2010](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
- Les ![paramètres SharePoint](media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint") [soumettent des commentaires et des informations de contact via Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).
+ Les ![paramètres SharePoint](media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint") [soumettent des commentaires et des informations de contact via Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) ( https://connect.microsoft.com/SQLServer/Feedback) .
 
 ## <a name="see-also"></a>Voir aussi
  [Outils de configuration PowerPivot](power-pivot-sharepoint/power-pivot-configuration-tools.md) [administration et configuration du serveur PowerPivot dans l’administration centrale](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)

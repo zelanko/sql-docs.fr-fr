@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083767"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521633"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
   L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MTS (Time Series) fournit des algorithmes de régression optimisés pour la prévision de valeurs continues, telles que les ventes de produits, dans le temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
@@ -47,11 +46,11 @@ ms.locfileid: "66083767"
  Chaque trimestre, la société projette de mettre à jour le modèle avec les données de ventes récentes ainsi que leurs prédictions pour modeler des tendances récentes. Pour corriger les magasins qui n'effectuent pas une mise à jour correcte ou régulière des données de ventes, elle créera un modèle de prédiction global et l'utilisera pour créer des prédictions pour toutes les régions.  
   
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
- Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MTS (Time Series) utilisait un algorithme unique, ARTxp. L’algorithme ARTXP a été optimisé pour les prédictions à bref terme et, par conséquent, a prédit la valeur probable suivante dans une série. À compter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]de, [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’algorithme MTS (Time Series) utilise à la fois l’algorithme ARTxp et un second algorithme, ARIMA. L'algorithme ARIMA est optimisé pour les prédictions à long terme. Pour obtenir une explication détaillée sur l’implémentation des algorithmes ARTXP et ARIMA, consultez [Références techniques relatives à l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md).  
+ Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MTS (Time Series) utilisait un algorithme unique, ARTxp. L’algorithme ARTXP a été optimisé pour les prédictions à bref terme et, par conséquent, a prédit la valeur probable suivante dans une série. À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MTS (Time Series) utilise à la fois l’algorithme ARTxp et un second algorithme, ARIMA. L'algorithme ARIMA est optimisé pour les prédictions à long terme. Pour obtenir une explication détaillée sur l’implémentation des algorithmes ARTXP et ARIMA, consultez [Références techniques relatives à l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md).  
   
  Par défaut, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series utilise une combinaison des algorithmes quand il analyse des schémas et effectue des prédictions. L’algorithme effectue l’apprentissage de deux modèles distincts sur les mêmes données : un modèle utilise l’algorithme ARTXP et un modèle utilise l’algorithme ARIMA. L'algorithme fusionne ensuite les résultats des deux modèles pour produire la meilleure prédiction sur un nombre variable de tranches de temps. L'algorithme ARTXP étant idéal pour les prédictions à court terme, il pèse plus lourdement au début d'une série de prédictions. Toutefois, à mesure que les tranches de temps que vous prédisez sont éloignées dans le temps, l'algorithme ARIMA pèse plus lourdement.  
   
- Vous pouvez également contrôler la combinaison des algorithmes pour favoriser les prédictions à court ou long terme dans la série chronologique. À compter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] de standard, vous pouvez spécifier que [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’algorithme MTS (Time Series) utilise l’un des paramètres suivants :  
+ Vous pouvez également contrôler la combinaison des algorithmes pour favoriser les prédictions à court ou long terme dans la série chronologique. À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] standard, vous pouvez spécifier que l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MTS (Time Series) utilise l’un des paramètres suivants :  
   
 -   Utiliser uniquement ARTXP pour les prédictions à court terme.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083767"
   
 -   Utiliser la fusion par défaut des deux algorithmes.  
   
- À compter [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]de, vous pouvez personnaliser la [!INCLUDE[msCoName](../../includes/msconame-md.md)] façon dont l’algorithme Time Series fusionne les modèles pour la prédiction. Quand vous utilisez un modèle mixte, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series fusionne les deux algorithmes comme suit :  
+ À compter de [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] , vous pouvez personnaliser la façon dont l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Time Series fusionne les modèles pour la prédiction. Quand vous utilisez un modèle mixte, l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series fusionne les deux algorithmes comme suit :  
   
 -   Seul ARTXP est toujours utilisé pour effectuer les deux premières prédictions.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66083767"
 ### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Exemple 1 : jeu de données de série chronologique avec la série représentée comme valeurs de colonne  
  Cet exemple utilise la table de cas d'entrée suivante :  
   
-|TimeID|Produit|Ventes|Volume|  
+|TimeID|Produit|Sales|Volume|  
 |------------|-------------|-----------|------------|  
 |1/2001|Un|1 000|600|  
 |2/2001|Un|1100|500|  

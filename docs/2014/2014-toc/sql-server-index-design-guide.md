@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6327f7e825906635864777e9c993ae16790e6116
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000502"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528375"
 ---
 # <a name="sql-server-index-design-guide"></a>Guide de conception d'index SQL Server
 
@@ -37,7 +36,7 @@ ms.locfileid: "83000502"
   
  [Directives de conception d’index uniques](#Unique)  
   
- [Instructions de conception d'index filtrés](#Filtered)  
+ [Instructions de conception d’index filtrés](#Filtered)  
   
  [Lecture supplémentaire](#Additional_Reading)  
   
@@ -137,7 +136,7 @@ ms.locfileid: "83000502"
   
  Vous pouvez également personnaliser les caractéristiques de stockage initiales de l'index afin d'optimiser ses performances ou sa maintenance en définissant une option telle que FILLFACTOR. Vous pouvez également déterminer l'emplacement de stockage de l'index en utilisant des groupes de fichiers ou des schémas de partition pour optimiser les performances.  
   
-###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a>Placement d’index sur les groupes de fichiers ou les schémas de partition  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> Placement d'index sur les groupes de fichiers ou les schémas de partition  
 
  Lors du développement de votre stratégie de conception des index, vous devez tenir compte du placement de ces index sur les groupes de fichiers associés à la base de données. Une sélection rigoureuse du groupe de fichiers ou du schéma de partition peut améliorer les performances des requêtes.  
   
@@ -165,7 +164,7 @@ ms.locfileid: "83000502"
   
  Pour plus d’informations, consultez [Tables et index partitionnés](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a>Instructions de conception de l’ordre de tri des index  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> Indications pour la conception de l'ordre de tri des index  
 
  Lorsque vous définissez des index, vous devez déterminer si les données de la colonne clé d'index doivent être stockées dans l'ordre croissant ou décroissant. L'ordre croissant est l'option par défaut et maintient la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La syntaxe des instructions CREATE INDEX, CREATE TABLE et ALTER TABLE permet l'application des mot clés ASC (croissant) et DESC (décroissant) à chaque colonne d'un index et d'une contrainte.  
   
@@ -200,7 +199,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
-##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a>Indications pour la conception d’index cluster  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> Indications pour la conception d'index cluster  
 
  Les index cluster trient et stockent les lignes de données de la table en fonction de leurs valeurs de clé. Il n'y a qu'un index cluster par table car les lignes de données ne peuvent être triées que dans un seul ordre. À quelques exceptions près, toutes les tables doivent avoir un index cluster défini sur la ou les colonnes présentant les caractéristiques suivantes :  
   
@@ -275,7 +274,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
-##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a>Indications pour la conception d’index non-cluster  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> Indications pour la conception d'index non-cluster  
 
  Un index non-cluster contient les valeurs de clé d'index et les localisateurs de ligne qui pointent vers l'emplacement de stockage des données de table. Vous pouvez créer plusieurs index non cluster sur une table ou une vue indexée. Les index non-cluster doivent, en principe, améliorer les performances des requêtes fréquemment utilisées qui ne sont pas couvertes par l'index cluster.  
   
@@ -343,7 +342,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Lorsqu'il existe très peu de valeurs distinctes (1 et 0 uniquement, par exemple), la plupart des requêtes utiliseront une analyse de table, généralement plus efficace, au lieu de l'index. Pour ce type de données, envisagez de créer un index filtré sur une valeur distincte qui se produit uniquement dans un petit nombre de lignes. Par exemple, si la plupart des valeurs sont 0, l'optimiseur de requête peut utiliser un index filtré pour les lignes de données qui contiennent 1.  
   
-####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a>Utiliser des colonnes incluses pour étendre les index non cluster  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> Utiliser des colonnes incluses pour étendre les index non cluster  
 
  Vous pouvez étendre la fonctionnalité des index non cluster en ajoutant des colonnes non-clés au niveau feuille de l'index non cluster. L'inclusion de colonnes non-clés permet de créer des index non-cluster qui couvrent davantage de requêtes. En effet, les colonnes non-clés présentent les avantages suivants :  
   
@@ -481,7 +480,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [dans ce guide](#Top)  
   
-##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a>Instructions de conception d’index filtrés  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Instructions de conception d'index filtrés  
 
  Un index filtré est un index non cluster optimisé, convenant tout particulièrement aux requêtes qui effectuent des sélections dans un sous-ensemble de données bien défini. Il utilise un prédicat de filtre pour indexer une partie des lignes de la table. Un index filtré bien conçu peut améliorer les performances des requêtes, réduire les coûts de maintenance des index et réduire les coûts de stockage des index par rapport aux index de table entière.  
   
@@ -495,7 +494,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      Un index filtré bien conçu améliore les performances des requêtes et la qualité du plan d'exécution car il est plus petit qu'un index non cluster de table entière et contient des statistiques filtrées. Les statistiques filtrées sont plus précises que les statistiques de table entière car elles couvrent uniquement les lignes de l'index filtré.  
   
--   **Réduction des coûts de maintenance des index**  
+-   **Coûts réduits de maintenance des index**  
   
      La maintenance d'un index intervient uniquement lorsque les instructions de langage de manipulation de données (DML) affectent les données de l'index. Un index filtré réduit les coûts de maintenance des index par rapport à un index non cluster de table entière car il est plus petit et est demande une maintenance uniquement lorsque les données de l'index sont affectées. Il est possible d'avoir un grand nombre d'index filtrés, notamment s'ils contiennent des données qui sont rarement affectées. De la même façon, si un index filtré contient uniquement les données fréquemment affectées, la plus petite taille de l'index réduit le coût de la mise à jour des statistiques.  
   

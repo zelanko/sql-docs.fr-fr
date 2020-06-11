@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21e8c6f7cb6938e629be9d252c208c61c04d17d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084550"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522489"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Requêtes d'extraction (exploration de données)
   Une *requête d'extraction* vous permet de récupérer les détails des cas ou des données de structure sous-jacents, en envoyant une requête au modèle d'exploration de données. L'extraction est utile si vous souhaitez consulter les cas utilisés pour l'apprentissage du modèle, par opposition à ceux utilisés pour tester le modèle, ou si vous souhaitez consulter des détails supplémentaires à partir des données de cas.  
@@ -69,7 +68,7 @@ ms.locfileid: "66084550"
 -   Si, contrairement au modèle d'exploration de données, la structure d'exploration de données ne vous autorise pas à extraire les données sous-jacentes, vous pouvez n'afficher les informations que des cas de modèle, mais non de la structure d'exploration de données.  
   
 ###  <a name="security-issues-for-drillthrough"></a><a name="bkmk_Security"></a>Problèmes de sécurité pour l’extraction  
- Si vous souhaitez extraire les cas de structure du modèle, vous devez vérifier que la propriété [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) de la structure d’exploration de données et du modèle d’exploration de `True`données est définie sur. De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle. Pour plus d’informations sur la façon de créer des rôles, consultez [Concepteur de rôle &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). consultez.  
+ Si vous souhaitez extraire les cas de structure du modèle, vous devez vérifier que la propriété [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) de la structure d’exploration de données et du modèle d’exploration de données est définie sur `True` . De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle. Pour plus d’informations sur la façon de créer des rôles, consultez [Concepteur de rôle &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). consultez.  
   
  Les autorisations d'extraction sont définies séparément sur la structure et le modèle. L'autorisation de modèle permet d'effectuer une extraction à partir du modèle, même si vous n'avez pas d'autorisations sur la structure. Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   

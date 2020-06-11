@@ -1,5 +1,6 @@
 ---
 title: Expressions primaires (XQuery) | Microsoft Docs
+description: En savoir plus sur les expressions primaires XQuery qui incluent des littéraux, des références de variables, des expressions d’élément de contexte, des constructeurs et des appels de fonction.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200512"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529773"
 ---
 # <a name="primary-expressions-xquery"></a>Expressions primaires (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "74200512"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- Un littéral chaîne peut également comprendre une référence de caractère (référence de style XML à un caractère Unicode) qui est identifiée par un point de code décimal ou hexadécimal. Par exemple, le symbole euro peut être représenté par la référence de caractère « &\#8364 ; ».  
+ Un littéral chaîne peut également comprendre une référence de caractère (référence de style XML à un caractère Unicode) qui est identifiée par un point de code décimal ou hexadécimal. Par exemple, le symbole euro peut être représenté par la référence de caractère « &\# 8364 ; ».  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'appuie sur XML version 1.0 pour l'analyse.  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>Expressions d'élément contextuel  
  L'élément contextuel est l'élément en cours de traitement dans le cadre d'une expression de chemin d'accès. Il est initialisé dans une instance non-NULL de type XML avec le nœud de document. Elle peut également être modifiée par la méthode nodes (), dans le contexte des expressions XPath ou des prédicats [].  
   
- L'élément contextuel est renvoyé par une expression contenant un point (.). Par exemple, la requête suivante évalue chaque élément <`a`> pour la présence de l' `attr`attribut. Si l'attribut est présent, l'élément est renvoyé. Notez que la condition exprimée dans le prédicat indique que le nœud de contexte est spécifié par un simple point.  
+ L'élément contextuel est renvoyé par une expression contenant un point (.). Par exemple, la requête suivante évalue chaque élément <`a`> pour la présence de l’attribut `attr` . Si l'attribut est présent, l'élément est renvoyé. Notez que la condition exprimée dans le prédicat indique que le nœud de contexte est spécifié par un simple point.  
   
 ```  
 DECLARE @var XML  

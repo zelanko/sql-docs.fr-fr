@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084032"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522125"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme de gestion de clusters Microsoft
   Cette section explique l'implémentation de l'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] , en particulier les paramètres que vous pouvez utiliser pour contrôler le comportement des modèles de clustering. Vous y trouverez également des informations sur la façon d'améliorer les performances lors de la création et du traitement des modèles de clustering.  
@@ -94,7 +93,7 @@ ms.locfileid: "66084032"
  CLUSTERING_METHOD  
  Spécifie la méthode de clustering que doit utiliser l'algorithme. Les méthodes de clustering disponibles sont les suivantes :  
   
-|ID|Méthode|  
+|id|Méthode|  
 |--------|------------|  
 |1|EM évolutif|  
 |2|EM non évolutif|  
@@ -113,7 +112,7 @@ ms.locfileid: "66084032"
   
  En modifiant ce nombre, vous pouvez modifier la façon dont les clusters initiaux sont créés, puis comparer des modèles qui ont été générés avec des valeurs de départ différentes. Si la valeur de départ est modifiée mais que les clusters trouvés ne changent guère, le modèle peut être considéré comme relativement stable.  
   
- La valeur par défaut est 0.  
+ La valeur par défaut est 0.  
   
  MINIMUM_SUPPORT  
  Spécifie le nombre minimal de cas requis pour générer un cluster. Si le nombre de cas dans le cluster est inférieur à ce nombre, le cluster est considéré comme vide et est ignoré.  
@@ -164,7 +163,7 @@ ms.locfileid: "66084032"
 |MODEL_EXISTENCE_ONLY|La colonne sera considérée comme ayant deux états possibles : manquante et existante. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|La colonne ne peut pas contenir de valeur NULL. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Un modèle de clustering doit contenir une colonne clé et des colonnes d'entrée. Vous pouvez également définir les colonnes d'entrée comme prédictibles. Les colonnes ayant la valeur `Predict Only` ne sont pas utilisées pour générer des clusters. La distribution de ces valeurs dans les clusters est calculée après la création des clusters.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  

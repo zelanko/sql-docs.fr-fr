@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085489"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523755"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Créer une requête singleton de prédiction à partir d'un modèle
   Une requête singleton est utile lorsque vous avez un modèle que vous souhaitez utiliser pour la prédiction, mais que vous ne souhaitez pas le mapper à un jeu de données d’entrée externe ou effectuer des prédictions en bloc. Avec une requête singleton, vous pouvez fournir une ou plusieurs valeurs au modèle et immédiatement consulter la valeur prédite.  
@@ -69,20 +68,20 @@ AS [t]
   
 5.  Dans la ligne **modèle d'exploration de données** , tapez le nom du modèle d'exploration de données extrait de la liste des modèles d'exploration de données qui apparaissent dans l' **Explorateur d'objets**.  
   
-     Pour l’exemple de code présenté au début de cette rubrique, la ligne du **modèle d’exploration de données** a été `TM_Decision_Tree`définie sur le nom,.  
+     Pour l’exemple de code présenté au début de cette rubrique, la ligne du **modèle d’exploration de données** a été définie sur le nom, `TM_Decision_Tree` .  
   
 6.  Dans la ligne **valeur** , tapez la nouvelle valeur des données pour lesquelles vous souhaitez effectuer une prédiction.  
   
-     Pour l’exemple de code présenté au début de cette rubrique, la ligne **valeur** a été définie `2` sur pour prédire le comportement d’achat de vélo en fonction du nombre d’enfants à la base.  
+     Pour l’exemple de code présenté au début de cette rubrique, la ligne **valeur** a été définie sur `2` pour prédire le comportement d’achat de vélo en fonction du nombre d’enfants à la base.  
   
 7.  Dans la ligne **colonne** , tapez le nom de la colonne du modèle d'exploration de données à laquelle les nouvelles données doivent être mappées.  
   
-     Pour l’exemple de code présenté au début de cette rubrique, la **column** ligne de `Number Children at Home`la colonne a la valeur.  
+     Pour l’exemple de code présenté au début de cette rubrique, la ligne de la **colonne** a la valeur `Number Children at Home` .  
   
     > [!NOTE]  
     >  Lorsque vous utilisez la boîte de dialogue **Spécifier les valeurs des paramètres du modèle** , vous n'avez pas besoin de mettre le nom de colonne entre crochets. Les crochets seront ajoutés automatiquement.  
   
-8.  Laissez l' **alias d’entrée** sous la forme `t`.  
+8.  Laissez l' **alias d’entrée** sous la forme `t` .  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

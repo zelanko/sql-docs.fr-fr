@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434eb332c7fc8829d515ac33102604dd9ca46d5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081073"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544408"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Général (boîte de dialogue Propriétés de partition) (SSMS)
   Utilisez la page **Général** de la boîte de dialogue **Propriétés de partition** de SQL Server Management Studio pour définir les propriétés générales d'une partition d'un groupe de mesures d'un cube d'une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -37,9 +36,9 @@ ms.locfileid: "66081073"
 |**Dernier traitement**|Affiche la date et l'heure du dernier traitement de la partition.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la partition.|  
 |**Nom**|Affiche le nom de la partition.|  
-|**Mode de traitement**|Sélectionnez le mode de traitement à utiliser pour la partition. Pour plus d’informations sur les modes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de traitement des objets, consultez traitement des objets de [modèle multidimensionnel](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
+|**Mode de traitement**|Sélectionnez le mode de traitement à utiliser pour la partition. Pour plus d’informations sur les modes de traitement des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objets, consultez traitement des objets de [modèle multidimensionnel](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**ID de la source de données distante**|Affiche l'identificateur de la source de données distante d'où est extraite la partition.<br /><br /> Remarque : cette propriété contient une valeur uniquement pour les partitions distantes.|  
-|**Couper**|Affiche l'expression qui identifie la tranche de données représentée par la partition.|  
+|**Tranche**|Affiche l'expression qui identifie la tranche de données représentée par la partition.|  
 |**Source**|Affiche la table ou la requête qui fournit la source de données pour la partition.|  
 |**State**|Affiche l'état actuel du traitement de la partition.|  
 |**Emplacement de stockage**|Affiche le dossier dans lequel les données de la partition sont stockées.<br /><br /> Remarque : cette propriété contient une valeur uniquement si un emplacement de stockage différent de celui par défaut de l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est spécifié.|  

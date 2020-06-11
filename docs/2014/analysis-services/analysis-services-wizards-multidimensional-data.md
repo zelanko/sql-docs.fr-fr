@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed0c5c3317d628c4202b09a56d810830523969d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062391"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528015"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Assistants Analysis Services (données multidimensionnelles)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]fournit des assistants à utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Le tableau suivant décrit les Assistants disponibles.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit des assistants à utiliser dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Le tableau suivant décrit les Assistants disponibles.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

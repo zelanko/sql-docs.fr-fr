@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e149d5f7a6a8e14fbedc8e85ef31cbf42438b751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078935"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543462"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Leçon 2 : Définition et déploiement d'un cube
-  Une fois que vous avez défini une vue de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source de données dans votre projet, vous êtes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prêt à définir un cube initial.  
+  Une fois que vous avez défini une vue de source de données dans votre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet, vous êtes prêt à définir un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube initial.  
   
  Vous pouvez également définir un cube et ses dimensions en une même phase, en utilisant l'Assistant Cube. Vous pouvez également définir une ou plusieurs dimensions, puis utiliser l'Assistant Cube pour définir un cube qui utilise ces dimensions. Si vous concevez une solution complexe, vous démarrez généralement en définissant les dimensions. Pour plus d’informations, consultez [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md) ou [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md).  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39909acacb29f68b0de49ba2093c9b812510172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078561"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542711"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Leçon 6 : Créer des colonnes calculées
   Dans cette leçon, vous allez créer des données dans votre modèle en ajoutant des colonnes calculées. Une colonne calculée est basée sur les données qui existent déjà dans votre modèle. Pour en savoir plus, consultez [Colonnes calculées &#40;SSAS Tabulaire&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66078561"
     > [!NOTE]  
     >  Si vous obtenez une erreur, vérifiez que les noms de colonne dans la formule correspondent aux noms de colonne que vous avez modifiés dans la [Leçon 3 : Renommer des colonnes](rename-columns.md).  
   
-5.  Renommez cette colonne `Month Calendar`en.  
+5.  Renommez cette colonne en `Month Calendar` .  
   
  La colonne calculée Month Calendar fournit un nom triable pour le mois.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66078561"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
-3.  Renommez la colonne `Day of Week`en.  
+3.  Renommez la colonne en `Day of Week` .  
   
 4.  Cliquez sur l’en-tête de colonne et faites glisser la colonne entre les colonnes **Day Name** et **Day of Month** .  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66078561"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
-4.  Renommez la colonne `Product Subcategory Name`en.  
+4.  Renommez la colonne en `Product Subcategory Name` .  
   
  La colonne calculée Product Subcategory Name est utilisée pour créer une hiérarchie dans la table Product, incluant les données de la colonne Product Subcategory Name dans la table Product Subcategory. Les hiérarchies ne peuvent pas couvrir plusieurs tables. Vous allez créer des hiérarchies plus loin, dans la leçon 7.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66078561"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
-3.  Renommez la colonne `Product Category Name`en.  
+3.  Renommez la colonne en `Product Category Name` .  
   
  La colonne calculée Product Category Name est utilisée pour créer une hiérarchie dans la table Product, incluant les données de la colonne Product Category Name dans la table Product Category. Les hiérarchies ne peuvent pas couvrir plusieurs tables.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66078561"
   
      Lorsque vous avez terminé de générer la formule, appuyez sur ENTRÉE pour l'accepter.  
   
-4.  Renommez la colonne `Margin`en.  
+4.  Renommez la colonne en `Margin` .  
   
 5.  Faites glisser la colonne entre les colonnes **Sales Amount** et **Tax Amt** .  
   

@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088492"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527701"
 ---
 # <a name="browsing-a-forecasting-model"></a>Exploration d'un modèle de prévision
-  Lorsque vous ouvrez un modèle de prévision à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse interactive, similaire à la visionneuse de modèle de série chronologique dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les tendances, de comparer les séries, de créer des prédictions et d'obtenir des informations sur le modèle et les données sous-jacentes.  
+  Lorsque vous ouvrez un modèle de prévision à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse interactive, similaire à la visionneuse de modèle de série chronologique dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . La visionneuse permet d'explorer les tendances, de comparer les séries, de créer des prédictions et d'obtenir des informations sur le modèle et les données sous-jacentes.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorer le modèle  
  La visionneuse de **recherche** pour les modèles de prévision fournit une vue graphique, qui montre les tendances au fil du temps et vous permet de créer des prédictions, ainsi qu’une vue de modèle, qui représente la série chronologique sous la forme d’un arbre de décision ou d’un arbre de régression.  
   
 -   [Vue de graphique](#bkmk_charts)  
   
--   [Vue du modèle](#bkmk_Model)  
+-   [Vue Modèle](#bkmk_Model)  
   
  Pour expérimenter un modèle de prévision, vous pouvez utiliser les exemples de données de l’onglet Prévision du classeur d’exemples de données, puis générer un modèle de série chronologique à l’aide de l' [Assistant prévision &#40;les compléments d’exploration de données pour excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) dans le ruban **exploration de données** , ou [prévoir &#40;outils d’analyse de table pour Excel&#41;](forecast-table-analysis-tools-for-excel.md) dans le ruban **analyser** .  
   

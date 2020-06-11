@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fabd1de8361d9cc8753b42c35e0597769545c6b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67826337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540321"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
   Un déploiement PowerPivot pour SharePoint qui s'exécute dans une batterie de serveurs SharePoint 2010 utilise le sous-système d'authentification et le modèle d'autorisation fournis par les serveurs SharePoint. L'infrastructure de sécurité SharePoint s'étend au contenu et aux opérations PowerPivot, car l'ensemble du contenu relatif à PowerPivot est stocké dans des bases de données de contenu SharePoint et l'ensemble des opérations relatives à PowerPivot est effectué par des services partagés PowerPivot de la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données PowerPivot sont authentifiés à l'aide d'une identité d'utilisateur SharePoint basée sur leur identité d'utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
@@ -107,7 +106,7 @@ ms.locfileid: "67826337"
 ||Autoriser les données externes|Ce paramètre doit avoir la valeur **Bibliothèques de connexions de données approuvées et incorporées**. Les connexions de données PowerPivot sont incorporées au classeur. Si vous interdisez les connexions incorporées, les utilisateurs peuvent consulter le cache de tableau croisé dynamique, mais ils ne seront pas en mesure d'interagir avec les données PowerPivot.|  
 ||Avertir lors de l'actualisation|Cette valeur doit être désactivée si vous utilisez la Galerie PowerPivot pour stocker des classeurs et des rapports. La Galerie PowerPivot inclut une fonctionnalité d'aperçu des documents qui fonctionne mieux si les paramètres Actualisation à l'ouverture et Avertir lors de l'actualisation sont désactivés.|  
 |Fournisseurs de données approuvés|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 est inclus par défaut, mais l'accès aux données PowerPivot requiert que le fournisseur MSOLAP.4 soit la version SQL Server 2008 R2.<br /><br /> MSOLAP.5 est installé avec la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de PowerPivot pour SharePoint.<br /><br /> Ne supprimez pas ces fournisseurs de la liste des fournisseurs de données approuvés. Dans certains cas, vous devrez peut-être installer des copies supplémentaires de ce fournisseur sur d'autres serveurs SharePoint dans votre batterie de serveurs. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).|  
-|Bibliothèques de connexions de données approuvées|Facultatif.|Vous pouvez utiliser des fichiers Office Data Connection (.odc) dans les classeurs PowerPivot. Si vous utilisez des fichiers .odc pour fournir les informations de connexion aux classeurs PowerPivot locaux, vous pouvez ajouter les mêmes fichiers .odc à cette bibliothèque.|  
+|Bibliothèques de connexions de données approuvées|facultatif.|Vous pouvez utiliser des fichiers Office Data Connection (.odc) dans les classeurs PowerPivot. Si vous utilisez des fichiers .odc pour fournir les informations de connexion aux classeurs PowerPivot locaux, vous pouvez ajouter les mêmes fichiers .odc à cette bibliothèque.|  
 |Assembly de fonction défini par l'utilisateur|Non applicable.|PowerPivot pour SharePoint ignore les assemblys de fonction définis par l'utilisateur que vous générez pour Excel Services. Si vous comptez sur les assemblys définis par l'utilisateur pour un comportement spécifique, sachez que le traitement des requêtes PowerPivot n'utilise pas les fonctions définies par l'utilisateur que vous avez créées.|  
   
 ## <a name="see-also"></a>Voir aussi  

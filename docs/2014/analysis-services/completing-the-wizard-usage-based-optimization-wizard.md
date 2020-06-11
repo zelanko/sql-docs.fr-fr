@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3faf5983b452f436b4d3071fa542bfb2ccdd382e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087559"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527279"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Fin de l'Assistant (Assistant Optimisation de l'utilisation)
   Utilisez la page **Fin de l'Assistant** pour enregistrer la conception d'agrégation et l'affecter aux partitions sélectionnées. Vous pouvez également traiter les partitions sélectionnées après que l'Assistant Optimisation de l'utilisation a créé et enregistré les agrégations.  

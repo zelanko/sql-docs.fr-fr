@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15ba71b6beb46280f1fc3ad972c6252f95842eaa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062990"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528279"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Graphique de précision (Compléments d'exploration de données SQL Server)
   ![Bouton Graphique de précision du ruban Exploration de données](media/dmc-accchart.gif "Bouton Graphique de précision du ruban Exploration de données")  
@@ -71,7 +70,7 @@ ms.locfileid: "66062990"
   
      L'Assistant crée un rapport comprenant le graphique de courbes d'élévation et les données sous-jacentes.  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Dans le cas de la prédiction d'une valeur discrète, vous devez sélectionner la valeur cible à prédire. Par exemple, si vos données sont classées en deux catégories, 1 correspondant à la réponse « Oui : acheter » et 2 correspondant à la réponse « Non : ne pas acheter », vous devez spécifier 1 ou 2 comme valeurs de prédiction. Par contre, si vous voulez prédire une plage de valeurs, vous ne pouvez comparer que deux valeurs à la fois. Par exemple, si vous voulez prédire un score supérieur à 5, il peut être nécessaire de réétiqueter vos données sources et de créer un nouveau modèle qui sépare les résultats en deux groupes : d'un côté, les valeurs supérieures à 5, de l'autre, les valeurs inférieures à 5. Vous pouvez ensuite comparer la précision de ces deux groupes.  
   
 ## <a name="understanding-accuracy"></a>À propos de la précision  

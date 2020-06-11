@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d86ba50c76c167e0f6d17cd0dee7e00e6ac938
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085141"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523345"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algorithmes d'exploration de données (Analysis Services - Exploration de données)
   Un *algorithme d’exploration de données* est un ensemble d’heuristiques et de calculs qui crée un modèle d’exploration de données à partir de données. Pour créer un modèle, l'algorithme analyse d'abord les données que vous fournissez, à la recherche de types spécifiques de modèles ou de tendances. L'algorithme utilise les résultats de cette analyse afin de définir les paramètres optimaux pour la création du modèle d'exploration de données. Ensuite, ces paramètres sont appliqués au jeu de données entier pour extraire des modèles utilisables et des statistiques détaillées.  
@@ -41,7 +40,7 @@ ms.locfileid: "66085141"
   
 -   Un ensemble de règles qui décrivent la manière dont les produits sont regroupés dans une transaction et les probabilités que les produits soient achetés ensemble.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs algorithmes à utiliser dans vos solutions d’exploration de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] données. Ces algorithmes sont des implémentations de certaines méthodologies les plus populaires utilisées dans l'exploration de données. Tous les algorithmes d'exploration de données Microsoft peuvent être personnalisés et sont entièrement programmables à l'aide des interfaces API fournies, ou en utilisant des composants d'exploration de données dans SQL Server Integration Services.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs algorithmes à utiliser dans vos solutions d’exploration de données. Ces algorithmes sont des implémentations de certaines méthodologies les plus populaires utilisées dans l'exploration de données. Tous les algorithmes d'exploration de données Microsoft peuvent être personnalisés et sont entièrement programmables à l'aide des interfaces API fournies, ou en utilisant des composants d'exploration de données dans SQL Server Integration Services.  
   
  Vous pouvez également utiliser des algorithmes tiers qui sont conformes à la spécification OLE DB pour l'exploration de données, ou développer des algorithmes personnalisés qui peuvent être inscrits en tant que services, puis utilisés dans l'infrastructure d'exploration de données SQL Server.  
   

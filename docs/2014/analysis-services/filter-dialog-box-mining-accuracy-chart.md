@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6102fe9c623e785c0ca207660697bffebce82bb5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081170"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544483"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Filtrer, boîte de dialogue (Graphique d'analyse de précision de l'exploration de données)
   La boîte de dialogue **Filtre** vous permet de générer des conditions que vous pouvez appliquer à un jeu de données. Le jeu de données peut être un jeu de données externe utilisé pour le test, ou les données de cas utilisées pour l'apprentissage d'un modèle d'exploration de données. Cette boîte de dialogue vous permet de générer des critères que vous pouvez enregistrer comme parties intégrantes de critères de filtre plus complexes dans la boîte de dialogue **Filtre de jeu de données** ou dans la boîte de dialogue **Filtre de modèle** .  
@@ -38,7 +37,7 @@ ms.locfileid: "66081170"
  **Conditions**  
  Grille qui contient des colonnes dans lesquelles vous spécifiez des conditions sur les colonnes de la table que vous avez sélectionnée dans la boîte de dialogue **Filtre de jeu de données** .  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Et/ou**|Cliquez sur cette option pour spécifier s'il faut appliquer l'opérateur AND ou l'opérateur OR à la condition figurant sur cette ligne. Ces valeurs ne sont disponibles qu’une fois que vous avez sélectionné une colonne dans la liste **Colonne de la structure d’exploration de données** .|  
 |**Colonne de la structure d'exploration de données**|Cliquez sur cette option pour sélectionner une colonne dans la liste des colonnes contenues dans la table que vous avez sélectionnée à partir de la source de données dans la boîte de dialogue **Filtre de jeu de données** .|  

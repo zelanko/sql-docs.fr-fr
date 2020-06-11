@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71ca6e81a11b53d7a614fcffb498a1bf5fa2b32
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084609"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522527"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Extraire des données de cas à partir d'un modèle d'exploration de données
   Si un modèle d'exploration de données a été configuré pour vous autoriser à extraire des cas de modèles, lorsque vous parcourez le modèle, vous pouvez extraire des informations détaillées à propos des cas utilisés pour créer le modèle. De plus, si la structure d'exploration de données sous-jacente a été configurée pour autoriser l'extraction de cas de structure et que vous avez les autorisations appropriées, vous pouvez retourner des informations à partir de la structure d'exploration de données. Cela peut inclure des colonnes qui n'ont pas été incluses dans le modèle d'exploration de données.  
@@ -31,7 +30,7 @@ ms.locfileid: "66084609"
   
 |Nom de la visionneuse|Nom du volet ou de l'onglet|Sélection du nœud|  
 |-----------------|----------------------|-----------------|  
-|**visionneuse d'arbres Microsoft**|Onglet **arbre de décision**|Cliquez sur un nœud d'arborescence.<br /><br /> **Remarque** Évitez d’utiliser l’extraction `All` sur le nœud, car le renvoi des résultats peut prendre beaucoup de temps.|  
+|**visionneuse d'arbres Microsoft**|Onglet **arbre de décision**|Cliquez sur un nœud d'arborescence.<br /><br /> **Remarque** Évitez d’utiliser l’extraction sur le `All` nœud, car le renvoi des résultats peut prendre beaucoup de temps.|  
 |**Microsoft Cluster Viewer**|**Diagramme de cluster**|Cliquez sur un nœud de cluster.|  
 |**Microsoft Cluster Viewer**|**Profils du cluster**|Cliquez n'importe où dans la colonne de cluster.|  
 |**Visionneuse d'associations Microsoft**|Onglet **règles**|Cliquez sur une ligne qui contient un ensemble de règles.|  

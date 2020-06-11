@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c90031f3c1191e99ff6274f6198d513225f0927
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087099"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527015"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Connexion à une source de données (Client d'exploration de données pour Excel)
   Cette rubrique décrit comment créer et utiliser les connexions utilisées pour stocker des modèles d'exploration de données et pour accéder aux données externes stockées dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "66087099"
  Pour vous connecter à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous devez disposer des autorisations d'accès au serveur de base de données. De plus, les sessions d'exploration de données doivent être activées, et vous devez disposer des autorisations de lecture ou de lecture/écriture sur des objets de base de données stockés sur le serveur.  
   
 ##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>Création de connexions au serveur d’exploration de données  
- Le groupe **connexions** dans le client d’exploration de données pour Excel et les outils d’analyse de table pour Excel fournit des outils pour gérer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]les connexions à une instance de.  
+ Le groupe **connexions** dans le client d’exploration de données pour Excel et les outils d’analyse de table pour Excel fournit des outils pour gérer les connexions à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 -   Vous pouvez créer la connexion lorsque vous installez le complément, ou vous pouvez ajouter une connexion par la suite.  
   
@@ -45,14 +44,14 @@ ms.locfileid: "66087099"
 -   Une seule connexion peut être active à un moment donné.  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Connexions dans les compléments Excel  
- Le groupe **connexions** dans le client d’exploration de données pour Excel et les outils d’analyse de table pour Excel est l’emplacement où vous [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]gérez les connexions à une instance de.  
+ Le groupe **connexions** dans le client d’exploration de données pour Excel et les outils d’analyse de table pour Excel est l’emplacement où vous gérez les connexions à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>Créer une nouvelle connexion au serveur dans les compléments Excel  
   
 1.  Cliquez sur le bouton **connexion** dans le ruban **analyse** ou **exploration de données** .  
   
     > [!NOTE]  
-    >  Le texte du bouton indique si une connexion existe. Quand aucune connexion n’a été établie dans la feuille de calcul, le bouton contient\<le texte « aucune> de connexion ». Si une connexion a été établie auparavant dans la feuille de calcul, le nom de cette connexion s'affiche sur le bouton.  
+    >  Le texte du bouton indique si une connexion existe. Quand aucune connexion n’a été établie dans la feuille de calcul, le bouton contient le texte « \<No connection> . » Si une connexion a déjà été établie dans le classeur, le nom de cette connexion s’affiche dans le bouton.  
   
 2.  Dans la boîte de dialogue **Analysis Services les connexions** , cliquez sur **nouveau**.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66087099"
 8.  Cliquez sur **OK**, puis sur **Fermer**.  
   
 ### <a name="connections-using-a-web-service"></a>Connexions à l'aide d'un service Web  
- Si vous utilisez une architecture de client léger pour permettre l’exploration des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubes et des données, vous pouvez également configurer une connexion à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un serveur via des services Web. Pour obtenir des informations sur la manière de définir un client Web, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Si vous utilisez une architecture de client léger pour permettre l’exploration des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubes et des données, vous pouvez également configurer une connexion à un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] serveur via des services Web. Pour obtenir des informations sur la manière de définir un client Web, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Si vous avez accès à un serveur qui a été configuré pour des services Web, vous pouvez spécifier le type de connexion lorsque vous créez celle-ci pour la première fois.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66087099"
   
 2.  Si vous devez modifier la chaîne de connexion afin d'augmenter le délai de requête ou ajouter d'autres paramètres spécifiques à l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], il est possible de modifier le fichier .dmc où la chaîne de connexion est stockée.  
   
-     \<lecteur : > \Utilisateurs\\<le\>complément d’exploration de données myusername \AppData\Local\Microsoft\Data  
+     \<drive:>\Utilisateurs \\<\> complément d’exploration de données myusername \AppData\Local\Microsoft\Data  
   
 ##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>Connexion à des sources de données externes  
  Tandis que les outils du ruban **analyser** fonctionnent exclusivement avec les données dans Excel, les outils du ruban **exploration de données** vous permettent de vous connecter directement à des sources de données externes à utiliser comme entrées pour votre modèle ou pour l’échantillonnage.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f7e4f7c9d97878be9f2cd2f3251ac463332faf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174679"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522295"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Graphique de courbes d'élévation (Analysis Services - Exploration de données)
   Un **graphique de courbes d’élévation** représente graphiquement l’amélioration apportée par un modèle d’exploration de données par rapport à une estimation aléatoire, et mesure la modification en termes de score d' *élévation* . En comparant les scores d’élévation pour différentes parties de votre jeu de données et pour différents modèles, vous pouvez déterminer quel modèle est le mieux possible et quel pourcentage des cas du jeu de données tirent parti de l’application des prédictions du modèle.

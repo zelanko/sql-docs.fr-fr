@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da6b52d4b1d6b4179a88860b5fe1dc79b92657cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546827"
 ---
 # <a name="specifying-processing-options"></a>Spécification d'options de traitement
-  L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les options de traitement \<à partir du *nom du projet*> fichier. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crée ce fichier lorsque vous générez [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le projet. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]utilise les options de traitement spécifiées dans la page **déploiement** de la boîte de dialogue>les **pages** de \<propriétés du * \<projet* pour créer le *nom du projet*> fichier. deploymentoptions.  
+  L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les options de traitement à partir du \<*project name*> fichier. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crée ce fichier lorsque vous générez le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]utilise les options de traitement spécifiées dans la page **déploiement** de la *\<project name>* boîte de dialogue pages de **Propriétés** de pour créer le \<*project name*> fichier. deploymentoptions.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Examen des options de traitement pour le déploiement  
- Les paramètres de configuration stockés dans \<le *nom du projet*> fichier. deploymentoptions sont les suivants :  
+ Les paramètres de configuration stockés dans le \<*project name*> fichier. deploymentoptions sont les suivants :  
   
 -   **Méthode de traitement** Ce paramètre contrôle si les objets déployés sont traités après le déploiement et le type de traitement à effectuer. Trois options de traitement sont possibles :  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075225"
     -   Si cette option a la valeur `False`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déploie les modifications de métadonnées en une seule transaction et déploie chaque commande de processus dans sa propre transaction.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>Modification des options de traitement pour le déploiement  
- Toutefois, vous devrez peut-être déployer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le projet en utilisant des options de traitement différentes de \<celles stockées dans le *nom du projet*> fichier. deploymentoptions. Par exemple, vous pouvez souhaiter que tous les objets soient traités entièrement ou traités en utilisant l'option de traitement par défaut, ou encore qu'aucun traitement n'ait lieu. Si les cubes ou les dimensions sont activés en écriture, vous pouvez spécifier si une nouvelle table d'écriture différée ou une table existante doit être utilisée.  
+ Toutefois, vous devrez peut-être déployer le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet en utilisant des options de traitement différentes de celles stockées dans le \<*project name*> fichier. deploymentoptions. Par exemple, vous pouvez souhaiter que tous les objets soient traités entièrement ou traités en utilisant l'option de traitement par défaut, ou encore qu'aucun traitement n'ait lieu. Si les cubes ou les dimensions sont activés en écriture, vous pouvez spécifier si une nouvelle table d'écriture différée ou une table existante doit être utilisée.  
   
  Pour modifier les options de traitement utilisées durant le déploiement, vous pouvez soit modifier et régénérer le projet, soit modifier les options de traitement dans le fichier d'entrée en utilisant l'une des méthodes décrites dans la procédure suivante.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66075225"
   
      -ou-  
   
--   Modifiez le \< *nom du projet*> fichier. deploymentoptions à l’aide de n’importe quel éditeur de texte.  
+-   Modifiez le \<*project name*> fichier. deploymentoptions à l’aide de n’importe quel éditeur de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécification de la cible d’installation](deployment-script-files-specifying-the-installation-target.md)   

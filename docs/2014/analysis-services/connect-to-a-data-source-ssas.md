@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fe7f7d5b31118369b8ce2a855b955e44f661dbc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087339"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527225"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Connexion à une source de données (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de créer une connexion à diverses sources de données, telles que des bases de données relationnelles, des flux de données et des fichiers. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31620135818f77db11938c67059319932e98fc51
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087869"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527435"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Onglet Profils du cluster (Visionneuse de modèle d'exploration de données)
   Utilisez l’onglet **Profils du cluster** pour obtenir une vue globale des clusters détectés par l’algorithme au sein d’un modèle de clustering. L'onglet affiche chaque attribut, accompagné de sa répartition dans chaque cluster.  
@@ -43,7 +42,7 @@ ms.locfileid: "66087869"
  **Attributs**  
  Répertorie les colonnes figurant dans le modèle de clustering. Les histogrammes de chaque attribut montrent la manière dont l'attribut est distribué entre les clusters identifiés par l'algorithme.  
   
- **États**  
+ **Déclare**  
  Fournit une clé qui indique quelle couleur représente chaque état dans la ligne correspondante de clusters, ou un curseur avec un losange qui indique la distribution des valeurs numériques continues. Vous pouvez afficher ou masquer cette colonne en utilisant la case à cocher **Afficher la légende** .  
   
  **Profils du cluster**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4856a924bcea68b98336dd77adfdc8762733d548
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284808"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527865"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Modifications de comportement des fonctionnalités Analysis Services dans SQL Server 2014
   Cette rubrique décrit les modifications de comportement dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour les déploiements Multidimensionnel, Tabulaire, Exploration de données et [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . Les modifications de comportement affectent le mode de fonctionnement ou d’interaction des fonctionnalités dans la version actuelle de SQL Server par rapport aux versions précédentes.  
@@ -48,7 +47,7 @@ ms.locfileid: "67284808"
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services, mode multidimensionnel  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>L’option NullProcessing avec la valeur Preserve n’est plus prise en charge pour les mesures de comptage de valeurs  
- Avant [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il était possible de définir l' [élément NullProcessing &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) sur `Preserve` pour les mesures de comptage de valeurs.  Malheureusement, cette pratique entraînait souvent des résultats non valides, voire dans certains cas le blocage du travail de traitement. Cette configuration n’est donc plus valide dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Toute tentative d’utilisation de cette configuration génère l’erreur de validation suivante : « Erreurs dans le gestionnaire de métadonnées. Preserve n’est pas une valeur NullProcessing valide pour \<la mesure MeasureName> distinct Count.»  
+ Avant [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , il était possible de définir l' [élément NULLPROCESSING &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) sur `Preserve` pour les mesures de comptage de valeurs.  Malheureusement, cette pratique entraînait souvent des résultats non valides, voire dans certains cas le blocage du travail de traitement. Cette configuration n’est donc plus valide dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Toute tentative d’utilisation de cette configuration génère l’erreur de validation suivante : « Erreurs dans le gestionnaire de métadonnées. Preserve n’est pas une valeur NullProcessing valide pour la mesure de comptage de valeurs \<measurename> .  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>L'explorateur de cube dans Management Studio et le Concepteur de cube a été supprimé  
  Le contrôle explorateur de cube qui vous permet d'effectuer un glisser-déplacer des champs sur une structure de tableau croisé dynamique dans Management Studio ou le Concepteur de cube a été supprimé du produit. Le contrôle était un composant OWC (Office Web Control). OWC a été déconseillé par Office et n'est plus disponible.  

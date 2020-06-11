@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086651"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526335"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validation croisée (Compléments d'exploration de données SQL Server)
   ![Bouton Validation croisée, ruban Exploration de données](media/dmc-xvalid.gif "Bouton Validation croisée, ruban Exploration de données")  
@@ -67,7 +66,7 @@ ms.locfileid: "66086651"
     > [!NOTE]  
     >  Microsoft Excel peut rester temporairement sans réponse pendant que le modèle est partitionné en replis et que chaque repli est testé.  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Pour créer un rapport de validation croisée, vous devez avoir déjà créé une structure d'exploration de données et des modèles connexes. L'Assistant fournit une boîte de dialogue pour vous aider à faire un choix parmi les structures et les modèles existants.  
   
  Si vous choisissez une structure d'exploration de données qui prend en charge plusieurs modèles d'exploration de données, et les modèles utilisent des attributs prévisibles différents, l'Assistant Validation croisée testera uniquement les modèles qui partagent le même attribut prévisible.  
@@ -75,7 +74,7 @@ ms.locfileid: "66086651"
  Si vous choisissez une structure qui prend en charge les modèles de clustering et d'autres types de modèles, les modèles de clustering ne seront pas testés.  
   
 ## <a name="understanding-cross-validation-results"></a>Présentation des résultats de la validation croisée  
- Les résultats de la validation croisée s’affichent dans une nouvelle feuille de calcul intitulée **rapport de validation \<croisée pour le nom d’attribut>**. La nouvelle feuille de calcul contient plusieurs sections : la première section est un résumé qui fournit des métadonnées importantes concernant le modèle testé, afin que vous puissiez déterminer à quel modèle ou à quelle structure les résultats sont destinés ;  
+ Les résultats de la validation croisée s’affichent dans une nouvelle feuille de calcul intitulée **rapport de validation \<attribute name> croisée pour **. La nouvelle feuille de calcul contient plusieurs sections : la première section est un résumé qui fournit des métadonnées importantes concernant le modèle testé, afin que vous puissiez déterminer à quel modèle ou à quelle structure les résultats sont destinés ;  
   
  la deuxième section dans le rapport fournit un résumé statistique qui indique la qualité du modèle d'origine. Dans ce résumé, les différences entre les modèles créés pour chaque pli sont analysées pour trois mesures principales : *erreur quadratique moyenne*, erreur d' *absolue moyenne*et *score du journal*. Ce sont les mesures statistiques standard qui sont utilisées non seulement dans l'exploration de données mais également dans la plupart des types d'analyse statistique.  
   
