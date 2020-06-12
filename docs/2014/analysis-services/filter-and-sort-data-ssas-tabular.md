@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 55ebd7a6-2458-4398-911f-fcfeb2413f1b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558be08d129a1d6d86454cfe20ffb1da1dbbeccd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081259"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528325"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtrer et trier les données (SSAS Tabulaire)
   Lorsque vous utilisez des tables dans un modèle tabulaire, vous pouvez filtrer ou trier les données en utilisant les contrôles du générateur de modèles. Vous pouvez également créer des filtres dans les calculs afin de contrôler les données utilisées dans une colonne ou une table de données. Chaque type de filtre fonctionne uniquement dans sa fenêtre respective.  

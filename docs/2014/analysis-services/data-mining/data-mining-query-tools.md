@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084979"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523156"
 ---
 # <a name="data-mining-query-interfaces"></a>Interface de requête d'exploration de données
   Les requêtes d'exploration de données sont basées sur le langage DMX (Data Mining Extensions). Vous utilisez DMX pour toutes les tâches de prédiction et de modélisation, notamment la classification, l'évaluation des risques, la génération de recommandations et la régression linéaire. Vous pouvez également récupérer les modèles et les statistiques générés lorsque vous avez traité le modèle.  
@@ -61,7 +60,7 @@ ms.locfileid: "66084979"
  Lorsque vous utilisez le générateur de requêtes, vous pouvez utiliser des outils graphiques pour sélectionner un modèle d'exploration de données, ajouter de nouvelles données de cas, ainsi que des fonctions de prédiction. Le Générateur de requêtes de prédiction contient un éditeur de texte que vous pouvez utiliser pour modifier la requête manuellement et un volet de **résultats** simple pour afficher les résultats de la requête.  
   
 ###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a> Éditeur de requête  
- L’éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de fournit des outils que vous pouvez utiliser pour générer et exécuter des requêtes DMX. Vous pouvez vous connecter à une instance de SQL Server Analysis Services, puis sélectionner une base de données, des colonnes de structure d'exploration de données, ainsi qu'un modèle d'exploration de données. **L’explorateur de métadonnées** contient une liste des fonctions de prédiction que vous pouvez parcourir.  
+ L’éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des outils que vous pouvez utiliser pour générer et exécuter des requêtes DMX. Vous pouvez vous connecter à une instance de SQL Server Analysis Services, puis sélectionner une base de données, des colonnes de structure d'exploration de données, ainsi qu'un modèle d'exploration de données. **L’explorateur de métadonnées** contient une liste des fonctions de prédiction que vous pouvez parcourir.  
   
 ###  <a name="dmx-templates"></a><a name="bkmk_Templates"></a>Modèles DMX  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des modèles de requête DMX interactifs que vous pouvez utiliser pour générer des requêtes DMX. Si vous ne voyez pas la liste de modèles, cliquez sur **Vue** dans la barre d’outils, puis sélectionnez **Explorateur de modèles**. Pour voir tous les modèles Analysis Services, y compris les modèles pour DMX, MDX et XMLA, cliquez sur l'icône de cube.  
@@ -74,7 +73,7 @@ ms.locfileid: "66084979"
 >  Le complément d'exploration de données pour Microsoft Office Excel contient également plusieurs modèles, avec un générateur de requêtes interactif qui peut vous aider à composer des instructions DMX complexes. Pour utiliser les modèles, cliquez sur **Requête**, puis sur **Avancé** dans le client d’exploration de données.  
   
 ###  <a name="integration-services-data-mining-components"></a><a name="bkmk_SSIS"></a>Integration Services les composants d’exploration de données  
- Vous pouvez également inclure des requêtes de prédiction dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cadre d’un package. Les tâches et transformations suivantes dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prennent en charge la création et l’exécution d’instructions DMX et de requêtes de prédiction DMX.  
+ Vous pouvez également inclure des requêtes de prédiction dans le cadre d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Package. Les tâches et transformations suivantes dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prennent en charge la création et l’exécution d’instructions DMX et de requêtes de prédiction DMX.  
   
 |Composant|Description|  
 |---------------|-----------------|  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fddf96a5d6ae1089ca2acd67f08ab0989ce75173
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083833"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521626"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algorithme MSC (Microsoft Sequence Clustering)
-  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Sequence Clustering est un algorithme d’analyse [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de séquence fourni par. Vous pouvez utiliser cet algorithme pour explorer des données qui contiennent des événements pouvant être liés par des chemins d’accès ou des *séquences*suivants. L'algorithme recherche les séquences les plus communes en groupant, ou en regroupant en clusters, les séquences identiques. Voici quelques exemples de données qui contiennent des séquences qui peuvent être utilisées pour l'exploration de données, pour fournir des précisions sur des problèmes courants ou des scénarios d'entreprise :  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Sequence Clustering est un algorithme d’analyse de séquence fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Vous pouvez utiliser cet algorithme pour explorer des données qui contiennent des événements pouvant être liés par des chemins d’accès ou des *séquences*suivants. L'algorithme recherche les séquences les plus communes en groupant, ou en regroupant en clusters, les séquences identiques. Voici quelques exemples de données qui contiennent des séquences qui peuvent être utilisées pour l'exploration de données, pour fournir des précisions sur des problèmes courants ou des scénarios d'entreprise :  
   
 -   Séquence de clics qui sont créées lorsque les utilisateurs parcourent un site Web.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20601a1ece7707e8f798907f21ee5ee7110fe2fe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078251"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542221"
 ---
 # <a name="lesson-9-create-perspectives"></a>Leçon 9 : Créer des perspectives
   Dans cette leçon, vous allez créer une perspective Internet Sales. Une perspective correspond à un sous-ensemble visualisable d’un modèle qui fournit des points de vue précis, spécifiques à l’entreprise ou à l’application. Lorsqu'un utilisateur se connecte à un modèle à l'aide d'une perspective, il voit uniquement les objets de modèle (tables, colonnes, mesures, hiérarchies et KPI) en tant que champs définis dans cette perspective.  
@@ -39,9 +38,9 @@ ms.locfileid: "66078251"
   
 2.  Dans la boîte de dialogue **Perspectives** , cliquez sur **Nouvelle perspective**.  
   
-3.  Pour renommer la perspective, double-cliquez sur l’en-tête **de colonne nouvelle perspective 1** , puis tapez `Internet Sales`.  
+3.  Pour renommer la perspective, double-cliquez sur l’en-tête **de colonne nouvelle perspective 1** , puis tapez `Internet Sales` .  
   
-4.  Dans **champs**, sélectionnez les tables suivantes : **Date**, **géographie**, **produit**, **catégorie de produit**, sous-catégorie de **produit**et `Internet Sales`.  
+4.  Dans **champs**, sélectionnez les tables suivantes : **Date**, **géographie**, **produit**, **catégorie de produit**, sous-catégorie de **produit**et `Internet Sales` .  
   
      Notez que vous avez exclu la table Customer et toutes ses colonnes de cette perspective. Ultérieurement, au cours de la leçon 12, vous utiliserez la fonctionnalité Analyser dans Excel pour tester cette perspective. La liste de champs de tableau croisé dynamique Excel inclut chaque table sauf la table Customer.  
   

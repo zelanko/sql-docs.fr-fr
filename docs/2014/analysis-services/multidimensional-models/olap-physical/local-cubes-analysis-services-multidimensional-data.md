@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75f02dd54992e9cc4f94d9845e0e25de5ed988f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889498"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545941"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubes locaux (Analysis Services - Données multidimensionnelles)
   Pour créer, mettre à jour ou supprimer des cubes locaux, vous devez écrire et exécuter un script ASSL ou un programme AMO.  
@@ -34,7 +33,7 @@ ms.locfileid: "68889498"
 >  L'utilisation de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] pour gérer les cubes locaux n'est pas prise en charge.  
   
 ## <a name="local-cubes"></a>Cubes locaux  
- Un cube local peut être créé et rempli à partir d’un cube existant dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] une instance ou à partir d’une source de données relationnelle.  
+ Un cube local peut être créé et rempli à partir d’un cube existant dans une [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance ou à partir d’une source de données relationnelle.  
   
 |Source de données pour un cube local|Méthode de création|  
 |------------------------------------|---------------------|  

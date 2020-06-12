@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b3dad28227547f88956f1ac49e2878b2940f91
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084582"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522536"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Extraction sur des structures d'exploration de données
   *L'extraction* désigne la capacité d'interroger un modèle d'exploration de données ou une structure d'exploration de données pour obtenir des informations détaillées qui ne sont pas exposées dans le modèle.  
@@ -36,9 +35,9 @@ ms.locfileid: "66084582"
   
 -   Si vous créez la structure d'exploration de données avec DMX, utilisez la clause WITH DRILLTHROUGH. Pour plus d’informations, consultez [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx).  
   
--   Le principe de l'extraction consiste à extraire des informations sur les cas d'apprentissage mis en cache lorsque vous avez traité la structure d'exploration de données. Par conséquent, si vous effacez les données mises en cache après avoir traité la <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> structure en `ClearAfterProcessing`modifiant la propriété en, l’extraction ne fonctionnera pas. Pour activer l'extraction aux colonnes de structure, vous devez modifier la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en `KeepTrainingCases`, puis retraiter la structure.  
+-   Le principe de l'extraction consiste à extraire des informations sur les cas d'apprentissage mis en cache lorsque vous avez traité la structure d'exploration de données. Par conséquent, si vous effacez les données mises en cache après avoir traité la structure en modifiant la <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propriété en `ClearAfterProcessing` , l’extraction ne fonctionnera pas. Pour activer l'extraction aux colonnes de structure, vous devez modifier la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en `KeepTrainingCases`, puis retraiter la structure.  
   
--   Vérifiez que la propriété [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) de la structure d’exploration de données et du modèle d' `True`exploration de données est définie sur. De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle.  
+-   Vérifiez que la propriété [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) de la structure d’exploration de données et du modèle d’exploration de données est définie sur `True` . De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle.  
   
 ## <a name="security-issues-for-drillthrough"></a>Problèmes de sécurité pour l'extraction  
  Les autorisations d'extraction sont définies séparément sur la structure et le modèle. L'autorisation de modèle permet d'effectuer une extraction à partir du modèle, même si vous n'avez pas d'autorisations sur la structure. Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  

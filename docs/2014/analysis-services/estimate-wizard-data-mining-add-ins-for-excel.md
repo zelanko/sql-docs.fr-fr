@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2706dae37c1dc303aa6708fe1f7387a39835e4d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081244"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528367"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Assistant Estimation (Compléments d'exploration de données pour Excel)
   ![Assistant Estimation sur le ruban Exploration de données](media/dmc-estimate.gif "Assistant Estimation sur le ruban Exploration de données")  
@@ -89,7 +88,7 @@ ms.locfileid: "66081244"
   
  [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Pour utiliser l'Assistant Estimation des données, vous devez être connecté à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Pour plus d’informations sur la création d’une connexion, consultez [se connecter à des données sources &#40;client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  

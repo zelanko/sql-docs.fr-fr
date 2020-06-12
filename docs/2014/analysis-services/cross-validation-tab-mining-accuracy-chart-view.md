@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 867bd6d1abffb29ec3eb2a8a78e562e5cbcc5b29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086617"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526345"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Onglet Validation croisée (vue Graphique d'analyse de précision de l'exploration de données)
   La validation croisée vous permet de partitionner une structure d'exploration de données en sections croisées et d'effectuer l'apprentissage et le test des modèles de manière itérative sur chaque section croisée. Vous spécifiez un nombre de replis pour la division des données. Chaque repli est utilisé à son tour comme données de test, tandis que les autres données sont utilisées pour l'apprentissage d'un nouveau modèle. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère ensuite un jeu de mesures de précision standard pour chaque modèle. En comparant les mesures des modèles générés pour chaque section croisée, vous pouvez vous faire une bonne idée de la fiabilité du modèle d'exploration de données pour le jeu de données complet.  
@@ -41,7 +40,7 @@ ms.locfileid: "66086617"
   
 -   Cliquez sur **Obtenir les résultats** pour afficher les résultats de la validation croisée.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nombre de replis**  
  Spécifiez le nombre de replis ou de partitions à créer. La valeur minimale est 2, ce qui signifie qu'une moitié du jeu de données est utilisée pour le test et une autre moitié pour l'apprentissage.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66086617"
   
  Si vous utilisez **0**, tous les cas des données sources sont utilisés pour la validation croisée.  
   
- Aucune valeur par défaut.  
+ Il n’y a pas de valeur par défaut.  
   
 > [!NOTE]  
 >  Le temps de traitement augmente également avec l'augmentation du nombre de cas.  
@@ -96,7 +95,7 @@ ms.locfileid: "66086617"
   
  Par exemple, supposons que trois prédictions soient effectuées pour un état cible donné et que les probabilités de chaque prédiction soient égales à 0,05, 0,15 et 0,8. Si vous définissez la valeur 0,5 pour le seuil, une seule prédiction est comptabilisée comme correcte. Si vous affectez à **Seuil** **cible** la valeur 0,10, deux prédictions sont comptabilisées comme correctes.  
   
- Lorsque **Target** le **seuil** cible est défini `null`sur, qui est la valeur par défaut, la prédiction la plus probable pour chaque cas est comptabilisée comme correcte. Dans l'exemple que nous venons de citer, 0,05, 0,15 et 0,8 sont les probabilités des prédictions de trois cas différents. Bien que les probabilités soient très différentes, chaque prédiction est comptabilisée comme correcte, car chaque cas génère une seule prédiction et il s'agit des meilleures prédictions pour ces cas.  
+ Lorsque le **seuil** **cible** est défini sur `null` , qui est la valeur par défaut, la prédiction la plus probable pour chaque cas est comptabilisée comme correcte. Dans l'exemple que nous venons de citer, 0,05, 0,15 et 0,8 sont les probabilités des prédictions de trois cas différents. Bien que les probabilités soient très différentes, chaque prédiction est comptabilisée comme correcte, car chaque cas génère une seule prédiction et il s'agit des meilleures prédictions pour ces cas.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Test et validation &#40;l’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9cf2e37d9a6ae6d0fa93012f72673642d11a2a4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547451"
 ---
 # <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
   L'Assistant Génération de schéma crée pour la base de données de la zone de sujet un schéma relationnel dénormalisé basé sur les dimensions et les groupes de mesures définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
@@ -82,7 +81,7 @@ ms.locfileid: "68811046"
  L'Assistant génère une table séparée pour stocker les valeurs traduites de toute propriété du groupe de mesures qui nécessite une colonne de traduction. L'Assistant crée également une colonne séparée pour chacune des langues requises.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversion de type de données et longueurs par défaut  
- L’Assistant génération de schéma ignore les types de données dans tous les cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` à l’exception des colonnes qui utilisent le type de données. Le type de données `wchar` se traduit directement en type de données `nvarchar`. Toutefois, si la longueur spécifiée d'une colonne utilisant le type `wchar` dépasse 4 000 octets, l'Assistant Génération de schéma produit une erreur.  
+ L’Assistant génération de schéma ignore les types de données dans tous les cas, à l’exception des colonnes qui utilisent le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` type de données. Le type de données `wchar` se traduit directement en type de données `nvarchar`. Toutefois, si la longueur spécifiée d'une colonne utilisant le type `wchar` dépasse 4 000 octets, l'Assistant Génération de schéma produit une erreur.  
   
  Le tableau suivant indique la longueur par défaut de la colonne si un élément de données, par exemple la liaison d'un attribut, n'a pas de longueur spécifiée.  
   

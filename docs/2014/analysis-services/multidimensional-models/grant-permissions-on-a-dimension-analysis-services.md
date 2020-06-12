@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 626211f974b41ce44655d0b79cf82eb9cb8373ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074957"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546661"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Octroyer des autorisations sur une dimension (Analysis Services)
   La sécurité de dimension sert à définir des autorisations sur un objet de dimension, et non sur ses données. En général, l'autorisation ou le refus de l'accès aux opérations de traitement est le principal objectif de la définition des autorisations sur une dimension.  
@@ -45,7 +44,7 @@ ms.locfileid: "66074957"
 ## <a name="set-permissions-on-a-database-dimension"></a>Définir des autorisations sur une dimension de base de données  
  Les dimensions de base de données sont des objets autonomes dans une base de données, ce qui permet de réutiliser une dimension au sein du même modèle. Imaginez une dimension de base de données DATE utilisée à plusieurs reprises dans un modèle, par exemple comme dimensions de cube Date de commande, Date d'expédition et Date d'échéance. Les dimensions de cube et de base de données étant des objets homologues dans une base de données, vous pouvez définir des autorisations de traitement indépendamment sur chaque objet.  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]instance de, développez **rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous à l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , développez **rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
   
 2.  Dans le volet **Dimensions** , l’ensemble de dimensions doit avoir comme valeur **Toutes les dimensions de la base de données**.  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66074957"
 ## <a name="set-permissions-on-a-cube-dimension"></a>Définir des autorisations sur une dimension de cube  
  Les dimensions de cube sont des dimensions de base de données qui ont été ajoutées à un cube. En tant que telles, elles dépendent structurellement des groupes de mesures associés. Bien que vous puissiez traiter ces objets de manière atomique, en termes d'autorisation, il est plus logique de traiter le cube et les dimensions de cube comme une seule et même entité.  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]instance de, développez **rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous à l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , développez **rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
   
-2.  Dans le volet **dimensions** , remplacez l’ensemble de dimensions \<par cube-Name> **dimensions de cube**.  
+2.  Dans le volet **dimensions** , modifiez l’ensemble de dimensions en \<cube-name> **dimensions de cube**.  
   
      Par défaut, les autorisations sont héritées à partir d'une dimension de base de données correspondante. Décochez la case **Hériter** pour remplacer les autorisations de **Lecture** par **Lecture/Écriture**. Avant d’utiliser **Lecture/Écriture**, veillez à lire la remarque de la section précédente.  
   

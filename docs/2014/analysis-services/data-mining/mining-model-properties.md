@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa158dba22938d347030ada0c9b2ea8e589cab5d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083511"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521231"
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
   Les modèles d'exploration de données ont les types de propriétés suivantes :  

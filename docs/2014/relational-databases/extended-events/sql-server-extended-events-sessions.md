@@ -1,7 +1,7 @@
 ---
 title: Sessions Événements étendus SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -14,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706606"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868342"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
   Une session Événements étendus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est créée dans le processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le moteur des Événements étendus. Les aspects suivants d'une session Événements étendus fournissent le contexte nécessaire pour comprendre l'infrastructure des Événements étendus et le processus global qui est en cours :  
@@ -30,9 +30,9 @@ ms.locfileid: "82706606"
   
 ## <a name="session-states"></a>États de la session  
  L'illustration ci-dessous indique les divers états d'une session Événements étendus.  
-  
- ![État de session d'événements étendu](../../database-engine/media/xesessionstate.gif "État de session d'événements étendu")  
-  
+
+![État de session d'événements étendu](../../database-engine/media/xesessionstate.png "État de session d'événements étendu")
+
  En vous référant à l'illustration précédente, notez que l'état de la session change au fur et à mesure que les commandes DDL sont exécutées pour une session d'événements. Ces changements d'état sont décrits dans le tableau ci-dessous.  
   
 |Nom de l'illustration|Instruction DDL|Description|  

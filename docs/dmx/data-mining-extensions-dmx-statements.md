@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070861"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670417"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instructions DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  L’utilisation des modèles d’exploration [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de données dans implique les tâches principales suivantes :  
+  L’utilisation des modèles d’exploration de données dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] implique les tâches principales suivantes :  
   
 -   Création de structures et de modèles d'exploration de données  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68070861"
  Utilisez l’instruction [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md) pour copier la structure d’un modèle d’exploration de données existant dans un nouveau modèle d’exploration de données et pour effectuer l’apprentissage du nouveau modèle avec les mêmes données.  
   
  Exploration des modèles d’exploration de données  
- Utilisez l’instruction [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) pour parcourir les informations que l’algorithme d’exploration de données calcule et stocke dans le modèle d’exploration de données lors de l’apprentissage du modèle. À l’instar de [!INCLUDE[tsql](../includes/tsql-md.md)], vous pouvez utiliser plusieurs clauses avec l’instruction SELECT pour étendre sa puissance. Ces clauses incluent [distinct du \<modèle>](../dmx/select-distinct-from-model-dmx.md), [du \<modèle>. ](../dmx/select-from-model-cases-dmx.md)Les cas [, \<du modèle>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [à \<partir de> de modèle. CONTENU](../dmx/select-from-model-content-dmx.md) et [à \<partir de> de modèle. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ Utilisez l’instruction [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) pour parcourir les informations que l’algorithme d’exploration de données calcule et stocke dans le modèle d’exploration de données lors de l’apprentissage du modèle. À l’instar de [!INCLUDE[tsql](../includes/tsql-md.md)] , vous pouvez utiliser plusieurs clauses avec l’instruction SELECT pour étendre sa puissance. Ces clauses incluent [distinct du \< modèle>](../dmx/select-distinct-from-model-dmx.md), [du \< modèle>. Les cas](../dmx/select-from-model-cases-dmx.md), [du \< modèle>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [à partir de \<> de modèle. CONTENU](../dmx/select-from-model-content-dmx.md) et [à partir de \<> de modèle. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  Prévision dans des modèles d'exploration de données  
  Utilisez la clause [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) de l’instruction SELECT pour créer des prédictions basées sur un modèle d’exploration de données existant.  

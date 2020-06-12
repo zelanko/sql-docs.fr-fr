@@ -1,5 +1,6 @@
 ---
 title: Exécution d’un mise à jour à l’aide de OLE DB (SQLXML)
+description: Découvrez comment utiliser OLE DB dans SQLXML 4,0 pour exécuter un mise à jour.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241282"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215252"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "75241282"
 </Schema>  
 ```  
   
- La requête retourne tous les éléments d'employé. Avec le mappage par défaut, l' ** \<élément person. contact>** est mappé à la table Person. contact de la base de données AdventureWorks.  
+ La requête retourne tous les éléments d'employé. Avec le mappage par défaut, l' **\<Person.Contact>** élément est mappé à la table Person. contact de la base de données AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Pour définir le code XML en tant que commande et récupérer les résultats sous forme d'un document XML  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- Le modèle inclut une requête SQL. La requête requiert une valeur pour son paramètre (@Title). Si aucune valeur de paramètre n'est passée, la valeur par défaut ("Mr.") est utilisée.  
+ Le modèle inclut une requête SQL. La requête requiert une valeur pour son paramètre ( @Title ). Si aucune valeur de paramètre n'est passée, la valeur par défaut ("Mr.") est utilisée.  
   
  Pour passer des valeurs de paramètre à un modèle, le nom et la valeur du paramètre doivent être spécifiés.  
   

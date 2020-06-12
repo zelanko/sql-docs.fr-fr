@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7db49fd2b6a86e9b113dbede785379f910b978
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083859"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521765"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   L’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) utilise un réseau *perceptron multicouche* , également appelé *réseau à règle delta à rétropropagation*, qui peut comporter jusqu’à trois couches de neurones, ou *perceptrons*. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
@@ -186,7 +185,7 @@ ms.locfileid: "66083859"
  Log-normale  
  Indique que les valeurs de la colonne doivent être considérées comme étant distribuées selon la courbe *log-normale* , ce qui signifie que le logarithme des valeurs est distribué normalement.  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Un modèle de réseau neuronal doit contenir au moins une colonne d'entrée et une colonne de sortie.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  

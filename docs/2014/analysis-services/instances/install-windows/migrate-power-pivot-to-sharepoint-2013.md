@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3d08a4458ce9347f4e26238d8a28c2b49a22a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175238"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543891"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrer PowerPivot vers SharePoint 2013
 
@@ -72,7 +71,7 @@ ms.locfileid: "78175238"
 5.  **Définir la base de données en lecture-écriture :** attribuez au paramètre **Base de données en lecture seule** la valeur **False**.
 
 ##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3) préparer les applications Web et monter les bases de données de contenu
- Pour obtenir une explication plus détaillée des procédures suivantes, consultez [mettre à niveau des bases de données de sharepoint 2010 vers sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+ Pour obtenir une explication plus détaillée des procédures suivantes, consultez [mettre à niveau des bases de données de sharepoint 2010 vers sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .
 
 1.  **Mettre les bases de données hors connexion :**
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175238"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]
     ```
 
-     Pour plus d’informations, consultez [attacher ou détacher des bases de données de contenu (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).
+     Pour plus d’informations, consultez [attacher ou détacher des bases de données de contenu (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) ( https://technet.microsoft.com/library/ff628582.aspx) .
 
      **État lorsque l'étape est terminée :**  lorsque l'opération de montage est terminée, les utilisateurs peuvent voir les fichiers qui étaient dans l'ancienne base de données de contenu. Par conséquent, les utilisateurs peuvent voir et ouvrir des classeurs dans la bibliothèque de documents.
 
@@ -129,7 +128,7 @@ ms.locfileid: "78175238"
 
 -   **Migrer les planifications, option 1 : administrateur de batterie de serveurs SharePoint**
 
-    1.  Dans la gestion de SharePoint 2013, `Set-PowerPivotServiceApplication` exécutez l’applet `-StartMigratingRefreshSchedules` de commande avec le commutateur pour activer la migration automatique du ![contenu relatif à PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")de la planification à la demande. Le script Windows PowerShell suivant suppose qu'il existe une seule application de service PowerPivot.
+    1.  Dans la gestion de SharePoint 2013, exécutez l’applet de commande `Set-PowerPivotServiceApplication` avec le `-StartMigratingRefreshSchedules` commutateur pour activer la migration automatique du ![contenu relatif à PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")de la planification à la demande. Le script Windows PowerShell suivant suppose qu'il existe une seule application de service PowerPivot.
 
         ```powershell
         $app = Get-PowerPivotServiceApplication
@@ -170,8 +169,8 @@ ms.locfileid: "78175238"
 
 -   [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).
 
--   [Vue d’ensemble du processus de mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Vue d’ensemble du processus de mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) ( https://go.microsoft.com/fwlink/p/?LinkId=256688) .
 
--   [Nettoyez les préparations avant une mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).
+-   [Nettoyez les préparations avant une mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) ( https://go.microsoft.com/fwlink/p/?LinkId=256689) .
 
--   [Mettez à niveau les bases de données de sharepoint 2010 vers sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Mettez à niveau les bases de données de sharepoint 2010 vers sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da4e685a1ebc05e27070873b12de99e8cc480a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079842"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543871"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Mettre à niveau les classeurs et l'actualisation planifiée des données (SharePoint 2013)
   Cette rubrique traite de l'utilisation des classeurs créés dans les environnements PowerPivot précédents et comment mettre à niveau les classeurs PowerPivot afin de pouvoir tirer parti des nouvelles fonctionnalités introduites dans cette version. Pour en savoir plus sur les nouvelles fonctionnalités, consultez [Nouveautés de PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -53,7 +52,7 @@ ms.locfileid: "66079842"
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot pour SharePoint 2010**|**2012 PowerPivot pour SharePoint 2010**|**2012 SP1 PowerPivot pour SharePoint 2013**|  
 |**2008 R2 PowerPivot pour Excel 2010**|Toutes les fonctionnalités|**Expérience :** les utilisateurs peuvent interagir avec le classeur dans le navigateur et l'utiliser comme source de données pour d'autres solutions.<br /><br /> **Mise à niveau :** les classeurs sont mis à niveau automatiquement dans la bibliothèque de documents si la mise à niveau automatique est activée pour le service système PowerPivot dans la batterie de serveurs SharePoint.<br /><br /> **Planification de l'actualisation des données :** NON prise en charge. Le classeur doit être mis à niveau.|**Expérience :** les utilisateurs peuvent interagir avec le classeur et l'utiliser comme source de données pour d'autres solutions.<br /><br /> **Mise à niveau :** la mise à niveau automatique n'est pas disponible. Les utilisateurs doivent mettre à niveau leurs classeurs 2008 R2 vers la version 2012 ou version Office 2013 manuellement.<br /><br /> **Planification de l'actualisation des données :** NON prise en charge. Le classeur doit être mis à niveau.|  
-|**2012 PowerPivot pour Excel**|Non prise en charge|Toutes les fonctionnalités|**Expérience :** les utilisateurs peuvent interagir avec le classeur dans le navigateur et l'utiliser comme source de données pour d'autres solutions. La planification de l'actualisation des données est disponible.<br /><br /> **Mise à niveau :** la mise à niveau automatique n'est pas prise en charge. Les utilisateurs peuvent mettre à niveau leurs classeurs vers la version Office 2013.<br /><br /> **Planification de l'actualisation des données :** prise en charge.|  
+|**2012 PowerPivot pour Excel**|Non pris en charge|Toutes les fonctionnalités|**Expérience :** les utilisateurs peuvent interagir avec le classeur dans le navigateur et l'utiliser comme source de données pour d'autres solutions. La planification de l'actualisation des données est disponible.<br /><br /> **Mise à niveau :** la mise à niveau automatique n'est pas prise en charge. Les utilisateurs peuvent mettre à niveau leurs classeurs vers la version Office 2013.<br /><br /> **Planification de l'actualisation des données :** prise en charge.|  
 |**Excel 2013**|Non pris en charge|Non pris en charge|Toutes les fonctionnalités|  
   
 ##  <a name="upgrade-to-sql-server-2012-service-pack-1-sp1-workbooks-from-2008-r2-workbooks"></a><a name="bkmk_to_2012sp1_from_2008r2"></a>Mettre à niveau vers SQL Server classeurs 2012 Service Pack 1 (SP1) à partir de classeurs 2008 R2  

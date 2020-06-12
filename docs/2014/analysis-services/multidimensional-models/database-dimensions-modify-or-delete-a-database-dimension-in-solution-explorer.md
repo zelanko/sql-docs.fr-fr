@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b46e9e42d212ca8f92f905c241915fdccec679f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e9fd625b521e6de4693cf31fa2d1edb3ceb0da8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075885"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547121"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>Modifier ou supprimer une dimension de base de données dans l'Explorateur de solutions
   Vous pouvez modifier ou supprimer une dimension à l’aide du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsque vous modifiez une dimension, vos modifications ne sont pas disponibles pour les utilisateurs tant que vous ne traitez pas la dimension. Pour plus d’informations, consultez traitement de l' [objet de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md).  

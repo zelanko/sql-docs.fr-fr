@@ -1,5 +1,6 @@
 ---
 title: Fonction ceiling (XQuery) | Microsoft Docs
+description: Découvrez comment utiliser la fonction XQuery Ceiling () pour retourner le plus petit nombre sans une partie fractionnaire qui n’est pas inférieure à la valeur de l’argument de fonction.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946576"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689766"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Fonctions de valeurs numériques : ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>A. Utilisation de la fonction ceiling() de XQuery  
+### <a name="a-using-the-ceiling-xquery-function"></a>R. Utilisation de la fonction ceiling() de XQuery  
  Pour le modèle de produit 7, cette requête renvoie une liste des postes de travail que compte le processus de fabrication du modèle de produit. Pour chaque poste de travail, la requête renvoie l'ID, les heures de main-d'œuvre et la taille des lots, le cas échéant. La requête utilise la fonction **Ceiling** pour retourner les heures de main-d’œuvre en tant que valeurs de type **Decimal**.  
   
 ```  
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **Instructions** est une colonne de type **XML** . Par conséquent, la [méthode Query () (type de données XML)](../t-sql/xml/query-method-xml-data-type.md) est utilisée pour spécifier XQuery. L'instruction XQuery est spécifiée comme argument de la méthode query.  
   
--   **pour... Return** est une construction de boucle. Dans la requête, la boucle **for** identifie une liste d' \<emplacements> éléments. Pour chaque poste de travail, l’instruction **Return** dans la boucle **for** décrit le XML à générer :  
+-   **pour... Return** est une construction de boucle. Dans la requête, la boucle **for** identifie une liste d' \< emplacements> éléments. Pour chaque poste de travail, l’instruction **Return** dans la boucle **for** décrit le XML à générer :  
   
     -   \<Emplacement> élément ayant des attributs LocationID et LaborHrs. L'expression correspondante entre accolades ({ }) récupère les valeurs requises à partir du document.  
   
-    -   L’expression {i/@LotSize $} extrait l’attribut de volume du document, le cas échéant.  
+    -   L’expression {$ i/@LotSize } extrait l’attribut de volume du document, le cas échéant.  
   
     -   Voici le résultat obtenu :  
   

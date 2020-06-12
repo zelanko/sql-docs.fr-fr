@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobsteps (Transact-SQL) | Microsoft Docs
+title: dbo.sysJobSteps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827312"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423376"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "82827312"
 |**step_id**|**int**|ID de l'étape dans le travail|  
 |**step_name**|**sysname**|Nom de l'étape du travail|  
 |**sous-système**|**nvarchar(40)**|Nom du sous-système utilisé par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter l'étape du travail|  
-|**commande**|**nvarchar(max)**|Commande à exécuter par le **sous-système**.|  
+|**command**|**nvarchar(max)**|Commande à exécuter par le **sous-système**.|  
 |**flags**|**int**|Réservé.|  
 |**additional_parameters**|**ntext**|Réservé.|  
 |**cmdexec_success_code**|**int**|Valeur de niveau erreur retournée par les étapes du sous-système **CmdExec** pour indiquer la réussite.|  
-|**on_success_action**|**tinyint**|Action à exécuter lors du succès d'une étape|  
+|**on_success_action**|**tinyint**|Action à exécuter lors du succès d'une étape<br /><br /> **1** = (valeur par défaut) quitter avec succès<br /><br /> **2** = quitter avec échec<br /><br /> **3** = passer à l’étape suivante<br /><br /> **4** = passer à l’étape _on_success_step_id_|
 |**on_success_step_id**|**int**|ID de la prochaine étape à exécuter après le succès d'une étape|  
-|**on_fail_action**|**tinyint**|Action à exécuter lors de l'échec d'une étape|  
+|**on_fail_action**|**tinyint**|Action à exécuter lors de l'échec d'une étape<br /><br /> **1** = quitter avec succès<br /><br /> **2** = (valeur par défaut) quitter avec échec<br /><br /> **3** = passer à l’étape suivante<br /><br /> **4** = passer à l’étape _on_fail_step_id_|
 |**on_fail_step_id**|**int**|ID de l'étape à exécuter après l'échec d'une étape|  
-|**serveurs**|**sysname**|Réservé.|  
+|**server**|**sysname**|Réservé.|  
 |**database_name**|**sysname**|Nom de la base de données dans laquelle la **commande** est exécutée si le **sous-système** est TSQL.|  
 |**database_user_name**|**sysname**|Nom de l'utilisateur de la base de données dont le compte sera utilisé lors de l'exécution de l'étape|  
 |**retry_attempts**|**int**|Nombre de tentatives de reprise en cas d'échec de l'étape|  

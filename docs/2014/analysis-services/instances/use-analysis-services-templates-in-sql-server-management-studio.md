@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c8daa38dd1bda5c23d60478394cd1f6450d41ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175222"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543741"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utiliser des modèles Analysis Services dans SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit un ensemble de modèles qui vous aident à créer rapidement des scripts XMLA et des requêtes DMX ou MDX, à créer des indicateurs de performance clés dans un cube ou un modèle tabulaire, à générer des scripts pour les opérations de sauvegarde et de restauration et à effectuer de nombreuses autres tâches. Les modèles sont situés dans l' **Explorateur de modèles** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
@@ -69,7 +68,7 @@ ms.locfileid: "78175222"
 
 3.  À l'aide de l' **Explorateur de métadonnées**, faites glisser les champs et mesures suivants dans le modèle de requête :
 
-    1.  Remplacez \<row_axis, mdx_set> par **[Product Category]. [ Nom de la catégorie de produits]**.
+    1.  Remplacez \<row_axis, mdx_set> par **[catégorie de produit]. [ Nom de la catégorie de produits]**.
 
     2.  Remplacez \<column_axis, mdx_set> par **[date]. [ Année civile]. [Année civile]**.
 
@@ -99,13 +98,13 @@ ms.locfileid: "78175222"
     > [!WARNING]
     >  Vous ne pouvez pas définir le contexte d'une requête XMLA en modifiant la liste de restriction ou en spécifiant une base de données dans la boîte de dialogue de connexion. Vous devez ouvrir la fenêtre de requête XMLA à partir de la base de données à interroger.
 
-2.  Faites glisser `Backup` le modèle dans la fenêtre de requête vide.
+2.  Faites glisser le `Backup` modèle dans la fenêtre de requête vide.
 
-3.  Double-cliquez sur le texte dans \<l’élément DatabaseID>.
+3.  Double-cliquez sur le texte dans l' \<DatabaseID> élément.
 
 4.  Dans l'Explorateur d'objets, sélectionnez la base de données que vous voulez sauvegarder, puis faites-la glisser entre les crochets de l'élément DatabaseID.
 
-5.  Double-cliquez sur le texte dans \<le fichier> élément. Tapez le chemin du fichier de sauvegarde suivi de l'extension de fichier .abf. Spécifiez le chemin d'accès de fichier complet si vous n'utilisez pas l'emplacement de sauvegarde par défaut. Pour plus d’informations, consultez [Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).
+5.  Double-cliquez sur le texte dans l' \<File> élément. Tapez le chemin du fichier de sauvegarde suivi de l'extension de fichier .abf. Spécifiez le chemin d'accès de fichier complet si vous n'utilisez pas l'emplacement de sauvegarde par défaut. Pour plus d’informations, consultez [Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).
 
 ##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a> Générer une requête d'ensemble de lignes de schéma à l'aide d'un modèle XMLA
  L' **Explorateur de modèles** contient un seul modèle pour les requêtes d'ensemble de lignes de schéma. Pour utiliser ce modèle, vous devez connaître les spécifications de l'ensemble de lignes de schéma spécifique à utiliser, notamment les éléments requis et les colonnes qui peuvent être utilisées comme restrictions. Pour plus d’informations, consultez [Ensembles de lignes de schéma Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).
@@ -167,12 +166,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
 |Category|Modèle d'élément|Description|
 |--------------|-------------------|-----------------|
-|DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser la>DMX Select from * \<Model *. Instruction CONTENT pour récupérer le contenu de l’ensemble de lignes de schéma du modèle d’exploration de données pour un modèle d’exploration de données spécifié.|
-||Valeurs des colonnes continues|Montre comment utiliser l’instruction DMX Select distinct from * \<Model>* avec les fonctions DMX `RangeMin` et `RangeMax` pour récupérer un ensemble de valeurs dans une plage spécifiée à partir de colonnes continues dans un modèle d’exploration de données spécifié.|
-||Valeurs des colonnes discrètes|Montre comment utiliser l’instruction DMX Select distinct from * \<Model>* récupérer un jeu complet de valeurs à partir de colonnes discrètes dans un modèle d’exploration de données spécifié.|
+|DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser l’instruction DMX SELECT FROM *\<model>* . Instruction CONTENT pour récupérer le contenu de l’ensemble de lignes de schéma du modèle d’exploration de données pour un modèle d’exploration de données spécifié.|
+||Valeurs des colonnes continues|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM *\<model>* avec les fonctions DMX `RangeMin` et `RangeMax` pour récupérer un ensemble de valeurs dans une plage spécifiée à partir de colonnes continues dans un modèle d’exploration de données spécifié.|
+||Valeurs des colonnes discrètes|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM pour *\<model>* récupérer un jeu complet de valeurs à partir de colonnes discrètes dans un modèle d’exploration de données spécifié.|
 ||Requête d'extraction|Indique comment utiliser l'instruction DMX SELECT * FROM Model.CASES avec la fonction DMX IsInNode pour exécuter une requête d'extraction|
 ||Attributs de modèle|Montre comment utiliser la fonction DMX System.GetModelAttributes pour retourner une liste d'attributs utilisés par un modèle.|
-||Contenu PMML|Montre comment utiliser la>DMX Select \* from * \<Model *. Instruction PMML pour récupérer la représentation PMML (Prediction Model Markup Language) du modèle d’exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.|
+||Contenu PMML|Montre comment utiliser l’instruction DMX SELECT \* from *\<model>* . Instruction PMML pour récupérer la représentation PMML (Prediction Model Markup Language) du modèle d’exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.|
 |DMX\Gestion des modèles|Ajouter un modèle|Indique comment utiliser l'instruction DMX ALTER MINING MODEL STRUCTURE pour ajouter un modèle d'exploration de données.|
 ||Supprimer le modèle|Indique comment utiliser l'instruction DMX DELETE * FROM MINING MODEL pour supprimer le contenu d'un modèle d'exploration de données spécifié.|
 ||Supprimer les exemples de structure|Indique comment utiliser l'instruction DMX DELETE FROM MINING STRUCTURE pour supprimer les exemples de structure de modèle d'exploration de données.|
@@ -190,10 +189,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Entraîner le modèle|Indique comment utiliser l'instruction DMX INSERT INTO MINING MODEL pour effectuer l'apprentissage d'un modèle d'exploration de données dans une structure précédemment formée.|
 ||Effectuer l'apprentissage de la structure imbriquée|Indique comment associer l'instruction DMX INSERT INTO MINING STRUCTURE à la requête de données sources SHAPE pour effectuer l'apprentissage d'un modèle d'exploration de données contenant des colonnes imbriquées avec des données contenant des tables imbriquées, récupérées à l'aide d'une requête, à partir d'une source de données existante.|
 ||Effectuer l'apprentissage de la structure|Indique comment associer l'instruction DMX INSERT INTO MINING STRUCTURE à la requête de données sources OPENQUERY pour effectuer l'apprentissage d'une structure d'exploration de données.|
-|DMX\Requêtes de prédictions|Prédiction de base|Montre comment combiner une instruction DMX Select from * \<Model>* PREDICTION JOIN avec la requête de données sources OPENQUERY pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide de données récupérées à l’aide d’une requête, à partir d’une source de données existante.|
-||Prédiction imbriquée|Montre comment combiner une instruction DMX Select from * \<Model>* PREDICTION JOIN avec les requêtes de données sources Shape et OPENQUERY pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide de données contenant des tables imbriquées, récupérées à l’aide d’une requête, à partir d’une source de données existante.|
-||Prédiction de singleton imbriqué|Montre comment utiliser une clause DMX Select from * \<Model>* NATURAL PREDICTION JOIN pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide d’une valeur unique, spécifiés explicitement dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne dans le modèle d’exploration de données et qui contient un ensemble de valeurs dans une table imbriquée créée à l’aide d’une instruction Union dont les noms correspondent également aux colonnes imbriquées dans le modèle d’exploration de données.|
-||Prédiction de singleton|Montre comment utiliser une instruction DMX SELECT FROM \<Model> NATURAL PREDICTION JOIN pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide d’une valeur unique, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne du modèle d’exploration de données.|
+|DMX\Requêtes de prédictions|Prédiction de base|Montre comment combiner une instruction DMX SELECT FROM *\<model>* PREDICTION JOIN avec la requête de données sources OPENQUERY pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide de données récupérées à l’aide d’une requête, à partir d’une source de données existante.|
+||Prédiction imbriquée|Montre comment combiner une instruction DMX SELECT FROM *\<model>* PREDICTION JOIN avec les requêtes de données sources Shape et OPENQUERY pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide de données contenant des tables imbriquées, récupérées à l’aide d’une requête, à partir d’une source de données existante.|
+||Prédiction de singleton imbriqué|Montre comment utiliser une clause DMX SELECT FROM *\<model>* NATURAL PREDICTION JOIN pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide d’une seule valeur, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne du modèle d’exploration de données et qui contient un ensemble de valeurs dans une table imbriquée créée à l’aide d’une instruction Union dont les|
+||Prédiction de singleton|Montre comment utiliser une instruction DMX SELECT FROM \<model> NATURAL PREDICTION JOIN pour exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide d’une valeur unique, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne dans le modèle d’exploration de données.|
 ||Appel de procédure stockée|Indique comment utiliser l'instruction DMX CALL pour appeler une procédure stockée.|
 |MDX\Expressions|Moyenne mobile-fixe|Indique comment utiliser les fonctions MDX `ParallelPeriod` et `CurrentMember` avec un jeu naturellement ordonné pour créer une mesure calculée qui fournit une moyenne mobile d'une mesure sur un nombre fixe de périodes de temps contenu par une hiérarchie dans une dimension de temps.|
 ||Moyenne mobile-variable|Indique comment utiliser l'instruction MDX `CASE` au sein de la fonction `Avg` pour créer une mesure calculée qui fournit une moyenne mobile d'une mesure sur un nombre variable de périodes de temps contenu par une hiérarchie dans une dimension de temps.|
@@ -205,7 +204,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Requête sub-select|Indique comment créer une instruction MDX SELECT pour récupérer des informations d'un sous-cube défini par une autre instruction SELECT.|
 ||Avec membre calculé|Indique comment utiliser la clause MDX WITH dans une instruction SELECT pour définir un membre calculé pour une requête MDX.|
 ||Avec jeu nommé|Indique comment utiliser la clause MDX WITH dans une instruction SELECT pour définir un jeu nommé pour une requête MDX.|
-|XMLA\Gestion|Backup|Indique comment utiliser la commande XMLA `Backup` pour sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier.|
+|XMLA\Gestion|Sauvegarde|Indique comment utiliser la commande XMLA `Backup` pour sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier.|
 ||Annuler|Indique comment utiliser la commande XMLA `Cancel` pour annuler toutes les opérations en cours d'exécution dans la session (pour les utilisateurs autres que les administrateurs ou les administrateurs de serveur), la base de données (pour les administrateurs) ou l'instance (pour les administrateurs de serveur) actuelle.|
 ||Créer une base de données de partition distante|Indique comment utiliser la commande XMLA `Create` avec l'élément ASSL ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) Database pour créer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une source de données pour stocker les partitions distantes.|
 ||DELETE|Indique comment utiliser la commande XMLA `Delete` pour supprimer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante.|

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4a6693a46679badc068111a311bb82219e752cd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083150"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520755"
 ---
 # <a name="processing-data-mining-objects"></a>Traitement des objets d'exploration de données
   Un objet d'exploration de données n'est rien de plus qu'un conteneur vide tant qu'il n'est pas traité. Le*traitement* d’un modèle d’exploration de données est également appelé *apprentissage*.  

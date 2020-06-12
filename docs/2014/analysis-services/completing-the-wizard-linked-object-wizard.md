@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: f42e61a4-163d-4552-97e4-a275a30ba106
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2576d5775c2effc8d45565c52c78114ac5349f1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af28a607482e83732a8b99be6e569d1d29af8e66
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087553"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527278"
 ---
 # <a name="completing-the-wizard-linked-object-wizard"></a>Fin de l'Assistant (Assistant Objet lié)
   Utilisez la page **Fin de l'Assistant** pour examiner les décisions prises dans les pages précédentes de l'Assistant.  
   
 ## <a name="options"></a>Options  
- **PRÉVERSION**  
+ **Préversion**  
  Affiche les objets sélectionnés pour la liaison ou l'importation.  
   
   

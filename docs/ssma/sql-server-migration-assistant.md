@@ -1,5 +1,6 @@
 ---
 title: Assistant Migration SQL Server | Microsoft Docs
+description: En savoir plus sur Assistant Migration SQL Server, un outil qui automatise la migration de bases de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252124"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294026"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant Migration SQL Server
 

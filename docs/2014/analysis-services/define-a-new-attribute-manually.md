@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3739728631ae0273150c010600f099623bb98c2a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082340"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528887"
 ---
 # <a name="define-a-new-attribute-manually"></a>Définir un nouvel attribut manuellement
   Cette procédure décrit comment créer un nouvel attribut dans une dimension à l’aide du volet **attributs** du concepteur de dimensions.  
@@ -31,7 +30,7 @@ ms.locfileid: "66082340"
   
      Cliquez avec le bouton droit sur le volet **attributs** , pointez sur **afficher les attributs dans**, puis cliquez sur **grille**.  
   
-3.  Faites défiler jusqu’à la dernière ligne de la grille, puis cliquez sur ** \<nouvel attribut>**.  
+3.  Faites défiler jusqu’à la dernière ligne de la grille, puis cliquez sur **\<new attribute>** .  
   
 4.  Tapez le nom de l'attribut pour définir la propriété `Name`, puis appuyez sur Entrée.  
   

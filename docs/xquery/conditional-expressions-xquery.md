@@ -1,5 +1,6 @@
 ---
 title: Expressions conditionnelles (XQuery) | Microsoft Docs
+description: En savoir plus sur les expressions conditionnelles prises en charge par XQuery.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76570b6b7cbb1ecb55a881d58683e158736e85d0
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039010"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689703"
 ---
 # <a name="conditional-expressions-xquery"></a>Expressions conditionnelles (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ else
   
 -   L’expression **else** est obligatoire. Si vous n'en avez pas besoin, vous pouvez renvoyer « ( ) », comme le montrent les exemples de cette rubrique.  
   
- Par exemple, la requête suivante est spécifiée par rapport à la variable de type **XML** . La condition **If** teste la valeur de la variable SQL@v() à l’intérieur de l’expression XQuery à l’aide de la fonction d’extension de [fonction SQL : variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Si la valeur de la variable est « FirstName », elle retourne `FirstName` l’élément <>. Sinon, elle retourne l’élément `LastName` <>.  
+ Par exemple, la requête suivante est spécifiée par rapport à la variable de type **XML** . La condition **If** teste la valeur de la variable SQL ( @v ) à l’intérieur de l’expression XQuery à l’aide de la fonction d’extension de [fonction SQL : variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Si la valeur de la variable est « FirstName », elle retourne l' `FirstName` élément <>. Sinon, elle retourne l' `LastName` élément <>.  
   
 ```  
 declare @x xml  
@@ -80,7 +81,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- La requête suivante extrait les deux premières descriptions de fonctionnalités de la description de catalogue de produit d'un modèle de produit spécifique. S’il y a plus de fonctionnalités dans le document, il ajoute `there-is-more` un <élément> avec un contenu vide.  
+ La requête suivante extrait les deux premières descriptions de fonctionnalités de la description de catalogue de produit d'un modèle de produit spécifique. S’il y a plus de fonctionnalités dans le document, il ajoute un <`there-is-more` élément> avec un contenu vide.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -122,7 +123,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- Dans la requête suivante, un élément `Location` <> avec un attribut LocationID est retourné si l’emplacement du poste de travail ne spécifie pas les heures d’installation.  
+ Dans la requête suivante, un `Location` élément <> avec un attribut LocationID est retourné si l’emplacement du poste de travail ne spécifie pas les heures d’installation.  
   
 ```  
 SELECT Instructions.query('  

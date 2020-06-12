@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237f4dfaa615718f7fa4301b8d64cab0c45600b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071047"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547761"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Démarrer ou arrêter un service PowerPivot pour un serveur SharePoint
   Service système PowerPivot et une [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance de fonctionnent ensemble sur le même serveur d’applications local pour prendre en charge le traitement des requêtes et des données coordonné dans une batterie de serveurs SharePoint.  

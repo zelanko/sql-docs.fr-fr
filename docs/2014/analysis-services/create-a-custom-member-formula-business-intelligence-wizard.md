@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df5d8e67ce19d3aa509f3eb111f74779a27c844
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086997"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526766"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Créer une formule de membre personnalisée (Assistant Business Intelligence)
   Utilisez la page **créer une formule de membre personnalisée** pour associer des attributs dans la dimension spécifiée avec des colonnes de formules de membre personnalisées-colonnes qui contiennent des instructions MDX (Multidimensional Expressions) qui définissent des valeurs de membre pour cet attribut.  

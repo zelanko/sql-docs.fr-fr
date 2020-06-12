@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085580"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524015"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Créer une requête de contenu sur un modèle d'exploration de données
   Vous pouvez interroger par programme le contenu du modèle d'exploration de données en utilisant AMO ou XML/A, mais il est plus facile de créer des requêtes à l'aide de DMX. Vous pouvez créer des requêtes sur les ensembles de lignes de schéma d'exploration de données en établissant une connexion à l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en créant une requête utilisant les vues DMV fournies par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -40,11 +39,11 @@ ms.locfileid: "66085580"
   
      Le modèle **Requête de contenu** s'ouvre dans l'éditeur de code approprié. Le volet de métadonnées répertorie les modèles qui sont disponibles dans la base de données active. Pour changer la base de données, sélectionnez une autre base de données dans la liste **Bases de données disponibles** .  
   
-5.  Entrez le nom d’un modèle d’exploration de données dans `FROM` la ligne, [*\<modèle d’exploration de données, nom, MyModel>*].`.CONTENT` Si le nom du modèle d'exploration de données contient des espaces, vous devez le mettre entre crochets.  
+5.  Entrez le nom d’un modèle d’exploration de données sur la ligne, `FROM` [ *\<mining model, name, MyModel>* ] `.CONTENT` . Si le nom du modèle d'exploration de données contient des espaces, vous devez le mettre entre crochets.  
   
      Si vous ne voulez pas taper le nom, vous pouvez sélectionner un modèle d'exploration de données dans l' **Explorateur d'objets** et le faire glisser dans le modèle.  
   
-6.  Dans la ligne, `SELECT` * \<sélectionnez liste, liste expr, \* *, tapez les noms des colonnes dans l’ensemble de lignes de schéma du contenu du modèle d’exploration de données.  
+6.  Dans la ligne, `SELECT` *\<select list, expr list, \*>* tapez les noms des colonnes dans l’ensemble de lignes de schéma du contenu du modèle d’exploration de données.  
   
      Pour afficher une liste des colonnes que vous pouvez retourner dans les requêtes de contenu de modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
@@ -79,6 +78,6 @@ ms.locfileid: "66085580"
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Ensembles de lignes de schéma d’exploration de données](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

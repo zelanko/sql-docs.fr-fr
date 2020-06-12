@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18312c8c597c783ad3f30dab0bdd386f7e560de6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543351"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Leçon 3 : Modification des mesures, des attributs et des hiérarchies
   Après avoir défini votre cube initial, vous êtes prêt à améliorer son utilité et sa convivialité. Pour ce faire, ajoutez des hiérarchies qui prennent en charge la navigation et l'agrégation à différents niveaux, appliquez des formats à la mesure spécifique et définissez des calculs et des relations.  

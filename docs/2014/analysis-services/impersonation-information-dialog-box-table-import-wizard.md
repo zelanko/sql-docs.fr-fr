@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b29901213da4653c2d8867b9f450b359c39bded3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080697"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544252"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Boîte de dialogue Informations d'emprunt d'identité (Assistant Importation de table)
   Utilisez la page **Informations d'emprunt d'identité** pour spécifier les informations d'identification que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilisera pour se connecter à la source de données. Pour plus d’informations sur l’emprunt d’identité d’informations d’identification, consultez [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "66080697"
  **Nom d'utilisateur**  
  Entrez le domaine et le nom du compte d'utilisateur à utiliser. Utilisez le format suivant :  
   
- Nom de **\\** domaine>* \<nom du compte d’utilisateur>* * \<*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  Cette option est activée si **Utiliser un nom d'utilisateur et un mot de passe spécifiques** est sélectionné.  
   

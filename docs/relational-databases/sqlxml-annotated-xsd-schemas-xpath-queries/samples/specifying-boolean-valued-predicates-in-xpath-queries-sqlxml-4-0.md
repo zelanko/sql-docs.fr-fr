@@ -1,5 +1,6 @@
 ---
 title: Spécifier des prédicats booléens dans les requêtes XPath (SQLXML)
+description: Consultez des exemples de spécification de prédicats booléens dans les requêtes XPath (SQLXML 4,0).
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8f2f4a80b6e4ab47245c55aa9fa2f2716ea39f7
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252565"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215395"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Spécification de prédicats booléens dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,13 +92,13 @@ ms.locfileid: "75252565"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Spécifier les prédicats consécutifs et imbriqués  
- La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les éléments ** \<client>** enfants du nœud de contexte qui ont à la fois un attribut **SalesPersonID** avec la valeur 277 et un attribut **TerritoryID** avec une valeur de 3 :  
+ La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les **\<Customer>** éléments enfants du nœud de contexte qui ont à la fois un attribut **SalesPersonID** avec une valeur de 277 et un attribut **TerritoryID** avec une valeur de 3 :  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- La requête retourne le ** \<client>** éléments qui répondent aux deux conditions spécifiées dans les prédicats.  
+ La requête retourne les **\<Customer>** éléments qui répondent aux conditions spécifiées dans les prédicats.  
   
  Vous pouvez spécifier un raccourci vers l’axe des **attributs** (@), et comme l’axe **enfant** est la valeur par défaut, il peut être omis dans la requête :  
   
@@ -105,7 +106,7 @@ ms.locfileid: "75252565"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- La requête XPath suivante illustre l'utilisation de prédicats imbriqués. La requête retourne tous les ** \<éléments enfants>client** du nœud de contexte qui incluent ** \<l’ordre>** éléments enfants avec au moins une ** \<commande>** élément ayant une valeur d’attribut **SalesPersonID** égale à 2.  
+ La requête XPath suivante illustre l'utilisation de prédicats imbriqués. La requête retourne tous les **\<Customer>** éléments enfants du nœud de contexte qui incluent des **\<Order>** éléments enfants avec au moins un **\<Order>** élément ayant une valeur d’attribut **SalesPersonID** égale à 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -168,7 +169,7 @@ ms.locfileid: "75252565"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Spécifier un prédicat de niveau supérieur  
- La requête suivante retourne le ** \<client>** nœuds d’élément enfant du nœud de contexte qui ont ** \<l’ordre>** éléments enfants. La requête teste le chemin d'accès de l'emplacement comme prédicat de niveau supérieur :  
+ La requête suivante retourne les **\<Customer>** nœuds d’élément enfant du nœud de contexte qui ont des **\<Order>** éléments enfants. La requête teste le chemin d'accès de l'emplacement comme prédicat de niveau supérieur :  
   
 ```  
 /child::Customer[child::Order]  

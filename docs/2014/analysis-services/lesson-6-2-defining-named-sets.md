@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e02f4624dc0ec25ee0c3d8950c83550ca3d9ed57
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175266"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542731"
 ---
 # <a name="defining-named-sets"></a>Définition de jeux nommés
   Un jeu nommé est une expression MDX (Multidimensional Expressions) qui retourne un ensemble de membres de dimension. Vous pouvez définir des jeux nommés et les enregistrer en tant que partie de la définition du cube ; vous pouvez aussi créer des jeux nommés dans des applications clientes. Vous créez des jeux nommés en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Les jeux nommés peuvent être employés par les utilisateurs dans des requêtes MDX dans des applications clientes. Ils peuvent aussi être utilisés pour définir des jeux dans des sous-cubes. Un sous-cube est une collection de jeux joints entre eux qui limite l'espace du cube au sous-espace défini pour les instructions suivantes. Définir un espace de cube limité est un des concepts fondamentaux des scripts MDX.
@@ -32,11 +31,11 @@ ms.locfileid: "78175266"
 
      Lorsque vous définissez un nouveau calcul sous l'onglet **Calculs** , n'oubliez pas que les calculs sont résolus dans l'ordre où ils apparaissent dans le volet **Organisateur de script** . La partie de ce volet qui est active lorsque vous créez un nouveau calcul détermine l'ordre d'exécution du calcul ; un nouveau calcul est défini immédiatement après le calcul actif.
 
-3.  Dans la zone **nom** , remplacez le nom du nouveau jeu nommé par `[Core Products]`.
+3.  Dans la zone **nom** , remplacez le nom du nouveau jeu nommé par `[Core Products]` .
 
      Dans le volet **Organisateur de script** , remarquez l'icône unique qui différencie un jeu nommé d'une commande de script ou d'un membre calculé.
 
-4.  Sous l' **onglet métadonnées** du **volet outils de calcul** , développez **Product**, développez `Members` **Category**, développez, puis développez **All Products**.
+4.  Sous l’onglet **métadonnées** du volet **outils de calcul** , développez **Product**, développez **Category**, développez `Members` , puis développez **All Products**.
 
     > [!NOTE]
     >  Si le volet **Outils de calcul** ne contient pas de métadonnées, cliquez sur **Reconnexion** dans la barre d'outils. Si cette opération ne donne pas de résultats, il se peut que vous deviez traiter le cube ou démarrer une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].
@@ -47,11 +46,11 @@ ms.locfileid: "78175266"
 
 ## <a name="defining-a-large-resellers-named-set"></a>Définition d'un jeu nommé Large Resellers
 
-1.  Cliquez `[Core Products]` avec le bouton droit dans le volet **organisateur de script** , puis cliquez sur **nouveau jeu nommé**.
+1.  Cliquez avec le bouton droit `[Core Products]` dans le volet **organisateur de script** , puis cliquez sur **nouveau jeu nommé**.
 
-2.  Dans la zone **nom** , remplacez le nom de ce jeu nommé par `[Large Resellers]`.
+2.  Dans la zone **nom** , remplacez le nom de ce jeu nommé par `[Large Resellers]` .
 
-3.  Dans la zone **expression** , tapez `Exists()`.
+3.  Dans la zone **expression** , tapez `Exists()` .
 
      Vous allez utiliser la fonction Exists pour retourner le jeu de membres de la hiérarchie d’attribut Reseller Name qui a une intersection avec le jeu de membres de la hiérarchie d’attribut Number of Employees ayant le plus grand nombre d’employés.
 
@@ -69,29 +68,29 @@ ms.locfileid: "78175266"
 
      Maintenant que vous avez défini le premier jeu pour l’expression d’ensemble Exists, vous êtes prêt à ajouter le second ensemble : l’ensemble de membres de la dimension Reseller qui contient le plus grand nombre d’employés.
 
-7.  Sous l' **onglet métadonnées** du volet **outils de calcul** , développez **nombre d’employés** dans la dimension Reseller, développez `Members`, puis développez **All**Resellers.
+7.  Sous l’onglet **métadonnées** du volet **outils de calcul** , développez **nombre d’employés** dans la dimension Reseller, développez `Members` , puis développez **All**Resellers.
 
      Observez que les membres de cette hiérarchie d'attribut ne sont pas groupés.
 
 8.  Ouvrez le Concepteur de dimensions pour la dimension **Reseller** , puis cliquez sur **Number of Employees** dans le volet **Attributs** .
 
-9. Dans la Fenêtre Propriétés, remplacez la `DiscretizationMethod` valeur de la propriété par **automatique**, puis `DiscretizationBucketCount` remplacez la `5`propriété par. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
+9. Dans la Fenêtre Propriétés, remplacez la valeur de la `DiscretizationMethod` propriété par **automatique**, puis remplacez la `DiscretizationBucketCount` propriété par `5` . Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
 
 10. Dans le menu **Générer** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], cliquez sur **Déployer Analysis Services Tutorial**.
 
 11. Une fois le déploiement achevé, ouvrez le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans le Concepteur de cube, puis cliquez sur **Reconnexion** dans la barre d'outils de l'onglet **Calculs** .
 
-12. Sous l’onglet **métadonnées** du volet **outils de calcul** , développez **nombre d’employés** dans la dimension **Reseller** , développez `Members`, puis développez **All**Resellers.
+12. Sous l’onglet **métadonnées** du volet **outils de calcul** , développez **nombre d’employés** dans la dimension **Reseller** , développez `Members` , puis développez **All**Resellers.
 
      Observez que les membres de cette hiérarchie d'attributs sont maintenant contenus dans cinq groupes, numérotés de 0 à 4. Pour afficher le numéro d'un groupe, arrêtez le pointeur sur le groupe qui vous intéresse pour faire apparaître une info-bulle. Pour la plage `2 -17`, l'info-bulle doit contenir `[Reseller].[Number of Employees].&[0]`.
 
-     Les membres de cette hiérarchie d’attributs sont regroupés, car la propriété DiscretizationBucketCount `5` a la valeur et la propriété DiscretizationMethod est définie sur **Automatic**.
+     Les membres de cette hiérarchie d’attributs sont regroupés, car la propriété DiscretizationBucketCount a la valeur `5` et la propriété DiscretizationMethod est définie sur **Automatic**.
 
 13. Dans la zone **Expression** , ajoutez une virgule à l’expression d’ensemble Exists après la fonction Members et avant la parenthèse fermante, puis faites glisser **83 - 100** depuis le volet **Métadonnées** jusqu’à la position suivant immédiatement cette virgule.
 
      Vous avez maintenant terminé l’expression d’ensemble Exists qui, quand le jeu nommé Large Resellers sera placé sur un axe, retournera le jeu de membres ayant une intersection avec les deux jeux spécifiés, à savoir le jeu de tous les revendeurs et le jeu de revendeurs qui ont de 83 à 100 employés.
 
-     L’illustration suivante montre le volet des **expressions** de calcul `[Large Resellers]` pour le jeu nommé.
+     L’illustration suivante montre le volet des **expressions de calcul** pour le `[Large Resellers]` jeu nommé.
 
      ![Volet des expressions de calcul pour [Large Resellers]](../../2014/tutorials/media/l6-named-set-02.gif "Volet des expressions de calcul pour [Large Resellers]")
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079230"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543611"
 ---
 # <a name="modifying-default-table-names"></a>Modification des noms de tables par défaut
   Vous pouvez modifier la valeur de la propriété **FriendlyName** des objets de la vue de source de données pour en faciliter l'utilisation et la compréhension.  
@@ -33,11 +32,11 @@ ms.locfileid: "66079230"
   
      Il est plus facile de modifier les propriétés de chaque table dans la vue de source de données si la fenêtre des propriétés reste ouverte. Si vous n'ouvrez pas la fenêtre en utilisant le bouton **Masquer automatiquement** , elle se ferme lorsque vous cliquez sur un autre objet dans le volet **Diagramme** .  
   
-3.  Modifiez la propriété **FriendlyName** de l’objet **FactInternetSales** en *`InternetSales`*.  
+3.  Modifiez la propriété **FriendlyName** de l’objet **FactInternetSales** en *`InternetSales`* .  
   
      Lorsque vous cliquez en dehors de la cellule correspondant à la propriété **FriendlyName** , la modification est appliquée. Dans la leçon suivante, vous définirez un groupe de mesures basé sur cette table de faits. Le nom de la table de faits sera InternetSales au lieu de FactInternetSales à cause de la modification que vous avez apportée dans cette leçon.  
   
-4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la Fenêtre Propriétés, remplacez la **FriendlyName** valeur de la *`Product`* propriété FriendlyName par.  
+4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **FriendlyName** par *`Product`* .  
   
 5.  Modifiez la propriété **FriendlyName** de chaque table restante dans la vue de source de données en procédant de la même façon, pour supprimer le préfixe «**Dim**».  
   

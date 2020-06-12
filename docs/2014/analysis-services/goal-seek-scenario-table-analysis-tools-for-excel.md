@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080737"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544361"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Scénario Valeur cible (Outils d'analyse de table pour Excel)
   ![Bouton Valeur cible dans les outils d'analyse de table](media/tat-goalseek.gif "Bouton Valeur cible dans les outils d'analyse de table")  
@@ -59,7 +58,7 @@ ms.locfileid: "66080737"
   
 9. Si vous avez sélectionné l’option **sur cette ligne**, les résultats de l’analyse sont générés dans la boîte de dialogue à des fins de vérification. La boîte de dialogue reste ouverte afin que vous puissiez continuer à essayer différentes valeurs et cibles.  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Cet outil utilise l'algorithme MLR (Microsoft Logistic Regression), qui peut traiter des valeurs numériques ou discrètes.  
   
  Vous pouvez exécuter la prédiction plusieurs fois et sélectionner par la suite d'autres colonnes, mais chaque combinaison de cible et de modification doit être calculée séparément.  
@@ -99,7 +98,7 @@ ms.locfileid: "66080737"
 ## <a name="related-tools"></a>Outils connexes  
  Le client d'exploration de données pour Excel, un complément séparé qui fournit des fonctionnalités d'exploration de données plus avancées, comprend des Assistants pour créer des modèles d'exploration de données qui prédisent le comportement. Pour plus d’informations, consultez [création d’un modèle d’exploration de données](creating-a-data-mining-model.md).  
   
- Pour plus d’informations sur l’algorithme utilisé par l’outil de scénario de la valeur **cible** , consultez la rubrique « algorithme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de régression logistique Microsoft » dans la documentation en ligne de.  
+ Pour plus d’informations sur l’algorithme utilisé par l’outil de scénario de la valeur **cible** , consultez la rubrique « algorithme de régression logistique Microsoft » dans la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation en ligne de.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d'analyse de table pour Excel](table-analysis-tools-for-excel.md)  

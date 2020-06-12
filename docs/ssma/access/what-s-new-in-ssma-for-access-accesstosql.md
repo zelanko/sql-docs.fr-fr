@@ -1,24 +1,29 @@
 ---
 title: Nouveautés de SSMA for Access (AccessToSQL) | Microsoft Docs
+description: Découvrez les modifications apportées à Assistant Migration SQL Server (SSMA) for Access (AccessToSQL) pour chaque version.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: da71576b58487fa5d2d1e069d56c9fa6db783fc2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220254"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292956"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Nouveautés de SSMA for Access (AccessToSQL)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications d’accès dans chaque version.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+La version 8.10 de SSMA pour l’accès contient des améliorations de performances mineures et des correctifs de bogues.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -194,11 +199,11 @@ La version 2016 de SSMA pour Access contient les modifications suivantes :
 * Le chargement des données des tables fixes pour les onglets de l’interface utilisateur pour l’accès.
 * Correction du bogue dans les paramètres globaux.
 
-## <a name="march-2016"></a>Mars 2016
+## <a name="march-2016"></a>Mars 2016
 
 La version préliminaire de de SSMA pour Access de mars 2016 ajoute la prise en charge de la migration vers SQL Server 2016.
 
-## <a name="january-2016"></a>Janvier 2016
+## <a name="january-2016"></a>Janvier 2016
 
 La version de maintenance de SSMA pour l’accès de janvier 2016 contient les modifications suivantes :
 

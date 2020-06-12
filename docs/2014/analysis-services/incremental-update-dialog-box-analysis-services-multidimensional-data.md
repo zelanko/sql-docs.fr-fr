@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6115a5123fd6e72cee0ebccaac5f539be8aebfbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080486"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544161"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Mise à jour incrémentielle (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Mise à jour incrémentielle** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les paramètres utilisés pendant la mise à jour incrémentielle des groupes de mesures et des partitions. Pour afficher la boîte de dialogue **Mise à jour incrémentielle** , cliquez sur **Configurer** dans la colonne **Paramètres** de la grille **Liste d’objets** dans la boîte de dialogue **Traiter** .  
@@ -27,8 +26,8 @@ ms.locfileid: "66080486"
 |Terme|Définition|  
 |----------|----------------|  
 |**Groupe de mesures**|Sélectionnez le groupe de mesures soumis à la mise à jour incrémentielle.<br /><br /> Remarque : cette option est activée uniquement lorsque vous effectuez la mise à jour incrémentielle d’un cube. Si vous appliquez la mise à jour incrémentielle à un groupe de mesures ou à une partition, elle est désactivée.|  
-|**Non**|Sélectionnez la partition à mettre à jour.<br /><br /> Remarque : cette option est activée uniquement lorsque vous effectuez la mise à jour incrémentielle d’un cube. Si vous appliquez la mise à jour incrémentielle à un groupe de mesures ou à une partition, elle est désactivée.|  
-|**Table de charge de travail**|Met à jour l'objet d'une table.|  
+|**Partition**|Sélectionnez la partition à mettre à jour.<br /><br /> Remarque : cette option est activée uniquement lorsque vous effectuez la mise à jour incrémentielle d’un cube. Si vous appliquez la mise à jour incrémentielle à un groupe de mesures ou à une partition, elle est désactivée.|  
+|**Table**|Met à jour l'objet d'une table.|  
 |**Source de données ou vue**|Sélectionnez la source ou la vue des données dans laquelle se trouve la table source.<br /><br /> Remarque : Cette option est active uniquement si **Table** est sélectionné.|  
 |**Schéma et nom de la table**|Sélectionnez la table source utilisée pour extraire les données pour la mise à jour incrémentielle du cube, du groupe de mesures ou de la partition.<br /><br /> Remarque : Cette option est active uniquement si **Table** est sélectionné.|  
 |**Requête**|Met à jour l'objet d'une requête.|  

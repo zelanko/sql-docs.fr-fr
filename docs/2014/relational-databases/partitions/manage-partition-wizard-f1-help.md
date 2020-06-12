@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49625e9ef5311b261bc309a90cfa9d6b315953f6
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249678"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858861"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Aide sur l'Assistant Gestion de partition via la touche F1
   Utilisez l’ **Assistant Gestion de partition** pour gérer et modifier des tables partitionnées existantes via le basculement de partition ou l’implémentation d’un scénario de fenêtre glissante. Cet Assistant peut faciliter la gestion de vos partitions et simplifier la migration régulière de données vers et à partir de vos tables.  
@@ -75,7 +75,7 @@ ms.locfileid: "63249678"
 ### <a name="sliding-window-scenario"></a>Scénario de fenêtre glissante  
  Pour gérer vos partitions dans un scénario de fenêtre défilante, sélectionnez **Gérer les données partitionnées dans un scénario de fenêtre glissante**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Créer une table intermédiaire pour le basculement de partition**  
  Crée une table intermédiaire pour les données que vous insérez ou extrayez dans la table partitionnée existante.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63249678"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Page Sélectionner les options d'insertion de partition  
  Utilisez la page **Sélectionner les options d’insertion de partition** pour sélectionner la table de mise en lots que vous insérez dans la table partitionnée.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Afficher toutes les partitions**  
  Sélectionnez cette option pour afficher toutes les partitions, notamment les partitions figurant actuellement dans la table partitionnée.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63249678"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Page Sélectionner les options d'extraction de partition  
  Utilisez la page **Sélectionner les options d’extraction de partition** pour sélectionner la partition et la table de mise en lots destinées à maintenir les données partitionnées que vous extrayez de la table partitionnée.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Grille de partition**  
  Affiche le nom des partitions, ainsi que les informations **Limite gauche**, **Limite droite**, **Groupe de fichiers**et **Nombre de lignes** des partitions que vous avez sélectionnées.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63249678"
   
  Vous pouvez également créer les mêmes index dans la table intermédiaire que dans la partition source. La table intermédiaire contient automatiquement une contrainte basée sur les éléments de la partition source. Cette contrainte est généralement générée à partir de la valeur limite de la partition source.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nom de la table intermédiaire**  
  Créez un nom pour la table intermédiaire ou acceptez le nom par défaut affiché dans la zone d'édition.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "63249678"
 ##  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez la page **Résumé** pour examiner les options que vous avez sélectionnées sur les pages précédentes.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Vérifier vos sélections**  
  Affiche les choix que vous avez effectués pour chaque page de l'Assistant. Cliquez sur un nœud pour développer et afficher les options que vous avez sélectionnées précédemment.  
   
@@ -302,7 +302,7 @@ ms.locfileid: "63249678"
   
  ![Icône de flèche utilisée avec le lien Retour en haut](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tables et index partitionnés](partitioned-tables-and-indexes.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Introduction au chargement en masse XML (SQLXML)
+description: En savoir plus sur l’utilitaire de chargement en masse XML, un objet COM autonome dans SQLXML 4,0 qui vous permet de charger des données XML semi-structurées dans des tables Microsoft SQL Server.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4116bef21a70e6de699046019fd404798826bf18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11b89a9d6981281bdb2e89bb5511c2f803c91b31
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246736"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529715"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Présentation du chargement en masse XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Le chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des tables Microsoft.  
+  Le chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables Microsoft.  
   
  Vous pouvez insérer les données XML dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide d'une instruction INSERT et de la fonction OPENXML ; toutefois, l'utilitaire de chargement en masse fournit de meilleures performances lorsque vous avez besoin d'insérer des quantités importantes de données XML.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "75246736"
 ## <a name="streaming-of-xml-data"></a>Diffusion en continu de données XML  
  Le document XML source pouvant être volumineux, le document n'est pas lu intégralement en mémoire au cours du traitement de chargement en masse. Au lieu de cela, le chargement en masse XML interprète les données XML en tant que flux et lit ce flux. À mesure que l'utilitaire lit les données, il identifie la ou les tables de base de données, génère le ou les enregistrements appropriés à partir de la source de données XML, puis envoie le ou les enregistrements à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des fins d'insertion.  
   
- Par exemple, le document XML source suivant se compose des ** \<éléments Customer>** et ** \<de l’ordre>** éléments enfants :  
+ Par exemple, le document XML source suivant se compose d' **\<Customer>** éléments et d' **\<Order>** éléments enfants :  
   
 ```  
 <Customer ...>  
@@ -58,7 +59,7 @@ ms.locfileid: "75246736"
 ...  
 ```  
   
- À mesure que le chargement en masse XML lit l' ** \<élément Customer>** , il génère un enregistrement pour CustomerTable. Lors de la lecture de la balise de fin ** \</Customer>** , le chargement en masse XML insère cet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]enregistrement dans la table de. De la même façon, lors de la lecture de l’élément ** \<Order>** , le chargement en masse XML génère un enregistrement pour Ordertable, puis insère cet enregistrement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la table lors de la lecture de la balise de fin de la ** \<>/Order** .  
+ À mesure que le chargement en masse XML lit l' **\<Customer>** élément, il génère un enregistrement pour le CustomerTable. Lorsqu’il lit la **\</Customer>** balise de fin, le chargement en masse XML insère cet enregistrement dans la table de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . De la même façon, lors de la lecture de l' **\<Order>** élément, le chargement en masse XML génère un enregistrement pour le Ordertable, puis insère cet enregistrement dans la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table lors de la lecture de la **\</Order>** balise de fin.  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Opérations de chargement en masse XML transactionnelles et non transactionnelles  
  Le chargement en masse XML peut fonctionner en mode transactionnel ou non transactionnel. Les performances sont généralement optimales si vous effectuez un chargement en masse en mode non-. autrement dit, la propriété transaction est définie sur FALSe et l’une ou l’autre des conditions suivantes est vraie :  

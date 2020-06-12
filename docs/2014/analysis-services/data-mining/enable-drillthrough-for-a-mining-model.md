@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6adfc389776f91132e527130f50f61c9783d9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084541"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522466"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Activer l'extraction pour un modèle d'exploration de données
   Si vous avez activé l'extraction pour un modèle d'exploration de données, lorsque vous parcourez le modèle, vous pouvez extraire des informations détaillées sur les cas utilisés pour créer le modèle. Pour consulter cette information, vous devez disposer des autorisations nécessaires et la structure doit déjà avoir été traitée.  
@@ -27,7 +26,7 @@ ms.locfileid: "66084541"
   
 -   Les autorisations d'extraction sur le modèle vous permettent d'extraire à partir du modèle, même si vous n'avez pas d'autorisations sur la structure.  
   
--   Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). Vous pouvez également interroger les cas de test et d’apprentissage dans la structure à l’aide de l’option SELECT... À \<partir de la structure>. Syntaxe des cas.  
+-   Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). Vous pouvez également interroger les cas de test et d’apprentissage dans la structure à l’aide de l’option SELECT... À partir de \<structure> . Syntaxe des cas.  
   
  **Mise en cache de cas d’apprentissage** L’extraction consiste à récupérer des informations sur les cas d’apprentissage dans la structure d’exploration de données. Ces informations sont mises en cache lorsque la structure est traitée. Par conséquent, si vous choisissez d'effacer toutes les données en cache en modifiant la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en `ClearAfterProcessing`, l'extraction ne fonctionnera pas.  
   

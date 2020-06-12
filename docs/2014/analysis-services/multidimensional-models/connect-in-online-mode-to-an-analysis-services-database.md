@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520bf86abe448b444c653f61849640f0b1a7789f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076571"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536951"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Connexion en mode en ligne à une base de données Analysis Services
   Vous pouvez vous connecter directement à une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données existante et modifier directement les objets de cette base de données. Si vous vous connectez directement à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les modifications sont immédiates et aucun projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

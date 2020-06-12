@@ -1,5 +1,6 @@
 ---
 title: Vues de réplication (Transact-SQL) | Microsoft Docs
+description: Les vues de réplication contiennent des informations qui sont utilisées par la réplication dans SQL Server. Les vues facilitent l'accès aux données dans les tables système de réplication.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129568"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807935"
 ---
 # <a name="replication-views-transact-sql"></a>Vues de réplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Ces vues contiennent des informations qui sont utilisées par la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]réplication dans. Les vues permettent un accès plus facile aux données dans les [tables système de réplication](../../relational-databases/system-tables/replication-tables-transact-sql.md). Les vues sont créées dans une base de données utilisateur lorsque celle-ci est activée en tant que base de données de publication ou d'abonnement. Tous les objets de réplication sont supprimés de la base de données utilisateur lorsque celle-ci est supprimée d'une topologie de réplication. La méthode recommandée pour accéder aux métadonnées de réplication consiste à utiliser des [procédures stockées de réplication](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
+  Ces vues contiennent des informations qui sont utilisées par la réplication dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les vues permettent un accès plus facile aux données dans les [tables système de réplication](../../relational-databases/system-tables/replication-tables-transact-sql.md). Les vues sont créées dans une base de données utilisateur lorsque celle-ci est activée en tant que base de données de publication ou d'abonnement. Tous les objets de réplication sont supprimés de la base de données utilisateur lorsque celle-ci est supprimée d'une topologie de réplication. La méthode recommandée pour accéder aux métadonnées de réplication consiste à utiliser des [procédures stockées de réplication](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Les vues système ne doivent pas être modifiées directement par l'utilisateur.  

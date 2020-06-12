@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 485a3e12b46700319c760b878ecbdcfb8c97545d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086816"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526675"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Créer une structure d'exploration de données (Compléments d'exploration de données SQL Server)
   ![Bouton Créer une structure d'exploration de données, ruban Exploration de données](media/dmc-createstruct.gif "Bouton Créer une structure d'exploration de données, ruban Exploration de données")  
@@ -84,7 +83,7 @@ ms.locfileid: "66086816"
   
 |Option|Commentaires|  
 |------------|--------------|  
-|Boîte de dialogue **Sélectionner les données source**|Lorsque vous sélectionnez une table Excel, vous devez indiquer si les données ont déjà des en-têtes. Si vous ignorez cette opération, la première ligne de données est utilisée comme nom de colonne.<br /><br /> Si vous utilisez l’option **source de données externe**, vous pouvez utiliser n’importe quel type de données pouvant être défini dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] une source de données. Toutefois, la boîte de dialogue du complément pour créer de nouvelles sources de données n'inclut pas la plage complète des sources de données prises en charge par Analysis Services. Nous vous recommandons de créer les sources de données sur le serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à l'avance, puis de vous connecter à l'aide des compléments.|  
+|Boîte de dialogue **Sélectionner les données source**|Lorsque vous sélectionnez une table Excel, vous devez indiquer si les données ont déjà des en-têtes. Si vous ignorez cette opération, la première ligne de données est utilisée comme nom de colonne.<br /><br /> Si vous utilisez l’option **source de données externe**, vous pouvez utiliser n’importe quel type de données pouvant être défini dans une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source de données. Toutefois, la boîte de dialogue du complément pour créer de nouvelles sources de données n'inclut pas la plage complète des sources de données prises en charge par Analysis Services. Nous vous recommandons de créer les sources de données sur le serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à l'avance, puis de vous connecter à l'aide des compléments.|  
 |**Éditeur de requête de source de données** , boîte de dialogue|Après vous être connecté à la source de données spécifiée, ajoutez des colonnes ou créez une requête personnalisée pour générer des colonnes personnalisées.|  
 |**Fractionner les données en jeux d'apprentissage et jeux de test**|La valeur recommandée pour l’apprentissage et les jeux de test est de 70% pour la formation et de 30% pour les tests. Toutefois, si vous avez beaucoup de données, vous pouvez spécifier un nombre maximal de lignes à tester.|  
 |Boîte de dialogue Terminer|Les options d'extraction sont disponibles sur certains types de modèle et sont très utiles si vous avez inclus les colonnes de détail dans la structure d'exploration de données. Par exemple, si vous créez un modèle de clustering, vous pouvez inclure des informations telles que le nom ou l'adresse de messagerie pour l'extraction mais pas pour l'analyse, afin de simplifier le contact avec les clients dans un cluster particulier.|  
@@ -111,7 +110,7 @@ ms.locfileid: "66086816"
   
 -   Tous les algorithmes nécessitent une colonne **clé** . Les valeurs de la colonne Clé doivent être uniques. Une colonne **Key Time** n’est requise que pour les modèles de prévision ou de série chronologique. .  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Pour créer une structure d'exploration de données, vous devez disposer d'une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La connexion est requise même si vous utilisez des structures temporaires. Pour plus d’informations sur la création ou la modification d’une connexion, consultez [se connecter à des données sources &#40;client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Voir aussi  

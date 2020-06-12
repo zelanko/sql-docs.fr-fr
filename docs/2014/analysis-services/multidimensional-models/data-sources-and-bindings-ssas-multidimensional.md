@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076082"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547191"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
   Les cubes, les dimensions et autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent être liés à une source de données. Une source de données peut être l'un des objets suivants :  
@@ -177,9 +176,9 @@ ms.locfileid: "66076082"
  Tous les éléments qui sont en rapport avec les liaisons hors-ligne sont facultatifs. Pour tous les éléments non spécifiés, ASSL utilise la spécification contenue dans le DDL de l'objet rendu persistant. La spécification de `DataSource` ou de `DataSourceView` dans la commande `Process` est facultative. Si `DataSource` ou `DataSourceView` sont spécifiés, ils ne sont pas instanciés et ne sont pas rendus persistants une fois la commande `Process` terminée.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Définition du type de liaison hors ligne  
- À l'intérieur de la collection `Bindings` hors ligne, ASSL prévoit une collection de liaisons pour les objets multiples, autorisant un élément `Binding` pour chacun. Chaque élément `Binding` a une référence d'objet étendue, qui est semblable à la référence d'objet mais qui peut également faire référence à des objets mineurs (par exemple, des attributs de dimension et des attributs de groupe de mesures). Cet objet prend la forme à deux dimensions typique `Object` de l' `Process` élément dans les commandes, \<sauf que les balises d' *objet*>\<*/Object*> ne sont pas présentes.  
+ À l'intérieur de la collection `Bindings` hors ligne, ASSL prévoit une collection de liaisons pour les objets multiples, autorisant un élément `Binding` pour chacun. Chaque élément `Binding` a une référence d'objet étendue, qui est semblable à la référence d'objet mais qui peut également faire référence à des objets mineurs (par exemple, des attributs de dimension et des attributs de groupe de mesures). Cet objet prend la forme à deux dimensions typique de l' `Object` élément dans les `Process` commandes, sauf que les \<*Object*> \<*/Object*> balises ne sont pas présentes.  
   
- Chaque objet pour lequel la liaison est spécifiée est identifié par un élément XML de l' \< *objet* de formulaire>ID (par exemple `DimensionID`,). Après avoir identifié l’objet aussi spécifiquement que possible avec l' \< *objet* de formulaire>ID, vous identifiez l’élément pour lequel la liaison est spécifiée, ce qui est généralement `Source`le cas. Un scénario commun est celui où `Source` est une propriété de `DataItem`, ce qui est le cas pour les liaisons de colonne dans un attribut. Dans ce cas, vous ne spécifiez pas la balise `DataItem` ; au lieu de cela, vous spécifiez simplement la propriété `Source`, comme si elle était directement sur la colonne à lier.  
+ Chaque objet pour lequel la liaison est spécifiée est identifié par un élément XML de l’ID de formulaire \<*object*> (par exemple, `DimensionID` ). Après avoir identifié l’objet aussi spécifiquement que possible avec l’ID de formulaire \<*object*> , vous identifiez l’élément pour lequel la liaison est spécifiée, ce qui est généralement le cas `Source` . Un scénario commun est celui où `Source` est une propriété de `DataItem`, ce qui est le cas pour les liaisons de colonne dans un attribut. Dans ce cas, vous ne spécifiez pas la balise `DataItem` ; au lieu de cela, vous spécifiez simplement la propriété `Source`, comme si elle était directement sur la colonne à lier.  
   
  Les éléments `KeyColumns` sont identifiés par leur classement à l'intérieur de la collection `KeyColumns`. Ici, il n'est pas possible de spécifier, par exemple, uniquement la première et la troisième colonne clé d'un attribut, parce qu'il n'y a aucun moyen d'indiquer que la deuxième colonne clé doit être ignorée. Toutes les colonnes clés doivent être présentes dans la liaison hors-ligne pour un attribut de dimension.  
   

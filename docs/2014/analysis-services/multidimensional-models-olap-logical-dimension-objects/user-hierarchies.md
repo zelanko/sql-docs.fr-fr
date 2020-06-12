@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 533b244a8a5b6ec5e2866b068cfbf5eb6f31a7a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72811601"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545111"
 ---
 # <a name="user-hierarchies"></a>Hiérarchies utilisateur
-  Les hiérarchies définies par l’utilisateur sont des hiérarchies d’attributs définies par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l’utilisateur qui sont utilisées dans pour organiser les membres d’une dimension en structures hiérarchiques et fournir des chemins de navigation dans un cube. Par exemple, le tableau suivant définit une table de dimension pour une dimension de temps. La table de dimension prend en charge trois attributs nommés Year, Quarter et Month.  
+  Les hiérarchies définies par l’utilisateur sont des hiérarchies d’attributs définies par l’utilisateur qui sont utilisées dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour organiser les membres d’une dimension en structures hiérarchiques et fournir des chemins de navigation dans un cube. Par exemple, le tableau suivant définit une table de dimension pour une dimension de temps. La table de dimension prend en charge trois attributs nommés Year, Quarter et Month.  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -80,7 +79,7 @@ ms.locfileid: "72811601"
  Le niveau Province est rempli avec des membres associés à d'autres membres du niveau CountryRegion, et des membres du niveau City sont associés à leurs membres correspondants du niveau Province. Toutefois, le membre État de la Cité du Vatican du niveau CountryRegion n'étant associé à aucun membre du niveau Province, les membres doivent être associés directement du niveau City au membre État de la Cité du Vatican du niveau CountryRegion. En raison de ces modifications, la hiérarchie de la dimension est désormais irrégulière. Le parent de la ville État de la Cité du Vatican est État de la Cité du Vatican du niveau CountryRegion, qui n'est pas inclus dans le niveau immédiatement supérieur au membre État de la Cité du Vatican du niveau City. Pour plus d’informations sur les hiérarchies, consultez [Hiérarchies déséquilibrées](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Hiérarchies parent-enfant  
- Les hiérarchies parent-enfant de dimensions sont définies à l'aide d'un attribut spécial, nommé « attribut parent », pour déterminer la façon dont les membres sont liés les uns aux autres. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. Le schéma de dimension d'une hiérarchie parent-enfant dépend de la présence d'une relation d'auto-référencement dans la table principale de la dimension. Par exemple, le diagramme suivant illustre la table principale de la dimension **dimorganisation** dans [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l’exemple de base de données.  
+ Les hiérarchies parent-enfant de dimensions sont définies à l'aide d'un attribut spécial, nommé « attribut parent », pour déterminer la façon dont les membres sont liés les uns aux autres. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. Le schéma de dimension d'une hiérarchie parent-enfant dépend de la présence d'une relation d'auto-référencement dans la table principale de la dimension. Par exemple, le diagramme suivant illustre la table principale de la dimension **Dimorganisation** dans l' [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemple de base de données.  
   
  ![Jointure auto-référencée dans la table DimOrganization](../dev-guide/media/dimorganization.gif "Jointure auto-référencée dans la table DimOrganization")  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 960b0ef3f050b780998a0f86dcd7b7edf121676d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080729"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544311"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Accorder des autorisations sur des procédures stockées (Analysis Services)
   Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les procédures stockées, ou assemblys, sont des routines externes écrites dans un langage de programmation [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET, qui étendent les possibilités d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Les assemblys permettent au développeur de tirer parti de l'intégration interlangage, de la gestion des exceptions, ainsi que de la prise en charge du contrôle de version, du déploiement et du débogage.  
@@ -29,7 +28,7 @@ ms.locfileid: "66080729"
   
  Les jeux d'autorisations utilisés pour exécuter les procédures stockées sont répertoriés ci-dessous :  
   
--   **Sécurité** Avec le jeu d’autorisations SAFE, une procédure stockée ne peut pas accéder aux [!INCLUDE[msCoName](../includes/msconame-md.md)] ressources protégées dans le .NET Framework. Ce jeu d'autorisations ne permet que les calculs. Il s'agit du jeu d'autorisations le plus sûr ; les informations ne sortent pas d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les autorisations ne peuvent pas être élevées et les risques de falsification des données sont réduits.  
+-   **Sécurité** Avec le jeu d’autorisations SAFE, une procédure stockée ne peut pas accéder aux ressources protégées dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework. Ce jeu d'autorisations ne permet que les calculs. Il s'agit du jeu d'autorisations le plus sûr ; les informations ne sortent pas d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les autorisations ne peuvent pas être élevées et les risques de falsification des données sont réduits.  
   
 -   **Accès externe** Avec le jeu d’autorisations d’accès externe, une procédure stockée peut accéder à des ressources externes à l’aide de code managé. L'affectation de ce jeu d'autorisations à une procédure stockée ne générera pas d'erreurs de programmation qui pourraient rendre le serveur instable. Toutefois, ce jeu d'autorisations peut entraîner une divulgation d'informations hors du serveur et des risques d'élévation des autorisations et de falsification des données.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174209"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527726"
 ---
 # <a name="browsing-a-neural-network-model"></a>Exploration d'un modèle MNN (Microsoft Neural Network)
   Quand vous ouvrez un modèle de réseau neuronal ou de régression logistique à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de modèle de réseau neuronal dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les corrélations et d'obtenir des informations sur les schémas du modèle et les données sous-jacentes.
@@ -89,7 +88,7 @@ ms.locfileid: "78174209"
 
 1.  Supposez que vous vouliez cibler un groupe particulier et voir les facteurs qui influent le plus sur la décision d'achat dans ce groupe.
 
-     Dans le volet **entrée** , cliquez sur la ** \<cellule tout>** sous **attribut**, puis sélectionnez **Age (âge**).
+     Dans le volet **entrée** , cliquez sur la **\<All>** cellule sous **attribut**, puis sélectionnez Age ( **âge**).
 
      Pour **Valeur**, sélectionnez la catégorie correspondant à la tranche d’âge des plus jeunes.
 

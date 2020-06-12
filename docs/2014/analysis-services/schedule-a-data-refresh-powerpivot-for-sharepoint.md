@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cfbd8496a700f03ae91e81f1fcf442c1a12bcfa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538921"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Planifier une actualisation des données (PowerPivot pour SharePoint)
   Vous pouvez planifier l'actualisation des données pour obtenir des mises à jour automatiques des données PowerPivot figurant dans un classeur Excel que vous avez publié sur un site SharePoint.  
@@ -28,7 +27,7 @@ ms.locfileid: "66070013"
   
  **Dans cette rubrique :**  
   
- [Conditions préalables](#prereq)  
+ [Composants requis](#prereq)  
   
  [Vue d'ensemble de l'actualisation des données](#intro)  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66070013"
   
 7.  Dans Notifications par courrier électronique, entrez l'adresse de messagerie de la personne qui doit être notifiée en cas d'erreur de traitement.  
   
-8.  Dans les informations d'identification, spécifiez un compte qui sera utilisé pour exécuter le travail d'actualisation des données. Le compte doit avoir des autorisations de collaboration sur le classeur afin qu'il puisse ouvrir le classeur pour actualiser ses données. Il doit s'agir d'un compte d'utilisateur de domaine Windows. Dans de nombreux cas, ce compte doit également avoir des autorisations de lecture sur les sources de données externes utilisées pendant l'actualisation des données. Plus précisément, si vous avez importé à l'origine les données à l'aide de l'option Utiliser l'authentification Windows, la chaîne de connexion est construite pour utiliser les informations d'identification Windows de l'utilisateur actuel. Si l'utilisateur actuel correspond au compte d'actualisation des données, ce compte doit avoir des autorisations de lecture sur la source de données externe pour que l'actualisation des données réussisse. Choisissez l’une des options suivantes :  
+8.  Dans les informations d'identification, spécifiez un compte qui sera utilisé pour exécuter le travail d'actualisation des données. Le compte doit avoir des autorisations de collaboration sur le classeur afin qu'il puisse ouvrir le classeur pour actualiser ses données. Il doit s'agir d'un compte d'utilisateur de domaine Windows. Dans de nombreux cas, ce compte doit également avoir des autorisations de lecture sur les sources de données externes utilisées pendant l'actualisation des données. Plus précisément, si vous avez importé à l'origine les données à l'aide de l'option Utiliser l'authentification Windows, la chaîne de connexion est construite pour utiliser les informations d'identification Windows de l'utilisateur actuel. Si l'utilisateur actuel correspond au compte d'actualisation des données, ce compte doit avoir des autorisations de lecture sur la source de données externe pour que l'actualisation des données réussisse. Choisissez l'une des options suivantes :  
   
     1.  Choisissez **Utilisez le compte d'actualisation des données configuré par l'administrateur** pour traiter l'opération d'actualisation des données à l'aide du compte d'actualisation des données PowerPivot sans assistance.  
   

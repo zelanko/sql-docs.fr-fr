@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f06781ea61a1958d41f37a55026a60cba67b387
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081497"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528465"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Rôle de sécurité dupliqué dans Analysis Services (Analysis Services - Données multidimensionnelles)
-  Utilisez la boîte **de dialogue Analysis Services dupliquer le rôle de sécurité- \<nom de la base de données>- \<copier à partir du nom de rôle>** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour dupliquer un rôle existant dans une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Pour afficher la boîte de dialogue **Dupliquer un rôle**, cliquez avec le bouton droit sur un rôle dans l’Explorateur d’objets, puis sélectionnez **Dupliquer**.  
+  Utilisez la boîte de dialogue **Analysis Services un \<database name>  -  \<copy from role name> rôle de sécurité dupliqué-** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour dupliquer un rôle existant dans une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Pour afficher la boîte de dialogue **Dupliquer un rôle**, cliquez avec le bouton droit sur un rôle dans l’Explorateur d’objets, puis sélectionnez **Dupliquer**.  
   
 ## <a name="options"></a>Options  
   

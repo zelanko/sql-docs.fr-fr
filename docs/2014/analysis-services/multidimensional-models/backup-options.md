@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f620bafc0a734651adfe43bcf0367ca5328dc40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9fc674e699a3078ebd39d50fde96d632ae20493
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544631"
 ---
 # <a name="backup-options"></a>Options de sauvegarde
   Il existe de nombreuses façons de sauvegarder vos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de données et elles nécessitent toutes des autorisations d’administrateur de serveur et d’administrateur de base de données. Vous pouvez ouvrir la boîte de dialogue **Sauvegarder** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], sélectionner les options appropriées et effectuer la sauvegarde dans la boîte de dialogue elle-même. Ou bien, vous pouvez créer un script en utilisant les paramètres définis dans le fichier, le script pouvant être enregistré et exécuté aussi souvent que nécessaire.  

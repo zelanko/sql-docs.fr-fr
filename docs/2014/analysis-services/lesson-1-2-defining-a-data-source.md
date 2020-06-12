@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b206facd1a8dc3faa58c58ae97e783d8a5c630b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079334"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543621"
 ---
 # <a name="defining-a-data-source"></a>Définition d'une source de données
   Après avoir créé un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous commencez généralement par définir une ou plusieurs sources de données à utiliser dans ce projet. Lorsque vous définissez une source de données, vous définissez les informations de la chaîne de connexion qui seront utilisées pour se connecter à la source de données. Pour plus d’informations, consultez [Créer une source de données &#40;SSAS Multidimensionnel&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -34,9 +33,9 @@ ms.locfileid: "66079334"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend également en charge d’autres fournisseurs, affichés dans la liste **Fournisseur** .  
   
-5.  Dans la zone de texte **nom** du serveur `localhost`, tapez.  
+5.  Dans la zone de texte **nom du serveur** , tapez `localhost` .  
   
-     Pour vous connecter à une instance nommée sur votre ordinateur local, **tapez\\ localhost<nom\>** de l’instance. Pour se connecter à l'ordinateur spécifique au lieu de l'ordinateur local, tapez le nom d'ordinateur ou l'adresse IP.  
+     Pour vous connecter à une instance nommée sur votre ordinateur local, tapez **localhost \\<nom \> **de l’instance. Pour se connecter à l'ordinateur spécifique au lieu de l'ordinateur local, tapez le nom d'ordinateur ou l'adresse IP.  
   
 6.  Vérifiez que l’option **Utiliser l’authentification Windows** est sélectionnée. Dans la liste **Sélectionner ou entrer un nom de base de données** , sélectionnez **AdventureWorksDW2012**.  
   

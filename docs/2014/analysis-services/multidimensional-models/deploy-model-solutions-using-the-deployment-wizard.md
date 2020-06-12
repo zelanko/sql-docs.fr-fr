@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e18b1786201be9ba671bc08fe7b24ba2207469e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e3dfd0b727fd917c37aa44aa8fd1d29326aaaa1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075378"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546893"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Deploy Model Solutions Using the Deployment Wizard
   L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de utilise les fichiers de sortie XML générés à partir d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet en tant que fichiers d’entrée. Il est facile de modifier ces fichiers d'entrée pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
@@ -43,6 +42,6 @@ ms.locfileid: "66075378"
  [Déployer des solutions de modèle à l’aide de XMLA](deploy-model-solutions-using-xmla.md)   
  [Synchroniser les bases de données Analysis Services](synchronize-analysis-services-databases.md)   
  [Comprendre les fichiers d’entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)   
- [Déployer des solutions de modèle avec l'utilitaire de déploiement](deploy-model-solutions-with-the-deployment-utility.md)  
+ [Déployer des solutions de modèle avec l’utilitaire de déploiement](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

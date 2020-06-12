@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075873"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547111"
 ---
 # <a name="database-readwritemodes"></a>Base de données ReadWriteModes
-  Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite modifier une base de données en lecture/écriture en une base de données en lecture seule, ou inversement. Ces situations sont souvent dues à des impératifs de fonctionnement, tels que le partage du même dossier de base de données entre plusieurs serveurs pour la montée en puissance d'une solution et l'amélioration des performances. Dans ces situations, la `ReadWriteMode` propriété de base de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] données permet à l’administrateur de base de données de modifier facilement le mode de fonctionnement de la base de données.  
+  Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite modifier une base de données en lecture/écriture en une base de données en lecture seule, ou inversement. Ces situations sont souvent dues à des impératifs de fonctionnement, tels que le partage du même dossier de base de données entre plusieurs serveurs pour la montée en puissance d'une solution et l'amélioration des performances. Dans ces situations, la `ReadWriteMode` propriété de base de données permet à l’administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de modifier facilement le mode de fonctionnement de la base de données.  
   
 ## <a name="readwritemode-database-property"></a>Propriété de base de données ReadWriteMode  
  La propriété de base de données `ReadWriteMode` spécifie si la base de données est en mode lecture/écriture ou en mode lecture seule. Ce sont les deux seules valeurs possibles de la propriété. Lorsque la base de données est en mode lecture seule, aucune modification ou mise à jour ne peut être appliquée à la base de données. Toutefois, lorsque la base de données est en mode lecture/écriture, des modifications et des mises à jour peuvent se produire. La propriété de base de données `ReadWriteMode` est définie comme une propriété en lecture seule ; elle ne peut être définie qu'à travers une commande `Attach`.  
@@ -38,7 +37,7 @@ ms.locfileid: "66075873"
 ## <a name="readwritemode-usage"></a>Utilisation de ReadWriteMode  
  La propriété de base de données `ReadWriteMode` doit être utilisée dans le cadre d'une commande de base de données `Attach`. La commande `Attach` permet que la propriété de base de données soit définie avec la valeur `ReadWrite` ou la valeur `ReadOnly`. La valeur de la propriété de base de données `ReadWriteMode` ne peut pas être mise à jour directement parce que la propriété est définie en lecture seule. Les bases de données sont créées avec la propriété `ReadWriteMode` définie avec la valeur `ReadWrite`. Une base de données ne peut pas être créée en mode lecture seule.  
   
- Pour faire basculer la `ReadWriteMode` propriété `ReadWrite` de `ReadOnly`la base de données entre et, `Detach/Attach` vous devez émettre une séquence de commandes.  
+ Pour faire basculer la `ReadWriteMode` propriété de la base de données entre `ReadWrite` et `ReadOnly` , vous devez émettre une séquence de `Detach/Attach` commandes.  
   
  Toutes les opérations de base de données, à l'exception d'`Attach`, conservent la propriété de base de données `ReadWriteMode` dans son état courant. Par exemple, les opérations telles que `Alter`, `Backup`, `Restore` et `Synchronize` conservent la valeur `ReadWriteMode`.  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b97bee2099ea82508ba9e66414bb9527a3c3a8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727575"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545321"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Traitement et modes de stockage des partitions
   Le mode de stockage d'une partition affecte les performances de traitement et des requêtes, les besoins en espace de stockage, ainsi que les emplacements de stockage de la partition, de son cube et de son groupe de mesures parents. Le mode de stockage a également une incidence sur les options de traitement.  
@@ -39,7 +38,7 @@ ms.locfileid: "62727575"
   
 -   Hybrid OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les trois modes de stockage de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base. Il prend également en charge la mise en cache proactive, qui vous permet de combiner les caractéristiques du stockage ROLAP et MOLAP pour bénéficier de la rapidité des données et des performances des requêtes. Pour plus d’informations, consultez [Mise en cache proactive &#40;partitions&#41;](partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les trois modes de stockage de base. Il prend également en charge la mise en cache proactive, qui vous permet de combiner les caractéristiques du stockage ROLAP et MOLAP pour bénéficier de la rapidité des données et des performances des requêtes. Pour plus d’informations, consultez [Mise en cache proactive &#40;partitions&#41;](partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  Dans le mode de stockage MOLAP, les agrégations de la partition et une copie de ses données sources sont stockées dans une structure multidimensionnelle dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lors du traitement de la partition. Cette structure MOLAP est hautement optimisée pour renforcer les performances des requêtes. L'emplacement de stockage peut se trouver sur l'ordinateur où est définie la partition ou sur un autre ordinateur exécutant [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Étant donné qu'une copie des données sources réside dans la structure multidimensionnelle, les requêtes peuvent être résolues sans accéder aux données sources de la partition. Les temps de réponse aux requêtes peuvent être réduits de façon significative à l'aide des agrégations. Les données dans la structure MOLAP de la partition reflètent le traitement le plus récent de la partition.  
@@ -72,7 +71,7 @@ ms.locfileid: "62727575"
   
     -   QUOTED_IDENTIFIER  
   
--   Dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la taille totale de la clé d'index ne peut pas dépasser 900 octets. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]déclare cette condition en fonction des colonnes clés de longueur fixe lors du traitement de l’instruction CREATe INDEX. Toutefois, s’il existe des colonnes de longueur variable dans la clé [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’index, déclarera également cette condition pour chaque mise à jour des tables de base. Dans la mesure où des agrégations différentes correspondent à des définitions de vues différentes, le traitement ROLAP à l'aide de vues indexées peut réussir ou échouer en fonction de la structure de l'agrégation.  
+-   Dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la taille totale de la clé d'index ne peut pas dépasser 900 octets. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]déclare cette condition en fonction des colonnes clés de longueur fixe lors du traitement de l’instruction CREATe INDEX. Toutefois, s’il existe des colonnes de longueur variable dans la clé d’index, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] déclarera également cette condition pour chaque mise à jour des tables de base. Dans la mesure où des agrégations différentes correspondent à des définitions de vues différentes, le traitement ROLAP à l'aide de vues indexées peut réussir ou échouer en fonction de la structure de l'agrégation.  
   
 -   Les options suivantes doivent être activées (ON) pour la session de création de la vue indexée : ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING et ANSI_WARNING. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

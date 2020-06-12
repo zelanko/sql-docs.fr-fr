@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e7f387bb62f15acff8e3443e7e9fdc8888896e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536691"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
   Dans un modèle multidimensionnel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objet de source de données représente une connexion à la source de données depuis laquelle vous traitez (ou importez) des données. Un modèle multidimensionnel doit contenir au moins un objet de source de données, mais rien ne vous empêche d'en ajouter plus pour combiner des données émanant de plusieurs entrepôts de données. Suivez les instructions de cette rubrique pour créer un objet de source de données pour votre modèle. Pour plus d’informations sur la définition des propriétés de cet objet, consultez [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -82,11 +81,11 @@ ms.locfileid: "70175915"
   
      Le fournisseur par défaut d’une nouvelle connexion est le fournisseur OLE DB natif\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ce fournisseur est utilisé pour se connecter à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’OLE DB. Pour les connexions à une base de données relationnelle SQL Server, l'utilisation du mode natif OLE DB\SQL Server Native Client 11.0 est souvent plus rapide que l'utilisation d'autres fournisseurs.  
   
-     Vous pouvez choisir un fournisseur différent pour accéder à d'autres sources de données. Pour obtenir la liste des fournisseurs et des bases de données relationnelles [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]pris en charge par, consultez [sources de données prises en charge &#40;&#41;multidimensionnels SSAS ](supported-data-sources-ssas-multidimensional.md).  
+     Vous pouvez choisir un fournisseur différent pour accéder à d'autres sources de données. Pour obtenir la liste des fournisseurs et des bases de données relationnelles pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [sources de données prises en charge &#40;&#41;multidimensionnels SSAS ](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Tapez les informations requises par le fournisseur sélectionné pour établir la connexion à la source de données sous-jacente. Si le fournisseur **OLE DB natif\SQL Server Native Client** est sélectionné, tapez les informations suivantes :  
   
-    1.  **Nom du serveur** correspond au nom réseau de l’instance du moteur de base de données. Il peut être spécifié comme adresse IP, nom NetBIOS de l'ordinateur ou nom de domaine complet. Si le serveur est installé en tant qu’instance nommée, vous devez inclure le nom de l’instance ( \<par exemple \\ , ComputerName\>><nom_instance).  
+    1.  **Nom du serveur** correspond au nom réseau de l’instance du moteur de base de données. Il peut être spécifié comme adresse IP, nom NetBIOS de l'ordinateur ou nom de domaine complet. Si le serveur est installé en tant qu’instance nommée, vous devez inclure le nom de l’instance (par exemple, \<computername> \\<InstanceName \> ).  
   
     2.  **Connexion au serveur** spécifie le mode d’authentification de la connexion. **Utiliser l’authentification Windows** fait appel à l’authentification Windows. **Utiliser l’authentification SQL Server** spécifie une connexion d’utilisateur de base de données pour une base de données SQL Azure ou une instance SQL Server qui prend en charge l’authentification en mode mixte.  
   

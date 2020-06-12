@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79a675d0d27c5bfe033075c92e7ed06aa9c914c5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076503"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536707"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Créer un cube à l'aide de l'Assistant Cube
   Vous pouvez créer un cube en utilisant l’Assistant Cube dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

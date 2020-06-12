@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50086ef38d9bd54a4088e9cf647a53553694a09d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072589"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535773"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Ajouter ou supprimer une hiérarchie définie par l'utilisateur
   Vous pouvez ajouter ou supprimer une hiérarchie définie par l’utilisateur dans une dimension sous l’onglet **Structure de dimension** du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

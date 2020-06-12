@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0bbd80998f7a6fd74f76f641cc16fe81ba715dde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889849"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669848"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Expression qui retourne une table, telle qu’une référence \<de colonne de table>, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’une \< référence de colonne de table>, ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
  \<expression de table>  
   
 ## <a name="remarks"></a>Notes  
- La valeur fournie par l' \<expression de classement> argument détermine l’ordre croissant de classement des lignes fournies dans l' \<expression de table> argument, et le nombre de lignes les plus basses spécifiées dans l' \<argument Count> est retourné.  
+ La valeur fournie par l' \< expression de classement> argument détermine l’ordre croissant de classement des lignes fournies dans l' \< expression de table> argument, et le nombre de lignes les plus basses spécifiées dans l' \< argument Count> est retourné.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

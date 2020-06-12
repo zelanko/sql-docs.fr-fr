@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1343f8234e23156981e416613cd2b899cf57f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080569"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544221"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importer à partir d'un flux de données (SSAS Tabulaire)
   Les flux de données désignent un ou plusieurs flux de données XML générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Vous pouvez importer des données à partir d'un flux de données dans votre modèle à l'aide de l'Assistant Importation de table.  
@@ -122,7 +121,7 @@ ms.locfileid: "66080569"
   
 3.  Dans la page **Connexion à un flux de données** , tapez un nom descriptif pour le flux auquel vous accédez. Si vous importez plusieurs flux ou sources de données, l'utilisation de noms descriptifs pour la connexion peut vous aider à vous souvenir de la façon dont la connexion est utilisée.  
   
-4.  Dans URL du flux de données, tapez une adresse pour le service de données \<de liste, en remplaçant Server-Name> par le nom réel de votre serveur SharePoint :  
+4.  Dans URL du flux de données, tapez une adresse pour le service de données de liste, en remplaçant \<server-name> par le nom réel de votre serveur SharePoint :  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -156,7 +155,7 @@ ms.locfileid: "66080569"
   
 4.  Cliquez sur **Parcourir** , puis sélectionnez un serveur de rapports.  
   
-     Si vous utilisez régulièrement des rapports sur un serveur de rapports, le serveur peut figurer dans **Sites et serveurs récents**. Sinon, dans le champ Nom, tapez l’adresse d’un serveur de rapports, puis cliquez sur **Ouvrir** pour parcourir les dossiers sur le site du serveur de rapports. Un exemple d’adresse pour un serveur de rapports peut\<être http://ComputerName>/ReportServer.  
+     Si vous utilisez régulièrement des rapports sur un serveur de rapports, le serveur peut figurer dans **Sites et serveurs récents**. Sinon, dans le champ Nom, tapez l’adresse d’un serveur de rapports, puis cliquez sur **Ouvrir** pour parcourir les dossiers sur le site du serveur de rapports. Un exemple d’adresse pour un serveur de rapports peut être http:// \<computername> /reportserver.  
   
 5.  Sélectionnez le rapport et cliquez sur **Ouvrir**. Vous pouvez également coller un lien vers le rapport, notamment le chemin complet et le nom du rapport, dans la zone de texte **Nom** . L'Assistant Importation de table se connecte au rapport et le restitue dans la zone d'aperçu.  
   

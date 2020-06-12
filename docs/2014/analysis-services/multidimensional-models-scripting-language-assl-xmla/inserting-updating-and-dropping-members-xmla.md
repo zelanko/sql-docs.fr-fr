@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aef124abc8398f1b314a391291b52340a90689ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544973"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Insertion, mise à jour et suppression de membres (XMLA)
   Vous pouvez utiliser les commandes [Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)et [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) dans XML for Analysis (XMLA) pour insérer, mettre à jour ou supprimer des membres dans une dimension activée en écriture. Pour plus d’informations sur les dimensions activées en écriture, consultez [Dimensions activées en écriture](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
@@ -81,7 +80,7 @@ ms.locfileid: "62727163"
     >  À l'exception des nouveaux membres, la commande `Update` ne peut mettre à jour que les valeurs de clé des attributs non inclus dans la clause `Where`. Par exemple, le nom de ville ne peut pas être mis à jour lors de la mise à jour d'un client ; sinon, le nom de ville est modifié pour tous les clients.  
   
 ### <a name="updating-members-in-parent-attributes"></a>Mise à jour des membres d'attributs parents  
- Pour prendre en charge les attributs `Update` parents, la commande les propriétés facultatives de MoveWithDescendants [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla). Le fait de définir la propriété `MoveWithDescendants` à true indique que les descendants du membre parent doivent également être déplacés avec le membre parent lorsque l'identificateur de ce dernier est modifié. Si cette valeur est définie à false, le déplacement d'un membre parent entraîne la promotion des descendants immédiats de ce membre parent au niveau précédent du membre parent.  
+ Pour prendre en charge les attributs parents, la `Update` commande les propriétés facultatives de MoveWithDescendants [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla). Le fait de définir la propriété `MoveWithDescendants` à true indique que les descendants du membre parent doivent également être déplacés avec le membre parent lorsque l'identificateur de ce dernier est modifié. Si cette valeur est définie à false, le déplacement d'un membre parent entraîne la promotion des descendants immédiats de ce membre parent au niveau précédent du membre parent.  
   
  Lors de la mise à jour des membres d'un attribut parent, la commande `Update` ne peut pas mettre à jour les membres des autres attributs.  
   

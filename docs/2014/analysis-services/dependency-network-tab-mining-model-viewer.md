@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dde94a8d08bba3ea529c9edf3fde12ee0260a3f0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081939"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528735"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Onglet Réseau de dépendances (Visionneuse de modèle d'exploration de données)
   L'onglet **Réseau de dépendances** affiche sous forme graphique tous les attributs contenus dans le modèle d'exploration de données et illustre les relations qu'il existe entre eux.  
@@ -52,7 +51,7 @@ ms.locfileid: "66081939"
  **Copier le graphique entier**  
  Copie la totalité du diagramme dans le Presse-papiers.  
   
- **Liens**  
+ **Liées**  
  Ajustez le nombre de liens (arêtes) et de nœuds affichés par la visionneuse en déplaçant le curseur à droite des attributs. Faites glisser la barre de curseur vers le bas pour augmenter la valeur de seuil, afin que seuls les liens les plus forts soient affichés. Pour chaque type de modèle, une valeur légèrement différente est utilisée pour représenter les liens dans le graphique :  
   
 -   Dans un modèle d' **arbre de décision** , les arêtes représentent la force prédictive de la connexion, déterminée en partie par le score de fractionnement.  

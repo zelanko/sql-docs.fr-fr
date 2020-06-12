@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b13eb819edc2a33117d45954423466343f5de18a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082301"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528875"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Onglet Arbre de décision (Visionneuse de modèle d'exploration de données)
   Le volet **Arbre de décision** affiche une représentation visuelle des règles de décision créées dans un modèle d’arbre de décision. Les règles de décision décrivent les chemins d'accès vers certains résultats.  
@@ -55,7 +54,7 @@ ms.locfileid: "66082301"
  **Arbres**  
  Choisissez un arbre à afficher dans la visionneuse. Si vous créez un modèle qui comporte plusieurs attributs prédictibles, l'algorithme crée une arborescence distincte pour chaque attribut prédictible.  
   
- **Contexte**  
+ **Arrière-plan**  
  Choisissez une valeur de l'attribut prédictible à utiliser pour représenter la couleur d'arrière-plan de chaque nœud. Dans les exemples de modèles AdventureWorks, si **Arrière-plan** est défini à la valeur 1 ([Bike Buyer] = Yes), les nœuds sont plus foncés s’ils ont une proportion supérieure d’acquéreurs de vélo. Cette option fournit un indice visuel supplémentaire concernant la signification des branches et des nœuds dans l'arborescence.  
   
  **Expansion par défaut**  

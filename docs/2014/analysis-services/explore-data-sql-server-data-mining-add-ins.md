@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a20484a85b459dad58e5e6687a6cc34a093b130
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081309"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528355"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Explorer des données (Compléments d'exploration de données SQL Server)
   ![Assistant Explorer les données](media/dmc-explore.gif "Assistant Explorer les données")  
@@ -48,7 +47,7 @@ ms.locfileid: "66081309"
   
 5.  Le cas échéant, ajoutez de nouvelles colonnes aux données, modifiez la segmentation des données ou copiez le graphique dans Excel.  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Pour utiliser l’Assistant **Explorer les données** , vos données doivent se trouver dans une table de données Excel.   
   
 ## <a name="see-also"></a>Voir aussi  

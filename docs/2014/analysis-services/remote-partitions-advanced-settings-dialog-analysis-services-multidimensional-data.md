@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ca3f12ff53c4291d8bbe7c8eb97ce8e47172ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e68aea7325094af7b60d4b3f0c8ca0cd9525df71
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070380"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539428"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Partitions distantes - Paramètres avancés (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Partitions distantes - Paramètres avancés** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permet de modifier les paramètres avancés tels que la chaîne de connexion à la source de données représentant la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] distante qui englobe les partitions distantes, tout en restaurant ces partitions distantes à partir d’un fichier de sauvegarde distant vers une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans la boîte de dialogue **Restaurer la base de données** . Pour accéder à cette boîte de dialogue, sélectionnez l’option **Restaurer les partitions distantes** puis cliquez sur le bouton, représenté par les points de suspension ( **...** ), correspondant à une partition distante. Dans la boîte de dialogue **Restaurer la base de données** , ouvrez la page**Partitions**où vous retrouverez ainsi la boîte de dialogue **Partitions distantes - Paramètres avancés** .  
