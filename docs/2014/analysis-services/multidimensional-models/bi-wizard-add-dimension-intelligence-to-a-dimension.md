@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd5d6917544cca3506d37ec13e058f4bce9fe77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cad591d3e89dc306571efa9aeef9d81a235c9fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544561"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Ajouter de l'intelligence de dimensions à une dimension
   Ajoutez l'intelligence des dimensions à un cube ou à une dimension pour spécifier un type d'entreprise standard pour une dimension. Cette amélioration spécifie également les types correspondants pour les attributs de la dimension. Les applications clientes peuvent utiliser ces spécifications de type lors de l'analyse de données.  
@@ -34,7 +33,7 @@ ms.locfileid: "66076919"
 >  Si vous sélectionnez **Compte** comme dimension, vous spécifierez l’intelligence comptable pour la dimension. Pour plus d’informations, consultez [Ajouter de l’intelligence comptable à une dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="specifying-dimension-attributes"></a>Spécification des attributs de dimension  
- Dans la page **définir l’intelligence des dimensions** , dans la liste type de **dimension** , la sélection que vous définissez `Type` définit la propriété de la dimension. La définition de la propriété `Type` fournit des informations aux serveurs et aux applications clientes sur le contenu d'une dimension. Certains paramètres permettent uniquement de guider les applications clientes ; ces paramètres sont facultatifs. D'autres paramètres, tels que Comptes ou Temps, déterminent des comportements spécifiques et peuvent être requis pour implémenter des améliorations de décisionnel particulières. Par exemple, SQL Server Management Studio utilise le type de dimension pour identifier une dimension Devise et définir les règles de conversion monétaire appropriées. La définition par défaut du **Type de dimension** est **Normal**et ne fournit aucune information théorique sur le contenu de la dimension.  
+ Dans la page **définir l’intelligence des dimensions** , dans la liste type de **dimension** , la sélection que vous définissez définit la propriété de la dimension `Type` . La définition de la propriété `Type` fournit des informations aux serveurs et aux applications clientes sur le contenu d'une dimension. Certains paramètres permettent uniquement de guider les applications clientes ; ces paramètres sont facultatifs. D'autres paramètres, tels que Comptes ou Temps, déterminent des comportements spécifiques et peuvent être requis pour implémenter des améliorations de décisionnel particulières. Par exemple, SQL Server Management Studio utilise le type de dimension pour identifier une dimension Devise et définir les règles de conversion monétaire appropriées. La définition par défaut du **Type de dimension** est **Normal**et ne fournit aucune information théorique sur le contenu de la dimension.  
   
  Après avoir sélectionné le type de dimension, dans **Attributs de la dimension**, dans la colonne **Inclure** , cochez la case à côté de chaque type d’attribut standard pour lequel il existe un attribut correspondant dans la dimension. Enfin, dans la colonne **Attribut de dimension** , développez la liste déroulante, puis sélectionnez l’attribut de la dimension qui correspond au type d’attribut sélectionné. La sélection de l'attribut dans la liste définit la propriété `Type` d'attribut pour les attributs.  
   

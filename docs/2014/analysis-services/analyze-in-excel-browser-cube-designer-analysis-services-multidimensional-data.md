@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a84fd7daf954b7537d34189ce6848472aa8818e6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062364"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527968"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analyser dans Excel (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   La fonctionnalité**Analyser dans Excel** permet au développeur du cube de vérifier rapidement la façon dont un projet est présenté à l'utilisateur final. La fonctionnalité **Analyser dans Excel** ouvre l'application Microsoft Excel, crée une connexion de source de données à la base de données de l'espace de travail, puis ajoute automatiquement un tableau croisé dynamique à la feuille de calcul. Cette fonction remplace le composant Office Web Control qui fournissait un tableau croisé dynamique incorporé dans l'onglet Navigateur dans les versions précédentes.  

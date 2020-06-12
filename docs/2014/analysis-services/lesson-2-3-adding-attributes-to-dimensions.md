@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079029"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543491"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Ajout d'attributs aux dimensions
   Une fois les dimensions définies, vous pouvez les remplir avec les attributs qui représentent chaque élément de données dans la dimension. Les attributs reposent généralement sur les champs d'une vue de source de données. Lorsque vous ajoutez des attributs à une dimension, vous pouvez inclure des champs de n'importe quelle table dans la vue de source de données.  
@@ -70,7 +69,7 @@ ms.locfileid: "66079029"
   
     -   **EnglishCountryRegionName**  
   
-    -   **Postal**  
+    -   **PostalCode**  
   
 6.  Dans le menu Fichier , cliquez sur **Enregistrer tout**.  
   

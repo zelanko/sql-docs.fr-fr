@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493827"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542311"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Définition et utilisation d'une action d'extraction
   Le dimensionnement des données de fait par une dimension de fait sans filtrage correct des données retournées par la requête peut ralentir les performances des requêtes. Pour éviter ceci, vous pouvez définir une action d'extraction qui restreint le nombre total de lignes retournées. Cela améliorera considérablement les performances des requêtes.  
@@ -38,7 +37,7 @@ ms.locfileid: "69493827"
   
      ![Modèle d'action vide dans le volet d'informations](../../2014/tutorials/media/l8-action2.gif "Modèle d'action vide dans le volet d'informations")  
   
-3.  Dans la zone **nom** , remplacez le nom de cette action par `Internet Sales Details Drillthrough Action`.  
+3.  Dans la zone **nom** , remplacez le nom de cette action par `Internet Sales Details Drillthrough Action` .  
   
 4.  Dans la liste **Membres de groupe de mesures** , sélectionnez **Internet Sales**.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493827"
   
      ![Zone Propriétés supplémentaires](../../2014/tutorials/media/l8-action4.gif "Zone Propriétés supplémentaires")  
   
-8.  Dans la zone **nombre maximal** de lignes `10`, tapez.  
+8.  Dans la zone **nombre maximal de lignes** , tapez `10` .  
   
-9. Dans la zone **légende** , tapez `Drillthrough to Order Details...`.  
+9. Dans la zone **légende** , tapez `Drillthrough to Order Details...` .  
   
      Ces paramètres limitent le nombre de lignes retournées et spécifient la légende qui apparaît dans le menu de l'application cliente. L’image suivante montre ces paramètres dans la zone **Propriétés supplémentaires** .  
   
@@ -104,11 +103,11 @@ ms.locfileid: "69493827"
   
     -   ShipDateKey  
   
-6.  Affectez à la propriété **nom** de l’attribut **Order Date Key** `Order Date` la valeur, cliquez sur le bouton Parcourir pour la propriété **colonne de nom** , et dans la boîte de dialogue colonne de **nom** , sélectionnez **Date** comme table source et sélectionnez SimpleDate comme colonne source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Affectez à la propriété **nom** de l’attribut **Order Date Key** la valeur `Order Date` , cliquez sur le bouton Parcourir pour la propriété **colonne de nom** , et dans la boîte de dialogue **colonne de nom** , sélectionnez **Date** comme table source et sélectionnez SimpleDate comme colonne source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modifiez la propriété de **nom** de l’attribut de clé de `Due Date`date d' **échéance** sur, puis, en utilisant la même méthode que l’attribut **Order Date Key** , remplacez la valeur de la propriété **Name Column** de cet attribut par **date. SimpleDate (WCHAR)**.  
+7.  Modifiez la propriété de **nom** de l’attribut de **clé de date d’échéance** sur, puis `Due Date` , en utilisant la même méthode que l’attribut **Order Date Key** , remplacez la valeur de la propriété **Name Column** de cet attribut par **date. SimpleDate (WCHAR)**.  
   
-8.  Remplacez la propriété **Name** de l’attribut **Ship Date Key** par `Ship Date`, puis remplacez la propriété **Name Column** de cet attribut par **date. SimpleDate (WCHAR)**.  
+8.  Remplacez la propriété **Name** de l’attribut **Ship Date Key** par `Ship Date` , puis remplacez la propriété **Name Column** de cet attribut par **date. SimpleDate (WCHAR)**.  
   
 9. Sélectionnez l’onglet **Actions** du Concepteur de cube pour le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   

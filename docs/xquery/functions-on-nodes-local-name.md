@@ -1,5 +1,6 @@
 ---
 title: Fonction locale-Name (XQuery) | Microsoft Docs
+description: Découvrez comment utiliser la fonction XQuery local-name () de XQuery pour retourner la partie locale d’un nœud.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038874"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689564"
 ---
 # <a name="functions-on-nodes---local-name"></a>Fonctions sur les nœuds : local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Extraction du nom local d'un nœud spécifique  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>R. Extraction du nom local d'un nœud spécifique  
  La requête suivante est spécifiée sur une instance XML non typée. L'expression de requête, `local-name(/ROOT[1])`, extrait la partie locale du nom du nœud spécifié.  
   
 ```  
@@ -71,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Utilisation de local-name sans argument dans un prédicat  
- La requête suivante est spécifiée par rapport à la colonne instructions, colonne **XML** typée, de la table ProductModel. L’expression retourne tous les éléments enfants de l’élément `root` <> dont la partie nom local du QName est « location ». La fonction **local-name ()** est spécifiée dans le prédicat et n’a aucun argument. le nœud de contexte est utilisé par la fonction.  
+ La requête suivante est spécifiée par rapport à la colonne instructions, colonne **XML** typée, de la table ProductModel. L’expression retourne tous les éléments enfants de l' `root` élément <> dont la partie nom local du QName est « location ». La fonction **local-name ()** est spécifiée dans le prédicat et n’a aucun argument. le nœud de contexte est utilisé par la fonction.  
   
 ```  
 SELECT Instructions.query('  
@@ -81,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La requête retourne tous les <`Location`> éléments enfants de l’élément `root` <>.  
+ La requête retourne tous les <`Location`> éléments enfants de l' `root` élément <>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions sur les nœuds](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

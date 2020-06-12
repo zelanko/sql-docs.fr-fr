@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4331773f9c80fee37de1c145beeafd37cee2466d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080422"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544151"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Onglet Sélection d'entrée (vue Graphique d'analyse de précision de l'exploration de données)
   Utilisez l’onglet **Sélection d’entrée** du concepteur **Graphique d’analyse de précision de l’exploration de données** pour spécifier la source des données utilisées pour tester le modèle et générer le graphique d’analyse de précision.  
@@ -33,7 +32,7 @@ ms.locfileid: "66080422"
  **Sélectionnez les colonnes prédictibles du modèle d'exploration de données à afficher dans le graphique de courbes d'élévation**  
  Grille contenant les colonnes permettant de contrôler les modèles qui sont inclus dans le graphique de courbes d'élévation et leur mode d'utilisation dans ce graphique.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Afficher**|Activez la case à cocher située en regard du nom de chaque colonne prédictible dans le modèle d'exploration de données que vous souhaitez afficher dans le graphique.<br /><br /> Si le graphique est trop complexe pour être consulté facilement, désactivez la case à cocher en regard d'une ou de plusieurs colonnes pour le simplifier.<br /><br /> Remarque : vous ne pouvez créer un graphique d’analyse de précision que si au moins une colonne est sélectionnée.|  
 |**Modèle d'exploration de données**|Répertorie les modèles d'exploration de données contenus dans la structure d'exploration de données.|  
@@ -43,7 +42,7 @@ ms.locfileid: "66080422"
  **Sélectionner le jeu de données à utiliser pour le graphique d'analyse de précision**  
  Groupe d'options qui contient trois options pour spécifier les données de test de précision.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Utiliser des scénarios de test de modèle d'exploration de données**|Utilisez le jeu de test créé lorsque vous avez partitionné la structure d'exploration de données et appliquez le filtre défini sur le modèle. Pour plus d’informations sur les filtres de modèle, consultez [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**Utiliser des scénarios de test de structure d'exploration de données**|Utilisez le jeu de test créé lorsque vous avez partitionné la structure d'exploration de données.|  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f034e8892a8f5a77c7a049da6e33336592cb5294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9d90d0483b81f2a21b187b6132efc1c93861d8a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175198"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520899"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Architecture physique (Analysis Services - Exploration de données)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise des composants serveur et client pour fournir des fonctionnalités d’exploration de données pour les applications décisionnelles :
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]utilise des composants serveur et client pour fournir des fonctionnalités d’exploration de données pour les applications décisionnelles :
 
 -   Le composant serveur est implémenté comme un service Microsoft Windows. Vous pouvez avoir plusieurs instances sur le même ordinateur, chaque instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] étant implémentée comme une instance séparée du service Windows.
 

@@ -19,12 +19,12 @@ ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4b4d63a7ff49b580205415df4c2b428a07874e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 750850c9e01720b5f345f720e3a9f13db8fcd9f0
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68103263"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669511"
 ---
 # <a name="referential_constraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68103263"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificateur de la contrainte.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. Les vues de INFORMATION_SCHEMA représentent seulement un sous-ensemble des métadonnées d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nom de la contrainte.|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Identificateur de la contrainte unique.|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la contrainte UNIQUE.<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la contrainte UNIQUE.<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. Les vues de INFORMATION_SCHEMA représentent seulement un sous-ensemble des métadonnées d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|Contrainte UNIQUE.|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|Conditions référentielles de correspondance de contraintes. Renvoie toujours la valeur SIMPLE. Signifie qu'aucune correspondance n'est définie. La condition est considérée comme correspondante si l'une des conditions suivantes est réalisée :<br /><br /> au moins une valeur de la colonne clé étrangère est NULL ;<br /><br /> toutes les valeurs de la colonne clé étrangère ne comportent pas la valeur NULL, et une ligne de la table de clé primaire contient la même clé.|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|Action entreprise lorsqu’une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction enfreint l’intégrité référentielle définie par cette contrainte. Retourne l'une des valeurs suivantes : <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Si NO ACTION est spécifié sur une instruction ON UPDATE de cette contrainte, la mise à jour de la clé primaire référencée dans la contrainte n'est pas propagée vers la clé étrangère. Si une telle mise à jour enfreint l'intégrité référentielle car au moins une clé étrangère contient la même valeur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'apporte aucune modification aux tables parentes et de référence. Par ailleurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur.<br /><br /> Si CASCADE est spécifié sur une instruction ON UPDATE de cette contrainte, toute modification de valeur de la clé primaire est automatiquement propagée vers la valeur de la clé étrangère.|  

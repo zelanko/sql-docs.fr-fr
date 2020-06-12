@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3370370-43cd-4cc2-bb9f-c0d988b96f05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 087f5f5e3383fd66244541fea35160946936bc1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42336656ce19d36cf0eadc986450dd8f3b81f669
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527642"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Outils de calcul (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Outils de calcul** sur l'onglet **Actions** du Concepteur de cube afin d'explorer les métadonnées, les fonctions et les modèles disponibles en vue de leur utilisation dans des actions, des actions d'extraction et des actions du rapport.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c038e13706c44891bae021aaf35d04a10b715a97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062811"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528241"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter une table (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Ajouter une table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour ajouter une table lors de la création d’une requête dans la boîte de dialogue **Créer une requête nommée** , **Créer la requête d’interrogation** ou **Créer la requête de traitement** . Vous pouvez afficher la boîte de dialogue **Ajouter une table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur **Ajouter une table** dans le volet **Barre d’outils** de la boîte de dialogue **Créer une requête nommée** , **Créer la requête d’interrogation** ou **Créer la requête de traitement** .  

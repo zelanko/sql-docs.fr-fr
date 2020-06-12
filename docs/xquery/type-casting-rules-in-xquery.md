@@ -1,5 +1,6 @@
 ---
 title: Règles de conversion de types dans XQuery | Microsoft Docs
+description: En savoir plus sur les règles appliquées lors de la conversion explicite ou implicite d’un type de données à un autre dans XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946213"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520126"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Règles de conversion de types dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946213"
   
  Cette rubrique décrit donc les règles de conversion de types applicables suivant une des deux méthodes suivantes :  
   
--   Cast explicite que vous effectuez en utilisant **cast as** ou les fonctions de constructeur de type (par `xs:integer("5")`exemple,).  
+-   Cast explicite que vous effectuez en utilisant **cast as** ou les fonctions de constructeur de type (par exemple, `xs:integer("5")` ).  
   
 -   la conversion implicite qui a lieu pendant la promotion de type à un rang supérieur.  
   
@@ -95,7 +96,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- La requête suivante renvoie une erreur statique, car vous ne savez pas combien de <`root`> éléments de niveau supérieur se trouvent dans l’instance de document.  
+ La requête suivante renvoie une erreur statique, car vous ne savez pas combien `root` de <> éléments de niveau supérieur se trouvent dans l’instance de document.  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- En spécifiant un <`root` Singleton> élément dans l’expression, la requête est réussie. Elle renvoie ainsi une séquence de valeurs de type simple typé en xs:string.  
+ En spécifiant un <Singleton `root`> élément dans l’expression, la requête est réussie. Elle renvoie ainsi une séquence de valeurs de type simple typé en xs:string.  
   
 ```  
 declare @x xml(myCollection)  
@@ -167,7 +168,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Lors de la conversion vers des types binaires tels que xs:base64Binary ou xs:hexBinary à partir d'un type string (chaîne) ou untypedAtomic (atomique non typé), la valeur d'entrée doit être encodée respectivement au format base64 ou HEX.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Conversion d'une valeur en valeur de type string ou untypedAtomic  
- La conversion vers un type string (chaîne) ou untypedAtomic (atomique non typé) transforme la valeur en sa représentation lexicale canonique XQuery. Plus précisément, on peut dire qu'une valeur ayant répondu à un modèle précis ou à une autre contrainte lors de sa saisie pourrait ne pas être représentée en fonction de ladite contrainte.  Pour informer les utilisateurs de cela [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , signale les types où la contrainte de type peut être un problème en fournissant un avertissement lorsque ces types sont chargés dans la collection de schémas.  
+ La conversion vers un type string (chaîne) ou untypedAtomic (atomique non typé) transforme la valeur en sa représentation lexicale canonique XQuery. Plus précisément, on peut dire qu'une valeur ayant répondu à un modèle précis ou à une autre contrainte lors de sa saisie pourrait ne pas être représentée en fonction de ladite contrainte.  Pour informer les utilisateurs de cela, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] signale les types où la contrainte de type peut être un problème en fournissant un avertissement lorsque ces types sont chargés dans la collection de schémas.  
   
  Lors de la conversion d'une valeur de type xs:float ou xs:double, ou encore de l'un de leurs sous-types, en une valeur de type string ou untypedAtomic, ladite valeur est alors représentée sous sa forme scientifique. Cette opération n'est effectuée que si la valeur absolue de la donnée est inférieure à 1,0E-6 ou supérieure ou égale à 1,0E6. Dans ce cas, 0 est sérialisé sous sa forme scientifique de 0,0E0.  
   

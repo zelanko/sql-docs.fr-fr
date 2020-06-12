@@ -13,12 +13,12 @@ ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e529f26ca6a0e032d9a6d580330ea4a4f968ce6d
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460145"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859161"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Boîte de dialogue Ajouter une table (Concepteur de bases de données)
   Vous permet d'ajouter des tables dans le Concepteur de bases de données.  
@@ -26,7 +26,7 @@ ms.locfileid: "63460145"
 > [!NOTE]  
 >  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou de SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au diagramme à l’aide du Concepteur de tables ou du Concepteur de diagrammes de base de données, celui-ci tente d’abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Actualiser**  
  Actualise la liste des tables afin de refléter l'état actuel de la base de données.  
   

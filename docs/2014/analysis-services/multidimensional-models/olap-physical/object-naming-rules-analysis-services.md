@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6adfd4b23b6fe9129641271fc3c2381e161119ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530892"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545887"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
   Cette rubrique décrit les conventions d'attribution de noms aux objets, ainsi que les caractères et les mots réservés qui ne peuvent pas être utilisés dans un nom d'objet, dans le code ou dans un script dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

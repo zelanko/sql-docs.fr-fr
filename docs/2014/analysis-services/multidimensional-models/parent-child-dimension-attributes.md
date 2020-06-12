@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35521a8f12d3e5c16e63ba883a2b5d561bde4c96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c4a7e8ba43ac8ede0bd60409f84a6fa233ce182
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073478"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545881"
 ---
 # <a name="attributes-in-parent-child-hierarchies"></a>Attributs dans des hiérarchies de type parent-enfant
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], une hypothèse générale est généralement prise sur le contenu des membres d’une dimension. Les membres feuilles contiennent des données directement dérivées des sources de données sous-jacentes, et les membres non-feuilles contiennent des données dérivées d'agrégations effectuées sur les membres enfants.  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , une hypothèse générale est généralement prise sur le contenu des membres d’une dimension. Les membres feuilles contiennent des données directement dérivées des sources de données sous-jacentes, et les membres non-feuilles contiennent des données dérivées d'agrégations effectuées sur les membres enfants.  
   
  Toutefois, dans une hiérarchie parent-enfant, certains membres non-feuilles peuvent contenir des données issues de sources de données sous-jacentes en plus des données d'agrégation issues des membres enfants. Pour ces membres non-feuilles de la hiérarchie parent-enfant, des membres enfants spéciaux créés par le système contiennent les données des tables de faits sous-jacentes. Appelés *membres de données*, ces membres contiennent une valeur directement associée à un membre non-feuille et indépendante de la valeur agrégée calculée à partir des descendants du membre non-feuille.  
   
  Les membres de données ne sont disponibles que dans les dimensions dotées de hiérarchies parent-enfant et ne sont visibles que si l'attribut parent le permet. Vous pouvez utiliser le Concepteur de dimensions pour contrôler la visibilité des membres de données. Pour exposer les membres de données, affectez à la propriété `MembersWithData` de l'attribut parent la valeur `NonLeafDataVisible.` Pour masquer les membres de données contenus dans l'attribut parent, affectez à la propriété `MembersWithData` de l'attribut parent la valeur `NonLeafDataHidden`.  
   
- Cette configuration ne supplante pas le fonctionnement normal de l'agrégation pour les membres non-feuilles ; le membre de données est toujours inclus comme un membre enfant pour les besoins de l'agrégation. Cependant, une formule de cumul personnalisée peut être utilisée pour remplacer le fonctionnement normal de l'agrégation. La fonction MDX (Multidimensional Expressions) [DataMember](/sql/mdx/datamember-mdx) vous donne la possibilité d’accéder à la valeur du membre de données associé, quelle que soit la `MembersWithData` valeur de la propriété.  
+ Cette configuration ne supplante pas le fonctionnement normal de l'agrégation pour les membres non-feuilles ; le membre de données est toujours inclus comme un membre enfant pour les besoins de l'agrégation. Cependant, une formule de cumul personnalisée peut être utilisée pour remplacer le fonctionnement normal de l'agrégation. La fonction MDX (Multidimensional Expressions) [DataMember](/sql/mdx/datamember-mdx) vous donne la possibilité d’accéder à la valeur du membre de données associé, quelle que soit la valeur de la `MembersWithData` propriété.  
   
  La propriété `MembersWithDataCaption` de l'attribut parent fournit à [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le modèle de nom utilisé pour générer les noms des membres de données.  
   

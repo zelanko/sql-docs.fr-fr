@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081087"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544472"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Général (Concepteur de bases de données) (Analysis Services - Données multidimensionnelles)
   Utilisez l’onglet **Général** pour modifier les propriétés d’une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -45,10 +44,10 @@ ms.locfileid: "66081087"
 ## <a name="translations-options"></a>Options de traduction  
  Développez la section **Traductions** pour créer et modifier les traductions pour la légende et la description de la base de données. Cette section comprend une grille avec les colonnes suivantes :  
   
- **Langage**  
+ **Langue**  
  Choisissez la langue de la transaction spécifiée.  
   
- Pour ajouter une nouvelle traduction à la grille, cliquez sur ** \<ajouter une nouvelle traduction>**.  
+ Pour ajouter une nouvelle traduction à la grille, cliquez sur **\<Add new translation>** .  
   
  **Légende traduite**  
  Tapez la légende de la base de données dans la langue adéquate pour procéder à la traduction. Si vous ne renseignez pas ce champ, la légende par défaut est utilisée pour cette base de données.  
@@ -67,7 +66,7 @@ ms.locfileid: "66081087"
  **Nom**  
  Tapez le nom du type de compte.  
   
- Pour ajouter un nouveau type de compte, cliquez sur ** \<ajouter un nouveau type de compte>**.  
+ Pour ajouter un nouveau type de compte, cliquez sur **\<Add new account type>** .  
   
  **Alias**  
  Définit le nom par défaut du type de compte, à utiliser par l'Assistant Business Intelligence. Si cette colonne est laissée vide, la valeur par défaut dans la colonne **Nom** est utilisée.  

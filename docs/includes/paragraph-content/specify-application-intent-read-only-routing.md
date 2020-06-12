@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
+ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68213535"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721518"
 ---
 ## <a name="specifying-application-intent"></a>Spécification de l'intention d'application
 
@@ -54,5 +54,5 @@ Le routage en lecture seule est une fonctionnalité qui permet de garantir la di
 
 Il est possible que plusieurs connexions utilisant toutes le routage en lecture seule ne se connectent pas toutes au même réplica en lecture seule. Les modifications apportées à la synchronisation de base de données ou à la configuration du routage du serveur peuvent entraîner des connexions clientes à différents réplicas en lecture seule. Vous pouvez vous assurer que toutes les demandes de lecture seule se connectent au même réplica en lecture seule. Pour vous en assurer, ne passez *pas* un écouteur de groupe de disponibilité au mot clé de chaîne de connexion de **Serveur**. Au lieu de cela, spécifiez le nom de l'instance en lecture seule.
 
-Le routage en lecture seule peut prendre plus de temps que la connexion au serveur principal. Le délai plus long est dû au fait que le routage en lecture seule se connecte d’abord à la base de données principale, puis recherche la meilleure base de données secondaire lisible disponible. En raison de ces multiples étapes, vous devez augmenter le délai d’expiration de la connexion à au moins 30 secondes.
+Le routage en lecture seule peut prendre plus de temps que la connexion au serveur principal. Le délai plus long est dû au fait que le routage en lecture seule se connecte d’abord à la base de données principale, puis recherche la meilleure base de données secondaire lisible disponible. En raison de ces différentes étapes, vous devez augmenter le délai de connexion à au moins 30 secondes.
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b7fdf989fc23ea70be7d7863f5d4c6ac0b61d8a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074162"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546321"
 ---
 # <a name="using-member-properties-mdx"></a>Utilisation des propriétés de membre (MDX)
   Les propriétés de membre couvrent les informations de base relatives à chaque membre de chaque tuple. Ces informations de base comprennent le nom du membre, le niveau parent, le nombre d'enfants, etc. Les propriétés de membre sont mises à la disposition de tous les membres situés à un niveau donné. D'un point de vue organisationnel, les propriétés de membre sont regroupées en dimensions et traitées comme telles.  
@@ -40,10 +39,10 @@ ms.locfileid: "66074162"
   
  Pour plus d’informations, consultez [Propriétés de membre définies par l’utilisateur &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
- Les propriétés de membre intrinsèques et définies par l’utilisateur peuvent être récupérées à `PROPERTIES` l’aide du mot clé ou de la fonction [Properties](/sql/mdx/properties-mdx) .  
+ Les propriétés de membre intrinsèques et définies par l’utilisateur peuvent être récupérées à l’aide du `PROPERTIES` mot clé ou de la fonction [Properties](/sql/mdx/properties-mdx) .  
   
 ## <a name="using-the-properties-keyword"></a>Utilisation du mot clé PROPERTIES  
- Le mot clé `PROPERTIES` spécifie les propriétés de membre à utiliser pour une dimension donnée d'un axe. Le `PROPERTIES` mot clé est enfoui dans `<axis specification>` la clause de l’instruction MDX [Select](/sql/mdx/mdx-data-manipulation-select) :  
+ Le mot clé `PROPERTIES` spécifie les propriétés de membre à utiliser pour une dimension donnée d'un axe. Le `PROPERTIES` mot clé est enfoui dans la `<axis specification>` clause de l’instruction MDX [Select](/sql/mdx/mdx-data-manipulation-select) :  
   
 ```  
 SELECT [<axis_specification>  

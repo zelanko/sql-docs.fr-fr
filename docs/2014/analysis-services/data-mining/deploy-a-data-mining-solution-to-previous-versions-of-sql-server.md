@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084676"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522645"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Déployer une solution d'exploration de données sur des versions antérieures de SQL Server
   Cette section décrit des problèmes de compatibilité connus qui peuvent survenir lorsque vous essayez de déployer un modèle d'exploration de données ou une structure d'exploration de données créée dans une instance de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] sur une base de données qui utilise SQL Server 2005 Analysis Services, ou lorsque vous déployez des modèles créés dans SQL Server 2005 sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -60,7 +59,7 @@ ms.locfileid: "66084676"
   
  Lorsque vous ouvrez la structure d'exploration de données dans SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] génère une erreur, puis régénère la structure pour supprimer la partition d'exclusion.  
   
- Une fois la structure régénérée, la taille de la partition exclusion n’est plus disponible dans le Fenêtre Propriétés ; Toutefois, la valeur \<Ddl100_100 : HoldoutMaxPercent>30\</ddl100_100 : HoldoutMaxPercent>) peut toujours être présente dans le fichier de script ASSL.  
+ Une fois la structure régénérée, la taille de la partition exclusion n’est plus disponible dans le Fenêtre Propriétés ; Toutefois, la valeur \<ddl100_100:HoldoutMaxPercent> 30 \</ddl100_100:HoldoutMaxPercent> ) peut toujours être présente dans le fichier de script ASSL.  
   
 ##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a>Déploiement de modèles avec des filtres  
  Si vous utilisez [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] pour appliquer un filtre à un modèle d'exploration de données, le modèle peut être déployé sur une instance de SQL Server 2005, mais le filtre ne sera pas appliqué.  
