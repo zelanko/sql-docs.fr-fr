@@ -1,5 +1,6 @@
 ---
 title: Migrer des bases de données MySQL vers SQL Server-Azure SQL DB | Microsoft Docs
+description: Utilisez ce processus recommandé pour migrer des bases de données MySQL vers SQL Server ou Azure SQL Database à l’aide d’Assistant Migration SQL Server (SSMA).
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 33dd7faf67e82f1259ac87a0ef8e0eb5fdf2927d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0daee899775b5a8bb3a0e4b6ee0eef4a93eca00b
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908795"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293588"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Migration de bases de données MySQL vers SQL Server-Azure SQL DB (MySQLToSql)
 Assistant Migration SQL Server (SSMA) pour MySQL est un environnement complet qui vous permet de migrer rapidement des bases de données MySQL vers SQL Server ou SQL Azure. En utilisant SSMA pour MySQL, vous pouvez examiner les données et les objets de base de données, évaluer les bases de données pour la migration, migrer des objets de base de données vers SQL Server ou SQL Azure, puis migrer des données vers SQL Server ou SQL Azure.  
@@ -38,7 +39,7 @@ Pour migrer des objets et des données de bases de données MySQL vers SQL Serve
   
 7.  [Conversion de bases de données MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Synchronisationméthode](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
+8.  [Synchronisation](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. Vous pouvez le faire de l’une des manières suivantes :  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072105"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540741"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitions (boîte de dialogue Restaurer la base de données) (Analysis Services - Données multidimensionnelles)
   Utilisez la page **Partitions** de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] afin de spécifier l’emplacement de restauration des partitions locales et les fichiers de sauvegarde à distance à utiliser lors de la restauration des partitions distantes, et pour indiquer si les partitions distantes doivent, ou non, être restaurées.  
@@ -63,7 +62,7 @@ ms.locfileid: "66072105"
 |------------|-----------------|  
 |**Dernier**|Affiche le nom du cube qui contient la partition locale.|  
 |**MeasureGroup**|Affiche le nom du groupe de mesures qui contient la partition locale.|  
-|**Non**|Affiche le nom de la partition locale.|  
+|**Partition**|Affiche le nom de la partition locale.|  
 |**Taille (Mo)**|Affiche la taille (en mégaoctets) de la partition locale.|  
 |**Dossier original**|Affiche le nom du dossier original dans lequel la partition locale était stockée.|  
 |**Dossier de restauration**|Tapez le nom du dossier de restauration de la partition locale ou cliquez sur le bouton de sélection (**...**) pour afficher la boîte de dialogue **Rechercher un dossier distant** et sélectionner le chemin du dossier à utiliser. Pour plus d'informations sur la boîte de dialogue **Rechercher un dossier distant**, consultez [Boîte de dialogue Rechercher un dossier distant &#40;Analysis Services - Données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  

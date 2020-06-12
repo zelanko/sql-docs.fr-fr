@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa0d177d7fc3da967c4143a71e0852928a6e81c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083095"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520815"
 ---
 # <a name="process-a-mining-model"></a>Traiter un modèle d'exploration de données
   Dans l'onglet Modèles d'exploration de données du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez traiter un modèle d'exploration de données associé à une structure d'exploration de données, ou traiter tous les modèles associés à la structure.  
@@ -38,13 +37,13 @@ ms.locfileid: "66083095"
   
      Si vous avez modifié la structure d'exploration de données, un message vous demande de la redéployer avant de traiter le modèle. Cliquez sur **Oui**.  
   
-3.  Dans la boîte de dialogue **traitement \<du modèle d’exploration de données model>** , cliquez sur **exécuter**.  
+3.  Dans la boîte de dialogue **traitement \<model> du modèle d’exploration de données-** , cliquez sur **exécuter**.  
   
      La boîte de dialogue **État d'avancement du traitement** s'ouvre avec les informations de traitement du modèle.  
   
 4.  Une fois le modèle traité, cliquez sur **Fermer** dans la boîte de dialogue **État d'avancement du traitement** .  
   
-5.  Cliquez sur **Fermer** dans la boîte de dialogue **traitement de modèles d’exploration de \<données>** .  
+5.  Cliquez sur **Fermer** dans la boîte de dialogue **traitement du modèle d’exploration de données- \<model> ** .  
   
  Seuls la structure d'exploration de données et le modèle d'exploration de données sélectionné ont été traités.  
   
@@ -54,13 +53,13 @@ ms.locfileid: "66083095"
   
 2.  Si vous avez modifié la structure d'exploration de données, un message vous demande de la redéployer avant de traiter les modèles. Cliquez sur **Oui**.  
   
-3.  Dans la boîte de dialogue traitement de la structure d' **exploration de données- \<structure>** , cliquez sur **exécuter**.  
+3.  Dans la boîte de dialogue traitement de la **structure d’exploration de \<structure> données-** , cliquez sur **exécuter**.  
   
 4.  La boîte de dialogue **État d'avancement du traitement** s'ouvre avec les informations de traitement du modèle.  
   
 5.  Une fois les modèles traités, cliquez sur **Fermer** dans la boîte de dialogue **État d'avancement du traitement** .  
   
-6.  Cliquez sur **Fermer** dans la boîte de dialogue **>du modèle de traitement \<** .  
+6.  Cliquez sur **Fermer** dans la boîte de dialogue **traitement \<model> ** .  
   
  La structure d'exploration de données et tous les modèles d'exploration de données associés ont été traités.  
   

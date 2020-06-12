@@ -1,5 +1,6 @@
 ---
 title: Conversion d’objets de base de données Access (AccessToSQL) | Microsoft Docs
+description: Découvrez comment sélectionner des objets de base de données Access après vous être connecté à SQL Server/Azure SQL Database, puis convertir les schémas en schémas SQL Server/SQL Database.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -29,21 +30,21 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006632"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84302804"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Conversion d’objets de base de données Access (AccessToSQL)
-Une fois que vous avez ajouté des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access et que vous vous êtes connecté à ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure, SSMA affiche des métadonnées pour les objets de base de données Access et ou SQL Azure. Vous pouvez maintenant sélectionner accéder aux objets de base de données, puis convertir les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas dans ou SQL Azure schémas.  
+Une fois que vous avez ajouté des bases de données Access et que vous vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, SSMA affiche des métadonnées pour les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de base de données Access et ou SQL Azure. Vous pouvez maintenant sélectionner accéder aux objets de base de données, puis convertir les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure schémas.  
   
 ## <a name="the-conversion-process"></a>Processus de conversion  
-La conversion d’objets de base de données prend les définitions d’objet des métadonnées d' [!INCLUDE[tsql](../../includes/tsql-md.md)] accès, les convertit en syntaxe équivalente, puis charge ces informations dans le projet. Vous pouvez ensuite afficher les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure et leurs propriétés à l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aide de ou SQL Azure Explorateur de métadonnées.  
+La conversion d’objets de base de données prend les définitions d’objet des métadonnées d’accès, les convertit en syntaxe équivalente [!INCLUDE[tsql](../../includes/tsql-md.md)] , puis charge ces informations dans le projet. Vous pouvez ensuite afficher les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets ou SQL Azure et leurs propriétés à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure Explorateur de métadonnées.  
   
 > [!IMPORTANT]  
-> La conversion d’objets ne crée pas les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets dans ou SQL Azure. Il convertit uniquement les définitions d’objets et stocke les informations dans le projet SSMA.  
+> La conversion d’objets ne crée pas les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Il convertit uniquement les définitions d’objets et stocke les informations dans le projet SSMA.  
   
 Pendant la conversion, SSMA imprime l’État dans le volet de sortie, ainsi que les messages d’erreur, d’avertissement et d’information dans le volet Liste d’erreurs. Utilisez ces informations pour déterminer si vous devez modifier vos bases de données Access ou votre processus de conversion pour obtenir les résultats de conversion souhaités. Vous pouvez également utiliser les informations de la rubrique [préparation des bases de données Access pour la migration](preparing-access-databases-for-migration-accesstosql.md) pour déterminer ce qui va et ne sera pas converti.  
   
@@ -61,7 +62,7 @@ Le tableau suivant répertorie les objets Access qui sont convertis et les [!INC
 |clé étrangère|clé étrangère|  
 |query|vue<br /><br />La plupart des requêtes SELECT sont converties en vues. Les autres requêtes, telles que les requêtes de mise à jour, ne sont pas migrées.<br /><br />Les requêtes SELECT qui acceptent des paramètres ne sont pas converties, et ne sont pas des requêtes à onglets croisées.|  
 |rapport|non converti|  
-|form|non converti|  
+|formulaire|non converti|  
 |macro|non converti|  
 |module|non converti|  
 |valeur par défaut|valeur par défaut|  
@@ -87,7 +88,7 @@ Pour convertir des objets de base de données Access, vous devez d’abord séle
   
     -   Pour convertir ou omettre des tables individuelles, développez la base de données, développez **tables**, puis activez ou désactivez la case à cocher en regard de la table.  
   
-3.  Effectuez l'une des opérations suivantes :  
+3.  Effectuez l’une des opérations suivantes :  
   
     -   Pour convertir des schémas, cliquez avec le bouton droit sur **bases de données** , puis sélectionnez **convertir le schéma**.  
   
@@ -100,7 +101,7 @@ Pour convertir des objets de base de données Access, vous devez d’abord séle
 4.  Examinez les messages dans le volet de **sortie** et les erreurs et les avertissements dans le volet **liste d’erreurs** .  
   
 ## <a name="altering-tables-and-indexes"></a>Modification des tables et des index  
-Après avoir converti les métadonnées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’accès vers ou SQL Azure métadonnées, et avant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charger les objets dans ou SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez modifier ou SQL Azure des tables et des index.  
+Après avoir converti les métadonnées d’accès vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure métadonnées, et avant de charger les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous pouvez modifier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure des tables et des index.  
   
 **Pour modifier les propriétés d’une table ou d’un index**  
   

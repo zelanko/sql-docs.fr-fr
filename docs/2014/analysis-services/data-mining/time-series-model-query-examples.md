@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082751"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520316"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de série chronologique peut fournir des détails supplémentaires sur les structures périodiques détectées, tandis qu'une requête de prédiction peut vous donner des prédictions pour les 5 à 10 tranches de temps suivantes. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},....|  
+|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT = {1,3} ,....|  
   
  L'indication de périodicité par défaut, {1}, apparaît dans tous les modèles ; cet exemple de modèle a été créé avec une indication supplémentaire qui peut ne pas être présente dans le modèle final.  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  Par exemple, supposez que le modèle existant a des données pour six mois. Vous souhaitez étendre ce modèle en ajoutant les chiffres de vente des trois derniers mois. En même temps, vous souhaitez effectuer une prédiction concernant les trois prochains mois. Pour obtenir uniquement les nouvelles prédictions lorsque vous ajoutez les nouvelles données, spécifiez la tranche de temps 4 comme point de départ et la tranche de temps 7 comme point de terminaison. Vous pourriez également demander un total de six prédictions, mais les tranches de temps pour les trois premières prédictions et celles des nouvelles données ajoutées se chevaucheraient.  
   
- Pour obtenir des exemples de requêtes et plus d’informations sur `REPLACE_MODEL_CASES` la `EXTEND_MODEL_CASES`syntaxe d’utilisation de et de, consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Pour obtenir des exemples de requêtes et plus d’informations sur la syntaxe d’utilisation de `REPLACE_MODEL_CASES` et de `EXTEND_MODEL_CASES` , consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> Exécution de prédictions avec EXTEND_MODEL_CASES  
  Le comportement de prédiction diffère selon que vous étendez ou remplacez les cas de modèle. Lorsque vous étendez un modèle, les nouvelles données sont jointes à la fin de la série et la taille du jeu d'apprentissage augmente. Toutefois, les tranches de temps utilisées pour les requêtes de prédiction commencent toujours à la fin de la série d'origine. Par conséquent, si vous ajoutez trois nouveaux points de données et que vous demandez six prédictions, les trois premières prédictions retournées et les nouvelles données se chevauchent. Dans ce cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retourne les nouveaux points de données réels au lieu d'effectuer une prédiction, jusqu'à ce que tous les nouveaux points de données soient utilisés. Ensuite, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] effectue des prédictions sur la base de la série composite.  
@@ -198,10 +197,10 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  Avec REPLACE_MODEL_CASES, commençant à la valeur timestamp 1, vous obtenez de nouvelles prédictions basées sur les nouvelles données, lesquelles remplacent les anciennes données d'apprentissage.  
   
- Pour obtenir des exemples de requêtes et plus d’informations sur `REPLACE_MODEL_CASES` la `EXTEND_MODEL_CASES`syntaxe d’utilisation de et de, consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Pour obtenir des exemples de requêtes et plus d’informations sur la syntaxe d’utilisation de `REPLACE_MODEL_CASES` et de `EXTEND_MODEL_CASES` , consultez [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>Substitution de valeurs manquantes dans les modèles de série chronologique  
- Lorsque vous ajoutez de nouvelles données à un modèle de série chronologique en utilisant une instruction `PREDICTION JOIN`, le nouveau dataset ne peut pas avoir de valeurs manquantes. Si une série est incomplète, le modèle doit fournir les valeurs manquantes en utilisant une valeur Null, une moyenne numérique, une moyenne numérique spécifique ou une valeur prédite. Si vous spécifiez `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remplace les valeurs manquantes par des prédictions basées sur le modèle d'origine. Si vous utilisez `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remplace les valeurs manquantes par la valeur que vous spécifiez dans le paramètre *MISSING_VALUE_SUBSTITUTION* .  
+ Lorsque vous ajoutez de nouvelles données à un modèle de série chronologique en utilisant une instruction `PREDICTION JOIN`, le nouveau dataset ne peut pas avoir de valeurs manquantes. Si une série est incomplète, le modèle doit fournir les valeurs manquantes en utilisant une valeur Null, une moyenne numérique, une moyenne numérique spécifique ou une valeur prédite. Si vous spécifiez `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remplace les valeurs manquantes par des prédictions basées sur le modèle d'origine. Si vous utilisez `REPLACE_MODEL_CASES` , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remplace les valeurs manquantes par la valeur que vous spécifiez dans le paramètre *MISSING_VALUE_SUBSTITUTION* .  
   
 ## <a name="list-of-prediction-functions"></a>Liste des fonctions de prédiction  
  Tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] prennent en charge un ensemble commun de fonctions. Toutefois, l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) prend en charge les fonctions supplémentaires décrites dans le tableau suivant.  

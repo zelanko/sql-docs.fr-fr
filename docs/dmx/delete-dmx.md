@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 600f3bc6d5ad4b9f7f67e15b894185123dccca8b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070765"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669764"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,15 +36,15 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  Identificateur de la structure  
   
 ## <a name="remarks"></a>Notes  
- Si vous ne spécifiez pas de **modèle** d’exploration de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données ou de structure d’exploration de **données**, recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
+ Si vous ne spécifiez pas de **modèle** d’exploration de données ou de **structure d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
   
  Le tableau ci-dessous décrit le résultat obtenu en utilisant différentes formes de la syntaxe.  
   
 |.|Résultats|  
 |---------------|------------|  
-|Supprimer de la structure de structure*\<d’exploration de données>*<br /><br /> or<br /><br /> Supprimer de la structure*\< *de structure d’exploration de données>. HUMIDITÉ|Exécute ProcessClear sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données et de ses modèles d'exploration de données associés.|  
-|Supprimer de la structure*\< *de structure d’exploration de données>. PARFOIS|Exécute ProcessClearStructureOnly sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données, en laissant ses modèles d'exploration de données associés intacts. Une fois la structure d'exploration de données supprimée, l'extraction dans les modèles d'exploration de données associés échoue.|  
-|Supprimer du modèle de*\<modèle d’exploration de données>*<br /><br /> or<br /><br /> Supprimer du*\<modèle *de modèle d’exploration de données>. HUMIDITÉ|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’État intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
+|SUPPRIMER de la structure de STRUCTURE d’exploration de données* \<>*<br /><br /> or<br /><br /> SUPPRIMER de la structure de STRUCTURE d’exploration de données* \<>*. HUMIDITÉ|Exécute ProcessClear sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données et de ses modèles d'exploration de données associés.|  
+|SUPPRIMER de la structure de STRUCTURE d’exploration de données* \<>*. PARFOIS|Exécute ProcessClearStructureOnly sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données, en laissant ses modèles d'exploration de données associés intacts. Une fois la structure d'exploration de données supprimée, l'extraction dans les modèles d'exploration de données associés échoue.|  
+|SUPPRIMER du modèle de modèle d’exploration de données* \<>*<br /><br /> or<br /><br /> SUPPRIMER du modèle de modèle d’exploration de données* \<>*. HUMIDITÉ|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’État intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
   
  Pour plus d’informations sur les types de traitement, consultez [élément Type &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   

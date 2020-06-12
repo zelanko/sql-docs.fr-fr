@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5007728a9af2032f83b71a7ea5b2aea19d0cf20
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070260"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539121"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Restaurer la base de données (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Restaurer la base de données** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permet de restaurer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à partir d'un fichier de sauvegarde portant l'extension .abf ([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Backup File).  
@@ -35,7 +34,7 @@ ms.locfileid: "66070260"
  La boîte de dialogue **Restaurer la base de données** contient les pages suivantes.  
   
 ## <a name="pages"></a>Pages  
- **Généralités**  
+ **Général**  
  Cette page permet de sélectionner la base de données à restaurer, le fichier de sauvegarde, ainsi que les options générales et le mot de passe permettant cette restauration. Pour plus d’informations sur cette page, consultez [Général &#40;boîte de dialogue Restaurer la base de données&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Partitions**  

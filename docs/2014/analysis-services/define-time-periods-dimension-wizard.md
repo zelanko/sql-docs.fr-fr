@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7f5fc866904397d4e6fc78a95030c79f6f9451a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081981"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528765"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Définir des périodes (Assistant Dimension)
   Utilisez la page **Définir des périodes** pour définir les informations d'année civile et les fréquences de temps à inclure dans la dimension de temps ou la dimension de temps du serveur.  

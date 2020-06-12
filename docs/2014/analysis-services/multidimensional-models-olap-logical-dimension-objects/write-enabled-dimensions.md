@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8f0f1c959d44b4d3e133e5676e9aca9365a628d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727439"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545091"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensions activées en écriture
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- Dans une dimension, les données sont généralement en lecture seule. Cependant, dans certains scénarios, vous pouvez activer l'écriture sur une dimension. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l’activation en écriture d’une dimension permet aux utilisateurs professionnels de modifier le contenu de la dimension et de voir l’impact immédiat des modifications sur les hiérarchies de la dimension. Toute dimension basée sur une seule table peut être activée en écriture. Dans une dimension activée en écriture, les utilisateurs et les administrateurs peuvent modifier, déplacer, ajouter et supprimer des membres d'attribut. Ces mises à jour sont collectivement regroupées sous l'appellation d' *écriture différée de dimension*.  
+ Dans une dimension, les données sont généralement en lecture seule. Cependant, dans certains scénarios, vous pouvez activer l'écriture sur une dimension. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l’activation en écriture d’une dimension permet aux utilisateurs professionnels de modifier le contenu de la dimension et de voir l’impact immédiat des modifications sur les hiérarchies de la dimension. Toute dimension basée sur une seule table peut être activée en écriture. Dans une dimension activée en écriture, les utilisateurs et les administrateurs peuvent modifier, déplacer, ajouter et supprimer des membres d'attribut. Ces mises à jour sont collectivement regroupées sous l'appellation d' *écriture différée de dimension*.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge l'écriture différée de dimension dans tous les attributs de dimension, et il est possible de modifier n'importe quel membre d'une dimension. Pour un cube ou une partition activé en écriture, les mises à jour sont stockées dans une table d'écriture différée distincte des tables sources du cube. Toutefois, pour une dimension d'écriture différée, les mises à jour sont enregistrées directement dans la table de la dimension. De plus, si la dimension activée en écriture figure dans un cube à plusieurs partitions dont certaines ou l'ensemble des sources de données possèdent une copie de la table de dimension, seule la table de dimension d'origine est mise à jour lors de l'écriture différée.  
   

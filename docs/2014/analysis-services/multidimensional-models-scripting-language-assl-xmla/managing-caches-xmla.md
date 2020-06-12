@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdc5bcd2e0500749edfa298a871b6fec7243ddfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727585"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544981"
 ---
 # <a name="managing-caches-xmla"></a>Gestion des caches (XMLA)
-  Vous pouvez utiliser la commande [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) dans XML for Analysis (XMLA) pour effacer le cache d’une dimension ou d’une partition spécifiée. L’effacement du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cache force à reconstruire le cache pour cet objet.  
+  Vous pouvez utiliser la commande [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) dans XML for Analysis (XMLA) pour effacer le cache d’une dimension ou d’une partition spécifiée. L’effacement du cache force [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à reconstruire le cache pour cet objet.  
   
 ## <a name="specifying-objects"></a>Spécification d'objets  
  La propriété [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) de la `ClearCache` commande peut contenir une référence d’objet uniquement pour l’un des objets suivants. Si une référence d'objet désigne un objet différent de ceux mentionnés ci-dessous, une erreur se produit :  

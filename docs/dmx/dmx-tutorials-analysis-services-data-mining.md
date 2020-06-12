@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 262d8f9f62718bcb91ef034177375035a37dfc84
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892784"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668960"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Didacticiels DMX (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68892784"
   
  Dans ce didacticiel, vous allez apprendre à créer un modèle d'exploration de données qui prédit les produits susceptibles d'être achetés simultanément. Ce didacticiel présente également l'utilisation de tables imbriquées dans l'exploration de données.  
   
-## <a name="reference"></a>Informations de référence  
+## <a name="reference"></a>Référence  
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Instructions de définition de données DMX &#40;Data Mining Extensions&#41;](../dmx/dmx-statements-data-definition.md)  

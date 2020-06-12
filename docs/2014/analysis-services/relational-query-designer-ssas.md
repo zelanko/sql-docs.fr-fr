@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251216"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539641"
 ---
 # <a name="relational-query-designer-ssas"></a>Concepteur de requêtes relationnelles (SSAS)
-  Le concepteur de requêtes relationnelles vous aide à créer une requête qui spécifie les données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] récupérer à partir des bases [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]de données relationnelles et. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer la requête de manière interactive et afficher les résultats de votre requête.  Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
+  Le concepteur de requêtes relationnelles vous aide à créer une requête qui spécifie les données à récupérer à partir des [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] bases de données relationnelles et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer la requête de manière interactive et afficher les résultats de votre requête.  Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
   
  Si vous préférez, vous pouvez écrire la requête en langage SQL à l'aide de l'éditeur textuel. Pour basculer vers le Concepteur de requêtes textuel, cliquez sur **Modifier en tant que texte**dans la barre d’outils. Une fois que vous modifiez une requête dans le Concepteur de requêtes textuel, vous ne pouvez plus utiliser le Concepteur de requêtes graphique.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "72251216"
   
  Les agrégats fournissent des synthèses de données, lesquelles sont regroupées pour prendre en charge l'agrégat qui remet les données de synthèse. Lorsque vous utilisez un agrégat dans la requête, les autres champs retournés par la requête sont regroupés automatiquement ; par ailleurs, la requête inclut la clause SQL GROUP BY. Vous pouvez synthétiser les données sans ajouter d'agrégat en utilisant uniquement l'option **Regroupement par** de la liste **Groupe et agrégat** . De nombreux agrégats incluent une version qui utilise le mot clé DISTINCT. L'inclusion de DISTINCT élimine les valeurs dupliquées.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise [!INCLUDE[tsql](../includes/tsql-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] et [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utilise [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]utilise [!INCLUDE[tsql](../includes/tsql-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utilise [!INCLUDE[DWsql](../includes/dwsql-md.md)] . Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
   
  Pour plus d’informations sur [!INCLUDE[tsql](../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference) dans la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=141687) de  sur msdn.microsoft.com.  
   

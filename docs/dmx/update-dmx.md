@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2d28df68512f9c97faebf3ee00b2aa34a2b8d1a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c4f8c1b48ccc6b3f2c2363671f5e3c072f77042
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028667"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669175"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,10 +37,10 @@ SET NODE_CAPTION='new caption'
  Chaîne qui contient le nouveau nom de la colonne **NODE_CAPTION** .  
   
  *expression de condition*  
- Facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
 ## <a name="examples"></a>Exemples  
- Dans l’exemple suivant, l’instruction **Update** modifie le nom par défaut `Cluster 1`,, pour `001` le cluster avec le nom plus `Likely Customers`descriptif,.  
+ Dans l’exemple suivant, l’instruction **Update** modifie le nom par défaut, `Cluster 1` , pour `001` le cluster avec le nom plus descriptif, `Likely Customers` .  
   
 ```  
 UPDATE [TM Clustering].CONTENT  

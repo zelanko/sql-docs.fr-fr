@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493850"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528305"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur
   Comme vous l'avez déjà appris au cours de ce didacticiel, vous pouvez organiser les hiérarchies d'attributs en niveaux au sein des hiérarchies utilisateur pour mettre à disposition des utilisateurs d'un cube des chemins de navigation. Une hiérarchie utilisateur peut représenter une hiérarchie naturelle, telle que ville, état et pays, ou simplement un chemin de navigation tel que nom d'employé, titre et nom de division. Du point de vue de l'utilisateur qui navigue au sein d'une hiérarchie, ces deux types de hiérarchies utilisateur sont identiques.  
@@ -42,7 +41,7 @@ ms.locfileid: "69493850"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Une icône d'avertissement apparaît dans le diagramme parce que la relation est redondante. Le nom complet de la**Geography**-> relation **nom** -> complet du**Code postal** existe déjà, et vous venez de créer le**Code postal**de la relation **nom** -> complet. Le**Code postal** de la relation **Geography**-> est maintenant redondant. nous allons donc le supprimer.  
+     Une icône d'avertissement apparaît dans le diagramme parce que la relation est redondante. Le nom complet de la relation **nom complet**du  ->  **Geography** ->  **Code postal** existe déjà, et vous venez de créer le code postal de la relation **nom complet**  ->  **Postal Code**. Le code postal de la relation **Geography** ->  **Postal Code** est maintenant redondant. nous allons donc le supprimer.  
   
 6.  Dans le volet **Relations d’attributs** , cliquez avec le bouton droit sur **Géographie**-> **Code postal** , puis cliquez sur **Supprimer**.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493850"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     La relation **Geography**-> **City** est maintenant redondante. nous allons donc la supprimer.  
+     La relation **Geography** ->  **City** est maintenant redondante. nous allons donc la supprimer.  
   
-11. Dans le volet relations d’attributs, cliquez avec le bouton droit sur **Geography**-> **City** , puis cliquez sur **supprimer**.  
+11. Dans le volet relations d’attributs, cliquez avec le bouton droit sur **Geography** ->  **City** , puis cliquez sur **supprimer**.  
   
 12. Quand la boîte de dialogue **Supprimer les objets** apparaît, cliquez sur **OK**.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493850"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. Dans le volet relations d’attributs, cliquez avec le bouton droit sur **Geography**-> **Country-Region** , puis cliquez sur **supprimer**.  
+21. Dans le volet relations d’attributs, cliquez avec le bouton droit sur **Geography** ->  **Country-Region** , puis cliquez sur **supprimer**.  
   
 22. Quand la boîte de dialogue **Supprimer les objets** apparaît, cliquez sur **OK**.  
   

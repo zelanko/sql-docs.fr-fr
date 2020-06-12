@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83b301239264351da33d0b22379f00c48b08c836
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076507"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536696"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
   Sélectionnez **Construire le cube sans utiliser de source de données** dans la première page de l’Assistant Cube pour créer un cube sans utiliser de vue de source de données. Vous pouvez par la suite utiliser l’Assistant Génération de schéma pour générer le schéma relationnel pour la vue de source de données basée sur la structure du cube et éventuellement d’autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour plus d’informations sur la génération d’un schéma, consultez [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "66076507"
 ## <a name="selecting-dimensions"></a>Sélection de dimensions  
  Utilisez la page **Sélectionner des dimensions** de l'Assistant pour ajouter les dimensions existantes au cube. Cette page s'affiche uniquement s'il existe déjà des dimensions partagées sans source de données dans le projet ou la base de données. Elle ne présente pas les dimensions qui ont une source de données.  
   
- Pour ajouter des dimensions existantes, sélectionnez une ou plusieurs dimensions dans la liste **Dimensions partagées** et cliquez sur le bouton fléché droit (**>**) pour les déplacer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux**>>** flèches () pour déplacer toutes les dimensions de la liste.  
+ Pour ajouter des dimensions existantes, sélectionnez une ou plusieurs dimensions dans la liste **Dimensions partagées** et cliquez sur le bouton fléché droit (**>**) pour les déplacer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux flèches ( **>>** ) pour déplacer toutes les dimensions de la liste.  
   
 ## <a name="defining-new-measures"></a>Définition de nouvelles mesures  
  Utilisez la page **Définir de nouvelles mesures** de l’Assistant pour spécifier les mesures et les groupes de mesures du nouveau cube. Les groupes de mesures que vous spécifiez ici correspondront aux tables de faits dans le schéma généré. Les mesures que vous spécifiez ici correspondront aux colonnes non-clés numériques dans les tables.  
@@ -51,7 +50,7 @@ ms.locfileid: "66076507"
   
  Si vous utilisez un modèle pour créer le cube, la grille située sous **Sélectionnez des dimensions dans le modèle** affiche les dimensions du modèle. Vous pouvez désactiver la case à cocher en regard de n'importe quelle dimension pour la supprimer du cube. Désactivez la case à cocher dans la barre de titre de la grille pour supprimer toutes les dimensions répertoriées. Si vous n'utilisez pas de modèle, cette grille répertorie uniquement la dimension de temps.  
   
- Vous pouvez ajouter des dimensions au cube dans la grille située sous **Ajoutez de nouvelles dimensions**. Pour ajouter une dimension, cliquez sur la cellule dans `Name` la colonne qui contient le texte **Ajouter une nouvelle dimension**, puis tapez un nom pour la dimension. Pour supprimer une ligne de la liste, cliquez sur l’icône de suppression (**X**).  
+ Vous pouvez ajouter des dimensions au cube dans la grille située sous **Ajoutez de nouvelles dimensions**. Pour ajouter une dimension, cliquez sur la cellule dans la `Name` colonne qui contient le texte **Ajouter une nouvelle dimension**, puis tapez un nom pour la dimension. Pour supprimer une ligne de la liste, cliquez sur l’icône de suppression (**X**).  
   
  La grille **Sélectionnez des dimensions dans le modèle** et la grille **Ajoutez de nouvelles dimensions** affichent des valeurs dans les colonnes décrites dans le tableau suivant. Vous pouvez cliquer sur une valeur dans l'une ou l'autre liste pour la modifier.  
   

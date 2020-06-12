@@ -1,5 +1,6 @@
 ---
 title: Gestion des erreurs (XQuery) | Microsoft Docs
+description: En savoir plus sur la gestion des erreurs dans XQuery et afficher des exemples de gestion des erreurs dynamiques.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038963"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305891"
 ---
 # <a name="error-handling-xquery"></a>Gestion des erreurs (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68038963"
  Si l'erreur dynamique devait se produire dans un prédicat, il est courant que son non-déclenchement épargne la sémantique car () est mappé à False. Toutefois, dans certains cas, le renvoi de () au lieu d'une erreur dynamique peut générer des résultats inattendus. Les exemples suivants illustrent ce point.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>Exemple : utilisation de la fonction avg() avec une chaîne  
- Dans l’exemple suivant, la [fonction AVG](../xquery/aggregate-functions-avg.md) est appelée pour calculer la moyenne des trois valeurs. L'une de ces valeurs est une chaîne. L'instance XML étant, dans ce cas, non typée, toutes les données qu'elle contient sont de type atomique non typé. La fonction **AVG ()** convertit d’abord ces valeurs en **XS : double** avant le calcul de la moyenne. Toutefois, la valeur, `"Hello"`, ne peut pas être convertie en **XS : double** et crée une erreur dynamique. Dans ce cas, au lieu de renvoyer une erreur dynamique, la conversion `"Hello"` de en **XS : double** provoque une séquence vide. La fonction **AVG ()** ignore cette valeur, calcule la moyenne des deux autres valeurs et retourne 150.  
+ Dans l’exemple suivant, la [fonction AVG](../xquery/aggregate-functions-avg.md) est appelée pour calculer la moyenne des trois valeurs. L'une de ces valeurs est une chaîne. L'instance XML étant, dans ce cas, non typée, toutes les données qu'elle contient sont de type atomique non typé. La fonction **AVG ()** convertit d’abord ces valeurs en **XS : double** avant le calcul de la moyenne. Toutefois, la valeur, `"Hello"` , ne peut pas être convertie en **XS : double** et crée une erreur dynamique. Dans ce cas, au lieu de renvoyer une erreur dynamique, la conversion de `"Hello"` en **XS : double** provoque une séquence vide. La fonction **AVG ()** ignore cette valeur, calcule la moyenne des deux autres valeurs et retourne 150.  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>Exemple: utilisation de la fonction not  
- Lorsque vous utilisez la [fonction not](../xquery/functions-on-boolean-values-not-function.md) dans un prédicat, par exemple, `/SomeNode[not(Expression)]`, et que l’expression provoque une erreur dynamique, une séquence vide est retournée à la place d’une erreur. L’application de **not ()** à la séquence vide retourne la valeur true, au lieu d’une erreur.  
+ Lorsque vous utilisez la [fonction not](../xquery/functions-on-boolean-values-not-function.md) dans un prédicat, par exemple, `/SomeNode[not(Expression)]` , et que l’expression provoque une erreur dynamique, une séquence vide est retournée à la place d’une erreur. L’application de **not ()** à la séquence vide retourne la valeur true, au lieu d’une erreur.  
   
 ### <a name="example-casting-a-string"></a>Exemple: conversion d'une chaîne  
  Dans l'exemple suivant, la chaîne littérale « NaN » est convertie au format xs:string, puis au format xs:double. Le résultat est un ensemble de lignes vide. Le fait que la chaîne « NaN » ne puisse pas être correctement convertie au format xs:double n'est détecté qu'à l'exécution car elle est d'abord convertie au format xs:string.  

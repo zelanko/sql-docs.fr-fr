@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a912bab0c43764c0c09844fd26ca66a708b3c495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d75636280033ff0dcedfc3c281939a2484a4cac0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175668"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540611"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
   La Galerie PowerPivot est un type de bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données PowerPivot.
 
 ##  <a name="in-this-topic"></a><a name="bkmk_top"></a>Dans cette rubrique
 
--   [Conditions préalables](#prereq)
+-   [Composants requis](#prereq)
 
--   [Vue d'ensemble](#overview)
+-   [Vue d’ensemble](#overview)
 
 -   [Créer la Galerie PowerPivot](#createlib)
 
@@ -53,7 +52,7 @@ ms.locfileid: "78175668"
 
 -   Pour être en mesure d'afficher ou de créer un rapport Reporting Services basé sur un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous devez installer le classeur et le rapport dans la même bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le rapport doit utiliser un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui contient des données incorporées ou le classeur doit contenir au plus une source de données externe qui est un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .
 
-##  <a name="overview"></a>Vue d'ensemble de <a name="overview"></a>
+##  <a name="overview"></a><a name="overview"></a> Vue d'ensemble
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est un modèle de bibliothèque disponible lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] sur un serveur SharePoint. La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combine un aperçu exact du contenu du fichier avec les informations relatives à l'origine du document. Vous pouvez voir immédiatement qui a créé le document et quand il a été modifié pour la dernière fois. Pour créer des images d'aperçu, la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] utilise un service d'instantanés capable de lire les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et les rapports Reporting Services qui contiennent des données PowerPivot. Si vous publiez un fichier que le service d'instantanés ne peut pas lire, aucune image d'aperçu n'est disponible pour ce fichier.
 
  Les images d'aperçu reposent sur la façon dont le classeur est restitué par Excel Services. La représentation dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être identique à celle que vous voyez quand vous affichez un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un navigateur. L'aperçu a cependant une surface d'exposition limitée. Les parties d'un classeur ou rapport peuvent être réduites de façon à s'ajuster à l'espace disponible. Vous devrez peut-être ouvrir un classeur ou un rapport pour visualiser le document dans son intégralité.

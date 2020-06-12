@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf7389ee0097428bd5825c81abd36f3bdc5c02d2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893928"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83667943"
 ---
 # <a name="modeling-flags-dmx"></a>Indicateurs de modélisation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68893928"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les indicateurs de modélisation suivants :  
   
- **NOT NULL**  
+ **NON NULL**  
  Les valeurs de la colonne d'attribut ne doivent jamais contenir de valeur NULL. Une erreur est générée si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur NULL pour la colonne d’attribut au cours du processus d’apprentissage du modèle. Cet indicateur est défini sur une colonne de structure d'exploration de données.  
   
  **RÉGRESSEUR**  
@@ -44,7 +44,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>Spécification d'indicateurs de modélisation sur un modèle d'exploration de données  
- Pour obtenir des exemples de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] syntaxe prise en charge pour la spécification d’un indicateur sur une colonne de structure d’exploration de données, consultez [Create Mining structure &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
+ Pour obtenir des exemples de la syntaxe [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prise en charge pour la spécification d’un indicateur sur une colonne de structure d’exploration de données, consultez [Create mining structure &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Pour obtenir un exemple de la syntaxe permettant de spécifier un indicateur de modélisation sur une colonne de modèle d’exploration de données, consultez [ALTER Mining STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   

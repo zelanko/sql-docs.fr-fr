@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071637"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547481"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Créer une connexion de modèle sémantique BI à un classeur PowerPivot
   Utilisez les informations de cette rubrique pour configurer une connexion de modèle sémantique BI qui redirige vers un classeur PowerPivot dans la même batterie.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071637"
   
  Cette rubrique comprend les sections suivantes. Effectuez chaque tâche dans l'ordre indiqué.  
   
- [Vérifier les conditions préalables](#bkmk_prereq)  
+ [Examiner la configuration requise](#bkmk_prereq)  
   
  [Créer une connexion](#bkmk_create)  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66071637"
   
  Vous devez disposer d'une bibliothèque qui prend en charge le type de contenu Connexion de modèle sémantique BI. Pour plus d’informations, consultez [Ajouter un type de contenu de connexion de modèle sémantique bi à une bibliothèque &#40;PowerPivot pour SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Vous devez connaître l’URL du classeur PowerPivot pour lequel vous configurez une connexion de modèle sémantique BI (par exemple http://adventure-works/shared , documents/myworkbook. xlsx). Le classeur doit figurer dans la même batterie de serveurs.  
+ Vous devez connaître l’URL du classeur PowerPivot pour lequel vous configurez une connexion de modèle sémantique BI (par exemple, http://adventure-works/shared documents/myworkbook.xlsx). Le classeur doit figurer dans la même batterie de serveurs.  
   
  Tous les ordinateurs et utilisateurs qui participent à la séquence de connexion doivent être dans le même domaine ou dans un domaine approuvé (approbation bidirectionnelle).  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071637"
   
      ![Sous-menu Nouveau document dans une bibliothèque SharePoint](../media/ssas-bismconnection-new.gif "Sous-menu Nouveau document dans une bibliothèque SharePoint")  
   
-2.  Définissez la propriété de **serveur** sur l’URL SharePoint du classeur PowerPivot (par exemple, ** http://mysharepoint/shared documents/myWorkbook. xlsx**). Dans un déploiement PowerPivot pour SharePoint, les données peuvent être chargées sur tout serveur de la batterie. Pour cette raison, les connexions de la source de données aux données PowerPivot spécifient juste le chemin d'accès au classeur. Le service système PowerPivot détermine quel serveur charge les données.  
+2.  Définissez la propriété de **serveur** sur l’URL SharePoint du classeur PowerPivot (par exemple, ** http://mysharepoint/shared documents/myWorkbook.xlsx**. Dans un déploiement PowerPivot pour SharePoint, les données peuvent être chargées sur tout serveur de la batterie. Pour cette raison, les connexions de la source de données aux données PowerPivot spécifient juste le chemin d'accès au classeur. Le service système PowerPivot détermine quel serveur charge les données.  
   
      N’utilisez pas la propriété **de base de données** ; elle n’est pas utilisée lors de la spécification de l’emplacement d’un classeur PowerPivot.  
   

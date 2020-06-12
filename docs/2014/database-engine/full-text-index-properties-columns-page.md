@@ -12,19 +12,19 @@ ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1b842f8fe4e2a5c3adc489df35e20c58000a69d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5eac064dbcb727542969095906260ee962bb44af
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000915"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858659"
 ---
 # <a name="full-text-index-properties-columns-page"></a>Propriétés d'index de texte intégral (page Colonnes)
   **Pour afficher ou modifier les propriétés d'un index de recherche en texte intégral**  
   
 -   [Gérer les index de recherche en texte intégral](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Index unique**  
  Sélectionnez un index dans la liste déroulante. Cet index doit être un index unique, n'acceptant pas les valeurs Null, avec une colonne à clé unique.  
   

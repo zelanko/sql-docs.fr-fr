@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91ebeb4d4e357c8c56ad1c9b26e123a49d78875b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081486"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528475"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Boîte de dialogue Extraire (Visionneuse de modèle d'exploration de données)
   Quand vous affichez un modèle d’exploration de données sous l’onglet **Visionneuse de modèle d’exploration de données** du concepteur de modèle d’exploration de données, vous pouvez extraire les détails des données de cas, à condition que l’extraction ait été activée sur le modèle. De plus, si l'extraction a été activée sur la structure d'exploration de données sous-jacente, vous pouvez aussi afficher les colonnes dans la structure d'exploration de données, même si ces colonnes n'ont pas été incluses dans le modèle d'exploration de données. Dans la liste de colonnes, les colonnes de structure portent un préfixe par l’étiquette « Structure. ».  
@@ -36,7 +35,7 @@ ms.locfileid: "66081486"
   
  **Remarque** Les colonnes de structure sont affichées uniquement si l’extraction est activée sur la structure d’exploration de données et si vous avez sélectionné l’option **Colonnes de structure et de modèle**. De plus, vous devez posséder des autorisations d'extraction à la fois sur le modèle d'exploration de données et sur la structure d'exploration de données pour afficher les colonnes.  
   
- Les colonnes de structure qui ne sont pas incluses dans le modèle apparaissent en tant que **structure.\< nom de la colonne>**.  
+ Les colonnes de structure qui ne sont pas incluses dans le modèle apparaissent en tant que **structure. \<column name> **  
   
 > [!NOTE]  
 >  Vous pouvez cliquer avec le bouton droit n’importe où dans la grille de colonnes et sélectionner **Copier tout** pour copier les données d’extraction, au format séparé par des tabulations, dans le Presse-papiers. Les données copiées comprennent uniquement les données de cas, et non la définition du nœud.  

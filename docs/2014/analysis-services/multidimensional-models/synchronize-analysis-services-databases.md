@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072849"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547351"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comprend une fonctionnalité de synchronisation de bases de données qui rend deux bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] équivalentes en copiant les données et les métadonnées depuis une base de données sur un serveur source vers une base de données sur un serveur de destination. Utilisez la fonctionnalité de synchronisation de bases de données pour effectuer l'une des tâches suivantes :  
@@ -129,7 +128,7 @@ ms.locfileid: "66072849"
   
      L’option **Emplacements** affiche une grille donnant les détails sur les emplacements dans lesquels sont stockées les partitions distantes de la base de données source, notamment les informations de source et de destination ainsi que la taille du stockage utilisé par chaque emplacement, disponibles dans la base de données sélectionnée. Cette grille comporte les colonnes suivantes :  
   
-     **Sync**  
+     **Synchronisation**  
      Sélectionnez cette option pour inclure un emplacement contenant les partitions distantes durant la synchronisation.  
   
     > [!NOTE]  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079276"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543641"
 ---
 # <a name="defining-a-data-source-view"></a>Définition d'une vue de source de données
   L'étape qui suit la définition des sources de données que vous utiliserez dans un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consiste généralement à définir une vue de source de données pour le projet. Une vue de source de données est une vue unique et unifiée des métadonnées des tables et des vues spécifiées que la source de données définit dans le projet. Le stockage des métadonnées dans la vue de source de données permet d'utiliser ces métadonnées au cours de la phase de développement sans avoir besoin de disposer d'une connexion ouverte à une source de données sous-jacente. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "66079276"
   
 1.  Dans l’Explorateur de solutions (à droite de la fenêtre de Microsoft Visual Studio), cliquez avec le bouton droit sur **Vues des sources de données**, puis cliquez sur **Nouvelle vue de source de données**.  
   
-2.  Sur la page **Bienvenue dans l'Assistant Sources de données**, cliquez sur **Suivant**. La page **Sélectionner une source de données** s'affiche.  
+2.  Sur la page **Bienvenue dans l'Assistant Sources de données** , cliquez sur **Suivant**. La page **Sélectionner une source de données** s'affiche.  
   
 3.  Sous **Sources de données relationnelles**, la source de données **Adventure Works DW 2012** est sélectionnée. Cliquez sur **Suivant**.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66079276"
   
     -   **FactInternetSales (dbo)**  
   
-5.  Cliquez **>** sur cette option pour ajouter les tables sélectionnées à la liste **objets inclus** .  
+5.  Cliquez sur cette **>** option pour ajouter les tables sélectionnées à la liste **objets inclus** .  
   
 6.  Cliquez sur **Suivant**.  
   

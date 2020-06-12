@@ -19,12 +19,12 @@ ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6233a44137427d607cb36283b911bd6fd5f5ef52
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68103284"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669503"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68103284"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Nom de catalogue de la routine pour laquelle cet élément constitue un paramètre|  
-|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma de la routine pour laquelle cet élément constitue un paramètre<br /><br /> <strong> \* Important \* \* </strong> N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
+|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma de la routine pour laquelle cet élément constitue un paramètre<br /><br /> Important n’utilisez pas les vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. <strong> \* \* \* \* </strong> Les vues de INFORMATION_SCHEMA représentent seulement un sous-ensemble des métadonnées d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
 |**SPECIFIC_NAME**|**nvarchar (** 128 **)**|Nom de la routine pour laquelle cet élément constitue un paramètre|  
 |**ORDINAL_POSITION**|**int**|Position ordinale du paramètre en commençant à 1. Dans le cas de la valeur de retour d'une fonction, il s'agit d'un 0.|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|Retourne IN pour un paramètre d'entrée, OUT pour un paramètre de sortie et INOUT pour un paramètre d'entrée/sortie.|  

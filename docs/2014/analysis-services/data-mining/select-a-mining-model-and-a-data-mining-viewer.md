@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ab24c6ccb8a87879cbab8439d06d625e304061
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082880"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520437"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Sélectionner un modèle d'exploration de données et une visionneuse d'exploration de données
   Vous pouvez explorer un modèle d’exploration de données en utilisant l’une des visionneuses sous l’onglet **Visionneuse de modèle d’exploration de données** du Concepteur d’exploration de données. Vous pouvez aisément basculer entre les modèles ou modifier la visionneuse utilisée.  

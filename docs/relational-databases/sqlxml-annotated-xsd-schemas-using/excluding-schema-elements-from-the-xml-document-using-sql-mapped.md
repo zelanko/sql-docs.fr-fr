@@ -1,5 +1,6 @@
 ---
 title: 'Exclure des éléments de schéma d’un document XML avec SQL : mappé'
+description: 'Découvrez comment utiliser l’annotation sql : mapped pour créer un élément dans le schéma XSD qui n’est mappé à aucune table de base de données (vue) ou colonne.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,12 +24,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257441"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689395"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Exclusion d’éléments du schéma du document XML à l’aide de sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "75257441"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Spécification de l'annotation sql:mapped  
- Supposons que vous ayez un schéma XSD provenant d'une autre source. Ce schéma XSD se compose d’un ** \<élément person. contact>** avec les attributs **ContactID**, **FirstName**, **LastName**et **HomeAddress** .  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>R. Spécification de l'annotation sql:mapped  
+ Supposons que vous ayez un schéma XSD provenant d'une autre source. Ce schéma XSD se compose d’un élément ** \< Person. contact>** avec les attributs **ContactID**, **FirstName**, **LastName**et **HomeAddress** .  
   
  Lors du mappage de ce schéma XSD à la table Person. contact de la base de données AdventureWorks, **SQL : mapped** est spécifié sur l’attribut **HomeAddress** parce que la table Employees ne stocke pas les adresses personnelles des employés. En conséquence, cet attribut n'est pas mappé avec la base de données et n'est pas retourné dans le document XML obtenu lorsqu'une requête XPath est spécifiée sur le schéma de mappage.  
   
- Le mappage par défaut a lieu pour le reste du schéma. L' ** \<élément person. contact>** est mappé à la table Person. contact, et tous les attributs sont mappés aux colonnes portant le même nom dans la table Person. contact.  
+ Le mappage par défaut a lieu pour le reste du schéma. L’élément ** \< Person. contact>** est mappé à la table Person. contact, et tous les attributs sont mappés aux colonnes portant le même nom dans la table Person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

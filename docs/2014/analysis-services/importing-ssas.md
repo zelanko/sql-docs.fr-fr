@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f1681be4-c543-4e77-875d-b13eeb75cf77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 411901f318d08109d6f7c7ce724d76e1039dfa7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95ea60385014e5ca8b998b986a66c384f7151081
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080509"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544165"
 ---
 # <a name="importing-ssas"></a>Importation (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de suivre la progression de l’opération d’importation. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Détails**  
  Affiche les informations suivantes pour chaque opération d'importation de données.  
   

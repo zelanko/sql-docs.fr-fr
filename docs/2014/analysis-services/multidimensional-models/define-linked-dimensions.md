@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075575"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547005"
 ---
 # <a name="define-linked-dimensions"></a>Définir des dimensions liées
   Une dimension liée est basée sur une dimension créée et enregistrée dans une autre base de données Analysis Services ayant la même version et le même niveau de compatibilité. En utilisant une dimension liée, vous pouvez créer, stocker et gérer une dimension dans une base de données, tout en rendant la dimension disponible pour les utilisateurs de plusieurs bases de données. Pour les utilisateurs, une dimension liée a la même apparence que n'importe quelle autre dimension.  
@@ -62,7 +61,7 @@ ms.locfileid: "66075575"
   
 2.  Dans le Gestionnaire de connexions, vérifiez que le fournisseur a la valeur **OLE DB natif\Fournisseur Microsoft OLE DB pour Analysis Services 11.0**.  
   
-3.  Entrez le nom du serveur (utilisez *ServerName*\\*nom_instance* pour une instance nommée)<sup>1</sup> ou tapez **localhost** pour vous connecter à un serveur de Analysis Services qui s’exécute sur le même ordinateur.  
+3.  Entrez le nom du serveur (utilisez *ServerName* \\ *nom_instance* pour une instance nommée)<sup>1</sup> ou tapez **localhost** pour vous connecter à un serveur de Analysis Services qui s’exécute sur le même ordinateur.  
   
 4.  Utilisez l'authentification Windows pour la connexion.  
   

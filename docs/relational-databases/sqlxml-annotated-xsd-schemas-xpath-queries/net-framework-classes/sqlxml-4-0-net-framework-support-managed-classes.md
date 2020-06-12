@@ -1,5 +1,6 @@
 ---
 title: classes managées SQLXML
+description: Découvrez les classes managées de Microsoft SQLXML qui exposent les fonctionnalités de SQLXML 4,0 dans le Framework Microsoft .NET.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7511dc12bea8a83544ddb39ff427b6400128294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b73fff4ba541e0f9b25c1b8dc84419dd5db1b2b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246918"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529943"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>Prise en charge de SQLXML 4.0 pour Microsoft .NET Framework - Classes managées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "75246918"
 > [!NOTE]  
 >  Le .NET Framework inclut le fournisseur de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET. Ce fournisseur peut être utilisé pour accéder à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir de l'environnement .NET ; toutefois, il ne peut gérer que les requêtes SQL traditionnelles (autrement dit, les requêtes de base de données relationnelle à l'exception des requêtes FOR XML). Vous ne pouvez pas exécuter les modèles XML ou les requêtes XPath côté serveur dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
- Pour plus d’informations sur l’accès et la modification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] dans le .NET Framework, et sur l’utilisation de DiffGrams [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour mettre à jour des données dans des tables, consultez [accès à la fonctionnalité SQLXML dans l’environnement .net](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ Pour plus d’informations sur l’accès et la modification des données dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, et sur l’utilisation de DiffGrams pour mettre à jour des données dans des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables, consultez [accès à la fonctionnalité SQLXML dans l’environnement .net](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
 > [!NOTE]  
 >  Vous pouvez également écrire des applications [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio pour charger en masse des documents XML à l'aide du chargement en masse XML. Pour plus d’informations, consultez [exécution du chargement en masse de données XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md). Vous devez ajouter une référence à la DLL de chargement en masse XML (Xblkld4.dll) dans votre application. Il s'agit d'une DLL COM pour laquelle Visual Studio .NET crée automatiquement la bibliothèque de wrappers.  
   
-  Cette section fournit des exemples d’applications qui montrent comment utiliser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les classes managées SQLXML :  
+  Cette section fournit des exemples d’applications qui montrent comment utiliser les [!INCLUDE[msCoName](../../../includes/msconame-md.md)] classes managées SQLXML :  
  [Exécution de requêtes SQL &#40;les classes managées SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)  
   [Exécution de requêtes SQL à l'aide de la méthode ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
   [Traitement du XML côté client &#40;les classes managées SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  

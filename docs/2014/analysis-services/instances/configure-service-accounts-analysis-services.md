@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c48dbe2f224b9b7e2d5e47f6771105adc0524ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080187"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544051"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurer les comptes de service (Analysis Services)
   L’approvisionnement de comptes à l’échelle du produit est traité dans la rubrique [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). Vous y trouverez des informations complètes sur les comptes de service pour tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Reportez-vous à cette rubrique pour en savoir plus sur les types de comptes valides, les privilèges Windows assignés par le programme d'installation, les autorisations du système de fichiers, les autorisations de Registre et bien plus encore.  
@@ -49,7 +48,7 @@ ms.locfileid: "66080187"
   
  Vous pouvez consulter ce groupe de sécurité dans les paramètres de sécurité locale :  
   
--   Exécuter compmgmt. msc | **Utilisateurs et groupes** | **locaux groupes** | `SQLServerMSASUser$`\<nom-serveur>`$MSSQLSERVER` (pour une instance par défaut).  
+-   Exécuter compmgmt. msc | **Utilisateurs et groupes locaux**  |  **Groups**  |  `SQLServerMSASUser$` Groupes \<server-name> `$MSSQLSERVER` (pour une instance par défaut).  
   
 -   Double-cliquez sur le groupe de sécurité pour afficher ses membres.  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66080187"
 |-|-|  
 |**Augmenter une plage de travail de processus** (SeIncreaseWorkingSetPrivilege)|Ce privilège est accessible par défaut à tous les utilisateurs par l'intermédiaire du groupe de sécurité **Utilisateurs** . Si vous verrouillez un serveur en supprimant des privilèges pour ce groupe, le démarrage d'Analysis Services risque d'échouer avec l'erreur suivante : « Le client ne dispose pas d'un privilège qui est obligatoire. » Lorsque cette erreur se produit, restaurez le privilège à Analysis Services en l'accordant au groupe de sécurité Analysis Services approprié.|  
 |**Ajuster les quotas de mémoire pour un processus** (SeIncreaseQuotaSizePrivilege)|Ce privilège sert à demander davantage de mémoire si un processus dispose de ressources insuffisantes pour terminer son exécution, avec comme limitation les seuils de mémoire établis pour l'instance.|  
-|**Verrouiller les pages en mémoire** (SeLockMemoryPrivilege)|Ce privilège est nécessaire uniquement lorsque la pagination est complètement désactivée. Par défaut, une instance serveur tabulaire utilise le fichier de pagination Windows, mais vous pouvez l'empêcher d'utiliser la pagination Windows en affectant la valeur 0 au paramètre `VertiPaqPagingPolicy`.<br /><br /> Si `VertiPaqPagingPolicy` a la valeur 1 (par défaut), l'instance serveur tabulaire utilise le fichier de pagination Windows. Les allocations ne sont pas verrouillées, ce qui permet à Windows de paginer selon les besoins. La pagination étant utilisée, nul besoin de verrouiller les pages en mémoire. Ainsi, pour la configuration par défaut ( `VertiPaqPagingPolicy` où = 1), vous n’avez pas besoin d’accorder le privilège **verrouiller les pages en mémoire** à une instance tabulaire.<br /><br /> `VertiPaqPagingPolicy`à 0. Si vous désactivez la pagination pour Analysis Services, les allocations sont verrouillées, ce qui implique que le privilège **Verrouiller les pages en mémoire** est accordé à l'instance tabulaire. Étant donné ce paramètre et le privilège **Verrouiller les pages en mémoire** , Windows ne peut pas paginer les allocations effectuées à Analysis Services lorsque le système est soumis à une sollicitation de la mémoire. Analysis Services s’appuie sur l’autorisation **verrouiller les pages en mémoire** en tant que `VertiPaqPagingPolicy` mise en œuvre derrière = 0. La désactivation de la pagination Windows n'est pas recommandée. Cela augmente le taux d'erreurs liées à l'insuffisance de mémoire pour les opérations qui réussiraient si la pagination était autorisée. Pour [Memory Properties](../server-properties/memory-properties.md) plus d’informations sur `VertiPaqPagingPolicy`, consultez Propriétés de la mémoire.|  
+|**Verrouiller les pages en mémoire** (SeLockMemoryPrivilege)|Ce privilège est nécessaire uniquement lorsque la pagination est complètement désactivée. Par défaut, une instance serveur tabulaire utilise le fichier de pagination Windows, mais vous pouvez l'empêcher d'utiliser la pagination Windows en affectant la valeur 0 au paramètre `VertiPaqPagingPolicy`.<br /><br /> Si `VertiPaqPagingPolicy` a la valeur 1 (par défaut), l'instance serveur tabulaire utilise le fichier de pagination Windows. Les allocations ne sont pas verrouillées, ce qui permet à Windows de paginer selon les besoins. La pagination étant utilisée, nul besoin de verrouiller les pages en mémoire. Ainsi, pour la configuration par défaut (où `VertiPaqPagingPolicy` = 1), vous n’avez pas besoin d’accorder le privilège **verrouiller les pages en mémoire** à une instance tabulaire.<br /><br /> `VertiPaqPagingPolicy`à 0. Si vous désactivez la pagination pour Analysis Services, les allocations sont verrouillées, ce qui implique que le privilège **Verrouiller les pages en mémoire** est accordé à l'instance tabulaire. Étant donné ce paramètre et le privilège **Verrouiller les pages en mémoire** , Windows ne peut pas paginer les allocations effectuées à Analysis Services lorsque le système est soumis à une sollicitation de la mémoire. Analysis Services s’appuie sur l’autorisation **verrouiller les pages en mémoire** en tant que mise en œuvre derrière `VertiPaqPagingPolicy` = 0. La désactivation de la pagination Windows n'est pas recommandée. Cela augmente le taux d'erreurs liées à l'insuffisance de mémoire pour les opérations qui réussiraient si la pagination était autorisée. Pour plus d’informations sur, consultez Propriétés de la [mémoire](../server-properties/memory-properties.md) `VertiPaqPagingPolicy` .|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>Pour afficher ou ajouter des privilèges Windows sur le compte de service  
   
 1.  Exécutez GPEDIT.msc | Stratégie de l'ordinateur local | Configuration ordinateur | Paramètres Windows | Paramètres de sécurité | Stratégies locales | Attribution des droits utilisateur.  
   
-2.  Passez en revue les stratégies `SQLServerMSASUser$`existantes qui incluent. Il s'agit d'un groupe de sécurité local présent sur les ordinateurs ayant une installation d'Analysis Services. Les privilèges Windows et les autorisations sur les dossiers de fichiers sont accordés à ce groupe de sécurité. Doublez-cliquez sur **Ouvrir une session en tant que service** pour voir de quelle façon le groupe de sécurité est spécifié sur votre système. Le nom complet du groupe de sécurité varie selon que vous avez installé Analysis Services comme instance nommée ou non. Utilisez ce groupe de sécurité plutôt que le compte de service lors de l'ajout des privilèges de compte.  
+2.  Passez en revue les stratégies existantes qui incluent `SQLServerMSASUser$` . Il s'agit d'un groupe de sécurité local présent sur les ordinateurs ayant une installation d'Analysis Services. Les privilèges Windows et les autorisations sur les dossiers de fichiers sont accordés à ce groupe de sécurité. Doublez-cliquez sur **Ouvrir une session en tant que service** pour voir de quelle façon le groupe de sécurité est spécifié sur votre système. Le nom complet du groupe de sécurité varie selon que vous avez installé Analysis Services comme instance nommée ou non. Utilisez ce groupe de sécurité plutôt que le compte de service lors de l'ajout des privilèges de compte.  
   
 3.  Pour ajouter des privilèges de compte dans GPEDIT, cliquez avec le bouton droit sur **Augmenter une plage de travail de processus** et sélectionnez **Propriétés**.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66080187"
   
  Le conteneur des autorisations sur les fichiers de données, les exécutables des fichiers programme, les fichiers de configuration, les fichiers journaux et les fichiers temporaires est un groupe de sécurité local créé par le programme d'installation de SQL Server.  
   
- Un groupe de sécurité est créé pour chaque instance que vous installez. Le groupe de sécurité est nommé d’après l’instance ─ soit **SQLServerMSASUser $ MSSQLSERVER** pour l’instance par `SQLServerMSASUser$` \<défaut, soit\<NomServeur>$ nom_instance> pour une instance nommée. Le programme d'installation configure ce groupe de sécurité avec les autorisations de fichiers requises pour effectuer les opérations serveur. Si vous vérifiez les autorisations de sécurité dans le répertoire \MSAS12.MSSQLSERVER\OLAP\BIN, vous verrez que le groupe de sécurité (et non le compte de service ou son SID par service) est le détenteur des autorisations sur ce répertoire.  
+ Un groupe de sécurité est créé pour chaque instance que vous installez. Le groupe de sécurité est nommé d’après l’instance, soit **SQLServerMSASUser $ MSSQLSERVER** pour l’instance par défaut, soit `SQLServerMSASUser$` \<servername> $ \<instancename> pour une instance nommée. Le programme d'installation configure ce groupe de sécurité avec les autorisations de fichiers requises pour effectuer les opérations serveur. Si vous vérifiez les autorisations de sécurité dans le répertoire \MSAS12.MSSQLSERVER\OLAP\BIN, vous verrez que le groupe de sécurité (et non le compte de service ou son SID par service) est le détenteur des autorisations sur ce répertoire.  
   
  Le groupe de sécurité contient un membre uniquement : l'identificateur de sécurité (SID) par service du compte de démarrage de l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le programme d'installation ajoute le SID par service au groupe de sécurité local. L'utilisation d'un groupe de sécurité local, avec son appartenance au SID, est la différence entre la configuration d'Analysis Services par le programme d'installation de SQL Server et le moteur de base de données.  
   
@@ -118,14 +117,14 @@ ms.locfileid: "66080187"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  Utilisez les | **groupes** **utilisateurs et groupes locaux**de **Computer Manager** | pour inspecter l’appartenance du\<groupe de sécurité\<SQLServerMSASUser $ ServerName>$ nom_instance>.  
+2.  Utilisez **Computer Manager**les  |  **groupes utilisateurs et groupes locaux**de Computer Manager  |  **Groups** pour inspecter l’appartenance du \<servername> $ \<instancename> groupe de sécurité SQLServerMSASUser $.  
   
      Le SID de membre doit correspondre au SID par service obtenu à l'étape 1.  
   
-3.  Utiliser les**fichiers** | programme de l' **Explorateur** | Windows**Microsoft SQL Server** | MSASxx. MSSQLServer | **OLAP** | **Emplacement** OLAP pour vérifier que les propriétés de sécurité du dossier sont accordées au groupe de sécurité à l’étape 2.  
+3.  Utiliser les fichiers programme de l' **Explorateur Windows**  |  **Program Files**  |  **Microsoft SQL Server** | MSASxx. MSSQLServer | **OLAP**  |  **bin** pour vérifier que les propriétés de sécurité du dossier sont accordées au groupe de sécurité à l’étape 2.  
   
 > [!NOTE]  
->  Ne supprimez ni ne modifiez jamais un SID. Pour restaurer un SID par service qui a été supprimé par inadvertance, [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201)consultez.  
+>  Ne supprimez ni ne modifiez jamais un SID. Pour restaurer un SID par service qui a été supprimé par inadvertance, consultez [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201) .  
   
  **En savoir plus sur les SID par service**  
   

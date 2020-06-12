@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a08f7fbccf1192f946043ebe932020d0fe5d3409
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537581"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visionneuses de modèle d'exploration de données (Concepteur de modèle d'exploration de données)
   Utilisez l’onglet **Visionneuse de modèle d’exploration de données** pour explorer les modèles d’exploration de données d’une structure associée.
@@ -31,7 +30,7 @@ ms.locfileid: "78175803"
 
  **Modèle d'exploration de données** Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre tout d'abord dans sa visionneuse personnalisée associée.
 
- **Visionneuse** Choisissez la visionneuse à utiliser pour explorer le modèle d'exploration de données sélectionné. Cette liste inclut les visionneuses [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournies par pour chaque modèle d’exploration [!INCLUDE[msCoName](../includes/msconame-md.md)] de données, la visionneuse de contenu d’exploration de données et les visionneuses de plug-in.
+ **Visionneuse** Choisissez la visionneuse à utiliser pour explorer le modèle d'exploration de données sélectionné. Cette liste inclut les visionneuses [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournies par pour chaque modèle d’exploration de données, la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de contenu d’exploration de données et les visionneuses de plug-in.
 
  Le diagramme suivant représente une visionneuse personnalisée et la visionneuse générique pour le même modèle.
 

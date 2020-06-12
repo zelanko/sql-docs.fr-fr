@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175628"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547691"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Actualisation des données PowerPivot avec SharePoint 2010
   L'actualisation des données [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] est une opération côté serveur planifiée qui interroge des sources de données externes pour mettre à jour les données incorporées [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] dans un classeur Excel 2010 stocké dans la bibliothèque de contenus.
@@ -75,7 +74,7 @@ ms.locfileid: "78175628"
 
 5.  Dans **base de données**, spécifiez l’instance de SQL Server qui hébergera la base de données pour cette application de service. La valeur par défaut est l'instance du moteur de base de données SQL Server qui héberge les bases de données de configuration de la batterie de serveurs.
 
-6.  Dans **nom de la base de données**, entrez le nom de la base de données d’application de service. La valeur par défaut est\<Secure_Store_Service_DB_> GUID. Le nom par défaut correspond au nom par défaut de l'application de service. Si vous avez entré un nom d'application de service unique, suivez une convention d'affectation des noms similaire pour la base de données afin de pouvoir les gérer ensemble.
+6.  Dans **nom de la base de données**, entrez le nom de la base de données d’application de service. La valeur par défaut est Secure_Store_Service_DB_ \<guid> . Le nom par défaut correspond au nom par défaut de l'application de service. Si vous avez entré un nom d'application de service unique, suivez une convention d'affectation des noms similaire pour la base de données afin de pouvoir les gérer ensemble.
 
 7.  Dans **Authentification de la base de données**, la valeur par défaut est Authentification Windows. Si vous choisissez Authentification SQL, reportez-vous au guide de l'administrateur SharePoint pour des recommandations concernant l'utilisation de ce type d'authentification dans votre batterie de serveurs.
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175628"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- Cette option d'identification est activée par défaut. Lorsque cette option d'informations d'identification est activée, le service système PowerPivot génère une application cible dans le Service Banque d'informations sécurisé pour stocker le nom d'utilisateur et le mot de passe entrés par le propriétaire de la planification. Une application cible générée est créée à l’aide de la convention\<d’affectation de noms suivante : PowerPivotDataRefresh_ GUID>. Une application de cible est créée pour chaque ensemble d'informations d'identification Windows. Si une application cible existe déjà, détenue par le service système PowerPivot, et stocke le nom d'utilisateur et le mot de passe entrés par la personne qui définit la planification, le service système PowerPivot utilisera cette application cible au lieu d'en créer une.
+ Cette option d'identification est activée par défaut. Lorsque cette option d'informations d'identification est activée, le service système PowerPivot génère une application cible dans le Service Banque d'informations sécurisé pour stocker le nom d'utilisateur et le mot de passe entrés par le propriétaire de la planification. Une application cible générée est créée à l’aide de cette Convention d’affectation de noms : PowerPivotDataRefresh_ \<guid> . Une application de cible est créée pour chaque ensemble d'informations d'identification Windows. Si une application cible existe déjà, détenue par le service système PowerPivot, et stocke le nom d'utilisateur et le mot de passe entrés par la personne qui définit la planification, le service système PowerPivot utilisera cette application cible au lieu d'en créer une.
 
  Le principal avantage de l'utilisation de cette option d'informations d'identification est la facilité d'utilisation et la simplicité. Le travail préalable est minime, car les applications cibles sont créées pour vous. En outre, l'exécution de l'actualisation des données sous les informations d'identification du propriétaire de la planification (qui est très probablement la personne qui a créé le classeur) simplifie les autorisations requises en aval. Très probablement, cet utilisateur dispose déjà des autorisations nécessaires sur la base de données cible. Lorsque l’actualisation des données s’exécute sous l’identité d’utilisateur Windows de cette personne, toutes les connexions de données qui spécifient « utilisateur actuel » fonctionnent automatiquement.
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175628"
 
  Si vous voyez **Integrated Security = SSPI** dans la chaîne de connexion, vous ne pouvez pas remplacer les informations d’identification dans la chaîne de connexion. La connexion utilisera toujours l'utilisateur actuel. Toutes les informations d'identification que vous spécifiées sont ignorées.
 
- Si vous voyez **Persist Security Info = false, password\*\*\*\*\*\*\*\*\*\*=\*, userid\<= Userlogin>**, c’est que vous avez une chaîne de connexion qui accepte les remplacements d’informations d’identification. Les informations d'identification qui s'affichent dans une chaîne de connexion (comme UserID et Password) ne sont pas des informations d'identification Windows, mais plutôt des connexions à une base de données ou d'autres comptes d'ouverture de session qui sont valides pour la source de données cible.
+ Si vous voyez **Persist Security Info = false, password = \* \* \* \* \* \* \* \* \* \* \* , userid \<userlogin> =**, vous avez une chaîne de connexion qui accepte les substitutions d’informations d’identification. Les informations d'identification qui s'affichent dans une chaîne de connexion (comme UserID et Password) ne sont pas des informations d'identification Windows, mais plutôt des connexions à une base de données ou d'autres comptes d'ouverture de session qui sont valides pour la source de données cible.
 
  **Comment remplacer des informations d'identification dans la chaîne de connexion**
 

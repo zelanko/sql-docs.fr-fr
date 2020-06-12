@@ -1,5 +1,6 @@
 ---
 title: Sequence et QNames (XQuery) | Microsoft Docs
+description: Découvrez les concepts fondamentaux des séquences et des QNames dans XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380780"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305769"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Séquence et QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  Dans l'expression (`/Root/a`), `Root` et `a` sont des QNames.  
   
- Dans l’exemple suivant, une requête est spécifiée par rapport à une colonne **XML** typée. La requête effectue une itération sur \<tous les éléments de> d’étape au premier emplacement atelier.  
+ Dans l’exemple suivant, une requête est spécifiée par rapport à une colonne **XML** typée. La requête effectue une itération sur tous les \<step> éléments au premier emplacement atelier.  
   
 ```  
 SELECT Instructions.query('  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  Chaque base de données que vous créez possède la collection de schémas XML **sys** . Elle réserve ces schémas de sorte qu'ils soient accessibles à partir de toute collection de schémas XML créée par l'utilisateur.  
   
 > [!NOTE]  
->  Cette implémentation ne prend pas en `local` charge le préfixe comme décrit dans la http://www.w3.org/2004/07/xquery-local-functionsspécification XQuery dans.  
+>  Cette implémentation ne prend pas en charge le `local` préfixe comme décrit dans la spécification XQuery dans http://www.w3.org/2004/07/xquery-local-functions .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts de base de XQuery](../xquery/xquery-basics.md)  

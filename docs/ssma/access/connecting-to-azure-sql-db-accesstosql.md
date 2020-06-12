@@ -1,5 +1,6 @@
 ---
 title: Connexion à Azure SQL DB (AccessToSQL) | Microsoft Docs
+description: Découvrez comment vous connecter à une instance cible de Azure SQL Database pour migrer des bases de données Access. SSMA obtient des métadonnées sur les bases de données dans Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006653"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293126"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Connexion à Azure SQL DB (AccessToSQL)
 Pour migrer des bases de données Access vers SQL Azure, vous devez vous connecter à l’instance cible de SQL Azure. Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de SQL Azure et affiche les métadonnées de la base de données dans l’Explorateur de métadonnées SQL Azure. SSMA stocke des informations sur l’instance de SQL Azure à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -35,7 +36,7 @@ Les métadonnées relatives à l’instance de SQL Azure ne sont pas synchronis�
 ## <a name="required-sql-azure-permissions"></a>Autorisations de SQL Azure requises  
 Le compte utilisé pour se connecter à SQL Azure nécessite des autorisations différentes en fonction des actions effectuées par le compte :  
   
--   Pour convertir des objets Access [!INCLUDE[tsql](../../includes/tsql-md.md)] en syntaxe, pour mettre à jour des métadonnées à partir de SQL Azure, ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit avoir l’autorisation de se connecter à l’instance de SQL Azure.  
+-   Pour convertir des objets Access en [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe, pour mettre à jour des métadonnées à partir de SQL Azure, ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit avoir l’autorisation de se connecter à l’instance de SQL Azure.  
   
 -   Pour charger des objets de base de données dans SQL Azure, l’exigence d’autorisation minimale est l’appartenance au rôle de base de données **db_owner** dans la base de données cible.  
   

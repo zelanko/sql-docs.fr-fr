@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 066969ef47dbe72732d7ee873f162a6a1e5915d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073664"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546091"
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
   Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
@@ -36,7 +35,7 @@ ms.locfileid: "66073664"
 |--------------|---------------------|  
 |[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|Choisissez entre les différentes approches permettant de créer des mesures et des groupes de mesures.|  
 |[Configurer des propriétés de mesure](configure-measure-properties.md)|Si vous avez utilisé l'Assistant Cube pour entreprendre la création de votre cube, vous devrez peut-être modifier la méthode d'agrégation, appliquer un format de données, définir la visibilité de la mesure dans les applications clientes ou éventuellement ajouter une expression de mesure pour manipuler les données avant que les valeurs soient agrégées.|  
-|[Configurer les propriétés d’un groupe de mesures](configure-measure-group-properties.md)|Dans un modèle multidimensionnel, un groupe de mesures équivaut à une table de faits de l'entrepôt de données source. Les propriétés définies sur un groupe de mesures vous permettent de spécifier des comportements de mise en cache, le stockage et les directives de traitement qui fonctionnent collectivement au niveau du groupe de mesures. La configuration de partitions est en partie déterminée par les propriétés définies sur les objets groupes de mesures.|  
+|[Configurer les propriétés d'un groupe de mesures](configure-measure-group-properties.md)|Dans un modèle multidimensionnel, un groupe de mesures équivaut à une table de faits de l'entrepôt de données source. Les propriétés définies sur un groupe de mesures vous permettent de spécifier des comportements de mise en cache, le stockage et les directives de traitement qui fonctionnent collectivement au niveau du groupe de mesures. La configuration de partitions est en partie déterminée par les propriétés définies sur les objets groupes de mesures.|  
 |[Utiliser des fonctions d'agrégation](use-aggregate-functions.md)|Découvrez les méthodes d'agrégation qui peuvent être affectées à une mesure.|  
 |[Définir le comportement semi-additif](define-semiadditive-behavior.md)|Le comportement semi-additif fait référence aux agrégations qui sont valides pour certaines dimensions, mais pas pour d'autres. Un solde de compte bancaire en est un exemple courant. Vous pouvez agréger des soldes par client et par région, mais pas sur une période donnée. Par exemple, il n'est pas souhaitable d'ajouter des soldes du même compte sur plusieurs jours consécutifs. Pour définir un comportement semi-additif, utilisez l'Assistant Ajouter Business Intelligence.|  
 |[Groupes de mesures liés](linked-measure-groups.md)|Réaffectez un groupe de mesures existant à d'autres cubes de la même base de données ou à des bases de données Analysis Services différentes.|  
@@ -46,7 +45,7 @@ ms.locfileid: "66073664"
   
  Chaque cube doit posséder au moins une mesure, mais la plupart en ont plusieurs, parfois même des centaines. D'un point de vue structurel, une mesure est souvent mappée à une colonne source d'une table de faits, cette colonne fournissant les valeurs utilisées pour charger la mesure. Vous pouvez également définir une mesure à l'aide de MDX.  
   
- Les mesures sont contextuelles et s'appliquent à des données numériques dans un contexte qui est déterminé par tout membre de dimension inclus dans la requête. Par exemple, une mesure qui calcule les **ventes des revendeurs** est sauvegardée par `Sum` un opérateur et ajoute les montants des ventes pour chaque membre de dimension inclus dans la requête. Que la requête spécifie des produits individuels, qu'elle effectue un classement dans une catégorie ou qu'elle soit segmentée par tranches horaires ou par situation géographique, la mesure doit produire une opération qui est valide pour les dimensions incluses dans la requête.  
+ Les mesures sont contextuelles et s'appliquent à des données numériques dans un contexte qui est déterminé par tout membre de dimension inclus dans la requête. Par exemple, une mesure qui calcule les **ventes des revendeurs** est sauvegardée par un `Sum` opérateur et ajoute les montants des ventes pour chaque membre de dimension inclus dans la requête. Que la requête spécifie des produits individuels, qu'elle effectue un classement dans une catégorie ou qu'elle soit segmentée par tranches horaires ou par situation géographique, la mesure doit produire une opération qui est valide pour les dimensions incluses dans la requête.  
   
  Dans cet exemple, **Reseller Sales** est agrégé en différents niveaux dans la hiérarchie **Sales Territory** .  
   

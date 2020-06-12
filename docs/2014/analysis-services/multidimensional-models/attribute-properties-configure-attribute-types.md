@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c73600d934bb87540487e0d82874650d708e034f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544791"
 ---
 # <a name="configure-attribute-types"></a>Configurer des types d'attributs
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les types d’attributs permettent de classer un attribut en termes de fonctionnalités d’entreprise. Il existe un grand nombre de types d'attributs que la plupart des applications clientes utilisent pour afficher ou prendre en charge un attribut. Cependant, certains types d’attributs ont une signification particulière pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, certains types d'attributs identifient des attributs qui représentent des périodes dans divers calendriers des dimensions de temps.  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les types d’attributs permettent de classer un attribut en termes de fonctionnalités d’entreprise. Il existe un grand nombre de types d'attributs que la plupart des applications clientes utilisent pour afficher ou prendre en charge un attribut. Cependant, certains types d’attributs ont une signification particulière pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, certains types d'attributs identifient des attributs qui représentent des périodes dans divers calendriers des dimensions de temps.  
   
 ##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a> Définition des types d'attributs  
  La valeur de la propriété `Type` d'un attribut détermine le type de l'attribut de cet attribut. Différents assistants d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définissent les types d’attributs lors de la définition des dimensions ou des attributs. Ces Assistants d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définissent également les types d’attributs quand ils ajoutent des fonctionnalités à des dimensions. Par exemple, l'Assistant Business Intelligence applique des types d'attributs aux attributs d'une dimension lorsqu'il ajoute l'intelligence comptable pour identifier les attributs qui contiennent les noms, les codes, les numéros et la structure des comptes de la dimension. L'Assistant Business Intelligence utilise également les types d'attributs, par exemple pour la conversion de devises. Pour plus d’informations, consultez [Créer une dimension de type devise](database-dimensions-create-a-currency-type-dimension.md).  

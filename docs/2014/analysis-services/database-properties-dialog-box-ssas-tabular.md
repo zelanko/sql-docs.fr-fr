@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8361508d678e407be9bed6eb18e8c221364daf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41bf7838a714c35e2149e8163e21a7b8044a77c6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082361"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528925"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Boîte de dialogue Propriétés de la base de données (SSAS - Tabulaire)
   Cette boîte de dialogue fournit des horodateurs et d'autres informations descriptives, ainsi que des propriétés personnalisables qui déterminent si la base de données utilise des données en mémoire cache. Les autres propriétés personnalisables incluent la modification du nom de la base de données et la spécification des options d'emprunt d'identité.  

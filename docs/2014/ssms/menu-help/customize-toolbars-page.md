@@ -12,17 +12,17 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32e57b44b759ba36ea92cd7d08a600738ff2b4dd
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470006"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859231"
 ---
 # <a name="customize-toolbars-page"></a>Personnaliser (page Barres d'outils)
   L'onglet **Barres d'outils** vous permet de créer, de renommer, de supprimer et de rétablir des barres d'outils. Vous pouvez accéder à cet onglet en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Barres d'outils**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Barres d'outils**  
  Affiche les barres d'outils intégrées et toutes les autres barres d'outils que vous créez. Lorsqu'une barre d'outils est affichée, une coche figure à gauche de son nom dans cette boîte de dialogue.  
   

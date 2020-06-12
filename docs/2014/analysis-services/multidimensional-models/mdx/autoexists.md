@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd35958a364456c12d58392afe3754f6adcf97b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074728"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546591"
 ---
 # <a name="autoexists"></a>Autoexists
   La fonctionnalité d’auto-existence, ou *autoexists* , limite l’espace du cube aux cellules qui existent réellement dans le cube, par opposition à celles qui pourraient exister en créant toutes les combinaisons possibles de membres de la hiérarchie d’attribut à partir de la même hiérarchie. En effet, les membres d'une hiérarchie d'attribut ne peuvent coexister avec les membres d'une autre hiérarchie d'attribut au sein de la même dimension. Lorsque deux hiérarchies d'attribut, ou plus, de la même dimension sont utilisées dans une instruction SELECT, Analysis Services évalue les expressions des attributs pour s'assurer que les membres de ces attributs sont correctement limités afin de répondre aux critères de tous les autres attributs.  
@@ -85,7 +84,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Les valeurs retournées des cellules sont identiques, même si les métadonnées dans l'ensemble de résultats apparaissent différemment. Par exemple, dans la requête ci-dessus, la hiérarchie Country a été déplacée vers l'axe de segment (dans la clause WHERE) et ne peut donc s'afficher de manière explicite dans l'ensemble de résultats.  
   
- Chacune de ces trois requêtes précédentes illustre l’effet du comportement de l’auto-existence [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]dans.  
+ Chacune de ces trois requêtes précédentes illustre l’effet du comportement de l’auto-existence dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="deep-and-shallow-autoexists"></a>Fonctionnalités Deep Autoexists et Shallow Autoexists  
  Autoexists peut être appliquée en profondeur ou superficiellement aux expressions. `Deep Autoexists` signifie que toutes les expressions seront évaluées pour rencontrer l'espace le plus profond possible après l'application des expressions de découpage, des expressions de sous-sélection dans l'axe, etc. `Shallow Autoexists` permet d'évaluer les expressions externes avant l'expression actuelle et de passer ces résultats à l'expression actuelle. La fonctionnalité Deep Autoexists est paramétrée par défaut.  
@@ -134,12 +133,12 @@ WHERE (Measures.[Internet Sales Amount],
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
-|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0,04%**|  
+|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0,04 %**|  
 |**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
 |**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0,53 %**|  
 |**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2,47%**|  
 |**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0,05%**|  
-|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
+|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0,57%**|  
 |**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
 |**Road-150**|**2 363 805,16 $**|**$0,00**|**0,00%**|  
 |**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3,89%**|  
@@ -186,12 +185,12 @@ WHERE (Measures.[Internet Sales Amount],
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14 356 699,36 $**|**19 012,71 $**|**0,13%**|  
-|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0,04%**|  
+|**Road-250**|**9 377 457,68 $**|**4 032,47 $**|**0,04 %**|  
 |**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1,63%**|  
 |**Road-650**|**7 442 141,81 $**|**39 698,30 $**|**0,53 %**|  
 |**Touring-1000**|**6 723 794,29 $**|**166 144,17 $**|**2,47%**|  
 |**Road-550-W**|**3 668 383,88 $**|**1 901,97 $**|**0,05%**|  
-|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0.57%**|  
+|**Road-350-W**|**3 665 932,31 $**|**20 946,50 $**|**0,57%**|  
 |**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0,01%**|  
 |**Road-150**|**2 363 805,16 $**|**$0,00**|**0,00%**|  
 |**Touring-3000**|**2 046 508,26 $**|**79 582,15 $**|**3,89%**|  
@@ -224,7 +223,7 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-500**|**1 067 327,31 $**|**17 266,09 $**|**1,62%**|  
 |**Mountain-400-W**|**592 450,05 $**|**$303.49**|**0,05%**|  
 |**LL Mountain Frame**|**521 864,42 $**|**$252.41**|**0,05%**|  
-|**ML Mountain Frame-W**|**482 953,16 $**|**$206,95**|**0,04%**|  
+|**ML Mountain Frame-W**|**482 953,16 $**|**$206,95**|**0,04 %**|  
 |**ML Mountain Frame**|**343 785,29 $**|**$161.82**|**0,05%**|  
 |**Women's Mountain Shorts**|**260 304,09 $**|**6 675,56 $**|**2,56%**|  
   

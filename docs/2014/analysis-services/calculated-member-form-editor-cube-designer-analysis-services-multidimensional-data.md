@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088372"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527656"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire de membre calculé (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire de membre calculé** de l'onglet **Calculs** dans le Concepteur de cube pour créer et modifier un membre calculé.  
@@ -39,7 +38,7 @@ ms.locfileid: "66088372"
   
  **Remarque** Cette option est disponible si **Hiérarchie parente** spécifie une hiérarchie différente de MESURES.  
   
- **Modifiés**  
+ **Changement**  
  Affiche la boîte de dialogue **Sélectionnez le membre parent** pour choisir un **Membre parent**. Pour plus d’informations sur la boîte de dialogue **Sélectionnez le membre parent**, consultez [Boîte de dialogue Sélectionnez le membre parent &#40;Analysis Services - Données multidimensionnelles&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Expression**  
@@ -87,7 +86,7 @@ ms.locfileid: "66088372"
  **Expressions de police**  
  Développez cette branche pour afficher les options **Nom de police**, **Taille de police**et **Indicateurs de police** .  
   
- **Nom de police**  
+ **Nom de la police**  
  Tapez l'expression MDX qui fournit le nom de la police utilisée pour le membre calculé.  
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  

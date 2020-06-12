@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dec570bb4ef4a499c5f141d62b15467212d2ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084732"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522595"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Supprimer un filtre d'un modèle d'exploration de données
   Lorsque vous créez un filtre sur un modèle d'exploration de données, vous pouvez créer des modèles sur un sous-ensemble des données contenues dans la vue de source de données. Les filtres sont également utiles pour tester la précision du modèle sur un sous-ensemble des données d'origine.  
@@ -54,7 +53,7 @@ ms.locfileid: "66084732"
   
 1.  Dans l'Explorateur de solutions, cliquez sur le modèle d'exploration de données qui contient le filtre.  
   
-2.  Dans la fenêtre **Propriétés** , cliquez avec le bouton droit sur le texte `Filter` de filtre dans la propriété, puis sélectionnez **Sélectionner tout**.  
+2.  Dans la fenêtre **Propriétés** , cliquez avec le bouton droit sur le texte de filtre dans la `Filter` propriété, puis sélectionnez **Sélectionner tout**.  
   
 3.  Appuyez sur la touche Retour arrière ou Suppr.  
   

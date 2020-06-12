@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075028"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546711"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Octroyer des autorisations de cube ou de modèle (Analysis Services)
   Un cube ou modèle tabulaire est le principal objet de requête dans un modèle de données Analysis Services. Lors de la connexion à des données tabulaires ou multidimensionnelles à partir d'Excel pour l'exploration de données ad hoc, les utilisateurs commencent en général par sélectionner un cube ou modèle tabulaire spécifique comme structure de données derrière l'objet de rapport de tableau croisé dynamique. Cette rubrique explique comment accorder les autorisations nécessaires pour l'accès aux données tabulaires ou de cube.  
@@ -93,7 +92,7 @@ ms.locfileid: "66075028"
   
 2.  Dans SSMS, accédez au dossier **Rôles** et cliquez avec le bouton droit sur un rôle existant.  
   
-3.  Sélectionnez **le rôle** | de script**créer dans** | un**fichier**.  
+3.  Sélectionnez le **rôle de script**  |  **créer dans**un  |  **fichier**.  
   
 4.  Enregistrez le fichier avec une extension .xmla. Pour tester le script, supprimez le rôle actif, ouvrez le fichier dans SSMS, puis appuyez sur la touche F5 pour exécuter le script.  
   

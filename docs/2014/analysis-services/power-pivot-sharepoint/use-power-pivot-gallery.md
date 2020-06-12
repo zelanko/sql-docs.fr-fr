@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547711"
 ---
 # <a name="use-powerpivot-gallery"></a>Utiliser la Galerie PowerPivot
   La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et des rapports Reporting Services contenant des données PowerPivot et d'autres types de documents.
@@ -41,7 +40,7 @@ ms.locfileid: "78175688"
 
 -   [Problèmes connus](#bkmk_known_issues)
 
- [Conditions préalables](#prereq)
+ [Composants requis](#prereq)
 
 ##  <a name="prerequisites"></a><a name="prereq"></a> Conditions préalables
 
@@ -146,16 +145,16 @@ ms.locfileid: "78175688"
 
 3.  Cliquez sur la flèche Bas à droite, puis sélectionnez **Modifier les propriétés**.
 
-4.  Cliquez sur **Save**. L'enregistrement du document force le service d'instantanés à régénérer l'image d'aperçu.
+4.  Cliquez sur **Enregistrer**. L'enregistrement du document force le service d'instantanés à régénérer l'image d'aperçu.
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>Problèmes connus
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> Problèmes connus
 
 ### <a name="document-type-is-not-supported"></a>Le type de document n'est pas pris en charge.
  Le type de contenu **Document de Galerie PowerPivot** n'est pas pris en charge. Si vous activez le type de contenu **Document de Galerie PowerPivot** pour une bibliothèque de documents, et si vous tentez de créer un document de ce type, un message d'erreur semblable à l'un des messages suivants s'affiche :
 
 -   « Nouveau document » nécessite une application et un navigateur Web compatibles avec Microsoft SharePoint Foundation. Pour ajouter un document à cette bibliothèque de documents, cliquez sur le bouton « Télécharger un document ».
 
--   « L’adresse Internet’http://[nom du serveur]/testSite/PowerPivot Gallery/ReportGallery/Forms/template. xlsx’n’est pas valide. » Microsoft Excel ne peut pas accéder au fichier’http://[nom du serveur]/testSite/PowerPivot Gallery/ReportGallery/Forms/template. xlsx'. Plusieurs raisons sont possibles :
+-   « L’adresse Internet’http://[nom du serveur]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx 'n’est pas valide. » Microsoft Excel ne peut pas accéder au fichier’http://[nom du serveur]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx '. Plusieurs raisons sont possibles :
 
  Le type de contenu **Document de Galerie PowerPivot** n'est pas automatiquement ajouté aux bibliothèques de documents. Vous ne rencontrerez pas ce problème à moins que vous n'ayez activé manuellement le type de contenu non pris en charge.
 

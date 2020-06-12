@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 546448bd05f3af45b7093acb2dbb9d1e1a8f1bd5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081455"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528495"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action d'extraction (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire d’action d’extraction** sous l’onglet **Actions** du Concepteur de cube pour modifier l’action d’extraction sélectionnée dans le volet **Organisateur d’action** . Pour plus d’informations sur les actions d’extraction, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -59,7 +58,7 @@ ms.locfileid: "66081455"
  **Par défaut**  
  Sélectionnez **True** pour définir cette action d’extraction comme valeur par défaut. Sinon, sélectionnez **False**.  
   
- Si la `RETURN` clause est omise dans une instruction `DRILLTHROUGH` MDX exécutée par une application cliente [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l’instance évalue toutes les actions d’extraction par défaut et exécute la première action d’extraction par défaut qui retourne un jeu non vide. Pour plus d’informations sur l' `DRILLTHROUGH` instruction MDX, consultez [instruction d’extraction &#40;&#41;MDX ](/sql/mdx/mdx-data-manipulation-drillthrough).  
+ Si la `RETURN` clause est omise dans une `DRILLTHROUGH` instruction MDX exécutée par une application cliente, l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance évalue toutes les actions d’extraction par défaut et exécute la première action d’extraction par défaut qui retourne un jeu non vide. Pour plus d’informations sur l' `DRILLTHROUGH` instruction MDX, consultez [instruction d’extraction &#40;&#41;MDX ](/sql/mdx/mdx-data-manipulation-drillthrough).  
   
 > [!NOTE]  
 >  Cette option est utilisée à des fins de compatibilité ascendante.  
@@ -75,10 +74,10 @@ ms.locfileid: "66081455"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Batch|L’action doit s’exécuter dans le cadre d’une opération par lot ou d’une tâche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive (Interactif)|L'action s'exécute lorsque l'utilisateur l'invoque.|  
+|Interactive|L'action s'exécute lorsque l'utilisateur l'invoque.|  
 |À l’ouverture|L'action s'exécute à la première ouverture du cube.|  
   
  **Application**  
@@ -92,7 +91,7 @@ ms.locfileid: "66081455"
  **Description**  
  Tapez une description facultative de l'action.  
   
- **-**  
+ **Caption**  
  Entrez la légende à afficher pour l’action dans l’application cliente si l’option **La légende est MDX** a la valeur **False**.  
   
  Entrez l’expression MDX (Multidimensional Expressions) qui retourne une chaîne pour la légende si l’option **La légende est MDX** a la valeur **True**.  

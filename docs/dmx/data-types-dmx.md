@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f1c43ad454f499429a151dc23177e380f4eac88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e45433b1a7e031c0aa5e549f9b2d48c036ef91c6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892866"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669778"
 ---
 # <a name="data-types-dmx"></a>Types de données (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Lorsque vous utilisez les extensions DMX (Data Mining Extensions) pour définir un nouveau modèle [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]d’exploration de données dans, vous devez fournir un type de données pour chaque colonne du modèle. Le type de données décrit les données que l'algorithme d'exploration de données utilisera lorsqu'il construira le modèle.  
+  Lorsque vous utilisez les extensions DMX (Data Mining Extensions) pour définir un nouveau modèle d’exploration de données dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous devez fournir un type de données pour chaque colonne du modèle. Le type de données décrit les données que l'algorithme d'exploration de données utilisera lorsqu'il construira le modèle.  
   
  Les types de données dépendent de l'algorithme utilisé. Chaque algorithme détermine les types de données pris en charge et leur mode d'utilisation. Les algorithmes Microsoft prennent en charge les types de données suivants :  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68892866"
   
 -   Date  
   
- Pour plus d’informations sur les types de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données pris en charge par, consultez [types de données &#40;&#41;d’exploration de données ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
+ Pour plus d’informations sur les types de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pris en charge par, consultez [types de données &#40;&#41;d’exploration de données ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

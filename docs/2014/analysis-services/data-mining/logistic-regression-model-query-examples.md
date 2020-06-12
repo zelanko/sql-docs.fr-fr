@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084232"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522225"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Exemples de requêtes de modèle de régression logistique
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions à l'aide de nouvelles données.  
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>Pour créer une version discrétisée de la structure d'exploration de données et des modèles du centre d'appels  
   
-1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans Explorateur de solutions, développez **structures d’exploration de données**.  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , dans Explorateur de solutions, développez **structures d’exploration de données**.  
   
 2.  Cliquez avec le bouton droit sur Call Center.dmm, puis sélectionnez **Copier**.  
   
@@ -157,7 +156,7 @@ NATURAL PREDICTION JOIN
   
 6.  Sous l’onglet **Structure d’exploration de données** , cliquez avec le bouton droit sur la colonne de Service Grade, puis sélectionnez **Propriétés**.  
   
-7.  Modifiez la `Content` propriété de **continue** en **discrétisation**. Remplacez la `DiscretizationMethod` valeur de la propriété par **clusters**. Pour DiscretizationBucketCount, tapez **3**.  
+7.  Modifiez la `Content` propriété de **continue** en **discrétisation**. Remplacez la valeur `DiscretizationMethod` de la propriété par **clusters**. Pour DiscretizationBucketCount, tapez **3**.  
   
     > [!NOTE]  
     >  Ces paramètres sont utilisés juste pour illustrer le processus et ne produisent pas nécessairement de modèle valide.  

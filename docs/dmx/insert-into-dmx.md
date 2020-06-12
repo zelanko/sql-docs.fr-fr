@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a66897fe02d33c3f614ad5a24e5b2f9a78e1e4c9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892726"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670083"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,11 +44,11 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  Requête source dans le format défini par le fournisseur  
   
 ## <a name="remarks"></a>Notes  
- Si vous ne spécifiez pas de **modèle** d’exploration de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données ou de structure d’exploration de **données**, recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
+ Si vous ne spécifiez pas de **modèle** d’exploration de données ou de **structure d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
   
- En utilisant la deuxième forme de syntaxe, insérer dans*\<l’objet>*. COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans l’apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
+ En utilisant la deuxième forme de syntaxe, insérer dans l'* \< objet>*. COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans l’apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
   
- Si vous utilisez **insert into** avec un modèle d’exploration de données ou une structure d’exploration de \<données et que vous laissez les \<colonnes de modèle mappées> et les arguments de> de requête de données source, l’instruction se comporte comme **ProcessDefault**, en utilisant des liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [options et paramètres de traitement &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). L’exemple suivant illustre la syntaxe :  
+ Si vous utilisez **insert into** avec un modèle d’exploration de données ou une structure d’exploration de données et que vous laissez les \< colonnes de modèle mappées> et les \< arguments de> de requête de données source, l’instruction se comporte comme **ProcessDefault**, en utilisant des liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [options et paramètres de traitement &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). L’exemple suivant illustre la syntaxe :  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -60,14 +60,14 @@ INSERT INTO [MINING MODEL] <model>
   
 |.|État des objets|Résultats|  
 |---------------|----------------------|------------|  
-|Insérer dans le modèle de modèle*\<d’exploration de données>*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
+|INSÉRER dans le modèle de modèle d’exploration de données* \<>*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
 ||La structure d'exploration de données n'est pas traitée.|Le modèle et la structure d'exploration de données sont traités.|  
 ||La structure d'exploration de données contient des modèles d'exploration de données supplémentaires.|Échec du traitement. Vous devez retraiter la structure et les modèles d'exploration de données associés.|  
-|Insérer dans la structure de structure*\<d’exploration de données>*|La structure d'exploration de données est traitée ou non.|La structure d'exploration de données et les modèles d'exploration de données associés sont traités.|  
-|Insérer dans le*\<modèle* de modèle d’exploration de données>qui contient une requête source<br /><br /> or<br /><br /> Insérer dans une structure d’exploration de données*\<>* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez effacer les objets avant d’effectuer cette opération en utilisant [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSÉRER dans la structure de STRUCTURE d’exploration de données* \<>*|La structure d'exploration de données est traitée ou non.|La structure d'exploration de données et les modèles d'exploration de données associés sont traités.|  
+|INSÉRER dans le modèle de modèle d’exploration de données* \<>* qui contient une requête source<br /><br /> or<br /><br /> INSÉRER dans une structure d’exploration de données* \<>* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez effacer les objets avant d’effectuer cette opération en utilisant [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Mapped Model Columns  
- En utilisant les \<colonnes du modèle mappé> élément, vous pouvez mapper les colonnes de la source de données aux colonnes de votre modèle d’exploration de données. Les \<colonnes du modèle mappé> élément se présente sous la forme suivante :  
+ En utilisant les \< colonnes du modèle mappé> élément, vous pouvez mapper les colonnes de la source de données aux colonnes de votre modèle d’exploration de données. Les \< colonnes du modèle mappé> élément se présente sous la forme suivante :  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -80,7 +80,7 @@ INSERT INTO [MINING MODEL] <model>
  La syntaxe de SKIP requiert que vous insériez SKIP à la position de la colonne individuelle dans l'ensemble de lignes d'entrée qui n'a aucune colonne de structure d'exploration de données correspondante. Par exemple, dans l'exemple de table imbriquée ci-dessous, OrderNumber doit être sélectionné dans la clause APPEND afin de pouvoir être utilisé dans la clause RELATE pour spécifier la jointure ; toutefois, vous ne souhaitez pas insérer les données OrderNumber dans la table imbriquée dans la structure d'exploration de données. Par conséquent, l'exemple utilise le mot clé SKIP au lieu de OrderNumber dans l'argument INSERT INTO.  
   
 ## <a name="source-data-query"></a>Source Data Query  
- L' \<élément de> de requête de données source peut inclure les types de sources de données suivants :  
+ L' \< élément de> de requête de données source peut inclure les types de sources de données suivants :  
   
 -   **OPENQUERY**  
   
@@ -93,7 +93,7 @@ INSERT INTO [MINING MODEL] <model>
  Pour plus d’informations sur les types de sources de données, consultez [&#60;&#62;de requête de données source ](../dmx/source-data-query.md).  
   
 ## <a name="basic-example"></a>Exemple de base  
- L’exemple suivant utilise **OPENQUERY** pour effectuer l’apprentissage d’un modèle Naive Bayes basé sur les données de [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] publipostage ciblées dans la base de données.  
+ L’exemple suivant utilise **OPENQUERY** pour effectuer l’apprentissage d’un modèle Naive Bayes basé sur les données de publipostage ciblées dans la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données.  
   
 ```  
 INSERT INTO NBSample (CustomerKey, Gender, [Number Cars Owned],  

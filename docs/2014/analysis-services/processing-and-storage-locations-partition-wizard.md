@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dda2dc57-923d-4db9-93a7-38e95770f3df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60294db73475d97c487b33d41dd6f9637ae94ba1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070652"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539981"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Emplacements pour le traitement et le stockage (Assistant Partition)
   Utilisez la page **Emplacements pour le traitement et le stockage** pour spécifier l’instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] du cube qui possède la partition, ainsi que l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui stocke les données de la partition. Vous pouvez définir une partition distante en spécifiant une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] distante ou un emplacement de stockage différent de l'emplacement par défaut. Pour plus d’informations sur les partitions distantes, consultez [Partitions distantes](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "66070652"
 > [!NOTE]  
 >  Une erreur se produit si vous sélectionnez une source de données dans laquelle la propriété de la chaîne de connexion `Initial Catalog` ne définit pas une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] valide ou si la base de données spécifiée dans la chaîne de connexion `Initial Catalog` ne prend pas en charge les partitions distantes (autrement dit, si la propriété `MasterDatasourceID` de la base de données n'est pas configurée avec une valeur valide).  
   
- **Nouvelle**  
+ **Nouveau**  
  Crée une nouvelle source de données qui représente l'instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] distante responsable du traitement de la partition.  
   
 ## <a name="storage-location-options"></a>Options de l'emplacement de stockage  

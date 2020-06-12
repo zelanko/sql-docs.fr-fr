@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 730ba13c22c8dcecf503398baae683f5d9c2b667
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072957"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545626"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Définir les options d'emprunt d'identité (SSAS - Multidimensionnel)
   Lorsque vous créez un objet `data source` dans un modèle Analysis Services, un des paramètres que vous devez configurer est une option d'emprunt d'identité. Cette option détermine si Analysis Services utilise l'identité d'un compte d'utilisateur Windows spécifique lors d'opérations locales spécifiques associées à la connexion, telles que le téléchargement d'un fournisseur de données OLE DB ou la résolution d'informations de profil utilisateur dans des environnements qui prennent en charge les profils itinérants.  
@@ -49,7 +48,7 @@ ms.locfileid: "66072957"
  Toutes les options sont disponibles dans la boîte de dialogue, mais elles ne sont pertinentes pour tous les scénarios. Utilisez les informations suivantes pour déterminer la meilleure solution pour votre scénario.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Sélectionnez cette option pour que l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utilise les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié au format suivant : * \<nom de domaine>***\\*** \<nom du compte d’utilisateur>*.  
+ Sélectionnez cette option pour que l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utilise les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié au format suivant : *\<Domain name>***\\***\<User account name>* .  
   
  Sélectionnez cette option pour utiliser une identité d'utilisateur Windows dédiée et dotée de privilèges minimaux que vous avez créée spécifiquement à des fins d'accès aux données. Par exemple, si vous créez de manière régulière un compte à usage général pour la récupération de données utilisées dans des rapports, vous pouvez spécifier ce compte ici.  
   

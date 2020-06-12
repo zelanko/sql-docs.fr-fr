@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e315d21eb6e7b8d5e590ca4cfb655ce232ddf945
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085079"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523187"
 ---
 # <a name="data-mining-architecture"></a>Architecture d'exploration de données
   Cette section décrit l'architecture des solutions d'exploration de données qui sont hébergées dans une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les rubriques de cette section décrivent l'architecture logique et physique d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge l'exploration de données, et fournissent également des informations sur les clients, les fournisseurs et les protocoles qui peuvent être utilisés pour communiquer avec des serveurs d'exploration de données, et pour utiliser des objets d'exploration de données localement ou à distance.  
@@ -45,6 +44,6 @@ ms.locfileid: "66085079"
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de modèles multidimensionnels](../multidimensional-models/multidimensional-model-programming.md)   
- [Programmation de l'exploration de données](../dev-guide/data-mining-programming.md)  
+ [Programmation de l’exploration de données](../dev-guide/data-mining-programming.md)  
   
   

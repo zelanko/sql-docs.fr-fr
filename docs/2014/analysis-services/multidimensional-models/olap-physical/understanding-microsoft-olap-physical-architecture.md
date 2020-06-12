@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 7109fad3-65d3-4971-87db-31194bc85e05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 68e1bba4999f237d5b38ac3f475d2b67fc41959b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc98ce256342d17ae8d5433089c2a742ff612648
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62724804"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545871"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>Architecture physique (Analysis Services - Données multidimensionnelles)
     
 ## <a name="in-this-section"></a>Dans cette section  
- Les rubriques suivantes fournissent des informations supplémentaires sur l’architecture d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] une solution.  
+ Les rubriques suivantes fournissent des informations supplémentaires sur l’architecture d’une [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solution.  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
