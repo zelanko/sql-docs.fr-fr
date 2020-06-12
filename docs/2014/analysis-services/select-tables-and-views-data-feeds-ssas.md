@@ -12,12 +12,12 @@ ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82fcf08a84a06d33c33a520ce351f6c685092a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee72d4347e85851388b4a4ab1f4d29b33a89134
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069281"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858124"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Sélectionner des tables et des vues (flux de données) (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de sélectionner les tables et les vues à partir desquelles vous voulez importer des données. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -26,7 +26,7 @@ ms.locfileid: "66069281"
   
  Pour les sources de données qui utilisent l'Authentification Windows, les informations d'identification de l'utilisateur actuel sont utilisées pour extraire les tables et les vues dans la boîte de dialogue Sélectionner des tables et des vues. Pour d'autres sources de données, les informations d'identification fournies dans la chaîne de connexion sont utilisées pour extraire les données.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **URL du flux de données**  
  Affiche l'URL pour le flux de données que vous avez sélectionné.  
   

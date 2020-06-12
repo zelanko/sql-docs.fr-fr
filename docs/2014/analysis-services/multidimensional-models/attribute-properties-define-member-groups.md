@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2da7f19fa9626792a117ffa0108a28c50f32c5f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95f9516c7a0077e97af348afa863fe15c8d4528b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077302"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544741"
 ---
 # <a name="define-member-groups"></a>Définir des groupes de membres
   Si un attribut possède un grand nombre de membres, vous pouvez décider de grouper ces membres dans des compartiments afin de réduire le nombre de membres visibles lorsque les utilisateurs parcourent les données d'une hiérarchie. Vous pouvez également déterminer le nombre de compartiments dans lesquels sont groupés les membres et définir un schéma d'attribution de noms pour les compartiments. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](attribute-properties-group-attribute-members.md).  

@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5edbd0ab8f713d227e4ef06307090b6079390869
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076687"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537131"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Définir le niveau de compatibilité d'une base de données multidimensionnelle (Analysis Services)
-  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la propriété du niveau de compatibilité de la base de données détermine le niveau fonctionnel d'une base de données. Les niveaux de compatibilité sont propres à chaque type de modèle. Par exemple, un niveau de compatibilité `1100` de a une signification différente selon que la base de données est multidimensionnelle ou tabulaire.  
+  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la propriété du niveau de compatibilité de la base de données détermine le niveau fonctionnel d'une base de données. Les niveaux de compatibilité sont propres à chaque type de modèle. Par exemple, un niveau de compatibilité de `1100` a une signification différente selon que la base de données est multidimensionnelle ou tabulaire.  
   
  Cette rubrique décrit le niveau de compatibilité des bases de données multidimensionnelles uniquement. Pour plus d’informations sur les solutions tabulaires, consultez [niveau de compatibilité &#40;SSAS tabulaire SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
 > [!NOTE]  
->  Les modèles tabulaires possèdent des niveaux de compatibilité de base de données qui ne s'appliquent pas aux modèles multidimensionnels. Le niveau de compatibilité `1103` n'existe pas pour les modèles multidimensionnels. Pour plus d’informations sur `1103` les solutions tabulaires, consultez [Nouveautés du modèle tabulaire dans SQL Server 2012 SP1 et niveau de compatibilité](https://go.microsoft.com/fwlink/?LinkId=301727) .  
+>  Les modèles tabulaires possèdent des niveaux de compatibilité de base de données qui ne s'appliquent pas aux modèles multidimensionnels. Le niveau de compatibilité `1103` n'existe pas pour les modèles multidimensionnels. Pour plus d’informations sur les solutions tabulaires, consultez [Nouveautés du modèle tabulaire dans SQL Server 2012 SP1 et niveau de compatibilité](https://go.microsoft.com/fwlink/?LinkId=301727) `1103` .  
   
  **Niveaux de compatibilité des bases de données multidimensionnelles**  
   
@@ -34,10 +33,10 @@ ms.locfileid: "66076687"
 |Paramètre|Description|  
 |-------------|-----------------|  
 |`1050`|Cette valeur n'est pas visible dans un script ou des outils, mais elle correspond aux bases de données créées dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Toute base de données pour laquelle `CompatibilityLevel` n'est pas défini explicitement, s'exécute implicitement au niveau `1050`.|  
-|`1100`|C'est la valeur par défaut pour les nouvelles bases de données que vous créez dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous pouvez également la spécifier pour les bases de données créées dans les versions antérieures de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour permettre l'utilisation des fonctionnalités prises en charge uniquement à ce niveau de compatibilité (à savoir, le stockage amélioré des chaînes pour les attributs de dimension ou les mesures de comptage des valeurs qui contiennent les données de chaîne).<br /><br /> Les bases de données qui `CompatibilityLevel` ont un `1100` jeu pour obtenir une propriété `StringStoresCompatibilityLevel`supplémentaire,, qui vous permet de choisir un autre stockage de chaînes pour les partitions et les dimensions.|  
+|`1100`|C'est la valeur par défaut pour les nouvelles bases de données que vous créez dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous pouvez également la spécifier pour les bases de données créées dans les versions antérieures de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour permettre l'utilisation des fonctionnalités prises en charge uniquement à ce niveau de compatibilité (à savoir, le stockage amélioré des chaînes pour les attributs de dimension ou les mesures de comptage des valeurs qui contiennent les données de chaîne).<br /><br /> Les bases de données qui ont un `CompatibilityLevel` jeu pour `1100` obtenir une propriété supplémentaire, `StringStoresCompatibilityLevel` , qui vous permet de choisir un autre stockage de chaînes pour les partitions et les dimensions.|  
   
 > [!WARNING]  
->  La définition de la compatibilité de la base de données sur un niveau supérieur est irrévocable. Après avoir augmenté le niveau de compatibilité `1100`à, vous devez continuer à exécuter la base de données sur des serveurs plus récents. Vous ne pouvez pas `1050`revenir à. Vous ne pouvez pas attacher ou `1100` restaurer une base de données sur une version de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]antérieure à ou.  
+>  La définition de la compatibilité de la base de données sur un niveau supérieur est irrévocable. Après avoir augmenté le niveau de compatibilité à `1100` , vous devez continuer à exécuter la base de données sur des serveurs plus récents. Vous ne pouvez pas revenir à `1050` . Vous ne pouvez pas attacher ou restaurer une `1100` base de données sur une version de serveur antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="prerequisites"></a>Prérequis  
  Les niveaux de compatibilité de la base de données ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Vous devez disposer de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou ultérieur pour visualiser ou définir le niveau de compatibilité de la base de données.  
@@ -84,7 +83,7 @@ ms.locfileid: "66076687"
   
 1.  La fusion de partitions de bases de données différentes est prise en charge uniquement si les deux bases de données partagent le même niveau de compatibilité.  
   
-2.  L'utilisation de dimensions liées d'une autre base de données requiert le même niveau de compatibilité. Par exemple, si vous souhaitez utiliser une dimension liée d’une [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] base de données dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] une base de données, vous [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] devez déplacer la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] base de données vers un serveur et `1100`définir le niveau de compatibilité sur.  
+2.  L'utilisation de dimensions liées d'une autre base de données requiert le même niveau de compatibilité. Par exemple, si vous souhaitez utiliser une dimension liée d’une base de données [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] dans une [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] base de données, vous devez déplacer la [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] base de données vers un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] serveur et définir le niveau de compatibilité sur `1100` .  
   
 3.  La synchronisation des serveurs est prise en charge uniquement pour les serveurs qui partagent la même version et le même niveau de compatibilité de base de données.  
   

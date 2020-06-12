@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08db0d81ac198795386391f977d09d20ff8d22ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 112f8944bd20b2b6a464b0d84fb8ac1a0e89d976
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076878"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544571"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>Définir des formules de membre personnalisées pour les attributs d’une dimension
   Ajoutez une formule de membre personnalisée à un cube ou à une dimension pour remplacer l'agrégation par défaut qui est associée à un membre de dimension par les résultats d'une expression MDX (Multidimensional Expressions). (Cette fonctionnalité affecte à la propriété `CustomRollupColumn` un attribut spécifié dans une dimension.)  

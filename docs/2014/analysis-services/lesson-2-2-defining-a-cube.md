@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b69cf276335267e283db35dce37a6192cc7f866
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079057"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543511"
 ---
 # <a name="defining-a-cube"></a>Définition d'un cube
   L'Assistant Cube vous aide à définir les groupes de mesures et les dimensions d'un cube. Dans la tâche suivante, vous allez utiliser l'Assistant Cube pour générer un cube.  
@@ -56,7 +55,7 @@ ms.locfileid: "66079057"
   
 11. Cliquez sur **Suivant**.  
   
-12. Dans la page **fin de l’Assistant** , remplacez le nom du cube par `Analysis Services Tutorial`. Dans le volet Aperçu, vous pouvez voir le groupe de mesures **InternetSales** et ses mesures. Vous pouvez également voir les dimensions **Date**, **Customer** et **Product** .  
+12. Dans la page **fin de l’Assistant** , remplacez le nom du cube par `Analysis Services Tutorial` . Dans le volet Aperçu, vous pouvez voir le groupe de mesures **InternetSales** et ses mesures. Vous pouvez également voir les dimensions **Date**, **Customer** et **Product** .  
   
 13. Cliquez sur **Terminer** pour terminer l’Assistant.  
   

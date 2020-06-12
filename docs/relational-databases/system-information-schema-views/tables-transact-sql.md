@@ -19,12 +19,12 @@ ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52416d954660aac6981ced8e2407672f04bc0bb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 655026163236a448b3f225cfa4aea4f2ffacd30e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078412"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669691"
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68078412"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la table.<br /><br /> <strong> \* Important \* \* </strong> N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d'un objet est d'interroger l'affichage catalogue sys.objects. Les vues INFORMATION_SCHEMA peuvent être incomplètes dans la mesure où elles ne sont pas mises à jour pour toutes les nouvelles fonctionnalités.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la table.<br /><br /> Important la seule façon fiable de trouver le schéma d’un objet est d’interroger l’affichage catalogue sys. Objects. <strong> \* \* \* \* </strong> Les vues INFORMATION_SCHEMA peuvent être incomplètes dans la mesure où elles ne sont pas mises à jour pour toutes les nouvelles fonctionnalités.|  
 |**TABLE_NAME**|**sysname**|Nom de table ou de vue.|  
 |**TABLE_TYPE**|**varchar (** 10 **)**|Type de table. Peut être VIEW ou BASE TABLE.|  
   

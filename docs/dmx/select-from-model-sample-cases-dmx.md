@@ -1,21 +1,21 @@
 ---
-title: Sélectionnez à &lt;partir&gt;du modèle. SAMPLE_CASES (DMX) | Microsoft Docs
+title: Sélectionnez à partir du &lt; modèle &gt; . SAMPLE_CASES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928318"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670113"
 ---
-# <a name="select-from-ltmodelgtsample_cases-dmx"></a>Sélectionnez à &lt;partir&gt;du modèle. SAMPLE_CASES (DMX)
+# <a name="select-from-ltmodelgtsample_cases-dmx"></a>Sélectionnez à partir du &lt; modèle &gt; . SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne les exemples de cas qui sont représentatifs des cas utilisés pour l'apprentissage du modèle d'exploration de données.  
@@ -32,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste séparée par des virgules des identificateurs des colonnes associées.  
@@ -41,15 +41,15 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  Identificateur du modèle  
   
  *liste de conditions*  
- Facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Facultatif. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Les exemples de cas peuvent être générés et ne pas réellement exister dans les données d'apprentissage. Le cas retourné est représentatif du nœud de contenu spécifié.  
   
- Bien que [!INCLUDE[msCoName](../includes/msconame-md.md)] l’algorithme Sequence Clustering soit [!INCLUDE[msCoName](../includes/msconame-md.md)] le seul algorithme qui prend \<en charge l’utilisation de l’option Select from Model>. SAMPLE_CASES, les algorithmes tiers peuvent également le prendre en charge.  
+ Bien que l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme Sequence Clustering soit le seul [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme qui prend en charge l’utilisation de l’option SELECT FROM \< Model>. SAMPLE_CASES, les algorithmes tiers peuvent également le prendre en charge.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne les exemples de cas utilisés pour l'apprentissage du modèle d'exploration de données Target Mail (Courrier cible). L’utilisation de la fonction [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) dans la clause **Where** renvoie uniquement les cas associés au nœud « 000000003 ». La chaîne de nœud peut être trouvée dans la colonne NODE_UNIQUE_NAME de l'ensemble de lignes du schéma.  

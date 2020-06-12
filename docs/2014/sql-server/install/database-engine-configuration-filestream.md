@@ -12,17 +12,17 @@ ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa6f1df8858f5ba9bf302eb6a415182cfa9442c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eb4eb049bfe700a83d58e05a3af1ee4f6f41a6
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095789"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859699"
 ---
 # <a name="database-engine-configuration---filestream"></a>Configuration du moteur de base de données - Filestream
-  Utilisez cette page pour activer FILESTREAM pour cette installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM intègre le avec [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] un système de fichiers NTFS en stockant `varbinary(max)` les données BLOB (Binary Large Object) en tant que fichiers sur le système de fichiers. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent insérer, mettre à jour, interroger, rechercher et sauvegarder des données FILESTREAM. Les interfaces de système de fichiers Win32 fournissent l'accès de diffusion en continu aux données.  
+  Utilisez cette page pour activer FILESTREAM pour cette installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM intègre le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec un système de fichiers NTFS en stockant les `varbinary(max)` données BLOB (Binary Large Object) en tant que fichiers sur le système de fichiers. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent insérer, mettre à jour, interroger, rechercher et sauvegarder des données FILESTREAM. Les interfaces de système de fichiers Win32 fournissent l'accès de diffusion en continu aux données.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Activer FILESTREAM pour l’accès Transact-SQL**  
  Sélectionnez cette option pour activer FILESTREAM pour l'accès [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce contrôle doit être activé pour que les autres options de contrôle soient disponibles.  
   

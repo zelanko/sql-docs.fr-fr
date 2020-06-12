@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d24d3316275e649a62e2c66d01e683a20b7a640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083037"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520585"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Interroger les paramètres utilisés pour créer un modèle d'exploration de données
   La composition d'un modèle d'exploration de données est affecté non seulement par les cas d'apprentissage, mais aussi par les paramètres définis lors de la création du modèle. Par conséquent, il peut s'avérer utile d'extraire les paramètres d'un modèle existant pour mieux comprendre le comportement du modèle. La récupération des paramètres peut aussi servir à documenter une version particulière de ce modèle.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078428"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542561"
 ---
 # <a name="lesson-7-create-measures"></a>Leçon 7 : Créer des mesures
   Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Similairement aux colonnes calculées que vous avez créées dans la leçon précédente, une mesure est essentiellement un calcul créé à l'aide d'une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées en fonction d'un *filtre*sélectionné par l'utilisateur ; par exemple, une colonne ou un segment particulier ajouté au champ des étiquettes de ligne dans un tableau croisé dynamique.   Pour chaque cellule du filtre, une valeur est alors calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous pouvez inclure dans pratiquement tous les modèles tabulaires, pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [Mesures &#40;SSAS Tabulaire&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "66078428"
   
      Notez que la cellule en haut à gauche contient maintenant une mesure nommée **Measure 1**, suivie du résultat, **30**. Le nom de la mesure précède également la formule dans la barre de formule.  
   
-5.  Pour renommer la mesure, dans la barre de formule, mettez en surbrillance le nom, `Days Current Quarter to Date` **mesure 1**, puis tapez et appuyez sur entrée.  
+5.  Pour renommer la mesure, dans la barre de formule, mettez en surbrillance le nom, **mesure 1**, puis tapez `Days Current Quarter to Date` et appuyez sur entrée.  
   
     > [!TIP]  
     >  Lorsque vous tapez une formule dans la barre de formule, vous pouvez également taper d'abord le nom de la mesure suivi de deux-points (:), suivi d'un espace, puis suivi de la formule. Avec cette méthode, vous n'aurez pas à renommer la mesure.  

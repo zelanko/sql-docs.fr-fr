@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00554c9e56bebe12a5e63c9d50e4a2fa59149599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289137"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543821"
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
   Une instance de Analysis Services enregistre les notifications de serveur, les erreurs et les avertissements dans le fichier msmdsrv. log (un pour chaque instance que vous installez). Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](https://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
@@ -46,7 +45,7 @@ ms.locfileid: "79289137"
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Journal des erreurs|Surveillance de routine et dépannage de base|Oui|  
 |Table OlapQueryLog dans une base de données relationnelle|Journal des requêtes|Recueillir les entrées de l'Assistant Optimisation de l'utilisation|Non|  
-|Guid\<fichiers sqldmp> fichiers. mdmp|Blocages et exceptions|Dépannage approfondi|Non|  
+|\<guid>Fichiers fichiers sqldmp. mdmp|Blocages et exceptions|Dépannage approfondi|Non|  
   
  Nous vous recommandons vivement de consulter le lien suivant pour accéder à des ressources supplémentaires non traitées dans la rubrique suivante, qui fournit des [conseils sur la collecte de données initiale depuis le support Microsoft](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289137"
   
 2.  Accordez des autorisations suffisantes sur la base de données au compte de service Analysis Services. Le compte nécessite une autorisation pour créer une table, écrire dans la table et lire à partir de la table.  
   
-3.  Dans SQL Server Management Studio, cliquez avec le bouton droit sur **Analysis Services** | **Propriétés** | **général**, affectez à **affectez createquerylogtable** la valeur true.  
+3.  Dans SQL Server Management Studio, cliquez avec le bouton droit sur **Analysis Services**  |  **Propriétés**  |  **général**, affectez à **affectez createquerylogtable** la valeur true.  
   
 4.  Éventuellement, modifiez **QueryLogSampling** ou **QueryLogTableName** si vous souhaitez échantillonner les requêtes à une fréquence différente ou utiliser un autre nom pour la table.  
   

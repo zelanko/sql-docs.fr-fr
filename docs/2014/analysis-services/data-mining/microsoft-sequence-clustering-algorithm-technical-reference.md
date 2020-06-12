@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083836"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521668"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)
   L'algorithme MSC (Microsoft Sequence Clustering) est un algorithme hybride qui utilise l'analyse en chaîne de Markov pour identifier les séquences ordonnées et associe les résultats de cette analyse aux techniques de clustering pour générer des clusters basés sur les séquences et les autres attributs du modèle. Cette rubrique décrit l'implémentation de l'algorithme, la personnalisation de l'algorithme et les besoins spéciaux pour les modèles Sequence Clustering.  
@@ -99,7 +98,7 @@ ms.locfileid: "66083836"
  La valeur par défaut est 64.  
   
  MAXIMUM_STATES  
- Spécifie le nombre maximal d'états pour un attribut non-séquence que l'algorithme prend en charge. Si le nombre d’États pour un attribut non-séquence est supérieur au nombre maximal d’États, l’algorithme utilise les États les plus populaires de l’attribut et traite les autres `Missing`États comme.  
+ Spécifie le nombre maximal d'états pour un attribut non-séquence que l'algorithme prend en charge. Si le nombre d’États pour un attribut non-séquence est supérieur au nombre maximal d’États, l’algorithme utilise les États les plus populaires de l’attribut et traite les autres États comme `Missing` .  
   
  La valeur par défaut est 100.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66083836"
   
  Pour plus d’informations sur l’utilisation de valeurs manquantes dans les modèles d’exploration de données et pour savoir comment les valeurs manquantes affectent les scores de probabilité, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  La table de cas doit avoir une colonne d'ID de cas. La table de cas peut éventuellement contenir d'autres colonnes qui stockent des attributs  propos du cas.  
   
  L'algorithme MSC (Microsoft Sequence Clustering) requiert des informations de séquence, stockées en tant que table imbriquée. La table imbriquée doit avoir une seule colonne Key Sequence. Une colonne `Key Sequence` peut contenir tout type de données pouvant être triées, y compris les types de données de chaîne, mais la colonne doit contenir des valeurs uniques pour chaque cas. De plus, avant de traiter le modèle, vous devez vérifier que la table de cas et la table imbriquée sont toutes les deux triées par ordre croissant sur la clé qui associe les tables.  
@@ -136,7 +135,7 @@ ms.locfileid: "66083836"
   
 ## <a name="remarks"></a>Notes  
   
--   Utilisez la fonction [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) pour la prédiction des séquences. Pour plus d’informations sur les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de qui prennent en charge la prédiction de séquence, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Utilisez la fonction [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) pour la prédiction des séquences. Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la prédiction de séquence, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 -   L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering ne prend pas en charge l’utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d’exploration de données.  
   

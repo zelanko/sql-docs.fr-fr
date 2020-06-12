@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e647b32d8f94ebd545a9d8d85d066a25dde6e77c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed843b8b0005ff62f05b13ebd20024d528857388
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076908"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544605"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>Ajouter une agrégation personnalisée à une dimension
   Ajoutez une agrégation personnalisée à un cube ou à une dimension pour remplacer les agrégations par défaut qui sont associées à un membre de dimension avec un opérateur unaire différent. Cette amélioration spécifie une colonne d'opérateur unaire qui, dans la table de dimension, définit le cumul pour les membres d'une hiérarchie parent-enfant. L'opérateur unaire agit sur l'attribut parent dans une hiérarchie parent-enfant.  
@@ -38,7 +37,7 @@ ms.locfileid: "66076908"
  Dans la première page **Spécifier un opérateur unaire** de l’Assistant, vous spécifiez la dimension à laquelle vous voulez appliquer une agrégation personnalisée. L'agrégation personnalisée ajoutée à la dimension sélectionnée provoquera des changements dans cette dimension. Ces modifications seront héritées par tous les cubes contenant la dimension sélectionnée.  
   
 ## <a name="adding-custom-aggregation-unary-operator"></a>Ajout d'une agrégation personnalisée (opérateur unaire)  
- Dans la seconde page **Spécifier un opérateur unaire** , vous spécifiez l’attribut parent souhaité pour l’agrégation personnalisée et la colonne source de la table de dimension pour l’opérateur unaire. **Attribut parent** répertorie les attributs dont `Usage` la propriété a `Parent`la valeur. S'il y a plus d'un attribut parent, choisissez l'attribut parent qui correspond à la relation parent-enfant que vous voulez utiliser. Si la liste ne contient aucun attribut parent, la dimension ne possède pas de hiérarchie parent-enfant valide.  
+ Dans la seconde page **Spécifier un opérateur unaire** , vous spécifiez l’attribut parent souhaité pour l’agrégation personnalisée et la colonne source de la table de dimension pour l’opérateur unaire. **Attribut parent** répertorie les attributs dont la propriété a la `Usage` valeur `Parent` . S'il y a plus d'un attribut parent, choisissez l'attribut parent qui correspond à la relation parent-enfant que vous voulez utiliser. Si la liste ne contient aucun attribut parent, la dimension ne possède pas de hiérarchie parent-enfant valide.  
   
  Dans **Colonne source**, vous sélectionnez la colonne de valeurs de chaîne qui contient les opérateurs unaires. (Cette sélection définit la `UnaryOperatorColumn` propriété sur l’attribut parent.) La table de dimension doit également avoir une colonne de chaîne qui spécifie l’opérateur de cumul unaire. Les valeurs de chaîne de cette colonne doivent contenir des opérateurs d'agrégation valides. Si une ligne est vide, le membre correspondant est calculé normalement. Si la formule figurant dans une colonne n'est pas valide, une erreur se produit au moment de l'exécution lorsqu'une valeur de cellule utilisant le membre est extraite. Pour plus d’informations, consultez [Opérateurs unaires dans les dimensions parent-enfant](parent-child-dimension-attributes-unary-operators.md).  
   

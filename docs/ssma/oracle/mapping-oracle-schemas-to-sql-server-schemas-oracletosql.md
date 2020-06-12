@@ -1,5 +1,6 @@
 ---
 title: Mappage de schémas Oracle à des schémas de SQL Server (OracleToSQL) | Microsoft Docs
+description: Découvrez comment personnaliser les mappages SSMA pour Oracle entre les schémas Oracle et SQL Server ou accepter la valeur par défaut.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,25 +11,25 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5639687a22749ccb8315262347807bb44ac79210
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262913"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293826"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Mappage de schémas Oracle à des schémas SQL Server (OracleToSQL)
-Dans Oracle, chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’un schéma Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une base de données nommée pour le schéma. Toutefois, vous pouvez personnaliser le mappage entre les schémas Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les bases de données.  
+Dans Oracle, chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’un schéma Oracle vers une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données nommée pour le schéma. Toutefois, vous pouvez personnaliser le mappage entre les schémas Oracle et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  
   
 ## <a name="oracle-and-sql-server-schemas"></a>Schémas Oracle et SQL Server  
 Une base de données Oracle contient des schémas. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient plusieurs bases de données, chacune pouvant avoir plusieurs schémas.  
   
-Le concept Oracle d’un schéma est mappé au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concept d’une base de données et à l’un de ses schémas. Par exemple, Oracle peut avoir un schéma nommé **HR**. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut avoir une base de données nommée **HR**et au sein de cette base de données sont des schémas. Un schéma est le schéma **dbo** (ou propriétaire de la base de données). Par défaut, le schéma Oracle **HR** est mappé à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et au schéma **hr. dbo**. SSMA fait référence à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la combinaison base de données et schéma en tant que schéma.  
+Le concept Oracle d’un schéma est mappé au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concept d’une base de données et à l’un de ses schémas. Par exemple, Oracle peut avoir un schéma nommé **HR**. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut avoir une base de données nommée **HR**et au sein de cette base de données sont des schémas. Un schéma est le schéma **dbo** (ou propriétaire de la base de données). Par défaut, le schéma Oracle **HR** est mappé à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et au schéma **hr. dbo**. SSMA fait référence à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinaison base de données et schéma en tant que schéma.  
   
-Vous pouvez modifier le mappage entre Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les schémas.  
+Vous pouvez modifier le mappage entre Oracle et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modification de la base de données et du schéma cibles  
-Dans SSMA, vous pouvez mapper un schéma Oracle à n’importe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quel schéma disponible.  
+Dans SSMA, vous pouvez mapper un schéma Oracle à n’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma disponible.  
   
 **Pour modifier la base de données et le schéma**  
   
@@ -50,10 +51,10 @@ Dans SSMA, vous pouvez mapper un schéma Oracle à n’importe [!INCLUDE[ssNoVer
   
 -   Mappage à SQL Server  
   
-Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mappée à la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’est pas existante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sur, vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
+Vous pouvez mapper une base de données source à une base de données cible. Par défaut, la base de données source est mappée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible avec laquelle vous vous êtes connecté à l’aide de SSMA. Si la base de données cible mappée n’est pas existante sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous êtes invité à entrer un message **«la base de données et/ou le schéma n’existe pas dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées cibles. Il serait créé au cours de la synchronisation. Voulez-vous continuer ?»** Cliquez sur Oui. De même, vous pouvez mapper le schéma à un schéma non existant sous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de données cible, qui sera créé lors de la synchronisation.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Rétablissement de la base de données et du schéma par défaut  
-Si vous personnalisez le mappage entre un schéma Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un schéma, vous pouvez rétablir les valeurs par défaut du mappage.  
+Si vous personnalisez le mappage entre un schéma Oracle et un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma, vous pouvez rétablir les valeurs par défaut du mappage.  
   
 **Pour rétablir la base de données et le schéma par défaut**  
   

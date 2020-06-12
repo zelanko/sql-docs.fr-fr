@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3682d65ac06d970fed2d5346e9d39684485c5dfe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064678"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527755"
 ---
 # <a name="browsing-a-clustering-model"></a>Exploration d'un modèle de clustering
-  Lorsque vous ouvrez un modèle de clustering à l’aide de l’outil **Parcourir**, le modèle est affiché dans une visionneuse interactive, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]similaire à la visionneuse de clustering dans. Cette visionneuse vous aide à explorer les clusters qui ont été créés et à comprendre les caractéristiques de cluster. Vous pouvez également comparer des segments individuels avec d'autres segments ou avec la population, et mettre en évidence les différences.  
+  Lorsque vous ouvrez un modèle de clustering à l’aide de l’outil **Parcourir**, le modèle est affiché dans une visionneuse interactive, similaire à la visionneuse de clustering dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Cette visionneuse vous aide à explorer les clusters qui ont été créés et à comprendre les caractéristiques de cluster. Vous pouvez également comparer des segments individuels avec d'autres segments ou avec la population, et mettre en évidence les différences.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorer le modèle  
  La fenêtre **Parcourir** comprend les outils suivants pour vous aider à comprendre votre modèle de clustering et à explorer les attributs des groupes de données sous-jacents :  
@@ -65,7 +64,7 @@ ms.locfileid: "66064678"
   
 5.  Maintenant, cliquez sur la liste déroulante **variable d’ombrage** et choisissez la variable **Age** . Dans ce cas, une liste de valeurs apparaît dans la zone de texte **État** .  
   
-     La colonne d'âge utilisée comme entrée de ce modèle contient des valeurs numériques continues, mais pour les besoins du clustering, l'algorithme discrétise toujours les nombres. Ici, vous pouvez voir les emplacements ou les groupes créés par l’algorithme, par exemple « très\<faible (= 27) » et « très élevé (>= 63) ».  
+     La colonne d'âge utilisée comme entrée de ce modèle contient des valeurs numériques continues, mais pour les besoins du clustering, l'algorithme discrétise toujours les nombres. Ici, vous pouvez voir les emplacements ou les groupes créés par l’algorithme, par exemple « très faible ( \<=27)" and "Very High (> = 63) ».  
   
 6.  Dans les listes déroulantes **État** , sélectionnez **très élevé** pour voir comment le diagramme change.  
   

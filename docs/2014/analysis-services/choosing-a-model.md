@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088091"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527535"
 ---
 # <a name="choosing-a-model"></a>Choix d'un modèle
   **Algorithme d’exploration de données :** L' *algorithme* d’exploration de données est le mécanisme qui crée des modèles à partir de données. L'algorithme définit la façon dont les données sont comptées, les relations dérivées et les séquences stockées. La sélection d'un algorithme dépend en partie du type de données à analyser. Par exemple, certains algorithmes peuvent uniquement utiliser des nombres continus, tandis que d'autres peuvent être plus efficaces avec un nombre limité de valeurs distinctes.  
@@ -77,7 +76,7 @@ ms.locfileid: "66088091"
   
  Les algorithmes qu'utilisent les compléments d'exploration de données SQL Server pour Office reposent sur les algorithmes fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez également utiliser des algorithmes tiers conformes à la spécification OLE DB pour l’exploration de données, si l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous êtes connecté a été configurée pour autoriser les algorithmes tiers.  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Chaque algorithme diffère au niveau des types des données avec lesquels il peut s'exécuter.  
   
 -   Un modèle de régression linéaire ne peut modéliser que des valeurs numériques. Les variables d'entrée et les résultats cibles doivent être des types de nombres continus. Utilisez un arbre de décision ou un modèle d'estimation si vous devez combiner des variables discrètes et continues.  

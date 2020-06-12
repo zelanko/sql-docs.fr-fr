@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782650"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528025"
 ---
 # <a name="analysis-services-powershell"></a>PowerShell Analysis Services
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] inclut un fournisseur et des applets de commande PowerShell Analysis Services (SQLAS) afin que vous puissiez utiliser Windows PowerShell pour parcourir, administrer et interroger des objets Analysis Services.  
@@ -28,8 +27,8 @@ ms.locfileid: "72782650"
   
 -   Applets de commande spécifiques aux tâches pour les opérations courantes, telles que le traitement, la gestion des rôles, la gestion des partitions, la sauvegarde et la restauration.  
   
-## <a name="in-this-article"></a>Contenu de cet article  
- [Conditions préalables](#bkmk_prereq)  
+## <a name="in-this-article"></a>Dans cet article  
+ [Composants requis](#bkmk_prereq)  
   
  [Versions et modes de Analysis Services pris en charge](#bkmk_vers)  
   
@@ -61,7 +60,7 @@ Pour plus d’informations sur la syntaxe et des exemples, consultez [Analysis S
 |Bases de données et instances tabulaires|Prise en charge pour l'administration locale et à distance.<br /><br /> Pour plus d’informations, consultez le blog d’août 2011 sur la [gestion des modèles tabulaires à l’aide de PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Bases de données et instances PowerPivot pour SharePoint|Prise en charge limitée. Vous pouvez utiliser des connexions HTTP et le fournisseur SQLAS pour afficher des informations d'instance et de base de données.<br /><br /> Toutefois, l'utilisation des applets de commande n'est pas prise en charge. Vous ne devez pas utiliser Analysis Services PowerShell pour sauvegarder et restaurer la base de données PowerPivot en mémoire, et vous ne devez pas ajouter ou supprimer des rôles, des données de processus ni exécuter un script XMLA aléatoire.<br /><br /> À des fins de configuration, PowerPivot pour SharePoint a une prise en charge PowerShell intégrée qui est fournie séparément. Pour plus d’informations, consultez informations [de référence sur PowerShell pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
 |Connexions natives à des cubes locaux<br /><br /> « Data source = c:\backup\test.CUB »|Non pris en charge.|  
-|Connexions HTTP aux fichiers de connexion de modèle sémantique BI (.bism) dans SharePoint<br /><br /> "Data source =http://server/shared_docs/name.bism"|Non pris en charge.|  
+|Connexions HTTP aux fichiers de connexion de modèle sémantique BI (.bism) dans SharePoint<br /><br /> "Data source = http://server/shared_docs/name.bism "|Non pris en charge.|  
 |Connexions incorporées aux bases de données PowerPivot<br /><br /> "Data source = $Embedded $"|Non pris en charge.|  
 |Contexte de serveur local dans les procédures stockées Analysis Services<br /><br /> « Source de données = * »|Non pris en charge.|  
   
@@ -82,7 +81,7 @@ Pour plus d’informations sur la syntaxe et des exemples, consultez [Analysis S
   
 3.  Le nom d'utilisateur et le mot de passe fournis par l'objet contenant les informations d'identification retournent une identité d'utilisateur Windows. Analysis Services utilise cette identité pour l'utilisateur actuel. Si l'utilisateur n'est pas un utilisateur Windows, ou ne dispose pas d'autorisations suffisantes pour effectuer l'opération demandée, la requête échouera.  
   
- Pour créer un objet contenant des informations d'identification, vous pouvez utiliser l'applet de commande Get-Credential pour collecter des informations auprès de l'opérateur. Vous pouvez ensuite utiliser l'objet contenant les informations d'identification sur une commande qui se connecte à Analysis Services. L'exemple suivant illustre une approche. Dans cet exemple, la connexion concerne une instance locale (`SQLSERVER:\SQLAS\HTTP_DS`) configurée pour l’accès http.  
+ Pour créer un objet contenant des informations d'identification, vous pouvez utiliser l'applet de commande Get-Credential pour collecter des informations auprès de l'opérateur. Vous pouvez ensuite utiliser l'objet contenant les informations d'identification sur une commande qui se connecte à Analysis Services. L'exemple suivant illustre une approche. Dans cet exemple, la connexion concerne une instance locale ( `SQLSERVER:\SQLAS\HTTP_DS` ) configurée pour l’accès http.  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Les connexions HTTP sont utiles si vous avez configuré votre serveur pour l’accès HTTP à l’aide des instructions de cette rubrique : [configurer l’accès http à Analysis Services sur Internet Information Services &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- En supposant une URL de http://localhost/olap/msmdpump.dllserveur de, une connexion peut se présenter comme suit :  
+ En supposant une URL de serveur de http://localhost/olap/msmdpump.dll , une connexion peut se présenter comme suit :  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

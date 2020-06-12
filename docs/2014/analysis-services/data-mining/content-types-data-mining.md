@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085659"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524035"
 ---
 # <a name="content-types-data-mining"></a>Types de contenu (Exploration de données)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez définir le type de données physique d’une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne lorsqu’elle est utilisée dans un modèle.  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous pouvez définir le type de données physique d’une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne lorsqu’elle est utilisée dans un modèle.  
   
  Le *type de données* détermine la façon dont les algorithmes traitent les données dans ces colonnes quand vous créez des modèles d’exploration de données. La définition du type de données d'une colonne donne les informations d'algorithme relatives au type de données des colonnes, ainsi que la façon de traiter les données. Chaque type de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge un ou plusieurs types de contenu pour l'exploration de données.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66085659"
   
  Le type de contenu `Discretized` est pris en charge par les types de données suivants : `Date`, `Double`, `Long` et `Text`.  
   
-## <a name="key"></a>Touche  
+## <a name="key"></a>Clé  
  Le type de contenu *clé* (Key) signifie que la colonne identifie de façon unique une ligne. Dans une table de cas, la colonne clé est généralement un identificateur numérique ou texte. Vous attribuez la valeur `key` au type de contenu pour indiquer que la colonne doit uniquement servir au suivi des enregistrements, et non à des fins d'analyse.  
   
  Les tables imbriquées ont également des clés, mais l'utilisation de la clé de table imbriquée diffère quelque peu. Vous attribuez la valeur `key` au type de contenu dans une table imbriquée si la colonne est l'attribut à analyser. Les valeurs dans la clé de table imbriquée doivent être uniques pour chaque cas, mais il peut y avoir des doublons sur tout le jeu de cas.  

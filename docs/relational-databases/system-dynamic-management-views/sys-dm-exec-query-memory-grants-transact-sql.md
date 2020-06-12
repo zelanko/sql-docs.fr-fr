@@ -1,7 +1,7 @@
 ---
 title: sys. dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2e3cfbea2f7ff9bb7cd976142db28acec3105fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829413"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731888"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,14 +63,18 @@ ms.locfileid: "82829413"
 |**pool_id**|**int**|ID du pool de ressources auquel appartient ce groupe de charge de travail.|  
 |**is_small**|**tinyint**|Si la valeur est définie sur 1, cette allocation utilise le sémaphore de ressource le plus petit. Si la valeur est définie sur 0, c'est que le sémaphore de ressource ordinaire est utilisé.|  
 |**ideal_memory_kb**|**bigint**|Taille de l'allocation mémoire, en kilo-octets (Ko) pour l'ajuster à la mémoire physique. Elle est basée sur l'estimation de la cardinalité.|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**pdw_node_id**|**int**|Identificateur du nœud sur lequel cette distribution se trouve.<br /><br /> **S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**reserved_worker_count**|**bigint**|Nombre de [threads de travail](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)réservés.<br /><br />**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |  
+|**used_worker_count**|**bigint**|Nombre de [threads de travail](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) utilisés pour le moment.<br /><br />**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**max_used_worker_count**|**bigint**|Nombre maximal de [threads de travail](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) utilisés jusqu’à présent.<br /><br />**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**reserved_node_bitmap**|**bigint**|Bitmap des nœuds NUMA où les [threads de travail](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) sont réservés.<br /><br />**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
    
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un scénario de débogage type pour le délai d'attente de la requête peut ressembler à ce qui suit :  
   
 -   Recherchez l'état général de la mémoire système à l'aide de [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) et de différents compteurs de performance.  
@@ -117,6 +121,6 @@ Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiert l’autorisa
 ## <a name="see-also"></a>Voir aussi  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
+ [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+ [Guide d’architecture de thread et de tâche](../../relational-databases/thread-and-task-architecture-guide.md)   
   

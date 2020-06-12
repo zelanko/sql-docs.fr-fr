@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96e3e434e8f4ff3d8df4b4837bffb0d96649741
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540001"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue État d'avancement du traitement (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **État d'avancement du traitement** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour contrôler le traitement dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Cette boîte de dialogue s'affiche **** lorsque le traitement d'un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] commence.  

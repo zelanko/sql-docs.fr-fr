@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082987"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520595"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d’exploration de données
   Une solution d'exploration de données requiert au minimum le projet d'exploration de données, lequel définit les sources de données, les vues de source de données, ainsi que les structures et modèles d'exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
@@ -57,15 +56,15 @@ ms.locfileid: "66082987"
   
  **Composants de flux de contrôle**  
   
--   [Tâche DDL d'exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tâche DDL d’exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [tâche de traitement d'Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tâche de traitement d’Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)  
   
 -   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
   
--   [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Tâche de profilage des données](../../integration-services/control-flow/data-profiling-task.md)  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66082987"
   
 -   [Transformation de fractionnement conditionnel](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [transformation de conversion de données](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Transformation de conversion de données](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [Destination d’apprentissage du modèle d’exploration de données](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66082987"
   
 -   [Transformation de colonne dérivée](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [transformation de l'échantillonnage du pourcentage](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Transformation d’échantillonnage par pourcentage](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
 -   [Transformation d'extraction de terme](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   

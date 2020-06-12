@@ -1,5 +1,6 @@
 ---
 title: Installation de SSMA pour le client DB2 (DB2ToSQL) | Microsoft Docs
+description: En savoir plus sur les conditions préalables à l’installation de l’Assistant Migration SQL Server (SSMA) pour le client DB2 et sur l’installation de.
 ms.prod: sql
 ms.custom: ''
 ms.date: 09/07/2019
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 1623430eed752db7fa387caf33124082eb318490
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7615f775a43da2853a0c98f8402f738e73dc8bb6
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70774183"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293806"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Installation de SSMA pour le client DB2 (DB2ToSQL)
 
@@ -24,17 +25,17 @@ Le client SSMA se compose des fichiers programme qui effectuent les tâches suiv
   
 - Connectez-vous à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-- Convertit les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données DB2 en syntaxe.  
+- Convertit les objets de base de données DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntaxe.  
   
-- Chargez les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans.  
+- Chargez les objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-- Migrer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données vers.  
+- Migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Cette rubrique décrit les conditions préalables à l’installation et les instructions pour l’installation de SSMA.  
   
 ## <a name="prerequisites"></a>Prérequis
 
-SSMA est conçu pour fonctionner avec DB2 sur z/OS version 9,0 et 10,0 ou DB2 sur LUW version 9,8 et 10,1 ou versions ultérieures [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et 2012 ou versions ultérieures.  
+SSMA est conçu pour fonctionner avec DB2 sur z/OS version 9,0 et 10,0 ou DB2 sur LUW version 9,8 et 10,1 ou versions ultérieures et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou versions ultérieures.  
   
 Avant d’installer SSMA, assurez-vous que l’ordinateur remplit les conditions suivantes :  
   
@@ -60,7 +61,7 @@ Après avoir téléchargé la dernière version, extrayez les fichiers d’insta
   
 Pour installer le client SSMA :
   
-1. Double-cliquez sur SSMA pour DB2 *n*. Install. exe, où *n* est le numéro de Build.  
+1. Double-cliquez sur SSMA pour DB2 *n*.Install.exe, où *n* est le numéro de Build.  
   
 2. Sur la page d’**accueil**, sélectionnez **Suivant**.  
   

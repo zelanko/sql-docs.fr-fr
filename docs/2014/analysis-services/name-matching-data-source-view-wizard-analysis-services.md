@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69f68beecc8f4ce7f8f4da3e36f2f9f400575c9d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072394"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541261"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Correspondance de noms (Assistant Vue de source de données) (Analysis Services)
   Utilisez la page **Correspondance de noms** pour sélectionner le critère à utiliser pour détecter les relations possibles entre les tables que vous sélectionnez pour la vue de source de données et les autres tables du schéma. Si aucune relation de clé étrangère n'existe entre les tables, ce critère permet d'identifier et d'ajouter les tables associées à la vue de source de données. Les relations logiques identifiées par une correspondance de noms sont également ajoutées à la vue de source de données.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083670"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521593"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md). Il est important de se rappeler que l'algorithme MDT (Microsoft Decision Trees) est un algorithme hybride qui peut créer des modèles avec des fonctions très différentes : un arbre de décision peut représenter des associations, des règles ou même une régression linéaire. La structure de l'arbre est essentiellement la même, mais le mode d’interprétation des informations dépendra de l'objectif visé par la création du modèle.  
@@ -189,7 +188,7 @@ ms.locfileid: "66083670"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Affiche l'attribut qui distingue ce nœud par rapport au nœud parent. La légende du nœud définit un sous-segment de remplissage basé sur la condition de fractionnement. Par exemple, si le fractionnement était sur [Age] et s’il s’agissait d’un fractionnement triple, les légendes de nœud pour les trois nœuds enfants peuvent être « [Age] < 40 », « 40 <\< = [Age] 50 », « [age] >= 50 ».|  
+|**NODE_CAPTION**|Affiche l'attribut qui distingue ce nœud par rapport au nœud parent. La légende du nœud définit un sous-segment de remplissage basé sur la condition de fractionnement. Par exemple, si le fractionnement était sur [Age] et s’il s’agissait d’un fractionnement triple, les légendes de nœud pour les trois nœuds enfants peuvent être « [Age] < 40 », « 40 <= [Age] \< 50", "[Age] > = 50 ».|  
 |**NODE_DESCRIPTION**|Contient la liste complète des attributs qui distinguent ce nœud des autres, en commençant par le nœud parent du modèle. Par exemple, Nom de produit = Pomme et Couleur = Rouge.|  
   
 ###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> Règle du nœud et règle marginale  
@@ -198,7 +197,7 @@ ms.locfileid: "66083670"
  L'attribut représenté par le fragment XML peut être simple ou complexe. Un attribut simple contient le nom de la colonne du modèle, ainsi que la valeur de l’attribut. Si la colonne du modèle contient une table imbriquée, l'attribut de table imbriquée est représenté sous la forme d’une concaténation du nom de la table, de la valeur de clé et de l'attribut.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2,0 de PMML standard, avec des extensions pour prendre en charge l’utilisation de la table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]prend en charge la version 2,0 de PMML standard, avec des extensions pour prendre en charge l’utilisation de la table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
   
 ###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>Distribution de nœuds pour les attributs discrets  
  Dans un modèle d'arbre de décision, la table NODE_DISTRIBUTION contient des statistiques utiles. Toutefois, le type de statistiques varie selon que l'arborescence prédit un attribut discret ou continu. Cette section explique la signification des statistiques de distribution du nœud pour les attributs discrets.  
@@ -225,7 +224,7 @@ ms.locfileid: "66083670"
 |Âge < 30|40|Âge < 30 et Genre = Homme|30|30/40 = .75|30/100 = .30|  
 |||Âge < 30 et Genre = Femme|10|10/40 = .25|10/100 = .10|  
   
- Un petit ajustement est effectué dans tous les modèles afin de compenser pour les valeurs manquantes éventuelles. Pour les attributs continus, chaque valeur ou plage de valeurs est représentée sous la forme d’un état \<(par exemple, âge 30, âge = 30 et âge >30) et les probabilités sont calculées comme suit : l’État existe (valeur = 1), un autre État existe (valeur `Missing`= 0), l’État est. Pour plus d’informations sur l’ajustement des probabilités afin de représenter les valeurs manquantes, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Un petit ajustement est effectué dans tous les modèles afin de compenser pour les valeurs manquantes éventuelles. Pour les attributs continus, chaque valeur ou plage de valeurs est représentée comme un État (par exemple, âge \<30, Age = 30, and Age > 30) et les probabilités sont calculées comme suit : l’État existe (valeur = 1), un autre État existe (valeur = 0), l’État est `Missing` . Pour plus d’informations sur l’ajustement des probabilités afin de représenter les valeurs manquantes, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
  Les probabilités pour chaque nœud sont calculées presque directement à partir de la distribution, comme suit :  
   

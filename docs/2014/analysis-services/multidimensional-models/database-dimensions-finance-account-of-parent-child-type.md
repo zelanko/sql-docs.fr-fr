@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28a7cf6b3a712144daead54d521fb3cc6936c99e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ad3c9733003a22b2d75b483e792e097ae229233
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547131"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Créer un compte Finance de la dimension de type parent-enfant
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une dimension de type compte est une dimension dont les attributs représentent un graphique de comptes à des fins de création de rapports financiers.  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , une dimension de type compte est une dimension dont les attributs représentent un graphique de comptes à des fins de création de rapports financiers.  
   
  Une dimension de comptes permet de gérer dans le temps et de manière sélective le comportement de l'agrégation dans les comptes. Un compte de dimensions permet également d'utiliser un mécanisme standard pour résoudre la plupart des problèmes d'agrégation non standard associés généralement aux solutions décisionnelles qui gèrent des données financières. Si vous ne disposiez pas d'un tel mécanisme standard, la résolution des problèmes d'agrégation non standard nécessiterait des formules de cumul personnalisées, des membres calculés ou des scripts d'expression multidimensionnelle (MDX, Multidimensional Expressions).  
   

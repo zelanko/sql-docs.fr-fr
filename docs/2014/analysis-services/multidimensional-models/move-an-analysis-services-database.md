@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073597"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546061"
 ---
 # <a name="move-an-analysis-services-database"></a>Déplacer une base de données Analysis Services
   Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] souhaite déplacer une base de données de modèle multidimensionnel ou tabulaire à un emplacement différent. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit.  
@@ -148,6 +147,6 @@ ms.locfileid: "66073597"
  [Élément Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Détacher l’élément](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Élément ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
- [Élément StorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
+ [DbStorageLocation, élément](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e050a59da542041b9ce825f573625bdb6afc289
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082735"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520336"
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
   La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
@@ -105,7 +104,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Fournit des informations sur les interfaces de programmation pour utiliser les jeux d'apprentissage et de test dans une structure d'exploration de données.|[Concepts et modèle objet AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Élément MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
 |Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d’exploration de données](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Interrogation des ensembles de lignes de schéma d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Interrogation des ensembles de lignes de schéma d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils d’exploration de données](data-mining-tools.md)   

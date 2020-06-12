@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1067bf817051f28c939ce5f438dd617e4a9495
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085789"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524831"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice de classification (Analysis Services - Exploration de données)
   Une *matrice de classification* trie tous les cas du modèle en catégories, en déterminant si la valeur prédite correspondait à la valeur réelle. Tous les cas dans chaque catégorie sont ensuite comptés et les totaux sont affichés dans la matrice. La matrice de classification est un outil standard d’évaluation des modèles statistiques et est parfois appelée *matrice de confusion*.  

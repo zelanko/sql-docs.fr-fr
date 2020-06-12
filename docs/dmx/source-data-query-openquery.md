@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887726"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670034"
 ---
-# <a name="ltsource-data-querygt---openquery"></a>&lt;requête&gt; de données sources-OPENQUERY
+# <a name="ltsource-data-querygt---openquery"></a>&lt;requête de données sources &gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Remplace la requête de données source par une requête vers une source de données existante. Les instructions INSERT, SELECT FROM PREDICTION JOIN et SELECT FROM NATURAL PREDICTION JOIN prennent en charge **OPENQUERY**.  
@@ -44,7 +44,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise la source de données MyDS déjà définie dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] la base de données pour créer une [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] connexion à la base de données et interroger la vue **vTargetMail** .  
+ L’exemple suivant utilise la source de données MyDS déjà définie dans la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données pour créer une connexion à la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données et interroger la vue **vTargetMail** .  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  

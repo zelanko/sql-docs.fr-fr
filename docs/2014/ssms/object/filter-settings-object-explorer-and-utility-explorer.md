@@ -13,17 +13,17 @@ ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd040bbf0f6e3f5e150d45df41ea676a71c6e03a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277079"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859221"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Paramètres de filtre (Explorateur d'objets et Explorateur de l'utilitaire)
   Cette boîte de dialogue vous permet de spécifier un filtre. Un filtre vous permet de configurer l'Explorateur d'objets et l'Explorateur de l'utilitaire pour qu'ils affichent uniquement les éléments qui correspondent à des critères spécifiques. Par exemple, vous pouvez utiliser un filtre pour afficher uniquement les travaux dont le nom contient le mot « Maintenance ». L’en-tête de la boîte de dialogue **Paramètres du filtre** contient le nom du serveur et peut contenir le nom de la base de données.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Propriété**  
  Indique la propriété sur laquelle filtrer.  
   
@@ -74,6 +74,6 @@ ms.locfileid: "63277079"
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
- [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Fonctionnalités et tâches de Utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bcc40c0b8ca91c621c9e269b4d19af0de4e1af7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079908"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543881"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installer Analysis Services en mode tabulaire
   Si vous installez Analysis Services afin d'utiliser les nouvelles fonctionnalités tabulaires de modélisation, vous devez installer Analysis Services dans un mode serveur qui prend en charge ce type de modèle. Le mode serveur est un mode tabulaire configuré pendant l'installation.  
@@ -53,9 +52,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  `ASSERVERMODE` respecte la casse.  Toutes les valeurs doivent être exprimées en majuscules. Le tableau suivant décrit les valeurs valides pour `ASSERVERMODE`.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|Il s'agit de la valeur par défaut. Si vous ne définissez pas `ASSERVERMODE`, le serveur est installé en mode serveur multidimensionnel.|  
+|MULTIDIMENSIONAL|Il s’agit de la valeur par défaut. Si vous ne définissez pas `ASSERVERMODE`, le serveur est installé en mode serveur multidimensionnel.|  
 |POWERPIVOT|Cette valeur est facultative. En pratique, si vous définissez le paramètre `ROLE`, le mode serveur est automatiquement défini sur 1, ce qui rend `ASSERVERMODE` facultatif pour une installation de PowerPivot pour SharePoint. Pour plus d'informations, consultez [Install PowerPivot from the Command Prompt](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Cette valeur est obligatoire si vous installez Analysis Services en mode tabulaire à partir de la ligne de commande.|  
   

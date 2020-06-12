@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e0cfd7aa0b6d7f401510add51f3938c4c297a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075983"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547151"
 ---
 # <a name="create-a-currency-type-dimension"></a>Créer une dimension de type monétaire
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une dimension de type monétaire est une dimension dont les attributs représentent une liste de devises pour les rapports financiers.  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , une dimension de type monétaire est une dimension dont les attributs représentent une liste de devises pour les rapports financiers.  
   
  Une dimension monétaire permet d'ajouter des fonctions de conversion monétaire à un cube dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour ajouter une conversion monétaire à un cube, utilisez l'Assistant Business Intelligence pour définir une commande de script MDX (Multidimensional Expressions) qui convertit les mesures monétaires en valeurs correspondant aux paramètres régionaux de l'application cliente. Pour créer ce script MDX, vous devez fournir les informations suivantes à l'Assistant Business Intelligence :  
   

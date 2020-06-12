@@ -1,5 +1,6 @@
 ---
 title: Connexion à SQL Server (MySQLToSQL) | Microsoft Docs
+description: Découvrez comment vous connecter à une instance cible de SQL Server pour migrer des bases de données MySQL. SSMA obtient des métadonnées sur les bases de données dans SQL Server.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103127"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293956"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Connexion à SQL Server (MySQLToSQL)
 Pour migrer des bases de données MySQL vers SQL Server, vous devez vous connecter à l’instance cible de SQL Server. Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de SQL Server et affiche les métadonnées de la base de données dans l’Explorateur de métadonnées SQL Server. SSMA stocke les informations de l’instance de SQL Server à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -29,7 +30,7 @@ Les métadonnées relatives à l’instance de SQL Server ne sont pas synchronis
 ## <a name="required-sql-server-permissions"></a>Autorisations de SQL Server requises  
 Le compte utilisé pour se connecter à SQL Server nécessite des autorisations différentes en fonction des actions effectuées par le compte :  
   
--   Pour convertir des objets MySQL [!INCLUDE[tsql](../../includes/tsql-md.md)] en syntaxe, pour mettre à jour des métadonnées à partir de SQL Server, ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit avoir l’autorisation de se connecter à l’instance de SQL Server.  
+-   Pour convertir des objets MySQL en [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe, pour mettre à jour des métadonnées à partir de SQL Server, ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit avoir l’autorisation de se connecter à l’instance de SQL Server.  
   
 -   Pour charger des objets de base de données dans SQL Server, l’exigence d’autorisation minimale est l’appartenance au rôle de base de données **db_owner** dans la base de données cible.  
   
@@ -67,13 +68,13 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
   
 Il est autorisé à se connecter/se reconnecter à des versions ultérieures de SQL Server.  
   
-1.  Vous serez en mesure de vous connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou 2014 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou 2016 quand le projet créé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est 2005.  
+1.  Vous serez en mesure de vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quand le projet créé est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-2.  Vous serez en mesure de vous connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou 2014 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou 2016 lorsque le projet créé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est 2008, mais qu’il n’est pas autorisé à se connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux versions inférieures, c.-à-d., 2005.  
+2.  Vous serez en mesure de vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 lorsque le projet créé est 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais qu’il n’est pas autorisé à se connecter aux versions inférieures, c.-à-d., [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-3.  Vous serez en mesure de vous connecter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou 2014 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou 2016 lorsque le projet créé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est 2012.  
+3.  Vous serez en mesure de vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 lorsque le projet créé est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
   
-4.  Vous ne pouvez vous connecter qu' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 lorsque le projet créé est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
+4.  Vous ne pouvez vous connecter qu’à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 lorsque le projet créé est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
 5.  La compatibilité de version supérieure n’est pas valide pour « SQL Azure ».  
   
@@ -88,7 +89,7 @@ Il est autorisé à se connecter/se reconnecter à des versions ultérieures de 
 |SQL Azure||||||Oui|  
   
 > [!IMPORTANT]  
-> La conversion des objets de base de données est effectuée en fonction du type de projet, mais pas de celui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la version de connectée à. Dans le cas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’un projet 2005, la conversion est effectuée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en fonction du nombre de 2005, même si vous êtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connecté à une version plus récente de (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
+> La conversion des objets de base de données est effectuée en fonction du type de projet, mais pas de celui de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connectée à. Dans le cas d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un projet 2005, la conversion est effectuée en fonction du nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, même si vous êtes connecté à une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
   
 ## <a name="synchronizing-sql-server-metadata"></a>Synchronisation des métadonnées de SQL Server  
 Les métadonnées relatives aux bases de données SQL Server ne sont pas automatiquement mises à jour. Les métadonnées dans SQL Server Explorateur de métadonnées sont un instantané des métadonnées lorsque vous vous êtes connecté pour la première fois à SQL Server, ou la dernière fois que vous avez mis à jour manuellement les métadonnées. Vous pouvez mettre à jour manuellement les métadonnées de toutes les bases de données ou d’une base de données ou d’un objet de base de données unique.  

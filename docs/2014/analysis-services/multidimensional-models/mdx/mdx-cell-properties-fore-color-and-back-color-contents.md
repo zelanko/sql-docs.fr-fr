@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ff8f40cb-2ac4-4fc2-9761-7f1b14c17c8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd8bb157d7b501d29230c91d87f148ae738ff45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748754ec3c90bb44392d7acb7de8f815be24086e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546414"
 ---
 # <a name="fore_color-and-back_color-contents-mdx"></a>Contenu de FORE_COLOR et BACK_COLOR (MDX)
   Les propriétés de cellule `FORE_COLOR` et `BACK_COLOR` permettent de stocker les informations de couleur respectivement pour le texte et l'arrière-plan d'une cellule, selon le format rouge-vert-bleu (RVB) du système d'exploitation Microsoft Windows.  

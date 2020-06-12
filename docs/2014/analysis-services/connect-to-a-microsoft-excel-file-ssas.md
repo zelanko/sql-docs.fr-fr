@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6646ee55ce6703391b5c146d41d513445aa2fabd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087318"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527185"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Connexion à un fichier Microsoft Excel (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de vous connecter à un fichier Microsoft Excel stocké sur l'ordinateur local. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087318"
 > [!NOTE]  
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'un fichier dans cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire le fichier sélectionné.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   

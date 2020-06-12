@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682987b276a850104b6c4e10811423666eb4ffb0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081926"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528725"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Déploiement et mise à l'échelle des modèles d'exploration de données (Compléments d'exploration de données pour Excel)
   Les outils du groupe **utilisation du modèle** et **gestion** sont fournis pour vous aider à gérer et à parcourir les modèles d’exploration de données existants. Utilisez ces outils pour afficher tous les modèles stockés sur une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], et non pas uniquement ceux créés avec les compléments.  
@@ -26,7 +25,7 @@ ms.locfileid: "66081926"
   
 ## <a name="model-usage-toolbar"></a>Barre d'outils Utilisation du modèle  
   
-### <a name="browse"></a>...  
+### <a name="browse"></a>Parcourir  
  Utilisez l’Assistant **Parcourir** pour sélectionner un modèle d’exploration de données existant, puis affichez et explorez le modèle dans une visionneuse qui contient plusieurs graphiques et outils.  
   
  Pour plus d’informations, consultez [navigation dans les modèles dans Excel &#40;SQL Server les compléments d’exploration de données&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  

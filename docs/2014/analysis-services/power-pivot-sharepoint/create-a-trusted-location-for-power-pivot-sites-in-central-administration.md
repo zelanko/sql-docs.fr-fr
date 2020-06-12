@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 104d9dedafafedce505f63a9b8c17291d631ca54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684083"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540601"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Créer un emplacement approuvé pour les sites PowerPivot dans l'Administration centrale
   Excel Services vous permet de spécifier les emplacements qui constituent des référentiels valides pour les classeurs que vous ouvrez sur un serveur SharePoint. Ces emplacements sont appelés « emplacements approuvés ». Vous pouvez utiliser des paramètres de configuration différents pour chaque emplacement approuvé créé. Pour un déploiement de PowerPivot pour SharePoint, vous envisagez peut être de créer un emplacement approuvé pour les sites qui contiennent des classeurs PowerPivot, pour pouvoir appliquer les paramètres les plus appropriés à l'accès aux données PowerPivot tout en conservant les paramètres par défaut pour le reste de la batterie.  
@@ -27,7 +26,7 @@ ms.locfileid: "74684083"
   
  Vous devez connaître l'adresse URL du site SharePoint contenant la Galerie PowerPivot ou une autre bibliothèque qui stocke vos classeurs. Pour récupérer l’adresse, ouvrez le site qui contient la bibliothèque, cliquez avec le bouton droit sur **Galerie PowerPivot**, sélectionnez **Propriétés**, puis copiez la première partie de l’adresse (URL) qui contient le nom du serveur et le chemin d’accès au site.  
   
-##  <a name="overview"></a>Vue d'ensemble de <a name="overview"></a>  
+##  <a name="overview"></a><a name="overview"></a> Vue d'ensemble  
  Une installation initiale d'Excel Services spécifie 'http://' comme son emplacement approuvé, ce qui signifie que les classeurs de n'importe quel site de la batterie peuvent être ouverts sur le serveur. Si vous avez besoin d'un contrôle plus strict sur les emplacements à considérer comme dignes de confiance, vous pouvez créer de nouveaux emplacements approuvés qui mappent à des sites spécifiques dans votre batterie, puis faire varier les paramètres et les autorisations pour chacun.  
   
  La création d'un emplacement approuvé pour les sites hébergeant des classeurs PowerPivot est particulièrement utile si vous voulez conserver les valeurs par défaut pour le reste de la batterie de serveurs, tout en appliquant des paramètres différents, plus appropriés pour l'accès aux données PowerPivot. Par exemple, un emplacement approuvé optimisé pour les classeurs PowerPivot peut disposer d'une taille maximale de classeur de 50 Mo, tandis que le reste de la batterie utilise la valeur par défaut de 10 Mo.  
@@ -61,7 +60,7 @@ ms.locfileid: "74684083"
   
 11. Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Galerie PowerPivot](../../2014-toc/index.yml)  
  [Créer et personnaliser la Galerie PowerPivot](create-and-customize-power-pivot-gallery.md)   
  [Utiliser la Galerie PowerPivot](use-power-pivot-gallery.md)  

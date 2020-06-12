@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e7262beef3e9d64a488e255fe5fd9f1b79a8837
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086131"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525240"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MSC (Microsoft Sequence Cluster)
-  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse Sequence cluster [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans affiche les modèles d’exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] générés à l’aide de l’algorithme Sequence Clustering. L’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme d’analyse de séquence conçu pour l’exploration des données qui contiennent des événements pouvant être liés par des chemins consécutifs, ou *séquences*. Pour plus d’informations sur cet algorithme, consultez [Algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm.md).  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse Sequence cluster dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données générés à l’aide de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Sequence Clustering. L’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme d’analyse de séquence conçu pour l’exploration des données qui contiennent des événements pouvant être liés par des chemins consécutifs, ou *séquences*. Pour plus d’informations sur cet algorithme, consultez [Algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
 >  La visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] permet de consulter des informations détaillées relatives aux équations utilisées dans le modèle et les motifs découverts. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "66086131"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>Profils de cluster  
- L’onglet **Profil du cluster** fournit une vue d’ensemble des clusters créés par l’algorithme de votre modèle. Chacune des colonnes situées après la colonne **Remplissage** dans la grille représente un cluster qui a été découvert par le modèle. La \<ligne d’attributs>. samples représente les différentes séquences de données qui existent dans le cluster \<, et l’attribut> ligne décrit tous les éléments contenus dans le cluster et leur distribution globale.  
+ L’onglet **Profil du cluster** fournit une vue d’ensemble des clusters créés par l’algorithme de votre modèle. Chacune des colonnes situées après la colonne **Remplissage** dans la grille représente un cluster qui a été découvert par le modèle. La \<attribute> ligne. samples représente les différentes séquences de données qui existent dans le cluster, et la \<attribute> ligne décrit tous les éléments contenus dans le cluster et leur distribution globale.  
   
  L’option **Barres de l’histogramme** contrôle le nombre de barres qui sont visibles dans l’histogramme. Si le nombre réel de barres est supérieur au nombre de barres à afficher, les barres les plus importantes sont conservées et le reste des barres est regroupé dans un compartiment gris.  
   

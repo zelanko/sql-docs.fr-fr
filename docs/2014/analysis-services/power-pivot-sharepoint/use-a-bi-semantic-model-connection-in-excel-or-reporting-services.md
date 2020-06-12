@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05cd74af77cc62dc637eeb4141478a79fee4ad02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070933"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547721"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services
   Cette rubrique explique comment utiliser les connexions de modèles sémantiques BI que vous avez créées à l'aide des instructions fournies dans d'autres rubriques. Si vous n’avez pas encore créé de modèle sémantique BI, consultez [créer une connexion de modèle sémantique bi à un classeur PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) et [créer une connexion de modèle sémantique bi à une base de données model tabulaire](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66070933"
   
 2.  Cliquez sur **À partir d'Analysis Services** et utilisez l'Assistant Connexion de Données pour importer les données.  
   
-3.  Entrez l’URL SharePoint du fichier de connexion de modèle sémantique bi (par exemple, ** http://mysharepoint/shared documents/mydata. BISM**). Acceptez l'option d'utilisation des informations d'identification de connexion par défaut, **Utiliser l'authentification Windows**. Cliquez sur **Suivant**.  
+3.  Entrez l’URL SharePoint du fichier de connexion de modèle sémantique BI (par exemple, ** http://mysharepoint/shared documents/mydata. BISM**). Acceptez l'option d'utilisation des informations d'identification de connexion par défaut, **Utiliser l'authentification Windows**. Cliquez sur **Suivant**.  
   
 4.  Sur la page suivante, cliquez de nouveau sur **Suivant** . Bien que vous soyez invité à sélectionner une base de données, vous pouvez utiliser uniquement celle spécifiée dans la connexion de modèle sémantique BI.  
   

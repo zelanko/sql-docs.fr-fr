@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03b4264e421756fb1234a306f3834ca89a97489b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8569d07e5833b6a98d28484b578a8094a1eed2ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174640"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521672"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)
   L'algorithme MTS (Microsoft Time Series) [!INCLUDE[msCoName](../../includes/msconame-md.md)] inclut deux algorithmes séparés pour l'analyse de la série chronologique :
@@ -152,7 +151,7 @@ ms.locfileid: "78174640"
 |NOT NULL|Indique que la colonne ne peut pas contenir de valeur Null. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique aux colonnes de structure d'exploration de données.|
 |MODEL_EXISTENCE_ONLY|Signifie que la colonne sera considérée comme ayant deux états possibles : manquant et existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique aux colonnes de modèle d'exploration de données.|
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Spécifications
  Un modèle de série chronologique doit contenir une colonne Key Time qui contient des valeurs uniques, des colonnes d'entrée et au moins une colonne prédictible.
 
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles

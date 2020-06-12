@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e830fc353898e3ec835b338e84765a0cad0de43f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546821"
 ---
 # <a name="specifying-the-installation-target"></a>Spécification de la cible d'installation
-  L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les informations sur la cible \<d’installation à partir du *nom du projet*> fichier. deploymenttargets. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crée ce fichier lorsque vous générez [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le projet. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]utilise la base de données et le serveur spécifiés dans la page **déploiement** de la **Properties Pages** \< *project name* * \<* boîte de dialogue pages de propriétés de>nom du projet pour créer le nom du projet> fichier. targets.  
+  L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les informations sur la cible d’installation à partir du \<*project name*> fichier. deploymenttargets. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crée ce fichier lorsque vous générez le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]utilise la base de données et le serveur spécifiés dans la page **déploiement** de la *\<project name>* boîte de dialogue pages de **Propriétés** pour créer le \<*project name*> fichier. targets.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Modification de la cible d'installation pour le déploiement  
  Dans certaines situations, il peut s'avérer nécessaire de déployer un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers une base de données ou une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] différente de celle spécifiée sur la page **Déploiement** . Par exemple, vous pouvez choisir de déployer le projet vers un serveur où il sera testé avant son déploiement, puis de le déployer vers un serveur de production une fois les tests terminés. Vous pouvez aussi décider de déployer un projet terminé et testé vers plusieurs serveurs de production dans un cluster d'équilibrage de la charge réseau, ou encore vers un serveur de test et un serveur de production.  
@@ -42,7 +41,7 @@ ms.locfileid: "66075223"
   
      -ou-  
   
--   Modifiez le \< *nom du projet*> fichier. deploymenttargets à l’aide de n’importe quel éditeur de texte.  
+-   Modifiez le \<*project name*> fichier. deploymenttargets à l’aide de n’importe quel éditeur de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécification des options de déploiement de partitions et de rôles](deployment-script-files-partition-and-role-deployment-options.md)   

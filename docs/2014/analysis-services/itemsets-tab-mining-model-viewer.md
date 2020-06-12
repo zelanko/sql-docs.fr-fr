@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 800e14fb360feef3f03804f5d57ed36c57142744
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079557"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543691"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Onglet Jeux d'éléments (Visionneuse de modèle d'exploration de données)
   Vous pouvez utiliser le volet **Jeux d’éléments** pour afficher les jeux d’éléments fréquents contenus dans un modèle d’exploration de données de règles d’association. Étant donné qu'un modèle d'association peut contenir un grand nombre de jeux d'éléments, des contrôles sont fournis dans la visionneuse pour vous aider à filtrer les jeux d'éléments affichés dans la visionneuse.  
@@ -68,7 +67,7 @@ ms.locfileid: "66079557"
  **Lignes au maximum**  
  Limitez le nombre de jeux d'éléments affichés dans la visionneuse. Par défaut, les jeux d'éléments sont classés selon la prise en charge, par ordre décroissant ; une valeur plus faible limite ainsi la liste aux jeux d'éléments les plus courants.  
   
- **Support technique**  
+ **Support**  
  Affiche la prise en charge de chaque jeu d'éléments.  
   
  **Taille**  

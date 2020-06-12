@@ -6,17 +6,17 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ad7b080f1b42ae6f082be94afe9a5709f613f53c
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 737557dfff61cecdacf6bec0990145fcb4e4649f
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606709"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732697"
 ---
 # <a name="database-requirements-master-data-services"></a>Configuration requise pour la base de données (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "83606709"
 > [!NOTE]  
 >  Tout ordinateur sur lequel vous installez les composants de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] doit disposer d'une licence. Pour plus d'informations, reportez-vous au Contrat de Licence Utilisateur Final (CLUF).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Avant de créer une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , assurez -vous que les conditions suivantes sont remplies.  
   
 ### <a name="sql-server-edition"></a>Édition SQL Server  

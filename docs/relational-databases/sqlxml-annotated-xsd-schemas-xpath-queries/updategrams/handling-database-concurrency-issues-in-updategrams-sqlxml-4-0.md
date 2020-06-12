@@ -1,5 +1,6 @@
 ---
 title: Problèmes d’accès concurrentiel à la base de données dans codes (SQLXML)
+description: Découvrez comment utiliser le mécanisme de contrôle d’accès concurrentiel optimiste dans codes (SQLXML 4,0) pour gérer les problèmes d’accès concurrentiel de la base de données.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,23 +22,23 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb77a6499472d116ad3b30028ce1566b68b81122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbb10145e8d660fa02ebefefc09da4aa04eb1778
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241291"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215277"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Gestion des problèmes d'accès concurrentiel aux bases de données dans les codes de mise à jour (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Comme d'autres mécanismes de mise à jour de base de données, les codes de mise à jour doivent faire face à des mises à jour simultanées de données dans un environnement multi-utilisateur. Les codes de mise à jour utilisent le contrôle d'accès concurrentiel optimiste, qui utilise la comparaison des données de champ sélectionnées comme instantanés pour garantir que les données à mettre à jour n'ont pas été altérées par une autre application utilisateur depuis qu'elles ont été lues à partir de la base de données. Codes inclut ces valeurs d’instantané dans le ** \<bloc Before>** du codes. Avant de mettre à jour la base de données, le mise à jour vérifie les valeurs spécifiées dans le ** \<bloc Before>** par rapport aux valeurs actuellement présentes dans la base de données pour s’assurer que la mise à jour est valide.  
+  Comme d'autres mécanismes de mise à jour de base de données, les codes de mise à jour doivent faire face à des mises à jour simultanées de données dans un environnement multi-utilisateur. Les codes de mise à jour utilisent le contrôle d'accès concurrentiel optimiste, qui utilise la comparaison des données de champ sélectionnées comme instantanés pour garantir que les données à mettre à jour n'ont pas été altérées par une autre application utilisateur depuis qu'elles ont été lues à partir de la base de données. Codes inclut ces valeurs d’instantané dans le **\<before>** bloc du codes. Avant de mettre à jour la base de données, le mise à jour vérifie les valeurs spécifiées dans le **\<before>** bloc par rapport aux valeurs actuellement présentes dans la base de données pour s’assurer que la mise à jour est valide.  
   
  Le contrôle d'accès concurrentiel optimiste offre trois niveaux de protection dans un code de mise à jour : bas (aucune), intermédiaire et haut. Vous pouvez décider de quel niveau de protection vous avez besoin en spécifiant le code de mise à jour en conséquence.  
   
 ## <a name="lowest-level-of-protection"></a>Niveau de protection le plus bas  
- Ce niveau correspond à une mise à jour aveugle, dans laquelle la mise à jour est traitée sans se référer aux autres mises à jour effectuées depuis la dernière lecture de la base de données. Dans ce cas, vous spécifiez uniquement la ou les colonnes de clé primaire dans le ** \<bloc Before>** pour identifier l’enregistrement et vous spécifiez les informations mises à jour dans le ** \<bloc after>** .  
+ Ce niveau correspond à une mise à jour aveugle, dans laquelle la mise à jour est traitée sans se référer aux autres mises à jour effectuées depuis la dernière lecture de la base de données. Dans ce cas, vous spécifiez uniquement la ou les colonnes de clé primaire dans le **\<before>** bloc pour identifier l’enregistrement et vous spécifiez les informations mises à jour dans le **\<after>** bloc.  
   
- Par exemple, le nouveau numéro de téléphone du contact dans le code de mise à jour suivant est correct, indépendamment de ce que le numéro de téléphone était précédemment. Notez que le ** \<bloc Before>** spécifie uniquement la colonne de clé primaire (ContactID).  
+ Par exemple, le nouveau numéro de téléphone du contact dans le code de mise à jour suivant est correct, indépendamment de ce que le numéro de téléphone était précédemment. Notez que le **\<before>** bloc spécifie uniquement la colonne de clé primaire (ContactID).  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -55,9 +56,9 @@ ms.locfileid: "75241291"
 ## <a name="intermediate-level-of-protection"></a>Niveau de protection intermédiaire  
  Dans ce niveau de protection, le code de mise à jour compare la ou les valeurs actuelles des données qui sont mises à jour avec la ou les valeurs présentes dans la ou les colonnes de la base de données pour garantir que les valeurs n'ont pas été modifiées par quelque autre transaction depuis que l'enregistrement a été lu par votre transaction.  
   
- Vous pouvez bénéficier de ce niveau de protection en spécifiant la ou les colonnes de clé primaire et la ou les colonnes que vous mettez à jour dans le ** \<bloc Before>** .  
+ Vous pouvez bénéficier de ce niveau de protection en spécifiant la ou les colonnes de clé primaire et la ou les colonnes que vous mettez à jour dans le **\<before>** bloc.  
   
- Par exemple, ce code de mise à jour modifie la valeur dans la colonne Phone de la table Person.Contact pour le contact dont ContactID a la valeur 1. Le ** \<bloc Before>** spécifie l’attribut **Phone** pour garantir que cette valeur d’attribut correspond à la valeur de la colonne correspondante dans la base de données avant d’appliquer la valeur mise à jour.  
+ Par exemple, ce code de mise à jour modifie la valeur dans la colonne Phone de la table Person.Contact pour le contact dont ContactID a la valeur 1. Le **\<before>** bloc spécifie l’attribut **Phone** pour garantir que cette valeur d’attribut correspond à la valeur de la colonne correspondante dans la base de données avant d’appliquer la valeur mise à jour.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -77,11 +78,11 @@ ms.locfileid: "75241291"
   
  Il existe deux façons d'obtenir ce niveau de protection élevé contre les mises à jour simultanées :  
   
--   Spécifiez des colonnes supplémentaires dans la table dans le ** \<bloc Before>** .  
+-   Spécifiez des colonnes supplémentaires dans la table du **\<before>** bloc.  
   
-     Si vous spécifiez des colonnes supplémentaires dans le ** \<bloc Before>** , mise à jour compare les valeurs spécifiées pour ces colonnes aux valeurs qui se trouvaient dans la base de données avant d’appliquer la mise à jour. Si l'une quelconque des colonnes d'enregistrement a changé depuis que votre transaction a lu l'enregistrement, le code de mise à jour n'effectue pas la mise à jour.  
+     Si vous spécifiez des colonnes supplémentaires dans le **\<before>** bloc, mise à jour compare les valeurs spécifiées pour ces colonnes aux valeurs qui se trouvaient dans la base de données avant d’appliquer la mise à jour. Si l'une quelconque des colonnes d'enregistrement a changé depuis que votre transaction a lu l'enregistrement, le code de mise à jour n'effectue pas la mise à jour.  
   
-     Par exemple, le mise à jour suivant met à jour le nom de l’équipe, mais spécifie des colonnes supplémentaires (StartTime, EndTime) dans le ** \<bloc Before>** , ce qui demande un niveau de protection plus élevé contre les mises à jour simultanées.  
+     Par exemple, le mise à jour suivant met à jour le nom de l’équipe, mais spécifie des colonnes supplémentaires (StartTime, EndTime) dans le **\<before>** bloc, ce qui demande un niveau de protection supérieur contre les mises à jour simultanées.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -99,11 +100,11 @@ ms.locfileid: "75241291"
     </ROOT>  
     ```  
   
-     Cet exemple spécifie le niveau de protection le plus élevé en spécifiant toutes les valeurs de colonne de l’enregistrement dans le ** \<bloc Before>** .  
+     Cet exemple spécifie le niveau de protection le plus élevé en spécifiant toutes les valeurs de colonne de l’enregistrement dans le **\<before>** bloc.  
   
--   Spécifiez la colonne timestamp (si disponible) dans le ** \<bloc Before>** .  
+-   Spécifiez la colonne timestamp (si disponible) dans le **\<before>** bloc.  
   
-     Au lieu de spécifier toutes les colonnes d’enregistrement dans le ** \<bloc Before**>, vous pouvez simplement spécifier la colonne timestamp (si la table en a une) avec la ou les colonnes de clé primaire dans le ** \<bloc Before>** . La base de données met à jour la colonne timestamp en spécifiant une valeur unique après chaque mise à jour de l'enregistrement. Dans ce cas, le code de mise à jour compare la valeur de l'horodateur avec la valeur correspondante dans la base de données. La valeur d'horodateur stockée dans la base de données est une valeur binaire. Par conséquent, la colonne timestamp doit être spécifiée dans le schéma sous la forme **DT : type = "bin. Hex"**, **DT : type = "bin. base64"** ou **SQL : datatype = "timestamp"**. (Vous pouvez spécifier le type de données **XML** ou le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données.)  
+     Au lieu de spécifier toutes les colonnes d’enregistrement dans le \<before**> bloc * *, vous pouvez simplement spécifier la colonne timestamp (si la table en a une) avec la ou les colonnes de clé primaire dans le **\<before>** bloc. La base de données met à jour la colonne timestamp en spécifiant une valeur unique après chaque mise à jour de l'enregistrement. Dans ce cas, le code de mise à jour compare la valeur de l'horodateur avec la valeur correspondante dans la base de données. La valeur d'horodateur stockée dans la base de données est une valeur binaire. Par conséquent, la colonne timestamp doit être spécifiée dans le schéma sous la forme **DT : type = "bin. Hex"**, **DT : type = "bin. base64"** ou **SQL : datatype = "timestamp"**. (Vous pouvez spécifier soit le type de données **XML** , soit le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données.)  
   
 #### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   

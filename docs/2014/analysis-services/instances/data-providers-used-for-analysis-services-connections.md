@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a48316bb89f92ba8b44e3160a6b38e77762f3be
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080097"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543981"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Fournisseurs de données utilisés pour les connexions Analysis Services
   Analysis Services fournit trois fournisseurs de données pour l'accès au serveur et aux données. Toutes les applications qui se connectent à Analysis Services le font à l'aide de l'un de ces fournisseurs. Deux des fournisseurs ADOMD.NET et Analysis Services Management Objects (AMO) sont des fournisseurs de données managés. Le fournisseur OLE DB Analysis Services (DLL MSOLAP) est un fournisseur de données natif.  
@@ -54,7 +53,7 @@ ms.locfileid: "66080097"
   
 1.  Accédez au dossier \Program Files\Microsoft Analysis Services\AS OLEDB\120.  
   
-2.  Cliquez avec le bouton droit sur msolap120. dll, puis cliquez sur **Propriétés**.  
+2.  Cliquez avec le bouton droit sur msolap120.dll, puis cliquez sur **Propriétés**.  
   
  Si vous ne parvenez pas à trouver le fichier à cet emplacement, ou si le chemin d'accès au dossier inclut AS OLEDB\110 ou AS OLEDB\90, c'est que vous utilisez une bibliothèque plus ancienne et que vous devez maintenant installer une version plus récente (AS OLEDB\11) pour vous connecter à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66080097"
   
  MSOLAP130.dll correspond à la version du fournisseur OLE DB Analysis Services fournie avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les versions précédentes récentes incluent MSOLAP10.dll (pour SQL Server 2008 et 2008 R2) et MSOLAP90.dll (pour SQL Server 2005).  
   
- Les fournisseurs OLE DB sont souvent spécifiés dans les chaînes de connexion. Une chaîne de connexion Analysis Services utilise une autre nomenclature pour faire référence au fournisseur de OLE DB : MSOLAP. \<version>. dll  
+ Les fournisseurs OLE DB sont souvent spécifiés dans les chaînes de connexion. Une chaîne de connexion Analysis Services utilise une autre nomenclature pour faire référence au fournisseur de OLE DB : MSOLAP. \<version> . dll  
   
  MSOLAP.5.dll correspond au fournisseur OLE DB Analysis Services installé avec Excel 2013. Les versions précédentes, telles que MSOLAP.4.dll ou MSOLAP.3.dll, sont souvent disponibles sur des stations de travail qui exécutent des versions antérieures d'Excel. Certaines fonctionnalités Analysis Services, telles que le complément PowerPivot, requièrent des versions spécifiques du fournisseur OLE DB. Pour plus d’informations, consultez [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66080097"
   
  AMO est installé par le programme d'installation de SQL Server et est utilisé par les applications clientes SQL Server pour la connexion à Analysis Services. Vous pouvez également le télécharger et l’installer manuellement quand vous utilisez AMO dans du code personnalisé (consultez [Procédure : déterminer la version des fournisseurs de données Analysis Services](#bkmk_LibUpdate) , dans cette rubrique). AMO est disponible dans le Global Assembly Cache (GAC) en tant que `Microsoft.AnalysisServices`.  
   
- Une connexion à l’aide d’AMO est généralement minime, composée de «\<Data source = ServerName> ». Une fois une connexion établie, vous utilisez l’API pour recourir à des collections de bases de données et à des objets principaux. SSDT et SSMS utilisent AMO pour se connecter à une instance Analysis Services.  
+ Une connexion à l’aide d’AMO est généralement minime, composée de « Data source = \<servername> ». Une fois une connexion établie, vous utilisez l’API pour recourir à des collections de bases de données et à des objets principaux. SSDT et SSMS utilisent AMO pour se connecter à une instance Analysis Services.  
   
  Pour plus d’informations sur la connexion par programmation, consultez [Programmation d’objets fondamentaux AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   

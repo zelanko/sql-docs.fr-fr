@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537361"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Onglet Modèle (Visionneuses de modèle d'exploration de données)
   L'onglet **Modèle** dans la visionneuse de l'algorithme MTS affiche une représentation de série chronologique en tant que nœud dans un graphique, comme celles utilisées dans les modèles d'arbre de décision.  
@@ -60,7 +59,7 @@ ms.locfileid: "66077620"
   
  Si l'arborescence affichée dans la liste déroulante comporte une barre de couleur plus longue, cela signifie que le modèle a de nombreuses branches dans l'arborescence. Un branchement indique une régression plus complexe et le modèle doit être divisé en plusieurs segments, avec une équation différente (ou une paire d'équations) dans chaque nœud.  
   
- **Contexte**  
+ **Arrière-plan**  
  Utilisez ce contrôle pour sélectionner l'état représenté par la couleur d'arrière-plan de chaque nœud.  
   
  **Expansion par défaut**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086970"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526835"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copier et coller des données (SSAS Tabulaire)
   Vous pouvez copier des données de table depuis des applications externes et les coller dans une table nouvelle ou existante du générateur de modèles. Les données que vous collez à partir du Presse-papiers doivent être au format HTML, notamment les données copiées à partir d’Excel ou de Word. Le générateur de modèles détecte et applique automatiquement les types de données aux données collées. Vous pouvez également modifier manuellement le type de données ou la mise en forme d'affichage d'une colonne.  
@@ -28,7 +27,7 @@ ms.locfileid: "66086970"
   
  Sections de cette rubrique :  
   
--   [Conditions préalables](#bkmk_prerequisites)  
+-   [Composants requis](#bkmk_prerequisites)  
   
 -   [Coller des données](#bkmk_paste_data)  
   

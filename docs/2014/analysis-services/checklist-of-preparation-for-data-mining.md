@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 099f97ac1195f58ae9bf9dbc7c6b0671e6aada2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088149"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527555"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Liste de vérification : préparation pour l'exploration de données
   Bien que les compléments d'exploration de données facilitent et agrémentent la création de modèles et leur expérimentation, lorsque vous devez obtenir des résultats reproductibles et utilisables, vous devez prévoir suffisamment de temps pour formuler les critères fondamentaux pour l'entreprise, ainsi que pour obtenir et préparer les données. Cette section fournit une liste de vérification pour vous aider à planifier les tâches d'inspection, et décrit les problèmes courants.  

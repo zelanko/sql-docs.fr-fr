@@ -10,12 +10,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096529"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856600"
 ---
 # <a name="check-files-in-use"></a>Vérifier les fichiers en cours d'utilisation
   Pour éviter d'avoir à redémarrer Windows après avoir installé des mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez la page Vérifier les fichiers en cours d'utilisation afin d'identifier les processus qui verrouillent des fichiers requis par le programme d'installation des mises à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,11 +42,11 @@ ms.locfileid: "66096529"
   
 -   Nom du fichier verrouillé  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
   
 |Nom|Description|  
 |----------|-----------------|  
-|Process|Affiche le nom complet du processus qui utilise les fichiers à mettre à jour.|  
+|Processus|Affiche le nom complet du processus qui utilise les fichiers à mettre à jour.|  
 |Type|Affiche le type de processus.|  
 |Compte|Affiche le compte sous lequel le processus est en cours d'exécution.|  
 |ID du processus|Affiche l'ID de processus.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723f48aadd1681583946f357479e7cf0e1c88513
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175318"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543271"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Masquage et désactivation des hiérarchies d'attributs
   Par défaut, une hiérarchie d'attribut est créée pour chaque attribut dans une dimension, et chaque hiérarchie est disponible pour dimensionner les données de faits. Cette hiérarchie se compose d'un niveau « All » et d'un niveau de détail contenant tous les membres de la hiérarchie. Comme vous l'avez déjà appris, vous pouvez organiser les attributs en hiérarchies définies par l'utilisateur pour fournir les chemins de navigation dans un cube. Dans certaines circonstances, vous pouvez être amené à choisir de désactiver ou de masquer certains attributs et leurs hiérarchies. Par exemple, certains attributs, tels que les numéros de sécurité sociale ou les numéros de carte d'identité, les taux de rémunération, les dates de naissance et les informations de connexion ne sont pas des attributs par lesquels les utilisateurs pourront dimensionner les informations d'un cube. Ces informations sont au contraire généralement affichées uniquement comme détails d'un membre d'attribut spécifique. Vous pouvez choisir de masquer ces hiérarchies d'attributs, ce qui permet de laisser les attributs affichés uniquement en tant que propriétés de membre d'un attribut spécifique. Vous pouvez également choisir d'afficher les membres d'autres attributs, tels que les noms de clients ou les codes postaux, uniquement lorsqu'ils sont visualisés via une hiérarchie utilisateur et non indépendamment via une hiérarchie d'attributs. L'une des raisons qui amène à procéder ainsi est le nombre même de membres distincts dans la hiérarchie d'attributs. Enfin, pour améliorer les performances de traitement, vous devez désactiver les hiérarchies d'attributs auxquelles les utilisateurs ne feront pas appel pour l'exploration.

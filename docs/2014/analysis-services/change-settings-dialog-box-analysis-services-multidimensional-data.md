@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088249"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527635"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Modifier les paramètres (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Modifier les paramètres** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour changer les paramètres de traitement des objets figurant dans la boîte de dialogue **Traiter** . Vous pouvez afficher la boîte de dialogue **Modifier les paramètres** en cliquant sur **Modifier les paramètres** dans la boîte de dialogue **Traiter** .  
@@ -29,7 +28,7 @@ ms.locfileid: "66088249"
  **Options de traitement**  
  Utilisez cet onglet pour modifier les paramètres relatifs à l'ordre de traitement, à la table d'écriture différée et aux objets affectés pour le traitement. Cet onglet contient les options suivantes :  
   
- **Égal**  
+ **Parallel**  
  Cliquez sur cette option pour traiter les objets en parallèle.  
   
  **Nombre maximum de tâches en parallèle**  

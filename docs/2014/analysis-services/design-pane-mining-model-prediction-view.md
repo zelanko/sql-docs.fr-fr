@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ac73a2d6fde38d15d1f45a8439293695749ea4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081848"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528695"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Volet Conception (vue Prévision de modèle d'exploration de données)
   Le volet **Conception** contient le Générateur de requêtes de prédiction qui peut servir à créer des prédictions d’exploration de données. Vous pouvez concevoir des requêtes de prédiction qui utilisent des tables de données d'entrée d'une vue de source de données, pour générer des prédictions en bloc, ou vous pouvez créer des requêtes singleton de prédiction qui vous permettent de fournir des valeurs individuelles.  
@@ -68,7 +67,7 @@ ms.locfileid: "66081848"
  **Entrée de requête singleton**  
  Cette option est activée quand vous sélectionnez le bouton **Requête singleton** . Elle contient les colonnes suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Colonne du modèle d'exploration de données**|Affiche la liste des colonnes du modèle d’exploration de données sélectionné dans la table **Modèle d’exploration de données** .|  
 |**Valeur**|Sélectionnez une valeur dans la liste qui contient tous les états possibles de la colonne du modèle d'exploration de données sélectionné.<br /><br /> Si la colonne est une colonne de table imbriquée, la boîte de dialogue **Entrée de la table imbriquée** s’ouvre quand vous cliquez dans la cellule de la valeur.|  
@@ -82,10 +81,10 @@ ms.locfileid: "66081848"
  Sélectionnez une colonne dans la liste des colonnes dérivées de la table source. Si vous avez sélectionné **Fonction de prédiction** dans **Source**, elle contient la fonction de prédiction disponible pour le modèle d’exploration de données sélectionné.  
   
  **Groupe**  
- Utilisez cette option avec la colonne **et/ou** pour regrouper les expressions. Par exemple, `(expr1 Or expr2) And expr3`.  
+ Utilisez cette option avec la colonne **et/ou** pour regrouper les expressions. Par exemple : `(expr1 Or expr2) And expr3`.  
   
  **Et/ou**  
- Utilisez cette option pour créer une requête logique. Par exemple, `(expr1 Or expr2) And expr3`.  
+ Utilisez cette option pour créer une requête logique. Par exemple : `(expr1 Or expr2) And expr3`.  
   
  **Critères/Argument**  
  Spécifiez une condition ou une expression utilisateur qui s'applique à la colonne. Les colonnes des tables contenant le modèle d'exploration de données et des tables d'entrée peuvent être glissées et déplacées sur la cellule.  

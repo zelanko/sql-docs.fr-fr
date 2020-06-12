@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6044c22f84abdc17adf7015804627266ccff09b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175248"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542431"
 ---
 # <a name="defining-and-browsing-kpis"></a>Définition et exploration d'indicateurs de performance clés
   Pour définir un indicateur de performance clé (PKI, Key Performance Indicator), vous définissez d'abord son nom et le groupe de mesures auquel il est associé. Un indicateur de performance clé peut être associé à tous les groupes de mesures ou à un seul groupe de mesures. Vous définissez ensuite les éléments suivants de l'indicateur de performance clé :
@@ -67,7 +66,7 @@ ms.locfileid: "78175248"
 
      ![Modèle d'indicateur de performance clé vide dans le volet d'informations](../../2014/tutorials/media/l7-kpi-2.gif "Modèle d'indicateur de performance clé vide dans le volet d'informations")
 
-3.  Dans la zone **nom** , tapez `Reseller Revenue`, puis sélectionnez **Reseller Sales** dans la liste groupe de **mesures associé** .
+3.  Dans la zone **nom** , tapez `Reseller Revenue` , puis sélectionnez **Reseller Sales** dans la liste groupe de **mesures associé** .
 
 4.  Sous l’onglet **Métadonnées** du volet **Outils de calcul** , développez **Mesures**, **Reseller Sales**, puis faites glisser la mesure **Reseller Sales-Sales Amount** jusqu’à la zone **Expression de valeur** .
 
@@ -152,7 +151,7 @@ ms.locfileid: "78175248"
 
 1.  Cliquez sur le bouton **Mode Formulaire** dans la barre d’outils de l’onglet **Indicateurs de performance clés** , puis cliquez sur le bouton **Nouvel indicateur de performance clé (KPI)** .
 
-2.  Dans la zone **nom** , tapez `Product Gross Profit Margin`, puis vérifiez que ** \<tous les>** s’affichent dans la liste **groupe de mesures associé** .
+2.  Dans la zone **nom** , tapez `Product Gross Profit Margin` , puis vérifiez que **\<All>** apparaît dans la liste **groupe de mesures associé** .
 
 3.  Sous l’onglet **Métadonnées** du volet **Outils de calcul** , faites glisser la mesure **Total GPM** jusqu’à la zone **Expression de valeur** .
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a03f1580b525707ccadbd018d9d270b0cc7740
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063132"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527907"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Onglet Discrimination d'attribut (Visionneuse de modèle d'exploration de données)
   Utilisez l’onglet **Discrimination d’attribut** pour comparer les états des attributs d’entrée et examiner leur relation avec l’attribut de résultat. Les valeurs d'attribut qui présentent la plus grande différence entre les deux états d'attribut prédictible sélectionnés sont répertoriées en premier.  
@@ -43,15 +42,15 @@ ms.locfileid: "66063132"
  **Valeur 2**  
  Choisissez l’état de l’attribut prédictible à comparer à l’état contenu dans **Valeur 1**. Vous pouvez également sélectionner **tous les autres États** pour comparer la valeur de la **valeur 1** avec son complément, autrement dit, toutes les autres valeurs à l’exception de la valeur 1.  
   
- **Scores de \<discrimination pour la valeur \<1> et la valeur 2>**  
+ **Scores de discrimination pour \<Value 1> et\<Value 2>**  
  Le graphique contient les colonnes suivantes, qui décrivent comment l'attribut cible est lié aux états spécifiques de l'attribut d'entrée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Attributs**|Attribut d'entrée du modèle d'exploration de données.|  
 |**Valeurs**|État de l’attribut répertorié dans **Attributs**.|  
-|**Privilégie \<la valeur 1>**|La barre indique si l’attribut actuel et la valeur favorisent les résultats cibles sélectionnés dans **Valeur 1**.|  
-|**Privilégie \<la valeur 2>**|La barre indique si l’attribut actuel et la valeur favorisent les résultats cibles sélectionnés dans **Valeur 2**.|  
+|**Privilégie\<Value 1>**|La barre indique si l’attribut actuel et la valeur favorisent les résultats cibles sélectionnés dans **Valeur 1**.|  
+|**Privilégie\<Value 2>**|La barre indique si l’attribut actuel et la valeur favorisent les résultats cibles sélectionnés dans **Valeur 2**.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

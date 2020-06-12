@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cbf22bb2524d94e3665fd79c5ceeeab5b5c88af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076034"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547181"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Sources de données dans des modèles multidimensionnels
   Toutes les données que vous importez ou chargez dans un modèle multidimensionnel proviennent d'une source de données externe. En général, les données source proviennent d’un entrepôt de données conçu pour générer des rapports, mais elles peuvent provenir de n’importe quelle base de données relationnelle, accessible directement ou indirectement via un intermédiaire, tel qu’un package [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  

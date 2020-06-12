@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077021"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544662"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisation de l'accès à des objets et des opérations (Analysis Services)
   L'accès utilisateur non-administratif aux cubes, aux dimensions et aux modèles d'exploration de données au sein d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est octroyé via l'appartenance à un ou à plusieurs rôles de base de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] les administrateurs créent ces rôles de base de données, octroient des autorisations en lecture ou en lecture/écriture sur des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puis ajoutent des groupes et des utilisateurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour chaque rôle.  
@@ -37,7 +36,7 @@ ms.locfileid: "66077021"
 ## <a name="list-roles-defined-for-your-database"></a>Lister les rôles définis pour votre base de données  
  Les administrateurs peuvent exécuter une simple requête DMV dans SQL Server Management Studio pour obtenir une liste de tous les rôles définis sur le serveur.  
   
-1.  Dans SSMS, cliquez avec le bouton droit sur une base de données et sélectionnez **nouvelle requête** | **MDX**.  
+1.  Dans SSMS, cliquez avec le bouton droit sur une base de données et sélectionnez **nouvelle requête**  |  **MDX**.  
   
 2.  Tapez la requête suivante et appuyez sur F5 pour l'exécuter :  
   

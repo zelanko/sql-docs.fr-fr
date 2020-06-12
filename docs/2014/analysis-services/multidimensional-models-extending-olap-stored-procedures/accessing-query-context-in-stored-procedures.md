@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9da8ddb223ed03c0208fe524ea5cd7195a039c97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702670"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545370"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Accès au contexte de requête dans les procédures stockées
   Le contexte d'exécution d'une procédure stockée est disponible à l'intérieur du code de cette procédure sous la forme de l'objet `Context` du modèle d'objet serveur ADOMD.NET. Il s'agit d'un contexte en lecture seule qui ne peut pas être modifié par la procédure stockée. Les propriétés suivantes sont disponibles pour cet objet.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8775ec4dbfb7d851d98e0a943d052589f45b1ade
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084910"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523065"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Interrogation des ensembles de lignes de schéma d'exploration de données (Analysis Services - Exploration de données)
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la plupart des ensembles de lignes de schéma d'exploration de données OLE DB existants sont exposés sous forme d'un jeu de tables système que vous pouvez interroger à l'aide d'instructions DMX (Data Mining Extensions). En créant des requêtes sur l'ensemble de lignes de schéma d'exploration de données, vous pouvez identifier les services qui sont disponibles, obtenir des mises à jour sur l'état de vos modèles et de vos structures, et obtenir des détails sur le contenu ou les paramètres du modèle. Pour obtenir une description des ensembles de lignes de schéma d’exploration de données, consultez [Ensembles de lignes de schéma d’exploration de données](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  

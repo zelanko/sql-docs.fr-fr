@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530819"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544114"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services
   Utilisez les instructions et les liens fournis dans cette rubrique pour installer tous les fichiers de données et de projet utilisés dans le didacticiel Analysis Services.  
@@ -65,7 +64,7 @@ ms.locfileid: "69530819"
   
 4.  Cliquez avec le bouton droit sur Bases de données, puis cliquez sur **Attacher**.  
   
-5.  Cliquez sur **Ajouter**.  
+5.  Cliquez sur **Add**.  
   
 6.  Sélectionnez le fichier de base de données **AdventureWorksDW2012_Data.mdf** , puis cliquez sur **OK**. Si le fichier n'est pas répertorié, accédez au dossier C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data pour vous assurer que le fichier y est.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "69530819"
   
      Les didacticiels 2012 sont valides pour la version de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-     Le fichier « Analysis Services Tutorial SQL Server 2012. zip » sera enregistré dans le dossier téléchargements de votre ordinateur.  
+     Le fichier « Analysis Services didacticiel SQL Server 2012.zip » sera enregistré dans le dossier téléchargements de votre ordinateur.  
   
 2.  Déplacez le fichier .zip vers un dossier immédiatement en dessous du lecteur racine (par exemple, C:\Didacticiel). Cette étape atténue l’erreur « chemin d’accès trop long » qui se produit parfois si vous tentez de décompresser les fichiers dans le dossier téléchargements.  
   
@@ -150,6 +149,6 @@ ms.locfileid: "69530819"
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configurer le pare-feu Windows pour autoriser l’accès Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configurer le pare-feu Windows pour autoriser l’accès SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Fonction namespace-URI (XQuery) | Microsoft Docs
+description: Découvrez comment utiliser la fonction namespace-URI dans un XQuery pour retourner l’URI d’espace de noms d’un QName spécifié.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929940"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306058"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Fonctions sur les nœuds : namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ fn:namespace-uri($arg as node()?) as xs:string
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Extraction de l'URI d'espace de noms d'un nœud spécifique  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>R. Extraction de l'URI d'espace de noms d'un nœud spécifique  
  La requête suivante est spécifiée sur une instance XML non typée. L'expression de requête, `namespace-uri(/ROOT[1])`, extrait la partie URI d'espace de noms du nœud spécifié.  
   
 ```  
@@ -61,7 +62,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Étant donné que le QName spécifié ne possède pas la partie URI d'espace de noms mais uniquement la partie nom local, le résultat est une chaîne nulle.  
   
- La requête suivante est spécifiée par rapport à la colonne **XML** typée d’instructions. L’expression, `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, retourne l’URI de l’espace de noms `Location` de la première <> élément `root` enfant de l’élément> <.  
+ La requête suivante est spécifiée par rapport à la colonne **XML** typée d’instructions. L’expression, `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` , retourne l’URI de l’espace de noms de la première <`Location`> élément enfant de l' `root` élément> <.  
   
 ```  
 SELECT Instructions.query('  
@@ -98,7 +99,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- Vous pouvez remplacer l'URI d'espace de noms dans la requête précédente par `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Vous recevrez ensuite tous les enfants de nœud d’élément de `ProductDescription` l’élément <> dont la partie URI d’espace de `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`noms du QName développé est.  
+ Vous pouvez remplacer l'URI d'espace de noms dans la requête précédente par `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Vous recevrez ensuite tous les enfants de nœud d’élément de l' `ProductDescription` élément <> dont la partie URI d’espace de noms du QName développé est `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` .  
   
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  

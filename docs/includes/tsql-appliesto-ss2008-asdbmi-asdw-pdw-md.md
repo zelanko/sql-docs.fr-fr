@@ -4,11 +4,11 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: a84aab849040c956a0b445e2f7545ac508992744
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d98e2977076f09f79d76b4ffacca1e55ea20b51
+ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387299"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84124505"
 ---
-<Token>**S’applique à :** ![](media/yes-icon.png)oui ![SQL Server](media/yes-icon.png)Oui Azure SQL Database (Managed instance uniquement ![)](media/yes-icon.png)Oui Azure Synapse Analytics (SQL DW ![)](media/yes-icon.png)Oui en parallèle Data Warehouse</Token>
+<Token>**s’applique à :** ![ Oui ](media/yes-icon.png) SQL Server ![ Oui ](media/yes-icon.png) Azure SQL Managed instance ![ Oui ](media/yes-icon.png) Azure Synapse Analytics (SQL DW) ![ Oui ](media/yes-icon.png) parallèle Data Warehouse</Token>

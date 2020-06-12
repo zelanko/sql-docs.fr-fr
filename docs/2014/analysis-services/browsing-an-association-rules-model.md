@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088470"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527732"
 ---
 # <a name="browsing-an-association-rules-model"></a>Exploration d'un modèle d'exploration de données Règles d'association
-  Lorsque vous ouvrez un modèle d’association à l’aide de l’outil **Parcourir**, le modèle est affiché dans une visionneuse interactive, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]similaire à la visionneuse des règles d’association dans.  La visionneuse vous permet de voir d'un seul coup d'œil les éléments corrélés les uns aux autres, et d'afficher les règles que vous pouvez utiliser pour la prédiction ou pour formuler des recommandations.  
+  Lorsque vous ouvrez un modèle d’association à l’aide de l’outil **Parcourir**, le modèle est affiché dans une visionneuse interactive, similaire à la visionneuse des règles d’association dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  La visionneuse vous permet de voir d'un seul coup d'œil les éléments corrélés les uns aux autres, et d'afficher les règles que vous pouvez utiliser pour la prédiction ou pour formuler des recommandations.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Explorer le modèle  
- Lorsque vous ouvrez un modèle d’exploration de données qui a [!INCLUDE[msCoName](../includes/msconame-md.md)] été créé à l’aide de l’algorithme de règles d’association, la fenêtre **Parcourir** comprend les vues suivantes, chacune conçue pour vous permettre d’explorer un aspect différent du modèle :  
+ Lorsque vous ouvrez un modèle d’exploration de données qui a été créé à l’aide de l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de règles d’association, la fenêtre **Parcourir** comprend les vues suivantes, chacune conçue pour vous permettre d’explorer un aspect différent du modèle :  
   
 -   [Jeux d'éléments](#BKMK_Itemsets)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66088470"
   
  Vous pouvez filtrer le nombre de jeux d’éléments affichés dans l’onglet en modifiant les valeurs de **prise en charge minimale** et de **lignes au maximum** . Si vous augmentez la valeur de **prise en charge minimale** , la liste affichera moins de jeux d’éléments, mais le jeux d’éléments sera le plus courant dans les données d’entrée. Une autre question, que vous pouvez explorer à l’aide de l’onglet **règles** , est le même que le rôle important.  
   
- Notez que la modification de la valeur de prise en charge ou d’autres contrôles de l’onglet **jeux d’éléments** modifie uniquement les éléments affichés et n’affecte pas le modèle sous-jacent. Si vous souhaitez générer moins ou plus d’jeux d’éléments, ou limiter leur taille, vous devez utiliser les paramètres, `MINIMUM_SUPPORT` et `MAXIMUM_SUPPORT`, disponibles dans la boîte de dialogue **paramètres d’algorithme** .  
+ Notez que la modification de la valeur de prise en charge ou d’autres contrôles de l’onglet **jeux d’éléments** modifie uniquement les éléments affichés et n’affecte pas le modèle sous-jacent. Si vous souhaitez générer moins ou plus d’jeux d’éléments, ou limiter leur taille, vous devez utiliser les paramètres, `MINIMUM_SUPPORT` et `MAXIMUM_SUPPORT` , disponibles dans la boîte de dialogue **paramètres d’algorithme** .  
   
 ##### <a name="explore-the-itemsets-list"></a>Explorer la liste de jeux d'éléments  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088470"
   
 2.  Pour vous concentrer sur un jeu d’éléments particulier d’intérêt, parmi les nombreuses combinaisons possibles, tapez du texte dans la zone **filtre jeu d’éléments** .  
   
-     Ici, nous `Gloves`avons tapé. Lorsque vous appliquez le filtre, la liste est actualisée pour afficher uniquement les éléments contenant des gants. Cela vous permet de vous concentrer sur les transactions où les clients ont acheté des gants et d'autres éléments.  
+     Ici, nous avons tapé `Gloves` . Lorsque vous appliquez le filtre, la liste est actualisée pour afficher uniquement les éléments contenant des gants. Cela vous permet de vous concentrer sur les transactions où les clients ont acheté des gants et d'autres éléments.  
   
      L'option **Filtrer le jeu d'éléments** affiche également une liste des filtres que vous avez utilisés précédemment.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088470"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>Pour plus d'informations sur les modèles d'association  
- Vous pouvez utiliser la fonctionnalité **Parcourir** pour ouvrir et explorer tout modèle qui a été créé à l’aide de l’algorithme Microsoft Association Rules. Cela comprend les modèles créés à l’aide de l' [analyse du panier d’achat &#40;la table outils pour Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) outil, dans le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ruban outils d’analyse de **table** ou dans.  
+ Vous pouvez utiliser la fonctionnalité **Parcourir** pour ouvrir et explorer tout modèle qui a été créé à l’aide de l’algorithme Microsoft Association Rules. Cela comprend les modèles créés à l’aide de l' [analyse du panier d’achat &#40;la table outils pour Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) outil, dans le ruban **Outils d’analyse de table** ou dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Si vous créez un modèle de règles d'association à l'aide de l'outil Analyse du panier d'achat, de nombreuses options avancées sont configurées automatiquement.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a922f23cf667068ff51c315563b8fc3b35fceefe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082526"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528989"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vue de source de données (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Vue de source de données** permet d'afficher les tables et colonnes de la vue de source de données associée au cube sélectionné. Il sert à créer des groupes de mesures et des mesures en faisant glisser les colonnes du volet **Vue de source de données** vers le volet **Mesures** .  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371b515bbd548b544fba0125cf3d6b58b0098470
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076757"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544551"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Parcourir les données et métadonnées de cube
   Utilisez l'onglet **Navigateur** du Concepteur de cube pour parcourir les données du cube. Vous pouvez utiliser cette vue pour examiner la structure d'un cube et vérifier des données, le calcul, la mise en forme, ainsi que la sécurité des objets de base de données. Vous pouvez examiner rapidement un cube tel que les utilisateurs finaux le voient dans les outils de création de rapports ou d'autres applications clientes. Lorsque vous parcourez des données de cube, vous pouvez afficher différentes dimensions, explorer les membres et découper les dimensions.  
@@ -57,14 +56,14 @@ ms.locfileid: "66076757"
   
      \- ou -  
   
--   Dans la colonne **dimension** du volet **filtre** , cliquez sur ** \<sélectionner une dimension>** et sélectionnez une dimension dans la liste, puis cliquez sur ** \<sélectionner une hiérarchie>** dans la colonne **hiérarchie** et sélectionnez une hiérarchie dans la liste.  
+-   Dans la colonne **dimension** du volet **filtre** , cliquez **\<Select dimension>** et sélectionnez une dimension dans la liste, puis cliquez **\<Select hierarchy>** dans la colonne **hiérarchie** et sélectionnez une hiérarchie dans la liste.  
   
  Après avoir spécifié la hiérarchie, spécifiez l'opérateur et l'expression de filtre. Le tableau suivant décrit les opérateurs et les expressions de filtre.  
   
 |Opérateur|Expression de filtre|Description|  
 |--------------|-----------------------|-----------------|  
 |Égal à|Un ou plusieurs membres|Les valeurs doivent être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
-|Non égal à|Un ou plusieurs membres|Les valeurs ne doivent pas être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
+|Not Equal|Un ou plusieurs membres|Les valeurs ne doivent pas être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
 |Dans|Un ou plusieurs jeux nommés|Les valeurs doivent se trouver dans un jeu nommé spécifié.<br /><br /> (Pris en charge pour les hiérarchies d'attribut uniquement.)|  
 |Pas dans|Un ou plusieurs jeux nommés|Les valeurs ne doivent pas se trouver dans un jeu nommé spécifié.<br /><br /> (Pris en charge pour les hiérarchies d'attribut uniquement.)|  
 |Plage (limites incluses)|Un ou deux membres de délimitation d'une plage|Les valeurs doivent se situer entre les membres de délimitation ou être égales à ceux-ci. Si les membres de délimitation sont égaux ou qu'un seul membre est spécifié, aucune plage n'est appliquée et toutes les valeurs sont autorisées.<br /><br /> (Pris en charge pour les hiérarchies d'attribut uniquement. La plage doit se situer sur un niveau d'une hiérarchie. Les plages illimitées ne sont pas prises en charge actuellement.)|  

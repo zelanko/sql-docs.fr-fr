@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84dd9e307279c83b955d6569571772414123f0f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086789"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526461"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Créer un jeu de test (Assistant Exploration de données)
   Utilisez la page **Créer un jeu de test** pour spécifier la quantité des données à utiliser pour l’apprentissage et celle à réserver au jeu de test. La séparation des données dans un jeu d'apprentissage et de test lorsque vous créez une structure d'exploration de données facilite énormément l'évaluation de l'exactitude des modèles d'exploration de données que vous créez ultérieurement.  
@@ -26,9 +25,9 @@ ms.locfileid: "66086789"
   
  Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère une valeur de départ numérique utilisée pour démarrer le partitionnement. Cette valeur de départ est basée sur le nom de la structure d'exploration de données. Si vous souhaitez veiller à ce que la partition reste la même, même si le nom de la structure d'exploration de données est modifié, vous pouvez spécifier une valeur pour la valeur de départ, en définissant la propriété HoldoutSeed de la structure d'exploration de données. Si vous modifiez la valeur de départ d'exclusion, vous devez retraiter la structure.  
   
- Si vous souhaitez ultérieurement modifier la quantité de données de test ou d’apprentissage, vous pouvez modifier `HoldoutMaxCases` les `HoldoutMaxPercent` propriétés et sur la structure d’exploration de données à l’aide de la fenêtre **Propriétés** . Toutefois, après avoir apporté cette modification, vous devez retraiter la structure d'exploration de données et tous les modèles d'exploration de données associés. Les limitations suivantes s'appliquent également :  
+ Si vous souhaitez ultérieurement modifier la quantité de données de test ou d’apprentissage, vous pouvez modifier `HoldoutMaxCases` les `HoldoutMaxPercent` Propriétés et sur la structure d’exploration de données à l’aide de la fenêtre **Propriétés** . Toutefois, après avoir apporté cette modification, vous devez retraiter la structure d'exploration de données et tous les modèles d'exploration de données associés. Les limitations suivantes s'appliquent également :  
   
--   Le partitionnement d'une structure d'exploration de données est pris en charge uniquement lorsque la structure d'exploration de données est stockée dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Les versions antérieures [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de ne prennent pas en charge la mise en cache des informations de partition pour les structures d’exploration de données.  
+-   Le partitionnement d'une structure d'exploration de données est pris en charge uniquement lorsque la structure d'exploration de données est stockée dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne prennent pas en charge la mise en cache des informations de partition pour les structures d’exploration de données.  
   
 -   Vous ne pouvez pas partitionner une structure d'exploration de données si elle contient une colonne Temps clé, ce qui est obligatoire pour les modèles d'exploration de données de séries chronologiques.  
   

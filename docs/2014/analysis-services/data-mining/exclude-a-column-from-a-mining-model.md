@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30affebc143184c6287858f60b5d4f5d089c322a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084561"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522481"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>Exclure une colonne d'un modèle d'exploration de données
   Lorsque vous créez un modèle d'exploration de données, vous pouvez décider de ne pas utiliser toutes les colonnes qui existent dans la structure d'exploration de données sur laquelle le modèle repose. Par exemple, vous avez peut-être ajouté une colonne nom du client pour l’extraction, mais vous ne souhaitez pas l’utiliser pour la modélisation. Ou, vous pouvez décider de créer plusieurs copies d'une colonne avec différentes discrétisations, et utiliser uniquement une des copies dans chaque modèle, et ignorer les autres. Vous pouvez également ajouter de manière sélective des colonnes d'entrée dans différents modèles pour voir de quelle façon la variable ajoutée affecte la colonne de sortie.  

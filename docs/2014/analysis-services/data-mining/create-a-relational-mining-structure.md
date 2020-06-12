@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2342cde485968bb40c523b9c7c3ae68d889f6fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085382"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523705"
 ---
 # <a name="create-a-relational-mining-structure"></a>Créer une structure d’exploration de données relationnelle
   La plupart des modèles d'exploration de données sont basés sur des sources de données relationnelles. Les avantages de la création d'un modèle d'exploration de données relationnel sont que vous pouvez compiler des données ad hoc et effectuer l'apprentissage et la mise à jour d'un modèle sans entrer dans la complexité d'une création de cube.  
@@ -42,7 +41,7 @@ ms.locfileid: "66085382"
   
  [Pourquoi et comment activer l'extraction](#BKMK_DrillThru)  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Tout d'abord, vous devez disposer d'une source de données existante. Vous pouvez utiliser le concepteur de source de données pour configurer une source de données, si aucune n'est disponible. Pour plus d’informations, consultez [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Ensuite, utilisez l'Assistant Vue de source de données pour compiler les données requises en une vue de source de données. Pour plus d’informations sur la façon dont vous pouvez sélectionner, transformer, filtrer ou gérer des données avec des vues de source de données, consultez [Vues de sources de données dans les modèles multidimensionnels](../multidimensional-models/data-source-views-in-multidimensional-models.md).  

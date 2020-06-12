@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dee8b07c942a76601da81ae227b5cd34d9ed32ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544726"
 ---
 # <a name="rename-an-attribute"></a>Renommer un attribut
   Le nom d’un attribut dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est défini par sa propriété **Name** . Pour renommer un attribut, cliquez dessus avec le bouton droit dans le volet **Attributs** de l’onglet **Structure de dimension** du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis cliquez sur **Renommer**. Si le volet **Attributs** affiche la grille, vous pouvez cliquer sur le nom de l’attribut et le modifier directement dans la grille. Vous pouvez aussi sélectionner un attribut et définir sa propriété **Name** dans la fenêtre **Propriétés** .  

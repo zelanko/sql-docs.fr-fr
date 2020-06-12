@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085457"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523785"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Créer une structure d’exploration de données OLAP
-  Vous pouvez utiliser l’Assistant Exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans pour créer une structure d’exploration de données qui utilise les données d’un modèle multidimensionnel. Les modèles d'exploration de données basés sur des cubes OLAP peuvent utiliser la colonne et les valeurs des tables de faits, les dimensions et les groupes de mesures comme attributs pour l'analyse.  
+  Vous pouvez utiliser l’Assistant Exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer une structure d’exploration de données qui utilise les données d’un modèle multidimensionnel. Les modèles d'exploration de données basés sur des cubes OLAP peuvent utiliser la colonne et les valeurs des tables de faits, les dimensions et les groupes de mesures comme attributs pour l'analyse.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Pour créer une structure d'exploration de données OLAP  
   

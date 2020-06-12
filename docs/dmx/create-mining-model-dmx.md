@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889076"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669475"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,10 +47,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Nom d'un algorithme d'exploration de données, tel que défini par le fournisseur actuel.  
   
 > [!NOTE]  
->  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [DMSCHEMA_MINING_SERVICES ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Pour afficher les algorithmes pris en charge dans l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]actuelle de, consultez [propriétés d’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [DMSCHEMA_MINING_SERVICES ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [propriétés d’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *liste de paramètres*  
- Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *chaîne XML*  
  (Pour une utilisation avancée uniquement.) Un modèle encodé XML (PMML). La chaîne doit être entourée de guillemets simples (').  
@@ -102,7 +102,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Indicateurs de modélisation &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Vous pouvez ajouter une clause à l'instruction pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge l’utilisation de \<la clause de> de relation de colonne suivante.  
+ Vous pouvez ajouter une clause à l'instruction pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge l’utilisation de la \< clause de> de relation de colonne suivante.  
   
  **EN RAPPORT AVEC**  
  Cette forme indique une hiérarchie des valeurs. La cible d'une colonne RELATED TO peut être une colonne clé dans une table imbriquée, une colonne de valeurs discrètes dans la ligne de cas ou une autre colonne RELATED TO qui indique une hiérarchie plus profonde.  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  L'exemple suivant utilise l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series pour créer un modèle d'exploration de données à l'aide de l'algorithme ARTxp. ReportingDate est la colonne clé pour la série chronologique et ModelRegion est la colonne clé pour la série de données. Dans cet exemple, on suppose que la périodicité des données est tous les 12 mois. Par conséquent, le paramètre *PERIODICITY_HINT* a la valeur 12.  
   
 > [!NOTE]  
->  Vous devez spécifier le paramètre *PERIODICITY_HINT* à l’aide de caractères d’accolade. En outre, étant donné que la valeur est une chaîne, elle doit être placée entre guillemets simples\<: « {valeur numérique>} ».  
+>  Vous devez spécifier le paramètre *PERIODICITY_HINT* à l’aide de caractères d’accolade. En outre, étant donné que la valeur est une chaîne, elle doit être placée entre guillemets simples : « { \< valeur numérique>} ».  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

@@ -1,5 +1,6 @@
 ---
 title: Fonction distinct-values (XQuery) | Microsoft Docs
+description: Découvrez comment utiliser la fonction distinct-values dans un XQuery pour supprimer des valeurs en double d’une séquence.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68223736"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215825"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Fonctions sur les séquences : distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Utilisation de la fonction distinct-values() pour supprimer les valeurs en double d'une séquence  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>R. Utilisation de la fonction distinct-values() pour supprimer les valeurs en double d'une séquence  
  Dans cet exemple, une instance XML contenant des numéros de téléphone est assignée à une variable de type **XML** . Le XQuery spécifié par rapport à cette variable utilise la fonction **distinct-values ()** pour compiler une liste de numéros de téléphone qui ne contiennent pas de doublons.  
   
 ```  

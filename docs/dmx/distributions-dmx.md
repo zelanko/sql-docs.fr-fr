@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fda2eb169985eb670614f611764fbf149c71a42d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 535d1caff3729b552ef0982b056eb516b8f23048
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892794"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669777"
 ---
 # <a name="distributions-dmx"></a>Distributions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez définir le contenu des colonnes dans une structure d’exploration de données, pour affecter la façon dont les algorithmes traitent les données dans ces colonnes lorsque vous créez des modèles d’exploration de données. Pour certains algorithmes, il est judicieux de définir la distribution des colonnes continues avant de traiter le modèle, s'il est établi que les colonnes contiennent des distributions de valeurs communes. Si vous ne définissez pas de distributions, les modèles d'exploration de données obtenus risquent de générer des prévisions moins précises, car les algorithmes disposent dans ce cas d'une moins grande quantité d'informations pour interpréter les données.  
+  Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous pouvez définir le contenu des colonnes dans une structure d’exploration de données, pour affecter la façon dont les algorithmes traitent les données dans ces colonnes lorsque vous créez des modèles d’exploration de données. Pour certains algorithmes, il est judicieux de définir la distribution des colonnes continues avant de traiter le modèle, s'il est établi que les colonnes contiennent des distributions de valeurs communes. Si vous ne définissez pas de distributions, les modèles d'exploration de données obtenus risquent de générer des prévisions moins précises, car les algorithmes disposent dans ce cas d'une moins grande quantité d'informations pour interpréter les données.  
   
  Les algorithmes d'exploration de données [!INCLUDE[msCoName](../includes/msconame-md.md)] prennent en charge les types de distribution suivants :  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68892794"
  **UNIFORME**  
  Les valeurs de la colonne continue forment une courbe plate, dont toutes les valeurs sont sensiblement les mêmes.  
   
- Pour plus d’informations [!INCLUDE[msCoName](../includes/msconame-md.md)] sur les algorithmes d’exploration de données, consultez algorithmes d’exploration de [données &#40;Analysis Services-exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Des algorithmes tiers peuvent prendre en charge des types de distribution supplémentaires. Pour déterminer les types de distribution pris en charge par un algorithme, utilisez l’ensemble de lignes de schéma **SUPPORTED_DISTRIBUTION_FLAGS** .  
+ Pour plus d’informations sur les [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes d’exploration de données, consultez algorithmes d’exploration de [données &#40;Analysis Services-exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Des algorithmes tiers peuvent prendre en charge des types de distribution supplémentaires. Pour déterminer les types de distribution pris en charge par un algorithme, utilisez l’ensemble de lignes de schéma **SUPPORTED_DISTRIBUTION_FLAGS** .  
   
  Pour plus d’informations sur les types de distribution, consultez [distributions de colonnes &#40;&#41;d’exploration de données ](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining).  
   

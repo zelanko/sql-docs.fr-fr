@@ -1,5 +1,6 @@
 ---
 title: Exécution de requêtes XPath (fournisseur SQLXMLOLEDB)
+description: Découvrez comment utiliser des propriétés spécifiques au fournisseur SQLXMLOLEDB lors de l’exécution de requêtes XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbed0ee01fbe2f2a632f81265e0722eb1ad32727
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 175c2e82b29c9c7c3895b8764e835db11295ebdb
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246633"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306230"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Exécution de requêtes XPath (fournisseur SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "75246633"
   
 -   **Schéma de mappage**  
   
- Dans cet exemple d'application ADO, une requête XPath (root) est spécifiée contre un schéma de mappage XSD (MySchema.xml). Le schéma a un ** \<élément contacts>** avec les attributs **ContactID**, **FirstName**et **LastName** . Dans le schéma, le mappage par défaut a lieu : un nom d'élément mappe à la table avec le même nom et les attributs de type simple mappent aux colonnes avec les mêmes noms.  
+ Dans cet exemple d'application ADO, une requête XPath (root) est spécifiée contre un schéma de mappage XSD (MySchema.xml). Le schéma a un **\<Contacts>** élément avec les attributs **ContactID**, **FirstName**et **LastName** . Dans le schéma, le mappage par défaut a lieu : un nom d'élément mappe à la table avec le même nom et les attributs de type simple mappent aux colonnes avec les mêmes noms.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -62,7 +63,7 @@ ms.locfileid: "75246633"
  Dans l'application, une requête XPath est spécifiée directement. Par conséquent, le dialecte XPath {ec2a4293-e898-11d2-b1b7-00c04f680c56} doit être inclus.  
   
 > [!NOTE]  
->  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de Native Client (SQLNCLI11) pour le fournisseur de données qui requiert l’installation d’un logiciel client réseau supplémentaire. Pour plus d’informations, consultez [Configuration système requise pour SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion. En outre, cet exemple spécifie l’utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) pour le fournisseur de données qui requiert l’installation d’un logiciel client réseau supplémentaire. Pour plus d’informations, consultez [Configuration système requise pour SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

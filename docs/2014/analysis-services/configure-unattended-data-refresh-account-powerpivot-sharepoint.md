@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7f373dfa85e80de6bfd3a0bb33e9b28ab33a697
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087420"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527245"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurer le compte d'actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)
   Le compte d'actualisation des données PowerPivot sans assistance est un compte désigné pour l'exécution de travaux d'actualisation des données PowerPivot dans une batterie de serveurs SharePoint. En le configurant, vous activez l’option **utiliser le compte d’actualisation des données configuré par l’administrateur** dans une page planification de l’actualisation des données (voir ci-dessous). Les auteurs de classeurs qui planifient l'actualisation des données peuvent choisir cette option s'ils souhaitent utiliser le compte d'actualisation des données PowerPivot sans assistance pour exécuter un travail d'actualisation des données. Pour plus d’informations sur la façon d’afficher les options d’informations d’identification dans une planification d’actualisation des données, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
@@ -30,7 +29,7 @@ ms.locfileid: "66087420"
   
  Cette rubrique contient les sections suivantes :  
   
- [Conditions préalables](#bkmk_prereq)  
+ [Composants requis](#bkmk_prereq)  
   
  [Étape 1 : créer une application cible et définir les informations d'identification](#bkmk_create)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08da312fa1348266bbc33fafa6b1b3c6b07c64ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070590"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539771"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Graphique des bénéfices (Compléments d'exploration de données SQL Server)
   ![Bouton Graphique des bénéfices sur le ruban Exploration de données](media/dmc-profitchart.gif "Bouton Graphique des bénéfices sur le ruban Exploration de données")  
@@ -67,7 +66,7 @@ ms.locfileid: "66070590"
   
 7.  L'Assistant crée un graphique qui inclut l'analyse coût-bénéfice du modèle.  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  Si vous prévoyez une valeur numérique discrète, vous devez sélectionner la valeur cible exacte à prévoir.  
   
 ## <a name="understanding-the-profit-chart"></a>Fonctionnement du graphique des bénéfices  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b4e5ac88a81728d6e29d32b0d330ba8fd408633
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175730"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546681"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Octroyer des autorisations de base de données (Analysis Services)
   Si vous débutez dans l'administration des bases de données Analysis Services avec une expérience des bases de données relationnelles, la première chose que vous devez comprendre est qu'en termes d'accès aux données, la base de données n'est pas l'objet sécurisable principal dans Analysis Services.
@@ -72,10 +71,10 @@ ms.locfileid: "78175730"
 5.  Cliquez sur **OK** pour terminer la création du rôle.
 
 ## <a name="process-database"></a>Traiter la base de données
- Lorsque vous définissez un rôle qui accorde des autorisations de base de `Full Control` données, vous `Process Database`pouvez ignorer et choisir juste. Cette autorisation, définie au niveau de la base de données, permet de traiter tous les objets dans la base de données. Pour plus d’informations, consultez [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
+ Lorsque vous définissez un rôle qui accorde des autorisations de base de données, vous pouvez ignorer `Full Control` et choisir juste `Process Database` . Cette autorisation, définie au niveau de la base de données, permet de traiter tous les objets dans la base de données. Pour plus d’informations, consultez [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>Lire la définition
- À `Process Database`l’instar de, la définition `Read Definition` d’autorisations au niveau de la base de données a un effet en cascade sur d’autres objets dans la base de données. Si vous souhaitez définir des autorisations Lire la définition à un niveau plus granulaire, vous devez effacer Lire la définition comme propriété de base de données dans le volet Général. Pour plus d’informations, consultez [Octroyer des autorisations Lire la définition sur des métadonnées d’objets &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).
+ À l’instar de `Process Database` , la définition `Read Definition` d’autorisations au niveau de la base de données a un effet en cascade sur d’autres objets dans la base de données. Si vous souhaitez définir des autorisations Lire la définition à un niveau plus granulaire, vous devez effacer Lire la définition comme propriété de base de données dans le volet Général. Pour plus d’informations, consultez [Octroyer des autorisations Lire la définition sur des métadonnées d’objets &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).
 
 ## <a name="see-also"></a>Voir aussi
  [Accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) [accorder des autorisations de processus &#40;Analysis Services](grant-process-permissions-analysis-services.md)&#41;

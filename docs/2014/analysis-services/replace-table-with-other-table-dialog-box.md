@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac74a4147541837e642c9d3ab9637555ef16fb0d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070273"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539293"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Boîte de dialogue Remplacer la table par une autre table
   Utilisez la boîte de dialogue **Remplacer la table par une autre table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour remplacer dans une vue de source de données une table existante par une table de la source de données sous-jacente qui n'est pas encore incluse dans la vue de source de données. Vous pouvez afficher la boîte de dialogue **Remplacer la table par une autre table** en cliquant avec le bouton droit sur le nom d’une table dans le volet **Diagramme** ou **Tables** du **Concepteur de vue de source de données** et en sélectionnant **Avec une autre table** dans **Remplacer la table**.  
   
 ## <a name="options"></a>Options  
- **Sources de données**  
+ **Source de données**  
  Sélectionnez la source de données d'extraction de la table.  
   
- **Grille**  
+ **Grid**  
  Affiche les objets et leurs types disponibles dans la source de données sélectionnée, qui ne sont pas encore inclus dans la vue de source de données.  
   
  **Filter**  

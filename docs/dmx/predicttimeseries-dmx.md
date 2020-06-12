@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893885"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666697"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *référence de colonne de table>, référence de colonne scalaire>\< * * \<*  
+ * \< référence de colonne de table>, référence *de * \< colonne scalaire>*  
  Spécifie le nom de la colonne à prédire. La colonne peut contenir des données scalaires ou tabulaires.  
   
  *n*  
@@ -67,7 +67,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Type de retour  
  \< *Expression de table*>.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series) ne prend pas en charge la prédiction historique lorsque vous utilisez l'instruction PREDICTION JOIN pour ajouter de nouvelles données.  
   
  Dans une instruction PREDICTION JOIN, le processus de prédiction commence toujours à l'étape venant immédiatement après la fin de la série d'apprentissage d'origine. Cela est vrai même si vous ajoutez de nouvelles données. Par conséquent, le paramètre *n* et les valeurs de paramètre *n-Start* doivent être un entier supérieur à 0.  
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  Vous pouvez obtenir des résultats différents de votre modèle ; les résultats des exemples suivants sont fournis uniquement pour illustrer le format de résultat.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Exemple 1 : Prédiction de plusieurs tranches de temps  
- L’exemple suivant utilise la fonction **PredictTimeSeries** pour retourner une prédiction pour les trois étapes suivantes, et limite les résultats à la série M200 dans les régions Europe et Pacifique. Dans ce modèle particulier, l’attribut prévisible est Quantity. vous devez donc `[Quantity]` utiliser comme premier argument de la fonction PredictTimeSeries.  
+ L’exemple suivant utilise la fonction **PredictTimeSeries** pour retourner une prédiction pour les trois étapes suivantes, et limite les résultats à la série M200 dans les régions Europe et Pacifique. Dans ce modèle particulier, l’attribut prévisible est Quantity. vous devez donc utiliser `[Quantity]` comme premier argument de la fonction PredictTimeSeries.  
   
 ```  
 SELECT FLATTENED  
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- Étant donné que la requête *EXTEND_MODEL_CASES* utilise l’option [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] EXTEND_MODEL_CASES, effectue les actions suivantes pour ses prédictions :  
+ Étant donné que la requête utilise l’option *EXTEND_MODEL_CASES* , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] effectue les actions suivantes pour ses prédictions :  
   
 -   Augmente la taille totale des cas d'apprentissage en ajoutant les deux nouveaux mois de données au modèle.  
   
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Exemple 4 : retour de statistiques dans une prédiction de série chronologique  
  La fonction **PredictTimeSeries** ne prend pas en charge *INCLUDE_STATISTICS* en tant que paramètre. Toutefois, la requête suivante peut être utilisée pour retourner les statistiques de prédiction pour une requête de série chronologique. Cette approche peut également être suivie avec des modèles qui ont des colonnes de tables imbriquées.  
   
- Dans ce modèle particulier, l’attribut prévisible est Quantity. vous devez donc `[Quantity]` utiliser comme premier argument de la fonction PredictTimeSeries. Si votre modèle utilise un autre attribut prédictible, vous pouvez substituer un nom de colonne différent.  
+ Dans ce modèle particulier, l’attribut prévisible est Quantity. vous devez donc utiliser `[Quantity]` comme premier argument de la fonction PredictTimeSeries. Si votre modèle utilise un autre attribut prédictible, vous pouvez substituer un nom de colonne différent.  
   
 ```  
 SELECT FLATTENED [Model Region],  

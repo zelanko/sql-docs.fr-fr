@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa501e2a5b23f32fbd10d244788b1e6e938e938b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070540"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539731"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Interroger et filtrer (onglet Navigateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Cette zone de l'onglet **Navigateur** dans le Concepteur de cube contient une zone de requête et de filtre qui vous aide à choisir les données du cube à utiliser dans la navigation ou dans les requêtes. Vous pouvez ajouter autant d'objets de cube que vous le souhaitez, puis vous pouvez afficher les résultats dans la zone de données, ou les exporter dans un rapport en utilisant Analyser dans Excel pour visualiser la façon dont les données sont affichées par les utilisateurs finaux.  
@@ -37,10 +36,10 @@ ms.locfileid: "66070540"
  **Opérateur**  
  Sélectionnez l’opérateur qui définit comment l’expression dans **Expression de filtre** est appliquée à la hiérarchie sélectionnée. Le tableau suivant décrit les opérateurs disponibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Égal**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
-|**Non égal à**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  
+|**Différent de**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  
 |**Dans**|Les résultats se limitent à l'ensemble nommé choisi dans **Expression de filtre**.|  
 |**Pas dans**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble nommé choisi dans **Expression de filtre**.|  
 |**Contains**|Les résultats se limitent aux membres dont le nom contient la chaîne de caractères figurant dans **Expression de filtre**.|  

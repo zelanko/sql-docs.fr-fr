@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083531"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521252"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
   Tous les modèles d'exploration de données utilisent la même structure pour stocker leur contenu. Cette structure est définie d'après l'ensemble de lignes de schéma du contenu de l'exploration de données. Toutefois, dans cette structure standard, les nœuds qui contiennent des informations sont organisés de différentes façons pour représenter différents types d'arbres. Cette rubrique décrit l'organisation des nœuds, ainsi que la signification de chacun, pour les modèles d'exploration de données qui sont basés sur l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
@@ -57,7 +56,7 @@ ms.locfileid: "66083531"
   
  Si le nœud n'a pas d'enfant, cela signifie qu'aucune condition significative que justifierait de diviser les cas en sous-groupes supplémentaires n'a été trouvée. La branche se termine à cette position et le nœud est appelé *nœud terminal*. Le nœud terminal contient les attributs, les coefficients et les valeurs qui sont les blocs de construction de la formule ARTXP.  
   
- Certaines branches peuvent avoir des divisions supplémentaires, comme dans un modèle d'arbre de décision. Par exemple, la branche de l'arbre qui représente des ventes de la région Europe se divise en deux branches. Une division se produit lorsqu'une condition qui provoque une différence significative entre les deux groupes est détectée. Le nœud parent vous indique le nom de l'attribut qui a provoqué la division, tel que [Amount], et le nombre de cas qui se trouvent dans le nœud parent. Les nœuds terminaux fournissent plus de détails : la valeur de l’attribut, telle que [Sales] >10 000 et [Sales \< ] 10 000), le nombre de cas qui prennent en charge chaque condition et la formule ARTxp.  
+ Certaines branches peuvent avoir des divisions supplémentaires, comme dans un modèle d'arbre de décision. Par exemple, la branche de l'arbre qui représente des ventes de la région Europe se divise en deux branches. Une division se produit lorsqu'une condition qui provoque une différence significative entre les deux groupes est détectée. Le nœud parent vous indique le nom de l'attribut qui a provoqué la division, tel que [Amount], et le nombre de cas qui se trouvent dans le nœud parent. Les nœuds terminaux fournissent plus de détails : la valeur de l’attribut, telle que [Sales] >10 000 et [Sales] \< 10 000), le nombre de cas qui prennent en charge chaque condition et la formule ARTxp.  
   
 > [!NOTE]  
 >  Si vous voulez afficher les formules, vous pouvez rechercher la formule de régression complète au niveau du nœud terminal, mais pas dans un nœud intermédiaire ou racine.  
@@ -311,7 +310,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="understanding-the-arima-tree"></a><a name="bkmk_ARIMA_1"></a> Fonctionnement de l'arbre ARIMA  
  Chaque structure d'un modèle ARIMA correspond à une *périodicité* ou *structure périodique*. Une structure périodique est un modèle de données qui se répète dans l'ensemble de la série de données. Une variation mineure dans le modèle est autorisée, dans les limites statistiques. La périodicité est mesurée en fonction des unités de temps par défaut qui ont été utilisées dans les données d'apprentissage. Par exemple, si les données d'apprentissage fournissent les données de ventes pour chaque jour, l'unité de temps par défaut est un jour, et toutes les structures périodiques sont définies sous la forme d'un nombre de jours spécifié.  
   
- Chaque période détectée par l'algorithme obtient son propre nœud de structure. Par exemple, si vous analysez les données de ventes quotidiennes, le modèle peut détecter des structures périodiques qui représentent les semaines. Dans ce cas, l’algorithme créera deux structures périodiques dans le modèle terminé : une pour la période quotidienne par défaut, indiquée {1}sous la forme, et une pour les {7}semaines, indiquée par.  
+ Chaque période détectée par l'algorithme obtient son propre nœud de structure. Par exemple, si vous analysez les données de ventes quotidiennes, le modèle peut détecter des structures périodiques qui représentent les semaines. Dans ce cas, l’algorithme créera deux structures périodiques dans le modèle terminé : une pour la période quotidienne par défaut, indiquée sous la forme {1} , et une pour les semaines, indiquée par {7} .  
   
  Par exemple, la requête suivante retourne toutes les structures ARIMA d'un modèle d'exploration de données.  
   
@@ -384,9 +383,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Équation ARIMA :  
   
- ARIMA ({1,1}, 0, {1, 1.49791920964142, 1.10640053499397, 0.888873034670339,-5.05429403071953 e-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) interception : 56.8888888888889  
+ ARIMA ( {1,1} , 0, {1, 1.49791920964142, 1.10640053499397, 0.888873034670339,-5.05429403071953 e-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) interception : 56.8888888888889  
   
- Cette équation est le format ARIMA long, qui inclut les valeurs des coefficients et l'ordonnée à l'origine. La forme abrégée de cette équation serait {1,0,7}, où 1 indique la période comme un nombre de tranches de temps, 0 indique l’ordre des différences de terme et 7 indique le nombre de coefficients.  
+ Cette équation est le format ARIMA long, qui inclut les valeurs des coefficients et l'ordonnée à l'origine. La forme abrégée de cette équation serait {1,0,7} , où 1 indique la période comme un nombre de tranches de temps, 0 indique l’ordre des différences de terme et 7 indique le nombre de coefficients.  
   
 > [!NOTE]  
 >  Une constante est calculée par Analysis Services pour calculer la variance, mais la constante elle-même n'est pas affichée n'importe où dans l'interface utilisateur. Toutefois, vous pouvez afficher la variance de n'importe quel point de la série sous la forme d'une fonction de cette constante si vous sélectionnez **Afficher les écarts** dans la vue **Graphique** . L'info-bulle de chaque série de données affiche la variance d'un point prédit spécifique.  
@@ -396,7 +395,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Un modèle ARIMA pour une série de données contient l'équation périodique de base dans quatre formats différents, que vous pouvez choisir en fonction de l'application.  
   
- **NODE_CAPTION :** affiche la forme abrégée de l’équation. La forme abrégée vous indique le nombre de structures périodiques qui sont représentées, ainsi que le nombre de coefficients qu'elles ont. Par exemple, si la forme abrégée de l'équation est {4,0,6}, le nœud représente une structure périodique avec 6 coefficients. Si la forme abrégée ressemble à {2,0,8} x {1,0,0}(4), le nœud contient deux structures périodiques.  
+ **NODE_CAPTION :** affiche la forme abrégée de l’équation. La forme abrégée vous indique le nombre de structures périodiques qui sont représentées, ainsi que le nombre de coefficients qu'elles ont. Par exemple, si la forme abrégée de l'équation est {4,0,6}, le nœud représente une structure périodique avec 6 coefficients. Si la forme abrégée ressemble à {2,0,8} x {1,0,0} (4), le nœud contient deux structures périodiques.  
   
  **NODE DESCRIPTION :** affiche le long format de l'équation, qui est également la forme de l'équation qui apparaît dans la **légende d'exploration de données**. La forme longue de l'équation est semblable à la forme abrégée, mais les valeurs réelles des coefficients sont affichées au lieu d'être dénombrées.  
   

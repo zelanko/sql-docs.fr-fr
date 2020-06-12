@@ -1,21 +1,21 @@
 ---
-title: SELECT FROM &lt;Model&gt; PREDICTION JOIN (DMX) | Microsoft Docs
+title: SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928321"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670131"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Model&gt; PREDICTION JOIN (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Utilise un modèle d'exploration de données pour prévoir les états des colonnes dans une source de données externe. L’instruction **PREDICTION JOIN** correspond à chaque cas de la requête source au modèle.  
@@ -33,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *sélectionner la liste d’expressions*  
  Liste séparée par des virgules des identificateurs de colonnes et expressions dérivées du modèle d'exploration de données.  
@@ -48,16 +48,16 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Requête source  
   
  *liste de mappage de jointure*  
- Facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
+ facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
   
  *expression de condition*  
- Facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Facultatif. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
- La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Les colonnes de \<la *liste de mappage de jointure*> sont associées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
+ La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Les colonnes de la \< *liste de mappage de jointure*> sont associées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La requête source de la jointure de prévision peut être une table ou une requête singleton.  
   
- Vous pouvez spécifier des fonctions de prédiction qui ne retournent pas d' \<expression de table dans la *liste Sélectionner* une expression> et l' \< *expression de condition*>.  
+ Vous pouvez spécifier des fonctions de prédiction qui ne retournent pas d’expression de table dans la \< *liste Sélectionner* une expression> et l' \< *expression de condition*>.  
   
  La **jointure de prédiction naturelle** mappe automatiquement les noms de colonnes de la requête source qui correspondent aux noms de colonne dans le modèle. Si vous utilisez la **prédiction naturelle**, vous pouvez omettre la clause on.  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>Exemple 2 : utilisation de OPENQUERY  
- L'exemple suivant montre comment créer une requête de prédiction par lot à l'aide d'une liste de clients potentiels stockés dans un dataset externe. Étant donné que la table fait partie d’une vue de source de données qui a été définie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]sur une instance de, la requête peut utiliser [OPENQUERY](../dmx/source-data-query-openquery.md) pour récupérer les données. Étant donné que les noms des colonnes de la table sont différents de ceux du modèle d’exploration de données, la clause **on** doit être utilisée pour mapper les colonnes de la table aux colonnes du modèle.  
+ L'exemple suivant montre comment créer une requête de prédiction par lot à l'aide d'une liste de clients potentiels stockés dans un dataset externe. Étant donné que la table fait partie d’une vue de source de données qui a été définie sur une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la requête peut utiliser [OPENQUERY](../dmx/source-data-query-openquery.md) pour récupérer les données. Étant donné que les noms des colonnes de la table sont différents de ceux du modèle d’exploration de données, la clause **on** doit être utilisée pour mapper les colonnes de la table aux colonnes du modèle.  
   
  La requête retourne le prénom et le nom de toutes les personnes de la table, ainsi qu'une colonne booléenne qui indique si chaque personne est susceptible d'acheter une bicyclette, où 0 signifie « n'achètera probablement pas de bicyclette » et 1 signifie « achètera probablement une bicyclette ». La dernière colonne contient la probabilité du résultat prédit.  
   

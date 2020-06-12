@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eeef3697-a4fd-4263-ba7e-f86afa1f46cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03c98f3ab44a4a9f3aac91be36f3d704a3f796ab
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087382"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527215"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Connexion à une base de données DB2 (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de spécifier des paramètres pour vous connecter à une base de données DB2. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087382"
 > [!NOTE]  
 >  Lors de la sélection d'une base de données dans cette page, les informations d'identification de l'utilisateur spécifiées sont utilisées. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   

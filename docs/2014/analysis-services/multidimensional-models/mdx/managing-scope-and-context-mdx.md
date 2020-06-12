@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7cf1e6cea8df00b632e114a5a8756373738ca6e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074643"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546521"
 ---
 # <a name="managing-scope-and-context-mdx"></a>Gestion de la portée et du contexte (MDX)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], un script MDX (Multidimensional Expressions) peut s’appliquer à l’intégralité du cube ou à des portions spécifiques du cube, à des points spécifiques de l’exécution du script. Le script MDX peut opter pour approche par couche des calculs au sein d'un cube à l'aide de tests de calcul.  
+  Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , un script MDX (Multidimensional Expressions) peut s’appliquer à l’intégralité du cube ou à des portions spécifiques du cube, à des points spécifiques de l’exécution du script. Le script MDX peut opter pour approche par couche des calculs au sein d'un cube à l'aide de tests de calcul.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur la manière dont les tests de calcul peuvent affecter les calculs, consultez [Présentation des concepts d’ordre de passage et d’ordre de résolution &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
@@ -58,7 +57,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- Pour plus d’informations sur la syntaxe de `This` la fonction, consultez [cet &#40;&#41;MDX ](/sql/mdx/this-mdx).  
+ Pour plus d’informations sur la syntaxe de la `This` fonction, consultez [cet &#40;&#41;MDX ](/sql/mdx/this-mdx).  
   
 ## <a name="using-the-scope-statement"></a>Utilisation de l'instruction SCOPE  
  L'instruction SCOPE définit le sous-cube actuel qui contient (et spécifie la portée) d'autres expressions et instructions MDX au sein d'un script MDX. MDX évalue ces autres expressions et instructions MDX, notamment la fonction `This` et l'instruction CALCULATE, dans le contexte du sous-cube.  

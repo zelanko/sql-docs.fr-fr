@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217120"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543714"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services
   Les vues de gestion dynamique (DMV) d'Analysis Services sont des structures de requête qui exposent des informations sur les opérations de serveur local et l'intégrité du serveur. La structure de requête est une interface vers des ensembles de lignes de schéma qui retournent des métadonnées et des informations d'analyse relatives à une instance Analysis Services.  
@@ -98,7 +97,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Si une DMV n’est pas disponible pour un ensemble de lignes donné, le serveur retourne l’erreur suivante \<: « le type de demande SchemaRowset> n’a pas été reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
+>  Si une DMV n’est pas disponible pour un ensemble de lignes donné, le serveur retourne l’erreur suivante : « le type de la \<schemarowset> demande n’a pas été reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
   
 |Ensemble de lignes|Description|  
 |------------|-----------------|  

@@ -1,5 +1,6 @@
 ---
 title: Définir des prédicats de sélection dans le chemin d’accès d’emplacement (SQLXML)
+description: Découvrez comment la spécification de prédicats de sélection dans l’expression de chemin d’emplacement d’une requête XPath (SQLXML 4,0) filtre l’ensemble de nœuds interrogé.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3f62aa328573011d61a4a650aeb117516c3f9a6
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255997"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306195"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Spécification de prédicats de sélection dans le chemin d'accès d'emplacement (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ ms.locfileid: "75255997"
 >  Pour plus d’informations sur les limitations de cette implémentation XPath de XPath et sur les différences entre elle et la spécification W3C, consultez [Introduction à l’utilisation de requêtes xpath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Prédicat de sélection : exemple 1  
- L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tout le ** \<client>** éléments enfants dont l’attribut **CustomerID** a la valeur ALFKI :  
+ L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les **\<Customer>** éléments enfants dont l’attribut **CustomerID** a la valeur ALFKI :  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Dans cette requête XPath, `child` et `attribute` sont les noms d'axes. `Customer`est le test de nœud (true `Customer` si est un ** \<nœud d’élément>**, parce que ** \<l’élément>** est le type `child` de nœud principal de l’axe). `attribute::CustomerID="ALFKI"` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (true si **CustomerID** est un attribut du nœud de contexte, car ** \<l’attribut>** est le type de nœud principal de l’axe d' **attribut** ).  
+ Dans cette requête XPath, `child` et `attribute` sont les noms d'axes. `Customer`est le test de nœud (TRUE si `Customer` est un **\<element node>** , car **\<element>** est le type de nœud principal de l' `child` axe). `attribute::CustomerID="ALFKI"` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (true si **CustomerID** est un attribut du nœud de contexte, car **\<attribute>** est le type de nœud principal de l’axe d' **attribut** ).  
   
  À l'aide de la syntaxe abrégée, la requête XPath peut également être spécifiée de la façon suivante :  
   
@@ -50,7 +51,7 @@ ms.locfileid: "75255997"
 ```  
   
 ## <a name="selection-predicate-example-2"></a>Prédicat de sélection : exemple 2  
- L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tout l' ** \<ordre>** petits-enfants ayant l’attribut **SalesOrderID** avec la valeur 1 :  
+ L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les petits-enfants ayant l' **\<Order>** attribut **SalesOrderID** avec la valeur 1 :  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -65,17 +66,17 @@ ms.locfileid: "75255997"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>Prédicat de sélection : exemple 3  
- L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tout le ** \<client>** enfants ayant un ou plusieurs ** \<enfants ContactName>** :  
+ L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les **\<Customer>** enfants qui ont un ou plusieurs **\<ContactName>** enfants :  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- Cet exemple suppose que le ** \<ContactName>** est un élément enfant de l' ** \<élément Customer>** dans le document XML, appelé *mappage centré* sur les éléments dans un schéma XSD annoté.  
+ Cet exemple suppose que **\<ContactName>** est un élément enfant de l' **\<Customer>** élément dans le document XML, appelé *mappage centré* sur l’élément dans un schéma XSD annoté.  
   
- Dans cette expression XPath, `child` est le nom de l'axe. `Customer`est le test de nœud (true `Customer` si est un ** \<élément>** nœud, parce que ** \<l’élément>** est le type `child` de nœud principal pour Axis). `child::ContactName` est le prédicat. Dans le prédicat `child` , est l’axe et `ContactName` est le test de nœud (true si `ContactName` est un ** \<élément>** nœud).  
+ Dans cette expression XPath, `child` est le nom de l'axe. `Customer`est le test de nœud (TRUE si `Customer` est un **\<element>** nœud, car **\<element>** est le type de nœud principal pour `child` Axis). `child::ContactName` est le prédicat. Dans le prédicat, `child` est l’axe et `ContactName` est le test de nœud (true si `ContactName` est un **\<element>** nœud).  
   
- Cette expression retourne uniquement le ** \<client>** éléments enfants du nœud de contexte qui ont ** \<ContactName>** éléments enfants.  
+ Cette expression retourne uniquement les **\<Customer>** éléments enfants du nœud de contexte qui ont des **\<ContactName>** éléments enfants.  
   
  À l'aide de la syntaxe abrégée, la requête XPath peut également être spécifiée de la façon suivante :  
   
@@ -84,15 +85,15 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>Prédicat de sélection : exemple 4  
- L’expression XPath suivante sélectionne ** \<Customer>** élément Children du nœud de contexte qui n’a ** \<pas ContactName>** Element Children :  
+ L’expression XPath suivante sélectionne les **\<Customer>** éléments enfants du nœud de contexte qui n’ont pas d' **\<ContactName>** éléments enfants :  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- Cet exemple suppose que ** \<ContactName>** est un élément enfant de l' ** \<élément Customer>** dans le document XML et que le champ ContactName n’est pas requis dans la base de données.  
+ Cet exemple suppose que **\<ContactName>** est un élément enfant de l' **\<Customer>** élément dans le document XML et que le champ ContactName n’est pas requis dans la base de données.  
   
- Dans cet exemple, `child` est l'axe. `Customer`est le test de nœud (TRUE `Customer` si est \<un élément> nœud). `not(child::ContactName)` est le prédicat. Dans le prédicat `child` , est l’axe et `ContactName` est le test de nœud (true si `ContactName` est un \<élément> nœud).  
+ Dans cet exemple, `child` est l'axe. `Customer`est le test de nœud (TRUE si `Customer` est un \<element> nœud). `not(child::ContactName)` est le prédicat. Dans le prédicat, `child` est l’axe et `ContactName` est le test de nœud (true si `ContactName` est un \<element> nœud).  
   
  À l'aide de la syntaxe abrégée, la requête XPath peut également être spécifiée de la façon suivante :  
   
@@ -101,13 +102,13 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>Prédicat de sélection : exemple 5  
- L’expression XPath suivante sélectionne à partir du nœud de contexte actuel tout le ** \<client>** les enfants qui ont l’attribut **CustomerID** :  
+ L’expression XPath suivante sélectionne à partir du nœud de contexte actuel tous les **\<Customer>** enfants qui ont l’attribut **CustomerID** :  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- Dans cet exemple, `child` est l’axe et `Customer` est le test de nœud ( `Customer` true si \<est un élément> nœud). `attribute::CustomerID` est le prédicat. Dans le prédicat `attribute` , est l’axe et `CustomerID` est le prédicat (true si `CustomerID` est un ** \<attribut>** nœud).  
+ Dans cet exemple, `child` est l’axe et `Customer` est le test de nœud (true si `Customer` est un \<element> nœud). `attribute::CustomerID` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le PRÉDICAT (true si `CustomerID` est un **\<attribute>** nœud).  
   
  À l'aide de la syntaxe abrégée, la requête XPath peut également être spécifiée de la façon suivante :  
   

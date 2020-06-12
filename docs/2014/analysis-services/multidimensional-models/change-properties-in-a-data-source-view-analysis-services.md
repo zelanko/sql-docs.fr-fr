@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 201ff28999efb006b80157125c85242d538d756a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076735"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537101"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modifier les propriétés d'une vue de source de données (Analysis Services)
   Après avoir défini une vue de source de données à l'aide de l'Assistant Vue de source de données, puis ajouté des tables, des vues, des calculs nommés et des requêtes nommées à la vue de source de données, vous pouvez modifier les propriétés en rapport avec :  

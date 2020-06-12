@@ -18,12 +18,12 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808930"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806845"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Arguments  
 `[ @resample = ] 'resample'`Spécifie que **sp_updatestats** utilisera l’option reéchantillonner de l’instruction [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Si **'resample'** n’est pas spécifié, **sp_updatestats** met à jour les statistiques à l’aide de l’échantillonnage par défaut. **resample** est de type **varchar (8)** avec la valeur non par défaut.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_updatestats** s’exécute `UPDATE STATISTICS` en spécifiant le `ALL` mot clé, sur toutes les tables définies par l’utilisateur et les tables internes de la base de données. sp_updatestats affiche des messages indiquant sa progression. Une fois la mise à jour terminée, cette procédure signale que les statistiques ont été mises à jour pour toutes les tables.  
   
-sp_updatestats met à jour les statistiques sur les index non cluster désactivés mais ne met pas à jour les statistiques sur les index cluster désactivés.  
+**sp_updatestats** met à jour les statistiques sur les index non cluster désactivés et ne met pas à jour les statistiques sur les index cluster désactivés.  
   
 Pour les tables sur disque, **sp_updatestats** met à jour les statistiques en fonction des informations de **modification_counter** dans l’affichage catalogue **sys. dm_db_stats_properties** , en mettant à jour les statistiques où au moins une ligne a été modifiée. Les statistiques sur les tables optimisées en mémoire sont toujours mises à jour lors de l’exécution de **sp_updatestats**. Par conséquent, n’exécutez pas **sp_updatestats** plus que nécessaire.  
   
@@ -58,7 +58,8 @@ Pour les tables sur disque, **sp_updatestats** met à jour les statistiques en f
 Pour les bases de données dont le niveau de compatibilité est inférieur à 90, l’exécution de **sp_updatestats** ne conserve pas le dernier paramètre NORECOMPUTE pour des statistiques spécifiques. Pour les bases de données dont le niveau de compatibilité est égal ou supérieur à 90, sp_updatestats conserve la dernière option NORECOMPUTE pour des statistiques spécifiques. Pour plus d’informations sur la désactivation et la réactivation des mises à jour des statistiques, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** ou la propriété de la base de données (**dbo**).  
+
+Pour exécuter **sp_updatestats**, l’utilisateur doit être le propriétaire de la base de données (le `dbo` , pas uniquement le membre du rôle `db_owner` ) ou être membre du rôle serveur fixe sysadmin.
 
 ## <a name="examples"></a>Exemples  
 Cet exemple met à jour les statistiques des tables de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  

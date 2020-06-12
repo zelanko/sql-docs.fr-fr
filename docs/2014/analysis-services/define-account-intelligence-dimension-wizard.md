@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b218c10826253bc63985e2eb970a4102873e699
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082159"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528855"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Définir l'intelligence comptable (Assistant Dimension)
   Utilisez la page **Définir l'intelligence comptable** pour faire correspondre les types de comptes définis dans l'instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avec ceux définis dans l'attribut de dimension associé à l'attribut **Type de compte** de la dimension.  
@@ -34,7 +33,7 @@ ms.locfileid: "66082159"
   
  Le tableau ci-dessous répertorie les types de comptes définis dans une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Asset**|Valeur des biens possédés à un moment donné.|  
 |**Balance**|Comptage d'une grandeur à un moment donné.|  

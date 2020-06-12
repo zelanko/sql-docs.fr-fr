@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35bd61dcc59eca8bcb920ed99f2e791631047c7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074047"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546281"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Création de jeux nommés dans l'étendue de session (MDX)
   Pour créer un jeu nommé disponible dans l’ensemble d’une session MDX (Multidimensional Expressions), utilisez l’instruction [CREATE SET](/sql/mdx/mdx-data-definition-create-set) . Un jeu nommé créé à l'aide de l'instruction CREATE SET n'est supprimé qu'après la fermeture de la session MDX.  

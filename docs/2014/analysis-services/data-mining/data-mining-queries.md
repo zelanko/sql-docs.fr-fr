@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab6725ddd86d18132de9c408125fa9084161a187
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084967"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523106"
 ---
 # <a name="data-mining-queries"></a>Requêtes d’exploration de données
   Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous pouvez :  
@@ -164,7 +163,7 @@ ms.locfileid: "66084967"
 |Utiliser les modèles de requête DMX et XMLA fournis dans Management Studio|[Créer une requête singleton de prédiction à partir d'un modèle](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Créer une requête d’exploration de données en utilisant XMLA](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Utiliser des modèles Analysis Services dans SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |En savoir plus sur les requêtes de contenu et afficher des exemples|[Créer une requête de contenu sur un modèle d'exploration de données](create-a-content-query-on-a-mining-model.md)<br /><br /> [Interroger les paramètres utilisés pour créer un modèle d'exploration de données](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Requêtes de contenu &#40;Exploration de données&#41;](content-queries-data-mining.md)|  
 |Définir des options de requête et résoudre les problèmes liés aux autorisations et aux requêtes|[Modifier la valeur du délai d'attente pour les requêtes d'exploration de données](data-mining-queries.md)|  
-|Utiliser les composants d'exploration de données dans Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [transformation de requête d'exploration de données](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Utiliser les composants d'exploration de données dans Integration Services|[Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [transformation de requête d'exploration de données](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   

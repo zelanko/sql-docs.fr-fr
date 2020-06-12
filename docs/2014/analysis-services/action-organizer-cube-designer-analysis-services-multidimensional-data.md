@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 147b4622-e9fa-4537-9dbb-9e595c0f55bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b144745cfac6bcefd3e78b4faa3cc7f2980e6363
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062931"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528215"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Organisateur d'action (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Dans le Concepteur de cube, utilisez le volet **Organisateur d'action** sous l'onglet **Actions** pour avoir accès aux actions contenues dans le cube spécifié.  

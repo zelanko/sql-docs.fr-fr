@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086398"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525775"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formes d'exploration de données pour Visio
   Les formes d'exploration de données pour Visio fournissent des modèles personnalisés pour l'affichage de modèles d'exploration de données. En utilisant ces modèles, vous pouvez vous connecter à un modèle que vous avez créé et créer des présentations interactives pour illustrer les résultats de l'exploration de données.  
@@ -38,7 +37,7 @@ ms.locfileid: "66086398"
 -   **Diagramme du cluster :** Utilisez cet Assistant pour créer des graphiques colorés pour vos modèles de segmentation. Activez/désactivez les vues, telles que la discrimination d'attribut, les profils de cluster et les dépendances, et personnalisez l'apparence des clusters.  
   
 ## <a name="installation"></a>Installation  
- Lorsque vous installez les modèles d’exploration de données pour Visio, par défaut, les fichiers suivants \<sont installés dans le lecteur> \program Files\Microsoft SQL Server 2012 DM Add \<-ins (ou lecteur> \ ou Program Files (x86) \Microsoft SQL Server 2012 DM Add-ins) :  
+ Lorsque vous installez les modèles d’exploration de données pour Visio, par défaut les fichiers suivants sont installés dans \<drive> \Program Files\Microsoft SQL Server 2012 DM Add-ins (ou \<drive> \ ou Program Files (x86) \microsoft SQL Server 2012 DM Add-ins) :  
   
 -   **Exploration de données Microsoft. VST** Ce modèle contient des assistants de mise en forme et de mise en page prédéfinis pour vous aider à utiliser les formes d’exploration de données.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66086398"
   
  Pour plus d’informations sur l’utilisation et l’amélioration des diagrammes de modèle Visio, consultez [affichage des modèles d’exploration de données dans Visio &#40;compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
   
 -   Pour utiliser les modèles, vous devez d'abord créer une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66086398"
   
      Pour plus d’informations sur la création d’une connexion, consultez [se connecter à des données sources &#40;client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
--   Si vous utilisez les outils d’analyse de table, assurez-vous d’enregistrer vos modèles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur le serveur et n’utilisez pas de modèles temporaires.  
+-   Si vous utilisez les outils d’analyse de table, assurez-vous d’enregistrer vos modèles sur le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] serveur et n’utilisez pas de modèles temporaires.  
   
 -   Le modèle doit avoir été créé avec un des algorithmes pris en charge : clustering, arbres de décision, réseaux neuronaux, Naïve Bayes ou régression logistique.  
   

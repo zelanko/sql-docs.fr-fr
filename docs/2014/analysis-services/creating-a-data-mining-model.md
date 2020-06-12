@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce03fab2757b366fbe67dc6c68cb3be1c075e3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086725"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526443"
 ---
 # <a name="creating-a-data-mining-model"></a>Création d'un modèle d'exploration de données
   La modélisation des données est l’étape d’exploration de données dans laquelle vous créez des modèles et des tendances en appliquant des *algorithmes* aux données. Ultérieurement, utilisez ces séquences pour l'analyse, ou pour faire des prédictions.  
   
  Les compléments d'exploration de données pour Office prennent en charge l'exploration de données au moyen d'Assistants qui facilitent la création de modèles. Les Assistants analysent les données, identifient des corrélations, calculent l'importance statistique de toutes les variables et sélectionnent automatiquement le meilleur modèle.  
   
- Bien que cette fonctionnalité soit tout aussi puissante que les outils d’exploration de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournis [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]par et, la combinaison d’assistants et de l’interface Excel familière facilite la création, la modification et l’utilisation de l’exploration de données.  
+ Bien que cette fonctionnalité soit tout aussi puissante que les outils d’exploration de données fournis par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , la combinaison d’assistants et de l’interface Excel familière facilite la création, la modification et l’utilisation de l’exploration de données.  
   
 ## <a name="advanced-data-mining"></a>Avancés (Exploration de données)  
- Les assistants avancés vous permettent de créer des modèles d’exploration de données basés sur des données stockées dans Excel, à l’aide de l’un des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]algorithmes d’exploration de données de.  
+ Les assistants avancés vous permettent de créer des modèles d’exploration de données basés sur des données stockées dans Excel, à l’aide de l’un des algorithmes d’exploration de données de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="create-mining-structure"></a>Créer une structure d’exploration de données  
  L'Assistant Création d'une structure d'exploration de données vous aide à générer une nouvelle structure d'exploration de données, que vous pouvez utiliser comme base pour plusieurs modèles d'exploration de données. L'Assistant vous permet de mettre de côté une partie des données à utiliser comme un jeu de test, afin que vous puissiez évaluer tous les modèles qui utilisent les mêmes données selon un standard de test cohérent.  

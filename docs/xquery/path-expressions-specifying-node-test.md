@@ -1,5 +1,6 @@
 ---
 title: Spécification d’un test de nœud dans une étape d’expression de chemin | Microsoft Docs
+description: Découvrez comment spécifier un test de nœud dans l’étape d’axe d’une expression de chemin d’accès XQuery.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946433"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524432"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expressions de chemin : spécification d’un test de nœud
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +70,9 @@ child::ProductDescription
   
  L'expression du chemin d'accès `/child::PD:ProductDescription/child::PD:Features/descendant::*,` possède pour sa part trois étapes. Ces étapes indiquent les axes child et descendant. Dans chacune des étapes, le nom du nœud est spécifié comme test de nœud. Le caractère générique (à savoir `*`) de la troisième étape indique tous les nœuds du type de nœud principal correspondant à l'axe descendant. Le type de nœud principal de l'axe détermine en effet le type de nœuds sélectionné, ainsi que les filtres de nom de nœud que les nœuds ont sélectionnés.  
   
- Par conséquent, lorsque cette expression est exécutée sur des documents XML du catalogue de produits dans la table **ProductModel** , elle récupère tous les enfants du nœud \<d’élément des fonctionnalités> enfant du \<nœud d’élément de l’élément ProductDescription>.  
+ Par conséquent, lorsque cette expression est exécutée sur des documents XML du catalogue de produits dans la table **ProductModel** , elle récupère tous les enfants du nœud d’élément de l' \<Features> enfant du nœud d’élément de l' \<ProductDescription> élément.  
   
- L’expression de chemin `/child::PD:ProductDescription/attribute::ProductModelID`d’accès,, est constituée de deux étapes. Ces deux étapes indiquent un nom de nœud comme test de nœud. La deuxième étape utilise également un axe attribute. Ainsi, chaque étape sélectionne des nœuds du type de nœud principal de son axe portant le nom spécifié comme test de nœud. Ainsi, l’expression retourne **ProductModelID** le nœud d’attribut ProductModelID \<du nœud de l’élément ProductDescription>.  
+ L’expression de chemin d’accès, `/child::PD:ProductDescription/attribute::ProductModelID` , est constituée de deux étapes. Ces deux étapes indiquent un nom de nœud comme test de nœud. La deuxième étape utilise également un axe attribute. Ainsi, chaque étape sélectionne des nœuds du type de nœud principal de son axe portant le nom spécifié comme test de nœud. Ainsi, l’expression retourne le nœud d’attribut **ProductModelID** du \<ProductDescription> nœud d’élément.  
   
  En spécifiant les noms des nœuds comme tests de nœud, vous pouvez également utiliser le caractère générique (*) dans le nom local d'un nœud ou dans le préfixe de son espace de noms, comme illustré dans l'exemple suivant :  
   
@@ -105,12 +106,12 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- De même, `/child::ProductDescription/child::Features/child::comment()` récupère les \<enfants de nœuds de commentaires des fonctionnalités> enfant de nœud \<d’élément du nœud d’élément ProductDescription>.  
+ De même, `/child::ProductDescription/child::Features/child::comment()` récupère les enfants de nœuds de commentaire de l' \<Features> enfant de nœud d’élément du \<ProductDescription> nœud d’élément.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants comparent nom de nœud et type de nœud.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Résultats de la spécification du nom de nœud et du type de nœud en tant que tests de nœuds dans une expression de chemin d'accès  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>R. Résultats de la spécification du nom de nœud et du type de nœud en tant que tests de nœuds dans une expression de chemin d'accès  
  Dans l’exemple suivant, un document XML simple est assigné à une variable de type **XML** . Le document est interrogé à l'aide de plusieurs expressions de chemin d'accès. Les résultats sont ensuite comparés.  
   
 ```  
@@ -169,7 +170,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- Étant `node()` donné que est un type de nœud, vous recevrez tous les nœuds de l’axe descendant. Voici le résultat obtenu :  
+ Étant donné que `node()` est un type de nœud, vous recevrez tous les nœuds de l’axe descendant. Voici le résultat obtenu :  
   
 ```  
 text1  
@@ -201,7 +202,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. Indication d'un nom de nœud dans le test de nœud  
  Cet exemple spécifie un nom de nœud comme test de nœud dans toutes les expressions de chemin d'accès. Par conséquent, toutes les expressions renvoient les nœuds du type de nœud principal de l'axe dont le nom de nœud est indiqué dans le test de nœud.  
   
- L’expression de requête suivante renvoie l' `Warranty` élément <> à partir du document XML du catalogue de `Production.ProductModel` produits stocké dans la table :  
+ L’expression de requête suivante renvoie l' `Warranty` élément <> à partir du document XML du catalogue de produits stocké dans la `Production.ProductModel` table :  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -221,7 +222,7 @@ WHERE ProductModelID=19
   
 -   La partie facultative de qualificateur d'étape de l'étape d'axe n'est précisée dans aucune étape de l'expression.  
   
- La requête retourne le <`Warranty`> éléments enfants de la <`Features`> élément enfant de l' `ProductDescription` élément <>.  
+ La requête retourne le <`Warranty`> éléments enfants de la <`Features`> élément enfant de l’élément <> `ProductDescription` .  
   
  Voici le résultat obtenu :  
   
@@ -244,9 +245,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Le caractère générique est précisé pour le nom du nœud. Par conséquent, la requête retourne tous les enfants de nœud d’élément `Features` du nœud d’élément <> enfant `ProductDescription` du nœud d’élément <>.  
+ Le caractère générique est précisé pour le nom du nœud. Par conséquent, la requête retourne tous les enfants de nœud d’élément du nœud d’élément <`Features`> enfant du nœud d’élément <`ProductDescription`>.  
   
- Cette requête est similaire à la précédente sauf qu'un espace de noms combiné au caractère générique est indiqué. Tous les enfants du nœud élément se trouvant dans cet espace de noms sont ainsi renvoyés. Notez que l’élément `Features` <> peut contenir des éléments provenant de différents espaces de noms.  
+ Cette requête est similaire à la précédente sauf qu'un espace de noms combiné au caractère générique est indiqué. Tous les enfants du nœud élément se trouvant dans cet espace de noms sont ainsi renvoyés. Notez que l' `Features` élément <> peut contenir des éléments provenant de différents espaces de noms.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -295,7 +296,7 @@ WHERE ProductModelID=19
   
 -   Les deux premières étapes précisent un nom de nœud comme test de nœud alors que la troisième indique un type de nœud comme test de nœud.  
   
--   L’expression retourne les enfants du nœud de texte `Features` de la <> élément enfant `ProductDescription` du nœud d’élément <>.  
+-   L’expression retourne les enfants du nœud de texte de la <`Features`> élément enfant du `ProductDescription` nœud d’élément <>.  
   
  Un seul nœud de texte est renvoyé. Voici le résultat obtenu :  
   
@@ -303,7 +304,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- La requête suivante retourne les enfants du nœud de commentaire de `ProductDescription` l’élément <> :  
+ La requête suivante retourne les enfants du nœud de commentaire de l' `ProductDescription` élément <> :  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -319,7 +320,7 @@ WHERE ProductModelID=19
   
 -   La deuxième étape indique un type de nœud comme test de nœud.  
   
--   Par conséquent, l’expression retourne les enfants du nœud de commentaire des nœuds d’élément <`ProductDescription`>.  
+-   Par conséquent, l’expression retourne les enfants du nœud de commentaire des `ProductDescription` nœuds d’élément <>.  
   
  Voici le résultat obtenu :  
   

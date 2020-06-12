@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: af7df609-5e38-40c5-b176-28450792409f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ac7ca54d8db398cf93e83e93c8f7d87c81f9d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cac085621f80df6f03d34443765e30f041d5d48
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078065"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542081"
 ---
 # <a name="linked-object-wizard-f1-help"></a>Aide de l'Assistant Objet lié par la touche F1
-  Utilisez l’Assistant objet lié pour établir une liaison ou une importation à partir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’objets dans d’autres bases de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données, de la même instance ou d’une autre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]vers le projet actuel de. Les objets liés continuent à refléter les modifications apportées à leur base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source, alors que les objets importés ne reflètent pas de telles modifications. Aussi bien les dimensions que les groupes de mesures peuvent être liés, y compris leurs mesures associées. Les actions, les indicateurs de performance clé (KPI) et les calculs peuvent, eux, être importés.  
+  Utilisez l’Assistant objet lié pour établir une liaison ou une importation à partir d’objets dans d’autres [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bases de données, de la même [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance ou d’une autre instance, vers le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet actuel de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Les objets liés continuent à refléter les modifications apportées à leur base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source, alors que les objets importés ne reflètent pas de telles modifications. Aussi bien les dimensions que les groupes de mesures peuvent être liés, y compris leurs mesures associées. Les actions, les indicateurs de performance clé (KPI) et les calculs peuvent, eux, être importés.  
   
  L'Assistant Objet lié vous guide lors des différentes étapes décrites ci-après :  
   

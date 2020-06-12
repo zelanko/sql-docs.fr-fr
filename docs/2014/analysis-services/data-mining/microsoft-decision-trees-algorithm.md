@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd55af5914bcc6409a3e5d6c899cbfd8b7f939f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174639"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522147"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algorithme MDT (Microsoft Decision Trees)
-  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MDT (Decision Trees) est un algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de classification et de régression fourni par pour une utilisation dans la modélisation prédictive d’attributs discrets et continus.
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MDT (Decision Trees) est un algorithme de classification et de régression fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour une utilisation dans la modélisation prédictive d’attributs discrets et continus.
 
  Pour les attributs discrets, l'algorithme effectue des prévisions en fonction des relations entre les colonnes d'entrée d'un dataset. Il utilise les valeurs, également appelées « états », de ces colonnes pour prédire les états d'une colonne désignée comme prévisibles. En particulier, l'algorithme identifie les colonnes d'entrée en corrélation avec la colonne prédictible. Par exemple, dans un scénario conçu pour prévoir quels clients sont susceptibles d'acheter un vélo, si neuf jeunes clients sur dix achètent un vélo, alors que seulement deux clients plus âgés sur dix le font, l'algorithme déduit que l'âge est un bon facteur de prévision d'achat de vélo. L'arbre de décision effectue des prévisions en fonction de cette tendance vers une issue particulière.
 

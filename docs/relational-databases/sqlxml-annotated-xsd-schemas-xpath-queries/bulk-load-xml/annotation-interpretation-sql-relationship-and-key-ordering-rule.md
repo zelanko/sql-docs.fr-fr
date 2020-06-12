@@ -1,5 +1,6 @@
 ---
 title: 'SQL : Relationship et la règle de classement des clés (SQLXML)'
+description: 'En savoir plus sur l’utilisation de l’élément SQL : Relationship et des règles de classement des clés dans SQLXML.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c04b14f474e2afc0e6feb18eaa0bd321fdbb5e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9963058caa3c027a294fac5828b39990bb344f5f
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246770"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215723"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interprétation des annotations - sql:relationship et Key Ordering Rule
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Dans la mesure où la fonctionnalité de chargement en masse XML génère des enregistrements lorsque les nœuds de ces derniers entrent dans l'étendue, et qu'elle envoie ces enregistrements à Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque les nœuds correspondants sortent de l'étendue, les données de l'enregistrement doivent être présentes dans l'étendue du nœud.  
   
- Prenons le schéma XSD suivant, dans lequel la relation un-à-plusieurs entre ** \<les>client** et ** \<** les éléments de>de commande (un client peut passer plusieurs commandes) est spécifiée à l’aide de l' ** \<élément SQL : Relationship>** :  
+ Prenons le schéma XSD suivant, dans lequel la relation un-à-plusieurs entre **\<Customer>** les **\<Order>** éléments et (un client peut passer plusieurs commandes) est spécifiée à l’aide de l' **\<sql:relationship>** élément :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -60,7 +61,7 @@ ms.locfileid: "75246770"
 </xsd:schema>  
 ```  
   
- Lorsque le nœud de l’élément ** \<>du client** entre dans l’étendue, le chargement en masse XML génère un enregistrement de client. Cet enregistrement reste jusqu’à ce que le chargement en masse XML Lise ** \</Customer>**. Lors du traitement de l' ** \<ordre>** nœud élément, le chargement en masse XML utilise ** \<SQL : Relationship>** pour obtenir la valeur de la colonne de clé étrangère CustomerID de la table CustOrder à partir de l' ** \<élément Customer>** parent, car l' ** \<élément Order>** ne spécifie pas l’attribut **CustomerID** . Cela signifie que lors de la définition de l' ** \<élément Customer>** , vous devez spécifier l’attribut **CustomerID** dans le schéma avant de spécifier ** \<SQL : Relationship>**. Dans le cas contraire, lorsqu’une ** \<commande>** élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder et, lorsque le chargement en masse XML atteint la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** \<** balise de fin de la>/Order, il envoie l’enregistrement à sans la valeur de la colonne de clé étrangère CustomerID.  
+ Lorsque le **\<Customer>** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement de client. Cet enregistrement est conservé jusqu’à la lecture du chargement en masse XML **\</Customer>** . Lors du traitement du **\<Order>** nœud d’élément, le chargement en masse XML utilise **\<sql:relationship>** pour obtenir la valeur de la colonne de clé étrangère CustomerID de la table CustOrder à partir de l' **\<Customer>** élément parent, car l' **\<Order>** élément ne spécifie pas l’attribut **CustomerID** . Cela signifie que lors de la définition de l' **\<Customer>** élément, vous devez spécifier l’attribut **CustomerID** dans le schéma avant de spécifier **\<sql:relationship>** . Dans le cas contraire, lorsqu’un **\<Order>** élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder et, lorsque le chargement en masse XML atteint la **\</Order>** balise de fin, il envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sans la valeur de la colonne de clé étrangère CustomerID.  
   
  Enregistrez le schéma fourni dans cet exemple sous le nom SampleSchema.xml.  
   
@@ -117,7 +118,7 @@ ms.locfileid: "75246770"
     set objBL=Nothing  
     ```  
   
-     Il en résulte que la fonctionnalité de chargement en masse XML insère une valeur NULL dans la colonne de clé étrangère CustomerID de la table CustOrder. Si vous révisez les exemples de données XML de ** \<** sorte que l’élément enfant CustomerID>apparaisse avant l' ** \<ordre>** élément enfant, vous obtenez le résultat attendu : le chargement en masse XML insère la valeur de clé étrangère spécifiée dans la colonne.  
+     Il en résulte que la fonctionnalité de chargement en masse XML insère une valeur NULL dans la colonne de clé étrangère CustomerID de la table CustOrder. Si vous modifiez l’exemple de données XML de sorte que l' **\<CustomerID>** élément enfant apparaisse avant l' **\<Order>** élément enfant, vous obtenez le résultat attendu : le chargement en masse XML insère la valeur de clé étrangère spécifiée dans la colonne.  
   
  Voici le schéma XDR équivalent :  
   

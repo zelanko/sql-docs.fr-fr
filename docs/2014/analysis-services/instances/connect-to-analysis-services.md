@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 654d659900d01ae9d5caf5188b9146510de483ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a019de00f932a8992b9adde426d1b9d953acb49f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080116"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544011"
 ---
 # <a name="connect-to-analysis-services"></a>Se connecter à Analysis Services
   Utilisez les informations de cette section pour en savoir plus sur les propriétés de chaîne de connexion, les bibliothèques clientes utilisées pour les connexions, les méthodes d'authentification prises en charge par Analysis Services et la procédure permettant de définir ou supprimer les connexions avant de déconnecter un serveur.  

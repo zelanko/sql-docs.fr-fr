@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cc3530c7bc316c0dbdc3271d456d4f7adf05038a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c291dbc9903fddfa714f9b1665d7ba9d4265a0f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087215"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527175"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Connexion à une base de données Microsoft SQL Server (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de spécifier des paramètres pour vous connecter à une base de données Microsoft SQL Server. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087215"
 > [!NOTE]  
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'une base de données sur cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66087215"
   
  Vous pouvez utiliser un point (.), (local) ou localhost pour indiquer le serveur local.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Précisez si l’authentification Windows est utilisée pour se connecter à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows. Dans la mesure du possible, utilisez l’authentification Windows.  

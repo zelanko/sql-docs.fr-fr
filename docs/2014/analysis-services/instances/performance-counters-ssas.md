@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079708"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543831"
 ---
 # <a name="performance-counters-ssas"></a>Compteurs de performance (SSAS)
   L'Analyseur de performances vous permet d'analyser les performances d'une instance Microsoft SQL Server Analysis Services (SSAS) à l'aide de compteurs de performance.  
@@ -32,7 +31,7 @@ ms.locfileid: "66079708"
   
 |Groupe|Description|  
 |-----------|-----------------|  
-|[Cache](#bkmk_Cache)|Statistiques relatives au cache d'agrégation Analysis Services.|  
+|[d'instance/de clé](#bkmk_Cache)|Statistiques relatives au cache d'agrégation Analysis Services.|  
 |[Connection](#bkmk_Connection)|Statistiques relatives aux connexions Microsoft Analysis Services.|  
 |[Prédiction de l'exploration de données](#bkmk_DataMiningPrediction)|Statistiques relatives au traitement de modèles d'exploration de données.|  
 |[Traitement du modèle d'exploration de données](#bkmk_DataMiningModelProcessing)|Statistiques relatives à la création de prédictions à partir de modèles d'exploration de données.|  

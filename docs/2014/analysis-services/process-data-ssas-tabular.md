@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d88f2dc9-2933-4be5-9bf3-48ffbc2d0a1a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a0ca45681866e0ba96edaa81c21445a89f94275
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2066cb6d871f43dda719cab3539253db97bfca7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070699"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540061"
 ---
 # <a name="process-data-ssas-tabular"></a>Traiter les données (SSAS Tabulaire)
   Lorsque vous importez des données dans un modèle tabulaire, en mode mis en cache, vous capturez un instantané de ces données au moment de l'importation. Dans certains cas, ces données peuvent ne jamais changer et elles n'ont pas besoin d'être mises à jour dans le modèle. Toutefois, il est plus probable que les données que vous importez subissent des modifications régulièrement, et pour que votre modèle reflète les données les plus récentes des sources de données, il est nécessaire de traiter (actualiser) ces données et de recalculer les données calculées. Pour mettre à jour les données dans votre modèle, effectuez une action de traitement sur toutes les tables, sur une table individuelle, par partition ou par connexion de source de données.  

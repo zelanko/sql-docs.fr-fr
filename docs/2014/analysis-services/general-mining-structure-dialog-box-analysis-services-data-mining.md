@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 678dace2a8695b5da0788aa95b66adc3ada6af98
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081055"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544400"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Général (Boîte de dialogue Structure d'exploration de données) (Analysis Services – Exploration de données)
   Utilisez la page **Général** de la boîte de dialogue **Propriétés de structure d'exploration de données** dans **SQL Server Management Studio** pour définir les propriétés générales d'une structure d'exploration de données dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

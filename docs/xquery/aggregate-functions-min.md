@@ -1,5 +1,6 @@
 ---
 title: Fonction min (XQuery) | Microsoft Docs
+description: En savoir plus sur la fonction XQuery min () qui retourne un élément dans une séquence dont la valeur est inférieure à celle de tous les autres.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985751"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529962"
 ---
 # <a name="aggregate-functions---min"></a>Fonctions d’agrégation : min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Utilisation de la fonction XQuery min() pour rechercher le poste de travail enregistrant le moins d'heures de main-d'œuvre  
+### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>R. Utilisation de la fonction XQuery min() pour rechercher le poste de travail enregistrant le moins d'heures de main-d'œuvre  
  La requête suivante récupère tous les postes de travail du processus de fabrication du modèle de produit (ProductModelID=7) qui enregistre le moins d'heures de main-d'œuvre. Généralement, comme le montre l'exemple suivant, un seul poste est renvoyé. Si plusieurs postes de travail enregistraient le même nombre minimal de main-d'œuvre, ils seraient tous renvoyés.  
   
 ```  
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
   
 -   Le mot clé **namespace** dans le prologue XQuery définit un préfixe d’espace de noms. Ce préfixe est utilisé ultérieurement dans le corps de la requête.  
   
- Le corps XQuery construit le XML qui possède un \<emplacement> élément avec des attributs wcid et **LaborHrs** .  
+ Le corps XQuery construit le XML qui possède un \<Location> élément avec des attributs wcid et **LaborHrs** .  
   
 -   La requête récupère également l'identificateur et le nom du modèle de produit.  
   

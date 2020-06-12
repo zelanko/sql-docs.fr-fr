@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eef1dd188b0038c637dc15750a6538c929359299
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727660"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545281"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Stockage de cube (Analysis Services - Données multidimensionnelles)
-  Il se peut que le stockage n'inclue que les métadonnées de cube, ou toutes les données sources de la table de faits ainsi que les agrégations définies par des dimensions liées au groupe de mesures. La quantité de données stockée dépend du mode de stockage sélectionné et du nombre d'agrégations défini. Cette quantité de données stockées influence directement les performances des requêtes. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise plusieurs techniques pour réduire l’espace requis pour le stockage des données et des agrégations du [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube :  
+  Il se peut que le stockage n'inclue que les métadonnées de cube, ou toutes les données sources de la table de faits ainsi que les agrégations définies par des dimensions liées au groupe de mesures. La quantité de données stockée dépend du mode de stockage sélectionné et du nombre d'agrégations défini. Cette quantité de données stockées influence directement les performances des requêtes. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise plusieurs techniques pour réduire l’espace requis pour le stockage des données et des agrégations du cube :  
   
 -   Les options de stockage permettent de choisir les modes et emplacements de stockage qui conviennent le mieux aux données de cube.  
   

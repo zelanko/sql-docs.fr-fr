@@ -1,5 +1,6 @@
 ---
 title: Exécution d’un DiffGram à l’aide d’ADO (SQLXML)
+description: Découvrez comment exécuter un fichier DiffGram dans une application Microsoft Visual Basic à l’aide d’ADO (SQLXML 4,0) pour établir une connexion à une instance de Microsoft SQL Server.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7ca55bdea021127d73bcef8bb2e695a5fe45123
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64835df5e298f85af2cf4560273a1ece16683b0c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246650"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306212"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Exécution d'un DiffGram à l'aide d'ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "75246650"
   
 -   Le flux de sortie de la commande est défini sur l’objet **StrmOut** (**ADODB. Stream**) pour recevoir toutes les données retournées.  
   
--   Lorsque vous utilisez le fournisseur SQLOLEDB, par défaut, vous obtenez les fonctionnalités SQLXML de Microsoft fournies par Sqlxmlx.dll. Pour utiliser Sqlxml4. dll avec le fournisseur SQLOLEDB, la propriété de **version SQLXML** doit être définie sur **SQLXML. 4.0** sur l’objet de **connexion** du fournisseur SQLOLEDB.  
+-   Lorsque vous utilisez le fournisseur SQLOLEDB, par défaut, vous obtenez les fonctionnalités SQLXML de Microsoft fournies par Sqlxmlx.dll. Pour utiliser Sqlxml4.dll avec le fournisseur SQLOLEDB, la propriété de **version SQLXML** doit être définie sur **SQLXML. 4.0** sur l’objet de **connexion** du fournisseur SQLOLEDB.  
   
 -   La commande (DiffGram) est exécutée.  
   

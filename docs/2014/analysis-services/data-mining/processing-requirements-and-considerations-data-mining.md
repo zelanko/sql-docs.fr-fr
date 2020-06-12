@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0a1dcf4793244a17bb52b38894bba2cb06d219
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083130"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520856"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Exigences et considérations concernant le traitement (exploration de données)
   Cette rubrique décrit quelques considérations techniques que vous devez garder à l'esprit lors du traitement des objets d'exploration de données. Pour une présentation générale du traitement et de la manière dont il s’applique à l’exploration de données, consultez [Traitement des objets d’exploration de données](processing-data-mining-objects.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66083130"
   
  Lors du traitement du modèle, celui-ci ne relit pas les données à partir de la source de données, mais il récupère à la place un résumé des données à partir de la structure d'exploration de données. À l'aide du cube qui a été créé, ainsi que des données d'index et de cas mises en cache, le serveur crée des threads indépendants pour l'apprentissage des modèles.  
   
- Pour plus d’informations sur les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de qui prennent en charge le traitement de modèles parallèles, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge le traitement de modèles parallèles, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a> Traitement des structures d'exploration de données  
  Une structure d'exploration de données peut être traitée avec tous les modèles dépendants, ou séparément. Le traitement d'une structure d'exploration de données séparément des modèles peut être utile lorsqu'il est envisagé que le traitement de certains modèles prenne beaucoup de temps et que vous souhaitez différer cette opération.  

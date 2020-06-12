@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558f9936b7a8e78b3ef75f3bb525185ae497959c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087024"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526965"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Connexion à Microsoft SQL Server Analysis Services (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de spécifier les paramètres d'importation de données à partir d'un cube Microsoft SQL Server Analysis Services ou d'un classeur PowerPivot hébergé sur SharePoint. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087024"
 > [!NOTE]  
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'une base de données sur cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66087024"
   
 -   Tapez l'URL d'un classeur PowerPivot publié dans SharePoint.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Spécifiez si l'authentification Windows est utilisée pour se connecter à un serveur SQL Server Analysis Services.  
   
  Le mode d'authentification Windows permet à l'utilisateur de se connecter au moyen d'un compte d'utilisateur Windows. Dans la mesure du possible, utilisez l’authentification Windows.  

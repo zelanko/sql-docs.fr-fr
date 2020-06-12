@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 199de07778a153cd1bc40b5033d364e5e0055bd3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074425"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546431"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Création de cellules calculées au niveau de la session
     
@@ -80,7 +79,7 @@ FOR String_Expression AS 'MDX_Expression'
 |Jeu vide|Expression de jeu MDX qui prend la valeur d'un ensemble vide. Dans ce cas, la portée de la cellule calculée est l'intégralité du cube.|  
 |Jeu à un seul membre|Expression de jeu MDX qui prend la valeur d'un seul membre.|  
 |Jeu de membres de niveau|Expression de jeu MDX qui prend la valeur des membres d'un même niveau. L' *Level_Expression*en est un exemple.`Members` Fonction MDX. Pour inclure des membres calculés, utilisez l' *Level_Expression*.`AllMembers` Fonction MDX.<br /><br /> Pour plus d’informations, consultez [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Par `Descendants`exemple, la fonction MDX (*Member_Expression*, *Level_Expression*, *Desc_Flag*).<br /><br /> Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Par exemple `Descendants` , la fonction MDX (*Member_Expression*, *Level_Expression*, *Desc_Flag*).<br /><br /> Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création de calculs de cellules à l’aide de la syntaxe MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  

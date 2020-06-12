@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081558"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528512"
 ---
 # <a name="dmx-templates"></a>Modèles DMX
   Les modèles d'exploration de données vous aident à créer rapidement des requêtes sophistiquées. Bien que la syntaxe générale des requêtes DMX soit bien documentée, l'utilisation de modèles facilite leur création car il suffit de cliquer et pointer sur les arguments et les sources de données.  
@@ -74,7 +73,7 @@ ms.locfileid: "66081558"
   
  **Créer**  
   
- Utilisez ces modèles pour créer des modèles ou des structures de données personnalisés. Vous n’êtes pas limité aux modèles pris en charge par les assistants : vous pouvez utiliser n’importe quel algorithme d’exploration [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de données pris en charge par l’instance de à laquelle vous êtes connecté, y compris les algorithmes de plug-in.  
+ Utilisez ces modèles pour créer des modèles ou des structures de données personnalisés. Vous n’êtes pas limité aux modèles pris en charge par les assistants : vous pouvez utiliser n’importe quel algorithme d’exploration de données pris en charge par l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous êtes connecté, y compris les algorithmes de plug-in.  
   
 -   Modèle d’exploration de données  
   
@@ -122,7 +121,7 @@ ms.locfileid: "66081558"
   
 -   Effectuer l'apprentissage d'une structure d'exploration de données  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Spécifications  
  En fonction du modèle vous utilisez, vous pouvez avoir besoin d'autorisations administratives pour accéder au serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et exécuter la requête.  
   
 ## <a name="see-also"></a>Voir aussi  

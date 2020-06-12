@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27df4456d774f7c80f30fd4840c521ddf93c77a6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520215"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Afficher la formule d'un modèle de série chronologique (exploration de données)
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] concepteur d’exploration de données de la visionneuse de série chronologique fournit le moyen le plus simple d’afficher les détails de l’équation de régression utilisée dans un modèle de série chronologique.  
+  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Concepteur d’exploration de données de la visionneuse de série chronologique fournit le moyen le plus simple d’afficher les détails de l’équation de régression utilisée dans un modèle de série chronologique.  
   
  Vous pouvez extraire la formule de régression d'un modèle de série chronologique en interrogeant le contenu du modèle. Toutefois, pour afficher la formule complète ARTXP ou ARIMA, nous vous recommandons d’utiliser la **légende d’exploration de données** de la [visionneuse MTS (Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)), qui présente toutes les constantes dans un format lisible.  
   

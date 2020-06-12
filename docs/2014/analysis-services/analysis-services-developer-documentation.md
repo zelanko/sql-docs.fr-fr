@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5b22848e6f689615274d958f8b4ff175e8ac5ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638783"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528055"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Guide des&#39;pour les développeurs (Analysis Services)
     
@@ -26,10 +25,10 @@ ms.locfileid: "62638783"
  [Programmation de modèle tabulaire](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
  Décrit les extensions CSDL qui définissent un modèle tabulaire dans la syntaxe XML. Elle contient également des informations sur le modèle d'objet tabulaire.  
   
- [Programmation de l'exploration de données](dev-guide/data-mining-programming.md)  
+ [Programmation de l’exploration de données](dev-guide/data-mining-programming.md)  
  Décrit les approches de création de solutions qui incluent des objets d'exploration de données.  
   
- [Programmation de modèle multidimensionnel](multidimensional-models/multidimensional-model-programming.md)  
+ [Programmation de modèles multidimensionnels](multidimensional-models/multidimensional-model-programming.md)  
  Décrit les tâches de développement et les approches permettant l'intégration d'objets modèles multidimensionnels dans une solution personnalisée.  
   
  [Ensembles de lignes de schéma Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  

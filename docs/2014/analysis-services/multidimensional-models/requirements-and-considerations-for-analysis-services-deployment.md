@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073170"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545731"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Configuration requise et considérations relatives au déploiement d'Analysis Services
   Les performances et la disponibilité d'une solution dépendent de nombreux facteurs, notamment des capacités du matériel sous-jacent, de la topologie de votre déploiement de serveur, des caractéristiques de votre solution (présence, par exemple, de partitions distribuées sur plusieurs serveurs ou utilisation du stockage ROLAP qui requiert l'accès direct au moteur relationnel), des contrats de niveau de service et de la complexité de votre modèle de données.  
@@ -50,7 +49,7 @@ ms.locfileid: "66073170"
   
  [Limites de capacité de calcul par édition de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
- [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
  [Caractéristiques de capacité maximale &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   

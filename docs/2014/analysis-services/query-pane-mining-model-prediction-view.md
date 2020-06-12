@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e17a27190891ea9e00be21d5013d0767d61ac148
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070515"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539665"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Volet Requête (vue Prévision de modèle d'exploration de données)
   Le volet **Requête** affiche les instructions DMX (Data Mining Extensions) créées par le Générateur de requêtes de prévisions. Vous pouvez modifier les instructions, puis cliquer sur le bouton **Basculer vers l'affichage du résultat de la requête** pour retourner les résultats. Si vous basculez de nouveau vers la vue **Conception**, les modifications éventuelles apportées à l'instruction seront perdues.  

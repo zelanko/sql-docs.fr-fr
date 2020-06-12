@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072885"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547337"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite
   Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] souhaite modifier le mode lecture/écriture d'une base de données tabulaire ou multidimensionnelle. Ces situations sont souvent justifiées par des exigences opérationnelles, telles que le partage de la base de données au sein d'un pool de serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour un plus grand confort de l'utilisateur.  
@@ -47,7 +46,7 @@ ms.locfileid: "66072885"
   
 4.  Assignez un mot de passe à la base de données à détacher, puis cliquez sur **OK** pour exécuter la commande de détachement.  
   
-5.  Localisez le dossier **bases de données** dans le volet gauche ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]droit de.  
+5.  Localisez le dossier **bases de données** dans le volet gauche ou droit de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 6.  Cliquez avec le bouton droit sur le dossier **bases de données** , puis sélectionnez **attacher...**  
   
@@ -175,6 +174,6 @@ ms.locfileid: "66072885"
  [Élément Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Détacher l’élément](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Élément ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
- [Élément StorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
+ [DbStorageLocation, élément](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

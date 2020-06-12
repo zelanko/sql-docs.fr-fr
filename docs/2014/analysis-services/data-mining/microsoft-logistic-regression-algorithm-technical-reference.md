@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174509"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521855"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)
   L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression) est une variante de l’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), où le paramètre *HIDDEN_NODE_RATIO* 0. Ce paramètre crée un modèle de réseau neuronal qui ne contient pas de couche masquée et qui, par conséquent, est équivalent à la régression logistique.
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  Pour chaque valeur de sortie, cette requête retourne les coefficients et un ID qui pointe en retour vers le nœud d'entrée associé. Elle retourne également une ligne qui contient la valeur de la sortie et de l'ordonnée à l'origine. Chaque entrée X a son propre coefficient (ci), mais la table imbriquée contient également un coefficient « libre » (CO), calculé en fonction de la formule suivante :
 
- F (X) = x1 * C1 + x2\*C2 +... + xn\*CN + x0
+ F (X) = x1 * C1 + x2 \* C2 +... + xn \* CN + x0
 
  Activation : exp (F (X)) / (1 + exp (F (X)))
 
@@ -102,7 +101,7 @@ WHERE NODE_TYPE = 23
 
  HOLDOUT_SEED spécifie un nombre à utiliser pour amorcer le générateur Pseudo-aléatoire lors de la détermination aléatoire des données exclusion. Si HOLDOUT_SEED a la valeur 0, l'algorithme génère la valeur de départ en fonction du nom du modèle d'exploration de données afin de garantir que le contenu du modèle reste inchangé lors du retraitement.
 
- La valeur par défaut est 0.
+ La valeur par défaut est 0.
 
  MAXIMUM_INPUT_ATTRIBUTES définit le nombre d’attributs d’entrée que l’algorithme peut traiter avant d’appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.
 
@@ -129,11 +128,11 @@ WHERE NODE_TYPE = 23
 
  S'applique aux colonnes de structure d'exploration de données.
 
- MODEL_EXISTENCE_ONLY signifie que la colonne sera considérée comme ayant deux États possibles : `Missing` et. `Existing` Une valeur NULL est une valeur manquante.
+ MODEL_EXISTENCE_ONLY signifie que la colonne sera considérée comme ayant deux États possibles : `Missing` et `Existing` . Une valeur NULL est une valeur manquante.
 
  S'applique à la colonne de modèle d'exploration de données.
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Spécifications
  Un modèle de régression logistique doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.
 
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles

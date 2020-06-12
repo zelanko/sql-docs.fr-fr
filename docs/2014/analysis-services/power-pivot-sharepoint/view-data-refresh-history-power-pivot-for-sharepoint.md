@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efe11a733408124490ece2e85c9bd40db34f3fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ad05ca790b42756a51f0dfc419d369e8a24f70d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547681"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Afficher l'historique d'actualisation des données (PowerPivot pour SharePoint)
   L'historique d'actualisation des données est un enregistrement de toute l'activité d'actualisation de données PowerPivot dans un classeur Excel. Dans une batterie de serveurs SharePoint, les opérations d'actualisation des données sont effectuées sur une instance du serveur Analysis Services, selon une planification que vous fournissez. Par défaut, l'historique d'actualisation des données est conservé pendant un an. Toutefois, un administrateur de batterie de serveurs peut, pour l'historique de l'utilisation et des événements, spécifier une stratégie de rétention différente qui détermine la durée de conservation des enregistrements d'actualisation des données.  
@@ -29,7 +28,7 @@ ms.locfileid: "66070920"
   
  **Dans cette rubrique :**  
   
- [Conditions préalables](#prereq)  
+ [Composants requis](#prereq)  
   
  [Afficher l'historique d'actualisation des données d'un classeur](#viewhistory)  
   
@@ -68,8 +67,8 @@ ms.locfileid: "66070920"
 |Prochaine actualisation planifiée|Spécifie la date prévue pour la prochaine actualisation des données.<br /><br /> Le lien **Configurer la planification** vous dirige vers la page de définition de la planification. Si vous disposez d'autorisations Collaboration sur le classeur, vous pouvez cliquer sur ce lien pour afficher et modifier les informations de planification qui contrôlent l'actualisation sans assistance des données PowerPivot du classeur.|  
 |Démarré|Dans la section des détails de l'historique, **Démarré** indique l'heure réelle du traitement. Celle-ci peut différer de celle que vous avez planifiée. En effet, le traitement commence lorsque le serveur dispose de suffisamment de mémoire. Si le serveur est très occupé, le traitement peut commencer plusieurs heures après l'heure de début que vous avez spécifiée.|  
 |Completed|Dans la section des détails de l'historique, **Terminé** indique quand l'opération d'actualisation de données s'est terminée. Les date et heure indiquent quand le classeur a été réarchivé dans la bibliothèque.<br /><br /> Si l'actualisation des données échoue, un ou plusieurs messages d'erreur expliquent la cause de l'échec. Vous pouvez développer chaque enregistrement pour consulter l'état détaillé. Chaque source de données apparaît individuellement, avec les messages de réussite ou d'échec indiquant le cas échéant la raison pour laquelle l'actualisation n'a pas été effectuée.|  
-|Heure|Indique le temps écoulé entre l'heure de début et l'heure de fin de l'opération d'actualisation.|  
-|État|Fournit un enregistrement d'historique indiquant si une opération d'actualisation a réussi ou échoué.|  
+|Temps|Indique le temps écoulé entre l'heure de début et l'heure de fin de l'opération d'actualisation.|  
+|Statut|Fournit un enregistrement d'historique indiquant si une opération d'actualisation a réussi ou échoué.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la collecte des données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   

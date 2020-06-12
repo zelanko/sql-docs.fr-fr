@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25eb4d4424223449052ab1f65b41cf270da81fb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070718"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540071"
 ---
 # <a name="preview-selected-table-ssas"></a>Aperçu de la table sélectionnée (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet d'afficher un aperçu des données dans la table sélectionnée, pour sélectionner les colonnes à inclure dans l'importation de données et pour filtrer des données dans les colonnes sélectionnées. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -28,7 +27,7 @@ ms.locfileid: "66070718"
   
  L'apparence des données dans cette page ne garantit pas que l'importation réussira. Si le nom d'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire la base de données sélectionnée, l'importation échouera.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Case à cocher dans l'en-tête de colonne**  
  Activez la case à cocher pour inclure la colonne lors de l'importation des données. Désactivez la case à cocher pour supprimer la colonne lors de l'importation de données.  
   

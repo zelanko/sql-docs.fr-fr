@@ -19,12 +19,12 @@ ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7392edabcef2b1ff8348bab641380b6ab64cea0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 277791461943c669b2a768efd14aadd2170251b9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950765"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669557"
 ---
 # <a name="domain_constraints-transact-sql"></a>DOMAIN_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "67950765"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Base de données dans laquelle se trouve la règle.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> <strong> \* Important \* \* </strong> N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> Important n’utilisez pas les vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. <strong> \* \* \* \* </strong> Les vues de INFORMATION_SCHEMA représentent seulement un sous-ensemble des métadonnées d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nom de la règle.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Base de données dans laquelle réside le type de données alias.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> <strong> \* Important \* \* </strong> N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> Important n’utilisez pas les vues de INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. <strong> \* \* \* \* </strong> La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
 |**DOMAIN_NAME**|**sysname**|Type de données alias.|  
 |**IS_DEFERRABLE**|**varchar (** 2 **)**|Spécifie si la vérification de contrainte peut être différée. Renvoie toujours NO.|  
 |**INITIALLY_DEFERRED**|**varchar (** 2 **)**|Spécifie si la vérification des contraintes est différée au départ. Renvoie toujours NO.|  

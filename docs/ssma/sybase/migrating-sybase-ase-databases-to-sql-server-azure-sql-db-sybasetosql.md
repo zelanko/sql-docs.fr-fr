@@ -1,5 +1,6 @@
 ---
 title: Migrer des bases de données Sybase ASE vers SQL Server-Azure SQL DB | Microsoft Docs
+description: Utilisez ce processus recommandé pour migrer des bases de données SAP Adaptive Server Enterprise vers SQL Server ou Azure SQL Database à l’aide d’Assistant Migration SQL Server (SSMA).
 ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: sql
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c3735e03e3196f899ab33ca152364244e3331ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9bcca5d23fe147394a350ff8c640680ec674675
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028851"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292816"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>Migration de bases de données SAP ASE vers SQL Server Azure SQL Database (SybaseToSQL)
-Assistant Migration SQL Server (SSMA) pour SAP Adaptive Server Enterprise (ASE) est un environnement complet qui vous permet de migrer rapidement des bases de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données SAP ASE vers ou Azure SQL Database. En utilisant SSMA pour SAP ASE, vous pouvez examiner les données et les objets de base de données, évaluer les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la migration, migrer des objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données vers ou Azure SQL Database, puis migrer des données vers ou Azure SQL Database.  
+Assistant Migration SQL Server (SSMA) pour SAP Adaptive Server Enterprise (ASE) est un environnement complet qui vous permet de migrer rapidement des bases de données SAP ASE vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database. En utilisant SSMA pour SAP ASE, vous pouvez examiner les données et les objets de base de données, évaluer les bases de données pour la migration, migrer des objets de base de données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database, puis migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database.  
   
 ## <a name="recommended-migration-process"></a>Processus de migration recommandé  
-Pour migrer des objets et des données de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SAP ASE vers ou Azure SQL Database, procédez comme suit :  
+Pour migrer des objets et des données de bases de données SAP ASE vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database, procédez comme suit :  
   
 1.  [Créez un nouveau projet SSMA](working-with-ssma-projects-sybasetosql.md).  
   
@@ -38,7 +39,7 @@ Pour migrer des objets et des données de bases de données [!INCLUDE[ssNoVersio
   
 7.  [Chargez les objets de base de données convertis dans SQL Server/Azure SQL Database](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
-    Vous pouvez enregistrer un script et l’exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans ou Azure SQL Database, ou synchroniser les objets de base de données.  
+    Vous pouvez enregistrer un script et l’exécuter dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database, ou synchroniser les objets de base de données.  
   
 8.  [Migrez les données vers SQL Server/Azure SQL Database](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   

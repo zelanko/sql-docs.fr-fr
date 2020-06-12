@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef72741b09666a4059fc0fdd09f282d749e4e99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080349"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544104"
 ---
 # <a name="analysis-services-instance-management"></a>Gestion d'instances Analysis Services
   Une instance d'Analysis Services est une copie de l'exécutable `msmdsrv.exe` qui s'exécute en tant que service du système d'exploitation. Chaque instance est entièrement indépendante des autres instances situées sur le même serveur et dispose de ses propres paramètres de configuration, autorisations, ports, comptes de démarrage, stockage de fichier, et propriétés de mode serveur.  

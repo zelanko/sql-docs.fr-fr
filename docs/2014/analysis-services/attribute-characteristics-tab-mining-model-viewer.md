@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62e42dc1cc405f5515e40b0b050036b673a7b89
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063046"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527935"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Onglet Caractéristiques d'attribut (Visionneuse de modèle d'exploration de données)
   Le volet **Caractéristiques d’attribut** permet d’explorer les relations entre les résultats et les attributs d’entrée dans un modèle Naïve Bayes. Vous pouvez choisir la valeur de l'attribut cible, puis consulter la liste des attributs d'entrée qui ont l'effet le plus important sur les résultats.  
@@ -40,10 +39,10 @@ ms.locfileid: "66063046"
  **Valeur**  
  Choisissez un état pour l’attribut prédictible que vous avez défini dans **Attribut**. Étant donné que les modèles Naïve Bayes ne prennent pas en charge les variables continues, tous les attributs cibles possèdent des résultats discrets ou discrétisés. L'attribut manquant est toujours ajouté automatiquement à la liste.  
   
- **Caractéristiques de \<l’état prévisible>**  
+ **Caractéristiques pour\<predictable state>**  
  Ce graphique contient les colonnes suivantes, qui décrivent la relation des états des attributs d'entrée par rapport à l'état de l'attribut prédictible sélectionné.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Variable**|Répertorie les attributs d'entrée du modèle d'exploration de données.|  
 |**Valeurs**|Répertorie chaque état de l’attribut d’entrée dans **Variable**.|  

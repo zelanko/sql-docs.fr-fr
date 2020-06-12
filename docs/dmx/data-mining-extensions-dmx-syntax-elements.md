@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7cfd0e6846fc377cda6fe9655fa3770748748e2c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070853"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669801"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Éléments de syntaxe DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser différents éléments syntaxiques pour définir des instructions DMX (Data Mining Extensions) que vous pouvez utiliser pour créer, gérer et utiliser des modèles d’exploration de données. Les rubriques suivantes décrivent ces éléments de syntaxe.  
+  Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous pouvez utiliser différents éléments syntaxiques pour définir des instructions DMX (Data Mining Extensions) que vous pouvez utiliser pour créer, gérer et utiliser des modèles d’exploration de données. Les rubriques suivantes décrivent ces éléments de syntaxe.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Identificateurs &#40;&#41;DMX](../dmx/identifiers-dmx.md)  

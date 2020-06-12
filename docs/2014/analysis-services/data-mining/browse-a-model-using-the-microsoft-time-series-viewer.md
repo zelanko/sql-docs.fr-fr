@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 069199c648b883f85dcddb2538efc154c1ee7ebf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085980"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525239"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)
-  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] algorithme Time Series dans affiche les modèles [!INCLUDE[msCoName](../../includes/msconame-md.md)] d’exploration de données générés avec l’algorithme MTS (Time Series). L’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) est un algorithme de régression qui crée des modèles d’exploration de données pour la prédiction des colonnes continues, telles que les ventes de produits, dans un scénario de prédiction. Ces modèles de série chronologiques peuvent inclure des informations basées sur des algorithmes différents :  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse de l’algorithme Time Series dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données générés avec l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MTS (Time Series). L’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) est un algorithme de régression qui crée des modèles d’exploration de données pour la prédiction des colonnes continues, telles que les ventes de produits, dans un scénario de prédiction. Ces modèles de série chronologiques peuvent inclure des informations basées sur des algorithmes différents :  
   
 -   L'algorithme ARTxp, qui est optimisé pour les prédictions à court terme.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66085980"
 ##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse de l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) inclut les onglets suivants :  
   
--   [Modélisation](#BKMK_Tree)  
+-   [Modèle](#BKMK_Tree)  
   
 -   [Graphiques](#BKMK_Charts)  
   

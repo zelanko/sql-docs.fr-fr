@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 006f1090faed746737a89041593222d95637d387
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072381"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541201"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Utiliser des diagrammes dans un concepteur de vues de sources de données (Analysis Services)
   Un diagramme de vue de source de données (DSV) est une représentation visuelle des objets dans une vue DSV. Vous pouvez utiliser le diagramme en mode interactif pour ajouter, masquer, supprimer ou modifier des objets spécifiques. Vous pouvez également créer plusieurs diagramme sur la même vue DSV afin d'attirer l'attention sur un sous-ensemble des objets.  
@@ -46,11 +45,11 @@ ms.locfileid: "66072381"
   
  Pour créer un diagramme, cliquez avec le bouton droit n’importe où dans le volet **Bibliothèque de diagrammes** et cliquez sur **Nouveau diagramme**.  
   
- Lorsque vous définissez initialement une vue de source de données (DSV) dans un projet Analysis Services, toutes les tables et les vues ajoutées à la vue de source \<de données sont ajoutées au diagramme toutes les tables>. Ce diagramme s'affiche dans le volet Bibliothèque de diagrammes du Concepteur de vue de source de données. Les tables de ce diagramme (ainsi que leurs colonnes et relations) sont répertoriées dans le volet Tables et sont représentées graphiquement dans le volet des schémas. Toutefois, lorsque vous ajoutez des tables, des vues et des requêtes \<nommées au diagramme toutes les tables>, le nombre important d’objets dans ce diagramme rend difficile la visualisation des relations, en particulier lorsque plusieurs tables de faits sont ajoutées au diagramme, et les tables de dimension sont liées à plusieurs tables de faits.  
+ Lorsque vous définissez initialement une vue de source de données (DSV) dans un projet Analysis Services, toutes les tables et les vues ajoutées à la vue de source de données sont ajoutées au \<All Tables> diagramme. Ce diagramme s'affiche dans le volet Bibliothèque de diagrammes du Concepteur de vue de source de données. Les tables de ce diagramme (ainsi que leurs colonnes et relations) sont répertoriées dans le volet Tables et sont représentées graphiquement dans le volet des schémas. Toutefois, au fur et à mesure que vous ajoutez des tables, des vues et des requêtes nommées au \<All Tables> diagramme, le nombre important d’objets dans ce diagramme rend difficile la visualisation des relations, en particulier lorsque plusieurs tables de faits sont ajoutées au diagramme, et les tables de dimension sont liées à plusieurs tables de faits.  
   
  Pour faciliter la compréhension lorsque vous souhaitez uniquement consulter un sous-ensemble de tables dans la vue de source de données, vous pouvez définir des sous-diagrammes (appelés diagrammes) composés des sous-ensembles de tables, de vues et de requêtes nommées sélectionnés dans la vue de source de données. Vous pouvez utiliser des diagrammes pour grouper des éléments de la vue de source de données en fonction des besoins de votre société ou de votre solution.  
   
- Vous pouvez grouper des tables associées et des requêtes nommées dans des diagrammes distincts à des fins professionnelles et pour faciliter la compréhension d'une vue de source de données contenant de nombreuses tables, vues et requêtes nommées. La même table ou requête nommée peut être incluse dans plusieurs diagrammes, à l' \<exception du diagramme toutes les tables>. Dans le \<diagramme toutes les tables>, tous les objets contenus dans la vue de source de données sont affichés une seule fois.  
+ Vous pouvez grouper des tables associées et des requêtes nommées dans des diagrammes distincts à des fins professionnelles et pour faciliter la compréhension d'une vue de source de données contenant de nombreuses tables, vues et requêtes nommées. La même table ou requête nommée peut être incluse dans plusieurs diagrammes, à l’exception du \<All Tables> diagramme. Dans le \<All Tables> diagramme, tous les objets contenus dans la vue de source de données sont affichés une seule fois.  
   
 ##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Modifier ou supprimer un diagramme  
  Lorsque vous travaillez avec un diagramme, prêtez la grande attention aux commandes utilisées pour ajouter et supprimer des objets. Par exemple, la suppression d'un objet dans un diagramme les supprime de la vue DSV. Si vous voulez le supprimer uniquement du diagramme, utilisez plutôt **Masquer la table** .  

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03e142f00192e04d5b17bc2041563cea06199c8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073039"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545706"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Exécution de l'Assistant Déploiement d'Analysis Services
   Lorsque vous utilisez l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant déploiement pour déployer un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet, vous pouvez exécuter l’Assistant des manières suivantes :  
   
 -   **Interactivement** Lorsque vous exécutez l'Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de manière interactive, il génère un script de déploiement XML basé sur les fichiers d'entrée, modifié de manière interactive par l'entrée utilisateur. L'Assistant applique les modifications utilisateur uniquement au script de déploiement. Il ne modifie pas les fichiers d'entrée. Pour plus d’informations sur les fichiers d’entrée, voir [Précisions sur les fichiers d’entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md).  
   
--   **À partir de l’invite de commandes** Lorsqu’il est exécuté à partir de l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] invite de commandes, l’Assistant Déploiement génère un script de déploiement XML for Analysis (XMLA) basé sur les commutateurs que vous utilisez pour exécuter l’Assistant. L'Assistant peut effectuer les opérations suivantes : vous demander une entrée utilisateur et modifier les fichiers d'entrée en fonction de cette entrée, exécuter un déploiement automatisé en mode silencieux en utilisant les fichiers d'entrée tels quels, ou créer un script de déploiement que vous pouvez utiliser ultérieurement.  
+-   **À partir de l’invite de commandes** Lorsqu’il est exécuté à partir de l’invite de commandes, l' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement génère un script de déploiement XML for Analysis (XMLA) basé sur les commutateurs que vous utilisez pour exécuter l’Assistant. L'Assistant peut effectuer les opérations suivantes : vous demander une entrée utilisateur et modifier les fichiers d'entrée en fonction de cette entrée, exécuter un déploiement automatisé en mode silencieux en utilisant les fichiers d'entrée tels quels, ou créer un script de déploiement que vous pouvez utiliser ultérieurement.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Exécution de l'Assistant Déploiement d'Analysis Services de manière interactive  
  Lorsque vous exécutez l'Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de manière interactive, il lit les valeurs des fichiers d'entrée et affiche ces informations. Vous pouvez modifier ces valeurs d’entrée, telles que la destination de déploiement, les paramètres de configuration, les options de déploiement et les mots de passe de chaîne de connexion, ou les conserver en l’emplacement. Si vous changez les valeurs d'entrée, l'Assistant utilise ces modifications lors de la génération du script de déploiement XMLA. Toutefois, il ne modifie pas les valeurs du fichier d'entrée.  
@@ -40,10 +39,10 @@ ms.locfileid: "66073039"
   
      -ou-  
   
--   Dans le dossier **projets** du [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet, double-cliquez sur le * \<nom du projet>* fichier. asdatabase.  
+-   Dans le dossier **projets** du [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet, double-cliquez sur le *\<project name>* fichier. asdatabase.  
   
     > [!NOTE]  
-    >  Si vous ne trouvez pas le * \<nom du projet>* fichier. asdatabase, essayez d’utiliser la recherche et spécifiez *. asdatabase.  
+    >  Si vous ne trouvez pas le *\<project name>* fichier. asdatabase, essayez d’utiliser la recherche et spécifiez *. asdatabase.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>Exécution de l'Assistant Déploiement d'Analysis Services à partir de l'invite de commandes  
  Vous pouvez également exécuter l'Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir de l'invite de commandes. Lorsque vous exécutez l'Assistant à l'invite de commandes, vous fournissez le chemin d'accès complet au fichier .asdatabase et exécutez l'Assistant en l'un des modes suivants :  

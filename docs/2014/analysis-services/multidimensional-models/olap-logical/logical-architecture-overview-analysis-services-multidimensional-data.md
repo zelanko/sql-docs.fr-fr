@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dc9c46cf4ddcc7ff04f0c9002bff59cdb3ba370
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175718"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545995"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
   Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. Le **mode multidimensionnel et d’exploration de données** prend en charge les données OLAP et l’exploration de données traditionnelles. Le **mode tabulaire** prend en charge les modèles tabulaires. Le **mode intégré SharePoint** fait référence à une instance de Analysis Services qui a été installée en tant que PowerPivot pour SharePoint, utilisé pour le chargement et l’interrogation des modèles de données Excel ou PowerPivot à l’intérieur d’un classeur.
@@ -26,7 +25,7 @@ ms.locfileid: "78175718"
  Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [modélisation tabulaire &#40;SSAS tabulaire&#41;](../../tabular-models/tabular-models-ssas.md) et [comparaison des solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).
 
 ## <a name="basic-architecture"></a>Architecture de base
- Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les instances [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de sont nommées\<« ServerName \\><\>instanceName ». L’illustration suivante montre toutes les relations mentionnées [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] entre les objets.
+ Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Les instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sont nommées « \<ServerName> \\<InstanceName \> ». L’illustration suivante montre toutes les relations mentionnées entre les [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets.
 
  ![Relations d'objets AMO en cours d'exécution](../../dev-guide/media/amo-runningobjects.gif "Relations d'objets AMO en cours d'exécution")
 
@@ -36,14 +35,14 @@ ms.locfileid: "78175718"
 
  Les cubes sont construits à partir de dimensions et de groupes de mesures. Les dimensions dans la collection de dimensions d'un cube appartiennent à la collection de dimensions de la base de données. Les groupes de mesures sont des collections de mesures qui ont la même vue de source de données et ont le même sous-ensemble de dimensions du cube. Un groupe de mesures dispose d'une ou de plusieurs partitions pour gérer les données physiques. Un groupe de mesures peut avoir une conception d'agrégation par défaut. La conception d'agrégation par défaut peut être utilisée par toutes les partitions dans le groupe de mesures ; de plus, chaque partition peut avoir sa propre conception d'agrégation.
 
- Objets serveur chaque instance de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est considérée comme un objet serveur différent dans AMO ; chaque instance différente est connectée à <xref:Microsoft.AnalysisServices.Server> un objet par une connexion différente. Chaque objet serveur contient une ou plusieurs sources de données, vues de source de données et objets de base de données, ainsi qu'assemblys et rôles de sécurité.
+ Objets serveur chaque instance de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est considérée comme un objet serveur différent dans AMO ; chaque instance différente est connectée à un <xref:Microsoft.AnalysisServices.Server> objet par une connexion différente. Chaque objet serveur contient une ou plusieurs sources de données, vues de source de données et objets de base de données, ainsi qu'assemblys et rôles de sécurité.
 
  Objets de dimension chaque objet de base de données contient plusieurs objets de dimension. Chaque objet de dimension contient un ou plusieurs attributs, organisés en hiérarchies.
 
  Objets de cube chaque objet de base de données contient un ou plusieurs objets de cube. Un cube est défini par ses mesures et ses dimensions. Les mesures et les dimensions d'un cube sont dérivées des tables et des vues de la vue de source de données sur laquelle est basé le cube ou qui est générée à partir des définitions des mesures et des dimensions.
 
 ## <a name="object-inheritance"></a>Héritage d'objet
- Le modèle objet ASSL contient de nombreux groupes d'éléments répétés. Par exemple, le groupe d’éléments «`Dimensions` Contains `Hierarchies`» définit la hiérarchie de dimension d’un élément. `Cubes` et `MeasureGroups` contiennent le groupe d'élément, « `Dimensions` contient `Hierarchies` ».
+ Le modèle objet ASSL contient de nombreux groupes d'éléments répétés. Par exemple, le groupe d’éléments « `Dimensions` Contains `Hierarchies` » définit la hiérarchie de dimension d’un élément. `Cubes` et `MeasureGroups` contiennent le groupe d'élément, « `Dimensions` contient `Hierarchies` ».
 
  Sauf en cas de remplacement explicite, un élément hérite les détails de ces groupes d'éléments répétés du niveau supérieur. Par exemple, les `Translations` pour un `CubeDimension` sont les mêmes que `Translations` pour son élément ancêtre `Cube`.
 
@@ -62,7 +61,7 @@ ms.locfileid: "78175718"
 
  Les petites valeurs alphanumériques autour du cube représentent les membres des dimensions. Les membres sont par exemple ground (membre de la dimension Route), Africa (membre de la dimension Source) et 1st quarter (membre de la dimension Time).
 
-### <a name="measures"></a>mesures
+### <a name="measures"></a>Mesures
  Les valeurs dans les cellules de cube représentent les deux mesures, Packages et Last. La mesure Packages représente le nombre de lots importés et la fonction `Sum` est utilisée pour agréger les faits. La mesure Last représente la date de réception et la fonction `Max` est utilisée pour agréger les faits.
 
 ### <a name="dimensions"></a>Dimensions
