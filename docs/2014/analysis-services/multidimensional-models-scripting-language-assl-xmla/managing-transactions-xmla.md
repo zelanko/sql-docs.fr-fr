@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff1c60addd25b222905e33bc33e77dd85e88803
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544961"
 ---
 # <a name="managing-transactions-xmla"></a>Gestion des transactions (XMLA)
   Chaque commande XML for Analysis (XMLA) envoyée à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’exécute dans le contexte d’une transaction sur la session implicite ou explicite actuelle. Pour gérer chacune de ces transactions, vous devez utiliser les commandes [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)et [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) . En utilisant ces commandes, vous pouvez créer des transactions implicites ou explicites, modifier le nombre de références de transaction, ainsi que les transactions de démarrage, de validation ou d'annulation.  
@@ -34,7 +33,7 @@ ms.locfileid: "62727206"
  Une transaction est soit implicite, soit explicite :  
   
  **Transaction implicite**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crée une transaction *implicite* pour une commande XMLA si `BeginTransaction` la commande ne spécifie pas le début d’une transaction. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] valide toujours une transaction implicite si la commande aboutit et l'annule si la commande échoue.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crée une transaction *implicite* pour une commande XMLA si la `BeginTransaction` commande ne spécifie pas le début d’une transaction. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] valide toujours une transaction implicite si la commande aboutit et l'annule si la commande échoue.  
   
  **Transaction explicite**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crée une transaction *explicite* si la `BeginTransaction` commande démarre une transaction. Toutefois, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne valide une transaction explicite que si une commande `CommitTransaction` est envoyée et l'annule si une commande `RollbackTransaction` est envoyée.  

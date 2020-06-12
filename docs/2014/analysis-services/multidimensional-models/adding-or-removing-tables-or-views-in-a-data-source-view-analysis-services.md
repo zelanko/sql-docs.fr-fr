@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da7169cc95b768324e18f1ab5fd7b0a33615f99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da1bc2b1ac0af7576cfe3c3593b451f78d6a9fae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077462"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544851"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Ajout ou suppression de tables ou de vues dans une vue de source de données (Analysis Services)
   Après avoir créé une vue de source de données (DSV) dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez la modifier dans le concepteur de vue de source de données en ajoutant ou en supprimant des tables et des colonnes, y compris les tables et les colonnes d'une autre source de données.  
@@ -39,7 +38,7 @@ ms.locfileid: "66077462"
   
  L'ajout ou la suppression d'une table à la vue DSV ajoute ou supprime également la table au diagramme sélectionné dans cette vue DSV. Pour plus d’informations sur les diagrammes, consultez [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md).  
   
- Une fois que vous avez placé une table dans la liste **Objets inclus** de la boîte de dialogue **Ajouter/supprimer des tables** , vous pouvez ajouter toutes les tables associées. Cette opération ajoute des tables en fonction des contraintes de clé étrangère dans la source de données, si de telles contraintes existent. Si aucune contrainte de clé étrangère n'existe, vous pouvez utiliser la propriété `NameMatchingCriteria` de la vue de source de données pour déterminer des relations en spécifiant un critère de correspondance des noms de colonnes dans les tables pour générer des relations possibles. Si la `NameMatchingCriteria`propriété est spécifiée pour la vue de source de données, cliquez sur **Ajouter des tables associées** pour ajouter des tables de la source de données qui ont des noms de colonnes correspondants. Pour plus d’informations sur la `NameMatchingCriteria` définition de la propriété, consultez [vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md).  
+ Une fois que vous avez placé une table dans la liste **Objets inclus** de la boîte de dialogue **Ajouter/supprimer des tables** , vous pouvez ajouter toutes les tables associées. Cette opération ajoute des tables en fonction des contraintes de clé étrangère dans la source de données, si de telles contraintes existent. Si aucune contrainte de clé étrangère n'existe, vous pouvez utiliser la propriété `NameMatchingCriteria` de la vue de source de données pour déterminer des relations en spécifiant un critère de correspondance des noms de colonnes dans les tables pour générer des relations possibles. Si la `NameMatchingCriteria` propriété est spécifiée pour la vue de source de données, cliquez sur **Ajouter des tables associées** pour ajouter des tables de la source de données qui ont des noms de colonnes correspondants. Pour plus d’informations sur la définition de la `NameMatchingCriteria` propriété, consultez [vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  L'ajout ou la suppression d'objets dans une vue de source de données n'affecte pas la source de données sous-jacente.  

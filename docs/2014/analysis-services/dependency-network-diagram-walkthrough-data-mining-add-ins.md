@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8138cef980e7b040a99a6e1db21f1b67fd84aeb5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081968"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528775"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme Réseau de dépendances (Compléments d'exploration de données)
   Plusieurs types de modèles d'exploration de données différents utilisent un graphique de réseau comme manière d'explorer les relations dans les données. Vous pouvez importer ces modèles dans Visio à l’aide de la forme **réseau de dépendances** , puis continuer à personnaliser et améliorer la disposition. Les **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour l’utilisation des diagrammes de réseau de dépendances :  
@@ -43,13 +42,13 @@ ms.locfileid: "66081968"
   
 1.  Si les **formes d’exploration de données Microsoft** ne s’affichent pas dans la liste **formes** , cliquez sur **autres formes**, sélectionnez **ouvrir le stencil**, puis ouvrez le modèle à partir de l’emplacement d’installation par défaut.  
   
-     \<lecteur> : \Program Files (x85) \Microsoft SQL Server 2012 DM Add-ins  
+     \<drive>: \Program Files (x85) \Microsoft SQL Server 2012 DM Add-ins  
   
 2.  Faites glisser la forme **réseau de dépendances** sur la page pour démarrer l’Assistant. Cliquez sur **Suivant**.  
   
 3.  Sur la page d’accueil de l **'Assistant Création d’une forme réseau de dépendances Visio**, cliquez sur **suivant**.  
   
-4.  Dans la page **Sélectionner une source de données** de l' **Assistant Création de forme réseau de dépendances Visio**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] choisissez une connexion à un serveur qui possède le modèle que vous souhaitez visualiser.  
+4.  Dans la page **Sélectionner une source de données** de l' **Assistant Création de forme réseau de dépendances Visio**, choisissez une connexion à un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] serveur qui possède le modèle que vous souhaitez visualiser.  
   
 5.  Sélectionnez un modèle d’exploration de données approprié, puis cliquez sur **suivant**.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66081968"
   
 3.  Cliquez sur le ruban **compléments** , puis affichez l’une des barres d’outils personnalisées utilisées pour travailler avec les diagrammes d’exploration de données :  
   
-     **Mise en page**  
+     **Disposition**  
      Optimise la disposition des nœuds sur la page et modifie l'affichage pour que tous les nœuds soient visibles.  
   
      **Redimensionner la page**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c728f865cb905414525048e5b4678005a1613a28
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087595"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527337"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Fin de l'Assistant (Assistant Dimension)
   La page **Fin de l’assistant** permet d’exécuter les procédures suivantes :  
@@ -36,7 +35,7 @@ ms.locfileid: "66087595"
  **Nom**  
  Tapez le nom de la nouvelle dimension.  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affiche les attributs et les hiérarchies de la dimension à créer.  
   
  **Créer le schéma maintenant**  

@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c564425b541ff61353b511ba09ca16fb5331ff10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727335"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545241"
 ---
 # <a name="remote-partitions"></a>Partitions distantes
-  Les données d’une partition distante sont stockées sur une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de Microsoft que l’instance qui contient les définitions (métadonnées) de la partition et de son cube parent. Une partition distante est administrée sur la même instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle la partition et son cube parent sont définis.  
+  Les données d’une partition distante sont stockées sur une autre instance de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que l’instance qui contient les définitions (métadonnées) de la partition et de son cube parent. Une partition distante est administrée sur la même instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle la partition et son cube parent sont définis.  
   
 > [!NOTE]  
->  Pour stocker une partition distante, l’ordinateur doit avoir une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance de installée et exécuter le même niveau de Service Pack que l’instance où la partition a été définie. Les partitions distantes sur des instances d'une version antérieure d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne sont pas prises en charge.  
+>  Pour stocker une partition distante, l’ordinateur doit avoir une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] installée et exécuter le même niveau de Service Pack que l’instance où la partition a été définie. Les partitions distantes sur des instances d'une version antérieure d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne sont pas prises en charge.  
   
  Lorsque les partitions distantes sont incluses dans un groupe de mesures, l'utilisation de la mémoire et de l'unité centrale du cube est répartie sur l'ensemble des partitions du groupe de mesures. Par exemple, lorsqu'une partition distante est traitée, seule ou dans le cadre du traitement de son cube parent, la mémoire et l'unité centrale sont essentiellement utilisées pour cette partition sur l'instance distante d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

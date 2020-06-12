@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 564f09564349fa5709cefa87eca8fe847638b9b6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67913745"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669863"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ Expression1 AND Expression2
  *Expression2*  
  Expression DMX valide qui retourne une valeur numérique.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Valeur booléenne qui retourne TRUE si les deux paramètres donnent comme résultat la valeur TRUE ; dans le cas contraire, elle retourne FALSE.  
   
 ## <a name="remarks"></a>Notes  
@@ -42,10 +42,10 @@ Expression1 AND Expression2
   
 |Si Expression1 est|Si Expression2 est|La valeur de retour est|  
 |-----------------------|-----------------------|---------------------|  
-|TRUE|TRUE|TRUE|  
-|TRUE|FALSE|FALSE|  
-|FALSE|TRUE|FALSE|  
-|FALSE|FALSE|FALSE|  
+|VRAI|VRAI|VRAI|  
+|VRAI|FAUX|FAUX|  
+|FAUX|VRAI|FAUX|  
+|FAUX|FAUX|FAUX|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur l’opérateur de&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   

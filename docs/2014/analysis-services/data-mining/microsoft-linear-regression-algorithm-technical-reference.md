@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20acb57a4c2ddb60d2daefc6733ac7ef52310f3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084059"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521995"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)
   L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) est une version spéciale de l’algorithme MDT (Microsoft Decision Trees) qui est optimisée pour la modélisation des paires d’attributs continus. Cette rubrique explique l'implémentation de l'algorithme, décrit la façon de personnaliser le comportement de l'algorithme et fournit des liens vers des informations supplémentaires sur l'interrogation des modèles.  
@@ -64,13 +63,13 @@ ms.locfileid: "66084059"
 ### <a name="regressors-in-linear-regression-models"></a>Régresseurs dans les modèles de régression linéaire  
  Les modèles de régression linéaire sont basés sur l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Cependant, même si vous n’utilisez pas l’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression), tout modèle d’arbre de décision peut contenir un arbre ou des nœuds qui représentent une régression sur un attribut continu.  
   
- Il est inutile de spécifier qu'une colonne continue représente un régresseur. L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l’indicateur REGRESSOR sur la colonne. La différence réside dans le fait que lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de trouver des équations de régression de la\*forme a * C1 + b C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
+ Il est inutile de spécifier qu'une colonne continue représente un régresseur. L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l’indicateur REGRESSOR sur la colonne. La différence réside dans le fait que lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de trouver des équations de régression de la forme a * C1 + b \* C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
   
  Par exemple, si vous prédisez le comportement d’achat de vos clients en utilisant **Income** comme attribut et que vous définissez l’indicateur de modélisation REGRESSOR sur la colonne, l’algorithme essaie tout d’abord de faire tenir les valeurs **Income** en utilisant une formule de régression standard. Si l'écart est trop grand, la formule de régression est abandonnée et l'arbre est fractionné sur un autre attribut. L’algorithme MDT essaie ensuite de faire tenir un régresseur pour le revenu dans chacune des branches après le fractionnement.  
   
  Vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé avec les algorithmes MDT et MLR.  
   
-## <a name="requirements"></a>Conditions requises  
+## <a name="requirements"></a>Spécifications  
  Un modèle de régression linéaire doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  

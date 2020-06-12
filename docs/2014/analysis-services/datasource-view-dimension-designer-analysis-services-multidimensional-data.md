@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7136c984315714ba6726633522c8702b4c3a84f8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082345"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528915"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vue de source de données (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Vue de source de données** pour afficher les tables et les colonnes associées à la dimension sélectionnée. Ce volet sert à créer des attributs, des propriétés de membres, des hiérarchies et des niveaux. Pour cela, faites glisser des colonnes du volet **Vue de source de données** dans le volet **Attributs** ou **Hiérarchies et niveaux** .  

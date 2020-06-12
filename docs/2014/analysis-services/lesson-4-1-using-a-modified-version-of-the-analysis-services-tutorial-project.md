@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6c55141db6491fe1532dfcdc37a6d7a688c7274
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493941"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543361"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilisation d'une version modifiée du projet du didacticiel Analysis Services
   Les sept dernières leçons de ce didacticiel sont basées sur une version évoluée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous avez créé au cours des trois premières leçons. D’autres tables et calculs nommés ont été ajoutés à la vue de source de données **Adventure Works DW 2012** , des dimensions supplémentaires ont été ajoutées au projet et ces nouvelles dimensions ajoutées au cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. De plus, un deuxième groupe de mesures a été ajouté, qui contient des mesures d'une deuxième table de faits. Ce projet évolué va vous permettre d'apprendre à enrichir en fonctionnalités votre application Business Intelligence sans avoir à répéter ce que vous avez déjà appris.  
@@ -40,7 +39,7 @@ ms.locfileid: "69493941"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Chargement et traitement du projet amélioré  
   
-1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **fichier** , cliquez sur **Fermer la solution** pour fermer les fichiers que vous n’utiliserez pas.  
+1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , dans le menu **fichier** , cliquez sur **Fermer la solution** pour fermer les fichiers que vous n’utiliserez pas.  
   
 2.  Dans le menu **Fichier** , pointez sur **Ouvrir**, puis cliquez sur **Projet/Solution**.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "69493941"
 ### <a name="data-source-view"></a>Vue de source de données  
  Dans le projet amélioré, la vue de source de données contient une table de faits supplémentaire et quatre tables de dimension supplémentaires dans la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Notez qu’avec dix tables dans la vue de source de données \<, le diagramme toutes les tables> devient encombré. Il devient dès lors difficile de comprendre les relations entre les tables et de localiser des tables spécifiques. Pour résoudre ce problème, les tables sont organisées en deux diagrammes logiques, le diagramme **Internet Sales** et le diagramme **Reseller Sales** . Ces diagrammes sont tous deux organisés autour d'une seule table de faits. La création de diagrammes logiques permet d'afficher et d'utiliser uniquement des sous-ensembles spécifiques des tables dans la vue de source de données au lieu de toujours afficher la totalité des tables et de leurs relations dans un même diagramme.  
+ Remarquez qu’avec dix tables dans la vue de source de données, le diagramme \<All Tables> est presque plein. Il devient dès lors difficile de comprendre les relations entre les tables et de localiser des tables spécifiques. Pour résoudre ce problème, les tables sont organisées en deux diagrammes logiques, le diagramme **Internet Sales** et le diagramme **Reseller Sales** . Ces diagrammes sont tous deux organisés autour d'une seule table de faits. La création de diagrammes logiques permet d'afficher et d'utiliser uniquement des sous-ensembles spécifiques des tables dans la vue de source de données au lieu de toujours afficher la totalité des tables et de leurs relations dans un même diagramme.  
   
 #### <a name="internet-sales-diagram"></a>Diagramme Internet Sales  
  Le diagramme **Internet Sales** contient les tables qui sont liées à la vente des produits [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] effectuée directement auprès des clients par le biais d’Internet. Les tables que ce diagramme contient sont les quatre tables de dimension et la table de faits que vous avez ajoutées à la vue de source de données **Adventure Works DW 2012** de la leçon 1. Il s’agit des tables suivantes :  

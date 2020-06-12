@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae3e672932dd320c6b369f23f03c1f056d30d4ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084203"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522175"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestion des solutions et des objets d'exploration de données
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des outils clients que vous pouvez utiliser pour gérer les structures et modèles d'exploration de données existants. Cette section décrit les opérations de gestion que vous pouvez effectuer avec chaque environnement.  
@@ -35,7 +34,7 @@ ms.locfileid: "66084203"
 ## <a name="location-of-data-mining-objects"></a>Emplacement des objets d'exploration de données  
  Les structures et modèles d'exploration de données qui ont été traités sont stockés dans une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Si vous créez une connexion à une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de `Immediate` données en mode lors du développement de vos objets d’exploration de données, tous les objets que vous créez sont immédiatement ajoutés au serveur au fur et à mesure que vous travaillez. Toutefois, si vous concevez des objets d'exploration de données en mode **hors connexion** , ce qui représente le paramètre par défaut lorsque vous travaillez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], les objets d'exploration de données que vous créez ne sont que des conteneurs de métadonnées, tant que vous ne les avez pas déployés sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par conséquent, vous devez redéployer un objet sur le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chaque fois que vous y apportez une modification. Pour plus d’informations sur l’architecture d’exploration de données, consultez [Architecture physique &#40;Analysis Services - Exploration de données&#41;](physical-architecture-analysis-services-data-mining.md).  
+ Si vous créez une connexion à une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données en `Immediate` mode lors du développement de vos objets d’exploration de données, tous les objets que vous créez sont immédiatement ajoutés au serveur au fur et à mesure que vous travaillez. Toutefois, si vous concevez des objets d'exploration de données en mode **hors connexion** , ce qui représente le paramètre par défaut lorsque vous travaillez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], les objets d'exploration de données que vous créez ne sont que des conteneurs de métadonnées, tant que vous ne les avez pas déployés sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par conséquent, vous devez redéployer un objet sur le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chaque fois que vous y apportez une modification. Pour plus d’informations sur l’architecture d’exploration de données, consultez [Architecture physique &#40;Analysis Services - Exploration de données&#41;](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Certains clients, par exemple les compléments d’exploration de données pour [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, vous permettent également de créer des modèles et des structures d’exploration de données de la session qui utilisent une connexion à une instance, mais stockent la structure et les modèles d’exploration de données sur le serveur uniquement pendant la durée de la session. Vous pouvez toujours gérer ces modèles via le client, de la même façon que vous le feriez avec des structures et modèles stockés dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais les objets ne persistent pas une fois que vous êtes déconnecté de l'instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

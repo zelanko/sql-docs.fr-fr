@@ -1,24 +1,32 @@
 ---
 title: Nouveautés de SSMA pour Oracle (OracleToSQL) | Microsoft Docs
+description: Découvrez les modifications apportées à Assistant Migration SQL Server (SSMA) pour Oracle (OracleToSQL) pour chaque version.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 07dd930a853926be98dba5f2ca91bd7080b9a808
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 39da9754b75ebf1ce7dd5adb3df55d4d07718b32
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220684"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294066"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Nouveautés de SSMA pour Oracle (OracleToSQL)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications Oracle dans chaque version.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+La version v 8.10 de SSMA pour Oracle contient des améliorations mineures en matière de performances, ainsi que les modifications suivantes :
+
+* Correctif pour le problème du testeur avec les tables organisées par index
+* Correctif pour les noms de procédures stockées étendues dans le pack d’extension
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -287,7 +295,7 @@ La version 2016 de SSMA pour Oracle contient les modifications suivantes :
 * Correction de la conversion des types de données caractères pour Oracle.
 * Correction du bogue dans les paramètres globaux.
 
-## <a name="march-2016"></a>Mars 2016
+## <a name="march-2016"></a>Mars 2016
 
 La version préliminaire de SSMA de mars 2016 de SSMA pour Oracle a ajouté la prise en charge de :
 
@@ -295,7 +303,7 @@ La version préliminaire de SSMA de mars 2016 de SSMA pour Oracle a ajouté la p
 * Migration d’Sécurité au niveau des lignes Oracle (avec certaines limitations).
 * Migration d’Oracle dans des tables de mémoire vers SQL Server magasin de colonnes.
 
-## <a name="january-2016"></a>Janvier 2016
+## <a name="january-2016"></a>Janvier 2016
 
 La version de maintenance de SSMA pour Oracle de janvier 2014 contient les modifications suivantes :
 

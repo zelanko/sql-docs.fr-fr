@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0fb91b5343bd6f45eaadb93f71a73b85cb7f3a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084737"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522745"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistant Exploration de données (Analysis Services - Exploration de données)
-  L’Assistant Exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de démarre chaque fois que vous ajoutez une nouvelle structure d’exploration de données à un projet d’exploration de données. L'Assistant vous permet de choisir une source de données et de configurer une vue de source de données qui définit les données à utiliser pour l'analyse, puis vous aide à créer un modèle.  
+  L’Assistant Exploration de données de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] démarre chaque fois que vous ajoutez une nouvelle structure d’exploration de données à un projet d’exploration de données. L'Assistant vous permet de choisir une source de données et de configurer une vue de source de données qui définit les données à utiliser pour l'analyse, puis vous aide à créer un modèle.  
   
  Pendant la dernière phase de l'Assistant, vous pouvez éventuellement diviser vos données en jeux d'apprentissage et de test, et activer certaines fonctionnalités telles que l'extraction.  
   

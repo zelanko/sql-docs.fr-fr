@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1051981ddcac948a447e814c278fab4fb61496
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076106"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547199"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubes dans les modèles multidimensionnels
   Un cube est une structure multidimensionnelle qui contient des informations à des fins analytiques ; les constituants principaux d'un cube sont des dimensions et des mesures. Les dimensions définissent la structure du cube que vous utilisez pour la découpe, et les mesures fournissent des valeurs numériques agrégées qui intéressent l'utilisateur final. Comme structure logique, un cube permet à une application cliente de récupérer des valeurs, de mesures, comme si elles étaient contenues dans des cellules du cube ; les cellules sont définies pour chaque valeur résumée possible. Une cellule, dans le cube, est définie par l'intersection des membres de dimension et contient les valeurs agrégées des mesures à cette intersection spécifique.  
@@ -36,8 +35,8 @@ ms.locfileid: "66076106"
 |Dimensions|[Dimensions dans les modèles multidimensionnels](dimensions-in-multidimensional-models.md)|  
 |Mesures et groupes de mesures|[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Partitions|[Partitions dans les modèles multidimensionnels](partitions-in-multidimensional-models.md)|  
-|perspectives|[Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)|  
-|Hierarchies|[Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)|  
+|Perspectives|[Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)|  
+|Hiérarchies|[Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)|  
 |Actions|[Actions dans les modèles multidimensionnels](actions-in-multidimensional-models.md)|  
 |Indicateurs de performance clés (KPI)|[Indicateurs de performance clés &#40;KPI&#41; dans les modèles multidimensionnels](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Calculs|[Calculs dans les modèles multidimensionnels](calculations-in-multidimensional-models.md)|  

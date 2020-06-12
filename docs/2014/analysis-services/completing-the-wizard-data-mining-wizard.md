@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087710"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527365"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Fin de l'Assistant (Assistant Exploration de données)
   Utilisez la page **Fin de l’Assistant** pour examiner la structure d’exploration de données qui sera créée à la fin de l’Assistant. Vous pouvez également définir le nom de la structure d'exploration de données.  
@@ -44,7 +43,7 @@ ms.locfileid: "66087710"
   
  Pour plus d’informations sur les options d’extraction, consultez [Requêtes d’extraction &#40;exploration de données&#41;](data-mining/drillthrough-queries-data-mining.md).  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affiche la structure d'exploration de données à créer.  
   
  **Créer une dimension de modèle d’exploration de données**  

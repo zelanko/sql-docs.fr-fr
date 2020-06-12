@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071080"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669818"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +33,10 @@ Cluster()
 ## <a name="return-type"></a>Type de retour  
  La fonction de **cluster** ne requiert pas de paramètres.  
   
- La fonction **cluster** retourne une valeur scalaire d’un nom de cluster. Toutefois, si vous utilisez cette fonction en tant qu’argument d’une autre fonction, vous devez la considérer \<comme une référence de colonne de cluster>.  
+ La fonction **cluster** retourne une valeur scalaire d’un nom de cluster. Toutefois, si vous utilisez cette fonction en tant qu’argument d’une autre fonction, vous devez la considérer comme une \< référence de colonne de cluster>.  
   
 ## <a name="remarks"></a>Notes  
- **Le cluster** peut également être utilisé en `<`tant que référence`>` de colonne de cluster pour une fonction **PredictHistogram** .  
+ Le **cluster** peut également être utilisé en tant que `<` référence `>` de colonne de cluster pour une fonction **PredictHistogram** .  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant utilise une requête singleton avec les fonctions [&#40;DMX&#41;](../dmx/predicthistogram-dmx.md) et cluster pour retourner la distance du cas individuel de chaque cluster du modèle d’exploration de données de clustering TM et la probabilité que le cas individuel existe dans chaque cluster.  

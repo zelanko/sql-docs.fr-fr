@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdd83e0a0d24a67fb5389b5c836212bffb3fa424
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083250"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520923"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tables imbriquées (Analysis Services - Exploration de données)
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être transmises à un algorithme d’exploration de données sous la forme d’une série de cas contenus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une méthode unique permettant de gérer de tels cas, en utilisant des *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les données doivent être transmises à un algorithme d’exploration de données sous la forme d’une série de cas contenus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une méthode unique permettant de gérer de tels cas, en utilisant des *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
   
  ![Combinaison de deux tables à l'aide d'une table imbriquée](../media/nested-tables.gif "Combinaison de deux tables à l'aide d'une table imbriquée")  
   

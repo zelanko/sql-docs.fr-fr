@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b479564984727e47432754d0a660e6aa979244b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072006"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547631"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Activer la fonctionnalité d'intégration PowerPivot pour des collections de sites dans l'Administration centrale
   Activer la fonctionnalité d'intégration PowerPivot pour des collections de sites spécifiques est indispensable si vous avez utilisé l'option d'installation Batterie de serveurs existante lors de l'installation de SQL Server PowerPivot pour SharePoint. Si vous avez installé PowerPivot pour SharePoint à l'aide de l'option Nouveau serveur, vous pouvez ignorer cette tâche, car le programme d'installation de SQL Server a déjà activé la fonctionnalité d'intégration PowerPivot pour la collection de sites racine lorsqu'il a configuré votre déploiement.  
@@ -31,7 +30,7 @@ ms.locfileid: "66072006"
   
 1.  Sur un site SharePoint, cliquez sur **Actions du site**.  
   
-     Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant\<http://nom d’ordinateur> pour ouvrir la collection de sites racine.  
+     Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant http://\<computer name> pour ouvrir la collection de sites racine.  
   
 2.  Cliquez sur **Paramètres du site**.  
   

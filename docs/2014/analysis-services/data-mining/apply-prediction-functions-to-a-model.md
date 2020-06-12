@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde9de00adaa1712a9db6e18aabc6a83dd660efb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086143"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525316"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Appliquer des fonctions de prédiction à un modèle
   Pour créer une requête de prédiction, vous devez d'abord sélectionner le modèle d'exploration de données sur lequel la requête sera basée. Vous pouvez sélectionner n'importe quel modèle d'exploration de données existant du projet actuel.  
@@ -67,7 +66,7 @@ ms.locfileid: "66086143"
   
     |||  
     |-|-|  
-    |**\<nom du modèle>**|Sélectionnez cette option pour inclure des valeurs du modèle d'exploration de données dans la sortie. Vous pouvez uniquement ajouter des colonnes prédictibles.<br /><br /> Lorsque vous ajoutez une colonne du modèle, le résultat retourné est la liste non distinctive des valeurs se trouvant dans cette colonne.<br /><br /> Les colonnes que vous ajoutez à cette option sont incluses dans la partie SELECT de l'instruction DMX obtenue.|  
+    |**\<model name>**|Sélectionnez cette option pour inclure des valeurs du modèle d'exploration de données dans la sortie. Vous pouvez uniquement ajouter des colonnes prédictibles.<br /><br /> Lorsque vous ajoutez une colonne du modèle, le résultat retourné est la liste non distinctive des valeurs se trouvant dans cette colonne.<br /><br /> Les colonnes que vous ajoutez à cette option sont incluses dans la partie SELECT de l'instruction DMX obtenue.|  
     |**Prediction Function**|Sélectionnez cette option pour parcourir une liste de fonctions de prédiction.<br /><br /> Les valeurs ou fonctions que vous sélectionnez sont ajoutées à la partie SELECT de l'instruction DMX obtenue.<br /><br /> La liste des fonctions de prédiction n'est pas filtrée ou limitée par le type de modèle sélectionné. Par conséquent, si vous avez un doute sur la prise en charge, ou non, de la fonction pour le type de modèle actuel, vous pouvez simplement ajouter la fonction à la liste et voir s'il y a une erreur.<br /><br /> Les éléments de la liste qui sont précédés d'un symbole $ (tel que $AdjustedProbability) représentent les colonnes de la table imbriquée qui est produite en sortie lorsque vous utilisez la fonction `PredictHistogram`. Vous trouverez ci-après les raccourcis que vous pouvez utiliser pour retourner une seule colonne, et non une table imbriquée.|  
     |**Expression personnalisée**|Sélectionnez cette option pour taper une expression personnalisée puis affecter un alias à la sortie.<br /><br /> L'expression personnalisée est ajoutée à la partie SELECT de la requête de prédiction DMX obtenue.<br /><br /> Cette option est utile si vous voulez ajouter du texte pour une sortie avec chaque ligne, pour appeler des fonctions VB ou pour appeler des procédures stockées personnalisées.<br /><br /> Pour plus d’informations sur l’utilisation de fonctions VBA et Excel à partir de DMX, consultez [Fonctions VBA dans MDX et DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
@@ -92,9 +91,9 @@ ms.locfileid: "66086143"
   
 5.  Dans la grille de requête, pour **Source**, sélectionnez le modèle d’exploration de données TM_Clustering, puis ajoutez la colonne [Bike Buyer].  
   
-6.  Pour **source**, sélectionnez **fonction de prédiction**, puis ajoutez la fonction `Cluster`.  
+6.  Pour **source**, sélectionnez **fonction de prédiction**, puis ajoutez la fonction `Cluster` .  
   
-7.  Pour **source**, sélectionnez **fonction de prédiction**, ajoutez la fonction `PredictSupport`, et faites glisser la colonne modèle [Bike Buyer] dans la zone **critères/argument** . Tapez **Support** dans la colonne **Alias** .  
+7.  Pour **source**, sélectionnez **fonction de prédiction**, ajoutez la fonction, `PredictSupport` et faites glisser la colonne modèle [Bike Buyer] dans la zone **critères/argument** . Tapez **Support** dans la colonne **Alias** .  
   
      Copiez l’expression représentant la fonction de prédiction et la référence de colonne dans la zone **Critères/Argument** .  
   

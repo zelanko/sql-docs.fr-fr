@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49ec8adeaf5d8726220ed03f29c1be3088f9ccb2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070904"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547701"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utiliser des flux de données (PowerPivot pour SharePoint)
   Les flux de données comportent un ou plusieurs flux de données générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Si vous utilisez PowerPivot pour Excel, les flux peuvent vous aider à obtenir des données d'entreprise ou données métier à partir de sources de données arbitraires et qui s'affichent dans la fenêtre PowerPivot dans votre classeur Excel 2010. Après avoir importé un flux dans un classeur, vous pouvez y faire référence ultérieurement dans toute opération d'actualisation des données que vous planifiez sur un serveur SharePoint.  
   
  La façon dont vous utilisez un flux varie selon que vous utilisez les fonctionnalités d'exportation intégrées dans les applications qui prennent en charge les flux Atom ou que vous créez et utilisez des services de données personnalisés. Les applications capables de publier et de lire des données XML Atom fournissent un transfert de données transparent ; la mécanique des flux et services de données est invisible pour l'utilisateur. À ses yeux, un utilisateur ne fait que déplacer des données d'une application vers un autre.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et Microsoft SharePoint 2010 fournissent des flux de données qui peuvent être utilisés dans les classeurs PowerPivot. Vous pouvez utiliser les informations de cette rubrique pour apprendre à accéder à des flux de rapports et listes que vous avez déjà.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et Microsoft SharePoint 2010 fournissent des flux de données qui peuvent être utilisés dans les classeurs PowerPivot. Vous pouvez utiliser les informations de cette rubrique pour apprendre à accéder à des flux de rapports et listes que vous avez déjà.  
   
  Cette rubrique contient les sections suivantes :  
   
- [Conditions préalables](#prereq)  
+ [Composants requis](#prereq)  
   
  [Créer un flux de données à partir d’une liste SharePoint](#sharepointlist)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66070904"
 ##  <a name="prerequisites"></a><a name="prereq"></a> Conditions préalables  
  Vous devez disposer de PowerPivot pour Excel pour importer un flux de données dans Excel 2010.  
   
- Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Et SharePoint 2010 peuvent fournir des données dans ce [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] format.  
+ Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Et SharePoint 2010 peuvent fournir des données dans ce format.  
   
  Avant de pouvoir exporter une liste SharePoint sous forme de flux de données, vous devez installer ADO.NET Data Services sur le serveur SharePoint. Pour plus d’informations, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66070904"
   
     1.  L'**URL de base** est facultative. Vous devez la spécifier si un document de service de données fournit plusieurs flux. L'URL de base doit spécifier la partie de l'URL qui est commune à tous les flux (par exemple, le nom du serveur et le site). Si vous créez un document de service de données pour un rapport Reporting Services, l'URL de base correspond à l'URL du serveur de rapports et au rapport.  
   
-    2.  L'**URL du service Web** est requise. Sans l'URL de base, cette valeur doit inclure le préfixe http:// ou https:// dans l'adresse. Si vous spécifiez une URL de base, l'URL du service Web est la partie qui suit l'URL de base. Par exemple, si l’URL complète est http://adventure-works/inventory/today.aspx, l’URL de base est http://adventure-works/inventory, et l’URL du service Web est/Today.aspx.  
+    2.  L'**URL du service Web** est requise. Sans l'URL de base, cette valeur doit inclure le préfixe http:// ou https:// dans l'adresse. Si vous spécifiez une URL de base, l'URL du service Web est la partie qui suit l'URL de base. Par exemple, si l’URL complète est http://adventure-works/inventory/today.aspx , l’URL de base est http://adventure-works/inventory , et l’URL du service Web est/Today.aspx.  
   
          L'URL du service Web peut inclure des paramètres qui filtrent ou sélectionnent un sous-ensemble de données. L'application ou le service qui fournit le flux doit prendre en charge les paramètres que vous spécifiez dans l'URL.  
   

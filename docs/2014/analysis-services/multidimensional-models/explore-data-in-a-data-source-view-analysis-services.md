@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: debf1257667ea3aa3380117bbbc4c31399283252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28db322a38ae90206ae0c43db1c8c039e6395b8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075129"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546741"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Explorer des données dans une vue de source de données (Analysis Services)
   Vous pouvez utiliser la boîte de dialogue **Explorer les données** du Concepteur de vue de source de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour parcourir les données d’une table, d’une vue ou d’une requête nommée dans une vue de source de données (DSV). Si vous explorez les données dans le Concepteur de vue de source de données, vous pouvez afficher le contenu de chacune des colonnes de données d'une table, d'une vue ou d'une requête nommée sélectionnée. Cet affichage vous permet de déterminer si toutes les colonnes sont nécessaires, si des calculs nommés sont nécessaires pour améliorer la convivialité, et si les requêtes nommées ou les calculs nommés existants retournent les valeurs prévues.  
@@ -38,15 +37,15 @@ ms.locfileid: "66075129"
   
 3.  Cliquez avec le bouton droit sur la table, la vue ou la requête nommée contenant les données que vous voulez consulter, puis sélectionnez **Explorer les données**.  
   
-     La source de données sous-jacente de la table, de la vue ou de la requête nommée dans la vue de source de données sont des requêtes, et les résultats s’affichent sous l’onglet **Explorer \<nom de l’objet> table** .  
+     La source de données sous-jacente de la table, de la vue ou de la requête nommée dans la vue de source de données sont des requêtes et les résultats s’affichent sous l’onglet **Explorer la \<object name> table** .  
   
-4.  Dans la barre d’outils **Explorer \<le nom de l’objet> table** , cliquez sur l’icône **options d’échantillonnage** .  
+4.  Dans la barre d’outils **Explorer la \<object name> table** , cliquez sur l’icône **options d’échantillonnage** .  
   
      La boîte de dialogue **Options d'exploration de données** s'ouvre. Dans cette boîte de dialogue, vous pouvez spécifier la méthode d’échantillonnage (et augmenter ou diminuer le nombre d’enregistrements par rapport à la taille d’échantillonnage par défaut de 5000 lignes) ou le nombre d’échantillons.  
   
 5.  Selon le cas, cliquez sur **OK** ou sur **Annuler** .  
   
-6.  Pour rééchantillonner les données, cliquez sur **rééchantillonner les données** dans la barre d’outils Explorer ** \<le nom de l’objet> table** .  
+6.  Pour rééchantillonner les données, cliquez sur **rééchantillonner les données** dans la barre d’outils **Explorer la \<object name> table** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)  

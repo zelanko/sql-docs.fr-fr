@@ -1,5 +1,6 @@
 ---
 title: Expressions arithmétiques (XQuery) | Microsoft Docs
+description: En savoir plus sur les expressions arithmétiques dans XQuery et les opérateurs arithmétiques pris en charge.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ccbeda01726a3473f8e955676c3ebd62a93fd630
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8d0f4f9286f80ad7031663eb21e8677d99e1cc3
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985737"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305838"
 ---
 # <a name="arithmetic-expressions-xquery"></a>Expressions arithmétiques (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

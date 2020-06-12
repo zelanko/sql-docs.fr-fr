@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbc9c9b7a09b0d7f06db624be9d94978ab996621
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082609"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529015"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Boîte de dialogue Filtre de jeu de données ou Filtre de modèle
   Cette boîte de dialogue vous permet de générer les filtres que vous pouvez appliquer à un jeu de données.  Le jeu de données peut être un jeu de données externes utilisé pour le test ou il peut s'agir des données de cas d'un modèle d'exploration de données. Le nom de la boîte de dialogue change selon que le filtre concerne un jeu de données externes ou un modèle d'exploration de données.  
@@ -37,7 +36,7 @@ ms.locfileid: "66082609"
  **Conditions**  
  Affiche des noms de table, suivis de noms de colonne avec des conditions.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Et/ou**|Choisissez un opérateur pour joindre plusieurs conditions.|  
 |**Colonne de la structure d'exploration de données**|Cliquez pour sélectionner une source de données, puis cliquez sur des lignes consécutives dans la grille pour ajouter des colonnes de la source de données.<br /><br /> La première ligne de la grille spécifie la vue de source de données. Une fois que vous avez sélectionné une vue de source de données, la zone **Colonne de la structure d’exploration de données** affiche une icône de table et le champ **Valeur** affiche la combinaison de tous les critères que vous avez définis pour cette source de données.<br /><br /> Une fois que vous avez sélectionné une source de données, la zone **Colonne de la structure d’exploration de données** propose une liste déroulante de colonnes individuelles contenues dans la source de données.|  

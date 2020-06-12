@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546361"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propriétés de membre intrinsèques (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expose les propriétés intrinsèques sur les membres de dimension que vous pouvez inclure dans une requête afin de retourner des informations supplémentaires ou des métadonnées à utiliser dans une application personnalisée, ou pour faciliter l’analyse ou la construction d’un modèle. Si vous utilisez les outils clients SQL Server, vous pouvez voir les propriétés intrinsèques dans SQL Server Management Studio (SSMS).  
@@ -34,7 +33,7 @@ ms.locfileid: "66074206"
 >  Des fournisseurs autres que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peuvent prendre en charge des propriétés de membre intrinsèques supplémentaires. Pour plus d'informations sur les propriétés de membre intrinsèques prises en charge par d'autres fournisseurs, consultez la documentation qui les accompagne.  
   
 ## <a name="types-of-member-properties"></a>Types de propriétés de membre  
- Les propriétés de membre intrinsèques [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prises en charge par sont de deux types :  
+ Les propriétés de membre intrinsèques prises en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sont de deux types :  
   
  Propriétés de membre sensibles au contexte  
  Ces propriétés de membre doivent être utilisées dans le contexte d'une hiérarchie ou d'un niveau spécifique ; elles fournissent les valeurs de chaque membre de la dimension ou du niveau en question.  
@@ -54,7 +53,7 @@ ms.locfileid: "66074206"
   
 -   Vous devez utiliser le mot clé `PROPERTIES` pour rechercher les propriétés.  
   
- Les sections suivantes décrivent les différentes propriétés de membre intrinsèques sensibles au contexte et non sensibles au [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]contexte disponibles dans, et expliquent comment utiliser le `PROPERTIES` mot clé avec chaque type de propriété.  
+ Les sections suivantes décrivent les différentes propriétés de membre intrinsèques sensibles au contexte et non sensibles au contexte disponibles dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , et expliquent comment utiliser le `PROPERTIES` mot clé avec chaque type de propriété.  
   
 ## <a name="context-sensitive-member-properties"></a>Propriétés de membre sensibles au contexte  
  Tous les membres de dimension ou de niveau prennent en charge une série de propriétés de membre intrinsèques sensibles au contexte. Le tableau suivant en dresse la liste.  
@@ -84,10 +83,10 @@ ms.locfileid: "66074206"
 ## <a name="non-context-sensitive-member-properties"></a>Propriétés de membre non sensibles au contexte  
  Tous les membres prennent également en charge une liste de propriétés de membre intrinsèques qui sont identiques quel que soit le contexte. Ces propriétés fournissent des informations supplémentaires pouvant être utilisées par des applications pour améliorer l'expérience de l'utilisateur.  
   
- Le tableau suivant répertorie les propriétés intrinsèques non sensibles au contexte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]prises en charge par.  
+ Le tableau suivant répertorie les propriétés intrinsèques non sensibles au contexte prises en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  Les colonnes du jeu de lignes du schéma MEMBERS prennent en charge les propriétés de membre intrinsèques répertoriées dans le tableau suivant. Pour plus d’informations sur `MEMBERS` l’ensemble de lignes de schéma, consultez [MDSCHEMA_MEMBERS rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
+>  Les colonnes du jeu de lignes du schéma MEMBERS prennent en charge les propriétés de membre intrinsèques répertoriées dans le tableau suivant. Pour plus d’informations sur l' `MEMBERS` ensemble de lignes de schéma, consultez [MDSCHEMA_MEMBERS rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Propriété|Description|  
 |--------------|-----------------|  
@@ -101,7 +100,7 @@ ms.locfileid: "66074206"
 |`IS_DATAMEMBER`|Valeur booléenne indiquant si le membre est un membre de données.|  
 |`IS_PLACEHOLDERMEMBER`|Valeur booléenne indiquant si le membre est un espace réservé.|  
 |`KEYx`|Clé du membre, où x est la valeur ordinale de base zéro de la clé. KEY0 est disponible pour les clés composites et non composites.<br /><br /> S'il s'agit d'une clé non composite, KEY0 équivaut alors à `Key`.<br /><br /> Pour les clés composites, KEY0, KEY1, KEY2, etc., forment collectivement la clé composite. Vous pouvez faire référence à chacune indépendamment dans une requête pour retourner la partie en question de la clé composite. Par exemple, la spécification de KEY0 retourne la première partie de la clé composite, la spécification de KEY1 retourne la partie suivante de la clé composite, et ainsi de suite.<br /><br /> Notez que `KEYx` peut être utilisé en contexte, ainsi que sans contexte. Pour cette raison, il apparaît dans les deux listes.<br /><br /> Pour obtenir un exemple d’utilisation de cette propriété de membre, consultez [A Simple MDX Tidbit : Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364)(Une astuce MDX toute simple : Key0, Key1, Key2).|  
-|`LCID`*x*|Traduction de la légende du membre dans la valeur hexadécimale de l’ID des paramètres régionaux, où *x* correspond à la valeur décimale de l’ID des paramètres régionaux (par exemple, LCID1009 pour Anglais - Canada). Uniquement disponible si la colonne de légende de la traduction est liée à la source de données.|  
+|`LCID` *x*|Traduction de la légende du membre dans la valeur hexadécimale de l’ID des paramètres régionaux, où *x* correspond à la valeur décimale de l’ID des paramètres régionaux (par exemple, LCID1009 pour Anglais - Canada). Uniquement disponible si la colonne de légende de la traduction est liée à la source de données.|  
 |`LEVEL_NUMBER`|Distance du membre par rapport à la racine de la hiérarchie. Le niveau de la racine est égal à zéro.|  
 |`LEVEL_UNIQUE_NAME`|Nom unique du niveau auquel le membre appartient. Pour les fournisseurs qui produisent des noms uniques par qualification, chaque composant du nom est délimité.|  
 |`MEMBER_CAPTION`|Étiquette ou légende associée au membre. La légende est essentiellement utilisée à des fins d'affichage. En l'absence de légende, la requête retourne `MEMBER_NAME`.|  
@@ -128,7 +127,7 @@ ms.locfileid: "66074206"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- Cette instruction retourne la description de chaque membre de la dimension de l'axe. Si vous avez tenté de qualifier la propriété avec une dimension ou un niveau, comme dans *dimension* `.DESCRIPTION` ou *Level*`.DESCRIPTION`, l’instruction n’est pas validée.  
+ Cette instruction retourne la description de chaque membre de la dimension de l'axe. Si vous avez tenté de qualifier la propriété avec une dimension ou un niveau, comme dans *dimension* `.DESCRIPTION` ou *Level* `.DESCRIPTION` , l’instruction n’est pas validée.  
   
 ### <a name="example"></a>Exemple  
  Les exemples suivants montrent des requêtes MDX qui retournent les propriétés intrinsèques.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42d48d088b72c28c6e44b6f96aab1e1493e47577
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175768"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536051"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Création de mesures et de groupes de mesures dans les modèles multidimensionnels
   Une *mesure* est une agrégation de valeurs de données numériques, telle qu'une somme, un décompte, un minimum, un maximum, une moyenne ou une expression MDX personnalisée que vous créez. Un *groupe de mesures* est un conteneur d'une ou de plusieurs mesures. Toutes les mesures existent dans un groupe de mesures, même s'il n'y a qu'une seule mesure. Un cube doit comporter au moins une mesure et un groupe de mesures.
@@ -49,7 +48,7 @@ ms.locfileid: "78175768"
 
 |||
 |-|-|
-|**code**|La plupart des mesures proviennent de colonnes numériques de tables de faits contenues dans un entrepôt de données externe, telles que la colonne Sales Amount des tables Internet Sales et Reseller Sales contenues dans l'entrepôt de données AdventureWorks. Toutefois, vous pouvez également créer de nouvelles mesures entièrement basées sur des calculs que vous définissez.<br /><br /> Les colonnes d'attribut de tables de dimension peuvent être utilisées pour définir des mesures, mais de telles mesures ont généralement un comportement d'agrégation de type semi-additif ou non additif. Pour plus d’informations sur le comportement semi-additif, consultez [Définir le comportement semi-additif](define-semiadditive-behavior.md).|
+|**source**|La plupart des mesures proviennent de colonnes numériques de tables de faits contenues dans un entrepôt de données externe, telles que la colonne Sales Amount des tables Internet Sales et Reseller Sales contenues dans l'entrepôt de données AdventureWorks. Toutefois, vous pouvez également créer de nouvelles mesures entièrement basées sur des calculs que vous définissez.<br /><br /> Les colonnes d'attribut de tables de dimension peuvent être utilisées pour définir des mesures, mais de telles mesures ont généralement un comportement d'agrégation de type semi-additif ou non additif. Pour plus d’informations sur le comportement semi-additif, consultez [Définir le comportement semi-additif](define-semiadditive-behavior.md).|
 |**agréger**|Par défaut, les mesures sont additionnées avec chaque dimension. Toutefois, la propriété `AggregateFunction` vous permet de modifier ce comportement. Pour obtenir la liste des fonctions d'agrégation, consultez [Use Aggregate Functions](use-aggregate-functions.md) .|
 |**Propriétés**|Pour obtenir des descriptions de propriété supplémentaires, consultez [Configure Measure Properties](configure-measure-properties.md) .|
 

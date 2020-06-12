@@ -12,12 +12,12 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815652"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858916"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propriétés du groupe de disponibilité et Nouveau groupe de disponibilité (page Général)
    Cette rubrique s’applique à l’onglet **Général** de la boîte de dialogue **Nouveau groupe de disponibilité** et de la boîte de dialogue **Propriétés du groupe de disponibilité**.  La boîte de dialogue **Nouveau groupe de disponibilité** vous permet de créer un nouveau groupe de disponibilité sans utiliser l’ [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. La boîte de dialogue **Propriétés du groupe de disponibilité** vous permet d’afficher et de modifier la configuration d’un groupe de disponibilité existant.  
@@ -28,18 +28,18 @@ ms.locfileid: "62815652"
   
 -   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Nom du groupe de disponibilité**  
  Nom du groupe de disponibilité. Il s'agit d'un nom spécifié par l'utilisateur qui doit être unique dans le cluster de basculement Windows Server (WSFC).  
   
 ## <a name="availability-databases"></a>Bases de données de disponibilité  
- **Nom de la base de données**  
+ **Database Name**  
  Nom d'une base de données qui a été ajoutée au groupe de disponibilité.  
   
  **Ajouter**  
  Cliquez pour ajouter une base de données au groupe de disponibilité.  
   
- **Remove**  
+ **Supprimer**  
  Cliquez pour supprimer une base de données sélectionnée du groupe de disponibilité.  
   
 ## <a name="availability-replicas"></a>Réplicas de disponibilité  
@@ -83,7 +83,7 @@ ms.locfileid: "62815652"
  Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du paramètre par défaut.  
   
  **Autoriser les connexions en lecture/écriture**  
- Les connexions où la propriété de connexion d’intention de l’application a la valeur **ReadOnly** ne sont pas autorisées. Lorsque la propriété d’intention de l’application est définie sur **ReadWrite** ou si la propriété de connexion d’intention de l’application n’est pas définie, la connexion est autorisée. Pour plus d'informations sur la propriété de connexion d'intention de l'application, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Les connexions où la propriété de connexion d’intention de l’application a la valeur **ReadOnly** ne sont pas autorisées. Lorsque la propriété d'intention de l'application a la valeur **ReadWrite** ou si cette propriété n'est pas définie, la connexion est autorisée. Pour plus d'informations sur la propriété de connexion d'intention de l'application, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  **Secondaire accessible en lecture**  
  Si un réplica de disponibilité qui revêt le rôle secondaire (autrement dit, un réplica secondaire) peut accepter les connexions des clients, les options suivantes sont disponibles :  
@@ -106,7 +106,7 @@ ms.locfileid: "62815652"
  **Ajouter**  
  Cliquez pour ajouter un réplica secondaire au groupe de disponibilité.  
   
- **Remove**  
+ **Supprimer**  
  Cliquez pour supprimer un réplica secondaire du groupe de disponibilité.  
   
 ## <a name="see-also"></a>Voir aussi  

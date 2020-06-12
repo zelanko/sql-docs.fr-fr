@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6a6da73815f06aa5ab80f6ad5a9d06227ed842
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074708"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546564"
 ---
 # <a name="cube-space"></a>Espace du cube
   L'espace du cube est le produit des membres des hiérarchies d'attribut d'un cube associés aux mesures du cube. Par conséquent, l'espace du cube est déterminé par le produit combinatoire de tous les membres de la hiérarchie d'attribut dans le cube et par les mesures du cube, et définit la taille maximale du cube. Il est important de noter que cet espace inclut toutes les combinaisons possibles de membres de la hiérarchie d'attribut ; même les combinaisons qui peuvent être jugées comme impossibles dans le monde réel, c'est-à-dire les combinaisons où la ville est Paris et les pays sont l'Angleterre, l'Espagne, le Japon, l'Inde ou ailleurs.  
@@ -55,7 +54,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Remarquez l'emploi de 0, soit la formule abrégée de Axes(0), pour désigner l'axe des colonnes.  
   
- La requête ci-dessus retourne uniquement les cellules des membres de chaque hiérarchie d'attribut dans la requête qui coexistent entre eux. La requête précédente peut également être écrite à l’aide de la nouvelle variante * de la [ \* fonction (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) .  
+ La requête ci-dessus retourne uniquement les cellules des membres de chaque hiérarchie d'attribut dans la requête qui coexistent entre eux. La requête précédente peut également être écrite à l’aide de la nouvelle variante * de la fonction [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) .  
   
 ```  
 SELECT   
@@ -78,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Les valeurs retournées des cellules sont identiques, même si les métadonnées dans l'ensemble de résultats apparaissent différemment. Par exemple, dans la requête ci-dessus, la hiérarchie Country a été déplacée vers l'axe de segment (dans la clause WHERE) et ne peut donc s'afficher de manière explicite dans l'ensemble de résultats.  
   
- Chacune de ces trois requêtes précédentes illustre l’effet du comportement de l’auto-existence [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]dans.  
+ Chacune de ces trois requêtes précédentes illustre l’effet du comportement de l’auto-existence dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>Hiérarchies définies par l'utilisateur et espace du cube  
  Les exemples présentés précédemment dans cette rubrique définissent des positions au sein de l'espace du cube par le biais des hiérarchies d'attribut. Néanmoins, vous pouvez également définir une position dans l'espace du cube en utilisant des hiérarchies définies par l'utilisateur qui ont été conçues à partir des hiérarchies d'attribut d'une dimension. Une hiérarchie définie par l'utilisateur est une hiérarchie de hiérarchies d'attribut conçue pour faciliter la navigation des utilisateurs dans les données du cube.  

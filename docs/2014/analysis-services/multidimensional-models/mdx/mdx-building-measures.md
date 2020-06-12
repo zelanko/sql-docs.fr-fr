@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0347835-4983-4d26-acbb-6c8fae7992bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7587e3304d1464beb7ef94cd7d3093982f394bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac49d37f11584bfbc5d372241056da39e7dd8c93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074587"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546501"
 ---
 # <a name="building-measures-in-mdx"></a>Génération de mesures dans une expression MDX
   Dans les expressions multidimensionnelles (MDX, Multidimensional Expressions), une mesure est une expression DAX nommée qui est résolue en calculant l'expression permettant de retourner une valeur dans un modèle tabulaire. Cette définition anodine couvre un vaste champ d'action. La possibilité de bâtir et d'utiliser des mesures dans une requête MDX est un élément fondamental de la manipulation des données tabulaires.  

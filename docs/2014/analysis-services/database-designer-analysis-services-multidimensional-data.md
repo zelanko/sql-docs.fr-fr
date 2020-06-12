@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3173e382cfc2dbbba8eabf5b84db9bd95725c4bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082409"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528945"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Concepteur de bases de données (Analysis Services - Données multidimensionnelles)
-  Utilisez le concepteur de base [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] de données dans pour modifier les propriétés de et vérifier les [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avertissements générés par une base de données.  
+  Utilisez le concepteur de base de données dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour modifier les propriétés de et vérifier les avertissements générés par une [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données.  
   
-## <a name="tabs"></a>Onglets  
+## <a name="tabs"></a>Tabulations  
  Le Concepteur de bases de données contient les onglets suivants :  
   
- [Généralités](general-database-designer-analysis-services-multidimensional-data.md)  
+ [Général](general-database-designer-analysis-services-multidimensional-data.md)  
  Utilisez l’onglet **Général** pour modifier les propriétés d’une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  [Avertissements](warnings-database-designer-analysis-services-multidimensional-data.md)  

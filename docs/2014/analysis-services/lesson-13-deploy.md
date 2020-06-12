@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b930734fa70578d10e107bc3d1e8d865f9e7e2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079140"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543531"
 ---
 # <a name="lesson-14-deploy"></a>Leçon 14 : Déploiement
   Dans cette leçon, vous allez configurer les propriétés de déploiement ; pour cela, vous allez spécifier une instance de serveur de déploiement d'Analysis Services qui s'exécute en mode tabulaire, ainsi qu'un nom pour le modèle que vous déployez. Vous allez ensuite déployer le modèle sur cette instance. Après son déploiement, les utilisateurs peuvent se connecter au modèle en utilisant une application de création de rapports cliente. Pour plus d’informations, consultez [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -41,9 +40,9 @@ ms.locfileid: "66079140"
     > [!NOTE]  
     >  Le modèle créé à l'aide de ce didacticiel n'est pas pris en charge en mode DirectQuery.  
   
-4.  Dans la propriété **Database** , tapez `Adventure Works Internet Sales Model`.  
+4.  Dans la propriété **Database** , tapez `Adventure Works Internet Sales Model` .  
   
-5.  Dans la propriété nom du **cube** , `Adventure Works Internet Sales Model`tapez.  
+5.  Dans la propriété nom du **cube** , tapez `Adventure Works Internet Sales Model` .  
   
 6.  Passez en revue vos sélections, puis cliquez sur **OK**.  
   

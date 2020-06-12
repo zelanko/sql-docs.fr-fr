@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809857"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523635"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validation croisée (Analysis Services - Exploration de données)
   La *validation croisée* est un outil standard dans Analytics et constitue une fonctionnalité importante pour vous aider à développer et à ajuster les modèles d’exploration de données. Vous recourez à la validation croisée après avoir créé une structure d'exploration de données et des modèles d'exploration de données connexes dans le but d'établir la validité du modèle.  Les applications de la validation croisée sont les suivantes :  
@@ -82,7 +81,7 @@ ms.locfileid: "68809857"
 ### <a name="choosing-models-and-columns-to-validate"></a>Choix des modèles et colonnes à valider  
  Quand vous utilisez l’onglet **Validation croisée** dans le Concepteur d’exploration de données, vous devez en premier lieu sélectionner la colonne prédictible dans une liste. Une structure d'exploration de données peut généralement prendre en charge de nombreux modèles d'exploration de données, qui n'utilisent pas tous la même colonne prédictible. Lorsque vous exécutez la validation croisée, seuls les modèles qui utilisent la même colonne prédictible peuvent être inclus dans le rapport.  
   
- Pour choisir un attribut prédictible, cliquez sur **Attribut cible** et sélectionnez la colonne dans la liste. Si l’attribut cible est une colonne imbriquée ou une colonne dans une table imbriquée, vous devez taper le nom de la colonne imbriquée en utilisant le format \<nom de la table imbriquée> (clé). \<> de colonnes imbriquées. Si la seule colonne utilisée à partir de la table imbriquée est la colonne clé, vous \<pouvez utiliser le nom de la table imbriquée> (clé).  
+ Pour choisir un attribut prédictible, cliquez sur **Attribut cible** et sélectionnez la colonne dans la liste. Si l’attribut cible est une colonne imbriquée ou une colonne dans une table imbriquée, vous devez taper le nom de la colonne imbriquée en utilisant le format \<Nested Table Name> (clé). \<Nested Column> Si la seule colonne utilisée à partir de la table imbriquée est la colonne clé, vous pouvez utiliser \<Nested Table Name> (clé).  
   
  Une fois que vous avez sélectionné l'attribut prédictible, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] teste automatiquement tous les modèles qui utilisent le même attribut prédictible. Si l'attribut cible contient des valeurs discrètes, une fois que vous avez sélectionné la colonne prédictible, vous pouvez taper facultativement un état cible, si vous souhaitez prédire une valeur spécifique.  
   

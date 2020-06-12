@@ -1,5 +1,6 @@
 ---
 title: Assistant Migration SQL Server pour MySQL (MySQLToSQL) | Microsoft Docs
+description: Découvrez SSMA pour MySQL et suivez les instructions pas à pas pour migrer des bases de données MySQL vers SQL Server ou Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,18 +11,18 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: Jtoland
 ms.author: Jtoland
 manager: murato
-ms.openlocfilehash: 61f1edc662e7b4a510d616dbee47cfaa615b9c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff0f81088d4da835a24b59c1629dc7d59ef2e5b1
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252145"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293596"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>Assistant Migration SQL Server pour MySQL (MySQLToSQL)
 
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour MySQL est un outil qui permet de migrer des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données MySQL [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 2014, 2016, 2017 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows et Linux, 2019 sur Windows [!INCLUDE[msCoName](../../includes/msconame_md.md)] et Linux, ou une base de données Azure. SSMA pour MySQL convertit les objets de base de données MySQL en SQL Server objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base de données, crée ces objets dans, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]puis migre les données de MySQL vers.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration (SSMA) pour MySQL est un outil qui permet de migrer des bases de données MySQL vers [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 sur Windows et Linux, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019 sur Windows et Linux, ou une [!INCLUDE[msCoName](../../includes/msconame_md.md)] base de données Azure. SSMA pour MySQL convertit les objets de base de données MySQL en SQL Server objets de base de données, crée ces objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis migre les données de MySQL vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Cette documentation vous présente les SSMA pour MySQL et fournit des instructions pas à pas pour migrer des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MySQL vers. Le tableau suivant présente des articles qui vous aideront à en savoir plus :  
+Cette documentation vous présente les SSMA pour MySQL et fournit des instructions pas à pas pour migrer des bases de données MySQL vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau suivant présente des articles qui vous aideront à en savoir plus :  
   
 ## <a name="contents"></a>Contents  
   

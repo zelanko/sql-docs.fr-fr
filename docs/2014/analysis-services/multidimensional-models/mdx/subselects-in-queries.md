@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41471645e3443d59294f980eba35fbf9074d7728
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073903"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546143"
 ---
 # <a name="subselects-in-queries"></a>Instructions de sous-sélection dans les requêtes
   Les expressions d'instruction de sous-sélection sont des expressions SELECT imbriquées utilisées pour restreindre l'espace du cube à partir duquel SELECT externe est évalué. Les instructions de sous-sélection vous permettent de définir un nouvel espace sur lequel tous les calculs sont évalués.  
@@ -255,7 +254,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Route|Touring|  
+||All Products|Accessory|Composants|Mountain|Route|Touring|  
 |All Customers|29 358 677,22 $|604 053,30 $|(Null)|10 251 183,52 $|14 624 108,58 $|3 879 331,82 $|  
 |États-Unis|9 389 789,51 $|217 168,79 $|(Null)|3 547 956,78 $|4 322 438,41 $|1 302 225,54 $|  
 |Oregon|1 170 991,54 $|30 513,17 $|(Null)|443 607,98 $|565 372,10 $|131 498,29 $|  
@@ -280,7 +279,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Route|Touring|  
+||All Products|Accessory|Composants|Mountain|Route|Touring|  
 |All Customers|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
 |États-Unis|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
 |Washington|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
@@ -349,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La clause HAVING n’est pas autorisée dans une clause d’axe ; utilisez à la place une expression de fonction [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx).  
   
--   Par défaut, les membres calculés ne sont pas autorisés dans les sous-sélections ; Toutefois, cette restriction peut être modifiée, par session, en affectant une valeur à la propriété de chaîne `SubQueries` de connexion dans <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> la propriété `DBPROP_MSMD_SUBQUERIES` ou dans les [Propriétés XMLA prises en charge &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Consultez [membres calculés dans les sous-sélections et les sous-cubes](calculated-members-in-subselects-and-subcubes.md) pour obtenir une explication détaillée du comportement des membres calculés `SubQueries` en `DBPROP_MSMD_SUBQUERIES`fonction des valeurs de ou.  
+-   Par défaut, les membres calculés ne sont pas autorisés dans les sous-sélections ; Toutefois, cette restriction peut être modifiée, par session, en affectant une valeur à la `SubQueries` propriété de chaîne de connexion dans la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> `DBPROP_MSMD_SUBQUERIES` propriété ou dans les [Propriétés xmla prises en charge &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Consultez [membres calculés dans les sous-sélections et les sous-cubes](calculated-members-in-subselects-and-subcubes.md) pour obtenir une explication détaillée du comportement des membres calculés en fonction des valeurs de `SubQueries` ou `DBPROP_MSMD_SUBQUERIES` .  
   
   

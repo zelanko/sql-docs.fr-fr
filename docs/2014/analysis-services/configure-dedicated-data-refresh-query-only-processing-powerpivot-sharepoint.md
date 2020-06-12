@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67cc581c177f5d07df035927eb979c09061a537
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087508"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527295"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurer un traitement d'actualisation des données uniquement ou de requêtes uniquement (PowerPivot pour SharePoint)
   En mode intégré SharePoint, une instance de serveur Analysis Services peut être configurée pour prendre en charge un type spécifique de demande de traitement, comme l'actualisation des données ou le traitement des requêtes uniquement. Par défaut, les deux types sont activés. Vous pouvez en désactiver un pour créer un moteur d'interrogation dédié ou un serveur d'actualisation des données.  

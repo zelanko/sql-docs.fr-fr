@@ -3,9 +3,9 @@ title: sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627400"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
 
@@ -61,7 +61,7 @@ Retourne les paramètres réels de configuration et de capacité utilisés par l
 |**initial_db_file_size_in_mb**|bigint|Taille par défaut du nouveau fichier de données, en Mo. Consultez [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**log_size_in_mb**|bigint|Taille par défaut du nouveau fichier journal, en Mo. Consultez [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**instance_cap_cpu**|int|À usage interne uniquement|
-|**instance_max_log_rate**|bigint|Limite du taux de génération de journaux pour l’instance de SQL Server, en octets par seconde. S’applique à tous les journaux générés par l' `tempdb` instance, y compris les autres bases de données système. Dans un pool élastique, s’applique au journal généré par toutes les bases de données dans le pool.|
+|**instance_max_log_rate**|bigint|Limite du taux de génération de journaux pour l’instance de SQL Server, en octets par seconde. S’applique à tous les journaux générés par l’instance, y compris les `tempdb` autres bases de données système. Dans un pool élastique, s’applique au journal généré par toutes les bases de données dans le pool.|
 |**instance_max_worker_threads**|int|Limite de threads de travail pour l’instance SQL Server.|
 |**replica_type**|int|Type de réplica, où 0 est principal et 1 est secondaire.|
 |**max_transaction_size**|bigint|Espace maximal du journal utilisé par une transaction, en Ko.|
@@ -115,7 +115,7 @@ FROM sys.dm_user_db_resource_governance
 ORDER BY database_name;  
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [gouverneur de ressources](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
 - [sys.dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)

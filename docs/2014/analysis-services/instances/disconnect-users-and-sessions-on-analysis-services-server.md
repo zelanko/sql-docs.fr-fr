@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c1a974025e1f23cd5fa0a3b7824431d422bfe35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c001aaca5c0c11a7c7c615c5507045dfbaea1136
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080069"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543961"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Déconnecter des utilisateurs et sessions sur un serveur Analysis Services
   Un administrateur de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut vouloir arrêter l'activité des utilisateurs dans le cadre de la gestion de la charge de travail. Pour cela, vous devez annuler les sessions et les connexions. Les sessions peuvent être formées automatiquement lorsqu'une requête est exécutée (implicite) ou nommées au moment de la création par l'administrateur (explicite). Les connexions sont des conduits ouverts par lesquels les requêtes peuvent être exécutées. Les sessions et les connexions peuvent être terminées pendant qu'elles sont actives. Par exemple, un administrateur peut vouloir terminer le processus de traitement d'une session si le traitement dure trop longtemps ou si l'administrateur n'est pas sûr que la commande en cours d'exécution a été écrite correctement.  

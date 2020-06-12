@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e434493813f0237533ca2e50ff089974f3556f34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea4eee9909b4af80a5d8471f58d569690ff0962
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535911"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Utiliser l'Assistant Génération de schéma (Analysis Services)
   L'Assistant Génération de schéma requiert un volume d'informations restreint durant la phase de génération. La plupart des informations dont l’Assistant Génération de schéma a besoin pour générer des schémas relationnels sont extraites depuis les cubes et dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez déjà créés dans le projet. En outre, vous pouvez personnaliser la façon dont le schéma de la base de données de zone de sujet est généré et comment les objets du schéma sont nommés.  

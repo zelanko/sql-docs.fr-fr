@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079000"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543501"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Vérification des propriétés de cube et de dimension
   Après avoir défini un cube, vous pouvez examiner les résultats en utilisant le Concepteur de cube. Dans la tâche suivante, vous examinez la structure du cube dans le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
@@ -52,7 +51,7 @@ ms.locfileid: "66079000"
   
 9. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **Analysis Services Tutorial** dans le nœud **Cubes** , puis cliquez sur **Afficher le code**. Cela peut prendre un certain temps.  
   
-     Le code XML du cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] du didacticiel est affiché sous l' ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] onglet Tutorial. cube [XML]** . Il s’agit du code réel utilisé pour créer le cube dans une instance de au [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cours du déploiement. Pour plus d’informations, consultez [Afficher le code XML d’un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     Le code XML du [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube du didacticiel est affiché sous l’onglet ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. cube [XML]** . Il s’agit du code réel utilisé pour créer le cube dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] au cours du déploiement. Pour plus d’informations, consultez [Afficher le code XML d’un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Fermez l'onglet du code XML.  
   

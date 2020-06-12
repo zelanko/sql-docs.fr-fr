@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a748a81412f015f556f9224fb6e390eb0be1ef24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080412"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544136"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Insérer une fonction, boîte de dialogue (SSAS)
   La boîte de dialogue **Insérer une fonction** vous permet de sélectionner une fonction parmi une liste de fonctions utilisables lors de la génération de formules. Pour accéder à cette boîte de dialogue à partir du générateur de modèles, dans la barre de formule située au-dessus de chaque table, cliquez sur le bouton de fonction (**fx**). Pour plus d'informations sur le choix des fonctions à utiliser dans les formules, consultez Introduction à DAX et génération d'une formule.  

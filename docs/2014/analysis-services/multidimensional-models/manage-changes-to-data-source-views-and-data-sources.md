@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac551a708433e973ada499f0e7504bc75516e756
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f558ce6aaf9e57576d5773322352d33b81a3392
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074768"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546581"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Gérer des modifications dans les vues de source de données et les sources de données
   Lorsque l'Assistant Génération de schéma est exécuté à nouveau, il réutilise la même source de données et la même vue de source de données que lors de la génération initiale. Si vous ajoutez une source de données ou une vue de source de données, l'Assistant ne l'utilise pas. Si vous supprimez la source de données ou la vue de source de données d'origine après la génération initiale, vous devez exécuter l'Assistant depuis le début. Toutes les options précédemment définies dans l'Assistant sont également supprimées. Tous les objets existants d'une base de données sous-jacente qui étaient liés à une source de données ou une vue de source de données supprimée sont traités comme des objets créés par l'utilisateur lorsque vous exécutez l'Assistant Génération de schéma la fois suivante.  

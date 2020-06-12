@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736392"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545671"
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
   Le langage de script ASSL (Analysis Services Scripting Language) représente la hiérarchie d'objets comme un ensemble de types d'élément, chacun d'entre eux définissant les éléments enfants qu'il contient.  
@@ -135,10 +134,10 @@ ms.locfileid: "62736392"
   
 -   les espaces internes sont conservés.  
   
- Les propriétés `Name` et `ID` imposent des limitations spéciales en matière de validité des caractères dans les éléments de chaîne. Pour plus d’informations `Name` sur `ID` les conventions et, consultez [objets ASSL et caractéristiques](assl-objects-and-object-characteristics.md)de l’objet.  
+ Les propriétés `Name` et `ID` imposent des limitations spéciales en matière de validité des caractères dans les éléments de chaîne. Pour plus d’informations sur `Name` les `ID` conventions et, consultez [objets ASSL et caractéristiques](assl-objects-and-object-characteristics.md)de l’objet.  
   
  `DateTime`  
- `DateTime` Structure de l' .NET Framework. Une valeur `DateTime` ne peut pas être NULL. La date la plus reculée prise en charge par le type de données `DataTime` est le 1er janvier 1601, qui est accessible aux programmeurs via `DateTime.MinValue`. La présence de cette date indique qu'il manque une valeur `DateTime`.  
+ `DateTime`Structure de l' .NET Framework. Une valeur `DateTime` ne peut pas être NULL. La date la plus reculée prise en charge par le type de données `DataTime` est le 1er janvier 1601, qui est accessible aux programmeurs via `DateTime.MinValue`. La présence de cette date indique qu'il manque une valeur `DateTime`.  
   
  `Boolean`  
  Énumération constituée de seulement deux valeurs, telles que {true, false} ou {0, 1}.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c0b3e7184f3cc6abd189344bbce1b6e1f948ebb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074531"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546473"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Création de membres calculés d'étendue de requête (MDX)
   Si un membre calculé n'est nécessaire que pour une seule requête MDX (Multidimensional Expressions), vous pouvez le définir à l'aide du mot clé WITH. Un membre calculé créé à l'aide du mot clé WITH n'existe plus une fois que l'exécution de la requête est terminée.  

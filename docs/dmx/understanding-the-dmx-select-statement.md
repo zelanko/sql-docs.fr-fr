@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8cc28e9394cabee4dd32e8e84ee02517de415a75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 689e04acc8177a55a751ffa8e8e2e46848732fd1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893074"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669231"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Présentation de l'instruction DMX Select
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  L' [instruction SELECT](../dmx/select-dmx.md) est la base de la plupart des requêtes que vous créez avec les extensions DMX (Data [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Mining Extensions) dans. Elle peut effectuer une grande diversité de tâches, par exemple la navigation et la prévision dans les modèles d'exploration de données.  
+  L’instruction [Select](../dmx/select-dmx.md) est la base de la plupart des requêtes que vous créez avec les extensions DMX (Data Mining Extensions) dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Elle peut effectuer une grande diversité de tâches, par exemple la navigation et la prévision dans les modèles d'exploration de données.  
   
  Voici les tâches que vous pouvez effectuer à l’aide de l’instruction **Select** :  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68893074"
 |Type de requête|Description|  
 |----------------|-----------------|  
 |SELECT FROM [NATURAL] PREDICTION JOIN|Retourne une prévision qui est créée en joignant les colonnes du modèle d'exploration de données aux colonnes d'une source de données interne.<br /><br /> Le domaine de ce type de requête sont les colonnes prédictibles du modèle et les colonnes de la source de données d'entrée.<br /><br /> [Sélectionnez un modèle de &#60;&#62; &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Requêtes de prédiction &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
-|Sélectionner à partir du * \<modèle>*|Retourne l'état le plus probable de la colonne prédictible, uniquement sur la base du modèle d'exploration de données. Ce type de requête est un raccourci pour créer une prévision avec une jointure de prévision vide.<br /><br /> Le domaine de ce type de requête sont les colonnes prédictibles du modèle.<br /><br /> [Sélectionnez un modèle de &#60;&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Requêtes de prédiction &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|SÉLECTIONNER à partir du * \< modèle>*|Retourne l'état le plus probable de la colonne prédictible, uniquement sur la base du modèle d'exploration de données. Ce type de requête est un raccourci pour créer une prévision avec une jointure de prévision vide.<br /><br /> Le domaine de ce type de requête sont les colonnes prédictibles du modèle.<br /><br /> [Sélectionnez un modèle de &#60;&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Requêtes de prédiction &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [Retour à Types SELECT](#Select_Types)  
   
@@ -72,10 +72,10 @@ ms.locfileid: "68893074"
   
 |Type de requête|Description|  
 |----------------|-----------------|  
-|Select distinct from * \<Model>*|Retourne toutes les valeurs d'état provenant du modèle d'exploration de données pour la colonne spécifiée.<br /><br /> Le domaine de données pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SELECT DISTINCT FROM &#60;modèle &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Requêtes de contenu &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|Sélectionnez un * \<modèle>*. HUMIDITÉ|Retourne le contenu décrivant le modèle d'exploration de données.<br /><br /> Le domaine de données pour ce type de requête est l'ensemble de lignes du contenu.<br /><br /> [Sélectionnez &#60;&#62; de modèle. &#40;DE CONTENU DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Requêtes de contenu &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|Sélectionnez un * \<modèle>*. DIMENSION_CONTENT|Retourne le contenu décrivant le modèle d'exploration de données.<br /><br /> Le domaine de données pour ce type de requête est l'ensemble de lignes du contenu.<br /><br /> [Sélectionnez &#60;&#62; de modèle.&#41;DIMENSION_CONTENT &#40;DMX](../dmx/select-from-model-dimension-content-dmx.md)|  
-|Sélectionnez un * \<modèle>*. PMML|Retourne la représentation PMML (Predictive Model Markup Language) du modèle d'exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.<br /><br /> Le domaine pour ce type de requête est l'ensemble de lignes du schéma PMML.<br /><br /> [Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
+|SELECT DISTINCT FROM * \< Model>*|Retourne toutes les valeurs d'état provenant du modèle d'exploration de données pour la colonne spécifiée.<br /><br /> Le domaine de données pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SELECT DISTINCT FROM &#60;modèle &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Requêtes de contenu &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|Sélectionnez un * \< modèle>*. HUMIDITÉ|Retourne le contenu décrivant le modèle d'exploration de données.<br /><br /> Le domaine de données pour ce type de requête est l'ensemble de lignes du contenu.<br /><br /> [Sélectionnez &#60;&#62; de modèle. &#40;DE CONTENU DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Requêtes de contenu &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|Sélectionnez un * \< modèle>*. DIMENSION_CONTENT|Retourne le contenu décrivant le modèle d'exploration de données.<br /><br /> Le domaine de données pour ce type de requête est l'ensemble de lignes du contenu.<br /><br /> [Sélectionnez &#60;&#62; de modèle.&#41;DIMENSION_CONTENT &#40;DMX](../dmx/select-from-model-dimension-content-dmx.md)|  
+|Sélectionnez un * \< modèle>*. PMML|Retourne la représentation PMML (Predictive Model Markup Language) du modèle d'exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.<br /><br /> Le domaine pour ce type de requête est l'ensemble de lignes du schéma PMML.<br /><br /> [Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [Retour à Types SELECT](#Select_Types)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68893074"
   
 |Type de requête|Description|  
 |----------------|-----------------|  
-|Sélectionner dans * \<le nouveau modèle>*|Crée une copie du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SÉLECTIONNER DANS &#40;&#41;DMX](../dmx/select-into-dmx.md)|  
+|SÉLECTIONNER dans le * \< nouveau modèle>*|Crée une copie du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SÉLECTIONNER DANS &#40;&#41;DMX](../dmx/select-into-dmx.md)|  
   
  [Retour à Types SELECT](#Select_Types)  
   
@@ -93,9 +93,9 @@ ms.locfileid: "68893074"
   
 |Type de requête|Description|  
 |----------------|-----------------|  
-|Sélectionnez un * \<modèle>*. PARFOIS|Retourne les cas utilisés pour l'apprentissage du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [Sélectionnez &#60;&#62; de modèle. CAS &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Créer des requêtes d'extraction à l'aide de DMX](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
-|Sélectionnez un * \<modèle>*. SAMPLE_CASES|Retourne un exemple de cas, qui représente les cas utilisés pour l'apprentissage du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [Sélectionnez &#60;&#62; de modèle.&#41;SAMPLE_CASES &#40;DMX](../dmx/select-from-model-sample-cases-dmx.md)|  
-|Sélectionnez à partir de * \<la structure>*. PARFOIS|Retourne des lignes de données détaillées de la structure d'exploration de données sous-jacente, même si certains détails n'ont pas été utilisés dans l'apprentissage du modèle d'exploration de données.<br /><br /> [Sélectionnez &#60;&#62; de structure. PARFOIS](../dmx/select-from-structure-cases.md)<br /><br /> [Requêtes d’extraction &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
+|Sélectionnez un * \< modèle>*. PARFOIS|Retourne les cas utilisés pour l'apprentissage du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [Sélectionnez &#60;&#62; de modèle. CAS &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Créer des requêtes d'extraction à l'aide de DMX](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
+|Sélectionnez un * \< modèle>*. SAMPLE_CASES|Retourne un exemple de cas, qui représente les cas utilisés pour l'apprentissage du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [Sélectionnez &#60;&#62; de modèle.&#41;SAMPLE_CASES &#40;DMX](../dmx/select-from-model-sample-cases-dmx.md)|  
+|Sélectionnez à partir de la * \< structure>*. PARFOIS|Retourne des lignes de données détaillées de la structure d'exploration de données sous-jacente, même si certains détails n'ont pas été utilisés dans l'apprentissage du modèle d'exploration de données.<br /><br /> [Sélectionnez &#60;&#62; de structure. PARFOIS](../dmx/select-from-structure-cases.md)<br /><br /> [Requêtes d’extraction &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [Retour à Types SELECT](#Select_Types)  
   

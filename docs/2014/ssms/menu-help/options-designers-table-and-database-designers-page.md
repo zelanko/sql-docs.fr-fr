@@ -12,17 +12,17 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2cabbd38f05ffd45976eac6d18c8ea5f6615816
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283657"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859821"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>Options (concepteurs-page concepteurs de bases de données et de tables)
   Utilisez cette page pour déterminer le comportement par défaut du concepteur. Pour accéder aux paramètres, dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Concepteurs** , puis cliquez sur **Concepteur de bases de données et de tables**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Remplacer la valeur du délai d'attente de la chaîne de connexion pour les mises à jour du Concepteur de tables**  
  Permet de définir une nouvelle valeur de délai d'attente pour les actions du Concepteur de tables. Cette option peut s'avérer utile lorsque le Concepteur de tables affecte une table volumineuse et nécessite un délai supplémentaire pour terminer la modification de la table.  
   

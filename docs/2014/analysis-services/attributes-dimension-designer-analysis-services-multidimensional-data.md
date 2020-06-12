@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c5e1d6b92dce1a1be42ae1bc30ae3a3d5e48d59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064401"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527845"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributs (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez ce volet pour gérer les attributs de la dimension sélectionnée. Vous pouvez faire glisser les attributs depuis ce volet vers le volet **Hiérarchies** pour créer des hiérarchies et des niveaux. Pour plus d’informations, consultez [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -55,10 +54,10 @@ ms.locfileid: "66064401"
  **Utilisation**  
  Définit l'utilisation de l'attribut sélectionné. Cliquez sur la flèche orientée vers le bas pour sélectionner l'une des options suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|Normal|Définit un attribut normal.|  
-|Touche|Définit l'attribut de clé de la dimension. Cela correspond aux membres de nœud terminal de la dimension. Il ne peut exister qu'un seul attribut clé par dimension. Pour modifier, cliquez sur le bouton avec les points de suspension (**...**) situé à côté de la propriété **KeyColumns** dans le volet **Propriétés** .|  
+|Normale|Définit un attribut normal.|  
+|Clé|Définit l'attribut de clé de la dimension. Cela correspond aux membres de nœud terminal de la dimension. Il ne peut exister qu'un seul attribut clé par dimension. Pour modifier, cliquez sur le bouton avec les points de suspension (**...**) situé à côté de la propriété **KeyColumns** dans le volet **Propriétés** .|  
 |Parent|Définit l'attribut parent d'une relation parent-enfant. L'attribut enfant de la relation doit toujours correspondre à l'attribut de clé.|  
 |AccountType|Définit un attribut de type compte. Cette option est utilisée par le serveur ou le moteur lorsque la valeur « par compte » est affectée à la fonction d'agrégation d'une mesure.|  
   

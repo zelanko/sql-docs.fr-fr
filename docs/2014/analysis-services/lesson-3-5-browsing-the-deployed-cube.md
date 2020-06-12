@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493985"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543401"
 ---
 # <a name="browsing-the-deployed-cube"></a>Exploration du cube déployé
   Dans la tâche suivante, vous parcourez le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Étant donné que notre analyse compare la mesure entre plusieurs dimensions, utilisez un tableau croisé dynamique Excel pour parcourir vos données. Un tableau croisé dynamique permet de placer le client, la date et les informations produit sur différents axes afin que vous pouvoir voir les disparités des ventes sur Internet en fonction des points dans le temps, des caractéristiques démographiques de la clientèle et des gammes de produits.  
   
 ### <a name="to-browse-the-deployed-cube"></a>Pour parcourir le cube déployé  
   
-1.  Pour basculer vers le concepteur [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]de cube dans, double-cliquez sur le ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube Tutorial** dans le dossier **cubes** de l’Explorateur de solutions.  
+1.  Pour basculer vers le concepteur de cube dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , double-cliquez sur le cube ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** dans le dossier **cubes** de l’Explorateur de solutions.  
   
 2.  Ouvrez l'onglet **Navigateur** , puis cliquez sur le bouton **Reconnecter** dans la barre d'outils du Concepteur.  
   

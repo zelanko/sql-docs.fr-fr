@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e7712b7a7e861eb3d588f5217baa02bf26746fd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67343894"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528900"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilité des formules DAX en mode DirectQuery (SSAS 2014)
-Le langage DAX (Data Analysis expression) peut être utilisé pour créer des mesures et d’autres formules personnalisées à utiliser dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] des modèles tabulaires Analysis Services, des modèles de données dans des classeurs Excel et des modèles de données Power bi Desktop. Dans la plupart des aspects, les modèles que vous créez dans ces environnements sont identiques et vous pouvez utiliser les mêmes mesures, relations et indicateurs de performance clés, etc. Toutefois, si vous créez un modèle tabulaire Analysis Services et que vous le déployez en mode DirectQuery, certaines restrictions s’appliquent aux formules que vous pouvez utiliser. Cette rubrique fournit une vue d’ensemble de ces différences, répertorie les fonctions qui ne sont pas prises en charge dans le modèle SQL Server 2014 Analysis Services tabulaires au niveau de compatibilité 1100 ou 1103 et en mode DirectQuery, et répertorie les fonctions prises en charge, mais qui peuvent retourner des résultats différents.  
+Le langage DAX (Data Analysis expression) peut être utilisé pour créer des mesures et d’autres formules personnalisées à utiliser dans des modèles tabulaires Analysis Services, des [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modèles de données dans des classeurs Excel et des modèles de données Power bi Desktop. Dans la plupart des aspects, les modèles que vous créez dans ces environnements sont identiques et vous pouvez utiliser les mêmes mesures, relations et indicateurs de performance clés, etc. Toutefois, si vous créez un modèle tabulaire Analysis Services et que vous le déployez en mode DirectQuery, certaines restrictions s’appliquent aux formules que vous pouvez utiliser. Cette rubrique fournit une vue d’ensemble de ces différences, répertorie les fonctions qui ne sont pas prises en charge dans le modèle SQL Server 2014 Analysis Services tabulaires au niveau de compatibilité 1100 ou 1103 et en mode DirectQuery, et répertorie les fonctions prises en charge, mais qui peuvent retourner des résultats différents.  
   
 Dans cette rubrique, nous utilisons le terme *modèle en mémoire* pour faire référence aux modèles tabulaires, qui sont des données en mémoire cache entièrement hébergées sur un serveur Analysis Services s’exécutant en mode tabulaire. Nous utilisons les *modèles DirectQuery* pour faire référence aux modèles tabulaires qui ont été créés et/ou déployés en mode DirectQuery. Pour plus d’informations sur le mode DirectQuery, consultez [mode DirectQuery (SSAS tabulaire)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
@@ -30,7 +29,7 @@ Par exemple, il existe des différences dans la façon dont certaines banques de
   
 En revanche, le langage DAX est prévu pour émuler le mieux possible le comportement des fonctions dans Microsoft Excel. Par exemple, lorsque vous gérez des valeurs Null, des chaînes vides et des valeurs zéro, Excel tente de fournir la meilleure réponse quel que soit le type de données exact, et par conséquent le moteur xVelocity en fait de même. Toutefois, lorsqu'un modèle tabulaire est déployé en mode DirectQuery et transmet des formules à une source de données relationnelle pour l'évaluation, les données doivent être traitées selon la sémantique de la source de données relationnelle, qui nécessite généralement une gestion distincte des chaînes vides et des valeurs Null. Pour cette raison, la même formule peut retourner un résultat différent une fois évaluée sur des données en mémoire cache et sur des données extraites seulement de la banque de données relationnelle.  
   
-En outre, certaines fonctions ne peuvent pas être utilisées du tout en mode DirectQuery, car le calcul exige que les données du contexte actuel soient envoyées à la source de données relationnelle en tant que paramètre. Par exemple, les mesures d' [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] un classeur utilisent souvent des fonctions d’intelligence temporelle qui font référence à des plages de dates disponibles dans le classeur. En général, ces formules ne peuvent pas être utilisées en mode DirectQuery.  
+En outre, certaines fonctions ne peuvent pas être utilisées du tout en mode DirectQuery, car le calcul exige que les données du contexte actuel soient envoyées à la source de données relationnelle en tant que paramètre. Par exemple, les mesures d’un [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] classeur utilisent souvent des fonctions d’intelligence temporelle qui font référence à des plages de dates disponibles dans le classeur. En général, ces formules ne peuvent pas être utilisées en mode DirectQuery.  
   
 ## <a name="semantic-differences"></a>Différences sémantiques  
 Cette section répertorie les types de différences sémantiques que vous pouvez attendre, et décrit toutes les limitations qui peuvent s'appliquer à l'utilisation des fonctions ou aux résultats de la requête.  
@@ -55,7 +54,7 @@ La formule compare une chaîne de texte à un nombre. L’expression est **true*
   
 Dans un modèle en mémoire, le résultat est **true** car les nombres sous forme de chaînes sont implicitement convertis en type de données numérique pour les comparaisons avec d’autres nombres. SQL effectue aussi un cast implicite des nombres sous forme de texte en nombres afin de les comparer aux types de données numériques.  
   
-Notez que cela représente un changement de comportement de la première version de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], qui retourne la **valeur false**, car le texte « 2 » est toujours considéré comme supérieur à n’importe quel nombre.  
+Notez que cela représente un changement de comportement de la première version de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] , qui retourne la **valeur false**, car le texte « 2 » est toujours considéré comme supérieur à n’importe quel nombre.  
   
 **Comparaison de texte avec une valeur booléenne**  
 EXEMPLE : `"VERDADERO" = TRUE`  
@@ -85,7 +84,7 @@ Les conversions en type de données booléen d'une autre chaîne génèrent une 
 **Conversion d'une chaîne en date/heure**  
 En mode DirectQuery, les conversions des représentations sous forme de chaîne des dates et heures en valeurs **datetime** réelles se comportent de la même façon que dans SQL Server.  
   
-Pour plus d’informations sur les règles régissant les casts **datetime** de types de données [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] String en DateTime dans les modèles, consultez la [référence de syntaxe DAX](/dax/dax-syntax-reference).
+Pour plus d’informations sur les règles régissant les casts de types de données String en **DateTime** dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] les modèles, consultez la [référence de syntaxe DAX](/dax/dax-syntax-reference).
   
 Les modèles qui utilisent la banque de données en mémoire utilisent une plage plus limitée de formats de texte pour les dates que les formats de chaîne pour les dates prises en charge par SQL Server. Toutefois, DAX prend en charge les formats de date et d'heure personnalisés.  
   
@@ -155,7 +154,7 @@ Les expressions suivantes sont toutes valides dans les modèles en mémoire, mai
 L'expression `BLANK/BLANK` est un cas spécial qui retourne `BLANK` dans les modèles en mémoire et en mode DirectQuery.  
   
 ### <a name="supported-numeric-and-date-time-ranges"></a><a name="bkmk_Ranges"></a>Plages numériques et de date/heure prises en charge  
-Les formules [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] dans les modèles tabulaires et en mémoire sont soumises aux mêmes limitations qu’Excel en ce qui concerne les valeurs maximales autorisées pour les nombres réels et les dates. Toutefois, des différences peuvent survenir lorsque la valeur maximale est retournée à partir d'un calcul ou d'une requête, ou lorsque les valeurs sont converties, castées, arrondies ou tronquées.  
+Les formules dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] les modèles tabulaires et en mémoire sont soumises aux mêmes limitations qu’Excel en ce qui concerne les valeurs maximales autorisées pour les nombres réels et les dates. Toutefois, des différences peuvent survenir lorsque la valeur maximale est retournée à partir d'un calcul ou d'une requête, ou lorsque les valeurs sont converties, castées, arrondies ou tronquées.  
   
 -   Si des valeurs des types **Currency** et **Real** sont multipliées, et que le résultat est supérieur à la valeur maximale possible, en mode DirectQuery, aucune erreur n’est générée et une valeur Null est retournée.  
   
@@ -311,7 +310,7 @@ EXEMPLE : `MID([col], 2, 5)`
   
 Si le texte d **varchar** ou **nvarchar**, le résultat de la formule est toujours identique.  
   
-Toutefois, si le texte est un caractère de longueur fixe et que la valeur * &lt;de&gt; num_chars* est supérieure à la longueur de la chaîne cible, en mode DirectQuery, un espace est ajouté à la fin de la chaîne de résultat.  
+Toutefois, si le texte est un caractère de longueur fixe et que la valeur de * &lt; num_chars &gt; * est supérieure à la longueur de la chaîne cible, en mode DirectQuery, un espace est ajouté à la fin de la chaîne de résultat.  
   
 Dans un modèle en mémoire, le résultat se termine au dernier caractère de chaîne, sans remplissage.  
   

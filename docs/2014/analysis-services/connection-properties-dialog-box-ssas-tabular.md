@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26fa80cc770d4bee9163ec18c21b35bd8c807bde
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6e68e92658bcc32530d787630998c52e1295596
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086990"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526825"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Boîte de dialogue Propriétés de connexion (SSAS - Tabulaire)
   Utilisez cette page pour consulter ou modifier dans SQL Server Management Studio les propriétés de connexion d'une source de données utilisée par une base de données model tabulaire.  
@@ -35,8 +34,8 @@ ms.locfileid: "66086990"
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la base de données.|  
 |**Chaîne de connexion**|Affiche la chaîne de connexion utilisée pour se connecter à la source de données qui fournit des données au modèle.|  
 |**Nombre maximal de connexions**|Spécifie le nombre maximal de connexions clientes à cette base de données.|  
-|**Isolation**|Les valeurs valides sont ReadCommitted ou Snapshot. Pour plus d’informations, consultez [Isolation, élément &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl).|  
-|**Délai de requête**|Spécifie le temps (en secondes) après lequel une tentative de récupération des données expire.|  
+|**Isolement**|Les valeurs valides sont ReadCommitted ou Snapshot. Pour plus d’informations, consultez [Isolation, élément &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl).|  
+|**Délai d’expiration de la requête**|Spécifie le temps (en secondes) après lequel une tentative de récupération des données expire.|  
 |**Fournisseur managé**|Spécifie le nom du fournisseur managé. Si la connexion à la source de données utilise un fournisseur OLE DB natif, cette valeur est vide.|  
 |**Informations d'emprunt d'identité**|Spécifie le compte d'emprunt d'identité utilisé pour les connexions de base de données lors du traitement ou de l'actualisation des données, les requêtes qui s'exécutent sur une banque de données relationnelle (via DirectQuery), les liaisons hors ligne, les partitions distantes et la synchronisation de la cible vers la source.<br /><br /> Les valeurs valides incluent le compte de service Analysis Services ou un jeu d'informations d'identification Windows spécifique. Ne spécifiez pas **Utiliser les infos d'identification de l'utilisateur actuel** ou **Hériter**. Ces options d'identification ne sont pas prises en charge pour une base de données model tabulaire.|  
   

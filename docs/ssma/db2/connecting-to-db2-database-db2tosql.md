@@ -1,5 +1,6 @@
 ---
 title: Connexion à la base de données DB2 (DB2ToSQL) | Microsoft Docs
+description: Découvrez comment vous connecter à une instance cible de la base de données DB2 pour migrer des bases de données DB2. SSMA obtient des métadonnées sur tous les schémas DB2.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d31a20aa0aa4b00feaf7d0af5aeb13b5b73c381d
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141067"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292937"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Connexion à la base de données DB2 (DB2ToSQL)
-Pour migrer des bases de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données DB2 vers, vous devez vous connecter à la base de données DB2 que vous souhaitez migrer. Quand vous vous connectez, SSMA obtient des métadonnées sur tous les schémas DB2, puis les affiche dans le volet de l’Explorateur de métadonnées DB2. SSMA stocke les informations relatives au serveur de base de données, mais ne stocke pas les mots de passe.  
+Pour migrer des bases de données DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez vous connecter à la base de données DB2 que vous souhaitez migrer. Quand vous vous connectez, SSMA obtient des métadonnées sur tous les schémas DB2, puis les affiche dans le volet de l’Explorateur de métadonnées DB2. SSMA stocke les informations relatives au serveur de base de données, mais ne stocke pas les mots de passe.  
   
 Votre connexion à la base de données reste active jusqu’à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter si vous souhaitez une connexion active à la base de données.  
   
@@ -31,7 +32,7 @@ Autorisation de l’utilisateur définit la liste des commandes et des objets qu
 -   L’accès aux données pour la migration des données nécessite DATAACCESS  
   
 ## <a name="establishing-a-connection-to-db2"></a>Établissement d’une connexion à DB2  
-Lorsque vous vous connectez à une base de données, SSMA lit les métadonnées de la base de données, puis ajoute ces métadonnées au fichier projet. Ces métadonnées sont utilisées par SSMA lorsqu’elle convertit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des objets en syntaxe, et lorsqu’elle migre des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez parcourir ces métadonnées dans le volet Explorateur de métadonnées DB2 et consulter les propriétés des objets de base de données individuels.  
+Lorsque vous vous connectez à une base de données, SSMA lit les métadonnées de la base de données, puis ajoute ces métadonnées au fichier projet. Ces métadonnées sont utilisées par SSMA lorsqu’elle convertit des objets en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntaxe, et lorsqu’elle migre des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez parcourir ces métadonnées dans le volet Explorateur de métadonnées DB2 et consulter les propriétés des objets de base de données individuels.  
   
 > [!IMPORTANT]  
 > Avant d’essayer de vous connecter, assurez-vous que le serveur de base de données est en cours d’exécution et peut accepter des connexions.  
@@ -77,7 +78,7 @@ Lorsque vous vous connectez à une base de données, SSMA lit les métadonnées 
     Pour plus d’informations, consultez [se connecter à Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-db2"></a>Reconnexion à DB2  
-Votre connexion au serveur de base de données reste active jusqu’à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter si vous souhaitez une connexion active à la base de données. Vous pouvez travailler hors connexion jusqu’à ce que vous souhaitiez mettre à jour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des métadonnées, charger des objets de base de données dans et migrer des données.  
+Votre connexion au serveur de base de données reste active jusqu’à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter si vous souhaitez une connexion active à la base de données. Vous pouvez travailler hors connexion jusqu’à ce que vous souhaitiez mettre à jour des métadonnées, charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et migrer des données.  
   
 ## <a name="refreshing-db2-metadata"></a>Actualisation des métadonnées DB2  
 Les métadonnées relatives à la base de données DB2 ne sont pas automatiquement actualisées. Dans l’Explorateur de métadonnées DB2, les métadonnées sont un instantané des métadonnées lorsque vous vous êtes connecté pour la première fois ou lors de la dernière actualisation manuelle des métadonnées. Vous pouvez mettre à jour manuellement les métadonnées de tous les schémas, un seul schéma ou des objets de base de données individuels.  

@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773751"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857848"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administration de l'utilitaire (utilitaire SQL Server)
   Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres de stratégie, de sécurité et d'entrepôt de données pour un utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur les concepts de l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  Onglet Stratégie : utilisez l'onglet de stratégie pour afficher ou spécifier des stratégies d'analyse globales.  
   
  Définissez des stratégies globales de surveillance des applications de couche Données. Pour développer la liste des valeurs de cette option, cliquez sur la flèche en regard du nom de la stratégie ou cliquez sur le titre de la stratégie.  
@@ -64,7 +64,7 @@ ms.locfileid: "62773751"
  Réduction du bruit des violations de la stratégie par des ressources très volatiles. Pour développer les contrôles de cette fonctionnalité, cliquez sur la flèche basse située sur le côté droit de l'écran.  
  Pour plus d’informations, consultez [réduire le bruit dans les stratégies d’utilisation du processeur &#40;Utilitaire SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  Onglet de sécurité : affiche les noms de connexion disposant d'autorisations pour administrer ou lire l'UCP.  
   
  Sélectionnez les connexions de l'UCP qui seront ajoutées au rôle de lecteur d'utilitaire.  
@@ -80,7 +80,7 @@ ms.locfileid: "62773751"
   
  Pour être administrateur de l'utilitaire, vous devez avoir des privilèges de sysadmin sur l'instance de SQL Server. Pour ajouter ou modifier des comptes d'utilisateurs pour l'UCP de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisez l'Explorateur d'objets dans SSMS pour ajouter l'utilisateur aux connexions serveur de l'instance de l'UCP de SQL Server. Pour plus d’informations, consultez [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql).  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  Onglet Entrepôt de données : affiche les détails de configuration de l'entrepôt de données de gestion de l'utilitaire.  
   
  Conservation des données  

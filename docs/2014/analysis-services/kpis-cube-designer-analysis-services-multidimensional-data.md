@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aad6b1f02ad5fc10eb254a50eefe67166ddb563d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543633"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>Indicateurs de performance clés (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez l’onglet **Indicateurs de performance clés** du Concepteur de cube pour afficher et modifier les indicateurs de performance clés (KPI) du cube sélectionné.  
@@ -37,7 +36,7 @@ ms.locfileid: "66079427"
   
 |Volet|Définition|  
 |----------|----------------|  
-|**Barre**|Utilisez la barre d’outils en mode formulaire et navigateur pour effectuer des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet indicateurs de performance clés, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barre d’outils**|Utilisez la barre d’outils en mode formulaire et navigateur pour effectuer des opérations courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet indicateurs de performance clés, concepteur de Cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Organisateur d'indicateur de performance clé (KPI)**|Utilisez le volet **Organisateur d'indicateur de performance clé (KPI)** en mode Formulaire pour afficher les indicateurs de performance clés (KPI) du cube dans un format ordonné. Pour plus d’informations sur ce volet, consultez [Organisateur d’indicateur de performance clé &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Outils de calcul**|Utilisez le volet **Outils de calcul** en mode Formulaire pour afficher les métadonnées, les fonctions et les outils disponibles pour le cube. Pour plus d’informations sur ce volet, consultez [Outils de calcul &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Éditeur de formulaire d'indicateur de performance clé (KPI)**|Utilisez le volet Éditeur de formulaire d'indicateur de performance clé en mode Formulaire pour modifier les indicateurs de performance clés du cube. Pour plus d’informations sur ce volet, consultez [Éditeur de formulaire d’indicateur de performance clé (KPI) &#40;onglet Indicateurs de performance clés, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  

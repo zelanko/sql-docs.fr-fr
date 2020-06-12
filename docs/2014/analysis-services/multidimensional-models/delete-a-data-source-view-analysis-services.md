@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ae3f5ca0-ecbf-4b52-8386-eb457719d854
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24b587e8d8961161ea803915c31d117c11f7cf2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075431"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546921"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Supprimer une vue de source de données (Analysis Services)
   Si vous n’utilisez plus de vue de source de données (DSV) dans un projet OLAP, vous pouvez la supprimer du projet dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf2e0f2d57ce8bf1834813d4e39d06afc9724fd7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887675"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670088"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ FROM <existing model>
  Nom défini par le fournisseur d'un algorithme d'exploration de données  
   
  *liste de paramètres*  
- Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *expression*  
  Expression dont le résultat est une condition de filtre valide sur les données d'apprentissage. Pour plus d’informations sur les expressions qui peuvent être utilisées comme filtres, consultez [filtres pour les modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
@@ -53,7 +53,7 @@ FROM <existing model>
  La clause **with Drillthrough** active l’extraction sur le nouveau modèle d’exploration de données. L'extraction ne peut être activée que lors de la création du modèle.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Exemple 1 : modification des paramètres du modèle  
- L’exemple suivant crée un modèle d’exploration de données basé sur un modèle d' `TM_Clustering`exploration de données existant, que vous créez dans le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Le paramètre CLUSTER_COUNT est modifié de telle sorte que cinq clusters au maximum existent dans ce nouveau modèle. En revanche, le modèle existant utilise la valeur par défaut 10.  
+ L’exemple suivant crée un modèle d’exploration de données basé sur un modèle d’exploration de données existant, que `TM_Clustering` vous créez dans le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Le paramètre CLUSTER_COUNT est modifié de telle sorte que cinq clusters au maximum existent dans ce nouveau modèle. En revanche, le modèle existant utilise la valeur par défaut 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16ebdd2ac874784c071fea7aa962d005436aac60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0500cca6b59ce1510d274dc0a8336ee2ac1db394
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820867"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859786"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Retourne des informations sur toutes les attentes de verrou interne, organisées
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|Nom de la classe de verrou interne.|  
+|latch_class|**nvarchar(60)**|Nom de la classe de verrou interne.|  
 |waiting_requests_count|**bigint**|Nombre d'attentes pour les verrous internes de cette classe. Ce compteur est incrémenté au début d'une attente de verrou interne.|  
 |wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** Cette colonne est mise à jour toutes les cinq minutes pendant l’attente d’un verrou et à la fin de l’attente d’un verrou.|  
 |max_wait_time_ms|**bigint**|Durée maximum d'attente d'un objet de mémoire sur ce verrou interne. Si cette valeur est anormalement élevée, cela peut indiquer un blocage interne.|  

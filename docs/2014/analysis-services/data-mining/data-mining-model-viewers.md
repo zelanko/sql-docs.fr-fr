@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 686d9ee54de7fb71857093ef10c44ddbd15d3f86
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085044"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523197"
 ---
 # <a name="data-mining-model-viewers"></a>Visionneuses de modèle d’exploration de données
-  Après l’apprentissage d’un modèle d’exploration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de données dans, vous pouvez explorer le modèle pour rechercher des tendances intéressantes. Étant donné que les résultats des modèles d'exploration de données sont complexes et peuvent être difficiles à comprendre dans un format brut, l'examen visuel des données constitue souvent le moyen le plus simple pour comprendre les règles et les relations que les algorithmes découvrent au sein des données.  
+  Après l’apprentissage d’un modèle d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous pouvez explorer le modèle pour rechercher des tendances intéressantes. Étant donné que les résultats des modèles d'exploration de données sont complexes et peuvent être difficiles à comprendre dans un format brut, l'examen visuel des données constitue souvent le moyen le plus simple pour comprendre les règles et les relations que les algorithmes découvrent au sein des données.  
   
  Chacun des algorithmes que vous utilisez pour la construction d'un modèle renvoie un type différent de résultats. Par conséquent, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une visionneuse spécifique pour chaque algorithme. Quand vous explorez un modèle d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le modèle s’affiche sous l’onglet **Visionneuse de modèle d’exploration de données** du Concepteur d’exploration de données, à l’aide de la visionneuse appropriée pour ce modèle.  
   

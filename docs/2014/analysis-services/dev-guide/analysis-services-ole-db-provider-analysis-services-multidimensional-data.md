@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0348a23a6def4c3cdbd083354083947ce1390b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732185"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528663"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Fournisseur OLE DB Analysis Services (Analysis Services - Données multidimensionnelles)
-  Le Fournisseur Analysis Services OLE DB est une interface pour les applications qui interagissent avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il est utilisé pour générer des applications clientes qui interagissent avec les données multidimensionnelles. Ce fournisseur fournit également des méthodes pour l'analyse d'exploration de données en ligne et hors connexion de données multidimensionnelles et relationnelles. Il est intégré dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il peut être redistribué par des applications clientes tierces.  
+  Le Fournisseur Analysis Services OLE DB est une interface pour les applications qui interagissent avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il est utilisé pour générer des applications clientes qui interagissent avec les données multidimensionnelles. Ce fournisseur fournit également des méthodes pour l'analyse d'exploration de données en ligne et hors connexion de données multidimensionnelles et relationnelles. Il est intégré dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il peut être redistribué par des applications clientes tierces.  
   
  Le fournisseur OLE DB pour Analysis Services est la principale méthode pour communiquer avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin d'effectuer des tâches telles que se connecter à un cube ou modèle d'exploration de données, interroger un cube ou modèle d'exploration de données, et extraire des informations de schéma.  
   

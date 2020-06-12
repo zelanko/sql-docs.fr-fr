@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085717"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524195"
 ---
 # <a name="clustering-model-query-examples"></a>Exemples de requêtes de modèle de clustering
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez récupérer les métadonnées sur le modèle ou créer une requête de contenu qui fournit des détails sur les séquences découvertes dans l'analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
@@ -221,7 +220,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 |Région|Amérique du Nord|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
 |Région|Europe|-72.5041051379789|  
-|English Occupation|Manuelle|-69.6503163202722|  
+|English Occupation|Manuel|-69.6503163202722|  
   
  Ces informations sont les mêmes que celles présentées dans le graphique de la visionneuse **Discrimination de cluster** si vous sélectionnez le cluster 9 dans la première liste déroulante et le cluster 7 dans la deuxième. Pour comparer le cluster 9 avec son complément, vous utilisez la chaîne vide dans le deuxième paramètre, comme le montre l'exemple suivant :  
   

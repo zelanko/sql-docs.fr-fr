@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9c408f79dcecd0a7850c7361716cc29b07f4cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1c645486a0d328a1074f1a25b730bfbac1b14af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073346"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545835"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Perspectives dans les modèles multidimensionnels
   Une perspective est un sous-ensemble de cube créé pour une application ou un groupe d'utilisateurs particuliers. Le cube lui-même est la perspective par défaut. Une perspective se présente à un client sous forme de cube. Lorsqu'un utilisateur affiche une perspective, elle ressemble à n'importe quel autre cube. Toute modification apportée aux données du cube via l'écriture différée dans la perspective affecte le cube d'origine. Pour plus d’informations sur les vues dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Perspectives](../multidimensional-models-olap-logical-cube-objects/perspectives.md).  
@@ -45,11 +44,11 @@ ms.locfileid: "66073346"
   
 -   les groupes de mesures ;  
   
--   mesures  
+-   Mesures  
   
 -   Dimensions  
   
--   Hierarchies  
+-   Hiérarchies  
   
 -   Les jeux nommés  
   

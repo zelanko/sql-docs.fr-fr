@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6279c738ada597984465ff0c1c3db6fa8fbaeb38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076898"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544593"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Ajouter de l'intelligence comptable à une dimension
-  Ajoutez l'intelligence comptable à un cube ou une dimension pour affecter des classes comptables standard, par exemple recettes et dépenses, aux membres d'un attribut de compte. Cette amélioration identifie également les types de comptes (tels que l'actif et le passif) et affecte l'agrégation appropriée à chaque type de compte. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser les classifications pour agréger les comptes dans le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] temps.  
+  Ajoutez l'intelligence comptable à un cube ou une dimension pour affecter des classes comptables standard, par exemple recettes et dépenses, aux membres d'un attribut de compte. Cette amélioration identifie également les types de comptes (tels que l'actif et le passif) et affecte l'agrégation appropriée à chaque type de compte. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut utiliser les classifications pour agréger les comptes dans le temps.  
   
 > [!NOTE]  
 >  L'intelligence comptable n'est disponible que pour les dimensions qui sont basées sur des sources de données existantes. Pour les dimensions créées sans utiliser de source de données, vous devez exécuter l'Assistant Génération de schéma pour créer une vue de source de données avant d'ajouter l'intelligence comptable.  

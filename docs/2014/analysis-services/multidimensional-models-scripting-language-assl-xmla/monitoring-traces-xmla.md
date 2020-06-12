@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ca181b7c194fdd3909875f881d1030a77ae039
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62729068"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544907"
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
-  Vous pouvez utiliser la commande [subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) dans XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La commande `Subscribe` retourne les résultats d'une trace sous la forme d'un ensemble de lignes.  
+  Vous pouvez utiliser la commande [subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) dans XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La commande `Subscribe` retourne les résultats d'une trace sous la forme d'un ensemble de lignes.  
   
 ## <a name="specifying-a-trace"></a>Spécification d'une trace  
- La propriété [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) de la `Subscribe` commande doit contenir une référence d’objet à une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance ou à une trace sur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] une instance. Si la propriété `Object` n'est pas spécifiée ou si aucun identificateur de trace n'y est `Object` spécifié, la commande `Subscribe` surveille la trace de session par défaut pour la session explicite spécifiée dans l'en-tête SOAP de la commande.  
+ La propriété [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) de la `Subscribe` commande doit contenir une référence d’objet à une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance ou à une trace sur une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Si la propriété `Object` n'est pas spécifiée ou si aucun identificateur de trace n'y est `Object` spécifié, la commande `Subscribe` surveille la trace de session par défaut pour la session explicite spécifiée dans l'en-tête SOAP de la commande.  
   
 ## <a name="returning-results"></a>Retour de résultats  
  La commande `Subscribe` retourne un ensemble de lignes contenant les événements de trace capturés par la trace spécifiée. La `Subscribe` commande retourne les résultats de trace jusqu’à ce que la commande soit annulée par la commande [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) .  
@@ -56,7 +55,7 @@ ms.locfileid: "62729068"
 |NumSegments|Entier long|Nombre de segments de données affectés ou atteints par la commande pour laquelle l'événement s'est produit.|  
 |severity|Integer|Niveau de gravité d'une exception relative à l'événement. La colonne peut contenir l'une des valeurs suivantes :<br /><br /> Valeur : 0 = réussite<br /><br /> Valeur : 1 = informations<br /><br /> Valeur : 2 = avertissement<br /><br /> Valeur : 3 = erreur|  
 |Opération réussie|Boolean|Indique si une commande a abouti ou échoué.|  
-|Error|Entier long|Numéro d'erreur de l'événement, le cas échéant.|  
+|Erreur|Entier long|Numéro d'erreur de l'événement, le cas échéant.|  
 |ConnectionID|String|Identificateur de la connexion pour laquelle l'événement s'est produit.|  
 |nom_base_de_données|String|Nom de la base de données pour laquelle l'événement s'est produit.|  
 |NTUserName|String|Nom d'utilisateur Windows de l'utilisateur associé à l'événement.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087913"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527485"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme de cluster (Compléments d'exploration de données)
   Une fois que vous avez créé un modèle de clustering, vous pouvez l’importer dans Visio à l’aide de la forme **cluster** , puis continuer à personnaliser et améliorer la disposition. Les **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour l’utilisation des diagrammes d’exploration de données :  
@@ -43,13 +42,13 @@ ms.locfileid: "66087913"
   
 1.  Si les **formes d’exploration de données Microsoft** ne s’affichent pas dans la liste **formes** , cliquez sur **autres formes**, sélectionnez **ouvrir le stencil**, puis ouvrez le modèle à partir de l’emplacement d’installation par défaut.  
   
-     \<lecteur> : \Program files\Microsoft SQL Server 2012 DM Add-ins  
+     \<drive>: \Program files\Microsoft SQL Server 2012 DM Add-ins  
   
 2.  Faites glisser la forme **cluster** sur la page.  
   
 3.  Sur la page d’accueil de l' **Assistant Création de forme cluster Visio**, cliquez sur **suivant**.  
   
-4.  Dans la page **Sélectionner une source de données** de l' **Assistant cluster**, choisissez une connexion à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un serveur qui contient les modèles d’exploration de données que vous souhaitez visualiser.  
+4.  Dans la page **Sélectionner une source de données** de l' **Assistant cluster**, choisissez une connexion à un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] serveur qui contient les modèles d’exploration de données que vous souhaitez visualiser.  
   
 5.  Sélectionnez un modèle d’exploration de données approprié, puis cliquez sur **suivant**.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "66087913"
   
 4.  Cliquez sur le ruban **compléments** , puis affichez l’une des barres d’outils personnalisées utilisées pour travailler avec les diagrammes d’exploration de données :  
   
-     **Mise en page**  
+     **Disposition**  
      Optimise la disposition des clusters pour qu'ils tiennent sur la page active.  
   
      **Redimensionner la page**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1a78735cd5aee5ebc87adaac6fab48bb4e183d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8df85723676df5f9fb1475465c8f7585384013ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387899"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545121"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Présentation des dimensions (Analysis Services - Données multidimensionnelles)
   Toutes les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensions Microsoft sont des groupes d’attributs basés sur des colonnes de tables ou de vues dans une vue de source de données. Les dimensions existent indépendamment d'un cube, elles peuvent être utilisées dans plusieurs cubes et plusieurs fois dans un même cube, ainsi que liées entre les instances d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Une dimension qui existe indépendamment d'un cube est appelée dimension de base de données et une instance de dimension de base de données dans un cube est appelée dimension de cube.  
@@ -29,7 +28,7 @@ ms.locfileid: "81387899"
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimension basée sur un schéma en étoile  
  La structure d'une dimension repose principalement sur la structure de la table ou des tables de dimension sous-jacentes. La structure la plus simple est appelée schéma en étoile, où chaque dimension est basée sur une seule table de dimension qui est directement liée à la table de faits par une relation clé primaire - clé étrangère.  
   
- Le diagramme suivant illustre une sous-section de [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] l’exemple de base de données, dans laquelle la table de faits **FactResellerSales** est associée à deux tables de dimension, **DimReseller** et **DimPromotion**. La colonne **ResellerKey** de la table de faits **FactResellerSales** définit une relation de clé étrangère avec la colonne de clé primaire **ResellerKey** dans la table de dimension **DimReseller** . De même, la colonne **PromotionrKey** de la table de faits **FactResellerSales** définit une relation de clé étrangère avec la colonne de clé primaire **PromotionrKey** dans la table de dimension **DimPromotion** .  
+ Le diagramme suivant illustre une sous-section de l' [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] exemple de base de données, dans laquelle la table de faits **FactResellerSales** est associée à deux tables de dimension, **DimReseller** et **DimPromotion**. La colonne **ResellerKey** de la table de faits **FactResellerSales** définit une relation de clé étrangère avec la colonne de clé primaire **ResellerKey** dans la table de dimension **DimReseller** . De même, la colonne **PromotionrKey** de la table de faits **FactResellerSales** définit une relation de clé étrangère avec la colonne de clé primaire **PromotionrKey** dans la table de dimension **DimPromotion** .  
   
  ![Schéma logique pour la relation de dimensions de fait](../../analysis-services/dev-guide/media/dimfactrelationship.gif "Schéma logique pour la relation de dimensions de fait")  
   

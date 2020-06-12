@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087345"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527235"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Connexion à un serveur d'exploration de données
   ![Bouton Connexions](media/misc-connection.gif "Bouton Connexions")  
   
- Cliquez sur le bouton **connexion** pour sélectionner une connexion existante ou pour créer une nouvelle connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Cliquez sur le bouton **connexion** pour sélectionner une connexion existante ou pour créer une nouvelle connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Pourquoi devez-vous vous connecter à un serveur ?**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66087345"
   
  **J’obtiens un message indiquant « aucune connexion n’a été trouvée ».**  
   
- Si le texte dans la partie inférieure du bouton n’indique **aucune connexion**, cela signifie que vous n’avez pas créé de connexion à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] une base de données ou que la connexion a échoué. Vous pouvez continuer à travailler dans Excel à partir de données issues d'Access ou d'autres sources, mais pour créer un modèle d'exploration de données ou exécuter une requête de prédiction, vous devez disposer d'une connexion active.  
+ Si le texte dans la partie inférieure du bouton n’indique **aucune connexion**, cela signifie que vous n’avez pas créé de connexion à une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données ou que la connexion a échoué. Vous pouvez continuer à travailler dans Excel à partir de données issues d'Access ou d'autres sources, mais pour créer un modèle d'exploration de données ou exécuter une requête de prédiction, vous devez disposer d'une connexion active.  
   
  **Supposons que je n’ai pas l’autorisation d’utiliser le serveur ?**  
   

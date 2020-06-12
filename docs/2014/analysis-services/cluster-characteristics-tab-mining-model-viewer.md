@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f753564c3be308f986a48e8a40203b7d338292f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087989"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527465"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Onglet Caractéristiques du cluster (Visionneuse de modèle d'exploration de données)
   L’onglet **Caractéristiques du cluster** vous permet d’explorer les caractéristiques d’un cluster dans un modèle de clustering, ou l’ensemble de tous les cas du modèle. Le graphique affiche l'importance de chaque paire attribut-valeur comme caractéristique qui définit le cluster, en comparaison avec d'autres clusters.  
@@ -37,10 +36,10 @@ ms.locfileid: "66087989"
  **Cluster**  
  Choisissez le cluster à afficher, ou choisissez **Remplissage (tout)** pour voir la distribution des attributs du modèle dans son ensemble.  
   
- **Caractéristiques du \<cluster>**  
+ **Caractéristiques pour\<cluster>**  
  Le graphique contient les colonnes suivantes, qui décrivent les caractéristiques du cluster sélectionné.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Variable**|Répertorie les attributs du modèle d'exploration de données qui se trouvent dans le cluster sélectionné.|  
 |**Valeurs**|Répertorie les valeurs des attributs actuels qui se trouvent dans le cluster sélectionné.|  

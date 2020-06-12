@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27d4202774107795eaddf76c27e21010d534d977
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727645"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545251"
 ---
 # <a name="cube-properties"></a>Propriétés de cube
   Les cubes ont un grand nombre de propriétés que vous pouvez définir pour affecter le comportement à l'échelle du cube. Ces propriétés sont présentées dans le tableau suivant.  
@@ -58,13 +57,13 @@ ms.locfileid: "62727645"
 |`Language`|Spécifie l'identificateur de langue par défaut du cube.|  
 |`Name`|Spécifie le nom convivial du cube.|  
 |`ProactiveCaching`|Définit les paramètres de mise en cache proactive pour le cube.|  
-|`ProcessingMode`|Indique si l'indexation et l'agrégation doivent avoir lieu lors du traitement ou après celui-ci. Les options **regular** sont Regular `lazy`ou.|  
+|`ProcessingMode`|Indique si l'indexation et l'agrégation doivent avoir lieu lors du traitement ou après celui-ci. Les options sont **Regular** ou `lazy` .|  
 |`ProcessingPriority`|Détermine la priorité de traitement du cube pendant les opérations d'arrière-plan, telles que les agrégations et les indexations différées (Lazy). La valeur par défaut est **0**.|  
-|`ScriptCacheProcessingMode`|Indique si le cache des scripts doit être généré durant le traitement ou après celui-ci. Les options **regular** sont Regular `lazy`et.|  
-|`ScriptErrorHandlingMode`|Détermine la gestion des erreurs. Les options `IgnoreNone` sont ou`IgnoreAll`|  
+|`ScriptCacheProcessingMode`|Indique si le cache des scripts doit être généré durant le traitement ou après celui-ci. Les options sont **Regular** et `lazy` .|  
+|`ScriptErrorHandlingMode`|Détermine la gestion des erreurs. Les options sont `IgnoreNone` ou`IgnoreAll`|  
 |`Source`|Affiche la vue de source de données utilisée pour le cube.|  
 |`StorageLocation`|Spécifie l'emplacement de stockage du système de fichiers pour le cube. Si aucun n'est spécifié, l'emplacement est hérité de la base de données qui contient l'objet du cube.|  
-|`StorageMode`|Spécifie le mode de stockage pour le cube. Les valeurs `MOLAP`sont `ROLAP`, ou`HOLAP``.`|  
+|`StorageMode`|Spécifie le mode de stockage pour le cube. Les valeurs sont `MOLAP` , `ROLAP` ou`HOLAP``.`|  
 |`Visible`|Détermine la visibilité du cube.|  
   
 > [!NOTE]  

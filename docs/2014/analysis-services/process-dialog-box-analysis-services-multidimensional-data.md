@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6b9ab6db9fc50b09b752b5deaa59d42c4664bd5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539991"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Traiter (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Traiter** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour traiter les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour ouvrir la boîte de dialogue **Traiter** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] :  
@@ -48,7 +47,7 @@ ms.locfileid: "66070746"
  **Paramètres**  
  Affiche le lien hypertexte **Configurer** quand vous choisissez **Traitement incrémentiel** dans les **Options de traitement** des cubes, des groupes de mesures ou des partitions. Cliquez sur **Configurer** pour ouvrir la boîte de dialogue **Mise à jour incrémentielle** . Pour plus d’informations sur la boîte de dialogue **Mise à jour incrémentielle**, consultez [Boîte de dialogue Mise à jour incrémentielle &#40;Analysis Services - Données multidimensionnelles&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Remove**  
+ **Supprimer**  
  Supprime les éléments sélectionnés de la **Liste d’objets**.  
   
  **Analyse d'impact**  

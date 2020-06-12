@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20a10c066fc77e8d760bde456be54b366def8f59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085850"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524886"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Choisir et mapper les données d'entrée pour une requête de prédiction
   Lorsque vous créez des prédictions à partir d'un modèle d'exploration de données, vous le faites généralement en alimentant de nouvelles données dans le modèle. (Les modèles de série chronologique, qui peuvent faire des prédictions basées sur des données historiques uniquement, font exception.) Pour fournir de nouvelles données au modèle, vous devez vous assurer que les données sont disponibles dans une vue de source de données. Si vous connaissez à l'avance les données que vous allez utiliser pour la prédiction, vous pouvez les inclure dans la vue de source de données utilisée pour créer le modèle. Sinon, vous devrez peut-être créer une vue de source de données. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](../multidimensional-models/data-source-views-in-multidimensional-models.md).  

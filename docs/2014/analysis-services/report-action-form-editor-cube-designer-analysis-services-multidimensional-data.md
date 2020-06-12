@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b514d2d85a01fdb4b13c922e81a39e694308334
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070294"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539299"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action de rapport (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire d’action de rapport** de l’onglet **Actions** dans le Concepteur de cube pour modifier l’action de rapport sélectionnée dans le volet **Organisateur d’action** .  
@@ -32,7 +31,7 @@ ms.locfileid: "66070294"
  **Type de cible**  
  Sélectionnez le type d'objet auquel l'action doit être associée. Le serveur retourne au client uniquement les actions qui s'appliquent à l'objet du type spécifié. L’action est disponible pour le client si la **Condition** est remplie et si les objets spécifiés dans le tableau suivant sont sélectionnés.  
   
-|Value|Objet sélectionné|  
+|Valeur|Objet sélectionné|  
 |-----------|---------------------|  
 |Membres d'attribut|Un membre est sélectionné d’après un niveau qui dépend de l’attribut **Objet cible**.<br /><br /> Remarque : les autres hiérarchies des utilisateurs qui utilisent l’attribut sélectionné héritent de l’action de rapport.|  
 |Cellules|L’ensemble nommé dans **Objet cible** est sélectionné. Sélectionnez **Toutes les cellules** pour sélectionner toutes les cellules du cube.|  
@@ -63,7 +62,7 @@ ms.locfileid: "66070294"
  **Format de rapport**  
  Sélectionnez le format dans lequel le rapport est retourné. Le tableau suivant décrit les formats disponibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |HTML5|Le rapport est retourné dans format compatible HTML 5.0.|  
 |HTML3|Le rapport est retourné dans format compatible HTML 3,2.|  
@@ -89,10 +88,10 @@ ms.locfileid: "66070294"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|Batch|L’action doit s’exécuter dans le cadre d’une opération de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] traitement par lot ou d’une tâche.|  
-|Interactive (Interactif)|L'action s'exécute lorsque l'utilisateur l'invoque.|  
+|Batch|L’action doit s’exécuter dans le cadre d’une opération de traitement par lot ou d’une [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tâche.|  
+|Interactive|L'action s'exécute lorsque l'utilisateur l'invoque.|  
 |À l’ouverture|L'action s'exécute à la première ouverture du cube.|  
   
  **Application**  
@@ -106,7 +105,7 @@ ms.locfileid: "66070294"
  **Description**  
  Tapez une description facultative de l'action.  
   
- **-**  
+ **Caption**  
  Entrez la légende à afficher pour l’action dans l’application cliente si l’option **La légende est MDX** a la valeur **False**.  
   
  Tapez l’expression MDX qui retourne une chaîne de caractères pour la légende si l’option **La légende est MDX** a la valeur **True**.  

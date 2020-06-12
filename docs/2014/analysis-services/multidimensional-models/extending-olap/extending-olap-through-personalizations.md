@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59e63b6be2253c69e0676a0bf33281b441e39b95
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725983"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546731"
 ---
 # <a name="extending-olap-through-personalizations"></a>Extension d'OLAP par des personnalisations
   Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] fournit de nombreuses fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et DMX (Data Mining Extensions). Ces fonctions sont conçues pour accomplir toutes les opérations possibles, depuis les calculs statistiques standard jusqu'au parcours des membres d'une hiérarchie. Cependant, comme avec tout autre produit complexe et puissant, il est toujours nécessaire d'étendre les fonctionnalités de ce type d'outil.  

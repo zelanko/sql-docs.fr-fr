@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8311b2c3a2cfec2e3bac00a9082ca83d2d927b25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081659"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528575"
 ---
 # <a name="dimension-wizard-f1-help"></a>Aide (F1) de l'Assistant Dimension
-  Utilisez l’Assistant Dimension de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une dimension de base de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données dans un projet. Après avoir créé une dimension de base de données, vous pouvez utiliser le Concepteur de dimensions pour modifier ses propriétés. Pour plus d’informations sur le Concepteur de dimensions, consultez [Concepteur de dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+  Utilisez l’Assistant Dimension de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une dimension de base de données dans un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet. Après avoir créé une dimension de base de données, vous pouvez utiliser le Concepteur de dimensions pour modifier ses propriétés. Pour plus d’informations sur le Concepteur de dimensions, consultez [Concepteur de dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Pour ouvrir l'Assistant Dimension**  
   

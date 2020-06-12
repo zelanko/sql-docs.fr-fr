@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2fd3263a2f8050c36747a81ab3473f5b405ef21
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727542"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545023"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Définition et identification d'objets (XMLA)
   Les objets sont identifiés dans les commandes XMLA (XML for Analysis) à l'aide d'identificateurs et de références d'objet, et ils sont définis à l'aide de commandes XMLA contenant des éléments ASSL (Analysis Services Scripting Language).  
   
 ## <a name="object-identifiers"></a>Identificateurs d'objet  
- Un objet est identifié à l’aide de l’identificateur unique de l’objet tel qu’il est défini [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sur une instance de. Les identificateurs d'objet peuvent être spécifiés explicitement ou déterminés par l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] au moment où [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée l'objet. Vous pouvez utiliser la méthode [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) pour récupérer des identificateurs d’objet `Discover` pour les appels de méthode suivants ou [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
+ Un objet est identifié à l’aide de l’identificateur unique de l’objet tel qu’il est défini sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les identificateurs d'objet peuvent être spécifiés explicitement ou déterminés par l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] au moment où [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée l'objet. Vous pouvez utiliser la méthode [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) pour récupérer des identificateurs d’objet pour les `Discover` appels de méthode suivants ou [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
   
 ## <a name="object-references"></a>Références d'objet  
  Plusieurs commandes XMLA, telles que [Delete](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/delete-element-xmla) ou [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla), utilisent une référence d’objet pour faire référence à un objet d’une manière non ambiguë. Une référence d'objet contient l'identificateur de l'objet sur lequel une commande est exécutée, ainsi que les identificateurs des ancêtres de cet objet. Par exemple, dans le cas d'une partition, la référence d'objet contient l'identificateur d'objet de la partition, ainsi que les identificateurs d'objet du groupe de mesures parent, du cube et de la base de données de cette partition.  
   
 ## <a name="object-definitions"></a>Définition d'objets  
- Les commandes [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) et [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) dans XMLA créent ou modifient, respectivement, des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets sur une instance. Les définitions de ces objets sont représentées par un élément [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) qui contient des éléments de ASSL. Les identificateurs d’objet peuvent être spécifiés explicitement pour tous les principaux et nombreux objets mineurs à l’aide de l’élément [ID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) . Si l'élément `ID` n'est pas utilisé, l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un identificateur unique, avec une convention d'affectation des noms qui dépend de l'objet à identifier. Pour plus d’informations sur l’utilisation des `Create` commandes `Alter` et pour définir des objets, consultez [création et modification d’objets &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
+ Les commandes [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) et [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) dans XMLA créent ou modifient, respectivement, des objets sur une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Les définitions de ces objets sont représentées par un élément [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) qui contient des éléments de ASSL. Les identificateurs d’objet peuvent être spécifiés explicitement pour tous les principaux et nombreux objets mineurs à l’aide de l’élément [ID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) . Si l'élément `ID` n'est pas utilisé, l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un identificateur unique, avec une convention d'affectation des noms qui dépend de l'objet à identifier. Pour plus d’informations sur l’utilisation des `Create` `Alter` commandes et pour définir des objets, consultez [création et modification d’objets &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Élément objet &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)   

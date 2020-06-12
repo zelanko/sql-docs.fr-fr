@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175338"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543391"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Regroupement automatique des membres d'attribut
-  Lorsque vous explorez un cube, vous dimensionnez généralement les membres d'une hiérarchie d'attributs en vous basant sur les membres d'une autre hiérarchie d'attributs. Par exemple, vous pouvez souhaiter regrouper les ventes par ville, par produit acheté ou par genre. Toutefois, avec certains types d’attributs, il est utile de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pouvoir créer automatiquement des regroupements de membres d’attribut en fonction de la distribution des membres dans une hiérarchie d’attribut. Par exemple, vous pouvez demander à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer des groupes de revenus annuels pour les clients. Lorsque vous faites cela, les utilisateurs qui parcourent la hiérarchie d'attributs voient les noms et les valeurs des groupes au lieu de voir les membres eux-mêmes. Cela limite le nombre de niveaux présentés aux utilisateurs, ce qui est plus pratique pour l'analyse.
+  Lorsque vous explorez un cube, vous dimensionnez généralement les membres d'une hiérarchie d'attributs en vous basant sur les membres d'une autre hiérarchie d'attributs. Par exemple, vous pouvez souhaiter regrouper les ventes par ville, par produit acheté ou par genre. Toutefois, avec certains types d’attributs, il est utile de pouvoir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] créer automatiquement des regroupements de membres d’attribut en fonction de la distribution des membres dans une hiérarchie d’attribut. Par exemple, vous pouvez demander à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de créer des groupes de revenus annuels pour les clients. Lorsque vous faites cela, les utilisateurs qui parcourent la hiérarchie d'attributs voient les noms et les valeurs des groupes au lieu de voir les membres eux-mêmes. Cela limite le nombre de niveaux présentés aux utilisateurs, ce qui est plus pratique pour l'analyse.
 
  La propriété **DiscretizationMethod** détermine si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] effectue le regroupement et détermine le type de regroupement effectué. Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n'effectue aucun regroupement. Lorsque vous activez les regroupements automatiques, vous pouvez autoriser [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à déterminer automatiquement la meilleure méthode de regroupement en se basant sur la structure de l'attribut ou bien, vous pouvez choisir l'un des algorithmes de regroupement dans la liste suivante pour spécifier la méthode de regroupement :
 
  **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des plages de groupes pour que la totalité de la population des membres de dimension soit distribuée de façon égale dans les groupes.
 
- **Clusters** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des groupes en effectuant un clustering unidimensionnel sur les valeurs d’entrée à l’aide de la méthode de clustering K-signifiant avec des distributions gaussienles. Cette option est valide uniquement pour les colonnes numériques.
+ **Clusters** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée des groupes en effectuant un clustering unidimensionnel sur les valeurs d’entrée à l’aide de la méthode de clustering K-signifiant avec des distributions Gaussienles. Cette option est valide uniquement pour les colonnes numériques.
 
  Après avoir spécifié une méthode de regroupement, vous devez spécifier le nombre de groupes, en utilisant la propriété **DiscretizationBucketCount** . Pour plus d’informations, consultez [regrouper les membres d’attribut &#40;discrétisation&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175338"
 
 4.  Dans le volet **Attributs** , sélectionnez **Yearly Income**.
 
-5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **Automatic** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5`.
+5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **Automatic** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5` .
 
      L'illustration suivante montre les propriétés modifiées pour l'attribut **Yearly Income**.
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175338"
 
 4.  Dans le volet **Attributs** , sélectionnez **Sick Leave Hours**.
 
-5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **clusters** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5`.
+5.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **DiscretizationMethod** par **clusters** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5` .
 
 6.  Dans le volet **Attributs** , sélectionnez **Vacation Hours**.
 
-7.  Dans la Fenêtre Propriétés, modifiez la valeur de la propriété **DiscretizationMethod** en **zones égales** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5`.
+7.  Dans la Fenêtre Propriétés, modifiez la valeur de la propriété **DiscretizationMethod** en **zones égales** et remplacez la valeur de la propriété **DiscretizationBucketCount** par `5` .
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Exploration des hiérarchies d'attributs modifiées
 

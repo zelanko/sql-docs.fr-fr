@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d55f61d9255d19f22fffb7380785a2ada1a2763
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eef8453ec15268638559964e669b70e1f55b3b85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087897"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527445"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Onglet Discrimination de cluster (Visionneuse de modèle d'exploration de données)
   Utilisez l’onglet **Discrimination de cluster** pour comparer deux clusters qui existent dans un modèle Sequence Clustering. Vous pouvez voir comment différentes combinaisons d'attributs et de valeurs sont représentées dans les clusters.  
@@ -40,15 +39,15 @@ ms.locfileid: "66087897"
  **Cluster 2**  
  Sélectionnez un deuxième cluster dans la liste de clusters du modèle d’exploration des données pour le comparer au **Cluster 1**. Vous pouvez également comparer un cluster à son complément, ce qui correspond à tous les cas du modèle à l'exception de ceux du cluster sélectionné.  
   
- **Scores de \<discrimination pour le cluster \<1> et le cluster 2>**  
+ **Scores de discrimination pour \<cluster 1> et\<cluster 2>**  
  Les colonnes dans le graphique fournissent des informations sur la façon dont chaque paire attribut-valeur se rapporte aux deux clusters sélectionnés.  
   
 |||  
 |-|-|  
 |**Variables**|Attribut du modèle d'exploration de données.|  
 |**Valeurs**|Valeur de l’attribut sélectionné dans **Variables**.|  
-|**Privilégie \<le cluster 1>**|Le graphique à barres à gauche représente la probabilité que la paire attribut-valeur sélectionnée soit représentative du cluster sélectionné dans **Cluster 1**. Vous pouvez positionner la souris sur la barre pour afficher la valeur, représentée en pourcentage. Notez que même si la valeur est égale à zéro, cela ne signifie pas que la valeur d’attribut est nécessairement manquante dans le cluster, mais que la distribution privilégie fortement un cluster par rapport à l’autre.|  
-|**Privilégie \<le cluster 2>**|Le graphique à barres à droite représente la probabilité que la paire attribut-valeur sélectionnée soit représentative du cluster sélectionné dans **Cluster 2**.|  
+|**Privilégie\<cluster 1>**|Le graphique à barres à gauche représente la probabilité que la paire attribut-valeur sélectionnée soit représentative du cluster sélectionné dans **Cluster 1**. Vous pouvez positionner la souris sur la barre pour afficher la valeur, représentée en pourcentage. Notez que même si la valeur est égale à zéro, cela ne signifie pas que la valeur d’attribut est nécessairement manquante dans le cluster, mais que la distribution privilégie fortement un cluster par rapport à l’autre.|  
+|**Privilégie\<cluster 2>**|Le graphique à barres à droite représente la probabilité que la paire attribut-valeur sélectionnée soit représentative du cluster sélectionné dans **Cluster 2**.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

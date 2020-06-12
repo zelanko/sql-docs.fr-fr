@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7571457847d8ffb0388608b7d634cc19261a609
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daa921545cdc0c76d4f9d328305cee8a39da352e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076668"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536827"
 ---
 # <a name="configure-measure-group-properties"></a>Configurer les propriétés d'un groupe de mesures
   Les propriétés des groupes de mesures vous permettent de définir le fonctionnement des groupes de mesures.  

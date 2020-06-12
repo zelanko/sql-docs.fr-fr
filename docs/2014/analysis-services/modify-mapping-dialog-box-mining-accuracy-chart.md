@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968046a09214c4b5d7922302c911ca4d1f2b875
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077683"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537401"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Boîte de dialogue Modifier le mappage (Graphique d'analyse de précision de l'exploration de données)
-  Utilisez la boîte de dialogue **Modifier le mappage** pour modifier la façon dont les colonnes d'entrée sont jointes aux colonnes du modèle d'exploration de données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mappe automatiquement les colonnes en fonction du nom de colonne et du type de données, mais vous pouvez utiliser cette boîte de dialogue pour modifier les mappages de colonnes. Si vous apportez des modifications, vous devez vérifier que les types de données et de contenus des colonnes dans la source de données externes correspondent à ceux des colonnes dans le modèle d'exploration de données que vous testez.  
+  Utilisez la boîte de dialogue **Modifier le mappage** pour modifier la façon dont les colonnes d'entrée sont jointes aux colonnes du modèle d'exploration de données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mappe automatiquement les colonnes en fonction du nom de colonne et du type de données, mais vous pouvez utiliser cette boîte de dialogue pour modifier les mappages de colonnes. Si vous apportez des modifications, vous devez vérifier que les types de données et de contenus des colonnes dans la source de données externes correspondent à ceux des colonnes dans le modèle d'exploration de données que vous testez.  
   
 ## <a name="options"></a>Options  
  **Colonne de la structure d'exploration de données**  

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b9088dc5dc222d8dd1c0c861746f225e6f5b469
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062505"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528075"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Concepteur de requêtes MDX Analysis Services (SSAS)
-  Le concepteur de requêtes MDX (Multidimensional Expression) Analysis Services fournit des interfaces utilisateur graphiques pour vous aider à créer des requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] MDX pour une source de données. Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres de cubes sélectionnés pour créer une requête MDX qui extrait les données que vous souhaitez utiliser.  
+  Le concepteur de requêtes MDX (Multidimensional Expression) Analysis Services fournit des interfaces utilisateur graphiques pour vous aider à créer des requêtes MDX pour une [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source de données. Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres de cubes sélectionnés pour créer une requête MDX qui extrait les données que vous souhaitez utiliser.  
   
 > [!IMPORTANT]  
 >  Les utilisateurs accèdent aux sources de données lorsqu'ils créent et exécutent des requêtes. Vous devez accorder des autorisations minimales sur les sources de données, telles que des autorisations en lecture seule.  

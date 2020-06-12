@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d8293cd61ef105352e6c6e1aaccb7f44494b2d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077463"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544861"
 ---
 # <a name="add-a-standard-action"></a>Ajouter une action standard
   Vous ajoutez une action à une base de données à l'aide de la vue Actions du Concepteur de cube. Cette vue est accessible depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé une action, elle devient disponible aux utilisateurs une fois que vous avez retraité le cube approprié. Pour plus d'informations, consultez [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -63,7 +62,7 @@ ms.locfileid: "66077463"
   
         |Option|Description|  
         |------------|-----------------|  
-        |Interactive (Interactif)|L'action est générée par l'intervention de l'utilisateur.|  
+        |Interactive|L'action est générée par l'intervention de l'utilisateur.|  
         |Batch|L'action s'exécute en tant que traitement par lots.|  
         |À l'ouverture|L'action s'exécute lorsqu'un utilisateur ouvre le cube.|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077463"
         > [!NOTE]  
         >   Les actions propriétaires ne sont pas retournées au serveur sauf si l'application cliente restreint explicitement l'ensemble de lignes du schéma afin de retourner uniquement les actions qui correspondent au nom spécifié dans **Application**.  
   
-    -   Dans **contenu**de l’action, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, parhttp://www.adventure-works.comexemple, "".  
+    -   Dans **contenu**de l’action, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, par exemple, " http://www.adventure-works.com ".  
   
     -   Dans **Description**, tapez la description de l'action.  
   

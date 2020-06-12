@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85694cfbd86e1c6ada9ff326bc3c212d64274201
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075181"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546758"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensions dans les modèles multidimensionnels
   Une dimension de base de données est un ensemble d'objets associés, appelés attributs, qui peuvent être utilisés pour fournir des informations sur des données dans un ou plusieurs cubes. Par exemple, les attributs les plus courants dans une dimension de produit sont le nom, la catégorie, la gamme, la taille et le prix du produit. Ces objets sont liés à une ou plusieurs colonnes dans une ou plusieurs tables d'une vue de source de données. Par défaut, ces attributs sont visibles en tant que hiérarchies d'attributs et peuvent être utilisés pour comprendre les données de faits dans un cube. Les attributs peuvent être organisés en hiérarchies définies par l'utilisateur qui fournissent des chemins d'exploration pour aider les utilisateurs lorsqu'ils recherchent des données dans un cube.  

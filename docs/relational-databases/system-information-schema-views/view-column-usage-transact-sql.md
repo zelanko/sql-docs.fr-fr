@@ -19,12 +19,12 @@ ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9364cbf0a305ed50c992e360d6b951cd6d7c8693
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6fdb0c5be9b509c2f801ad5728d40467cd349c2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078390"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670335"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68078390"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|Qualificateur de la vue.|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la vue.<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la vue.<br /><br /> **&#42;&#42; Important &#42;&#42;** seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
 |**VIEW_NAME**|**sysname**|Nom de la vue.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **&#42;&#42; Important &#42;&#42;** seule méthode fiable pour rechercher le schéma d’un objet consiste à interroger l’affichage catalogue sys. Objects.|  
 |**TABLE_NAME**|**sysname**|Table de base.|  
 |**COLUMN_NAME**|**sysname**|Nom de la colonne.|  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcca1e1e5eec19c81c26fd917e3f557006926233
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545501"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Métadonnées (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Métadonnées** de l’onglet **Navigateur** dans le Concepteur de cube pour parcourir la structure du cube, afficher les mesures associées et afficher et créer des dimensions. Vous pouvez explorer les hiérarchies, afficher la liste des mesures et des indicateurs de performance clés disponibles et copier les noms complets des objets.  

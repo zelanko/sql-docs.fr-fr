@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 123393c061d151240949f41e59e5d14b19056c52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078370"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542318"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Leçon 8 : Créer les indicateurs de performance clés
   Au cours de cette leçon, vous allez créer des indicateurs de performance clés (KPI). Les KPI évaluent la performance d’une valeur, définie par une mesure de *base* , par rapport à une valeur *cible* , également définie par une mesure ou par une valeur absolue. Dans les applications clientes de création de rapports, les indicateurs de performance clés offrent aux professionnels un moyen d’obtenir rapidement et aisément un résumé d’un succès commercial ou d’identifier les tendances. Pour en savoir plus, consultez [KPI &#40;SSAS Tabulaire&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -47,9 +46,9 @@ ms.locfileid: "66078370"
   
 5.  Dans la boîte de dialogue **Indicateur de performance clé** , dans **Définir la valeur cible**, sélectionnez l’option **Valeur absolue** .  
   
-6.  Dans le champ **valeur absolue** , tapez `1.1`, puis appuyez sur entrée.  
+6.  Dans le champ **valeur absolue** , tapez `1.1` , puis appuyez sur entrée.  
   
-7.  Dans **définir les seuils d’État**, dans le champ curseur de gauche (bas) `1`, tapez, puis dans le champ curseur de droite (élevé), `1.07`tapez.  
+7.  Dans **définir les seuils d’État**, dans le champ curseur de gauche (bas), tapez `1` , puis dans le champ curseur de droite (élevé), tapez `1.07` .  
   
 8.  Dans **Sélectionner le style d’icône**, sélectionnez le type d’icône losange (rouge), triangle (jaune) et cercle (vert).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66078370"
   
 4.  Dans la boîte de dialogue **Indicateur de performance clé** , dans **Définir la valeur cible**, sélectionnez l’option **Valeur absolue** .  
   
-5.  Dans le champ **valeur absolue** , tapez `1.25`.  
+5.  Dans le champ **valeur absolue** , tapez `1.25` .  
   
 6.  Dans **Définir les seuils d’état**, faites glisser le secteur gauche (bas) du curseur jusqu’à ce que le champ affiche **0.8**, puis faites glisser le secteur droit (élevé) du curseur jusqu’à ce que le champ affiche **1.03**.  
   

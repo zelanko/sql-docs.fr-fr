@@ -12,17 +12,17 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000749"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856583"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Options (résultats de la requête-SQL Server des résultats dans une page de texte)
   Utilisez cette page pour définir les options d'affichage d'un jeu de résultats de requête au format texte. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes en cours, cliquez sur **options de requête** dans le menu **requête** ou cliquez avec le bouton droit dans la fenêtre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requête et sélectionnez **options de requête**. Dans la boîte de dialogue **Options de requête**, sous **Résultats**, cliquez sur **Texte**.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  **Format de sortie**  
  Par défaut, la sortie est affichée sous la forme de colonnes créées par le remplissage des résultats à l'aide d'espaces. Vous pouvez également utiliser des virgules, des tabulations ou des espaces pour séparer les colonnes. Sélectionnez **Délimiteur personnalisé** dans cette liste déroulante pour spécifier un autre séparateur dans la zone de texte **Délimiteur personnalisé**.  
   

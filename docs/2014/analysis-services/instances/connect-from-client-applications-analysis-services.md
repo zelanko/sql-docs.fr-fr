@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a646d152abaa3c352bf5ca1c576760e1715c3578
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09cf6ff2e755dd8493b4d923f8bd328d7b07c351
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080211"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544031"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Connexion à partir d'applications clientes (Analysis Services)
   Si vous débutez avec Analysis Services, utilisez les informations de cette rubrique pour vous connecter à une instance existante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide d'applications et d'outils courants. Cette rubrique explique également comment se connecter sous différentes identités d'utilisateur à des fins de test.  

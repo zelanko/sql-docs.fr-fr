@@ -19,12 +19,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833241"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423183"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Une fois qu'un verrou d'application a été acquis, seuls les 32 premiers caractères peuvent être récupérés sous forme de texte brut ; les autres caractères sont hachés.  
   
  [ @LockMode =] '*lock_mode*'  
- Mode de verrouillage à obtenir pour une ressource spécifique. L’argument *lock_mode* est de type **nvarchar(32)** et n’a pas de valeur par défaut. La valeur peut être l’une des suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **exclusive**. Pour plus d’informations, consultez [modes de verrouillage](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Mode de verrouillage à obtenir pour une ressource spécifique. *lock_mode* est de type **varchar (32)** et n’a pas de valeur par défaut. La valeur peut être l’une des suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **exclusive**. Pour plus d’informations, consultez [modes de verrouillage](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner =] '*lock_owner*'  
- Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque la valeur de *lock_owner* est **transaction**, par défaut ou explicitement spécifiée, sp_getapplock doit être exécutée à partir d’une transaction.  
+ Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est **de type varchar (32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque la valeur de *lock_owner* est **transaction**, par défaut ou explicitement spécifiée, sp_getapplock doit être exécutée à partir d’une transaction.  
   
  [ @LockTimeout =] '*valeur*'  
  Valeur de délai d'attente de verrou, en millisecondes. La valeur par défaut est la même que la valeur retournée par @ @LOCK_TIMEOUT . Pour indiquer qu’une demande de verrou doit retourner un code de retour de-1 au lieu d’attendre le verrou quand la demande ne peut pas être accordée immédiatement, spécifiez 0.  

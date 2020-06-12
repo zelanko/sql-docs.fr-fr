@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4be2f343f0fb7969f76b63ec1eb1677c1c9e589f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084828"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522865"
 ---
 # <a name="data-mining-tools"></a>Outils d'exploration de données
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les outils suivants que vous pouvez utiliser pour créer des solutions d’exploration de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] données :  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit les outils suivants que vous pouvez utiliser pour créer des solutions d’exploration de données :  
   
 -   L' **Assistant Exploration de données** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] vous permet de créer facilement des structures et des modèles d'exploration de données basés sur des sources de données relationnelles ou des données mutidimensionnelles dans des cubes.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66084828"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est l'interface où vous gérez des solutions d'exploration de données existantes déployées dans une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vous pouvez retraiter des structures et des modèles pour mettre à jour les données qu'ils contiennent.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des outils que vous pouvez utiliser pour nettoyer des données, pour automatiser des tâches telles que la création de prédictions et la mise à jour de modèles, et pour créer des solutions d’exploration de texte.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]contient des outils que vous pouvez utiliser pour nettoyer des données, pour automatiser des tâches telles que la création de prédictions et la mise à jour de modèles, et pour créer des solutions d’exploration de texte.  
   
  Les sections suivantes fournissent des informations complémentaires sur les outils d'exploration de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66084828"
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] contient également les éditeurs de requêtes que vous pouvez utiliser pour concevoir et exécuter des requêtes DMX (data mining extensions), ou pour travailler avec des objets d’exploration de données à l’aide de XMLA.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Tâches et transformations d'exploration de données d'Integration Services  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit de nombreux composants qui prennent en charge l’exploration de données.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fournit de nombreux composants qui prennent en charge l’exploration de données.  
   
  Certains outils dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont conçus pour vous aider à automatiser des tâches courantes d'exploration de données, y compris la prédiction, la création de modèles et le traitement. Par exemple :  
   

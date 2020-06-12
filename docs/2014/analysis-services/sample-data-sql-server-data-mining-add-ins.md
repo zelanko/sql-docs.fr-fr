@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb8c0f9424c9e817ee482f426b3045e878a9c9c9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070037"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539061"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Exemples de données (Compléments d'exploration de données SQL Server)
   ![Assistant Partition des données sur le ruban Exploration de données](media/dmc-partition.gif "Assistant Partition des données sur le ruban Exploration de données")  
@@ -75,7 +74,7 @@ ms.locfileid: "66070037"
 |Boîte de dialogue Sélectionner les données source (Client d'exploration de données pour Excel)|Sélectionnez une plage Excel ou la table qui contient les données. Si vous souhaitez utiliser des données externes, les données peuvent être relationnelles, mais elles doivent être incluses dans une source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. T|  
 |Page Sélectionner le type d'échantillonnage (Client d'exploration de données pour Excel)|Si vous utilisez une source de données externe, vous êtes limité à l'option d'échantillonnage aléatoire. En outre, vous devez spécifier le nombre de lignes à créer dans le jeu de données final, à l’aide de l’option **nombre** de lignes. Vous ne pouvez pas spécifier un pourcentage des données sources.|  
 |Page Échantillonnage aléatoire (Client d'exploration de données pour Excel)|Copiez un pourcentage de lignes à partir de la source, ou un nombre spécifique de lignes.|  
-|Page Suréchantillonnage (Client d'exploration de données pour Excel)|**État cible**<br /><br /> Sélectionnez une valeur dans la liste sous-représentée dans le jeu de données d'origine. Le suréchantillonnage augmentera la proportion des lignes de données qui incluent cet état.<br /><br /> **Taille de l’échantillon**<br /><br /> Sélectionnez le nombre total de lignes à extraire. Cette valeur représente la taille du jeu de données final.|  
+|Page Suréchantillonnage (Client d'exploration de données pour Excel)|**État cible**<br /><br /> Sélectionnez une valeur dans la liste sous-représentée dans le jeu de données d'origine. Le suréchantillonnage augmentera la proportion des lignes de données qui incluent cet état.<br /><br /> **Taille d’échantillon**<br /><br /> Sélectionnez le nombre total de lignes à extraire. Cette valeur représente la taille du jeu de données final.|  
   
 ## <a name="other-sampling-options"></a>Autres options d'échantillonnage  
  Si les options d'échantillonnage de cet Assistant ne répondent pas à vos besoins, vous pouvez utiliser la transformation d'échantillonnage dans SQL Server Integration Services (SSIS) pour échantillonner des lignes de plusieurs sources de données.  

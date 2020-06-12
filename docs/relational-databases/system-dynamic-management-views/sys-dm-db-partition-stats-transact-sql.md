@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947396f3706c877770a10259838f6b860ab34b9
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828030"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454422"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82828030"
   Renvoie le nombre de pages et de lignes de chaque partition de la base de données active.  
   
 > [!NOTE]  
->  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_db_partition_stats**. La partition_id dans sys. dm_pdw_nodes_db_partition_stats diffère de la partition_id de l’affichage catalogue sys. partitions pour Azure SQL Data Warehouse.
+> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_db_partition_stats**. La partition_id dans sys. dm_pdw_nodes_db_partition_stats diffère de la partition_id de l’affichage catalogue sys. partitions pour Azure SQL Data Warehouse.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "82828030"
 |**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
 |**distribution_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numérique unique associé à la distribution.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sys.dm_db_partition_stats** affiche des informations sur l'espace utilisé pour stocker et gérer les données LOB des données dans la ligne et les données en dépassement de capacité des lignes de toutes les partitions d'une base de données. Une seule ligne est affichée par partition.  
   
  Les nombres sur lesquels le résultat est basé sont placés en mémoire cache ou stockés sur disque dans diverses tables système.  
@@ -66,14 +66,14 @@ ms.locfileid: "82828030"
  Le nombre total pour une table ou un index s'obtient en ajoutant les nombres obtenus pour l'ensemble des partitions concernées.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'autorisation VIEW DATABASE STATE pour effectuer une requête dans la vue de gestion dynamique **sys.dm_db_partition_stats**. Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Requiert `VIEW DATABASE STATE` les `VIEW DEFINITION` autorisations et pour interroger la vue de gestion dynamique **sys. dm_db_partition_stats** . Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>R. Renvoi de tous les nombres pour toutes les partitions de tous les index et segments de mémoire d'une base de données  
  Le code exemple suivant affiche tous les nombres pour toutes les partitions de tous les index et segments de mémoire de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats;  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B. Renvoi de tous les nombres pour toutes les partitions d'une table et de ses index  
  Le code exemple suivant affiche tous les nombres pour toutes les partitions de la table `HumanResources.Employee` et de ses index.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats   
@@ -94,7 +94,7 @@ GO
 ### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>C. Renvoi du nombre total de pages utilisées et du nombre total de lignes d'un segment de mémoire ou d'un index cluster  
  Le code exemple suivant renvoie le nombre total de pages utilisées et le nombre total de lignes du segment de mémoire ou de l'index cluster de la table `HumanResources.Employee`. Du fait que la table `Employee` n'est pas partitionnée par défaut, la somme n'inclut qu'une seule partition.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SUM(used_page_count) AS total_number_of_used_pages,   

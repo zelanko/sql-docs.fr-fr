@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543431"
 ---
 # <a name="modifying-measures"></a>Modification des mesures
   Vous pouvez utiliser la propriété **FormatString** pour définir des paramètres de mise en forme qui contrôlent comment les mesures sont affichées aux utilisateurs. Au cours de cette tâche, vous allez spécifier des propriétés de formatage pour les mesures relatives aux devises et aux pourcentages dans le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -56,9 +55,9 @@ ms.locfileid: "66078902"
   
 7.  Dans la zone de liste déroulante en haut de la fenêtre des propriétés (sous la barre de titre), sélectionnez la mesure **Unit Price Discount Pct**, puis sélectionnez **Percent** dans la liste **FormatString** .  
   
-8.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **Name** de la mesure **Unit Price discount PCT** par `Unit Price Discount Percentage`.  
+8.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **Name** de la mesure **Unit Price discount PCT** par `Unit Price Discount Percentage` .  
   
-9. Dans le volet **mesures** , cliquez sur **Tax AMT** et remplacez le nom de cette mesure `Tax Amount`par.  
+9. Dans le volet **mesures** , cliquez sur **Tax AMT** et remplacez le nom de cette mesure par `Tax Amount` .  
   
 10. Dans la fenêtre des propriétés, cliquez sur l'icône **Masquer automatiquement** pour masquer la fenêtre des propriétés, puis cliquez sur **Afficher l'arborescence de mesures** dans la barre d'outils de l'onglet **Structure de cube** .  
   

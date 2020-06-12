@@ -18,17 +18,17 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754089"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858689"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Détails des applications de la couche Données déployées (utilitaire SQL Server)
   Les informations de la vue Applications de la couche Données déployées de l'Explorateur de l'utilitaire fournissent des données d'utilisation pour les applications de la couche Données, l'historique de l'utilisation du processeur, des détails sur l'utilisation du stockage au niveau du fichier, ainsi que la capacité d'afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l'application de la couche Données pour l'utilisation du processeur et pour les fichiers des données de la base de données et les fichiers journaux. Vous pouvez également consulter les détails des propriétés des applications de la couche Données.  
   
-## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
+## <a name="ui-element-list"></a>Liste des éléments d’interface utilisateur  
  Mode Liste  
  Le mode Liste, dans le volet supérieur, affiche des données concernant des applications de la couche Données. Les icônes d'état d'intégrité fournissent un résumé de l'état de chaque application de la couche Données par catégorie d'utilisation :  
   
@@ -169,6 +169,6 @@ ms.locfileid: "62754089"
  [Détails Managed Instance &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Tableau de bord de l’utilitaire &#40;Utilitaire SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Surveiller des instances de SQL Server dans le Utilitaire SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Fonctionnalités et tâches de l'utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Fonctionnalités et tâches de Utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

@@ -16,21 +16,20 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064670"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527745"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Exploration d'un modèle Arbre de décision
-  Lorsque vous ouvrez un modèle de classification à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse de l' [!INCLUDE[msCoName](../includes/msconame-md.md)] arbre de décision interactif [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], similaire à la visionneuse des arbres de décision dans. La visionneuse affiche les résultats de la classification sous la forme d'un graphique qui est conçu pour mettre en évidence les critères qui différencient un groupe de données d'un autre. Vous pouvez également explorer des sous-ensembles individuels de l'arborescence et récupérer les données sous-jacentes.  
+  Lorsque vous ouvrez un modèle de classification à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse de l’arbre de décision interactif, similaire à la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse des arbres de décision dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . La visionneuse affiche les résultats de la classification sous la forme d'un graphique qui est conçu pour mettre en évidence les critères qui différencient un groupe de données d'un autre. Vous pouvez également explorer des sous-ensembles individuels de l'arborescence et récupérer les données sous-jacentes.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorer le modèle  
  Les modèles fondés sur l'algorithme MDT comportent un certain nombre d'informations intéressantes à explorer. La fenêtre **Parcourir** comprend les onglets et les volets suivants pour vous aider à apprendre les modèles et à prédire les résultats à l’aide du graphique :  
   
--   [Arbre de décision](#BKMK_DecisionTree)  
+-   [Decision Tree](#BKMK_DecisionTree)  
   
 -   [Réseau de dépendances](#BKMK_DNetwork)  
   
@@ -87,13 +86,13 @@ ms.locfileid: "66064670"
   
      Il suffit d'observer l'intensité de l'ombrage pour pouvoir se concentrer sur quelques groupes d'intérêt et obtenir des données plus détaillées à leur sujet pour effectuer une comparaison. Par exemple, ces groupes présentent une probabilité relativement élevée d'acheter des vélos :  
   
-    -   Âge >= 32 et \< 53 et revenus annuels >= 26000 et enfants = 0  
+    -   Âge >= 32 et \< 53 and Yearly Income > = 26000 et enfants = 0  
   
          Nombre total de cas : 1150  
   
          Probabilité d’achat de vélo : 18%  
   
-    -   Âge >= 32 et \< 53 et revenus annuels >= 26000 et enfants non = 0 et état civil = 'unique'  
+    -   Age >= 32 et \< 53 and Yearly Income > = 26000 et enfants not = 0 et matrimonial Status = 'single'  
   
          Total des cas : 402  
   

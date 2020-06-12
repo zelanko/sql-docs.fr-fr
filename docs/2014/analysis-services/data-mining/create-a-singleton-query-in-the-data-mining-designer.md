@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fa1d14c1a96a89cbd890dbf4d133d84897b9197
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085306"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523675"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>créer une requête singleton dans le Concepteur d'exploration de données
   Une requête singleton est utile si vous voulez créer une prédiction pour un seul cas. Pour plus d’informations sur les requêtes singleton, consultez [Requêtes d’exploration de données](data-mining-queries.md).  
@@ -57,7 +56,7 @@ AS [t]
   
 4.  Dans la table **Entrée de requête singleton** , sélectionnez les valeurs dans la colonne **Valeur** pour décrire le cas pour lequel vous voulez créer une prévision.  
   
-     Par exemple, sélectionnez **2** pour **nombre d’enfants à la résidence**, puis `45` tapez pour **Age**.  
+     Par exemple, sélectionnez **2** pour **nombre d’enfants à la résidence**, puis tapez `45` pour **Age**.  
   
 5.  Faites glisser une colonne prévisible de la table **modèle d’exploration de données** vers la colonne **source** au bas de l’onglet. Si vous le souhaitez, vous pouvez taper un alias pour la colonne.  
   

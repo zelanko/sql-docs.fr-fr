@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075780"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547081"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
   Cette rubrique explique les dimensions plusieurs-à-plusieurs dans Analysis Services, à quel moment les utiliser, et comment les créer.  
@@ -142,7 +141,7 @@ ms.locfileid: "66075780"
   
 1.  Déployez le projet, puis parcourez le cube pour vérifier que les agrégations sont valides.  
   
-2.  Dans Excel, cliquez sur **données** | **à partir d’autres sources** | **à partir de Analysis Services**. Entrez le nom du serveur, puis choisissez la base de données et le cube.  
+2.  Dans Excel, cliquez sur **données**  |  **à partir d’autres sources**  |  **à partir de Analysis Services**. Entrez le nom du serveur, puis choisissez la base de données et le cube.  
   
 3.  Créez un tableau croisé dynamique qui utilise les éléments suivants :  
   
