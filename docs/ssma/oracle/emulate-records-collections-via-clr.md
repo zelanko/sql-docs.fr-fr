@@ -1,18 +1,19 @@
 ---
 title: Émulation des enregistrements et des collections via l’UDT du CLR
 description: Explique comment le Assistant Migration SQL Server (SSMA) pour Oracle utilise les types de données définis par l’utilisateur SQL Server CLR (Common Language Runtime) pour émuler les collections et les enregistrements Oracle.
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73991999cf0a6e7bd2c8cd541ec58a37d1f18f09
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762813"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779379"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>Émulation des enregistrements et des collections via l’UDT du CLR
 
@@ -26,7 +27,7 @@ SSMA crée trois UDT basés sur CLR :
 * `CollectionIndexString`
 * `Record`
 
-Le `CollectionIndexInt` type est destiné à émuler des collections indexées par un entier, `VARRAY`telles que des, des tables imbriquées et des tableaux associatifs basés sur des clés entières. Le `CollectionIndexString` type est utilisé pour les tableaux associatifs indexés par clés de caractères. La fonctionnalité d’enregistrement Oracle est émulée par `Record` le type.
+Le `CollectionIndexInt` type est destiné à émuler des collections indexées par un entier, telles que des `VARRAY` , des tables imbriquées et des tableaux associatifs basés sur des clés entières. Le `CollectionIndexString` type est utilisé pour les tableaux associatifs indexés par clés de caractères. La fonctionnalité d’enregistrement Oracle est émulée par le `Record` type.
 
 Toutes les déclarations des types d’enregistrement ou de collection sont converties en cette déclaration Transact-SQL :
 
@@ -101,7 +102,7 @@ BEGIN
 END
 ```
 
-Ici, étant donné `Manager` que la table est associée à un index`INDEX BY PLS_INTEGER`numérique (), la déclaration T-SQL correspondante utilisée est `@CollectionIndexInt$TYPE`de type. Si la table était associée à un index de jeu de caractères `VARCHAR2`, par exemple, la déclaration T-SQL correspondante serait `@CollectionIndexString$TYPE`de type :
+Ici, étant donné que la `Manager` table est associée à un index numérique ( `INDEX BY PLS_INTEGER` ), la déclaration T-SQL correspondante utilisée est de type `@CollectionIndexInt$TYPE` . Si la table était associée à un index de jeu de caractères, par exemple `VARCHAR2` , la déclaration T-SQL correspondante serait de type `@CollectionIndexString$TYPE` :
 
 ```sql
 -- Oracle
@@ -112,13 +113,13 @@ TYPE Manager_table is TABLE OF Manager INDEX BY VARCHAR2(40);
     ' TABLE INDEX BY STRING OF ( RECORD ( MGRID INT , MGRNAME STRING , HIREDATE DATETIME ) )'
 ```
 
-La fonctionnalité d’enregistrement Oracle est émulée par `Record` le type uniquement.
+La fonctionnalité d’enregistrement Oracle est émulée par le `Record` type uniquement.
 
-Chacun des types `CollectionIndexInt`,, `CollectionIndexString`et a une `Record`propriété `[Null]` statique qui retourne une instance vide. La `SetType` méthode est appelée pour recevoir un objet vide d’un type spécifique (comme indiqué dans l’exemple ci-dessus).
+Chacun des types, `CollectionIndexInt` , `CollectionIndexString` et `Record` a une propriété statique qui `[Null]` retourne une instance vide. La `SetType` méthode est appelée pour recevoir un objet vide d’un type spécifique (comme indiqué dans l’exemple ci-dessus).
 
 ## <a name="constructor-call-conversions"></a>Conversions d’appel de constructeur
 
-La notation de constructeur ne peut être utilisée que pour les `VARRAY`tables imbriquées et les s, donc tous les appels de `CollectionIndexInt` constructeur explicites sont convertis à l’aide du type. Les appels de constructeur vides sont `SetType` convertis via un appel appelé sur une `CollectionIndexInt`instance null de. La `[Null]` propriété retourne l’instance null. Si le constructeur contient une liste d’éléments, les appels de méthode spéciaux sont appliqués de manière séquentielle pour ajouter la valeur à la collection.
+La notation de constructeur ne peut être utilisée que pour les tables imbriquées et `VARRAY` les s, donc tous les appels de constructeur explicites sont convertis à l’aide du `CollectionIndexInt` type. Les appels de constructeur vides sont convertis via un `SetType` appel appelé sur une instance null de `CollectionIndexInt` . La `[Null]` propriété retourne l’instance null. Si le constructeur contient une liste d’éléments, les appels de méthode spéciaux sont appliqués de manière séquentielle pour ajouter la valeur à la collection.
 
 Par exemple :
 
@@ -166,7 +167,7 @@ END
 
 ## <a name="referencing-and-assigning-record-and-collection-elements"></a>Référencer et assigner des éléments d’enregistrement et de collection
 
-Chacun des UDT possède un ensemble de méthodes qui utilisent des éléments des différents types de données. Par exemple, la `SetDouble` méthode assigne une `float(53)` valeur à l’enregistrement ou à la `GetDouble` collection et peut lire cette valeur. Voici la liste complète des méthodes :
+Chacun des UDT possède un ensemble de méthodes qui utilisent des éléments des différents types de données. Par exemple, la `SetDouble` méthode assigne une `float(53)` valeur à l’enregistrement ou à la collection et `GetDouble` peut lire cette valeur. Voici la liste complète des méthodes :
 
 ```sql
 GetCollectionIndexInt(@key <KeyType>) returns CollectionIndexInt;
@@ -247,7 +248,7 @@ EXISTS | `ContainsElement(@index int) returns bit`
 ÉTENDRE (n, i) | `ExtendDefault(@count int, @def int) returns <UDT_type>`
 FIRST | `First() returns int`
 LAST | `Last() returns int`
-LIMIT | NON APPLICABLE
+LIMIT | N/A
 PRIOR | `Prior(@current int) returns int`
 NEXT | `Next(@current int) returns int`
 TRIM | `Trim() returns <UDT_type>`
@@ -255,16 +256,16 @@ TRIM (n) | `TrimN(@count int) returns <UDT_type>`
 
 ## <a name="bulk-collect-operation"></a>Opération de collecte en bloc
 
-SSMA convertit les `BULK COLLECT INTO` instructions `SELECT ... FOR XML PATH` en SQL Server instruction, dont le résultat est encapsulé dans l’une des fonctions suivantes :
+SSMA convertit `BULK COLLECT INTO` les instructions en SQL Server `SELECT ... FOR XML PATH` instruction, dont le résultat est encapsulé dans l’une des fonctions suivantes :
 
 * `ssma_oracle.fn_bulk_collect2CollectionSimple`
 * `ssma_oracle.fn_bulk_collect2CollectionComplex`
 
-Le choix dépend du type de l’objet cible. Ces fonctions retournent des valeurs XML qui peuvent être `CollectionIndexInt`analysées par `CollectionIndexString` les types et `Record` . Une fonction `AssignData` spéciale affecte la collection XML au type défini par l’utilisateur.
+Le choix dépend du type de l’objet cible. Ces fonctions retournent des valeurs XML qui peuvent être analysées par `CollectionIndexInt` `CollectionIndexString` les `Record` types et. Une `AssignData` fonction spéciale affecte la collection XML au type défini par l’utilisateur.
 
 SSMA reconnaît trois types d' `BULK COLLECT INTO` instructions.
 
-### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>La collection contient des éléments avec des types scalaires `SELECT` , et la liste contient une colonne
+### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>La collection contient des éléments avec des types scalaires, et la `SELECT` liste contient une colonne
 
 ```sql
 -- Oracle
@@ -279,7 +280,7 @@ SET @<collection_name_1> =
             (SELECT column_name_1 FROM <data_source> FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>La collection contient des éléments avec des types d’enregistrements `SELECT` , et la liste contient une colonne
+### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>La collection contient des éléments avec des types d’enregistrements, et la `SELECT` liste contient une colonne
 
 ```sql
 -- Oracle
@@ -301,7 +302,7 @@ SET @<collection_name_1> =
             FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>La collection contient des éléments avec le type scalaire et `SELECT` la liste contient plusieurs colonnes
+### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>La collection contient des éléments avec le type scalaire et la `SELECT` liste contient plusieurs colonnes
 
 ```sql
 -- Oracle
@@ -340,4 +341,4 @@ SELECT
 
 ## <a name="select-into-record"></a>SÉLECTIONNER dans l’enregistrement
 
-Lorsque le résultat de la requête Oracle est enregistré dans une variable d’enregistrement PL/SQL, vous avez le choix entre deux options en fonction du paramètre SSMA pour **convertir l’enregistrement en tant que liste de variables séparées** (disponibles dans le menu **Outils** , **paramètres du projet**, puis sur**conversion** **générale** -> ). Si la valeur de ce paramètre est **Oui** (valeur par défaut), SSMA ne crée pas d’instance du type d’enregistrement. Au lieu de cela, il fractionne l’enregistrement en champs constituant en créant une variable Transact-SQL distincte pour chaque champ d’enregistrement. Si le paramètre est **non**, l’enregistrement est instancié et une valeur est assignée à chaque `Set` champ à l’aide de méthodes.
+Lorsque le résultat de la requête Oracle est enregistré dans une variable d’enregistrement PL/SQL, vous avez le choix entre deux options en fonction du paramètre SSMA pour **convertir l’enregistrement en tant que liste de variables séparées** (disponibles dans le menu **Outils** , **paramètres du projet**, puis sur **General**  ->  **conversion**générale). Si la valeur de ce paramètre est **Oui** (valeur par défaut), SSMA ne crée pas d’instance du type d’enregistrement. Au lieu de cela, il fractionne l’enregistrement en champs constituant en créant une variable Transact-SQL distincte pour chaque champ d’enregistrement. Si le paramètre est **non**, l’enregistrement est instancié et une valeur est assignée à chaque champ à l’aide de `Set` méthodes.

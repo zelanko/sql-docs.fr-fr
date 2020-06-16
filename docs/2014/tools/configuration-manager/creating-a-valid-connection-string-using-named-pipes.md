@@ -1,5 +1,6 @@
 ---
 title: Création d’une chaîne de connexion valide à l’aide de canaux nommés | Microsoft Docs
+description: Découvrez comment créer une chaîne de connexion valide lors de l’utilisation du protocole canaux nommés pour vous connecter à une instance de SQL Server. Affichez des exemples de noms de canaux valides.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +17,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001029"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716706"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Création d'une chaîne de connexion valide à l'aide de canaux nommés
   Sauf modification par l’utilisateur, lorsque l’instance par défaut de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute le protocole des canaux nommés, elle utilise `\\.\pipe\sql\query` comme nom de canal. Le point indique que l’ordinateur est l’ordinateur local, `pipe` indique que la connexion est un canal nommé et `sql\query` est le nom du canal. Pour se connecter au canal par défaut, l'alias doit avoir `\\<computer_name>\pipe\sql\query` comme nom de canal. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été configuré de manière à être à l'écoute sur un autre canal, le nom de canal doit correspondre à ce canal. Par exemple, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise `\\.\pipe\unit\app` comme canal, l'alias doit utiliser `\\<computer_name>\pipe\unit\app` comme nom de canal.  
@@ -116,7 +117,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Pour spécifier le protocole réseau en tant que paramètre **sqlcmd** , consultez « Procédure : se connecter au moteur de base de données à l’aide de sqlcmd. exe » dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentation en ligne de.  
+>  Pour spécifier le protocole réseau en tant que paramètre **sqlcmd** , consultez « Procédure : se connecter au moteur de base de données à l’aide de sqlcmd.exe » dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentation en ligne de.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une chaîne de connexion valide à l’aide du protocole de mémoire partagée](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

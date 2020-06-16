@@ -20,12 +20,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ab32f364725d11a606ac698fdefb7f9f95a312d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811750"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748254"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82811750"
   Renvoie les informations sur la file d'attente des tâches en attente de certaines ressources. Pour plus d’informations sur les tâches, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_waiting_tasks**.  
+> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_waiting_tasks**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -54,11 +54,11 @@ ms.locfileid: "82811750"
   
  **Propriétaire des ressources de pool de threads :**  
   
--   ID de pool de threads = \<> d’adresses hex du planificateur  
+-   ID ThreadPool = planificateur\<hex-address>  
   
  **Propriétaire de ressources de requêtes parallèles :**  
   
--   exchangeEvent ID = {port | Pipe} \< adresse hexadécimale> WaitType = \< Exchange-type d’attente> NodeId = \< Exchange-node-ID>  
+-   exchangeEvent ID = {port | Pipe} \<hex-address> WaitType = \<exchange-wait-type> NodeId =\<exchange-node-id>  
   
  **Exchange-wait-type :**  
   
@@ -78,43 +78,43 @@ ms.locfileid: "82811750"
   
  **Propriétaire de ressources de verrouillage :**  
   
--   \<spécifique au type-Description> ID = Verrou Lock \< -Hex-address> mode = \< mode> associatedObjectId = \< associé-obj-ID>  
+-   \<type-specific-description>ID = verrou \<lock-hex-address> mode = \<mode> associatedObjectId =\<associated-obj-id>  
   
-     **\<la> de description spécifique au type peut être :**  
+     **\<type-specific-description>peut être :**  
   
-    -   Pour la base de données : databaselock Resource = \< databaselock-Resource> dbid = \< DB-ID>  
+    -   Pour la base de données : databaselock Resource = \<databaselock-subresource> dbid =\<db-id>  
   
-    -   Pour le fichier : filelock fileid = \< file-ID> Resource = \< filelock-Resource> dbid = \< DB-ID>  
+    -   Pour le fichier : filelock fileid = \<file-id> Resource = \<filelock-subresource> dbid =\<db-id>  
   
-    -   Pour Object : objectlock lockPartition = \< Lock-partition-ID> objid = \< obj-ID> Resource = \< objectlock-Resource> dbid = \< DB-ID>  
+    -   Pour Object : objectlock lockPartition = \<lock-partition-id> objID = \<obj-id> Resource = \<objectlock-subresource> dbid =\<db-id>  
   
-    -   Pour la page : PageLock fileid = \< file-ID> pageid = \< page-ID> dbid = \< DB-ID> Resource = \< PageLock-Resource>  
+    -   Pour la page : PageLock fileid = \<file-id> pageid = \<page-id> dbid = Resource \<db-id> =\<pagelock-subresource>  
   
-    -   Clé : Keylock hobtid = \< HoBT-id> dbid = \< DB-ID>  
+    -   Pour Key : Keylock hobtid = \<hobt-id> dbid =\<db-id>  
   
-    -   Pour extent : extentlock fileid = \< file-id> pageid = \< page-ID> dbid = \< db-ID>  
+    -   Pour extent : extentlock fileid = \<file-id> pageid = \<page-id> dbid =\<db-id>  
   
-    -   Pour RID : ridlock fileid = \< file-id> pageid = \< page-ID> dbid = \< db-ID>  
+    -   Pour RID : ridlock fileid = \<file-id> pageid = \<page-id> dbid =\<db-id>  
   
-    -   Pour APPLICATION : applicationlock hash = \< hash> databasePrincipalId = \< role-ID> dbid = \< db-ID>  
+    -   Pour APPLICATION : applicationlock hash = \<hash> databasePrincipalId = \<role-id> dbid =\<db-id>  
   
-    -   Pour les métadonnées : metadatalock Resource = \< Metadata-Resource> ClassID = \< metadatalock-Description> dbid = \< DB-ID>  
+    -   Pour les métadonnées : metadatalock Resource = \<metadata-subresource> ClassID = \<metadatalock-description> dbid =\<db-id>  
   
-    -   Pour HoBT : hobtlock hobtid = \< HoBT-ID> Resource = \< HoBT-Resource> dbid = \< DB-ID>  
+    -   Pour HoBT : hobtlock hobtid = \<hobt-id> Resource = \<hobt-subresource> dbid =\<db-id>  
   
-    -   Pour ALLOCATION_UNIT : allocunitlock hobtid = \< HoBT-ID> Resource = \< Alloc-Unit-Resource> dbid = \< DB-ID>  
+    -   Pour ALLOCATION_UNIT : allocunitlock hobtid = \<hobt-id> Resource = \<alloc-unit-subresource> dbid =\<db-id>  
   
-     **\<le> du mode peut être :**  
+     **\<mode>peut être :**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
  **Propriétaire de ressources externes :**  
   
--   Externalressource externe = \< type d’attente>  
+-   Externalressource externe =\<wait-type>  
   
  **Propriétaire de ressources génériques :**  
   
--   TransactionMutex TransactionInfo Workspace = \< Workspace-id>  
+-   Espace de travail TransactionInfo TransactionMutex =\<workspace-id>  
   
 -   Mutex  
   
@@ -128,11 +128,11 @@ ms.locfileid: "82811750"
   
  **Propriétaire de ressources de verrou :**  
   
--   \<DB-ID> : \< file-id> : \< page in-file>  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
 -   \<GUID>  
   
--   \<> de classe LATCH ( \< verrou-adresse>)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Autorisations
 
@@ -140,12 +140,44 @@ Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
  
 ## <a name="example"></a>Exemple
-Cet exemple identifie les sessions bloquées. Exécutez la [!INCLUDE[tsql](../../includes/tsql-md.md)] requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .
+### <a name="a-identify-tasks-from-blocked-sessions"></a>A. Identifiez les tâches des sessions bloquées. 
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
-``` 
+```   
+
+### <a name="b-view-waiting-tasks-per-connection"></a>B. Afficher les tâches en attente par connexion
+
+```sql
+SELECT st.text AS [SQL Text], c.connection_id, w.session_id, 
+  w.wait_duration_ms, w.wait_type, w.resource_address, 
+  w.blocking_session_id, w.resource_description, c.client_net_address, c.connect_time
+FROM sys.dm_os_waiting_tasks AS w
+INNER JOIN sys.dm_exec_connections AS c ON w.session_id = c.session_id 
+CROSS APPLY (SELECT * FROM sys.dm_exec_sql_text(c.most_recent_sql_handle)) AS st 
+              WHERE w.session_id > 50 AND w.wait_duration_ms > 0
+ORDER BY c.connection_id, w.session_id
+GO
+```
+
+### <a name="c-view-waiting-tasks-for-all-user-processes-with-additional-information"></a>C. Afficher les tâches en attente pour tous les processus utilisateur avec des informations supplémentaires
+
+```sql
+SELECT 'Waiting_tasks' AS [Information], owt.session_id,
+    owt.wait_duration_ms, owt.wait_type, owt.blocking_session_id,
+    owt.resource_description, es.program_name, est.text,
+    est.dbid, eqp.query_plan, er.database_id, es.cpu_time,
+    es.memory_usage*8 AS memory_usage_KB
+FROM sys.dm_os_waiting_tasks owt
+INNER JOIN sys.dm_exec_sessions es ON owt.session_id = es.session_id
+INNER JOIN sys.dm_exec_requests er ON es.session_id = er.session_id
+OUTER APPLY sys.dm_exec_sql_text (er.sql_handle) est
+OUTER APPLY sys.dm_exec_query_plan (er.plan_handle) eqp
+WHERE es.is_user_process = 1
+ORDER BY owt.session_id;
+GO
+```
   
 ## <a name="see-also"></a>Voir aussi  
 [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      

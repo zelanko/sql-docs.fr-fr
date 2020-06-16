@@ -1,5 +1,6 @@
 ---
 title: Protocoles clients-propriétés TCP et IP (onglet protocole) | Microsoft Docs
+description: Découvrez comment spécifier les options TCP/IP dans Microsoft SQL Server Configuration Manager, telles que le paramètre Keep Alive et le numéro de port par défaut.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +14,12 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e543e10ab00981419ca02f527867bd91839fb07
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 32e1546af52fb411564c2b6d1635971b9f73fc60
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001049"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716666"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocoles clients - Propriétés TCP/IP (onglet Protocole)
   Dans le Gestionnaire de connexions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez l’onglet **Protocole** de la boîte de dialogue **Propriétés TCP/IP** pour afficher ou spécifier les options suivantes. Pour vous connecter à un autre port, tapez le numéro du port dans la zone **Port par défaut** . Pour plus d’informations sur les chaînes de connexion, consultez [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  

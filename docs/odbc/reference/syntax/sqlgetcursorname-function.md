@@ -1,7 +1,7 @@
 ---
 title: SQLGetCursorName, fonction | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/12/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285547"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779061"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName Function
 **Conformité**  
@@ -54,10 +54,10 @@ SQLRETURN SQLGetCursorName(
  Si *CursorName* a la valeur null, *NameLengthPtr* retourne toujours le nombre total de caractères (à l’exception du caractère de fin null pour les données de type caractère) disponibles pour retourner dans la mémoire tampon vers laquelle pointe *CursorName*.  
   
  *BufferLength*  
- Entrée Longueur de \* *CursorName*, en caractères. Si la valeur de * \*CursorName* est une chaîne Unicode (lors de l’appel de **SQLGetCursorNameW**), l’argument *BufferLength* doit être un nombre pair.  
+ Entrée Longueur de \* *CursorName*, en caractères. 
   
  *NameLengthPtr*  
- Sortie Pointeur vers la mémoire dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à \*retourner dans *CursorName*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength*, le nom du curseur dans \* *CursorName* est tronqué à *BufferLength* moins la longueur d’un caractère de fin null.  
+ Sortie Pointeur vers la mémoire dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à retourner dans \* *CursorName*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength*, le nom du curseur dans \* *CursorName* est tronqué à *BufferLength* moins la longueur d’un caractère de fin null.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -65,11 +65,11 @@ SQLRETURN SQLGetCursorName(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLGetCursorName** retourne soit SQL_ERROR, soit SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_STMT et un *handle* de *StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLGetCursorName** et les explique dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Données de chaîne, tronquées à droite|Le \* *CursorName* de mémoire tampon n’est pas assez grand pour retourner le nom de curseur entier, donc le nom de curseur a été tronqué. La longueur du nom de curseur non tronqué est retournée dans **NameLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLGetCursorName** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  

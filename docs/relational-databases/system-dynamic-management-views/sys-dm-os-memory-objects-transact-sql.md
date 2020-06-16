@@ -20,12 +20,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61cc363e15a200ed23de4ac94aba64680e1bc4a6
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827876"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716776"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "82827876"
 |**page_allocator_address**|**varbinary (8)**|Adresse mémoire de l'allocateur de page. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary (8)**|À usage interne uniquement Autorise la valeur NULL.|  
 |**sequence_num**|**int**|À usage interne uniquement Autorise la valeur NULL.|  
-|**partition_type**|**int**|Le type de partition :<br /><br /> 0-objet mémoire non partitionnée<br /><br /> 1-objet mémoire partitionné, actuellement non partitionné<br /><br /> 2-objet mémoire partitionné, partitionné par le nœud NUMA. Dans un environnement avec un seul nœud NUMA, cette valeur est équivalente à 1.<br /><br /> 3-objet mémoire partitionné, partitionné par UC.|  
-|**contention_factor**|**real**|Valeur qui spécifie la contention sur cet objet mémoire, 0 signifiant aucun conflit. La valeur est mise à jour chaque fois qu’un nombre spécifié d’allocations de mémoire reflétant une contention a été effectué pendant cette période. S’applique uniquement aux objets de mémoire thread-safe.|  
-|**waiting_tasks_count**|**bigint**|Nombre d’attentes sur cet objet mémoire. Ce compteur est incrémenté chaque fois que la mémoire est allouée à partir de cet objet mémoire. L’incrément est le nombre de tâches actuellement en attente d’accès à cet objet mémoire. S’applique uniquement aux objets de mémoire thread-safe. Il s’agit d’une valeur d’effort optimale sans garantie d’exactitude.|  
-|**exclusive_access_count**|**bigint**|Spécifie la fréquence à laquelle cet objet mémoire a fait l’objet d’un accès exclusif. S’applique uniquement aux objets de mémoire thread-safe.  Il s’agit d’une valeur d’effort optimale sans garantie d’exactitude.|  
+|**partition_type**|**int**|**S’applique à** : [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] et versions ultérieures.<br /><br /> Le type de partition :<br /><br /> 0-objet mémoire non partitionnée<br /><br /> 1-objet mémoire partitionné, actuellement non partitionné<br /><br /> 2-objet mémoire partitionné, partitionné par le nœud NUMA. Dans un environnement avec un seul nœud NUMA, cette valeur est équivalente à 1.<br /><br /> 3-objet mémoire partitionné, partitionné par UC.|  
+|**contention_factor**|**real**|**S’applique à** : [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] et versions ultérieures.<br /><br /> Valeur qui spécifie la contention sur cet objet mémoire, 0 signifiant aucun conflit. La valeur est mise à jour chaque fois qu’un nombre spécifié d’allocations de mémoire reflétant une contention a été effectué pendant cette période. S’applique uniquement aux objets de mémoire thread-safe.|  
+|**waiting_tasks_count**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] et versions ultérieures.<br /><br /> Nombre d’attentes sur cet objet mémoire. Ce compteur est incrémenté chaque fois que la mémoire est allouée à partir de cet objet mémoire. L’incrément est le nombre de tâches actuellement en attente d’accès à cet objet mémoire. S’applique uniquement aux objets de mémoire thread-safe. Il s’agit d’une valeur d’effort optimale sans garantie d’exactitude.|  
+|**exclusive_access_count**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] et versions ultérieures.<br /><br /> Spécifie la fréquence à laquelle cet objet mémoire a fait l’objet d’un accès exclusif. S’applique uniquement aux objets de mémoire thread-safe.  Il s’agit d’une valeur d’effort optimale sans garantie d’exactitude.|  
 |**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**et **exclusive_access_count** ne sont pas encore implémentées dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
@@ -63,7 +63,7 @@ ms.locfileid: "82827876"
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les objets mémoire sont des segments. Ils fournissent des allocations qui ont une granularité plus fine que celles fournies par les régisseurs de mémoire. Les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des objets mémoire au lieu de régisseurs de mémoire. Les objets mémoire utilisent l'interface d'allocation de page du régisseur de mémoire pour allouer les pages. Ils n'utilisent pas les interfaces de mémoire virtuelle ou partagée. Selon les modèles d'allocation, les composants peuvent créer différents types d'objets mémoire pour allouer des régions de taille arbitraire.  
   
  La taille de page type pour un objet mémoire est de 8 Ko. Toutefois, les objets mémoire incrémentiels peuvent avoir des tailles de page allant de 512 octets à 8 Ko.  
