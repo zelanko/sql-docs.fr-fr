@@ -1,5 +1,6 @@
 ---
 title: Base de données Master Data Services
+description: La base de données Master Data Services contient toutes les informations pour le système Master Data Services et est essentielle à un déploiement Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9aab396644dde824668cda8717ed7d14b695bb6d
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729038"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796250"
 ---
 # <a name="master-data-services-database"></a>Base de données Master Data Services
 

@@ -1,5 +1,6 @@
 ---
 title: Importer des données à partir de tables
+description: Importez des données à partir de tables et apportez des modifications de données à un modèle en bloc. Utilisez cette procédure pour ajouter, mettre à jour et supprimer des données dans la base de données Master Data Services.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e10a3facdec9b5b412b1c9b93396d2d0a94886e
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729246"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796313"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importer des données à partir de tables (Master Data Services)
 
@@ -23,23 +24,23 @@ ms.locfileid: "73729246"
 
   Vous pouvez ajouter des données et apporter des modifications de données à un modèle en bloc dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
- **Conditions préalables**  
+ **Composants requis**  
   
--   Vous devez avoir l’autorisation d’insérer des données dans la table stg.\<nom>_Leaf, the stg.\<nom>_Consolidated ou stg.\<nom>_Relationship de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Vous devez avoir l’autorisation d’insérer des données dans le STG. \<name> _Leaf, STG. \<name> _Consolidated, STG. \<name> _Relationship table dans la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données.  
   
--   Vous devez avoir l’autorisation d’exécuter la procédure stockée stg.udp_\<nom>_Leaf, stg.udp\_\<nom>_Consolidated ou stg.udp\_\<nom>_Relationship dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Vous devez disposer des autorisations pour exécuter la \<name> procédure stockée STG. udp_ _Leaf, STG. udp \_ \<name> _Consolidated ou stg. UDP \_ \<name> _Relationship dans la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données.  
   
 -   L'état du modèle ne doit pas être **Activé**.  
   
- **Pour ajouter, mettre à jour et supprimer des données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dans la base de données**  
+ **Pour ajouter, mettre à jour et supprimer des données dans la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données**  
   
 1.  Préparez les membres à importer dans la table de mise en lots appropriée de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , en fournissant aussi les valeurs pour les champs obligatoires. Pour plus d’informations sur les tables de mise en lots, consultez [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-    -   Pour les membres feuille, la table est stg.\<nom>_Leaf, où \<nom>, fait référence à l’entité correspondante. Pour plus d’informations sur les champs requis, consultez [Table de mise en lots des membres feuille &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md).  
+    -   Pour les membres feuille, la table est STG. \<name> _Leaf, où \<name> fait référence à l’entité correspondante. Pour plus d’informations sur les champs requis, consultez [Table de mise en lots des membres feuille &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
-    -   Pour les membres consolidés, la table est stg.\<nom>_Consolidated. Pour plus d’informations sur les champs requis, consultez [Table de mise en lots des membres consolidés &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   Pour les membres consolidés, la table est STG. \<name> _Consolidated. Pour plus d’informations sur les champs requis, consultez [Table de mise en lots des membres consolidés &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Pour déplacer des membres dans les hiérarchies explicites, la table est stg.\<nom>_Relationship. Pour plus d’informations sur les champs requis, consultez [Table de mise en lots des relations &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Pour déplacer l’emplacement des membres dans les hiérarchies explicites, la table est STG. \<name> _Relationship. Pour plus d’informations sur les champs requis, consultez [Table de mise en lots des relations &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
   
          Pour plus d’informations sur le déplacement de membres dans les hiérarchies explicites, consultez [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   

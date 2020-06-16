@@ -1,5 +1,6 @@
 ---
 title: Créer une vue d’abonnement pour exporter des données
+description: Découvrez comment créer une vue d’abonnement pour exporter des données Master Data Services vers des systèmes d’abonnement, ce qui permet de créer une vue de vos données.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728473"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796415"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Créer une vue d’abonnement pour exporter des données (Master Data Services)
 
@@ -60,14 +61,14 @@ ms.locfileid: "73728473"
   
 10. Si vous avez sélectionné **Niveaux explicites** ou **Niveaux dérivés** dans la liste **Format** , tapez le nombre de niveaux dans la hiérarchie à inclure dans la vue.  
   
-11. Cliquez sur **Save**.  
+11. Cliquez sur **Enregistrer**.  
   
 ## <a name="view-information"></a>Visualiser les informations  
  Pour chaque vue créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau suivant décrit ces colonnes.  
   
 |Colonne|Description|  
 |------------|-----------------|  
-|État|État de la vue.<br /><br /> Lorsque vous cliquez sur **Enregistrer**, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que la vue est en mode de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’une vue, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
+|Statut|État de la vue.<br /><br /> Lorsque vous cliquez sur **Enregistrer**, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que la vue est en mode de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’une vue, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Nom|Nom de la vue d’abonnement.|  
 |Modèle|Nom du modèle.|  
 |Version|Nom de la version.|  

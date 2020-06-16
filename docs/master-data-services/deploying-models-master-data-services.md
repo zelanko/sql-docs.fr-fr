@@ -1,5 +1,6 @@
 ---
 title: Déploiement de modèles
+description: Déployez des packages de modèles pour déplacer des copies de modèles d’un environnement de Master Data Services à un autre ou pour créer des modèles dans votre environnement.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef909fd817da4835e9f3d0903a4e8a7f8f1a4658
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728288"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796365"
 ---
 # <a name="deploying-models-master-data-services"></a>Déploiement de modèles (Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "73728288"
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un package est un fichier XML qui contient une structure de modèle déployable et, éventuellement, les données du modèle. Utilisez les packages de modèle pour déplacer des copies de modèles d'un environnement MDS vers un autre, ou pour créer de nouveaux modèles dans votre environnement MDS existant.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]L' **outil MDSModelDeploy** offre une compatibilité descendante avec les [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Packages créés dans ou version ultérieure.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]L' **outil MDSModelDeploy** offre une compatibilité descendante avec les packages créés dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou version ultérieure.  
   
 ## <a name="tools-for-deploying-models"></a>Outils pour déployer des modèles  
  Pour utiliser les packages de modèles, vous pouvez opter pour l'un des trois outils, selon vos besoins.  
@@ -52,9 +53,9 @@ ms.locfileid: "73728288"
   
 -   Groupes d’attributs  
   
--   Hierarchies  
+-   Hiérarchies  
   
--   Collections  
+-   Regroupements  
   
 -   Règles d'entreprise  
   

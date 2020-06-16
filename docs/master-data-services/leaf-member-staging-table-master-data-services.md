@@ -1,5 +1,6 @@
 ---
 title: Leaf Member Staging Table
+description: Utilisez la table de mise en lots des membres feuille dans la base de données Master Data Services pour créer, mettre à jour, désactiver et supprimer des membres feuille.
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 626452bb0247b355cff7e8f1e9584e2fdc0c32c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a23e37608597b1f746b53d15deca99ff49031bc
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729065"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796602"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>Table de mise en lots des membres feuille (Master Data Services)
 
@@ -40,7 +41,7 @@ ms.locfileid: "73729065"
 |**Code**<br /><br /> Obligatoire, sauf quand les codes sont générés automatiquement pour **ImportType1** ou **2**. Pour plus d’informations, consultez [Création automatique de code &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Code unique du membre.||  
 |**Nom**<br /><br /> Facultatif|Nom du membre.||  
 |**NewCode**|À utiliser uniquement si vous modifiez le code du membre.||  
-|\<Nom de l’attribut>|Il existe une colonne pour chaque attribut dans l'entité. Utilisez ceci avec un **ImportType** de valeur **0** ou **2**. Pour les attributs de forme libre, spécifiez le nouveau texte ou la nouvelle valeur de chaîne pour l'attribut. Pour les attributs basés sur un domaine, spécifiez le code du membre qui sera l'attribut. Pour les attributs de lien, l’URL doit commencer par **https://**.<br /><br /> Remarque : vous ne pouvez pas mettre en lots des attributs de fichier.||  
+|\<Attribute name>|Il existe une colonne pour chaque attribut dans l'entité. Utilisez ceci avec un **ImportType** de valeur **0** ou **2**. Pour les attributs de forme libre, spécifiez le nouveau texte ou la nouvelle valeur de chaîne pour l'attribut. Pour les attributs basés sur un domaine, spécifiez le code du membre qui sera l'attribut. Pour les attributs de lien, l’URL doit commencer par **https://**.<br /><br /> Remarque : vous ne pouvez pas mettre en lots des attributs de fichier.||  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

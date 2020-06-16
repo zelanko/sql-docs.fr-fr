@@ -1,5 +1,6 @@
 ---
 title: Procédure stockée de mise en lots
+description: Utilisez l’une des trois procédures stockées pour initier le processus de site à partir de SQL Server Management Studio dans Master Data Services.
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82b068612f0699cdba3788e4931fb6bdfe8c7e69
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727886"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796500"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Procédure stockée de mise en lots (Master Data Services)
 
@@ -23,11 +24,11 @@ ms.locfileid: "73727886"
 
   Lors de l’initialisation du processus de site à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], vous devez utiliser l’une des trois procédures stockées.  
   
--   stg.udp_\<nom>_Leaf  
+-   STG. udp_ \<name> _Leaf  
   
--   stg.udp_\<nom>_Consolidated  
+-   STG. udp_ \<name> _Consolidated  
   
--   stg.udp_\<nom>_Relationship  
+-   STG. udp_ \<name> _Relationship  
   
  Où nom indique le nom de la table de mise en lots spécifié lors de la création de l'entité.  
   

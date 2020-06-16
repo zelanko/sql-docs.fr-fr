@@ -1,5 +1,6 @@
 ---
 title: Business Rules Extension
+description: Vous pouvez appliquer des scripts SQL définis par l’utilisateur en tant qu’extension de conditions et d’actions de règle d’entreprise prédéfinies dans Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a8a5215438a7cbed7796c5b9afaae5f8d59db9a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728679"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796530"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extension de règles d’entreprise (Master Data Services)
 
@@ -91,7 +92,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 5.  Dans la liste **Types de membres** , sélectionnez un type de membre auquel appliquer la règle d’entreprise.  
   
-6.  Cliquez sur **Ajouter**.  
+6.  Cliquez sur **Add**.  
   
 7.  Procédez comme suit pour créer un script défini par l’utilisateur en tant que condition.  
   
@@ -103,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  Affecter une valeur à chaque paramètre  
   
-    5.  Cliquez sur **Save**.  
+    5.  Cliquez sur **Enregistrer**.  
   
 8.  Procédez comme suit pour créer un script défini par l’utilisateur en tant qu’action.  
   
@@ -111,7 +112,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  Dans la liste déroulante **Opérateur** , sélectionnez la fonction définie par l’utilisateur sous **Script défini par l’utilisateur** .  
   
-    3.  Cliquez sur **Save**.  
+    3.  Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   

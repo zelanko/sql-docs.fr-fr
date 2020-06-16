@@ -1,5 +1,6 @@
 ---
 title: Installation et configuration
+description: Apprenez à installer Master Data Services sur un ordinateur Windows Server 2012 R2, à configurer la base de données et le site Web MDS et à déployer les exemples de modèles et de données.
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289777"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796280"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -34,7 +35,7 @@ Si vous souhaitez une vue d’ensemble de l’organisation des données dans [!I
 Pour obtenir des liens vers des vidéos et d’autres ressources de formation concernant [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consultez [En savoir plus sur Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Télécharger**  
-> -   Pour télécharger [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Pour télécharger [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle avec SQL Server déjà installé.  
 > 
 > **Vous ne parvenez pas à créer un site web MDS ?**
@@ -46,7 +47,7 @@ Pour obtenir des liens vers des vidéos et d’autres ressources de formation co
 - Pour fonctionner dans l’application web, Silverlight 5 doit être installé sur l’ordinateur client. Si vous n’avez pas la version requise de Silverlight, vous êtes invité à l’installer quand vous accédez à une partie de l’application web qui l’utilise. Vous pouvez installer Silverlight 5 à partir de **[cet emplacement](https://www.microsoft.com/silverlight/)**.
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure
-Par défaut, lorsque vous lancez une machine virtuelle Azure sur [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] laquelle est déjà installé [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , est également installé. 
+Par défaut, lorsque vous lancez une machine virtuelle Azure sur laquelle [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] est déjà installé, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] est également installé. 
 
 L’étape suivante consiste à installer IIS (Internet Information Services). Consultez la section [Installation et configuration d’IIS](#InstallIIS). 
 
@@ -133,7 +134,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
 
 4. Sélectionnez le **type d’authentification** , puis cliquez sur **tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données à l’aide des informations d’identification pour le type d’authentification que vous avez sélectionné. Cliquez sur **Suivant**.
 
-    >Pour [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], pour vous connecter à Azure SQL database instance gérée, utilisez l’un des types d’authentification suivants :
+    >Pour [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] , pour vous connecter à Azure SQL database instance gérée, utilisez l’un des types d’authentification suivants :
     >
     >- Authentification intégrée Azure Active Directory : **utilisateur actuel – Active Directory intégré**
     >- Authentification SQL Server : **compte SQL Server**.
@@ -203,7 +204,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Cliquez sur **Appliquer**. La boîte de message **Configuration terminée** s’affiche. Cliquez sur **OK** dans la boîte de message pour lancer l’application web. L’adresse du site Web est https://*Server Name*/*/.* 
+15. Cliquez sur **Appliquer**. La boîte de message **Configuration terminée** s’affiche. Cliquez sur **OK** dans la boîte de message pour lancer l’application web. L’adresse du site Web est https://*Server Name* / *web application*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,7 +282,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
     1.  Accédez au site web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que vous avez configuré. Consultez la section [Configuration de la base de données et du site web](#SetUpWeb) .  
   
-         L’adresse du site Web est https://*Server Name*/*/.*  
+         L’adresse du site Web est https://*Server Name* / *web application*/.  
   
     2.  Sélectionnez un modèle dans la zone de liste **Modèle** , puis cliquez sur **Explorer**.  
   

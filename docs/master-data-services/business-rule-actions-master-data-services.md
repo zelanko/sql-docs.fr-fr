@@ -1,5 +1,6 @@
 ---
 title: Actions de règle d'entreprise
+description: Dans Master Data Services, les règles d’entreprise provoquent des actions. En savoir plus sur les actions de valeur par défaut, les actions de modification de valeur, les actions de validation et les actions externes.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3aa704289844143dc07f63a384269a1ff45f31b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729734"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796545"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Actions de règle d'entreprise (Master Data Services)
 
@@ -40,7 +41,7 @@ ms.locfileid: "73729734"
   
 |Nom de la valeur|Description|  
 |----------------|-----------------|  
-|**Equals**|L'attribut sélectionné est modifié sur une valeur d'attribut définie, un autre attribut ou est vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**Égal à**|L'attribut sélectionné est modifié sur une valeur d'attribut définie, un autre attribut ou est vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**est égal à une valeur concaténée**|L'attribut sélectionné est modifié sur une valeur concaténée, qui est déterminée en spécifiant plusieurs attributs.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
   
 ## <a name="validation-actions"></a>Actions Validation  
@@ -51,7 +52,7 @@ ms.locfileid: "73729734"
 |Nom de validation|Description|  
 |---------------------|-----------------|  
 |**est obligatoire**|L'attribut sélectionné **est requis**, ce qui signifie qu'il ne peut pas être null ou vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
-|**n'est pas valide**|L'attribut sélectionné **n'est pas valide**.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**n’est pas valide**|L'attribut sélectionné **n'est pas valide**.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**doit contenir le modèle**|L'attribut sélectionné **doit contenir le modèle** spécifié. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
 |**doit être unique**|L'attribut sélectionné **doit être unique** indépendamment ou en association avec des attributs définis.<br /><br /> **Meilleure pratique :** associez cette action à une condition obligatoire pour garantir la validité des champs d'index dans les systèmes d'abonnement.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.<br /><br /> **REMARQUE**: Si le premier attribut est de type DateTime, vous ne pouvez pas l’utiliser en combinaison avec un attribut de type Numérique ou Texte. Si le premier attribut est de type Numérique, vous ne pouvez pas l’utiliser en combinaison avec un attribut de type DateTime.|  
 |**doit avoir l'une des valeurs suivantes**|L'attribut sélectionné **doit avoir l'une des valeurs** spécifiées dans une liste.<br /><br /> Cette action est valide pour les valeurs de texte.|  
