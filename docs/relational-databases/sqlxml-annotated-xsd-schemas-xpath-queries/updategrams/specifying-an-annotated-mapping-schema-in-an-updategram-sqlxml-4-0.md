@@ -1,5 +1,6 @@
 ---
 title: Schémas de mappage annotés pour un mise à jour (SQLXML)
+description: Découvrez comment un schéma de mappage XSD ou XDR annoté qui est spécifié dans un mise à jour SQLXML 4,0 est utilisé pour traiter les mises à jour d’une base de données.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed9225fad50f467dfcbc71068b46a6d822119ea9
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882189"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cette rubrique explique comment le schéma de mappage (XSD ou XDR) spécifié dans un code de mise à jour est utilisé pour traiter les mises à jour. Dans un mise à jour, vous pouvez fournir le nom d’un schéma de mappage annoté à utiliser pour mapper les éléments et les attributs du mise à jour aux tables et aux colonnes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dans. Lorsqu'un schéma de mappage est spécifié dans un code de mise à jour, les noms d'élément et d'attribut spécifiés dans le code de mise à jour doivent être mappés aux éléments et aux attributs dans le schéma de mappage.  
+  Cette rubrique explique comment le schéma de mappage (XSD ou XDR) spécifié dans un code de mise à jour est utilisé pour traiter les mises à jour. Dans un mise à jour, vous pouvez fournir le nom d’un schéma de mappage annoté à utiliser pour mapper les éléments et les attributs du mise à jour aux tables et aux colonnes dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Lorsqu'un schéma de mappage est spécifié dans un code de mise à jour, les noms d'élément et d'attribut spécifiés dans le code de mise à jour doivent être mappés aux éléments et aux attributs dans le schéma de mappage.  
   
- Pour spécifier un schéma de mappage, vous utilisez l’attribut **mapping-schema** de l' ** \<élément Sync>** . Les exemples suivants présentent deux codes de mise à jour : l'un utilise un schéma de mappage simple et l'autre utilise un schéma plus complexe.  
+ Pour spécifier un schéma de mappage, vous utilisez l’attribut **mapping-schema** de l' **\<sync>** élément. Les exemples suivants présentent deux codes de mise à jour : l'un utilise un schéma de mappage simple et l'autre utilise un schéma plus complexe.  
   
 > [!NOTE]  
 >  Cette documentation suppose une connaissance suffisante des modèles et de la prise en charge des schémas de mappage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Introduction aux schémas XSD Annotés &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour les applications héritées qui utilisent XDR, consultez [schémas XDR Annotés &#40;dépréciés dans SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
@@ -42,13 +43,13 @@ ms.locfileid: "75243569"
   
  Si le schéma spécifie le type de données XSD **DateTime**, **Date**ou **Time** , vous devez également spécifier le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données correspondant à l’aide de **SQL : datatype = "DateTime"**.  
   
- Lors du traitement des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] paramètres de type **Money** , vous devez spécifier explicitement **SQL : datatype = "Money"** sur le nœud approprié dans le schéma de mappage.  
+ Lors du traitement des paramètres de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type **Money** , vous devez spécifier explicitement **SQL : datatype = "Money"** sur le nœud approprié dans le schéma de mappage.  
   
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l’aide des exemples suivants, vous devez respecter les exigences spécifiées dans la [Configuration requise pour l’exécution d’exemples SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Création d'un code de mise à jour avec un schéma de mappage simple  
- Le schéma XSD suivant (SampleSchema. Xml) est un schéma de mappage qui mappe l' ** \<élément Customer>** à la table Sales. Customer :  
+ Le schéma XSD suivant (SampleSchema.xml) est un schéma de mappage qui mappe l' **\<Customer>** élément à la table Sales. Customer :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -66,7 +67,7 @@ ms.locfileid: "75243569"
 </xsd:schema>  
 ```  
   
- Le code de mise à jour suivant insère un enregistrement dans la table Sales.Customer et compte sur le schéma de mappage précédent pour mapper correctement ces données à la table. Notez que le mise à jour utilise le même nom d’élément, ** \<>client **, comme défini dans le schéma. C'est absolument essentiel dans la mesure où le code de mise à jour spécifie un schéma particulier.  
+ Le code de mise à jour suivant insère un enregistrement dans la table Sales.Customer et compte sur le schéma de mappage précédent pour mapper correctement ces données à la table. Notez que le mise à jour utilise le même nom d’élément, **\<Customer>** , tel que défini dans le schéma. C'est absolument essentiel dans la mesure où le code de mise à jour spécifie un schéma particulier.  
   
 ##### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   
@@ -115,9 +116,9 @@ ms.locfileid: "75243569"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Insertion d'un enregistrement à l'aide de la relation parent-enfant spécifiée dans le schéma de mappage  
- Les éléments du schéma peuvent être liés. L' ** \<élément SQL : Relationship>** spécifie la relation parent-enfant entre les éléments de schéma. Ces informations sont utilisées pour mettre à jour les tables correspondantes qui ont une relation clé primaire/clé étrangère.  
+ Les éléments du schéma peuvent être liés. L' **\<sql:relationship>** élément spécifie la relation parent-enfant entre les éléments de schéma. Ces informations sont utilisées pour mettre à jour les tables correspondantes qui ont une relation clé primaire/clé étrangère.  
   
- Le schéma de mappage suivant (SampleSchema. Xml) se compose de deux éléments : ** \<Order>** et ** \<OD>**:  
+ Le schéma de mappage (SampleSchema.xml) suivant se compose de deux **\<Order>** éléments **\<OD>** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -156,7 +157,7 @@ ms.locfileid: "75243569"
 </xsd:schema>  
 ```  
   
- Le mise à jour suivant utilise ce schéma XSD pour ajouter un nouvel enregistrement de détail de commande (un ** \<élément OD>** dans le bloc ** \<after>** ) pour la commande 43860. L’attribut **mapping-schema** est utilisé pour spécifier le schéma de mappage dans le mise à jour.  
+ Le mise à jour suivant utilise ce schéma XSD pour ajouter un nouvel enregistrement de détail de commande (un **\<OD>** élément dans le **\<after>** bloc) pour la commande 43860. L’attribut **mapping-schema** est utilisé pour spécifier le schéma de mappage dans le mise à jour.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -275,11 +276,11 @@ ms.locfileid: "75243569"
 </xsd:schema>  
 ```  
   
- Dans cet exemple, le schéma XSD contient ** \<les éléments Customer>** et ** \<Order>** , et il spécifie une relation parent-enfant entre les deux éléments. Il identifie ** \<l’ordre>** en tant qu’élément parent et ** \<>client** comme élément enfant.  
+ Le schéma XSD de cet exemple possède **\<Customer>** des **\<Order>** éléments et, et spécifie une relation parent-enfant entre les deux éléments. Elle identifie **\<Order>** en tant qu’élément parent et **\<Customer>** en tant qu’élément enfant.  
   
- La logique de traitement du code de mise à jour utilise les informations relatives à la relation parent-enfant pour déterminer l'ordre dans lequel les enregistrements sont insérés dans les tables. Dans cet exemple, la logique mise à jour tente d’abord d’insérer un enregistrement dans la table Ord (car ** \<Order>** est le parent), puis tente d’insérer un enregistrement dans la table Cust (car ** \<Customer>** est l’enfant). Toutefois, en raison des informations de clé primaire/clé étrangère contenues dans le schéma de la table de base de données, cette opération d'insertion provoque une violation de clé étrangère dans la base de données et échoue.  
+ La logique de traitement du code de mise à jour utilise les informations relatives à la relation parent-enfant pour déterminer l'ordre dans lequel les enregistrements sont insérés dans les tables. Dans cet exemple, la logique mise à jour tente d’abord d’insérer un enregistrement dans la table Ord (car **\<Order>** est le parent), puis tente d’insérer un enregistrement dans la table Cust (car **\<Customer>** est l’enfant). Toutefois, en raison des informations de clé primaire/clé étrangère contenues dans le schéma de la table de base de données, cette opération d'insertion provoque une violation de clé étrangère dans la base de données et échoue.  
   
- Pour indiquer à la logique mise à jour d’inverser la relation parent-enfant au cours de l’opération de mise à jour, l’annotation **inverse** est spécifiée sur la ** \<relation>** élément. En conséquence, les enregistrements sont d'abord ajoutés dans la table Cust, puis dans la table Ord, et l'opération réussit.  
+ Pour indiquer à la logique mise à jour d’inverser la relation parent-enfant au cours de l’opération de mise à jour, l’annotation **inverse** est spécifiée sur l' **\<relationship>** élément. En conséquence, les enregistrements sont d'abord ajoutés dans la table Cust, puis dans la table Ord, et l'opération réussit.  
   
  Le code de mise à jour suivant insère une commande (OrderID=2) dans la table Ord et un client (CustomerID='AAAAA') dans la table Cust à l'aide du schéma XSD spécifié :  
   

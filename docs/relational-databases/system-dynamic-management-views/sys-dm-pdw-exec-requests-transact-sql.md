@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796520"
+ms.locfileid: "84818045"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "84796520"
 |start_time|**datetime**|Heure à laquelle l’exécution de la requête a été démarrée.|NULL pour les demandes mises en file d’attente ; dans le cas contraire, la valeur **DateTime** valide est inférieure ou égale à l’heure actuelle.|  
 |end_compile_time|**datetime**|Heure à laquelle le moteur a terminé la compilation de la requête.|NULL pour les requêtes qui n’ont pas encore été compilées ; Sinon, une valeur **DateTime** valide inférieure à start_time et inférieure ou égale à l’heure actuelle.|
 |end_time|**datetime**|Heure à laquelle l’exécution de la requête s’est terminée, a échoué ou a été annulée.|NULL pour les demandes en file d’attente ou actives ; dans le cas contraire, un **DateTime** valide est plus petit ou égal à l’heure actuelle.|  
-|total_elapsed_time|**int**|Temps écoulé durant l’exécution depuis le début de la demande, en millisecondes.|Entre 0 et la différence entre start_time et end_time.</br></br> Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time sera toujours la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée ».</br></br> La valeur maximale en millisecondes est identique à 24,8 jours.|  
+|total_elapsed_time|**int**|Temps écoulé durant l’exécution depuis le début de la demande, en millisecondes.|Entre 0 et la différence entre submit_time et end_time.</br></br> Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time sera toujours la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée ».</br></br> La valeur maximale en millisecondes est identique à 24,8 jours.|  
 |label|**nvarchar(255)**|Chaîne d’étiquette facultative associée à certaines instructions de requête SELECT.|Toute chaîne contenant « a-z », « A-Z », « 0-9 », « _ ».|  
 |error_id|**nvarchar (36)**|ID unique de l’erreur associée à la demande, le cas échéant.|Consultez [sys. dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); Affectez la valeur NULL si aucune erreur ne s’est produite.|  
 |database_id|**int**|Identificateur de la base de données utilisée par le contexte explicite (par exemple, utilisez DB_X).|Consultez ID dans [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
@@ -47,7 +47,7 @@ ms.locfileid: "84796520"
 |result_cache_hit|**decimal**|Indique si une requête terminée a utilisé le cache du jeu de résultats.  </br>S’applique à : Azure SQL Data Warehouse| 1 = accès au cache de l’ensemble de résultats </br> 0 = absence dans le cache du jeu de résultats </br> Valeurs négatives = raisons pour lesquelles la mise en cache du jeu de résultats n’a pas été utilisée.  Pour plus d’informations, consultez la section Notes.|
 ||||
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarques 
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section métadonnées dans la rubrique [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
  Le result_cache_hit est un masque de masque de l’utilisation d’une requête du cache de jeu de résultats.  Cette colonne peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes :  

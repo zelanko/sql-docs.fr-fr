@@ -1,5 +1,6 @@
 ---
 title: Fonction en minuscules (XQuery) | Microsoft Docs
+description: En savoir plus sur la fonction XQuery minuscule () qui convertit chaque caractère d’une chaîne spécifiée en son équivalent en minuscules.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886594"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Fonctions sur les valeurs de chaîne : lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ fn:lower-case($arg as xs:string?) as xs:string
 |Terme|Définition|  
 |*$arg*|Valeur de chaîne à convertir en minuscule.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si la valeur de *$arg* est vide, une chaîne de longueur nulle est retournée.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>R. Conversion d'une chaîne en majuscules.  
- L’exemple suivant modifie la chaîne d’entrée’abcDEF ! '. @4'en minuscules.  
+ L’exemple suivant modifie la chaîne d’entrée’abcDEF ! @4 ' en minuscules.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

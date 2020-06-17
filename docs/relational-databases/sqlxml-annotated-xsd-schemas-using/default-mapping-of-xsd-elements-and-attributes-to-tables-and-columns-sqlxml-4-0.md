@@ -1,5 +1,6 @@
 ---
 title: Mappage XSD par défaut vers les tables/colonnes (SQLXML)
+description: Découvrez comment les éléments et les attributs d’un schéma XSD sont mappés par défaut aux tables et aux colonnes de SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,12 +28,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cabf0e7eb0fd65121cab717ffc2b94b22b4cc354
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257450"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885452"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage par défaut d'éléments et d'attributs XSD à des tables et des colonnes (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "75257450"
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Spécification du mappage par défaut  
- Dans cet exemple, aucune annotation n'est spécifiée dans le schéma XSD. L' ** \<élément person. contact>** est de type complexe et, par conséquent, est mappé par défaut à la table Person. contact de la base de données AdventureWorks. Tous les attributs (ContactID, FirstName, LastName) de l' ** \<élément person. contact>** sont de type simple et sont mappés par défaut aux colonnes portant le même nom dans la table Person. contact.  
+ Dans cet exemple, aucune annotation n'est spécifiée dans le schéma XSD. L' **\<Person.Contact>** élément est de type complexe et, par conséquent, est mappé par défaut à la table Person. contact de la base de données AdventureWorks. Tous les attributs (ContactID, FirstName, LastName) de l' **\<Person.Contact>** élément sont de type simple et sont mappés par défaut aux colonnes portant le même nom dans la table Person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -93,7 +94,7 @@ ms.locfileid: "75257450"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mappage d'un élément XML à une colonne de base de données  
- Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. L' ** \<élément person. contact>** est de type complexe et est mappé à la table portant le même nom dans la base de données. Les éléments ** \<FirstName>** et ** \<LastName>** et l’attribut **EmployeeID** sont de type simple et, par conséquent, sont mappés aux colonnes portant le même nom. La seule différence entre ceci et l'exemple précédent réside dans le fait que les éléments sont utilisés pour le mappage des champs FirstName et LastName.  
+ Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. L' **\<Person.Contact>** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. Les éléments **\<FirstName>** et **\<LastName>** et l’attribut **EmployeeID** sont de type simple et, par conséquent, sont mappés aux colonnes portant le même nom. La seule différence entre ceci et l'exemple précédent réside dans le fait que les éléments sont utilisés pour le mappage des champs FirstName et LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -147,7 +148,7 @@ ms.locfileid: "75257450"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Mappage d'un élément XML à une colonne de type de données XML  
- Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. L' ** \<élément>production. ProductModel** est de type complexe et est mappé à la table portant le même nom dans la base de données. L’attribut **ProductModelID** est de type simple et, par conséquent, est mappé aux colonnes portant le même nom. La seule différence entre cet exemple et les exemples précédents est que les ** \<instructions>** élément est mappé à une colonne qui utilise le type de données **XML** à l’aide du type **xsd : anyType** .  
+ Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. L' **\<Production.ProductModel>** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. L’attribut **ProductModelID** est de type simple et, par conséquent, est mappé aux colonnes portant le même nom. La seule différence entre cet exemple et les exemples précédents est que l' **\<Instructions>** élément est mappé à une colonne qui utilise le type de données **XML** à l’aide du type **xsd : anyType** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -163,7 +164,7 @@ ms.locfileid: "75257450"
 </xsd:schema>  
 ```  
   
- Le type de données **XML** a été [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduit dans.  
+ Le type de données **XML** a été introduit dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Pour tester un exemple de requête XPath sur le schéma  
   

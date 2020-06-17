@@ -1,5 +1,6 @@
 ---
 title: Requêtes XQuery impliquant Order | Microsoft Docs
+description: Affichez des exemples de requêtes XQuery basés sur l’ordre dans lequel les nœuds s’affichent dans un document.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946110"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880512"
 ---
 # <a name="xqueries-involving-order"></a>Requêtes XQuery impliquant un ordre
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Le concept de séquence n'existe pas dans les bases de données relationnelles. Il est, par exemple, impossible de créer une requête telle que « Obtenir le premier client de la base de données ». Toutefois, vous pouvez interroger un document XML et récupérer le \<premier élément customer>. Vous récupérez alors toujours le même client.  
+  Le concept de séquence n'existe pas dans les bases de données relationnelles. Il est, par exemple, impossible de créer une requête telle que « Obtenir le premier client de la base de données ». Toutefois, vous pouvez interroger un document XML et récupérer le premier \<Customer> élément. Vous récupérez alors toujours le même client.  
   
  Cette rubrique présente les requêtes s'appuyant sur l'ordre dans lequel les nœuds apparaissent dans le document.  
   
@@ -81,7 +82,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- La requête précédente récupère uniquement les nœuds de texte. Si vous souhaitez que l’ensemble `step` <> élément soit retourné, supprimez la fonction **String ()** de la requête :  
+ La requête précédente récupère uniquement les nœuds de texte. Si vous souhaitez que l’ensemble <`step`> élément soit retourné, supprimez la fonction **String ()** de la requête :  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Recherche des matières et outils utilisés sur le deuxième poste de travail au cours de la fabrication d'un produit  
  Pour un modèle de produit spécifique, la requête suivante récupère les outils et les matières utilisés sur le deuxième poste de travail dans l'ordre des postes de travail que comprend le processus de fabrication.  
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  Notez les points suivants dans la requête précédente :  
   
--   La requête construit l’élément <Loca`tion`> et récupère ses valeurs d’attribut à partir de la base de données.  
+-   La requête construit l’élément <Loca `tion`> et récupère ses valeurs d’attribut à partir de la base de données.  
   
 -   Elle utilise deux itérations FLWOR (for...return) : la première pour récupérer les outils et la deuxième pour récupérer les matières.  
   
@@ -137,7 +138,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Récupération des descriptions des deux premiers composants d'un produit à partir du catalogue du produit  
- Pour un modèle de produit spécifique, la requête récupère les deux premières descriptions de fonctionnalités à partir `Features` de l’élément <> dans le catalogue de modèles de produits.  
+ Pour un modèle de produit spécifique, la requête récupère les deux premières descriptions de fonctionnalités à partir de l' `Features` élément <> dans le catalogue de modèles de produits.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,7 +158,7 @@ where ProductModelID=19
   
  Notez les points suivants dans la requête précédente :  
   
- Le corps de la requête construit le code XML qui `ProductModel` inclut l’élément <> ayant les attributs ProductModelID et ProductModelName.  
+ Le corps de la requête construit le code XML qui inclut l' `ProductModel` élément <> ayant les attributs ProductModelID et ProductModelName.  
   
 -   La requête utilise une pour... Boucle de retour pour récupérer les descriptions des fonctionnalités du modèle de produit. La fonction **position ()** permet de récupérer les deux premières fonctionnalités.  
   

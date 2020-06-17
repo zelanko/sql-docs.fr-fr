@@ -1,5 +1,6 @@
 ---
 title: Contexte d’expression et évaluation de requête (XQuery) | Microsoft Docs
+description: Découvrez comment les informations du contexte statique et dynamique d’une expression XQuery sont utilisées pour l’analyser et l’évaluer.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038921"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881905"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexte des expressions et évaluation des requêtes (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68038921"
   
     -   Tous les espaces de noms définis à l'aide de WITH XMLNAMESPACES. Pour plus d’informations, consultez [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-    -   Tous les espaces de noms définis dans le prologue de la requête. Remarquez que les déclarations d'espace de noms du prologue peuvent remplacer la déclaration d'espace de noms de WITH XMLNAMESPACES. Par exemple, dans la requête suivante, WITH XMLNAMESPACES déclare un préfixe (PD) qui le lie à l’espace de`https://someURI`noms (). En revanche, dans la clause WHERE, le prologue de la requête remplace la liaison.  
+    -   Tous les espaces de noms définis dans le prologue de la requête. Remarquez que les déclarations d'espace de noms du prologue peuvent remplacer la déclaration d'espace de noms de WITH XMLNAMESPACES. Par exemple, dans la requête suivante, WITH XMLNAMESPACES déclare un préfixe (PD) qui le lie à l’espace de noms ( `https://someURI` ). En revanche, dans la clause WHERE, le prologue de la requête remplace la liaison.  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -127,7 +128,7 @@ ms.locfileid: "68038921"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     Dans l’exemple suivant, l’opérateur **value ()** requiert un singleton. Comme spécifié dans le schéma XML, il peut y avoir \<plusieurs éléments> elem. L'analyse statique de l'expression détermine que le type n'est pas sûr et une erreur statique est générée. Pour corriger cette erreur, vous devez réécrire l'expression de façon à spécifier explicitement un singleton (`data(/x:Elem)[1]`).  
+     Dans l’exemple suivant, l’opérateur **value ()** requiert un singleton. Comme spécifié dans le schéma XML, il peut y avoir plusieurs \<Elem> éléments. L'analyse statique de l'expression détermine que le type n'est pas sûr et une erreur statique est générée. Pour corriger cette erreur, vous devez réécrire l'expression de façon à spécifier explicitement un singleton (`data(/x:Elem)[1]`).  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  

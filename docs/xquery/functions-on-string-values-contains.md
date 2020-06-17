@@ -1,5 +1,6 @@
 ---
 title: Contains, fonction (XQuery) | Microsoft Docs
+description: En savoir plus sur l’utilisation de la fonction contains dans un XQuery pour déterminer si une valeur de chaîne spécifiée contient la valeur de sous-chaîne spécifiée.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881862"
 ---
 # <a name="functions-on-string-values---contains"></a>Fonctions sur les valeurs de chaîne : contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg 2*  
  Sous-chaîne à rechercher.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si la valeur de *$arg 2* est une chaîne de longueur nulle, la fonction retourne la **valeur true**. Si la valeur de *$arg 1* est une chaîne de longueur nulle et que la valeur de *$arg 2* n’est pas une chaîne de longueur nulle, la fonction retourne **false**.  
   
  Si la valeur de *$arg 1* ou *$arg 2* est la séquence vide, l’argument est traité comme une chaîne de longueur nulle.  
@@ -59,7 +60,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  Cette rubrique fournit des exemples XQuery sur des instances XML stockées dans différentes colonnes de type XML dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Utilisation de la fonction contains() XQuery pour rechercher une chaîne de caractères spécifique.  
- La requête suivante recherche des produits qui contiennent le mot Aerodynamic dans les descriptions résumées. La requête retourne le ProductID et l’élément `Summary` <> pour ces produits.  
+ La requête suivante recherche des produits qui contiennent le mot Aerodynamic dans les descriptions résumées. La requête retourne le ProductID et l' `Summary` élément <> pour ces produits.  
   
 ```  
 --The product model description document uses  

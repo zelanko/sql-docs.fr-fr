@@ -1,5 +1,6 @@
 ---
 title: Traitement du XML côté client (SQLXML)
+description: Apprenez à traiter le code XML côté client à l’aide de la propriété ClientSideXml de l’objet SqlXmlCommand dans les classes managées SQLXML.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54063c371489aaf8928a4c3cad290e4a0961c229
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dca939b5d3180e3a0d61b94797610b44344a73a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251486"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884242"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>traitement du XML côté client (classes managées SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

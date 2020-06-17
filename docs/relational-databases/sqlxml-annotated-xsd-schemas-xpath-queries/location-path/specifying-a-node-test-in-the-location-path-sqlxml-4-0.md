@@ -1,5 +1,6 @@
 ---
 title: Spécification d’un test de nœud dans le chemin d’accès d’emplacement (SQLXML)
+description: Découvrez comment spécifier un test de nœud dans le chemin d’accès d’emplacement d’une requête XPath SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,32 +17,32 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f94f155ee86df6daf0c039a18f27c30e294d57df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc00f51a357bf87b5031b669528c72c261a21017
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882171"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Spécification d'un test de nœud dans le chemin d'accès d'emplacement (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (**enfant**, **parent**, **attribut**ou **Self**) a un type de nœud principal. Pour l’axe **attribute** , le type de nœud principal est ** \<attribute>**. Pour les axes **parent**, **enfant**et **Self** , le type de nœud principal est ** \<l’élément>**.  
+  Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (**enfant**, **parent**, **attribut**ou **Self**) a un type de nœud principal. Pour l’axe **attribute** , le type de nœud principal est **\<attribute>** . Pour les axes **parent**, **enfant**et **Self** , le type de nœud principal est **\<element>** .  
   
 > [!NOTE]  
 >  Le test de nœud générique * (par exemple, `child::*`) n'est pas pris en charge.  
   
 ## <a name="node-test-example-1"></a>Test de nœud : exemple 1  
- Le chemin d' `child::Customer` accès de l’emplacement sélectionne ** \<Customer>** élément Children du nœud de contexte.  
+ Le chemin d’accès de l’emplacement `child::Customer` sélectionne **\<Customer>** les éléments enfants du nœud de contexte.  
   
- Dans cet exemple, `child` est l'axe et `Customer` est le test de nœud. Le type de nœud principal de l’axe **enfant** est ** \<l’élément>**. Par conséquent, le test de nœud a la valeur true si le nœud ** \<>du client** est un nœud d' ** \<élément>** . Si le nœud de contexte n’a pas ** \<de client>** d’enfants, un ensemble de nœuds vide est retourné.  
+ Dans cet exemple, `child` est l'axe et `Customer` est le test de nœud. Le type de nœud principal de l’axe **enfant** est **\<element>** . Par conséquent, le test de nœud a la valeur TRUE si le **\<Customer>** nœud est un **\<element>** nœud. Si le nœud de contexte n’a pas **\<Customer>** d’enfants, un ensemble de nœuds vide est retourné.  
   
 ## <a name="node-test-example-2"></a>Test de nœud : exemple 2  
- Le chemin d' `attribute::CustomerID` accès de l’emplacement sélectionne l’attribut **CustomerID** du nœud de contexte.  
+ Le chemin d’accès de l’emplacement `attribute::CustomerID` sélectionne l’attribut **CustomerID** du nœud de contexte.  
   
- Dans l’exemple, `attribute` est l’axe et `CustomerID` est le test de nœud. Le type de nœud principal de l’axe d' **attribut** est ** \<l’attribut>**. Par conséquent, le test de nœud a la valeur true si **CustomerID** est un ** \<attribut>** nœud. Si le nœud de contexte n’a pas de **CustomerID**, un ensemble de nœuds vide est retourné.  
+ Dans l’exemple, `attribute` est l’axe et `CustomerID` est le test de nœud. Le type de nœud principal de l’axe d' **attribut** est **\<attribute>** . Par conséquent, le test de nœud a la valeur TRUE si **CustomerID** est un **\<attribute>** nœud. Si le nœud de contexte n’a pas de **CustomerID**, un ensemble de nœuds vide est retourné.  
   
 > [!NOTE]  
->  Dans cette implémentation de XPath, si une étape de localisation fait référence à un ** \<élément>** ou à un ** \<attribut>** type qui n’est pas déclaré dans le schéma, une erreur est générée. Dans une implémentation de XPath dans MSXML, un ensemble de nœud vide est renvoyé.  
+>  Dans cette implémentation de XPath, si une étape de localisation fait référence à un **\<element>** ou à un **\<attribute>** type qui n’est pas déclaré dans le schéma, une erreur est générée. Dans une implémentation de XPath dans MSXML, un ensemble de nœud vide est renvoyé.  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>Syntaxe abrégée des axes  
  La syntaxe abrégée suivante est prise en charge pour le chemin d'accès d'emplacement :  

@@ -1,5 +1,6 @@
 ---
 title: 'Fonction SQL : Column () (XQuery) | Microsoft Docs'
+description: 'Découvrez comment la fonction XQuery SQL : Column () peut être utilisée pour lier des données relationnelles non XML à l’intérieur de XML et rassembler des données relationnelles et XML.'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881504"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Fonctions d’extension XQuery : sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ sql:column("columnName")
 ## <a name="remarks"></a>Notes  
  Notez que la référence à une colonne spécifiée dans la fonction **SQL : Column ()** à l’intérieur d’un XQuery fait référence à une colonne de la ligne en cours de traitement.  
   
- Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez uniquement faire référence à une instance **XML** dans le contexte de l’expression source d’une instruction INSERT XML-DML. dans le cas contraire, vous ne pouvez pas faire référence à des colonnes de type **XML** ou à un type CLR défini par l’utilisateur.  
+ Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous pouvez uniquement faire référence à une instance **XML** dans le contexte de l’expression source d’une instruction INSERT XML-DML ; sinon, vous ne pouvez pas faire référence à des colonnes de type **XML** ou à un type CLR défini par l’utilisateur.  
   
  La fonction **SQL : Column ()** n’est pas prise en charge dans les opérations de jointure. Vous pouvez utiliser l'opération APPLY à la place.  
   
@@ -134,7 +135,7 @@ select @x
  [Comparer du XML typé et du XML non typé](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [SQL Server de &#40;de données XML&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Créer des instances de données XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Méthodes de type de données XML](../t-sql/xml/xml-data-type-methods.md)   
- [Langage de modification de données XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [méthodes de type de données xml](../t-sql/xml/xml-data-type-methods.md)   
+ [Langage de manipulation de données XML &#40;DML XML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

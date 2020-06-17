@@ -1,5 +1,6 @@
 ---
 title: Gestion des espaces de noms dans XQuery | Microsoft Docs
+description: Consultez des exemples de gestion d’espaces de noms dans un XQuery qui incluent la manière de déclarer de nouveaux espaces de noms et des espaces de noms par défaut.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7b427dfa3756b83eb3d0a73f6ff5dd0be23b0c7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004533"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880717"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Gestion des espaces de noms dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Construction à l'aide des espaces de noms par défaut  
- Vous pouvez aussi définir un espace de noms par défaut en vue de son utilisation dans le code XML construit. Par exemple, la requête suivante montre comment vous pouvez spécifier un espace de noms par défaut, « URI\\: SomeNamespace », à utiliser comme valeur par défaut pour les éléments nommés localement qui sont construits `<Result>` , tels que l’élément.  
+ Vous pouvez aussi définir un espace de noms par défaut en vue de son utilisation dans le code XML construit. Par exemple, la requête suivante montre comment vous pouvez spécifier un espace de noms par défaut, « Uri : SomeNamespace » \\ , à utiliser comme valeur par défaut pour les éléments nommés localement qui sont construits, tels que l' `<Result>` élément.  
   
 ```  
 SELECT CatalogDescription.query('  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670001"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881805"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;requête de données source &gt; -forme
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "83670001"
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
@@ -45,16 +45,16 @@ APPEND ({ <child table query> }
  *requête de table enfant*  
  Requête retournant la table imbriquée.  
   
- *colonne maître*  
+ *colonne principale*  
  Colonne de la table parent permettant d'identifier les lignes enfants dans le résultat d'une requête de table enfant.  
   
  *colonne enfant*  
- Colonne de la table enfant permettant d'identifier la ligne parent dans le résultat d'une requête de table enfant.  
+ Colonne de la table enfant qui permet d’identifier la ligne parente à partir du résultat d’une requête principale.  
   
  *nom de la table de colonnes*  
  Nom de la nouvelle colonne dans la table parent de la table imbriquée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous devez ordonner les requêtes par la colonne qui relie la table parent à la table enfant.  
   
 ## <a name="examples"></a>Exemples  

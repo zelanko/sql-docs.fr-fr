@@ -1,5 +1,6 @@
 ---
 title: Vue d’ensemble
+description: En savoir plus sur les principales fonctionnalités d’organisation et de gestion des données de Master Data Services. Master Data Services vous permet de gérer un ensemble principal de vos données.
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44723e33929c71b51cdf61d675644a4bf9f6068d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb6d1967173c4379b54ca8596b34eadbd8ab46e9
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729050"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800516"
 ---
 # <a name="master-data-services-overview-mds"></a>Vue d’ensemble de Master Data Services (MDS)
 
@@ -30,7 +31,7 @@ Cette rubrique décrit les fonctionnalités d’organisation et de gestion des d
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] vous permet de gérer un ensemble principal de données de votre organisation. Vous pouvez organiser les données en modèles, créer des règles de mise à jour des données et contrôler qui met les données à jour. Avec Excel, vous pouvez partager le jeu de données principal avec d’autres personnes de votre organisation. 
   
- >  Pour obtenir une description de l’architecture [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , consultez l’article [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) sur simple-talk.com. Pour plus d’informations sur les nouvelles [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]fonctionnalités de, consultez [nouveautés de Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ >  Pour obtenir une description de l’architecture [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , consultez l’article [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) sur simple-talk.com. Pour plus d’informations sur les nouvelles fonctionnalités de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , consultez [nouveautés de Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **Pour obtenir des instructions sur l’installation de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], la configuration de la base de données et du site web, et le déploiement des exemples de modèles, consultez** [Installation et configuration de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
   
  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le modèle est le conteneur de niveau le plus élevé dans la structure de vos données de référence. Vous créez un modèle pour gérer des groupes de données semblables, par exemple pour gérer des données de produits en ligne. Un modèle contient une ou plusieurs entités, et les entités contiennent des membres qui sont des enregistrements de données. Une entité est semblable à une table.  

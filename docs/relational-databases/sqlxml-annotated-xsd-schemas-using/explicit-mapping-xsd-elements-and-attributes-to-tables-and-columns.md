@@ -1,5 +1,6 @@
 ---
 title: Mappages XSD personnalisés aux tables/colonnes (SQLXML)
+description: Découvrez comment créer un mappage personnalisé dans une requête XPath SQLXML entre les éléments et les attributs d’un schéma XSD et les tables et les colonnes d’une base de données relationnelle.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885603"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Mappages XSD personnalisés aux tables/colonnes (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,9 +61,9 @@ ms.locfileid: "75257434"
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Spécification des annotations sql:relation et sql:field  
- Dans cet exemple, le schéma XSD se compose d’un élément ** \<contact>** d’un type complexe avec ** \<fname>** et ** \<lname>** éléments enfants et l’attribut **ContactID** .  
+ Dans cet exemple, le schéma XSD se compose d’un **\<Contact>** élément de type complexe avec les **\<FName>** **\<LName>** éléments enfants et et l’attribut **ContactID** .  
   
- L’annotation **SQL : relation** mappe l' ** \<élément Contact>** à la table Person. contact de la base de données AdventureWorks. L’annotation **SQL : Field** mappe l' ** \<élément>fname** à la colonne FirstName et à l’élément ** \<lname>** à la colonne LastName.  
+ L’annotation **SQL : relation** mappe l' **\<Contact>** élément à la table Person. contact de la base de données AdventureWorks. L’annotation **SQL : Field** mappe l' **\<FName>** élément à la colonne FirstName et **\<LName>** à l’élément à la colonne LastName.  
   
  Aucune annotation n’est spécifiée pour l’attribut **ContactID** . Il s'ensuit un mappage par défaut de l'attribut avec la colonne du même nom.  
   

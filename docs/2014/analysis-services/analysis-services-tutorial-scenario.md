@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880668"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Scénario du didacticiel Analysis Services
   Ce didacticiel est basé sur [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], une société fictive. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une grande entreprise multinationale spécialisée dans la fabrication et la distribution de métaux et de pièces détachées de vélos pour les marchés d'Amérique du Nord, d'Europe et d'Asie. Le siège de la société [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est situé dans la ville de Bothell, à Washington, où 500 personnes sont employées. Par ailleurs, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emploie plusieurs équipes commerciales régionales pour couvrir son marché.  
@@ -26,7 +26,7 @@ ms.locfileid: "84528035"
 ## <a name="current-analysis-environment"></a>Environnement d'analyse actuel  
  Pour répondre aux besoins en analyse des données des équipes commerciales et marketing, ainsi que de la direction, l’entreprise récupère actuellement les données transactionnelles dans la base de données [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] et les données non transactionnelles telles que les quotas des ventes dans des feuilles de calcul, et consolide ces données dans l’entrepôt de données relationnelles **AdventureWorksDW2012** . Cependant, l'entrepôt de données relationnelles présente les problèmes suivants :  
   
--   Les rapports sont statiques. Les utilisateurs n'ont aucun moyen d'explorer les données des rapports de façon interactive pour obtenir davantage d'informations détaillées comme ils pourraient le faire s'ils utilisaient des tableaux croisés dynamiques [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Bien que les jeux de rapports prédéfinis existants répondent aux besoins de la plupart des utilisateurs, les utilisateurs plus expérimentés ont besoin d'accéder directement aux requêtes de la base de données pour utiliser des requêtes interactives et des rapports spécialisés. Cependant, du fait de la complexité de la base de données **AdventureWorksDW2012** , beaucoup trop de temps serait nécessaire à ces utilisateurs pour apprendre à créer des requêtes efficaces.  
+-   Les rapports sont statiques. Les utilisateurs n'ont aucun moyen d'explorer les données des rapports de façon interactive pour obtenir davantage d'informations détaillées comme ils pourraient le faire s'ils utilisaient des tableaux croisés dynamiques [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Bien que les jeux de rapports prédéfinis existants répondent aux besoins de la plupart des utilisateurs, les utilisateurs plus expérimentés ont besoin d'accéder directement aux requêtes de la base de données pour utiliser des requêtes interactives et des rapports spécialisés. Toutefois, en raison de la complexité de la base de données **AdventureWorksDW2012** , un trop grand temps est nécessaire pour que les utilisateurs puissent apprendre à créer des requêtes efficaces.  
   
 -   Les performances des requêtes sont aléatoires. Par exemple, certaines requêtes renvoient des résultats très rapidement, en quelques secondes seulement, tandis que d'autres renvoient les résultats au bout de plusieurs minutes.  
   

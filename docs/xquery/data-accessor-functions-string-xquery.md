@@ -1,5 +1,6 @@
 ---
 title: Fonction de chaîne (XQuery) | Microsoft Docs
+description: Découvrez la chaîne de fonction XQuery () qui retourne la valeur de son argument représenté sous la forme d’une chaîne.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881897"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Fonctions d’accesseur de données : string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  Nœud ou valeur atomique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 -   Si *$arg* est la séquence vide, la chaîne de longueur nulle est retournée.  
   
@@ -55,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-string-function"></a>A. Utilisation de la fonction string  
- La requête suivante récupère le <`Features`> nœud d’élément enfant de l’élément `ProductDescription` <>.  
+ La requête suivante récupère le <`Features`> nœud d’élément enfant de l' `ProductDescription` élément <>.  
   
 ```  
 SELECT CatalogDescription.query('  

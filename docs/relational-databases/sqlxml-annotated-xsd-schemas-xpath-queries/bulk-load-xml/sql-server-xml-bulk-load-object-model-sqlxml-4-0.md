@@ -1,5 +1,6 @@
 ---
 title: SQL Server le modèle d’objet de chargement en masse XML (SQLXML)
+description: En savoir plus sur les méthodes et les propriétés de l’objet SQLXMLBulkLoad utilisé pour le chargement en masse XML dans SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,16 +33,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dff7936e236ae76333543e902f588fa8ead1be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882561"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modèle objet de chargement en masse XML de SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Le modèle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet de chargement en masse XML de Microsoft se compose de l’objet SQLXMLBulkLoad. Cet objet prend en charge les méthodes et les propriétés suivantes.  
+  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modèle objet de chargement en masse XML de Microsoft se compose de l’objet SQLXMLBulkLoad. Cet objet prend en charge les méthodes et les propriétés suivantes.  
   
 ## <a name="methods"></a>Méthodes  
  Execute  
@@ -139,13 +140,13 @@ ms.locfileid: "75246708"
  La valeur par défaut est FALSE.  
   
  TempFilePath  
- Spécifie le chemin d'accès où le chargement en masse XML crée les fichiers temporaires pour un chargement en masse transactionnel. (Cette propriété est utile uniquement lorsque la propriété transaction a la valeur TRUE.) Vous devez vous assurer que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le compte utilisé pour le chargement en masse XML a accès à ce chemin d’accès. Si cette propriété n'est pas définie, le chargement en masse XML stocke les fichiers temporaires à l'emplacement spécifié dans la variable d'environnement TEMP.  
+ Spécifie le chemin d'accès où le chargement en masse XML crée les fichiers temporaires pour un chargement en masse transactionnel. (Cette propriété est utile uniquement lorsque la propriété transaction a la valeur TRUE.) Vous devez vous assurer que le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compte utilisé pour le chargement en masse XML a accès à ce chemin d’accès. Si cette propriété n'est pas définie, le chargement en masse XML stocke les fichiers temporaires à l'emplacement spécifié dans la variable d'environnement TEMP.  
   
  Transaction  
  Spécifie si le chargement en masse doit avoir lieu sous la forme d'une transaction, auquel cas la restauration est garantie si le chargement en masse échoue. Il s'agit d'une propriété booléenne. Si la propriété est définie sur TRUE, le chargement en masse intervient dans un contexte transactionnel. La propriété TempFilePath est utile uniquement lorsque transaction a la valeur TRUE.  
   
 > [!NOTE]  
->  Si vous chargez des données binaires (telles que les types de données XML bin. Hex, bin. Base64 dans les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types de données binaires image), la propriété transaction doit avoir la valeur false.  
+>  Si vous chargez des données binaires (telles que les types de données XML bin. Hex, bin. Base64 dans les types de données binaires image [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), la propriété transaction doit avoir la valeur false.  
   
  La valeur par défaut est FALSE.  
   

@@ -1,5 +1,6 @@
 ---
 title: Système de type (XQuery) | Microsoft Docs
+description: Découvrez le système de type XQuery qui comprend des types intégrés de schéma XML et des types définis dans l’espace de noms XPath-Datatypes.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82cfc060b021e28c5b5e73602285b1edc3fcf20
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946203"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886548"
 ---
 # <a name="type-system-xquery"></a>Système de types (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery est un langage fortement typé pour les types de schéma et un langage faiblement typé pour les données non typées. Les types prédéfinis de XQuery incluent les suivants :  
   
--   Types intégrés de schéma XML dans l' **http://www.w3.org/2001/XMLSchema** espace de noms.  
+-   Types intégrés de schéma XML dans l’espace de **http://www.w3.org/2001/XMLSchema** noms.  
   
 -   Types définis dans l' **http://www.w3.org/2004/07/xpath-datatypes** espace de noms.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67946203"
 ## <a name="built-in-types-of-xml-schema"></a>Types intégrés de schéma XML  
  Les types intégrés de schéma XML possèdent un préfixe d'espace de noms prédéfini, xs. Parmi ces types, citons **XS : Integer** et **XS : String**. Tous ces types intégrés sont pris en charge. Vous pouvez utiliser ces types lorsque vous créez une collection de schémas XML.  
   
- Lorsque vous interrogez des données XML typées, le type statique et dynamique des nœuds est déterminé par la collection de schémas XML associée à la colonne ou à la variable sur laquelle porte la requête. Pour plus d’informations sur les types statiques et dynamiques, consultez [contexte d’expression et évaluation de requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Par exemple, la requête suivante est spécifiée par rapport à **xml** une colonne XML`Instructions`typée (). L'expression utilise `instance of` pour vérifier que la valeur typée de l'attribut `LotSize` retourné est de type `xs:decimal`.  
+ Lorsque vous interrogez des données XML typées, le type statique et dynamique des nœuds est déterminé par la collection de schémas XML associée à la colonne ou à la variable sur laquelle porte la requête. Pour plus d’informations sur les types statiques et dynamiques, consultez [contexte d’expression et évaluation de requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Par exemple, la requête suivante est spécifiée par rapport à une colonne **XML** typée ( `Instructions` ). L'expression utilise `instance of` pour vérifier que la valeur typée de l'attribut `LotSize` retourné est de type `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -132,7 +133,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- L'exemple ci-dessous calcule le total des attributs `LaborHours`. La `data()` fonction récupère les valeurs typées des `LaborHours` attributs de tous les éléments `Location` de> <pour un modèle de produit. Selon le schéma XML associé à la `Instruction` colonne, `LaborHours` est de type **XS : Decimal** .  
+ L'exemple ci-dessous calcule le total des attributs `LaborHours`. La `data()` fonction récupère les valeurs typées des `LaborHours` attributs de tous les `Location` éléments de> <pour un modèle de produit. Selon le schéma XML associé à la `Instruction` colonne, `LaborHours` est de type **XS : Decimal** .  
   
 ```  
 SELECT Instructions.query('   
@@ -149,7 +150,7 @@ WHERE ProductModelID=7
 >  L’utilisation explicite de la fonction **Data ()** dans cet exemple est à titre d’illustration uniquement. Si elle n’est pas spécifiée, **Sum ()** applique implicitement la fonction **Data ()** pour extraire les valeurs typées des nœuds.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Concepts de base de XQuery](../xquery/xquery-basics.md)  
   
   

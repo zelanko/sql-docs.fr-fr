@@ -1,5 +1,6 @@
 ---
 title: Mise en forme côté client et côté serveur (SQLXML)
+description: Découvrez la mise en forme XML côté client et côté serveur des documents générés par les requêtes SQLXML 4,0 exécutées sur une base de données Microsoft SQL Server.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27bf8d7c69755bc0745773fd6c0e3defd6bc03c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cf289d7f34cdfa0226464e67b5894b02d982f02
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882907"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Mise en forme côté client et côté serveur (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75247030"
   
 -   Mise en forme côté client  
   
- Cette section contient des informations sur la mise en forme des documents XML côté client ou côté serveur à partir des ensembles de lignes générés par les requêtes exécutées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sur une base de données dans.  
+ Cette section contient des informations sur la mise en forme des documents XML côté client ou côté serveur à partir des ensembles de lignes générés par les requêtes exécutées sur une base de données dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Architecture de la mise en forme XML côté client et côté serveur &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  

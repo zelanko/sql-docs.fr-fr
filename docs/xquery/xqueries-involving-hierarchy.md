@@ -1,5 +1,6 @@
 ---
 title: Requêtes XQuery impliquant une hiérarchie | Microsoft Docs
+description: Affichez des exemples de requêtes XQuery qui impliquent des hiérarchies.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880637"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Requêtes XQuery impliquant une hiérarchie
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "67946106"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>R. Extraction, à partir des instructions de fabrication, des postes de travail ainsi que de la première étape de fabrication réalisée sur ces différents postes  
- Pour le modèle de produit 7, la requête construit le code XML qui `ManuInstr` comprend l’élément <>, avec les attributs **ProductModelID** et **ProductModelName** , et `Location` un ou plusieurs <> éléments enfants.  
+ Pour le modèle de produit 7, la requête construit le code XML qui comprend l' `ManuInstr` élément <>, avec les attributs **ProductModelID** et **ProductModelName** , et un ou plusieurs <`Location`> éléments enfants.  
   
  Chaque <`Location` élément> a son propre ensemble d’attributs et un <`step`> élément enfant. Ce <`step`> élément enfant est la première étape de fabrication sur l’emplacement du poste de travail.  
   
@@ -61,7 +62,7 @@ WHERE ProductModelID=7
   
 -   **SQL : Column ()** est utilisé pour inclure une valeur relationnelle dans le code XML en cours de construction.  
   
--   Lors de la construction de `Location` l’élément <>, $WC/@ * récupère tous les attributs de l’emplacement du centre de travail.  
+-   Lors de la construction de l' `Location` élément <>, $WC/@ * récupère tous les attributs de l’emplacement du centre de travail.  
   
 -   La fonction **String ()** retourne la valeur de chaîne de l' `step` élément <>.  
   
@@ -84,7 +85,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Recherche de tous les numéros de téléphone de la colonne AdditionalContactInfo  
- La requête suivante récupère des numéros de téléphone supplémentaires pour un contact client spécifique en recherchant l’élément <`telephoneNumber`> dans la hiérarchie entière. Étant donné que `telephoneNumber` l’élément <> peut apparaître n’importe où dans la hiérarchie, la requête utilise le descendant et l’opérateur Self (//) dans la recherche.  
+ La requête suivante récupère des numéros de téléphone supplémentaires pour un contact client spécifique en recherchant l’élément <> dans la hiérarchie entière `telephoneNumber` . Étant donné que l' `telephoneNumber` élément <> peut apparaître n’importe où dans la hiérarchie, la requête utilise le descendant et l’opérateur Self (//) dans la recherche.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,7 +112,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Pour récupérer uniquement les numéros de téléphone de niveau supérieur, en particulier `telephoneNumber` les <> éléments enfants `AdditionalContactInfo` de <>, l’expression for de la requête devient  
+ Pour récupérer uniquement les numéros de téléphone de niveau supérieur, en particulier les <`telephoneNumber`> éléments enfants de <`AdditionalContactInfo`>, l’expression for de la requête devient  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   

@@ -1,5 +1,6 @@
 ---
 title: Mise en forme XML côté client et côté serveur (SQLXML)
+description: Découvrez les différences générales entre la mise en forme XML côté client et côté serveur dans SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34eb3a31a9b2affc473338cb730dddeee2f87904
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882893"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Côté client et Mise en forme XML côté serveur (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique décrit les principales différences entre la mise en forme XML côté client et côté serveur dans SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Les requêtes générant plusieurs ensembles de lignes ne sont pas prises en charge dans la mise en forme côté client  
- Les requêtes qui génèrent plusieurs ensembles de lignes ne sont pas prises en charge lorsque vous utilisez la mise en forme XML côté client. Supposons par exemple que vous ayez un répertoire virtuel dans lequel une mise en forme côté client est spécifiée. Considérez cet exemple de modèle, qui contient deux instructions SELECT dans un ** \<bloc de>SQL : Query** :  
+ Les requêtes qui génèrent plusieurs ensembles de lignes ne sont pas prises en charge lorsque vous utilisez la mise en forme XML côté client. Supposons par exemple que vous ayez un répertoire virtuel dans lequel une mise en forme côté client est spécifiée. Considérez cet exemple de modèle, qui contient deux instructions SELECT dans un **\<sql:query>** bloc :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,12 +43,12 @@ ms.locfileid: "75247009"
 </ROOT>  
 ```  
   
- Si vous exécutez ce modèle dans un code d'application, une erreur est alors retournée car la mise en forme XML côté client ne prend pas en charge la mise en forme de plusieurs ensembles de lignes. Si vous spécifiez les requêtes dans deux blocs ** \<SQL : Query>** distincts, vous obtiendrez les résultats souhaités.  
+ Si vous exécutez ce modèle dans un code d'application, une erreur est alors retournée car la mise en forme XML côté client ne prend pas en charge la mise en forme de plusieurs ensembles de lignes. Si vous spécifiez les requêtes dans deux **\<sql:query>** blocs distincts, vous obtiendrez les résultats souhaités.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp est mappé différemment dans la mise en forme côté client et la mise en forme côté serveur  
  Dans la mise en forme XML côté serveur, la colonne de base de données de type **timestamp** est mappée au type XDR i8 (lorsque l’option XMLDATA est spécifiée dans la requête).  
   
- Dans la mise en forme XML côté client, la colonne de base de données de type **timestamp** est mappée à l' **URI** ou au type XDR **bin. base64** (selon que l’option BINARY BASE64 est spécifiée dans la requête). Le type XDR **bin. base64** est utile si vous utilisez les fonctionnalités mise à jour et bulkload, car ce type est converti en type [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d' **horodatage** . De cette manière, l'opération insert, update ou delete réussit.  
+ Dans la mise en forme XML côté client, la colonne de base de données de type **timestamp** est mappée à l' **URI** ou au type XDR **bin. base64** (selon que l’option BINARY BASE64 est spécifiée dans la requête). Le type XDR **bin. base64** est utile si vous utilisez les fonctionnalités mise à jour et bulkload, car ce type est converti en type d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **horodatage** . De cette manière, l'opération insert, update ou delete réussit.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>Les sous-types Deep du type VARIANT sont utilisés dans la mise en forme côté serveur  
  Dans la mise en forme XML côté serveur, les types Deep d'un type de données VARIANT sont utilisés. Si vous utilisez la mise en forme XML côté client, les variantes sont converties en chaîne Unicode et les sous-types de VARIANT ne sont pas utilisés.  

@@ -1,5 +1,6 @@
 ---
 title: Expressions triées et non ordonnées (XQuery) | Microsoft Docs
+description: En savoir plus sur les expressions ordonnées et non ordonnées dans XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4538b78cb64a5017230f0a879f5bf20a02df0341
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 995e2072be85128ab58b85213c255ee35c042d5b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946515"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886858"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Expressions triées et non triées (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Par défaut, le mode de classement de toutes les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] opérations dans est **ordonné**. Par conséquent, les séquences de nœuds retournées par les expressions de chemin d’accès et les expressions FLWOR, sans la clause **order by** , sont dans l’ordre du document.  
+  Par défaut, le mode de classement de toutes les opérations dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est **ordonné**. Par conséquent, les séquences de nœuds retournées par les expressions de chemin d’accès et les expressions FLWOR, sans la clause **order by** , sont dans l’ordre du document.  
   
  La syntaxe supplémentaire **ordonnée** et non **ordonnée** décrite dans la spécification XQuery n’est pas prise en charge.  
   

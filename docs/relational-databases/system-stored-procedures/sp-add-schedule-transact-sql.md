@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151971"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818135"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,6 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
     [ , [ @schedule_id = ] schedule_id OUTPUT ]
-    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -66,7 +65,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**1**|Une fois|  
 |**4**|Quotidien|  
 |**8**|Hebdomadaire|  
-|**16bits**|Mensuelle|  
+|**16**|Mensuelle|  
 |**32**|Tous les mois, par rapport à *freq_interval*|  
 |**64**|Exécuter au démarrage du service de l’agent SQL|  
 |**128**|Exécuter lorsque l’ordinateur est inactif (non pris en charge dans [Azure SQL Database Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
@@ -102,7 +101,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**2**|Seconde|  
 |**4**|Troisième|  
 |**8**|Quatrième|  
-|**16bits**|Dernier|  
+|**16**|Dernier|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Nombre de semaines ou de mois entre l’exécution planifiée d’un travail. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**ou **32**. *freq_recurrence_factor* est de **type int**, avec **0**comme valeur par défaut.  
   

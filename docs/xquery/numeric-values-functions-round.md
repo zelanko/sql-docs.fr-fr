@@ -1,5 +1,6 @@
 ---
 title: Fonction Round (XQuery) | Microsoft Docs
+description: En savoir plus sur la fonction XQuery Round () qui retourne le nombre qui n’a pas de partie fractionnaire qui est le plus proche de l’argument spécifié.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53686410ff6dc36af5cc50a0210e33e9a1fb6ad1
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946543"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881484"
 ---
 # <a name="numeric-values-functions---round"></a>Fonctions de valeurs numériques : round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ fn:round ( $arg as numeric?) as numeric?
  *$arg*  
  Nombre à laquelle s'applique la fonction.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si le type de *$arg* est l’un des trois types numériques de base, **XS : float**, **XS : double**ou **XS : Decimal**, le type de retour est le même que le type de *$arg* . Si le type de *$arg* est un type dérivé de l’un des types numériques, le type de retour est le type numérique de base.  
   
  Si l’entrée des fonctions **FN : Floor**, **FN : Ceiling**ou **FN : Round** est **xdt : untypedAtomic**, les données non typées sont implicitement converties en **XS : double**.  
