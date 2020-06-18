@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51fe880ce3865e44620e0f7ae88c2103b0796f38
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933260"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Exemple de manipulation de chaînes sensible aux caractères supplémentaires
-  Cet exemple pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illustre un traitement de chaînes sensible aux caractères supplémentaires. Cet exemple illustre l'implémentation de cinq fonctions de chaîne Transact-SQL qui procurent les mêmes fonctions de manipulation de chaînes que les fonctions intégrées, mais avec une capacité additionnelle autorisant la gestion des chaînes de caractères Unicode et supplémentaires. Les cinq fonctions sont Lens ( `lefts(), rights(), subs()` ) et `replace_s()` sont équivalentes aux fonctions intégrées `LEN(), LEFT(), RIGHT(), SUBSTRING()` et `REPLACE()` aux fonctions de chaîne.  
+  Cet exemple pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illustre un traitement de chaînes sensible aux caractères supplémentaires. Cet exemple illustre l'implémentation de cinq fonctions de chaîne Transact-SQL qui procurent les mêmes fonctions de manipulation de chaînes que les fonctions intégrées, mais avec une capacité additionnelle autorisant la gestion des chaînes de caractères Unicode et supplémentaires. Les cinq fonctions sont Lens () `lefts(), rights(), subs()` et `replace_s()` sont équivalentes aux fonctions intégrées et aux fonctions de `LEN(), LEFT(), RIGHT(), SUBSTRING()` `REPLACE()` chaîne.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  

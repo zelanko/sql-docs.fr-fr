@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e73e11c582a2a8fc310423551e6e618718e375a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637758"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933695"
 ---
 # <a name="clr-transactions-sample"></a>Exemple de transactions CLR
   Cet exemple montre comment contrôler les transactions à l'aide des API managées situées dans l'espace de noms `System.Transactions` . La classe `System.Transactions.TransactionScope` est notamment utilisée pour établir la limite d'une transaction de sorte que les chiffres de stock ne soient pas modifiés tant que le stock n'est pas suffisant pour répondre à la demande et, si le stock est suffisant, que le transfert du stock d'un emplacement à un autre s'effectue de manière atomique. L'inscription automatique dans une transaction distribuée s'effectue en enregistrant les modifications apportées au stock dans une base de données d'audit stockée sur une instance distincte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

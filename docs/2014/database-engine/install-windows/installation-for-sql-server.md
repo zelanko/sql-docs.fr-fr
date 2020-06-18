@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dafb1e971b85adfee2ecb3579ac20b83906b9dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932370"
 ---
 # <a name="installation-for-sql-server-2014"></a>Installation de SQL Server 2014
  ## <a name="download-sql-server-2014-express"></a>[Télécharger SQL Server Express 2014](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -45,7 +44,7 @@ ms.locfileid: "75228410"
   
 -   Composants de connectivité  
   
- Vous pouvez installer chaque composant individuellement ou sélectionner une combinaison de composants ci-dessus. Pour faire le meilleur choix parmi les éditions et les composants disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est disponible en éditions 32 bits et 64 bits.
+ Vous pouvez installer chaque composant individuellement ou sélectionner une combinaison de composants ci-dessus. Pour faire le meilleur choix parmi les éditions et les composants disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est disponible en éditions 32 bits et 64 bits.
  
  **Essayez-le :**  
   

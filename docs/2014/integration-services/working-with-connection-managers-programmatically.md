@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972439"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Utilisation de gestionnaires de connexions par programme
   Dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la méthode AcquireConnection de la classe de gestionnaire de connexions associée est celle que vous appelez le plus souvent quand vous utilisez des gestionnaires de connexions dans le code managé. Quand vous écrivez du code managé, vous devez appeler la méthode AcquireConnection pour utiliser les fonctionnalités d’un gestionnaire de connexions. Vous devez appeler cette méthode que vous écriviez du code managé dans une tâche de script, un composant Script, un objet personnalisé ou une application personnalisée.  
@@ -61,7 +60,7 @@ ms.locfileid: "62877700"
 |MULTIFILE|Gestionnaire de connexions de fichiers multiples|`System.String`|Chemin d'accès à l'un des fichiers.|  
 |MULTIFLATFILE|Gestionnaire de connexions de fichiers plats multiples|`System.String`|Chemin d'accès à l'un des fichiers.|  
 |SMOServer|Gestionnaire de connexions SMO|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|Gestionnaire de connexions SMTP|`System.String`|Par exemple : `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|Gestionnaire de connexions SMTP|`System.String`|Par exemple : `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|Gestionnaire de connexions WMI|`System.Management.ManagementScope`||  
 |SQLMOBILE|Gestionnaire de connexions SQL Server Compact|`System.Data.SqlServerCe.SqlCeConnection`||  
   

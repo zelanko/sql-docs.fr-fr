@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058527"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966379"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Éditeur de boucle Foreach (page Mappage de variables)
   Utilisez la page **Mappage de variables** de la boîte de dialogue **Éditeur de boucle Foreach** pour mapper les variables à la valeur de la collection. La valeur de cette variable est mise à jour avec les valeurs de la collection à chaque itération de la boucle.  
   
  Pour en savoir plus sur l’utilisation du conteneur de boucles Foreach dans un package Integration Services, consultez [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md) . Pour en savoir plus sur la façon de le configurer, consultez [Configurer un conteneur de boucles Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] didacticiel Création d’un package ETL simple, comprend une leçon qui vous apprend à ajouter et configurer une boucle foreach.  
+ Le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] didacticiel Création d’un package ETL simple, comprend une leçon qui vous apprend à ajouter et configurer une boucle foreach.  
   
 ## <a name="options"></a>Options  
  **Variable**  
- Sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
 > [!NOTE]  
 >  Après avoir mappé une variable, une nouvelle ligne s’ajoute automatiquement à la liste **Variable**.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 752447d6c38a2df0fcbdce72fbba12edd7a9eeb3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920686"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956159"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Sauvegardes du journal des transactions (SQL Server)
   Cette rubrique s'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employant le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions. Cette rubrique décrit la sauvegarde du journal des transactions d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "62920686"
 ##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>Fonctionnement d’une séquence de sauvegardes de journaux  
  La séquence de sauvegarde des journaux des transactions ( *séquence de journaux* ) ne dépend pas des sauvegardes de données. Supposons, par exemple, que la séquence des événements est la suivante.  
   
-|Heure|Événement|  
+|Temps|Événement|  
 |----------|-----------|  
 |8h00|Sauvegarde de la base de données.|  
 |Midi|Sauvegarde du journal des transactions.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd603a59a1ddb2ede3d3c779d31f13424342edc2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932550"
 ---
 # <a name="install-sql-server-powershell"></a>Installer SQL Server PowerShell
   Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'arrête s'il détecte que vous avez sélectionné des fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui incluent des composants PowerShell, alors que Windows PowerShell 2.0 n'est pas installé. Vous devez installer PowerShell à l'aide de Windows Management Framework, puis réexécuter l'installation.  
@@ -23,7 +22,7 @@ ms.locfileid: "62775439"
 ## <a name="installing-ssnoversion-powershell-support"></a>Installation de la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell  
  Vous installez le logiciel qui fournit la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque vous sélectionnez des fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui requièrent la prise en charge de PowerShell, le programme d'installation vérifie que Windows PowerShell 2.0 est installé. Si PowerShell 2.0 est présent, le programme d'installation installe ensuite les composants suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell :  
   
--   Composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logiciels enfichables PowerShell. Les composants logiciels enfichables sont des fichiers dll qui implémentent deux types de prise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en charge de Windows PowerShell pour :  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Composants logiciels enfichables PowerShell. Les composants logiciels enfichables sont des fichiers dll qui implémentent deux types de prise en charge de Windows PowerShell pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
     -   Un jeu d'applets de commande [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les applets de commande sont des commandes qui implémentent une action spécifique. Par exemple, **Invoke-Sqlcmd** exécute un script [!INCLUDE[tsql](../../includes/tsql-md.md)] ou XQuery qui peut également être exécuté à l’aide de l’utilitaire **sqlcmd** , et **Invoke-PolicyEvaluation** indique si les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont conformes aux stratégies de la gestion basée sur des stratégies.  
   

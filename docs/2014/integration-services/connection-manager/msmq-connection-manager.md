@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a92d6ee495c31e788e7924f00d5469d538155da3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920710"
 ---
 # <a name="msmq-connection-manager"></a>Gestionnaire de connexions MSMQ
   Un gestionnaire de connexions MSMQ permet à un package de se connecter à une file d'attente de messages qui utilise Message Queuing (MSMQ). La tâche MSMQ incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions MSMQ.  
@@ -37,8 +36,8 @@ ms.locfileid: "62833656"
   
 |Type de file d'attente|Exemple de chemin d'accès|  
 |----------------|-----------------|  
-|Public|\<nom_ordinateur >\\<nom_file_attente\>|  
-|Privé|\<nom_ordinateur >\Private$\\<nom_file_attente\>|  
+|Public|\<computer name>\\Nom de la file d’attente<\>|  
+|Privé|\<computer name>\Private $ \\<nom de la file d’attente\>|  
   
  Vous pouvez utiliser un point (.) pour représenter l'ordinateur local.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933404"
 ---
 # <a name="program-exception-message-box"></a>Programmer la boîte de message d'exceptions
   Vous pouvez utiliser la boîte de message d'exception dans vos applications pour fournir un contrôle nettement supérieur sur les messages que celui fourni par la classe <xref:System.Windows.Forms.MessageBox>. Pour plus d’informations, consultez [programmation de la boîte de message d’exception](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Pour plus d'informations sur la façon d'obtenir et de déployer le fichier .dll de boîte de message d'exception, consultez [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "62780693"
   
 1.  Ajoutez une référence dans votre projet de code managé à l'assembly Microsoft.ExceptionMessageBox.dll.  
   
-2.  Facultatif Ajoutez une `using` directive (C#) `Imports` ou[!INCLUDE[msCoName](../../includes/msconame-md.md)] (Visual Basic .net) pour utiliser l' <xref:Microsoft.SqlServer.MessageBox> espace de noms.  
+2.  Facultatif Ajoutez une `using` directive (C#) ou `Imports` ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net) pour utiliser l' <xref:Microsoft.SqlServer.MessageBox> espace de noms.  
   
 3.  Créez un bloc try-catch pour gérer l'exception anticipée.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62780693"
   
 1.  Ajoutez une référence dans votre projet de code managé à l'assembly Microsoft.ExceptionMessageBox.dll.  
   
-2.  Facultatif Ajoutez une `using` directive (C#) `Imports` ou (Visual Basic .net) pour utiliser l' <xref:Microsoft.SqlServer.MessageBox> espace de noms.  
+2.  Facultatif Ajoutez une `using` directive (C#) ou `Imports` (Visual Basic .net) pour utiliser l' <xref:Microsoft.SqlServer.MessageBox> espace de noms.  
   
 3.  Créez une instance de la classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>. Passez le texte du message comme une valeur <xref:System.String>.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62780693"
   
 1.  Ajoutez une référence dans votre projet de code managé à l'assembly Microsoft.ExceptionMessageBox.dll.  
   
-2.  Facultatif Ajoutez une `using` directive (C#) `Imports` ou (Visual Basic .net) pour utiliser l' <xref:Microsoft.SqlServer.MessageBox> espace de noms.  
+2.  Facultatif Ajoutez une `using` directive (C#) ou `Imports` (Visual Basic .net) pour utiliser l' <xref:Microsoft.SqlServer.MessageBox> espace de noms.  
   
 3.  Créez une instance de la classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> en appliquant l'une des deux méthodes suivantes :  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62780693"
   
 1.  Ajoutez une référence dans votre projet de code managé à l'assembly Microsoft.ExceptionMessageBox.dll.  
   
-2.  Facultatif Ajoutez une `using` directive (C#) `Imports` ou (Visual Basic .net) pour utiliser l' <xref:Microsoft.SqlServer.MessageBox> espace de noms.  
+2.  Facultatif Ajoutez une `using` directive (C#) ou `Imports` (Visual Basic .net) pour utiliser l' <xref:Microsoft.SqlServer.MessageBox> espace de noms.  
   
 3.  Créez une instance de la classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> en appliquant l'une des deux méthodes suivantes :  
   

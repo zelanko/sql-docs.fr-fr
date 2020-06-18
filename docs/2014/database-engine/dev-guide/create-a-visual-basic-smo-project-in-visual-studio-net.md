@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49eb94833d10b2e901c008092aea29eab8e4ad48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933680"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Créer un projet SMO Visual Basic dans Visual Studio .NET
   Cette section décrit comment élaborer une application de console SMO simple.  
@@ -36,7 +35,7 @@ ms.locfileid: "62753338"
   
 4.  Facultatif Dans le champ **nom** , tapez le nom de la nouvelle application.  
   
-5.  Cliquez sur **OK** pour charger [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] le modèle application console.  
+5.  Cliquez sur **OK** pour charger le [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] modèle application console.  
   
 6.  Dans le menu **Projet**, sélectionnez **Ajouter une référence**. La boîte de dialogue **Ajouter une référence** s’affiche.  
   

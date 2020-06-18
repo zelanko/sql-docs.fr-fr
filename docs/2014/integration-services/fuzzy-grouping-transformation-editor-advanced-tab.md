@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058371"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966309"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Éditeur de transformation de regroupement probable (onglet Avancé).
   Utilisez l'onglet **Avancé** de la boîte de dialogue **Éditeur de transformation de regroupement probable** pour spécifier les colonnes d'entrée et de sortie, définir des seuils de similarité et des séparateurs.  
   
 > [!NOTE]  
->  Les `Exhaustive` `MaxMemoryUsage` propriétés et de la transformation de regroupement approximatif ne sont pas disponibles dans l **'éditeur de transformation de regroupement probable**, mais elles peuvent être définies à l’aide de l' **éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section Transformation de regroupement approximatif dans [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Les `Exhaustive` Propriétés et `MaxMemoryUsage` de la transformation de regroupement approximatif ne sont pas disponibles dans l **'éditeur de transformation de regroupement probable**, mais elles peuvent être définies à l’aide de l' **éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section Transformation de regroupement approximatif dans [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Pour en savoir plus sur la transformation de regroupement approximatif, consultez [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   

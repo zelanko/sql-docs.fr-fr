@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939480"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
@@ -74,7 +73,7 @@ ms.locfileid: "62900223"
 -   Sortie sans correspondance. La sortie sans correspondance gère les lignes de l'entrée qui ne correspondent pas au moins à une entrée dans le dataset de référence. Si vous configurez la transformation de recherche pour traiter les lignes sans entrées correspondantes comme des erreurs, elles sont redirigées vers la sortie d'erreur. Sinon, la transformation redirige ces lignes vers la sortie sans correspondance.  
   
     > [!NOTE]  
-    >  Dans [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la transformation de recherche n'avait qu'une seule sortie. Pour plus d’informations sur l’exécution d’une transformation de recherche créée dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consultez [mettre à niveau les transformations de recherche](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  Dans [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la transformation de recherche n'avait qu'une seule sortie. Pour plus d’informations sur l’exécution d’une transformation de recherche créée dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , consultez [mettre à niveau les transformations de recherche](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Sortie d'erreur.  
   

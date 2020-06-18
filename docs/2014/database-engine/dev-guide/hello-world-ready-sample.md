@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64a693738df444e91fa4c9277b8a7dbc3eaca1a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933561"
 ---
 # <a name="hello-world-ready-sample"></a>Exemple HelloWorldReady
   L'exemple HelloWorldReady présente les opérations de base à effectuer pour créer, déployer et tester une procédure stockée simple basée sur l'intégration du CLR (Common Language Runtime) et adaptée pour un usage international. Un composant est dit adapté pour un usage international lorsqu'il est possible de le localiser facilement, sans changer son code source, en différentes langues pour divers marchés dans le monde entier. Cet exemple montre également comment retourner des données via un paramètre de sortie et via un enregistrement, qui est construit de manière dynamique par la procédure stockée et est retourné au client. Cet exemple est presque identique à l'exemple Hello World, mais il est beaucoup plus facile et sécurisé de localiser cette application. La modification du texte localisé nécessite les opérations suivantes :  
@@ -78,7 +77,7 @@ ms.locfileid: "73637657"
   
 4.  Dans c:\MySample, créez le fichier `messages.resx` et copiez l'exemple de code C# dans le fichier.  
   
-5.  Dans c:\MySample, créez le fichier `messages.de.resx` en enregistrant le `messages.resx` fichier `messages.de.resx` comme après avoir modifié la ligne.  
+5.  Dans c:\MySample, créez le fichier `messages.de.resx` en enregistrant le fichier `messages.resx` comme `messages.de.resx` après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  Dans c:\MySample, créez le fichier `messages.es.resx` en enregistrant le `messages.resx` fichier `messages.es.resx` comme après avoir modifié la ligne.  
+6.  Dans c:\MySample, créez le fichier `messages.es.resx` en enregistrant le fichier `messages.resx` comme `messages.es.resx` après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +93,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  Dans c:\MySample, créez le fichier `messages.fr.resx` en enregistrant le `messages.resx` fichier `messages.fr.resx` comme après avoir modifié la ligne.  
+7.  Dans c:\MySample, créez le fichier `messages.fr.resx` en enregistrant le fichier `messages.resx` comme `messages.fr.resx` après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  Dans c:\MySample, créez le fichier `messages.fr-FR.resx` en enregistrant le `messages.resx` fichier `messages.fr-FR.resx` comme après avoir modifié la ligne.  
+8.  Dans c:\MySample, créez le fichier `messages.fr-FR.resx` en enregistrant le fichier `messages.resx` comme `messages.fr-FR.resx` après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. Dans c:\MySample, créez le fichier `messages.it.resx` en enregistrant le `messages.resx` fichier `messages.it.resx` comme après avoir modifié la ligne.  
+9. Dans c:\MySample, créez le fichier `messages.it.resx` en enregistrant le fichier `messages.resx` comme `messages.it.resx` après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +117,7 @@ ms.locfileid: "73637657"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. Dans c:\MySample, créez le fichier `messages.ja.resx` en enregistrant le `messages.resx` fichier `messages.ja.resx` comme après avoir modifié la ligne.  
+10. Dans c:\MySample, créez le fichier `messages.ja.resx` en enregistrant le fichier `messages.resx` comme `messages.ja.resx` après avoir modifié la ligne.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932376"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installer SQL Server 2014 à l'aide d'un fichier de configuration
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation permet de générer un fichier de configuration basé sur les entrées système par défaut et celles effectuées au moment de l’exécution. Vous pouvez utiliser le fichier de configuration pour déployer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la totalité de l'entreprise avec la même configuration. Vous pouvez également standardiser les installations manuelles dans l'ensemble de l'entreprise, en créant un fichier de commandes qui lance Setup.exe.  
@@ -56,7 +55,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Suivez le déroulement des étapes de l'Assistant jusqu'à la page **Prêt pour l'installation** . Le chemin d'accès au fichier de configuration est spécifié dans la page **Prêt pour l'installation** , dans la section relative au chemin d'accès du fichier de configuration. Pour plus d’informations sur l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [installer SQL Server 2014 à partir de l’assistant Installation &#40;&#41;d' ](install-sql-server-from-the-installation-wizard-setup.md)installation.  
+2.  Suivez le déroulement des étapes de l'Assistant jusqu'à la page **Prêt pour l'installation** . Le chemin d'accès au fichier de configuration est spécifié dans la page **Prêt pour l'installation** , dans la section relative au chemin d'accès du fichier de configuration. Pour plus d’informations sur l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [installer SQL Server 2014 à partir de l’assistant installation &#40;&#41;d' ](install-sql-server-from-the-installation-wizard-setup.md)installation.  
   
 3.  Annulez l'exécution du programme d'installation sans réellement terminer l'installation afin de générer le fichier INI.  
   
@@ -71,7 +70,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Comment utiliser un fichier de configuration pour installer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome  
   
--   Exécutez l’installation à l’aide de l’invite de commandes et fournissez fichier ConfigurationFile. ini à l’aide du paramètre *fichier ConfigurationFile* .  
+-   Exécutez l’installation à l’aide de l’invite de commandes et fournissez le ConfigurationFile.ini à l’aide du paramètre *fichier ConfigurationFile* .  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Procédure d'utilisation d'un fichier de configuration afin de préparer et finaliser une image d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome (SysPrep)  
   

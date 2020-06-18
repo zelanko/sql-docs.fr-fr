@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966205"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
-  Utilisez la **page enregistrer le package SSIS** pour nommer, décrire et enregistrer un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] package Integration Services[!INCLUDE[ssIS](../../includes/ssis-md.md)]() dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` base de données ou dans un fichier portant l’extension. dtsx.  
+  Utilisez la page **enregistrer le package SSIS** pour nommer, décrire et enregistrer un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Package Integration Services ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` base de données ou dans un fichier portant l’extension. dtsx.  
   
 > [!NOTE]  
 >  Dans [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], l'option permettant d'enregistrer le package créé par l'Assistant n'est pas disponible.  
@@ -45,7 +44,7 @@ ms.locfileid: "62892751"
  **Nom du serveur**  
  Lorsque vous sélectionnez une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tapez ou sélectionnez le nom du serveur de destination.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Lorsque vous sélectionnez une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indiquez si la connexion au serveur utilise l'authentification intégrée Windows. Il s'agit de la méthode d'authentification conseillée.  
   
  **Utiliser l’authentification SQL Server**  

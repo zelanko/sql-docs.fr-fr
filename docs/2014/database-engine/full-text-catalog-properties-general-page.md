@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9e2411daea2d4b1c4028e9ed0b3143762f2db592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933020"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriétés du catalogue de texte intégral (page Général)
   Cette section présente les options et fonctions disponibles dans la page **Général** de la boîte de dialogue **Propriétés du catalogue de texte intégral** .  
@@ -34,7 +33,7 @@ ms.locfileid: "83000959"
  **État du remplissage**  
  Indique l'état du catalogue. Les valeurs possibles sont les suivantes :  
   
--   **Inactif**  
+-   **Idle**  
   
 -   **Analyse en cours**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000959"
   
 -   **Le disque est en pause plein**  
   
--   **Suivi des modifications**  
+-   **Change tracking**  
   
  **Nombre d’éléments**  
  Affiche le nombre d'éléments de texte intégral contenus dans le catalogue.  

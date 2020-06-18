@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00d643088634c918eb626917eae64a001ce3678
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932870"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Instructions pour utiliser les index sur les tables optimisées en mémoire
   Les index sont utilisés pour accéder efficacement aux données dans les tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifier les index appropriés peut améliorer considérablement les performances des requêtes. Par exemple, considérez la requête :  
@@ -69,10 +68,10 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 |Opération|Index de hachage non cluster optimisé en mémoire|Index non cluster optimisé en mémoire|Index sur disque|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
-|Analyse d'index, récupère toutes les lignes de la table.|Oui|Oui|Oui|  
-|Recherche d'index sur les prédicats d'égalité (=).|Oui<br /><br /> (Clé complète requise.)|Oui <sup>1</sup>|Oui|  
-|Recherche d’index sur les prédicats d’inégalité (> \<, <, =, >=, between).|Non (résulte dans une analyse d'index)|Oui <sup>1</sup>|Oui|  
-|Récupérez les lignes selon un ordre de tri qui correspond à la définition de l'index.|Non|Oui|Oui|  
+|Analyse d'index, récupère toutes les lignes de la table.|Oui|Oui|Yes|  
+|Recherche d'index sur les prédicats d'égalité (=).|Yes<br /><br /> (Clé complète requise.)|Oui <sup>1</sup>|Yes|  
+|Recherche d’index sur les prédicats d’inégalité (>, <, \<=, > =, between).|Non (résulte dans une analyse d'index)|Oui <sup>1</sup>|Yes|  
+|Récupérez les lignes selon un ordre de tri qui correspond à la définition de l'index.|Non|Oui|Yes|  
 |Récupérez les lignes selon un ordre de tri inverse par rapport à la définition de l'index.|Non|Non|Oui|  
   
  Dans la table, Oui signifie que l'index peut traiter la demande et Non signifie que l'index ne peut pas être utilisé pour répondre à cette demande.  

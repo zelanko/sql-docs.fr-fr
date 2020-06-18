@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26055dde636d299a2a58fdfe0bdbd3fdfbdab012
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054280"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972349"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Utilisez le nœud **Général** de la boîte de dialogue **Éditeur de tâche XML** pour préciser le type d'opération à effectuer, puis la configurer.  
@@ -32,14 +31,14 @@ ms.locfileid: "66054280"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Vérification**|Permet de valider le document XML en utilisant un DTD (Document Type Definition) ou un schéma XSD (XML Schema definition). Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **Valider**s'affichent alors.|  
+|**Procéder à la validation**|Permet de valider le document XML en utilisant un DTD (Document Type Definition) ou un schéma XSD (XML Schema definition). Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **Valider**s'affichent alors.|  
 |**XSLT**|Effectue les transformations XSL sur les documents XML. Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **XSLT**s'affichent alors.|  
 |**EXPRESSIONS**|Lance les requêtes et les évaluations XPath. Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **XPATH**s'affichent alors.|  
-|**Fusion**|Permet de fusionner deux documents XML. Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **Fusionner**s'affichent alors.|  
+|**Fusionner**|Permet de fusionner deux documents XML. Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **Fusionner**s'affichent alors.|  
 |**Diff**|Permet de comparer deux documents XML. Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **Diff**s'affichent alors.|  
 |**Correctif**|Permet d'appliquer la sortie de l'opération Diff afin de créer un document. Si cette valeur est sélectionnée, les options dynamiques incluses dans la section **Patch**s'affichent alors.|  
   
- **Telle**  
+ **SourceType**  
  Permet de sélectionner le type de source correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Value|Description|  
@@ -51,11 +50,11 @@ ms.locfileid: "66054280"
  **Source**  
  Si **Source** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
   
- Si **Source** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **source** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **source** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur ** \<nouvelle variable... >** pour créer une variable.  
+ Si **source** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur **\<New variable...>** pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66054280"
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -112,11 +111,11 @@ ms.locfileid: "66054280"
  **SecondOperand**  
  Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **XPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -130,11 +129,11 @@ ms.locfileid: "66054280"
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **destinationType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -158,11 +157,11 @@ ms.locfileid: "66054280"
  **SecondOperand**  
  Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **XPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -176,11 +175,11 @@ ms.locfileid: "66054280"
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **destinationType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -204,11 +203,11 @@ ms.locfileid: "66054280"
  **SecondOperand**  
  Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **XPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -239,11 +238,11 @@ ms.locfileid: "66054280"
  **XPathStringSource**  
  Si **XPathStringSourceType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
   
- Si **XPathStringSourceType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **XPathStringSourceType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **XPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes**: [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
@@ -256,11 +255,11 @@ ms.locfileid: "66054280"
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **destinationType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -284,11 +283,11 @@ ms.locfileid: "66054280"
  **SecondOperand**  
  Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **SecondOperandType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes**: [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
@@ -301,7 +300,7 @@ ms.locfileid: "66054280"
 |Value|Description|  
 |-----------|-----------------|  
 |**Auto**|Laisse la tâche XML déterminer si l'algorithme à utiliser est l'algorithme rapide ou l'algorithme précis.|  
-|**Rapide**|L'algorithme de comparaison utilisé est le plus rapide des deux, mais aussi le moins précis.|  
+|**Expédition**|L'algorithme de comparaison utilisé est le plus rapide des deux, mais aussi le moins précis.|  
 |**Précise**|L'algorithme de comparaison utilisé est le plus précis des deux.|  
   
  **Options Diff**  
@@ -331,11 +330,11 @@ ms.locfileid: "66054280"
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **destinationType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -359,11 +358,11 @@ ms.locfileid: "66054280"
  **SecondOperand**  
  Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **SecondOperandType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes**: [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
@@ -377,11 +376,11 @@ ms.locfileid: "66054280"
  Permet de spécifier si le fichier ou la variable de destination doit être remplacé.  
   
  **Destination**  
- Si **DestinationType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **destinationType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **destinationType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :**[Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -405,11 +404,11 @@ ms.locfileid: "66054280"
  **SecondOperand**  
  Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
- Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
+ Si **SecondOperandType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **SecondOperandType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes**: [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   

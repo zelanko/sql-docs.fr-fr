@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47c42afc2f09c43a678bb99c22ec7275cf2ca20f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483771"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972326"
 ---
 # <a name="add-a-user-master-data-services"></a>Ajouter un utilisateur (Master Data Services)
   Ajoutez un utilisateur à la liste **Utilisateurs** dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour commencer la procédure d’affectation d’une autorisation d’accès à l’application web. Avant qu’un utilisateur de la liste puisse accéder à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez lui accorder une autorisation d’accès à un ou plusieurs objets de modèle et zones fonctionnelles.  
@@ -34,7 +33,7 @@ ms.locfileid: "65483771"
   
 2.  Dans la page **Utilisateurs** , cliquez sur **Ajouter des utilisateurs**.  
   
-3.  Tapez le nom de l’utilisateur précédé du nom de domaine Active Directory ou du nom de l’ordinateur serveur, comme dans *domain*\\*user_name* de domaine ou *ordinateur \ user_name*.  
+3.  Tapez le nom de l’utilisateur précédé du nom de domaine Active Directory ou du nom de l’ordinateur serveur, comme dans *domain* \\ *user_name* de domaine ou *ordinateur \ user_name*.  
   
 4.  Cliquez éventuellement sur **Vérifier les noms**.  
   

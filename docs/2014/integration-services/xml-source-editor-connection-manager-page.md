@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972369"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Éditeur de source XML (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de source XML** pour spécifier un fichier XML et le schéma XSD qui transforme les données XML.  

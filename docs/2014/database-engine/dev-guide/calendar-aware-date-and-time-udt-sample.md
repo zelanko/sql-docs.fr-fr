@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a8d632b538104e490fb70542cdd0f8bd73b87f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933727"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Exemple de type de date et d’heure prenant en compte le calendrier
   Le stockage de dates sous forme de chaînes peut prêter à confusion car les dates sont sans intérêt si vous ne connaissez pas le système de calendrier utilisé. L'exemple `CADatetime` présente deux types de données définis par l'utilisateur, `CADatetime` et `CADate`, qui fournissent une gestion des dates et des heures utilisant un calendrier.  

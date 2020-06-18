@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17ca833a0773b48df0cc3781505b1046e2a63814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932740"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considérations relatives à l'installation de SQL Server à l'aide de SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep vous permet de préparer une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur et de terminer la configuration ultérieurement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep implique un processus en deux étapes pour arriver à une instance autonome configurée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces étapes sont les suivantes :  
@@ -28,7 +27,7 @@ ms.locfileid: "62779134"
   
      Cette étape vous permet de finaliser la configuration d'une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pendant cette étape, vous pouvez fournir les informations spécifiques à l'ordinateur, au réseau et au compte.  
   
- Pour plus d’informations sur l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de à l’aide de Sysprep, consultez [installer SQL Server 2014 à l’aide de Sysprep](install-sql-server-using-sysprep.md).  
+ Pour plus d’informations sur l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de Sysprep, consultez [installer SQL Server 2014 à l’aide de Sysprep](install-sql-server-using-sysprep.md).  
   
 ## <a name="common-uses-for-ssnoversion-sysprep"></a>Utilisations courantes pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  Vous pouvez utiliser la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep de chacune des manières suivantes :  
@@ -65,7 +64,7 @@ ms.locfileid: "62779134"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Writer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont préparés automatiquement lorsque vous préparez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ils sont finalisés lorsque vous finalisez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'étape Finaliser l'image.  
   
- Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]éditions prises en charge de, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Pour plus d’informations sur les éditions prises en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Vous pouvez effectuer une mise à niveau d'édition lors de la configuration d'une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option n'est pas prise en charge pour les éditions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   

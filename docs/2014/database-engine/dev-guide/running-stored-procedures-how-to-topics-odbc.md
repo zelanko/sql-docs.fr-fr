@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2220182-a23d-4475-b353-77a77ab613d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c40d064da4cd518e77d724a2ea38217124d6b8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 532a211f0e765547c6f15eb762b8dcc3048302a1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933390"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>Rubriques de procédures relatives à l'exécution des procédures stockées (ODBC)
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'exécution des procédures stockées en tant que procédures stockées distantes. L'exécution d'une procédure stockée en tant que procédure stockée distante permet au pilote et au serveur d'optimiser les performances de l'exécution de la procédure.  

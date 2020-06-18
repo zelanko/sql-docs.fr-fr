@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833810"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920879"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
   Un gestionnaire de connexions de fichiers plats permet à un package d'accéder aux données d'un fichier plat. Ainsi, les sources et destinations de fichiers plats peuvent utiliser des gestionnaires de connexions de fichiers plats pour extraire et charger des données.  
@@ -35,13 +34,13 @@ ms.locfileid: "62833810"
  Si vous mettez à jour les longueurs de colonnes dans le gestionnaire de connexions de fichiers plats après l'ajout et la configuration de la source de fichiers plats qui utilise le gestionnaire de connexions, il n'est pas nécessaire de redimensionner manuellement les colonnes de sortie dans la source de fichiers plats. Quand vous ouvrez la boîte de dialogue **Source du fichier plat** , la source du fichier plat offre la possibilité de synchroniser les métadonnées de la colonne.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configuration du gestionnaire de connexions de fichiers plats  
- Lorsque vous ajoutez un gestionnaire de connexions de fichiers plats à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, crée un gestionnaire de connexions qui sera résolu en une connexion de fichier plat au moment de l’exécution, définit les propriétés de connexion de fichier plat et ajoute `Connections` le gestionnaire de connexions de fichiers plats à la collection du package.  
+ Lorsque vous ajoutez un gestionnaire de connexions de fichiers plats à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera résolu en une connexion de fichier plat au moment de l’exécution, définit les propriétés de connexion de fichier plat et ajoute le gestionnaire de connexions de fichiers plats à la `Connections` collection du package.  
   
  La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `FLATFILE`.  
   
  Par défaut, le gestionnaire de connexions de fichiers plats cherche toujours la présence d'un séparateur de lignes dans les données non délimitées par des guillemets, puis démarre une nouvelle ligne lorsqu'un séparateur de lignes est trouvé. Cela permet au gestionnaire de connexions de fichiers plats d'analyser correctement les fichiers comportant des lignes auxquelles il manque des champs de colonnes.  
   
- Dans certains cas, la désactivation de cette fonctionnalité peut améliorer les performances des packages. Vous pouvez désactiver cette fonctionnalité en définissant la propriété du gestionnaire de connexions **AlwaysCheckForRowDelimiters**de fichiers plats `False`, alwayscheckforrowdelimiters du, sur.  
+ Dans certains cas, la désactivation de cette fonctionnalité peut améliorer les performances des packages. Vous pouvez désactiver cette fonctionnalité en définissant la propriété du gestionnaire de connexions de fichiers plats, **alwayscheckforrowdelimiters du**, sur `False` .  
   
  Vous pouvez configurer le gestionnaire de connexions de fichiers plats de plusieurs manières :  
   

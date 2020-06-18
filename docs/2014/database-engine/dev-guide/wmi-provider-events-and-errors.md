@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0be233b164d68bc93caa0484e59fb2196497a3b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933170"
 ---
 # <a name="wmi-provider-events-and-errors"></a>Événements et erreurs du fournisseur WMI
   Cette rubrique contient des informations sur les causes et résolutions de certaines erreurs WMI relatives à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,6 +28,6 @@ ms.locfileid: "62780265"
  Échec d'ouverture de session : restriction de compte d'utilisateur. Parmi les explications possibles figurent les mots de passe vides qui ne sont pas autorisés, les restrictions liées aux heures de connexion ou l'application d'une restriction de stratégie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Erreurs et événements du moteur de base de données](../../relational-databases/native-client-ole-db-errors/errors.md)  
+ [Événements et erreurs de Moteur de base de données](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

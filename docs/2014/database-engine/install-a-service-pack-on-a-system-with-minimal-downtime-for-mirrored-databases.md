@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932784"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installer un Service Pack sur un système avec un temps mort minimal pour les bases de données mises en miroir
   Cette rubrique décrit comment réduire le temps mort pour les bases de données mises en miroir lorsque vous installez des Service Packs et des correctifs. Ce processus implique la mise à niveau séquentielle des instances de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] qui participent à la mise en miroir de bases de données. Cette forme de mise à jour, appelée *mise à jour propagée*, réduit le temps d’arrêt à un seul basculement. Notez que pour les sessions en mode hautes performances dans lesquelles le serveur miroir est géographiquement distant du serveur principal, une mise à jour propagée peut être inappropriée.  
@@ -125,7 +124,7 @@ ms.locfileid: "62779593"
   
     -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: affectez la valeur **Haute performance (asynchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données** .  
   
-    -   Dans [!INCLUDE[tsql](../includes/tsql-md.md)]: utilisez [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) pour désactiver la sécurité des transactions.  
+    -   Dans [!INCLUDE[tsql](../includes/tsql-md.md)] : utilisez [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) pour désactiver la sécurité des transactions.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Pour réintégrer un témoin dans une session de mise en miroir  
   

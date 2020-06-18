@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8b9f5968cf68762178602ced64078248f3badb0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932930"
 ---
 # <a name="get-dialog-box-source-control"></a>Boîte de dialogue Obtenir (Contrôle de code source)
   Extrait une copie en lecture seule de l'élément sélectionné à partir de la base de données contenant le contrôle de code source vers votre dossier de travail ou un autre dossier de votre choix.  

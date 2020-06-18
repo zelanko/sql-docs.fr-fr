@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480017"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972269"
 ---
 # <a name="administrators-master-data-services"></a>Administrateurs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], il existe deux types d'administrateurs : les administrateurs de modèle et l'administrateur système [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="model-administrators"></a>Administrateurs de modèle  
- Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur de modèle est un utilisateur qui dispose de l’autorisation **mettre à jour** affectée à l’objet modèle de niveau supérieur sous l’onglet **objets de modèle** et aucune autre autorisation n’est affectée.  
+ Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , un administrateur de modèle est un utilisateur qui dispose de l’autorisation **mettre à jour** affectée à l’objet modèle de niveau supérieur sous l’onglet **objets de modèle** et aucune autre autorisation n’est affectée.  
   
 -   Si l'utilisateur a accès à la zone fonctionnelle **Explorateur** , il peut ajouter, supprimer et mettre à jour toutes les données de référence dans cette zone.  
   
