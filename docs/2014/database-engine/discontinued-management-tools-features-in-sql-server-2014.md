@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 724f6e91b911f9edc89188a265364956176d6974
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933130"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Fonctionnalités des outils d'administration supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités des outils de gestion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

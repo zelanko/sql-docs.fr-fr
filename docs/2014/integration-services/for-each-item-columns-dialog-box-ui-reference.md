@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e442ad28f64de8bd293fa95a604207e9bdc13107
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966394"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Colonnes For Each Item
   Utilisez la boîte de dialogue **Colonnes For Each Item** pour définir les colonnes des éléments énumérés par l'énumérateur Foreach Item.  
@@ -34,7 +33,7 @@ ms.locfileid: "66058549"
  **Ajouter**  
  Ajoutez une nouvelle colonne.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez une colonne, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  

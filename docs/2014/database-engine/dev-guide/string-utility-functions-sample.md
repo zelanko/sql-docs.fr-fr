@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61cc9b3b9a07bb20d8aa0defa28fdae133ae454f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933267"
 ---
 # <a name="string-utility-functions-sample"></a>Exemple de fonctions d'utilitaire de chaîne
   L'exemple String Utilities contient une fonction table en continu écrite en Visual C# et Visual Basic qui fractionne une chaîne séparée par des virgules en une table avec une colonne. Il contient également une fonction d'agrégation qui convertit une colonne de chaîne en une chaîne séparée par des virgules.  Une fonction scalaire et une fonction table sont également implémentées ; elles fournissent des fonctionnalités de recherche et de remplacement d'expressions régulières.  
@@ -50,7 +49,7 @@ ms.locfileid: "74054847"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer l’intégration du CLR, vous `ALTER SETTINGS` devez disposer de l' `sysadmin` autorisation de niveau serveur, qui est implicitement détenue par les membres des rôles serveur fixes et `serveradmin` .  
+    >  Pour activer l’intégration du CLR, vous devez disposer `ALTER SETTINGS` de l’autorisation de niveau serveur, qui est implicitement détenue par les membres des `sysadmin` `serveradmin` rôles serveur fixes et.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   

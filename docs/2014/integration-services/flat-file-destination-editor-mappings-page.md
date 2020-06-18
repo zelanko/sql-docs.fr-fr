@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d26cda51087ff0bf0cbe648e74e09332724c1d10
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058682"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966449"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Éditeur de destination de fichier plat (page Mappages)
   La page **Mappages** de la boîte de dialogue **Éditeur de destination de fichier plat** permet de mapper des colonnes d’entrée à des colonnes de destination.  
@@ -34,7 +33,7 @@ ms.locfileid: "66058682"
  Affichez la liste des colonnes de destination disponibles. Au moyen d'une opération glisser-déplacer, mappez les colonnes de destination disponibles aux colonnes d'entrée.  
   
  **Colonne d'entrée**  
- Affichez les colonnes d'entrée sélectionnées précédemment. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**. Sélectionnez ** \<ignorer>** pour exclure la colonne de la sortie.  
+ Affichez les colonnes d'entrée sélectionnées précédemment. Vous pouvez modifier les mappages au moyen de la liste **Colonnes d'entrée disponibles**. Sélectionnez **\<ignore>** cette option pour exclure la colonne de la sortie.  
   
  **Colonne de destination**  
  Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  

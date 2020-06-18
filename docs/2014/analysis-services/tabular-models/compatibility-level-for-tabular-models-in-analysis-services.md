@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5727bd88bd04deab0e1b8364bd6cbefe9e6c142
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939870"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>Niveau de compatibilité (SSAS Tabulaire SP1)
   Vous pouvez spécifier le *niveau de compatibilité* lors de la création de projets de modèles tabulaires, lors de la mise à niveau de projets de modèles tabulaires existants, lors de la mise à niveau de bases de données de modèles tabulaires déployées ou lors de l’importation de classeurs PowerPivot  
@@ -39,7 +38,7 @@ ms.locfileid: "66067597"
  Vous pouvez également spécifier un niveau de compatibilité par défaut en sélectionnant l'option **Ne plus afficher ce message** . Tous les projets suivants utiliseront le niveau de compatibilité que vous avez spécifié. Vous pouvez modifier le niveau de compatibilité par défaut dans SSDT sous Options.  
   
 ### <a name="upgrade-an-existing-tabular-model-project-to-1103-compatibility-level"></a>Mettre à niveau un projet de modèle tabulaire existant vers le niveau de compatibilité 1103  
- Vous pouvez mettre à niveau un projet de modèle tabulaire créé dans SSDT [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] avant d’installer ou une version ultérieure pour qu’il soit compatible avec la version 1103 de la base de données à l’aide de la propriété **niveau de compatibilité** dans la fenêtre **Propriétés** du modèle. Pour mettre à niveau un projet de modèle tabulaire, [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou version ultérieure doit être installé sur l'ordinateur sur lequel est installé SSDT et [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou version ultérieure doit également être installé sur l'instance Analysis Services sur laquelle réside la base de données d'espace de travail. Vous ne pouvez pas mettre à niveau vers une version antérieure.  
+ Vous pouvez mettre à niveau un projet de modèle tabulaire créé dans SSDT avant d’installer [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou une version ultérieure pour qu’il soit compatible avec la version 1103 de la base de données à l’aide de la propriété **niveau de compatibilité** dans la fenêtre **Propriétés** du modèle. Pour mettre à niveau un projet de modèle tabulaire, [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou version ultérieure doit être installé sur l'ordinateur sur lequel est installé SSDT et [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou version ultérieure doit également être installé sur l'instance Analysis Services sur laquelle réside la base de données d'espace de travail. Vous ne pouvez pas mettre à niveau vers une version antérieure.  
   
 ### <a name="upgrade-a-deployed-tabular-model-database-to-1103-compatibility-level"></a>Mettre à niveau une base de données model tabulaire déployée vers le niveau de compatibilité 1103  
  Vous pouvez mettre à niveau une base de données model tabulaire déployée existante vers la version de base de données 1103 compatible dans SQL Server Management Studio (SSMS) à l’aide de la propriété **niveau de compatibilité** dans **Propriétés de la base de données**. Pour mettre à niveau, [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou version ultérieure doit être installé sur l'ordinateur sur lequel est installée l'instance SQL Server Analysis Services. Vous ne pouvez pas mettre à niveau une base de données model tabulaire déployée vers une version antérieure.  
@@ -48,9 +47,9 @@ ms.locfileid: "66067597"
  Lorsque vous créez un projet de modèle tabulaire par importation à partir de PowerPivot, spécifiez si vous souhaitez mettre à niveau le niveau de compatibilité vers le niveau de compatibilité par défaut (s'il a été configuré précédemment dans SSDT) ou conserver le niveau de compatibilité déjà spécifié dans le classeur PowerPivot.  
   
 ### <a name="check-compatibility-level-for-a-tabular-model-database-in-ssms"></a>Vérifier le niveau de compatibilité d'une base de données model tabulaire dans SSMS  
- Vous pouvez vérifier le niveau de compatibilité d’une base de données model tabulaire dans SSMS en consultant la propriété **niveau** de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]compatibilité (nouveauté de) dans **Propriétés de la base de données**.  
+ Vous pouvez vérifier le niveau de compatibilité d’une base de données model tabulaire dans SSMS en consultant la propriété **niveau de compatibilité** (nouveauté de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ) dans **Propriétés de la base de données**.  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>Vérifier le niveau de compatibilité pris en charge pour une instance Analysis Services dans SSMS  
- Vous pouvez vérifier le niveau de compatibilité pris en charge dans SSMS en consultant la propriété **niveau de compatibilité pris en charge** dans [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]la page **informations** (nouveauté de) dans Propriétés de **Analysis Services**. Un niveau de compatibilité 1103 pris en charge indique que SQL Server SP1 ou version ultérieure est installé. Le niveau de compatibilité pris en charge ne peut pas être modifié.  
+ Vous pouvez vérifier le niveau de compatibilité pris en charge dans SSMS en consultant la propriété **niveau de compatibilité pris en charge** dans la page **informations** (nouveauté de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ) dans **Propriétés de Analysis Services**. Un niveau de compatibilité 1103 pris en charge indique que SQL Server SP1 ou version ultérieure est installé. Le niveau de compatibilité pris en charge ne peut pas être modifié.  
   
   

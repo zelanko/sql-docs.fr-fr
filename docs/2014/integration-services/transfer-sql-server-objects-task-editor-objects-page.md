@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054865"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972743"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Éditeur de tâche de transfert d'objets SQL (page Objets)
   Utilisez la page **Objets** de la boîte de dialogue **Éditeur de tâche de transfert d’objets SQL** pour spécifier les propriétés de copie d’un ou plusieurs objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à une autre. Les tables, les vues, les procédures stockées et les fonctions définies par l’utilisateur représentent quelques exemples des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que vous pouvez copier. Pour plus d'informations sur cette tâche, consultez [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -29,13 +28,13 @@ ms.locfileid: "66054865"
   
 ## <a name="static-options"></a>Options statiques  
  **Abord SourceConnection**  
- Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur source.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<New connection...>** pour créer une nouvelle connexion au serveur source.  
   
  **SourceDatabase**  
  Sélectionnez une base de données sur le serveur source à partir duquel les objets seront copiés.  
   
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur de destination.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<New connection...>** pour créer une connexion au serveur de destination.  
   
  **DestinationDatabase**  
  Sélectionnez une base de données sur le serveur de destination dans lequel les objets seront copiés.  

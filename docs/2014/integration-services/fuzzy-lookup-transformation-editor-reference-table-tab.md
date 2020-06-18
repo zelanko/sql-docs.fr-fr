@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efdb863b0a067d3d52405c5caa5a78e85555c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966271"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche floue (onglet Table de référence)
   Utilisez l’onglet **Table de référence** de la boîte de dialogue **Éditeur de transformation de recherche floue** pour définir la table source et l’index à utiliser pour la recherche. La source de données de référence doit être une table d’une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -28,7 +27,7 @@ ms.locfileid: "66058305"
 >  La transformation de recherche floue crée une copie de travail de la table de référence. Les index décrits ci-dessous sont créés dans cette table de travail en utilisant une table spéciale et non un index [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] standard. La transformation ne modifie pas les tables sources existantes si vous ne sélectionnez pas **Conserver l’index stocké**. Dans ce cas, elle crée un déclencheur dans la table de référence qui met à jour la table de travail et la table d'index de recherche en fonction des modifications apportées à la table de référence.  
   
 > [!NOTE]  
->  Les `Exhaustive` `MaxMemoryUsage` propriétés et de la transformation de recherche floue ne sont pas disponibles dans l **'éditeur de transformation de recherche floue**, mais elles peuvent être définies à l’aide de l' **éditeur avancé**. De plus, une valeur supérieure à 100 pour `MaxOutputMatchesPerInput` ne peut être spécifiée que dans le **éditeur avancé**. Pour plus d’informations sur ces propriétés, consultez la section Transformation de recherche floue dans [Propriétés personnalisées des transformations](data-flow/transformations/transformation-custom-properties.md).  
+>  Les `Exhaustive` Propriétés et `MaxMemoryUsage` de la transformation de recherche floue ne sont pas disponibles dans l **'éditeur de transformation de recherche floue**, mais elles peuvent être définies à l’aide de l' **éditeur avancé**. De plus, une valeur supérieure à 100 pour `MaxOutputMatchesPerInput` ne peut être spécifiée que dans le **éditeur avancé**. Pour plus d’informations sur ces propriétés, consultez la section Transformation de recherche floue dans [Propriétés personnalisées des transformations](data-flow/transformations/transformation-custom-properties.md).  
   
  Pour en savoir plus sur la transformation de recherche floue, consultez [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66058305"
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions OLE DB existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Crée une connexion en utilisant la boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** .  
   
  **Créer un nouvel index**  

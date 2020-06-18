@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdbc41e4290914ac45a4afe09cc5715395774d80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939450"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Fusionner des données à l'aide de la transformation d'union totale
   Pour pouvoir ajouter et configurer une transformation d'union totale, le package doit inclure au moins une tâche de flux de données et deux sources de données.  
@@ -38,7 +37,7 @@ ms.locfileid: "62770337"
   
 4.  Double-cliquez sur la transformation d'union totale.  
   
-5.  Dans **l’Éditeur de transformation d’union totale**, mappez une colonne d’une entrée à une colonne de la liste **Nom de colonne de sortie** en cliquant sur une ligne, puis en sélectionnant une colonne dans la liste d’entrée. Sélectionnez **\<ignorer>** dans la liste d’entrée pour ignorer le mappage de la colonne.  
+5.  Dans **l’Éditeur de transformation d’union totale**, mappez une colonne d’une entrée à une colonne de la liste **Nom de colonne de sortie** en cliquant sur une ligne, puis en sélectionnant une colonne dans la liste d’entrée. Sélectionnez **\<ignore>** dans la liste d’entrée pour ignorer le mappage de la colonne.  
   
     > [!NOTE]  
     >  Vous ne pouvez mapper deux colonnes que si leurs métadonnées correspondent.  

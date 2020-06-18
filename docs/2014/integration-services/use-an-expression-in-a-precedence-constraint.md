@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fd5c1f75a0085767ade60f6010e446b70e60840
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972619"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>Utiliser une expression dans une contrainte de précédence
   Cette procédure explique comment ajouter une expression à une contrainte de précédence via la boîte de dialogue **Éditeur de contrainte de précédence** . Pour pouvoir ajouter une expression à une contrainte de précédence, le package doit inclure au moins deux exécutables (des tâches ou des conteneurs) qui doivent être connectés par une contrainte de précédence.  

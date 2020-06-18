@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966262"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Choisir une source de données (Assistant Importation et Exportation SQL Server)
   Utilisez la page **choisir une source de données** pour spécifier la source des données que vous souhaitez copier.  
@@ -28,7 +27,7 @@ ms.locfileid: "62893594"
   
 ## <a name="options"></a>Options  
  **Source de données**  
- Permet de choisir le fournisseur de données qui correspond au format de stockage de la source. Plusieurs fournisseurs peuvent être disponibles pour votre source de données. Par exemple, avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliser Native Client, le .NET Framework fournisseur de données pour SQL Server ou le fournisseur Microsoft OLE DB pour SQL Server.  
+ Permet de choisir le fournisseur de données qui correspond au format de stockage de la source. Plusieurs fournisseurs peuvent être disponibles pour votre source de données. Par exemple, avec, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, le .NET Framework Fournisseur de données pour SQL Server ou le fournisseur Microsoft OLE DB pour SQL Server.  
   
  Le nombre d'options de la propriété **Source de données** varie en fonction des fournisseurs installés sur l'ordinateur. Les tableaux suivants répertorient les options de destinations fréquemment utilisées. Pour les autres fournisseurs, consultez la documentation du fournisseur.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62893594"
  **Nom du serveur**  
  Tapez le nom du serveur qui contient les données ou choisissez un serveur dans la liste.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Spécifiez si le package doit utiliser l'authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour la connexion à la base de données. L'authentification Windows est recommandée pour renforcer la sécurité.  
   
  **Utiliser l’authentification SQL Server**  
@@ -80,10 +79,10 @@ ms.locfileid: "62893594"
 ### <a name="data-source--microsoft-excel"></a>Source de données = Microsoft Excel  
   
 > [!NOTE]  
->  Sélectionnez **Microsoft Excel** uniquement si vous souhaitez vous connecter à une source de données qui utilise Excel 2003 ou une version antérieure. Pour vous connecter à une source de données qui utilise Excel 2007, sélectionnez **Microsoft Office 12,0 accès Moteur de base de données OLE DB fournisseur**, cliquez sur **Propriétés**, puis sous l’onglet **tous** de la boîte de dialogue Propriétés des `Excel 12.0` liaisons de **données** , entrez comme valeur pour les **propriétés étendues**.  
+>  Sélectionnez **Microsoft Excel** uniquement si vous souhaitez vous connecter à une source de données qui utilise Excel 2003 ou une version antérieure. Pour vous connecter à une source de données qui utilise Excel 2007, sélectionnez **Microsoft Office 12,0 accès Moteur de base de données OLE DB fournisseur**, cliquez sur **Propriétés**, puis sous l’onglet **tous** de la boîte de dialogue **Propriétés des liaisons de données** , entrez `Excel 12.0` comme valeur pour les **propriétés étendues**.  
   
  **Chemin de fichier Excel**  
- Spécifiez le chemin d'accès et le nom de la feuille de calcul à partir de laquelle les données doivent être importées. Par exemple, **C:\mydata.xls, \\\Sales\Database\Northwind.xls**. Ou cliquez sur **Parcourir**.  
+ Spécifiez le chemin d'accès et le nom de la feuille de calcul à partir de laquelle les données doivent être importées. Par exemple, **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. Ou cliquez sur **Parcourir**.  
   
  **Parcourir**  
  Permet de rechercher la feuille de calcul à l’aide de la boîte de dialogue **Ouvrir**.  

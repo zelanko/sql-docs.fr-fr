@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972659"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Mise à niveau des packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Mise à niveau des packages** pour afficher la progression de la mise à niveau de packages et pour interrompre le processus de mise à niveau. L'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] met à niveau, un par un, les packages sélectionnés.  
@@ -46,7 +45,7 @@ ms.locfileid: "66054735"
  **Stop**  
  Permet d'arrêter la mise à niveau de packages.  
   
- **Rapport**  
+ **Report**  
  Sélectionnez ce que vous voulez faire avec le rapport qui contient les résultats de la mise à niveau de packages :  
   
 -   Afficher le rapport en ligne.  

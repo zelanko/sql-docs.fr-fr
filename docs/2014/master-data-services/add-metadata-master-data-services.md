@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64093c4a0db4a4fc31f287fe908757de13a3462e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972296"
 ---
 # <a name="add-metadata-master-data-services"></a>Ajouter des métadonnées (Master Data Services)
-  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ajoutez des métadonnées définies par l’utilisateur au modèle de **métadonnées** pour décrire vos objets de modèle.  
+  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , ajoutez des métadonnées définies par l’utilisateur au modèle de **métadonnées** pour décrire vos objets de modèle.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66428796"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966419"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Éditeur de boucle Foreach (page de collection)
   La page **Collection** de la boîte de dialogue **Éditeur de boucle Foreach** permet de spécifier le type d’énumérateur et de configurer ce dernier.  
@@ -58,7 +57,7 @@ ms.locfileid: "66428796"
   
 -   si des fichiers sont ajoutés, il peut être difficile de déterminer pour quels fichiers la boucle Foreach a effectué le travail.  
   
- **Répertoire**  
+ **Dossier**  
  Permet d'indiquer le chemin du dossier racine à énumérer.  
   
  **Parcourir**  
@@ -103,7 +102,7 @@ ms.locfileid: "66428796"
  **Type de données de la colonne**  
  Permet d'afficher le type de données de la colonne active.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez un élément, puis cliquez sur **Supprimer** pour le supprimer de la liste.  
   
  **Colonnes**  
@@ -115,7 +114,7 @@ ms.locfileid: "66428796"
  Vous utilisez l'énumérateur ADO Foreach pour énumérer les lignes ou les tables d'un objet ADO ou ADO.NET qui est stocké dans une variable. Par exemple, si la boucle Foreach inclut une tâche de script qui écrit un dataset dans une variable, vous pouvez utiliser l'énumérateur ADO Foreach pour énumérer les lignes du dataset. Si la variable contient un dataset ADO.NET, l'énumérateur peut être configuré pour énumérer les lignes de plusieurs tables ou pour énumérer des tables.  
   
  **Variable source de l'objet ADO**  
- Sélectionnez une variable définie par l’utilisateur dans la liste ou cliquez \<sur **nouvelle variable...**> pour créer une variable.  
+ Sélectionnez une variable définie par l’utilisateur dans la liste ou cliquez sur \<**New variable...**> pour créer une variable.  
   
 > [!NOTE]  
 >  La variable doit être de type Objet ; dans le cas contraire, une erreur se produit.  
@@ -135,7 +134,7 @@ ms.locfileid: "66428796"
  Vous utilisez l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach pour énumérer un schéma pour une source de données spécifiée. Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL, vous pouvez utiliser l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach pour énumérer des schémas tels que les colonnes de la base de données **AdventureWorks** , et la tâche d'exécution SQL pour obtenir les autorisations de schéma.  
   
  **Connection**  
- Sélectionnez un gestionnaire de connexions ADO.net dans la liste ou cliquez \<sur **nouvelle connexion...**> pour créer un gestionnaire de connexions ADO.net.  
+ Sélectionnez un gestionnaire de connexions ADO.NET dans la liste ou cliquez sur \<**New connection...**> pour créer un nouveau gestionnaire de connexions ADO.net.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions ADO.NET doit utiliser un fournisseur .NET pour OLE DB. Lors de la connexion à SQL Server, il est recommandé d'utiliser le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, répertorié dans la section **Fournisseurs .Net pour OleDb** de la boîte de dialogue **Gestionnaire de connexions** .  
@@ -154,14 +153,14 @@ ms.locfileid: "66428796"
  L'énumérateur Foreach à partir d'une variable permet d'énumérer les objets énumérables contenus dans la variable spécifiée. Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL qui exécute une requête et enregistre le résultat dans une variable, vous pouvez utiliser l'énumérateur Foreach à partir d'une variable pour énumérer les résultats de la requête.  
   
  **Variable**  
- Sélectionnez une variable dans la liste ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Sélectionnez une variable dans la liste ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList Enumerator  
  L'énumérateur Foreach Nodelist permet d'énumérer un ensemble de nœuds XML qui résulte de l'application d'une expression XPath à un fichier XML. Par exemple, si la boucle Foreach inclut une tâche de script, vous pouvez utiliser l'énumérateur Foreach NodeList pour transmettre une valeur qui correspond aux critères de l'expression XPath du fichier XML à la tâche de script.  
   
- L’expression XPath qui s’applique au fichier XML est l’opération XPath externe, stockée dans la propriété OuterXPathString. Si le type d' `ElementCollection`énumération XPath a la valeur, l’énumérateur Foreach NodeList peut appliquer une expression XPath interne, stockée dans la propriété InnerXPathString, à une collection d’éléments.  
+ L’expression XPath qui s’applique au fichier XML est l’opération XPath externe, stockée dans la propriété OuterXPathString. Si le type d’énumération XPath a la valeur `ElementCollection` , l’énumérateur Foreach NodeList peut appliquer une expression XPath interne, stockée dans la propriété InnerXPathString, à une collection d’éléments.  
   
  Pour en savoir plus sur l'utilisation de documents et de données XML, consultez «[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)» (en anglais) dans MSDN Library.  
   
@@ -177,11 +176,11 @@ ms.locfileid: "66428796"
  **DocumentSource**  
  Si **DocumentSourceType** est défini sur **entrée directe**, indiquez le code XML, ou cliquez sur le bouton des points de suspension (...) pour fournir le code XML à l’aide de la boîte de dialogue **éditeur de source de document**.  
   
- Si **DocumentSourceType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers \<ou cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
+ Si **DocumentSourceType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **DocumentSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **DocumentSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -207,16 +206,16 @@ ms.locfileid: "66428796"
  `OuterXPathString`  
  Si **OuterXPathStringSourceType** est défini sur **Entrée directe**, fournissez la chaîne XPath.  
   
- Si **OuterXPathStringSourceType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers \<ou cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
+ Si **OuterXPathStringSourceType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **OuterXPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **OuterXPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
- Si **EnumerationType** a la valeur `ElementCollection`, sélectionnez le type d’élément interne dans la liste.  
+ Si **EnumerationType** a la valeur `ElementCollection` , sélectionnez le type d’élément interne dans la liste.  
   
  **InnerXPathStringSourceType**  
  Permet de sélectionner le type source correspondant à une chaîne XPath interne. Cette propriété dispose des options répertoriées dans le tableau suivant.  
@@ -230,11 +229,11 @@ ms.locfileid: "66428796"
  `InnerXPathString`  
  Si **InnerXPathStringSourceType** est défini sur **Entrée directe**, fournissez la chaîne XPath.  
   
- Si **InnerXPathStringSourceType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers \<ou cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
+ Si **InnerXPathStringSourceType** est défini sur **connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **InnerXPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Si **InnerXPathStringSourceType** est défini sur **variable**, sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -242,7 +241,7 @@ ms.locfileid: "66428796"
  L'énumérateur Foreach SMO permet d'énumérer des objets SQL-SMO (SQL Server Management Object). Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL, vous pouvez utiliser l'énumérateur Foreach SMO pour énumérer les tables de la base de données **AdventureWorks** et exécuter des requêtes qui comptent le nombre de lignes dans chaque table.  
   
  **Connection**  
- Sélectionnez un gestionnaire de connexions ADO.net existant ou cliquez \<sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
+ Sélectionnez un gestionnaire de connexions ADO.NET existant ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  Rubriques connexes : [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
@@ -274,7 +273,7 @@ ms.locfileid: "66428796"
  **Filtre de plage de temps de/à des objets blob**  
  Spécifiez un filtre de plage de temps. Les fichiers modifiés après **TimeRangeFrom** et avant **TimeRangeTo** seront énumérés.  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a> Enumerator = Foreach ADLS File Enumerator  
-L' **énumérateur de fichiers ADLS** permet à un package SSIS d’énumérer des fichiers sur ADLS avec des filtres. La barre oblique`/`()-préfixe du chemin d’accès complet des fichiers énumérés peut être stockée dans une variable et utilisée dans les tâches à l’intérieur du conteneur de boucles Foreach.
+L' **énumérateur de fichiers ADLS** permet à un package SSIS d’énumérer des fichiers sur ADLS avec des filtres. La barre oblique ( `/` )-préfixe du chemin d’accès complet des fichiers énumérés peut être stockée dans une variable et utilisée dans les tâches à l’intérieur du conteneur de boucles Foreach.
   
 **AzureDataLakeConnection**  
 Spécifie un gestionnaire de connexions Azure Data Lake ou en crée un qui fait référence à un compte ADLS.   

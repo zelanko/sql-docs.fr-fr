@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16a86fa9098efcd6f4d8d46917df175667414dd9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054485"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972489"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Afficher les métadonnées d'un chemin d'accès dans l'Éditeur du chemin d'accès au flux de données
   Les chemins d'accès connectent deux composants de flux de données. Pour pouvoir afficher les métadonnées d'un chemin d'accès, le flux de données doit contenir au moins deux composants de flux de données connectés. Pour plus d’informations, consultez [Ajouter ou supprimer un composant dans un flux de données](data-flow/add-or-delete-a-component-in-a-data-flow.md) et [Connecter des composants dans un flux de données](data-flow/connect-components-in-a-data-flow.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66054485"
   
 7.  Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Chemins d’accès Integration Services](data-flow/integration-services-paths.md)   
  [Flux de données](data-flow/data-flow.md)  
   

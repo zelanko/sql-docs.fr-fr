@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27f6bda21381a3388e51c387b072c80026b44c6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067402"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939780"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Créer et gérer des partitions de modèles tabulaires (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les partitions définies pour un modèle au cours de la création de modèles sont dupliquées dans un modèle déployé. Une fois le déploiement terminé, vous pouvez gérer ces partitions à l'aide de la boîte de dialogue **Partitions** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou à l'aide d'un script. Les tâches fournies dans cette rubrique décrivent comment créer et gérer des partitions pour un modèle déployé.  

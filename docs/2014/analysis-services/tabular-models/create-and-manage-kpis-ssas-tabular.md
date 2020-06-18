@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b64c5014f6f32d2e6e702937a739b66f38362e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067509"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939820"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Créer et gérer les indicateurs de performance clés (SSAS Tabulaire)
   Cette rubrique décrit comment créer, modifier ou supprimer un indicateur de performance clé (KPI) dans un modèle tabulaire. Pour créer un indicateur de performance clé, vous sélectionnez une mesure qui correspond à la valeur de base de l’indicateur de performance clé. Utilisez ensuite la boîte de dialogue Indicateur de performance clé pour sélectionner une seconde mesure ou une valeur absolue qui prend une valeur cible. Vous pourrez ensuite définir des seuils d'état qui mesurent les performances entre les mesures de base et cible.  

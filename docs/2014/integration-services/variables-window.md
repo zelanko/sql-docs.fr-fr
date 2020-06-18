@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877874"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972559"
 ---
 # <a name="variables-window"></a>Fenêtre Variables
   La fenêtre **Variables** permet de créer et de modifier les variables définies par l’utilisateur et d’afficher les variables système.  
@@ -49,7 +48,7 @@ ms.locfileid: "62877874"
  `Name`  
  Affichez le nom de la variable. Vous pouvez mettre à jour le nom des variables définies par l'utilisateur.  
   
- **Étendue**  
+ **Portée**  
  Affichez l'étendue de la variable. Une variable a l'étendue du package entier ou celle d'un conteneur ou d'une tâche. L'étendue de la variable doit être suffisante pour qu'elle soit visible pour tout autre composant ou tâche qui doit lire ou définir ses valeurs.  
   
  Vous pouvez modifier l'étendue en cliquant sur la variable puis en cliquant sur **Déplacer la variable** dans la fenêtre **Variables** .  
@@ -64,7 +63,7 @@ ms.locfileid: "62877874"
  Affichez la valeur de la variable. Vous pouvez mettre à jour la valeur des variables définies par l'utilisateur. Cette valeur peut être un littéral ou une expression. En outre, la valeur peut être une chaîne multiligne. Pour affecter une expression à la variable, cliquez sur le bouton d'ellipse qui est en regard de la colonne **Expression** dans la fenêtre **Variables** .  
   
  `Namespace`  
- Affichez le nom de l'espace de noms. Les variables définies par l’utilisateur sont initialement créées dans l’espace de noms **User** , mais vous pouvez modifier le `Namespace` nom de l’espace de noms dans le champ. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
+ Affichez le nom de l'espace de noms. Les variables définies par l’utilisateur sont initialement créées dans l’espace de noms **User** , mais vous pouvez modifier le nom de l’espace de noms dans le `Namespace` champ. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
   
  **Déclencher l'événement lorsque la valeur de la variable change**  
  Indiquez si l'événement `OnVariableValueChanged` est déclenché lors de la modification d'une valeur. Vous pouvez mettre à jour la valeur des variables système définies par l'utilisateur. Par défaut, la fenêtre **Variables** ne répertorie pas cette colonne. Pour afficher cette colonne, cliquez sur **Options de la grille**.  

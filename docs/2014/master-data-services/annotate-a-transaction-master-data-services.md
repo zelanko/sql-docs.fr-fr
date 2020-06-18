@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 87e33ff166f07c10ee8b0b32eac5590f486e70c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad76c2933cf39bf1a036995a09c3713e79f5db09
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483915"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972259"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Annoter une transaction (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], annotez une transaction lorsque vous souhaitez fournir des informations de prise en charge relatives à la transaction à des fins d'historique.  
@@ -63,7 +62,7 @@ ms.locfileid: "65483915"
   
 5.  Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Annotations &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
  [Transactions &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   

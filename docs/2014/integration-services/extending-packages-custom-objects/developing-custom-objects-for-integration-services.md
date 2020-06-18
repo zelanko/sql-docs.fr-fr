@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 787ec28a5e118b0a5090463be68c55c51c6f1023
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2c4d65e421915fa67f1e3700fdfa91998c0c36e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176307"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966469"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Développement d'objets personnalisés pour Integration Services
   Lorsque les objets de flux de contrôle et de flux de données inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne répondent pas complètement à vos besoins, vous pouvez développer vos propres types d’objets personnalisés, notamment les suivants :

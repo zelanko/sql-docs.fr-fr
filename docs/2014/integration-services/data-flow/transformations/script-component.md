@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4921ddbfd1b7066d94aa18ae4cec68d702dc4223
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939390"
 ---
 # <a name="script-component"></a>Composant Script
   Le composant Script héberge le script et permet à un package d'inclure du code de script personnalisé et de l'exécuter. Vous pouvez utiliser le composant Script dans des packages pour :  

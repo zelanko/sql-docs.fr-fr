@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a123557bdeb84ed8d36664b6451772b669edbbec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6eed81f7a4a149de3912b5e9142fbdbd4a2f2c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919680"
 ---
 # <a name="check-database-integrity-task"></a>Tâche Vérifier l'intégrité de la base de données
   La tâche Vérifier l'intégrité de la base de données contrôle l'allocation et l'intégrité de la structure de tous les objets de la base de données spécifiée. La tâche peut vérifier une ou plusieurs bases de données et vous pouvez indiquer si vous souhaitez également contrôler les index de base de données.  

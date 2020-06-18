@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fee544578a24f47e662645a0d5cd576a74fb0496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e98fd75976a7862909f3d4f03f78649073da32d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768887"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966491"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Développement d'un gestionnaire de connexions personnalisé
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise des gestionnaires de connexions pour encapsuler les informations nécessaires pour se connecter à une source de données externe. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers gestionnaires de connexions qui prennent en charge les connexions aux sources de données les plus couramment utilisées, allant des bases de données d'entreprise aux fichiers texte et feuilles de calcul Excel. Si les gestionnaires de connexions et les sources de données externes pris en charge par [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ne répondent pas totalement à vos besoins, vous pouvez créer un gestionnaire de connexions personnalisé.  

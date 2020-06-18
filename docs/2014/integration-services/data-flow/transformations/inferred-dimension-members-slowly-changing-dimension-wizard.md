@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c505bf78acc4293e68f0f2222dd9fbf7f9e01e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35df99f7870130fb32d1cd7bf63b2bbc775b9381
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900135"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939460"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>Membres de la dimension inférés (Assistant Dimension à variation lente)
   La boîte de dialogue **Membres de la dimension inférés** vous permet de spécifier les options d'utilisation des membres inférés. Des membres inférés existent lorsqu'une table de faits fait référence à des membres de la dimension qui ne sont pas encore chargés. Lorsque les données du membre inféré sont chargées, vous pouvez mettre à jour l'enregistrement existant au lieu d'en créer un.  

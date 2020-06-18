@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7354c9152d075c2ebc3611a342bbf8d7594cde79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966529"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Création d'un gestionnaire de connexions personnalisé
   Les étapes à suivre pour créer un gestionnaire de connexions personnalisé sont similaires à celles permettant de créer tout autre objet personnalisé pour [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] :  
@@ -43,7 +42,7 @@ ms.locfileid: "62768924"
  Configurez les deux projets pour qu'ils signent les assemblys qui seront créés au moment de la génération à l'aide d'un fichier de clé de nom fort.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Application de l'attribut DtsConnection  
- Appliquez l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> à la classe que vous avez créée pour l'identifier en tant que gestionnaire de connexions. Cet attribut fournit des informations au moment de la conception, telles que le nom, la description et le type de connexion du gestionnaire de connexions. Les <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> propriétés `Description` et correspondent au **type** et `Description` aux colonnes affichées dans la boîte de dialogue **Ajouter un gestionnaire de connexions SSIS** , qui s’affiche lors de la configuration des [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]connexions pour un package dans.  
+ Appliquez l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> à la classe que vous avez créée pour l'identifier en tant que gestionnaire de connexions. Cet attribut fournit des informations au moment de la conception, telles que le nom, la description et le type de connexion du gestionnaire de connexions. Les <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> `Description` Propriétés et correspondent au **type** et aux `Description` colonnes affichées dans la boîte de dialogue **Ajouter un gestionnaire de connexions SSIS** , qui s’affiche lors de la configuration des connexions pour un package dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] .  
   
  Utilisez la propriété <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> pour lier le gestionnaire de connexions à son interface utilisateur personnalisée. Pour obtenir le jeton de clé publique requis pour cette propriété, vous pouvez utiliser **sn.exe -t** de manière à afficher le jeton de clé publique du fichier de paire de clés (.snk) que vous voulez utiliser pour signer l’assembly de l’interface utilisateur.  
   

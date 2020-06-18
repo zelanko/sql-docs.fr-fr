@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7ebdcc68c4fe8c4782251e2f4e5896e4557e23e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d150aa7bcf77268cdfdbc3b037e28f358a115a97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770325"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939656"
 ---
 # <a name="copy-column-transformation"></a>copie de colonnes (transformation)
   La transformation de copie de colonne crée de nouvelles colonnes en copiant des colonnes d'entrée et en ajoutant les nouvelles colonnes à la sortie de la transformation. Ultérieurement dans le flux de données, différentes transformations peuvent être appliquées aux copies de colonne. Par exemple, vous pouvez utiliser la transformation de copie de colonne pour créer une copie d'une colonne, puis convertir les données copiées en caractères majuscules à l'aide de la transformation de la table des caractères, ou appliquer des agrégations à la nouvelle colonne à l'aide de la transformation d'agrégation.  

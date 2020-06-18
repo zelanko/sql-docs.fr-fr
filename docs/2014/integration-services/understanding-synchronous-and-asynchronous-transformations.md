@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33037538a773d27c32522238b14e6ebfc2557eaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e2c771dc186fb520c1b59961c523b16a9efa83f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176098"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972669"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Présentation des transformations synchrones et asynchrones
   Pour comprendre la différence entre une transformation synchrone et une transformation asynchrone dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], il est plus facile de commencer par examiner une transformation synchrone. Si une transformation synchrone ne répond pas à vos besoins, il est possible que votre conception nécessite une transformation asynchrone.
@@ -30,7 +29,7 @@ ms.locfileid: "78176098"
 
  La transformation de conversion de données est un exemple de transformation synchrone. Pour chaque ligne entrante, elle convertit la valeur dans la colonne spécifiée et transfère la ligne. Chaque opération de conversion discrète est indépendante de toutes les autres lignes dans le jeu de données.
 
- Dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les scripts et la programmation, vous spécifiez une transformation synchrone en recherchant l’ID de l’entrée d’un composant et en l’affectant à la `SynchronousInputID` propriété des sorties du composant. Vous indiquez ainsi au moteur de flux de données de traiter chaque ligne de l'entrée et d'envoyer automatiquement chaque ligne aux sorties spécifiées. Si vous souhaitez diriger chaque ligne vers chaque sortie, vous n'avez pas besoin d'écrire du code supplémentaire pour exporter les données. Si vous utilisez la propriété `ExclusionGroup` pour spécifier que les lignes doivent atteindre un groupe de sorties uniquement, comme dans la transformation de fractionnement conditionnel, vous devez appeler la méthode `DirectRow` afin de sélectionner la destination appropriée pour chaque ligne. Lorsque vous disposez d'une sortie d'erreur, vous devez appeler `DirectErrorRow` pour que les lignes présentant un problème soient transmises à la sortie d'erreur au lieu de la sortie par défaut.
+ Dans les [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] scripts et la programmation, vous spécifiez une transformation synchrone en recherchant l’ID de l’entrée d’un composant et en l’affectant à la `SynchronousInputID` propriété des sorties du composant. Vous indiquez ainsi au moteur de flux de données de traiter chaque ligne de l'entrée et d'envoyer automatiquement chaque ligne aux sorties spécifiées. Si vous souhaitez diriger chaque ligne vers chaque sortie, vous n'avez pas besoin d'écrire du code supplémentaire pour exporter les données. Si vous utilisez la propriété `ExclusionGroup` pour spécifier que les lignes doivent atteindre un groupe de sorties uniquement, comme dans la transformation de fractionnement conditionnel, vous devez appeler la méthode `DirectRow` afin de sélectionner la destination appropriée pour chaque ligne. Lorsque vous disposez d'une sortie d'erreur, vous devez appeler `DirectErrorRow` pour que les lignes présentant un problème soient transmises à la sortie d'erreur au lieu de la sortie par défaut.
 
 ## <a name="asynchronous-transformations"></a>Transformations asynchrones
  Vous pouvez décider que votre conception nécessite une transformation asynchrone lorsqu'il n'est pas possible de traiter chaque ligne indépendamment de toutes les autres. En d'autres termes, vous ne pouvez pas transférer chaque ligne dans le flux de données dès lors qu'elle est traitée. Vous devez plutôt exporter les données de façon asynchrone, c'est-à-dire à un autre moment que l'importation. Par exemple, les scénarios suivants requièrent une transformation asynchrone :

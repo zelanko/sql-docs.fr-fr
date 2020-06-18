@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2dbe1aad203dfdc83e438d5b7f4ed19c15038c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933110"
 ---
 # <a name="edit-checked-in-files"></a>Modifier des fichiers archivés
   Vous devez généralement extraire les fichiers sous contrôle de code source avant de pouvoir les modifier. Toutefois, vous pouvez configurer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de sorte que vous puissiez modifier les fichiers que vous n’avez pas extraits. Dans ce cas, vos modifications sont conservées en mémoire jusqu’à ce que vous enregistriez les fichiers. Vous êtes ensuite invité à extraire le fichier à partir du contrôle de code source.  

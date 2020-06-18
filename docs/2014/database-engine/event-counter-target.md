@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ddf153da7af2906fe7167c8cb2b77d9100d1154f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f540f39176ec638cdc9236b315e306ecebfdcb1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933070"
 ---
 # <a name="event-counter-target"></a>Cible de compteur d'événements
   La cible de compteur d'événements compte tous les événements qui surviennent au cours d'une session Événements étendus. Elle vous permet d'obtenir des informations sur les caractéristiques de charge de travail sans ajouter la surcharge de la collecte d'événements complète. Cette cible n'a pas de paramètres personnalisables.  
