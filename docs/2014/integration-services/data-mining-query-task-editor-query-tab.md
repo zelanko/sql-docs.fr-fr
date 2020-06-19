@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890720"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939120"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Requête)
   Utilisez l’onglet **Requête** de la boîte de dialogue **Tâche de requête d’exploration de données** pour créer des requêtes de prédiction basées sur un modèle d’exploration de données. Dans cette boîte de dialogue, vous pouvez également lier des paramètres et des ensembles de résultats à des variables.  
@@ -57,7 +56,7 @@ ms.locfileid: "68890720"
  **Ajouter**  
  Ajoute un paramètre à la liste.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez un paramètre, puis cliquez sur **Supprimer**.  
   
 ## <a name="result-set-tab-options"></a>Options de l'onglet Ensemble de résultats  
@@ -75,7 +74,7 @@ ms.locfileid: "68890720"
  **Ajouter**  
  Ajoute un ensemble de résultats à la liste.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez un résultat et cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  

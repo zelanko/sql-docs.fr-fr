@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965489"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS
   Vous pouvez mettre à niveau des packages créés dans des versions antérieures d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vers le format [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisé par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit l'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] à cet effet. Étant donné que vous pouvez configurer l'Assistant pour qu'il sauvegarde vos packages d'origine, vous pouvez continuer à les utiliser si vous rencontrez des problèmes de mise à niveau.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767885"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Pour exécuter l'Assistant à l'invite de commandes  
   
--   À l’invite de commandes, exécutez le fichier fichier ssisupgrade. exe à partir du dossier **C:\Program Files\Microsoft SQL Server\120\DTS\Binn**  
+-   À l’invite de commandes, exécutez le fichier SSISUpgrade.exe à partir du dossier **C:\Program Files\Microsoft SQL Server\120\DTS\Binn**  
   
 ## <a name="backing-up-the-original-packages"></a>Sauvegarde des packages d'origine  
  Pour sauvegarder les packages d'origine, les packages d'origine et les package mis à niveau doivent être stockés dans le même dossier du système de fichiers. Selon la façon dont vous exécutez l'Assistant, cet emplacement de stockage peut être sélectionné automatiquement.  
@@ -86,7 +85,7 @@ ms.locfileid: "62767885"
 2.  Dans la page **Sélectionner les options de gestion des packages** de l'Assistant, sélectionnez l'option **Sauvegarder les packages d'origine** .  
   
     > [!WARNING]  
-    >  L’option **sauvegarder les packages d’origine** ne s’affiche pas lorsque [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] vous [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] ouvrez un [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]projet ou dans, ce qui lance automatiquement l’Assistant.  
+    >  L’option **sauvegarder les packages d’origine** ne s’affiche pas lorsque vous ouvrez un [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] projet ou dans, ce [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] qui lance automatiquement l’Assistant.  
   
 3.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], exécutez l'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

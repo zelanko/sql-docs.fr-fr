@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54677355520ee8c045a0c3fb78a25ead8ac4d885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211088"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064056"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Créer une trace (SQL Server Profiler)
   Cette rubrique décrit comment utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour créer une trace.  
@@ -29,7 +28,7 @@ ms.locfileid: "68211088"
      La boîte de dialogue **Propriétés de la trace** s'affiche.  
   
     > [!NOTE]  
-    >  La boîte de dialogue **Propriétés de la trace** ne s’affiche pas et la trace démarre en lieu et place, si l’option **Démarrer le suivi juste après avoir établi la connexion** est sélectionnée. Pour désactiver ce paramètre, dans le menu **Outils**, cliquez sur **options**, puis désactivez la case à cocher **Démarrer le suivi juste après avoir effectué la connexion** .  
+    >  La boîte de dialogue **Propriétés de la trace** ne s’affiche pas et la trace démarre en lieu et place, si l’option **Démarrer le suivi juste après avoir établi la connexion** est sélectionnée. Pour désactiver ce paramètre, accédez au menu **Outils**, cliquez sur **Options**et désactivez la case à cocher **Démarrer le suivi juste après avoir établi la connexion** .  
   
 2.  Dans la zone **Nom de la trace** , tapez un nom pour la trace.  
   

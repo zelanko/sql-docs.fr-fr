@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b94819974c53e9bd73aa085580018bad22a3bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064401"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Propriétés du compte de proxy et Nouveau compte de proxy (onglet Principaux)
   Utilisez cette page pour afficher ou modifier les principaux qui peuvent utiliser un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte proxy de l’agent dans les étapes du travail.  
@@ -29,7 +28,7 @@ ms.locfileid: "62650220"
  **Ajouter**  
  Ajoute un principal dans la liste.  
   
- **Remove**  
+ **Supprimer**  
  Supprime de la liste le principal sélectionné.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80330d03853c984cfd26100b02918eb218705085
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931140"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Mettre à niveau la copie des journaux de transaction vers SQL Server 2014 (Transact-SQL)
   Il est possible de conserver les configurations de copie des journaux de transaction lors d'une mise à niveau de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cette rubrique décrit les scénarios et les méthodes conseillées pour la mise à niveau d'une configuration de la copie des journaux de transaction.
@@ -181,7 +180,7 @@ ms.locfileid: "78175415"
 5.  Basculez la base de données en redirigeant les clients depuis le serveur principal original (serveur A) vers le serveur secondaire en ligne (serveur B).
 
     > [!IMPORTANT]
-    >  Lorsque vous basculez vers une nouvelle base de données primaire, vous devez vous assurer que ses métadonnées sont cohérentes avec celles de la base de données principale d'origine. Pour plus d’informations, consultez [gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
+    >  Lorsque vous basculez vers une nouvelle base de données primaire, vous devez vous assurer que ses métadonnées sont cohérentes avec celles de la base de données principale d'origine. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
 
 ##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>Mise à niveau de plusieurs instances de serveur secondaire
  La figure ci-après illustre cette configuration, avec une instance du serveur principal, A, et deux instances du serveur secondaire, B et C.

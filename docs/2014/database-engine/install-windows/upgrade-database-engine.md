@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931955"
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
   Cette rubrique fournit les informations qui vous aideront à préparer et à comprendre le processus de mise à niveau :  
@@ -102,7 +101,7 @@ ms.locfileid: "62774970"
  Vous pouvez mettre à niveau le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Niveau de compatibilité des bases de données après une mise à niveau  
- Les niveaux de compatibilité des `tempdb`bases `model`de `msdb` données de **ressources** , et sont définis sur 120 après la mise à niveau. La base de données système `master` conserve le niveau de compatibilité qu'elle avait avant la mise à niveau.  
+ Les niveaux de compatibilité des `tempdb` `model` `msdb` bases de données de **ressources** , et sont définis sur 120 après la mise à niveau. La base de données système `master` conserve le niveau de compatibilité qu'elle avait avant la mise à niveau.  
   
  Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -163,7 +162,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mises à niveau de version et d’édition prises en charge](supported-version-and-edition-upgrades.md)   
+ [Mises à niveau de la version et de l'édition prises en charge](supported-version-and-edition-upgrades.md)   
  [Utiliser plusieurs versions et instances de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Compatibilité descendante](../../getting-started/backward-compatibility.md)   
  [Mettre à niveau des bases de données répliquées](upgrade-replicated-databases.md)  

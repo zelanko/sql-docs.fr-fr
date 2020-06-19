@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7873f616e2a6e9657f2e7c59c745fdab77c9b61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00e5f4cbafa7604eb67059dfcb45632c09d10ff7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923310"
 ---
 # <a name="edit-instance-properties"></a>Modifier les propriétés d'instance
   Utilisez l'éditeur de propriétés pour apporter des modifications à l'instance CDC après avoir créé les configurations initiales. Vous pouvez effectuer les opérations suivantes dans l'éditeur de propriétés.  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061191"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924650"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Éditeur de tâche d'insertion en bloc (page Options)
-  Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d’insertion en bloc copie de grandes quantités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] données dans une table ou une vue.  
+  Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d’insertion en bloc copie de grandes quantités de données dans une [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table ou une vue.  
   
  Pour en savoir plus sur l’utilisation des insertions en bloc, consultez [Tâche d’insertion en bloc](control-flow/bulk-insert-task.md) et [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -65,6 +64,6 @@ ms.locfileid: "66061191"
  [Éditeur de tâche d’insertion en bloc &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Éditeur de tâche d’insertion en bloc &#40;page connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Page expressions](expressions/expressions-page.md)   
- [Flux de contrôle](control-flow/control-flow.md)  
+ [Workflow de contrôle](control-flow/control-flow.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d0d731d25c20597be3ac84adfacd8973e4a51cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001709"
 ---
 # <a name="view-or-modify-jobs"></a>Afficher ou modifier les travaux
   Vous pouvez afficher tout travail que vous avez créé. Après avoir exécuté un travail, vous pouvez également afficher son historique. L'affichage de l'historique d'un travail vous permet de déterminer le moment de son exécution, l'état du travail dans son ensemble et l'état de chaque étape du travail. Il permet également de savoir si le travail a déjà échoué dans le passé, si sa dernière exécution s'est terminée correctement, ainsi que les résultats qu'il a générés à chaque exécution. Les membres du rôle serveur fixe **sysadmin** peuvent afficher ou modifier n’importe quel travail, quel que soit son propriétaire.  
@@ -67,6 +66,6 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |Explique comment modifier les propriétés des travaux [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Modifier un travail](modify-a-job.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [dbo. sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
+ [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
   
   

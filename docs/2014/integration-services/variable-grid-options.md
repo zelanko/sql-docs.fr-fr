@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054674"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972579"
 ---
 # <a name="variable-grid-options"></a>Options de grille variables
   Utilisez la boîte de dialogue **Options de grille variables** pour sélectionner les colonnes qui s'affichent dans la fenêtre **Variables** et sélectionner les filtres à appliquer à la liste des variables. Pour plus d'informations sur les propriétés de variable correspondantes, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "66054674"
 ## <a name="options-for-columns"></a>Options pour les colonnes  
  Sélectionnez les colonnes que vous souhaitez afficher dans la fenêtre **Variables** .  
   
--   **Étendue**  
+-   **Portée**  
   
 -   **Type de données**  
   

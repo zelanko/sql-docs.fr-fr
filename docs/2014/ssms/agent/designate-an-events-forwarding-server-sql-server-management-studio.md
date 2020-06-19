@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1617038a42dcef9103613e4d0164ba0f796000fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995284"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
-  Cette rubrique explique comment désigner un serveur vers lequel transfère [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les événements dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de. Notez que le transfert d'événements s'applique aux événements transférés entre serveurs, et non aux événements transférés entre instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergées sur un même ordinateur. Notez également qu'afin de recevoir les événements transférés, le serveur de gestion des alertes doit être une instance par défaut de SQL Server.  
+  Cette rubrique explique comment désigner un serveur vers lequel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfère les événements dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Notez que le transfert d'événements s'applique aux événements transférés entre serveurs, et non aux événements transférés entre instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergées sur un même ordinateur. Notez également qu'afin de recevoir les événements transférés, le serveur de gestion des alertes doit être une instance par défaut de SQL Server.  
   
  **Dans cette rubrique**  
   

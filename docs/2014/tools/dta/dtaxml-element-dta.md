@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0682c6100a96fbfb3016dec4bead4c385190192f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87866ebff3a7c6ae74157053492b76f49d713927
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470036"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048471"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML, élément (Assistant Paramétrage de base de données)
   Élément racine d'un fichier d'entrée ou de sortie de l'Assistant Paramétrage du moteur de base de données, **DTAXML** contient tous les éléments qui décrivent les entrées et les sorties de paramétrage générées par l'Assistant Paramétrage du moteur de base de données.  
@@ -39,14 +38,14 @@ ms.locfileid: "62470036"
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`xmlns:xsi`|Obligatoire. Identifie l'espace de noms de l'instance du schéma XML. Les attributs de cet espace de noms servent à référencer le schéma qui est utilisé pour valider le fichier XML de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Valeur requise :[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
+|`xmlns:xsi`|Obligatoire. Identifie l'espace de noms de l'instance du schéma XML. Les attributs de cet espace de noms servent à référencer le schéma qui est utilisé pour valider le fichier XML de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Valeur requise : [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |`xmlns`|Obligatoire. Identifie l'espace de noms de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Si vous modifiez le fichier XML de l'Assistant Paramétrage du moteur de base de données à l'aide de l'éditeur XML dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cette valeur est utilisée par l'aide obtenue par la touche F1 et l'aide dynamique pour rechercher les rubriques de référence dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valeur obligatoire :<br /><br /> [Database Engine Tuning Advisor XML Schema](https://go.microsoft.com/fwlink/?LinkId=43100) Namespace|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|Aucune.|  
+|**Type de données et longueur**|Aucun.|  
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Obligatoire une fois par fichier XML de l'Assistant Paramétrage du moteur de base de données.|  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62470036"
  Pour obtenir des exemples d’éléments **DTAXML** caractéristiques, consultez [Exemples de fichiers d’entrée XML &#40;DTA&#41;](xml-input-file-samples-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du fichier d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
- [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
+ [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

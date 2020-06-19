@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0eb13d2997c9b2b29c85489f30a161a96f64c70c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 284dfdbd57dde61c92d4cb368371ebe3b1ae6913
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064105"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler
   Vous pouvez ajouter des classes d'événements Showplan à une définition de trace afin que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] rassemble et affiche les informations de plan de requête dans la trace. Vous pouvez également extraire les événements Showplan des autres événements collectés dans la trace et les enregistrer dans un fichier XML distinct.  

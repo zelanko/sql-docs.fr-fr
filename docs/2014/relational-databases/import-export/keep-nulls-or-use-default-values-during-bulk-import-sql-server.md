@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011900"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026693"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l'importation en bloc (SQL Server)
   Par défaut, quand des données sont importées dans une table, la commande **bcp** et l’instruction BULK INSERT inspectent toutes les valeurs par défaut définies pour les colonnes de la table. Par exemple, si un fichier de données contient un champ NULL, la valeur par défaut de la colonne est chargée à la place. La commande **bcp** et l’instruction BULK INSERT vous permettent de spécifier que les valeurs NULL doivent être conservées.  
@@ -39,7 +38,7 @@ ms.locfileid: "66011900"
  Pour exécuter les exemples proposés dans cette rubrique, vous devez créer un exemple de table et un exemple de fichier de données.  
   
 ### <a name="sample-table"></a>Exemple de table  
- Les exemples requièrent la création d'une table nommée **MyTestDefaultCol2** dans l'exemple de base de données **AdventureWorks** sous le schéma **dbo** . Pour créer cette table, dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l’éditeur de requête, exécutez :  
+ Les exemples requièrent la création d'une table nommée **MyTestDefaultCol2** dans l'exemple de base de données **AdventureWorks** sous le schéma **dbo** . Pour créer cette table, dans l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] éditeur de requête, exécutez :  
   
 ```  
 USE AdventureWorks;  
@@ -79,7 +78,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |Commande|Qualificateur|Type de qualificateur|  
 |-------------|---------------|--------------------|  
-|**bcp**|`-k`|Commutateur|  
+|**bcp**|`-k`|Basculer|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argument|  
   
  <sup>1</sup> pour Bulk Insert, si les valeurs par défaut ne sont pas disponibles, la colonne de table doit être définie de façon à autoriser les valeurs NULL.  
@@ -99,7 +98,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Pour insérer «`NULL`» à la place`Default value of Col2`de «», vous devez utiliser `-k` l’option Switch ou KEEPNULL, comme illustré dans les exemples suivants : **BCP** et Bulk Insert.  
+ Pour insérer « `NULL` » à la place de «» `Default value of Col2` , vous devez utiliser l' `-k` option Switch ou KEEPNULL, comme illustré dans les exemples suivants : **BCP** et Bulk Insert.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Utilisation de la commande bcp et conservation des valeurs NULL  
  L’exemple suivant montre comment conserver les valeurs NULL dans une commande **bcp** . La commande **BCP** contient les commutateurs suivants :  
@@ -149,7 +148,7 @@ GO
   
  Pour exécuter les exemples, vous devez créer l'exemple de table **MyTestDefaultCol2** , le fichier de données `MyTestEmptyField2-c.Dat` et utiliser un fichier de format, `MyTestDefaultCol2-f-c.Fmt`. Pour plus d'informations sur la création de ces exemples, consultez la section « Exemples de table et de fichier de données », plus haut dans cette rubrique.  
   
- La deuxième colonne de la table, **Col2**, a une valeur par défaut. Le champ correspondant du fichier de données contient une chaîne vide. Quand INSERT... SELECT \* from OPENROWSET (BULK...) importe les champs de ce fichier de données dans la table **MyTestDefaultCol2** . par défaut, la valeur null est insérée dans **col2** au lieu de la valeur par défaut. Ce comportement par défaut produit le résultat suivant :  
+ La deuxième colonne de la table, **Col2**, a une valeur par défaut. Le champ correspondant du fichier de données contient une chaîne vide. Quand INSERT... SELECT \* FROM OPENROWSET (BULK...) importe les champs de ce fichier de données dans la table **MyTestDefaultCol2** . par défaut, la valeur null est insérée dans **col2** au lieu de la valeur par défaut. Ce comportement par défaut produit le résultat suivant :  
   
 ||||  
 |-|-|-|  

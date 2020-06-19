@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f9e37d3062bba763f44e0eef14b216972b29f1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057385"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965109"
 ---
 # <a name="numeric-data-formats"></a>Formats de données numériques
   L'analyse rapide fournit un ensemble de routines simple, rapide et insensible aux paramètres régionaux pour l'analyse des données. Elle prend en charge uniquement un ensemble limité de formats pour les types de données integer.  

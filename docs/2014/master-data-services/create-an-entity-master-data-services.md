@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50cf10a9a745b3a111deb5db6be356d10d204d4a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479914"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971717"
 ---
 # <a name="create-an-entity-master-data-services"></a>Créer une entité (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une entité destinée à contenir des membres et leurs attributs.  
@@ -49,11 +48,11 @@ ms.locfileid: "65479914"
     > [!TIP]  
     >  Utilisez le nom du modèle dans le nom de la table de mise en lots, par exemple *NomModèle_NomEntité*. Cela facilite la recherche de tables dans la base de données. Pour plus d’informations sur les tables de mise en lots, consultez [&#40;d’importation de données Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
-7.  Facultatif. Activez la case à cocher **Créer automatiquement les valeurs de code** . Pour plus d’informations, consultez [création automatique de Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
+7.  facultatif. Activez la case à cocher **Créer automatiquement les valeurs de code** . Pour plus d’informations, consultez [création automatique de Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
 8.  Dans la liste **activer les hiérarchies explicites et les regroupements** , sélectionnez l’une des options suivantes :  
   
-    -   **No**. Sélectionnez cette option si vous n'avez pas besoin d'activer l'entité pour les hiérarchies et les collections explicites. Vous pouvez changer ce paramètre ultérieurement si nécessaire.  
+    -   **Non**. Sélectionnez cette option si vous n'avez pas besoin d'activer l'entité pour les hiérarchies et les collections explicites. Vous pouvez changer ce paramètre ultérieurement si nécessaire.  
   
     -   **Oui**. Sélectionnez cette option lorsque vous souhaitez activer l'entité pour les hiérarchies et collections explicites. Dans la zone nom de la **hiérarchie explicite** , tapez un nom. Si vous le souhaitez, sélectionnez **hiérarchie obligatoire (tous les membres feuille sont inclus** pour transformer la hiérarchie explicite en hiérarchie obligatoire.  
   

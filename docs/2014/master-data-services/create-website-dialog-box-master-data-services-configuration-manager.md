@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f5354ff3b4e461196a9f84e6efc2ff755cf40c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 63e18bfd9c907e5604f82d0e5462b80d07279556
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971669"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Boîte de dialogue Créer un site Web (Gestionnaire de configuration Master Data Services)
   Utilisez la boîte de dialogue **Créer un site web** pour créer un site web sur l’ordinateur local. Lorsque vous créez un site web dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], le site est ajouté à Internet Information Services (IIS) sur l’ordinateur local avec une application racine configurée comme application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Un pool d'applications est également créé et l'application web est placée dans ce pool d'applications.  

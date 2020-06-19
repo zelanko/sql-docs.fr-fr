@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 09d597cb7776362c44ca53e8d544f66608d8d37c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a7389173f97f7d4bcfbbfed99e46beae0d3c89b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923471"
 ---
 # <a name="connection-to-sql-server"></a>Connexion à SQL Server
   Quand une connexion sans rôle de base de données qui inclut l’autorisation d’accès en écriture (par exemple le rôle **db_owner** ) à la base de données MSXDBCDC tente de créer une instance Oracle CDC, la boîte de dialogue Connexion à SQL Server s’affiche.  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1eae606b3c2ca4c18d088e650e774986d4e31387
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064486"
 ---
 # <a name="edit-an-alert"></a>Modifier une alerte
-  Cette rubrique explique comment modifier une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l' [!INCLUDE[tsql](../../includes/tsql-md.md)]aide de ou de.  
+  Cette rubrique explique comment modifier une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Dans cette rubrique**  
   

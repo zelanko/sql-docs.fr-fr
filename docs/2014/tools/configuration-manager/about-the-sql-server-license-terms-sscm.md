@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6553d743fe3cb0ba4e4ab6229baa65cc9d94eec8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b75762a1cb2cebc3834852f258c4b23b88435fbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008361"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>À propos des termes du contrat de licence SQL Server (SSCM)
   Les termes de la Licence d'utilisation du logiciel [!INCLUDE[msCoName](../../includes/msconame-md.md)]sont copiés vers l'ordinateur local lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Lorsque plusieurs instances des mêmes édition et langue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées sur le même ordinateur, une seule copie du contrat de licence s'applique à toutes les instances de cette édition et de cette langue. Les fichiers sont écrits dans :%ProgramFiles%\Microsoft SQL Server\110\License Terms \ ou% ProgramFiles (x86)% \ Microsoft SQL Server\110\License Terms \\ .  

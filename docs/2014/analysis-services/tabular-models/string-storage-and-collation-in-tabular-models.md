@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3aad4cf16c39897bc0796f4fb161eaf39abdb5fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938600"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Stockage de chaîne et classement dans les modèles tabulaires
   Les chaînes (valeurs texte) sont stockées dans un format fortement compressé dans les modèles tabulaires ; en raison de cette compression, vous pouvez obtenir des résultats inattendus lorsque vous récupérez des chaînes entières ou partielles. En outre, comme les paramètres régionaux et les classements de chaîne sont hérités hiérarchiquement de l'objet parent le plus proche, si le langage de chaîne n'est pas défini explicitement, les paramètres régionaux et le classement du parent peuvent affecter la façon dont chaque chaîne est stockée et si la chaîne doit être unique ou combinée avec des chaînes semblables tel que le défini le classement parent.  
@@ -41,7 +40,7 @@ ms.locfileid: "70874492"
 |Arborescence|  
 |PlAnT|  
 |trEE|  
-|arborescence|  
+|tree|  
 |PlAnT|  
 |trEE|  
   

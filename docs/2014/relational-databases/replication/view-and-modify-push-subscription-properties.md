@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1506d4f83fcfb94d62efd01c4d6447048fecfd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063687"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Afficher et modifier les propriétés d'un abonnement par émission (push)
   Cette rubrique décrit comment afficher et modifier les propriétés de l'abonnement par émission (push) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -40,7 +39,7 @@ ms.locfileid: "68212016"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Affichez et modifiez les propriétés d'abonnement par envoi de données (push) du serveur de publication dans :  
   
--   La boîte de dialogue **Propriétés de l’abonnement - \<serveur_publication> : \<base_de_données_publication>**, disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   La boîte de dialogue Propriétés de l' **abonnement- \<Publisher> \<PublicationDatabase> :** , qui est disponible à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   L'onglet **Tous les abonnements** , disponible dans le Moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](monitor/start-the-replication-monitor.md).  
   
@@ -69,7 +68,7 @@ ms.locfileid: "68212016"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Pour afficher les propriétés d'un abonnement par émission de données à une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)sur la base de données de publication du serveur de publication. **@publication**Spécifiez **@subscriber**, et la valeur **All** pour **@article**.  
+1.  Exécutez [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez **@publication** , **@subscriber** et la valeur **All** pour **@article** .  
   
 2.  Exécutez [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), en spécifiant **@subscriber**.  
   
@@ -77,9 +76,9 @@ ms.locfileid: "68212016"
   
 1.  Exécutez [sp_changesubscriber](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql), en spécifiant **@subscriber** et tous les paramètres des propriétés d'Abonné en cours de modification.  
   
-2.  Exécutez [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)sur la base de données de publication du serveur de publication. **@publication**Spécifiez **@subscriber**, **@destination_db**,, la valeur **All** pour **@article**, la propriété d’abonnement qui est **@property**modifiée comme et la nouvelle valeur **@value**comme. Cela modifie les paramètres de sécurité de l'abonnement par émission de données.  
+2.  Exécutez [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez **@publication** , **@subscriber** , **@destination_db** , la valeur **All** pour **@article** , la propriété d’abonnement qui est modifiée comme **@property** et la nouvelle valeur comme **@value** . Cela modifie les paramètres de sécurité de l'abonnement par émission de données.  
   
-3.  (Facultatif) Pour modifier les propriétés des packages DTS (Data Transformation Services) d'un abonnement, exécutez [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) sur la base de données d'abonnement de l'Abonné. Spécifiez l’ID de la tâche de **@jobid** agent de distribution pour et les propriétés de package DTS suivantes :  
+3.  (Facultatif) Pour modifier les propriétés des packages DTS (Data Transformation Services) d'un abonnement, exécutez [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) sur la base de données d'abonnement de l'Abonné. Spécifiez l’ID de la tâche de Agent de distribution pour **@jobid** et les propriétés de package DTS suivantes :  
   
     -   **@dts_package_name**  
   
@@ -94,15 +93,15 @@ ms.locfileid: "68212016"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Pour afficher les propriétés d'un abonnement par émission de données à une publication de fusion  
   
-1.  Exécutez [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)sur la base de données de publication du serveur de publication. **@publication** Spécifiez **@subscriber**et.  
+1.  Exécutez [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez **@publication** et **@subscriber** .  
   
 2.  Sur le serveur de publication, exécutez [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), en spécifiant **@subscriber**.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Pour modifier les propriétés d'un abonnement par émission de données à une publication de fusion  
   
-1.  Exécutez [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)sur la base de données de publication du serveur de publication. **@publication**Spécifiez **@subscriber**, **@subscriber_db**,, la propriété d’abonnement qui **@property**est modifiée comme, et la **@value**nouvelle valeur comme.  
+1.  Exécutez [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez **@publication** , **@subscriber** ,, **@subscriber_db** la propriété d’abonnement qui est modifiée comme **@property** , et la nouvelle valeur comme **@value** .  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemple (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemple (Transact-SQL)  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Les classes RMO à utiliser pour afficher ou modifier les propriétés d'un abonnement par émission de données dépendent du type de publication auquel l'abonnement par émission de données a été souscrit.  

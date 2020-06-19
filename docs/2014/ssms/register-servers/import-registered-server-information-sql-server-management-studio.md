@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 32ef669c238c52ec5e5e20804c896b4364c8bc85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddf4a72fa81e12f49b8974881dd964473c863c28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048710"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importer des informations de serveur inscrit (SQL Server Management Studio)
   Cette rubrique explique comment importer les informations du serveur inscrit enregistrées dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'exportation puis l'importation de fichiers de serveurs inscrits vous permet de configurer aisément plusieurs ordinateurs avec les mêmes serveurs dans Serveurs inscrits. Cela est utile lors de la gestion d'un grand nombre de serveurs à partir d'ordinateurs situés à des emplacements différents ou lorsque vous voulez configurer des paramètres de connexion de base pour un utilisateur peu expérimenté.  

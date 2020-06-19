@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97d6731c5e85c3b37facc7172ecacbd2c7c74176
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c140715b3f6c6003992ef42f6af6352de17c2c4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066470"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938630"
 ---
 # <a name="table-properties-ssas-tabular"></a>Propriétés de table (SSAS Tabular)
   Cette rubrique décrit les propriétés de table d'un modèle tabulaire. Les propriétés décrites ici sont différentes de celles figurant dans la boîte de dialogue Modifier les propriétés de la table, lesquelles définissent les colonnes importées de la source.  
@@ -33,12 +32,12 @@ ms.locfileid: "66066470"
   
 |Propriété|Paramètre par défaut|Description|  
 |--------------|---------------------|-----------------|  
-|**Nom de connexion**|\<nom de la connexion>|Nom de la connexion à la source de données de la table.<br /><br /> Pour modifier la connexion, cliquez sur le bouton.|  
+|**Nom de connexion**|\<connection name>|Nom de la connexion à la source de données de la table.<br /><br /> Pour modifier la connexion, cliquez sur le bouton.|  
 |**Masquer**|False|Spécifie si la table est masquée dans les listes de champs de client de création de rapports.|  
 |**Partitions**||Les partitions de la table ne peuvent pas être affichées dans la fenêtre **Propriétés** . Pour afficher, créer ou modifier des partitions, cliquez sur le bouton pour ouvrir le Gestionnaire de partition.|  
 |**Données sources**||Les données sources de la table ne peuvent pas être affichées dans la fenêtre **Propriétés** . Pour afficher ou modifier les données sources, cliquez sur le bouton pour ouvrir la boîte de dialogue Modifier les propriétés de la table.|  
 |**Description de la table**||Description textuelle de la table.<br /><br /> Dans [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], si un utilisateur positionne le curseur sur cette table dans la liste des champs, la description apparaît sous la forme d'une info-bulle.|  
-|**Nom de la table**|\<nom convivial>|Spécifie le nom convivial de la table. Le nom de la table peut être spécifié lorsqu'une table est importée à l'aide de l'Assistant Importation de table ou à tout moment après l'importation. Le nom de la table dans le modèle peut être différent de la table associée à la source. Le nom convivial de la table s'affiche dans la liste de champs de l'application cliente de création de rapports ainsi que dans la base de données model dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|**Nom de la table**|\<friendly name>|Spécifie le nom convivial de la table. Le nom de la table peut être spécifié lorsqu'une table est importée à l'aide de l'Assistant Importation de table ou à tout moment après l'importation. Le nom de la table dans le modèle peut être différent de la table associée à la source. Le nom convivial de la table s'affiche dans la liste de champs de l'application cliente de création de rapports ainsi que dans la base de données model dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
  **Propriétés de la création de rapports**  
   

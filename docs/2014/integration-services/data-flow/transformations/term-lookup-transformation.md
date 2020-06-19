@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cc4ec27de159735b43f88dd978e7070cb0f0983
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939262"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  
@@ -62,7 +61,7 @@ ms.locfileid: "62770315"
 |Termes de référence|Windows, Windows 7 Professionnel|  
 |Output|Windows|  
   
- La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants : %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " et '.  
+ La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants :%, @, &, $, #, \* , :,;,., **,** , !, ?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "et'.  
   
 ## <a name="data-types"></a>Types de données  
  La transformation de recherche de terme ne peut utiliser qu'une colonne contenant le type de données DT_WSTR ou DT_NTEXT. Si une colonne contient du texte, mais pas l'un de ces types de données, la transformation de conversion de données peut ajouter une colonne avec le type de données DT_WSTR ou DT_NTEXT au flux de données, puis copier les valeurs de la colonne dans cette nouvelle colonne. La sortie de la transformation de conversion de données peut ensuite être utilisée comme entrée de la transformation de recherche de terme. Pour plus d’informations, voir [Data Conversion Transformation](data-conversion-transformation.md).  

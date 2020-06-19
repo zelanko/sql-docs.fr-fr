@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 987548418e78999e0c247c65aac5e67912b5385f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924790"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Sélection de colonnes d'entrée par programme
   Après avoir connecté des composants par programme, sélectionnez les colonnes des composants en amont que vous transformerez ou passerez aux composants en aval. Si vous ne sélectionnez pas de colonnes d'entrée pour votre composant, le composant ne reçoit pas de lignes de la part de la tâche de flux de données.  

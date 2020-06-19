@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965632"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mappage de colonnes (Assistant Importation et exportation SQL Server)
   Utilisez la boîte de dialogue **mappage de colonnes** pour modifier les paramètres de transformation.  
   
 > [!NOTE]  
->  Vous n'êtes pas obligé de copier toutes les colonnes d'une table lorsque vous sélectionnez l'option de copie de table. Sélectionnez ** \<ignorer>** dans la colonne **destination** de cette boîte de dialogue pour les colonnes que vous souhaitez ignorer.  
+>  Vous n'êtes pas obligé de copier toutes les colonnes d'une table lorsque vous sélectionnez l'option de copie de table. Sélectionnez **\<ignore>** dans la colonne **destination** de cette boîte de dialogue les colonnes que vous souhaitez ignorer.  
   
  Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que sur les autorisations requises pour exécuter correctement l’Assistant, consultez [exécuter l’Assistant importation et exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -63,7 +62,7 @@ ms.locfileid: "62893040"
  Affiche chaque colonne source pour laquelle vous voulez définir des paramètres de transformation.  
   
  **Destination**  
- Spécifiez si vous voulez ignorer une colonne pendant la copie. Vous ne pouvez copier qu’un sous-ensemble de colonnes en sélectionnant ** \<ignorer les>** dans cette colonne pour les colonnes que vous souhaitez ignorer. Avant de mapper les colonnes, vous devez ignorer toutes les colonnes qui ne seront pas mappées.  
+ Spécifiez si vous voulez ignorer une colonne pendant la copie. Vous ne pouvez copier qu’un sous-ensemble de colonnes en sélectionnant **\<ignore>** dans cette colonne les colonnes que vous souhaitez ignorer. Avant de mapper les colonnes, vous devez ignorer toutes les colonnes qui ne seront pas mappées.  
   
  **Type**  
  Sélectionnez un type de données pour la colonne.  
@@ -77,7 +76,7 @@ ms.locfileid: "62893040"
  **Précision**  
  Spécifiez la précision des données affichées en indiquant le nombre de chiffres.  
   
- **Mettre à l'échelle**  
+ **Mise à l’échelle**  
  Spécifiez l'échelle des données affichées en indiquant le nombre de décimales.  
   
   

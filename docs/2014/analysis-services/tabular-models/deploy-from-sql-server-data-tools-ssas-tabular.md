@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1690e2772de50258a69a4a33b048f16f7da2caca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939713"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Déployer à partir de SQL Server Data Tools (SSAS Tabulaire)
   Utilisez les tâches de cette rubrique pour déployer une solution de modèle tabulaire à l'aide de la commande Déployer de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "66067301"
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le nom du projet, puis sélectionnez **Propriétés**.  
   
-2.  Dans la boîte de dialogue ** \<propriétés du nom du projet>** , dans **options de déploiement**, spécifiez les paramètres de propriété s’ils sont différents des paramètres par défaut.  
+2.  Dans la boîte de dialogue ** \<project name> Propriétés** , dans **options de déploiement**, spécifiez les paramètres de propriété s’ils sont différents des paramètres par défaut.  
   
     > [!NOTE]  
     >  Pour les modèles en mode mis en cache, **Mode de requête** a toujours la valeur **In-Memory**.  
@@ -54,7 +53,7 @@ ms.locfileid: "66067301"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Pour déployer une solution de modèle tabulaire  
   
--   Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], dans le menu **générer** , cliquez sur **déployer \<le nom du projet>**.  
+-   Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , dans le menu **générer** , cliquez **sur \<project name> déployer **.  
   
      La boîte de dialogue **Déployer** apparaît et indique l’état du déploiement des métadonnées et du traitement (sauf si la propriété Option de traitement a la valeur Ne pas traiter) de chaque table incluse dans le modèle. Lorsque le déploiement est terminé, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous connecter à l'instance d'Analysis Services et vérifier que le nouvel objet de base de données model a été créé ou utilisez une application de création de rapports cliente pour vous connecter au modèle déployé.  
   

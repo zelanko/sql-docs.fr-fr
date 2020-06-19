@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965669"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importer et exporter des packages (Service SSIS)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058148"
   
  Vous pouvez importer ou exporter un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] depuis ou vers les emplacements suivants :  
   
--   Vous pouvez importer un package stocké dans une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dans le système de fichiers ou dans le [!INCLUDE[ssIS](../includes/ssis-md.md)] magasin de packages. Le package importé est enregistré dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou dans un dossier dans le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+-   Vous pouvez importer un package stocké dans une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , dans le système de fichiers ou dans le [!INCLUDE[ssIS](../includes/ssis-md.md)] magasin de packages. Le package importé est enregistré dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou dans un dossier dans le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 -   Vous pouvez exporter un package stocké dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dans le système de fichiers ou dans le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] vers un format ou un emplacement de stockage différent.  
   
@@ -70,11 +69,11 @@ ms.locfileid: "66058148"
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **nom du serveur** , indiquez le nom du serveur ou cliquez sur ** \<parcourir pour en savoir plus... >** et recherchez le serveur à utiliser.  
+    -   Dans la zone **nom du serveur** , indiquez un nom de serveur ou cliquez sur **\<Browse for more...>** et recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
-4.  Dans l'Explorateur d'objets, développez le dossier **Packages stockés** .  
+4.  Dans l’Explorateur d’objets, développez le dossier **packages stockés** .  
   
 5.  Développez les sous-dossiers afin de rechercher celui dans lequel vous souhaitez importer un package.  
   
@@ -106,11 +105,11 @@ ms.locfileid: "66058148"
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **nom du serveur** , indiquez le nom du serveur ou cliquez sur ** \<parcourir pour en savoir plus... >** et recherchez le serveur à utiliser.  
+    -   Dans la zone **nom du serveur** , indiquez un nom de serveur ou cliquez sur **\<Browse for more...>** et recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
-4.  Dans l’Explorateur d’objets, développez le dossier **packages stockés** .  
+4.  Dans l'Explorateur d'objets, développez le dossier **Packages stockés** .  
   
 5.  Développez les sous-dossiers pour localiser le package à exporter.  
   

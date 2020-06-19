@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637917"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063240"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installer et configurer la recherche sémantique
   Décrit les conditions préalables à une recherche sémantique statistique, ainsi que la procédure d'installation ou de vérification de ces conditions.  

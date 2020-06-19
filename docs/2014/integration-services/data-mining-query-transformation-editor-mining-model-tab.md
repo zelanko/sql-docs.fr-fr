@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a994ee7b9e01b310ba9d90c5acf35ba93877c0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939106"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Éditeur de transformation de requête d'exploration de données (onglet Modèle d'exploration de données)
   Utilisez l'onglet **Modèle d'exploration de données** de l' **Éditeur de transformation de requête d'exploration de données** pour sélectionner la structure d'exploration de données et ses modèles d'exploration de données.  
@@ -30,7 +29,7 @@ ms.locfileid: "66059767"
  **Connection**  
  Sélectionnez une connexion Analysis Services en utilisant la zone de liste, ou créez une connexion en utilisant le bouton **Nouvelle** comme indiqué ci-dessous.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
   
  **Structure d’exploration de données**  

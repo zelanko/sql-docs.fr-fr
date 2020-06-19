@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b85d267cd56fdf64b6235f551b84f32e4353b2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063789"
 ---
 # <a name="create-the-off-by-default-policy"></a>Créer la stratégie Désactivé par défaut
   Cette tâche crée une condition nommée Courrier désactivé basée sur la facette Configuration de la surface d'exposition. Ensuite, elle crée une stratégie nommée Désactivé par défaut.  

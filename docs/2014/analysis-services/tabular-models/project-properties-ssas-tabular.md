@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a050c8eecadec138341ffe2f64a791eb198beebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a89a37f328bd8109002393107e400969b7699903
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938710"
 ---
 # <a name="project-properties-ssas-tabular"></a>Propriétés de projet (SSAS Tabulaire)
   Cette rubrique décrit les propriétés de projet de modèle. Chaque projet de modèle tabulaire propose des propriétés de serveur de déploiement et d'options de déploiement qui spécifient comment le projet et le modèle sont déployés. Par exemple, le serveur sur lequel le modèle sera déployé et le nom de la base de données model déployée. Ces paramètres sont différents des propriétés du modèle, qui affectent la base de données model de l'espace de travail. Les propriétés du projet décrites ici se trouvent dans une boîte de dialogue de propriétés modale différente de la fenêtre de propriétés utilisée pour afficher les autres types de propriétés. Pour afficher les propriétés de projet modales, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis cliquez sur **Propriétés**.  
@@ -44,8 +43,8 @@ ms.locfileid: "66066742"
 |--------------|---------------------|-----------------|  
 |**Serveur**|**localhost**|Spécifie une instance d'Analysis Services. Par défaut, les modèles sont déployés dans l'instance par défaut d'Analysis Services sur l'ordinateur local. Vous pouvez modifier ce paramètre pour spécifier une instance nommée sur l'ordinateur local ou n'importe quelle autre instance sur un ordinateur distant sur lequel vous avez l'autorisation de créer des objets Analysis Services. En général, les autorisations d'administrateur.<br /><br /> Le paramètre par défaut de cette propriété peut être modifié à l'aide de la propriété Serveur de déploiement par défaut sur la page Déploiement dans les paramètres du serveur d'analyse de la boîte de dialogue Outils\Options. Pour plus d’informations, consultez [Configurer les propriétés par défaut de modélisation des données et de déploiement &#40;SSAS Tabulaire&#41;](properties-ssas-tabular.md).|  
 |**Édition**|**Développeur**|Spécifie l'édition du serveur Analysis Services sur lequel le modèle sera déployé. L'édition du serveur définit différentes fonctionnalités qui peuvent être incorporées dans le projet.|  
-|**Sauvegarde de la base de données**|**Modélisation**|Spécifie le nom de la base de données Analysis Services dans laquelle les objets de modèle seront instanciés lors du déploiement. Ce nom sera spécifié dans une connexion de données ou un fichier de connexion de données .rsds. Il est recommandé que le nom reflète le type d'analyse qui sera effectuée à l'aide du modèle, par exemple AdventureWorksSalesModel.<br /><br /> ** \* Important \* \* ** Pour empêcher les noms en double pour les modèles déployés, vous devez modifier le paramètre **de nom de propriété de base de données** pour refléter l’objectif du modèle. Il s'agit du nom que les utilisateurs verront lorsqu'ils se connecteront au modèle en tant que source de données.|  
-|**Nom du cube**|**Modélisation**|Spécifie le nom du cube de base de données comme indiqué dans une connexion de données au client de création de rapports.|  
+|**Sauvegarde de la base de données**|**Modèle**|Spécifie le nom de la base de données Analysis Services dans laquelle les objets de modèle seront instanciés lors du déploiement. Ce nom sera spécifié dans une connexion de données ou un fichier de connexion de données .rsds. Il est recommandé que le nom reflète le type d'analyse qui sera effectuée à l'aide du modèle, par exemple AdventureWorksSalesModel.<br /><br /> ** \* \* Important \* pour \* ** empêcher les noms en double pour les modèles déployés, vous devez modifier le paramètre **de nom de propriété de base de données** pour refléter l’objectif du modèle. Il s'agit du nom que les utilisateurs verront lorsqu'ils se connecteront au modèle en tant que source de données.|  
+|**Nom du cube**|**Modèle**|Spécifie le nom du cube de base de données comme indiqué dans une connexion de données au client de création de rapports.|  
 |**Version**|**11,0**|Version de l'instance d'Analysis Services où le projet sera déployé.|  
   
  **Options DirectQuery**  

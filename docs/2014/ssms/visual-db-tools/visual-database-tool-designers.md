@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9dd7dff57d9413d5a06262a8c185b0cd61f0b2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63227043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064226"
 ---
 # <a name="visual-database-tool-designers"></a>Concepteurs Visual Database Tools
   Visual Database Tools est une combinaison d'outils de conception que vous pouvez utiliser pour traiter une source de données. Vous pouvez les utiliser pour créer des requêtes, concevoir ou modifier une structure de base de données ou mettre à jour des données. Les outils disponibles sont le Concepteur de diagrammes de base de données, le Concepteur de tables et le Concepteur de requêtes et de vues.  

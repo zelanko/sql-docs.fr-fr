@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa1858469ec8756f05e186ca1cb50c966ee47268
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054518"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972459"
 ---
 # <a name="web-service-task-editor-input-page"></a>Éditeur de tâche de service Web (page Entrée)
   Utilisez la page **Entrée** de l' **Éditeur de tâche de service Web** pour définir le service Web, la méthode Web et les valeurs à fournir à la méthode Web comme entrée. Vous pouvez fournir les valeurs en tapant des chaînes directement dans la colonne Valeur ou en y sélectionnant des variables.  

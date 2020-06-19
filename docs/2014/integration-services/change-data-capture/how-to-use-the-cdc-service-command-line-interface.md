@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 68c45be7cc124b0cadcd8f769e2471799d5b502a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30649c7e4b61dfb1b5d2f75a1b24f69c3bfa36e9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771146"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922900"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées
   Le programme de service de capture de données modifiées Oracle, xdbcdcsvc.exe, exécute normalement le service Windows de capture de données modifiées Oracle, mais il peut être appelé directement à partir de la ligne de commande pour créer ou supprimer un service Windows de capture de données modifiées Oracle.  

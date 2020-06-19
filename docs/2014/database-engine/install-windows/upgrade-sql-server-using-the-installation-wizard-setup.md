@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775396"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931821"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau vers SQL Server 2014 à l'aide de l'Assistant Installation (programme d'installation)
   L'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une arborescence de fonctionnalités unique pour mettre à niveau les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] côte à côte avec une version antérieure ou migrer les bases de données et les paramètres de configuration existants à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les appliquer à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -54,7 +53,7 @@ ms.locfileid: "62775396"
 -   [Compatibilité descendante du moteur de base de données SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour plus d’informations sur la façon d’ajouter des fonctionnalités à une instance mise [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à niveau de une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server 2014 &#40;&#41;d’installation ](add-features-to-an-instance-of-sql-server-setup.md).  
+>  N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour plus d’informations sur la façon d’ajouter des fonctionnalités à une instance mise à niveau de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server 2014 &#40;&#41;d’installation ](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Procédure  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775396"
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
-2.  L'Assistant d'installation démarre le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour mettre à niveau une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]existante de, cliquez sur **installation** dans la zone de navigation de gauche, puis cliquez sur **mettre [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]à niveau [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]partir de, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ou **.  
+2.  L'Assistant d'installation démarre le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour mettre à niveau une instance existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **installation** dans la zone de navigation de gauche, puis cliquez sur **mettre à niveau à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ,, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **.  
   
 3.  Dans la page Clé de produit, cliquez sur une option pour indiquer si vous effectuez une mise à niveau vers une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou si vous disposez d'une clé PID pour une version de production du produit. Pour plus d’informations, consultez [éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) et [mises à niveau de version et d’édition prises en charge](supported-version-and-edition-upgrades.md).  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775396"
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure.  
   
     > [!NOTE]  
-    >  Si vous avez choisi de mettre à niveau les fonctionnalités partagées en sélectionnant ** \<mettre à niveau les fonctionnalités partagées uniquement>** dans la page **Sélectionner une instance** , toutes les fonctionnalités partagées sont présélectionnées dans la page sélection de fonctionnalités. Tous les composants partagés sont mis à niveau à la fois.  
+    >  Si vous avez choisi de mettre à niveau les fonctionnalités partagées en sélectionnant **\<Upgrade shared features only>** dans la page **Sélectionner une instance** , toutes les fonctionnalités partagées sont présélectionnées dans la page sélection de fonctionnalités. Tous les composants partagés sont mis à niveau à la fois.  
   
 12. Dans la page Configuration de l'instance, spécifiez l'ID d'instance pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -122,11 +121,11 @@ ms.locfileid: "62775396"
 ## <a name="next-steps"></a>Étapes suivantes  
  Après avoir effectué la mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effectuez les tâches suivantes :  
   
--   **Inscrire vos serveurs-la** mise à niveau supprime les paramètres du Registre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour l’instance précédente de. Après la mise à niveau, vous devez réinscrire vos serveurs.  
+-   **Inscrire vos serveurs-la** mise à niveau supprime les paramètres du Registre pour l’instance précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Après la mise à niveau, vous devez réinscrire vos serveurs.  
   
 -   **Mettre à jour les statistiques** : pour optimiser les performances des requêtes, nous vous recommandons de mettre à jour les statistiques sur toutes les bases de données après la mise à niveau. Utilisez la procédure stockée `sp_updatestats` pour mettre à jour les statistiques des tables définies par l'utilisateur dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Configurer votre nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation** : pour réduire la surface d’exposition attaquable d’un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations sur la configuration de la surface d'exposition, consultez le fichier Lisezmoi de cette version.  
+-   **Configurer votre nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation** : pour réduire la surface d’exposition attaquable d’un système, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations sur la configuration de la surface d'exposition, consultez le fichier Lisezmoi de cette version.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise à niveau vers SQL Server 2014](upgrade-sql-server.md)   

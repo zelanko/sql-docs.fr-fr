@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7db48f0ee7241bedcd7536133450a2a41cd8f9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048551"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriétés de l'objet table (Visual Database Tools)
   Ces propriétés figurent dans la fenêtre Propriétés lorsque vous sélectionnez un objet table dans le **Concepteur de requêtes et de vues**. L'objet table peut être une vue, un synonyme, une table dérivée ou une fonction table. Sauf indication contraire, ces propriétés sont en lecture seule dans la fenêtre **Propriétés** .  

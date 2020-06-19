@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f95aab55d402ac72228dcc4326ad00ea15e7471f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048378"
 ---
 # <a name="tuning-a-workload"></a>Paramétrage d'une charge de travail
   L'Assistant Paramétrage du moteur de base de données peut servir à trouver la conception de base de données physique qui permet d'obtenir les meilleures performances des requêtes sur les bases de données et les tables que vous avez sélectionnées pour le paramétrage.  
@@ -44,7 +43,7 @@ ms.locfileid: "66110184"
   
 8.  Une fois l’analyse terminée, enregistrez votre recommandation sous la forme d’un script [!INCLUDE[tsql](../../includes/tsql-md.md)] en cliquant sur **Enregistrer les recommandations** dans le menu **Actions** . Dans la boîte de dialogue **Enregistrer sous** , accédez au répertoire dans lequel vous souhaitez enregistrer le script de recommandations et tapez le nom de fichier **MyRecommendations**.  
   
-## <a name="summary"></a>Récapitulatif  
+## <a name="summary"></a>Résumé  
  Vous avez correctement paramétré une charge de travail d'instruction SELECT simple sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . L'Assistant Paramétrage du moteur de base de données peut également utiliser les fichiers et les tables de trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] comme charges de travail de paramétrage. Au cours de la tâche suivante, vous allez afficher et interpréter les recommandations de paramétrage que vous avez reçues en résultat de l'exercice de paramétrage.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  

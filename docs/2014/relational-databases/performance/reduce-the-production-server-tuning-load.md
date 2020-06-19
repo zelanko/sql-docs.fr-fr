@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44a63e55d6a0868ac8395828e5f386573665fcaa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e437b561a44ab84e95b7c1dbef4fe2c2c4ff1bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063879"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Réduire la charge de paramétrage du serveur de production
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] L’Assistant Paramétrage compte sur l’optimiseur de requête pour analyser une charge de travail et faire des recommandations de paramétrage. Le fait d'effectuer cette analyse sur le serveur de production augmente la charge du serveur et peut dégrader les performances du serveur pendant la session de paramétrage. Vous pouvez réduire l'impact sur la charge du serveur pendant une session de paramétrage en utilisant un serveur de test en plus du serveur de production.

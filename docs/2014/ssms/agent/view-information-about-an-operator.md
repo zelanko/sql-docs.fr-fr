@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 680b90401f800a9c435bdae33b8e55385541cc4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064418"
 ---
 # <a name="view-information-about-an-operator"></a>Afficher des informations relatives à un opérateur
-  Cette rubrique explique comment afficher des informations sur un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opérateur de l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agent dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à [!INCLUDE[tsql](../../includes/tsql-md.md)]l’aide de ou de.  
+  Cette rubrique explique comment afficher des informations sur un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opérateur de l’agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Dans cette rubrique**  
   
