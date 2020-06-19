@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d0606e2a3f5480b27e27a4a585562f4b289b640
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935959"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask (option de configuration de serveur)
   Pour exécuter des travaux multitâche, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 et Windows Server 2003 transfèrent parfois des threads de processus entre différents processeurs. Bien qu’efficace du point de vue du système d’exploitation, cette activité peut réduire les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous des charges de système intenses, car des données sont rechargées de façon répétée dans chaque cache de processeur. L'affectation de processeurs à des threads spécifiques peut améliorer les performances sous ces conditions en éliminant les rechargements de processeur ; une telle association entre un thread et un processeur est qualifiée d'affinité de processeur.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c88bc60b4aeab12b3c55d23d1fe7b2b033a962f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936290"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Groupe de disponibilité (SQL Server Management Studio)
   Cette rubrique explique comment utiliser l'Assistant Nouveau groupe de disponibilité (dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) pour créer et configurer un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -120,7 +119,7 @@ ms.locfileid: "75228740"
     |**Préférences de sauvegarde**|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, ainsi que les priorités de sauvegarde pour les différents réplicas de disponibilité.|  
     |**Port d'écoute**|Utilisez cet onglet pour créer un écouteur de groupe de disponibilité. Par défaut, l'assistant ne crée pas d'écouteur.|  
   
-8.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l’une des options suivantes :  
+8.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  
   
     -   **Complète**  
   
@@ -202,7 +201,7 @@ ms.locfileid: "75228740"
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Vidéos**  
+-   **Vidéos :**  
   
      [Microsoft SQL Server, nom de code « Denali », série AlwaysOn, Partie 1 : Présentation de la solution haute disponibilité de la prochaine génération](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

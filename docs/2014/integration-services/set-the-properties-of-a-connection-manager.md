@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1e3d0780e761cb5b0cdd4fd267bdfb2662f55cf4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8581771394ed40f740ea83407b9acd47c6f4ddd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055835"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963234"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Définir les propriétés d’un gestionnaire de connexions
   Tous les gestionnaires de connexions peuvent être configurés à l'aide de la fenêtre **Propriétés** .  
@@ -61,7 +60,7 @@ ms.locfileid: "66055835"
     |[Gestionnaire de connexions de fichiers multiples](connection-manager/multiple-files-connection-manager.md)|[Référence de l'interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Gestionnaire de connexions de fichiers plats](connection-manager/flat-file-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Colonnes&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
     |[Gestionnaire de connexions de fichiers plats multiples](connection-manager/multiple-flat-files-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Colonnes&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[Gestionnaires de connexion FTP](connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
+    |[Gestionnaires de connexions FTP](connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions HTTP](connection-manager/http-connection-manager.md)|[Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[Gestionnaire de connexions MSMQ](connection-manager/msmq-connection-manager.md)|[Éditeur du gestionnaire de connexions MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[Gestionnaire de connexions ODBC](connection-manager/odbc-connection-manager.md)|[Informations de référence sur l’interface utilisateur du gestionnaire de connexions ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  

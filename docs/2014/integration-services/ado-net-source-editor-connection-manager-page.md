@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6dc089acb1d15491817d8876dee82951e4495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925884"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Éditeur de source ADO NET (page Gestionnaire de connexions)
   La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source ADO NET** permet de sélectionner le gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -36,7 +35,7 @@ ms.locfileid: "66061689"
  **Gestionnaire de connexions ADO.NET**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez un gestionnaire de connexions à partir de la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** .  
   
  **Mode d'accès aux données**  
@@ -47,11 +46,11 @@ ms.locfileid: "66061689"
 |Table ou vue|Permet de récupérer les données d’une table ou d’une vue dans la source de données [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Commande SQL|Permet de récupérer les données auprès de la source de données [!INCLUDE[vstecado](../includes/vstecado-md.md)] à l’aide d’une requête SQL.|  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . Le mode**Aperçu** peut afficher jusqu’à 200 lignes.  
   
 > [!NOTE]  
->  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. Les valeurs \<valeur trop grande pour être affichée> ou System.Byte[] s’affichent à la place. La première s'affiche lorsque le fournisseur [!INCLUDE[vstecado](../includes/vstecado-md.md)] accède à la source de données ; la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. À la place \<value too big to display> , les valeurs ou System. Byte [] sont affichés. La première s'affiche lorsque le fournisseur [!INCLUDE[vstecado](../includes/vstecado-md.md)] accède à la source de données ; la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936010"
 ---
 # <a name="collations-and-code-pages"></a>Classements et pages de codes
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] est limité au niveau des pages de codes prises en charge pour les colonnes (var)char dans les tables mémoire optimisées et les classements pris en charge utilisés dans des index et des procédures stockées compilées en mode natif.  
@@ -82,7 +81,7 @@ GO
   
 -   Toutes les expressions et les opérations de tri à l'intérieur des procédures stockées compilées en mode natif doivent utiliser les classements BIN2. La conséquence est que toutes les comparaisons et les opérations de tri sont basées sur les points de code Unicode des caractères (représentations binaires). Par exemple, tous les tris respectent la casse (« Z » vient avant « a »). Si nécessaire, utilisez le [!INCLUDE[tsql](../includes/tsql-md.md)] interprété pour le tri et la comparaison insensibles à la casse.  
   
--   La troncation des données UTF-16 n'est pas prise en charge dans les procédures stockées compilées en mode natif. Cela signifie que les valeurs n (var) char (*n*) ne peuvent pas être converties en type n (var) char (*i*), si *i* < *n*, si le classement a _SC propriété. Par exemple, ce qui suit n'est pas pris en charge :  
+-   La troncation des données UTF-16 n'est pas prise en charge dans les procédures stockées compilées en mode natif. Cela signifie que les valeurs n (var) char (*n*) ne peuvent pas être converties en type n (var) char (*i*), si *i*  <  *n*, si le classement a _SC propriété. Par exemple, ce qui suit n'est pas pris en charge :  
   
     ```sql  
     -- column definition using an _SC collation  

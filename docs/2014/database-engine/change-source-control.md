@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a615e26ac966fcf0c2af580825019c344889a5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936050"
 ---
 # <a name="change-source-control"></a>Modifier le contrôle de code source
   Cette boîte de dialogue permet de créer et de gérer les connexions et liaisons entre une solution ou un projet enregistré en local et un dossier de base de données de contrôle de code source.  
@@ -46,7 +45,7 @@ ms.locfileid: "62812743"
  **Connecté**  
  Affiche l'état de connexion d'une solution ou d'un projet sélectionné.  
   
- **Connect**  
+ **Déconnecter**  
  Déconnecte la copie locale d'une solution ou d'un projet, sur votre ordinateur personnel, de sa copie principale dans la base de données. Utilisez cette commande avant de déconnecter votre ordinateur du serveur de contrôle de code source (par exemple, en mode hors connexion sur votre ordinateur portable).  
   
  **OK**  
@@ -80,7 +79,7 @@ ms.locfileid: "62812743"
 |Unknown|L'état de l'élément sous contrôle de code source n'a pas encore été déterminé.|  
 |Pas contrôlé|L'élément n'est pas placé sous contrôle de code source.|  
   
- **Dissoci**  
+ **Annuler la liaison**  
  Affiche la boîte de dialogue **Contrôle de code source** pour vous permettre de supprimer des éléments du contrôle de code source et de les dissocier de façon permanente de leurs dossiers actuels.  
   
 ## <a name="see-also"></a>Voir aussi  

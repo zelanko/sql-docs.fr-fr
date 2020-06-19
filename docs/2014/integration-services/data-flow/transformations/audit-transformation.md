@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea923f72e0c9e505bc9e1f056d5ff4dbe36ad9a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daca48b79b4bb0dd4655bb306c881c199ecfb0a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913849"
 ---
 # <a name="audit-transformation"></a>transformation d'audit
   La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] comprend des variables système qui fournissent ces informations.  

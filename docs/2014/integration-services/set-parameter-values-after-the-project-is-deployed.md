@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b81223d0ecfc27ce249e80bfde350336cae2f1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055779"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963249"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Définir des valeurs de paramètres après le déploiement du projet
   L'Assistant Déploiement vous permet de définir des valeurs de paramètre par défaut du serveur lorsque vous déployez votre projet dans le catalogue. Une fois votre projet dans le catalogue, vous pouvez utiliser l'Explorateur d'objets SQL Server Management Studio (SSMS) ou Transact-SQL pour définir les valeurs par défaut du serveur.  

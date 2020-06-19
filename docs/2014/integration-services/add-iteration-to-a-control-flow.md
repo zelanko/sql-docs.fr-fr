@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 671073193853d35f1d66f815b5952ab69e978bf9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926060"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Ajouter une itération à un flux de contrôle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut le conteneur de boucles For, élément de flux de contrôle qui permet de facilement inclure un bouclage assurant la répétition conditionnelle d’un flux de contrôle dans un package. Pour plus d’informations, consultez [Conteneur de boucles For](control-flow/for-loop-container.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "66061980"
   
  Les expressions peuvent inclure des variables. Les variables présentent l'avantage de pouvoir être mises à jour au moment de l'exécution, ce qui rend les packages plus flexibles et plus faciles à gérer. La longueur maximale d'une expression est limitée à 4 000 caractères.  
   
- Lorsque vous spécifiez une variable dans une expression, vous devez préfixer le nom de la variable avec le signe arobase (@). Par exemple, pour une variable nommée `Counter`, entrez @Counter dans l’expression utilisée par le conteneur de boucles for. Si vous incluez la propriété d'espace de noms dans la variable, vous devez placer la variable et l'espace de noms entre crochets. Par exemple, pour une `Counter` variable dans l' `MyNamespace` espace de noms,@MyNamespace::Countertapez [].  
+ Lorsque vous spécifiez une variable dans une expression, vous devez préfixer le nom de la variable avec le signe arobase (@). Par exemple, pour une variable nommée `Counter` , entrez @Counter dans l’expression utilisée par le conteneur de boucles for. Si vous incluez la propriété d'espace de noms dans la variable, vous devez placer la variable et l'espace de noms entre crochets. Par exemple, pour une `Counter` variable dans l' `MyNamespace` espace de noms, tapez [ @MyNamespace::Counter ].  
   
  Les variables utilisées par le conteneur de boucles For doivent être définies dans la portée du conteneur de boucles For ou dans la portée d'un conteneur situé plus haut dans la hiérarchie de conteneurs de package. Par exemple, un conteneur de boucles For peut utiliser des variables définies dans sa portée et également des variables définies dans la portée du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md).  
   
@@ -61,6 +60,6 @@ ms.locfileid: "66061980"
  [Grouper ou dissocier des composants](group-or-ungroup-components.md)   
  [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Ajouter une énumération à un workflow de contrôle](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
- [Flux de contrôle](control-flow/control-flow.md)  
+ [Workflow de contrôle](control-flow/control-flow.md)  
   
   

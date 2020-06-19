@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c420a52528662cecec1bae8e0e1718152279bc0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 442516495ce4a384a7f2d61ffe469a976269dbb3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770455"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913809"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>Appliquer des règles de qualité des données à la source de données
   Vous pouvez utiliser Data Quality (DQS) Services pour corriger les données dans le flux de données du package en connectant la transformation de nettoyage DQS à la source de données. Pour plus d’informations sur DQS, consultez [Concepts Data Quality Services](../../../data-quality-services/data-quality-services-concepts.md). Pour plus d’informations sur la transformation, consultez [Transformation de nettoyage DQS](dqs-cleansing-transformation.md).  

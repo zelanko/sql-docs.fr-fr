@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 419f1cd22e0a7aa314f6a1036793091bb7b385fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788322"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936300"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Utiliser les détails de l'Explorateur d'objets pour surveiller les groupes de disponibilité (SQL Server Management Studio)
   Cette rubrique explique comment utiliser le volet **Détails de l'Explorateur d'objets** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour surveiller et gérer des groupes de disponibilité AlwaysOn existants, des réplicas de disponibilité et des bases de données de disponibilité.  
@@ -100,7 +99,7 @@ ms.locfileid: "62788322"
 |-----------|-----------------|  
 |**Déconnecté**|Pour un réplica de disponibilité distant, indique qu'il est déconnecté du réplica de disponibilité local. La réponse du réplica local à l'état déconnecté dépend de son rôle, comme suit :<br /><br /> Sur le réplica principal, si un réplica secondaire est déconnecté, les bases de données secondaires sont marquées comme **Non synchronisé** sur le réplica principal, et le réplica principal attend que le réplica secondaire se reconnecte.<br /><br /> Une fois la déconnexion détectée, le réplica secondaire tente de se reconnecter au réplica principal.|  
 |**Connecté**|Réplica de disponibilité distant qui est actuellement connecté au réplica local.|  
-|**NUL**|Si le réplica local est un réplica secondaire, cette valeur est NULL pour les autres réplicas secondaires.|  
+|**NULL**|Si le réplica local est un réplica secondaire, cette valeur est NULL pour les autres réplicas secondaires.|  
   
  **État de synchronisation**  
  Indique si un réplica secondaire est actuellement synchronisé avec le réplica principal. Les valeurs possibles sont les suivantes :  
@@ -109,7 +108,7 @@ ms.locfileid: "62788322"
 |-----------|-----------------|  
 |**Non synchronisé**|La base de données n'est pas synchronisée ou n'a pas encore été jointe au groupe de disponibilité.|  
 |**Synchronisée**|La base de données est synchronisée avec la base de données primaire sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.<br /><br /> Remarque : en mode de performances, la base de données n’est jamais dans l’état synchronisé.|  
-|**NUL**|État inconnu. Cette valeur se produit lorsque l'instance de serveur locale ne peut pas communiquer avec le cluster de basculement WSFC (le nœud local ne fait pas partie du quorum WSFC).|  
+|**NULL**|État inconnu. Cette valeur se produit lorsque l'instance de serveur locale ne peut pas communiquer avec le cluster de basculement WSFC (le nœud local ne fait pas partie du quorum WSFC).|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les compteurs de performances pour les réplicas de disponibilité, consultez [SQL Server, réplica de disponibilité](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
@@ -129,14 +128,14 @@ ms.locfileid: "62788322"
 |-----------|-----------------|  
 |Synchronisation|La base de données secondaire a reçu les enregistrements du journal des transactions de la base de données primaire qui ne sont pas encore écrits sur le disque (renforcé).<br /><br /> Remarque : En mode de validation asynchrone, l’état de synchronisation est toujours **Synchronisation**.|  
   
- **Interrompu**  
+ **Provisoire**  
  Indique si la base de données de disponibilité est actuellement en ligne. Les valeurs possibles sont les suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Interrompu**|Cet état indique que la base de données est interrompue localement et doit être reprise manuellement.<br /><br /> Sur le réplica principal, la valeur est peu fiable pour une base de données secondaire. Pour déterminer de manière fiable si une base de données secondaire est interrompue, interrogez-la sur le réplica secondaire qui héberge la base de données.|  
+|**Provisoire**|Cet état indique que la base de données est interrompue localement et doit être reprise manuellement.<br /><br /> Sur le réplica principal, la valeur est peu fiable pour une base de données secondaire. Pour déterminer de manière fiable si une base de données secondaire est interrompue, interrogez-la sur le réplica secondaire qui héberge la base de données.|  
 |**Non jointe**|Indique que la base de données secondaire n'a pas été jointe au groupe de disponibilité ou a été supprimée du groupe.|  
-|**Service**|Indique que la base de données n'est pas interrompue sur le réplica de disponibilité local et que la base de données est connectée.|  
+|**En ligne**|Indique que la base de données n'est pas interrompue sur le réplica de disponibilité local et que la base de données est connectée.|  
 |**Non connecté**|Indique que le réplica secondaire n'est pas actuellement en mesure de se connecter au réplica principal.|  
   
 > [!NOTE]  

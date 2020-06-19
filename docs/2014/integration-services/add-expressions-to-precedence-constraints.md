@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926110"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Ajouter des expressions aux contraintes de précédence
   Une contrainte de précédence peut utiliser une expression pour définir la contrainte entre deux exécutables : l'exécutable de précédence et l'exécutable contraint. Les exécutables peuvent être des tâches ou des conteneurs. L'expression peut être utilisée seule ou en combinaison avec le résultat d'exécution de l'exécutable de précédence. Le résultat d'exécution d'un exécutable est soit succès, soit échec. Lorsque vous configurez le résultat d'exécution d'une contrainte de précédence, vous pouvez lui affecter la valeur `Success`, `Failure` ou `Completion`. `Success` exige que l'exécutable de précédence réussisse, `Failure` exige que l'exécutable de précédence échoue et `Completion` indique que l'exécutable contraint doit s'exécuter, que la tâche de précédence réussisse ou échoue. Pour plus d’informations, consultez [Contraintes de précédence](control-flow/precedence-constraints.md).  
@@ -46,10 +45,10 @@ ms.locfileid: "66061897"
   
 |Opération d'évaluation|Résultat d'évaluation de la contrainte|Résultat d'évaluation de l'expression|L'exécutable contraint s'exécute|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Contrainte|True|NON APPLICABLE|True|  
-|Contrainte|False|NON APPLICABLE|False|  
-|Expression|NON APPLICABLE|True|True|  
-|Expression|NON APPLICABLE|False|False|  
+|Contrainte|True|N/A|True|  
+|Contrainte|False|N/A|False|  
+|Expression|N/A|True|True|  
+|Expression|N/A|False|False|  
 |Contrainte et expression|True|True|True|  
 |Contrainte et expression|True|False|False|  
 |Contrainte et expression|False|True|False|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925610"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Éditeur de transformation d'agrégation (onglet Avancé)
   L’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation d’agrégation** permet de définir les propriétés des composants, de spécifier des agrégations et de définir les propriétés des colonnes d’entrée et de sortie.  
@@ -39,7 +38,7 @@ ms.locfileid: "66061591"
 |-----------|-----------------|  
 |Non spécifié|La propriété **KeyScale** n’est pas utilisée.|  
 |Faible|L’agrégation peut écrire environ 500 000 clés.|  
-|Moyen|L'agrégation peut écrire environ 5 000 000 clés.|  
+|Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
 |Élevé|L'agrégation peut écrire plus de 25 000 000 clés.|  
   
  **Nombre de clés**  
@@ -52,7 +51,7 @@ ms.locfileid: "66061591"
 |-----------|-----------------|  
 |Non spécifié|La propriété CountDistinctScale n'est pas utilisée.|  
 |Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
-|Moyen|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
+|Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
 |Élevé|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
   
  **Nombre de clés distinctes**  

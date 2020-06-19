@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925560"
 ---
 # <a name="analysis-of-data-flow"></a>Analyse des flux de données
-  Vous pouvez utiliser la vue de base de données [Catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` pour analyser le workflow de packages. Cette vue affiche une ligne à chaque fois qu'un composant de flux de données envoie des données à un composant en aval. Les informations peuvent être utilisées pour mieux comprendre les lignes envoyées à chaque composant.  
+  Vous pouvez utiliser la [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vue de base de donnéescatalog.execution_data_statistics pour analyser le workflow des packages. Cette vue affiche une ligne à chaque fois qu'un composant de flux de données envoie des données à un composant en aval. Les informations peuvent être utilisées pour mieux comprendre les lignes envoyées à chaque composant.  
   
 > [!NOTE]  
 >  Le niveau de journalisation doit avoir la valeur **Commentaires** afin de capturer des informations avec la vue catalog.execution_data_statistics.  

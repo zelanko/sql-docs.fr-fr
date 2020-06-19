@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935990"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configuration de la sauvegarde managée (SQL Server Management Studio)
   La boîte de dialogue **sauvegarde managée** permet de configurer les valeurs [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] par défaut pour l'instance. Cette rubrique explique comment utiliser cette boîte de dialogue pour configurer les paramètres [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] par défaut de l'instance et les options à prendre en compte. Lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est configuré pour l'instance, les paramètres sont appliqués aux nouvelles bases de données créées par la suite.  
@@ -69,7 +68,7 @@ ms.locfileid: "82849437"
   
  Spécifiez l' **URL de stockage** pour le compte de stockage Azure, les informations d’identification SQL qui stockent les informations d’authentification pour le compte de stockage et la période de rétention pour les fichiers de sauvegarde.  
   
- Le format de l’URL de stockage est : https:// \< StorageAccount>. blob.Core.Windows.net/  
+ Le format de l’URL de stockage est : https:// \<StorageAccount> . blob.Core.Windows.net/  
   
  Pour définir les paramètres de chiffrement au niveau de l'instance, cochez l’option **Chiffrement de la sauvegarde** et spécifiez l'algorithme de chiffrement et le certificat ou la clé asymétrique à utiliser pour le chiffrement.  Cette valeur définie au niveau de l'instance est utilisée pour toutes les nouvelles bases de données créées une fois cette configuration appliquée.  
   

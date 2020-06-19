@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 260b1a303685ad9247154504400ef1519ecaa219
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936110"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Modifications importantes apportées à la recherche en texte intégral
   Cette rubrique décrit les modifications importantes apportées à la recherche en texte intégral. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes lors d'une mise à niveau. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "83001019"
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Dernières modifications dans la recherche en texte intégral dans SQL Server 2008  
  Les modifications décrites ci-dessous s'appliquent à la recherche en texte intégral entre [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] et [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures.  
   
-|Caractéristique|Scénario|SQL Server 2005|SQL Server 2008 et versions ultérieures|  
+|Fonctionnalité|Scénario|SQL Server 2005|SQL Server 2008 et versions ultérieures|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) avec des types définis par l’utilisateur (UDT)|La clé de texte intégral est un type défini par l'utilisateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], par exemple `MyType = char(1)`.|La clé retournée est du type assigné au type défini par l'utilisateur.<br /><br /> Dans l’exemple, il s’agit de **char (1)**.|La clé retournée est du type défini par l'utilisateur. Dans l’exemple, il s’agit de **MyType**.|  
 |paramètre *top_n_by_rank* (des instructions CONTAINSTABLE et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] )|*top_n_by_rank* des requêtes en utilisant 0 comme paramètre.|Échec avec un message d'erreur qui signale que vous devez utiliser une valeur supérieure à zéro.|Réussite, retourne zéro ligne.|  

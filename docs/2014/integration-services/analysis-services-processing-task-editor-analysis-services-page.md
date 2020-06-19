@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ae832263c3a025f53989761541e3278f5ea6a60
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925570"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Éditeur de tâche de traitement d'Analysis Services (page Analysis Services)
   Utilisez la page **Analysis Services** de la boîte de dialogue **Éditeur de tâche de traitement d’Analysis Services** pour définir un gestionnaire de connexions Analysis Services, sélectionner les objets analytiques à traiter et définir les options de traitement et de gestion des erreurs.  
@@ -40,7 +39,7 @@ ms.locfileid: "68890368"
  **Gestionnaire de connexions Analysis Services**  
  Sélectionnez un gestionnaire de connexions Analysis Services existant dans la liste ou cliquez sur **Nouveau** pour créer un nouveau gestionnaire de connexions.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez un nouveau gestionnaire de connexions Analysis Services.  
   
  **Rubriques connexes :** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -56,7 +55,7 @@ ms.locfileid: "68890368"
  **Ajouter**  
  Ajoutez un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à la liste.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez un objet et cliquez sur **Supprimer**.  
   
  **Analyse d'impact**  
@@ -81,6 +80,6 @@ ms.locfileid: "68890368"
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche de traitement de Analysis Services &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
- [Tâche DDL d'exécution de SQL Server Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
+ [Tâche DDL d’exécution de SQL Server Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   
   

@@ -16,26 +16,25 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b67e2308c95db109c89bd2c3ff61f311e83fb898
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62878281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962579"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Tutoriel SSIS : Création d’un package ETL simple
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SSIS) est une plateforme permettant de créer des solutions d’intégration de données à hautes performances, notamment des packages d’extraction, de transformation et de chargement (ETL) pour l’entreposage de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] données. SSIS propose des outils graphiques et des assistants permettant de créer et de déboguer des packages ; des tâches permettant de réaliser des fonctions de flux de travail comme les opérations FTP, l'exécution d'instructions SQL et l'envoi de messages électroniques ; des sources de données et des destinations permettant d'extraire et de charger des données ; des transformations permettant de nettoyer, d'agréger, de fusionner et de copier des données ; un service de gestion, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , permettant d'administrer l'exécution et le stockage des packages, et des API (Application Programming Interface) permettant de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) est une plateforme permettant de créer des solutions d’intégration de données à hautes performances, notamment des packages d’extraction, de transformation et de chargement (ETL) pour l’entreposage de données. SSIS propose des outils graphiques et des assistants permettant de créer et de déboguer des packages ; des tâches permettant de réaliser des fonctions de flux de travail comme les opérations FTP, l'exécution d'instructions SQL et l'envoi de messages électroniques ; des sources de données et des destinations permettant d'extraire et de charger des données ; des transformations permettant de nettoyer, d'agréger, de fusionner et de copier des données ; un service de gestion, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , permettant d'administrer l'exécution et le stockage des packages, et des API (Application Programming Interface) permettant de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Dans ce [!INCLUDE[ssIS](../includes/ssis-md.md)] didacticiel, vous allez apprendre à utiliser le concepteur pour créer un package [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] simple. Ce package extrait les données d'un fichier plat, les reformate et les insère dans une table de faits. Au cours des leçons suivantes, ce package est développé pour illustrer le bouclage, les options de configuration de package, l'écriture dans un journal et le flux d'erreurs.  
+ Dans ce didacticiel, vous allez apprendre à utiliser le [!INCLUDE[ssIS](../includes/ssis-md.md)] Concepteur pour créer un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package simple. Ce package extrait les données d'un fichier plat, les reformate et les insère dans une table de faits. Au cours des leçons suivantes, ce package est développé pour illustrer le bouclage, les options de configuration de package, l'écriture dans un journal et le flux d'erreurs.  
   
  Lorsque vous procédez à l'installation des données exemples qu'exploite le didacticiel, vous installez également les versions finales des packages créés au cours de chaque leçon du didacticiel. En utilisant les packages finaux, vous pouvez à votre guise passer outre une leçon et débuter à partir d'une leçon ultérieure du didacticiel. S'il s'agit de la première fois que vous travaillez avec des packages ou le nouvel environnement de développement, nous vous recommandons de commencer par la leçon 1.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
- La meilleure façon de se familiariser avec les nouveaux outils, les contrôles et les fonctionnalités [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] disponibles dans consiste à les utiliser. Ce didacticiel va vous guider à travers le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer un package ETL simple qui offre le bouclage, les options de configuration, la logique de flux d'erreurs et la fonction d'écriture dans un journal.  
+ La meilleure façon de se familiariser avec les nouveaux outils, les contrôles et les fonctionnalités disponibles dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste à les utiliser. Ce didacticiel va vous guider à travers le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer un package ETL simple qui offre le bouclage, les options de configuration, la logique de flux d'erreurs et la fonction d'écriture dans un journal.  
   
-## <a name="requirements"></a>Conditions requises  
- Ce didacticiel est destiné aux utilisateurs familiarisés avec les opérations de base de données fondamentales, mais qui ont une exposition limitée [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]aux nouvelles fonctionnalités disponibles dans.  
+## <a name="requirements"></a>Configuration requise  
+ Ce didacticiel est destiné aux utilisateurs familiarisés avec les opérations de base de données fondamentales, mais qui ont une exposition limitée aux nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Pour utiliser ce didacticiel, les composants suivants doivent être installés sur votre système :  
   

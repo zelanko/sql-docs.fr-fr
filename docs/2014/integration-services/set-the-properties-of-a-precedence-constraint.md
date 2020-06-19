@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963119"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Définir les propriétés d'une contrainte de précédence
   Pour définir des propriétés sur des contraintes de précédence, vous pouvez utiliser l'un des outils suivants :  
@@ -45,12 +44,12 @@ ms.locfileid: "66055739"
   
 6.  Dans la `Value` liste déroulante, sélectionnez le résultat d’exécution de l’exécutable de précédence.  
   
-7.  Si l’opération d’évaluation utilise une expression, dans `Expression` la zone, tapez une expression, puis cliquez sur **tester** pour évaluer l’expression.  
+7.  Si l’opération d’évaluation utilise une expression, dans la `Expression` zone, tapez une expression, puis cliquez sur **tester** pour évaluer l’expression.  
   
     > [!NOTE]  
     >  Les noms de variable respectent la casse.  
   
-8.  Si plusieurs tâches ou conteneurs sont connectés à l’exécutable avec restriction, sélectionnez **logique and** pour spécifier que les résultats d’exécution de tous les exécutables précédents doivent avoir `true`la valeur. Sélectionnez **or logique** pour spécifier qu’un seul résultat d’exécution doit correspondre `true`à.  
+8.  Si plusieurs tâches ou conteneurs sont connectés à l’exécutable avec restriction, sélectionnez **logique and** pour spécifier que les résultats d’exécution de tous les exécutables précédents doivent avoir la valeur `true` . Sélectionnez **or logique** pour spécifier qu’un seul résultat d’exécution doit correspondre à `true` .  
   
 9. Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur de contrainte de précédence**.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66055739"
     |Propriété Lecture/écriture|Action de configuration|  
     |--------------------------|--------------------------|  
     |Description|Fournissez une description.|  
-    |EvalOp|Sélectionnez une opération d'évaluation. Si l' `Expression`opération, **ExpressionAndConstant**ou **ExpressionOrConstant** est sélectionnée, vous pouvez spécifier une expression.|  
+    |EvalOp|Sélectionnez une opération d'évaluation. Si l' `Expression` opération, **ExpressionAndConstant**ou **ExpressionOrConstant** est sélectionnée, vous pouvez spécifier une expression.|  
     |Expression|Si l'opération d'évaluation inclut une expression, fournissez une expression. L'expression doit prendre une valeur de type Boolean. Pour plus d’informations sur le langage des expressions, consultez [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Défini `LogicalAnd` pour spécifier si la contrainte de précédence est évaluée de concert avec d’autres contraintes de précédence, lorsque plusieurs exécutables précèdent et sont liés à l’exécutable avec contrainte|  
     |Nom|Mettez à jour le nom de la contrainte de précédence.|  

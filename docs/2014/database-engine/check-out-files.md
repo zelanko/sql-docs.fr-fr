@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c076f7bee35e0e466fc22aec9ad9f6984bac6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936030"
 ---
 # <a name="check-out-files"></a>Extraire des fichiers
   À moins que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ne soit configuré pour autoriser la modification des fichiers archivés, vous devez extraire un fichier avant de pouvoir le modifier. Lorsque vous procédez à l'extraction d'un fichier, une version du fichier est copiée sur votre disque local et l'attribut de lecture seule du fichier est désactivé.  
@@ -55,7 +54,7 @@ ms.locfileid: "62786744"
      Affiche les éléments que vous extrayez sous forme de liste en 2D sous leur connexion de contrôle de code source.  
   
      **Modifier**  
-     Modifiez un élément sans l’extraire. Le bouton **modifier** s’affiche uniquement si vous [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] avez configuré pour prendre en charge la modification des fichiers archivés.  
+     Modifiez un élément sans l’extraire. Le bouton **modifier** s’affiche uniquement si vous avez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] configuré pour prendre en charge la modification des fichiers archivés.  
   
      **Nom**  
      Affiche les noms des éléments disponibles en vue d'une extraction. Les cases à cocher activées indiquent les éléments sélectionnés. Si vous ne souhaitez pas extraire un élément donné, désactivez la case à cocher correspondante.  

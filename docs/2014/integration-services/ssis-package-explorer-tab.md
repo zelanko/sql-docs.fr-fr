@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ab5c3112bfeddd41c9c877365e36780e32b4241e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c09a6f967b85d19a8d07563862537787d45f1b42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055388"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962479"
 ---
 # <a name="ssis-package-explorer-tab"></a>Onglet Explorateur de package SSIS
   Utilisez l'onglet **Explorateur de package** du Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour afficher une vue hiérarchique de tous les éléments d'un package : configurations, connexions, gestionnaires d'événements, objets exécutables tels que les tâches et les conteneurs, modules fournisseurs d'informations, contraintes de précédence et variables. Si un package contient une tâche de flux de données, l'onglet **Explorateur de package** comporte un nœud qui contient une vue hiérarchique de tous les composants de flux de données.  

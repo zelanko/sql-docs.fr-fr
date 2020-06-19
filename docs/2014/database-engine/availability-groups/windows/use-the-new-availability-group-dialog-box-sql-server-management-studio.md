@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee729f9f2bdd0044f2897a06e93f00b7b37ca785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94a1eff298dd200275fec49519a51c4aeb96997
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783139"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936250"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)
   Cette rubrique contient des informations sur l'utilisation de la boîte de dialogue **Nouveau groupe de disponibilité** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour créer un groupe de disponibilité AlwaysOn sur les instances [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -160,5 +159,5 @@ ms.locfileid: "72783139"
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Le point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et &#40;de basculement d’application SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

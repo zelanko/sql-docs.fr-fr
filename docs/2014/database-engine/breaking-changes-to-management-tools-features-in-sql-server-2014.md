@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3ff3fad8-b569-4516-bd58-5a3efeb537e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73e2c6ecb4ae2f829c02897ed5c6ab5d84f1ba4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0487b6ab0958e0b83d4e8e34be507b5b3211ac87
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936100"
 ---
 # <a name="breaking-changes-to-management-tools-features-in-sql-server-2014"></a>Dernières modifications apportées aux fonctionnalités des outils d'administration dans SQL Server 2014
   Cette rubrique décrit les dernières modifications apportées aux fonctionnalités des outils d'administration. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes lors d'une mise à niveau. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
