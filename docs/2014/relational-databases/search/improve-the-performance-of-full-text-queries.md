@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1437f710725df5c87d31f6a80939a5d7869b412
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063214"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Améliorer les performances des requêtes de texte intégral
   La liste suivante comprend des recommandations destinées à améliorer les performances des requêtes de texte intégral.  

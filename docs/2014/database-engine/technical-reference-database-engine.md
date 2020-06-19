@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea211e607425d82a980cafc778647efca39773ab
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f91fd3914fb807eb1a9a2d9c8ee1f2082174a61f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000531"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928420"
 ---
 # <a name="technical-reference-database-engine"></a>Références techniques (moteur de base de données)
   Trouvez la documentation de référence de programmation relative aux outils, langages et à l'administration pour le [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -31,7 +30,7 @@ ms.locfileid: "83000531"
 
  ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") utilitaire d' **invite de commandes** utilitaire [BCP](../tools/bcp-utility.md) de référence
 
- [dta (utilitaire)](../tools/dta/dta-utility.md)
+ [Utilitaire dta](../tools/dta/dta-utility.md)
 
  [Utilitaire SqlLocalDB](../tools/sqllocaldb-utility.md)
 

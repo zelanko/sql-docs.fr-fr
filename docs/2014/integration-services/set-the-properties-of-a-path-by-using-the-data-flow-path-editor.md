@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07af1256f4935467d1230bf2987fde4cd02c5de7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963141"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Définir les propriétés d'un chemin d'accès à l'aide de l'Éditeur du chemin d'accès au flux de données
   Les chemins d'accès connectent deux composants de flux de données. Pour pouvoir définir les propriétés des chemins d'accès, le flux de données doit contenir au moins deux composants de flux de données connectés. Pour plus d’informations, consultez [Ajouter ou supprimer un composant dans un flux de données](data-flow/add-or-delete-a-component-in-a-data-flow.md) et [Connecter des composants dans un flux de données](data-flow/connect-components-in-a-data-flow.md).  

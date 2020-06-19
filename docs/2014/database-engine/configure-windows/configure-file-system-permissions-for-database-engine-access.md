@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7115a4f8953ade5fc91e4be3197772f4bc3784c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811323"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935750"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données
   Cette rubrique explique comment octroyer au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]un accès de système de fichiers à l'emplacement où sont stockés les fichiers de base de données. Le service [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit disposer d'une autorisation du système de fichiers Windows pour accéder au dossier de fichiers dans lequel sont stockés les fichiers de base de données. L'autorisation sur l'emplacement par défaut est configurée lors de l'installation. Si vous placez vos fichiers de base de données à un emplacement différent, vous devrez peut-être procéder comme suit pour octroyer au [!INCLUDE[ssDE](../../includes/ssde-md.md)] une autorisation de contrôle total sur cet emplacement.  
@@ -42,7 +41,7 @@ ms.locfileid: "62811323"
   
 7.  Cliquez à nouveau sur **OK** pour revenir à la boîte de dialogue **autorisations** .  
   
-8.  Dans la zone noms de **groupes ou d’utilisateurs** , sélectionnez le SID par service, puis dans la zone **autorisations pour** \<nom>, activez la case à cocher **autoriser** pour **contrôle total**.  
+8.  Dans la zone noms de **groupes ou d’utilisateurs** , sélectionnez le SID par service, puis dans la zone **autorisations pour** \<name> , activez la case à cocher **autoriser** pour **contrôle total**.  
   
 9. Cliquez sur **Appliquer**, puis cliquez à deux reprises sur **OK** pour quitter la boîte de dialogue.  
   

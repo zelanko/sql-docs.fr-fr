@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18fd2485c9b2e62586d9f3e81f76f6cf680dbfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063005"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   Une instance `MultiPolygon` est une collection de zéro ou plusieurs instances `Polygon`.
@@ -38,9 +37,9 @@ ms.locfileid: "78176639"
 
 -   Il s'agit d'une instance `MultiPolygon` vide.
 
--   Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` acceptées. Pour plus d’informations sur `Polygon` les instances acceptées, consultez [Polygon](../spatial/polygon.md).
+-   Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` acceptées. Pour plus d’informations sur les `Polygon` instances acceptées, consultez [Polygon](../spatial/polygon.md).
 
- Les exemples suivants illustrent `MultiPolygon` des instances acceptées.
+ Les exemples suivants illustrent des `MultiPolygon` instances acceptées.
 
 ```
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';
@@ -59,7 +58,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Instances valides
  Les instances `MultiPolygon` sont valides s'il s'agit d'instances `MultiPolygon` vides ou si elles respectent les critères suivants.
 
-1.  Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` valides. Pour connaître `Polygon` les instances valides, consultez [Polygon](../spatial/polygon.md).
+1.  Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` valides. Pour connaître les instances valides `Polygon` , consultez [Polygon](../spatial/polygon.md).
 
 2.  Aucune des instances `Polygon` comprenant l'instance `MultiPolygon` n'en chevauche une autre.
 

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edf390d5f127065b23c6ae479af1145209774332
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063070"
 ---
 # <a name="scripting"></a>Création de scripts
-  L'écriture de scripts dans SMO est contrôlée par l'objet <xref:Microsoft.SqlServer.Management.Smo.Scripter> et ses objets enfants ou par la méthode `Script` sur des objets individuels. L' <xref:Microsoft.SqlServer.Management.Smo.Scripter> objet contrôle le mappage à partir des relations de dépendance pour les objets sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]une instance de.  
+  L'écriture de scripts dans SMO est contrôlée par l'objet <xref:Microsoft.SqlServer.Management.Smo.Scripter> et ses objets enfants ou par la méthode `Script` sur des objets individuels. L' <xref:Microsoft.SqlServer.Management.Smo.Scripter> objet contrôle le mappage à partir des relations de dépendance pour les objets sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  L'écriture de scripts avancés à l'aide de l'objet <xref:Microsoft.SqlServer.Management.Smo.Scripter> et ses objets enfants est un processus en trois phases :  
   
-1.  Découverte  
+1.  découverte,  
   
 2.  Génération de la liste  
   

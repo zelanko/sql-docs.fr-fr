@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6d9779209b3ffb317658243c168d74740f6731b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026453"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utiliser un fichier de format pour importer des données en bloc (SQL Server)
   Cette rubrique illustre l'utilisation d'un fichier de format dans les importations en bloc. Le fichier de format met en relation les champs du fichier de données avec les colonnes de la table.  Vous pouvez utiliser un fichier de format non-XML ou XML pour importer des données en bloc lors de l’utilisation d’une commande **BCP** ou d’une BULK INSERT ou d’une instruction INSERT... SELECT * FROM OPENROWSET (BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] commande.  

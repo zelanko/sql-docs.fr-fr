@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c4ed409286e531413be74a487f5baa2d3a7a878
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089778"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928670"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Modifier le filtre
   Utilisez la boîte de dialogue **Modifier le filtre** pour créer et modifier des filtres de colonne de données dans une trace. Cliquez sur le nom d'une colonne de données dans la liste pour afficher dans le volet adjacent les critères de filtre disponibles pour cette colonne. Entrez les critères de filtre et cliquez sur **OK** pour les appliquer à la colonne de données sélectionnée. Si une icône de filtre apparaît à gauche du nom de la colonne de données dans la liste, cela signifie qu'un filtre est déjà configuré pour cette colonne.  

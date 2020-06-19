@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 894cb2beb52684ececb4d9aadb171e283fad5a55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811250"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935450"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue de l'authentification** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est prise en charge dans Windows 7 et Windows Server 2008 R2. La**protection étendue** figure dans les Service Packs pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] plus anciens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**.  
@@ -85,7 +84,7 @@ ms.locfileid: "62811250"
   
 1.  Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, pointez sur **Microsoft SQL Server** , puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** *\<* nom_instance*>*, puis cliquez sur **Propriétés**.  
+2.  Développez **SQL Server Configuration du réseau**, cliquez avec le bouton droit sur **protocoles pour** *\<*InstanceName*>* , puis cliquez sur **Propriétés**.  
   
 3.  Pour la liaison de service et la liaison de canal, sous l'onglet **Avancé** , affectez le paramètre approprié à **Protection étendue** .  
   

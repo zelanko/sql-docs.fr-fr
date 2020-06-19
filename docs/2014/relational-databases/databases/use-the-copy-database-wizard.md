@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0baaeef6cb196a67b2f615aa280b61b61fbc5119
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871136"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970003"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
   L'Assistant Copie de base de données vous permet de facilement déplacer ou copier des bases de données et leurs objets d'un serveur à un autre, sans nécessiter l'arrêt des serveurs. Vous pouvez également mettre à niveau les bases de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. À l'aide de cet Assistant, vous pouvez effectuer les opérations suivantes :  
@@ -55,7 +54,7 @@ ms.locfileid: "62871136"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   
@@ -98,7 +97,7 @@ ms.locfileid: "62871136"
   
 -   Pour garantir une performance optimale de la base de données mise à niveau, exécutez sp_updatestats (mise à jour des statistiques) sur la base de données mise à niveau.  
   
--   Lorsque vous copiez une base de données sur une autre instance de serveur et il est possible que vous deviez recréer sur cette autre instance de serveur une partie ou l'ensemble des métadonnées de la base de données, telles que les connexions et les travaux, afin de garantir la cohérence pour les utilisateurs et les applications. Pour plus d’informations, consultez [gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Lorsque vous copiez une base de données sur une autre instance de serveur et il est possible que vous deviez recréer sur cette autre instance de serveur une partie ou l'ensemble des métadonnées de la base de données, telles que les connexions et les travaux, afin de garantir la cohérence pour les utilisateurs et les applications. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
   
@@ -114,7 +113,7 @@ ms.locfileid: "62871136"
      **Serveur source**  
      Sélectionnez le nom du serveur sur lequel se situent les bases de données que vous souhaitez déplacer ou copier, ou cliquez sur le bouton Parcourir (**...**) pour rechercher le serveur de votre choix. La version du serveur doit être au moins [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-     **Utiliser l’authentification Windows**  
+     **Utiliser l'authentification Windows**  
      Permettre à un utilisateur de se connecter via un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Utiliser l’authentification SQL Server**  
@@ -137,7 +136,7 @@ ms.locfileid: "62871136"
     > [!NOTE]  
     >  Vous pouvez utiliser une destination qui est un serveur cluster ; l'Assistant Copie de base de données s'assurera que vous sélectionnez uniquement des lecteurs partagés sur un serveur de destination cluster.  
   
-     **Utiliser l’authentification Windows**  
+     **Utiliser l'authentification Windows**  
      Permettre à un utilisateur de se connecter via un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Utiliser l’authentification SQL Server**  
@@ -191,7 +190,7 @@ ms.locfileid: "62871136"
   
 6.  Sur la page **Configurer la base de données de destination** , modifiez le nom de la base de données si nécessaire et spécifiez l'emplacement et le nom des fichiers de base de données. Cette page s'affiche une seule fois, chaque fois qu'une base de données est déplacée ou copiée.  
   
-7.  Sur la page **Sélectionner des objets de base de données** , sélectionnez les objets à inclure dans l'opération de déplacement ou de copie. Cette page est disponible uniquement lorsque la source et la destination correspondent à des serveurs différents. Pour inclure un objet, cliquez sur son nom dans la zone **Objets connexes disponibles** , puis cliquez sur le bouton **>>** pour déplacer l’objet vers la zone **Objets connexes sélectionnés** . Pour exclure un objet, cliquez sur le nom de l’objet dans la zone **objets connexes sélectionnés** , puis ** < ** cliquez sur le bouton pour déplacer l’objet vers la zone **objets connexes disponibles** . Par défaut, tous les objets de chaque type sélectionné sont transférés. Pour choisir des objets de tout type, cliquez sur le bouton de sélection (...) en regard d'un type d'objet dans la zone **Objets connexes sélectionnés** . Cela permet d'afficher une boîte de dialogue dans laquelle vous pouvez sélectionner des objets individuels.  
+7.  Sur la page **Sélectionner des objets de base de données** , sélectionnez les objets à inclure dans l'opération de déplacement ou de copie. Cette page est disponible uniquement lorsque la source et la destination correspondent à des serveurs différents. Pour inclure un objet, cliquez sur son nom dans la zone **Objets connexes disponibles** , puis cliquez sur le bouton **>>** pour déplacer l’objet vers la zone **Objets connexes sélectionnés** . Pour exclure un objet, cliquez sur le nom de l’objet dans la zone **objets connexes sélectionnés** , puis cliquez sur le **<\<** bouton pour déplacer l’objet vers la zone **objets connexes disponibles** . Par défaut, tous les objets de chaque type sélectionné sont transférés. Pour choisir des objets de tout type, cliquez sur le bouton de sélection (...) en regard d'un type d'objet dans la zone **Objets connexes sélectionnés** . Cela permet d'afficher une boîte de dialogue dans laquelle vous pouvez sélectionner des objets individuels.  
   
      **Connexions (Tou(te)s les connexions lors de l'exécution)**  
      Inclut les connexions dans l'opération de déplacement ou de copie. Option sélectionnée par défaut.  
@@ -233,7 +232,7 @@ ms.locfileid: "62871136"
      **Partage de fichier sur le serveur source**  
      Spécifiez l’emplacement des fichiers de base de données source sous la forme du chemin d'accès à un partage de fichiers.  
   
-     Par exemple : «\\\\*SERVER_NAME*\c $ \Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
+     Par exemple : « \\ \\ *SERVER_NAME*\c $ \Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
 9. L'Assistant Copie de base de données crée un package [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour transférer la base de données. Sur la page **Configurer le package** , personnalisez le package si nécessaire.  
   
@@ -251,13 +250,13 @@ ms.locfileid: "62871136"
   
 10. Sur la page **Planifier le package** , indiquez à quel moment vous voulez que l'opération de déplacement ou de copie commence. Si vous n'êtes pas administrateur système, vous devez spécifier un compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a accès au sous-système d'exécution du package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS).  
   
-     **Exécuter immédiatement**  
+     **Run immediately**  
      Démarre l'opération de déplacement ou de copie une fois que vous avez appuyé sur **Suivant**.  
   
      **Planification**  
      Démarre l'opération de déplacement ou de copie plus tard. Les paramètres de planification actuels s'affichent dans la zone de description. Pour modifier la planification, cliquez sur **Modifier**.  
   
-     **Modifiés**  
+     **Changement**  
      Ouvre la boîte de dialogue **Nouvelle planification du travail** .  
   
      **Compte proxy Integration Services**  
@@ -278,8 +277,8 @@ ms.locfileid: "62871136"
      **Message**  
      Affiche les messages retournés par chaque étape.  
   
-##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Suivi : Après la mise à niveau d'une base de données SQL Server  
- Après avoir utilisé l'Assistant Copie de base de données pour mettre à niveau une base de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau des index de recherche en texte intégral** . Si l’option de mise à niveau a la valeur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne sont pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que lorsque l’option de mise à niveau a la valeur **Importer**, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Suivi : Après la mise à niveau d'une base de données SQL Server  
+ Après avoir utilisé l'Assistant Copie de base de données pour mettre à niveau une base de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau des index de recherche en texte intégral** . Si l’option de mise à niveau a la valeur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne sont pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que quand l’option de mise à niveau est **Importer**, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   

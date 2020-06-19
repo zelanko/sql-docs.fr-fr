@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56b159952c83ed243c4c5d8012c76e5a2a248519
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211303"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001743"
 ---
 # <a name="view-job-activity"></a>Afficher l’activité du travail
   Cette rubrique explique comment afficher l'état d'exécution des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "68211303"
   
 #### <a name="to-view-job-activity"></a>Pour afficher l'activité des travaux  
   
-1.  Dans **Object Explorer**l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Explorateur d’objets, connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans l' **Explorateur d’objets**, connectez-vous à une instance du, puis [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] développez cette instance.  
   
 2.  Développez **Agent SQL Server**.  
   

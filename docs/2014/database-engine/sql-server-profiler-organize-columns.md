@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 449f8000db655012ca7e66e5f186467b5671ea56
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928620"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>Générateur de profils SQL Server - Organiser les colonnes
   Utilisez la boîte de dialogue **Organiser les colonnes** pour sélectionner des colonnes de données en vue de regrouper ou d'agréger des événements affichés dans une trace et faciliter ainsi la consultation et l'analyse des tables ou des fichiers de trace volumineux.  
   
- L'agrégation déplace et réduit tous les événements de la trace sous leur type de classe d'événements respectif. Un signe plus (**+**) apparaît à gauche du nom de la classe d’événements. Si vous cliquez sur le signe plus, la classe d'événements se développe et affiche tous les événements de ce type.  
+ L'agrégation déplace et réduit tous les événements de la trace sous leur type de classe d'événements respectif. Un signe plus ( **+** ) apparaît à gauche du nom de la classe d’événements. Si vous cliquez sur le signe plus, la classe d'événements se développe et affiche tous les événements de ce type.  
   
  Le regroupement regroupe toutes les classes d'événements d'un type spécifique dans l'affichage de la fenêtre de trace. Les événements ne sont toutefois pas réduits sous le type de classe d'événements.  
   
@@ -34,12 +33,12 @@ ms.locfileid: "66089757"
  **Groupes**  
  Déplacez des noms de colonne de données sous **Groupes** pour regrouper ou agréger des classes d’événements dans la fenêtre de trace.  
   
- Pour agréger des événements, déplacez une colonne de données vers **Groupes**. Tous les événements d'un type spécifique sont alors réduits sous le nom du type de la classe d'événements dans l'affichage de la fenêtre de trace. Un signe plus (**+**) apparaît à gauche du nom de la classe d’événements. Cliquez sur ce signe plus pour développer le type de la classe d'événements et afficher tous les événements. Vous pouvez activer et désactiver l'agrégation et le regroupement en cliquant sur **Vue agrégée** ou sur **Vue groupée** dans le menu **Affichage** .  
+ Pour agréger des événements, déplacez une colonne de données vers **Groupes**. Tous les événements d'un type spécifique sont alors réduits sous le nom du type de la classe d'événements dans l'affichage de la fenêtre de trace. Un signe plus ( **+** ) apparaît à gauche du nom de la classe d’événements. Cliquez sur ce signe plus pour développer le type de la classe d'événements et afficher tous les événements. Vous pouvez activer et désactiver l'agrégation et le regroupement en cliquant sur **Vue agrégée** ou sur **Vue groupée** dans le menu **Affichage** .  
   
  Pour regrouper des événements, déplacez plusieurs colonnes de données vers **Groupes**. Tous les événements d'un type spécifique sont alors regroupés dans l'affichage de la fenêtre de trace, mais les événements ne sont pas réduits sous chaque nom de type de classe d'événements. Vous pouvez basculer entre une vue groupée et une vue non groupée en cliquant sur **Vue groupée** dans le menu Affichage. Lorsque plusieurs colonnes de données sont déplacées vers **Groupes**, l'option de basculement vers **Vue agrégée** n'est pas disponible.  
   
  **Colonnes**  
- Répertorie les colonnes de données qui peuvent être déplacées vers **Groupes**. Cliquez sur le signe plus**+**() à gauche de **colonnes** pour développer la liste.  
+ Répertorie les colonnes de données qui peuvent être déplacées vers **Groupes**. Cliquez sur le signe plus ( **+** ) à gauche de **colonnes** pour développer la liste.  
   
  **Haut**  
  Lorsque vous avez sélectionné une colonne de données, cliquez sur **Haut** pour déplacer des colonnes de données vers le haut dans **Groupes**. Vous pouvez également cliquer sur **Haut** pour réorganiser l'affichage des colonnes dans l'affichage de la fenêtre de trace.  

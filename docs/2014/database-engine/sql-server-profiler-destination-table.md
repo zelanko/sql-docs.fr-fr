@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88ee6090-b2f5-4dc5-997a-1d45fa7e3e84
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70849b85b391f46fd22e659b1b6b367c63b8f7ac
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088928"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928730"
 ---
 # <a name="sql-server-profiler---destination-table"></a>Générateur de profils SQL Server – Table de destination
   La boîte de dialogue **Table de destination** vous permet de spécifier la table dans laquelle vous souhaitez stocker la trace.  
@@ -34,12 +33,12 @@ ms.locfileid: "66088928"
  **Propriétaire**  
  Specifies the owner of the trace table. Ce champ est rempli automatiquement comme **dbo**.  
   
- **Table de charge de travail**  
+ **Table**  
  Spécifiez le nom de la table dans laquelle vous voulez stocker la trace.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Enregistrer les résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [SQL Server Profiler les modèles et les autorisations](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Enregistrer des résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

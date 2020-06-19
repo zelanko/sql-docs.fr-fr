@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 46598cf66c80d07383fb033436bbe1792b1eec64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 824dc837142acc4a0898cb04b4a8687bc5be4043
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935670"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurer l'option de configuration de serveur max degree of parallelism
-  Cette rubrique explique comment configurer `max degree of parallelism` l’option de configuration de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l' [!INCLUDE[tsql](../../includes/tsql-md.md)]aide de ou de. Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un ordinateur doté de plusieurs microprocesseurs ou UC, elle détecte le degré de parallélisme optimal, qui correspond au nombre de processeurs employés pour exécuter une seule instruction, pour chaque exécution d'un plan parallèle. Vous pouvez utiliser l'option `max degree of parallelism` pour limiter le nombre de processeurs à utiliser dans une exécution de plans parallèles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en compte les plans d’exécution parallèle pour les requêtes, les opérations DDL (Data Definition Language) d’index et l’alimentation des curseurs statiques et pilotés par keyset.  
+  Cette rubrique explique comment configurer l' `max degree of parallelism` option de configuration de serveur dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un ordinateur doté de plusieurs microprocesseurs ou UC, elle détecte le degré de parallélisme optimal, qui correspond au nombre de processeurs employés pour exécuter une seule instruction, pour chaque exécution d'un plan parallèle. Vous pouvez utiliser l'option `max degree of parallelism` pour limiter le nombre de processeurs à utiliser dans une exécution de plans parallèles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en compte les plans d’exécution parallèle pour les requêtes, les opérations DDL (Data Definition Language) d’index et l’alimentation des curseurs statiques et pilotés par keyset.  
   
  **Dans cette rubrique**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62786936"
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>Pour configurer l'option max degree of parallelism  
   
-1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
+1.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
   
 2.  Cliquez sur le nœud **Avancé** .  
   
@@ -101,11 +100,11 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a>Suivi : après avoir configuré l’option degré maximal de parallélisme  
+##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a> Suivi : Après avoir configuré l’option max degree of parallelism  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affinity Mask (option de configuration de serveur)](affinity-mask-server-configuration-option.md)   
+ [affinity mask (option de configuration de serveur)](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
@@ -115,8 +114,8 @@ GO
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql)   
- [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [Indicateurs de requête &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-query)   
- [Définir les options d'index](../../relational-databases/indexes/set-index-options.md)  
+ [Configurer des opérations d'index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md)   
+ [Indicateurs de requête &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [Définir les options d’index](../../relational-databases/indexes/set-index-options.md)  
   
   

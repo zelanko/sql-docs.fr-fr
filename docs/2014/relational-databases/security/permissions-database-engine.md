@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063179"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
   Chaque élément sécurisable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a des autorisations associées qui peuvent être accordées à un principal. Cette rubrique fournit les informations suivantes :  
@@ -32,7 +31,7 @@ ms.locfileid: "81487156"
   
 -   [Autorisations relatives à des éléments sécurisables spécifiques](#_securables)  
   
--   [Autorisations de SQL Server](#_permissions)  
+-   [Autorisations SQL Server](#_permissions)  
   
 -   [Algorithme de vérification des autorisations](#_algorithm)  
   
@@ -49,11 +48,11 @@ ms.locfileid: "81487156"
   
      Confère la capacité de modifier les propriétés, excepté l'appartenance, d'un élément sécurisable particulier. Lorsque ALTER est accordé sur une portée, ALTER octroie également la capacité de modifier, de créer ou de supprimer tous les éléments sécurisables contenus dans cette portée. Par exemple, l'autorisation ALTER sur un schéma inclut la capacité de créer, de modifier et de supprimer les objets du schéma.  
   
--   ALTER ANY \< *Server sécurisable*>, où l’élément *sécurisable* du serveur peut être n’importe quel élément sécurisable du serveur.  
+-   ALTER ANY \<*Server Securable*> , où *sécurisable du serveur* peut être n’importe quel élément sécurisable du serveur.  
   
      Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable du serveur*. Par exemple, ALTER ANY LOGIN confère la capacité de créer, de modifier ou de supprimer n'importe quelle connexion dans l'instance.  
   
--   Modifiez n' \<importe quel> *sécurisable de base* de données, où *sécurisable de base de données* peut être n’importe quel élément sécurisable au niveau de la base de données.  
+-   ALTER ANY \<*Database Securable*> , où *sécuriser la base de données* peut être n’importe quel élément sécurisable au niveau de la base de données.  
   
      Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable de base de données*. Par exemple, ALTER ANY SCHEMA confère la capacité de créer, de modifier ou de supprimer n'importe quel schéma dans la base de données.  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487156"
   
      Permet au bénéficiaire d'obtenir la propriété de l'élément sécurisable sur lequel cette autorisation est accordée.  
   
--   Emprunter l’identité \<de la *connexion*>  
+-   EMPRUNTER l’identité\<*Login*>  
   
      Permet au bénéficiaire d'emprunter l'identité impliquée dans la connexion.  
   
--   Emprunter l’identité \<de l' *utilisateur*>  
+-   EMPRUNTER l’identité\<*User*>  
   
      Permet au bénéficiaire d'emprunter l'identité de l'utilisateur.  
   
--   Créer \<un élément *sécurisable du serveur*>  
+-   CRÉÉS\<*Server Securable*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable du serveur*.  
   
--   Créer \<un élément *sécurisable de base de données*>  
+-   CRÉÉS\<*Database Securable*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable de base de données*.  
   
--   Créer \< *un élément sécurisable contenu dans un schéma*>  
+-   CRÉÉS\<*Schema-contained Securable*>  
   
      Confère la capacité de créer l'élément sécurisable contenu dans le schéma. Toutefois, l'autorisation ALTER sur le schéma est requise pour créer l'élément sécurisable dans un schéma particulier.  
   
@@ -85,14 +84,14 @@ ms.locfileid: "81487156"
   
      Permet au bénéficiaire d'accéder aux métadonnées.  
   
--   REFERENCES  
+-   RÉFÉRENCES  
   
      L'autorisation REFERENCES sur une table est obligatoire pour pouvoir créer une contrainte FOREIGN KEY qui référence cette table.  
   
      L'autorisation REFERENCES est obligatoire sur un objet pour pouvoir créer une FONCTION ou une VUE avec la clause `WITH SCHEMABINDING` qui référence cet objet.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Graphique des autorisations SQL Server  
- Pour obtenir un graphique de la taille [!INCLUDE[ssDE](../../includes/ssde-md.md)] d’une affiche de toutes les [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)autorisations au format PDF, consultez.  
+ Pour obtenir un graphique de la taille d’une affiche de toutes les [!INCLUDE[ssDE](../../includes/ssde-md.md)] autorisations au format PDF, consultez [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Autorisations applicables à des éléments sécurisables spécifiques  
  Le tableau ci-dessous répertorie les principales classes d'autorisations et les types d'éléments sécurisables auxquels elles peuvent s'appliquer.  
@@ -102,7 +101,7 @@ ms.locfileid: "81487156"
 |SELECT|Synonymes<br /><br /> Tables et colonnes<br /><br /> Fonctions table, [!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR (Common Language Runtime) et colonnes<br /><br /> Vues et colonnes|  
 |VIEW CHANGE TRACKING|Tables<br /><br /> Schémas|  
 |UPDATE|Synonymes<br /><br /> Tables et colonnes<br /><br /> Vues et colonnes<br /><br /> Objets séquence|  
-|REFERENCES|Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tables et colonnes<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR) et colonnes<br /><br /> Types<br /><br /> Vues et colonnes<br /><br /> Objets séquence|  
+|RÉFÉRENCES|Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tables et colonnes<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR) et colonnes<br /><br /> Types<br /><br /> Vues et colonnes<br /><br /> Objets séquence|  
 |INSERT|Synonymes<br /><br /> Tables et colonnes<br /><br /> Vues et colonnes|  
 |Suppression|Synonymes<br /><br /> Tables et colonnes<br /><br /> Vues et colonnes|  
 |Exécutez|Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Synonymes<br /><br /> Types CLR|  
@@ -126,12 +125,12 @@ ms.locfileid: "81487156"
 |APPLICATION ROLE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ASSEMBLY|ALTER|AL|DATABASE|ALTER ANY ASSEMBLY|  
 |ASSEMBLY|CONTROL|CL|DATABASE|CONTROL|  
-|ASSEMBLY|REFERENCES|RF|DATABASE|REFERENCES|  
+|ASSEMBLY|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |ASSEMBLY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |ASSEMBLY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ASYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY ASYMMETRIC KEY|  
 |ASYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
-|ASYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
+|ASYMMETRIC KEY|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |ASYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |ASYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |AVAILABILITY GROUP|ALTER|AL|SERVER|ALTER ANY AVAILABILITY GROUP|  
@@ -140,12 +139,12 @@ ms.locfileid: "81487156"
 |AVAILABILITY GROUP|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |CERTIFICATE|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
 |CERTIFICATE|CONTROL|CL|DATABASE|CONTROL|  
-|CERTIFICATE|REFERENCES|RF|DATABASE|REFERENCES|  
+|CERTIFICATE|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |CERTIFICATE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |CERTIFICATE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |CONTRACT|ALTER|AL|DATABASE|ALTER ANY CONTRACT|  
 |CONTRACT|CONTROL|CL|DATABASE|CONTROL|  
-|CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|  
+|CONTRACT|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |CONTRACT|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |CONTRACT|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |DATABASE|ALTER|AL|SERVER|ALTER ANY DATABASE|  
@@ -157,7 +156,7 @@ ms.locfileid: "81487156"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Remarque : s’applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487156"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|MODIFIER UNE STRATÉGIE DE SÉCURITÉ|ALSP<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à.|SERVER|CONTROL SERVER|  
+|DATABASE|MODIFIER UNE STRATÉGIE DE SÉCURITÉ|ALSP<br /><br /> Remarque : s’applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,8 +203,8 @@ ms.locfileid: "81487156"
 |DATABASE|Suppression|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Exécutez|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Remarque : s’applique uniquement [!INCLUDE[ssSDS](../../includes/sssds-md.md)]à. Utilisez ALTER ANY CONNECTION dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
-|DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Remarque : s’applique uniquement à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilisez ALTER ANY CONNECTION dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|RÉFÉRENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
@@ -220,12 +219,12 @@ ms.locfileid: "81487156"
 |ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |FULLTEXT CATALOG|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT CATALOG|CONTROL|CL|DATABASE|CONTROL|  
-|FULLTEXT CATALOG|REFERENCES|RF|DATABASE|REFERENCES|  
+|FULLTEXT CATALOG|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |FULLTEXT CATALOG|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |FULLTEXT STOPLIST|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT STOPLIST|CONTROL|CL|DATABASE|CONTROL|  
-|FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
+|FULLTEXT STOPLIST|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |Connexion|ALTER|AL|SERVER|ALTER ANY LOGIN|  
@@ -234,7 +233,7 @@ ms.locfileid: "81487156"
 |Connexion|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
-|MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
+|MESSAGE TYPE|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |MESSAGE TYPE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
@@ -243,7 +242,7 @@ ms.locfileid: "81487156"
 |OBJECT|Exécutez|EX|SCHEMA|Exécutez|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
-|OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
+|OBJECT|RÉFÉRENCES|RF|SCHEMA|RÉFÉRENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
 |OBJECT|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |OBJECT|UPDATE|UP|SCHEMA|UPDATE|  
@@ -263,7 +262,7 @@ ms.locfileid: "81487156"
 |ROUTE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SEARCH PROPERTY LIST|ALTER|AL|SERVER|ALTER ANY FULLTEXT CATALOG|  
 |SEARCH PROPERTY LIST|CONTROL|CL|SERVER|CONTROL|  
-|SEARCH PROPERTY LIST|REFERENCES|RF|SERVER|REFERENCES|  
+|SEARCH PROPERTY LIST|RÉFÉRENCES|RF|SERVER|RÉFÉRENCES|  
 |SEARCH PROPERTY LIST|TAKE OWNERSHIP|TO|SERVER|CONTROL|  
 |SEARCH PROPERTY LIST|VIEW DEFINITION|VW|SERVER|VIEW DEFINITION|  
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
@@ -272,7 +271,7 @@ ms.locfileid: "81487156"
 |SCHEMA|Suppression|DL|DATABASE|Suppression|  
 |SCHEMA|Exécutez|EX|DATABASE|Exécutez|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
-|SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
+|SCHEMA|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
 |SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
@@ -323,12 +322,12 @@ ms.locfileid: "81487156"
 |SERVICE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY SYMMETRIC KEY|  
 |SYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
-|SYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
+|SYMMETRIC KEY|RÉFÉRENCES|RF|DATABASE|RÉFÉRENCES|  
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
 |TYPE|Exécutez|EX|SCHEMA|Exécutez|  
-|TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
+|TYPE|RÉFÉRENCES|RF|SCHEMA|RÉFÉRENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |Utilisateur|ALTER|AL|DATABASE|ALTER ANY USER|  
@@ -338,7 +337,7 @@ ms.locfileid: "81487156"
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|Exécutez|EX|SCHEMA|Exécutez|  
-|XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
+|XML SCHEMA COLLECTION|RÉFÉRENCES|RF|SCHEMA|RÉFÉRENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   

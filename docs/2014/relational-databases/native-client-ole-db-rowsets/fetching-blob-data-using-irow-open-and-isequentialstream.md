@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4444f67ea4e843a3abb45ed078483904a1fa5116
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0b14fad61e66602495341354330f78d6fcea536d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694466"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055918"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::Open et ISequentialStream
   **IRow::Open** prend uniquement en charge l’ouverture des types d’objets DBGUID_STREAM et DBGUID_NULL.  

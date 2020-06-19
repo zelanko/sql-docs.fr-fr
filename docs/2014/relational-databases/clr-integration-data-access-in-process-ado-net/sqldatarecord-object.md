@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd49c2d32a5a3035bb76aa73a56d31e00a95549a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874684"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955093"
 ---
 # <a name="sqldatarecord-object"></a>Objet SqlDataRecord
   L'objet `SqlDataRecord` représente une ligne unique de données avec ses métadonnées connexes.  
   
  Les procédures stockées managées peuvent envoyer au client des jeux de résultats clients qui ne proviennent pas d'un `SqlDataReader`. La classe `SqlDataRecord`, avec les méthodes `SendResultsStart`, `SendResultsRow` et `SendResultsEnd` de l'objet `SqlPipe`, permet aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  
   
- Pour plus d’informations, consultez `Microsoft.SqlServer.Server.SqlDataRecord` la documentation de référence sur les classes dans la documentation du kit de développement logiciel (SDK) .NET Framework.  
+ Pour plus d’informations, consultez la `Microsoft.SqlServer.Server.SqlDataRecord` documentation de référence sur les classes dans la documentation du kit de développement logiciel (SDK) .NET Framework.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant crée un nouvel enregistrement d'employé et le retourne à l'appelant.  
