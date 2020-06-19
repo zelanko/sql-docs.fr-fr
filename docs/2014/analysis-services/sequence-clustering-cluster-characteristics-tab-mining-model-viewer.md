@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82bab25b25c8d27e1aad2e2692d9ca519c9269b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940760"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Onglet Caractéristiques du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L'onglet **Caractéristiques du cluster** dans la **Visionneuse de l'algorithme MSC** (Microsoft Sequence Clustering) fournit une liste détaillée des caractéristiques qui définissent un cluster de séquence. Ces fonctionnalités peuvent inclure des paires attribut-valeur simples, ainsi que des transitions entre les états.  
@@ -36,10 +35,10 @@ ms.locfileid: "66069168"
  **Visionneuse**  
  Choisissez la visionneuse à utiliser pour consulter le modèle d'exploration de données sélectionné. Vous pouvez utiliser la visionneuse personnalisée ou la **Visionneuse de l'arborescence de contenu générique Microsoft**. Vous pouvez également utiliser les visionneuses de plug-in, le cas échéant.  
   
- **Cluster**  
+ **Organisés**  
  Choisissez le cluster à afficher.  
   
- **Caractéristiques du \<cluster>**  
+ **Caractéristiques pour\<Cluster>**  
  Ce tableau présente une liste des séquences affectées au cluster actuel, classée par la probabilité. Souvenez-vous qu'une séquence est à la base une paire attribut-valeur, suivie d'un ou plusieurs paires attribut-valeur supplémentaires. La combinaison des séquences et leurs probabilités constituent les caractéristiques de définition de chaque cluster.  
   
  Par exemple, dans un modèle Sequence Clustering basé sur l'analyse du panier d'achat, un cluster peut avoir comme principale caractéristique un client choisissant l'article de vente puis mettant fin à la transaction sans effectuer d'autres achats. Dans un modèle Sequence Clustering qui cherche à analyser les erreurs d'un serveur, les caractéristiques principales d'un cluster peuvent être une série d'événements d'erreurs de fréquence élevée.  

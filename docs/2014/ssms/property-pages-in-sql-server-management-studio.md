@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fae6a07fbaa2a259fcca5c3807094b31e0d52d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058493"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Pages des propriétés dans SQL Server Management Studio
   Les boîtes de dialogue de page de propriétés de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] utilisent toutes un format commun pour l’affichage des informations avec des catégories pouvant être développées et réduites. Les champs affichés varient selon la propriété. Les propriétés affichées en gris sont en lecture seule. Les boutons Par catégorie et Alphabétique se trouvent en haut de chaque page de propriétés.  

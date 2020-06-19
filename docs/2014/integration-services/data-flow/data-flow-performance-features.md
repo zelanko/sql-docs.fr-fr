@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637823"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916305"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -94,7 +93,7 @@ ms.locfileid: "73637823"
  Indépendamment du composant de flux de données, deux règles générales sont à suivre pour améliorer les performances : optimiser les requêtes et éviter les chaînes inutiles.  
   
 #### <a name="optimize-queries"></a>Optimisation des requêtes  
- De nombreux composants de flux de données utilisent des requêtes, soit au cours de l'extraction de données à partir de sources, soit au cours d'opérations de recherche dans le but de créer des tables de référence. La requête par défaut utilise la syntaxe SELECT * FROM \<nom_table>. Ce type de requête retourne toutes les colonnes dans la table source. Le fait de disposer de toutes les colonnes au moment de la conception permet de choisir n'importe quelle colonne comme colonne de recherche, comme colonne SQL directe ou comme colonne source. Cependant, après avoir sélectionné les colonnes à utiliser, vous devez vérifier la requête et vous assurer qu'elle contient uniquement les colonnes utilisées. La suppression de colonnes superflues permet de créer une ligne plus petite et donc d'accroître l'efficacité du flux de données dans un package. Avec des lignes plus petites, vous pouvez faire tenir plus de lignes dans un tampon et, de ce fait, réduire la charge de travail nécessaire pour traiter toutes les lignes dans le dataset.  
+ De nombreux composants de flux de données utilisent des requêtes, soit au cours de l'extraction de données à partir de sources, soit au cours d'opérations de recherche dans le but de créer des tables de référence. La requête par défaut utilise la syntaxe SELECT * FROM \<tableName> . Ce type de requête retourne toutes les colonnes dans la table source. Le fait de disposer de toutes les colonnes au moment de la conception permet de choisir n'importe quelle colonne comme colonne de recherche, comme colonne SQL directe ou comme colonne source. Cependant, après avoir sélectionné les colonnes à utiliser, vous devez vérifier la requête et vous assurer qu'elle contient uniquement les colonnes utilisées. La suppression de colonnes superflues permet de créer une ligne plus petite et donc d'accroître l'efficacité du flux de données dans un package. Avec des lignes plus petites, vous pouvez faire tenir plus de lignes dans un tampon et, de ce fait, réduire la charge de travail nécessaire pour traiter toutes les lignes dans le dataset.  
   
  Pour construire une requête, vous pouvez taper la requête ou utiliser le générateur de requêtes.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "73637823"
  Utilisez les suggestions de cette section pour améliorer les performances des transformations d'agrégation, de recherche floue, de regroupement probable, de recherche, de jointure de fusion et de dimension à variation lente.  
   
 #### <a name="aggregate-transformation"></a>Transformation d'agrégation  
- La transformation d'agrégation inclut les propriétés `Keys`, `KeysScale`, `CountDistinctKeys` et `CountDistinctScale`. Ces propriétés améliorent les performances en permettant à la transformation de préallouer la quantité de mémoire dont la transformation a besoin pour les données que la transformation met en cache. Si vous connaissez le nombre exact ou approximatif de groupes attendus d’une opération **Group by** , définissez les `Keys` propriétés et `KeysScale` , respectivement. Si vous connaissez le nombre exact ou approximatif de valeurs distinctes attendues d’une opération de **comptage** de valeurs, définissez les `CountDistinctKeys` propriétés et `CountDistinctScale` , respectivement.  
+ La transformation d'agrégation inclut les propriétés `Keys`, `KeysScale`, `CountDistinctKeys` et `CountDistinctScale`. Ces propriétés améliorent les performances en permettant à la transformation de préallouer la quantité de mémoire dont la transformation a besoin pour les données que la transformation met en cache. Si vous connaissez le nombre exact ou approximatif de groupes attendus d’une opération **Group by** , définissez les `Keys` `KeysScale` Propriétés et, respectivement. Si vous connaissez le nombre exact ou approximatif de valeurs distinctes attendues d’une opération de **comptage** de valeurs, définissez les `CountDistinctKeys` `CountDistinctScale` Propriétés et, respectivement.  
   
  Si vous devez créer plusieurs agrégations dans un flux de données, songez à créer plusieurs agrégations qui utilisent une transformation d'agrégation au lieu de créer plusieurs transformations. Cette approche améliore les performances lorsqu'une agrégation est un sous-ensemble d'une autre agrégation, car la transformation peut optimiser le stockage interne et analyser une seule fois les données entrantes. Par exemple, si une agrégation utilise une clause GROUP BY et une agrégation AVG, le fait de les combiner en une seule transformation peut améliorer les performances. Toutefois, du fait que la réalisation de plusieurs agrégations au sein d'une transformation d'agrégation sérialise les opérations d'agrégation, il est possible que les performances ne s'améliorent pas lorsque plusieurs agrégations doivent être calculées indépendamment.  
   

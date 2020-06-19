@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93bb5d5d1625c4d558b865bdd28445e377abbfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830580"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918570"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach
   Les procédures de cette rubrique expliquent comment effectuer une boucle dans les classeurs Excel d'un dossier, ou dans les tableaux d'un classeur Excel, à l'aide du conteneur de boucles Foreach et de l'énumérateur approprié.  
@@ -49,7 +48,7 @@ ms.locfileid: "62830580"
   
 8.  Sélectionnez le nouveau gestionnaire de connexions Excel, cliquez sur la propriété **Expressions** dans la fenêtre Propriétés, puis cliquez sur les points de suspension.  
   
-9. Dans l' **éditeur d’expressions**de la propriété `ConnectionString` , sélectionnez la propriété, puis cliquez sur les points de suspension.  
+9. Dans l' **éditeur d’expressions**de la propriété, sélectionnez la `ConnectionString` propriété, puis cliquez sur les points de suspension.  
   
 10. Dans le Générateur d'expressions, entrez l'expression suivante :  
   

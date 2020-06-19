@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: f6c4a3e51745ab0f2c67dcba88f71b79f031d7ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058585"
 ---
 # <a name="name-not-found-dialog-box"></a>Nom introuvable (boîte de dialogue)
   Le ou les noms d'objets répertoriés dans la boîte de dialogue sont introuvables. Sélectionnez une option pour continuer.  
@@ -37,7 +36,7 @@ ms.locfileid: "83859211"
  **Entrez le nom de l’objet**  
  Contient le nom de l'objet qui n'a pas été trouvé. Corrigez le nom de l'objet ou tapez un nouveau nom d'objet.  
   
- **Supprimer**le nom de l'* \< objet>* **de la sélection**      
+ **Supprimer** *\<object name>* **à partir de la sélection**      
  Sélectionnez cette option pour fermer la boîte de dialogue **Nom introuvable** et supprimer l’élément de la boîte de dialogue **Sélectionner des objets** .  
   
   

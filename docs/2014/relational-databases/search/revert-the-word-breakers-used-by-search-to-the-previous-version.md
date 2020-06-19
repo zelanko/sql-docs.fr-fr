@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c3354fecd145f1df35d0c01252886de69bd37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004066"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe et active une version des analyseurs lexicaux et des générateurs de formes dérivées pour toutes les langues prises en charge par la recherche en texte intégral à l’exception du coréen. Cette rubrique décrit comment passer de cette version de ces composants à la version précédente, ou de la version précédente à la nouvelle version.  
@@ -152,7 +151,7 @@ ms.locfileid: "70874722"
     > [!WARNING]  
     >  Cette modification affecte toutes les langues qui utilisent NaturalLanguage6.dll dans la version actuelle et la version précédente.  
   
-5.  Dans le registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**.  
+5.  Dans le registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<InstanceRoot \> \MSSearch\CLSID**.  
   
 6.  Procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
   
@@ -181,7 +180,7 @@ ms.locfileid: "70874722"
     > [!WARNING]  
     >  Cette modification affecte toutes les langues qui utilisent NaturalLanguage6.dll dans la version actuelle et la version précédente.  
   
-3.  Dans le registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**.  
+3.  Dans le registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<InstanceRoot \> \MSSearch\CLSID**.  
   
 4.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
   
@@ -273,7 +272,7 @@ ms.locfileid: "70874722"
   
 1.  Ne supprimez pas les fichiers pour la version actuelle des composants du dossier Binn.  
   
-2.  Dans le registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**.  
+2.  Dans le registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<InstanceRoot \> \MSSearch\CLSID**.  
   
 3.  Procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
   
@@ -297,7 +296,7 @@ ms.locfileid: "70874722"
   
 1.  Ne supprimez pas les fichiers pour la version précédente des composants du dossier Binn.  
   
-2.  Dans le registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**.  
+2.  Dans le registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<InstanceRoot \> \MSSearch\CLSID**.  
   
 3.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
   

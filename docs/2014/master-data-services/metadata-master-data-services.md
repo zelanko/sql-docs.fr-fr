@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f43034d81af8092a44c25db466fa8fa51b9eaa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054038"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961539"
 ---
 # <a name="metadata-master-data-services"></a>Métadonnées (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les métadonnées définies par l'utilisateur sont des informations qui vous permettent de décrire les objets de modèle. Par exemple, vous pouvez effectuer le suivi des propriétaires d'un modèle ou d'une entité spécifique, ou des systèmes sources qui fournissent des données à une entité.  
@@ -47,7 +46,7 @@ ms.locfileid: "66054038"
   
 -   Un attribut de forme libre nommé Last Review Date, qui vous permet d'effectuer le suivi de la date à laquelle un objet a été révisé par le propriétaire pour la dernière fois.  
   
--   Un attribut basé sur un domaine nommé sources, que vous utilisez pour suivre et gérer les systèmes sources qui interagissent [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] avec l’instance.  
+-   Un attribut basé sur un domaine nommé sources, que vous utilisez pour suivre et gérer les systèmes sources qui interagissent avec l' [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] instance.  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0159c05b641cf234e2d8fdc6cd8c56bddb6a1054
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968869"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plan d'exécution et allocation de mémoire tampon
   Avant l'exécution, la tâche de flux de données examine ses composants et génère un plan d'exécution pour chaque séquence de composants. Cette section fournit des détails sur le plan d'exécution et son mode d'affichage, ainsi que sur l'allocation de mémoires tampons d'entrée et de sortie en fonction du plan d'exécution.  

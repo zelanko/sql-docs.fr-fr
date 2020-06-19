@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 70e99073f07e7e285d1fcbfad51cf9a275dd9441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a4aec2f63a5f811b8e61a5ac9c107394f3d53db
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968889"
 ---
 # <a name="implementing-external-metadata"></a>Implémentation des métadonnées externes
   Lorsqu'un composant est déconnecté de sa source de données, vous pouvez valider les colonnes comprises dans les collections de colonnes d'entrée et de sortie par rapport aux colonnes de sa source de données externe en utilisant l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Cette interface vous permet de conserver un instantané des colonnes à la source de données externe et de les mapper aux colonnes de la collection de colonnes d'entrée et de sortie du composant.  
@@ -77,7 +76,7 @@ End Sub
 ### <a name="connected-validation"></a>Validation connectée  
  Lorsqu'un composant est connecté à une source de données externe, les colonnes comprises dans les collections d'entrée ou de sortie sont vérifiées directement par rapport à la source de données externe. En outre, les colonnes comprises dans la collection de métadonnées externes doivent être validées. Cette validation est requise car la collection de métadonnées externe peut être modifiée à l’aide de l’**Éditeur avancé** dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], et les modifications apportées à la collection ne sont pas détectables. Par conséquent, en cas de connexion, les composants doivent s'assurer que les colonnes comprises dans la collection de colonnes de métadonnées externes continuent à refléter les colonnes à la source de données externe.  
   
- Vous pouvez choisir de masquer la collection de métadonnées externes dans la **éditeur avancé** en <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> affectant à `false`la propriété de la collection la valeur. Cependant, cela masque également l’onglet **Mappage de colonnes** de l’éditeur, lequel permet aux utilisateurs de mapper des colonnes de la collection d’entrée ou de sortie aux colonnes de la collection de colonnes de métadonnées externes. La définition de cette propriété sur `false` n'empêche pas les développeurs de modifier la collection par programme, mais elle fournit un niveau de protection pour la collection de colonnes de métadonnées externes d'un composant qui est utilisé exclusivement dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Vous pouvez choisir de masquer la collection de métadonnées externes dans la **éditeur avancé** en affectant <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> à la propriété de la collection la valeur `false` . Cependant, cela masque également l’onglet **Mappage de colonnes** de l’éditeur, lequel permet aux utilisateurs de mapper des colonnes de la collection d’entrée ou de sortie aux colonnes de la collection de colonnes de métadonnées externes. La définition de cette propriété sur `false` n'empêche pas les développeurs de modifier la collection par programme, mais elle fournit un niveau de protection pour la collection de colonnes de métadonnées externes d'un composant qui est utilisé exclusivement dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="disconnected-validation"></a>Validation déconnectée  
  Lorsqu'un composant est déconnecté d'une source de données externe, la validation est simplifiée parce que les colonnes comprises dans la collection d'entrée ou de sortie sont vérifiées directement par rapport aux colonnes de la collection de métadonnées externes et non pas par rapport à la source externe. Un composant doit effectuer une validation déconnectée lorsque la connexion à sa source de données externe n'a pas été établie ou lorsque la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> a pour valeur `false`.  

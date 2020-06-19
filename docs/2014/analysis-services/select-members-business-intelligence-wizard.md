@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c81a17df03fc770964780332a0fedd1d4ff711a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069429"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940960"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Sélectionner les membres (Assistant Business Intelligence)
   Utilisez la page **Sélectionner les membres** pour déterminer à quels membres l'Assistant Business Intelligence doit appliquer la fonction de conversion monétaire spécifiée à la page **Définir les options de conversion monétaire** .  
@@ -34,17 +33,17 @@ ms.locfileid: "66069429"
 |Option|Description|  
 |------------|-----------------|  
 |**Types de mesure intégrés**|Sélectionnez cette option afin d'inclure la fonctionnalité de conversion monétaire pour la mesure spécifiée.|  
-|**mesures**|Sélectionnez la mesure dans le groupe de mesures de taux qui contient le taux de change à utiliser lors de la conversion de la mesure sélectionnée à la section **Types de mesures intégrés** .|  
+|**Mesures**|Sélectionnez la mesure dans le groupe de mesures de taux qui contient le taux de change à utiliser lors de la conversion de la mesure sélectionnée à la section **Types de mesures intégrés** .|  
   
  **Hiérarchie de comptes**  
- Sélectionnez cette option afin d'appliquer la fonctionnalité de conversion monétaire à un ou plusieurs membres dans la hiérarchie de comptes de la dimension incluse dans le cube. La hiérarchie de compte est la hiérarchie dans la dimension de `Type` compte dont la propriété est définie sur *Account*.  
+ Sélectionnez cette option afin d'appliquer la fonctionnalité de conversion monétaire à un ou plusieurs membres dans la hiérarchie de comptes de la dimension incluse dans le cube. La hiérarchie de compte est la hiérarchie dans la dimension de compte dont la `Type` propriété est définie sur *Account*.  
   
  Une fois cette option sélectionnée, la grille affiche les options répertoriées dans le tableau suivant.  
   
 |Option|Description|  
 |------------|-----------------|  
 |**Membre du compte**|Sélectionnez cette option afin d'inclure la fonctionnalité de conversion monétaire pour le membre spécifié de la hiérarchie de comptes.|  
-|**mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives au membre choisi dans **Membre du compte** .|  
+|**Mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives au membre choisi dans **Membre du compte** .|  
   
  **Hiérarchie de comptes basée sur le type**  
  Sélectionnez afin d'appliquer la fonctionnalité de conversion monétaire à tous les membres d'attributs dans la hiérarchie de comptes dont la propriété `Type` est définie sur le type de compte indiqué.  
@@ -54,7 +53,7 @@ ms.locfileid: "66069429"
 |Option|Description|  
 |------------|-----------------|  
 |**Type de compte**|Sélectionnez cette option afin d'inclure la fonctionnalité de conversion monétaire pour le type de compte spécifié.|  
-|**mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives aux membres d'attributs dont le type de compte correspond à celui indiqué dans **Type de compte** .|  
+|**Mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives aux membres d'attributs dont le type de compte correspond à celui indiqué dans **Type de compte** .|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a3fe549e5a49dcc7c0c0417199206a6fd34079ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 793890018d0d7e57e4102d03a9120feb9803b816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050130"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implémentation d'IDENTITY dans une table optimisée en mémoire
   IDENTITY(1, 1) est pris en charge sur une table mémoire optimisée. Cependant, les colonnes d'identité avec définition IDENTITY(x, y) où x != 1 ou y != 1 ne sont pas prises en charge sur les tables mémoire optimisées. La solution pour les valeurs IDENTITY utilise l'objet SEQUENCE ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  
@@ -52,6 +51,6 @@ insert into T1 values (@c1, 'test', getdate())
  Après avoir effectué l'insertion plusieurs fois, vous voyez les valeurs à croissance monotone valides dans la colonne [c1]. Ce jeu de résultats est généré à l'aide de l'analyse de table et de l'index de hachage sans `ORDER BY` ; par conséquent, les lignes ne sont pas ordonnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

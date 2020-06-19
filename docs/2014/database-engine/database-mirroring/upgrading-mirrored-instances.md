@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754276"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933876"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Réduire le temps d'indisponibilité des bases de données mises en miroir lors de la mise à niveau d'instances de serveur
-  Lors de la mise à niveau [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]d’instances de serveur vers, vous pouvez réduire le temps d’arrêt de chaque base de données mise en miroir à un seul basculement manuel en effectuant une mise à niveau séquentielle, appelée mise à niveau *propagée*. Une mise à niveau propagée est un processus en plusieurs étapes qui, dans sa forme la plus simple, consiste à mettre à niveau l'instance de serveur qui agit actuellement en tant que serveur miroir dans une session de mise en miroir, puis à basculer manuellement la base de données mise en miroir, à mettre à niveau l'ancien serveur principal et à reprendre la mise en miroir. En pratique, le processus exact dépend du mode d'opération, du nombre et de la disposition de sessions de mise en miroir qui s'exécutent sur les instances de serveur que vous mettez à niveau.  
+  Lors de la mise à niveau d’instances de serveur vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vous pouvez réduire le temps d’arrêt de chaque base de données mise en miroir à un seul basculement manuel en effectuant une mise à niveau séquentielle, appelée mise à niveau *propagée*. Une mise à niveau propagée est un processus en plusieurs étapes qui, dans sa forme la plus simple, consiste à mettre à niveau l'instance de serveur qui agit actuellement en tant que serveur miroir dans une session de mise en miroir, puis à basculer manuellement la base de données mise en miroir, à mettre à niveau l'ancien serveur principal et à reprendre la mise en miroir. En pratique, le processus exact dépend du mode d'opération, du nombre et de la disposition de sessions de mise en miroir qui s'exécutent sur les instances de serveur que vous mettez à niveau.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’exécution d’une mise à niveau propagée pour installer un Service Pack ou un correctif, consultez [installer un Service Pack sur un système avec un temps d’arrêt minimal pour les bases de données mises en miroir](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  

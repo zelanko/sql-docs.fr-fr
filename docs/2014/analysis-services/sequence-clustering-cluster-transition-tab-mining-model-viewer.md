@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31fa9942ccfe25c5c56cc0edbce98f6946afad98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940686"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Onglet Transition d'état du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet **Transitions d’état** dans la **Visionneuse de l’algorithme MSC** (Microsoft Sequence Clustering) fournit une présentation détaillée des transitions entre des paires attribut-valeur, ou des états, dans le cluster sélectionné.  
@@ -48,7 +47,7 @@ ms.locfileid: "66069077"
  **Copier le graphique entier**  
  Copie la totalité du diagramme dans le Presse-papiers.  
   
- **Cluster**  
+ **Organisés**  
  Choisissez un cluster à afficher dans la visionneuse. Par défaut, **Remplissage (tout)** est sélectionné, ce qui signifie que les états et transitions du modèle entier sont inclus dans le graphique. Lorsque vous choisissez un cluster particulier, seuls les états et transitions qui figurent dans ce cluster sont affichés.  
   
  **Conseil :** Vous pouvez renommer les clusters à l’aide de l’onglet **diagramme de cluster** . Sélectionnez simplement un cluster, cliquez avec le bouton droit et sélectionnez **Renommer**. Renommer les clusters avec un nom plus descriptif simplifie la comparaison des clusters sous l’onglet **Transitions d’état** .  

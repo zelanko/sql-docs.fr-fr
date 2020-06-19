@@ -12,27 +12,26 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058562"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Options (Explorateur d’objets SQL Server-page script)
   Utilisez cette page pour définir les options de script qui s’appliquent aux commandes suivantes dans les menus contextuels d’objet de **l’Explorateur d’objets**:  
   
 -   Commandes **Edition** pour les vues et tables utilisateur.  
   
--   **L' \<objet de script> en tant que** commandes pour les objets créés par l’utilisateur.  
+-   Commandes **Script \<object> en tant que** pour les objets créés par l’utilisateur.  
   
 -   Commandes **Modifier** pour les objets créés par l’utilisateur.  
   
 -   Cette page définit également les valeurs par défaut des options de script de **l’Assistant Génération de scripts SQL Server**.  
   
 ## <a name="remarks"></a>Notes  
- Les commandes **modifier** et **modifier** peuvent produire des résultats qui sont différents de **l' \<objet script>** commande pour la même configuration d’option. Les commandes **Edition** et **Modifier** sont conçues pour modifier des objets de la base de données active durant une session de l’Éditeur de requête. L' **objet \<script> commande As** est conçu pour générer un script afin qu’il puisse être utilisé ultérieurement pour créer des objets.  
+ Les commandes **Edition** et **Modifier** et peuvent produire des résultats qui sont différents de ceux de la commande **Script \<object> en tant** que pour le même paramètre d’option. Les commandes **Edition** et **Modifier** sont conçues pour modifier des objets de la base de données active durant une session de l’Éditeur de requête. La commande **Script \<object> en tant que** est conçue pour générer un script pour qu’il puisse être utilisé ultérieurement pour créer des objets.  
   
 ## <a name="options"></a>Options  
  Spécifiez les options de script en les sélectionnant parmi les paramètres disponibles dans la liste située à droite de chaque option.  
@@ -56,7 +55,7 @@ ms.locfileid: "63031933"
  **Générer un script pour les catalogues de texte intégral**  
  Inclut un script pour les catalogues de texte intégral. La valeur par défaut est FALSE. Pour plus d’informations, consultez [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
   
- **Script utiliser \<la base de données>**  
+ **UTILISER le script\<database>**  
  Ajoute l’instruction USE DATABASE au script pour créer des objets de base de données dans le contexte de la base de données de **l’Explorateur d’objets** active. Lorsqu'il est prévu que le script sera utilisé dans une base de données différente, sélectionnez False afin d'omettre l'instruction. La valeur par défaut est True. Pour plus d’informations, consultez [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 ### <a name="object-scripting-options"></a>Options de scripts d'objets  

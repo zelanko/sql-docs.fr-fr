@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004051"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
   Pour définir des recherches en texte intégral, les requêtes de texte intégral de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les prédicats de texte intégral (CONTAINS et FREETEXT) et les fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE). Ces derniers prennent en charge la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] enrichie qui accepte divers formulaires de termes de requête. Pour écrire des requêtes de texte intégral, vous devez apprendre quand et comment utiliser ces prédicats et ces fonctions.  
@@ -232,7 +231,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>Données xml  
  Une colonne de type de données `xml` stocke uniquement des documents et des fragments XML, et seul le filtre XML est utilisé pour les documents. Par conséquent, une colonne de type est inutile. Sur les colonnes `xml`, l'index de recherche en texte intégral indexe le contenu des éléments XML, sans prendre en compte les balises XML. Les valeurs d'attributs sont indexées en texte intégral, à moins qu'il ne s'agisse de valeurs numériques. Des balises d'éléments sont utilisées comme limites de jeton. Les fragments et les documents XML ou HTML correctement formés contenant plusieurs langues sont pris en charge.  
   
- Pour plus d’informations sur l’interrogation `xml` d’une colonne, consultez [utiliser la recherche en texte intégral avec des colonnes XML](../xml/use-full-text-search-with-xml-columns.md).  
+ Pour plus d’informations sur l’interrogation d’une `xml` colonne, consultez [utiliser la recherche en texte intégral avec des colonnes XML](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
