@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 660c3975310d690867f72fd723d89d706b7b61bf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961259"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Mise en correspondance de la qualité des données dans le complément MDS pour Excel
   Au fil du temps, vous souhaiterez ajouter des données au référentiel MDS. Avant d’ajouter des données, il peut être utile de comparer les nouvelles données aux données qui sont déjà managées dans MDS pour s’assurer de ne pas ajouter de données dupliquées ou incorrectes.  

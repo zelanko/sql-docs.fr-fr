@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4673a38b275e180a51eedddfdee2c8233616fbd3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a43d803913faed9f7a63397b0b5784ca15e7ff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022906"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter`peut éliminer le fardeau de la conversion des données lorsqu’il est utilisé pour fournir des données pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client, ce qui permet d’obtenir des gains de performances significatifs pour les composants client et serveur des applications. D'autres avantages incluent une perte réduite de précision lors de l'insertion ou de la mise à jour de types de données numériques approximatifs.  

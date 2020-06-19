@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15fe0d424ac1f5a83fb842a2b9ab2f9416fedd55
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 324f221742152ebfc0850a609b04f2f6bf956fea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706891"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926710"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Envoi de commentaires sur SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] vous remercie de l'aide que vous lui apportez afin d'améliorer ses produits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leur documentation. Vous pouvez transmettre vos suggestions et rapports de bogues sur les caractéristiques et l'interface utilisateur d'un produit, soumettre des commentaires sur la documentation, ou envoyer automatiquement des rapports d'erreurs et des données sur l'utilisation à [!INCLUDE[msCoName](../includes/msconame-md.md)] en vue de leur analyse. Chacune de ces trois options d'envoi de commentaires est décrite ici.  

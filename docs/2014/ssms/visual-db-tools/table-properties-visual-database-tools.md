@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df4a0332ebc622b069c468e51c461b7cba20aa36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044199"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriétés de la table (Visual Database Tools)
   Ces propriétés apparaissent dans la fenêtre Propriétés lorsque vous cliquez avec le bouton droit dans le Concepteur de tables puis sélectionnez Propriétés. Sauf indication contraire, vous pouvez modifier ces propriétés dans la fenêtre Propriétés lorsque la table est sélectionnée.  

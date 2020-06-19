@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d5850ce71e483ea33bb99972c243140a63da5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01512949fae8e922c3f5d0056d4bc8d76f407cd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270534"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061802"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Modifications détectées dans la base de données, boîte de dialogue (Visual Database Tools)
   Cette boîte de dialogue apparaît si vous essayez d’enregistrer un diagramme de base de données ou des tables sélectionnées, mais certains des objets de la base de données qui seront affectés par l’action d’enregistrement sont devenus obsolètes pour la base de données. Le fait d'accepter les modifications indiquées dans cette boîte de dialogue met à jour la base de données pour qu'elle corresponde à votre schéma et écrase les modifications des autres utilisateurs.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968714"
 ---
 # <a name="developing-a-custom-log-provider"></a>Développement d'un module fournisseur d'informations personnalisé
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possède des fonctions de journalisation étendues qui permettent de capturer les événements qui se produisent pendant l'exécution de package. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers modules fournisseurs d’informations qui permettent de créer et de stocker des journaux dans différents formats, tels que XML, texte et base de données ou dans le journal des événements Windows. Si les modules fournisseurs d'informations et les formats de sortie fournis ne répondent pas totalement à vos besoin, vous pouvez créer un module fournisseur d'informations personnalisé.
@@ -36,14 +35,14 @@ ms.locfileid: "78176295"
 
  [Codage d’un module fournisseur d’informations personnalisé](coding-a-custom-log-provider.md) Décrit comment implémenter un module fournisseur d’informations personnalisé en substituant les méthodes et les propriétés de la classe de base.
 
- [Développement d’une interface utilisateur pour un module fournisseur d’informations personnalisé](developing-a-user-interface-for-a-custom-log-provider.md) Les interfaces utilisateur personnalisées pour les modules fournisseurs d’informations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]personnalisés ne sont pas prises en charge dans.
+ [Développement d’une interface utilisateur pour un module fournisseur d’informations personnalisé](developing-a-user-interface-for-a-custom-log-provider.md) Les interfaces utilisateur personnalisées pour les modules fournisseurs d’informations personnalisés ne sont pas prises en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
 ## <a name="related-topics"></a>Rubriques connexes
 
 ### <a name="information-common-to-all-custom-objects"></a>Informations communes à tous les objets personnalisés
  Pour obtenir les informations communes à tous les types d'objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :
 
- [Développement d’objets personnalisés pour Integration Services](../developing-custom-objects-for-integration-services.md) Décrit les étapes de base de l’implémentation de tous les types [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]d’objets personnalisés pour.
+ [Développement d’objets personnalisés pour Integration Services](../developing-custom-objects-for-integration-services.md) Décrit les étapes de base de l’implémentation de tous les types d’objets personnalisés pour [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [Persistance des objets personnalisés](../persisting-custom-objects.md) Décrit la persistance personnalisée et explique quand elle est nécessaire.
 

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53eaf828dd3fe6f5fa4056bda9dbc428dfa5d385
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054640"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>URL du gestionnaire de rapports (SSRS en mode natif)
   Utilisez la page URL du Gestionnaire de rapports pour configurer ou modifier l'URL permettant d'accéder au Gestionnaire de rapports. Par défaut, l'URL du Gestionnaire de rapports hérite du préfixe, de l'adresse IP et du port de l'URL du service Web Report Server URL. La raison en est que le Gestionnaire de rapports fournit l'accès frontal au service Web qui s'exécute au sein du même service Report Server. Si vous isolez les applications de service et utilisez le Gestionnaire de rapports pour accéder à un service Web Report Server sur un autre ordinateur, vous devez modifier le fichier RSReportServer.config pour pointer le Gestionnaire de rapports sur une instance différente. Pour plus d’informations sur la configuration d’une connexion Gestionnaire de rapports à un serveur de rapports distant, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.  
   
  Si vous êtes en train de configurer le serveur de rapports pour qu'il s'exécute en mode intégré SharePoint, ne créez pas l'URL du Gestionnaire de rapports. Le Gestionnaire de rapports n'est pas pris en charge sur un serveur de rapports exécuté en mode intégré SharePoint. Si une URL existe déjà pour le Gestionnaire de rapports, elle devient indisponible après que vous avez configuré le serveur de rapports pour qu'il s'exécute en mode intégré SharePoint.  
   

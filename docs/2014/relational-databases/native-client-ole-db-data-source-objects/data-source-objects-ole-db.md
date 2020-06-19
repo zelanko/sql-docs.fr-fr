@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede861a696ba7782f7cdce962578dc077f799b33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec5479d3b1e4ee1e828ba1c43cd86ce5e42b6497
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707435"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043891"
 ---
 # <a name="data-source-objects-ole-db"></a>Objets source de données (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client utilise le terme source de données pour l’ensemble des interfaces de OLE DB utilisées pour établir un lien vers un magasin de données, tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La création d’une instance de l’objet source de données du fournisseur est la première tâche d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consommateur Native Client.  

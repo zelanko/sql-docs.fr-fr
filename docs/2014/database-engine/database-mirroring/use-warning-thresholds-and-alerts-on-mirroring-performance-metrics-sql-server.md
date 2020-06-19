@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908b234143bc7e2140fe1c98d85ba150ea69b28d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933850"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir (SQL Server)
   Cette rubrique contient des informations sur les événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lesquels des seuils d'avertissement peuvent être configurés et gérés pour la mise en miroir de bases de données. Vous pouvez utiliser le moniteur de mise en miroir de bases de données ou les procédures stockées **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**et **sp_dbmmonitordropalert** . Cette rubrique contient également des informations sur la configuration d'alertes sur des événements de mise en miroir de bases de données.  
@@ -73,9 +72,9 @@ ms.locfileid: "62754032"
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Supprime l'avertissement pour une métrique de performance spécifiée.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Événements de seuil de performance envoyés au journal des événements Windows  
- Si un seuil d’avertissement est défini pour une métrique de performance, la valeur la plus récente est comparée au seuil quand la table d’états est mise à jour. Si le seuil a été atteint, la procédure de mise à jour, **sp_dbmmonitorupdate**, génère un événement d’information (un *événement de seuil de performance*) pour la métrique et écrit [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’événement dans le journal des événements Windows. Le tableau suivant répertorie les ID des événements de seuil de performance.  
+ Si un seuil d’avertissement est défini pour une métrique de performance, la valeur la plus récente est comparée au seuil quand la table d’états est mise à jour. Si le seuil a été atteint, la procédure de mise à jour, **sp_dbmmonitorupdate**, génère un événement d’information (un *événement de seuil de performance*) pour la métrique et écrit l’événement dans le journal des [!INCLUDE[msCoName](../../includes/msconame-md.md)] événements Windows. Le tableau suivant répertorie les ID des événements de seuil de performance.  
   
-|Mesure de performance|ID de l’événement|  
+|Mesure de performance|ID de l'événement|  
 |------------------------|--------------|  
 |Journal non envoyé|32042|  
 |Journal non restauré|32043|  

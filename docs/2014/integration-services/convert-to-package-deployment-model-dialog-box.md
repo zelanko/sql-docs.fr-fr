@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73f1242b9756828b330d0386d93e3c8e8e4f2220
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917609"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>Convertir en modèle de déploiement de package, boîte de dialogue
   La commande **Convertir en modèle de déploiement de package** vous permet de convertir un package en modèle de déploiement de package après avoir vérifié la compatibilité du projet et de chaque package du projet avec ce modèle. Si un package utilise des fonctionnalités propres au modèle de déploiement de projet, par exemple des paramètres spécifiques, le package ne peut pas être converti.  

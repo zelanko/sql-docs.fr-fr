@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f7a685a57bf07b812aefc2bd5406210b86054c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781068"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933510"
 ---
 # <a name="links-in-clr-integration-security"></a>Liens dans la sécurité d'intégration du CLR
   Cette section décrit la façon dont les parties de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en langage [!INCLUDE[tsql](../../includes/tsql-md.md)] ou dans l'un des langages managés. Ces relations entre objets sont connues sous le nom de liens.  
@@ -32,7 +31,7 @@ ms.locfileid: "62781068"
  Les liens d'accès de table correspondent à l'extraction ou à la modification de valeurs dans une table, une vue ou une fonction table. Ils sont semblables aux liens d'appel, mais offrent un contrôle d'accès affiné en ce qui concerne les autorisations SELECT, INSERT, UPDATE et DELETE.  
   
 ## <a name="gated-links"></a>Liens contrôlés  
- Les liens contrôlés signifient que pendant l'exécution, les autorisations ne sont pas vérifiées dans toute la relation d'objet une fois qu'elle a été établie. Lorsqu'il y a un lien contrôlé entre deux objets (par exemple, l'objet **x** et l'objet **y**), les autorisations sur l'objet **y** et autres objets accédés à partir de l'objet **y** sont vérifiés uniquement au moment de la création de l'objet **x**. À l’heure de création de **x**l’objet `REFERENCE` x, l’autorisation est vérifiée sur **y** par rapport au propriétaire de **x**. Lors de l'exécution (par exemple, lorsque quelqu'un appelle l'objet **x**), il n'y a aucune autorisation vérifiée par rapport à **y** ou autres objets auquel il fait  référence de manière statique. Lors de l'exécution, une autorisation appropriée est vérifiée par rapport à l'objet **x** lui-même.  
+ Les liens contrôlés signifient que pendant l'exécution, les autorisations ne sont pas vérifiées dans toute la relation d'objet une fois qu'elle a été établie. Lorsqu'il y a un lien contrôlé entre deux objets (par exemple, l'objet **x** et l'objet **y**), les autorisations sur l'objet **y** et autres objets accédés à partir de l'objet **y** sont vérifiés uniquement au moment de la création de l'objet **x**. À l’heure de création de l’objet **x**, `REFERENCE` l’autorisation est vérifiée sur **y** par rapport au propriétaire de **x**. Lors de l'exécution (par exemple, lorsque quelqu'un appelle l'objet **x**), il n'y a aucune autorisation vérifiée par rapport à **y** ou autres objets auquel il fait  référence de manière statique. Lors de l'exécution, une autorisation appropriée est vérifiée par rapport à l'objet **x** lui-même.  
   
  Les liens contrôlés sont toujours utilisés conjointement à une dépendance de métadonnées entre deux objets. Cette dépendance de métadonnées est une relation établie dans les catalogues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui empêche un objet d'être supprimé tant qu'un autre objet dépend de lui.  
   

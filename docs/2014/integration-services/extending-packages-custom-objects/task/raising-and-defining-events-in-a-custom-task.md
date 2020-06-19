@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 566f7ab8bc23eee58b133acb2e740cab1647b0ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896127"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968617"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Déclenchement et définition d'événements dans une tâche personnalisée
   Le moteur d’exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose une collection d’événements qui fournissent l’état d’avancement d’une tâche lors de sa validation et de son exécution. L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> définit ces événements et elle est fournie aux tâches en tant que paramètre pour les méthodes <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -43,7 +42,7 @@ ms.locfileid: "62896127"
   
  L'exemple de code suivant présente la méthode `InitializeTask` d'une tâche personnalisée, où deux événements personnalisés sont créés et leurs propriétés sont définies. Les nouveaux événements sont ensuite ajoutés à la collection <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- Pour le premier événement personnalisé, *eventName* a la valeur « **OnBeforeIncrement** » et *description* a la valeur « **Fires after the initial value is updated.** ». Le paramètre suivant, la valeur `true` indique que cet événement doit autoriser la création d'un conteneur de gestionnaire d'événements pour gérer l'événement. Le gestionnaire d'événements est un conteneur qui fournit une structure dans un package et des services à des tâches, comme d'autres conteneurs tels que le package, Séquence, ForLoop et ForEachLoop. Lorsque le paramètre *AllowEventHandlers* a `true`la <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> la, les objets sont créés pour l’événement. Tous les paramètres définis pour l'événement sont maintenant disponibles pour l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> dans la collection de variables de l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ Pour le premier événement personnalisé, *eventName* a la valeur « **OnBeforeIncrement** » et *description* a la valeur « **Fires after the initial value is updated.** ». Le paramètre suivant, la valeur `true` indique que cet événement doit autoriser la création d'un conteneur de gestionnaire d'événements pour gérer l'événement. Le gestionnaire d'événements est un conteneur qui fournit une structure dans un package et des services à des tâches, comme d'autres conteneurs tels que le package, Séquence, ForLoop et ForEachLoop. Lorsque le paramètre *AllowEventHandlers* a la la `true` , les <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objets sont créés pour l’événement. Tous les paramètres définis pour l'événement sont maintenant disponibles pour l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> dans la collection de variables de l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

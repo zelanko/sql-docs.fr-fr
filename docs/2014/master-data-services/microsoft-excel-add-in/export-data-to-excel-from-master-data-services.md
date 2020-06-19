@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acfec7a6d86f55e35ef7b3e6f1fa1af481ef87d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961121"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Charger des données MDS dans Excel
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Dans, vous devez charger les données à partir du référentiel MDS afin de les utiliser.  
+  Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] , vous devez charger les données à partir du référentiel MDS afin de les utiliser.  
   
  Si vous souhaitez filtrer le DataSet avant le chargement, consultez [Filtrer les données avant de charger &#40;Complément MDS pour Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) à la place.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "65482713"
   
     > [!NOTE]  
     >  -   Seul le premier million de membres est chargé dans Excel. Pour filtrer la liste avant le chargement, dans le ruban, dans le groupe **Se connecter et charger** , cliquez sur **Filtre**.  
-    > -   Dans les colonnes qui représentent des listes contraintes (attributs basés sur un domaine), seules les 25 000 premières valeurs sont chargées. Vous pouvez modifier ce nombre dans la propriété MaximumDbaEntitySize du fichier excelusersettings.config situé sur l'ordinateur sur lequel Excel est installé. Ce fichier se trouve dans C:\Users\\<utilisateur\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices\\.  
+    > -   Dans les colonnes qui représentent des listes contraintes (attributs basés sur un domaine), seules les 25 000 premières valeurs sont chargées. Vous pouvez modifier ce nombre dans la propriété MaximumDbaEntitySize du fichier excelusersettings.config situé sur l'ordinateur sur lequel Excel est installé. Ce fichier se trouve dans C:\Users \\<utilisateur \> \AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices \\ .  
   
     > [!NOTE]  
     >  Quand vous chargez des données de texte délimitées à l’aide du complément pour Microsoft Excel avec Excel 32 bits et que les paramètres des propriétés **Nombre de cellules à charger** et **Nombre de cellules à publier** ont une valeur maximale de 1000, une erreur de mémoire insuffisante se produit. Vous devez utiliser Excel 64 bits pour utiliser les paramètres maximaux de **Nombre de cellules à charger** et **Nombre de cellules à publier**.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 926a410ce7b91c5c4683856729a01353b2d37d00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061874"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Conventions pour la combinaison de conditions de recherche dans le volet Critères (Visual Database Tools)
   Vous pouvez créer des requêtes qui incluent un nombre quelconque de conditions de recherche, reliées par un nombre quelconque d'opérateurs AND et OR. Une requête avec une combinaison de clauses AND et OR peut devenir complexe ; il est donc utile de comprendre comment une telle requête est interprétée quand vous l’exécutez et comment elle est représentée dans les volets [Critères](visual-database-tools.md) et [SQL](sql-pane-visual-database-tools.md).  

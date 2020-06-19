@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f4a04d7851a79ab461711cfc173d40a0a83ef6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d0ca1b0fbad144117e409019d8d2247bbf918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022945"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
   En règle générale, prenez en compte les implications de l’utilisation de **SQLBindCol** pour la conversion de données. Les conversions de liaison sont des processus clients. Ainsi, par exemple, l'extraction d'une valeur à virgule flottante liée à une colonne de type character conduit le pilote à effectuer localement la conversion du type de données float en character lorsqu'une ligne est extraite. La fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT peut être utilisée pour reporter le coût de la conversion des données sur le serveur.  

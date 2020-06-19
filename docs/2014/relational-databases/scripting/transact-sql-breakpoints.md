@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 84ff925f2aa68ee81268eaca2faa3920f3ec407b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b5d363e7f68ba735168ef17eeff8e9605c54b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068450"
 ---
 # <a name="transact-sql-breakpoints"></a>Points d'arrêt Transact-SQL
   Les points d'arrêt spécifient que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] suspend l'exécution à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique ; vous pouvez ensuite consulter l'état des éléments de code à ce point.  

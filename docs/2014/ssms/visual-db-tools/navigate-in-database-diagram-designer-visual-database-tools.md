@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d1d93518a2b11ed55620aa39448faac9f0bc424
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63254460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044309"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Naviguer dans le Concepteur de diagrammes de base de données (Visual Database Tools)
   Vous pouvez travailler dans le Concepteur de diagrammes de base de données à l’aide du clavier ou de la souris. Pour connaître les méthodes spécifiques utilisées dans le Concepteur de diagrammes de base de données, consultez les tableaux suivants.  

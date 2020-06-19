@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968599"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analyse de formats de fichiers texte non standard à l'aide du composant Script
   Lorsque vos données sources sont organisées dans un format non standard, il peut être plus pratique de consolider l'ensemble de la logique d'analyse en un seul script au lieu de chaîner plusieurs transformations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour parvenir au même résultat.  
@@ -94,7 +93,7 @@ ms.locfileid: "62769005"
   
 11. Dans la page **Colonnes d’entrée** de l’**Éditeur de transformation de script**, sélectionnez la seule colonne d’entrée disponible.  
   
-12. Dans la page **entrées et sorties** de l **'éditeur de transformation de script**, sélectionnez sortie 0 `SynchronousInputID` et définissez sa valeur aucun. Créez 5 colonnes de sortie, de type String [DT_STR] et de longueur 32 :  
+12. Dans la page **entrées et sorties** de l **'éditeur de transformation de script**, sélectionnez sortie 0 et définissez sa valeur `SynchronousInputID` aucun. Créez 5 colonnes de sortie, de type String [DT_STR] et de longueur 32 :  
   
     -   FirstName  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769005"
   
     -   StateProvince  
   
-13. Dans la page **script** de l **'éditeur de transformation de script**, cliquez sur modifier le **script** et entrez `ScriptMain` le code affiché dans la classe de l’exemple. Fermez l’environnement de développement de script et l’**Éditeur de transformation de script**.  
+13. Dans la page **script** de l **'éditeur de transformation de script**, cliquez sur **modifier le script** et entrez le code affiché dans la `ScriptMain` classe de l’exemple. Fermez l’environnement de développement de script et l’**Éditeur de transformation de script**.  
   
 14. Ajoutez une destination pour SQL Server au flux de données. Configurez-la pour qu'elle utilise le gestionnaire de connexions OLE DB et la table RowDelimitedData. Connectez la sortie du composant Script à cette destination.  
   
@@ -253,7 +252,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. Dans la page **Colonnes d’entrée** de l’**Éditeur de transformation de script**, sélectionnez la seule colonne d’entrée disponible.  
   
-12. Dans la page **entrées et sorties** de l **'éditeur de transformation de script**, sélectionnez sortie 0, renommez-le ParentRecords `SynchronousInputID` et définissez sa sur aucun. Créez 2 colonnes de sortie :  
+12. Dans la page **entrées et sorties** de l **'éditeur de transformation de script**, sélectionnez sortie 0, renommez-le ParentRecords et définissez sa `SynchronousInputID` sur aucun. Créez 2 colonnes de sortie :  
   
     -   ParentID (la clé primaire), de type entier signé (4 bits) [DT_I4]  
   

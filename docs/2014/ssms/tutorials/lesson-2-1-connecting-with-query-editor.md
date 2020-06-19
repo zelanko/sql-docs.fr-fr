@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0658c567cca7acc2f045c2246118e52b4e7ac004
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68187819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994698"
 ---
 # <a name="connecting-with-query-editor"></a>Connexion à l'aide de l'Éditeur de requête
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permet d'écrire du code ou de le modifier tout en étant déconnecté du serveur. Cela peut s'avérer utile lorsque le serveur n'est pas disponible ou lorsque vous souhaitez limiter l'utilisation du serveur ou conserver les ressources réseau. Vous pouvez également modifier la connexion de l'Éditeur de requête pour choisir une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans ouvrir une nouvelle fenêtre de l'Éditeur de requête ou sans retaper du code.  

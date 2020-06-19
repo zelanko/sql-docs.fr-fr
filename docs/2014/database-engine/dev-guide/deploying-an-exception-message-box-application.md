@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: d8ecc67a-ef33-4d44-8ae6-eaacb8ca3e74
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 162c878c5d39356f08f01c4eb51a0f88e3ed2d45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f66c87a106c87969b029f67410d82a65021cc00d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933624"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>Déploiement d'une application de boîte de message d'exception
-  La boîte de message d’exception est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée par et est prise en charge pour une utilisation dans vos applications Windows personnalisées afin d’améliorer la gestion des exceptions. Étant donné que la boîte de message d’exception est installée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par [!INCLUDE[ssEW](../../includes/ssew-md.md)]toutes les éditions de, à l’exception de, vous pouvez l’utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans configuration supplémentaire sur tout ordinateur sur lequel les composants clients, y compris le kit de développement logiciel (SDK), ont été installés.  
+  La boîte de message d’exception est installée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est prise en charge pour une utilisation dans vos applications Windows personnalisées afin d’améliorer la gestion des exceptions. Étant donné que la boîte de message d’exception est installée par toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à l’exception de [!INCLUDE[ssEW](../../includes/ssew-md.md)] , vous pouvez l’utiliser sans configuration supplémentaire sur tout ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les composants clients, y compris le kit de développement logiciel (SDK), ont été installés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Boîte de message d’exception de programme](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   

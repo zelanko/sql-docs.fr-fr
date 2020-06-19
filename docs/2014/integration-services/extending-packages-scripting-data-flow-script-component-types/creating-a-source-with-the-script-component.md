@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968571"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Création d'une source à l'aide du composant Script
   Les composants sources dans le flux d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent de charger des données à partir d'une source de données et de les transférer à des transformations et des destinations en aval. En principe, vous vous connectez à la source de données via un gestionnaire de connexions existant.
@@ -60,7 +59,7 @@ ms.locfileid: "78176269"
 -   Vous pouvez créer une ou plusieurs sorties supplémentaires, telles qu'une sortie d'erreur simulée pour les lignes qui contiennent des valeurs inattendues. Utilisez les boutons **Ajouter une sortie** et **Supprimer une sortie** pour gérer les sorties du composant source. Toutes les lignes d'entrée sont dirigées vers toutes les sorties disponibles, sauf si vous attribuez une valeur identique non nulle à la propriété `ExclusionGroup` de ces sorties, auquel cas vous pourrez diriger chaque ligne vers une seule de ces sorties partageant la même valeur `ExclusionGroup`. La valeur entière particulière sélectionnée pour identifier `ExclusionGroup` n'a pas d'importance.
 
     > [!NOTE]
-    >  Vous pouvez également utiliser une valeur de propriété `ExclusionGroup` non nulle avec une sortie unique lorsque vous ne souhaitez pas générer des sorties pour toutes les lignes. Toutefois, dans ce cas, vous devez appeler explicitement la méthode **DirectRowTo\<outputbuffer>** pour chaque ligne que vous souhaitez envoyer à la sortie.
+    >  Vous pouvez également utiliser une valeur de propriété `ExclusionGroup` non nulle avec une sortie unique lorsque vous ne souhaitez pas générer des sorties pour toutes les lignes. Dans ce cas, toutefois, vous devez appeler explicitement la **méthode \<outputbuffer> méthode DirectRowTo** pour chaque ligne que vous souhaitez envoyer à la sortie.
 
 -   Vous pouvez assigner un nom convivial aux sorties. Vous ferez ultérieurement référence aux sorties par leur nom dans le script, à l'aide des propriétés d'accesseur typées, créées dans le code généré automatiquement.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176269"
  Pour plus d’informations sur la page **Entrées et sorties** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Entrées et sorties&#41;](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Ajout de variables
- S’il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans `ReadOnlyVariables` les champs de `ReadWriteVariables` propriété et de la page **script** de l **'éditeur de transformation de script**.
+ S’il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans les `ReadOnlyVariables` champs de `ReadWriteVariables` propriété et de la page **script** de l **'éditeur de transformation de script**.
 
- Lorsque vous entrez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également entrer plusieurs variables en cliquant sur le bouton des points de suspension (**...**) en regard des `ReadOnlyVariables` champs de propriété et `ReadWriteVariables` et en sélectionnant variables dans la boîte de dialogue Sélectionner des **variables** .
+ Lorsque vous entrez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également entrer plusieurs variables en cliquant sur le bouton des points de suspension (**...**) en regard des `ReadOnlyVariables` `ReadWriteVariables` champs de propriété et et en sélectionnant variables dans la boîte de dialogue **Sélectionner des variables** .
 
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176269"
 
  La classe `ScriptMain` inclut un stub pour la méthode `CreateNewOutputRows`. `CreateNewOutputRows` est la méthode la plus importante d'un composant source.
 
- Si vous ouvrez la fenêtre **Explorateur de projets** dans VSTA, vous pouvez voir que le composant script a également généré des éléments `BufferWrapper` de `ComponentWrapper` projet et en lecture seule. La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.
+ Si vous ouvrez la fenêtre **Explorateur de projets** dans VSTA, vous pouvez voir que le composant script a également généré des éléments de projet et en lecture seule `BufferWrapper` `ComponentWrapper` . La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.
 
  Au moment de l'exécution, le moteur de flux de données appelle la méthode `PrimeOutput` dans la classe `UserComponent`, qui remplace la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> de la classe parente <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La méthode `PrimeOutput` appelle à son tour les méthodes suivantes :
 
@@ -134,7 +133,7 @@ ms.locfileid: "78176269"
 
 5.  Dans la page **Script** , cliquez sur **Modifier le script** , puis entrez le script suivant. Ensuite, fermez l'environnement de développement de script et l' **Éditeur de transformation de script**.
 
-6.  Créez et configurez un composant de destination, comme une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’exemple de composant de destination présenté dans [Création d’une destination à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), qui attend les colonnes **AddressID** et **City**. Puis, connectez le composant source à la destination. (Vous pouvez connecter une source directement à une destination sans aucune transformation.) Vous pouvez créer une table de destination en exécutant la [!INCLUDE[tsql](../../includes/tsql-md.md)] commande suivante dans `AdventureWorks` la base de données :
+6.  Créez et configurez un composant de destination, comme une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’exemple de composant de destination présenté dans [Création d’une destination à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), qui attend les colonnes **AddressID** et **City**. Puis, connectez le composant source à la destination. (Vous pouvez connecter une source directement à une destination sans aucune transformation.) Vous pouvez créer une table de destination en exécutant la [!INCLUDE[tsql](../../includes/tsql-md.md)] commande suivante dans la `AdventureWorks` base de données :
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -267,7 +266,7 @@ ms.locfileid: "78176269"
 
 6.  Dans la page **Script** , cliquez sur **Modifier le script** , puis entrez le script suivant. Ensuite, fermez l'environnement de développement de script et l' **Éditeur de transformation de script**.
 
-7.  Créez et configurez un composant de destination, comme une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’exemple de composant de destination présenté dans [Création d’une destination à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Puis, connectez le composant source à la destination. (Vous pouvez connecter une source directement à une destination sans aucune transformation.) Vous pouvez créer une table de destination en exécutant la [!INCLUDE[tsql](../../includes/tsql-md.md)] commande suivante dans `AdventureWorks` la base de données :
+7.  Créez et configurez un composant de destination, comme une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’exemple de composant de destination présenté dans [Création d’une destination à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Puis, connectez le composant source à la destination. (Vous pouvez connecter une source directement à une destination sans aucune transformation.) Vous pouvez créer une table de destination en exécutant la [!INCLUDE[tsql](../../includes/tsql-md.md)] commande suivante dans la `AdventureWorks` base de données :
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

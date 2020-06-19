@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b450d603ec1d7b8c930a0361d8070519b6a2a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068899"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940603"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurer les propriétés du serveur dans Analysis Services
   Un administrateur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut modifier les propriétés de configuration par défaut du serveur pour une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Chaque instance a ses propriétés de configuration propres, qui peuvent être définies de façon indépendante des autres instances présentes sur le même serveur.  
@@ -61,7 +60,7 @@ ms.locfileid: "66068899"
   
 #### <a name="view-or-edit-configuration-properties-in-the-msmdsrvini-file"></a>Afficher ou modifier manuellement les propriétés de configuration dans le fichier msmdsrv.ini  
   
-1.  Avant de commencer, vérifiez la propriété **datadir** de la page de propriétés général dans Management Studio pour vérifier l’emplacement des fichiers programme de Analysis Services, y compris le fichier msmdsrv. ini. Vous serez ainsi certain de modifier le bon fichier.  
+1.  Avant de commencer, vérifiez la propriété **datadir** de la page de propriétés général dans Management Studio pour vérifier l’emplacement des fichiers programme de Analysis Services, y compris le fichier msmdsrv.ini. Vous serez ainsi certain de modifier le bon fichier.  
   
     > [!NOTE]  
     >  Dans une installation par défaut, ce fichier se trouve dans le dossier \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config.  
@@ -80,13 +79,13 @@ ms.locfileid: "66068899"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Propriétés générales](general-properties.md)|Les propriétés générales sont des propriétés fondamentales et avancées qui définissent notamment le répertoire de données, le répertoire de sauvegarde et d'autres comportements du serveur.|  
-|[Propriétés de l'exploration de données](data-mining-properties.md)|Les propriétés d'exploration de données déterminent les algorithmes d'exploration de données à activer ou à désactiver. Par défaut, tous les algorithmes sont activés.|  
+|[Propriétés d’exploration de données](data-mining-properties.md)|Les propriétés d'exploration de données déterminent les algorithmes d'exploration de données à activer ou à désactiver. Par défaut, tous les algorithmes sont activés.|  
 |DSO|DSO n'est plus pris en charge. Les propriétés DSO sont ignorées.|  
 |[Propriétés de fonctionnalité](feature-properties.md)|Les propriétés de fonctionnalité se rapportent à des fonctionnalités de produit, le plus souvent de caractère avancé. Il s'agit notamment de propriétés qui contrôlent les liaisons entre les instances de serveur.|  
 |[Propriétés du cache de la](filestore-properties.md)|Les propriétés du stockage de fichiers s'adressent uniquement aux utilisateurs expérimentés. Elles contiennent des paramètres avancés de gestion de la mémoire.|  
 |[Propriétés du gestionnaire de verrous](lock-manager-properties.md)|Les propriétés du gestionnaire de verrous définissent les comportements du serveur en matière de verrouillage et de délais d'attente. La plupart de ces propriétés s'adressent uniquement aux utilisateurs expérimentés.|  
 |[Propriétés du journal](log-properties.md)|Les propriétés du journal contrôlent si des événements sont enregistrés sur le serveur et, dans l'affirmative, à quel emplacement et de quelle façon. Il s'agit en particulier de l'enregistrement des erreurs, des exceptions et des requêtes, de la boîte noire SQL et des traces.|  
-|[Propriétés de mémoire](memory-properties.md)|Les propriétés de la mémoire contrôlent la façon dont le serveur utilise la mémoire. Elles s'adressent essentiellement aux utilisateurs expérimentés.|  
+|[Propriétés de la mémoire](memory-properties.md)|Les propriétés de la mémoire contrôlent la façon dont le serveur utilise la mémoire. Elles s'adressent essentiellement aux utilisateurs expérimentés.|  
 |[Propriétés du réseau](network-properties.md)|Les propriétés réseau contrôlent le comportement du serveur en matière de réseau, et contiennent notamment des paramètres XML binaire et de compression. La plupart de ces propriétés s'adressent uniquement aux utilisateurs expérimentés.|  
 |[Propriétés OLAP](olap-properties.md)|Les propriétés OLAP contrôlent le traitement des cubes et des dimensions, le traitement différé, la mise en cache des données et le comportement des requêtes. Il s'agit de propriétés fondamentales et de propriétés avancées.|  
 |[Propriétés de sécurité](security-properties.md)|La section de la sécurité contient des propriétés fondamentales et avancées qui définissent les autorisations d'accès. Il s'agit de paramètres concernant les administrateurs et les utilisateurs.|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0a811b88537d784c9e1db892003391914d50f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17cba78488e1149d491402c6bc63c54fedd9ea6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895179"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968529"
 ---
 # <a name="developing-specific-types-of-script-components"></a>Développement de types spécifiques de composants Script
   Le composant Script est un outil configurable que vous pouvez utiliser dans le flux de données d'un package pour remplir presque toutes les conditions qui ne sont pas satisfaites par les sources, les transformations et les destinations incluses dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Cette section contient des exemples de code du composant Script qui illustrent les quatre options de configuration du composant Script :  

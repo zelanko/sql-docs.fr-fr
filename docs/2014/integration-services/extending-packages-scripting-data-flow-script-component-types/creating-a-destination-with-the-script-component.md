@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968569"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Création d'une destination à l'aide du composant Script
   Les composants de destination dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent d'enregistrer des données provenant de sources et de transformations en amont dans une source de données. En principe, le composant de destination se connecte à la source de données via un gestionnaire de connexions existant.
@@ -66,9 +65,9 @@ ms.locfileid: "78176290"
  Pour plus d’informations sur la page **Entrées et sorties** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Entrées et sorties&#41;](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Ajout de variables
- Si vous souhaitez utiliser des variables existantes dans votre script, vous pouvez les ajouter dans les `ReadOnlyVariables` champs `ReadWriteVariables` de propriété et dans la page **script** de l **'éditeur de transformation de script**.
+ Si vous souhaitez utiliser des variables existantes dans votre script, vous pouvez les ajouter dans les `ReadOnlyVariables` champs de propriété et dans `ReadWriteVariables` la page **script** de l **'éditeur de transformation de script**.
 
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton des points de suspension (**...**) en regard des `ReadOnlyVariables` champs de propriété et `ReadWriteVariables` , puis en sélectionnant les variables dans la boîte de dialogue Sélectionner des **variables** .
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton des points de suspension (**...**) en regard des `ReadOnlyVariables` `ReadWriteVariables` champs de propriété et, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables** .
 
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176290"
 ### <a name="understanding-the-auto-generated-code"></a>Fonctionnement du code généré automatiquement
  Lorsque vous ouvrez l'environnement de développement intégré VSTA après avoir créé et configuré un composant de destination, la classe `ScriptMain` modifiable apparaît dans l'éditeur de code avec un stub pour la méthode `ProcessInputRow`. La classe `ScriptMain` est l'emplacement où vous allez écrire votre code personnalisé, et `ProcessInputRow` est la méthode la plus importante d'un composant de destination.
 
- Si vous ouvrez la fenêtre **Explorateur de projets** dans VSTA, vous pouvez voir que le composant script a également généré des éléments `BufferWrapper` de `ComponentWrapper` projet et en lecture seule. La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.
+ Si vous ouvrez la fenêtre **Explorateur de projets** dans VSTA, vous pouvez voir que le composant script a également généré des éléments de projet et en lecture seule `BufferWrapper` `ComponentWrapper` . La classe `ScriptMain` hérite de la classe `UserComponent` dans l'élément de projet `ComponentWrapper`.
 
  Au moment de l'exécution, le moteur de flux de données appelle la méthode `ProcessInput` dans la classe `UserComponent`, qui remplace la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la classe parente <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La méthode `ProcessInput` parcourt à son tour les lignes du tampon d'entrée et appelle la méthode `ProcessInputRow` une fois pour chaque ligne.
 
@@ -119,7 +118,7 @@ ms.locfileid: "78176290"
 
 3.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que destination.
 
-4.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter une source directement à une destination sans aucune transformation.) Cette sortie doit fournir les données de la table **Person. Address** de `AdventureWorks` l’exemple de base de données qui contient au moins les colonnes **AddressID** et **City** .
+4.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter une source directement à une destination sans aucune transformation.) Cette sortie doit fournir les données de la table **Person. Address** de l' `AdventureWorks` exemple de base de données qui contient au moins les colonnes **AddressID** et **City** .
 
 5.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes d’entrée **AddressID** et **City**.
 
@@ -236,7 +235,7 @@ public class ScriptMain:
 
 2.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que destination.
 
-3.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter une source directement à une destination sans aucune transformation.) Cette sortie doit fournir les données de la table **Person. Address** de `AdventureWorks` l’exemple de base de données et doit contenir au moins les colonnes **AddressID** et **City** .
+3.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter une source directement à une destination sans aucune transformation.) Cette sortie doit fournir les données de la table **Person. Address** de l' `AdventureWorks` exemple de base de données et doit contenir au moins les colonnes **AddressID** et **City** .
 
 4.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes **AddressID** et **City**.
 

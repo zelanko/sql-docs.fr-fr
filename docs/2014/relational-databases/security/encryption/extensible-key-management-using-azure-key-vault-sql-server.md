@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068380"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gestion de clés extensible à l'aide d'Azure Key Vault (SQL Server)
-  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connecteur pour [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] au chiffrement de tirer parti du service Azure Key Vault en tant que fournisseur de [gestion de clés extensible &#40;fournisseur de&#41;EKM](extensible-key-management-ekm.md) pour protéger ses clés de chiffrement.
+  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connecteur pour [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] au chiffrement de tirer parti du service Azure Key Vault en tant que fournisseur de [gestion de clés Extensible &#40;fournisseur de&#41;EKM](extensible-key-management-ekm.md) pour protéger ses clés de chiffrement.
 
  Contenu de cette rubrique :
 
@@ -79,7 +78,7 @@ ms.locfileid: "79289447"
 
     -   Un autre **principal de service** permet au [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] d'accéder au coffre afin de désencapsuler les clés utilisées dans le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
-     Pour plus d'informations sur la façon d'inscrire une application et de générer un principal du service, consultez la section **Inscrire une application auprès d'Azure Active Directory** dans [Prise en main d'Azure Active Directory](https://go.microsoft.com/fwlink/?LinkId=521402). Le processus d'inscription retourne un **ID d'application** (également appelé **ID CLIENT**) et une **clé d'authentification** (également appelée **clé secrète**) pour chaque **principal du service**Azure Active Directory. Lorsqu’il est utilisé `CREATE CREDENTIAL` dans l’instruction, le trait d’Union doit être supprimé de l' **ID client**. Enregistrez ces éléments en vue de les utiliser dans les scripts ci-après :
+     Pour plus d'informations sur la façon d'inscrire une application et de générer un principal du service, consultez la section **Inscrire une application auprès d'Azure Active Directory** dans [Prise en main d'Azure Active Directory](https://go.microsoft.com/fwlink/?LinkId=521402). Le processus d'inscription retourne un **ID d'application** (également appelé **ID CLIENT**) et une **clé d'authentification** (également appelée **clé secrète**) pour chaque **principal du service**Azure Active Directory. Lorsqu’il est utilisé dans l' `CREATE CREDENTIAL` instruction, le trait d’Union doit être supprimé de l' **ID client**. Enregistrez ces éléments en vue de les utiliser dans les scripts ci-après :
 
     -   **Principal de service** pour une connexion **sysadmin** : **CLIENTID_sysadmin_login** et **SECRET_sysadmin_login**
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289447"
 2.  Définissez des informations d'identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour une connexion d'administrateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour utiliser le coffre de clés, de façon à pouvoir configurer et gérer des scénarios de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
     > [!IMPORTANT]
-    >  L’argument **Identity** de requiert le nom du coffre de `CREATE CREDENTIAL` clés. L’argument **secret** de `CREATE CREDENTIAL` exige que l' * \<ID client>* (sans trait d’Union) et * \<le>secret* soient passés ensemble sans espace entre eux.
+    >  L’argument **Identity** de `CREATE CREDENTIAL` requiert le nom du coffre de clés. L’argument **secret** de `CREATE CREDENTIAL` exige que *\<Client ID>* (sans trait d’Union) et *\<Secret>* soit passé ensemble sans espace entre eux.
 
-     Dans l’exemple suivant, l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) est supprimé des traits d’Union et entré en tant que chaîne `EF5C8E094D2A4A769998D93440D8115D` et le **secret** est représenté par la chaîne *SECRET_sysadmin_login*.
+     Dans l’exemple suivant, l' **ID client** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) est supprimé des traits d’Union et entré en tant que chaîne `EF5C8E094D2A4A769998D93440D8115D` et le **secret** est représenté par la chaîne *SECRET_sysadmin_login*.
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289447"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     Pour obtenir un exemple d’utilisation de variables `CREATE CREDENTIAL` pour les arguments et la suppression par programmation des tirets de l’ID client, consultez [create Credential &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
+     Pour obtenir un exemple d’utilisation de variables pour les `CREATE CREDENTIAL` arguments et la suppression par programmation des tirets de l’ID client, consultez [Create Credential &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
 
 3.  Si vous avez importé une clé asymétrique comme décrit précédemment dans l'étape 1 de la section 3, ouvrez la clé en fournissant son nom dans l'exemple suivant.
 
@@ -224,9 +223,9 @@ ms.locfileid: "79289447"
 1.  Créez des informations d'identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] qui permettront d'accéder à la gestion de clés extensible du coffre de clés au moment du chargement de la base de données.
 
     > [!IMPORTANT]
-    >  L’argument **Identity** de requiert le nom du coffre de `CREATE CREDENTIAL` clés. L’argument **secret** de `CREATE CREDENTIAL` exige que l' * \<ID client>* (sans trait d’Union) et * \<le>secret* soient passés ensemble sans espace entre eux.
+    >  L’argument **Identity** de `CREATE CREDENTIAL` requiert le nom du coffre de clés. L’argument **secret** de `CREATE CREDENTIAL` exige que *\<Client ID>* (sans trait d’Union) et *\<Secret>* soit passé ensemble sans espace entre eux.
 
-     Dans l’exemple suivant, l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) est supprimé des traits d’Union et entré en tant que chaîne `EF5C8E094D2A4A769998D93440D8115D` et le **secret** est représenté par la chaîne *SECRET_DBEngine*.
+     Dans l’exemple suivant, l' **ID client** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) est supprimé des traits d’Union et entré en tant que chaîne `EF5C8E094D2A4A769998D93440D8115D` et le **secret** est représenté par la chaîne *SECRET_DBEngine*.
 
     ```sql
     USE master;

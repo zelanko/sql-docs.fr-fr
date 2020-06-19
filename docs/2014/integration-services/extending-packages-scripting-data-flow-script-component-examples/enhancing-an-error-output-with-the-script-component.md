@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2846fed91174f0703e5d195b13a36c2207a03c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895488"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968585"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Amélioration d'une sortie d'erreur à l'aide du composant Script
   Par défaut, les deux colonnes supplémentaires d'une sortie d'erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode et ErrorColumn, contiennent uniquement des codes numériques identifiant un numéro d'erreur et l'ID de la colonne dans laquelle l'erreur est survenue. L'usage de ces valeurs numériques peut être limité sans la description d'erreur correspondante.  
@@ -51,7 +50,7 @@ ms.locfileid: "62895488"
   
 7.  Dans l’éditeur de transformation de script, dans la page **colonnes d’entrée** , sélectionnez la colonne ErrorCode.  
   
-8.  Sur la page **entrées et sorties** , ajoutez une nouvelle colonne de sortie de `String` type nommée **ErrorDescription**. Augmentez la longueur par défaut de la nouvelle colonne à 255 pour prendre en charge les longs messages.  
+8.  Sur la page **entrées et sorties** , ajoutez une nouvelle colonne de sortie de type `String` nommée **ErrorDescription**. Augmentez la longueur par défaut de la nouvelle colonne à 255 pour prendre en charge les longs messages.  
   
 9. Fermez l’**Éditeur de transformation de script**.  
   

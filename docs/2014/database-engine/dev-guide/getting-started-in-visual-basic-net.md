@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 224093839e8e464f731040d3634c8b252796cfed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781561"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933600"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Mise en route avec Visual Basic .NET
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET est l'un des langages de programmation managés pris en charge par la bibliothèque CRT (Common Runtime Library) en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. De nombreux exemples de cette documentation sont écrits en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Vous pouvez utiliser aussi bien [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] que [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] pour développer des applications SMO.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbf419209e4a297e3b7a2dfdcce6d4aa5daefb23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061814"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personnaliser la quantité d'informations affichées dans les schémas (Visual Database Tools)
   Lorsque vous ajoutez une table à un diagramme de base de données, elle apparaît avec un nombre déterminé de propriétés affichées. Vous pouvez choisir dans un menu de variations la quantité d'informations qui s'affichent ou créer un jeu de propriétés personnalisé.  

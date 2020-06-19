@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d228eedfb3a23ae34a5d20fad682d7c42a9fceff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043939"
 ---
 # <a name="odbc-how-to-topics"></a>Rubriques de procédures ODBC
   Pour utiliser le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez être en mesure de créer des sources de données ODBC et de vous assurer que le serveur a la version correcte des procédures stockées de catalogue. Pour coder une application ODBC qui utilise SQL Server, vous devez savoir comment allouer des handles ODBC, définir des attributs, vous connecter à une instance de SQL Server, exécuter des requêtes et traiter les résultats.  

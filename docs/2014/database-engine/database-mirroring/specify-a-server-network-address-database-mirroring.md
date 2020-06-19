@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5da49fee774b7f70a0ab6108ee302d0ee28cec1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933933"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
   La configuration d'une session de mise en miroir de bases de données requiert une adresse réseau de serveur pour chaque instance de serveur. L'adresse réseau de serveur d'une instance de serveur doit identifier sans ambiguïté l'instance en fournissant une adresse système et le numéro du port sur lequel l'instance est à l'écoute.  
@@ -32,11 +31,11 @@ ms.locfileid: "62755055"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a>Syntaxe pour une adresse réseau de serveur  
  La syntaxe d'une adresse réseau de serveur est de la forme :  
   
- <strong>TCP<strong>://</strong>*\<>d’adresse système *:<strong>*\<port>* 
+ TCP<strong>://</strong> *\<system-address>* <strong> :<strong>*\<port>* 
   
  where  
   
--   >d’adresse système est une chaîne qui identifie sans ambiguïté le système informatique de destination. * \<* En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
+-   *\<system-address>* est une chaîne qui identifie sans ambiguïté le système informatique de destination. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
   
     -   Si les systèmes sont dans le même domaine, vous pouvez utiliser le nom du système informatique ; par exemple, `SYSTEM46`.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62755055"
         > [!NOTE]  
         >  Pour plus d'informations sur la recherche d'un nom de domaine complet, consultez « Recherche du nom de domaine complet » plus loin dans cette rubrique.  
   
--   port>est le numéro de port utilisé par le point de terminaison de mise en miroir de l’instance de serveur partenaire. * \<* Pour plus d’informations sur la spécification d’un point de terminaison, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* Numéro de port utilisé par le point de terminaison de mise en miroir de l’instance de serveur partenaire. Pour plus d’informations sur la spécification d’un point de terminaison, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Un point de terminaison de mise en miroir de bases de données peut utiliser tout port disponible sur le système informatique. Chaque numéro de port sur un système d'ordinateur doit être associé à un seul point de terminaison, et chaque point de terminaison est associé à une seule instance de serveur ; ainsi, différentes instances de serveurs sur le même serveur écoutent sur différents points de terminaison dotés de différents ports. Par conséquent, le port que vous spécifiez dans l'adresse réseau du serveur lorsque vous configurez une session de mise en miroir de bases de données dirigera systématiquement la session vers l'instance de serveur dont le point de terminaison est associé à ce port.  
   

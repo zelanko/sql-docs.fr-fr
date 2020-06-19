@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93a22979296e397ebe9c28a014913ca9da592ee6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961319"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Créer un attribut basé sur un domaine (complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], les administrateurs peuvent créer un attribut basé sur un domaine quand ils souhaitent limiter les valeurs d’une colonne à un ensemble de valeurs spécifique.  

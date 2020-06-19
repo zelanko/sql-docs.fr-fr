@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b77cc00c6b6faef7e22fc636a0b33703864d34d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926780"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Installation de démarrage rapide de SQL Server 2014
     
@@ -58,7 +57,7 @@ ms.locfileid: "82706885"
   
      Consultez [installer SQL Server 2014 à l’aide d’un fichier de configuration](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) pour obtenir un exemple de syntaxe et de paramètres d’installation pour exécuter le programme d’installation via un fichier de configuration.  
   
--   **SysPrep**  
+-   **Utilitaire**  
   
      Pour obtenir des informations procédurales sur l’installation de à l’aide de SysPrep, consultez [installer SQL Server 2014 à l’aide de Sysprep](../database-engine/install-windows/install-sql-server-using-sysprep.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   

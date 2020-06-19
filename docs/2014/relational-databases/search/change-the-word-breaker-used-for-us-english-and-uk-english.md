@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5401bea3c42674a1e85cd823570e2abfb30491b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068395"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifier l'analyseur lexical utilisé pour l'anglais des États-Unis et l'anglais (R.U.)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe une nouvelle version (version 14.0.4999.1038) de l’analyseur lexical et du générateur de formes dérivées pour la langue anglaise, en remplaçant la version précédente de ces composants (version 12.0.6828.0). Pour plus d’informations sur la modification du comportement des nouveaux composants, consultez [Changements de comportement pour la recherche en texte intégral](full-text-search.md). Cette rubrique décrit comment passer de la nouvelle version de ces composants à la version précédente, ou de la version précédente à la nouvelle version. Pour les installations de cluster, ces modifications doivent être apportées sur tous les nœuds principaux et passifs.  

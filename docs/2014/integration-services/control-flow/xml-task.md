@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d898433bc8130ecb4bbf2aae7bca2325ec113ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232728"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917649"
 ---
 # <a name="xml-task"></a>Tâche XML
   La tâche XML est utilisée pour travailler avec des données XML. À l'aide de cette tâche, un package peut extraire des documents XML, appliquer des opérations aux documents en utilisant des feuilles de style XSLT (Extensible Stylesheet Language Transformations) et des expressions XPath, fusionner plusieurs documents, ou bien valider, comparer et enregistrer les documents mis à jour dans des fichiers et des variables.  

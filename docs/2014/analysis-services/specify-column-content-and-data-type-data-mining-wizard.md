@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23bc2e0f21f15c0af1a26d64e528c65632d75a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068467"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940420"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Spécifier type de contenu et de données des colonnes (Assistant Exploration de données)
   Utilisez la page **Spécifier type de contenu et de données des colonnes** pour spécifier l’utilisation et le type de données de chaque colonne que vous avez sélectionnée dans la page précédente de l’Assistant. Si vous voulez ignorer la colonne, cliquez sur **Précédent** pour revenir à la page **Spécifier les données d’apprentissage**, puis décochez toutes les cases.  
@@ -38,7 +37,7 @@ ms.locfileid: "66068467"
   
 |Option|Description|  
 |------------|-----------------|  
-|Touche|Spécifiez que la colonne contient un identificateur unique pour la série de cas.|  
+|Clé|Spécifiez que la colonne contient un identificateur unique pour la série de cas.|  
 |Séquence clé|Spécifiez que la colonne contient un identificateur de séquence.|  
 |Temps clé|Spécifiez que la colonne contient une date ou un autre nombre continu unique utilisé pour identifier une date ou une série chronologique.|  
   

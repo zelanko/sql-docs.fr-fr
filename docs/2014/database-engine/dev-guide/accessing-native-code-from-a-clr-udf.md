@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bb0555485927076a2f0b845d4fd06b194ea60ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753891"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933750"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>Accès au code natif depuis une fonction CLR définie par l'utilisateur
   Cet exemple indique comment appeler une fonction dans du code C++ natif (non managé) à partir d'une fonction définie par l'utilisateur dans un assembly de votre base de données.  
   
- Pour cet exemple, le répertoire de travail doit `c:\test`être.  
+ Pour cet exemple, le répertoire de travail doit être `c:\test` .  
   
  Commencez par compiler le code C++ :  
   

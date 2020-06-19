@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061969"
 ---
 # <a name="start-sql-server-management-studio"></a>Démarrer SQL Server Management Studio
   Pour commencer ce didacticiel, commençons par regarder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,9 +26,9 @@ ms.locfileid: "78288984"
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis cliquez sur **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  Par défaut, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas installé. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n'est pas disponible, installez-le en exécutant le programme d'installation. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]n’est pas disponible [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]avec. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express est disponible en téléchargement gratuit à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), mais il possède une interface utilisateur différente de celle décrite dans ce didacticiel.  
+    >  Par défaut, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] n'est pas installé. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] n'est pas disponible, installez-le en exécutant le programme d'installation. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]n’est pas disponible avec [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express est disponible en téléchargement gratuit à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), mais il possède une interface utilisateur différente de celle décrite dans ce didacticiel.  
   
-2.  Dans la boîte de dialogue **Se connecter à un serveur** , vérifiez les paramètres par défaut, puis cliquez sur **Se connecter**. Pour vous connecter, la zone **nom du serveur** doit contenir le nom de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordinateur sur lequel est installé. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une instance nommée, la zone **nom du serveur** doit également contenir le nom de l’instance au format \< *computer_name*>\\<*instance_name*>.  
+2.  Dans la boîte de dialogue **Se connecter à un serveur** , vérifiez les paramètres par défaut, puis cliquez sur **Se connecter**. Pour vous connecter, la zone **nom du serveur** doit contenir le nom de l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une instance nommée, la zone **nom du serveur** doit également contenir le nom de l’instance au format \<*computer_name*> \\ < *instance_name*>.  
   
 ## <a name="management-studio-components"></a>Composants Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit des informations dans des fenêtres dédiées à des types d’informations précis. Les informations sur les bases de données s'affichent dans l'Explorateur d'objets et dans des fenêtres de documents.  

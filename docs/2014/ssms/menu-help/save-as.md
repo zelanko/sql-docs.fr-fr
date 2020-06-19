@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062007"
 ---
 # <a name="save-as"></a>Enregistrer sous
-  Utilisez cette boîte de dialogue pour enregistrer une instance de l'élément en cours à l'emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **Enregistrer** * \<le fichier>* **sous** dans le menu **fichier** (où * \<fichier>* est le nom de l’élément en cours), ou appuyez sur ALT + F, A dans l’éditeur de code.  
+  Utilisez cette boîte de dialogue pour enregistrer une instance de l'élément en cours à l'emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **Enregistrer** *\<file>* **sous** dans le menu **fichier** (où *\<file>* est le nom de l’élément en cours), ou appuyez sur ALT + F, A dans l’éditeur de code.  
   
 ## <a name="central-panel"></a>Volet central  
  **Enregistrer dans**  
