@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e5d4f03ead294ee591e0a478d15e3d5f10747a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676880"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068809"
 ---
 # <a name="add-or-edit-filter"></a>Ajouter un filtre ou Modifier le filtre
   Les boîtes de dialogue **Ajouter un filtre** et **Modifier le filtre** permettent d'ajouter et de modifier des filtres de lignes statiques ou paramétrés.  

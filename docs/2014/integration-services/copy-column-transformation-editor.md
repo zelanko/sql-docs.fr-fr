@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03d8cdb35372ed9850f3329f26e2647e018d9583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 317748ee2e5df7f64c15afd5f4d5661a739f4f88
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917509"
 ---
 # <a name="copy-column-transformation-editor"></a>Éditeur de transformation de copie de colonne
   Utilisez la boîte de dialogue **Éditeur de transformation de copie de colonne** pour sélectionner des colonnes à copier et attribuer des noms aux nouvelles colonnes de sortie.  

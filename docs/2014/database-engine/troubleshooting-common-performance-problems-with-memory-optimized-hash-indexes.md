@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927970"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Résoudre les problèmes de performance courants avec les index de hachage mémoire optimisés
   Cette rubrique traite du dépannage et des solutions de contournement des problèmes couramment rencontrés avec les index de hachage.  
@@ -25,7 +24,7 @@ ms.locfileid: "62842534"
   
  Par opposition, les index triés comme les index non cluster sur disque et les index non cluster mémoire optimisés, prennent en charge la recherche d'index sur un sous-ensemble de colonnes clés d'index, tant qu'il s'agit des premières colonnes de l'index.  
   
- **Symptôme :** Cela entraîne une dégradation des performances, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] car elle doit exécuter des analyses de tables complètes plutôt qu’une recherche d’index, ce qui est généralement plus rapide.  
+ **Symptôme :** Cela entraîne une dégradation des performances, car elle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit exécuter des analyses de tables complètes plutôt qu’une recherche d’index, ce qui est généralement plus rapide.  
   
  **Comment résoudre les problèmes :** Outre la dégradation des performances, l’inspection des plans de requête présente une analyse au lieu d’une recherche d’index. Si la requête est relativement simple, l'inspection du texte de la requête et de la définition d'index montrera également si la recherche nécessite un sous-ensemble de colonnes clés d'index.  
   

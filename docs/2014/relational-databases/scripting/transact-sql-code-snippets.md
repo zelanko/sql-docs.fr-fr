@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 03e4182cee09771ac3667b57a69f64cee3cf1ecc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e161f219340120198a76957a63d3176280754ab5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718513"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068440"
 ---
 # <a name="transact-sql-code-snippets"></a>Extraits de code Transact-SQL
   Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)]est un modèle contenant la structure de base d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'un bloc. Vous pouvez utiliser les extraits de code comme point de départ lors de l'ajout d'instructions dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez insérer les extraits de code prédéfinis fournis avec SQL Server ou créer vos propres extraits de code.  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 9c7ed5dd25ed2b02445bfae5eb78ac03b2270552
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927950"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Dépannage de la sauvegarde managée de SQL Server sur Azure
   Cette rubrique décrit les tâches et les outils que vous pouvez utiliser pour résoudre les erreurs qui peuvent se produire lors des opérations de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -102,7 +101,7 @@ ms.locfileid: "82849597"
 ### <a name="troubleshooting-system-issues"></a>Dépannage des problèmes du système  
  Voici des scénarios d'un problème avec le système (SQL Server, SQL Server Agent) et ses effets sur [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] :  
   
--   **Sqlservr. exe cesse de répondre ou cesse de fonctionner lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est en cours d’exécution :** si SQL Server cesse de fonctionner, l’agent SQL s’arrête normalement, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] s’arrête également et les événements sont consignés dans le fichier SQL Agent. out.  
+-   **Sqlservr.exe cesse de répondre ou cesse de fonctionner lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est en cours d’exécution :** si SQL Server cesse de fonctionner, l’agent SQL s’arrête normalement, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] s’arrête également et les événements sont consignés dans le fichier SQL Agent. out.  
   
      Si SQL Server ne répond plus, des événements sont consignés dans le canal d'administration.  Exemple du journal des événements :  
   

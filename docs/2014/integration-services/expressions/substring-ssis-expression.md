@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b749a88a0783e6981cf9fd643412f0ca614e6a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1618bb188a893ffb43eaae36f22ea17a615659
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969029"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (expression SSIS)
   Renvoie la partie d'une expression de caractères qui commence à la position spécifiée et qui a la longueur spécifiée. Les paramètres *position* et *length* doivent correspondre à des entiers.  

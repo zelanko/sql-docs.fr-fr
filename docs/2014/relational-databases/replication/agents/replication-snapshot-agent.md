@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a26aca7b33a7355500350572ea5e8ed21bddeacb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250589"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068719"
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
   L'Agent d'instantané de réplication est un fichier exécutable qui prépare les fichiers d'instantané contenant les schémas ainsi que les données des tables et des objets de base de données publiés, stocke les fichiers dans le dossier d'instantanés, et enregistre les travaux de synchronisation dans la base de données de distribution.  
@@ -138,7 +137,7 @@ ms.locfileid: "63250589"
  Pour plus d’informations, consultez [réplication SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
  **-FieldDelimiter** _field_delimiter_  
- Caractère ou séquence de caractères qui marque la fin d'un champ dans le fichier de données de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La valeur par défaut est \n\<x$3>\n.  
+ Caractère ou séquence de caractères qui marque la fin d'un champ dans le fichier de données de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La valeur par défaut est \n \<x$3> \n.  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Spécifie la quantité d'informations d'historique journalisées pendant une opération d'instantané. Vous pouvez réduire l'effet de la journalisation d'historique sur les performances en sélectionnant **1**.  
@@ -181,7 +180,7 @@ ms.locfileid: "63250589"
  Indique si les suppressions non pertinentes sont envoyées à l'Abonné. Les suppressions non pertinentes sont des commandes DELETE qui sont envoyées aux Abonnés pour les lignes qui n'appartiennent pas à la partition de l'Abonné. Les suppressions non pertinentes n'affectent ni l'intégrité ni la convergence des données, mais elles peuvent générer un trafic réseau inutile. La valeur par défaut de **MaxNetworkOptimization** est **0**. Le fait d'attribuer à **MaxNetworkOptimization** la valeur **1** réduit le risque d'obtention de suppressions non pertinentes, minimisant ainsi le trafic réseau et maximisant l'optimisation du réseau. L'attribution de la valeur **1** à ce paramètre peut aussi augmenter le stockage des métadonnées et entraîner une réduction des performances au niveau du serveur de publication si plusieurs niveaux de filtres de jointure et des filtres de sous-ensemble complexes sont présents. Vous devez évaluer avec soin votre topologie de réplication et attribuer uniquement à **MaxNetworkOptimization** la valeur **1** si le trafic réseau des suppressions non pertinentes est trop élevé.  
   
 > [!NOTE]
->  L’affectation de la valeur **1** à ce paramètre n’est utile que si l’option d’optimisation de la synchronisation de la **@keep_partition_changes** publication de fusion est définie sur **true** (le paramètre de [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
+>  L’affectation de la valeur **1** à ce paramètre n’est utile que si l’option d’optimisation de la synchronisation de la publication de fusion est définie sur **true** (le **@keep_partition_changes** paramètre de [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
   
  **-Output** _output_path_and_file_name_  
  Chemin d'accès du fichier de sortie de l'agent. Si le nom du fichier n'est pas spécifié, la sortie est envoyée à la console. Si le nom de fichier spécifié existe, la sortie est ajoutée au fichier.  
@@ -243,10 +242,10 @@ ms.locfileid: "63250589"
  Spécifie le type de la réplication. La valeur **1** indique la réplication transactionnelle, tandis que la valeur **2** indique la réplication de fusion.  
   
  **-RowDelimiter** _row_delimiter_  
- Caractère ou séquence de caractères qui marque la fin d'une ligne dans le fichier de données de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La valeur par défaut est \n\<,@g>\n.  
+ Caractère ou séquence de caractères qui marque la fin d'une ligne dans le fichier de données de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La valeur par défaut est \n \<,@g> \n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Nombre maximal de secondes pendant lesquelles le Agent d’instantané attend lorsque le nombre de processus d’instantanés dynamiques simultanés s’exécute à la limite définie par **@max_concurrent_dynamic_snapshots** la propriété de [Sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Si le nombre maximal de secondes est atteint et que l'Agent d'instantané attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
+ Nombre maximal de secondes pendant lesquelles le Agent d’instantané attend lorsque le nombre de processus d’instantanés dynamiques simultanés s’exécute à la limite définie par la **@max_concurrent_dynamic_snapshots** propriété de [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Si le nombre maximal de secondes est atteint et que l'Agent d'instantané attend toujours, celui-ci se ferme. La valeur 0 signifie que l'Agent attend indéfiniment, bien qu'il soit possible de l'annuler.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Ce paramètre est déconseillé et n'est pris en charge que dans un but de compatibilité ascendante.  

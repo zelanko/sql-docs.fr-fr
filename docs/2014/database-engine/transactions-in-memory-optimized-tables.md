@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8806486631ca65f67fb197dceef9149d66f655df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175406"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928110"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transactions dans les tables mémoire optimisées
   Le contrôle de version de ligne des tables sur disque (à l'aide de l'isolation SNAPSHOT ou avec READ_COMMITTED_SNAPSHOT) fournit un type de contrôle d'accès concurrentiel optimiste. Les programmes d'écriture et les programmes de lecture ne se bloquent pas les uns les autres. Avec les tables mémoire optimisées, les programmes d'écriture ne bloquent pas les autres programmes d'écriture. Avec le contrôle de version de ligne pour les tables sur disque, une transaction verrouille la ligne et les transactions concomitantes tentant de mettre à jour cette ligne sont bloquées. Il n'existe pas de verrouillage avec les tables mémoire optimisées. En revanche, si deux transactions tentent de mettre à jour la même ligne, un conflit d'écriture/écriture (erreur 41302) se produit.
@@ -60,7 +59,7 @@ ms.locfileid: "78175406"
 
 ### <a name="error-conditions-for-transactions-accessing-memory-optimized-tables"></a>Conditions d'erreur des transactions qui accèdent aux tables mémoire optimisées.
 
-|Error|Scénario|
+|Erreur|Scénario|
 |-----------|--------------|
 |Conflit d'écriture. Tentative de mettre à jour un enregistrement qui a été mis à jour depuis le début de la transaction.|Mise à jour (UPDATE) ou suppression (DELETE) d'une ligne ayant déjà été mise à jour ou supprimée par une transaction simultanée.|
 |Échec de la validation de lecture renouvelable|Une ligne qui était lue par la transaction a été modifiée (mise à jour ou supprimée) depuis le début de la transaction. La validation de lecture renouvelable a généralement lieu lors de l'utilisation des niveaux d'isolation de transactions REPEATABLE READ et SERIALIZABLE.|

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43381593b6a43f9e912088a67d5e10401ef3fc6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768705"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968999"
 ---
 # <a name="token--ssis-expression"></a>TOKEN  (expression SSIS)
   Retourne un jeton (sous-chaîne) à partir d'une chaîne en fonction des délimiteurs spécifiés qui séparent les jetons de la chaîne et du numéro de jeton qui indique le jeton à retourner.  
@@ -40,13 +39,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction fractionne la chaîne <character_expression> en un ensemble de jetons séparés par les délimiteurs spécifiés dans la chaîne <delimiter_string>, puis retourne le N-ième jeton, où N est le nombre d’occurrences du jeton spécifié par le paramètre \<occurrence>. Consultez la section Exemples pour obtenir des exemples d'utilisation de cette fonction.  
+ Cette fonction divise le <character_expression> chaîne en un ensemble de jetons séparés par les délimiteurs spécifiés dans la <delimiter_string> puis retourne le nième jeton, où N est le nombre d’occurrences du jeton spécifié par le \<occurrence> paramètre. Consultez la section Exemples pour obtenir des exemples d'utilisation de cette fonction.  
   
  Les remarques suivantes s'appliquent à la fonction TOKEN :  
   
 -   La chaîne de délimitation peut contenir un ou plusieurs caractères de délimitation.  
   
--   Si la valeur du paramètre \<occurrence> est supérieure au nombre total de jetons présents dans la chaîne, la fonction retourne NULL.  
+-   Si la valeur du \<occurrence> paramètre est supérieure au nombre total de jetons dans la chaîne, la fonction retourne la valeur null.  
   
 -   Les délimiteurs de début sont ignorés.  
   

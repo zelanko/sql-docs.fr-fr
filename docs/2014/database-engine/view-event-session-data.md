@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60fdb986e24c2fa682caaf56ad7209ca555c966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67131790"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927630"
 ---
 # <a name="view-event-session-data"></a>Afficher des données de session d'événements
   Cette rubrique décrit l'utilisation de l'interface utilisateur pour afficher et analyser les données d'événements étendus :  
@@ -44,9 +43,9 @@ ms.locfileid: "67131790"
   
 -   Pour une cible event_file, affichez les données cibles du fichier (fichier .XEL) à l'aide de l'une des méthodes suivantes :  
   
-    -   Utilisez fichier-> ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    -   Utilisez fichier-> ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
     
-    -   Glissez-déposez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]le fichier dans. 
+    -   Glissez-déposez le fichier dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . 
     
     -   Double-cliquez sur le fichier .XEL.  
     
@@ -147,7 +146,7 @@ ms.locfileid: "67131790"
   
 -   Sum  
   
--   min  
+-   minute(s)  
   
 -   max  
   
