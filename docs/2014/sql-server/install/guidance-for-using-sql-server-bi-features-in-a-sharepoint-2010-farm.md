@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba400e1030bb18b3370a023f88d069711a44c7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054839"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Instructions d'utilisation des fonctionnalités BI de SQL Server dans une batterie de serveurs SharePoint 2010
   Cette rubrique récapitule la disponibilité des fonctionnalités selon les versions et les éditions du logiciel utilisé. Elle décrit également la configuration requise pour l'installation de SharePoint 2010 avec des fonctionnalités spécifiques de SQL Server. Pour plus d’informations sur SharePoint 2013, consultez [topologies de déploiement pour SQL Server fonctionnalités bi dans SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
@@ -57,7 +56,7 @@ ms.locfileid: "78172528"
 
 -   Vous souhaitez utiliser [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].
 
- L’une des principales raisons pour lesquelles SP1 est requis pour les installations [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint exécutant avec est que la fonctionnalité du moteur de base de données **sp_dboption**, qui était dépréciée dans une [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version antérieure, n’est plus disponible dans la version. Pour plus d’informations, consultez [fonctionnalité abandonnée moteur de base de données dans SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
+ L’une des principales raisons pour lesquelles SP1 est requis pour les installations SharePoint exécutant avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] est que la fonctionnalité du moteur de base de données **sp_dboption**, qui était dépréciée dans une version antérieure, n’est plus disponible dans la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] version. Pour plus d’informations, consultez [fonctionnalité abandonnée moteur de base de données dans SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
 
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Aide à l'installation de SharePoint 2010 SP1
  [Téléchargez SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697) et appliquez-le sur tous les serveurs de la batterie.

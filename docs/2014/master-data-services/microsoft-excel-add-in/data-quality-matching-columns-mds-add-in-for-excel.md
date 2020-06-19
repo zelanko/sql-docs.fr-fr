@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ecbbaba1441fa150daaecbfcbc7cbdf65636de55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939ec9727cc81ce3b206b8bc7ca3ed8dd62c3877
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961299"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>Colonnes de mise en correspondance de la qualité des données (Complément MDS pour Excel)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Dans, après avoir mis en correspondance des données, dans le groupe **qualité des données** du ruban, vous pouvez cliquer sur **afficher les détails** pour afficher les colonnes qui fournissent des détails correspondants.  
+  Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] , après avoir mis en correspondance des données, dans le groupe **qualité des données** du ruban, vous pouvez cliquer sur **afficher les détails** pour afficher les colonnes qui fournissent des détails correspondants.  
   
  Le tableau suivant présente les colonnes affichées lors de la mise en correspondance des données.  
   

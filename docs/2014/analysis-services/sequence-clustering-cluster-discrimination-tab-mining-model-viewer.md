@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 705fb7bfd5fe8df27d39f81ed648f6406b6aa8dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940740"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Onglet Discrimination de cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet  **Discrimination de cluster** de la **Visionneuse de l’algorithme MSC** (Microsoft Sequence Clustering) compare les clusters sélectionnés à partir d’un modèle Sequence Clustering.  
@@ -44,7 +43,7 @@ ms.locfileid: "66069134"
   
  Si vous ne sélectionnez pas un autre cluster, par défaut le cluster sélectionné est comparé à son complément, ce qui correspond à tous les cas du modèle qui ne figurent pas dans le cluster 1.  
   
- **Scores de \<discrimination pour le cluster \<1> et le cluster 2>**  
+ **Scores de discrimination pour \<cluster 1> et\<cluster 2>**  
  Ce graphique fournit la comparaison détaillée des clusters que vous avez sélectionnés. En général, un modèle de clustering affecte rarement des états ou des valeurs exclusivement à un seul cluster. Par conséquent, la visionneuse indique uniquement qu’un attribut ou un état particulier *privilégie* un cluster particulier.  
   
  De façon générale, un cluster particulier peut contenir plusieurs états : par exemple, un état courant peut être l'achat d'une bouteille d'eau et d'un porte-bidon, dans l'ordre. Toutefois, la séquence peut être présente dans d'autres clusters qui ont des caractéristiques de définition plus importantes. Par exemple, un autre cluster peut être caractérisé de manière plus importante par des temps de transaction très courts, et une analyse indiquerait que les éléments « bouteille d'eau » et « porte-bidon » sont positionnés de manière à pouvoir généralement, mais pas systématiquement, être regroupés dans ce cluster.  
@@ -53,7 +52,7 @@ ms.locfileid: "66069134"
 |-----------|-----------------|  
 |**Variables**|Attribut du modèle d'exploration de données.|  
 |**Valeurs**|État de l’attribut répertorié dans **Variables**.|  
-|**Privilégie \<le cluster 1>**|Contient une barre ombragée qui indique dans quelle proportion l’attribut et l’état répertoriés dans **Variables** et **Valeur** privilégient le cluster sélectionné dans **Cluster 1**.|  
+|**Privilégie\<cluster 1>**|Contient une barre ombragée qui indique dans quelle proportion l’attribut et l’état répertoriés dans **Variables** et **Valeur** privilégient le cluster sélectionné dans **Cluster 1**.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

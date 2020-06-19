@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dae96ba17ee792b703e96ceff2200d1f8f629a01
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8b27d39327a68a150fe42a0d6f152bd34c0dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022929"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   Cette section fournit des informations sur les fonctions ODBC qui présentent des comportements spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsqu'elles sont utilisées avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Toutes les fonctions ODBC ne sont pas documentées ici. Les rubriques individuelles présentent uniquement les problèmes spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une fonction ODBC. Elles ne constituent pas une référence complète pour les fonctions ODBC.  

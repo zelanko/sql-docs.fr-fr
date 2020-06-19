@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3624aed38a7a5bf75e0c0807aa8d3657156264f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068595"
 ---
 # <a name="manage-oracle-tablespaces"></a>Gérer des espaces disque logiques Oracle
   Un espace disque logique est une unité de stockage de base de données qui est à peu près équivalent à un groupe de fichiers dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les espaces disque logiques permettent le stockage et la gestion d'objets de base de données au sein de groupes individuels. Pour plus d'informations, consultez votre documentation Oracle.  
@@ -31,15 +30,15 @@ ms.locfileid: "63022299"
   
 -   Utilisez [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Pour utiliser **sp_changearticle**, spécifiez les éléments suivants :  
   
-    -   Nom du serveur de publication Oracle pour le paramètre **@publisher**.  
+    -   Nom du serveur de publication Oracle pour le paramètre **@publisher** .  
   
-    -   Nom de la publication Oracle pour le paramètre **@publication**.  
+    -   Nom de la publication Oracle pour le paramètre **@publication** .  
   
-    -   Nom de l’article pour le paramètre **@article**.  
+    -   Nom de l’article pour le paramètre **@article** .  
   
-    -   Valeur de « tablespace » pour le paramètre **@property**.  
+    -   Valeur de « tablespace » pour le paramètre **@property** .  
   
-    -   Nom de l’espace disque logique pour le **@value**paramètre.  
+    -   Nom de l’espace disque logique pour le paramètre **@value** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](configure-an-oracle-publisher.md)   

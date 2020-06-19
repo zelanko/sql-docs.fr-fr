@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fceed0b4bcfb8d5c41046cd4faf555ca2847899c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72c119ab3188321be97b2c51ddc0a77f8a585aee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023029"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect** utilise des mots clés qui peuvent être classés en trois niveaux d’informations de connexion. Pour chaque mot clé, le tableau suivant indique si une liste de valeurs valides est retournée et si le mot clé est facultatif.  
@@ -37,7 +36,7 @@ ms.locfileid: "82706374"
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|Oui|Non|Nom du serveur sur le réseau sur lequel la source de données réside. Le terme « local » peut être entré en tant que serveur, auquel cas une copie locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisée, même lorsqu'il s'agit d'une version hors réseau.|  
 |Identificateur d’utilisateur|Non|Oui|ID de connexion d'utilisateur.|  
-|PWD|No|Oui (dépend de l'utilisateur)|Mot de passe spécifié par l'utilisateur.|  
+|PWD|Non|Oui (dépend de l'utilisateur)|Mot de passe spécifié par l'utilisateur.|  
 |APP|Non|Oui|Nom de l’application qui appelle **SQLBrowseConnect**.|  
 |WSID|Non|Oui|ID de station de travail. En général, il s'agit du nom réseau de l'ordinateur sur lequel l'application s'exécute.|  
   
@@ -45,8 +44,8 @@ ms.locfileid: "82706374"
   
 |Mot clé|Liste retournée ?|Facultatif ?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|Yes|Yes|Nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|LANGUAGE|Yes|Yes|Langage national utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|DATABASE|Oui|Oui|Nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|LANGUAGE|Oui|Oui|Langage national utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  **SQLBrowseConnect** ignore les valeurs de la base de données et les mots clés de langage stockés dans les définitions de source de données ODBC. Si la base de données ou la langue spécifiée dans la chaîne de connexion passée à **SQLBrowseConnect** n’est pas valide, **SQLBrowseConnect** retourne SQL_NEED_DATA et les attributs de connexion de niveau 3.  
   

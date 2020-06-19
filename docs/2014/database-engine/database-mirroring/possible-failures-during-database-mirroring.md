@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25ba1ccc87c024fa3da370f2ff19251a1bee9f30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934081"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Défaillances possibles pendant la mise en miroir d’une base de données
   Des problèmes physiques, de système d'exploitation ou propres à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être responsables de l'échec d'une session de mise en miroir de bases de données. La mise en miroir de bases de données ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. La mise en miroir de bases de données implémente ses propres mécanismes de délai d'attente pour détecter les autres erreurs qui passeraient sinon inaperçues. En cas de délai d’attente de la mise en miroir, une *erreur logicielle*se produit quand la mise en miroir de bases de données détermine qu’une défaillance s’est produite. Toutefois, certaines erreurs qui se produisent au niveau de l'instance SQL Server n'entraîne pas de délai d'attente de la mise en miroir et peuvent ne pas être détectées.  
@@ -98,7 +97,7 @@ ms.locfileid: "70874502"
   
  **Pour modifier la valeur du délai d'attente (en mode haute sécurité uniquement).**  
   
--   Utilisez l’instruction [ALTER DATABASE \<base_de_données> SET PARTNER TIMEOUT \<entier>](/sql/t-sql/statements/alter-database-transact-sql).  
+-   Utilisez l’instruction [ALTER DATABASE \<database> Set Partner \<integer> timeout](/sql/t-sql/statements/alter-database-transact-sql) .  
   
  **Pour afficher la valeur actuelle du délai d'attente**  
   

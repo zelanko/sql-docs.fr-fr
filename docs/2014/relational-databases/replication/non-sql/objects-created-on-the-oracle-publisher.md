@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50580bcb80e58b73931fd867a1be83cac58a9911
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068582"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objets créés sur le serveur de publication Oracle
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la réplication installe des objets de base de données sur le serveur de publication Oracle[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour activer le suivi et le transfert des modifications (n’installe aucun fichier binaire sur le serveur de publication Oracle). Le tableau suivant donne la liste des objets qui sont créés sur le serveur de publication Oracle quand il est identifié en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les descriptions des objets sont données seulement à titre d'information. Il est recommandé de ne pas modifier ces objets.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] réplication installe des objets de base de données sur le serveur de publication Oracle pour activer le suivi et le transfert des modifications ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’installe aucun fichier binaire sur le serveur de publication Oracle). Le tableau suivant donne la liste des objets qui sont créés sur le serveur de publication Oracle quand il est identifié en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les descriptions des objets sont données seulement à titre d'information. Il est recommandé de ne pas modifier ces objets.  
   
 |Nom d’objet|Type d'objet|Description|  
 |-----------------|-----------------|-----------------|  

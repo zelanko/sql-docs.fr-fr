@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec30df18fd50118d8698490f24f6ee65621d3b12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f0c7a9c9b78455059550d4b75ad5f4da8c68d7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968547"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Création d'une transformation asynchrone à l'aide du composant Script
   Vous utilisez un composant de transformation dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour modifier et analyser les données acheminées de la source à la destination. Une transformation à sorties synchrones traite chacune des lignes d'entrée lorsqu'elles traversent le composant. Une transformation à sorties asynchrones peut attendre d’avoir reçu toutes les lignes d’entrée avant de procéder au traitement des données, ou elle peut exporter certaines lignes avant d’avoir reçu toutes les lignes d’entrée. Cette rubrique examine une transformation asynchrone. Si votre traitement requiert une transformation synchrone, consultez [Création d’une transformation synchrone à l’aide du composant Script](../data-flow/transformations/script-component.md). Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../understanding-synchronous-and-asynchronous-transformations.md).
@@ -70,7 +69,7 @@ ms.locfileid: "78176249"
 ### <a name="adding-variables"></a>Ajout de variables
  S’il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans les champs de propriété ReadOnlyVariables et ReadWriteVariables de la page **Script** de l’**Éditeur de transformation de script**.
 
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton des points de suspension (**...**) en regard des `ReadOnlyVariables` champs de propriété et `ReadWriteVariables` , puis en sélectionnant les variables dans la boîte de dialogue Sélectionner des **variables** .
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton des points de suspension (**...**) en regard des `ReadOnlyVariables` `ReadWriteVariables` champs de propriété et, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables** .
 
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -82,11 +81,11 @@ ms.locfileid: "78176249"
  Pour obtenir des informations importantes concernant tous les types de composants créés à l’aide du composant Script, consultez [Codage et débogage du composant Script](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).
 
 ### <a name="understanding-the-auto-generated-code"></a>Fonctionnement du code généré automatiquement
- Lorsque vous ouvrez l’environnement de développement intégré VSTA après avoir créé et configuré un composant de `ScriptMain` transformation, la classe modifiable apparaît dans l’éditeur de code avec des stubs pour les méthodes ProcessInputRow et CreateNewOutputRows. La classe ScriptMain est l’emplacement où vous allez écrire votre code personnalisé et ProcessInputRow est la méthode la plus importante d’un composant de transformation. La méthode `CreateNewOutputRows`, plus généralement utilisée dans un composant source, s'apparente à une transformation asynchrone dans la mesure où les deux composants doivent créer leurs propres lignes de sortie.
+ Lorsque vous ouvrez l’environnement de développement intégré VSTA après avoir créé et configuré un composant de transformation, la classe modifiable `ScriptMain` apparaît dans l’éditeur de code avec des stubs pour les méthodes ProcessInputRow et CreateNewOutputRows. La classe ScriptMain est l’emplacement où vous allez écrire votre code personnalisé et ProcessInputRow est la méthode la plus importante d’un composant de transformation. La méthode `CreateNewOutputRows`, plus généralement utilisée dans un composant source, s'apparente à une transformation asynchrone dans la mesure où les deux composants doivent créer leurs propres lignes de sortie.
 
- Si vous ouvrez la fenêtre **Explorateur de projets** VSTA, vous pouvez voir que le composant script a également généré des éléments `BufferWrapper` de `ComponentWrapper` projet et en lecture seule. La classe ScriptMain hérite de la classe UserComponent dans l' `ComponentWrapper` élément de projet.
+ Si vous ouvrez la fenêtre **Explorateur de projets** VSTA, vous pouvez voir que le composant script a également généré des `BufferWrapper` éléments de projet et en lecture seule `ComponentWrapper` . La classe ScriptMain hérite de la classe UserComponent dans l' `ComponentWrapper` élément de projet.
 
- Au moment de l’exécution, le moteur de workflow appelle la méthode PrimeOutput `UserComponent` dans la classe, qui remplace la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> méthode de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> classe parente. La méthode PrimeOutput appelle à son tour la méthode CreateNewOutputRows.
+ Au moment de l’exécution, le moteur de workflow appelle la méthode PrimeOutput dans la `UserComponent` classe, qui remplace la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> méthode de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> classe parente. La méthode PrimeOutput appelle à son tour la méthode CreateNewOutputRows.
 
  Le moteur de flux de données appelle ensuite la méthode ProcessInput dans la classe UserComponent, qui remplace la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la classe parente <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La méthode ProcessInput parcourt à son tour les lignes du tampon d’entrée et appelle la méthode ProcessInputRow une fois pour chaque ligne.
 
@@ -95,7 +94,7 @@ ms.locfileid: "78176249"
 
  Dans une transformation asynchrone, vous pouvez utiliser la méthode AddRow pour ajouter des lignes à la sortie appropriée à partir des méthodes ProcessInputRow ou ProcessInput. Il est inutile d’utiliser la méthode CreateNewOutputRows. Si vous écrivez une seule ligne de résultats, comme des résultats d’agrégation, dans une sortie particulière, vous pouvez créer au préalable la ligne de sortie à l’aide de la méthode CreateNewOutputRows et spécifier ses valeurs ultérieurement après avoir traité toutes les lignes d’entrée. Toutefois, il est inutile de créer plusieurs lignes dans la méthode CreateNewOutputRows car le composant Script ne vous permet d’utiliser que la ligne en cours dans une entrée ou une sortie. La méthode CreateNewOutputRows est plus importante dans un composant source où il n’existe pas de ligne d’entrée à traiter.
 
- Vous pouvez également remplacer la méthode ProcessInput elle-même, afin d’effectuer d’autres traitements préliminaires ou finaux avant ou après avoir parcouru la mémoire tampon d’entrée et appelé la méthode ProcessInputRow pour chaque ligne. Par exemple, l’un des exemples de code de cette rubrique remplace ProcessInput pour compter le nombre d’adresses dans une ville spécifique, car ProcessInputRow effectue une boucle`.` sur les lignes. l’exemple écrit la valeur résumée dans la deuxième sortie une fois que toutes les lignes ont été traitées. L’exemple exécute l’opération de sortie dans ProcessInput car les mémoires tampons de sortie ne sont plus disponibles lorsque la méthode PostExecute est appelée.
+ Vous pouvez également remplacer la méthode ProcessInput elle-même, afin d’effectuer d’autres traitements préliminaires ou finaux avant ou après avoir parcouru la mémoire tampon d’entrée et appelé la méthode ProcessInputRow pour chaque ligne. Par exemple, l’un des exemples de code de cette rubrique remplace ProcessInput pour compter le nombre d’adresses dans une ville spécifique, car ProcessInputRow effectue une boucle sur les lignes `.` . l’exemple écrit la valeur résumée dans la deuxième sortie une fois que toutes les lignes ont été traitées. L’exemple exécute l’opération de sortie dans ProcessInput car les mémoires tampons de sortie ne sont plus disponibles lorsque la méthode PostExecute est appelée.
 
  Selon vos besoins, vous voudrez également écrire le script dans les méthodes PreExecute et PostExecute disponibles dans la classe ScriptMain pour effectuer tout traitement préliminaire ou final.
 

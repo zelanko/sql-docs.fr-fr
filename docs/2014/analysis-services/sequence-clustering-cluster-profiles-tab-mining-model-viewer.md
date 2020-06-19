@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7aff4d6a7f4f685fe589e2fb141848296bb82b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069094"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940699"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Onglet Profils du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet **Profils du cluster** dans la **Visionneuse de l’algorithme MSC** (Microsoft Sequence Clustering) fournit une vue à code de couleurs des séquences incluses dans chaque cluster.  
@@ -49,9 +48,9 @@ ms.locfileid: "66069094"
   
  Deux ensembles d'histogrammes sont affichés pour chaque cluster du modèle, chacun sur une ligne différente dans le graphique :  
   
--   **nom de l’attribut>. Samples : les histogrammes de cette ligne affichent les séquences d’éléments qui sont représentatives de chaque cluster. \<** En termes DMX, ce sont les cas d'exemple pour chaque cluster.  
+-   ** \<attribute name> . Samples**: les histogrammes de cette ligne affichent les séquences d’éléments qui sont représentatives de chaque cluster. En termes DMX, ce sont les cas d'exemple pour chaque cluster.  
   
--   nom de l’attribut> : les histogrammes de cette ligne décrivent tous les éléments que le cluster contient et leur distribution globale. ** \< ** Cliquez sur un histogramme quand la **Légende d’exploration de données** est visible et que vous pouvez voir les valeurs numériques de chacun.  
+-   **\<attribute name>**: Les histogrammes de cette ligne décrivent tous les éléments que le cluster contient et leur distribution globale. Cliquez sur un histogramme quand la **Légende d’exploration de données** est visible et que vous pouvez voir les valeurs numériques de chacun.  
   
  **États**  
  Cette colonne du graphique est facultative et peut être affichée ou supprimée en sélectionnant l’option **Afficher la légende** . La colonne **États** fournit un guide indiquant l’état représenté par chacune des couleurs dans l’histogramme de clusters correspondant.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92179abd47df2ee40b48be8eade7ea3e7b9267af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934120"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
   Cette section présente le moniteur de mise en miroir de bases de données et les procédures stockées système **sp_dbmmonitor** ; par ailleurs, elle décrit le fonctionnement de la surveillance de la mise en miroir de bases de données (ainsi que du **travail du moniteur de mise en miroir de bases de données)** et récapitule les informations que vous pouvez surveiller en matière de sessions de mise en miroir de bases de données. De plus, cette section explique comment définir des seuils d'avertissement pour un jeu d'événements de mise en miroir de bases de données prédéfinis et comment configurer des alertes pour des événements de mise en miroir de bases de données.  
@@ -130,7 +129,7 @@ ms.locfileid: "62755363"
      Les administrateurs système peuvent utiliser la procédure stockée système **sp_dbmmonitorresults** pour afficher (et éventuellement mettre à jour) la table d’état si cette dernière n’a pas été mise à jour au cours des 15 secondes précédentes. Cette procédure appelle la procédure **sp_dbmmonitorupdate** et retourne une ou plusieurs lignes d’historique, en fonction de la quantité demandée dans l’appel de procédure. Pour plus d’informations sur l’état dans son jeu de résultats, consultez [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>État de la mise en miroir de base de données (par les membres dbm_monitor)  
- Comme nous l’avons mentionné, lors de la première exécution de la procédure **sp_dbmmonitorupdate** , le rôle de base de données fixe **dbm_monitor** est créé dans la base de données **msdb** . Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (***\<heure>***)** et **Journal miroir (***\<heure>***)** dans la page **État**.  
+ Comme nous l’avons mentionné, lors de la première exécution de la procédure **sp_dbmmonitorupdate** , le rôle de base de données fixe **dbm_monitor** est créé dans la base de données **msdb** . Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures dans les étiquettes **journal principal ( ***\<time>*** )** et **Journal miroir ( ***\<time>*** )** dans la page **État** .  
   
  Les membres du rôle de base de données fixe **dbm_monitor** sont tributaires du **travail du moniteur de mise en miroir de bases de données** pour la mise à jour de la table d’état à des fréquences régulières. Si le travail n'existe pas ou si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté, l'état devient de plus en plus obsolète et ne correspondra plus forcément à la configuration de la session de mise en miroir. Par exemple, après un basculement, les partenaires peuvent sembler partager le même rôle (principal ou miroir), ou le serveur principal actuel peut être affiché comme serveur miroir, alors que le serveur miroir actuel est affiché comme principal.  
   

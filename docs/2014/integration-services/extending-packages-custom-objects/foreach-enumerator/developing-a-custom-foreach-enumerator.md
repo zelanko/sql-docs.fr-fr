@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d81d34389aaa46c6e4946cf4a159818724f70bbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c8587ba63ca73674de45684f0beab5e4590606
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968739"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Développement d'un énumérateur ForEach personnalisé
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise des énumérateurs Foreach pour parcourir les éléments d'une collection et effectuer les mêmes tâches pour chaque élément. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers énumérateurs Foreach qui prennent en charge les collections les plus couramment utilisées, telles que tous les fichiers inclus dans un dossier, toutes les tables incluses dans une base de données ou tous les éléments d'une liste stockée dans une variable de package. Si les énumérateurs foreach et les collections fournies ne répondent pas totalement à vos besoins, vous pouvez créer un énumérateur foreach personnalisé.  

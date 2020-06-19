@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068585"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivants peuvent s'abonner aux publications d'instantané et transactionnelle à l'aide d'abonnements par envoi de données (push). Les abonnements sont pris en charge pour les deux versions les plus récentes de chaque base de données listée, à l'aide de la version la plus récente du fournisseur OLE DB listé.  
@@ -49,7 +48,7 @@ ms.locfileid: "63022248"
   
 -   La réplication prend en charge la publication des tables et des vues indexées vers des Abonnées non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (les vues indexées ne peuvent pas être répliquées en tant que telles).  
   
--   Lorsque vous créez une publication dans l’Assistant Nouvelle publication, puis l’activez pour les abonnés non-SQL Server à l’aide de la boîte de dialogue Propriétés de la publication, le propriétaire de tous les objets de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’abonnement n’est pas spécifié pour les abonnés non-, tandis que pour les abonnés, elle est définie sur le propriétaire de l’objet correspondant dans la base de données  
+-   Lorsque vous créez une publication dans l’Assistant Nouvelle publication, puis l’activez pour les abonnés non-SQL Server à l’aide de la boîte de dialogue Propriétés de la publication, le propriétaire de tous les objets de la base de données d’abonnement n’est pas spécifié pour les abonnés non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , tandis que pour les [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abonnés, elle est définie sur le propriétaire de l’objet correspondant dans la base de données  
   
 -   Si une publication a des abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la publication doit être activée pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avant qu'un abonnement aux abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne soit créé.  
   

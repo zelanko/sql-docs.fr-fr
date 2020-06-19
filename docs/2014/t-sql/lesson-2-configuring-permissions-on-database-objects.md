@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcc6ee3ddf9be072b51bd568fd3e72eb6c871785
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054547"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Leçon 2 : Configuration des autorisations sur des objets de base de données
   L'octroi à un utilisateur de l'accès à une base de données implique trois étapes. Commencez par créer une connexion. La connexion permet à l’utilisateur de se connecter au [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Puis, configurez la connexion en tant qu'utilisateur dans la base de données spécifiée. Enfin, accordez à cet utilisateur l'autorisation sur les objets de base de données. Cette leçon illustre ces trois étapes et vous montre comment créer une vue et une procédure stockée comme objet.  
