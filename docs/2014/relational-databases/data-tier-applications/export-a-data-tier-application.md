@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d73724cd1aebd1d06048f634da3a1ad32ff8e49c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970249"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
   L'exportation d'une application de la couche Données (DAC) déployée ou d'une base de données crée un fichier d'exportation qui inclut les définitions des objets de la base de données et toutes les données contenues dans les tables. Le fichier d'exportation peut ensuite être importé dans une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les opérations d'exportation-importation peuvent être combinées pour migrer une DAC entre différentes instances, pour créer une sauvegarde logique ou pour créer une copie sur site d'une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -105,7 +104,7 @@ ms.locfileid: "70175976"
 ##  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer l'exportation à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler l'exportation et quitter l'Assistant, cliquez sur **Annuler**.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>Page progression  
+##  <a name="progress-page"></a><a name="Progress"></a> Page Progression  
  Cette page affiche une barre de progression indiquant l'état de l'opération. Pour afficher l'état détaillé, cliquez sur l'option **Afficher les détails** .  
   
 ##  <a name="results-page"></a><a name="Results"></a>Page résultats  

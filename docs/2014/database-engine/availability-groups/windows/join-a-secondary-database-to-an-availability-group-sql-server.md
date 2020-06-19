@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5de4600d4f4c3d52d1757218e1f2d9b32f554286
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0d79325bcde33d13688003de079a42a9601cc41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936768"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>Joindre une base de données secondaire à un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment joindre une base de données secondaire à un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Après avoir préparé une base de données secondaire pour un réplica secondaire, vous devez joindre la base de données au groupe de disponibilité dès que possible. Cette opération lance le déplacement des données entre la base de données primaire correspondante et la base de données secondaire.  
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Sécurité](#Security)  
   

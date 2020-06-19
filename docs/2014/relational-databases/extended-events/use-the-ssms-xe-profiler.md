@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f96be882208a9570c36ef8da63f1efb265f752f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512548"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027255"
 ---
 # <a name="use-the-system_health-session"></a>Utiliser la session system_health
   La session system_health est une session Événements étendus incluse par défaut avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette session démarre automatiquement en même temps que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et s’exécute sans effet notable sur les performances. Elle recueille des données système qui peuvent vous aider à résoudre des problèmes de performances dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Il est donc déconseillé de l'arrêter ou de la supprimer.  
@@ -70,7 +69,7 @@ WHERE xe.name = 'system_health'
 ## <a name="restoring-the-system_health-session"></a>Restauration de la session system_health  
  Si vous supprimez la session system_health, vous pouvez la restaurer en exécutant le fichier **u_tables.sql** dans l’Éditeur de requête. Ce fichier se trouve dans le dossier suivant, où C: représente le lecteur sur lequel vous avez installé les fichiers du programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12. \< *InstanceID*> \mssql\install  
+ C:\Program Files\Microsoft SQL Server\MSSQL12. \<*instanceid*> \MSSQL\Install  
   
  Sachez qu’après avoir restauré la session, vous devez la démarrer en utilisant l’instruction ALTER EVENT SESSION ou en utilisant le nœud **Événements étendus** dans l’Explorateur d’objets. Sinon, la session démarre automatiquement la prochaine fois que vous redémarrerez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

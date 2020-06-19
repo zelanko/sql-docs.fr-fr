@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e809d84071089ce57c66bc8f9a388203923fe66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dc9fc81fb02f004eb86c1bfef5662460aa4005f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936795"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>Commencer à utiliser les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique présente les étapes de configuration des instances de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et créer, gérer et surveiller un groupe de disponibilité.  

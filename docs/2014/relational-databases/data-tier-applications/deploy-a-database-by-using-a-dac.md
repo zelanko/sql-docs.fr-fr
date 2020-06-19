@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0da23febcc1f2e97b1dfaff29a5df5ced16c7e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970270"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Déployer une base de données à l'aide d'une DAC
   Utilisez l’Assistant **Déploiement de base de données dans SQL Azure** pour déployer une base de données entre une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et un serveur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , ou entre deux serveurs [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62873030"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]paramètres de base de données :**  
   
--   édition : sélectionnez l’édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans le menu déroulant. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
+-   ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] édition** : sélectionnez l’édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans le menu déroulant.  
   
 -   **Taille maximale de base de données** - Sélectionnez la taille maximale de la base de données dans le menu déroulant.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62873030"
 ##  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer le déploiement à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler le déploiement et quitter l'Assistant, cliquez sur **Annuler**.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>Page progression  
+##  <a name="progress-page"></a><a name="Progress"></a> Page Progression  
  Cette page affiche une barre de progression indiquant l'état de l'opération. Pour afficher l'état détaillé, cliquez sur l'option **Afficher les détails** .  
   
 ##  <a name="results-page"></a><a name="Results"></a>Page résultats  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bda31ca7d0c5949173a9a3e5ea656c1757c04f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935860"
 ---
 # <a name="change-server-authentication-mode"></a>Changer le mode d'authentification du serveur
   Cette rubrique explique comment modifier le mode d'authentification du serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Au cours de l’installation, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] est paramétré sur **Mode d’authentification Windows** ou sur **Mode d’authentification SQL Server et Windows**. Après l'installation, vous pouvez modifier le mode d'authentification à tout moment.  
@@ -58,7 +57,7 @@ ms.locfileid: "62812295"
   
 #### <a name="to-enable-the-sa-login"></a>Pour activer la connexion sa  
   
-1.  Dans l’Explorateur d’objets, développez **sécurité**, puis connexions, cliquez `sa`avec le bouton droit sur, puis cliquez sur **Propriétés**.  
+1.  Dans l’Explorateur d’objets, développez **sécurité**, puis connexions, cliquez avec le bouton droit sur `sa` , puis cliquez sur **Propriétés**.  
   
 2.  Sur la page **Général** , vous devrez peut-être créer et confirmer un mot de passe pour la connexion.  
   

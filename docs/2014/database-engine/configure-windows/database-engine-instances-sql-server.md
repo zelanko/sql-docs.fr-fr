@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae89ee9f60e740a4e20486e7dcbe99316fd4ed04
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935400"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
   Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une copie de l'exécutable `sqlservr.exe` qui s'exécute en tant que service du système d'exploitation. Chaque instance gère plusieurs bases de données système et une ou plusieurs bases de données utilisateur. Chaque ordinateur peut exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les applications se connectent à l'instance afin d'effectuer des travaux dans une base de données gérée par l'instance.  

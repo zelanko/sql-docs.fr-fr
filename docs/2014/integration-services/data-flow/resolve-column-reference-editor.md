@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63d14790e0690882dd23527d52d5de282637d2d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f810a24baec565a7870fb6602b76ff8f3ba119f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914619"
 ---
 # <a name="resolve-column-reference-editor"></a>Éditeur de restauration de références de colonnes
   Lorsqu'un chemin d'accès d'entrée est déconnecté ou s'il existe des colonnes non mappées dans le chemin d'accès, une icône d'erreur s'affiche en regard du chemin d'accès aux données correspondant. Pour simplifier la résolution des erreurs de référence de colonne, le nouvel éditeur de résolution des références vous permet de lier des colonnes de sortie non mappées avec des colonnes d'entrée non mappées pour tous les chemins d'accès de l'arborescence d'exécution. L'éditeur de résolution des références met également en surbrillance les chemins d'accès pour indiquer ceux qui sont résolus.  

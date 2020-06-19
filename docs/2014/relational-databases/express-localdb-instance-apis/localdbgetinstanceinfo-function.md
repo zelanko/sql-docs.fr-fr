@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bac043c4a194c904154e2c97cd0544c8c941078
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130529"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027765"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Fonction LocalDBGetInstanceInfo
   Retourne des informations pour l'instance de base de données locale SQL Server Express (LocalDB) spécifiée, entre autres si elle existe, la version de LocalDB qu'elle utilise, si elle s'exécute, et ainsi de suite.  
   
- Les informations sont retournées `struct` dans un **LocalDBInstanceInfo**nommé, qui a la définition suivante.  
+ Les informations sont retournées dans un `struct` **LocalDBInstanceInfo**nommé, qui a la définition suivante.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  

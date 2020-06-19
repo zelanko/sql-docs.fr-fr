@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97cf01d12e56b238b02d1c36c14cf8094dfd74d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76923041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936420"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica)
    Cette rubrique décrit les options de la page **Spécifier les réplicas**. Cette page s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] et à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez la page **Spécifier les réplicas** pour spécifier et configurer un ou plusieurs réplicas de disponibilité afin d'ajouter le groupe de disponibilité. Cette page contient quatre onglets, qui sont présentés dans le tableau suivant. Cliquez sur le nom d'un onglet du tableau pour atteindre la section correspondante, plus loin dans cette rubrique.  
@@ -115,7 +114,7 @@ ms.locfileid: "76923041"
  **Secondaire uniquement**  
  Spécifie que les sauvegardes ne doivent jamais être effectuées sur le réplica principal. Si le réplica principal est le seul réplica en ligne, la sauvegarde ne doit pas avoir lieu.  
   
- **Principal**  
+ **Primaire**  
  Spécifie que les sauvegardes doivent toujours avoir lieu sur le réplica principal. Cette option est utile si vous avez besoin de fonctionnalités de sauvegarde, telles que la création de sauvegardes différentielles, qui ne sont pas prises en charge lorsque la sauvegarde est exécutée sur un réplica secondaire.  
   
  **Tout réplica**  
@@ -146,7 +145,7 @@ ms.locfileid: "76923041"
  Spécifiez vos préférences d'écouteur pour ce groupe de disponibilité, comme suit :  
   
  **Nom DNS de l'écouteur**  
- Indiquez le nom réseau de l'écouteur. Ce nom doit être unique sur le domaine et ne peut contenir que des caractères alphanumériques,**-** des tirets () et des traits d’Union (**_**), dans n’importe quel ordre. Lorsqu'il est spécifié à l'aide de l'onglet **Écouteur** , le nom DNS peut contenir jusqu'à 15 caractères.  
+ Indiquez le nom réseau de l'écouteur. Ce nom doit être unique sur le domaine et ne peut contenir que des caractères alphanumériques, des tirets ( **-** ) et des traits d’Union (**_**), dans n’importe quel ordre. Lorsqu'il est spécifié à l'aide de l'onglet **Écouteur** , le nom DNS peut contenir jusqu'à 15 caractères.  
   
 > [!IMPORTANT]  
 >  Si vous entrez un nom d’écouteur DNS (ou un numéro de port) non valide dans l’onglet **Écouteur** , le bouton **Suivant** est désactivé dans la page **Spécifier les réplicas** .  
@@ -174,7 +173,7 @@ ms.locfileid: "76923041"
  **Ajouter**  
  Cliquez pour ajouter un sous-réseau à cet écouteur. Cela ouvre la boîte de dialogue **Ajouter une adresse IP** . Pour plus d’informations, consultez la rubrique d’aide [Boîte de dialogue Ajouter une adresse IP &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Remove**  
+ **Supprimer**  
  Cliquez pour supprimer le sous-réseau actuellement sélectionné dans la grille.  
   
  **DHCP**  
@@ -210,7 +209,7 @@ ms.locfileid: "76923041"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [CRÉER un groupe de disponibilité &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [Conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

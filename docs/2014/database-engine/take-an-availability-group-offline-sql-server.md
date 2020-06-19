@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87dff347bd0aee1211093d9e3406a24670a80e7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db2f56befe6905b9c3de6bd1ab6a2e5a4a00b1b3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928480"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Placer un groupe de disponibilité hors connexion (SQL Server)
   Cette rubrique explique comment faire passer un groupe de disponibilité AlwaysOn de l'état ONLINE à l'état OFFLINE à l'aide de [!INCLUDE[tsql](../includes/tsql-md.md)] dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] et versions ultérieures. Il n'y a aucune perte de données des bases de données de validation synchrone, car si aucun réplica avec validation synchrone n'est synchronisé, l'opération OFFLINE génère une erreur et conserve le groupe de disponibilité dans l'état ONLINE. Conserver le groupe de disponibilité en ligne protège les bases de données non synchronisées avec validation synchrone contre la perte de données. Après qu'un groupe de disponibilité a été mis hors connexion, ses bases de données deviennent indisponibles pour les clients et vous ne pouvez pas remettre le groupe de disponibilité en ligne. Par conséquent, mettez un groupe de disponibilité hors connexion uniquement pour migrer les ressources du groupe de disponibilité d'un cluster WSFC à un autre.  

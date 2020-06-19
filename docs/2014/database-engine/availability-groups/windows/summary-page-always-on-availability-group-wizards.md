@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e0aeae7b7207c9b469504cf4115f371d00f5d7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936380"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Page Résumé (assistants de groupe de disponibilité AlwaysOn)
   Cette rubrique d'aide décrit les options de la page **Résumé** . Cette rubrique s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], à l' [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] et à l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez la grille de cette page pour passer vos choix en revue pour le nouveau groupe de disponibilité. Pour effectuer une ou plusieurs modifications, cliquez sur **Précédent** pour revenir à la page ou aux pages appropriées. Lorsque vous êtes prêt, cliquez sur **Suivant** pour revenir à la page **Résumé** . Lorsque vous êtes satisfait de vos choix, cliquez sur **Terminer**.  

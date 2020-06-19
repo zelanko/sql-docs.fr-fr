@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc15a7f6002675c4e81b3ae8169a78648b210f44
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d490f4355f1dac4c337002e22f2d4dae82a7e9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063310"
 ---
 # <a name="output-window"></a>Fenêtre Sortie
   Cette fenêtre contient les messages d'état de plusieurs fonctionnalités de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La sortie est acheminée vers des volets spéciaux de la fenêtre **Sortie** du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] , des fonctionnalités d’outils externes ou les commandes exécutées dans la **Fenêtre Commande**du débogueur. La sortie généralement affichée dans la fenêtre d'invite de commande des outils externes (notamment les fichiers .bat ou .com) est également disponible.  

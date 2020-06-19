@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47ec51a82b1369210447b7d853d39a5a61e055ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970149"
 ---
 # <a name="database-properties-mirroring-page"></a>Propriétés de la base de données (page Mise en miroir)
   Accédez à cette page depuis la base de données principale et utilisez-la pour configurer et modifier les propriétés de la mise en miroir de bases de données pour une base de données. Utilisez-la également pour lancer Configurer l'Assistant Sécurité de mise en miroir de bases de données, afin d'afficher l'état d'une session de mise en miroir et de suspendre ou supprimer une session de mise en miroir de bases de données.  
@@ -100,7 +99,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 > [!NOTE]  
 >  S'il s'agit de la seule base de données mise en miroir sur l'instance de serveur, le travail de surveillance est supprimé.  
   
- **Basculement**  
+ **Type de basculement**  
  Cliquez sur ce bouton pour basculer manuellement de la base de données principale vers la base de données miroir.  
   
 > [!NOTE]  
@@ -121,7 +120,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |Option|Témoin ?|Explication|  
 |------------|--------------|-----------------|  
 |**Haute performance (asynchrone)**|Nul (s'il existe, non utilisé mais la session requiert un quorum)|Pour optimiser les performances, la base de données miroir reste toujours en léger décalage par rapport à la base de données principale, sans jamais complètement le rattraper. Toutefois, l'écart entre les bases de données est généralement faible. La perte d'un partenaire a les effets suivants :<br /><br /> Si l'instance de serveur miroir devient non disponible, le principal continue.<br /><br /> Si l'instance de serveur principal n'est plus disponible, le serveur miroir est arrêté. Mais si la session n'a pas de témoin (comme recommandé), ou que le témoin est connecté au serveur miroir, ce dernier reste accessible en veille ; le propriétaire de la base de données peut forcer le service vers l'instance de serveur miroir (avec perte de données éventuelle).|  
-|**Haute sécurité sans basculement automatique (synchrone)**|Non|Ce mode garantit que toutes les transactions validées sont écrites sur disque sur le serveur miroir. Le basculement manuel est possible si les partenaires sont connectés entre eux. La perte d'un partenaire a les effets suivants :<br /><br /> Si l'instance de serveur miroir devient non disponible, le principal continue.<br /><br /> Si l'instance de serveur principal n'est plus disponible, l'instance miroir s'arrête mais reste disponible en veille ; le propriétaire de la base de données peut forcer le service à l'instance de serveur miroir (avec perte de données éventuelle).|  
+|**Haute sécurité sans basculement automatique (synchrone)**|No|Ce mode garantit que toutes les transactions validées sont écrites sur disque sur le serveur miroir. Le basculement manuel est possible si les partenaires sont connectés entre eux. La perte d'un partenaire a les effets suivants :<br /><br /> Si l'instance de serveur miroir devient non disponible, le principal continue.<br /><br /> Si l'instance de serveur principal n'est plus disponible, l'instance miroir s'arrête mais reste disponible en veille ; le propriétaire de la base de données peut forcer le service à l'instance de serveur miroir (avec perte de données éventuelle).|  
 |**Haute sécurité avec basculement automatique (synchrone)**|Oui (requis)|Disponibilité optimisée par l'inclusion d'une instance de serveur témoin pour prendre en charge le basculement automatique. Notez que vous pouvez sélectionner l’option **Haute sécurité avec basculement automatique (synchrone)** seulement si vous avez spécifié au préalable une adresse de serveur témoin. Le basculement manuel est toujours possible lorsque les partenaires sont connectés entre eux. **&#42;&#42; Important &#42;&#42;** Si le témoin est déconnecté, les partenaires doivent être connectés entre eux pour que la base de données soit disponible. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> Dans les modes d'opération synchrones, l'écriture de toutes les transactions validées sur le serveur miroir est garantie. En présence d'un témoin, la conséquence de la perte d'un partenaire est la suivante :<br /><br /> Si l'instance de serveur principal devient non disponible, un basculement automatique se produit. L'instance de serveur miroir prend le rôle de principal et propose sa base de données comme base de données principale.<br /><br /> Si l'instance de serveur miroir devient non disponible, le principal continue.<br /><br /> <br /><br /> Pour plus d'informations, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
   
  Une fois que la mise en miroir a démarré, vous pouvez changer le mode d'opération et enregistrer la modification en cliquant sur **OK**.  
@@ -137,7 +136,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |**En pause**|La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.|  
 |**Aucune connexion**|L'instance de serveur principal ne peut pas se connecter à son partenaire.|  
 |**Renvoi**|Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression.<br /><br /> Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.|  
-|**Basculement**|Sur l'instance de serveur principal, un basculement manuel (basculement de rôle) a commencé et le serveur passe actuellement par le rôle de miroir. Dans cet état, les connexions utilisateur à la base de données principale sont rapidement interrompues et la base de données adopte le rôle de miroir dans l'instant qui suit.|  
+|**Type de basculement**|Sur l'instance de serveur principal, un basculement manuel (basculement de rôle) a commencé et le serveur passe actuellement par le rôle de miroir. Dans cet état, les connexions utilisateur à la base de données principale sont rapidement interrompues et la base de données adopte le rôle de miroir dans l'instant qui suit.|  
 |**Synchronisée**|Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal continue d'envoyer des modifications au serveur miroir et que le serveur miroir continue d'appliquer les modifications à la base de données miroir.<br /><br /> En mode haute sécurité, le basculement est possible sans perte de données.<br /><br /> En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .|  
   
  Pour plus d’informations, consultez [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
@@ -145,7 +144,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Actualisation**  
  Cliquez ici pour mettre à jour la zone **État** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si vous n’êtes pas familiarisé avec la mise en miroir de base de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Ajout d'un témoin à une session existante  

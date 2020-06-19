@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b25d06e69b24cf31d3bc84d69ccdcbc8a034588
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48e4bda558b75bec0c81815c90feff9d6500a803
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063283"
 ---
 # <a name="quickwatch-dialog-box"></a>Boîte de dialogue Espion express
   Utilisez la boîte de dialogue **Espion express** pour consulter rapidement le type de données et la valeur d’une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, une variable ou un paramètre) pendant que vous déboguez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour surveiller plusieurs expressions, vous pouvez également ajouter l’expression à une fenêtre **Espion** .  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970275"
 ---
 # <a name="delete-a-data-tier-application"></a>Supprimer une application de la couche Données
   Vous pouvez supprimer une application de la couche Données à l'aide de l'Assistant Supprimer l'application de la couche Données ou d'un script Windows PowerShell. Vous pouvez spécifier si la base de données associée doit être conservée, détachée ou supprimée.  
@@ -101,7 +100,7 @@ ms.locfileid: "72782734"
   
  Les données et fichiers journaux pour la base de données sont supprimés définitivement.  
   
- Précédent : renvoie à la page **Introduction** . ** \< **  
+ ** \< Précédent** : renvoie à la page **Introduction** .  
   
  **Suivant >** : passe à la page **Résumé**.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782734"
   
  **Examinez le résumé de vos sélections** : examinez la DAC, la base de données et la méthode de suppression affichées dans la fenêtre. Si les informations sont correctes, sélectionnez **Suivant** ou **Terminer** pour supprimer la DAC. Si la DAC et les informations sur la base de données ne sont pas correctes, sélectionnez **Annuler** , puis la DAC appropriée. Si la méthode de suppression n'est pas correcte, sélectionnez **Précédent** pour retourner à la page **Choisir une méthode** et sélectionner une méthode différente.  
   
- Précédent : renvoie à la page **choisir une méthode** pour choisir une autre méthode de suppression. ** \< **  
+ ** \< Précédent** : renvoie à la page **choisir une méthode** pour choisir une autre méthode de suppression.  
   
  **Suivant >** : supprime l’instance de la DAC en utilisant la méthode que vous avez choisie à la page précédente, puis passe à la page **Supprimer une application de couche Données**.  
   
@@ -223,5 +222,5 @@ $dacName  = "MyApplication"
  [Applications de la couche données](data-tier-applications.md)   
  [Déployer une application de la couche données](deploy-a-data-tier-application.md)   
  [Inscrire une base de données en tant que DAC](register-a-database-as-a-dac.md)   
- [Sauvegarder et restaurer des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Sauvegarde et restauration des bases de données SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

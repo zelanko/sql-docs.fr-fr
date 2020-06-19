@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a2dc38d5e916cf67c09162c86db9ab31728804f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: c517850e7dfc7dfb134389b50feee77b3d1cbfbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936630"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Conditions préalables requises pour la migration de la copie des journaux de transaction vers les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique décrit les conditions requises pour convertir une base de données principale pour la copie des journaux de transaction avec une ou plusieurs de ses bases de données secondaires en base de données principale AlwaysOn et ses bases de données secondaires.  
@@ -44,7 +43,7 @@ ms.locfileid: "82922034"
 |Préférence de sauvegarde automatisée du groupe de disponibilité|Uniquement sur le réplica principal|  
 |Priorité de sauvegarde du réplica principal.|>0|  
   
- **Pour plus d’informations :**  
+ **Pour plus d'informations :**  
   
  [Afficher les propriétés d’un groupe de disponibilité &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "82922034"
   
  Après avoir créé toutes les bases de données secondaires pour le groupe de disponibilité, si vous souhaitez effectuer des sauvegardes sur des réplicas secondaires, vous devez reconfigurer la préférence de sauvegarde automatisée du groupe de disponibilité.  
   
- **Pour plus d’informations :**  
+ **Pour plus d'informations :**  
   
  [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (Conversion d’une configuration de copie de journaux de transaction en groupe de disponibilité - blog SQL Server)  
   
@@ -110,7 +109,7 @@ ms.locfileid: "82922034"
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux de &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Surveillance des groupes de disponibilité &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   

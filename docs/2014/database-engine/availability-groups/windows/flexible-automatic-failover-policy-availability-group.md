@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd4dd62d8b30e2041415e0b9be5682ce4b01d1f6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789891"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936780"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Stratégie flexible pour le basculement automatique d'un groupe de disponibilité (SQL Server)
   Une stratégie de basculement flexible offre un contrôle granulaire sur les conditions qui provoquent le [basculement automatique](failover-and-failover-modes-always-on-availability-groups.md) pour un groupe de disponibilité. En changeant les conditions d'échec qui déclenchent un basculement automatique et la fréquence des contrôles d'intégrité, vous pouvez augmenter ou diminuer la probabilité d'un basculement automatique pour assurer le contrat de niveau de service relatif à la haute disponibilité.  
@@ -48,7 +47,7 @@ ms.locfileid: "62789891"
   
 |Level|Condition d'échec|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valeur|Valeur PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|Une|Le serveur est arrêté. Il s'agit du niveau le moins restrictif. Spécifie qu'un basculement automatique est initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> Le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est fermé.<br /><br /> Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n'est reçu de l'instance de serveur. Pour plus d'informations, consultez [Fonctionnement : délai d'expiration de bail AlwaysOn SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
+|Un|Le serveur est arrêté. Il s'agit du niveau le moins restrictif. Spécifie qu'un basculement automatique est initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> Le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est fermé.<br /><br /> Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n'est reçu de l'instance de serveur. Pour plus d'informations, consultez [Fonctionnement : délai d'expiration de bail AlwaysOn SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
 |Deux|Le serveur ne répond pas. Spécifie qu'un basculement automatique est initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> L'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne se connecte pas au cluster et le seuil du délai d'attente de contrôle d'intégrité spécifié par l'utilisateur pour le groupe de disponibilité est dépassé.<br /><br /> Le réplica de disponibilité est dans un état d'échec.|2|`OnServerUnresponsive`|  
 |Trois|Erreur critique du serveur. Spécifie qu'un basculement automatique est initialisé en cas d'erreurs internes critiques [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , telles que les verrouillages spinlock orphelins, les violations graves d'accès en écriture, ou en cas de trop de vidages. C'est le niveau par défaut.|3|`OnCriticalServerError`|  
 |Quatre|Erreur de serveur modérée. Spécifie qu'un basculement automatique est initialisé en cas d'erreurs internes modérées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , telles qu'une condition persistante de mémoire insuffisante dans le pool de ressources interne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|4|`OnModerateServerError`|  

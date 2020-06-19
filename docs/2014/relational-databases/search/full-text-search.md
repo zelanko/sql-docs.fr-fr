@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176839"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063317"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
   La recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permet aux utilisateurs et aux applications d’exécuter des requêtes de texte intégral sur des données caractères dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Avant de pouvoir exécuter des requêtes de texte intégral sur une table, l'administrateur de base de données doit créer un index de recherche en texte intégral sur la table. L'index de recherche en texte intégral inclut une ou plusieurs colonnes de caractères dans la table. Les types de données de ces colonnes peuvent être `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` ou `varbinary(max)` et FILESTREAM. Chaque index de recherche en texte intégral indexe une ou plusieurs colonnes de la table, et chaque colonne peut utiliser une langue spécifique.
@@ -134,7 +133,7 @@ ms.locfileid: "78176839"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>Processus d’indexation de texte intégral
  Au début d'une alimentation de texte intégral (également appelé analyse), le Moteur d'indexation et de recherche en texte intégral effectue l'envoi (push) de grands lots de données en mémoire et informe l'hôte de démon de filtre. L'hôte filtre et effectue une analyse lexicale des données et il convertit les données converties en listes de mots inversées. La recherche en texte intégral extrait ensuite les données converties des listes de mots, traite les données pour supprimer les mots vides et conserve les listes de mots pour un lot dans un ou plusieurs index inversés.
 
- Lors de l’indexation des données stockées `varbinary(max)` dans `image` une colonne ou, le filtre qui implémente l’interface **IFilter** extrait le texte en fonction du format de fichier spécifié pour ces données (par exemple [!INCLUDE[msCoName](../../includes/msconame-md.md)] , Word). Dans certains cas, les composants de filtre nécessitent `varbinary(max)`le, `image` ou les données sont écrites dans le dossier FilterData, au lieu d’être envoyées en mémoire.
+ Lors de l’indexation des données stockées dans une `varbinary(max)` `image` colonne ou, le filtre qui implémente l’interface **IFilter** extrait le texte en fonction du format de fichier spécifié pour ces données (par exemple, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Dans certains cas, les composants de filtre nécessitent le `varbinary(max)` , ou les `image` données sont écrites dans le dossier FilterData, au lieu d’être envoyées en mémoire.
 
  Dans le cadre du traitement, les données de texte collectées sont transmises à un analyseur lexical pour décomposer le texte en jetons individuels ou mots clés. La langue utilisée pour la création de jetons peut être spécifiée au niveau de la colonne ou être identifiée au sein des données `varbinary(max)`, `image`, ou `xml` par le composant de filtrage.
 

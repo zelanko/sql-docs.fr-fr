@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 63407b3bf1a2860ad3f8c35b5cd8ecc4a4b125c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fc8b4e5a5d6741dd11faf4c846db7862a7254db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027606"
 ---
 # <a name="localdbshareinstance-function"></a>Fonction LocalDBShareInstance
   Partage l'instance de base de données locale SQL Server Express spécifiée avec d'autres utilisateurs de l'ordinateur, en utilisant le nom partagé spécifié.  
@@ -80,7 +79,7 @@ HRESULT LocalDBShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103dd8eef782dfa7a4d13929b0b832dba9bc46e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936712"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Surveiller des groupes de disponibilité (Transact-SQL)
   Pour surveiller les groupes de disponibilité et les réplicas, ainsi que les bases de données associées à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournit un ensemble d'affichages catalogue et de vues de gestion dynamique, et des propriétés de serveur. Au moyen d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT, vous pouvez utiliser les vues pour surveiller les groupes de disponibilité, ainsi que leurs réplicas et bases de données. Les informations retournées pour un groupe de disponibilité donné varient selon que vous êtes connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica principal ou un réplica secondaire.  
@@ -80,7 +79,7 @@ ms.locfileid: "62789818"
 > [!NOTE]  
 >  Consultez également **sys.dm_hadr_availability_replica_cluster_nodes** et **sys.dm_hadr_availability_replica_cluster_states** dans la section [Surveillance de réplicas de disponibilité](#AvReplicas) et **sys.availability_databases_cluster** et **sys.dm_hadr_database_replica_cluster_states** dans la section [Surveillance des bases de données de disponibilité](#AvDbs) dans la suite de cette rubrique.  
   
- Pour plus d’informations sur les clusters WSFC et, consultez [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) et le [clustering de basculement et groupes de disponibilité AlwaysOn ](failover-clustering-and-always-on-availability-groups-sql-server.md)&#40;SQL Server&#41;.  
+ Pour plus d’informations sur les clusters WSFC et [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez [clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) et le [clustering de basculement et groupes de disponibilité AlwaysOn ](failover-clustering-and-always-on-availability-groups-sql-server.md)&#40;SQL Server&#41;.  
   
 ##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a>Surveillance des groupes de disponibilité  
  Pour surveiller les groupes de disponibilité pour lesquels l'instance de serveur héberge un réplica de disponibilité, utilisez les vues suivantes :  
@@ -148,7 +147,7 @@ ms.locfileid: "62789818"
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  Contient une ligne par base de données dans l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si une base de données appartient à un réplica de disponibilité, la ligne de cette base de données affiche l'identifiant GUID du réplica et l'identificateur unique de la base de données au sein de son groupe de disponibilité.  
   
- noms des colonnes : replica_id, group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
+ ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] noms des colonnes :** replica_id, group_database_id  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  Retourne une ligne pour chaque tentative de réparation de page automatique sur une base de données de disponibilité sur un réplica de disponibilité hébergé pour un groupe de disponibilité quelconque par l'instance de serveur. Cette vue contient des lignes pour les tentatives de réparation de page automatique les plus récentes sur une base de données primaire ou secondaire donnée, avec un maximum de 100 lignes par base de données. Dès qu'une base de données atteint le maximum, la ligne pour sa tentative de réparation de page automatique suivante remplace l'une des entrées existantes.  

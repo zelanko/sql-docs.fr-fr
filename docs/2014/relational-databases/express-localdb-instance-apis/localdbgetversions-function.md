@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b02f89903475462265ffc154553c176951c259
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027673"
 ---
 # <a name="localdbgetversions-function"></a>Fonction LocalDBGetVersions
   Retourne toutes les versions de SQL Server Express LocalDB disponibles sur l'ordinateur.  
@@ -58,7 +57,7 @@ En sortie, contient le nombre de versions de LocalDB existantes.
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  

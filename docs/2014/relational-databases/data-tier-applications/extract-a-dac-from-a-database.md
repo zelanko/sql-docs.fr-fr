@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37bb440288ccbc832d89180855566a969830e2ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc5a8eb0317e53b51927402608a8d9b1a09a76f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970232"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraire une DAC d'une base de données
   Utilisez **l’Assistant Extraire l’application de la couche Données** ou un script Windows PowerShell pour extraire un package d’application de la couche Données (DAC) d’une base de données SQL Server existante. Le processus d'extraction crée un fichier de package de DAC qui contient les définitions des objets de base de données et de leurs éléments associés au niveau de l'instance. Par exemple, un fichier de package DAC contient les tables de base de données, procédures stockées, vues, utilisateurs, ainsi que les connexions mappées aux utilisateurs de base de données.  
@@ -36,7 +35,7 @@ ms.locfileid: "72797985"
 -   **Pour extraire une DAC en utilisant :**  [L'Assistant Extraire l'application de la couche Données](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
- Vous pouvez extraire une DAC des bases de données qui résident sur les instances de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) ou version ultérieure. Si le processus d'extraction est exécuté sur une base de données déployée à partir d'une DAC, seules les définitions des objets de la base de données sont extraites. Le processus ne référence pas la DAC inscrite `msdb` dans**master** (Master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]dans). Le processus d'extraction n'inscrit pas la définition de la DAC dans l'instance actuelle du moteur de base de données. Pour plus d'informations sur l'inscription d'une DAC, consultez [Register a Database As a DAC](register-a-database-as-a-dac.md).  
+ Vous pouvez extraire une DAC des bases de données qui résident sur les instances de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) ou version ultérieure. Si le processus d'extraction est exécuté sur une base de données déployée à partir d'une DAC, seules les définitions des objets de la base de données sont extraites. Le processus ne référence pas la DAC inscrite dans `msdb` (**Master** dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ). Le processus d'extraction n'inscrit pas la définition de la DAC dans l'instance actuelle du moteur de base de données. Pour plus d'informations sur l'inscription d'une DAC, consultez [Register a Database As a DAC](register-a-database-as-a-dac.md).  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Une DAC peut uniquement être extraite d'une base de données dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure. Vous ne pouvez pas extraire une DAC si la base de données possède des objets qui ne sont pas pris en charge dans une DAC, ou des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
@@ -86,9 +85,9 @@ ms.locfileid: "72797985"
   
  **Nom** - Ce nom identifie la DAC. Il peut être différent du nom du fichier de package de DAC et doit décrire votre application. Par exemple, si la base de données est utilisée pour une application financière, vous pouvez nommer la DAC Finance.  
   
- **Version (utiliser x.x.x.x, où x est un nombre)** - Valeur numérique qui identifie la version de la DAC. La version de la DAC est utilisée dans Visual Studio pour identifier la version de la DAC sur laquelle les développeurs travaillent. Lors du déploiement d’une DAC, la version est stockée `msdb` dans la base de données et peut être affichée ultérieurement sous le nœud applications [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de la **couche données** dans.  
+ **Version (utiliser x.x.x.x, où x est un nombre)** - Valeur numérique qui identifie la version de la DAC. La version de la DAC est utilisée dans Visual Studio pour identifier la version de la DAC sur laquelle les développeurs travaillent. Lors du déploiement d’une DAC, la version est stockée dans la `msdb` base de données et peut être affichée ultérieurement sous le nœud applications de la **couche données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Description** : Facultatif. Décrit la DAC. Lors du déploiement d’une DAC, la description est stockée `msdb` dans la base de données et peut être affichée ultérieurement sous le nœud applications [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]de la **couche données** dans.  
+ **Description** : Facultatif. Décrit la DAC. Lors du déploiement d’une DAC, la description est stockée dans la `msdb` base de données et peut être affichée ultérieurement sous le nœud applications de la **couche données** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
  **Enregistrer le fichier de package DAC (inclure l’extension .dacpac dans le nom du fichier)** - Enregistre la DAC dans un fichier de package DAC, avec une extension .dacpac. Cliquez sur le bouton **Parcourir** pour spécifier le nom et l'emplacement du fichier.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 165036ba539c3392b1944282bd9d6126eb471a97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936340"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Résoudre des problèmes de configuration des groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique fournit des informations pour vous aider à résoudre les problèmes courants de configuration des instances de serveur pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Problèmes courants de configuration : [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est désactivé, les comptes sont incorrectement configurés, le point de terminaison de mise en miroir de bases de données n'existe pas, le point de terminaison est inaccessible (erreur SQL Server 1418), l'accès réseau n'existe pas et échec d'une commande de jointure de base de données (erreur SQL Server 35250).

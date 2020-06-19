@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ad98184856d2860316be35f0b83acbd53b3234a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789467"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936500"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Page Sélectionner la synchronisation de données initiale (assistants de groupe de disponibilité AlwaysOn)
   Utilisez la page AlwaysOn **Sélectionner la synchronisation de données initiale** afin d'indiquer votre préférence pour la synchronisation des données initiale des nouvelles bases de données secondaires. Cette page est commune à trois Assistants : [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] et [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
@@ -87,7 +86,7 @@ ms.locfileid: "62789467"
   
 -   Restaurez manuellement une sauvegarde récente de la base de données primaire à l'aide de RESTORE WITH NORECOVERY, puis restaurez chaque sauvegarde de journal suivante à l'aide de RESTORE WITH NORECOVERY. Si les bases de données primaire et secondaire ont des chemins d'accès différents, vous devez utiliser l'option WITH MOVE. Effectuez cette séquence de restauration sur chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité.  Vous pouvez utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell pour exécuter ces opérations de sauvegarde et de restauration.  
   
-     **Pour plus d’informations :**  
+     **Pour plus d'informations :**  
   
      [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62789467"
     > [!NOTE]  
     >  Après avoir créé toutes les bases de données secondaires pour le groupe de disponibilité, si vous souhaitez effectuer des sauvegardes sur des réplicas secondaires, vous devez reconfigurer la préférence de sauvegarde automatisée du groupe de disponibilité.  
   
-     **Pour plus d’informations :**  
+     **Pour plus d'informations :**  
   
      [Conditions préalables à la migration de la copie des journaux de session vers groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 052859e4605162daa87789b5c61d2ef9d33d4177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812583"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936040"
 ---
 # <a name="check-in-files"></a>Archiver des fichiers
   Pour mettre à la disposition d'autres utilisateurs des fichiers sous contrôle de code source auxquels vous avez apporté des modifications, vous devez archiver ces fichiers dans le contrôle de code source. Lorsque vous archivez un fichier, la version que vous archivez s'inscrit dans le fournisseur de contrôle de code source et devient la dernière version de ce fichier.  
@@ -32,7 +31,7 @@ ms.locfileid: "62812583"
   
 2.  Si la boîte de dialogue **Archivage** apparaît, sélectionnez les options appropriées, puis cliquez sur **OK**.  
   
-     **Archiver**  
+     **Date d'arrivée**  
      Archive tous les éléments sélectionnés.  
   
      **Colonnes**  

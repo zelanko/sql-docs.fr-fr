@@ -18,13 +18,12 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4722e844e527f04ccde62c699d46b0fbc955a416
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936620"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Page Progression (Assistants Groupe de disponibilité AlwaysOn)
   Utilisez cette boîte de dialogue pour afficher la progression d'un Assistant [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que vous exécutez dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La barre de progression indique la progression relative des étapes que l'Assistant effectue.  
@@ -43,7 +42,7 @@ ms.locfileid: "83858701"
 |------------|-----------------|  
 |**Error**|Indique que l'opération pour cette étape a rencontré une erreur. Cliquez sur le lien pour afficher une boîte de dialogue de message qui décrit l'erreur.|  
 |**En cours (** *pourcentage-effectué* **)**|Indique que l'opération a maintenant lieu et estime le pourcentage de réalisation de cette étape.|  
-|**Fructueux**|Indique que l'opération pour cette étape s'est terminée avec succès.|  
+|**Succès**|Indique que l'opération pour cette étape s'est terminée avec succès.|  
   
  **Moins de détails**  
  Cliquez pour masquer la grille de progression.  

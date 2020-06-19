@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9261f692dfed61174181fce1ff6b9aeb72ab69cc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789245"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936680"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Options (SQL Server AlwaysOn, page Tableau de bord)
-  Utilisez la page **tableau de bord SQL Server AlwaysOn** de la [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]boîte de dialogue **options** pour configurer le tableau de bord AlwaysOn.  
+  Utilisez la page **tableau de bord SQL Server AlwaysOn** de la [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] boîte de dialogue **options** pour configurer le tableau de bord AlwaysOn.  
   
  **Pour accéder à cette page :**  
   
@@ -28,7 +27,7 @@ ms.locfileid: "62789245"
   
 ## <a name="on-this-page"></a>Sur cette page  
  **Activez l'actualisation automatique.**  
- Cliquez pour activer l'actualisation automatique. Les options sont :  
+ Cliquez pour activer l'actualisation automatique. Les options disponibles sont :  
   
 -   Le champ **Intervalle d’actualisation (en secondes)** affiche le nombre de secondes auquel le tableau de bord sera actualisé. La valeur par défaut est 30. Lorsque l'actualisation automatique est activée, vous pouvez modifier ce champ afin de changer l'intervalle d'actualisation.  
   

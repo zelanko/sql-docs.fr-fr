@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9211f91d81d1da1d3c1b96286aac0fa53306f6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936510"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Page Résultats (assistants de groupe de disponibilité AlwaysOn)
   Cette rubrique d'aide décrit les options de la page **Résultats** . Cette rubrique s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], à l' [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]et à l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez cette page pour afficher les résultats de l'Assistant.  
@@ -37,7 +36,7 @@ ms.locfileid: "62789010"
 |Résultats|Description|  
 |------------|-----------------|  
 |**Error**|Indique que l'étape de validation a échoué. Cliquez sur le lien pour afficher le message d'erreur.|  
-|**Opération réussie**|Indique que l'étape de validation s'est terminée avec succès.|  
+|**Succès**|Indique que l'étape de validation s'est terminée avec succès.|  
   
 
   
