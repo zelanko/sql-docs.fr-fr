@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915209"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modifier la requête de la source OData à l'exécution
   Vous pouvez modifier la requête de la source OData à l’exécution en ajoutant une expression à la propriété **[OData Source].[Query]** de la tâche de flux de données.  
@@ -29,7 +28,7 @@ ms.locfileid: "62901186"
   
 1.  Cliquez avec le bouton droit sur **Tâche de flux de données** et sélectionnez l’option **Paramétrer...** .  
   
-2.  Dans la boîte de dialogue **Paramétrer**, sélectionnez **[\<<Nom du composant source OData].[Query]** pour **Propriété**.  
+2.  Dans la boîte de dialogue **paramétrer** , sélectionnez **[ \<Name of the OData Source Component> ]. [ Query]** pour **propriété**.  
   
 3.  Vous pouvez soit **créer un paramètre** , soit **utiliser un paramètre existant**.  
   

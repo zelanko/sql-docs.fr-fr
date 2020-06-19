@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8301c1f88eb8cf928066a3c12b14452ddbd98cda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958509"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Suppression de fichiers de sauvegarde d'objets blob avec des baux actifs
   Lors de la sauvegarde ou de la restauration à partir du stockage Azure, SQL Server acquiert un bail infini pour verrouiller l’accès exclusif à l’objet BLOB. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l'objet blob ne peut pas être écrit ou supprimé tant que le bail n'a pas été libéré. Cette rubrique explique comment libérer le bail et supprimer l'objet blob.  
@@ -39,7 +38,7 @@ ms.locfileid: "72783056"
 3.  **Suppression de l’objet blob :** pour supprimer un objet blob dont le bail est actif, vous devez d’abord résilier le bail.  
   
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a>Exemple de script PowerShell  
- ** \* Important \* \* ** Si vous exécutez PowerShell 2,0, vous risquez de rencontrer des problèmes lors du chargement de l’assembly Microsoft WindowsAzure. Storage. dll. Nous vous recommandons d'effectuer une mise à niveau vers Powershell 3.0 pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
+ Important si vous exécutez PowerShell 2,0, vous risquez de rencontrer des problèmes lors du chargement de l’assembly Microsoft WindowsAzure.Storage.dll. ** \* \* \* \* ** Nous vous recommandons d'effectuer une mise à niveau vers Powershell 3.0 pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
   
 -   Créez ou modifiez le fichier powershell.exe.config pour charger les assemblies .NET 2.0 et .NET 4.0 au moment de l'exécution avec les informations suivantes :  
   
@@ -79,9 +78,9 @@ ms.locfileid: "72783056"
   
      **Résiliation de baux**  
   
-     **Le bail sur \<URL de l’objet blob> est un bail de restauration : vous verrez ce message seulement si vous avez un objet blob avec un bail de restauration toujours actif.**  
+     **Le bail sur \<URL of the Blob> est un bail de restauration : ce message s’affiche uniquement si vous avez un objet BLOB avec un bail de restauration toujours actif.**  
   
-     **Le bail sur \<URL de l’objet blob> n’est pas un bail de restauration. Résiliation du bail sur \<URL de l’objet blob.**  
+     **Le bail sur \<URL of the Blob> n’est pas un bail de restauration avec rupture de bail sur \<URL of the Bob> .**  
   
 ```powershell
 param(  
@@ -150,4 +149,4 @@ if($lockedBlobs.Count -gt 0)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

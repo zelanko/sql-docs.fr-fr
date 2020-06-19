@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d267e6cc1e3343dc92dac6cc247b9308ba072d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914469"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Éditeur de destination SAP BW (page Mappages)
   La page **Mappages** de **l’Éditeur de destination SAP BW** vous permet de mapper les colonnes d’entrée aux colonnes de destination.  
@@ -71,7 +70,7 @@ ms.locfileid: "62770875"
  **Colonne d'entrée**  
  Affichez les colonnes d'entrée que vous avez sélectionnées.  
   
- Pour mapper une colonne d'entrée différente à la même colonne de destination, sélectionnez une colonne d'entrée différente dans la liste. Pour supprimer un mappage, sélectionnez **\<ignorer>** pour exclure la colonne d’entrée de la sortie.  
+ Pour mapper une colonne d'entrée différente à la même colonne de destination, sélectionnez une colonne d'entrée différente dans la liste. Pour supprimer un mappage, sélectionnez **\<ignore>** pour exclure la colonne d’entrée de la sortie.  
   
  **Colonne de destination**  
  Affichez chaque colonne de destination disponible, qu'elle soit mappée ou non.  

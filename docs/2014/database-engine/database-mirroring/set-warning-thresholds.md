@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a02fa726d7fef74c4baf3ba44a24519a5cbb680
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65805156"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933920"
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
   Utilisez cette boîte de dialogue pour activer et configurer un ou plusieurs seuils d'avertissement pour la base de données sélectionnée dans l'arborescence de navigation de la boîte de dialogue **Moniteur de mise en miroir de bases de données** .  
@@ -30,7 +29,7 @@ ms.locfileid: "65805156"
   
 ## <a name="options"></a>Options  
  *Instance de serveur et état de la connexion*  
- Nom d’une instance de serveur partenaire au format _système_**\\**_instance_name_. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
+ Nom d’une instance de serveur partenaire au format _système_ **\\** _instance_name_. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
   
  Ce champ indique également si le moniteur est actuellement connecté à cette instance de serveur. Les états de connexion possibles sont les suivants :  
   
@@ -72,10 +71,10 @@ ms.locfileid: "65805156"
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Ce seuil indique la durée exprimée en minutes des transactions qui n'ont pas encore été envoyées depuis la file d'attente d'envoi vers l'instance de serveur miroir. Cette valeur permet de mesurer la perte de données potentielle en termes de temps.|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Ce seuil indique le délai en millisecondes par transaction (utile uniquement en mode haute sécurité). Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression.|  
   
- **Activé sur «**   *\<instance_serveur>*   **»**  
+ **Activé à «** *\<server instance>* **'**  
  Une case à cocher vide indique que l'avertissement est actuellement désactivé sur l'instance de serveur. Pour activer l'avertissement, activez la case à cocher.  
   
- **Seuil à «**   *\<instance_serveur>*   **»**  
+ **Seuil à «** *\<server instance>* **'**  
  Lorsqu'un avertissement est activé, définissez le seuil dans la partie gauche de cette colonne. Un événement se produit si le seuil spécifié est atteint lors de la mise à jour de la table d'état. Si vous désactivez un seuil après avoir configuré une valeur, cette valeur reste dans le champ et sera utilisée lorsque vous activerez de nouveau l'avertissement.  
   
  Lorsqu'un avertissement n'est pas activé, ce champ est inactif.  

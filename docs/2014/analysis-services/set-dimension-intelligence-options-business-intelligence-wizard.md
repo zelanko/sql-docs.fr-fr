@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3fe16614-bf5b-458a-9f30-67ebc8ac2a8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f85ec2a21b478771a9ace733c22ff93a521c8430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 024aac42e6a5f0ee391ff7c9d00f9e035bd4dca5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940580"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>Définir les options d'intelligence des dimensions (Assistant Business Intelligence)
-  Utilisez la page **Définir les options d'intelligence des dimensions** pour sélectionner la dimension à laquelle l'Assistant Business Intelligence applique l'intelligence des dimensions. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge plusieurs types d’entreprise standard pour les dimensions et les attributs, tels que les dimensions de produit ou les dimensions de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] compte. Les applications clientes peuvent utiliser ces types d'entreprises pour fournir un support d'analyse supplémentaire pour les solutions Business Intelligence. Pour plus d’informations sur les types de dimensions et les types d’attributs disponibles, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) et [Attributs et hiérarchies d’attributs](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+  Utilisez la page **Définir les options d'intelligence des dimensions** pour sélectionner la dimension à laquelle l'Assistant Business Intelligence applique l'intelligence des dimensions. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge plusieurs types d’entreprise standard pour les dimensions et les attributs, tels que les dimensions de produit ou les dimensions de compte. Les applications clientes peuvent utiliser ces types d'entreprises pour fournir un support d'analyse supplémentaire pour les solutions Business Intelligence. Pour plus d’informations sur les types de dimensions et les types d’attributs disponibles, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) et [Attributs et hiérarchies d’attributs](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="options"></a>Options  
  **Dimension**  

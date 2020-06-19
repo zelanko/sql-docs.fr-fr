@@ -1,5 +1,6 @@
 ---
 title: Traiter les codes de retour et les paramètres de sortie (ODBC) | Microsoft Docs
+description: En savoir plus sur SQLSTATE, qui fournit des informations détaillées sur la cause d’un avertissement ou d’une erreur dans le pilote ODBC SQL Server Native Client.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967579"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Exécution de procédures stockées - Traiter les codes de retour et les paramètres de sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.locfileid: "81281879"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La première liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () crée une procédure stockée utilisée par cet exemple.  
+ La première [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () crée une procédure stockée utilisée par cet exemple.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Puis, exécutez le programme.  
   
- La troisième liste [!INCLUDE[tsql](../../includes/tsql-md.md)]de code () supprime la procédure stockée utilisée par cet exemple.  
+ La troisième [!INCLUDE[tsql](../../includes/tsql-md.md)] liste de code () supprime la procédure stockée utilisée par cet exemple.  
   
 ```  
 use AdventureWorks  

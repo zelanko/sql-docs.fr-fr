@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d948a9edfafdbf39bd8ee5c512fb77814cb7adf7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec4d14e3823cda0f33f5348e0a644387b83f2888
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62837256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923170"
 ---
 # <a name="high-availability-support"></a>Prise en charge de la haute disponibilité
   Le service de capture de données modifiées pour Oracle est conçu pour une haute disponibilité. Les fonctionnalités suivantes fournissent une partie de la prise en charge de la haute disponibilité :  
@@ -24,7 +23,7 @@ ms.locfileid: "62837256"
   
 -   Le service de capture de données modifiées pour Oracle peut utiliser des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cluster, de façon à récupérer après le basculement de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un autre nœud de cluster. L'administrateur de l'ordinateur de service de capture de données modifiées Oracle doit uniquement spécifier les informations de connexion à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cluster lorsqu'il crée un service de capture de données modifiées Oracle.  
   
--   Le service de capture de données modifiées pour Oracle peut utiliser la fonctionnalité de mise en miroir de bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** . Cette prise en charge requiert que les bases de données MSXDBCDC et toutes bases de données CDC soient membres du même groupe de disponibilité. Il requiert également que l’administrateur de l’ordinateur du service de capture de données modifiées Oracle spécifie les informations de connexion **AlwaysOn** appropriées au groupe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibilité (par exemple, les propriétés `Failover_Partner and Network=dbmssocn`de connexion). Cela permet au service de capture de données modifiées de reprendre automatiquement le traitement sur une réplication secondaire des bases de données après un basculement.  
+-   Le service de capture de données modifiées pour Oracle peut utiliser la fonctionnalité de mise en miroir de bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** . Cette prise en charge requiert que les bases de données MSXDBCDC et toutes bases de données CDC soient membres du même groupe de disponibilité. Il requiert également que l’administrateur de l’ordinateur du service de capture de données modifiées Oracle spécifie les informations de connexion **AlwaysOn** appropriées au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] groupe de disponibilité (par exemple, les propriétés de connexion `Failover_Partner and Network=dbmssocn` ). Cela permet au service de capture de données modifiées de reprendre automatiquement le traitement sur une réplication secondaire des bases de données après un basculement.  
   
 -   Le service de capture de données modifiées pour Oracle peut être configuré en tant que ressource de service générique sur un cluster de basculement Windows (conjointement avec, ou séparément de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), ce qui simplifie le basculement du traitement CDC avec le cluster. Pour configurer le service de capture de données modifiées pour Oracle en tant que ressource dans un cluster de basculement, l'administrateur système doit définir le service de capture de données modifiées pour Oracle comme ressource de service générique sur chaque nœud du cluster de basculement.  
   

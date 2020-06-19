@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060960"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922110"
 ---
 # <a name="common-properties"></a>Propriétés communes
-  Les objets de Data Flow dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le modèle objet ont des propriétés communes et des propriétés personnalisées au niveau du composant, de l’entrée et de la sortie, ainsi que des niveaux de colonne d’entrée et de colonne de sortie. De nombreuses propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
+  Les objets de Data Flow dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modèle objet ont des propriétés communes et des propriétés personnalisées au niveau du composant, de l’entrée et de la sortie, ainsi que des niveaux de colonne d’entrée et de colonne de sortie. De nombreuses propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
   
  Cette rubrique répertorie et décrit les propriétés communes des objets de flux de données.  
   
 -   [Composants](#components)  
   
--   [Port](#inputs)  
+-   [Entrées](#inputs)  
   
 -   [Colonnes d’entrée](#inputcolumns)  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66060960"
 |ComponentClassID|String|CLSID du composant.|  
 |ContactInfo|String|Informations de contact pour le développeur d'un composant.|  
 |Description|String|Description du composant de flux de données. La valeur par défaut de cette propriété est le nom du composant de flux de données.|  
-|ID|Integer|Valeur qui identifie de manière unique cette instance du composant.|  
+|id|Integer|Valeur qui identifie de manière unique cette instance du composant.|  
 |IdentificationString|String|Identifie le composant.|  
 |IsDefaultLocale|Boolean|Indique si le composant utilise les paramètres régionaux de la tâche de flux de données à laquelle il appartient.|  
 |LocaleID|Integer|Paramètres régionaux utilisés par le composant de flux de données lors de l'exécution du package. Tous les paramètres régionaux Windows sont disponibles dans les composants de flux de données.|  
@@ -109,8 +108,8 @@ ms.locfileid: "66060960"
 |Description|String|Description de l'entrée.|  
 |ErrorOrTruncationOperation|String|Chaîne facultative qui spécifie les types d'erreurs ou troncations qui peuvent se produire lors du traitement d'une ligne.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui spécifie la gestion des erreurs. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
-|HasSideEffects|Boolean|Indique si un composant peut être supprimé du plan d’exécution du workflow lorsqu’il n’est pas attaché à un composant en aval et lorsque `RunInOptimizedMode` a `true`la valeur.|  
-|ID|Integer|Valeur qui identifie l'entrée de façon unique.|  
+|HasSideEffects|Boolean|Indique si un composant peut être supprimé du plan d’exécution du workflow lorsqu’il n’est pas attaché à un composant en aval et lorsque `RunInOptimizedMode` a la valeur `true` .|  
+|id|Integer|Valeur qui identifie l'entrée de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie l'entrée.|  
 |IsSorted|Boolean|Indique si les données dans l'entrée sont triées.|  
 |Nom|String|Nom de l'entrée.|  
@@ -131,7 +130,7 @@ ms.locfileid: "66060960"
 |ErrorOrTruncationOperation|String|Chaîne facultative qui spécifie les types d'erreurs ou troncations qui peuvent se produire lors du traitement d'une ligne.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui spécifie la gestion des erreurs. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|ID de la colonne de métadonnées externe assigné à une colonne d'entrée.|  
-|ID|Integer|Valeur qui identifie la colonne d'entrée de façon unique.|  
+|id|Integer|Valeur qui identifie la colonne d'entrée de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la colonne d'entrée.|  
 |LineageID|Integer|ID de la colonne en amont.|  
 |Nom|String|Nom de la colonne d'entrée.|  
@@ -155,10 +154,10 @@ ms.locfileid: "66060960"
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui spécifie la gestion des erreurs. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
 |ExclusionGroup|Integer|Valeur qui identifie un groupe de sorties s'excluant mutuellement.|  
 |HasSideEffects|Boolean|Valeur qui indique si un composant peut être supprimé du plan d'exécution du flux de données lorsqu'il n'est pas attaché à un composant en amont et lorsque la propriété `RunInOptimizedMode` a la valeur `true`.|  
-|ID|Integer|Valeur qui identifie la sortie de façon unique.|  
+|id|Integer|Valeur qui identifie la sortie de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la sortie.|  
 |IsErrorOut|Boolean|Indique si la sortie est une sortie d'erreur.|  
-|IsSorted|Boolean|Indique si la sortie est triée. La valeur par défaut est `False`.<br /><br /> ** \* Important \* \* ** La définition de la valeur `IsSorted` de la `True` propriété sur ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indique si la sortie est triée. La valeur par défaut est `False`.<br /><br /> Important la définition de la valeur de la propriété sur **ne \* \* trie pas les données. \* \* ** `IsSorted` `True` Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nom|String|Nom de la sortie.|  
 |SynchronousInputID|Integer|ID d'une entrée synchrone avec la sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
@@ -175,7 +174,7 @@ ms.locfileid: "66060960"
 |ErrorOrTruncationOperation|String|Chaîne facultative qui spécifie les types d'erreurs ou troncations qui peuvent se produire lors du traitement d'une ligne.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui spécifie la gestion des erreurs. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`. La valeur par défaut est `Fail component`.|  
 |ExternalMetadataColumnID|Integer|ID de la colonne de métadonnées externe assigné à une colonne d'entrée.|  
-|ID|Integer|Valeur qui identifie la colonne de sortie de façon unique.|  
+|id|Integer|Valeur qui identifie la colonne de sortie de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la colonne de sortie.|  
 |LineageID|Integer|ID de la colonne de sortie. Les composants en aval font référence à la colonne à l'aide de cette valeur.|  
 |Nom|String|Nom de la colonne de sortie.|  
@@ -193,7 +192,7 @@ ms.locfileid: "66060960"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |Description|String|Décrit la colonne externe.|  
-|ID|Integer|Valeur qui identifie la colonne de façon unique.|  
+|id|Integer|Valeur qui identifie la colonne de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la colonne.|  
 |Nom|String|Nom de la colonne externe.|  
   

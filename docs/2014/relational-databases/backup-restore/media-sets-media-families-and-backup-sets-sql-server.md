@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853451ea5a7c43cd073fdf75703b3c4651b442d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958031"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
   Cette rubrique présente la terminologie de base des supports de sauvegarde propre aux sauvegardes et restaurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique s'adresse aux lecteurs qui font leurs premiers pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit le format utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les supports de sauvegarde, la correspondance entre le support de sauvegarde et les unités de sauvegarde, l'organisation des sauvegardes sur le support de sauvegarde, et plusieurs considérations relatives aux jeux de supports et aux familles de supports. La rubrique décrit également les étapes de l'initialisation ou la mise en forme du support de sauvegarde avant de l'utiliser pour la première fois ou de remplacer un jeu de supports ancien par un nouveau, comment remplacer d'anciens jeux de sauvegarde dans un jeu de supports, et comment ajouter de nouveaux jeux de sauvegarde à un jeu de supports.
@@ -86,7 +85,7 @@ ms.locfileid: "78175971"
 -   Si la description du support contient une étiquette de support MTF ou une description du support.
 
     > [!NOTE]
-    >  Tous les supports utilisés pour une opération de sauvegarde ou de restauration utilisent un format de sauvegarde [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] standard appelé préserve toute étiquette de support MTF écrite par une autre application, mais n’écrit pas d’étiquettes de support MTF.
+    >  Tous les supports utilisés pour une opération de sauvegarde ou de restauration utilisent un format de sauvegarde standard appelé [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] préserve toute étiquette de support MTF écrite par une autre application, mais n’écrit pas d’étiquettes de support MTF.
 
 -   Étiquette au format de bande [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou description du support au format texte libre.
 
@@ -137,7 +136,7 @@ WITH
 
  ![Deuxième jeu de sauvegarde réparti sur 3 bandes de jeux de supports](../../database-engine/media/bnr-mediaset-appendedto.gif "Deuxième jeu de sauvegarde réparti sur 3 bandes de jeux de supports")
 
- Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation de clauses de **=** _backup_set_file_number_ de fichier lors de la restauration d’une [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sauvegarde complète de la base de données suivie d’une sauvegarde différentielle sur le même support de sauvegarde. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.
+ Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=** _backup_set_file_number_ lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.
 
 ```
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754241"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933780"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Déterminer le nombre de compartiments correct pour les index de hachage
   Vous devez spécifier une valeur pour le paramètre `BUCKET_COUNT` lorsque vous créez la table mémoire optimisée. Cette rubrique fournit des recommandations pour déterminer la valeur appropriée du paramètre `BUCKET_COUNT`. Si vous ne pouvez pas déterminer le nombre de compartiments correct, utilisez un index non cluster à la place.  Une valeur `BUCKET_COUNT` incorrecte, en particulier une valeur trop basse, peut avoir un impact important sur les performances de la charge de travail, ainsi que sur le temps de récupération de la base de données. Il vaut mieux surestimer le nombre de compartiments.  
@@ -24,7 +23,7 @@ ms.locfileid: "62754241"
   
  Pour plus d'informations sur les index de hachage non cluster, consultez [Hash Indexes](hash-indexes.md) et [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Une table de hachage est allouée pour chaque index de hachage sur une table mémoire optimisée. La taille de la table de hachage allouée pour un index est `BUCKET_COUNT` spécifiée par le paramètre dans [Create table &#40;transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) ou [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). Le nombre de compartiment est arrondi en interne à la puissance de 2 suivante. Par exemple, la spécification d'un nombre de compartiments égal à 300 000 créera un nombre réel de compartiments égal à 524 288.  
+ Une table de hachage est allouée pour chaque index de hachage sur une table mémoire optimisée. La taille de la table de hachage allouée pour un index est spécifiée par le `BUCKET_COUNT` paramètre dans [Create table &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) ou [Create type &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). Le nombre de compartiment est arrondi en interne à la puissance de 2 suivante. Par exemple, la spécification d'un nombre de compartiments égal à 300 000 créera un nombre réel de compartiments égal à 524 288.  
   
  Pour accéder à un article et à une vidéo sur le nombre de compartiments, consultez [How to determine the right bucket count for hash indexes (In-Memory OLTP)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
@@ -177,7 +176,7 @@ GO
 -   Si les analyses complètes d'index sont les principales opérations critiques pour les performances, utilisez un nombre de compartiments qui est proche du nombre réel de valeurs de clés d'index.  
   
 ### <a name="big-tables"></a>Grandes tables  
- Pour les grandes tables, l'utilisation de la mémoire peut devenir un problème. Par exemple, avec une table de lignes 250 millions avec 4 index de hachage, chacun avec un nombre de compartiments de 1 milliard, la charge des tables de hachage est de 4 index * \* 1 milliard compartiments 8 octets = 32 gigaoctets d’utilisation de la mémoire. Lorsque vous choisissez un nombre de compartiments de 250 millions pour chacun des index, la charge totale pour les tables de hachage est de 8 gigaoctets. Notez que cela s’ajoute aux 8 octets d’utilisation de la mémoire que chaque index ajoute à chaque ligne individuelle, ce qui correspond à 8 gigaoctets dans ce scénario \* (4 \* indexe 8 octets 250 millions lignes).  
+ Pour les grandes tables, l'utilisation de la mémoire peut devenir un problème. Par exemple, avec une table de lignes 250 millions avec 4 index de hachage, chacun avec un nombre de compartiments de 1 milliard, la charge des tables de hachage est de 4 index * 1 milliard compartiments \* 8 octets = 32 gigaoctets d’utilisation de la mémoire. Lorsque vous choisissez un nombre de compartiments de 250 millions pour chacun des index, la charge totale pour les tables de hachage est de 8 gigaoctets. Notez que cela s’ajoute aux 8 octets d’utilisation de la mémoire que chaque index ajoute à chaque ligne individuelle, ce qui correspond à 8 gigaoctets dans ce scénario (4 indexe \* 8 octets \* 250 millions lignes).  
   
  Les analyses de table complètes ne sont généralement pas un problème critique pour les performances pour les charges de travail OLTP. Par conséquent, un choix doit être fait entre l'utilisation de la mémoire et les performances de la recherche de point et des opérations d'insertion :  
   

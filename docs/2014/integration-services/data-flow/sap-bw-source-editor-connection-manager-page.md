@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfb36f73366487ae413bdbeb7d62cc9aa1026f0b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901100"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914339"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Éditeur de source SAP BW (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de **l’Éditeur de source SAP BW** pour sélectionner le gestionnaire de connexions SAP BW pour la source SAP BW. Sur cette page, sélectionnez également le mode d'exécution et les paramètres pour extraire les données du système SAP Netweaver BW.  
@@ -83,7 +82,7 @@ ms.locfileid: "62901100"
  Entrez le nom du serveur ou l'adresse IP de l'hôte de passerelle. Généralement, le nom ou l'adresse IP est identique au serveur d'applications SAP.  
   
  **Service de passerelle**  
- Entrez le nom du service de passerelle, au format `sapgwNN`, où `NN` est le numéro du système.  
+ Entrez le nom du service de passerelle, au format `sapgwNN` , où `NN` est le numéro du système.  
   
  **ID de programme**  
  Entrez l'ID du programme qui est associé à la destination RFC.  
@@ -109,7 +108,7 @@ ms.locfileid: "62901100"
  Entrez le nom du serveur ou l'adresse IP de l'hôte de passerelle. Généralement, le nom ou l'adresse IP est identique au serveur d'applications SAP.  
   
  **Service de passerelle**  
- Entrez le nom du service de passerelle, au format `sapgwNN`, où `NN` est le numéro du système.  
+ Entrez le nom du service de passerelle, au format `sapgwNN` , où `NN` est le numéro du système.  
   
  **ID de programme**  
  Entrez l'ID du programme qui est associé à la destination RFC.  

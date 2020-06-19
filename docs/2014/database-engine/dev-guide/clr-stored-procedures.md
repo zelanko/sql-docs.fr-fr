@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4998058d55cd49c0eecfdecce2edc609a4d62c1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77213968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933710"
 ---
 # <a name="clr-stored-procedures"></a>Procédures stockées du CLR
-  Les procédures stockées sont des routines que vous ne pouvez pas utiliser dans des expressions scalaires. Contrairement aux fonctions scalaires, elles peuvent retourner des résultats scalaires et des messages au client, appeler des instructions DDL (Data Definition Language) et DML (Data Manipulation Language) et retourner des paramètres de sortie. Pour plus d’informations sur les avantages de l’intégration du CLR et le [!INCLUDE[tsql](../../includes/tsql-md.md)]choix entre le code managé et, consultez [vue d’ensemble de l’intégration du CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Les procédures stockées sont des routines que vous ne pouvez pas utiliser dans des expressions scalaires. Contrairement aux fonctions scalaires, elles peuvent retourner des résultats scalaires et des messages au client, appeler des instructions DDL (Data Definition Language) et DML (Data Manipulation Language) et retourner des paramètres de sortie. Pour plus d’informations sur les avantages de l’intégration du CLR et le choix entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez [vue d’ensemble de l’intégration du CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Configuration requise pour les procédures stockées CLR  
- Dans le Common Language Runtime (CLR), les procédures stockées sont implémentées en tant que méthodes statiques publiques [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sur une classe dans un assembly. La méthode statique peut soit être déclarée de type « void », soit retourner une valeur entière. Si elle retourne une valeur entière, l'entier retourné est traité comme le code de retour de la procédure. Par exemple :  
+ Dans le common language runtime (CLR), les procédures stockées sont implémentées en tant que méthodes statiques publiques sur une classe dans un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. La méthode statique peut soit être déclarée de type « void », soit retourner une valeur entière. Si elle retourne une valeur entière, l'entier retourné est traité comme le code de retour de la procédure. Par exemple :  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -48,7 +47,7 @@ ms.locfileid: "77213968"
  Plusieurs moyens permettent de retourner des informations des procédures stockées [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Il peut s'agir notamment de paramètres de sortie, de résultats sous forme de tableau et de messages.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>Paramètres OUTPUT et procédures stockées CLR  
- Tout comme avec les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)], des informations peuvent être retournées de procédures stockées [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à l'aide de paramètres OUTPUT. La syntaxe DML [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisée pour créer des procédures stockées [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] est le même que celle employée pour créer des procédures stockées écrites dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le paramètre correspondant du code d'implémentation dans la classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit utiliser un paramètre passé par référence en guise d'argument. Notez que Visual Basic ne prend pas en charge les paramètres de sortie de la même façon que C#. Vous devez spécifier le paramètre par référence et appliquer l' \<attribut out () > pour représenter un paramètre de sortie, comme suit :  
+ Tout comme avec les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)], des informations peuvent être retournées de procédures stockées [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à l'aide de paramètres OUTPUT. La syntaxe DML [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisée pour créer des procédures stockées [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] est le même que celle employée pour créer des procédures stockées écrites dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le paramètre correspondant du code d'implémentation dans la classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit utiliser un paramètre passé par référence en guise d'argument. Notez que Visual Basic ne prend pas en charge les paramètres de sortie de la même façon que C#. Vous devez spécifier le paramètre par référence et appliquer l' \<Out()> attribut pour représenter un paramètre de sortie, comme suit :  
   
 ```vb
 Imports System.Runtime.InteropServices  
@@ -122,7 +121,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- Une fois que l’assembly contenant la procédure stockée CLR ci-dessus a été généré et créé [!INCLUDE[tsql](../../includes/tsql-md.md)] sur le serveur, le code suivant est utilisé pour créer la procédure dans la base de données et spécifie *Sum* comme paramètre de sortie.  
+ Une fois que l’assembly contenant la procédure stockée CLR ci-dessus a été généré et créé sur le serveur, le code suivant [!INCLUDE[tsql](../../includes/tsql-md.md)] est utilisé pour créer la procédure dans la base de données et spécifie *Sum* comme paramètre de sortie.  
   
 ```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -132,7 +131,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- Notez que *Sum* est déclaré en tant `int` que type de données SQL Server et que le paramètre *value* défini dans la procédure stockée CLR est spécifié `SqlInt32` en tant que type de données CLR. Lorsqu’un programme appelant exécute la procédure stockée CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit automatiquement `SqlInt32` le type de données CLR `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un type de données.  Pour plus d’informations sur les types de données CLR qui peuvent et ne peuvent pas être convertis, consultez [mappage des données de paramètres CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Notez que *Sum* est déclaré en tant que `int` type de données SQL Server et que le paramètre *value* défini dans la procédure stockée CLR est spécifié en tant que type de `SqlInt32` données CLR. Lorsqu’un programme appelant exécute la procédure stockée CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit automatiquement le `SqlInt32` type de données CLR en un `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  Pour plus d’informations sur les types de données CLR qui peuvent et ne peuvent pas être convertis, consultez [mappage des données de paramètres CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="returning-tabular-results-and-messages"></a>Retour de résultats sous forme de tableau et de messages  
  Le retour au client de résultats sous forme de tableau et de messages s'effectue via l'objet `SqlPipe` obtenu en utilisant la propriété `Pipe` de la classe `SqlContext`. L'objet `SqlPipe` emploie une méthode `Send`. En appelant la méthode `Send`, vous pouvez transmettre des données à l'application appelante par l'intermédiaire du canal.  
@@ -366,7 +365,7 @@ END;
 ```  
   
 > [!NOTE]  
->  Les messages et les jeux de résultats sont extraits différemment dans l'application cliente. Par exemple, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] les jeux de résultats s’affichent dans la vue **résultats** et les messages s’affichent dans le volet **messages** .  
+>  Les messages et les jeux de résultats sont extraits différemment dans l'application cliente. Par exemple, les [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] jeux de résultats s’affichent dans la vue **résultats** et les messages s’affichent dans le volet **messages** .  
   
  Si le code Visual C# ci-avant est enregistré dans un fichier MyFirstUdp.cs et compilé avec :  
   

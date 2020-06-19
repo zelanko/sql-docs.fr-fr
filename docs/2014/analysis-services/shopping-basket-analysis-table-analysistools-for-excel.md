@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940520"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Analyse du panier d'achat (Outils d'analyse de table pour Excel)
   ![Outil Analyse du panier d'achat](media/tat-shopbskt.gif "Outil Analyse du panier d'achat")  
   
- L’outil d' **analyse du panier** d’achat `associations` vous aide à trouver vos données. Une association peut vous dire quels éléments sont fréquemment achetés en même temps. Dans l’exploration de données, cette technique est une méthode bien connue connue sous le nom d' *analyse du panier*d’achat, utilisée pour analyser le comportement d’achat des clients dans des jeux de données très volumineux. Les spécialistes du marketing peuvent utiliser ces informations pour recommander des produits connexes aux clients et promouvoir les produits connexes en les plaçant dans un proche voisinage sur les pages Web, dans les catalogues ou sur les rayons.  
+ L’outil d' **analyse du panier d’achat** vous aide à trouver `associations` vos données. Une association peut vous dire quels éléments sont fréquemment achetés en même temps. Dans l’exploration de données, cette technique est une méthode bien connue connue sous le nom d' *analyse du panier*d’achat, utilisée pour analyser le comportement d’achat des clients dans des jeux de données très volumineux. Les spécialistes du marketing peuvent utiliser ces informations pour recommander des produits connexes aux clients et promouvoir les produits connexes en les plaçant dans un proche voisinage sur les pages Web, dans les catalogues ou sur les rayons.  
   
  Pour utiliser l'analyse du panier d'achat, les éléments que vous souhaitez analyser doivent être liés par un ID de transaction. Par exemple, si vous analysez toutes les commandes reçues via un site Web, chaque commande aurait un ID de commande ou ID de transaction associé à un ou plusieurs éléments acheté.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66068678"
   
 5.  Cliquez sur**avancé**pour ouvrir la boîte de dialogue **Paramètres avancés** . Augmentez la valeur de la **prise en charge minimale** pour réduire le nombre de produits regroupés en tant que jeux d’éléments. Augmentez la **probabilité de règle minimale** pour filtrer les jeux d’éléments très courants.  
   
-### <a name="requirements"></a>Conditions requises  
+### <a name="requirements"></a>Configuration requise  
  Pour utiliser l’outil d' **analyse du panier d’achat** , vos données doivent être stockées dans un tableau Excel et contenir les colonnes suivantes :  
   
 -   Colonne qui contient un ID unique représentant la transaction. L'ID peut être numérique ou texte, du moment que la valeur dans chaque ligne est unique.  

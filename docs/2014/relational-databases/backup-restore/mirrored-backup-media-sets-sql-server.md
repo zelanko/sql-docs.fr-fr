@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ad183871e58f5dc64cf763c540e1629a09b4f320
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce3513c67a0087dd00021de75f360b19819b46db
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876090"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957869"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Jeux de supports de sauvegarde en miroir (SQL Server)
     
@@ -71,7 +70,7 @@ ms.locfileid: "62876090"
   
 -   [Sauvegarder sur un support de sauvegarde miroir &#40;Transact-SQL&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md)   

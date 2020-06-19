@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b684a20563bf73a50b4df9f624b59047c768865c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060925"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922010"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Terminer l'Assistant (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Terminer l'Assistant** pour vérifier et confirmer les options de mise à niveau des packages que vous avez sélectionnées. Il s'agit de la dernière page de l'Assistant dans laquelle vous pouvez revenir aux pages précédentes et modifier les options pour cette session de l'Assistant.  

@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 305d9d79-d1ab-4704-a7b5-3283842b3996
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d616997d3764aad42691d9ef3c213d553b5f311
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c66b972395f86746b2d08df234db8aa0c71d03fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068310"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940320"
 ---
 # <a name="specify-object-counts-aggregation-design-wizard"></a>Spécifier le nombre d'objets (Assistant Conception d'agrégation)
   La page **Spécifier le nombre d'objets** permet de calculer automatiquement le nombre d'objets inclus dans le cube ou d'entrer une estimation manuellement. L'Assistant Conception d'agrégation utilise le nombre d'objets pour évaluer la capacité de stockage nécessaire.  
   
 ## <a name="options"></a>Options  
  **Objets de cube**  
- Affiche les dimensions et les attributs du cube. Seuls les attributs dont la `AggregationUsage` propriété a la valeur `None` dans la page **vérifier l’utilisation** de l’agrégation de l’Assistant sont affichés, car il s’agit des seuls attributs qui nécessitent la spécification des nombres.  
+ Affiche les dimensions et les attributs du cube. Seuls les attributs dont la propriété a la `AggregationUsage` valeur `None` dans la page **vérifier l’utilisation** de l’agrégation de l’Assistant sont affichés, car il s’agit des seuls attributs qui nécessitent la spécification des nombres.  
   
  **Nombre estimé**  
- Affiche le nombre estimé de lignes dans le groupe de mesures et l'estimation du nombre de membres d'attribut dans les dimensions de base de données. Vous pouvez taper une valeur à utiliser comme nombre estimé ou vous pouvez calculer les valeurs du compteur estimées. Pour calculer les valeurs de nombre, `0` tapez dans le champ, puis cliquez sur **nombre**. Les champs qui affichent déjà un nombre ne sont pas mis à jour.  
+ Affiche le nombre estimé de lignes dans le groupe de mesures et l'estimation du nombre de membres d'attribut dans les dimensions de base de données. Vous pouvez taper une valeur à utiliser comme nombre estimé ou vous pouvez calculer les valeurs du compteur estimées. Pour calculer les valeurs de nombre, tapez `0` dans le champ, puis cliquez sur **nombre**. Les champs qui affichent déjà un nombre ne sont pas mis à jour.  
   
  **Nombre de partitions**  
  (Facultatif) Tapez le nombre estimé de lignes dans le groupe de mesures et tapez l'estimation du nombre de membres d'attribut dans les partitions.  

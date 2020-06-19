@@ -1,5 +1,6 @@
 ---
 title: Supprimer une source de données (ODBC) | Microsoft Docs
+description: Découvrez comment supprimer une source de données à l’aide de l’administrateur ODBC, par programmation ou à l’aide d’un fichier, avant d’utiliser des applications ODBC avec SQL Server 2005 ou version ultérieure.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1c8abf66fdd5a54b021008229b3218f1299ccf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294514"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967619"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configuration du pilote ODBC SQL Server - Supprimer une source de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
