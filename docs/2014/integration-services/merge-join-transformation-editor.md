@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 222e21e83ef0b722ea33c45ff5413dd77b88fe12
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951079"
 ---
 # <a name="merge-join-transformation-editor"></a>Éditeur de transformation de jointure de fusion
   La boîte de dialogue **Éditeur de transformation de jointure de fusion** permet de préciser le type de jointure, les colonnes qui composent cette dernière et les colonnes de sortie, afin de pouvoir fusionner deux entrées combinées par une opération de jointure.  
@@ -52,6 +51,6 @@ ms.locfileid: "66057713"
  [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Étendre un DataSet à l’aide de la transformation de jointure de fusion](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Transformation de fusion](data-flow/transformations/merge-transformation.md)   
- [transformation d'union totale](data-flow/transformations/union-all-transformation.md)  
+ [Transformation d'union totale](data-flow/transformations/union-all-transformation.md)  
   
   

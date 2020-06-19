@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968322f92c7a135adb5fd0733b5774e7562bc39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957579"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Récupération de bases de données associées contenant une transaction marquée
   Cette rubrique s'applique uniquement aux bases de données qui contiennent des transactions marquées et qui utilisent le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -61,11 +60,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Syntaxe Transact-SQL permettant de réaliser une récupération jusqu'à une marque  
  Quand vous ciblez une transaction marquée à l’aide d’une instruction[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), vous pouvez utiliser l’une des clauses suivantes pour vous arrêter à la marque ou juste avant celle-ci :  
   
--   Utilisez la clause WITH STOPATMARK **=*`<mark_name>`*' '** pour spécifier que la transaction marquée est le point de récupération.  
+-   Utilisez la clause WITH STOPATMARK = **' *`<mark_name>`* '** pour spécifier que la transaction marquée est le point de récupération.  
   
      L'option STOPATMARK effectue une restauration par progression jusqu'à la marque et inclut la transaction marquée dans cette restauration.  
   
--   Utilisez la clause with STOPBEFOREMARK **=*`<mark_name>`*' '** pour spécifier que l’enregistrement de journal situé juste avant la marque est le point de récupération.  
+-   Utilisez la clause with STOPBEFOREMARK = **' *`<mark_name>`* '** pour spécifier que l’enregistrement de journal situé juste avant la marque est le point de récupération.  
   
      L'option STOPBEFOREMARK effectue une restauration par progression jusqu'à la marque et exclut la transaction marquée de cette restauration.  
   
@@ -110,7 +109,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Récupérez chaque base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

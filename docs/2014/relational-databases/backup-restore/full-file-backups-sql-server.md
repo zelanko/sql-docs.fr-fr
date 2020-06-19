@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2e45dc68afa4d464aa3931075a1c1b3be792e6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876133"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957971"
 ---
 # <a name="full-file-backups-sql-server"></a>Sauvegardes de fichiers complètes (SQL Server)
   Cette rubrique concerne les bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui contiennent plusieurs fichiers ou groupes de fichiers.  
@@ -96,10 +95,10 @@ ms.locfileid: "62876133"
 > [!NOTE]  
 >  Les sauvegardes de fichiers ne sont pas prises en charge par l'Assistant Plan de maintenance.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Restaurations de fichiers &#40;mode de récupération simple&#41;](file-restores-simple-recovery-model.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](file-restores-full-recovery-model.md)   

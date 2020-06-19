@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05c636b29b57e898aa3579fc104cc8b044489fc0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b88b8616ee822a3811afe993936edd8747961506
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047911"
 ---
 # <a name="performing-asynchronous-operations"></a>Exécution d'opérations asynchrones
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux applications d'effectuer des opérations de base de données asynchrones. Le traitement asynchrone permet aux méthodes d'être retournées immédiatement sans blocage du thread appelant. Cela rend le multithreading plus puissant et plus souple, sans obliger le développeur à créer explicitement des threads ou à gérer la synchronisation. Les applications requièrent un traitement asynchrone lors de l'initialisation d'une connexion de base de données, ou lors de l'initialisation du résultat de l'exécution d'une commande.  

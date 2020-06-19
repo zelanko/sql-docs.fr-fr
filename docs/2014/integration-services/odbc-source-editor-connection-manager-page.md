@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9c4049681e671993f48594eb7ac18bad403e3e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965009"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Éditeur de source ODBC (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source ODBC** pour sélectionner le gestionnaire de connexions ODBC pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -52,7 +51,7 @@ ms.locfileid: "66057219"
 ||Cliquez sur **Parcourir** pour charger la requête SQL à partir d'un fichier texte.|  
 ||Pour vérifier la syntaxe du texte de la requête, cliquez sur **Analyser** .|  
   
-### <a name="preview"></a>PRÉVERSION  
+### <a name="preview"></a>Préversion  
  Cliquez sur **Aperçu** pour afficher les 200 premières lignes de données extraites de la table ou de la vue sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  

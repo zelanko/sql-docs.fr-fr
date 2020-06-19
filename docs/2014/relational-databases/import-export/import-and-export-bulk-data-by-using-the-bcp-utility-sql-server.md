@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
-ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d1892b26f3c638a696d8ed15e739f56ac2e682f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71708213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026786"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importer et exporter des données en bloc à l'aide de l'utilitaire bcp (SQL Server)
 
@@ -74,11 +73,11 @@ Cette rubrique est une présentation générale de l'utilisation de l' [utilitai
 
 ## <a name="see-also"></a>Voir aussi
 
-[Insérer &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) 
- [clause SELECT &#40;utilitaire Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
- [BCP](../../tools/bcp-utility.md)   
+[Insérer &#40;&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ Transact-SQL [Clause SELECT &#40;&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+ Transact-SQL [utilitaire bcp](../../tools/bcp-utility.md)   
 [Préparer l’importation en bloc de données &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
- [Bulk Insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
- [importation et l’exportation de données ](bulk-import-and-export-of-data-sql-server.md) 
-en bloc &#40;SQL Server&#41;[OpenRowset &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
- [créer un fichier de format](create-a-format-file-sql-server.md) &#40;SQL Server&#41;
+ [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+ [Importation et exportation en bloc de données &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md) 
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [Créer un fichier de Format &#40;SQL Server&#41;](create-a-format-file-sql-server.md)

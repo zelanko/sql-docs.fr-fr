@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a202c97b858e234657340232cef22ea3f25ba432
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057376"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965099"
 ---
 # <a name="odata-connection-manager-editor"></a>Éditeur du gestionnaire de connexions OData
   La boîte de dialogue **Éditeur du gestionnaire de connexions OData** vous permet d'ajouter ou de modifier une connexion à une source OData existante.  
@@ -27,7 +26,7 @@ ms.locfileid: "66057376"
  Nom du gestionnaire de connexions.  
   
  **Emplacement du document de service**  
- URL du service OData. Par exemple : http://services.odata.org/V3/Northwind/Northwind.svc/.  
+ URL du service OData. Par exemple : http://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Authentification**  
  Sélectionnez l' **Authentification Windows** ou utilisez **ce nom d'utilisateur et ce mot de passe** pour l' **authentification**. Si vous sélectionnez la deuxième option, entrez le **nom d'utilisateur** et le **mot de passe**.  

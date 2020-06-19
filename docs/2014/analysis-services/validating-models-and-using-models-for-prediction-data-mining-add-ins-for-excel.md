@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00048ea3c5f344a90e93799a92b4d48c07325482
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065503"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938160"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Validation des modèles et utilisation des modèles pour la prédiction (compléments d'exploration de données pour Excel)
   Le test et la validation de votre modèle est une étape importante du processus d'exploration de données. Vous devez savoir dans quelle mesure vos modèles d'exploration de données sont efficaces sur des données réelles avant de les déployer dans un environnement de production.  

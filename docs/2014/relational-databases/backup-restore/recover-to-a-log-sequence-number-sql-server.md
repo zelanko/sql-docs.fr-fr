@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df55c3468fc009d86cffd58a837d6935f5ce14b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957504"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Récupérer un numéro séquentiel dans le journal (SQL Server)
   Cette rubrique s'applique uniquement aux bases de données employant les modes de restauration complète ou de récupération utilisant les journaux de transactions.  
@@ -38,7 +37,7 @@ ms.locfileid: "62875762"
   
  Chaque enregistrement du journal de transactions est identifié de manière unique par un numéro séquentiel dans le journal (LSN). Les numéros de séquence d'enregistrement sont ordonnés de sorte que si LSN2 est supérieur à LSN1, la modification décrite par l'enregistrement de journal référencé par LSN2 se produit après la modification décrite par le numéro LSN d'enregistrement de journal.  
   
- Le numéro LSN d'un enregistrement de journal qui correspond à l'occurrence d'un événement significatif peut s'avérer utile pour créer les séquences de restauration appropriées. Étant donné que les LSN sont ordonnés, ils peuvent être comparés pour déterminer leur égalité et **\<** leur **>** inégalité (c’est-à-dire **=** ** \< **,,,,, **>=**). Ces comparaisons sont utiles pour créer des séquences de restauration.  
+ Le numéro LSN d'un enregistrement de journal qui correspond à l'occurrence d'un événement significatif peut s'avérer utile pour créer les séquences de restauration appropriées. Étant donné que les LSN sont ordonnés, ils peuvent être comparés pour déterminer leur égalité et leur inégalité (c’est-à-dire,, **\<**, **>** **=** , **\<=**, **>=** ). Ces comparaisons sont utiles pour créer des séquences de restauration.  
   
 > [!NOTE]  
 >  Les numéros LSN sont des valeurs de type données `numeric`(25,0). Les opérations arithmétiques (addition ou soustraction, par exemple) ne sont pas significatives et ne doivent pas être utilisées avec les numéros LSN.  
@@ -64,11 +63,11 @@ ms.locfileid: "62875762"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Syntaxe Transact-SQL relative à la restauration d'après un LSN  
  Grâce à l'instruction [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , vous pouvez vous arrêter à un LSN ou immédiatement avant ce point de la façon suivante :  
   
--   Utilisez la clause WITH STOPATMARK **= '** LSN :_<lsn_number>_ **'** , où LSN :*\<lsnNumber>* est une chaîne spécifiant que l’enregistrement du journal qui contient le LSN spécifié est le point de récupération.  
+-   Utilisez la clause WITH STOPATMARK **= '** LSN :_<lsn_number>_ **'** , où LSN : *\<lsnNumber>* est une chaîne qui spécifie que l’enregistrement de journal qui contient le LSN spécifié est le point de récupération.  
   
      STOPATMARK permet la restauration par progression jusqu'au NSE et inclut l'enregistrement correspondant issu du journal, dans la restauration.  
   
--   Utilisez la clause with STOPBEFOREMARK **= '** LSN :_<lsn_number>_ **'** , où LSN :*\<lsnNumber>* est une chaîne qui spécifie que l’enregistrement de journal situé juste avant l’enregistrement de journal qui contient le numéro LSN spécifié est le point de récupération.  
+-   Utilisez la clause with STOPBEFOREMARK **= '** LSN :_<lsn_number>_ **'** , où LSN : *\<lsnNumber>* est une chaîne qui spécifie que l’enregistrement de journal immédiatement avant l’enregistrement de journal qui contient le numéro LSN spécifié est le point de récupération.  
   
      STOPBEFOREMARK permet la restauration par progression jusqu'au NSE mais exclut l'enregistrement correspondant, se trouvant dans le journal, de la restauration par progression.  
   
@@ -97,7 +96,7 @@ GO
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Journal des transactions &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  

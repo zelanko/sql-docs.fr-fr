@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b751e2dfd9950ba7a25bc3cde36f3625ab473131
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938220"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Référence de l'interface utilisateur (Analysis Services)
-  Cette section contient des rubriques d' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]aide pour. Vous pouvez également accéder à ces rubriques à partir de l'interface utilisateur en appuyant sur la touche F1 ou en cliquant sur **Aide** dans les Assistants, les concepteurs et les boîtes de dialogue.  
+  Cette section contient des rubriques d’aide pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez également accéder à ces rubriques à partir de l'interface utilisateur en appuyant sur la touche F1 ou en cliquant sur **Aide** dans les Assistants, les concepteurs et les boîtes de dialogue.  
   
 ## <a name="topic-list"></a>Liste des rubriques  
   

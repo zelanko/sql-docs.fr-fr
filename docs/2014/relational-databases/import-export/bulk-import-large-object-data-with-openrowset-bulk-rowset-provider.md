@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f6fe945ea90a150397abecfd83f0ce1c945f217c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f43aa2fa5e7f7ef0b2c8f1f6e5e6ff28e02f9f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026899"
 ---
 # <a name="bulk-import-large-object-data-by-using-the-openrowset-bulk-rowset-provider-sql-server"></a>Importer en bloc des données LOB au moyen du fournisseur d'ensembles de lignes OPENROWSET (SQL Server)
   Le fournisseur d'ensembles de lignes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET vous permet d'importer en bloc un fichier de données en données LOB.  

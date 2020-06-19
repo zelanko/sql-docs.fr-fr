@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15691c513aad6027be1063ef566ebdf245ebcc8c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876109"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957699"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vous donne la possibilité de récupérer une base de données en dépit des erreurs détectées. Un nouveau et important mécanisme de détection d'erreur est la création facultative d'une somme de contrôle de sauvegarde qui peut être créée par une opération de sauvegarde et validée par une opération de restauration. Vous pouvez déterminer si une opération recherche la présence d'erreurs et si elle s'arrête ou si elle continue en présence d'une erreur. Si une sauvegarde contient une somme de contrôle de sauvegarde, les instructions RESTORE et RESTORE VERIFYONLY peuvent rechercher la présence d'erreurs.  
@@ -84,7 +83,7 @@ ms.locfileid: "62876109"
   
 -   [Spécifier si une opération de sauvegarde ou de restauration continue ou s’arrête après la survenue d’une erreur &#40;SQL Server&#41;](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   

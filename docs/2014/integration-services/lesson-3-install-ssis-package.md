@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b15b19bfc7f04c96bb955207c6631706380063fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fa7119ba9a8321e2b3bb8cbe1015271c9a3c95e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965193"
 ---
 # <a name="lesson-3-installing-packages"></a>Leçon 3 : Installation des packages
   Dans [la leçon 2 : création de l’ensemble de déploiement](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), vous avez créé un utilitaire de déploiement et créé l’ensemble de déploiement qui contient les éléments que vous devez installer sur un autre ordinateur. Vous avez vérifié également la liste de fichiers dans l'application de déploiement et examiné le contenu du fichier de manifeste créé lorsque vous avez créé l'utilitaire de déploiement.  
   
- Dans cette leçon, vous allez copier l'application de déploiement dans l'ordinateur de destination et exécuter l'Assistant Installation de package pour installer les packages, les dépendances de package et les fichiers annexes sur cet ordinateur. Les packages seront installés dans la base de données **msdb** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les autres éléments seront installés dans le système de fichiers. Une fois le package installé, vous allez tester le déploiement en exécutant les packages à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à l'aide de l'utilitaire d'exécution de package.  
+ Dans cette leçon, vous allez copier l'application de déploiement dans l'ordinateur de destination et exécuter l'Assistant Installation de package pour installer les packages, les dépendances de package et les fichiers annexes sur cet ordinateur. Les packages seront installés dans la **msdb** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de données msdb et les autres éléments seront installés dans le système de fichiers. Une fois le package installé, vous allez tester le déploiement en exécutant les packages à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à l'aide de l'utilitaire d'exécution de package.  
   
  **Durée estimée pour effectuer cette leçon :** 30 minutes  
   

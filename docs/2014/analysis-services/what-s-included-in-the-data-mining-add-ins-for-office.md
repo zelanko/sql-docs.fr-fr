@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065328"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938090"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>&#39;éléments inclus dans les compléments d’exploration de données pour Office
   Lorsque vous installez les Compléments d'exploration de données pour Office 2013, et sélectionnez toutes les options d'installation, les barres d'outils et les modèles suivants sont ajoutés :  
@@ -56,9 +55,9 @@ ms.locfileid: "66065328"
   
      L'emplacement par défaut de l'exemple de classeur dépend de la version installée :  
   
-    -   \<lecteur> : \Program Files\Microsoft SQL Server 2014 DM Add-ins  
+    -   \<drive>: \Program Files\Microsoft SQL Server 2014 DM Add-ins  
   
-    -   \<lecteur> : \Program Files (x86) \Microsoft SQL Server 2014 DM Add-ins  
+    -   \<drive>: \Program Files (x86) \Microsoft SQL Server 2014 DM Add-ins  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en main avec l’exploration de données &#40;des compléments d’exploration de données pour Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

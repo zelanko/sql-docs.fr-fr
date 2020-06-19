@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7886a9a6f51c76ed693576ca6f4659f4051d1f20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062994"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
   Vous pouvez limiter les lignes qui sont retournées à partir d'une requête de base de données et d'après une valeur de limitation. Les annotations `sql:limit-field` et `sql:limit-value` sont utilisées pour identifier la colonne de base de données qui contient les valeurs de limitation et spécifier une valeur de limitation spécifique à utiliser pour filtrer les données retournées.  
@@ -44,7 +43,7 @@ ms.locfileid: "82703582"
   
  Dans ces exemples, les modèles sont utilisés pour spécifier des requêtes XPath par rapport au schéma de mappage XSD.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitation des adresses de clients retournées à un type d'adresse spécifique  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitation des adresses de clients retournées à un type d'adresse spécifique  
  Dans cet exemple, une base de données contient deux tables :  
   
 -   Customer (CustomerID, CompanyName)  

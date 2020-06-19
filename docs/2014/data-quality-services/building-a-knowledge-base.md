@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 01d0b016f6b7e1ea3c83cd42f52facb56f825b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 992eef347c9fec365afacd05b275cbe6c828b2c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481158"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938030"
 ---
 # <a name="building-a-knowledge-base"></a>Construction d'une base de connaissances
   Une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est un référentiel de connaissances sur vos données qui vous permet de comprendre vos données et de préserver leur intégrité. Une base de connaissances comprend des domaines, chacun représentant les données dans un champ de données. La base de connaissances est utilisée par DQS pour effectuer le nettoyage et la duplication de données sur une base de données. Pour préparer la base de connaissances au nettoyage de données, vous pouvez exécuter une analyse assistée par ordinateur d'un exemple de données, et gérer de manière interactive les valeurs dans les domaines. DQS vous permet d'importer des connaissances, de créer des règles et des relations, de modifier directement les valeurs des données et d'exploiter une base de données par défaut.  

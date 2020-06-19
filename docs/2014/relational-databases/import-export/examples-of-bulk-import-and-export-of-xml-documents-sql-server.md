@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026736"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Vous pouvez importer en bloc des documents XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une base de données ou les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exporter en bloc à partir d’une base de données. Cette rubrique fournit des exemples de chaque.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Vous pouvez importer en bloc des documents XML dans une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou les exporter en bloc à partir d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Cette rubrique fournit des exemples de chaque.  
   
  Pour importer des données en bloc à partir d'un fichier de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez utiliser les méthodes suivantes :  
   

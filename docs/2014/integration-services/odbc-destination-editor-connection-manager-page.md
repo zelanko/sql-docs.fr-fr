@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57a45cb3e9eace357477c0c9f2adfc25384466a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965049"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Éditeur de destination ODBC (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination ODBC** pour sélectionner le gestionnaire de connexions ODBC de la destination. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -52,7 +51,7 @@ ms.locfileid: "66057204"
 |Nom de la table - Ligne par ligne|Sélectionnez cette option pour configurer la destination ODBC de manière à insérer les lignes dans la table de destination une par une. Lorsque vous sélectionnez cette option, l'option suivante est disponible :|  
 ||**Nom de la table ou de la vue**: sélectionnez dans la liste une table ou une vue disponible dans la base de données.<br /><br /> Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1 000 tables, vous pouvez taper le début du nom d'une table ou utiliser le caractère générique (*) pour entrer une partie du nom afin d'afficher la table ou les tables que vous souhaitez utiliser.|  
   
-### <a name="preview"></a>PRÉVERSION  
+### <a name="preview"></a>Préversion  
  Cliquez sur **Aperçu** pour afficher jusqu'à 200 lignes de données pour la table sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  

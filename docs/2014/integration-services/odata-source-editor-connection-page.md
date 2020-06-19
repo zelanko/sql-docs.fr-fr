@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965079"
 ---
 # <a name="odata-source-editor-connection-page"></a>Éditeur de source OData (page Connexion)
   La page **Connexion** de la boîte de dialogue **Éditeur de source OData** vous permet de sélectionner le gestionnaire de connexions OData pour la source OData. Cette page vous permet également de spécifier une collection ou un chemin d'accès de ressources et toutes les options de requête permettant de spécifier quelles données doivent être récupérées à partir de la source OData. Pour en savoir plus sur la source OData, consultez [Source OData](data-flow/odata-source.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "66057317"
  **Gestionnaire de connexions OData**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Éditeur du gestionnaire de connexions OData** .  
   
  **Utilisez une collection ou un chemin d'accès de ressource.**  
@@ -43,7 +42,7 @@ ms.locfileid: "66057317"
  **URL du flux**  
  Affiche l'URL du flux en lecture seule en fonction des options sélectionnées dans la boîte de dialogue.  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Aperçu** . L’**Aperçu** peut afficher jusqu’à 20 lignes.  
   
 ## <a name="dynamic-options"></a>Options dynamiques  
@@ -53,7 +52,7 @@ ms.locfileid: "66057317"
  Sélectionnez une collection dans la liste déroulante.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
- **Resource path**  
+ **Chemin de la ressource**  
  Type de chemin d'accès de ressource. Par exemple : Employees  
   
 ## <a name="see-also"></a>Voir aussi  

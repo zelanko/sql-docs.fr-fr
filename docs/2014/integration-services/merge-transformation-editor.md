@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5944ed5b2a5a0907b426ab3ce35516854652acb2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057682"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951069"
 ---
 # <a name="merge-transformation-editor"></a>Éditeur de transformation de fusion
   Utilisez **l’Éditeur de transformation de fusion** pour définir des colonnes dans deux datasets triés à fusionner.  
@@ -43,6 +42,6 @@ ms.locfileid: "66057682"
  [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Transformation de jointure de fusion](data-flow/transformations/merge-join-transformation.md)   
- [transformation d'union totale](data-flow/transformations/union-all-transformation.md)  
+ [Transformation d'union totale](data-flow/transformations/union-all-transformation.md)  
   
   

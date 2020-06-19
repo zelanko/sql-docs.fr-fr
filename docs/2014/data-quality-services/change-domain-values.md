@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 111b4dc0c1731b28da503794008be2b4d269094f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30cd75d1ca2716c8752a4b12cfe70f653994d0fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938040"
 ---
 # <a name="change-domain-values"></a>Modifier les valeurs de domaine
   Cette rubrique décrit comment modifier et augmenter les métadonnées d'une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Après avoir généré une connaissance par la découverte des connaissances, importé la connaissance dans la base de connaissances ou les domaines, ou basé une base de connaissances sur une autre base de connaissances, vous pouvez modifier de manière interactive les valeurs des données. La génération d'une base de connaissances non seulement bénéficie des processus assistés par ordinateur, mais vous permet aussi d'utiliser votre propre connaissance pour vérifier les valeurs des données et les modifier des manières suivantes :  

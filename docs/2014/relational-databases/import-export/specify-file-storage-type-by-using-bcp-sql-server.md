@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011821"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026485"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l'aide de bcp (SQL Server)
   Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Les données peuvent être exportées vers un fichier de données au type de table de base de données (format natif), dans sa représentation caractères (format caractères) ou tout type de données pour lesquelles la conversion implicite est prise en charge ; par exemple, en copiant un type de données `smallint` comme `int`. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  
@@ -45,11 +44,11 @@ ms.locfileid: "66011821"
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text` <sup>2</sup>|`T`[`ext`]|  
+    |`text`<sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image` <sup>2</sup>|`I`[`mage`]|  
+    |`image`<sup>2</sup>|`I`[`mage`]|  
     |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
@@ -73,9 +72,9 @@ ms.locfileid: "66011821"
     |`UDT` (type de données défini par l'utilisateur)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> l’interaction entre la longueur de champ, la longueur de préfixe et les terminateurs détermine la quantité d’espace de stockage alloué dans un fichier de données pour les données non `char` -caractères exportées en tant que type de stockage de fichier.  
+     <sup>1</sup> l’interaction entre la longueur de champ, la longueur de préfixe et les terminateurs détermine la quantité d’espace de stockage alloué dans un fichier de données pour les données non-caractères exportées en tant que `char` type de stockage de fichier.  
   
-     <sup>2</sup> les `ntext`types `text`de données `image` , et seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans un nouveau travail de développement, évitez ces types de données et prévoyez la modification des applications qui les utilisent actuellement. Utilisez `nvarchar(max)`, `varchar(max)`et `varbinary(max)` à la place.  
+     <sup>2</sup> les `ntext` `text` types de données, et `image` seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans un nouveau travail de développement, évitez ces types de données et prévoyez la modification des applications qui les utilisent actuellement. Utilisez `nvarchar(max)` , `varchar(max)` et à la `varbinary(max)` place.  
   
 ## <a name="native-file-storage-types"></a>Types de stockage de fichier natifs  
  Chaque type de stockage de fichier natif est enregistré dans le fichier de format comme un type de données du fichier hôte correspondant.  
@@ -86,11 +85,11 @@ ms.locfileid: "66011821"
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text` <sup>2</sup>|SQLCHAR|  
-|`ntext` <sup>2</sup>|SQLNCHAR|  
+|`text`<sup>2</sup>|SQLCHAR|  
+|`ntext`<sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image` <sup>2</sup>|SQLBINARY|  
+|`image`<sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -109,16 +108,16 @@ ms.locfileid: "66011821"
 |`timestamp`|SQLBINARY|  
 |UDT (type de données défini par l'utilisateur)|SQLUDT|  
   
- <sup>1</sup> les fichiers de données qui sont stockés au format `char` caractère utilisent comme type de stockage de fichier. Par conséquent, pour les fichiers de données de type caractère, SQLCHAR est le seul type de données qui apparaît dans un fichier de format.  
+ <sup>1</sup> les fichiers de données qui sont stockés au format caractère utilisent `char` comme type de stockage de fichier. Par conséquent, pour les fichiers de données de type caractère, SQLCHAR est le seul type de données qui apparaît dans un fichier de format.  
   
- <sup>2</sup> vous ne pouvez pas importer des `text`données `ntext`en bloc `image` dans des colonnes, et qui ont des valeurs par défaut.  
+ <sup>2</sup> vous ne pouvez pas importer des données en bloc dans des `text` `ntext` colonnes, et `image` qui ont des valeurs par défaut.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Observations supplémentaires concernant les types de stockage de fichier  
  Lorsque vous exportez des données en bloc à partir d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données :  
   
 -   Vous pouvez toujours spécifier `char` comme type de stockage de fichier.  
   
--   Si vous entrez un type de stockage de fichier qui représente une conversion implicite non valide, **BCP** échoue. par exemple, bien que vous puissiez `int` spécifier `smallint` pour des données, si `smallint` vous `int` spécifiez pour des données, des erreurs de dépassement de capacité se produisent.  
+-   Si vous entrez un type de stockage de fichier qui représente une conversion implicite non valide, **BCP** échoue. par exemple, bien que vous puissiez spécifier `int` pour des `smallint` données, si vous spécifiez `smallint` pour des `int` données, des erreurs de dépassement de capacité se produisent.  
   
 -   Lorsque des types de données autres que des caractères tels que `float`, `money`, `datetime` ou `int` sont stockés avec leurs types de base de données, les données sont écrites dans le fichier de données au format natif de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

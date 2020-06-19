@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b12069d84e00738e3ddac8c414f33903f4f0999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063042"
 ---
 # <a name="point"></a>Point
   Dans les données spatiales [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un `Point` est un objet à zéro dimension qui représente un emplacement unique et peut contenir des valeurs Z (élévation) et M (mesure).  
