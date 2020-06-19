@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063521"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
   Vous pouvez créer ou configurer des entités de Resource Governor, telles que des pools de ressources et des groupes de charge de travail, en utilisant la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -128,8 +127,8 @@ ms.locfileid: "63209681"
 ## <a name="see-also"></a>Voir aussi  
  [Resource Governor](resource-governor.md)   
  [Activer Resource Governor](enable-resource-governor.md)   
- [Liste de ressources partagées Resource Governor](resource-governor-resource-pool.md)   
- [Groupe de charge de travail Resource Governor](resource-governor-workload-group.md)   
- [Fonction classifieur du gouverneur de ressources](resource-governor-classifier-function.md)  
+ [Pool de ressources de Resource Governor](resource-governor-resource-pool.md)   
+ [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md)   
+ [Fonction classifieur de Resource Governor](resource-governor-classifier-function.md)  
   
   

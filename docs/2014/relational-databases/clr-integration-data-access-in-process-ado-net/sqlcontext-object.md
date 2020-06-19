@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72ff29ff35f1f09898b6f6e890aae5aba1d3d2d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955219"
 ---
 # <a name="sqlcontext-object"></a>Objet SqlContext
   Vous appelez le code managé dans le serveur lorsque vous appelez une procédure ou une fonction, lorsque vous appelez une méthode sur un type CLR défini par l'utilisateur ou lorsque votre action active un déclencheur défini dans l'un des langages du [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Comme l'exécution de ce code est demandée dans le cadre d'une connexion utilisateur, l'accès au contexte de l'appelant à partir du code en cours d'exécution dans le serveur est requis. De plus, certaines opérations d'accès aux données ne peuvent être valides que si elles sont exécutées sous le contexte de l'appelant. Par exemple, l'accès à des pseudo-tables insérées et supprimées utilisées dans les opérations de déclencheur n'est valide que sous le contexte de l'appelant.  
@@ -28,9 +27,9 @@ ms.locfileid: "62920042"
   
  `SqlContext` fournit l'accès aux composants suivants :  
   
--   `SqlPipe` : l'objet `SqlPipe` représente le « canal » à travers lequel les résultats transitent vers le client. Pour plus d’informations sur `SqlPipe` l’objet, consultez l' [objet SqlPipe](sqlpipe-object.md).  
+-   `SqlPipe` : l'objet `SqlPipe` représente le « canal » à travers lequel les résultats transitent vers le client. Pour plus d’informations sur l' `SqlPipe` objet, consultez l' [objet SqlPipe](sqlpipe-object.md).  
   
--   `SqlTriggerContext` : l'objet `SqlTriggerContext` ne peut être extrait qu'à partir d'un déclencheur CLR. Il fournit des informations sur l'opération qui a provoqué l'activation du déclencheur et un mappage des colonnes mises à jour. Pour plus d’informations sur `SqlTriggerContext` l’objet, consultez [objet SqlTriggerContext](sqltriggercontext-object.md).  
+-   `SqlTriggerContext` : l'objet `SqlTriggerContext` ne peut être extrait qu'à partir d'un déclencheur CLR. Il fournit des informations sur l'opération qui a provoqué l'activation du déclencheur et un mappage des colonnes mises à jour. Pour plus d’informations sur l' `SqlTriggerContext` objet, consultez [objet SqlTriggerContext](sqltriggercontext-object.md).  
   
 -   `IsAvailable` : la propriété `IsAvailable` est utilisée pour déterminer la disponibilité du contexte.  
   

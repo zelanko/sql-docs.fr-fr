@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 917c5af173fa1e7087d47789b17b0845ab426dad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889212"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963369"
 ---
 # <a name="set-package-properties"></a>Définir les propriétés d'un package
   Lorsque vous créez un package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide de l'interface graphique fournie par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous définissez les propriétés de l'objet de package dans la fenêtre Propriétés.  
@@ -82,7 +81,7 @@ ms.locfileid: "62889212"
 |Propriété|Description|  
 |--------------|-----------------|  
 |`DelayValidation`|Indique si la validation du package est retardée jusqu'à l'exécution du package. La valeur par défaut de cette propriété est `False`.|  
-|**Désactiver**|Indique si le package est désactivé. La valeur par défaut de cette propriété est `False`.|  
+|**Disable**|Indique si le package est désactivé. La valeur par défaut de cette propriété est `False`.|  
 |`DisableEventHandlers`|Indique si les gestionnaires d'événements du package sont exécutés. La valeur par défaut de cette propriété est `False`.|  
 |`FailPackageOnFailure`|Indique si le package échoue en cas d'erreur dans un composant du package. La seule valeur possible pour cette propriété est `False`.|  
 |`FailParentOnError`|Indique si le conteneur parent échoue en cas d'erreur dans un conteneur enfant. La valeur par défaut de cette propriété est `False`.|  
@@ -95,7 +94,7 @@ ms.locfileid: "62889212"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|`ForcedExecutionValue`|Si ForceExecutionValue a la valeur `True`, valeur qui spécifie la valeur d’exécution facultative retournée par le package. La valeur par défaut de cette propriété est **0**.|  
+|`ForcedExecutionValue`|Si ForceExecutionValue a la valeur `True` , valeur qui spécifie la valeur d’exécution facultative retournée par le package. La valeur par défaut de cette propriété est **0**.|  
 |`ForcedExecutionValueType`|Type de données de ForcedExecutionValue. La valeur par défaut de cette propriété est `Int32`.|  
 |`ForceExecutionValue`|Valeur booléenne qui indique si la valeur d'exécution facultative du conteneur doit être forcée de contenir une valeur particulière. La valeur par défaut de cette propriété est `False`.|  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62889212"
 |`CreatorComputerName`|Nom de l'ordinateur sur lequel le package a été créé.|  
 |`CreatorName`|Nom de la personne qui a créé le package.|  
 |`Description`|Description des fonctionnalités du package.|  
-|`ID`|Identificateur global unique du package, affecté lors de la création du package. Cette propriété est en lecture seule. Pour générer une nouvelle valeur aléatoire pour la `ID` propriété, sélectionnez ** \<générer un nouvel ID>** dans la liste déroulante.|  
+|`ID`|Identificateur global unique du package, affecté lors de la création du package. Cette propriété est en lecture seule. Pour générer une nouvelle valeur aléatoire pour la `ID` propriété, sélectionnez **\<Generate New ID>** dans la liste déroulante.|  
 |`Name`|Nom du package.|  
 |`PackageType`|Type de package. Les valeurs possibles sont `Default`, `DTSDesigner`, `DTSDesigner100`, `DTSWizard`, `SQLDBMaint` et `SQLReplication`. La valeur par défaut de cette propriété est `Default`. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -131,15 +130,15 @@ ms.locfileid: "62889212"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|`PackagePassword`|Mot de passe pour les niveaux de`EncryptSensitiveWithPassword` protection `EncryptAllWithPassword`du package (et) qui requièrent des mots de passe.|  
-|`ProtectionLevel`|Niveau de protection du package. Les valeurs sont `DontSaveSensitive`, `EncryptSensitiveWithUserKey` `EncryptSensitiveWithPassword` `EncryptAllWithPassword`,, et **ServerStorage**. La valeur par défaut de cette propriété est `EncryptSensitiveWithUserKey`. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
+|`PackagePassword`|Mot de passe pour les niveaux de protection du package ( `EncryptSensitiveWithPassword` et `EncryptAllWithPassword` ) qui requièrent des mots de passe.|  
+|`ProtectionLevel`|Niveau de protection du package. Les valeurs sont `DontSaveSensitive` ,,, `EncryptSensitiveWithUserKey` `EncryptSensitiveWithPassword` `EncryptAllWithPassword` et **ServerStorage**. La valeur par défaut de cette propriété est `EncryptSensitiveWithUserKey`. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
   
 ###  <a name="transactions"></a><a name="Transactions"></a>Mouvements  
  Les propriétés de cette catégorie permettent de configurer le niveau d'isolement et l'option de transaction du package. Pour plus d’informations, consultez [Transactions Integration Services](integration-services-transactions.md).  
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|`IsolationLevel`|Niveau d'isolement de la transaction sur package.  La valeur par défaut de cette propriété est `Serializable`. Les valeurs valides sont <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> Le système applique la propriété `IsolationLevel` aux transactions de package uniquement lorsque la propriété `TransactionOption` a la valeur `Required`.<br /><br /> La valeur de la propriété `IsolationLevel` demandée par un conteneur enfant est ignorée lorsque les conditions suivantes sont remplies :<br /><br /> La valeur de la propriété `TransactionOption` du conteneur enfant est `Supported`.<br />Le conteneur enfant rejoint la transaction d'un conteneur parent.<br /><br /> La valeur de la propriété `IsolationLevel` demandée par le conteneur est respectée uniquement lorsque le conteneur lance une nouvelle transaction. Un conteneur lance une nouvelle transaction lorsque les conditions suivantes sont remplies :<br /><br /> La valeur de la propriété du `TransactionOption` conteneur est `Required`.<br />Le parent n'a pas déjà démarré de transaction.<br /><br /> <br /><br /> Remarque : la valeur `Snapshot` de la propriété `IsolationLevel` est incompatible avec les transactions de package. Cependant, vous ne pouvez pas utiliser la propriété `IsolationLevel` pour définir le niveau d'isolation des transactions de package pour `Shapshot`. Utilisez une requête SQL pour définir les transactions de package à `Snapshot`. Pour plus d’informations, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Pour plus d'informations sur la propriété `IsolationLevel`, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|`IsolationLevel`|Niveau d'isolement de la transaction sur package.  La valeur par défaut de cette propriété est `Serializable`. Les valeurs valides sont <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> Le système applique la propriété `IsolationLevel` aux transactions de package uniquement lorsque la propriété `TransactionOption` a la valeur `Required`.<br /><br /> La valeur de la propriété `IsolationLevel` demandée par un conteneur enfant est ignorée lorsque les conditions suivantes sont remplies :<br /><br /> La valeur de la propriété `TransactionOption` du conteneur enfant est `Supported`.<br />Le conteneur enfant rejoint la transaction d'un conteneur parent.<br /><br /> La valeur de la propriété `IsolationLevel` demandée par le conteneur est respectée uniquement lorsque le conteneur lance une nouvelle transaction. Un conteneur lance une nouvelle transaction lorsque les conditions suivantes sont remplies :<br /><br /> La valeur de la propriété du conteneur `TransactionOption` est `Required` .<br />Le parent n'a pas déjà démarré de transaction.<br /><br /> <br /><br /> Remarque : la valeur `Snapshot` de la propriété `IsolationLevel` est incompatible avec les transactions de package. Cependant, vous ne pouvez pas utiliser la propriété `IsolationLevel` pour définir le niveau d'isolation des transactions de package pour `Shapshot`. Utilisez une requête SQL pour définir les transactions de package à `Snapshot`. Pour plus d’informations, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Pour plus d'informations sur la propriété `IsolationLevel`, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`TransactionOption`|Participation transactionnelle du package. Cette propriété peut prendre les valeurs `NotSupported`, `Supported` et `Required`. La valeur par défaut de cette propriété est `Supported`. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="version"></a><a name="Version"></a>Version  

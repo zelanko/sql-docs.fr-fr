@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72d392837da4abd28aaf48ed460113c561bd688d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063589"
 ---
 # <a name="resource-governor"></a>gouverneur de ressources
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le gouverneur des ressources vous permet de spécifier des limites sur la quantité d’UC,d’E/S physiques et de mémoire utilisables par les requêtes d’application entrantes.  
@@ -54,7 +53,7 @@ ms.locfileid: "62704877"
 ## <a name="resource-concepts"></a>Concepts des ressources  
  Les trois concepts suivants sont fondamentaux pour connaître le fonctionnement et l'utilisation de Resource Governor :  
   
--   **Pools de ressources.** Un pool de ressources représente les ressources physiques du serveur. Vous pouvez envisager un pool comme une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtuelle dans une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Deux pools de ressources (interne et par défaut) sont créés lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé. Resource Governor prend aussi en charge des pools de ressources définis par l'utilisateur. Pour plus d’informations, consultez [Pool de ressources de Resource Governor](resource-governor-resource-pool.md).  
+-   **Pools de ressources.** Un pool de ressources représente les ressources physiques du serveur. Vous pouvez envisager un pool comme une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtuelle dans une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Deux pools de ressources (interne et par défaut) sont créés lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé. Resource Governor prend aussi en charge des pools de ressources définis par l'utilisateur. Pour plus d’informations, consultez [Pool de ressources de Resource Governor](resource-governor-resource-pool.md).  
   
 -   **Groupes de charges de travail.** Un groupe de charges de travail sert de conteneur aux demandes de session qui ont des critères de classification similaires. Une charge de travail autorise l'analyse globale des sessions et définit les stratégies pour les sessions. Chaque groupe de charges de travail se trouve dans un pool de ressources. Deux groupes de charges de travail (interne et par défaut) sont créés et mappés à leurs pools de ressources correspondants lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé. Resource Governor prend aussi en charge des groupes de charges de travail définis par l'utilisateur. Pour plus d’informations, consultez [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md).  
   

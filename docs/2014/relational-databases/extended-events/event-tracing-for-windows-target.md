@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55f247af30b5278f614b6505a94266cc07ec6c54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027591"
 ---
 # <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
   Avant d'utiliser le suivi d'événements pour Windows (ETW) comme cible, il est recommandé d'avoir une connaissance pratique du Suivi d'événements pour Windows. Le suivi ETW est utilisé conjointement avec les Événements étendus ou en tant que consommateur d'événements des Événements étendus. Les liens externes suivants fournissent un point de départ pour obtenir des informations générales sur le suivi ETW :  
@@ -75,7 +74,7 @@ ms.locfileid: "82706835"
     > [!IMPORTANT]  
     >  Le chemin d'accès ne peut pas être modifié une fois la première session démarrée.  
   
--   Les fichiers format MOF (MOF) se trouvent dans * \< le chemin d’installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
+-   Les fichiers format MOF (MOF) se trouvent dans *\<your install path>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
  Pour ajouter la cible ETW à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  

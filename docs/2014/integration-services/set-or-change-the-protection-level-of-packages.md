@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963399"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Définir ou modifier le niveau de protection des packages
   Pour contrôler l'accès au contenu des packages et aux valeurs sensibles qu'ils contiennent, telles que les mots de passe, définissez la valeur de la propriété `ProtectionLevel`. Les packages contenus dans un projet doivent avoir le même niveau de protection que le projet pour permettre sa génération. Si vous modifiez le paramètre de propriété `ProtectionLevel` du projet, vous devez mettre à jour manuellement le paramètre de propriété des packages.  
   
- Pour plus d’informations sur la façon `ProtectionLevel` de déterminer les paramètres appropriés pour vos packages à différentes étapes du cycle de vie d’un package, consultez [Access Control pour obtenir des données sensibles dans des packages](security/access-control-for-sensitive-data-in-packages.md). Pour obtenir une vue d’ensemble des fonctionnalités de sécurité dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consultez [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
+ Pour plus d’informations sur la façon de déterminer les `ProtectionLevel` paramètres appropriés pour vos packages à différentes étapes du cycle de vie d’un package, consultez [Access Control pour obtenir des données sensibles dans des packages](security/access-control-for-sensitive-data-in-packages.md). Pour obtenir une vue d’ensemble des fonctionnalités de sécurité dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consultez [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
  Les procédures dans cette rubrique décrivent comment utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou l'utilitaire en ligne de commande dtutil pour modifier la propriété `ProtectionLevel`.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66055851"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Pour définir ou modifier le niveau de protection d'un package dans les outils de données SQL Server  
   
-1.  Passez en revue les valeurs disponibles `ProtectionLevel` pour la propriété dans la rubrique [définition du niveau de protection des packages](security/access-control-for-sensitive-data-in-packages.md)et déterminez la valeur appropriée pour votre package.  
+1.  Passez en revue les valeurs disponibles pour la `ProtectionLevel` propriété dans la rubrique [définition du niveau de protection des packages](security/access-control-for-sensitive-data-in-packages.md)et déterminez la valeur appropriée pour votre package.  
   
 2.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui contient le package.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "66055851"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Pour définir ou modifier le niveau de protection de package à l'invite de commandes  
   
-1.  Passez en revue les valeurs disponibles `ProtectionLevel` pour la propriété dans la rubrique [définition du niveau de protection des packages](security/access-control-for-sensitive-data-in-packages.md)et déterminez la valeur appropriée pour votre package.  
+1.  Passez en revue les valeurs disponibles pour la `ProtectionLevel` propriété dans la rubrique [définition du niveau de protection des packages](security/access-control-for-sensitive-data-in-packages.md)et déterminez la valeur appropriée pour votre package.  
   
-2.  Passez en revue les mappages `Encrypt` de l’option dans la rubrique [Utilitaire dtutil](dtutil-utility.md)et déterminez l’entier approprié à utiliser comme valeur de la propriété `ProtectionLevel` sélectionnée.  
+2.  Passez en revue les mappages de l' `Encrypt` option dans la rubrique [Utilitaire dtutil](dtutil-utility.md)et déterminez l’entier approprié à utiliser comme valeur de la `ProtectionLevel` propriété sélectionnée.  
   
 3.  Ouvrez une fenêtre d’invite de commandes.  
   
@@ -73,6 +72,6 @@ ms.locfileid: "66055851"
          Si vous utilisez une commande semblable dans un fichier de commandes, entrez l'espace réservé de fichier, « % f », comme « %% f » dans le fichier de commandes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [dtutil (utilitaire)](dtutil-utility.md)  
+ [Utilitaire dtutil](dtutil-utility.md)  
   
   

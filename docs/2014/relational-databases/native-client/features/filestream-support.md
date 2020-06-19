@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18e9a002bfb205e2c0807234550998fe48120d20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047993"
 ---
 # <a name="filestream-support"></a>Prise en charge de FILESTREAM
   FILESTREAM permet de stocker et d'accéder à de grandes valeurs binaires, soit par le biais de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], soit par accès direct au système de fichiers Windows. Une grande valeur binaire est une valeur supérieure à 2 gigaoctets (Go). Pour plus d'informations sur la prise en charge FILESTREAM améliorée, consultez [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
@@ -42,7 +41,7 @@ ms.locfileid: "82707293"
   
  Pour créer des colonnes FILESTREAM ou pour détecter les colonnes existantes qui sont des colonnes FILESTREAM, vous pouvez utiliser la `is_filestream` colonne de l’affichage catalogue [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) .  
   
- Par exemple :  
+ Voici un exemple :  
   
 ```  
 -- Create a table with a FILESTREAM column.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22bd0bb1f01e59ec30f7cf1bbf128c890d3d5d64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008439"
 ---
 # <a name="granting-access-to-a-database-object"></a>Octroi de l'accès à un objet de base de données
    En tant qu’administrateur, vous pouvez exécuter l’instruction SELECT à partir de la table **Products** et de la vue **vw_Names**, puis vous pouvez exécuter la procédure **pr_Names**. Toutefois, Mary ne peut pas le faire. Pour lui octroyer les autorisations nécessaires, utilisez l'instruction GRANT.  

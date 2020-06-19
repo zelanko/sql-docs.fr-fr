@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 274c984d6ecec8af8f5bea27496450a45fc2f1df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026800"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importer des données au format natif et caractère à partir de versions antérieures de SQL Server
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez utiliser la commande **bcp** pour importer des données au format natif et caractère à partir de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , à l’aide du commutateur **-V** . Le commutateur **-V** entraîne l’utilisation par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] des types de données à partir de la version antérieure spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et le format du fichier de données est identique à celui de cette version antérieure.  
@@ -52,15 +51,15 @@ ms.locfileid: "66011916"
  <sup>1</sup> UDT indique un type défini par l’utilisateur.  
   
 ## <a name="exporting-using--v-80"></a>Exportation à l’aide de -V 80  
- Lorsque vous exportez des données en bloc à l’aide `nvarchar(max)`du `varchar(max)`commutateur `varbinary(max)` **-V80** , les données,,, XML et UDT en mode natif sont stockées avec un préfixe `image`à 4 `ntext` octets, comme `text`les données, et, plutôt qu’avec un préfixe de 8 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] octets, qui est la valeur par défaut pour et les versions ultérieures.  
+ Lorsque vous exportez des données en bloc à l’aide du commutateur **-V80** , les données,,, `nvarchar(max)` `varchar(max)` `varbinary(max)` XML et UDT en mode natif sont stockées avec un préfixe à 4 octets, comme `text` `image` `ntext` les données, et, plutôt qu’avec un préfixe de 8 octets, qui est la valeur par défaut pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures.  
   
 ## <a name="copying-date-values"></a>Copie de valeurs de date  
  **bcp** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]).  
   
- La commande **BCP** exporte des fichiers de données au format caractère à l' `datetime` aide `smalldatetime` du format par défaut ODBC pour les valeurs et. Par exemple, une colonne `datetime` contenant la date `12 Aug 1998` est copiée en bloc dans un fichier de données en tant que chaîne de caractères `1998-08-12 00:00:00.000`.  
+ La commande **BCP** exporte des fichiers de données au format caractère à l’aide du format par défaut ODBC pour les `datetime` `smalldatetime` valeurs et. Par exemple, une colonne `datetime` contenant la date `12 Aug 1998` est copiée en bloc dans un fichier de données en tant que chaîne de caractères `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  Lorsque vous importez `smalldatetime` des données dans un champ à l’aide de **BCP**, vérifiez que la valeur des secondes est 00,000 ; dans le cas contraire, l’opération échoue. Le type de données `smalldatetime` ne conserve que les valeurs à la minute la plus proche. BULK INSERT et INSERT ... SELECT * FROM OPENROWSET(BULK...) n'échoueront pas dans ce cas, mais tronqueront la valeur des secondes.  
+>  Lorsque vous importez des données dans un `smalldatetime` champ à l’aide de **BCP**, assurez-vous que la valeur de secondes est 00,000 ; sinon, l’opération échouera. Le type de données `smalldatetime` ne conserve que les valeurs à la minute la plus proche. BULK INSERT et INSERT ... SELECT * FROM OPENROWSET(BULK...) n'échoueront pas dans ce cas, mais tronqueront la valeur des secondes.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour utiliser des formats de données pour l'importation ou l'exportation en bloc**  

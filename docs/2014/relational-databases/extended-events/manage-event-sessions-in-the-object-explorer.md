@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2db0f80599be6f4437636d978532f640af3cdd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027569"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gérer les sessions d'événements dans l'Explorateur d'objets
   Cette rubrique décrit les actions effectuées dans l' **Explorateur d'objets** qui affectent les événements étendus :  
@@ -96,7 +95,7 @@ STATE = STOP
   
 4.  Développez la zone déroulante **Modèle** .  
   
-5.  Cliquez sur ** \< fichier à partir de... >ouvrir** et recherchez la session (fichier XML) que vous souhaitez importer.  
+5.  Cliquez sur ** \<File From ...> ouvrir** et recherchez la session (fichier XML) que vous souhaitez importer.  
   
  La session apparaît sous le nœud **Sessions** . Par défaut, la session n'est pas démarrée.  
   

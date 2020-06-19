@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935890"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
   Introduite dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'extension du pool de mémoires tampons permet l'intégration transparente d'une extension de mémoire vive non volatile (c'est-à-dire d'un disque SSD) dans le pool de mémoires tampons [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour améliorer le débit d'E/S de façon significative. L'extension du pool de mémoires tampons n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
@@ -46,11 +45,11 @@ ms.locfileid: "78175428"
 
  Les disques SSD (Solid-State Drive) enregistrent des données en mémoire (RAM) de manière persistante. Pour plus d'informations, consultez [cette définition](http://en.wikipedia.org/wiki/Solid-state_drive).
 
- Mémoire tampon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans, une mémoire tampon est une page de 8 Ko en mémoire, avec la même taille qu’une page de données ou d’index. Ainsi, le cache des tampons est divisé en pages de 8 Ko. Une page reste dans le cache des tampons jusqu'à ce que le gestionnaire de tampons ait besoin de la zone de mémoire tampon pour lire davantage de données. Les données ne sont réécrites sur le disque que si elles sont modifiées. Ces pages modifiées en mémoire sont appelées « pages de modifications ». Une page est nettoyée lorsqu'elle est équivalente à son image de base de données sur le disque. Les données dans le cache de tampons peuvent être modifiées plusieurs fois avant leur réécriture sur le disque.
+ Mémoire tampon dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une mémoire tampon est une page de 8 Ko en mémoire, avec la même taille qu’une page de données ou d’index. Ainsi, le cache des tampons est divisé en pages de 8 Ko. Une page reste dans le cache des tampons jusqu'à ce que le gestionnaire de tampons ait besoin de la zone de mémoire tampon pour lire davantage de données. Les données ne sont réécrites sur le disque que si elles sont modifiées. Ces pages modifiées en mémoire sont appelées « pages de modifications ». Une page est nettoyée lorsqu'elle est équivalente à son image de base de données sur le disque. Les données dans le cache de tampons peuvent être modifiées plusieurs fois avant leur réécriture sur le disque.
 
  Pool de mémoires tampons également appelé cache des tampons. Le pool de mémoires tampons est une ressource globale partagée par toutes les bases de données pour leurs pages de données mises en cache. La taille maximale et la taille minimale du cache du pool de mémoires tampons sont déterminées au démarrage ou lorsque l'instance de SQL Server est reconfigurée de façon dynamique à l'aide de sp_configure. Cette valeur détermine le nombre maximal de pages pouvant être mises en cache dans le pool de mémoires tampons à tout moment dans l'instance en cours d'exécution.
 
- Point de contrôle un point de contrôle crée un point correct [!INCLUDE[ssDE](../../includes/ssde-md.md)] connu à partir duquel le peut commencer à appliquer les modifications contenues dans le journal des transactions lors de la récupération après un arrêt ou un blocage inattendu. Un point de contrôle écrit les pages de modifications et les informations du journal des transactions de la mémoire vers le disque et enregistre également les informations sur le journal des transactions. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).
+ Point de contrôle un point de contrôle crée un point correct connu à partir duquel le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut commencer à appliquer les modifications contenues dans le journal des transactions lors de la récupération après un arrêt ou un blocage inattendu. Un point de contrôle écrit les pages de modifications et les informations du journal des transactions de la mémoire vers le disque et enregistre également les informations sur le journal des transactions. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).
 
 ## <a name="buffer-pool-extension-details"></a>Détails de l'extension du pool de mémoires tampons
  Le stockage sur disque SSD est utilisé comme une extension du sous-système de mémoire au lieu du sous-système de stockage sur disque. Autrement dit, le fichier d'extension du pool de mémoires tampons permet au gestionnaire du pool d'utiliser une mémoire DRAM et NAND-Flash pour maintenir un plus grand pool de pages faiblement sollicitées dans la mémoire vive non volatile soutenue par les disques SSD. Cela crée une hiérarchie de mise en cache à plusieurs niveaux : avec le niveau 1 (L1) correspondant à la DRAM, et le niveau 2 (L2) correspondant au fichier d'extension du pool de mémoires tampons sur le disque SSD. Seules les pages nettoyées sont écrites dans le cache L2, ce qui vous permet d'assurer la sécurité de données. Le gestionnaire de tampons gère le déplacement des pages nettoyées entre les caches L1 et L2.
@@ -61,7 +60,7 @@ ms.locfileid: "78175428"
 
  Une fois activée, l'extension du pool de mémoires tampons spécifie la taille et le chemin d'accès du fichier de mise en cache du pool de mémoires tampons sur le disque SSD. Ce fichier est une extension contiguë du stockage sur le disque SSD, et est configuré statiquement au démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La modification des paramètres de configuration des fichiers est uniquement possible lorsque la fonctionnalité d'extension du pool de mémoires tampons est désactivée. Dans ce cas, tous les paramètres de configuration associés sont supprimés du Registre. Le fichier d'extension du pool de mémoires tampons est supprimé en cas d'arrêt de l'instance de SQL Server.
 
-## <a name="best-practices"></a>Meilleures pratiques
+## <a name="best-practices"></a>Bonnes pratiques
  Nous vous recommandons d'appliquer ces bonnes pratiques.
 
 -   Après avoir activé l’extension du pool de mémoires tampons pour la première fois, il est recommandé de redémarrer l’instance SQL Server pour obtenir des performances optimales.

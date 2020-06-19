@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026885"
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
   Lorsque vous importez des données en bloc dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données à partir d'une table, utilisez un fichier de format vers un système souple pour l'écriture de fichiers de données nécessitant peu ou pas d'édition pour la conformité aux autres formats de données ou pour la lecture des fichiers de données provenant d'autres logiciels.  
@@ -27,7 +26,7 @@ ms.locfileid: "66265153"
  En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML.  
   
 > [!NOTE]  
->  La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **BCP** peut lire un fichier de format version 10,0, qui est généré [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **BCP**, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]mais **BCP** ne peut pas lire un fichier de format version 11,0, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]qui est généré par **BCP**.  
+>  La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **BCP** peut lire un fichier de format version 10,0, qui est généré par [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **BCP**, mais [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **BCP** ne peut pas lire un fichier de format version 11,0, qui est généré par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **BCP**.  
   
  Cette rubrique décrit l'utilisation de l' [utilitaire bcp](../../tools/bcp-utility.md) pour créer un fichier de format pour une table donnée. Le fichier de format est basé sur l’option de type de données spécifiée ( **-n**, **-c**, **-w**ou **-N**) et les délimiteurs de la table ou de la vue.  
   
