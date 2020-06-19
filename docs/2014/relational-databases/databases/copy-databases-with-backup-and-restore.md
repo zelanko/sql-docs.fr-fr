@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ffed36767f961f7482aa0dccf755118c80c019
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917466"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952113"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copier des bases de données avec la sauvegarde et la restauration
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer une base de données en restaurant une sauvegarde d'une base de données utilisateur créée à l'aide de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure. Cependant, les sauvegardes des bases de données **master**, **model** et **msdb** créées avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Par ailleurs, les sauvegardes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne peuvent pas être restaurées par les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise un chemin d'accès par défaut différent de celui des versions précédentes. Par conséquent, pour restaurer des sauvegardes d'une base de données créée à l'emplacement par défaut de versions antérieures, vous devez utiliser l'option MOVE. Pour plus d’informations sur le nouveau chemin d’accès par défaut [, consultez emplacements des fichiers pour les instances par défaut et nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Pour plus d'informations sur le déplacement des fichiers d'une base de données, consultez la section « Déplacement des fichiers d'une base de données » dans les pages suivantes de cette rubrique.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise un chemin d'accès par défaut différent de celui des versions précédentes. Par conséquent, pour restaurer des sauvegardes d'une base de données créée à l'emplacement par défaut de versions antérieures, vous devez utiliser l'option MOVE. Pour plus d'informations sur le nouveau chemin par défaut, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Pour plus d'informations sur le déplacement des fichiers d'une base de données, consultez la section « Déplacement des fichiers d'une base de données » dans les pages suivantes de cette rubrique.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Étapes générales de l'utilisation de la sauvegarde et de la restauration pour copier une base de données  
  Lorsque vous utilisez la sauvegarde et la restauration pour copier une base de données vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les ordinateurs source et de destination peuvent correspondre à n'importe quelle plateforme qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +37,7 @@ ms.locfileid: "62917466"
   
 1.  Sauvegardez la base de données source, qui peut résider sur une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure. L’ordinateur qui exécute cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue *l’ordinateur source*.  
   
-2.  Sur l’ordinateur sur lequel vous souhaitez copier la base de données ( *ordinateur de destination*), connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’instance de sur laquelle vous envisagez de restaurer la base de données. Si nécessaire, sur l'instance de serveur de destination, créez les mêmes unités de sauvegarde que celles utilisées pour sauvegarder les bases de données sources.  
+2.  Sur l’ordinateur sur lequel vous souhaitez copier la base de données ( *ordinateur de destination*), connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle vous envisagez de restaurer la base de données. Si nécessaire, sur l'instance de serveur de destination, créez les mêmes unités de sauvegarde que celles utilisées pour sauvegarder les bases de données sources.  
   
 3.  Restaurez la sauvegarde de la base de données source sur l'ordinateur de destination. La restauration automatique de la base de données crée tous les fichiers de la base de données.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62917466"
  Le nom de la base de données fourni explicitement lors de la restauration d'une base de données est utilisé automatiquement comme nouveau nom. Le nom de la base de données n'existant pas encore, un nouveau nom est créé en utilisant les fichiers figurant dans la sauvegarde.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Lors de la mise à niveau d'une base de données en utilisant la restauration  
- Lors de la restauration de sauvegardes à partir d'une version antérieure, il est utile de savoir à l'avance si le chemin d'accès (lecteur ou répertoire) de chaque catalogue de texte intégral figurant dans la sauvegarde existe sur l'ordinateur de destination. Pour établir la liste des noms logiques et des noms physiques, du chemin et du nom de chaque fichier dans une sauvegarde, y compris les fichiers de catalogues, utilisez l’instruction RESTORE FILELISTONLY FROM *<unité_sauvegarde>*. Pour plus d’informations, consultez [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
+ Lors de la restauration de sauvegardes à partir d'une version antérieure, il est utile de savoir à l'avance si le chemin d'accès (lecteur ou répertoire) de chaque catalogue de texte intégral figurant dans la sauvegarde existe sur l'ordinateur de destination. Pour établir la liste des noms logiques et des noms physiques, du chemin et du nom de chaque fichier dans une sauvegarde, y compris les fichiers de catalogues, utilisez l’instruction RESTORE FILELISTONLY FROM *<unité_sauvegarde>* . Pour plus d’informations, consultez [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
  Si le même chemin n'existe pas sur l'ordinateur de destination, vous pouvez procéder de l'une des deux manières suivantes :  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62917466"
  Lorsqu'une base de données est restaurée sur un autre ordinateur, la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows à l'origine de l'opération de restauration devient automatiquement le propriétaire de la nouvelle base de données. Lorsque la base de données est restaurée, l'administrateur du système ou le nouveau propriétaire de la base de données peut modifier la propriété de la base de données. Pour éviter la restauration non autorisée d’une base de données, utilisez des mots de passe de supports de sauvegarde ou de jeux de sauvegardes.  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>Gestion de métadonnées lors de la restauration vers une autre instance de serveur  
- Lorsque vous restaurez une base de données sur une autre instance de serveur, pour garantir une expérience cohérente aux utilisateurs et aux applications, vous devrez peut-être recréer tout ou partie des métadonnées de la base de données, telles que les connexions et les travaux, sur l'autre instance de serveur. Pour plus d’informations, consultez [gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Lorsque vous restaurez une base de données sur une autre instance de serveur, pour garantir une expérience cohérente aux utilisateurs et aux applications, vous devrez peut-être recréer tout ou partie des métadonnées de la base de données, telles que les connexions et les travaux, sur l'autre instance de serveur. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  **Pour afficher les données et les fichiers journaux dans un jeu de sauvegarde**  
   
@@ -131,8 +130,8 @@ ms.locfileid: "62917466"
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
 ## <a name="see-also"></a>Voir aussi  
- [Copier les bases de données sur d’autres serveurs](copy-databases-to-other-servers.md)   
- [Emplacements des fichiers pour les instances par défaut et nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
+ [Copier des bases de données sur d'autres serveurs](copy-databases-to-other-servers.md)   
+ [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

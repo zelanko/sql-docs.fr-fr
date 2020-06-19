@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fca4ea655ffdcf8471d1340016d16f2c5b9c352a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927668"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administration de l'utilitaire (utilitaire SQL Server)
   Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres de stratégie, de sécurité et d'entrepôt de données pour un utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur les concepts de l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -89,11 +88,11 @@ ms.locfileid: "83857848"
  Informations de configuration de l'entrepôt de données de l'utilitaire  
  Les paramètres de configuration suivants ne sont pas configurables dans cette version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Nom de l’UMDW : Sysutility_mdw_\<GUID>_DATA.  
+-   Nom de UMDW : Sysutility_mdw_ \<GUID> _data.  
   
 -   fréquence de téléchargement du jeu d'éléments de collecte : toutes les 15 minutes.  
   
- Le répertoire UMDW est configurable : \<Lecteur_système:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nom_UCP>\MSSQL\Data\\, où \<Lecteur_système est normalement le lecteur C:\. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
+ Le répertoire UMDW est configurable : \<System drive> : \Program Files\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \MSSQL\DATA \\ , où \<System drive> est normalement le C:\ unités. Le fichier journal, UMDW_ \<GUID> _log, se trouve dans le même répertoire.  
   
 > [!NOTE]  
 >  L'emplacement du fichier UMDW (sysutility_mdw) peut être modifié à l'aide des opérations de détachement et d'attachement ou d'ALTER DATABASE. Nous recommandons l'utilisation d'ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

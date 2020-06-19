@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a7698276ece16f3c1c9db53deec94912c89db01
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062084"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926430"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Ajouter une visionneuse de données à un flux de données
   Cette rubrique explique comment ajouter et configurer une visionneuse de données dans un flux de données. Une visionneuse de données affiche des données déplacées entre deux composants de flux de données Par exemple, une visionneuse de données peut afficher les données extraites d'une source de données avant qu'une transformation dans le flux de données modifie les données.  
@@ -53,7 +52,7 @@ ms.locfileid: "66062084"
   
 10. Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformations de Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Chemins d’accès Integration Services](data-flow/integration-services-paths.md)   
  [Transmission de données](data-flow/data-flow.md)   

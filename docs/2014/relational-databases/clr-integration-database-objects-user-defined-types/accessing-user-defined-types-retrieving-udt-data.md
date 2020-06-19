@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e08fd0455e42717a5efcc33f9cb9757e81867ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970737"
 ---
 # <a name="retrieving-udt-data"></a>Extraction de données UDT
   Pour créer un type défini par l'utilisateur (UDT) sur le client, l'assembly enregistré comme UDT dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être accessible par l'application cliente. L'assembly de type défini par l'utilisateur (UDT) peut être placé dans le même répertoire que l'application, ou dans le Global Assembly Cache (GAC). Vous pouvez également définir une référence à l'assembly dans votre projet.  
@@ -157,10 +156,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Liaison des UDT comme octets  
- Dans certaines situations, vous pouvez extraire les données brutes de la colonne UDT. Peut-être le type n'est-il pas disponible localement ou ne souhaitez-vous pas instancier une instance de l'UDT. Vous pouvez lire les octets bruts dans un tableau d’octets **GetBytes** à l’aide de `SqlDataReader`la méthode GetBytes d’un. Cette méthode lit un flux d'octets à partir de l'offset de colonne spécifié dans la mémoire tampon d'un tableau commençant à un offset de mémoire tampon donné. Une autre option consiste à utiliser l’une des méthodes **GetSqlBytes** ou **GetSqlBinary** et à lire tout le contenu en une seule opération. Dans l'un et l'autre cas, comme l'objet UDT n'est jamais instancié, vous n'avez pas besoin de définir une référence à l'UDT dans l'assembly client.  
+ Dans certaines situations, vous pouvez extraire les données brutes de la colonne UDT. Peut-être le type n'est-il pas disponible localement ou ne souhaitez-vous pas instancier une instance de l'UDT. Vous pouvez lire les octets bruts dans un tableau d’octets à l’aide de la méthode **GetBytes** d’un `SqlDataReader` . Cette méthode lit un flux d'octets à partir de l'offset de colonne spécifié dans la mémoire tampon d'un tableau commençant à un offset de mémoire tampon donné. Une autre option consiste à utiliser l’une des méthodes **GetSqlBytes** ou **GetSqlBinary** et à lire tout le contenu en une seule opération. Dans l'un et l'autre cas, comme l'objet UDT n'est jamais instancié, vous n'avez pas besoin de définir une référence à l'UDT dans l'assembly client.  
   
 ### <a name="example"></a>Exemple  
- Cet exemple montre comment récupérer les données de **point** en tant qu’octets bruts dans un tableau `SqlDataReader`d’octets à l’aide d’un. Le code utilise un `System.Text.StringBuilder` pour convertir les octets bruts en une représentation sous forme de chaîne à afficher dans la fenêtre de la console.  
+ Cet exemple montre comment récupérer les données de **point** en tant qu’octets bruts dans un tableau d’octets à l’aide d’un `SqlDataReader` . Le code utilise un `System.Text.StringBuilder` pour convertir les octets bruts en une représentation sous forme de chaîne à afficher dans la fenêtre de la console.  
   
 ```vb  
 Option Explicit On  

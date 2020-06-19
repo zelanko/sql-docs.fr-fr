@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4255e17f7cd76cf402c10d84b015a1324d7d6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce531129099a8f4908bdc4b29920696d4ba3c505
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970632"
 ---
 # <a name="regular-vs-context-connections"></a>Connexions normales et Connexions contextuelles
   Si vous vous connectez à un serveur distant, utilisez toujours des connexions normales plutôt que des connexions contextuelles. Si vous devez vous connecter au même serveur sur lequel la procédure stockée ou la fonction est en cours d'exécution, utilisez la connexion contextuelle dans la majorité des cas. Ceci présente des avantages, notamment l'exécution dans le même espace de transaction et la non-obligation de s'authentifier à nouveau.  

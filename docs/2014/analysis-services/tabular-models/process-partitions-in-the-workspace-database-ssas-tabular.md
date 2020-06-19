@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 947f4bdbb6dae0e371c9df50b202986c62f0644e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066796"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938750"
 ---
 # <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>Traiter des partitions dans la base de données de l’espace de travail (SSAS tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les tâches de cette rubrique décrivent comment traiter les partitions dans la base de données model de l’espace de travail à l’aide de la boîte de dialogue **Traiter les partitions** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

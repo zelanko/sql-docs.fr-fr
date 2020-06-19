@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dedd2c5b8d075dee8aeeb438904137558c664d95
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872090"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970211"
 ---
 # <a name="database-instant-file-initialization"></a>Initialisation instantanée des fichiers de base de données
   Les fichiers de données et les fichiers journaux sont initialisés pour remplacer toutes les données existantes laissées sur le disque par des fichiers précédemment supprimés. Les fichiers de données et les fichiers journaux sont d'abord initialisés en étant remplis avec des zéros quand vous effectuez l'une des opérations suivantes :  
@@ -55,7 +54,7 @@ ms.locfileid: "62872090"
   
 4.  Cliquez sur **Ajouter un utilisateur ou un groupe** et ajoutez tout compte d’utilisateur utilisé pour les sauvegardes.  
   
-5.  Cliquez sur **appliquer**, puis fermez toutes `Local Security Policy` les boîtes de dialogue.  
+5.  Cliquez sur **appliquer**, puis fermez toutes les `Local Security Policy` boîtes de dialogue.  
   
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité  
  Comme le contenu du disque supprimé n'est remplacé qu'au moment où de nouvelles données sont écrites dans les fichiers, il est éventuellement accessible à un principal non autorisé. Même si le fichier de base de données est attaché à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le risque de divulgation de ces informations est limité par la liste de contrôle d'accès discrétionnaire (DACL, Discretionary Access Control List) du fichier. Cette liste DACL n'autorise l'accès au fichier qu'à l'administrateur local et au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cependant, quand le fichier est détaché, un utilisateur ou un service ne bénéficiant pas de l'autorisation SE_MANAGE_VOLUME_NAME peut y accéder. Un risque similaire existe quand la base de données est sauvegardée. Un service ou un utilisateur non autorisé peut accéder au contenu supprimé si le fichier de sauvegarde n'est pas protégé par une liste DACL appropriée.  

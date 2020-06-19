@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 955a17857ce0d847fb712473dddd581a072ab83d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858538"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970169"
 ---
 # <a name="database-properties-files-page"></a>Propriétés de la base de données (page Fichiers)
   Cette page vous permet de créer une nouvelle base de données, ainsi que d'afficher et de modifier les propriétés de la base de données sélectionnée. Cette rubrique s’applique aux **Propriétés de la base de données (page Fichiers)** pour les bases de données existantes et à la **Nouvelle base de données (page Général)** .  
@@ -46,7 +45,7 @@ ms.locfileid: "83858538"
  Pour ajouter des fichiers (conteneurs) à un groupe de fichiers de données Filestream, FILESTREAM doit être activé. Vous pouvez activer FILESTREAM à l’aide de la boîte de dialogue [Propriétés du serveur (page Avancé)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Groupe de fichiers**  
- Sélectionnez le groupe de fichiers du fichier dans la liste. Par défaut, le groupe de fichiers est PRIMARY. Vous pouvez créer un groupe de fichiers en sélectionnant **\<nouveau groupe de fichiers>** , puis en entrant les informations sur le groupe de fichiers dans la boîte de dialogue **Nouveau groupe de fichiers**. Il est également possible de créer un groupe de fichiers dans la page **Groupe de fichiers** . Vous ne pouvez pas modifier le groupe de fichiers d'un fichier existant.  
+ Sélectionnez le groupe de fichiers du fichier dans la liste. Par défaut, le groupe de fichiers est PRIMARY. Vous pouvez créer un nouveau groupe de fichiers en sélectionnant **\<new filegroup>** et en entrant des informations sur le groupe de fichiers dans la boîte de dialogue **nouveau groupe de fichiers** . Il est également possible de créer un groupe de fichiers dans la page **Groupe de fichiers** . Vous ne pouvez pas modifier le groupe de fichiers d'un fichier existant.  
   
  Lors de l’ajout de fichiers (conteneurs) à un groupe de fichiers optimisé en mémoire, le champ **Groupe de fichiers** est rempli avec le nom du groupe de fichiers optimisé en mémoire de la base de données.  
   

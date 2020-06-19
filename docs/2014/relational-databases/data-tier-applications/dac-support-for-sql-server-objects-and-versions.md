@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b3e88577bc7b166c84bfe8875a3e6e1b34dec76
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811266"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970339"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Prise en charge DAC pour les objets et versions SQL Server
   Une application de la couche Données (DAC) prend en charge les objets du [!INCLUDE[ssDE](../../includes/ssde-md.md)] les plus couramment utilisés.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93555bbbc6c7a10955e8fc869f6ddadc38572830
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927130"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Fonctionnalités prises en charge par les éditions de SQL Server 2014
 
@@ -34,7 +33,7 @@ ms.locfileid: "82706961"
   
  [Évolutivité et performances](#Scalability)  
   
- [Security](#Enterprise_security)  
+ [Sécurité](#Enterprise_security)  
   
  [Réplication](#Replication)  
   
@@ -84,8 +83,8 @@ ms.locfileid: "82706961"
 |Capacité maximale de calcul utilisée par une instance unique (Analysis Services, Reporting Services) <sup>1</sup>|Maximum du système d'exploitation|Maximum du système d'exploitation|Limité inférieure à 4 sockets ou 16 noyaux|Limité inférieure à 4 sockets ou 16 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|Limité inférieure à 1 sockets ou 4 noyaux|  
 |Mémoire maximale utilisée (par instance du moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Maximum du système d'exploitation|128 Go|128 Go|64 Go|1 Go|1 Go|1 Go|  
 |Mémoire maximale utilisée (par instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Maximum du système d'exploitation|Maximum du système d'exploitation|64 Go|N/A|N/A|N/A|N/A|  
-|Mémoire maximale utilisée (par instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Maximum du système d'exploitation|Maximum du système d'exploitation|64 Go|64 Go|4 Go|N/A|N/A|  
-|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|524 Po|10 Go|10 Go|10 Go|  
+|Mémoire maximale utilisée (par instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Maximum du système d'exploitation|Maximum du système d'exploitation|64 Go|64 Go|4 Go|N/A|N/A|  
+|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|524 Po|10 Go|10 Go|10 Go|  
   
  <sup>1</sup> Enterprise Edition avec serveur + licences d’accès client (CAL) (non disponibles pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
@@ -277,7 +276,7 @@ ms.locfileid: "82706961"
 > [!NOTE]  
 >  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est disponible uniquement sur les éditions 64 bits de Business Intelligence et Enterprise uniquement.  
   
-|Fonctionnalité|Enterprise|Business Intelligence|standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|Fonctionnalité|Entreprise|Business Intelligence|standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données|Oui|Oui||||||  
 |Application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]|Oui|Oui||||||  
@@ -310,9 +309,9 @@ ms.locfileid: "82706961"
 |Nom de la fonctionnalité|Entreprise|Business Intelligence|standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Mesures semi-additives|Oui|Oui|Non<sup>1</sup>|||||  
-|Hierarchies|Oui|Oui|Oui|||||  
+|Hiérarchies|Oui|Oui|Oui|||||  
 |Indicateurs de performance clés|Oui|Oui|Oui|||||  
-|perspectives|Oui|Oui||||||  
+|Perspectives|Oui|Oui||||||  
 |Actions|Oui|Oui|Oui|||||  
 |Intelligence comptable|Oui|Oui|Oui|||||  
 |Time Intelligence|Oui|Oui|Oui|||||  
@@ -346,9 +345,9 @@ ms.locfileid: "82706961"
   
 |Nom de la fonctionnalité|Entreprise|Business Intelligence|standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Hierarchies|Oui|Oui||||||  
+|Hiérarchies|Oui|Oui||||||  
 |Indicateurs de performance clés|Oui|Oui||||||  
-|perspectives|Oui|Oui||||||  
+|Perspectives|Oui|Oui||||||  
 |Translations|Oui|Oui||||||  
 |Calculs DAX, requêtes DAX, requêtes MDX|Oui|Oui||||||  
 |Sécurité de niveau ligne|Oui|Oui||||||  
@@ -415,7 +414,7 @@ ms.locfileid: "82706961"
 |Abonnement aux rapports pilotés par les données|Oui|Oui||||||  
 |Déploiement avec montée en puissance parallèle (batteries de serveurs Web)|Oui|Oui||||||  
 |Alerte<sup>2</sup>|Oui|Oui||||||  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|Oui|Oui||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Oui|Oui||||||  
   
  <sup>1</sup> Pour plus d’informations sur les sources de données prises en charge dans [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , consultez [sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -426,9 +425,9 @@ ms.locfileid: "82706961"
   
 |Pour cette édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Utilisez cette édition de l'instance du moteur de base de données pour héberger la base de données|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|Enterprise|Éditions Standard, Business Intelligence, Enterprise (locales ou distantes)|  
+|Entreprise|Éditions Standard, Business Intelligence, Enterprise (locales ou distantes)|  
 |Business Intelligence|Éditions Standard, Business Intelligence, Enterprise (locales ou distantes)|  
-|standard|Éditions Standard, Enterprise (locales ou distantes)|  
+|Standard|Éditions Standard, Enterprise (locales ou distantes)|  
 |Web|Web Edition (locale uniquement)|  
 |Express with Advanced Services|Express with Advanced Services (local uniquement).|  
 |Évaluation|Évaluation|  

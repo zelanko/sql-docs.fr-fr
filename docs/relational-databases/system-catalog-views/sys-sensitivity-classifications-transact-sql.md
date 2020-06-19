@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939040"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ Retourne une ligne pour chaque élément classifié dans la base de données.
 
 |Nom de la colonne|Type de données|Description|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Identifie la classe de l’élément sur lequel la classification existe. Aura toujours la valeur 1 (représentant une colonne)|  
+|**type**|**int**|Identifie la classe de l’élément sur lequel la classification existe. Aura toujours la valeur 1 (représentant une colonne)|  
 |**class_desc**|**varchar (16)**|Description de la classe de l’élément sur lequel la classification existe. aura toujours la valeur *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Représente l’ID de la table contenant la colonne classifiée, correspondant à sys. all_objects. object_id|  
 |**minor_id**|**int**|Représente l’ID de la colonne sur laquelle la classification existe, correspondant à sys. all_columns. column_id|   
@@ -49,7 +49,7 @@ Retourne une ligne pour chaque élément classifié dans la base de données.
 |**rank_desc**|**sysname**|Représentation textuelle du classement :  <br><br>AUCUN, FAIBLE, MOYEN, ÉLEVÉ, CRITIQUE|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 
 - Cette vue fournit une visibilité de l’état de classification de la base de données. Il peut être utilisé pour gérer les classifications de base de données, ainsi que pour générer des rapports.
 - Actuellement, seule la classification des colonnes de base de données est prise en charge.
@@ -58,7 +58,7 @@ Retourne une ligne pour chaque élément classifié dans la base de données.
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>R. Affichage de la liste de toutes les colonnes classées et de leur classification correspondante
 
-L’exemple suivant retourne une table qui répertorie le nom de la table, le nom de la colonne, l’étiquette, l’ID de l’étiquette, le type d’informations, l’ID du type d’information pour chaque colonne classifiée de la base de données.
+L’exemple suivant retourne une table qui répertorie le nom de la table, le nom de la colonne, l’étiquette, l’ID de l’étiquette, le type d’informations, l’ID du type d’information, le rang et la description du rang pour chaque colonne classifiée de la base de données.
 
 > [!NOTE]
 > L’étiquette est un mot clé pour Azure SQL Data Warehouse.

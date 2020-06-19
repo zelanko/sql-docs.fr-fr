@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e19c050d0dd5d0a07c12f88076c423ade3281a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937210"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Groupes de disponibilité Always On : interopérabilité (SQL Server)
   Cette rubrique documente l'interopérabilité de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec d'autres fonctionnalités de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "62815745"
 |Fonctionnalité|Informations complémentaires|  
 |-------------|----------------------|  
 |Capture des données modifiées|[Réplication, Change Tracking, capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|Suivi des modifications|[Réplication, Change Tracking, capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
+|Change tracking|[Réplication, Change Tracking, capture de données modifiées et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
 |Bases de données autonomes|[Bases de données autonomes avec les groupes de disponibilité AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)|  
 |Chiffrement de base de données|[Bases de données chiffrées avec groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |Instantanés de base de données|[Instantanés de base de données avec groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  

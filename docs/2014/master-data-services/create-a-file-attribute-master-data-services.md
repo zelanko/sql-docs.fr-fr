@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1af7ba28b217612a37a0649cd69892bff6f272b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971849"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Créer un attribut de fichier (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut de fichier pour remplir les valeurs d'attribut avec des fichiers.  
@@ -58,7 +57,7 @@ ms.locfileid: "65479992"
   
 9. Dans la zone **Largeur d'affichage en pixels** , tapez la largeur de la colonne d'attribut à afficher dans la grille **Explorateur** .  
   
-10. Dans la liste **extension de fichier** , sélectionnez un ou plusieurs types de fichiers qu’un utilisateur peut télécharger, ou laissez la valeur par\*défaut (*.) pour autoriser tous les types de fichiers.  
+10. Dans la liste **extension de fichier** , sélectionnez un ou plusieurs types de fichiers qu’un utilisateur peut télécharger, ou laissez la valeur par défaut (*. \* ) pour autoriser tous les types de fichiers.  
   
 11. Sélectionnez éventuellement **Activer le suivi des modifications** pour effectuer le suivi des modifications apportées aux groupes d'attributs. Pour plus d’informations, consultez [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 202fd03beea5ec2fbf4b3fc29978ba9e112010df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 073026ea048f545d404c0b656b721fb72ed7cc8e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914069"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Propriétés personnalisées de la destination SQL Server
   La destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispose à la fois de propriétés personnalisées et des propriétés communes à tous les composants de flux de données.  

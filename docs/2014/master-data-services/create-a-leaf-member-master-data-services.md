@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d85f5704a3a091f2f4b652812a66977eb11c93f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483404"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971839"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Créer un membre feuille (Master Data Services)
-  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], créez un membre feuille lorsque vous souhaitez ajouter des données de référence à votre système et que vous n’utilisez pas de tables [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] de mise en lots ou de pour importer des données.  
+  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , créez un membre feuille lorsque vous souhaitez ajouter des données de référence à votre système et que vous n’utilisez pas de tables de mise en lots ou [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] de pour importer des données.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
@@ -45,11 +44,11 @@ ms.locfileid: "65483404"
   
 6.  Dans le volet **Détails** , renseignez les champs.  
   
-7.  Facultatif. Dans la zone **Annotations** , tapez un commentaire pour expliquer l'ajout du membre. Tous les utilisateurs ayant accès au membre peuvent afficher l'annotation.  
+7.  facultatif. Dans la zone **Annotations** , tapez un commentaire pour expliquer l'ajout du membre. Tous les utilisateurs ayant accès au membre peuvent afficher l'annotation.  
   
 8.  Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Charger ou mettre à jour des membres dans Master Data Services à l’aide du processus de site](add-update-and-delete-data-master-data-services.md)   
  [Créer un membre consolidé &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Membres &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  

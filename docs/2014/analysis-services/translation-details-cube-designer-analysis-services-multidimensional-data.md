@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d90d246cb54b54dea0ed4f84f1b96142a5f56803
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065859"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938302"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Détails des traductions (onglet Traductions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Détails des transactions** sous l’onglet **Transactions** accessible dans le Concepteur de cube pour définir et gérer les traductions s’appliquant au cube actuellement sélectionné.  
@@ -61,7 +60,7 @@ ms.locfileid: "66065859"
   
      Propriété `Caption`  
   
- **\<>de langue**  
+ **\<Language>**  
  Permet de saisir la valeur de la propriété de l'objet du cube dans la langue choisie.  
   
 ## <a name="context-menu"></a>Menu contextuel  

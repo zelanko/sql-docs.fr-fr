@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a612b7b5005fb603be30d697a18fc92a7c481933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938640"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Spécifier la marque comme table de dates pour l'utiliser avec Time Intelligence (SSAS - Tabulaire)
   Pour utiliser des fonctions Time Intelligence dans les formules DAX, vous devez spécifier une table de dates et une colonne (datetime) d'identification unique pour le type de données Date. Une fois qu'une colonne dans la table de dates est spécifiée comme identificateur unique, vous pouvez créer des relations entre les colonnes de cette table et de toutes les tables de faits.  

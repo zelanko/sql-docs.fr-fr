@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb904cd0f0649c43553b5d6c8b031c5f284901f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814494"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936810"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité AlwaysOn)
   Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle secondaire des réplicas de disponibilité sont généralement interchangeables au moyen d'un processus appelé *basculement*. Trois formes de basculement existent : basculement automatique (sans perte de données), basculement manuel planifié (sans perte de données) et basculement manuel forcé (avec perte de données possible), ce dernier étant généralement appelé *basculement forcé*. Les basculements automatiques et planifiés manuels préservent vos données. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Autrement dit, un groupe de disponibilité bascule vers l’un de ses réplicas secondaires ( *cible de basculement*actuelle).  
@@ -65,8 +64,8 @@ ms.locfileid: "62814494"
 ||Mode de validation asynchrone|Mode de validation synchrone avec mode de basculement manuel|Mode de validation synchrone avec mode de basculement automatique|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Basculement automatique|Non|Non|Oui|  
-|Basculement manuel planifié|Non|Oui|Oui|  
-|basculement forcé|Oui|Oui|Oui**<sup>*</sup>**|  
+|Basculement manuel planifié|Non|Oui|Yes|  
+|basculement forcé|Oui|Yes|Oui**<sup>*</sup>**|  
   
  **<sup>*</sup>** Si vous exécutez une commande de basculement forcé sur un réplica secondaire synchronisé, le réplica secondaire se comporte de la même façon que pour un basculement manuel.  
   
@@ -78,11 +77,11 @@ ms.locfileid: "62814494"
 ### <a name="failover-sets"></a>Ensembles de basculement  
  Les formes de basculement possibles pour un groupe de disponibilité donné peuvent être présentées en termes de groupes de basculement. Un groupe de basculement comprend le réplica principal et les réplicas secondaires qui prennent en charge un type donné de basculement, comme suit :  
   
--   (facultatif) : ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] **  Dans un groupe de disponibilité donné, une paire de réplicas de disponibilité (y compris le réplica principal actuel) qui est configurée pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un groupe des basculements automatiques est appliqué uniquement si le réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (facultatif) :** dans un groupe de disponibilité donné, une paire de réplicas de disponibilité (y compris le réplica principal actuel) qui sont configurés pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un groupe des basculements automatiques est appliqué uniquement si le réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
--   (facultatif) : ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] **  Dans un groupe de disponibilité donné, un ensemble de deux ou trois réplicas de disponibilité (y compris le réplica principal actuel) qui sont configurés pour le mode de validation synchrone, le cas échéant. Un groupe de basculements avec validation synchrone est appliqué uniquement si les réplicas secondaires sont configurés pour le mode de basculement manuel et qu'au moins un réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (facultatif) :** dans un groupe de disponibilité donné, un ensemble de deux ou trois réplicas de disponibilité (y compris le réplica principal actuel) qui sont configurés pour le mode de validation synchrone, le cas échéant. Un groupe de basculements avec validation synchrone est appliqué uniquement si les réplicas secondaires sont configurés pour le mode de basculement manuel et qu'au moins un réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dans un groupe de disponibilité donné, ensemble de tous les réplicas de disponibilité dont l’état opérationnel est actuellement en ligne, quel que soit le mode de disponibilité et le mode de basculement. Le groupe de basculements devient approprié lorsqu'aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   ** [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** Dans un groupe de disponibilité donné, ensemble de tous les réplicas de disponibilité dont l’état opérationnel est actuellement en ligne, quel que soit le mode de disponibilité et le mode de basculement. Le groupe de basculements devient approprié lorsqu'aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
  Lorsque vous configurez un réplica de disponibilité en tant que validation synchrone avec basculement automatique, le réplica de disponibilité devient partie intégrante du [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Toutefois, l'entrée en vigueur de l'ensemble dépend du réplica principal actuel. Les formes de basculement qui sont en fait possibles à un moment donné dépendent des ensembles de basculement actuellement en vigueur.  
   
@@ -235,7 +234,7 @@ ms.locfileid: "62814494"
   
 1.  Connectez-vous au réplica principal.  
   
-2.  Interrogez `last_commit_lsn` les colonnes (LSN de la dernière transaction validée) et `last_commit_time` (heure des dernières validations) de la vue de gestion dynamique [sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
+2.  Interrogez les `last_commit_lsn` colonnes (LSN de la dernière transaction validée) et `last_commit_time` (heure des dernières validations) de la vue de gestion dynamique [sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
   
 3.  Comparez les valeurs retournées pour chaque base de données primaire et pour chacune de ses bases de données secondaires. La différence entre leurs LSN de dernière validation indique le niveau du décalage.  
   

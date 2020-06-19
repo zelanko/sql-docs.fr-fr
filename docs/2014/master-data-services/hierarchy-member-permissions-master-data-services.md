@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8a50ce407e0f9284d07a7248f08decacf434fee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482952"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971409"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorisations des membres de la hiérarchie (Master Data Services)
   Les autorisations des membres de la hiérarchie sont optionnelles et doivent être utilisées uniquement lorsque vous souhaitez qu'un utilisateur ait un accès limité à des membres spécifiques. Si vous n'affectez pas d'autorisations sous l'onglet **Membres de hiérarchie** , les autorisations de l'utilisateur sont basées uniquement sur celles affectées sous l'onglet **Modèles** .  
   
- Les autorisations des membres de la hiérarchie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sont affectées dans l’interface utilisateur, dans la zone fonctionnelle **autorisations d’accès** sous l’onglet **membres de hiérarchie** . Ces autorisations déterminent les membres auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l’interface utilisateur.  
+ Les autorisations des membres de la hiérarchie sont affectées dans l' [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] interface utilisateur, dans la zone fonctionnelle **autorisations d’accès** sous l’onglet **membres de hiérarchie** . Ces autorisations déterminent les membres auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l’interface utilisateur.  
   
  Sous l'onglet **Membres de hiérarchie** , chaque hiérarchie est représentée comme une arborescence. Lorsque vous affectez une autorisation à un nœud dans l'arborescence, tous les enfants héritent de cette autorisation à moins qu'elle ne soit affectée explicitement à un niveau inférieur.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "65482952"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|Les membres sont affichés, mais l'utilisateur ne peut pas les modifier. L'utilisateur ne peut pas non plus déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.<br /><br /> Remarque : Si vous attribuez l’autorisation **lecture** seule à la **racine**, les membres sous **racine** sont en lecture seule ; Toutefois, dans les hiérarchies et collections explicites, l’utilisateur peut déplacer des membres vers la **racine** et ajouter de nouveaux membres à la **racine**.|  
-|**Mise à jour**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
+|**Update**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
 |**Deny**|Les membres ne sont pas affichés.|  
   
  Sous l'onglet **Membres de hiérarchie** , les autorisations que vous affectez n'entrent pas immédiatement en vigueur. La fréquence à laquelle les autorisations sont appliquées dépend du paramètre **Intervalle de traitement de la sécurité des membres** dans la table Paramètres système de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Vous pouvez appliquer immédiatement des autorisations de membre en suivant la procédure décrite dans [Appliquer immédiatement des autorisations de membre &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  

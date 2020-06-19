@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44fce4aba87968a9b7e6acc3e18ae5d966f70d07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936020"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptateur de cloud pour SQL Server
-  Le service adaptateur cloud est créé dans le cadre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de l’approvisionnement sur une machine virtuelle Azure. Il génère un certificat SSL auto-signé dans le cadre de sa première exécution, puis s’exécute en tant que compte **Système local** . Il génère un fichier de configuration utilisé pour sa configuration. L’adaptateur de Cloud crée également une règle de pare-feu Windows pour autoriser les connexions TCP entrantes sur le port 11435 par défaut.  
+  Le service adaptateur cloud est créé dans le cadre de l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] approvisionnement sur une machine virtuelle Azure. Il génère un certificat SSL auto-signé dans le cadre de sa première exécution, puis s’exécute en tant que compte **Système local** . Il génère un fichier de configuration utilisé pour sa configuration. L’adaptateur de Cloud crée également une règle de pare-feu Windows pour autoriser les connexions TCP entrantes sur le port 11435 par défaut.  
   
  L'adaptateur de cloud est un service sans état et synchrone qui reçoit les messages de l'instance sur site de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque le service Adaptateur de cloud est arrêté, il arrête l'adaptateur de cloud d'accès à distance, dissocie le certificat SSL et désactive la règle de Pare-feu Windows.  
   
@@ -49,13 +48,13 @@ ms.locfileid: "70176016"
   
     -   \<configuration>  
   
-        -   \<> appSettings  
+        -   \<appSettings>  
   
-            -   \<Add Key = "WebServicePort" value = ""/>  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<Add Key = "WebServiceCertificate" value = "GUID"/>  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<Add Key = "ExposeExceptionDetails" value = "true"/>  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
         -   \</appSettings>  
   
@@ -63,7 +62,7 @@ ms.locfileid: "70176016"
   
 -   **Détails du certificat** : le certificat a les valeurs suivantes :  
   
-    -   Subject-"CN = CloudAdapter\<vmname>, dc = SQL Server, DC = Microsoft"  
+    -   Subject-"CN = CloudAdapter \<VMName> , DC = SQL Server, DC = Microsoft"  
   
     -   Le certificat doit disposer uniquement de l'utilisation améliorée de la clé d'authentification serveur activée.  
   
@@ -74,8 +73,8 @@ ms.locfileid: "70176016"
 |Paramètre|Valeurs|Default|Commentaires|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Si ce paramètre n'est pas spécifié, utilisez 11435.|  
-|WebServiceCertificate|Thumbprint|Vide|Si ce paramètre est vide, un nouveau certificat auto-signé est généré.|  
-|ExposeExceptionDetails|True/False|False||  
+|WebServiceCertificate|Empreinte numérique|Vide|Si ce paramètre est vide, un nouveau certificat auto-signé est généré.|  
+|ExposeExceptionDetails|Vrai/Faux|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>Dépannage de l'adaptateur de cloud  
  Utilisez les informations suivantes pour dépanner l'adaptateur de cloud pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -84,16 +83,16 @@ ms.locfileid: "70176016"
   
 -   **Traçage, événements** -tous les événements sont écrits dans le journal des événements de l’application.  
   
--   **Contrôle, configuration** : utilisez le fichier de configuration situé dans : C:\Program Files\Microsoft SQL\\Server\120\Tools\CloudAdapter.  
+-   **Contrôle, configuration** : utilisez le fichier de configuration situé dans : C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter \\ .  
   
-|Error|ID d'erreur|Cause|Résolution|  
+|Erreur|ID d'erreur|Cause|Résolution|  
 |-----------|--------------|-----------|----------------|  
 |Une exception s'est produite lors de l'ajout du certificat dans le magasin de certificats. [Texte de l'exception].|45560|Autorisations dans le magasin de certificats de l'ordinateur|Vérifiez que le service Adaptateur de cloud dispose des autorisations nécessaires pour ajouter des certificats dans le magasin de certificats de l'ordinateur.|  
 |Une exception s'est produite lors de la configuration de la liaison SSL du port {numéro de port} et du certificat {Thumbprint}. {Exception}.|45561|Une autre application a déjà utilisé le port ou lié un certificat à celui-ci.|Supprimez les liaisons existantes ou modifiez le port de l'adaptateur de cloud dans le fichier de configuration.|  
 |Certificat SSL introuvable [{Thumbprint}] dans le magasin de certificats.|45564|L'empreinte numérique de certificat est dans le fichier de configuration, mais le magasin de certificats personnel pour le service ne contient pas de certificat.<br /><br /> Autorisations insuffisantes.|Vérifiez que le certificat se trouve dans le magasin de certificats personnel pour le service.<br /><br /> Vérifiez que le service dispose des autorisations appropriées pour le magasin.|  
 |Échec du démarrage du service Web. [Texte de l'exception].|45570|Décrit dans l'exception.|Activez ExposeExceptionDetails et utilisez les informations étendues de l'exception.|  
 |Le certificat [{Thumbprint}] a expiré.|45565|Certificat arrivé à expiration référencé dans le fichier de configuration.|Ajoutez un certificat valide et mettez à jour le fichier de configuration avec son empreinte numérique.|  
-|Erreur du service Web {0}:.|45571|Décrit dans l'exception.|Activez ExposeExceptionDetails et utilisez les informations étendues de l'exception.|  
+|Erreur du service Web : {0} .|45571|Décrit dans l'exception.|Activez ExposeExceptionDetails et utilisez les informations étendues de l'exception.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

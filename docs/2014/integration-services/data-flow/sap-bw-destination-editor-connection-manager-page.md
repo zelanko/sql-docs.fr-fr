@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d45b5ea174b4055610584c663441a82834abfa99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770845"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914549"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Éditeur de destination SAP BW (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de destination SAP BW** pour sélectionner le gestionnaire de connexions SAP BW qui sera utilisé par la destination SAP BW. Sur cette page, sélectionnez également les paramètres pour charger les données dans le système SAP Netweaver BW.  
@@ -79,7 +78,7 @@ ms.locfileid: "62770845"
  Entrez le nom du serveur ou l'adresse IP de l'hôte de passerelle. Généralement, le nom ou l'adresse IP est identique au serveur d'applications SAP.  
   
  **Service de passerelle**  
- Entrez le nom du service de passerelle, au format `sapgwNN`, où `NN` est le numéro du système.  
+ Entrez le nom du service de passerelle, au format `sapgwNN` , où `NN` est le numéro du système.  
   
  **ID de programme**  
  Entrez l'ID du programme qui est associé à la destination RFC.  

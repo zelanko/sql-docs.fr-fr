@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009991"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970869"
 ---
 # <a name="manage-filetables"></a>Gérer des FileTables
   Décrit les tâches d'administration courantes permettant de gérer des FileTables.  
@@ -62,7 +61,7 @@ GO
   
      Si la commande ALTER DATABASE est annulée ou se solde par une erreur de délai d'attente, le niveau d'accès transactionnel n'est pas modifié.  
   
--   Si vous appelez l’instruction ALTER DATABASE avec une clause WITH \<termination> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), tous les descripteurs de fichiers non transactionnels ouverts sont alors supprimés.  
+-   Si vous appelez l’instruction ALTER DATABASE avec une \<termination> clause with (ROLLBACK après l’entier [seconds] | RESTAURATION IMMÉDIATE | NO_WAIT), tous les descripteurs de fichiers non transactionnels ouverts sont supprimés.  
   
 > [!WARNING]  
 >  La suppression des descripteurs de fichiers ouverts peut entraîner la perte de données utilisateur non enregistrées. Ce comportement est cohérent avec le comportement du système de fichiers lui-même.  

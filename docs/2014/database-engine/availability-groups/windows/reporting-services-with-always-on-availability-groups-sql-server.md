@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 685560b35eafd4092c149a809089abc299da6bbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29e41e2b65df744cdf495441a8e7bd72accc9ce9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936530"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique contient des informations sur la configuration de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (groupes de disponibilité) dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Les trois possibilités d'utilisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont les bases de données pour les sources de données de rapport, les bases de données de serveur de rapports et la conception de rapports. Les fonctionnalités prises en charge et la configuration requise diffèrent dans les trois cas.
 
  L'un des principaux avantages d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des sources de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] réside dans l'exploitation de réplicas secondaires accessibles en lecture en tant que source de données de rapports tandis que, dans le même temps, les réplicas secondaires permettent le basculement vers une base de données principale.
 
- Pour obtenir des informations [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]générales sur, consultez le [Forum aux questionshttps://msdn.microsoft.com/sqlserver/gg508768)sur alwayson pour SQL Server 2012 (](https://msdn.microsoft.com/sqlserver/gg508768).
+ Pour obtenir des informations générales sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez le [Forum aux questions https://msdn.microsoft.com/sqlserver/gg508768) sur AlwaysOn pour SQL Server 2012 (](https://msdn.microsoft.com/sqlserver/gg508768).
 
  
 
 ##  <a name="requirements-for-using-reporting-services-and-alwayson-availability-groups"></a><a name="bkmk_requirements"></a>Conditions requises pour l’utilisation de Reporting Services et groupes de disponibilité AlwaysOn
- Pour utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez télécharger et installer un correctif pour .net 3,5 SP1. Ce correctif ajoute une prise en charge au client SQL concernant les fonctionnalités de groupes de disponibilité et la prise en charge des propriétés de chaîne de connexion **ApplicationIntent** et **MultiSubnetFailover**. Si ce correctif n'est pas installé sur chaque ordinateur qui héberge un serveur de rapports, les utilisateurs qui essaient d'afficher un aperçu des rapports recevront un message d'erreur similaire à celui ci-dessous et ce message sera enregistré dans le fichier journal de traces du serveur de rapports :
+ Pour utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , vous devez télécharger et installer un correctif pour .net 3,5 SP1. Ce correctif ajoute une prise en charge au client SQL concernant les fonctionnalités de groupes de disponibilité et la prise en charge des propriétés de chaîne de connexion **ApplicationIntent** et **MultiSubnetFailover**. Si ce correctif n'est pas installé sur chaque ordinateur qui héberge un serveur de rapports, les utilisateurs qui essaient d'afficher un aperçu des rapports recevront un message d'erreur similaire à celui ci-dessous et ce message sera enregistré dans le fichier journal de traces du serveur de rapports :
 
 > **Message d’erreur :** « Mot clé non pris en charge’applicationintent' »
 
@@ -41,7 +40,7 @@ ms.locfileid: "78175458"
  Pour obtenir des informations sur les autres conditions préalables requises pour les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).
 
 > [!NOTE]
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]les fichiers de configuration, tels que **RSReportServer. config** , ne sont [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pas pris en charge dans le cadre de la fonctionnalité. Si vous apportez manuellement des modifications à un fichier de configuration sur l'un des serveurs de rapports, vous devez mettre à jour manuellement les réplicas.
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]les fichiers de configuration tels que les **RSreportserver.config** ne sont pas pris en charge dans le cadre de la [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fonctionnalité. Si vous apportez manuellement des modifications à un fichier de configuration sur l'un des serveurs de rapports, vous devez mettre à jour manuellement les réplicas.
 
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a>Sources de données de rapport et groupes de disponibilité
  Le comportement de sources de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] basées sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] peut varier selon la manière dont votre administrateur a configuré l'environnement de groupes de disponibilité.

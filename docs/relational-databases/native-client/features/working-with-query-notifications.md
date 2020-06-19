@@ -1,5 +1,6 @@
 ---
 title: Utilisation des notifications de requête | Microsoft Docs
+description: Les notifications de requêtes vous permettent de demander une notification pendant un délai d’attente lorsque les données sous-jacentes d’une requête sont modifiées dans SQL Server Native Client.
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8561d6c0e48e37dba7e22939fd868376c0ebdc9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 908da6bd9c0b978c273acd7e42cde7c8ad7f954d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948808"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "81303222"
   
  Les notifications sont envoyées une seule fois. Pour une notification continue des modifications de données, un nouvel abonnement doit être créé en exécutant à nouveau la requête une fois chaque notification traitée.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]En général, les applications clientes natives [!INCLUDE[tsql](../../../includes/tsql-md.md)] reçoivent des notifications à l’aide de la commande [Receive](../../../t-sql/statements/receive-transact-sql.md) pour lire les notifications de la file d’attente associée au service spécifié dans les options de notification.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]En général, les applications clientes natives reçoivent des notifications à l’aide de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] commande [Receive](../../../t-sql/statements/receive-transact-sql.md) pour lire les notifications de la file d’attente associée au service spécifié dans les options de notification.  
   
 > [!NOTE]  
 >  Les noms de tables doivent être qualifiés dans des requêtes pour lesquelles une notification est requise, par exemple `dbo.myTable`. Les noms de tables doivent être qualifiés avec des noms en deux parties. L'abonnement n'est pas valide si des noms en trois ou quatre parties sont utilisés.  
@@ -70,16 +71,16 @@ CREATE SERVICE myService ON QUEUE myQueue
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge la notification du consommateur sur la modification de l’ensemble de lignes. Le consommateur reçoit la notification à chaque phase de la modification de l'ensemble de lignes et à chaque tentative de modification.  
   
 > [!NOTE]  
->  Le passage d’une requête notifications au serveur avec **ICommand :: Execute** est la seule méthode valide pour s’abonner [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aux notifications de requête avec le fournisseur OLE DB Native Client.  
+>  Le passage d’une requête notifications au serveur avec **ICommand :: Execute** est la seule méthode valide pour s’abonner aux notifications de requête avec le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Le jeu de propriétés DBPROPSET_SQLSERVERROWSET  
- Afin de prendre en charge les notifications de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requêtes par le biais de OLE DB, Native Client ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
+ Afin de prendre en charge les notifications de requêtes par le biais de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
   
 |Nom|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Nombre de secondes pendant lesquelles la notification de requête doit rester active.<br /><br /> La valeur par défaut est 432 000 secondes (5 jours). La valeur minimale est 1 seconde, et la valeur maximale est 2^31-1 secondes.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texte du message de la notification. Il est défini par l'utilisateur et n'a aucun format prédéfini.<br /><br /> Par défaut, la chaîne est vide. Vous pouvez spécifier un message à l'aide de 1-2000 caractères.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Options de notification de requêtes. Celles-ci sont spécifiées dans une chaîne avec la syntaxe de*valeur* de *nom*=. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente.<br /><br /> La valeur par défaut est une chaîne vide.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Options de notification de requêtes. Celles-ci sont spécifiées dans une chaîne avec la syntaxe de valeur de *nom* = *value* . L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente.<br /><br /> La valeur par défaut est une chaîne vide.|  
   
  L'abonnement aux notifications est toujours validé, que l'instruction ait été exécutée dans une transaction utilisateur ou en mode de validation automatique, ou que la transaction dans laquelle l'instruction s'est exécutée ait été validée ou restaurée. La notification du serveur est déclenchée lorsque l'une des conditions de notification non valides suivantes se produit : modification des données sous-jacentes ou du schéma ou expiration du délai d'attente imparti (selon l'opération qui se produit en premier). Les inscriptions de notification sont supprimées dès qu'elles sont déclenchées. Par conséquent, lorsque l'application reçoit des notifications, l'application doit encore s'abonner au cas où elle souhaiterait obtenir d'autres mises à jour.  
   

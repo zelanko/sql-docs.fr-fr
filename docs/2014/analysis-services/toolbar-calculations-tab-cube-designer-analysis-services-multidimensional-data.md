@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac81f846f3f85f2ed8ea91592aea28942d557857
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938430"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Barre d'outils** pour exécuter des actions courantes dans l'onglet **Calculs** du Concepteur de cube.  
@@ -26,7 +25,7 @@ ms.locfileid: "66066076"
 |------------|-----------------|  
 |**Ajouter Business Intelligence**|Affiche l' **Assistant Business Intelligence** pour ajouter au cube des fonctionnalités d'aide à la décision.|  
 |**Processus**|Cliquez pour afficher la boîte de dialogue **Traiter** et traiter le cube.|  
-|**Reconnect**|Cliquez pour reconnecter l'onglet **Calculs** à l'instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et la base de données qui contient le cube, si la session de l'onglet **Calculs** s'est déconnectée à la suite d'une perte de connexion ou d'une temporisation.|  
+|**Reconnexion**|Cliquez pour reconnecter l'onglet **Calculs** à l'instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et la base de données qui contient le cube, si la session de l'onglet **Calculs** s'est déconnectée à la suite d'une perte de connexion ou d'une temporisation.|  
 |**Nouveau membre calculé**|Sélectionnez cette option pour afficher l' **Éditeur de formulaire de membre calculé** et créer un nouveau membre calculé. Cette option est active uniquement en mode Formulaire.|  
 |**Nouveau jeu nommé**|Cliquez pour afficher l' **Éditeur de formulaire de jeu nommé** et créer un nouveau jeu nommé. Cette option est active uniquement en mode Formulaire.|  
 |**Nouvelle commande de script**|Cliquez pour afficher l' **Éditeur de script** et créer une commande de script. Cette option est active uniquement en mode Formulaire.|  

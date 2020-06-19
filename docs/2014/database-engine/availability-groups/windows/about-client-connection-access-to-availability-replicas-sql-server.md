@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc978cd0280c9885fe7d4d4b499d01adc8f540cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789841"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937270"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>À propos de l'accès de la connexion client aux réplicas de disponibilité (SQL Server)
   Dans un groupe de disponibilité AlwaysOn, vous pouvez configurez un ou plusieurs réplicas de disponibilité pour autoriser les connexions en lecture seule lors d'une exécution sous le rôle secondaire (autrement dit, avec une exécution en tant que réplica secondaire). Vous pouvez également configurer chaque réplica de disponibilité afin d'autoriser ou exclure les connexions en lecture seule lors d'une exécution sous le rôle principal (autrement dit, avec une exécution comme réplica principal).  
@@ -53,11 +52,11 @@ ms.locfileid: "62789841"
  Aucune connexion utilisateur n'est autorisée. Les bases de données secondaires ne sont pas disponibles pour l'accès en lecture. Il s'agit du comportement par défaut dans le rôle secondaire.  
   
  Connexions d'intention en lecture seule  
- La ou les bases de données secondaires sont disponibles uniquement pour la connexion pour `Application Intent` laquelle la propriété de connexion `ReadOnly` a la valeur (*connexions d’intention de lecture*).  
+ La ou les bases de données secondaires sont disponibles uniquement pour la connexion pour laquelle la `Application Intent` propriété de connexion a la valeur `ReadOnly` (*connexions d’intention de lecture*).  
   
  Pour plus d'informations sur cette propriété de connexion, consultez [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
- Autoriser toute connexion en lecture seule  
+ autoriser toutes les connexions en lecture seule.  
  La ou les bases de données secondaires sont toutes disponibles pour les connexions d'accès en lecture. Cette option permet aux clients disposant d'une version antérieure de se connecter.  
   
  Pour plus d’informations, consultez [configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -69,7 +68,7 @@ ms.locfileid: "62789841"
  Les connexions en lecture-écriture et en lecture seule sont autorisées aux bases de données primaires. Il s'agit du comportement par défaut pour le rôle principal.  
   
  Autoriser uniquement les connexions en lecture-écriture  
- Lorsque la `Application Intent` propriété de connexion a la valeur **ReadWrite** ou n’est pas définie, la connexion est autorisée. Les connexions pour lesquelles `Application Intent` le mot clé de chaîne de `ReadOnly` connexion est défini sur ne sont pas autorisées. L'autorisation des seules connexions en lecture-écriture peut empêcher vos clients de connecter une charge de travail avec intention de lecture au réplica principal, par erreur.  
+ Lorsque la `Application Intent` propriété de connexion a la valeur **ReadWrite** ou n’est pas définie, la connexion est autorisée. Les connexions pour lesquelles le `Application Intent` mot clé de chaîne de connexion est défini sur ne `ReadOnly` sont pas autorisées. L'autorisation des seules connexions en lecture-écriture peut empêcher vos clients de connecter une charge de travail avec intention de lecture au réplica principal, par erreur.  
   
  Pour plus d'informations sur cette propriété de connexion, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62789841"
   
 |Rôle du réplica|Accès à la connexion pris en charge sur le réplica|Intention de connexion|Résultat de la tentative de connexion|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondary|Tous|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Opération réussie|  
+|Secondary|Tous|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Succès|  
 |Secondary|Aucun (il s'agit du comportement secondaire par défaut.)|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Échec|  
-|Secondary|Intention de lecture uniquement|Intention de lecture|Opération réussie|  
+|Secondary|Intention de lecture uniquement|Intention de lecture|Succès|  
 |Secondary|Intention de lecture uniquement|Lecture-écriture ou aucune intention de connexion spécifiée|Échec|  
-|Principal|Tous (il s'agit du comportement principal par défaut.)|Lecture seule, lecture-écriture ou aucune intention de connexion spécifiée|Opération réussie|  
+|Principal|Tous (il s'agit du comportement principal par défaut.)|Lecture seule, lecture-écriture ou aucune intention de connexion spécifiée|Succès|  
 |Principal|Lecture-écriture|Intention de lecture uniquement|Échec|  
-|Principal|Lecture-écriture|Lecture-écriture ou aucune intention de connexion spécifiée|Opération réussie|  
+|Principal|Lecture-écriture|Lecture-écriture ou aucune intention de connexion spécifiée|Succès|  
   
  Pour plus d’informations sur la configuration d’un groupe de disponibilité pour accepter les connexions clientes à ses réplicas, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62789841"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Écouteurs de groupe de disponibilité, connectivité client et &#40;de basculement d’application SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Statistiques](../../../relational-databases/statistics/statistics.md)  
   
   

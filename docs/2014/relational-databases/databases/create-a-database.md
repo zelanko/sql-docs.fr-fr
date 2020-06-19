@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe42e394482e3abf4d87c00c6e79ee84db6ba278
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952019"
 ---
 # <a name="create-a-database"></a>Créer une base de données
   Cette rubrique explique comment créer une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "62872317"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62872317"
   
 #### <a name="to-create-a-database"></a>Pour créer une base de données  
   
-1.  Dans l' **Explorateur d’objets**, connectez-vous à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] une instance du, puis développez cette instance.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
   
 2.  Cliquez avec le bouton droit sur **bases de données**, puis cliquez sur **nouvelle base de données**.  
   
@@ -133,7 +132,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers de base de données et groupes de fichiers](database-files-and-filegroups.md)   
- [Détachement et attachement de la base de données &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Attacher et détacher une base de données &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Ajouter des fichiers de données ou journaux à une base de données](add-data-or-log-files-to-a-database.md)  
   

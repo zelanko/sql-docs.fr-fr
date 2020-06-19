@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d7f48728921b997fc408ce224bd7bf8c9959b34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066154"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938438"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Navigateur, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Barre d’outils** pour effectuer les opérations courantes sous l’onglet **Navigateur** du **Concepteur de dimensions**.  
@@ -24,7 +23,7 @@ ms.locfileid: "66066154"
  **Processus**  
  Cliquez pour ouvrir la boîte de dialogue **Traiter** et traiter la dimension sélectionnée.  
   
- **Reconnect**  
+ **Reconnexion**  
  Cliquez pour reconnecter l’onglet **Navigateur** à l’instance et à la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui contient la dimension si la session de l’onglet **Navigateur** est déconnectée en raison d’une perte de connexion ou de l’expiration du délai d’attente.  
   
  **Actualisation**  

@@ -1,5 +1,6 @@
 ---
 title: Propriétés de SQL Server (onglet haute disponibilité AlwaysOn) | Microsoft Docs
+description: Découvrez comment activer ou désactiver la fonctionnalité groupes de disponibilité AlwaysOn dans SQL Server 2014. Affichez les conditions préalables que l’instance de serveur doit remplir pour cette fonctionnalité.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44282a8495bdefc9c817de1bd8340bca1379944c
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4e15cc28354d8dc77b579008feabbc6d13efb63d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939090"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Propriétés de SQL Server (onglet Haute disponibilité AlwaysOn)
   Utilisez l'onglet **Haute disponibilité AlwaysOn** de la boîte de dialogue **Propriétés de SQL Server** du Gestionnaire de configurations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour activer ou désactiver la fonctionnalité Groupes de disponibilité AlwaysOn de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'activation de Groupes de disponibilité AlwaysOn est une condition préalable nécessaire pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour utiliser les groupes de disponibilité comme solution de haute disponibilité et de récupération d'urgence.  

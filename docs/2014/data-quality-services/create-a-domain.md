@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d3f751d0547c3b335eb71b55370c8e8cb1e5529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937910"
 ---
 # <a name="create-a-domain"></a>Créer un domaine
   Cette rubrique décrit comment créer un domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Les valeurs du domaine sont une représentation sémantique des données d'un champ. Pour plus d’informations sur les domaines, consultez [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md).  

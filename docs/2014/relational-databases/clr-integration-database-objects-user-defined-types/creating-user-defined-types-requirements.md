@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cf45c7c108f522f894f97c25ed51bd4dd3c4fbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970705"
 ---
 # <a name="user-defined-type-requirements"></a>Configuration requise pour les types définis par l'utilisateur
-  Vous devez prendre plusieurs décisions importantes en matière de conception lors de la création d’un type défini par l’utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](UDT) à installer dans. Pour la plupart des types définis par l'utilisateur, il est recommandé de créer un type défini par l'utilisateur sous forme de structure mais il est également possible de le créer sous forme de classe. La définition de l'UDT doit être conforme aux spécifications de création d'UDT afin de pouvoir l'enregistrer avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Vous devez prendre plusieurs décisions importantes en matière de conception lors de la création d’un type défini par l’utilisateur (UDT) à installer dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour la plupart des types définis par l'utilisateur, il est recommandé de créer un type défini par l'utilisateur sous forme de structure mais il est également possible de le créer sous forme de classe. La définition de l'UDT doit être conforme aux spécifications de création d'UDT afin de pouvoir l'enregistrer avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Configuration requise pour l'implémentation des types définis par l'utilisateur  
  Pour s'exécuter dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], votre UDT doit implémenter les éléments requis suivants dans sa définition :  
@@ -71,7 +70,7 @@ ms.locfileid: "62919658"
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Les types de valeur qui sont composés de champs des types ci-dessus sont `Native` de bons candidats pour `structs` le format, tels que dans `Structures` Visual C#, (ou tels qu’ils sont connus dans Visual Basic). Par exemple, un UDT spécifié avec le format de sérialisation `Native` peut contenir un champ d'un autre UDT également spécifié avec le format `Native`. Si la définition de l'UDT est plus complexe et contient des types de données non inscrits dans la liste ci-dessus, vous devez spécifier à la place le format de sérialisation `UserDefined`.  
+ Les types de valeur qui sont composés de champs des types ci-dessus sont de bons candidats pour le `Native` format, tels que `structs` dans Visual C#, (ou `Structures` tels qu’ils sont connus dans Visual Basic). Par exemple, un UDT spécifié avec le format de sérialisation `Native` peut contenir un champ d'un autre UDT également spécifié avec le format `Native`. Si la définition de l'UDT est plus complexe et contient des types de données non inscrits dans la liste ci-dessus, vous devez spécifier à la place le format de sérialisation `UserDefined`.  
   
  Le format `Native` pose les conditions suivantes :  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f36908102a09eb1ef1f7a485898da715deb4253b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936722"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Effectuer un basculement manuel forcé d'un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment effectuer un basculement forcé (avec perte de données potentielle) sur un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un basculement forcé est une forme du basculement manuel qui est destiné exclusivement à la récupération d'urgence, lorsqu'un [basculement manuel planifié](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) n'est pas possible. Si vous forcez le basculement vers un réplica secondaire qui n'est pas synchronisé, une perte de données est possible. Par conséquent, nous vous recommandons fortement de forcer le basculement uniquement si vous devez restaurer immédiatement un service dans le groupe de disponibilité et si vous êtes prêt à prendre le risque de perdre des données.  
@@ -151,7 +150,7 @@ ms.locfileid: "72782883"
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour forcer le basculement (avec possible perte de données)**  
   
-1.  Remplacez le répertoire`cd`() par une instance de serveur qui héberge un réplica dont le rôle est dans l’état secondaire ou de résolution dans le groupe de disponibilité qui doit être basculé.  
+1.  Remplacez le répertoire ( `cd` ) par une instance de serveur qui héberge un réplica dont le rôle est dans l’état secondaire ou de résolution dans le groupe de disponibilité qui doit être basculé.  
   
 2.  Utilisez l'applet de commande `Switch-SqlAvailabilityGroup` avec le paramètre `AllowDataLoss` dans l'un des formats suivants :  
   

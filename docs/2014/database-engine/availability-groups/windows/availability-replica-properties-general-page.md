@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fb7e75fd1e25d8f4089d14688096afd0aa4dea8d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937037"
 ---
 # <a name="availability-replica-properties-general-page"></a>Propriétés du réplica de disponibilité (page Général)
   Utilisez cette boîte de dialogue pour afficher les propriétés d’un réplica de disponibilité.  
@@ -37,10 +36,10 @@ ms.locfileid: "83858901"
  Nom de serveur de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge ce réplica et, pour une instance non définie par défaut, son nom d'instance.  
   
  **Rôle**  
- **Principal**  
+ **Primaire**  
  Actuellement le réplica principal.  
   
- **Secondary**  
+ **Secondaire**  
  Actuellement un réplica secondaire.  
   
  **Résolution**  

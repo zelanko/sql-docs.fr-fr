@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a7d88923bc41939541bedeed2d40908e454e9c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970449"
 ---
 # <a name="manage-data-collection"></a>Gérer la collecte de données
-  Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées et des fonctions pour gérer différents aspects de la collecte de données, tels que l’activation ou la désactivation de la collecte de données, la modification de la configuration d’un jeu d’éléments de collecte ou l’affichage des données dans l’entrepôt de données de gestion.  
+  Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou des [!INCLUDE[tsql](../../includes/tsql-md.md)] procédures stockées et des fonctions pour gérer différents aspects de la collecte de données, tels que l’activation ou la désactivation de la collecte de données, la modification de la configuration d’un jeu d’éléments de collecte ou l’affichage des données dans l’entrepôt de données de gestion.  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>Gérer la collecte de données à l'aide de SQL Server Management Studio  
  Vous pouvez effectuer les tâches suivantes liées au collecteur de données en utilisant l'Explorateur d'objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  

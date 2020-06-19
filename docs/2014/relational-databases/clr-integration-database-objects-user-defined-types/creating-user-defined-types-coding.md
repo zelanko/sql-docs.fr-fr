@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4daa52a25ebc44e1668fa2c4d98619dc08f2dc26
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232237"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970707"
 ---
 # <a name="coding-user-defined-types"></a>Codage de types définis par l'utilisateur
   Lorsque vous codez votre définition de type défini par l'utilisateur (UDT, User-Defined Type), vous devez implémenter différentes fonctionnalités, selon que vous implémentez le type défini par l'utilisateur comme classe ou comme structure, et selon les options de format et de sérialisation que vous avez choisies.  
@@ -197,7 +196,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ## <a name="implementing-the-tostring-method"></a>Implémentation de la méthode ToString  
- La méthode `ToString` convertit le type défini par l'utilisateur `Point` en valeur de chaîne. Dans ce cas, la chaîne « NULL » est retournée pour une instance Null du type `Point`. La méthode `ToString` inverse la méthode `Parse` en utilisant un `System.Text.StringBuilder` pour retourner un `System.String` délimité par des virgules qui consiste en valeurs de coordonnées X et Y. Étant donné que **InvokeIfReceiverIsNull** prend par défaut la valeur false, la vérification `Point` d’une instance null de est inutile.  
+ La méthode `ToString` convertit le type défini par l'utilisateur `Point` en valeur de chaîne. Dans ce cas, la chaîne « NULL » est retournée pour une instance Null du type `Point`. La méthode `ToString` inverse la méthode `Parse` en utilisant un `System.Text.StringBuilder` pour retourner un `System.String` délimité par des virgules qui consiste en valeurs de coordonnées X et Y. Étant donné que **InvokeIfReceiverIsNull** prend par défaut la valeur false, la vérification d’une instance null de `Point` est inutile.  
   
 ```vb  
 Private _x As Int32  
@@ -367,10 +366,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>Limitations de méthode de validation  
  Le serveur appelle la méthode de validation lorsqu'il effectue des conversions, et non lorsque des données sont insérées en définissant des propriétés individuelles ou à l'aide d'une instruction INSERT [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Vous devez appeler explicitement la méthode de validation à partir des accesseurs `Parse` Set de propriété et la méthode si vous souhaitez que la méthode de validation s’exécute dans toutes les situations. Cela n'est pas obligatoire, et dans certains cas peut ne pas être souhaitable.  
+ Vous devez appeler explicitement la méthode de validation à partir des accesseurs set de propriété et la `Parse` méthode si vous souhaitez que la méthode de validation s’exécute dans toutes les situations. Cela n'est pas obligatoire, et dans certains cas peut ne pas être souhaitable.  
   
 ### <a name="parse-validation-example"></a>Exemple de validation Parse  
- Pour vous assurer que `ValidatePoint` la méthode est appelée dans la `Point` classe, vous devez l’appeler à partir `Parse` de la méthode et des procédures de propriété qui définissent les valeurs des coordonnées X et Y. Le fragment de code suivant montre comment appeler la `ValidatePoint` méthode de validation à `Parse` partir de la fonction.  
+ Pour vous assurer que la `ValidatePoint` méthode est appelée dans la `Point` classe, vous devez l’appeler à partir de la `Parse` méthode et des procédures de propriété qui définissent les valeurs des coordonnées X et Y. Le fragment de code suivant montre comment appeler la `ValidatePoint` méthode de validation à partir de la `Parse` fonction.  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -490,7 +489,7 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>Codage de méthodes UDT  
- Lors du codage de méthodes UDT, considérez si l'algorithme utilisé pourrait changer avec le temps. Si c'est le cas, vous pourriez envisager de créer une classe séparée pour les méthodes utilisées par votre type défini par l'utilisateur. Si l'algorithme change, vous pouvez recompiler la classe avec le nouveau code et charger l'assembly dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans affecter le type défini par l'utilisateur. Dans de nombreux cas, les types définis par l'utilisateur peuvent être rechargés à l'aide de l'instruction  [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mais cela pourrait provoquer des problèmes avec les données existantes. Par exemple, le `Currency` type défini par l’utilisateur (UDT) inclus dans l’exemple de base de données **AdventureWorks** utilise une fonction **ConvertCurrency** pour convertir les valeurs monétaires, qui est implémentée dans une classe distincte. Il est possible que les algorithmes de conversion puissent changer de manière imprévisible dans le futur, ou que de nouvelles fonctionnalités soient requises. La séparation de la fonction **ConvertCurrency** de `Currency` l’implémentation UDT offre une plus grande souplesse lors de la planification des modifications ultérieures.  
+ Lors du codage de méthodes UDT, considérez si l'algorithme utilisé pourrait changer avec le temps. Si c'est le cas, vous pourriez envisager de créer une classe séparée pour les méthodes utilisées par votre type défini par l'utilisateur. Si l'algorithme change, vous pouvez recompiler la classe avec le nouveau code et charger l'assembly dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans affecter le type défini par l'utilisateur. Dans de nombreux cas, les types définis par l'utilisateur peuvent être rechargés à l'aide de l'instruction  [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mais cela pourrait provoquer des problèmes avec les données existantes. Par exemple, le `Currency` type défini par l’utilisateur (UDT) inclus dans l’exemple de base de données **AdventureWorks** utilise une fonction **ConvertCurrency** pour convertir les valeurs monétaires, qui est implémentée dans une classe distincte. Il est possible que les algorithmes de conversion puissent changer de manière imprévisible dans le futur, ou que de nouvelles fonctionnalités soient requises. La séparation de la fonction **ConvertCurrency** de l' `Currency` implémentation UDT offre une plus grande souplesse lors de la planification des modifications ultérieures.  
   
 ### <a name="example"></a>Exemple  
  La `Point` classe contient trois méthodes simples pour le calcul de la distance : **distance**, **DistanceFrom** et **DistanceFromXY**. Chacune retourne un `double` qui calcule la distance de `Point` à zéro, la distance d'un point spécifié à `Point` et la distance des coordonnées X et Y spécifiées à `Point`. **Distance** et **DistanceFrom** chaque appel à **DistanceFromXY**, et montrent comment utiliser différents arguments pour chaque méthode.  
@@ -543,7 +542,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  La classe `Microsoft.SqlServer.Server.SqlMethodAttribute` fournit des attributs personnalisés pouvant être utilisés pour marquer des définitions de méthode afin de spécifier le déterminisme, pour le comportement d'appel Null, et de spécifier si une méthode est un mutateur. Les valeurs par défaut de ces propriétés sont assumées et l'attribut personnalisé est utilisé uniquement lorsqu'une valeur non définie par défaut est exigée.  
   
 > [!NOTE]  
->  La classe `SqlMethodAttribute` hérite de la classe `SqlFunctionAttribute` ; par conséquent, `SqlMethodAttribute` hérite des champs `FillRowMethodName` et `TableDefinition` de `SqlFunctionAttribute`. Cela implique qu'il est possible d'écrire une méthode table, ce qui n'est pas le cas. La méthode Compile et l’assembly est déployé, mais une erreur sur le type `IEnumerable` de retour est levée au moment de l’exécution avec le message suivant : « la méthode, la\<propriété ou le champ’name\<> 'de la classe'\<Class> 'dans l’assembly’assembly> 'a un type de retour non valide. »  
+>  La classe `SqlMethodAttribute` hérite de la classe `SqlFunctionAttribute` ; par conséquent, `SqlMethodAttribute` hérite des champs `FillRowMethodName` et `TableDefinition` de `SqlFunctionAttribute`. Cela implique qu'il est possible d'écrire une méthode table, ce qui n'est pas le cas. La méthode Compile et l’assembly est déployé, mais une erreur sur le `IEnumerable` type de retour est levée au moment de l’exécution avec le message suivant : « la méthode, la propriété ou le champ « » \<name> dans la classe « \<class> » dans l’assembly « \<assembly> » possède un type de retour non valide.»  
   
  Le tableau suivant décrit quelques-unes des propriétés `Microsoft.SqlServer.Server.SqlMethodAttribute` pertinentes qui peuvent être utilisées dans les méthodes UDT et répertorie leurs valeurs par défaut.  
   
@@ -620,7 +619,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  L'objectif du remplissage est de s'assurer que la culture est complètement séparée de la valeur monétaire, de sorte que lorsque deux types définis par l'utilisateur sont comparés dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)], les octets de culture soient comparés à des octets de culture et les valeurs d'octets de monnaie soient comparées à des valeurs d'octets de monnaie.  
   
- Pour obtenir la liste complète du code `Currency` pour le type défini par l’utilisateur, suivez les instructions d’installation des exemples CLR dans [SQL Server moteur de base de données exemples](https://msftengprodsamples.codeplex.com/).  
+ Pour obtenir la liste complète du code pour le type défini par l’utilisateur `Currency` , suivez les instructions d’installation des exemples CLR dans [SQL Server moteur de base de données exemples](https://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Attributs Currency  
  Le type défini par l'utilisateur `Currency` est défini avec les attributs suivants :  
@@ -744,7 +743,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Pour obtenir la liste complète du code `Currency` pour le type défini par l’utilisateur, consultez [SQL Server moteur de base de données des exemples](https://msftengprodsamples.codeplex.com/).  
+ Pour obtenir la liste complète du code pour le type défini par l’utilisateur `Currency` , consultez [SQL Server moteur de base de données des exemples](https://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un type défini par l’utilisateur](creating-user-defined-types.md)  

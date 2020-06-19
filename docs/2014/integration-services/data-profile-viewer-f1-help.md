@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059718"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951833"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Aide F1 de la Visionneuse du profil des données
   Utilisez la Visionneuse du profil des données pour afficher la sortie de la tâche de profilage des données.  
@@ -46,7 +45,7 @@ ms.locfileid: "66059718"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>Type de profil = Profil de distribution de longueurs de colonne  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>Profil de distribution de longueurs de colonne - volet \<colonne>  
+#### <a name="column-length-distribution-profile---column-pane"></a>Profil de distribution de longueurs de colonne- \<column> volet  
  **Longueur minimale**  
  Affiche la longueur minimale des valeurs de cette colonne.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66059718"
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Type de profil = Profil de ratio de colonne Null  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>Profil de ratio de colonne Null - volet \<colonne>  
+#### <a name="column-null-ratio-profile---column-pane"></a>Profil de ratio de colonne null- \<column> volet  
  **Nombre null**  
  Affiche le nombre de lignes dans lesquelles la colonne profilée possède une valeur NULL.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66059718"
   
 ### <a name="profile-type--column-pattern-profile"></a>Type de profil = Profil de modèle de colonne  
   
-#### <a name="column-pattern-profile---column-pane"></a>Profil de modèle de colonne - volet \<colonne>  
+#### <a name="column-pattern-profile---column-pane"></a>Profil de motif de colonne- \<column> volet  
  **Nombre de lignes**  
  Affiche le nombre de lignes présentes dans la table ou la vue.  
   
@@ -99,11 +98,11 @@ ms.locfileid: "66059718"
   
 ### <a name="profile-type--column-statistics-profile"></a>Type de profil = Profil de statistiques de colonnes  
   
-#### <a name="column-statistics-profile---column-pane"></a>Profil de statistiques de colonnes - volet \<colonne>  
- **Minimale**  
+#### <a name="column-statistics-profile---column-pane"></a>Profil de statistiques de colonnes- \<column> volet  
+ **Minimum**  
  Affiche la valeur minimale trouvée dans la colonne profilée.  
   
- **Maximale**  
+ **Maximum**  
  Affiche la valeur maximale trouvée dans la colonne profilée.  
   
  **Moyenne**  
@@ -114,7 +113,7 @@ ms.locfileid: "66059718"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>Type de profil = Profil de distribution de valeurs de colonne  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>Profil de distribution de valeurs de colonne - volet \<colonne>  
+#### <a name="column-value-distribution-profile---column-pane"></a>Profil de distribution de valeurs de colonne- \<column> volet  
  **Nombre de valeurs distinctes**  
  Affiche le nombre de valeurs distinctes trouvées dans la colonne profilée.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "66059718"
   
 ### <a name="profile-type--candidate-key-profile"></a>Type de profil = Profil de clé candidate  
   
-#### <a name="candidate-key-profile---table-pane"></a>Profil de clé candidate - volet \<table>  
+#### <a name="candidate-key-profile---table-pane"></a>Profil de clé candidate- \<table> volet  
  **Colonnes clés**  
  Affiche les colonnes sélectionnées pour le profilage en tant que clé candidate.  
   
@@ -141,7 +140,7 @@ ms.locfileid: "66059718"
  Affiche la puissance (sous forme de pourcentage) de la colonne ou de la combinaison de colonnes clés candidates. Une puissance de clé inférieure à 100 % indique qu'il existe des valeurs dupliquées.  
   
 #### <a name="key-violations-pane"></a>Volet Violations de clé  
- **\<Colonne1>, \<Colonne2>, etc.**  
+ **\<column1>, \<column2> , etc.**  
  Affiche les valeurs dupliquées qui ont été détectées dans la colonne profilée.  
   
  **Count**  
@@ -164,17 +163,17 @@ ms.locfileid: "66059718"
 > [!NOTE]  
 >  Un pourcentage élevé de valeurs erronées dans les données peut générer des résultats inattendus d'un profil de dépendance fonctionnelle. Par exemple, 90 % des lignes ont une valeur État de « WI » pour une valeur Code postal de « 98052 ». Le profil signale les lignes qui contiennent la valeur d'état correcte de « WA » en tant que violations.  
   
- **\<nom de la colonne déterminante>**  
+ **\<determinant column name>**  
  Affiche la valeur de la colonne déterminante ou de la combinaison de colonnes dans cette instance d'une violation de dépendance fonctionnelle.  
   
- **\<nom de la colonne dépendante>**  
+ **\<dependent column name>**  
  Affiche la valeur de la colonne dépendante dans cette instance d'une violation de dépendance fonctionnelle.  
   
  **Nombre de supports**  
  Affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante détermine la colonne dépendante.  
   
  **Nombre de violations**  
- Affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante ne détermine pas la colonne dépendante. (Il s’agit des lignes dans lesquelles la valeur dépendante est la valeur affichée dans la colonne nom de la ** \<colonne dépendante>** .)  
+ Affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante ne détermine pas la colonne dépendante. (Il s’agit des lignes dans lesquelles la valeur dépendante est la valeur affichée dans la **\<dependent column name>** colonne.)  
   
  **Pourcentage de supports**  
  Affiche le pourcentage de lignes dans lesquelles la colonne déterminante détermine la colonne dépendante.  
@@ -192,7 +191,7 @@ ms.locfileid: "66059718"
  Affiche la puissance (sous forme de pourcentage) du chevauchement entre les colonnes. Une puissance de clé inférieure à 100 % indique que dans certains cas, la valeur du sous-ensemble est introuvable parmi les valeurs du sur-ensemble.  
   
 #### <a name="inclusion-violations-pane"></a>Volet des violations d'inclusion  
- **\<Colonne1>, \<Colonne2>, etc.**  
+ **\<column1>, \<column2> , etc.**  
  Affiche les valeurs de la colonne ou des colonnes du sous-ensemble qui étaient introuvables dans la colonne ou les colonnes du sur-ensemble.  
   
  **Count**  

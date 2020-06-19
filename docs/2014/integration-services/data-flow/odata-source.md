@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0504d7be4060afc9c46a46fa3968523537381882
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915159"
 ---
 # <a name="odata-source"></a>Source OData
   Utilisez le composant source OData dans un package SSIS pour consommer les données provenant de services OData (Open Data Protocol). Le composant prend en charge les protocoles OData v2 et v3, ainsi que formats de données et ATOM de JSON.  
   
 > [!NOTE]  
->  La source OData peut être utilisée pour lire des listes SharePoint. Pour afficher toutes les listes sur votre serveur SharePoint, utilisez l’URL suivante :\<http://Server>/_vti_bin/listdata.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
+>  La source OData peut être utilisée pour lire des listes SharePoint. Pour afficher toutes les listes sur votre serveur SharePoint, utilisez l’URL suivante : http:// \<server> /_vti_bin/listdata.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
   
 ## <a name="odata-format"></a>Format OData  
  La plupart des services ODatas retournent les résultats dans plusieurs formats. Vous pouvez spécifier le format du jeu de résultats à l'aide de l'option de requête $format. Les formats comme JSON et JSON Light sont plus efficaces qu'ATOM/XML, et peuvent offrir de meilleures performances en cas de transfert d'un grand volume de données. Le tableau suivant fournit les résultats des tests. Comme vous pouvez le voir, un gain de performances de 30-53 % a été enregistré en passant d'ATOM à JSON, et un gain de performances de 67 % a été constaté en passant d'ATOM au nouveau format JSON Light (disponible dans WCF Data Services 5.1).  

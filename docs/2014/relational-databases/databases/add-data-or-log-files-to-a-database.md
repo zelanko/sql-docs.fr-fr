@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917715"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952349"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Ajouter des fichiers de données ou journaux à une base de données
   Cette rubrique explique comment ajouter des fichiers de données ou des fichiers journaux à une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -71,7 +70,7 @@ ms.locfileid: "62917715"
   
 6.  Sélectionnez le type de fichier : données ou journal.  
   
-7.  Pour un fichier de données, sélectionnez le groupe de fichiers dans lequel le fichier doit être inclus dans la liste, ou sélectionnez **\<nouveau_groupe_de_fichiers>** pour créer un groupe de fichiers. Les journaux des transactions ne peuvent pas être placés dans des groupes de fichiers.  
+7.  Pour un fichier de données, sélectionnez le groupe de fichiers dans lequel le fichier doit être inclus dans la liste, ou sélectionnez **\<new filegroup>** pour créer un nouveau groupe de fichiers. Les journaux des transactions ne peuvent pas être placés dans des groupes de fichiers.  
   
 8.  Spécifiez la taille initiale du fichier. Attribuez aux fichiers de données un maximum d'espace en tenant compte du volume maximal de données qu'est censée contenir la base de données.  
   

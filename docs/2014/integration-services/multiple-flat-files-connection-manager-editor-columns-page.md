@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 365a22cc515a971ff460a6433973f884c640c973
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950809"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Éditeur du gestionnaire de connexions de fichiers plats multiples (page Colonnes)
   Utilisez le nœud **Colonnes** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats multiples** pour spécifier les informations de ligne et de colonne et afficher un aperçu du premier fichier sélectionné.  

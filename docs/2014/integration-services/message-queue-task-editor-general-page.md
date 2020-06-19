@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25053ac966629c1265d735df8502eccad1d8a290
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057630"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950929"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Éditeur de tâche MSMQ (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche MSMQ** pour nommer et décrire la tâche MSMQ, pour spécifier le format du message et indiquer si la tâche envoie ou reçoit des messages.  
@@ -40,7 +39,7 @@ ms.locfileid: "66057630"
  Indiquez si le format 2000 de Message Queuing (ou MSMQ) doit être utilisé. Par défaut, il s’agit de `False`.  
   
  **MSMQConnection**  
- Sélectionnez un gestionnaire de connexions MSMQ existant ou \<cliquez sur **nouvelle connexion...**> pour créer un gestionnaire de connexions.  
+ Sélectionnez un gestionnaire de connexions MSMQ existant ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes**: [Gestionnaire de connexions MSMQ](connection-manager/msmq-connection-manager.md), [Éditeur du gestionnaire de connexions MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
   

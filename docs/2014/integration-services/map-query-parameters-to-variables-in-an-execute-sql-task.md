@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 691196697b7131cfaaf5ed5e41aea33f76ddc698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951199"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL
 
@@ -58,7 +57,7 @@ ms.locfileid: "66057795"
     |Type de connexion|Marqueur de paramètre|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET et SQLMOBILE|@\<nom du paramètre>|  
+    |ADO.NET et SQLMOBILE|@\<parameter name>|  
     |ODBC|?|  
     |EXCEL et OLE DB|?|  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66057795"
     |Type de connexion|Nom du paramètre|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET et SQLMOBILE|@\<nom du paramètre>|  
+    |ADO.NET et SQLMOBILE|@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL et OLE DB|0, 1, 2, 3, ...|  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66057795"
   
 14. Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâche d’exécution SQL](control-flow/execute-sql-task.md)   
  [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  

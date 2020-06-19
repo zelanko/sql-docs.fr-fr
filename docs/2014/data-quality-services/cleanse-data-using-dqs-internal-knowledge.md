@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9962cdc87fca0014d8e70738069bb52b5a36092d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481128"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938020"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Nettoyer des données à l'aide de la base de connaissances DQS (interne)
   Cette rubrique explique comment nettoyer vos données en utilisant un projet de qualité des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le nettoyage des données est effectué sur vos données sources à l'aide d'une base de connaissances générée dans DQS sur un ensemble de données de haute qualité. Pour plus d’informations, consultez [Construction d’une base de connaissances](../../2014/data-quality-services/building-a-knowledge-base.md).  
@@ -106,7 +105,7 @@ ms.locfileid: "65481128"
 |Onglet|Description|  
 |---------|-----------------|  
 |**Recommandée**|Affiche les valeurs de domaine pour lesquelles DQS a identifié les valeurs suggérées dont le niveau de confiance est supérieur à la valeur du *seuil de suggestion automatique* mais inférieur à la valeur du *seuil de correction automatique* .<br /><br /> Les valeurs suggérées sont affichées dans la colonne **Corriger vers** de la valeur d'origine. Vous pouvez cliquer sur la case d'option dans la colonne **Approuver** ou **Refuser** d'une valeur de la grille supérieure pour accepter ou refuser la suggestion pour toutes les instances de la valeur. Dans ce cas, la valeur acceptée se déplace vers l'onglet **Corrigés** et la valeur refusée se déplace vers l'onglet **Non valide** .|  
-|**Nouvelle**|Affiche le domaine valide pour lequel DQS ne dispose pas de suffisamment d’informations et, par conséquent, ne peut pas être mappé à un autre onglet. En outre, cet onglet contient également des valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être marqué comme valide.<br /><br /> Si vous pensez que la valeur est correcte, cliquez sur la case d'option située dans la colonne **Approuver** . Sinon, cliquez sur la case d'option située dans la colonne **Refuser** . La valeur acceptée se déplace vers l’onglet **correct** et la valeur rejetée se déplace vers l’onglet **non valide** . Vous pouvez également taper manuellement la valeur correcte en remplacement de la valeur d’origine dans la colonne **corriger vers** de la valeur, puis cliquer sur la case d’option dans la colonne **approuver** pour accepter la modification. Dans ce cas, la valeur se déplace vers l'onglet **Corrigés** .|  
+|**Nouveau**|Affiche le domaine valide pour lequel DQS ne dispose pas de suffisamment d’informations et, par conséquent, ne peut pas être mappé à un autre onglet. En outre, cet onglet contient également des valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être marqué comme valide.<br /><br /> Si vous pensez que la valeur est correcte, cliquez sur la case d'option située dans la colonne **Approuver** . Sinon, cliquez sur la case d'option située dans la colonne **Refuser** . La valeur acceptée se déplace vers l’onglet **correct** et la valeur rejetée se déplace vers l’onglet **non valide** . Vous pouvez également taper manuellement la valeur correcte en remplacement de la valeur d’origine dans la colonne **corriger vers** de la valeur, puis cliquer sur la case d’option dans la colonne **approuver** pour accepter la modification. Dans ce cas, la valeur se déplace vers l'onglet **Corrigés** .|  
 |**Non valide**|Affiche les valeurs de domaine qui ont été marquées comme non valides dans le domaine de la base de connaissances ou les valeurs qui n'ont pas respecté une règle de domaine. Cet onglet contient également les valeurs qui ont été refusées par l'utilisateur sous l'un des quatre autres onglets.<br /><br /> Toutefois, si vous pensez que la valeur est correcte, cliquez sur la case d'option située dans la colonne **Approuver** . La valeur acceptée se déplace vers l’onglet **correct** . Vous pouvez également taper manuellement la valeur correcte en remplacement de la valeur d’origine dans la colonne **corriger vers** de la valeur, puis cliquer sur la case d’option dans la colonne **approuver** pour accepter la modification. Dans ce cas, la valeur se déplace vers l'onglet **Corrigés** .|  
 |**Passé**|Affiche les valeurs de domaine corrigées par DQS pendant le processus de nettoyage automatisé lorsque DQS a trouvé une correction pour la valeur dont le niveau de confiance est supérieur à la valeur du seuil de correction automatique.<br /><br /> Les valeurs corrigées sont affichées dans la colonne **Corriger vers** de la valeur d'origine. Par défaut, la case d'option située dans la colonne **Approuver** de la valeur est sélectionnée. Si nécessaire, vous pouvez refuser la correction proposée en cliquant sur la case d'option située dans la colonne **Refuser** pour la déplacer vers l'onglet **Non valide** , ou tapez manuellement la valeur correcte dans la colonne **Corriger vers** puis cliquez sur la case d'option de la colonne **Approuver** pour accepter la modification et la déplacer vers l'onglet **Corrigés** .|  
 |**Correct**|Affiche les valeurs de domaine qui ont été signalés comme étant correctes. Par exemple, la valeur correspond à une valeur de domaine. Cet onglet contient également des valeurs qui ont été approuvées par l'utilisateur en cliquant sur la case d'option de la colonne **Approuver** sous les onglets **Nouveau** et **Non valide** .<br /><br /> Par défaut, la case d'option située dans la colonne **Approuver** est sélectionnée pour chaque valeur. Toutefois, si vous pensez qu'une valeur de cet onglet est incorrecte, vous pouvez soit cliquer sur la case d'option située dans la colonne **Refuser** de la valeur pour la déplacer vers l'onglet **Non valide** , soit taper manuellement la valeur correcte en remplacement de la valeur affichée dans la colonne **Corriger vers** de la valeur, puis cliquer sur la case d'option de la colonne **Approuver** pour accepter la modification et la déplacer vers l'onglet **Corrigés** .|  
@@ -157,17 +156,17 @@ ms.locfileid: "65481128"
   
     -   **Données et informations sur le nettoyage**: cliquez sur la case d'option pour exporter les données suivantes pour chaque domaine :  
   
-        -   >_Source de domaine : valeur d’origine dans le domaine. ** \<**  
+        -   ** \<Domain> _Source**: valeur d’origine dans le domaine.  
   
-        -   >_Output de domaine : valeurs nettoyées dans le domaine. ** \<**  
+        -   ** \<Domain> _Output**: valeurs nettoyées dans le domaine.  
   
-        -   >_Reason de domaine : raison spécifiée pour la correction de la valeur. ** \<**  
+        -   ** \<Domain> _Reason**: raison spécifiée pour la correction de la valeur.  
   
-        -   >_Confidence de domaine : niveau de confiance pour tous les termes qui ont été corrigés. ** \<** Il est affiché en tant que valeur décimale équivalente à la valeur en pourcentage correspondante. Par exemple, un niveau de confiance de 95 % est affiché sous la forme 0,9500000.  
+        -   ** \<Domain> _Confidence**: niveau de confiance pour tous les termes qui ont été corrigés. Il est affiché en tant que valeur décimale équivalente à la valeur en pourcentage correspondante. Par exemple, un niveau de confiance de 95 % est affiché sous la forme 0,9500000.  
   
-        -   >_Status de domaine : état de la valeur de domaine après le nettoyage des données. ** \<** Par exemple, **Suggérés**, **Nouveau**, **Non valide**, **Corrigés**ou **Correct**.  
+        -   ** \<Domain> _Status**: état de la valeur de domaine après le nettoyage des données. Par exemple, **Suggérés**, **Nouveau**, **Non valide**, **Corrigés**ou **Correct**.  
   
-        -   **État de l’enregistrement** : en plus d’avoir un champ d’état pour chaque domaine mappé **(\<Nom_domaine>_État**), le champ **État de l’enregistrement** affiche l’état d’un enregistrement. Si l’état de l’un des domaines dans l’enregistrement est *nouveau* ou *correct*, l’état de l' **enregistrement** est défini sur *correct*. Si l’état de l’un des domaines dans l’enregistrement est *suggéré*, *non valide*ou *corrigé*, l’état de l' **enregistrement** est défini sur la valeur correspondante. Par exemple, si l’état d’un domaine dans l’enregistrement est *suggéré*, l’état de l' **enregistrement** est défini sur *suggéré*.  
+        -   **État**de l’enregistrement : en plus d’avoir un champ d’État pour chaque domaine mappé **( \<DomainName> _Status**), le champ État de l' **enregistrement** affiche l’état d’un enregistrement. Si l’état de l’un des domaines dans l’enregistrement est *nouveau* ou *correct*, l’état de l' **enregistrement** est défini sur *correct*. Si l’état de l’un des domaines dans l’enregistrement est *suggéré*, *non valide*ou *corrigé*, l’état de l' **enregistrement** est défini sur la valeur correspondante. Par exemple, si l’état d’un domaine dans l’enregistrement est *suggéré*, l’état de l' **enregistrement** est défini sur *suggéré*.  
   
             > [!NOTE]  
             >  Si vous utilisez le service de données de référence pour l'opération de nettoyage, certaines informations supplémentaires sur la valeur de domaine peuvent également être exportées. Pour plus d’informations, consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

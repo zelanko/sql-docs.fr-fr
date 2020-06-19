@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 669d39c3f76cc8e925932b238bd7b0fd1c1a89c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938570"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bases de données model tabulaires (SSAS Tabulaire)
   Une base de données model tabulaire est une base de données Analysis Services que vous créez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l'aide d'un exemple de projet de modèle tabulaire Analysis Services, où les tables et les relations sont des structures primaires qui représentent des données.  
@@ -29,7 +28,7 @@ ms.locfileid: "66066421"
  [Accès aux données de modèle tabulaire](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Traiter une base de données, une table ou une partition](process-database-table-or-partition-analysis-services.md)  
+ [Traiter la base de données, la table ou la partition](process-database-table-or-partition-analysis-services.md)  
   
  [Rôles de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-model-roles-ssas-tabular.md)  
   
