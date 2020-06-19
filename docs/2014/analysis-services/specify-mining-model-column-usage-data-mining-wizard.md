@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9f57e7918e7ef283255bf8ff947cc4493e9a87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e7701d755b42dbbd94bcc53480bcc25a83bf1e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068360"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940380"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Spécifier l'utilisation des colonnes du modèle d'exploration de données (Assistant Exploration de données)
   Utilisez la page **Utilisation des colonnes du modèle d’exploration** pour spécifier le mode d’utilisation des colonnes du modèle d’exploration de données et pour ajouter des tables imbriquées.  

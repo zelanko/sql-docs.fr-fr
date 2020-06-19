@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dafd98f721bfc2d2d0dd64a9f97689466529407
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933871"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Résoudre les problèmes de configuration de mise en miroir de bases de données (SQL Server)
   Cette rubrique fournit des informations destinées à résoudre les problèmes de configuration d'une session de mise en miroir de base de données.  
@@ -28,7 +27,7 @@ ms.locfileid: "62754207"
 > [!NOTE]  
 >   Assurez-vous que vous prenez en charge tous les [éléments requis pour la mise en miroir de bases de données](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
-|Problème|Récapitulatif|  
+|Problème|Résumé|  
 |-----------|-------------|  
 |Message d'erreur 1418|Ce message [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indique que l'adresse réseau du serveur ne peut pas être atteinte ou n'existe pas, et il suggère de vérifier le nom de l'adresse réseau puis de réexécuter la commande. Pour plus d’informations, consultez la rubrique [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) .|  
 |[Comptes (Accounts)](#Accounts)|Traite des conditions nécessaires à la configuration correcte des comptes sous lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.|  

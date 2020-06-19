@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 594eeb1f-16d5-49ea-9b29-ccf029b58928
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d55d2d759857e07bd655add1b00bccbd2eb4ce2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e359c429d20996165e39f5edc49e96d5c8735ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054845"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Configuration de Distributed Replay Controller
   Utilisez la page **Configuration de Distributed Replay Controller** de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier les utilisateurs auxquels vous voulez accorder des autorisations administratives sur le service Distributed Replay Controller.  
@@ -29,7 +28,7 @@ ms.locfileid: "66095523"
  **Ajouter**  
  Cliquez sur ce bouton pour ajouter des autorisations d'accès au service Distributed Replay Controller.  
   
- **Remove**  
+ **Supprimer**  
  Cliquez sur ce bouton pour supprimer des autorisations d'accès du service Distributed Replay Controller.  
   
   

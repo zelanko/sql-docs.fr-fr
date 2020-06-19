@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc3fdb873a567bef9326232e5435cea5649b041
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054880"
 ---
 # <a name="database-ssrs-native-mode"></a>Base de données (SSRS en mode natif)
   Utilisez la page Base de données pour créer et configurer les bases de données du serveur de rapports qui fournissent le stockage interne pour une ou plusieurs instances du serveur de rapports. Si vous configurez un serveur de rapports pour utiliser une base de données de serveur de rapports, vous devez utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer la base de données.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.  
   
  La création d'une base de données de serveur de rapports et la configuration de la connexion est un processus comportant plusieurs étapes. Pour vous guider à travers les étapes, cette page propose un Assistant pour chaque type de tâche. Les autorisations et les connexions sont créées ou mises à jour automatiquement. Vous pouvez surveiller l'état de chaque étape dans la page Progression. Si une erreur se produit, vous pouvez cliquer sur l'erreur pour obtenir plus d'informations sur sa résolution.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "71952311"
  **Nom de l’SQL Server**  
  Dans la base de données en cours du serveur de rapports, **Nom du serveur SQL** spécifie le nom du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute la base de données du serveur de rapports. Vous pouvez utiliser une instance par défaut ou nommée sur un ordinateur local ou distant.  
   
- **Nom de la base de données**  
+ **Database Name**  
  Spécifie le nom de la base de données du serveur de rapports qui stocke les données du serveur.  
   
  **Mode du serveur de rapports**  
@@ -47,7 +46,7 @@ ms.locfileid: "71952311"
  Détermine les informations d'identification utilisées par le serveur de rapports pour la connexion à la base de données du serveur de rapports. Les types d'informations d'identification que vous pouvez spécifier incluent le compte de service, un utilisateur de domaine Windows, un utilisateur local Windows ou une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur la sélection des informations d’identification, consultez [configurer une connexion à la base de données du serveur de rapports &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nom d’utilisateur**  
- Spécifie un compte d'utilisateur du domaine si vous utilisez les informations d'identification Windows ou une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous utilisez les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez des informations d’identification Windows, spécifiez-les au format suivant : * \< \\ domaine\>><compte*.  
+ Spécifie un compte d'utilisateur du domaine si vous utilisez les informations d'identification Windows ou une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous utilisez les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez des informations d’identification Windows, spécifiez-les au format suivant : * \<domain> \\<compte \> *.  
   
  **Mot de passe**  
  Spécifie le mot de passe du compte.  

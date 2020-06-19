@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de1b0ed65bc4c0c079ca6de9e667c044027479fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6486f87072b203da5240f01dc5c3a4e1a948fa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968769"
 ---
 # <a name="creating-a-custom-log-provider"></a>Création d'un module fournisseur d'informations personnalisé
   L'environnement d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possède des fonctionnalités de journalisation complètes. Un journal vous permet de capturer des événements qui se produisent pendant l'exécution d'un package. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers modules fournisseurs d'informations qui permettent de créer et stocker des journaux dans plusieurs formats, notamment XML, texte et base de données ou dans le journal des événements Windows. Si l'un de ces fournisseurs ou formats de sortie ne répond pas à vos besoins, vous pouvez créer un module fournisseur d'informations personnalisé.
@@ -46,7 +45,7 @@ ms.locfileid: "78176324"
 >  De nombreux modules fournisseurs d’informations [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ont une interface utilisateur personnalisée qui implémente <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> et remplace la zone de texte **Configuration** dans la boîte de dialogue **Configurer les journaux SSIS** par la liste déroulante filtrée des gestionnaires de connexions disponibles. Toutefois, les interfaces utilisateur personnalisées des modules fournisseurs d'informations personnalisés ne sont pas implémentées dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].
 
 ### <a name="applying-the-dtslogprovider-attribute"></a>Application de l'attribut DtsLogProvider
- Appliquez l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> à la classe que vous avez créée pour l'identifier en tant que module fournisseur d'informations. Cet attribut fournit des informations de conception, telles que le nom et la description du module fournisseur d'informations. Les `DisplayName` propriétés `Description` et de l’attribut correspondent au **nom** et `Description` aux colonnes affichées dans l’éditeur **configurer les journaux SSIS** , qui s’affiche lors de la configuration de la journalisation pour un package dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].
+ Appliquez l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> à la classe que vous avez créée pour l'identifier en tant que module fournisseur d'informations. Cet attribut fournit des informations de conception, telles que le nom et la description du module fournisseur d'informations. Les `DisplayName` `Description` Propriétés et de l’attribut correspondent au **nom** et aux `Description` colonnes affichées dans l’éditeur **configurer les journaux SSIS** , qui s’affiche lors de la configuration de la journalisation pour un package dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] .
 
 > [!IMPORTANT]
 >  La propriété <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> de l'attribut n'est pas utilisée. Toutefois, vous devez entrer une valeur pour cette propriété, sans quoi le module fournisseur d'informations personnalisé n'apparaîtra pas dans la liste des modules fournisseurs d'informations disponibles.

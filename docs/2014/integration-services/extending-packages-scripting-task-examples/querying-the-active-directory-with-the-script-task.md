@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 142cef139d315d3db492651716c2ec8fb9b6e03c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968489"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Interrogation d'Active Directory avec la tâche de script
   Les applications de traitement des données d'entreprise, telles que les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ont souvent besoin de traiter des données différemment selon l'échelon, le poste ou d'autres caractéristiques des employés stockés dans Active Directory. Active Directory est un service d’annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows qui fournit un magasin centralisé de métadonnées, non seulement sur les utilisateurs, mais aussi sur d’autres ressources organisationnelles, comme les ordinateurs et les imprimantes. L'espace de noms `System.DirectoryServices` dans le Microsoft .NET Framework fournit des classes à utiliser avec Active Directory, pour vous aider à diriger le flux de travail du traitement des données selon les informations qu'il stocke.  
@@ -37,11 +36,11 @@ ms.locfileid: "62895028"
   
 1.  Créez les trois variables de chaîne `email`, `name` et `title`. Entrez une adresse de messagerie professionnelle valide en tant que valeur de la variable `email`.  
   
-2.  Dans la page **script** de l **'éditeur de tâche**de script `email` , ajoutez la `ReadOnlyVariables` variable à la propriété.  
+2.  Dans la page **script** de l **'éditeur de tâche de script**, ajoutez la `email` variable à la `ReadOnlyVariables` propriété.  
   
 3.  Ajoutez les variables `name` et `title` à la propriété `ReadWriteVariables`.  
   
-4.  Dans le projet de script, ajoutez une référence à `System.DirectoryServices` l’espace de noms.  
+4.  Dans le projet de script, ajoutez une référence à l' `System.DirectoryServices` espace de noms.  
   
 5.  . Dans votre code, utilisez une instruction `Imports` pour importer l'espace de noms `DirectoryServices`.  
   

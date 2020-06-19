@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168a343c208c7b9d98f3f03a802e40488602a7d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007066"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitaire SqlLocalDB
-  Utilisez l' `SqlLocalDB` utilitaire pour créer une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]base de données **locale.** L' `SqlLocalDB` utilitaire (SqlLocalDB. exe) est un outil en ligne de commande simple pour permettre aux utilisateurs et aux développeurs de créer et [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **de gérer une instance de base**de données locale. Pour plus d’informations sur l’utilisation de la **base de données locale, consultez** [SQL Server 2014 Express](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
+  Utilisez l' `SqlLocalDB` utilitaire pour créer une instance de base de données locale [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. L' `SqlLocalDB` utilitaire (SqlLocalDB.exe) est un outil de ligne de commande simple pour permettre aux utilisateurs et aux développeurs de créer et de gérer une instance de base de données locale [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. Pour plus d’informations sur l’utilisation de la **base de données locale, consultez** [SQL Server 2014 Express](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,8 +42,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
- Crée une instance de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB`utilise la version des [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] fichiers binaires spécifiée par * \<l’argument>version* de l’instance. Le numéro de version est spécifié au format numérique avec au moins une décimale. Les numéros de version secondaire (Service Packs) sont facultatifs. Par exemple, les deux numéros de version suivants sont acceptables : 11.0 et 11.0.1186. La version spécifiée doit être installée sur l'ordinateur. S’il n’est pas spécifié, le numéro de version est défini par `SqlLocalDB` défaut sur la version de l’utilitaire. L’ajout de **-s** permet de démarrer la nouvelle instance de **LocalDB**.  
+ [ **créer**  |  **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ Crée une instance de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB`utilise la version des [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] fichiers binaires spécifiée par l' *\<instance-version>* argument. Le numéro de version est spécifié au format numérique avec au moins une décimale. Les numéros de version secondaire (Service Packs) sont facultatifs. Par exemple, les deux numéros de version suivants sont acceptables : 11.0 ou 11.0.1186. La version spécifiée doit être installée sur l'ordinateur. S’il n’est pas spécifié, le numéro de version est défini par défaut sur la version de l' `SqlLocalDB` utilitaire. L’ajout de **-s** permet de démarrer la nouvelle instance de **LocalDB**.  
   
  [ **share** | **h** ]  
  Partage l’instance privée spécifiée de **LocalDB** à l’aide du nom partagé spécifié. Si le SID ou le nom de compte de l'utilisateur est omis, il prend par défaut la valeur de l'utilisateur actuel.  
@@ -52,25 +51,25 @@ SqlLocalDB.exe
  [ **unshared** | **u** ]  
  Arrête le partage de l’instance partagée spécifiée de **LocalDB**.  
   
- [ **delete** | **d** ] *\<instance-name>*  
+ [ **supprimer**  |  **d** ]*\<instance-name>*  
  Supprime l’instance spécifiée de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **start** | **s** ] " *\<instance-name>* "  
+ [ **Démarrer**  |  **s** ] " *\<instance-name>* "  
  Démarre l’instance spécifiée de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. En cas de réussite de l'opération, l'instruction retourne l'adresse du canal nommé de **LocalDB**.  
   
- [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
- Arrête l’instance spécifiée de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Ajout **de-i** demande l’arrêt de l' `NOWAIT` instance avec l’option. L’ajout de **-k** met fin au processus de l’instance sans le contacter.  
+ [ **arrêter**  |  **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ Arrête l’instance spécifiée de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Ajout **de-i** demande l’arrêt de l’instance avec l' `NOWAIT` option. L’ajout de **-k** met fin au processus de l’instance sans le contacter.  
   
- [ **info** | **i** ] [ *\<instance-name>* ]  
+ [ **info**  |  **i** ] [ *\<instance-name>* ]  
  Répertorie toutes les instances de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** détenues par l’utilisateur actuel.  
   
- *\<instance-name>* retourne le nom, la version, l’état (En cours d’exécution ou Arrêté), la dernière heure de début pour l’instance spécifiée de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** et le nom du canal local de **LocalDB**.  
+ *\<instance-name>* retourne le nom, la version, l’État (en cours d’exécution ou arrêté), la dernière heure de début pour l’instance spécifiée de la base de données [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**locale et le nom **du**canal local de la base de données locale.  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on** active le suivi des `SqlLocalDB` appels d’API pour l’utilisateur actuel. **trace off** désactive le suivi.  
   
  **-?**  
- Retourne une brève description de `SqlLocalDB` chaque option.  
+ Retourne une brève description de chaque `SqlLocalDB` option.  
   
 ## <a name="remarks"></a>Notes  
  L’argument *instance name* doit respecter les règles applicables aux identificateurs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou il doit être placé entre guillemets.  

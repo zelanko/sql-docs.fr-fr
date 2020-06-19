@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98986cf1e3f81d11355fa10ffcaa3304fe0702be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829485"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917869"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tâche de transfert de procédures stockées de master
   La tâche de transfert de procédures stockées de master transfère une ou plusieurs procédures stockées définies par l’utilisateur entre les bases de données **master** sur des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour transférer une procédure stockée à partir de la base de données **master** , le propriétaire de la procédure doit être dbo.  
@@ -84,6 +83,6 @@ ms.locfileid: "62829485"
 ## <a name="see-also"></a>Voir aussi  
  [Tâche de transfert d’objets SQL Server](transfer-sql-server-objects-task.md)   
  [Tâches Integration Services](integration-services-tasks.md)   
- [Flux de contrôle](control-flow.md)  
+ [Workflow de contrôle](control-flow.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e2865607f058c077fc3d12c2e3c2f778450511d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f78bca9bf2b99b2ab6f530613b64bc0e46c4001c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054819"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>Les connexions SQL Server 6.5 dormantes ne peuvent pas être mises à niveau
   Le Conseiller de mise à niveau a détecté un nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dont le mot de passe ne peut pas être directement mis à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

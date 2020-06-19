@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484b1ccb084ca6e3ed5f80f0ed8a98fd8c1c7c49
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069261"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940800"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Sélectionner la clé de cas (Assistant Exploration de données)
   Utilisez la page **Sélectionner la clé de cas** pour sélectionner l'attribut de la dimension du cube source qui constituera la clé de la structure d'exploration de données. Cet attribut doit figurer dans une hiérarchie ou sa hiérarchie d'attribut doit être activée.  
