@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940210"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurer les propriétés de création de rapports pour les rapports Power View
   Dans cette leçon supplémentaire, vous allez définir les propriétés de création de rapports pour le projet Adventure Works Internet Sales Model. Les propriétés de création de rapports facilitent la sélection et l'affichage des données du modèle dans Power View. Vous définirez également des propriétés permettant de masquer certaines colonnes et tables, et vous créerez des données à utiliser dans des graphiques.  
@@ -96,7 +95,7 @@ ms.locfileid: "66067958"
   
      **Prénom**  
   
-     **Nom**  
+     **Last Name**  
   
      **Date de naissance**.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "66067958"
   
      **Client**  
   
-    |Colonne|Propriété|Valeur|  
+    |Colonne|Propriété|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Format de données|Date courte|  
@@ -162,7 +161,7 @@ ms.locfileid: "66067958"
     > [!NOTE]  
     >  Étant donné que la table Date a été sélectionnée comme table de date du modèle à l'aide du paramètre Marquer en tant que table de dates, dans la leçon 7 : Marquer en tant que table de dates, et la colonne Date de la table Date comme la colonne à utiliser en tant qu'identificateur unique, la propriété Identificateur de ligne de la colonne Date se verra automatiquement affecter la valeur True, et ne pourra pas être modifiée. Lorsque vous utilisez les fonctions Time Intelligence dans des formules DAX, vous devez spécifier une table de dates. Dans ce modèle, vous avez créé plusieurs mesures à l'aide de fonctions Time Intelligence pour calculer les données de vente de plusieurs périodes, telles que les trimestres précédents et actuel, ainsi qu'à des fins d'utilisation dans des indicateurs de performance clés. Pour plus d’informations sur la spécification d’une table de dates, consultez [Spécifier la marque comme table de dates pour l’utiliser avec Time Intelligence &#40;SSAS Tabulaire&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
   
-    |Colonne|Propriété|Valeur|  
+    |Colonne|Propriété|Value|  
     |------------|--------------|-----------|  
     |Date|Format de données|Date courte|  
     |Day Number of Week|Hidden|True|  
@@ -170,8 +169,8 @@ ms.locfileid: "66067958"
     |Day of Week|Hidden|True|  
     |Day of Month|Hidden|True|  
     |Day of Year|Hidden|True|  
-    |Month Name|Trier par colonne|Month|  
-    |Month|Hidden|True|  
+    |Month Name|Trier par colonne|Mois|  
+    |Mois|Hidden|True|  
     |Month Calendar|Hidden|True|  
     |Fiscal Quarter|Hidden|True|  
     |Fiscal Year|Hidden|True|  
@@ -179,14 +178,14 @@ ms.locfileid: "66067958"
   
      **Zone géographique**  
   
-    |Colonne|Propriété|Valeur|  
+    |Colonne|Propriété|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Production**  
+     **Produit**  
   
-    |Colonne|Propriété|Valeur|  
+    |Colonne|Propriété|Value|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Étiquette par défaut|True|  
@@ -197,7 +196,7 @@ ms.locfileid: "66067958"
   
      **Internet Sales**  
   
-    |Colonne|Propriété|Valeur|  
+    |Colonne|Propriété|Value|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  

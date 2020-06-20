@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cb1c84cccf4123f6ca1894baba5676937d80a15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925636"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Éditeur de tâche DDL d'exécution d'Analysis Services (page DDL)
   Utilisez la page **DDL** de la boîte de dialogue **Éditeur de tâche DDL d’exécution d’Analysis Services** pour spécifier une connexion à un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et fournir des informations sur la source des instructions de langage de définition de données (DDL).  
@@ -28,11 +27,11 @@ ms.locfileid: "66061605"
   
 ## <a name="static-options"></a>Options statiques  
  **Connection**  
- Sélectionnez un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet ou un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gestionnaire de connexions dans la liste ou cliquez \<sur **nouvelle connexion...**> et utilisez la boîte de dialogue Ajouter un gestionnaire de **connexions Analysis Services** pour créer une nouvelle connexion.  
+ Sélectionnez un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet ou un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gestionnaire de connexions dans la liste, ou cliquez sur \<**New connection...**> et utilisez la boîte de dialogue **Ajouter un gestionnaire de connexions Analysis Services** pour créer une connexion.  
   
  **Rubriques connexes :** [Référence de l'interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
- **Telle**  
+ **SourceType**  
  Spécifiez le type de source des instructions DDL. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
 |Value|Description|  
@@ -49,13 +48,13 @@ ms.locfileid: "66061605"
   
 ### <a name="sourcetype--file-connection"></a>SourceType = Connexion de fichiers  
  **Source**  
- Sélectionnez une connexion de fichiers dans la liste ou cliquez \<sur **nouvelle connexion...**> et utilisez la boîte de dialogue **Gestionnaire de connexions de fichiers** pour créer une nouvelle connexion.  
+ Sélectionnez une connexion de fichiers dans la liste ou cliquez sur \<**New connection...**> et utilisez la boîte de dialogue **Gestionnaire de connexions de fichiers** pour créer une nouvelle connexion.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Source**  
- Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable**> et utilisez la boîte de dialogue **Ajouter une variable** pour créer une variable.  
+ Sélectionnez une variable dans la liste ou cliquez sur \<**New variable...**> et utilisez la boîte de dialogue **Ajouter une variable** pour créer une variable.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   

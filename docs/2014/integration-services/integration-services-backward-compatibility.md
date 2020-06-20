@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e3a1f1b8b30a6da6c224d73a126840205c68695
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968299"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilité descendante d'Integration Services
   Cette section décrit les modifications entre les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Elle traite des fonctionnalités qui ne sont plus disponibles ou destinées à être supprimées dans les versions futures. Elle décrit également les changements importants apportés au produit, connus pour empêcher le bon fonctionnement ou pour modifier le comportement d'une application personnalisée incluant la fonctionnalité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

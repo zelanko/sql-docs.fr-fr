@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72336f2f012ad6f2da03440f431d2fe5be294b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095475"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012708"
 ---
 # <a name="distributed-replay-client-configuration"></a>Configuration de Distributed Replay Client
   Utilisez la page **Configuration de Distributed Replay Client** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier les utilisateurs auxquels vous voulez accorder des autorisations administratives sur le service Distributed Replay Client.  
@@ -24,7 +23,7 @@ ms.locfileid: "66095475"
   
 ## <a name="options"></a>Options  
  **Nom du contrôleur**  
- Il s’agit d’un paramètre facultatif, et la valeur \<par défaut est *vide*>.  
+ Il s’agit d’un paramètre facultatif, et la valeur par défaut est \<*blank*> .  
   
  Entrez le nom du contrôleur avec lequel l'ordinateur client communiquera pour le service Distributed Replay Client. Notez les points suivants :  
   
@@ -37,11 +36,11 @@ ms.locfileid: "66095475"
  **Répertoire de travail**  
  Spécifiez le répertoire de travail du service Distributed Replay Client.  
   
- Le répertoire de travail par défaut est \< *lettre de lecteur*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Program Files \DReplayClient\WorkingDir.  
+ Le répertoire de travail par défaut est \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
  **Répertoire des résultats**  
  Spécifiez le répertoire des résultats du service Distributed Replay Client.  
   
- Le répertoire des résultats par \<défaut est la *lettre* de lecteur\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]>\\: \Program Files \DReplayClient\ResultDir.  
+ Le répertoire des résultats par défaut est \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
   

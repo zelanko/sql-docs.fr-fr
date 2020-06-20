@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88684c3a1ca12ea579859759ed804ca281647fa5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934422"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Ajouter un témoin de mise en miroir de bases de données à l'aide de l'authentification Windows (Transact-SQL)
   Pour configurer un témoin pour une base de données, le propriétaire de la base de données attribue à une instance de moteur de base de données le rôle de serveur témoin. L'instance de serveur témoin peut être exécutée sur le même ordinateur que l'instance de serveur principal ou miroir, mais cela réduit alors considérablement la robustesse du basculement automatique.  
@@ -33,7 +32,7 @@ ms.locfileid: "67792610"
   
 ### <a name="to-establish-a-witness"></a>Pour établir un témoin  
   
-1.  Sur l'instance de serveur témoin, assurez-vous qu'un point de terminaison existe pour la mise en miroir de bases de données. Quel que soit le nombre de sessions de mise en miroir à prendre en charge, l'instance de serveur ne doit disposer que d'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement comme témoin dans les sessions de mise en miroir de bases de données, attribuez **=** le rôle de témoin au point de terminaison (témoin de rôle). Si vous souhaitez utiliser cette instance de serveur comme partenaire dans une ou plusieurs sessions de mise en miroir de bases de données, attribuez le rôle ALL au point de terminaison.  
+1.  Sur l'instance de serveur témoin, assurez-vous qu'un point de terminaison existe pour la mise en miroir de bases de données. Quel que soit le nombre de sessions de mise en miroir à prendre en charge, l'instance de serveur ne doit disposer que d'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement comme témoin dans les sessions de mise en miroir de bases de données, attribuez le rôle de témoin au point de terminaison (témoin de rôle **=** ). Si vous souhaitez utiliser cette instance de serveur comme partenaire dans une ou plusieurs sessions de mise en miroir de bases de données, attribuez le rôle ALL au point de terminaison.  
   
      Pour exécuter une instruction SET WITNESS, la session de mise en miroir de bases de données doit déjà être démarrée (entre les partenaires) et la valeur STATE du point de terminaison du témoin doit être STARTED.  
   
@@ -58,11 +57,11 @@ ms.locfileid: "67792610"
   
      La syntaxe pour une adresse réseau de serveur est la suivante :  
   
-     TCP **://**\<_>d’adresse système _ **:**\<*port>*  
+     TCP **://** \<_system-address> _**:**\<*port>*  
   
-     où \<*adresse-système>* est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et \<*port>* est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](specify-a-server-network-address-database-mirroring.md).  
+     où \<*system-address> * est une chaîne qui identifie sans ambiguïté le système informatique de destination, et \<*port> * est le numéro de port utilisé par le point de terminaison de mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Ainsi, sur l'instance de serveur principal, l'instruction ALTER DATABASE suivante définit le témoin. Le nom de la base de données est **AdventureWorks**, l’adresse système est DBSERVER3-le nom du système témoin, et le port utilisé par le point de terminaison de mise `7022`en miroir de bases de données du témoin est :  
+     Ainsi, sur l'instance de serveur principal, l'instruction ALTER DATABASE suivante définit le témoin. Le nom de la base de données est **AdventureWorks**, l’adresse système est DBSERVER3-le nom du système témoin, et le port utilisé par le point de terminaison de mise en miroir de bases de données du témoin est `7022` :  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -126,7 +125,7 @@ ms.locfileid: "67792610"
   
  Pour voir un exemple illustrant la configuration de la sécurité, la préparation de la base de données miroir, la définition des serveurs partenaires et l’ajout d’un témoin, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Autoriser l’accès réseau à un point de terminaison de mise en miroir de bases de données à l’aide de l’authentification Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

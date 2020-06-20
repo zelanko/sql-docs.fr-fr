@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c00b08d40bc8c17013e6af19b5d11b0b7ad78c4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058989"
 ---
 # <a name="resolving-upgrade-issues"></a>Résolution de problèmes de mise à niveau
   Les rubriques dans cette section décrivent les problèmes de mise à niveau qui peuvent être détectés ainsi que ceux qui ne peuvent pas être détectés mais sont susceptibles d'affecter la mise à niveau ou les fonctionnalités après la mise à niveau. Les problèmes sont organisés par composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,7 +54,7 @@ ms.locfileid: "66092498"
 -   [Problèmes de mise à niveau de l'Agent SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
 ## <a name="issues-that-prevent-upgrading"></a>Problèmes qui empêchent la mise à niveau  
- Quelques configurations ou paramètres d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent vous empêcher d'effectuer une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si le programme d’installation détecte ces problèmes lors [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]de l’installation de, le programme d’installation arrête le processus de mise à niveau et demande que vous exécutiez le conseiller de mise à niveau et corrige les éventuels problèmes de blocage.  
+ Quelques configurations ou paramètres d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent vous empêcher d'effectuer une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si le programme d’installation détecte ces problèmes lors de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’installation de, le programme d’installation arrête le processus de mise à niveau et demande que vous exécutiez le conseiller de mise à niveau et corrige les éventuels problèmes de blocage.  
   
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  Si les tâches suivantes sont répertoriées dans le rapport de mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez effectuer les actions requises avant de procéder à la mise niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  

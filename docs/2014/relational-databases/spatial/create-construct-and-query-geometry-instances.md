@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014313"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996575"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Créer, construire et interroger des instances geometry
   Le type de données spatiales planaire, `geometry`, représente les données dans un système de coordonnées euclidien (plat). Ce type est implémenté en tant que type de données CLR (Common Language Runtime) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -129,7 +128,7 @@ ms.locfileid: "66014313"
   
   
 ###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Construction d'une instance geometry à partir d'une entrée texte GML  
- Le `geometry` type de données fournit une méthode qui génère `geometry` une instance à partir de GML, une représentation XML d’objets géométriques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
+ Le `geometry` type de données fournit une méthode qui génère une `geometry` instance à partir de GML, une représentation XML d’objets géométriques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
   
  **Pour construire tout type d'instance geometry à partir d'une entrée GML**  
  [GeomFromGml &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +155,7 @@ ms.locfileid: "66014313"
   
   
 ##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Interrogation des propriétés et comportements des instances geometry  
- Toutes `geometry` les instances ont un certain nombre de propriétés qui peuvent être récupérées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais des méthodes fournies par. Les rubriques suivantes définissent les propriétés et comportements de types geometry et les méthodes permettant de les interroger.  
+ Toutes les `geometry` instances ont un certain nombre de propriétés qui peuvent être récupérées par le biais des méthodes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournies par. Les rubriques suivantes définissent les propriétés et comportements de types geometry et les méthodes permettant de les interroger.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Informations sur la validité, le type d'instance et GeometryCollection  
  Une fois qu'une instance `geometry` est construite, vous pouvez utiliser les méthodes suivantes pour déterminer si elle est formée correctement, retourner le type d'instance ou, s'il s'agit d'une instance de collection, retourner une instance `geometry` spécifique.  
@@ -182,7 +181,7 @@ ms.locfileid: "66014313"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> Nombre de points  
- Toutes les instances `geometry` non vides sont constituées de *points*. Ces points représentent les coordonnées X et Y de latitude et de longitude du plan sur lequel les géométries sont dessinées. `geometry` fournit de nombreuses méthodes intégrées pour interroger les points d'une instance.  
+ Toutes les instances non vides `geometry` sont constituées de *points*. Ces points représentent les coordonnées X et Y de latitude et de longitude du plan sur lequel les géométries sont dessinées. `geometry` fournit de nombreuses méthodes intégrées pour interroger les points d'une instance.  
   
  **Pour retourner le nombre de points qui composent une instance**  
  [STNumPoints &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -233,7 +232,7 @@ ms.locfileid: "66014313"
   
   
 ###  <a name="simple"></a><a name="simple"></a> Simple  
- Pour qu' `geometry` une de l’instance soit *simple*, elle doit remplir les deux conditions requises suivantes :  
+ Pour `geometry` qu’une de l’instance soit *simple*, elle doit remplir les deux conditions requises suivantes :  
   
 -   Chaque graphique de l'instance ne doit pas se croiser lui-même, sauf à ses points de terminaison.  
   

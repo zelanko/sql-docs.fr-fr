@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ffa99b2271697302e9cfa284bd814ccc923e46d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065928"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d'un abonnement à la publication de fusion
   Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puis, vous définirez les autorisations sur la base de données d'abonnement et génèrerez manuellement l'instantané filtré des données du nouvel abonnement. Pour effectuer cette leçon, vous devez avoir terminé la leçon précédente, [Leçon 1 : Publication de données à l’aide de la réplication de fusion](lesson-1-publishing-data-using-merge-replication.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "83000439"
   
 5.  Dans la page Emplacement de l’Agent de fusion, cliquez sur **Exécuter chaque agent sur son Abonné**, puis cliquez sur **Suivant**.  
   
-6.  Sur la page abonnés, sélectionnez le nom de l’instance du serveur de l’abonné, puis, sous **base de données d’abonnement**, sélectionnez ** \< nouvelle base de données>** dans la liste.  
+6.  Dans la page Abonnés, sélectionnez le nom d’instance du serveur de l’Abonné, et sous **Base de données d’abonnement**sélectionnez **\<New Database>** dans la liste.  
   
 7.  Dans la boîte de dialogue **Nouvelle base de données** , entrez **SalesOrdersReplica** dans la zone **Nom de la base de données** , cliquez sur **OK**, puis cliquez sur **Suivant**.  
   
-8.  Dans la page sécurité du Agent de fusion, cliquez sur le bouton des points de suspension (**...**), entrez \< _Machine_Name>_ **\ Repl_merge** dans la zone **compte de processus** , fournissez le mot de passe de ce compte, cliquez sur **OK**, sur **suivant**, puis de nouveau sur **suivant** .  
+8.  Dans la page sécurité du Agent de fusion, cliquez sur le bouton des points de suspension (**...**), entrez \<_Machine_Name> _**\ repl_merge** dans la zone **compte de processus** , fournissez le mot de passe de ce compte, cliquez sur **OK**, sur **suivant**, puis de nouveau sur **suivant** .  
   
 9. Dans la page Initialiser les abonnements, sélectionnez **Lors de la première synchronisation** dans la liste **À quel moment** , cliquez sur **Suivant**, puis une nouvelle fois sur **Suivant** .  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000439"
   
 1.  Connectez-vous à l’Abonné dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Bases de données**, **SalesOrdersReplica**et **Sécurité**, cliquez avec le bouton droit sur **Utilisateurs**, puis choisissez **Nouvel utilisateur**.  
   
-2.  Sur la page **général** , entrez \< _Machine_Name>_ **\ Repl_merge** dans la zone **nom d’utilisateur** , cliquez sur le bouton de sélection (**...**), cliquez sur **Parcourir**, sélectionnez \< _Machine_Name>_ **\ repl_merge**, cliquez sur **OK**, sur **vérifier les noms**, puis sur **OK**.  
+2.  Sur la page **général** , entrez \<_Machine_Name> _ **\ repl_merge** dans la zone **nom d’utilisateur** , cliquez sur le bouton de sélection (**...**), cliquez \<_Machine_Name> sur **Parcourir**, sélectionnez _ **\ repl_merge**, cliquez sur **OK**, sur **vérifier les noms**, puis sur **OK**.  
   
 3.  Dans **Appartenance au rôle de base de données**, sélectionnez **db_owner**, puis cliquez sur **OK** pour créer l’utilisateur.  
   

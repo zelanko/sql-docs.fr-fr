@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a87b6a0ebd2293ad219ce43108c4f42487a8e0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808721"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934603"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Se connecter au serveur (page Connexion) Reporting Services
-  Utilisez cet onglet pour afficher ou spécifier les options suivantes lors de la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]connexion à.  
+  Utilisez cet onglet pour afficher ou spécifier les options suivantes lors de la connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
  **Type de serveur**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808721"
  **Nom du serveur**  
  Le mode serveur de l'instance du serveur de rapports à laquelle vous vous connectez détermine la valeur que vous devez entrer.  
   
- Pour un serveur de rapports qui fonctionne en mode natif, spécifiez l'instance du serveur de rapports avec laquelle établir la connexion. Si vous utilisez l'instance par défaut, le nom du serveur est généralement celui de l'ordinateur. Si vous avez installé une instance nommée, ajoutez le nom de l’instance au nom du serveur au \<format suivant \\ : NomServeur\>><nom_instance. Reporting Services utilise la barre oblique inverse pour délimiter le nom de l'instance.  
+ Pour un serveur de rapports qui fonctionne en mode natif, spécifiez l'instance du serveur de rapports avec laquelle établir la connexion. Si vous utilisez l'instance par défaut, le nom du serveur est généralement celui de l'ordinateur. Si vous avez installé une instance nommée, ajoutez le nom de l’instance au nom du serveur au format suivant : \<servername> \\<InstanceName \> . Reporting Services utilise la barre oblique inverse pour délimiter le nom de l'instance.  
   
  Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, vous devez spécifier un site SharePoint. Vous pouvez spécifier n'importe quel site d'une collection de sites intégrée à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. L'URL que vous fournissez doit inclure le préfixe HTTP ou HTTPS. Vous devez avoir l'autorisation d'accéder au site SharePoint pour vous y connecter à partir de Management Studio. Le niveau d'autorisation qui vous est assigné détermine les éléments que vous pouvez consulter et gérer. Pour plus d’informations, consultez [Se connecter à un serveur de rapports dans Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62808721"
  **Mot de passe**  
  Entrez le mot de passe correspondant au nom d'utilisateur indiqué. Cette option n'est modifiable que si vous avez choisi **Authentification de base** ou **Authentification par formulaire**.  
   
- **Se souvenir du mot de passe**  
+ **Mémoriser le mot de passe**  
  Permet d'enregistrer le mot de passe que vous avez entré. Cette option n’est affichée que si vous cliquez sur **Options**, et ne peut être modifiée que si vous avez sélectionné la connexion à l’aide de **l’Authentification de base** ou de **l’Authentification personnalisée**.  
   
  **Connexion**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8de6913085c24f98d8305f622f5cbec31aa2a79c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058966"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Exécution du Conseiller de mise à niveau (Invite de commandes)
   Utilisez l’utilitaire **UpgradeAdvisorWizardCmd** pour exécuter le conseiller de mise à niveau à partir de l’invite de commandes. Vous pouvez choisir de recevoir les résultats dans le format XML ou dans un fichier dont les valeurs sont séparées par des virgules.  
@@ -54,33 +53,33 @@ where <server_info> is any combination of the following:
  Spécifie le nom de l'ordinateur à analyser. Il peut s'agir de l'ordinateur local , qui correspond à la valeur par défaut, ou d'un ordinateur distant.  
   
  **-Instance** _instance_name_  
- Spécifie le nom de l'instance à analyser. Aucune valeur par défaut. Si vous ne spécifiez pas ce paramètre, [!INCLUDE[ssDE](../../includes/ssde-md.md)] le n’est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est MSSQLSERVER. Pour une instance nommée, utilisez le nom de l'instance.  
+ Spécifie le nom de l'instance à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas ce paramètre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est MSSQLSERVER. Pour une instance nommée, utilisez le nom de l'instance.  
   
  **-ASInstance**  _AS_instance_name_  
- Spécifie le nom de l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à analyser. Aucune valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est MSSQLServerOLAPService. Pour une instance nommée, utilisez le nom de l'instance.  
+ Spécifie le nom de l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est MSSQLServerOLAPService. Pour une instance nommée, utilisez le nom de l'instance.  
   
  **-RSInstance**  _RS_instance_name_  
- Spécifie le nom de l'instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à analyser. Aucune valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est ReportServer. Pour une instance nommée, utilisez le nom de l'instance.  
+ Spécifie le nom de l'instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est ReportServer. Pour une instance nommée, utilisez le nom de l'instance.  
   
  **-SqlUser** _login_id_  
  Si vous recourez à l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette valeur est le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que le Conseiller de mise à niveau utilise pour se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous ne spécifiez pas de compte de connexion, l'authentification Windows permet de se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-Sqlpassword** _mot de passe_  
- Si vous utilisez l’argument **-SQLUser** , utilisez cet argument pour spécifier le mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la connexion.  
+ Si vous utilisez l’argument **-SQLUser** , utilisez cet argument pour spécifier le mot de passe de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
   
  **-CSV**  
- Indique que les résultats doivent être fournis sous forme de valeurs séparées par des virgules dans un fichier .csv en plus du format XML standard. Les résultats sont écrits dans le dossier\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mes documents Upgrade Advisor\110\Reports.  
+ Indique que les résultats doivent être fournis sous forme de valeurs séparées par des virgules dans un fichier .csv en plus du format XML standard. Les résultats sont écrits dans le dossier Mes documents \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports.  
   
 ## <a name="return-values"></a>Valeurs de retour  
  Le tableau suivant montre les valeurs retournées par **UpgradeAdvisorWizardCmd** .  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|Analyse réussie, aucun problème de mise à niveau détecté.|  
 |entier positif|Analyse réussie, problèmes de mise à niveau détectés.|  
 |entier négatif|Échec de l'analyse.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Toutes les informations nécessaires à l'exécution de l'analyse, autres que les noms d'utilisateurs et les mots de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], peuvent être fournies dans un fichier de configuration XML. Ce fichier de configuration XML est documenté dans le modèle. Si vous n'utilisez pas de fichier de configuration, vous pouvez analyser tous les composants installés dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de paramètres par défaut en spécifiant des noms d'ordinateurs et des noms d'instances. Consultez le tableau « Description des éléments » plus loin dans cette rubrique pour obtenir une description des paramètres du fichier de configuration par défaut.  
   
 ## <a name="configuration-file-template"></a>Modèle de fichier de configuration  
@@ -127,22 +126,22 @@ where <server_info> is any combination of the following:
 |`Server`|Nom du serveur à analyser.|Facultatif une fois par fichier de configuration. La valeur par défaut est l'ordinateur local.|  
 |`Instance`|Nom de l' [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance à analyser.|Facultatif une fois par fichier de configuration. La valeur par défaut est l'instance par défaut.<br /><br /> Requis une fois par fichier de configuration, si un élément [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou `IntegrationServices` est présent sur le serveur.|  
 |`Components`|Contient des éléments qui spécifient les composants à analyser.|Obligatoire une fois par fichier de configuration.|  
-|`SQLServer`|Contient les [!INCLUDE[ssDE](../../includes/ssde-md.md)]paramètres d’analyse d’une instance du.|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, les bases de données [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne sont pas analysées.|  
-|`Databases` de l'élément `SQLServer`|Contient une liste de bases de données à analyser.|Facultatif une fois `SQLServer` par élément. Si cet élément n'est pas présent, toutes les bases de données de l'instance sont analysées.|  
-|`Database` de l'élément `SQLServer`|Spécifie le nom d'une base de données à analyser.|Obligatoire une ou plusieurs fois si l'élément `Databases` est présent. Si un élément `Database` contient la valeur "*", toutes les bases de données de l'instance sont analysées. Aucune valeur par défaut.|  
-|`TraceFiles`|Contient une liste de fichiers de trace à analyser.|Facultatif une fois `SQLServer` par élément.|  
-|`TraceFile`|Spécifie le chemin d'accès et le nom d'un fichier de trace à analyser.|Obligatoire une ou plusieurs fois si l'élément `TraceFiles` est présent. Aucune valeur par défaut.|  
-|`BatchFiles`|Contient une liste de fichiers de commandes à analyser.|Facultatif une fois `SQLServer` par élément.|  
-|`BatchFile`|Spécifie un fichier de commandes à analyser. Peut concerner plusieurs fichiers.|Obligatoire une ou plusieurs fois si l'élément `BatchFiles` est présent. Aucune valeur par défaut.|  
-|`BatchSeparator`|Spécifie le délimiteur de lot utilisé dans les fichiers de commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Facultatif une fois `SQLServer` par élément. La valeur par défaut est GO.|  
+|`SQLServer`|Contient les paramètres d’analyse d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, les bases de données [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne sont pas analysées.|  
+|`Databases` de l'élément `SQLServer`|Contient une liste de bases de données à analyser.|Facultatif une fois par `SQLServer` élément. Si cet élément n'est pas présent, toutes les bases de données de l'instance sont analysées.|  
+|`Database` de l'élément `SQLServer`|Spécifie le nom d'une base de données à analyser.|Obligatoire une ou plusieurs fois si l'élément `Databases` est présent. Si un élément `Database` contient la valeur "*", toutes les bases de données de l'instance sont analysées. Il n’y a pas de valeur par défaut.|  
+|`TraceFiles`|Contient une liste de fichiers de trace à analyser.|Facultatif une fois par `SQLServer` élément.|  
+|`TraceFile`|Spécifie le chemin d'accès et le nom d'un fichier de trace à analyser.|Obligatoire une ou plusieurs fois si l'élément `TraceFiles` est présent. Il n’y a pas de valeur par défaut.|  
+|`BatchFiles`|Contient une liste de fichiers de commandes à analyser.|Facultatif une fois par `SQLServer` élément.|  
+|`BatchFile`|Spécifie un fichier de commandes à analyser. Peut concerner plusieurs fichiers.|Obligatoire une ou plusieurs fois si l'élément `BatchFiles` est présent. Il n’y a pas de valeur par défaut.|  
+|`BatchSeparator`|Spécifie le délimiteur de lot utilisé dans les fichiers de commandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Facultatif une fois par `SQLServer` élément. La valeur par défaut est GO.|  
 |`AnalysisServices`|Contient les paramètres d'analyse d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, les bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne sont pas analysées.|  
-|`ASInstance`|Spécifie le nom d’une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de.|Obligatoire une fois par élément `AnalysisServices`. Aucune valeur par défaut.|  
-|`Databases` de l'élément `Analysis Services`|Contient une liste de bases de données à analyser.|Facultatif une fois `AnalysisServices` par élément. Si cet élément n'est pas présent, toutes les bases de données de l'instance sont analysées.|  
-|`Database` de l'élément `AnalysisServices`|Spécifie le nom d'une base de données à analyser.|Obligatoire une ou plusieurs fois si l'élément `Databases` est présent. Si un élément `Database` contient la valeur "*", toutes les bases de données de l'instance sont analysées. Aucune valeur par défaut.|  
+|`ASInstance`|Spécifie le nom d’une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|Obligatoire une fois par élément `AnalysisServices`. Il n’y a pas de valeur par défaut.|  
+|`Databases` de l'élément `Analysis Services`|Contient une liste de bases de données à analyser.|Facultatif une fois par `AnalysisServices` élément. Si cet élément n'est pas présent, toutes les bases de données de l'instance sont analysées.|  
+|`Database` de l'élément `AnalysisServices`|Spécifie le nom d'une base de données à analyser.|Obligatoire une ou plusieurs fois si l'élément `Databases` est présent. Si un élément `Database` contient la valeur "*", toutes les bases de données de l'instance sont analysées. Il n’y a pas de valeur par défaut.|  
 |`ReportingServices`|Spécifie d'exécuter l'analyse sur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas analysé.|  
-|`RSInstance`|Spécifie le nom d’une instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]de.|Obligatoire une fois par élément `ReportingServices`. Aucune valeur par défaut.|  
+|`RSInstance`|Spécifie le nom d’une instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Obligatoire une fois par élément `ReportingServices`. Il n’y a pas de valeur par défaut.|  
 |`IntegrationServices`|Contient les paramètres d'analyse d'[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois par fichier de configuration. S'il n'est pas spécifié, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas analysé.|  
-|`PackagePath`|Spécifie le chemin d'accès d'un jeu de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois `IntegrationServices` par élément. Si cet élément n’est pas présent, l’analyse se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produit sur l’instance et aucun package stocké de manière externe n’est analysé. Aucune valeur par défaut.|  
+|`PackagePath`|Spécifie le chemin d'accès d'un jeu de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Facultatif une fois par `IntegrationServices` élément. Si cet élément n’est pas présent, l’analyse se produit sur l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance et aucun package stocké de manière externe n’est analysé. Il n’y a pas de valeur par défaut.|  
   
 ## <a name="examples"></a>Exemples  
   

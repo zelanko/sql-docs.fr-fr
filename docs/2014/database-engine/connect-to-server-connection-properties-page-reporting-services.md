@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c24027a73cc36ea0cae4915b93d9968adf3e70b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808660"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934640"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Se connecter au serveur (page Propriétés de connexion) Reporting Services
-  Utilisez cet onglet pour afficher ou spécifier des options lors de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] la connexion [!INCLUDE[ssRS](../includes/ssrs.md)] ou de l’inscription à des **serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssRS](../includes/ssrs.md)].  
+  Utilisez cet onglet pour afficher ou spécifier des options lors de la connexion [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou [!INCLUDE[ssRS](../includes/ssrs.md)] de l’inscription à des **serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## <a name="options"></a>Options  
  **Délai de connexion (en ms)**  

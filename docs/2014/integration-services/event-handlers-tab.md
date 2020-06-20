@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bd7e159a148b134d744481a76ac910af572c0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969409"
 ---
 # <a name="event-handlers-tab"></a>Onglet Gestionnaires d'événements
   Utilisez l’onglet **Gestionnaires d’événements** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer un flux de contrôle dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Un gestionnaire d'événements est exécuté en réponse à un événement déclenché par le package ou par une tâche ou un conteneur du package.  
@@ -32,7 +31,7 @@ ms.locfileid: "66059284"
  **Supprimer**  
  Sélectionnez un gestionnaire d’événements et supprimez-le du package en cliquant sur **Supprimer**.  
   
- **Cliquez ici pour créer un \<nom de gestionnaire d’événements> pour le \<nom de l’exécutable exécutable>**  
+ **Cliquez ici pour créer un \<event handler name> pour l’exécutable\<executable name>**  
  Cliquez pour créer le gestionnaire d'événements.  
   
  Pour créer le flux de contrôle, faites glisser les objets graphiques qui représentent les tâches et les conteneurs [!INCLUDE[ssIS](../includes/ssis-md.md)] de la **Boîte à outils** vers l’onglet **Gestionnaires d’événements** , puis connectez-les en utilisant des contraintes de priorité pour définir leur ordre d’exécution.  

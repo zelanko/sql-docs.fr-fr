@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bb4a0aaf5c1cb6f11683029f4e43856fc7f7e4a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918905"
 ---
 # <a name="expression-task"></a>Tâche d'expression
   La tâche d'expression crée et évalue les expressions qui définissent les valeurs des variables au moment de l'exécution, à l'aide du Générateur d'expressions. Lorsque vous modifiez la tâche, le [Expression Builder](../expressions/expression-builder.md) est lancé.  

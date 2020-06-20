@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 457f3ef946b5cfaf86a4a19774af63c5d7635882
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930970"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gestion des connexions et des travaux pour les bases de données d'un groupe de disponibilité (SQL Server)
   Vous devez maintenir régulièrement le même ensemble de connexions utilisateur et de travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur chaque base de données primaire d'un groupe de disponibilité AlwaysOn et les bases de données secondaires correspondantes. Les connexions et les travaux doivent être reproduits sur chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui héberge un réplica de disponibilité pour le groupe de disponibilité.  
@@ -43,7 +42,7 @@ ms.locfileid: "62774281"
   
 -   **Métadonnées supplémentaires**  
   
-     Les connexions et les travaux ne sont pas les seules informations qui doivent être recréées sur chaque instance de serveur qui héberge un réplica secondaire d'un groupe de disponibilité donné. Par exemple, vous devrez peut-être recréer les paramètres de configuration du serveur, les informations d'identification, les données chiffrées, les autorisations, les paramètres de réplication, les applications de Service Broker, les déclencheurs (au niveau du serveur), etc. Pour plus d’informations, consultez [gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+     Les connexions et les travaux ne sont pas les seules informations qui doivent être recréées sur chaque instance de serveur qui héberge un réplica secondaire d'un groupe de disponibilité donné. Par exemple, vous devrez peut-être recréer les paramètres de configuration du serveur, les informations d'identification, les données chiffrées, les autorisations, les paramètres de réplication, les applications de Service Broker, les déclencheurs (au niveau du serveur), etc. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Connexions des applications qui utilisent l’authentification SQL Server ou une connexion locale Windows  
  Si une application utilise l'authentification SQL Server ou une connexion locale Windows, des SID incompatibles peuvent empêcher la résolution de la connexion de l'application sur une instance distante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En cas de SID incompatibles, la connexion peut se solder par un utilisateur orphelin sur l'instance de serveur distante. Ce problème peut se produire lorsqu'une application se connecte à une base de données de copie des journaux de transaction ou une base de données mise en miroir suite à un basculement ou à une base de données d'abonné de réplication qui a été initialisée à partir d'une sauvegarde.  
@@ -57,7 +56,7 @@ ms.locfileid: "62774281"
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
--   [Créer une connexion](../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Créer un compte de connexion](../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Créer un utilisateur de base de données](../relational-databases/security/authentication-access/create-a-database-user.md).  
   

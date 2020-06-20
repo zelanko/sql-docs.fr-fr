@@ -41,16 +41,15 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970042"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
-  Utilisez l’Assistant **déployer une base de données SQL Server sur une machine virtuelle Azure** pour déployer une base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)] à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir d’une instance du vers dans une machine virtuelle Azure. L'Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d'une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
+  Utilisez l’Assistant **déployer une base de données SQL Server sur une machine virtuelle Azure** pour déployer une base de données à partir d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Azure. L'Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d'une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
   
  Vous ne pouvez pas utiliser l'Assistant pour les sauvegardes différentielles, car il ne remplace pas une base de données existante portant le même nom de base de données. Pour remplacer une base de données existante sur la machine virtuelle, vous devez d'abord supprimer la base de données existante ou modifier le nom de la base de données. S'il existe un conflit de noms entre le nom de la base de données d'une opération de déploiement en cours et d'une base de données existante sur la machine virtuelle, l'Assistant suggère un nom de base de données avec suffixe pour la base de données en cours pour vous permettre d'effectuer cette opération.  
   
@@ -148,19 +147,19 @@ ms.locfileid: "70175739"
   
         -   <OtherSettings  
   
-            -   TraceLevel="Debug" \<!-- Logging level -->  
+            -   TraceLevel = "débogage"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[server name]\\[volume]\\" \<!-- The last used path for backup. Utilisé comme valeur par défaut dans l'Assistant. -->  
+            -   BackupPath = " \\ \\ [nom serveur] \\ [volume] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   CleanupDisabled = false/ \<> !--Assistant ne supprimera pas les fichiers intermédiaires et les objets Azure (machine virtuelle, CS, sa). -->  
+            -   CleanupDisabled = false/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<! -- Dernières informations de profil de publication utilisées. -->  
+        -   <PublishProfile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- Certificat à utiliser dans l’Assistant. -->  
+            -   Certificate = "12A34B567890123ABCD4EF567A8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<!-- Abonnement à utiliser dans l’Assistant. -->  
+            -   Subscription = "1a2b34c5-67d8-90ef-AB12-xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name="My Subscription" \<!-- Nom de l’abonnement. -->  
+            -   Name = « mon abonnement »\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -196,11 +195,11 @@ ms.locfileid: "70175739"
 -   **Aide** : ouvre la rubrique d’aide MSDN de l’Assistant.  
   
 ##  <a name="source-settings"></a><a name="Source_settings"></a>Paramètres de la source  
- Utilisez cette page pour vous connecter à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de qui héberge la base de données que vous souhaitez déployer sur la machine virtuelle Azure. Vous allez également spécifier un emplacement temporaire pour les fichiers à enregistrer à partir de l’ordinateur local avant leur transfert vers Azure. Il peut s'agir d'un emplacement réseau partagé.  
+ Utilisez cette page pour vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données que vous souhaitez déployer sur la machine virtuelle Azure. Vous allez également spécifier un emplacement temporaire pour les fichiers à enregistrer à partir de l’ordinateur local avant leur transfert vers Azure. Il peut s'agir d'un emplacement réseau partagé.  
   
  **Options**  
   
--   Cliquez sur **se connecter...** , puis spécifiez les détails de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour l’instance de qui héberge la base de données à déployer.  
+-   Cliquez sur **se connecter...** , puis spécifiez les détails de connexion pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données à déployer.  
   
 -   Utilisez la liste déroulante **Sélectionner une base de données** pour spécifier la base de données à déployer.  
   

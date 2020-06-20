@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3088333fbfd4babd209df07f8880c838ce626d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755509"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934323"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Établir une session de mise en miroir de bases de données au moyen de l'authentification Windows (Transact-SQL)
     
@@ -44,7 +43,7 @@ ms.locfileid: "62755509"
     > [!NOTE]  
     >  Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de bases de données : Authentification Windows ou authentification basée sur les certificats. Pour plus d’informations, consultez [sécurité de transport pour la mise en miroir de bases de données et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
-     Sur chaque serveur partenaire, assurez-vous de la présence d'un point de terminaison pour la mise en miroir. Indépendamment du nombre de sessions de mise en miroir à prendre en charge, l'instance du serveur ne peut avoir qu'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement pour les partenaires dans les sessions de mise en miroir de bases de données, vous pouvez**=** attribuer le rôle de partenaire au point de terminaison (partenaire de rôle). Si vous comptez aussi utiliser ce serveur comme témoin dans d'autres sessions, attribuez au point de terminaison le rôle ALL.  
+     Sur chaque serveur partenaire, assurez-vous de la présence d'un point de terminaison pour la mise en miroir. Indépendamment du nombre de sessions de mise en miroir à prendre en charge, l'instance du serveur ne peut avoir qu'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement pour les partenaires dans les sessions de mise en miroir de bases de données, vous pouvez attribuer le rôle de partenaire au point de terminaison (partenaire de rôle **=** ). Si vous comptez aussi utiliser ce serveur comme témoin dans d'autres sessions, attribuez au point de terminaison le rôle ALL.  
   
      Pour exécuter une instruction SET PARTNER, le paramètre STATE des points de terminaison des deux partenaires doit avoir la valeur STARTED.  
   
@@ -69,9 +68,9 @@ ms.locfileid: "62755509"
   
      La syntaxe pour une adresse réseau de serveur est la suivante :  
   
-     TCP<strong>://</strong>\<*>d’adresse système * <strong>:</strong>\<*port>*  
+     TCP<strong>://</strong> \<*system-address> *<strong>:</strong> \<*port> *  
   
-     où \<*adresse-système>* est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et \<*port>* est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](specify-a-server-network-address-database-mirroring.md).  
+     où \<*system-address> * est une chaîne qui identifie sans ambiguïté le système informatique de destination, et \<*port> * est le numéro de port utilisé par le point de terminaison de mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](specify-a-server-network-address-database-mirroring.md).  
   
      Par exemple, sur l'instance de serveur miroir, l'instruction ALTER DATABASE suivante définit le partenaire comme instance de serveur principal d'origine. Le nom de la base de données est **AdventureWorks**, l’adresse système est DBSERVER1 (nom du système du partenaire) et le port utilisé par le point de terminaison de la mise en miroir de la base de données du partenaire est 7022 :  
   

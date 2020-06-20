@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f7ebe0c0c5d23210a5111e8b4daaa69f8c73bb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3b94bef3cf3549720321a0bcd47f7314ff1ff8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836386"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924927"
 ---
 # <a name="creating-a-package-programmatically"></a>Création d'un package par programme
   L'objet <xref:Microsoft.SqlServer.Dts.Runtime.Package> correspond au conteneur de niveau supérieur de tous les autres objets inclus dans une solution de projet [!INCLUDE[ssIS](../../includes/ssis-md.md)]. En tant que conteneur de niveau supérieur, le package est le premier objet créé, puis des objets suivants lui sont ajoutés, puis ils sont exécutés dans le contexte du package. Le package lui-même ne déplace pas et ne transforme pas de données. Il se repose sur les tâches qu'il contient pour effectuer le travail. Les tâches effectuent la plupart du travail d'un package et définissent ses fonctionnalités. Un package est créé et exécuté avec seulement trois lignes de code, mais différentes tâches et objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> sont ajoutés pour lui donner des fonctionnalités supplémentaires. Cette section décrit comment créer un package par programme. Elle ne fournit pas d'informations sur la manière de créer les tâches ou les objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Ceux-ci sont traités dans les sections ultérieures.  
@@ -63,13 +62,13 @@ Module Module1
 End Module  
 ```  
   
- Pour compiler et exécuter l'exemple, appuyez sur F5 dans Visual Studio. Pour générer le code à l’aide du compilateur C#, **csc.exe**, à l’invite de commandes de compilation, utilisez la commande et les références de fichiers suivantes, en remplaçant *\<nom_fichier>* par le nom du fichier .cs ou .vb et en lui attribuant une valeur *\<nom_fichier_sortie>* de votre choix.  
+ Pour compiler et exécuter l'exemple, appuyez sur F5 dans Visual Studio. Pour générer le code à l’aide du compilateur C#, **csc.exe**, à l’invite de commandes à compiler, utilisez la commande et les références de fichier suivantes, en remplaçant le *\<filename>* par le nom du fichier. cs ou. vb et en lui donnant un *\<outputfilename>* de votre choix.  
   
- **csc /target:library /out: \<nom_fichier_sortie>.dll \<nom_fichier>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **csc/target : library/out : \<outputfilename> . dll \<filename> . cs/R : Microsoft. SqlServer. managed DTS.dll»/r:System.dll**  
   
  Pour générer le code à l’aide du compilateur Visual Basic .NET, **vbc.exe**, à l’invite de commandes de compilation, utilisez la commande et les références de fichiers suivantes.  
   
- **vbc /target:library /out: \<nom_fichier_sortie>.dll \<nom_fichier>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **Vbc/target : bibliothèque/out : \<outputfilename> . dll \<filename> . vb/R : Microsoft. SqlServer. managed DTS.dll»/r:System.dll**  
   
  Vous pouvez également créer un package en chargeant un package existant enregistré sur le disque, dans le système de fichiers ou dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La différence est que l'objet <xref:Microsoft.SqlServer.Dts.Runtime.Application> est d'abord créé, puis l'objet de package est renseigné par l'une des méthodes surchargées de l'application : `LoadPackage` pour les fichiers plats, `LoadFromSQLServer` pour les packages enregistrés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> pour les packages enregistrés dans le système de fichiers. L'exemple suivant charge un package existant à partir du disque, puis consulte plusieurs propriétés sur le package.  
   

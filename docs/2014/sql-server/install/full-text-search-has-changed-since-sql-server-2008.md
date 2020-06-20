@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 217e8326b0c847b1348464d5c87021b6f8d7f6fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012430"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>La recherche en texte intégral a été modifiée dans SQL Server 2008
   Le Conseiller de mise à niveau a détecté que la fonctionnalité de recherche en texte intégral va être mise à niveau. De nombreux paramètres et options de recherche en texte intégral ont changé. Par conséquent, lorsque vous effectuez une mise à niveau vers la recherche en texte intégral [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pourriez avoir besoin de modifier quelques-uns de vos paramètres.  

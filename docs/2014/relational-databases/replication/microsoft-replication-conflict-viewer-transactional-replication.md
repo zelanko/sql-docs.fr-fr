@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60d6ba6ab84615e43e872c4e8d4238a263a0b767
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065840"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visionneuse des conflits de réplication de Microsoft (réplication transactionnelle)
   La Visionneuse des conflits de réplication vous permet d'examiner les conflits qui se sont produits lors de la synchronisation pour la réplication transactionnelle d'égal à égal et la réplication transactionnelle avec des abonnements de mise à jour en attente. Pour plus d’informations, consultez [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "62714866"
  **Publication**  
  Choisissez une publication qui comporte des tables faisant l'objet de conflits.  
   
- **Table de charge de travail**  
+ **Table**  
  Choisissez une table qui comporte des conflits.  
   
  **Définir le filtre**  
@@ -51,7 +50,7 @@ ms.locfileid: "62714866"
  **Sélectionner aucun**  
  Désélectionne tous les conflits de la grille.  
   
- **Remove**  
+ **Supprimer**  
  Supprime les conflits sélectionnés et leurs métadonnées associées des tables système de réplication.  
   
  **Afficher toutes les colonnes**  

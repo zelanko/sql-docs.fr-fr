@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3d95ce69743caaa6b587195ba107774d8cd8454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48bb1911e0606941229035e14df1da8a2720dfc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011532"
 ---
 # <a name="name-element-for-column-dta"></a>Name, élément pour les colonnes (Assistant Paramétrage de base de données)
   Spécifie le nom d'une colonne d'index dans une configuration spécifiée par l'utilisateur.  
@@ -39,7 +38,7 @@ ms.locfileid: "63297523"
 |--------------------|-----------------|  
 |**Type de données et longueur**|`string`, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Obligatoire une fois pour `Column` chaque élément.|  
+|**Occurrence**|Obligatoire une fois pour chaque `Column` élément.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

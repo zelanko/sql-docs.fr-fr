@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd8bf917bd293cd4aab3d5c8c7fe526a557fec8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065506"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
   Si les requêtes portent essentiellement sur un petit nombre de valeurs d'élément et d'attribut, vous pouvez promouvoir ces quantités dans les colonnes relationnelles. Cela peut s'avérer utile lorsque les requêtes sont émises sur une petite partie des données XML et que l'ensemble de l'instance XML est récupéré. Il n'est pas nécessaire de créer un index XML sur la colonne XML. En revanche, la colonne promue peut être indexée. Les requêtes doivent être écrites en vue de l'utilisation de la colonne promue afin que l'optimiseur de requête ne redirige plus les requêtes de la colonne XML vers la colonne promue.  

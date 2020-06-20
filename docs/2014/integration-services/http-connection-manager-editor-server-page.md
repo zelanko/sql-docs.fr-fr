@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058244"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968329"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Éditeur du gestionnaire de connexions HTTP (page Serveur)
   Utilisez l'onglet **Serveur** de la boîte de dialogue **Éditeur du gestionnaire de connexions HTTP** pour configurer le gestionnaire de connexions HTTP en spécifiant des propriétés telles que l'URL et les informations d'identification de sécurité. Une connexion HTTP permet à un package d'accéder à un serveur Web via HTTP pour l'envoi et la réception de fichiers. Une fois le gestionnaire de connexions HTTP configuré, vous pouvez également tester la connexion.  
@@ -44,7 +43,7 @@ ms.locfileid: "66058244"
  **Mot de passe**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
- **Domain**  
+ **Domaine**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
  **Utiliser le certificat client**  

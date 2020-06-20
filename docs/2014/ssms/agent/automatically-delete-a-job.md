@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42538ac6566b70105fd183da1cadd00f7fd0c13b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011786"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
-  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour supprimer automatiquement des travaux lorsqu’ils réussissent, échouent ou se [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] terminent à l’aide de ou SQL Server Management Objects.  
+  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour supprimer automatiquement des travaux lorsqu’ils réussissent, échouent ou se terminent à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou SQL Server Management Objects.  
   
  Les réponses à un travail garantissent que les administrateurs de base de données ont connaissance de l'achèvement des travaux et de leur fréquence d'exécution. Les réponses classiques à un travail peuvent être :  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d70e4f9330db23c9cce54f7c615163c4dcee4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960859"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Enregistrer un fichier de requête de raccourci (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], si vous accédez souvent au même jeu de données, enregistrez un fichier de requête de raccourci.  
@@ -29,7 +28,7 @@ ms.locfileid: "65482867"
   
 1.  Dans le groupe **Enregistrer et envoyer** , cliquez sur la flèche sous **Enregistrer la requête** et sélectionnez **Enregistrer en tant que requête**.  
   
-2.  Facultatif. Pour renommer la requête, cliquez sur la flèche sous **Enregistrer la requête** et cliquez sur **Gérer les requêtes**. Sélectionnez la requête et cliquez sur **Renommer**.  
+2.  facultatif. Pour renommer la requête, cliquez sur la flèche sous **Enregistrer la requête** et cliquez sur **Gérer les requêtes**. Sélectionnez la requête et cliquez sur **Renommer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5583137d4c159756246938a83bf8c8e1fad6cdea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156832"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050340"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
   Cette rubrique fournit des instructions pour appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données.  

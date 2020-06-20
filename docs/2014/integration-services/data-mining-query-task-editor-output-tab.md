@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca81c082f936913a5844a7920a561325e87ceb5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890467"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939130"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Sortie)
   Utilisez l'onglet **Sortie** de la boîte de dialogue **Éditeur de tâche de requête d'exploration de données** pour définir la destination de la requête de prédiction.  
@@ -40,7 +39,7 @@ ms.locfileid: "68890467"
  **Connection**  
  Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur **Nouveau** pour en créer un.  
   
- **Nouvelle**  
+ **Nouveau**  
  Crée un gestionnaire de connexions. Vous ne pouvez utiliser que les types de gestionnaires de connexions ADO.NET et OLE DB.  
   
  **Table de sortie**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c42809ab5057d4234b992ec81db0b6571c3e68c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938820"
 ---
 # <a name="measures-ssas-tabular"></a>Mesures (SSAS Tabulaire)
   Dans les modèles tabulaires, une mesure est un calcul créé à l'aide d'une formule DAX pour une utilisation dans un client de création de rapport. Les mesures sont évaluées en fonction des champs, des filtres, et des segments que les utilisateurs choisissent dans l'application cliente de création de rapports.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067012"
   
 -   [Tâches associées](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Avantages  
  Les mesures peuvent reposer sur des fonctions d'agrégation standard, comme AVERAGE, COUNT, ou SUM, ou vous pouvez définir votre propre formule à l'aide de DAX. Outre la formule, chaque mesure a des propriétés, définies par le type de données de mesure, tel que le nom, le détail de table, le format et les décimales.  
   
  Lorsque les mesures ont été définies dans un modèle, les utilisateurs peuvent ensuite les ajouter à un rapport ou un tableau croisé dynamique. En fonction des perspectives et des rôles, les mesures s'affichent dans la liste de champs avec la table associée, et elles sont disponibles pour tous les utilisateurs du modèle. Les mesures sont généralement créées dans des tables de faits ; toutefois, elles peuvent être indépendantes de la table à laquelle elles sont associées.  

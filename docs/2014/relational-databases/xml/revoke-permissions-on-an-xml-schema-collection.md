@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e28d79b94a964895afc85e4e2a964eece8aa398f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 247364d01575e9ffae5988df03c82ea198289507
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065439"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Révoquer des autorisations sur une collection de schémas XML
   Il est possible de retirer l'autorisation de créer une collection de schémas XML de l'une des façons suivantes :  

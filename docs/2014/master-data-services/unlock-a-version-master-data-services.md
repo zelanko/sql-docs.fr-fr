@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8541dec5d64de7e0e98e30bbc48c5a5c4eeea9fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1be29725369777df423e2fe18fb346a2d7297c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960555"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Déverrouiller une version (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], déverrouillez une version d'un modèle pour permettre que des modifications soient apportées aux membres du modèle et à leurs attributs.  

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dfa6926d86fce5006e458b3738a28a8b5f467d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bc8faa8fbd897a9bbb3a51c1042d48e84ff977
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267390"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058769"
 ---
 # <a name="sql-server-agent-error-log"></a>Journal des erreurs de SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crée un journal des erreurs qui, par défaut, enregistre les avertissements et les erreurs. Le journal contient :  
   
--   Des messages d’avertissement qui fournissent des informations sur des problèmes potentiels, tels que « Le travail \<*nom_travail*> a été supprimé en cours d’exécution ».  
+-   Messages d’avertissement qui fournissent des informations sur les problèmes potentiels, tels que « la tâche \<*job_name*> a été supprimée pendant son exécution ».  
   
 -   Des messages d'erreur dont la solution nécessite habituellement l'intervention d'un administrateur système, tels que « Impossible de démarrer la session de messagerie ». Les messages d’erreur peuvent être envoyés à un utilisateur ou un ordinateur spécifique via **net send**.  
   

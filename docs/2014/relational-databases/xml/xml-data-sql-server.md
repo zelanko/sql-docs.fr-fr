@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a08e0130e8ab45842d9cc0dc91fdba64a0b06c6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48ddec1de8492c86aecfd80ea960c4a01673c24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012868"
 ---
 # <a name="xml-data-sql-server"></a>Données XML (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue une puissante plateforme de développement d’applications d’une grande richesse pour la gestion des données semi-structurées. La prise en charge de XML est intégrée à tous les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sous-entend :  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0142cd53006609e9274972e4f5964132f5982c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915686"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967969"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
@@ -39,7 +38,7 @@ ms.locfileid: "62915686"
   
  SELECT @mycol;  
   
- L'une des causes les plus compliquées de cette erreur est l'utilisation d'une variable qui a été déclarée en dehors de l'instruction EXECUTE. Par exemple, la variable **@mycol** spécifiée dans l’instruction SELECT est locale à l’instruction SELECT ; par conséquent, il est en dehors de l’instruction EXECUTe.  
+ L'une des causes les plus compliquées de cette erreur est l'utilisation d'une variable qui a été déclarée en dehors de l'instruction EXECUTE. Par exemple, la variable **@mycol** spécifiée dans l’instruction SELECT est locale à l’instruction SELECT ; elle est donc en dehors de l’instruction EXECUTE.  
   
  USE AdventureWorks2012 ;  
   
