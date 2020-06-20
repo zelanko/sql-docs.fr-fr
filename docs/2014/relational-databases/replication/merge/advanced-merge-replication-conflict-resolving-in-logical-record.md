@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d617095f190c89131ec81326279c16ec1a927125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049449"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Détection et résolution des conflits dans les enregistrements logiques
   Cette rubrique couvre les différentes combinaisons des approches possibles de détection et de résolution des conflits lors de l'utilisation d'enregistrements logiques. Un conflit se produit dans une réplication de fusion quand un ou plusieurs nœuds modifient les mêmes données, ou quand la réplication de fusion rencontre certains types d'erreurs lors de la réplication de modifications, par exemple une violation de contrainte. Pour plus d'informations sur la détection et la résolution des conflits, consultez [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).
@@ -34,7 +33,7 @@ ms.locfileid: "78175849"
 
  Un conflit est détecté si deux utilisateurs modifient des valeurs pour l'enregistrement logique Customer2 dans les tables **Customers**, **Orders**ou **OrderItems** . Cet exemple concerne des modifications effectuées via une instruction UPDATE, mais le conflit peut aussi être détecté pour des modifications effectuées avec des instructions INSERT ou DELETE.
 
-## <a name="conflict-resolution"></a>Résolution de conflits
+## <a name="conflict-resolution"></a>Résolution des conflits
  Par défaut, la réplication de fusion utilise une logique basée sur les priorités pour résoudre les conflits. Si une modification conflictuelle est effectuée dans deux bases de données d'Abonné, la modification pour l'Abonné ayant la priorité d'abonnement la plus élevée l'emporte, ou bien, si les priorités sont identiques, la première modification à atteindre le serveur de publication l'emporte. Avec une détection au niveau des lignes ou au niveau des colonnes, la ligne gagnante tout entière remplace toujours la ligne perdante.
 
  La propriété d'article **logical_record_level_conflict_resolution** peut être définie à TRUE ou à FALSE. La valeur doit être définie seulement pour l'article parent du plus haut niveau et sera ignorée par les articles enfants. Si la valeur est TRUE, l'enregistrement logique gagnant tout entier remplace l'enregistrement logique perdant. Si la valeur est FALSE, les lignes gagnantes individuelles peuvent provenir de différents Abonnés ou serveurs de publication. Par exemple, l'Abonné A peut remporter un conflit sur une ligne de la table **Orders** , et l'Abonné B peut remporter un conflit sur une ligne associée de la table **OrderItems** . Le résultat est un enregistrement logique avec la ligne **Orders** provenant de l'Abonné A et la ligne **OrderItems** provenant de l'Abonné B.

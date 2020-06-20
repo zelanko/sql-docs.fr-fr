@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 134c37bf2e509c44bfe459638e24ad24f4128aa0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cbced1bb62dcacb896a7ff30fdbd6b5aa28f20e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039589"
 ---
 # <a name="autotranslation-of-character-data"></a>Traduction automatique de données caractères
   Les données de type caractère, telles que les variables de caractères ANSI déclarées avec SQL_C_CHAR ou les données stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide des types de données **char**, **varchar**ou **Text** , ne peuvent représenter qu’un nombre limité de caractères. Les données caractères stockées à l'aide d'un octet par caractère ne peuvent représenter que 256 caractères. Les valeurs stockées dans les variables SQL_C_CHAR sont interprétées à l'aide de la page de codes ANSI (ACP) de l'ordinateur client. Les valeurs stockées à l’aide des types de données **char**, **varchar**ou **Text** sur le serveur sont évaluées à l’aide de l’ACP du serveur.  

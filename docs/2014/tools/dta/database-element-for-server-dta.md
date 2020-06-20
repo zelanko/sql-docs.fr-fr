@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87df538858c9294cb8986da3df0d2b3814411326
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661831"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057760"
 ---
 # <a name="database-element-for-server-dta"></a>Élément Database pour les serveurs (Assistant Paramétrage de base de données)
   Spécifie la base de données que vous souhaitez paramétrer sur un serveur spécifique.  
@@ -52,7 +51,7 @@ ms.locfileid: "62661831"
  Cet élément porte le nom **DatabaseDetailsTypecomplexType** dans le schéma XML de l’Assistant Paramétrage du moteur de base de données. Ne confondez pas cet élément `Database` avec celui dont le parent racine est l'élément `Configuration`. Pour plus d’informations, consultez [Database, élément pour les configurations &#40;Assistant Paramétrage de base de données&#41;](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Exemple  
- Pour obtenir un exemple d’utilisation `Database` de l’élément, consultez [Server, élément &#40;DTA&#41;](server-element-dta.md).  
+ Pour obtenir un exemple d’utilisation de l' `Database` élément, consultez [Server, élément &#40;DTA&#41;](server-element-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef4bc1d64ac74fa8a1c51e706e5ce6c16abb8156
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012200"
 ---
 # <a name="other-replication-upgrade-issues"></a>Autres problèmes de mise à niveau de la réplication
   Cette rubrique traite de plusieurs problèmes de mise à niveau qui ne sont pas signalés par le Conseiller de mise à niveau.  
@@ -30,7 +29,7 @@ ms.locfileid: "66093634"
 ## <a name="versions-supported"></a>Versions prises en charge  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la mise à niveau des bases de données répliquées à partir des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas nécessaire d'arrêter l'activité sur les autres nœuds pendant qu'un nœud est mis à niveau. Prenez soin de respecter les règles relatives aux versions qui sont prises en charge dans une topologie.  
   
- Lorsque vous effectuez une réplication entre ou entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]différentes versions de, vous êtes généralement limité aux fonctionnalités de la version la plus ancienne qui est utilisée.  
+ Lorsque vous effectuez une réplication entre ou entre différentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous êtes généralement limité aux fonctionnalités de la version la plus ancienne qui est utilisée.  
   
 > [!NOTE]  
 >  Le format de stockage sur disque de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant le même dans les environnements 64 bits et 32 bits, une topologie de réplication peut combiner des instances de serveur qui s'exécutent dans un environnement 32 bits et des instances de serveur qui s'exécutent dans un environnement 64 bits.  

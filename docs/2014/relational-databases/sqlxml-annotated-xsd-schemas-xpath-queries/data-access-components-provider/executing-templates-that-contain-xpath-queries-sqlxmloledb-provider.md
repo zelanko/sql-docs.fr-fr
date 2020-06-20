@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 227c8a5b3222bdddab9632ec2e80f0bb4dd54250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015596"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Exécution de modèles contenant des requêtes XPath (fournisseur SQLXMLOLEDB)
   Cet exemple indique comment utiliser les propriétés suivantes spécifiques au fournisseur SQLXMLOLEDB :  
@@ -34,7 +33,7 @@ ms.locfileid: "82703247"
   
 -   Schéma de mappage  
   
- Dans cet exemple d’application ADO, un modèle XML qui se compose d’une requête XPath (racine) est spécifié par rapport au schéma de mappage XSD (MySchema. Xml) décrit dans [exécution de requêtes xpath &#40;&#41;fournisseur SQLXMLOLEDB ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ Dans cet exemple d’application ADO, un modèle XML qui se compose d’une requête XPath (racine) est spécifié par rapport au schéma de mappage XSD (MySchema.xml) décrit dans [exécution de requêtes xpath &#40;&#41;fournisseur SQLXMLOLEDB ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
  La propriété schéma de mappage fournit le schéma de mappage XSD sur lequel la requête XPath est exécutée. La propriété chemin d’accès de base fournit le chemin d’accès du fichier au schéma de mappage.  
   

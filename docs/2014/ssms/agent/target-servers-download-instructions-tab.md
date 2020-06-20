@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39acaf350a4d63fc8896b3a55ca88fe4ed91461f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067491"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Serveurs cibles (onglet Instructions de téléchargement)
   Utilisez cette page pour afficher et mettre à jour les instructions de téléchargement pour un ou plusieurs serveurs cibles.  
@@ -50,10 +49,10 @@ ms.locfileid: "63245342"
  **Supprimer**  
  Supprime l'instruction de téléchargement sélectionnée.  
   
- **Effacé**  
+ **Effacer**  
  Désactive l'état de l'instruction de téléchargement sélectionnée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration automatisée à l'échelle d'une entreprise](automated-administration-across-an-enterprise.md)  
   
   

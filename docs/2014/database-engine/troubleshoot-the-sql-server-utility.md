@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4837ae389dc1b02921ae12ca081b096e63336ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797779"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928040"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Résolution des problèmes liés à l’utilitaire SQL Server
-  Les problèmes à résoudre liés à l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure la résolution d'une opération ayant échoué d'inscription d'une instance de SQL Server avec un UCP, de l'échec de la collecte de données qui grise des icônes dans le mode Liste de l'instance gérée sur un UCP, l'atténuation des goulots d'étranglement des performances, ou la résolution des problèmes d'intégrité des ressources. Pour plus d’informations sur l’atténuation des problèmes d’intégrité des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ressources identifiés par un UCP, consultez [Troubleshoot SQL Server Resource Health &#40;utilitaire SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  Les problèmes à résoudre liés à l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure la résolution d'une opération ayant échoué d'inscription d'une instance de SQL Server avec un UCP, de l'échec de la collecte de données qui grise des icônes dans le mode Liste de l'instance gérée sur un UCP, l'atténuation des goulots d'étranglement des performances, ou la résolution des problèmes d'intégrité des ressources. Pour plus d’informations sur l’atténuation des problèmes d’intégrité des ressources identifiés par un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, consultez [Troubleshoot SQL Server Resource Health &#40;utilitaire SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Opération d'inscription d'une instance de SQL Server dans un utilitaire SQL Server ayant échoué  
  Si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à inscrire, et que vous spécifiez un compte proxy qui appartient à un domaine Active Directory différent du domaine où l'UCP se trouve, la validation d'instance réussit, mais l'opération d'inscription échoue avec le message d'erreur suivant :  
   
  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
   
- Informations supplémentaires : Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT « \<Nom_Domaine\Nom_Compte> », code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
+ Informations supplémentaires : impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT' \<DomainName\AccountName> ', code d’erreur 0X5. (Microsoft SQL Server, erreur : 15404)  
   
  Dans ce scénario d'exemple, vous pouvez rencontrer le problème suivant :  
   
@@ -35,11 +34,11 @@ ms.locfileid: "72797779"
   
 3.  L'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à inscrire dans l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est également un membre de « Domain_1 ».  
   
-4.  Pendant l’opération d’inscription, connectez-vous à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l’instance de pour procéder à l’inscription à l’aide de « sa ». Spécifiez un compte proxy de « Domain_2 ».  
+4.  Pendant l’opération d’inscription, connectez-vous à l’instance de pour procéder à l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inscription à l’aide de « sa ». Spécifiez un compte proxy de « Domain_2 ».  
   
 5.  La validation réussit mais l'inscription échoue.  
   
- La solution de contournement pour ce problème, à l’aide de l’exemple ci-dessus, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consiste à se connecter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’instance de pour s’inscrire à l’utilitaire à l’aide de « sa » et fournir un compte proxy à partir de « Domain_1 ».  
+ La solution de contournement pour ce problème, à l’aide de l’exemple ci-dessus, consiste à se connecter à l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour s’inscrire à l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitaire à l’aide de « sa » et fournir un compte proxy à partir de « Domain_1 ».  
   
 ## <a name="failed-wmi-validation"></a>Échec de validation WMI  
  Si WMI n'est pas configuré correctement sur une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les opérations Créer un UCP et Inscrire une instance gérée affichent un avertissement, mais l'opération n'est pas bloquée. En outre, si vous modifiez la configuration du compte de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afin que l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'ait pas l'autorisation d'accès aux classes WMI obligatoire, la collecte de données sur l'instance gérée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] affectée ne parvient pas à télécharger à l'UCP. Cela provoque des icônes grises dans l'UCP.  
@@ -50,7 +49,7 @@ ms.locfileid: "72797779"
   
  L'exécution de la commande s'est arrêtée, car la variable d'environnement « ErrorActionPreference » a la valeur Stop : accès refusé.  
   
- ERREUR : \<date-heure (mm/jj/aaaa hh : mm : SS) > : une exception a été interceptée lors de la collecte des propriétés de l’UC.  Une requête WMI a peut-être échoué.  AVERTISSEMENT.  
+ ERREUR : \<Date-time (MM/DD/YYYY HH:MM:SS)> : Exception interceptée lors de la collecte des propriétés de l’UC.  Une requête WMI a peut-être échoué.  AVERTISSEMENT.  
   
  Pour résoudre ce problème, vérifiez les paramètres de configuration suivants :  
   
@@ -114,9 +113,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  Dans SSMS **Explorateur d'objets**, développez le nœud **Sécurité** , puis le nœud **Informations d'identification** .  
   
-    2.  Cliquez avec le bouton droit sur **UtilityAgentProxyCredential_\<GUID>** et sélectionnez **Propriétés**.  
+    2.  Cliquez avec le bouton droit sur **UtilityAgentProxyCredential_ \<GUID> ** , puis sélectionnez **Propriétés**.  
   
-    3.  Dans la boîte de dialogue Propriétés des informations d’identification, mettez à jour les informations d’identification nécessaires pour le **GUID UtilityAgentProxyCredential_\<>** informations d’identification.  
+    3.  Dans la boîte de dialogue Propriétés des informations d’identification, mettez à jour les informations d’identification nécessaires pour les informations d’identification de **UtilityAgentProxyCredential_ \<GUID> ** .  
   
     4.  Cliquez sur **OK** pour confirmer la modification.  
   
@@ -124,7 +123,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Le service SQL Server Browser sur l'UCP doit être démarré et configuré pour démarrer automatiquement. Si votre organisation empêche d'utiliser le service SQL Server Browser, utilisez la procédure suivante pour autoriser une instance gérée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à se connecter à l'UCP :  
   
-    1.  Dans la barre des tâches Windows sur l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]gérée de, cliquez sur **Démarrer**, puis sur **exécuter...**.  
+    1.  Dans la barre des tâches Windows sur l’instance gérée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cliquez sur **Démarrer**, puis sur **exécuter...**.  
   
     2.  Tapez « cliconfg.exe » dans l'espace fourni, puis cliquez sur **OK**.  
   
@@ -158,7 +157,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Cliquez avec le bouton droit sur **Utilisateurs de l'Analyseur de performances** et sélectionnez **Ajouter au groupe**.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3.  Cliquez sur **Add**.  
   
     4.  Entrez le compte sous lequel le service Agent SQL Server s'exécute, puis cliquez sur **OK**.  
   

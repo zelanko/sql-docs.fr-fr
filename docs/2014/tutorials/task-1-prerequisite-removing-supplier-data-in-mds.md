@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0290f033be47bec61e9ccce8465892d8cc98608c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec3d7aa164cc75485ba7d7d7b5a6533e7d4f30cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064830"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tâche 1 (prérequis) : Suppression de données de fournisseur dans MDS
   Dans cette tâche, vous allez supprimer les données des fournisseurs stockées dans MDS. Vous avez chargé les données manuellement à l’aide du **complément MDS pour Excel** dans la leçon précédente. Le package SSIS que vous créez dans cette leçon charge automatiquement les données dans MDS pour vous. Par conséquent, avant de tester le package SSIS, vous devez supprimer les données des fournisseurs dans MDS, ainsi que la hiérarchie dérivée, les entités Fournisseur et État, et créer l'entité Fournisseur sans données.  
   
-1.  Lancez le **Data Manager maître** en accédant `http://localhost/MDS` à ou au site Web et à l’application que vous avez spécifiés lors de la configuration de MDS. Si vous avez conservé le **Data Manager maître** ouvert, cliquez sur **SQL Server Master Data Services 2012** en haut pour basculer vers la **page d’hébergement**.  
+1.  Lancez le **Data Manager maître** en accédant à `http://localhost/MDS` ou au site Web et à l’application que vous avez spécifiés lors de la configuration de MDS. Si vous avez conservé le **Data Manager maître** ouvert, cliquez sur **SQL Server Master Data Services 2012** en haut pour basculer vers la **page d’hébergement**.  
   
 2.  Cliquez sur **administration de système** dans la section **tâches administratives** .  
   
@@ -38,7 +37,7 @@ ms.locfileid: "81484629"
   
 9. Ne fermez pas le **Data Manager maître**.  
   
-10. Basculez vers la fenêtre Excel dans laquelle le fichier **Suppliers. xls nettoyé et mis en correspondance** est ouvert. Basculez vers l’onglet **Feuil1** en bas.  
+10. Basculez vers la fenêtre Excel pour laquelle le fichier **Suppliers.xlsnettoyé et mis en correspondance** est ouvert. Basculez vers l’onglet **Feuil1** en bas.  
   
 11. Sélectionnez uniquement la **première ligne avec des en-têtes**. Ne sélectionnez aucune autre ligne. Vous souhaitez créer les entités en fonction des colonnes Excel, mais vous ne souhaitez pas télécharger de données. Par conséquent, sélectionnez uniquement la première ligne avec les en-têtes.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "81484629"
   
     1.  Sélectionnez **créer une nouvelle connexion**, puis cliquez sur le bouton **nouveau** .  
   
-    2.  Dans la boîte de dialogue Ajouter une nouvelle connexion, tapez **serveur MDS local** pour **Description** et **\/http:/localhost/MDS** pour **adresse du serveur MDS**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
+    2.  Dans la boîte de dialogue Ajouter une nouvelle connexion, tapez **serveur MDS local** pour **Description** et **http : \/ /localhost/MDS** pour **adresse du serveur MDS**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-15. Dans la boîte de dialogue **gérer les connexions** , sélectionnez **serveur MDS local** (`http://localhost/MDS`), puis cliquez sur **tester** pour tester la connexion. Cliquez sur **OK** dans le message de confirmation.  
+15. Dans la boîte de dialogue **gérer les connexions** , sélectionnez **serveur MDS local** ( `http://localhost/MDS` ), puis cliquez sur **tester** pour tester la connexion. Cliquez sur **OK** dans le message de confirmation.  
   
 16. Cliquez sur **connexion** pour établir une connexion au serveur MDS.  
   

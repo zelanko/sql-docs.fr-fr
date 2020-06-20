@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e1f29d8e9edcccf093ac85cc134b5b92b9c2173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704855"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061667"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Boîte de dialogue Propriétés de la facette, page Général
   Utilisez cette boîte de dialogue pour consulter les propriétés d'une facette de la Gestion basée sur des stratégies. Chaque facette peut être appliquée à un ou plusieurs types de cibles, par exemple : serveur, base de données ou table. Utilisez cette page pour afficher les types de cibles liés à cette facette. Les propriétés d'une facette sont définies lors de la création de la facette et ne peuvent pas être modifiées par le biais de cette page.  

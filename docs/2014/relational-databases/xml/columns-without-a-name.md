@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 016d84eb5fee22e2bd8152d0a5eeb283304c456a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c295a0795e8c073ae55fcb61457782496a91526f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046940"
 ---
 # <a name="columns-without-a-name"></a>Colonnes sans nom
   Toute colonne sans nom est insérée. Par exemple, les colonnes calculées ou les requêtes scalaires imbriquées qui ne spécifient pas d'alias de colonne génèrent des colonnes sans nom. Si la colonne est de type `xml`, le contenu de cette instance de type de données est inséré. Sinon, le contenu de la colonne est inséré en tant que nœud de texte.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dda7c4c0e2ae187f96883a32cac2528eceb90c74
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 04b19644e8f9c1a80cdb5f661e42c20d9849244a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022681"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   Pour les instructions exécutées, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’a pas besoin d’interroger le serveur pour décrire les colonnes d’un jeu de résultats. Dans ce cas, `SQLDescribeCol` n’entraîne pas l’aller-retour du serveur. Comme [SQLColAttribute](sqlnumresultcols.md), l’appel `SQLDescribeCol` de sur des instructions préparées mais non exécutées génère un aller-retour sur le serveur.  
@@ -39,7 +38,7 @@ ms.locfileid: "82706296"
 |-|-------------------|---------------------|------------------------|  
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|date|SQL_TYPE_DATE|10|0|  
+|Date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  

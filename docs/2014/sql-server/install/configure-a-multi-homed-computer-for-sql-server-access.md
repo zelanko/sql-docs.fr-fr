@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036986"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
   Lorsqu'un serveur doit fournir une connexion à plusieurs réseaux ou sous-réseaux, le scénario classique consiste à utiliser un ordinateur multirésident. Bien souvent, cet ordinateur se trouve dans un réseau de périmètre (également appelé sous-réseau filtré). Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.  
@@ -55,7 +54,7 @@ ms.locfileid: "68211505"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Pour déterminer les adresses IP disponibles sur l'ordinateur  
   
-1.  Sur l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, cliquez sur **Démarrer**, **Run**puis sur exécuter `cmd` , tapez [!INCLUDE[clickOK](../../includes/clickok-md.md)], puis.  
+1.  Sur l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, cliquez sur **Démarrer**, puis sur **exécuter**, tapez, puis `cmd` [!INCLUDE[clickOK](../../includes/clickok-md.md)] .  
   
 2.  Dans la fenêtre d’invite de commandes, tapez `ipconfig,`, puis appuyez sur Entrée pour visualiser la liste des adresses IP disponibles sur cet ordinateur.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211505"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration**.  
   
-2.  Dans le volet de la console du **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration**, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration du réseau** et **Protocoles pour \<nom d’instance>** , puis double-cliquez sur **TCP/IP**.  
+2.  Dans ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, dans le volet de la console, développez ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration du réseau**, développez **protocoles pour \<instance name> **, puis double-cliquez sur **TCP/IP**.  
   
 3.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses IP apparaissent pour chaque adresse IP configurée sur l'ordinateur.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211505"
   
 1.  Sur l'ordinateur où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ouvrez une session en tant qu'administrateur.  
   
-2.  Cliquez sur **Démarrer**, sur **exécuter**, `wf.msc`tapez, puis cliquez sur **OK**.  
+2.  Cliquez sur **Démarrer**, sur **exécuter**, tapez `wf.msc` , puis cliquez sur **OK**.  
   
 3.  Dans la boîte de dialogue **Contrôle de compte d’utilisateur** , cliquez sur **Continuer** pour utiliser les informations d’identification d’administrateur et ouvrir le composant logiciel enfichable Pare-feu Windows avec fonctions avancées de sécurité.  
   

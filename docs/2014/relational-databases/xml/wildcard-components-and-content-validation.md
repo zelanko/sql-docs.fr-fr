@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9d36a446645b289f2c182e90782d6932cf20ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07cff70d32d7d39619ecf3ee4ce36e37f2dee924
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012875"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Composants génériques et validation de contenu
   Les composants génériques sont utilisés pour accroître la flexibilité en termes d'éléments pouvant apparaître dans un modèle de contenu. Ils sont pris en charge comme suit dans le langage XSD :  
   
--   Composants génériques éléments. Ils sont représentés par l’élément **\<xsd:any>** .  
+-   Composants génériques éléments. Celles-ci sont représentées par l' **\<xsd:any>** élément.  
   
--   Composants génériques attributs. Ils sont représentés par l’élément **\<xsd:anyAttribute>** .  
+-   Composants génériques attributs. Celles-ci sont représentées par l' **\<xsd:anyAttribute>** élément.  
   
- Ces deux éléments de caractère générique, **\<xsd:any>** et **\<xsd:anyAttribute>** , prennent en charge l’utilisation d’un attribut **processContents**. Grâce à lui, vous pouvez préciser une valeur indiquant comment les applications XML vont gérer la validation du contenu des documents associé à ces éléments de caractères génériques. Les valeurs possibles et leurs effets sont décrits ci-dessous :  
+ Les deux éléments de caractère générique, **\<xsd:any>** et **\<xsd:anyAttribute>** , prennent en charge l’utilisation d’un attribut **processContents** . Grâce à lui, vous pouvez préciser une valeur indiquant comment les applications XML vont gérer la validation du contenu des documents associé à ces éléments de caractères génériques. Les valeurs possibles et leurs effets sont décrits ci-dessous :  
   
 -   La valeur **strict** indique que le contenu est entièrement validé.  
   

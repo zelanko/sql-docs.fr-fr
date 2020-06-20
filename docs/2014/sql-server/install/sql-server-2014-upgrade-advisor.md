@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 041637f92ff64fc66f7525a7bcd50501acb31d86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065171"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>Conseiller de mise à niveau SQL Server 2014
   Le Conseiller de mise à niveau [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analyse la configuration des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installés, puis génère un rapport des problèmes à traiter pour assurer une mise à niveau réussie.  

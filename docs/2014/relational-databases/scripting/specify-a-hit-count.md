@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6485dbee31573fdbd328e41ba74b552df50fcee0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48198318ec2febe4e79a501ef27d1bb56905f1f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047544"
 ---
 # <a name="specify-a-hit-count"></a>Spécifier un nombre d'accès
   Un nombre d'accès à un point d'arrêt est un compteur incrémenté par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] chaque fois que le point d'arrêt est atteint. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  

@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058215"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
   Il existe deux ensembles de propriétés pour les colonnes : un jeu complet que vous pouvez consulter sous l’onglet **Propriétés de la colonne** dans le Concepteur de tables (disponible uniquement pour les bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et un sous-ensemble que vous pouvez consulter dans la fenêtre Propriétés à l’aide de l’Explorateur de serveurs.  
@@ -179,12 +178,12 @@ ms.locfileid: "62990203"
  Indique si cette colonne est répliquée dans un autre emplacement.  
   
  **Est RowGuid**  
- Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la colonne en tant que ROWGUID. Vous pouvez définir cette valeur sur **Oui** uniquement pour une colonne avec le type de `uniqueidentifier`données. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
+ Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la colonne en tant que ROWGUID. Vous pouvez définir cette valeur sur **Oui** uniquement pour une colonne avec le type de données `uniqueidentifier` . Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
  **Taille**  
  Affiche la taille en octets autorisée par le type de données de la colonne. Par exemple, un type de données `nchar` peut avoir une longueur égale à 10 (nombre de caractères), mais une taille égale à 20 pour tenir compte des jeux de caractères Unicode.  
   
 > [!NOTE]  
->  La longueur d'un type de données `varchar(max)` varie pour chaque ligne. sp_help retourne (-1) comme longueur de `varchar(max)` la colonne. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche -1 comme taille de colonne.  
+>  La longueur d'un type de données `varchar(max)` varie pour chaque ligne. sp_help retourne (-1) comme longueur de la `varchar(max)` colonne. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche -1 comme taille de colonne.  
   
   

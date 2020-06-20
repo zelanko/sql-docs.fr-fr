@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 302ac36150d21dfecca1e6c6edfbcf6fd86c42f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c87985702147fe064c64d060450aa7c9fcb6c3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068245"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetBoolValue (classe SqlServiceAdvancedProperty)
   Définit la valeur booléenne d'une propriété.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlServiceAdvancedProperty](../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) qui représente une propriété avancée.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -49,7 +48,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le type de valeur de la propriété doit être booléen pour permettre l'attribution d'une valeur booléenne à la propriété.  
   
 ## <a name="see-also"></a>Voir aussi  

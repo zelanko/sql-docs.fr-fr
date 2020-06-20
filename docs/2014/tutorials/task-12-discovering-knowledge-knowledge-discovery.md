@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064774"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tâche 12 : Découverte des connaissances
   Au cours de cette tâche, vous allez effectuer l’activité de **découverte des connaissances** sur les domaines **ID du fournisseur** et nom du **fournisseur** . Dans ce scénario, le processus de découverte des connaissances importe principalement des valeurs pour ces deux domaines.  
@@ -28,7 +27,7 @@ ms.locfileid: "65484684"
   
 2.  Sélectionnez **fichier Excel** pour **source de données**.  
   
-3.  Cliquez sur **Parcourir**, naviguez et sélectionnez **Suppliers. xls**, puis cliquez sur **ouvrir**.  
+3.  Cliquez sur **Parcourir**, naviguez et sélectionnez **Suppliers.xls**, puis cliquez sur **ouvrir**.  
   
 4.  Sélectionnez **fournisseurs pour la détection** de la **feuille de calcul**.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484684"
   
 6.  Cliquez sur **suivant** pour basculer vers la page de **découverte** .  
   
-7.  Dans la page **découverte** , cliquez sur **Démarrer** pour démarrer le processus de découverte. La détection est effectuée sur les colonnes **RéfFournisseur** et **nom du fournisseur** dans le fichier **Suppliers. xls** . Les domaines **ID du fournisseur** et nom du **fournisseur** doivent être remplis avec les connaissances tirées de la découverte.  
+7.  Dans la page **découverte** , cliquez sur **Démarrer** pour démarrer le processus de découverte. La détection est effectuée sur les colonnes **RéfFournisseur** et le **nom du fournisseur** dans le fichier **Suppliers.xls** . Les domaines **ID du fournisseur** et nom du **fournisseur** doivent être remplis avec les connaissances tirées de la découverte.  
   
      ![Page de découverte du processus de découverte](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "Page de découverte du processus de découverte")  
   

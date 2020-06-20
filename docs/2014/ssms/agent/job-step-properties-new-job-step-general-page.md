@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062246"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propriétés de l’étape du travail : Nouvelle étape du travail (page Général)
   Utilisez cette page pour afficher et modifier les propriétés d’une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étape de travail de l’agent ou pour définir une nouvelle étape de travail.  
@@ -67,7 +66,7 @@ ms.locfileid: "62510953"
  **JScript**  
  Définit JScript en tant que langage des étapes de travail.  
   
- **Autres**  
+ **Autre**  
  Tapez le nom du langage des étapes de travail écrites dans un autre langage de script.  
   
  **Ouvrir**  
@@ -216,7 +215,7 @@ ms.locfileid: "62510953"
  **Serveur**  
  Tapez le nom du serveur où est stocké le package [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Cette option n’est disponible que si **SQL Server** ou **Magasin de packages SSIS** est spécifié dans **Source du package**.  
   
- **Utiliser l’authentification Windows**  
+ **Utiliser l'authentification Windows**  
  Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Utiliser l’authentification SQL Server**  
@@ -240,7 +239,7 @@ ms.locfileid: "62510953"
  **Ajouter**  
  Ajoute un fichier de configuration pour le package.  
   
- **Remove**  
+ **Supprimer**  
  Supprime un fichier de configuration pour le package.  
   
  **Monter**  
@@ -258,7 +257,7 @@ ms.locfileid: "62510953"
  **Ajouter**  
  Ajoute un fichier de commandes.  
   
- **Remove**  
+ **Supprimer**  
  Supprime le fichier de commandes sélectionné.  
   
  **Monter**  
@@ -315,7 +314,7 @@ ms.locfileid: "62510953"
  **Chaîne de configuration**  
  Tapez la chaîne de configuration du module fournisseur d'informations.  
   
- **Remove**  
+ **Supprimer**  
  Supprime le module fournisseur d'informations.  
   
 ### <a name="set-values-tab"></a>Onglet Valeurs définies  
@@ -327,7 +326,7 @@ ms.locfileid: "62510953"
  **Valeur**  
  Permet de consulter ou de modifier la valeur de la propriété.  
   
- **Remove**  
+ **Supprimer**  
  Supprime la propriété.  
   
 ### <a name="verification-tab"></a>Onglet Vérification  
@@ -339,7 +338,7 @@ ms.locfileid: "62510953"
  **Vérifier la build du package**  
  Exécute uniquement les packages dotés d'un numéro de build spécifique. Lorsque cette option est sélectionnée, l'étape du travail échoue si le package n'a pas le numéro de build spécifié.  
   
- **Créer**  
+ **Générer**  
  Tapez le numéro de build du package.  
   
  **Vérifier l'ID de package**  
