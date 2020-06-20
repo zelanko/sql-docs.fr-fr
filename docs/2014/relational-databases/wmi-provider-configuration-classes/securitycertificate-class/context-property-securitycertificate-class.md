@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc183a6bde5dc56454804472ee2e74042ed415ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 637fdc12d5dd1819ae2064df659a68098545a525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067889"
 ---
 # <a name="context-property-securitycertificate-class"></a>Propriété Context (classe SecurityCertificate)
   Obtient le contexte du certificat de sécurité.  
@@ -37,13 +36,13 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SecurityCertificate](securitycertificate-class.md) qui représente un certificat de sécurité.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de tableau `sint32` qui spécifie le contexte du certificat de sécurité.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

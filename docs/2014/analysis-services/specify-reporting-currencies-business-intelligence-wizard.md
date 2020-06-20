@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f395000888cccb52356b4e89e1331e1c86ea7e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068208"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940330"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Spécifier les devises pour les rapports (Assistant Business Intelligence)
   Utilisez la page **Spécifier les devises pour les rapports** pour définir les devises des rapports de la fonctionnalité de conversion de devise qui couvre les types de conversion plusieurs-à-plusieurs ou un-à-plusieurs définis dans la page **Sélectionner le type de conversion**. (Une devise de rapport est une devise dans laquelle les valeurs des mesures sélectionnées dans **Sélectionnez les mesures** sont converties.) Les membres sélectionnés dans la dimension de devise définissent une dimension de devise de rapport pour la conversion de devise générée par l'Assistant Business Intelligence.  

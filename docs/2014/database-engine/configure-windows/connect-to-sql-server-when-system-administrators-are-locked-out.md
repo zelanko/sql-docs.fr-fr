@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 300e1b133691d91bf3955fbdd1fd6fbe24274177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935458"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Se connecter à SQL Server lorsque les administrateurs système n'y ont plus accès
   Cette rubrique explique comment avoir à nouveau accès à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en tant qu’administrateur système. Un administrateur système peut perdre l'accès à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'une des raisons suivantes :  
@@ -58,12 +57,12 @@ ms.locfileid: "62782382"
   
 4.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dans le volet gauche, sélectionnez **Services SQL Server**. Dans le volet droit, recherchez votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (L’instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut **(MSSQLSERVER)** après le nom de l’ordinateur. Les instances nommées sont affichées en majuscules et portent le même nom que dans la zone Serveurs inscrits.) Cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis cliquez sur **Propriétés**.  
   
-5.  Sous l' **onglet Paramètres de démarrage** , dans la zone **Spécifiez un paramètre de démarrage** , tapez `-m` , puis cliquez sur `Add`. (Il s'agit d'un trait d'union suivi d'un m minuscule)  
+5.  Sous l’onglet **paramètres de démarrage** , dans la zone **Spécifiez un paramètre de démarrage** , tapez, `-m` puis cliquez sur `Add` . (Il s'agit d'un trait d'union suivi d'un m minuscule)  
   
     > [!NOTE]  
     >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet **Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Veillez à ne pas modifier les paramètres existants. Tout en bas, ajoutez un nouveau paramètre `;-m`, puis cliquez sur `OK`. (Il s'agit d'un point-virgule, suivi d'un trait d'union et d'un m minuscule.)  
   
-6.  Cliquez `OK`sur, puis, après le message à redémarrer, cliquez avec le bouton droit sur le nom de votre serveur, puis cliquez sur **redémarrer**.  
+6.  Cliquez sur `OK` , puis, après le message à redémarrer, cliquez avec le bouton droit sur le nom de votre serveur, puis cliquez sur **redémarrer**.  
   
 7.  Après le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , votre serveur passe en mode mono-utilisateur. Vérifiez que l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas en cours d’exécution. S'il est démarré, il utilise votre unique connexion.  
   
@@ -74,16 +73,16 @@ ms.locfileid: "62782382"
   
      Dans certaines configurations, SSMS essaie d'établir plusieurs connexions. Les connexions multiples échouent car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en mode mono-utilisateur. Vous pouvez sélectionner l'une des opérations suivantes. Procédez de l'une des manières suivantes :  
   
-    1.  Connectez-vous avec l'Explorateur d'objets en utilisant l'authentification Windows (qui contient vos informations d'identification d'administrateur). Développez **Sécurité**, **Connexions**, puis double-cliquez sur votre propre connexion. Dans la page **rôles de serveur** , `sysadmin`sélectionnez, puis cliquez `OK`sur.  
+    1.  Connectez-vous avec l'Explorateur d'objets en utilisant l'authentification Windows (qui contient vos informations d'identification d'administrateur). Développez **Sécurité**, **Connexions**, puis double-cliquez sur votre propre connexion. Dans la page **rôles de serveur** , sélectionnez, puis `sysadmin` cliquez sur `OK` .  
   
-    2.  Au lieu de vous connecter avec l'Explorateur d'objets, connectez-vous avec une fenêtre de requête en utilisant l'authentification Windows (qui contient vos informations d'identification d'administrateur). (Vous pouvez vous connecter de cette manière uniquement si vous ne vous êtes pas connecté avec l’Explorateur d’objets.) Exécutez le code suivant pour ajouter une nouvelle connexion d’authentification Windows qui est membre du rôle serveur `sysadmin` fixe. L’exemple suivant ajoute un utilisateur de domaine nommé `CONTOSO\PatK`.  
+    2.  Au lieu de vous connecter avec l'Explorateur d'objets, connectez-vous avec une fenêtre de requête en utilisant l'authentification Windows (qui contient vos informations d'identification d'administrateur). (Vous pouvez vous connecter de cette manière uniquement si vous ne vous êtes pas connecté avec l’Explorateur d’objets.) Exécutez le code suivant pour ajouter une nouvelle connexion d’authentification Windows qui est membre du `sysadmin` rôle serveur fixe. L’exemple suivant ajoute un utilisateur de domaine nommé `CONTOSO\PatK`.  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  Si votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute en mode d'authentification mixte, connectez-vous avec une fenêtre de requête en utilisant l'authentification Windows (qui inclut vos informations d'identification d'administrateur). Exécutez le code suivant pour créer une nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’authentification qui est membre du rôle serveur `sysadmin` fixe.  
+    3.  Si votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute en mode d'authentification mixte, connectez-vous avec une fenêtre de requête en utilisant l'authentification Windows (qui inclut vos informations d'identification d'administrateur). Exécutez le code suivant pour créer une nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’authentification qui est membre du `sysadmin` rôle serveur fixe.  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -93,7 +92,7 @@ ms.locfileid: "62782382"
         > [!WARNING]  
         >  Remplacez ************ par un mot de passe fort.  
   
-    4.  Si votre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute en mode d’authentification mixte et que vous souhaitez réinitialiser le mot de `sa` passe du compte, connectez-vous avec une fenêtre de requête à l’aide de l’authentification Windows (qui comprend les informations d’identification de votre administrateur). Modifiez le mot de passe `sa` du compte avec la syntaxe suivante.  
+    4.  Si votre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute en mode d’authentification mixte et que vous souhaitez réinitialiser le mot de passe du `sa` compte, connectez-vous avec une fenêtre de requête à l’aide de l’authentification Windows (qui comprend les informations d’identification de votre administrateur). Modifiez le mot de passe du `sa` compte avec la syntaxe suivante.  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -106,10 +105,10 @@ ms.locfileid: "62782382"
   
 10. Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dans le volet gauche, sélectionnez **Services SQL Server**. Dans le volet droit, cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis cliquez sur **Propriétés**.  
   
-11. Sous l' **onglet Paramètres de démarrage** , dans la zone **paramètres existants** , `-m` sélectionnez, puis `Remove`cliquez sur.  
+11. Sous l’onglet **paramètres de démarrage** , dans la zone **paramètres existants** , sélectionnez, `-m` puis cliquez sur `Remove` .  
   
     > [!NOTE]  
-    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet **Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Supprimez `;-m` le que vous avez ajouté précédemment, puis `OK`cliquez sur.  
+    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet **Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Supprimez le que `;-m` vous avez ajouté précédemment, puis cliquez sur `OK` .  
   
 12. Cliquez avec le bouton droit sur le nom de votre serveur, puis cliquez sur **Redémarrer**.  
   

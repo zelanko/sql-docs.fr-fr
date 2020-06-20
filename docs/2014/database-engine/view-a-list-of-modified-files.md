@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927570"
 ---
 # <a name="view-a-list-of-modified-files"></a>Afficher une liste de fichiers modifiés
   Vous pouvez utiliser la fenêtre **archivages en attente** pour afficher à tout moment une liste des fichiers extraits dans la solution actuelle et pour archiver ces fichiers avec un seul clic de bouton.  
@@ -32,7 +31,7 @@ ms.locfileid: "62773426"
   
 2.  Pour archiver les fichiers sélectionnés, cliquez sur **Archiver**. Vous pouvez également ancrer la fenêtre **archivages en attente** sur le côté droit de l' [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environnement afin de pouvoir archiver les fichiers une fois que vous avez fini de travailler.  
   
-     **Archiver**  
+     **Date d'arrivée**  
      Archive la solution.  
   
      **Commentaires**  

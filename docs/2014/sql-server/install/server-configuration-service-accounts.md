@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036720"
 ---
 # <a name="server-configuration---service-accounts"></a>Configuration du serveur - Comptes de service
   Utilisez la page Configuration du serveur de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour attribuer des comptes de connexion aux services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les services configurés dans cette page dépendent des fonctionnalités que vous avez sélectionnées.  
   
-Les comptes de démarrage utilisés pour démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécuter peuvent être des comptes d’utilisateur de domaine, des comptes d’utilisateur local, des comptes de service administrés, des comptes virtuels ou des comptes système intégrés.  
+Les comptes de démarrage utilisés pour démarrer et exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être des comptes d’utilisateur de domaine, des comptes d’utilisateur local, des comptes de service administrés, des comptes virtuels ou des comptes système intégrés.  
   
 ## <a name="options"></a>Options  
  Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Vous pouvez également spécifier si les services démarrent automatiquement, sont démarrés manuellement ou sont désactivés. Le compte par défaut est recommandé pour la plupart des installations.  
@@ -31,7 +30,7 @@ Les comptes de démarrage utilisés pour démarrer [!INCLUDE[ssNoVersion](../../
   
  Si vous configurez des services afin d'utiliser des comptes de domaine, [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin de fournir des privilèges moindres pour chaque service, où les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disposent des autorisations minimales requises pour effectuer leurs tâches. Pour plus d'informations et les descriptions des types de comptes, consultez [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
- **Configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les comptes de service individuellement (recommandé)**  
+ **Configurer les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comptes de service individuellement (recommandé)**  
  Utilisez la grille pour attribuer à chaque service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un nom d'utilisateur et un mot de passe d'ouverture de session et définir le type de démarrage pour le service. Vous pouvez utiliser des comptes système intégrés, un compte local, un groupe local, un groupe de domaine ou des comptes d'utilisateurs de domaine pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Sélectionnez l'un des services suivants pour en personnaliser les paramètres.  

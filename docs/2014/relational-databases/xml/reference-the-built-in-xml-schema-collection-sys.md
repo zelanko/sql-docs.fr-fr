@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bd879db30b3f787f513c1d657ebf6509cf59b37d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 498407598f691649024a027c5a441cd8ca74754d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065496"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Référencer la collection de schémas XML intégrée (sys)
   Chaque base de données que vous créez a une collection de schémas XML **sys** prédéfinie dans le schéma relationnel **sys** . Elle réserve ces schémas prédéfinis, qui sont accessibles à toute autre collection de schémas XML créés par l'utilisateur. Les préfixes utilisés dans ces schémas prédéfinis ont une signification dans XQuery. Seul **xml** est un préfixe réservé.  

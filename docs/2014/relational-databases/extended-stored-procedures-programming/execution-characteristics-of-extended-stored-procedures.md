@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62c95f0cb6c8239fee86b27b231e3e1830fb5009
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512214"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050896"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Caractéristiques d'exécution des procédures stockées étendues
     
@@ -27,7 +26,7 @@ ms.locfileid: "62512214"
   
  L'exécution d'une procédure stockée étendue présente les caractéristiques suivantes :  
   
--   La fonction de procédure stockée étendue est exécutée dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]contexte de sécurité de.  
+-   La fonction de procédure stockée étendue est exécutée dans le contexte de sécurité de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   La fonction de procédure stockée étendue s'exécute dans l'espace de processus de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62512214"
   
 -  
   
- Une fois la DLL de procédure stockée étendue chargée, la DLL reste chargée dans l’espace d’adressage du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur jusqu’à ce qu’elle soit arrêtée ou l’administrateur décharge explicitement la dll à l’aide de DBCC *DLL_name* (Free).  
+ Une fois la DLL de procédure stockée étendue chargée, la DLL reste chargée dans l’espace d’adressage du serveur jusqu’à ce qu' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elle soit arrêtée ou l’administrateur décharge explicitement la dll à l’aide de DBCC *DLL_name* (Free).  
   
  La procédure stockée étendue peut être exécutée à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] comme procédure stockée à l'aide de l'instruction EXECUTE :  
   

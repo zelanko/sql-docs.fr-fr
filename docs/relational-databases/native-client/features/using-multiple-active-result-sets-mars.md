@@ -1,5 +1,6 @@
 ---
 title: Utilisation de MARS (Multiple Active Result Sets) | Microsoft Docs
+description: SQL Server prend en charge plusieurs jeux de résultats actifs. Les applications peuvent avoir plusieurs demandes en attente et un jeu de résultats par défaut actif par connexion.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf953bd5cb1835b2d2f6cc0e868a3687e53e852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b83a79a92680c6499a4f2270ad3707082b324938
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950467"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilisation de MARS (Multiple Active Result Sets)
 
@@ -50,7 +51,7 @@ ms.locfileid: "81303200"
 -   Dans MARS, l'emprunt d'identité à l'échelle de la session est interdit lorsque des traitements simultanés sont en cours d'exécution.  
 
 > [!NOTE]
-> Par défaut, la fonctionnalité MARS n’est pas activée par le pilote. Pour utiliser MARS lors de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à avec Native Client, vous devez spécifiquement activer mars dans une chaîne de connexion. Toutefois, certaines applications peuvent activer MARS par défaut, si l’application détecte que le pilote prend en charge MARS. Pour ces applications, vous pouvez désactiver MARS dans la chaîne de connexion, si nécessaire. Pour plus d'informations, consultez les sections relatives au fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et au pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, plus loin dans cette rubrique.
+> Par défaut, la fonctionnalité MARS n’est pas activée par le pilote. Pour utiliser MARS lors de la connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vous devez spécifiquement activer mars dans une chaîne de connexion. Toutefois, certaines applications peuvent activer MARS par défaut, si l’application détecte que le pilote prend en charge MARS. Pour ces applications, vous pouvez désactiver MARS dans la chaîne de connexion, si nécessaire. Pour plus d'informations, consultez les sections relatives au fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et au pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, plus loin dans cette rubrique.
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne limite pas le nombre d'instructions actives sur une connexion.  
   
@@ -120,7 +121,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  Pour plus d'informations sur les améliorations apportées au jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [Propriétés d'initialisation et d'autorisation](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>Exemple de fournisseur OLE DB de SQL Server Native Client  
- Dans cet exemple, un objet de source de données est créé [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du fournisseur de OLE DB natif et mars est activé à l’aide de la propriété DBPROPSET_SQLSERVERDBINIT définie avant la création de l’objet de session.  
+ Dans cet exemple, un objet de source de données est créé à l’aide du [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB natif et mars est activé à l’aide de la propriété DBPROPSET_SQLSERVERDBINIT définie avant la création de l’objet de session.  
   
 ```cpp
 #include <sqlncli.h>  

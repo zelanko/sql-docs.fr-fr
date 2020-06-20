@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d229d490a9f3a7bc6f613259ee0535218de47975
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970644"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Accès aux données à partir d'objets de base de données CLR
-  Une routine de common language runtime (CLR) peut accéder facilement aux données stockées dans l' [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] instance de dans laquelle elles s’exécutent, ainsi qu’aux données stockées dans des instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accédez aux données à partir d’un objet de base de données CLR à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’aide de la .NET Framework fournisseur de données pour les données du client géré et des applications de couche intermédiaire. C'est la raison pour laquelle vous pouvez tirer parti de vos connaissances d'ADO.NET et de `SqlClient` dans les applications clientes managées et de couche intermédiaire.  
+  Une routine de common language runtime (CLR) peut accéder facilement aux données stockées dans l’instance de [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] dans laquelle elles s’exécutent, ainsi qu’aux données stockées dans des instances distantes. Les données particulières auxquelles la routine peut accéder sont déterminées par le contexte utilisateur dans lequel le code s'exécute. Accédez aux données à partir d’un objet de base de données CLR à l’aide de la .NET Framework Fournisseur de données pour les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] données du client géré et des applications de couche intermédiaire. C'est la raison pour laquelle vous pouvez tirer parti de vos connaissances d'ADO.NET et de `SqlClient` dans les applications clientes managées et de couche intermédiaire.  
   
 > [!NOTE]  
 >  Les méthodes de type défini par l'utilisateur et les fonctions définies par l'utilisateur ne sont pas autorisées à effectuer un accès aux données par défaut. Vous devez définir la propriété `DataAccess` de `SqlMethodAttribute` ou `SqlFunctionAttribute` à `DataAccessKind.Read` pour permettre l'accès aux données en lecture seule à partir des méthodes de type défini par l'utilisateur ou des fonctions définies par l'utilisateur. Les opérations de modification des données ne sont pas autorisées à partir des types définis par l'utilisateur ou des fonctions définies par l'utilisateur ; par ailleurs, elles lèvent des exceptions au moment de l'exécution, à la moindre tentative.  

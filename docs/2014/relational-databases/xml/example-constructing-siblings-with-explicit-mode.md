@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1404b0ab91c4812b5b08576818bfa8e74dcb664c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 740e132845a738101a38248da41fc0b53d1acecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067872"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Exemple : construction de frères à l'aide du mode EXPLICIT
   Supposons que vous souhaitiez construire un document XML qui fournit des informations sur les commandes. Les éléments <`SalesPerson`> et <`OrderDetail`> sont frères. Chaque commande possède un élément <`OrderHeader`>, un élément <`SalesPerson`> ainsi qu'un ou plusieurs éléments <`OrderDetail`>.  

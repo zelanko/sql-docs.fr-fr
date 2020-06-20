@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf6fd1f328366333e5464cb226a8a8ab8e275395
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782277"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935301"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Activer l'option Verrouiller les pages en mémoire (Windows)
   Cette stratégie Windows détermine quels comptes peuvent utiliser un processus destiné à conserver les données en mémoire physique pour éviter leur pagination en mémoire virtuelle sur le disque.  
@@ -29,7 +28,7 @@ ms.locfileid: "62782277"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>Pour activer l'option Verrouiller les pages en mémoire  
   
-1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans la zone **ouvrir** , tapez `gpedit.msc`.  
+1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**. Dans la zone **ouvrir** , tapez `gpedit.msc` .  
   
 2.  Sur la console **Éditeur de stratégie de groupe locale** , développez **Configuration ordinateur**, puis **Paramètres Windows**.  
   

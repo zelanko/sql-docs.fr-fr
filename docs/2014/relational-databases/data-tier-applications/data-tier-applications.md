@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f611367f0b078fb02977c27ee1d61d648de87869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873100"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970299"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
   Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les tables, les vues et les objets d’instance, y compris les connexions, qui sont associés à une base de données utilisateur. Une application DAC est une unité autonome de déploiement de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux développeurs et aux administrateurs de base de données de la couche Données d'empaqueter les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un artefact portable appelé « package DAC », ou encore DACPAC.  
@@ -121,7 +120,7 @@ ms.locfileid: "62873100"
 |Explique comment utiliser un nouveau fichier de package DAC pour mettre à niveau une instance vers une nouvelle version de la DAC.|[Mettre à niveau une application de la couche données](upgrade-a-data-tier-application.md)|  
 |Explique comment supprimer une instance DAC. Vous pouvez également choisir de détacher ou de supprimer la base de données associée, ou de laisser la base de données intacte.|[Supprimer une application de la couche Données](delete-a-data-tier-application.md)|  
 |Explique comment afficher l'état des DAC actuellement déployées à l'aide de l'utilitaire SQL Server.|[Analyser les applications de la couche Données](data-tier-applications.md)|  
-|Explique comment créer un fichier .bacpac contenant une archive des données et des métadonnées dans une DAC.|[Exporter une application de la couche Données](export-a-data-tier-application.md)|  
+|Explique comment créer un fichier .bacpac contenant une archive des données et des métadonnées dans une DAC.|[Exporter une application de la couche données](export-a-data-tier-application.md)|  
 |Explique comment utiliser un fichier d'archive DAC (.bacpac) pour effectuer une restauration logique d'une DAC ou pour migrer la DAC vers une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Indique comment importer un fichier BACPAC pour créer une nouvelle base de données utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraire une DAC d’une base de données](extract-a-dac-from-a-database.md)|  
 |Explique comment promouvoir une base de données existante en tant qu'instance DAC. Une définition de DAC est créée et stockée dans les bases de données système.|[Inscrire une base de données en tant que DAC](register-a-database-as-a-dac.md)|  

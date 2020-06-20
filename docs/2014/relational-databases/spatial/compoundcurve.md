@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a899bbe9a17a64083592e1078e8cac93365f02b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015996"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Un `CompoundCurve` est une collection de zéro ou plusieurs instances continues `CircularString` ou `LineString`, de type geometry ou geography.
 
 > [!IMPORTANT]
->  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales de cette version, `CompoundCurve` y compris le sous-type, téléchargez le livre blanc [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).
+>  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales de cette version, y compris le `CompoundCurve` sous-type, téléchargez le livre blanc [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).
 
  Une instance `CompoundCurve` vide peut être instanciée, mais pour qu'un `CompoundCurve` soit valide, il doit respecter les critères suivants :
 
@@ -29,7 +28,7 @@ ms.locfileid: "78176679"
 
 2.  La séquence des instances `CircularString` ou `LineString` doit être continue.
 
- Si un `CompoundCurve` contient une séquence de plusieurs `CircularString` instances `LineString` et, le point de terminaison de fin pour chaque instance, à l’exception de la dernière instance, doit être le point de terminaison initial de l’instance suivante dans la séquence. Cela signifie que si le point de fin d'une instance précédente dans la séquence est (4 3 7 2), le point de départ de l'instance suivante dans la séquence doit être (4 3 7 2). Notez que les valeurs Z (élévation) et M (mesure) du point doivent également être identiques. Si les deux points présentent une différence, une `System.FormatException` est levée. Les points dans un `CircularString` n'ont pas besoin de valeur Z ou M. Si aucune valeur Z ou M n'est indiquée pour le point de fin de l'instance précédente, le point de départ de l'instance suivante ne peut pas inclure de valeur Z ou M. Si le point de fin de la séquence précédente est (4 3), le point de départ de la séquence suivante doit être (4 3), mais pas (4 3 7 2). Tous les points d'une instance `CompoundCurve` doivent soit ne pas avoir de valeur Z, soit avoir une valeur Z identique.
+ Si un `CompoundCurve` contient une séquence de plusieurs `CircularString` `LineString` instances et, le point de terminaison de fin pour chaque instance, à l’exception de la dernière instance, doit être le point de terminaison initial de l’instance suivante dans la séquence. Cela signifie que si le point de fin d'une instance précédente dans la séquence est (4 3 7 2), le point de départ de l'instance suivante dans la séquence doit être (4 3 7 2). Notez que les valeurs Z (élévation) et M (mesure) du point doivent également être identiques. Si les deux points présentent une différence, une `System.FormatException` est levée. Les points dans un `CircularString` n'ont pas besoin de valeur Z ou M. Si aucune valeur Z ou M n'est indiquée pour le point de fin de l'instance précédente, le point de départ de l'instance suivante ne peut pas inclure de valeur Z ou M. Si le point de fin de la séquence précédente est (4 3), le point de départ de la séquence suivante doit être (4 3), mais pas (4 3 7 2). Tous les points d'une instance `CompoundCurve` doivent soit ne pas avoir de valeur Z, soit avoir une valeur Z identique.
 
 ## <a name="compoundcurve-instances"></a>Instances CompoundCurve
  L'illustration suivante montre des types de `CompoundCurve` valides.
@@ -79,7 +78,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- `@g3` est valide parce que l'instance `CircularString` est valide. Pour plus d’informations sur la validité de `CircularString` l’instance, consultez [CircularString](circularstring.md).
+ `@g3` est valide parce que l'instance `CircularString` est valide. Pour plus d’informations sur la validité de l' `CircularString` instance, consultez [CircularString](circularstring.md).
 
  L'exemple suivant montre des instances `CompoundCurve` qui ne sont pas valides.
 
@@ -90,7 +89,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- `@g1` n’est pas valide car la deuxième instance n’est pas une instance LineString valide. `@g2` n'est pas valide car l'instance `LineString` n'est pas valide. `@g3` n'est pas valide car l'instance `CircularString` n'est pas valide. Pour plus d’informations sur `CircularString` les `LineString` instances et valides, consultez [CircularString](circularstring.md) et [LineString](linestring.md).
+ `@g1` n’est pas valide car la deuxième instance n’est pas une instance LineString valide. `@g2` n'est pas valide car l'instance `LineString` n'est pas valide. `@g3` n'est pas valide car l'instance `CircularString` n'est pas valide. Pour plus d’informations sur les `CircularString` instances et valides `LineString` , consultez [CircularString](circularstring.md) et [LineString](linestring.md).
 
 ## <a name="examples"></a>Exemples
 

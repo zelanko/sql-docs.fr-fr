@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c0b625ac90e968cd68911a6527b82da6a988f7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059294"
 ---
 # <a name="how-to-export-reports"></a>Procédure : Export Reports
   La visionneuse de rapports du Conseiller de mise à niveau vous permet d'exporter une version du rapport sous forme de fichier plat. Vous pouvez ainsi exploiter les informations dans une feuille de calcul ou un document de traitement de texte, ou les transmettre à d'autres personnes par courrier électronique.  

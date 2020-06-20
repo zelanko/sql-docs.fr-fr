@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c5769a59a8deebfa99a00229f1b1227e427e051a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: af4b3ca7731e7ca13e697f43e76ac3cc3cacb4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706571"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050403"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accès aux tables optimisées en mémoire à l’aide du Transact-SQL interprété
   À quelques exceptions près, vous accédez aux tables mémoire optimisées à l'aide d'une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'une opération DML (SELECT, INSERT, UPDATE ou DELETE), de lots ad hoc et de modules SQL, tels que des procédures stockées, des fonctions table, des déclencheurs et des vues.  
@@ -36,7 +35,7 @@ ms.locfileid: "82706571"
   
  Les constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes ne sont pas prises en charge dans les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétées qui accèdent aux données dans une table mémoire optimisée.  
   
-|Zone|Non pris en charge|  
+|Domaine|Non pris en charge|  
 |----------|-----------------|  
 |Accès aux tables|TRUNCATE TABLE<br /><br /> MERGE (table mémoire optimisée comme cible).<br /><br /> Curseurs DYNAMIC et KEYSET (dégradés automatiquement en STATIC).<br /><br /> Accédez aux modules CLR à l'aide de la connexion contextuelle.<br /><br /> Référencement d'une table mémoire optimisée à partir d'une vue indexée.|  
 |Bases de données croisées|Requêtes de bases de données croisées<br /><br /> Transactions de bases de données croisées<br /><br /> Serveurs liés|  
@@ -60,6 +59,6 @@ ms.locfileid: "82706571"
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de Transact-SQL pour l’OLTP en mémoire](transact-sql-support-for-in-memory-oltp.md)   
- [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

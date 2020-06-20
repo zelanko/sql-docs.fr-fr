@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c86c8e8678fc821dc3796a511349c1c3498bdb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068014"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>Interrogation d'une table hiérarchique à l'aide de méthodes hiérarchiques
   Maintenant que la table HumanResources.EmployeeOrg est entièrement remplie, cette tâche vous indiquera comment interroger la hiérarchie à l'aide de certaines des méthodes hiérarchiques.  

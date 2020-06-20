@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bdaaeeddf8f35792c536624abfe6ff11b2dbd2e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68187298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011709"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>Lecture des données dans une table (Didacticiel)
   Utilisez l'instruction SELECT pour lire les données dans une table. L'instruction SELECT est une des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] les plus importantes et dont la syntaxe comporte beaucoup de variations. Pour ce didacticiel, vous allez travailler avec cinq versions simples.  
@@ -80,13 +79,13 @@ ms.locfileid: "68187298"
   
 |||  
 |-|-|  
-|[Fonctions de chaîne &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[Fonctions et types de données de date et d’heure &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[Fonctions de chaîne &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
 |[Fonctions mathématiques &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Fonctions texte et image &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Résumé : Création des objets de base de données](lesson-1-5-summary-creating-database-objects.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8a2006947cf4e4bffee0365ffbbf0b3b1c76bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069071"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940730"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilitaire de configuration du serveur (Compléments d'exploration de données pour Excel)
   Lorsque vous installez les compléments d’exploration de données pour Excel, un utilitaire de configuration de serveur est également installé et s’exécute la première fois que vous ouvrez les compléments. Cette rubrique explique comment utiliser l’utilitaire pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et configurer une base de données pour travailler avec des modèles d’exploration de données.  
@@ -86,7 +85,7 @@ ms.locfileid: "66069071"
  **Ajouter**  
  Cliquez pour ouvrir une boîte de dialogue et ajouter des utilisateurs ou des groupes.  
   
- **Remove**  
+ **Supprimer**  
  Cliquez pour supprimer l'utilisateur ou le groupe de la liste des utilisateurs dotés d'autorisations d'administration.  
   
   
