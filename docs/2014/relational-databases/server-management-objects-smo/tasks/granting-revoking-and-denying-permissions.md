@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cdc0c2873071d2bed6b1ff5893c88fe5baf16cc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037512"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Octroi, révocation et refus d'autorisations
   L'objet <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> est utilisé pour attribuer un jeu d'autorisations ou une autorisation de serveur individuelle à l'objet <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Pour les autorisations de niveau serveur, le bénéficiaire fait référence à une ouverture de session. Les ouvertures de session authentifiées par Windows sont répertoriées comme noms d'utilisateur Windows. Lorsque cet exemple de code est exécuté, il révoque l'autorisation du bénéficiaire et vérifie qu'il a été supprimé avec la méthode <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  

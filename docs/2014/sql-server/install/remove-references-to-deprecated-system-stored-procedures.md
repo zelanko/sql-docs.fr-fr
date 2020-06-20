@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65e7da666beaf84050dd8d60caf4cac5bfc013c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036611"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Supprimer les références aux procédures stockées système déconseillées
   Le Conseiller de mise à niveau a détecté des instructions faisant référence à des procédures stockées système non documentées et à des procédures stockées étendues qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les instructions faisant référence à ces objets échoueront. N'utilisez pas les objets système et les API non documentés car la fonctionnalité peut être modifiée ou supprimée sans préavis dans une version ultérieure.  
