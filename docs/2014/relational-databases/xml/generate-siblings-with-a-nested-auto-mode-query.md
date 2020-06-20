@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 30d1f6540a8be6cc45af4d396daf10ca0d1a7d88
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 20362942bdd0f7e7537433b664e5e63461ded499
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048761"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Générer des frères à l'aide d'une requête imbriquée en mode AUTO
   L'exemple suivant indique comment générer des frères à l'aide d'une requête imbriquée en mode AUTO. La seule autre façon de générer ce type de document XML consiste à utiliser le mode EXPLICIT. Toutefois, cette méthode peut s'avérer lourde.  

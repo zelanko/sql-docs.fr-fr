@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edb36bbf0f1a637551a7316748f58f9ed1c7f912
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047732"
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
   RMO (Replication Management Objects) est un assembly de code managé qui encapsule les fonctionnalités de réplication pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO est implémenté par l'espace de noms <xref:Microsoft.SqlServer.Replication>.  

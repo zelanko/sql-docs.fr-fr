@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a9ba0dc47b64c537a6d218dc55fdee1c2f0cac83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254c0ba5b0195e54513258ed28b391015bb4beb9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808870"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934820"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options (option de configuration de serveur)
   Utilisez l’option **show advanced options** pour afficher les options avancées de la procédure stockée système **sp_configure** . Si vous affectez la valeur 1 à l’option **show advanced options** , vous pouvez dresser la liste des options avancées à l’aide de **sp_configure**. La valeur par défaut est 0.  

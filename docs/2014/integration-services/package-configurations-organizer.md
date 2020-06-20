@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964899"
 ---
 # <a name="package-configurations-organizer"></a>Bibliothèque des configurations du package
   Utilisez la boîte de dialogue **Bibliothèque des configurations du package** pour activer les configurations du package, afficher une liste des configurations du package actuel et spécifier l'ordre de chargement de préférence des configurations.  
@@ -59,7 +58,7 @@ ms.locfileid: "66056964"
  **Modifier**  
  Modifiez une configuration existante en réexécutant l'Assistant Configuration de package.  
   
- **Remove**  
+ **Supprimer**  
  Sélectionnez une configuration, puis cliquez sur **Supprimer**.  
   
  **Flèches**  

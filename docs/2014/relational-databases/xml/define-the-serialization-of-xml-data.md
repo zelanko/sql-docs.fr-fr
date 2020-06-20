@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eec4a1b93be27ca49122e576107f2856dda9f7ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df87dddd9fd4cf067125314c9d798eaa42523576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046761"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Définir la sérialisation des données XML
   Lors de la conversion explicite ou implicite du type de données xml en données SQL de type chaîne ou binaire, le contenu des données de type xml sera sérialisé conformément aux règles présentées dans cette rubrique.  
@@ -75,7 +74,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Codage d'entité des caractères XML au cours de la sérialisation  
  Chaque structure XML sérialisée doit pouvoir subir une nouvelle analyse. C’est pourquoi certains caractères doivent être sérialisés à l’aide du codage d’entité de façon à autoriser les accès répétés aux caractères, tout au long de la phase de normalisation de l’analyseur XML. Il s'avère aussi nécessaire de spécifier le codage d'entité de certains caractères afin d'assurer la bonne formation du document et son analyse. Voici les règles de codage d'entité qui s'appliquent au cours de la sérialisation :  
   
--   Les caractères &, \< et > sont toujours codés sous la forme &amp;, &lt; et &gt;, respectivement, s’ils se trouvent dans la valeur d’un attribut ou dans le contenu d’un élément.  
+-   Les caractères &, \<, and > sont toujours codé à &amp; , &lt; et, &gt; respectivement, s’ils se produisent dans une valeur d’attribut ou un contenu d’élément.  
   
 -   Étant donné que SQL Server utilise les guillemets (U+0022) pour délimiter les valeurs des attributs, le guillemet des valeurs de l’attribut est codé par &quot;.  
   

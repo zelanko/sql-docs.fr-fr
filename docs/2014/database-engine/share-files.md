@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79909fcdb09e349798edfe285475f8a898c3bf04
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843555"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929020"
 ---
 # <a name="share-files"></a>Partager des fichiers
   Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour partager des éléments avec des projets du contrôle de code source. Lorsque vous partagez un élément, toute modification apportée à cet élément est réfléchie sur chaque projet avec lequel l'élément est partagé.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6489fcee1a8faa3f1205c8418e329182c41e376c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: def05f478c16dcbcdc91771925a11b0b91da2e9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020538"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>Création de signets pour des lignes dans ODBC
   Un signet est une valeur utilisée pour identifier une ligne de données. La signification de la valeur du signet est connue uniquement du pilote ou de la source de données. Par exemple, il peut être aussi simple qu'un numéro de ligne ou aussi complexe qu'une adresse disque. Dans ODBC, l'application demande un signet pour une ligne particulière, le stocke, puis le passe au curseur à retourner à la ligne.  

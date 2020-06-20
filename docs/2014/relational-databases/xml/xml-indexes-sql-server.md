@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046357"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
   Des index XML peuvent être créés sur des colonnes de type `xml`. L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   Si votre charge de travail récupère plusieurs valeurs d'instances XML individuelles en utilisant des expressions de chemin, le clustering des chemins pour chaque instance XML dans l'index PROPERTY peut s'avérer fort utile. Ce scénario se produit généralement avec un sac de propriétés où les propriétés d'un objet sont récupérées et la valeur de sa clé primaire est connue.  
   
--   Si votre charge de travail implique le lancement de requêtes sur des valeurs d'instances XML pour lesquelles vous ne connaissez pas les noms d'élément ou d'attribut, vous aurez peut-être intérêt à créer l'index VALUE. C’est généralement ce qui se produit en cas de recherches d’axes descendants telles que //author[last-name="Howard"], où les éléments \<author> peuvent se trouver à tout niveau de la hiérarchie. Cela se rencontre aussi dans les requêtes basées sur des caractères génériques telles que /book [@* = "novel"], où la requête recherche les éléments \<book> ayant des attributs de valeur « novel ».  
+-   Si votre charge de travail implique le lancement de requêtes sur des valeurs d'instances XML pour lesquelles vous ne connaissez pas les noms d'élément ou d'attribut, vous aurez peut-être intérêt à créer l'index VALUE. Cela se produit généralement avec les recherches d’axes descendants, telles que//author [Last-Name = "Howard"], où \<author> les éléments peuvent se produire à n’importe quel niveau de la hiérarchie. Elle se produit également dans les requêtes de caractères génériques, telles que/Book [@ * = "nouveau"], où la requête recherche les \<book> éléments dont l’attribut a la valeur "nouveau".  
   
 ### <a name="path-secondary-xml-index"></a>les index XML secondaires de type PATH (s'appuyant sur le chemin d'accès) ;  
  Si vos requêtes précisent habituellement les expressions de chemin d'accès sur les colonnes de type `xml`, un index secondaire de type PATH peut s'avérer à même d'accélérer la recherche. Comme nous l’avons vu précédemment, l’index primaire est des plus utiles pour les requêtes indiquant la méthode **exist()** dans leur clause WHERE. Si vous ajoutez à présent un index secondaire de type PATH, il se peut que vous amélioriez encore la rapidité de la recherche lancée par de telles requêtes.  

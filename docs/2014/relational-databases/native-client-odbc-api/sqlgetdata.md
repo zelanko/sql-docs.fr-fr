@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d8633a66b9c6d1896f95275380d73ab69cb873d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022255"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData** est utilisé pour récupérer les données du jeu de résultats sans les valeurs de colonne de liaison. **SQLGetData** peut être appelé successivement sur la même colonne pour récupérer de grandes quantités de données à partir d’une colonne avec un type de données **Text**, **ntext**ou **image** .  

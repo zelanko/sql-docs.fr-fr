@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eb26c3e273832aead4aa0421304df17dc5b8ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970439"
 ---
 # <a name="management-data-warehouse"></a>entrepôt de données de gestion
   L'entrepôt de données de gestion est une base de données relationnelle qui contient les données collectées à partir d'un serveur faisant office de cible de collecte de données. Ces données permettent de générer les rapports pour les jeux d'éléments de collecte de données système ainsi que de créer des rapports personnalisés.  
@@ -109,7 +108,7 @@ ms.locfileid: "62918337"
   
  Vous pouvez obtenir des informations détaillées sur le type et le contenu des données pour les colonnes de table de base de données en lisant la documentation de la procédure stockée du collecteur de données approprié pour chacune des tables.  
   
-### <a name="best-practices"></a>Meilleures pratiques  
+### <a name="best-practices"></a>Bonnes pratiques  
  Lors de l'utilisation de l'entrepôt de données de gestion, nous vous recommandons d'appliquer les méthodes conseillées suivantes :  
   
 -   Ne modifiez pas les métadonnées des tables de l'entrepôt de données de gestion sauf si vous ajoutez un nouveau type de collecteur.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966089"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Étape 1 : Génération de l’utilitaire de déploiement
   Au cours de cette tâche, vous allez configurer et générer un utilitaire de déploiement pour le projet Didacticiel de déploiement.  
@@ -34,7 +33,7 @@ ms.locfileid: "62767581"
   
 4.  Dans la boîte de dialogue **Pages de propriétés du didacticiel de déploiement** , développez Propriétés de configuration et cliquez sur Utilitaire de déploiement.  
   
-5.  Dans le volet droit de la boîte de dialogue **pages de propriétés du didacticiel** de `AllowConfigurationChanges` déploiement, vérifiez `true`que a `CreateDeploymentUtility` la `true`valeur, affectez à la valeur, et `DeploymentOutputPath`Mettez éventuellement à jour la valeur par défaut.  
+5.  Dans le volet droit de la boîte de dialogue **pages de propriétés du didacticiel de déploiement** , vérifiez que a la valeur `AllowConfigurationChanges` `true` , affectez `CreateDeploymentUtility` à `true` la valeur, et mettez éventuellement à jour la valeur par défaut `DeploymentOutputPath` .  
   
 6.  Cliquez sur **OK**.  
   

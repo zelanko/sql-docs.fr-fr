@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0770a17ce4c50c9c0e3b8728db85c0f9e80b555b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049116"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Définir et modifier un filtre de jointure entre des articles de fusion
   Cette rubrique décrit comment définir et modifier un filtre de jointure entre des articles de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La réplication de fusion prend en charge les filtres de jointure, qui sont en général utilisés conjointement aux filtres paramétrables pour étendre le partitionnement de table à d'autres articles de table connexes.  
@@ -52,11 +51,11 @@ ms.locfileid: "68199554"
 -   Les filtres de jointure peuvent être créés manuellement pour un ensemble de tables, ou bien la réplication peut générer les filtres automatiquement sur la base des relations entre les clés étrangères et les clés primaires définies sur les tables. Pour plus d’informations sur la génération automatique d’un ensemble de filtres de jointure, consultez [Générer automatiquement un ensemble de filtres de jointure entre des articles de fusion &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Définissez, modifiez et supprimez des filtres de jointure dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
+ Définissez, modifiez et supprimez les filtres de jointure sur la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue Propriétés de la **publication- \<Publication> ** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>Pour définir un filtre de jointure  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre de lignes existant ou un filtre de jointure dans le volet **Tables filtrées**.  
+1.  Sur la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page Filtrer les **lignes** de la page Propriétés de la **publication- \<Publication> **, sélectionnez un filtre de lignes ou un filtre de jointure existant dans le volet **Tables filtrées** .  
   
 2.  Cliquez sur **Ajouter**, puis sur **Ajouter une jointure pour étendre le filtre sélectionné**.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "68199554"
   
     -   Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure.  
   
-         Chaque colonne de la grille contient une zone de liste déroulante, ce qui vous permet de sélectionner deux colonnes et**=** un **<>** opérateur **<=**( **\<**, **>=**, **>**,,, et **Like**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure concerne plus d'une paire de colonnes, sélectionnez une conjonction (AND ou OR) dans la colonne **Conjonction** , et entrez deux autres colonnes et un opérateur.  
+         Chaque colonne de la grille contient une zone de liste déroulante, ce qui vous permet de sélectionner deux colonnes et un opérateur ( **=** , **<>** , **<=** , **\<**, **>=** , **>** et **comme**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure concerne plus d'une paire de colonnes, sélectionnez une conjonction (AND ou OR) dans la colonne **Conjonction** , et entrez deux autres colonnes et un opérateur.  
   
     -   Si vous créez l'instruction manuellement, écrivez l'instruction de jointure dans la zone de texte **Instruction de jointure** . Utilisez la zone de liste **Colonnes de table filtrée** et la zone de liste **Colonnes de table jointe** pour faire glisser et déposer des colonnes dans la zone de texte **Instruction de jointure** .  
   
@@ -83,15 +82,15 @@ ms.locfileid: "68199554"
         > [!CAUTION]  
         >  La sélection de cette option indique que la relation entre les tables enfant et parent dans un filtre de jointure correspond à une relation Un à un ou Un à plusieurs. Sélectionnez cette option seulement si vous avez une contrainte sur la colonne de jointure dans la table enfant qui garantit l'unicité. Si vous ne définissez pas correctement l'option, des erreurs de non-convergence de données peuvent se produire.  
   
-    -   Par défaut, la réplication de fusion traite les modifications ligne par ligne lors de la synchronisation. Pour que les modifications apportées aux lignes de la table filtrée et de la table jointe soient traitées comme une unité[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , sélectionnez **enregistrement logique** (et versions ultérieures uniquement). Cette option est disponible uniquement si les conditions d'article et de publication d'utilisation d'enregistrements logiques sont satisfaites. Pour plus d’informations, consultez la section « Considérations relatives à l’utilisation d’enregistrements logiques » dans [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Par défaut, la réplication de fusion traite les modifications ligne par ligne lors de la synchronisation. Pour que les modifications apportées aux lignes de la table filtrée et de la table jointe soient traitées comme une unité, sélectionnez **enregistrement logique** ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures uniquement). Cette option est disponible uniquement si les conditions d'article et de publication d'utilisation d'enregistrements logiques sont satisfaites. Pour plus d’informations, consultez la section « Considérations relatives à l’utilisation d’enregistrements logiques » dans [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../merge/group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+6.  Si vous êtes dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 #### <a name="to-modify-a-join-filter"></a>Pour modifier un filtre de jointure  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
+1.  Sur la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page Filtrer les **lignes** des propriétés de la **publication- \<Publication> **, sélectionnez un filtre dans le volet **Tables filtrées** , puis cliquez sur **modifier**.  
   
 2.  Dans la boîte de dialogue **Modifier une jointure** , modifiez le filtre.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "68199554"
   
 #### <a name="to-delete-a-join-filter"></a>Pour supprimer un filtre de jointure  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**. Si le filtre de jointure que vous supprimez est lui-même étendu par d'autres jointures, ces jointures seront aussi supprimées.  
+1.  Sur la page **Filtrer les lignes** de la table de l’Assistant Nouvelle publication ou la page Filtrer les **lignes** des propriétés de la **publication- \<Publication> **, sélectionnez un filtre dans le volet **Tables filtrées** , puis cliquez sur **supprimer**. Si le filtre de jointure que vous supprimez est lui-même étendu par d'autres jointures, ces jointures seront aussi supprimées.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Ces procédures montrent un filtre paramétrable sur un article parent avec des filtres de jointure entre cet article et des articles enfants connexes. Les filtres de jointure peuvent être définis et modifiés par programme à l'aide des procédures stockées de réplication.  
@@ -114,7 +113,7 @@ ms.locfileid: "68199554"
   
 2.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) sur la base de données de publication du serveur de publication pour définir un ou plusieurs articles connexes, également appelés « articles enfants », pour la publication. Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Spécifiez **@publication**, un nom unique pour ce filtre **@filtername**pour, le nom de l’article enfant créé à l’étape **@article**2 pour, le nom de l’article parent qui est **@join_articlename**joint à pour et l’une des valeurs **@join_unique_key**suivantes pour :  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Spécifiez **@publication** , un nom unique pour ce filtre pour **@filtername** , le nom de l’article enfant créé à l’étape 2 pour **@article** , le nom de l’article parent qui est joint à pour **@join_articlename** et l’une des valeurs suivantes pour **@join_unique_key** :  
   
     -   **0** – indique une jointure plusieurs-à-un ou plusieurs-à-plusieurs entre les articles parents et enfants.  
   
@@ -123,9 +122,9 @@ ms.locfileid: "68199554"
      Cela définit un filtre de jointure entre les deux articles.  
   
     > [!CAUTION]  
-    >  Affectez **@join_unique_key** uniquement la valeur **1** si vous avez une contrainte sur la colonne de jointure dans la table sous-jacente pour l’article parent qui garantit l’unicité. Si **@join_unique_key** a la valeur **1** de manière incorrecte, la non-convergence des données peut se produire.  
+    >  Affectez uniquement **@join_unique_key** la valeur **1** si vous avez une contrainte sur la colonne de jointure dans la table sous-jacente pour l’article parent qui garantit l’unicité. Si **@join_unique_key** a la valeur **1** de manière incorrecte, la non-convergence des données peut se produire.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple définit un article pour une publication de fusion, où l'article de la table `SalesOrderDetail` est filtré par rapport à la table `SalesOrderHeader` qui est elle-même filtrée à l'aide d'un filtre de ligne statique. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](define-and-modify-a-static-row-filter.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  

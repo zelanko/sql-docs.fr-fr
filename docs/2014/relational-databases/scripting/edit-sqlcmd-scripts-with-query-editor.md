@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: afcf38e662b152a5039043017624a46b214e263f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065755"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
   Grâce à l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , vous pouvez écrire et modifier des requêtes en tant que scripts SQLCMD. Vous utilisez des scripts SQLCMD lorsque vous devez traiter des commandes Windows System et des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le même script.  
@@ -76,7 +75,7 @@ ms.locfileid: "82703952"
   
     -   (6 lignes affectées)  
   
-    -   \<Informations sur le répertoire>  
+    -   \<The directory information>  
   
     -   (4 lignes affectées)  
   
@@ -138,7 +137,7 @@ ms.locfileid: "82703952"
 > [!NOTE]  
 >  Pour `:error` et `:out`, `stderr` et `stdout` envoient la sortie dans l'onglet des messages.  
   
- Les commandes SQLCMD qui ne sont pas répertoriées ci-dessus ne sont pas prises en charge dans l'Éditeur de requête. Quand un script contenant des mots clés SQLCMD non pris en charge est exécuté, l’éditeur de requête envoie un message « Commande *\<commande ignorée*> ignorée » à la destination pour chaque mot clé non pris en charge. Le script s'exécute correctement mais les commandes non prises en charge sont ignorées.  
+ Les commandes SQLCMD qui ne sont pas répertoriées ci-dessus ne sont pas prises en charge dans l'Éditeur de requête. Lorsqu’un script contenant des mots clés SQLCMD qui ne sont pas pris en charge est exécuté, l’éditeur de requête envoie un message « commande ignorée * \<ignored command*> » à la destination pour chaque mot clé non pris en charge. Le script s'exécute correctement mais les commandes non prises en charge sont ignorées.  
   
 > [!CAUTION]  
 >  Étant donné que vous ne démarrez pas SQLCMD à partir de la ligne de commande, l'exécution de l'Éditeur de requête en mode SQLCMD est quelque peu limitée. Vous ne pouvez pas transmettre des paramètres de ligne de commande tels que des variables, et, comme l'éditeur de requête n'a pas la possibilité de répondre aux invites du système d'exploitation, vous ne devez pas exécuter d'instructions interactives.  

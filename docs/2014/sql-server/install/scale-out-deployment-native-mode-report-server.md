@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04a0d0e08804724def9e586c05bb4b6e72cdbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058940"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Déploiement avec montée en puissance parallèle (serveur de rapports en mode natif)
   Utilisez la page **Déploiement avec montée en puissance parallèle** dans le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour afficher l'état d'initialisation d'un déploiement avec montée en puissance parallèle ou pour joindre un serveur de rapports à un déploiement avec montée en puissance parallèle. Un *déploiement avec montée en puissance* fait référence à deux ou plusieurs instances de serveurs de rapports qui partagent une même base de données de serveur de rapports.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.  
   
  Un *serveur de rapports initialisé* décrit un serveur qui peut chiffrer et déchiffrer les données sensibles stockées dans une base de données de serveur de rapports (par exemple, les informations d'identification et les chaînes de connexion). L'initialisation d'un serveur de rapports est nécessaire à son fonctionnement.  
   
@@ -38,9 +37,9 @@ ms.locfileid: "71952417"
   
 ## <a name="options"></a>Options  
  **Nom de l’SQL Server**  
- Spécifiez le nom de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] l’instance qui héberge la base de données du serveur de rapports.  
+ Spécifiez le nom de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance qui héberge la base de données du serveur de rapports.  
   
- **Nom de la base de données**  
+ **Database Name**  
  Spécifie le nom de la base de données à laquelle l'instance de serveur de rapports est connectée.  
   
  **Mode serveur**  
@@ -68,7 +67,7 @@ ms.locfileid: "71952417"
   
  Une instance de serveur de rapports est disponible uniquement si vous avez précédemment configuré une connexion à une base de données de serveur de rapports partagée. De plus, vous devez effectuer l'initialisation à partir d'un serveur de rapports qui est déjà initialisé pour utiliser la base de données du serveur de rapports.  
   
- **Remove**  
+ **Supprimer**  
  Cliquez sur **Supprimer** pour supprimer de la base de données du serveur de rapports les clés de chiffrement de l'instance sélectionnée du serveur de rapports. Vous pouvez supprimer des clés pour retirer un serveur de rapports d'un déploiement avec montée en puissance parallèle ou pour résoudre un problème de migration ou d'installation. Avec cette option, seules les clés de chiffrement de l'instance spécifiée du serveur de rapports sont supprimées. Les données chiffrées dans la base de données du serveur de rapports ne sont pas concernées.  
   
  Par précaution, veillez à créer une copie de sauvegarde de la clé symétrique avant de la supprimer. Après avoir supprimé de la liste les clés de chiffrement du dernier serveur de rapports, vous introduisez de nouvelles conditions sur toutes les initialisations ultérieures de serveur de rapports pour cette base de données. En effet, après avoir initialisé un serveur de rapports, vous devez restaurer une copie de sauvegarde de la clé symétrique. La restauration de la clé symétrique est nécessaire pour pouvoir accéder aux données chiffrées actuellement présentes dans la base de données du serveur de rapports.  

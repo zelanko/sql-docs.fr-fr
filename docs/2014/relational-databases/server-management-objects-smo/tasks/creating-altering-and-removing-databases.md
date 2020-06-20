@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 645ba8428dddb36de9a3edeb784d64f96b5c0603
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1c2a0a3447c8fd52b2266c363405b55200e2610
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797039"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996871"
 ---
 # <a name="creating-altering-and-removing-databases"></a>Création, modification et suppression de bases de données
   Dans SMO, une base de données est représentée par l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f3e0e78edd967e5fcb7377312c1811d34cb1ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068178"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Présentation du chargement en masse XML (SQLXML 4.0)
   Le chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables Microsoft.  
@@ -45,7 +44,7 @@ ms.locfileid: "82703371"
 ## <a name="streaming-of-xml-data"></a>Diffusion en continu de données XML  
  Le document XML source pouvant être volumineux, le document n'est pas lu intégralement en mémoire au cours du traitement de chargement en masse. Au lieu de cela, le chargement en masse XML interprète les données XML en tant que flux et lit ce flux. À mesure que l'utilitaire lit les données, il identifie la ou les tables de base de données, génère le ou les enregistrements appropriés à partir de la source de données XML, puis envoie le ou les enregistrements à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à des fins d'insertion.  
   
- Par exemple, le document XML source suivant se compose des éléments ** \< customer>** et de l' ** \< ordre>** éléments enfants :  
+ Par exemple, le document XML source suivant se compose d' **\<Customer>** éléments et d' **\<Order>** éléments enfants :  
   
 ```  
 <Customer ...>  
@@ -56,7 +55,7 @@ ms.locfileid: "82703371"
 ...  
 ```  
   
- À mesure que le chargement en masse XML lit l’élément ** \< customer>** , il génère un enregistrement pour CustomerTable. Lors de la lecture de la balise de fin ** \< /Customer>** , le chargement en masse XML insère cet enregistrement dans la table de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . De la même façon, lors de la lecture de l’élément ** \< Order>** , le chargement en masse XML génère un enregistrement pour Ordertable, puis insère cet enregistrement dans la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table lors de la lecture de la balise de fin de la ** \<>/Order** .  
+ À mesure que le chargement en masse XML lit l' **\<Customer>** élément, il génère un enregistrement pour le CustomerTable. Lorsqu’il lit la **\</Customer>** balise de fin, le chargement en masse XML insère cet enregistrement dans la table de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . De la même façon, lors de la lecture de l' **\<Order>** élément, le chargement en masse XML génère un enregistrement pour le Ordertable, puis insère cet enregistrement dans la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table lors de la lecture de la **\</Order>** balise de fin.  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Opérations de chargement en masse XML transactionnelles et non transactionnelles  
  Le chargement en masse XML peut fonctionner en mode transactionnel ou non transactionnel. Les performances sont généralement optimales si vous effectuez un chargement en masse en mode non-. autrement dit, la propriété transaction est définie sur FALSe et l’une ou l’autre des conditions suivantes est vraie :  

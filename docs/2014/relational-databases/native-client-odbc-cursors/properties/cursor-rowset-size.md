@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9facf44afde40c69523c67997f294c4a5fa620c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73c5d1dc337538869b75aa800ccdc5ab461d5bdc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020723"
 ---
 # <a name="cursor-rowset-size"></a>Taille de l'ensemble de lignes d'un curseur
   Les curseurs ODBC peuvent extraire plusieurs lignes à la fois. Ils peuvent récupérer plusieurs lignes dans chaque appel à **SQLFetch** ou [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Lorsque vous utilisez une base de données client/serveur, telle que Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il est plus efficace d'extraire plusieurs lignes à la fois. Le nombre de lignes retournées sur une extraction est appelé la taille de l’ensemble de lignes et est spécifié à l’aide de la SQL_ATTR_ROW_ARRAY_SIZE de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  

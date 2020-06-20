@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 185e5d0beb9df2ec8a3dcf263632c1d260a3bcd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882348"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038062"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
   Quand une publication a été créée, la plupart des propriétés de la publication et des articles peuvent être modifiées, mais certaines nécessitent que l'instantané soit régénéré et/ou que les abonnements soient réinitialisés. Cette rubrique contient des informations sur toutes les propriétés qui requièrent l'une de ces actions ou les deux si elles sont modifiées.  
@@ -56,7 +55,7 @@ ms.locfileid: "73882348"
 |Modifier des commandes INSERT, UPDATE ou DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier le nom de la table de destination|**sp_changearticle**|**dest_table**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Modifier le propriétaire de la table de destination (schéma).|**sp_changearticle**|**destination_owner**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
-|Modifier les mappages des types de données (s'applique seulement à la publication Oracle).|**sp_changearticlecolumndatatype**|**\@entrer**<br /><br /> **\@base**<br /><br /> **\@precision**<br /><br /> **\@échelle**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
+|Modifier les mappages des types de données (s'applique seulement à la publication Oracle).|**sp_changearticlecolumndatatype**|**\@entrer**<br /><br /> **\@base**<br /><br /> **\@précision**<br /><br /> **\@échelle**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Propriétés de la publication pour la réplication de fusion  
   
@@ -73,7 +72,7 @@ ms.locfileid: "73882348"
 |Modifier un filtre de jointure ou un enregistrement logique.|**sp_changemergefilter**|**\@propriété**<br /><br /> **\@ajoutée**|Nouvelle capture instantanée<br /><br /> Réinitialiser les abonnements.|  
 |Désactiver l'utilisation de filtres paramétrés (l'activation de filtres paramétrés ne nécessite pas d'actions particulières).|**sp_changemergepublication**|Une valeur **false** pour **dynamic_filters**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
 |Activer ou désactiver l'utilisation de partitions précalculées.|**sp_changemergepublication**|**use_partition_groups**|Nouvel instantané.|  
-|Activer ou désactiver [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] l’optimisation de partition.|**sp_changemergepublication**|**keep_partition_changes**|Réinitialiser les abonnements.|  
+|Activer ou désactiver l' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] optimisation de partition.|**sp_changemergepublication**|**keep_partition_changes**|Réinitialiser les abonnements.|  
 |Activer ou désactiver la validation de partition d'Abonné.|**sp_changemergepublication**|**validate_subscriber_info**|Réinitialiser les abonnements.|  
 |Modifier le niveau de compatibilité d'une publication en 80sp3 ou inférieur.|**sp_changemergepublication**|**publication_compatibility_level**|Nouvel instantané.|  
   

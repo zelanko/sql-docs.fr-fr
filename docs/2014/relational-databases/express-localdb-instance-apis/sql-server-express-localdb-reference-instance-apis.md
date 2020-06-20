@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42b71df860f82fe470cbd01dbd9e1c0f6c07e2a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050942"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Guide de référence de l'API d'instance SQL Server Express LocalDB
   Dans le monde traditionnel SQL Server basé sur les services, différentes instances de SQL Server installées sur un même ordinateur sont physiquement séparées ; autrement dit, chaque instance doit être installée et supprimée séparément, possède un jeu distinct de binaires, et s'exécute sous un processus de service distinct. Le nom de l'instance SQL Server est utilisé pour spécifier l'instance SQL Server à laquelle l'utilisateur souhaite se connecter.  
@@ -64,7 +63,7 @@ ms.locfileid: "63128636"
 ### <a name="named-instance-naming-rules"></a>Règles de dénomination d'instance nommée  
  Un nom d'instance de LocalDB peut comporter au plus 128 caractères (la limite est imposée par le type de données `sysname`). Il s'agit d'une différence importante comparée aux noms d'instances SQL Server traditionnelles, qui sont limités aux noms NetBIOS de 16 caractères ASCII. La raison de cette différence est que la base de données locale traite les bases de données en tant que fichiers et implique donc la sémantique basée sur les fichiers. il est donc intuitif pour les utilisateurs d’avoir plus de liberté dans le choix des noms d’instance.  
   
- Un nom d'instance de LocalDB peut contenir tous les caractères Unicode qui sont valides dans le composant nom de fichier. Les caractères non conformes dans un composant de nom de fichier sont généralement les suivants : caractères ASCII/Unicode 1 à 31, guillemets ("), inférieur\<à (), supérieur à (>), barre verticale (|), retour arrière (\b), tabulation (\t), deux-points ( :), astérisque (*), point d’interrogation ( ?), la barre oblique inverse (\\) et la barre oblique (/). Notez que le caractère Null (\0) est autorisé, car il est utilisé pour la fin de chaîne ; tout caractère qui se trouve après le premier caractère NULL est ignoré.  
+ Un nom d'instance de LocalDB peut contenir tous les caractères Unicode qui sont valides dans le composant nom de fichier. Les caractères non conformes dans un composant filename sont généralement les suivants : caractères ASCII/Unicode 1 à 31, guillemets ("), inférieur à ( \<), greater than (> ), canal (|), retour arrière (\b), tabulation (\t), deux-points ( :), astérisque (*), point d’interrogation ( ?), barre oblique inverse ( \\ ) et barre oblique (/). Notez que le caractère Null (\0) est autorisé, car il est utilisé pour la fin de chaîne ; tout caractère qui se trouve après le premier caractère NULL est ignoré.  
   
 > [!NOTE]  
 >  La liste de caractères non conformes peut dépendre du système d'exploitation et peut changer dans les versions ultérieures.  

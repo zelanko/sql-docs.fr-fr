@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047216"
 ---
 # <a name="synonyms-database-engine"></a>Synonymes (Moteur de base de données)
   Un synonyme est un objet de base de données utilisé aux fins suivantes :  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Pour plus d’informations sur les fonctions liées au schéma, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Obtention d'informations sur les synonymes  
- L'affichage catalogue sys.synonyms contient une entrée pour chaque synonyme dans une base de données déterminée. Cet affichage catalogue expose les métadonnées synonymes, telles que le nom du synonyme et celui de l'objet de base. Pour plus d’informations sur `sys.synonyms` l’affichage catalogue, consultez [sys. synonymes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ L'affichage catalogue sys.synonyms contient une entrée pour chaque synonyme dans une base de données déterminée. Cet affichage catalogue expose les métadonnées synonymes, telles que le nom du synonyme et celui de l'objet de base. Pour plus d’informations sur l' `sys.synonyms` affichage catalogue, consultez [sys. synonymes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  À l'aide des propriétés étendues, vous pouvez ajouter un texte descriptif ou instructif, des masques d'entrée et des règles de mise en forme comme propriétés d'un synonyme. Étant donné que la propriété est stockée dans la base de données, toutes les applications qui la lisent peuvent évaluer l'objet de la même manière. Pour plus d’informations, consultez [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   

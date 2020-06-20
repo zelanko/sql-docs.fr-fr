@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f89e074e8431d9d421b9168e43522412c152e55f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8685b5180d4c8dc91d0199030ecd04fdcbec994
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039016"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertion de données dans des paramètres table
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge deux modèles pour que le consommateur spécifie des données pour les lignes de paramètres table : un modèle d’émission et un modèle d’extraction. Pour obtenir un exemple illustrant le modèle de tirage (pull) des données, consultez [Exemples de programmation de données SQL Server](https://msftdpprodsamples.codeplex.com/).  

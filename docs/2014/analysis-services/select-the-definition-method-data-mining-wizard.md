@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b1750081198a258d1b49231324dd296084f6cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940790"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>Sélectionner la méthode de définition (Assistant Exploration de données)
   Utilisez la page **Sélectionner la méthode de définition** pour sélectionner la source de création du nouveau modèle d’exploration de données. Votre progression dans l'Assistant sera différente selon vos sélections, car une structure d'exploration de données basée sur un cube impose des étapes différentes pour sa construction par rapport à une structure d'exploration de données basée sur une source de données relationnelle.  

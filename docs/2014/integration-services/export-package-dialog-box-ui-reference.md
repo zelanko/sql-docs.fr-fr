@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be6942f419e8b13df12268363520c0f293e1a429
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966769"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Exporter un package
   Utilisez la boîte de dialogue **Exporter un package** , disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour exporter un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vers un autre emplacement et éventuellement modifier son niveau de protection.  

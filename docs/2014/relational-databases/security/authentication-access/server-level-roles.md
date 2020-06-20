@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8f2e75eb5272f30153814e923048b4f5c4f8b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016206"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des rôles au niveau du serveur pour vous aider à gérer les autorisations sur les serveurs. Ces rôles sont des principaux de sécurité qui regroupent d'autres principaux. Les autorisations des rôles serveur ont une portée à l'échelle du serveur. (Les*rôles* sont semblables aux *groupes* du système d’exploitation Microsoft Windows.)  
@@ -45,7 +44,7 @@ ms.locfileid: "63011925"
 |------------------------------|-----------------|  
 |administrateur système|Les membres du rôle serveur fixe sysadmin peuvent effectuer n'importe quelle activité sur le serveur.|  
 |serveradmin|Les membres du rôle serveur fixe serveradmin peuvent modifier les options de configuration à l'échelle du serveur et arrêter le serveur.|  
-|securityadmin|Les membres du rôle serveur fixe securityadmin gèrent les connexions et leurs propriétés. Ils peuvent assigner des autorisations GRANT, DENY et REVOKE au niveau du serveur. Ils peuvent également attribuer des autorisations GRANT, DENY et REVOKE au niveau de la base de données s'ils ont accès à une base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> Note de ** \* sécurité \* \* ** La possibilité d’accorder l’accès au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et de configurer des autorisations utilisateur permet à l’administrateur de la sécurité d’affecter la plupart des autorisations de serveur. Le `securityadmin` rôle doit être traité comme équivalent au `sysadmin` rôle.|  
+|securityadmin|Les membres du rôle serveur fixe securityadmin gèrent les connexions et leurs propriétés. Ils peuvent assigner des autorisations GRANT, DENY et REVOKE au niveau du serveur. Ils peuvent également attribuer des autorisations GRANT, DENY et REVOKE au niveau de la base de données s'ils ont accès à une base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> Note de sécurité la possibilité d’accorder l’accès au et de configurer des autorisations utilisateur permet à l’administrateur de la sécurité d’affecter la plupart des autorisations de serveur. ** \* \* \* \* ** [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Le `securityadmin` rôle doit être traité comme équivalent au `sysadmin` rôle.|  
 |processadmin|Les membres du rôle serveur fixe processadmin peuvent mettre fin aux processus en cours d'exécution dans une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |setupadmin|Les membres du rôle serveur fixe setupadmin peuvent ajouter et supprimer des serveurs liés à l’aide d’instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] . (L’appartenance au rôle sysadmin est nécessaire pour utiliser [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
 |bulkadmin|Les membres du rôle serveur fixe bulkadmin peuvent exécuter l'instruction BULK INSERT.|  
@@ -57,7 +56,7 @@ ms.locfileid: "63011925"
  Certaines autorisations sont assignées à chaque rôle serveur fixe. Pour un graphique des autorisations assignées aux rôles serveur, consultez [Serveur fixe du moteur de base de données et rôles de base de données fixes](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  L'autorisation `CONTROL SERVER` ressemble, mais n'est pas identique au rôle serveur fixe `sysadmin`. Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple, `CONTROL SERVER`n’implique pas l' `sysadmin` appartenance au rôle serveur fixe.) Toutefois, il est parfois possible d’emprunter l’identité entre les rôles et les autorisations équivalentes. La plupart des commandes `DBCC` et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe `sysadmin`. Pour obtenir la liste des procédures stockées système 171 qui `sysadmin` nécessitent l’appartenance, consultez le billet de blog suivant de Andreas Wolter [Control Server vs. sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et escalade des privilèges-avertissements](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  L'autorisation `CONTROL SERVER` ressemble, mais n'est pas identique au rôle serveur fixe `sysadmin`. Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple, `CONTROL SERVER`n’implique pas l’appartenance au `sysadmin` rôle serveur fixe.) Toutefois, il est parfois possible d’emprunter l’identité entre les rôles et les autorisations équivalentes. La plupart des commandes `DBCC` et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe `sysadmin`. Pour obtenir la liste des procédures stockées système 171 qui nécessitent `sysadmin` l’appartenance, consultez le billet de blog suivant de Andreas Wolter [Control Server vs. sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et escalade des privilèges-avertissements](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Autorisations au niveau serveur  
  Seules des autorisations au niveau du serveur peuvent être ajoutées aux rôles serveur définis par l'utilisateur. Pour répertorier les autorisations au niveau du serveur, exécutez l'instruction suivante. Les autorisations au niveau du serveur sont :  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a237fac7322ed1529a8962b096c6b918ffee33b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968209"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Étape 3 : Modification du Gestionnaire de connexions de fichiers plats
   Dans cette tâche, vous allez modifier le gestionnaire de connexions de fichiers plats que vous avez créé et configuré dans la leçon 1. Le gestionnaire de connexions de fichiers plats a été configuré au départ pour charger statiquement un seul fichier. Pour faire en sorte que le Gestionnaire de connexions de fichiers plats charge les fichiers interactivement, vous devez modifier la propriété ConnectionString du Gestionnaire de connexions afin que la variable `User:varFileName`définie par l’utilisateur soit acceptée. Cette variable contient le chemin du fichier qui doit être chargé au moment de l’exécution.  
@@ -28,7 +27,7 @@ ms.locfileid: "62767431"
   
 2.  Dans la Fenêtre Propriétés, pour **expressions**, cliquez dans la cellule vide, puis cliquez sur le bouton de sélection **(...)**.  
   
-3.  Dans la boîte de dialogue **éditeur d’expressions** de la propriété, dans la colonne **propriété** , tapez ou sélectionnez `ConnectionString`.  
+3.  Dans la boîte de dialogue **éditeur d’expressions** de la propriété, dans la colonne **propriété** , tapez ou sélectionnez `ConnectionString` .  
   
 4.  Dans la colonne **expression** , cliquez sur le bouton de sélection **(...)** pour ouvrir la boîte de dialogue **Générateur d’expressions** .  
   

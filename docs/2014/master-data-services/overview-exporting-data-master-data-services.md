@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3449aa76e596eebc77ad56e9c38ab2c0b0a0d615
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482838"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960749"
 ---
 # <a name="exporting-data-master-data-services"></a>Exportation de données (Master Data Services)
   Vous pouvez exporter des données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vers des systèmes d'abonnement en créant des vues d'abonnement. Tout système d'abonnement peut ensuite afficher les données publiées dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pour plus d'informations sur les affichages, voir [Affichages](../relational-databases/views/views.md).  

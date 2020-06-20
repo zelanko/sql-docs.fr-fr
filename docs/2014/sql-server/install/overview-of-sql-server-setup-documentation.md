@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2620439a-f9d3-4b3c-9968-48f60b4bb9a5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69770ed5bdcfbcf000413f8272ffda15d027c848
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042140"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Vue d'ensemble de la documentation d'installation de SQL Server
   La documentation du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est disponible sur le support d'installation et en ligne.  

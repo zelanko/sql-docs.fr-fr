@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4b760885a85f29a94affab8f0e016f1596bf0f6d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065934"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Leçon 2 : Préparation du dossier d'instantanés
   Dans cette leçon, vous allez apprendre à configurer le dossier d'instantanés utilisé pour créer et stocker l'instantané des publications.  
@@ -36,9 +35,9 @@ ms.locfileid: "83000405"
   
 6.  Sur l'onglet **Sécurité** , cliquez sur **Modifier**.  
   
-7.  Dans la boîte de dialogue **Autorisations** , cliquez sur **Ajouter**. Dans la zone de texte **Sélectionner les utilisateurs, les ordinateurs, le compte de service ou les groupes** , tapez le nom du compte agent d’instantané créé au cours de la leçon 1, comme \< _Machine_Name>_ **\ repl_snapshot**, où \< *Machine_Name>* est le nom du serveur de publication. Cliquez sur **Vérifier les noms**, puis sur **OK**.  
+7.  Dans la boîte de dialogue **Autorisations** , cliquez sur **Ajouter**. Dans la zone de texte **Sélectionner l’utilisateur, les ordinateurs, le compte de service ou les groupes** , tapez le nom du compte agent d’instantané créé au cours de la leçon 1, sous la forme \<_Machine_Name> _**\ repl_snapshot**, où \<*Machine_Name> * est le nom du serveur de publication. Cliquez sur **Vérifier les noms**, puis sur **OK**.  
   
-8.  Répétez l’étape précédente pour ajouter des autorisations pour le Agent de distribution, comme \< _Machine_Name>_ **\ repl_distribution**, et pour le agent de fusion en tant que Machine_Name>\< _ _ **\ repl_merge**.  
+8.  Répétez l’étape précédente pour ajouter des autorisations pour le agent de distribution, sous la forme \<_Machine_Name> _ **\ repl_distribution**, et \<_Machine_Name> pour le agent de fusion en tant que _ **\ repl_merge**.  
   
 9. Vérifiez que les autorisations suivantes sont accordées :  
   

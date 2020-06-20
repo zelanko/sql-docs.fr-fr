@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac38453237ed6816c32ed974e8141c57c93ceb44
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965909"
 ---
 # <a name="master-database"></a>Base de données master
   La base de données **master** contient l’intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela inclut les métadonnées relatives à l'instance, dont les comptes d'ouverture de session, les points de terminaison, les serveurs liés et les paramètres de configuration du système. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets système ne sont plus stockés dans la base de données **master** , mais dans la [base de données des ressources](resource-database.md). La base de données **master** enregistre également l'existence de toutes les bases de données et l'emplacement de leurs fichiers, et contient les informations d'initialisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas démarrer si la base de données **master** n'est pas disponible.  
@@ -39,32 +38,32 @@ ms.locfileid: "62917042"
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ACTIVÉ|Non|  
-|ANSI_NULL_DEFAULT|OFF|Oui|  
-|ANSI_NULLS|OFF|Oui|  
-|ANSI_PADDING|OFF|Oui|  
-|ANSI_WARNINGS|OFF|Oui|  
-|ARITHABORT|OFF|Oui|  
-|AUTO_CLOSE|OFF|Non|  
-|AUTO_CREATE_STATISTICS|ACTIVÉ|Oui|  
-|AUTO_SHRINK|OFF|Non|  
-|AUTO_UPDATE_STATISTICS|ACTIVÉ|Oui|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
-|CHANGE_TRACKING|OFF|Non|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
-|CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|No|  
+|AUTO_CREATE_STATISTICS|ACTIVÉ|Yes|  
+|AUTO_SHRINK|OFF|No|  
+|AUTO_UPDATE_STATISTICS|ACTIVÉ|Yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|CHANGE_TRACKING|OFF|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
+|CURSOR_DEFAULT|GLOBAL|Yes|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non |  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ACTIVÉ|Non|  
-|ENCRYPTION|OFF|Non|  
-|NUMERIC_ROUNDABORT|OFF|Oui|  
-|PAGE_VERIFY|CHECKSUM|Oui|  
+|ENCRYPTION|OFF|No|  
+|NUMERIC_ROUNDABORT|OFF|Yes|  
+|PAGE_VERIFY|CHECKSUM|Yes|  
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
 |READ_COMMITTED_SNAPSHOT|OFF|Non|  
 |RECOVERY|SIMPLE|Oui|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
-|Options de Service Broker|DISABLE_BROKER|Non|  
+|Options de Service Broker|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|Oui|  
   
  Pour obtenir une description de ces options de base de données, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

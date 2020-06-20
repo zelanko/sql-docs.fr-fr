@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c154b22d6469df034f4ec7cc6be77b2e7192913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059167"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966819"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Éditeur de source Excel (page Gestionnaire de connexions)
   Le nœud **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source Excel** vous permet de sélectionner le classeur [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] de la source à utiliser. La source Excel lit les données à partir d'une feuille de calcul ou d'une plage nommée dans un classeur existant.  
@@ -33,7 +32,7 @@ ms.locfileid: "66059167"
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions Excel existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions Excel** .  
   
  **Mode d'accès aux données**  
@@ -46,7 +45,7 @@ ms.locfileid: "66059167"
 |Commande SQL|Récupérez des données à partir du fichier Excel à l'aide d'une requête SQL. Pour plus d’informations sur la syntaxe de la requête, consultez [Source Excel](data-flow/excel-source.md).|  
 |Commande SQL à partir d'une variable|Spécifiez le texte de la requête SQL dans une variable.|  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
@@ -63,7 +62,7 @@ ms.locfileid: "66059167"
  **Texte de la commande SQL**  
  Entrez le texte d’une requête SQL, créez la requête en cliquant sur **Générer une requête**ou parcourez l’arborescence jusqu’au fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
- **Parameters**  
+ **Paramètres**  
  Si vous avez entré une requête paramétrable en spécifiant ? comme espace réservé de paramètre dans le texte de la requête, utilisez la boîte de dialogue **Définition des paramètres de la requête** pour mapper des paramètres d’entrée de la requête à des variables du package.  
   
  **Générer la requête**  

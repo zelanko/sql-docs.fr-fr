@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0da64d58-6e03-45f3-8443-6b94d4158891
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3884f6cec7cdb1eee6d06281a49d65a0bc16828
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940860"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>Sélectionner les partitions à modifier (Assistant Conception d'agrégation)
   Utilisez la page **Sélectionner les partitions à modifier** pour sélectionner les partitions pour lesquelles vous souhaitez concevoir des agrégations.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf8045ff45e7467a626bee85857ae8319f5d2649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048972"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
   La capture de données modifiées enregistre les activités d'insertion, de mise à jour et de suppression appliquées à une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle rend disponibles les détails des modifications dans un format relationnel simple à utiliser. Les informations sur les colonnes et les métadonnées nécessaires à l'application des modifications à un environnement cible sont capturées pour les lignes modifiées et stockées dans des tables de modification qui reflètent la structure de colonne des tables sources suivies. Des fonctions table sont fournies afin de procurer aux consommateurs un accès systématique aux données modifiées.  
@@ -36,7 +35,7 @@ ms.locfileid: "68211744"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Fonctionnement de la capture de données modifiées et de l'instance de capture  
  Pour que les modifications apportées à une table d'une base de données puissent être suivies, la capture de données modifiées doit être activée explicitement pour la base de données. Pour cela, utilisez la procédure stockée [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql). Lorsque la base de données est activée, les tables sources peuvent être identifiées en tant que tables faisant l’objet d’un suivi à l’aide de la procédure stockée [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql). Lorsqu'une table est activée pour la capture de données modifiées, une instance de capture associée est créée afin de prendre en charge la dissémination des données modifiées dans la table source. L'instance de capture se compose d'une table de modifications et de deux fonctions de requête maximum. Les métadonnées qui décrivent les détails de configuration de l'instance de capture sont conservées dans les tables de métadonnées de capture de données modifiées, `cdc.change_tables`, `cdc.index_columns` et `cdc.captured_columns`. Ces informations peuvent être extraites en utilisant la procédure stockée [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql).  
   
- Tous les objets associés à une instance de capture sont créés dans le schéma de capture de données modifiées de la base de données activée. Le nom d'instance de capture doit être un nom d'objet valide et doit être unique parmi les instances de capture de base de données. Par défaut, il s’agit \<du nom de *schéma*_ nom de la*table*> de la table source. Sa table de modifications associée est nommée en ajoutant `_CT` au nom d'instance de capture. La fonction utilisée pour vérifier la présence de modifications est nommée en ajoutant le préfixe `fn_cdc_get_all_changes_` au nom d'instance de capture. Si l’instance de capture est configurée `net changes`pour prendre `net_changes` en charge, la fonction de requête est également créée et nommée en ajoutant **fn_cdc_get_net_changes\_ ** au nom de l’instance de capture.  
+ Tous les objets associés à une instance de capture sont créés dans le schéma de capture de données modifiées de la base de données activée. Le nom d'instance de capture doit être un nom d'objet valide et doit être unique parmi les instances de capture de base de données. Par défaut, le nom est \<*schema name*_*table name*> de la table source. Sa table de modifications associée est nommée en ajoutant `_CT` au nom d'instance de capture. La fonction utilisée pour vérifier la présence de modifications est nommée en ajoutant le préfixe `fn_cdc_get_all_changes_` au nom d'instance de capture. Si l’instance de capture est configurée pour prendre en charge `net changes` , la `net_changes` fonction de requête est également créée et nommée en ajoutant **fn_cdc_get_net_changes \_ ** au nom de l’instance de capture.  
   
 ## <a name="change-table"></a>Table de modifications  
  Les cinq premières colonnes de la table de modifications de capture de données modifiées sont des colonnes de métadonnées. Elles fournissent des informations supplémentaires pertinentes à la modification enregistrée. Les autres colonnes reflètent les colonnes capturées de la table source, identifiées par nom et généralement par type. Ces colonnes contiennent les données de colonne capturées recueillies à partir de la table source.  

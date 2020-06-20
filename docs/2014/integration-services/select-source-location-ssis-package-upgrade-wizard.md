@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90cb7110a6b4e9372fe5397ba050f91535a58f94
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963672"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Sélectionner l'emplacement source (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionner l’emplacement source** pour spécifier la source à partir de laquelle effectuer la mise à niveau de packages.  
@@ -39,7 +38,7 @@ ms.locfileid: "66055943"
 |**Magasin de packages SSIS**|Indique que les packages à mettre à niveau se trouvent dans le magasin de packages. Le magasin de packages se compose de l’ensemble des dossiers du système de fichiers gérés par le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
 |**Microsoft SQL Server**|Indique que les packages à mettre à niveau proviennent d’une instance existante de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
   
- **Répertoire**  
+ **Dossier**  
  Tapez le nom d’un dossier qui contient les packages à mettre à niveau, ou cliquez sur **Parcourir** et recherchez le dossier.  
   
  **Parcourir**  

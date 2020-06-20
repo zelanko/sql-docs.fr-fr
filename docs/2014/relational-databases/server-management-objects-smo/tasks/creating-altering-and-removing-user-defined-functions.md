@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: edde17b3339a6a78f81ddf92da95afb2f8ba851c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5094900a0efdbd25973ccf0763facd1de18d5233
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037668"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Création, modification et suppression de fonctions définies par l'utilisateur
-  L' <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fournit des fonctionnalités qui permettent aux utilisateurs de gérer par programme des fonctions définies [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]par l’utilisateur dans. Les fonctions définies par l'utilisateur prennent en charge les paramètres d'entrée et de sortie, ainsi que les références directes aux colonnes de table.  
+  L' <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fournit des fonctionnalités qui permettent aux utilisateurs de gérer par programme des fonctions définies par l’utilisateur dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les fonctions définies par l'utilisateur prennent en charge les paramètres d'entrée et de sortie, ainsi que les références directes aux colonnes de table.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiert l'enregistrement d'assemblys dans une base de données pour que ceux-ci puissent être utilisés dans des procédures stockées, des fonctions définies par l'utilisateur, des déclencheurs et des types de données définis par l'utilisateur. SMO prend en charge cette fonctionnalité avec l'objet <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   

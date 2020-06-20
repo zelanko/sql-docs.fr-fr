@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3dc4e2b2df66b9670bf00e39e6f4a2624c4105e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059058"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gestionnaire de configurations de Reporting Services (mode natif)
   Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif. Si vous avez installé un serveur de rapports à l'aide de l'option d'installation de fichiers uniquement, vous devez utiliser le gestionnaire de configuration pour configurer le serveur avant de pouvoir vous en servir. Si vous avez installé un serveur de rapports à l'aide de l'option d'installation de configuration par défaut, vous pouvez utiliser le gestionnaire de configuration pour vérifier ou modifier les paramètres spécifiés au cours de l'installation. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut servir à configurer une instance de serveur de rapports locale ou distante.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.  
   
 > [!NOTE]  
 >  À compter de la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , le gestionnaire de configuration d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne gère plus les serveurs de rapports en mode SharePoint. Le mode SharePoint est géré et configuré à l'aide de l'Administration centrale et des scripts PowerShell SharePoint. Pour plus d’informations, consultez [Reporting Services installation en mode sharepoint &#40;sharepoint 2010 et sharepoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
@@ -87,7 +86,7 @@ ms.locfileid: "71952495"
   
 -   Configurer la messagerie Report Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par messagerie de serveur de rapports qui utilise un protocole SMTP (Simple Mail Transfer Protocol) pour remettre des rapports ou une notification de traitement des rapports à une boîte aux lettres électronique. Vous pouvez utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour spécifier le serveur ou la passerelle SMTP sur votre réseau à utiliser pour cette remise.  
   
- Vous ne pouvez pas utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer le contenu du serveur de rapports, activer des fonctionnalités supplémentaires ou accorder l'accès au serveur. Le déploiement complet requiert que vous utilisiez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] également pour activer des fonctionnalités supplémentaires ou modifier des valeurs par défaut, et gestionnaire de rapports pour accorder à l’utilisateur l’accès au serveur.  
+ Vous ne pouvez pas utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer le contenu du serveur de rapports, activer des fonctionnalités supplémentaires ou accorder l'accès au serveur. Le déploiement complet requiert que vous utilisiez également [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour activer des fonctionnalités supplémentaires ou modifier des valeurs par défaut, et gestionnaire de rapports pour accorder à l’utilisateur l’accès au serveur.  
   
 ##  <a name="requirements"></a><a name="bkmk_requirements"></a> Spécifications  
  Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est spécifique à la version. Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installé avec cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être utilisé pour configurer une version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous exécutez des versions anciennes et récentes d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] côte à côte sur le même ordinateur, vous devez utiliser le gestionnaire de configuration Reporting Services fourni avec chaque version pour configurer chaque instance.  

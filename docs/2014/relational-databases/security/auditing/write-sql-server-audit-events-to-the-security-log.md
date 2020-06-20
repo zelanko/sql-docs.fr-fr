@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d955e53e8a84365b60af5bd7aba68263a468fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055414"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Écrire des événements d'audit SQL Server dans le journal de sécurité
   Dans un environnement extrêmement sécurisé, le journal de sécurité Windows est l'emplacement approprié pour consigner des événements d'accès aux objets. D'autres emplacements d'audit sont pris en charge mais ils sont plus exposés au risque de falsification.  

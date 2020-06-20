@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 38918636fa569b5f9b43e1f93698879863429fb0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4aebcc06fe8442070ae55da81fbb914fea2e2df2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048196"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Traiter les codes de retour et les paramètres de sortie (ODBC)
   Les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont pas disponibles pour l'application tant que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) n'a pas retourné SQL_NO_DATA. Si une erreur est retournée à partir d’une procédure stockée, appelez SQLMoreResults pour passer au résultat suivant jusqu’à ce que SQL_NO_DATA soit retourné.  

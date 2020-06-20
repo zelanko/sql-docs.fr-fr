@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 911e40506891894213040a02cb439daa6997701a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059680"
 ---
 # <a name="set-breakpoints"></a>Définir des points d’arrêt
   Utilisez la boîte de dialogue **Définir des points d'arrêt** pour spécifier les événements pour lesquels activer des points d'arrêt et pour gérer le contrôle du point d'arrêt.  
@@ -34,7 +33,7 @@ ms.locfileid: "62911401"
  **Type de nombre d’accès**  
  Spécifiez le moment où le point d'arrêt entre en vigueur.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Toujours**|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |**Égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  

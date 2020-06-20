@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c9ba511746375a902a1643631c86ec8c72dbd02
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f37bee770c40235817b2b492ee34f89082012309
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018272"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>type ODBC SQL pour les paramètres table
   La prise en charge des paramètres de table est fournie par un nouveau type SQL ODBC, SQL_SS_TABLE.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  SQL_SS_TABLE ne peut pas être converti en un autre type de données ODBC ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Si SQL_SS_TABLE est utilisé comme type de données C dans le paramètre *ValueType* de SQLBindParameter ou si une tentative est faite pour définir SQL_DESC_TYPE dans un enregistrement de descripteur de paramètre d’application (APD) à SQL_SS_TABLE, SQL_ERROR est retourné et un enregistrement de diagnostic est généré avec SQLSTATE = HY003, « type de tampon d’application non valide ».  

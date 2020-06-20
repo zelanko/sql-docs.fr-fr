@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acafd5ba49bec92fd4c6b93c4163affaa42ab7f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62672071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037360"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Capture de données modifiées et autres fonctionnalités de SQL Server
   Cette rubrique décrit comment les fonctionnalités suivantes interagissent avec la capture de données modifiées :  
@@ -33,7 +32,7 @@ ms.locfileid: "62672071"
 ##  <a name="change-tracking"></a><a name="ChangeTracking"></a>Change Tracking  
  La capture de données modifiées et le [suivi des modifications](about-change-tracking-sql-server.md) peuvent être activés sur la même base de données. Aucune considération particulière ne s'applique. Pour plus d’informations, consultez [Utiliser le suivi des modifications &#40;SQL Server&#41;](work-with-change-tracking-sql-server.md).  
   
-##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>Mise en miroir de bases de données  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> Mise en miroir de bases de données  
  Une base de données prenant en charge la capture de données modifiées peut être mise en miroir. Pour faire en sorte que la capture et le nettoyage s'exécutent automatiquement après un basculement, suivez ces étapes :  
   
 1.  Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent s'exécute sur la nouvelle instance de serveur principal.  
@@ -47,9 +46,9 @@ ms.locfileid: "62672071"
  Pour plus d’informations sur la mise en miroir des bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ##  <a name="transactional-replication"></a><a name="TransReplication"></a>Réplication transactionnelle  
- La capture de données modifiées et la réplication transactionnelle peuvent coexister dans la même base de données, mais le remplissage des tables de modifications est géré différemment lorsque les deux fonctionnalités sont activées. La capture de données modifiées et la réplication transactionnelle utilisent toujours la même procédure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), pour lire les modifications dans le journal des transactions. Lorsque la capture de données modifiées est activée seule, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l' `sp_replcmds`agent appelle. Lorsque les deux fonctionnalités sont activées sur la même base de données, l' `sp_replcmds`agent de lecture du journal appelle. Cet agent remplit à la fois les tables de modifications et les tables de bases de données de distribution. Pour plus d’informations, consultez [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ La capture de données modifiées et la réplication transactionnelle peuvent coexister dans la même base de données, mais le remplissage des tables de modifications est géré différemment lorsque les deux fonctionnalités sont activées. La capture de données modifiées et la réplication transactionnelle utilisent toujours la même procédure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), pour lire les modifications dans le journal des transactions. Lorsque la capture de données modifiées est activée seule, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’agent appelle `sp_replcmds` . Lorsque les deux fonctionnalités sont activées sur la même base de données, l’agent de lecture du journal appelle `sp_replcmds` . Cet agent remplit à la fois les tables de modifications et les tables de bases de données de distribution. Pour plus d’informations, consultez [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
- Considérez un scénario dans lequel la capture de données modifiées est activée sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , et deux tables sont activées pour la capture. Pour remplir les tables de modifications, le travail de `sp_replcmds`capture appelle. La base de données est activée pour la réplication transactionnelle, et une publication est créée. Ensuite, l'Agent de lecture du journal est créé pour la base de données et le travail de capture est supprimé. L'Agent de lecture du journal continue à analyser le journal à partir du dernier numéro séquentiel dans le journal qui été validé dans la table de modifications. Cela garantit la cohérence des données dans les tables de modifications. Si la réplication transactionnelle est désactivée dans cette base de données, l'Agent de lecture du journal est supprimé et le travail de capture est recréé.  
+ Considérez un scénario dans lequel la capture de données modifiées est activée sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , et deux tables sont activées pour la capture. Pour remplir les tables de modifications, le travail de capture appelle `sp_replcmds` . La base de données est activée pour la réplication transactionnelle, et une publication est créée. Ensuite, l'Agent de lecture du journal est créé pour la base de données et le travail de capture est supprimé. L'Agent de lecture du journal continue à analyser le journal à partir du dernier numéro séquentiel dans le journal qui été validé dans la table de modifications. Cela garantit la cohérence des données dans les tables de modifications. Si la réplication transactionnelle est désactivée dans cette base de données, l'Agent de lecture du journal est supprimé et le travail de capture est recréé.  
   
 > [!NOTE]  
 >  Lorsque l'Agent de lecture du journal est utilisé à la fois pour la capture de données modifiées et la réplication transactionnelle, les modifications répliquées sont écrites en premier dans la base de données de distribution. Puis, les modifications capturées sont écrites dans les tables de modifications. Les deux opérations sont validées ensemble. Si l'écriture dans la base de données de distribution s'effectue avec une latence, la même latence est observée avant l'affichage des modifications dans les tables de modifications.  

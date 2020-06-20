@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 737a2e6c837baea373262e586e528a7307b1db6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940920"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Sélectionner les colonnes de la table imbriquée (Assistant Ajouter une nouvelle table imbriquée)
   Utilisez la page **Sélectionner les colonnes de la table imbriquée** pour sélectionner les attributs et les mesures à inclure dans la table imbriquée et pour définir comment le modèle d’exploration des données va les utiliser.  
