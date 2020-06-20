@@ -8,13 +8,12 @@ ms.technology: replication
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52a28664e0fa4e1633fd1700143a38df97977fc4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4c1128f36115134d54e554830dc85fea42b09d5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010687"
 ---
 # <a name="errors-and-events-replication"></a>Erreurs et des événements (Réplication)
   Pour obtenir des informations sur la cause et la résolution d’un certain nombre d’erreurs liées à la réplication, consultez [référence des erreurs et des événements (réplication)](../errors-and-events-reference-replication.md).  

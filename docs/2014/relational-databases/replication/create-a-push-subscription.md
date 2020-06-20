@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2195d96f4337cc60ba213deb5e3cc2831d27da76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010907"
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission (push)
   Cette rubrique explique comment créer un abonnement par émission de données (push) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Pour plus d’informations sur la création d’un abonnement par émission de données pour un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Créer un abonnement pour un Abonné non-SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md).  
@@ -55,7 +54,7 @@ ms.locfileid: "62721731"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>Pour créer un abonnement envoyé à partir du serveur de publication  
   
-1.  Connectez-vous au serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de publication dans, puis développez le nœud du serveur.  
+1.  Connectez-vous au serveur de publication dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , puis développez le nœud du serveur.  
   
 2.  Développez le dossier **Réplication** , puis développez le dossier **Publications locales** .  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62721731"
   
 3.  Cliquez avec le bouton droit sur le dossier **Abonnements locaux** , puis cliquez sur **Nouveaux abonnements**.  
   
-4.  Dans la page **Publication** de l’Assistant Nouvel abonnement, sélectionnez **\<Rechercher un serveur de publication SQL>** ou **\<Rechercher un serveur de publication Oracle>** dans la liste déroulante **Serveur de publication**.  
+4.  Sur la page **publication** de l’Assistant nouvel abonnement, sélectionnez **\<Find SQL Server Publisher>** ou **\<Find Oracle Publisher>** dans la liste déroulante **éditeur** .  
   
 5.  Connectez-vous au serveur de publication dans la boîte de dialogue **Se connecter au serveur** .  
   
@@ -91,18 +90,18 @@ ms.locfileid: "62721731"
   
     -   Si la valeur de **allow_push** est **1**, les abonnements par envoi de données sont pris en charge.  
   
-    -   Si la valeur de **allow_push** est **0**, exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en **allow_push** spécifiant **@property** allow_push `true` pour **@value**et pour.  
+    -   Si la valeur de **allow_push** est **0**, exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en spécifiant **allow_push** pour **@property** et `true` pour **@value** .  
   
-2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). **@publication**Spécifiez **@subscriber** , **@destination_db**et. Spécifiez la valeur **push** pour **@subscription_type**. Pour plus d’informations sur la mise à jour des abonnements, consultez [créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez **@publication** , **@subscriber** et **@destination_db** . Spécifiez la valeur **push** pour **@subscription_type**. Pour plus d’informations sur la mise à jour des abonnements, consultez [créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Spécifiez les éléments suivants :  
   
-    -   Paramètres **@subscriber**, **@subscriber_db**et **@publication** .  
+    -   **@subscriber**Paramètres, **@subscriber_db** et **@publication** .  
   
-    -   Les [!INCLUDE[msCoName](../../includes/msconame-md.md)] informations d’identification Windows sous lesquelles le agent de distribution sur le serveur de **@job_login** distribution **@job_password**s’exécute pour et.  
+    -   Les [!INCLUDE[msCoName](../../includes/msconame-md.md)] informations d’identification Windows sous lesquelles le agent de distribution sur le serveur de distribution s’exécute pour **@job_login** et **@job_password** .  
   
         > [!NOTE]  
-        >  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les **@job_login** informations **@job_password**d’identification Windows spécifiées par et. L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
+        >  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les informations d’identification Windows spécifiées par **@job_login** et **@job_password** . L'Agent de distribution crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
   
     -   (Facultatif) La valeur **0** pour **@subscriber_security_mode** et les informations de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@subscriber_login** et **@subscriber_password**. Spécifiez ces paramètres si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62721731"
   
     -   Si la valeur de **allow_push** est **1**, la publication prend en charge les abonnements par envoi de données.  
   
-    -   Si la valeur de **allow_push** n’est pas **1**, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en spécifiant `true` **allow_push** pour **@property** et pour. **@value**  
+    -   Si la valeur de **allow_push** n’est pas **1**, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en spécifiant **allow_push** pour **@property** et `true` pour **@value** .  
   
 2.  Sur la base de données de publication du serveur de publication, exécutez [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql), en spécifiant les paramètres suivants :  
   
@@ -131,12 +130,12 @@ ms.locfileid: "62721731"
   
 3.  Sur la base de données de publication du serveur de publication, exécutez [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Spécifiez les éléments suivants :  
   
-    -   Paramètres **@subscriber**, **@subscriber_db**et **@publication** .  
+    -   **@subscriber**Paramètres, **@subscriber_db** et **@publication** .  
   
-    -   Les informations d’identification Windows sous lesquelles le Agent de fusion sur le serveur de **@job_login** distribution **@job_password**s’exécute pour et.  
+    -   Les informations d’identification Windows sous lesquelles le Agent de fusion sur le serveur de distribution s’exécute pour **@job_login** et **@job_password** .  
   
         > [!NOTE]  
-        >  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les **@job_login** informations **@job_password**d’identification Windows spécifiées par et. L'Agent de fusion crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
+        >  Les connexions effectuées à l’aide de l’authentification intégrée Windows utilisent toujours les informations d’identification Windows spécifiées par **@job_login** et **@job_password** . L'Agent de fusion crée toujours la connexion locale au serveur de distribution à l'aide de l'authentification intégrée Windows. Par défaut, l'agent se connecte à l'Abonné à l'aide de ces informations.  
   
     -   (Facultatif) La valeur **0** pour **@subscriber_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@subscriber_login** et **@subscriber_password**. Spécifiez ces paramètres si vous devez utiliser l'authentification SQL Server lors de la connexion à l'abonné.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "62721731"
     > [!IMPORTANT]  
     >  Lors de la création d'un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  L'exemple suivant crée un abonnement par envoi de données vers une publication transactionnelle. Les valeurs de connexion et de mot de passe sont fournies lors de l’exécution à l’aide des variables de script **sqlcmd** .  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpushsub.sql#sp_addtranpushsubscription_agent)]  

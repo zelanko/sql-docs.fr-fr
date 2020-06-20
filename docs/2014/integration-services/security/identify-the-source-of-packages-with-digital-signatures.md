@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269aef896c485f0a383a35eae6d750e939868c29
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766651"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963824"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifier la source de packages à l'aide de signatures numériques
   Il est possible de signer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec un certificat numérique pour identifier sa source. Après avoir signé un package avec un certificat numérique, vous pouvez utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour vérifier la signature numérique avant de charger le package. Pour vérifier la signature à l’aide d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez définir une option dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou dans l’utilitaire **dtexec** (dtexec.exe), ou définir une valeur de Registre facultative.  
@@ -34,7 +33,7 @@ ms.locfileid: "62766651"
   
 -   Pour vérifier la signature numérique de tous les packages avant de charger les packages au moment de la conception, définissez l'option **Vérifier la signature numérique lors du chargement d'un package** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Cette option est un paramètre global pour tous les packages dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d'informations, consultez [General Page](../general-page-of-integration-services-designers-options.md).  
   
--   Pour vérifier la signature numérique d’un package individuel, spécifiez `/VerifyS[igned]` l’option lorsque vous utilisez l’utilitaire **dtexec** pour exécuter le package. Pour plus d'informations, consultez [Utilitaire dtexec](../packages/dtexec-utility.md).  
+-   Pour vérifier la signature numérique d’un package individuel, spécifiez l' `/VerifyS[igned]` option lorsque vous utilisez l’utilitaire **dtexec** pour exécuter le package. Pour plus d'informations, consultez [Utilitaire dtexec](../packages/dtexec-utility.md).  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>Définition d'une valeur du Registre pour vérifier la signature d'un package  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]prend également en charge une valeur de Registre facultative, **BlockedSignatureStates**, que vous pouvez utiliser pour gérer la stratégie de chargement des packages signés et non signés d’une organisation. La valeur de Registre peut empêcher le chargement de packages si les packages ne sont pas signés ou s'ils possèdent des signatures non valides ou non approuvées. Pour plus d’informations sur la définition de cette valeur de Registre, consultez [Implémenter une stratégie de signature en définissant une valeur du Registre](../implement-a-signing-policy-by-setting-a-registry-value.md).  

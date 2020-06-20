@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 571f6f3a0d44f0fc87c67885249fca441776946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055569"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Afficher et modifier les propriétés d'un serveur de distribution ou d'un serveur de publication
   Cette rubrique décrit comment afficher et modifier les propriétés du serveur de distribution et du serveur de publication dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -58,7 +57,7 @@ ms.locfileid: "68212026"
   
 2.  Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Propriétés du serveur de distribution**.  
   
-3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**.  
+3.  Affichez et modifiez les propriétés dans la boîte de dialogue Propriétés du serveur de **distribution- \<Distributor> ** .  
   
     -   Pour afficher et modifier les propriétés d’une base de données de distribution, cliquez sur le bouton des propriétés (**...**) pour la base de données dans la page **Général** de la boîte de dialogue.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68212026"
   
 2.  Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Propriétés du serveur de publication**.  
   
-3.  Affichez et modifiez les propriétés dans la boîte de dialogue Propriétés du serveur de publication **- \< serveur de publication >** .  
+3.  Affichez et modifiez les propriétés dans la boîte de dialogue Propriétés du serveur de **publication- \< Publisher > ** .  
   
     -   Un utilisateur du rôle serveur fixe **sysadmin** peut activer des bases de données pour la réplication sur la page **Bases de données de publication** . L'activation d'une base de données ne publie pas cette dernière, elle permet plutôt à n'importe quel utilisateur du rôle de base de données fixe **db_owner** de cette base de données de créer une ou plusieurs publications dans la base de données.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "68212026"
   
 4.  Sur le serveur de distribution, exécutez [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) pour modifier les propriétés d'un serveur de publication à l'aide du serveur de distribution.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemples (Transact-SQL)  
  L'exemple de script [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant retourne des informations sur le serveur de distribution et sur la base de données de distribution.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  

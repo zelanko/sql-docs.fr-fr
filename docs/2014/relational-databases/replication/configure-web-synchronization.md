@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 406175533b92d13dce8c14b91b654fbb6099dc22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010988"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
   L'option de synchronisation Web de la réplication de fusion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de répliquer les données à l'aide du protocole HTTPS sur Internet. Pour utiliser la synchronisation Web, vous devez d'abord effectuer les actions de configuration suivantes :  
@@ -124,7 +123,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 -   Si vous répliquez d'importants volumes de données, vous pouvez être amené à ajuster la taille de lot de l'Agent de fusion.  
   
- La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide des`DownloadGenerationsPerBatch` paramètres-`UploadGenerationsPerBatch` et-de la agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](agents/replication-merge-agent.md).  
+ La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide `DownloadGenerationsPerBatch` des paramètres-et- `UploadGenerationsPerBatch` de la agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Pour d'importants volumes de données, spécifiez un petit nombre pour chaque paramètre de traitement par lot. Nous vous recommandons de commencer avec une valeur de 10, puis d'ajuster cette valeur selon les besoins et les performances des applications. En général, ces paramètres sont spécifiés dans un profil d'agent. Pour plus d'informations sur ces profils, consultez [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +143,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
      Pour plus d'informations sur les autorisations requises par les agents, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Spécifiez le même compte de domaine que celui utilisé par le Agent de fusion lorsque vous spécifiez un compte et un mot de passe dans la page informations sur le **serveur Web** de l’Assistant nouvel **@internet_url** abonnement **@internet_login** ou lorsque vous spécifiez des valeurs pour les paramètres et de [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Ce compte doit disposer d'autorisations en lecture pour le partage des instantanés.  
+-   Spécifiez le même compte de domaine que celui utilisé par le Agent de fusion lorsque vous spécifiez un compte et un mot de passe dans la page informations sur le **serveur Web** de l’Assistant nouvel abonnement ou lorsque vous spécifiez des valeurs pour les **@internet_url** **@internet_login** paramètres et de [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Ce compte doit disposer d'autorisations en lecture pour le partage des instantanés.  
   
 -   Chaque publication doit utiliser un répertoire virtuel distinct pour IIS.  
   

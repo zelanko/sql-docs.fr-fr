@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ad0a33f0a5951256ff94bc78e7f09a88c05f227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250547"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010418"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimiser les performances des filtres paramétrés avec des partitions précalculées
   Les partitions précalculées représentent une optimisation des performances pouvant être utilisée avec les publications de fusion filtrées. Les partitions précalculées sont également une condition requise pour l'utilisation d'enregistrements logiques sur les publications filtrées. Pour plus d’informations sur les enregistrements logiques, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](group-changes-to-related-rows-with-logical-records.md).  
   
  Lorsqu'un abonné synchronise avec un serveur de publication, ce dernier doit évaluer les filtres de l'Abonné pour déterminer quelles lignes appartiennent à la partition, ou à l'ensemble de données de cet abonné. Le processus permettant de déterminer l'appartenance d'une partition aux modifications sur le serveur de publication pour chaque abonné recevant un dataset filtré est dénommé *évaluation de partition*. Sans partitions précalculées, l'évaluation de partition doit être effectuée pour chaque modification apportée à une colonne filtrée sur le serveur de publication depuis la dernière exécution de l'Agent de fusion pour un abonné spécifique, et ce processus doit être répété pour chaque abonné synchronisant avec le serveur de publication.  
   
- Toutefois, si le serveur de publication et l’abonné [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] s’exécutent sur ou une version ultérieure et que vous utilisez des partitions précalculées, l’appartenance à une partition pour toutes les modifications sur le serveur de publication est précalculée et persistante au moment où les modifications sont effectuées. Il en résulte que lorsque l'Abonné synchronise avec le serveur de publication, il peut commencer immédiatement à télécharger les modifications concernant sa partition, sans avoir à passer par le processus d'évaluation de partition. Cela peut entraîner d'importantes améliorations en terme de performance, lorsqu'une publication comporte beaucoup de modifications, d'abonnés ou d'articles dans la publication.  
+ Toutefois, si le serveur de publication et l’abonné s’exécutent sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure et que vous utilisez des partitions précalculées, l’appartenance à une partition pour toutes les modifications sur le serveur de publication est précalculée et persistante au moment où les modifications sont effectuées. Il en résulte que lorsque l'Abonné synchronise avec le serveur de publication, il peut commencer immédiatement à télécharger les modifications concernant sa partition, sans avoir à passer par le processus d'évaluation de partition. Cela peut entraîner d'importantes améliorations en terme de performance, lorsqu'une publication comporte beaucoup de modifications, d'abonnés ou d'articles dans la publication.  
   
  En plus d'utiliser des partitions précalculées, prégénérez des instantanés et/ou permettez aux Abonnés de demander la génération et l'application d'un instantané la première fois qu'ils se synchronisent. Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   

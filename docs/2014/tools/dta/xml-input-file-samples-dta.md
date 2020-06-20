@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3cf9ec0ff53fced20701b0b5b3379c1ec8dac219
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4dd6e1999fa04ec1de4428f6474c8eb2090257b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057741"
 ---
 # <a name="xml-input-file-samples-dta"></a>Exemples de fichiers d'entrée XML (Assistant Paramétrage de base de données)
   Cette section contient des exemples de fichiers d’entrée XML que vous pouvez utiliser avec l’outil en ligne de commande **dta** . Cet outil forme l'une des interfaces utilisateur de l'Assistant Paramétrage du moteur de base de données, outil qui permet de paramétrer des bases de données en vue d'améliorer les performances des requêtes. L'Assistant Paramétrage du moteur de base de données analyse les effets d'une charge de travail dans une ou plusieurs bases de données. Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécutent dans les bases de données que vous souhaitez paramétrer. Une fois que l'Assistant Paramétrage du moteur de base de données a terminé d'analyser les effets de la charge de travail, il crée une recommandation pour ajouter des index, des vues indexées et des partitions afin d'améliorer les performances des requêtes dans vos bases de données.  

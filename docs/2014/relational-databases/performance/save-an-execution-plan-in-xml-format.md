@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84ed341d186993ed77260e8361156b324c597839
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150862"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047891"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Enregistrer un plan d'exécution au format XML
   Utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour enregistrer un plan d'exécution en tant que fichier XML, puis pour l'ouvrir et le consulter.  
@@ -65,9 +64,9 @@ ms.locfileid: "63150862"
   
 4.  Dans le volet **Résultats** , cliquez avec le bouton droit sur le **Plan d’exécution XML Microsoft SQL Server** contenant le plan de requête, puis cliquez sur **Enregistrer les résultats sous**.  
   
-5.  Dans la boîte de dialogue **Enregistrer**les résultats** de la ** \<grille ou du texte>, dans la zone **Type de fichier**, cliquez sur **Tous les fichiers (\*.\*)**.  
+5.  Dans la boîte de dialogue **Enregistrer** \<Grid or Text> les **résultats** , dans la zone **type** de fichier, cliquez sur **tous les fichiers ( \* . \* )**.  
   
-6.  Dans la **zone nom de fichier** , entrez un nom, au \<format nom **>. sqlplan**, puis cliquez sur **Enregistrer**.  
+6.  Dans la zone **nom de fichier** , entrez un nom au format \<name**> . sqlplan * *, puis cliquez sur **Enregistrer**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Pour enregistrer un plan d'exécution avec les options de SQL Server Management Studio  
   
@@ -79,7 +78,7 @@ ms.locfileid: "63150862"
   
 3.  Dans la boîte de dialogue **Enregistrer sous**, assurez-vous que **Type de fichier** est défini à **Fichiers de plan d’exécution (\*.sqlplan)**.  
   
-4.  Dans la **zone nom de fichier** , entrez un nom, au \<format nom **>. sqlplan**, puis cliquez sur **Enregistrer**.  
+4.  Dans la zone **nom de fichier** , entrez un nom au format \<name**> . sqlplan * *, puis cliquez sur **Enregistrer**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Pour ouvrir un plan de requête XML dans SQL Server Management Studio  
   

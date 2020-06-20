@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ca0717a63c9660c225ec238e1e4d2423f7d01ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010788"
 ---
 # <a name="distributor-information-dialog-box"></a>Boîte de dialogue informations sur le serveur de distribution 
 Cette rubrique fournit des informations sur la boîte de dialogue serveur de **distribution** 
@@ -58,7 +57,7 @@ Cette rubrique fournit des informations sur la boîte de dialogue serveur de **d
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error    
+-   Erreur    
 -   Recommencer    
 -   Exécution en cours    
 -   Non exécuté    
@@ -104,7 +103,7 @@ Cette rubrique fournit des informations sur la boîte de dialogue serveur de **d
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error    
+-   Erreur    
 -   Recommencer    
 -   Exécution en cours    
 -   Non exécuté    

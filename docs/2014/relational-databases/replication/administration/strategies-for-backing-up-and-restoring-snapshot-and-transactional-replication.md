@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055742"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
   Lors de la conception d'une stratégie de sauvegarde et de restauration de la réplication transactionnelle et d'instantané, vous devez identifier :  
@@ -207,17 +206,17 @@ ms.locfileid: "68210774"
   
     2.  Recréez l’abonnement de la base de données **B** à la publication de la base de données **a**, en spécifiant que l’abonnement doit être initialisé avec une sauvegarde (valeur **Initialize with backup** pour le **@sync_type** paramètre de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l'étape c.  
   
-    3.  Recréez l’abonnement de la base de données **a** à la publication de la base de données **B**, en spécifiant que l’abonné possède déjà les données ( **@sync_type** valeur de la **prise en charge de la réplication uniquement** pour le paramètre de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l’étape 8.  
+    3.  Recréez l’abonnement de la base de données **a** à la publication de la base de données **B**, en spécifiant que l’abonné possède déjà les données (valeur de la **prise en charge de la réplication uniquement** pour le **@sync_type** paramètre de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l’étape 8.  
   
 8.  Exécutez les Agents de distribution pour synchroniser les abonnements sur les bases de données **A** et **B**. Si les tables publiées comportent des colonnes d'identité, passez à l'étape 9. Sinon, passez à l’étape 10.  
   
 9. Après la restauration, la plage d’identité assignée à chaque table de la base de données **A** est également utilisée dans la base de données **B**. Vérifiez que la base de données **B** restaurée a reçu toutes les modifications de la base de données **B** défaillante qui ont été propagées aux bases de données **A** et **C**, puis réattribuez une valeur de départ à la plage d’identité de chaque table.  
   
-    1.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) à la base de données **B** et récupérez le paramètre **@request_id**de sortie. Passez à l'étape b.  
+    1.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) à la base de données **B** et récupérez le paramètre de sortie **@request_id** . Passez à l'étape b.  
   
     2.  Par défaut, l'Agent de distribution est configuré pour s'exécuter en continu ; par conséquent, les jetons doivent être envoyés automatiquement à tous les nœuds. Si l'Agent de distribution ne s'exécute pas en mode continu, exécutez l'Agent. Pour plus d’informations, consultez [Concepts des exécutables de l’agent de réplication](../concepts/replication-agent-executables-concepts.md) ou [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Passez à l'étape c.  
   
-    3.  Exécutez [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), en fournissant **@request_id** la valeur récupérée à l’étape b. Attendez que tous les nœuds indiquent qu'ils ont reçu la demande de l'homologue. Passez à l'étape d.  
+    3.  Exécutez [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), en fournissant la **@request_id** valeur récupérée à l’étape b. Attendez que tous les nœuds indiquent qu'ils ont reçu la demande de l'homologue. Passez à l'étape d.  
   
     4.  Utilisez [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) pour réattribuer une valeur de départ à chaque table de la base de données **B** et vérifier qu'une plage appropriée est utilisée. Passez à l'étape 10.  
   
@@ -229,11 +228,11 @@ ms.locfileid: "68210774"
   
     1.  Arrêtez toute activité sur les tables publiées dans la topologie d'égal à égal. Passez à l'étape b.  
   
-    2.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) à la base de données **B** et récupérez le paramètre **@request_id**de sortie. Passez à l'étape c.  
+    2.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) à la base de données **B** et récupérez le paramètre de sortie **@request_id** . Passez à l'étape c.  
   
     3.  Par défaut, l'Agent de distribution est configuré pour s'exécuter en continu ; par conséquent, les jetons doivent être envoyés automatiquement à tous les nœuds. Si l'Agent de distribution ne s'exécute pas en mode continu, exécutez l'Agent. Passez à l'étape d.  
   
-    4.  Exécutez [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), en fournissant **@request_id** la valeur récupérée à l’étape b. Attendez que tous les nœuds indiquent qu'ils ont reçu la demande de l'homologue. Passez à l'étape e.  
+    4.  Exécutez [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), en fournissant la **@request_id** valeur récupérée à l’étape b. Attendez que tous les nœuds indiquent qu'ils ont reçu la demande de l'homologue. Passez à l'étape e.  
   
     5.  Recréez l'abonnement de la base de données **B** à la publication de la base de données **C**, en spécifiant que l'Abonné possède déjà les données. Passez à l'étape b.  
   
@@ -243,7 +242,7 @@ ms.locfileid: "68210774"
   
     1.  Sur la base de données **B**, interrogez la table [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) pour récupérer le numéro séquentiel dans le journal de la transaction la plus récente que la base de données **B** a reçue de la base de données **C**.  
   
-    2.  Recréez l’abonnement de la base de données **B** à la publication de la base de données **C**, en spécifiant que l’abonnement doit être initialisé en fonction du LSN (valeur **@sync_type** **initialize from LSN** pour le paramètre de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l'étape b.  
+    2.  Recréez l’abonnement de la base de données **B** à la publication de la base de données **C**, en spécifiant que l’abonnement doit être initialisé en fonction du LSN (valeur **Initialize from lsn** pour le **@sync_type** paramètre de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Passez à l'étape b.  
   
     3.  Recréez l'abonnement de la base de données **C** à la publication de la base de données **B**, en spécifiant que l'Abonné possède déjà les données. Passez à l’étape 13.  
   

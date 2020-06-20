@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab6d134177c7861c3a8f92cf767c71c0b56e233
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843719"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929128"
 ---
 # <a name="set-source-control-options"></a>Définir les options du contrôle de code source
   Pour pouvoir bénéficier des fonctionnalités du contrôle de code source intégrées à [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], vous devez préalablement configurer les options du contrôle de code source relatives aux différents environnements dans lesquels vous travaillez.  
@@ -52,9 +51,9 @@ ms.locfileid: "62843719"
   
     |Role|Description|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Spécifie que vous souhaitez utiliser les paramètres les plus couramment utilisés [!INCLUDE[msCoName](../includes/msconame-md.md)] par les utilisateurs de Visual SourceSafe.|  
+    |**Visual SourceSafe**|Spécifie que vous souhaitez utiliser les paramètres les plus couramment utilisés par [!INCLUDE[msCoName](../includes/msconame-md.md)] les utilisateurs de Visual SourceSafe.|  
     |**Développeur indépendant**|Indique que vous travaillez de manière indépendante.|  
-    |**Personnalisée**|Indique que vous avez modifié les paramètres d'un rôle.|  
+    |**Personnalisé**|Indique que vous avez modifié les paramètres d'un rôle.|  
   
      **Effectuer les mises à jour d'état en tâche de fond**  
      Met automatiquement à jour les icônes du signal de contrôle de code source dans l'Explorateur de solutions au fur et à mesure que l'état d'un élément change. Si vous rencontrez des problèmes de retards lors de l'exécution des opérations de serveur, particulièrement lors de l'ouverture d'une solution ou d'un projet à partir du contrôle de code source, le fait de désactiver cette case à cocher peut améliorer les performances.  
@@ -76,9 +75,9 @@ ms.locfileid: "62843719"
   
     |Role|Description|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Spécifie que vous souhaitez utiliser les paramètres les plus couramment utilisés [!INCLUDE[msCoName](../includes/msconame-md.md)] par les utilisateurs de Visual SourceSafe.|  
+    |**Visual SourceSafe**|Spécifie que vous souhaitez utiliser les paramètres les plus couramment utilisés par [!INCLUDE[msCoName](../includes/msconame-md.md)] les utilisateurs de Visual SourceSafe.|  
     |**Développeur indépendant**|Indique que vous travaillez de manière indépendante.|  
-    |**Personnalisée**|Indique que vous avez modifié les paramètres d'un rôle.|  
+    |**Personnalisé**|Indique que vous avez modifié les paramètres d'un rôle.|  
   
      Lorsque vous choisissez l'un de ces rôles, les options du contrôle de code source correspondantes sont automatiquement sélectionnées.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62843719"
      Spécifie que les éléments doivent rester extraits à votre niveau lorsque vous procédez à l'archivage d'éléments pour mettre à jour le magasin du contrôle de code source. Si vous souhaitez modifier cette option pour un archivage spécifique, cliquez sur la flèche **options** dans la boîte de dialogue **Archiver** , puis désactivez la case à cocher **conserver** l’extraction.  
   
      **Éléments archivés**  
-     Affiche une liste d’options qui spécifient [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] comment se comporter quand vous essayez de modifier un élément qui n’est pas extrait. Les tableaux suivants décrivent les options disponibles.  
+     Affiche une liste d’options qui spécifient comment [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se comporter quand vous essayez de modifier un élément qui n’est pas extrait. Les tableaux suivants décrivent les options disponibles.  
   
      **Enregistrement**  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c72b8c718237582f5a40c56e40e2a51e79e177e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029911"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction (classe d'événements)
   Utilisez la classe d’événements **DTCTransaction** pour analyser l’état des transactions du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] coordonnées par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC). Ceci inclut les transactions impliquant plusieurs bases de données dans la même instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou des transactions distribuées impliquant plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

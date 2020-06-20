@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d40c0397b0a43f8cd17a53ee9be3f738bbe8500c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03df9e953e8e6441a933f39632993804c6ea1227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048689"
 ---
 # <a name="options-environment-help-online-page"></a>Options (Environment-Help-Online Page)
   La boîte de dialogue **Options** vous permet de spécifier les sources d’aide à utiliser pour les recherches, notamment pour l’aide F1, dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , sélectionnez **Aide**, puis cliquez sur **En ligne**. Si la page **En ligne** n'apparaît pas dans la liste, activez la case à cocher **Afficher tous les paramètres** dans la boîte de dialogue **Options** .  

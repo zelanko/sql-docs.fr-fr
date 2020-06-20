@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: decf18a42bc2f3f80d5c6099adc58a42869eec64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19d7e332605f2b2f0f746d5d149451dd2646627d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030938"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation (classe d'événements)
-  La classe d’événements **Audit Server Principal Impersonation** se produit lors d’un emprunt d’identité dans l’étendue du serveur, comme EXECUTE AS \<*ID_connexion*>.  
+  La classe **d’événements Audit Server principal Impersonate** se produit en cas d’emprunt d’identité dans l’étendue du serveur, par exemple Execute As \<*login*> .  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Colonnes de données de la classe d'événements Audit Server Principal Impersonation  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3645dea1a929295d72c01a31fdc0e1f7999e9ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012859"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>Modifications des limites affectant les processeurs et la mémoire pour SQL Server Reporting Services Standard et Enterprise (Conseiller de mise à niveau)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard et Enterprise prennent en charge jusqu'à 64 gigaoctets de mémoire système.  
@@ -35,7 +34,7 @@ ms.locfileid: "71952575"
   
  Pour plus d'informations sur les limites de processeur et de mémoire des autres éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les rubriques suivantes  
   
--   [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+-   [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 -   [Limites de capacité de calcul par édition de SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
