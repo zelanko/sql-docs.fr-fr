@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3af9d31a54adc5645cab6fcc7104ae7ff27a61b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059100"
 ---
 # <a name="rename-user-sys"></a>Renommer l'utilisateur système
   Le Conseiller de mise à niveau a détecté le nom d'utilisateur **sys** dans une base de données. Ce nom est réservé. Renommez l'utilisateur avant d'effectuer la mise à niveau. Si l'utilisateur n'est pas renommé, la base de données sera marquée comme étant suspecte après l'opération de mise à niveau et restera indisponible jusqu'à ce qu'elle soit mise en ligne.  

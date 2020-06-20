@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1770b9ab0284d203f7a5954dd369c5391984c12b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938410"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez la barre d'outils pour exécuter des actions courantes dans la page **Structure de dimension** du **Concepteur de dimensions**.  
@@ -32,7 +31,7 @@ ms.locfileid: "66066049"
   
 -   List  
   
-     Affiche la liste des attributs de la dimension actuelle. Il s’agit de la valeur par défaut.  
+     Affiche la liste des attributs de la dimension actuelle. Il s'agit de la valeur par défaut.  
   
 -   Arborescence  
   

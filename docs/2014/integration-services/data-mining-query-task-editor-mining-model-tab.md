@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41a5d4530be6250795e083726df59acbd2f7f7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890776"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939140"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Modèle d'exploration de données)
   Utilisez l’onglet **Modèle d’exploration de données** de la boîte de dialogue **Tâche de requête d’exploration de données** pour spécifier la structure et le modèle d’exploration de données à utiliser.  
@@ -42,7 +41,7 @@ ms.locfileid: "68890776"
   
  **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  

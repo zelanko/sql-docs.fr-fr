@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2d187ea3ed951ac6f17eb4babc5f4f77451d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003996"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Recherche de mots dans le voisinage d'autres mots avec NEAR
-  Vous pouvez utiliser un terme de proximité (NEAR) dans un prédicat [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou une fonction [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) pour rechercher des mots ou des expressions à proximité les uns des autres. Vous pouvez également spécifier le nombre maximal de termes de non-recherche qui séparent le premier et le dernier terme de recherche. De plus, vous pouvez rechercher des mots ou des expressions dans n'importe quel ordre ou dans un ordre spécifié. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]prend en charge à la fois le [terme de proximité générique](#Generic_NEAR)précédent, qui est maintenant déconseillé et le [terme de proximité personnalisé](#Custom_NEAR), [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]qui est nouveau dans.  
+  Vous pouvez utiliser un terme de proximité (NEAR) dans un prédicat [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou une fonction [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) pour rechercher des mots ou des expressions à proximité les uns des autres. Vous pouvez également spécifier le nombre maximal de termes de non-recherche qui séparent le premier et le dernier terme de recherche. De plus, vous pouvez rechercher des mots ou des expressions dans n'importe quel ordre ou dans un ordre spécifié. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]prend en charge à la fois le [terme de proximité générique](#Generic_NEAR)précédent, qui est maintenant déconseillé et le [terme de proximité personnalisé](#Custom_NEAR), qui est nouveau dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
 ##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>Terme de proximité personnalisé  
  Le terme de proximité personnalisé présente les nouvelles fonctions suivantes :  
@@ -184,7 +183,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- Vous ne pouvez pas combiner un terme de proximité générique avec un terme de proximité `NEAR((term1,term2),5)`personnalisé, tel que, un terme pondéré (ISABOUT...) ou un terme GÉNÉRATIONNEL (FORMSOF...).  
+ Vous ne pouvez pas combiner un terme de proximité générique avec un terme de proximité personnalisé, tel que `NEAR((term1,term2),5)` , un terme pondéré (ISABOUT...) ou un terme générationnel (FORMSOF...).  
   
 ### <a name="example-using-the-generic-proximity-term"></a>Exemple : utilisation du terme de proximité générique  
  L'exemple suivant utilise le terme de proximité générique pour rechercher le mot « reflector » dans le même document que le mot « bracket ».  

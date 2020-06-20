@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060815"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921884"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurer une sortie d'erreur dans un composant de flux de données
   De nombreux composants de flux de données prennent en charge les sorties d’erreur, et en fonction du composant, le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] offre différentes manières de configurer une sortie d’erreur. En plus de configurer une sortie d'erreur, vous pouvez également configurer les colonnes d'une sortie d'erreur. Cela inclut la configuration des colonnes **ErrorCode** et **ErrorColumn** ajoutées par le composant.  
@@ -82,7 +81,7 @@ ms.locfileid: "66060815"
   
 4.  Cliquez avec le bouton droit sur le composant dont vous voulez configurer les colonnes de sortie d’erreur et cliquez sur **Afficher l’éditeur avancé**.  
   
-5.  Cliquez sur l’onglet **propriétés d’entrée et de sortie** et développez ** \<le nom du composant> la sortie d’erreur** , puis développez colonnes de **sortie**.  
+5.  Cliquez sur l’onglet **propriétés d’entrée et de sortie** et développez ** \<component name> sortie d’erreur** , puis développez colonnes de **sortie**.  
   
 6.  Cliquez sur une colonne et mettez à jour ses propriétés.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938690"
 ---
 # <a name="relationships-ssas-tabular"></a>Relations (SSAS Tabulaire)
   Dans les modèles tabulaires, une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation. Par exemple, il est possible de créer une relation entre une table Clients et une table Commandes afin d'indiquer le nom du client associé à chaque commande.  
@@ -43,7 +42,7 @@ ms.locfileid: "66066698"
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="what"></a>Avantageuse  
+##  <a name="benefits"></a><a name="what"></a> Avantages  
  Une relation est une connexion entre deux tables de données, basée sur une ou plusieurs colonnes dans chaque table. Pour comprendre pourquoi les relations sont utiles, imaginez que vous effectuez le suivi des données des commandes client dans votre entreprise. Vous pouvez effectuer le suivi de toutes les données dans une table individuelle possédant une structure similaire à :  
   
 |CustomerID|Nom|EMail|DiscountRate|OrderID|OrderDate|Produit|Quantité|  
@@ -56,7 +55,7 @@ ms.locfileid: "66066698"
   
 ### <a name="customers"></a>Clients  
   
-|[CustomerID]|Nom|Courrier électronique|  
+|[CustomerID]|Nom|E-mail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -112,7 +111,7 @@ ms.locfileid: "66066698"
 ### <a name="single-active-relationship-between-tables"></a>Relation active unique entre des tables  
  Plusieurs relations pourraient générer des dépendances ambiguës entre des tables. Pour créer des calculs exacts, vous avez besoin d'un chemin d'accès unique entre une table et la table suivante. Par conséquent, il ne peut y avoir qu'une seule relation active entre chaque paire de tables. Par exemple, dans AdventureWorks DW 2012, la table DimDate contient une colonne DateKey qui est associée à trois colonnes différentes dans la table FactInternetSales : OrderDate, DueDate et ShipDate. Si vous tentez d'importer ces tables, la première relation est créée avec succès, mais vous recevrez l'erreur suivante sur les relations consécutives qui impliquent la même colonne :  
   
- \*Relation : table [colonne 1]-> table [colonne 2]-État : erreur-raison : impossible de créer une relation entre les \<tables table 1> \<et table 2>. Une seule relation directe ou indirecte peut exister entre deux tables.  
+ \*Relation : table [colonne 1]-> table [colonne 2]-État : erreur-raison : impossible de créer une relation entre \<table 1> des tables et \<table 2> . Une seule relation directe ou indirecte peut exister entre deux tables.  
   
  Si vous avez deux tables et plusieurs relations entre elles, vous devez importer plusieurs copies de la table qui contient la colonne de recherche et créer une relation entre chaque paire de tables.  
   
@@ -177,7 +176,7 @@ ms.locfileid: "66066698"
 ##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>Valeurs dupliquées et autres erreurs  
  Si vous choisissez une colonne qui ne peut pas être utilisée dans la relation, un X rouge s'affiche en regard de la colonne. Vous pouvez placer le curseur sur l'icône d'erreur pour afficher un message qui fournit des informations supplémentaires sur le problème. Voici quelques-uns des problèmes qui peuvent rendre impossible la création d'une relation entre les colonnes sélectionnées :  
   
-|Problème ou message|Solution|  
+|Problème ou message|Résolution|  
 |------------------------|----------------|  
 |La relation ne peut pas être créée car les deux colonnes sélectionnées contiennent des valeurs dupliquées.|Au moins, une colonne de la paire que vous sélectionnez doit contenir uniquement des valeurs uniques pour créer une relation valide.<br /><br /> Vous pouvez modifier les colonnes pour supprimer les doublons ou inverser l'ordre des colonnes afin que la colonne qui contient les valeurs uniques soit utilisée comme **colonne de recherche associée**.|  
 |La colonne contient une valeur Null ou vide.|Les colonnes de données ne peuvent pas être jointes entre elles sur une valeur Null. Pour chaque ligne, une valeur doit figurer dans chacune des deux colonnes utilisées dans une relation.|  

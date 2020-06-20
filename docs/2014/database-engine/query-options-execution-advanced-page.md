@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034923"
 ---
 # <a name="query-options-execution-advanced-page"></a>Options Exécution de la requête (page Avancé)
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199328"
 
 **définir PARSEONLY** Vérifie la syntaxe de chaque requête, mais n’exécute pas les requêtes. Cette option est désactivée par défaut.  
 
-**définir CONCAT_NULL_YIELDS_NULL** Lorsque cette case à cocher est activée, les requêtes qui concatènent une valeur existante `NULL`avec un, retournent toujours une `NULL` valeur comme résultat. Lorsque cette case à cocher est désactivée, une valeur existante concaténée avec une valeur `NULL`, retourne la valeur existante. Cette option est activée par défaut.
+**définir CONCAT_NULL_YIELDS_NULL** Lorsque cette case à cocher est activée, les requêtes qui concatènent une valeur existante avec un `NULL` , retournent toujours une valeur `NULL` comme résultat. Lorsque cette case à cocher est désactivée, une valeur existante concaténée avec une valeur `NULL`, retourne la valeur existante. Cette option est activée par défaut.
 
-**SET ARITHABORT** Lorsque cette case à cocher est activée, `INSERT`lorsqu' `DELETE` une `UPDATE` instruction, ou rencontre une erreur arithmétique (dépassement de capacité, Division par zéro ou erreur de domaine) lors de l’évaluation de l’expression, la requête ou le traitement est terminé. Lorsque cette case à cocher est désactivée, une valeur `NULL` est fournie pour cette valeur, si possible, la requête se poursuit et un message est inclus avec le résultat. Consultez la documentation en ligne pour une description plus complète de ce comportement. Cette option est activée par défaut.
+**SET ARITHABORT** Lorsque cette case à cocher est activée, lorsqu’une `INSERT` `DELETE` instruction, ou `UPDATE` rencontre une erreur arithmétique (dépassement de capacité, Division par zéro ou erreur de domaine) lors de l’évaluation de l’expression, la requête ou le traitement est terminé. Lorsque cette case à cocher est désactivée, une valeur `NULL` est fournie pour cette valeur, si possible, la requête se poursuit et un message est inclus avec le résultat. Consultez la documentation en ligne pour une description plus complète de ce comportement. Cette option est activée par défaut.
   
 **définir SHOWPLAN_TEXT** Lorsque cette case à cocher est activée, le plan de requête est retourné sous forme de texte avec chaque requête. Cette option est désactivée par défaut.
   

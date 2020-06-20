@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95e77fe1743406d7206b05470b4559fcfb0a6d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011847"
 ---
 # <a name="replication-upgrade-issues"></a>Problèmes de mise à niveau de la réplication
   Les rubriques suivantes décrivent les problèmes de réplication susceptibles d'affecter la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Elles présentent les mesures que vous pouvez prendre pour atténuer les effets de ces modifications sur votre environnement.  
