@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dfe835b1-ea52-4e18-a23a-5188c5b6f013
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9837eb1c58facb76eef5885012920b294674f7fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0244760e6fadc421854e13869ad1e973d7ed12f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962349"
 ---
 # <a name="standard-parse"></a>Analyse standard
   L'analyse standard est un ensemble de routines d'analyse spécifique à un pays qui prend en charge toutes les conversions de type de données fournies par les API de conversion de type de données Automation disponibles dans Oleaut32.dll et Ole2dsip.dll. Elle est équivalente aux API d'analyse OLE DB.  

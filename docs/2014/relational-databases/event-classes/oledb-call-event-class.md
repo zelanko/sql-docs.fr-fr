@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a26781a34b75893dfb8aad54cea8e7f6d2c2e4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052873"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call (classe d'événements)
   La classe d’événements **OLEDB Call** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB pour les requêtes distribuées et les procédures stockées distantes.  
@@ -36,7 +35,7 @@ ms.locfileid: "62956328"
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|`Bigint`|Durée nécessaire pour exécuter l'événement d'appel OLE DB.|13|Non|  
 |EndTime|`Datetime`|Heure de fin de l'événement.|15|Oui|  
-|Error|`int`|Numéro d'erreur d'un événement donné. Il s'agit souvent du numéro d'erreur stocké dans l'affichage catalogue sys.messages.|31|Oui|  
+|Erreur|`int`|Numéro d'erreur d'un événement donné. Il s'agit souvent du numéro d'erreur stocké dans l'affichage catalogue sys.messages.|31|Oui|  
 |EventClass|`Int`|Type d’événement = 119.|27|Non|  
 |EventSequence|`Int`|Séquence de la classe d'événements OLE DB dans le lot.|51|Non|  
 |EventSubClass|`Int`|0=Démarrage<br /><br /> 1=Terminée|21|Non|  

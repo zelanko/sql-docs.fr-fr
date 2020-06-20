@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff127798f7c36340a85fa72cebfdc9a012c0676
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926100"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Ajouter une énumération à un flux de contrôle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut le conteneur de boucles Foreach, un élément de flux de contrôle qui permet de facilement inclure une construction de boucle énumérant les fichiers et objets du flux de contrôle d’un package. Pour plus d’informations, consultez [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md).  
@@ -47,6 +46,6 @@ ms.locfileid: "66061907"
  [Grouper ou dissocier des composants](group-or-ungroup-components.md)   
  [Contraintes de précédence](control-flow/precedence-constraints.md)   
  [Ajouter une itération à un workflow de contrôle](add-iteration-to-a-control-flow.md)   
- [Flux de contrôle](control-flow/control-flow.md)  
+ [Workflow de contrôle](control-flow/control-flow.md)  
   
   

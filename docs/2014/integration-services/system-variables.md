@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962369"
 ---
 # <a name="system-variables"></a>Variables système
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d'exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
@@ -41,7 +40,7 @@ ms.locfileid: "62927224"
 |`ExecutionInstanceGUID`|String|Identificateur unique de l'instance exécutée d'un package.|  
 |`FailedConfigurations`|String|Noms des configurations de package ayant échoué.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
-|**InteractiveMode**|Boolean|Indique si le package est exécuté en mode interactif. Si un package s'exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cette propriété a la valeur `True`. Si un package s’exécute à l' **DTExec** aide de l’utilitaire d' `False`invite de commandes dtexec, la propriété a la valeur.|  
+|**InteractiveMode**|Boolean|Indique si le package est exécuté en mode interactif. Si un package s'exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cette propriété a la valeur `True`. Si un package s’exécute à l’aide de l’utilitaire d’invite de commandes **dtexec** , la propriété a la valeur `False` .|  
 |`LocaleId`|Int32|Paramètre régional utilisé par le package.|  
 |**MachineName**|String|Nom de l'ordinateur sur lequel s'exécute le package.|  
 |**OfflineMode**|Boolean|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  

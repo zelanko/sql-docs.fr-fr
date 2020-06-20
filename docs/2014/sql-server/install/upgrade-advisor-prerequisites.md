@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5875ad2268e14d6bbe276ea437c5ee201867105e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c97cf585d1768c7aebeec2613ee8744cb220da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062360"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>Configuration requise par le Conseiller de mise à niveau
   Cette rubrique décrit la configuration logicielle requise par le Conseiller de mise à niveau.  
@@ -36,11 +35,11 @@ ms.locfileid: "73632771"
   
 -   Windows Installer 4.5. Vous pouvez installer Windows Installer à partir du [site Web Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], depuis .NET Framework 4. Est disponible sur le support [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] du produit, et à partir du [Kit de développement logiciel (SDK), redistribuable et Service Pack site Web de téléchargement](https://go.microsoft.com/fwlink/?LinkId=48882). [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]  
+-   The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], depuis .NET Framework 4. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]Est disponible sur le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support du produit, et à partir du [Kit de développement logiciel (SDK), redistribuable et Service Pack site Web de téléchargement](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
     -   Pour installer .NET Framework 4 à partir du support de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], localisez la racine du lecteur de disque. Ensuite, double-cliquez sur le dossier \redist, sur le dossier DotNetFrameworks et exécutez dotNetFx40_Full_x86_x64.exe (pour les systèmes d'exploitation 32 bits et 64 bits).  
   
--   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom est un composant requis pour l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation du conseiller de mise à niveau et n’est pas installé par le programme d’installation du conseiller de mise à niveau. Le programme d’installation vous demande de télécharger et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] d’installer le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ScriptDom à partir du Feature Pack.  
+-   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom est un composant requis pour l’installation du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] conseiller de mise à niveau et n’est pas installé par le programme d’installation du conseiller de mise à niveau. Le programme d’installation vous demande de télécharger et d’installer le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom à partir du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédure : installer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  

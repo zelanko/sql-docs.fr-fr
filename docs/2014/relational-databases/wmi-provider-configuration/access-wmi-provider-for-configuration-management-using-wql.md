@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b58297c5e292ceb18a6e2e50e2b25b9aa352e2fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061284"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Accéder au fournisseur WMI pour Gestion de l'ordinateur à l'aide de WQL
   Cette section décrit comment exécuter des instructions [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Management Instrumentation Query Language (WQL) contre le fournisseur WMI pour Gestion de l'ordinateur.  
@@ -29,7 +28,7 @@ ms.locfileid: "68195873"
   
 ### <a name="querying-services-using-wbemtest"></a>Interrogation de services à l'aide de WBEMtest  
   
-1.  Dans le menu **Démarrer** , cliquez sur **exécuter**, puis entrez `WBEMtest`.  
+1.  Dans le menu **Démarrer** , cliquez sur **exécuter**, puis entrez `WBEMtest` .  
   
 2.  La boîte de dialogue WBEMtest.exe apparaît. Cliquez sur **Connecter**.  
   

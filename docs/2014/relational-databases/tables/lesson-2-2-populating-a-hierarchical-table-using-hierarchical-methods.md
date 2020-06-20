@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef99d711a772a075f568a83f5d56fcecaaa598f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110063"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068051"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Remplissage d'une table hiérarchique utilisant des méthodes hiérarchiques
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a 8 employés travaillant dans le service Marketing. La hiérarchie des employés se présente comme suit :  
@@ -64,7 +63,7 @@ ms.locfileid: "66110063"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Pour insérer un employé subordonné  
   
-1.  **David** est le supérieur de **Sariya**. Pour insérer le nœud **de Sariya** , vous devez créer une valeur **OrgNode** appropriée de type `hierarchyid`de données. Le code suivant permet de créer une variable de type de données `hierarchyid` et de la remplir avec la valeur racine OrgNode de la table. Il utilise ensuite cette variable avec la méthode [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) pour insérer une ligne qui est un nœud subordonné. `GetDescendant` nécessite deux arguments. Vérifiez les valeurs d'argument des options suivantes :  
+1.  **David** est le supérieur de **Sariya**. Pour insérer le nœud **de Sariya** , vous devez créer une valeur **OrgNode** appropriée de type de données `hierarchyid` . Le code suivant permet de créer une variable de type de données `hierarchyid` et de la remplir avec la valeur racine OrgNode de la table. Il utilise ensuite cette variable avec la méthode [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) pour insérer une ligne qui est un nœud subordonné. `GetDescendant` nécessite deux arguments. Vérifiez les valeurs d'argument des options suivantes :  
   
     -   Si parent est NULL, `GetDescendant` retourne NULL.  
   

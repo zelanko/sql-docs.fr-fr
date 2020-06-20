@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d60474b5d72ab9745500325dfd523f83f155343c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956840"
 ---
 # <a name="restore-database-options-page"></a>Restaurer la base de données (page Options)
   Utilisez la page **Options** de la boîte de dialogue **Restaurer la base de données** pour modifier le comportement et le résultat de l’opération de restauration.  
@@ -112,7 +111,7 @@ ms.locfileid: "62875634"
   
 -   S'il s'agit d'une sauvegarde de journal, utilisez la tâche **Restaurer le journal des transactions** . Pour plus d’informations sur la reprise d’une séquence de restauration en restaurant un journal de transactions, consultez [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
  [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   

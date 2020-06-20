@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec8be3253811018dac345abdefda8f560e9dc2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068231"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   Le chargement en masse XML traite l' `sql:mapped` annotation dans le schéma XSD comme prévu, c’est-à-dire que si le schéma de mappage spécifie `sql:mapped="false"` pour un élément ou un attribut, le chargement en masse XML ne tente pas de stocker les données associées dans la colonne correspondante.  

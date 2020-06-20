@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 774dc4ec4a02c72420d004909cb7e6ee1b31f3a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046066"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Afficher et lire le journal de diagnostic de l'instance de cluster de basculement
   Toutes les erreurs et tous les événements d'avertissements critiques pour la DLL de ressource SQL Server sont écrits dans le journal des événements Windows. Un journal en cours des informations de diagnostic spécifiques de SQL Server est capturé par la procédure stockée système [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) ; il est écrit dans les fichiers journaux de diagnostics du cluster de basculement de SQL Server (également appelés journaux *SQLDIAG*).  
@@ -29,7 +28,7 @@ ms.locfileid: "63049335"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
- Par défaut, le SQLDIAG est stocké sous un dossier LOG local du répertoire SQL Server instance, par exemple, «C\Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName> \mssql\log’du nœud propriétaire de l’instance de cluster de basculement AlwaysOn (FCI). La taille de chaque fichier journal SQLDIAG est fixée à 100 Mo. Dix fichiers journaux de ce type sont stockés sur l'ordinateur avant qu'ils ne soient recyclés pour les nouveaux journaux.  
+ Par défaut, le SQLDIAG est stocké sous un dossier LOG local du répertoire SQL Server instance, par exemple, «C\Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\LOG’du nœud propriétaire de l’instance de cluster de basculement AlwaysOn (FCI). La taille de chaque fichier journal SQLDIAG est fixée à 100 Mo. Dix fichiers journaux de ce type sont stockés sur l'ordinateur avant qu'ils ne soient recyclés pour les nouveaux journaux.  
   
  Les journaux utilisent le format de fichier d'événements étendus. La fonction système **sys.fn_xe_file_target_read_file** peut être utilisée pour lire les fichiers créés par les événements étendus. Au format XML, un événement par ligne est retourné. Interrogez la vue système pour analyser les données XML définies comme ensemble de résultats. Pour plus d’informations, consultez [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
@@ -93,9 +92,9 @@ ORDER BY Time;
 > [!NOTE]  
 >  Pour obtenir un exemple de cette procédure, consultez [Exemple (Transact-SQL)](#TsqlExample)plus loin dans cette section.  
   
- À l’aide de l’instruction DDL (Data Definition `ALTER SERVER CONFIGURATION`Language),, vous pouvez démarrer ou arrêter la journalisation des données de diagnostic capturées par la procédure [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) et définir des paramètres de configuration du journal SQLdiag, tels que le nombre de substitutions du fichier journal, la taille du fichier journal et l’emplacement du fichier. Pour plus d'informations sur la syntaxe, consultez [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
+ À l’aide de l’instruction DDL (Data Definition Language), `ALTER SERVER CONFIGURATION` , vous pouvez démarrer ou arrêter la journalisation des données de diagnostic capturées par la procédure [Sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) et définir des paramètres de configuration du journal SQLdiag, tels que le nombre de substitutions du fichier journal, la taille du fichier journal et l’emplacement du fichier. Pour plus d'informations sur la syntaxe, consultez [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
-###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a>Exemples (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Exemples (Transact-SQL)  
   
 ####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a>Définition des options du journal de diagnostic  
  Les exemples de cette section montrent comment définir les valeurs de l'option de journal de diagnostics.  

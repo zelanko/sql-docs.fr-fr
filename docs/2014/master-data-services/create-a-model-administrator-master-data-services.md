@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964369"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971819"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Créer un administrateur de modèle (Master Data Services)
-  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un administrateur de modèle lorsque vous souhaitez qu’un groupe ou un utilisateur dispose de l’autorisation **mettre à jour** sur tous les objets dans un ou plusieurs modèles.  
+  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , créez un administrateur de modèle lorsque vous souhaitez qu’un groupe ou un utilisateur dispose de l’autorisation **mettre à jour** sur tous les objets dans un ou plusieurs modèles.  
   
 > [!TIP]  
 >  Pour simplifier l’administration, créez un groupe Windows ou local et configurez-le en tant qu’administrateur de modèle. Vous pouvez ensuite ajouter et supprimer des utilisateurs dans le groupe sans accéder à l'interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -52,9 +51,9 @@ ms.locfileid: "78964369"
   
 9. Effectuez les étapes 7 et 8 pour chaque modèle que vous souhaitez que le groupe ou l'utilisateur administre.  
   
-10. Cliquez sur **Save**.  
+10. Cliquez sur **Enregistrer**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  N'affectez pas d'autres autorisations à des objets modèle ou membres de hiérarchie. Si vous le faites, l’utilisateur n’est plus un administrateur et ne peut pas afficher le modèle dans une zone fonctionnelle autre que l' **Explorateur**.  
   
  Il existe une exception : si l’utilisateur a l’autorisation **mise à jour** attribuée à une **racine** de la hiérarchie sous l’onglet **membres de hiérarchie** , l’utilisateur est toujours considéré comme un administrateur de modèle.  

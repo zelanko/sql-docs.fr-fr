@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061112"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (facultatif) : Combinaison, mise en correspondance et publication d’un nouvel ensemble de données
   Au fil du temps, vous souhaiterez ajouter des données au référentiel MDS. Avant d’ajouter des données, il peut être utile de comparer les nouvelles données aux données qui sont déjà gérées dans MDS, pour vous assurer que vous n’ajoutez pas de données dupliquées ou inexactes. Dans le complément Master Data Services pour Excel, vous pouvez combiner les données de deux feuilles de calcul et les comparer afin d'identifier et supprimer les doublons, avant de les publier dans MDS. La fonctionnalité de correspondance dans le complément MDS pour Excel utilise la fonctionnalité de correspondance de DQS pour identifier les correspondances de données. Dans cette tâche, vous allez combiner les données de deux feuilles de calcul dans une seule feuille, puis vous allez exercer l'activité de correspondance pour identifier et supprimer les doublons avant la publication dans MDS. Pour plus d’informations, consultez [correspondance de la qualité des données dans les rubriques complément MDS pour Excel](https://msdn.microsoft.com/library/hh548681.aspx) et [combiner les données](https://msdn.microsoft.com/library/hh548680.aspx) .  
@@ -38,7 +37,7 @@ ms.locfileid: "65489269"
   
 7.  Cliquez sur **Feuil2** en bas pour basculer vers l’onglet **Feuil2** . Si vous ne voyez pas **Feuil2**, ajoutez une nouvelle feuille de calcul.  
   
-8.  Ouvrez le fichier **Suppliers. xls** (le fichier d’entrée d’origine inclus dans les fichiers du didacticiel) et copiez toutes les lignes (trois) de la feuille de calcul **CombineAndCleanse** dans **Feuil2**.  
+8.  Ouvrez **Suppliers.xls** fichier (le fichier d’entrée d’origine inclus dans les fichiers du didacticiel) et copiez toutes les lignes (trois) de la feuille de calcul **CombineAndCleanse** dans **Feuil2**.  
   
 9. Revenez à la feuille du **fournisseur** dans le **livre 1 : Microsoft Excel** (pas le **nettoyage et le correspondance des fournisseurs** Excel) qui est connecté à **MDS**.  
   

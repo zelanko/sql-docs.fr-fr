@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5596a8d4d4bad18c1adc03a5280e199d0fe91e0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046327"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Type et colonnes de données XML (SQL Server)
   Cette rubrique décrit les avantages et les limitations du type de `xml` données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et vous aide à choisir comment stocker des données XML.  
@@ -114,7 +113,7 @@ ms.locfileid: "82702241"
  Le stockage XML natif est utile lorsque les documents XML présentent des structures différentes ou suivent des schémas différents ou complexes beaucoup trop difficiles à mapper à des structures relationnelles.  
   
 #### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Exemple : modélisation de données XML à l'aide du type de données xml  
- Prenons l'exemple d'un manuel de produit au format XML. Chaque rubrique fait l'objet d'un chapitre distinct, lui-même composé de plusieurs sections. Une section peut contenir des sous-sections. L’élément \<section> est donc un élément récursif. Les manuels de produit regroupent un gros volume de données diverses : contenu, diagrammes, explications techniques ; les données sont semi-structurées. Les utilisateurs veulent pouvoir lancer une recherche contextuelle sur les rubriques qui les intéressent, par exemple rechercher la section consacrée aux « index cluster » dans le chapitre sur l'« indexation », et s'informer des quantités techniques.  
+ Prenons l'exemple d'un manuel de produit au format XML. Chaque rubrique fait l'objet d'un chapitre distinct, lui-même composé de plusieurs sections. Une section peut contenir des sous-sections. Par conséquent, \<section> est un élément récursif. Les manuels de produit regroupent un gros volume de données diverses : contenu, diagrammes, explications techniques ; les données sont semi-structurées. Les utilisateurs veulent pouvoir lancer une recherche contextuelle sur les rubriques qui les intéressent, par exemple rechercher la section consacrée aux « index cluster » dans le chapitre sur l'« indexation », et s'informer des quantités techniques.  
   
  Une colonne de type de données `xml` constitue un modèle de stockage approprié pour vos documents XML. Vous conservez ainsi le contenu InfoSet de vos données XML. L'indexation de la colonne XML permet d'optimiser les performances des requêtes.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0978452104eb9a55d49dfa9f851ef7578489db26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006477"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tâche 7 : Ajout d’une transformation de nettoyage DQS au flux de données
   Dans cette tâche, vous allez ajouter la transformation de nettoyage DQS au flux de données pour nettoyer les données des fournisseurs d'entrée à l'aide de DQS. Pour plus d’informations sur la transformation, consultez **[transformation de nettoyage DQS](https://msdn.microsoft.com/library/ee677619.aspx)** .  
@@ -55,7 +54,7 @@ ms.locfileid: "65488941"
     |Adresse|Adresse|  
     |City|City|  
     |State|State|  
-    |Country|Country|  
+    |Pays ou région|Pays ou région|  
     |Code postal|Zip|  
   
 12. Cliquez sur **OK** pour fermer la boîte de dialogue **éditeur de transformation de nettoyage DQS** .  

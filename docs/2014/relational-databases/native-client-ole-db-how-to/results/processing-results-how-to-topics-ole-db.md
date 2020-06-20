@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: beef30273e7d3ad3b0273c10ebbb3d589b7187a7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4c4aab04b1fbeaf9d0875a22c3e3e713c698a9b9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018131"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Rubriques des procédures relatives au traitement des résultats (OLE DB)
   Le traitement des résultats dans une application OLE DB implique tout d'abord la détermination des caractéristiques du jeu de résultats, puis l'extraction des données dans des variables de programme. Si la commande exécute une procédure stockée, vous devez également savoir comment traiter les codes de retour et les paramètres de sortie des procédures stockées.  
