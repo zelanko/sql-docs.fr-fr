@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84918dd3f50d129485911fc880e67c0152fa905c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bec2f363cd8c4f7dea45935568a88722b19323fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060415"
 ---
 # <a name="replicate-schema-changes"></a>Répliquer les modifications de schéma
   Cette rubrique explique comment répliquer les modification de schéma dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -54,11 +53,11 @@ ms.locfileid: "73882246"
 -   L’instruction ALTER TABLE ... DROP COLUMN est toujours répliquée vers tous les Abonnés dont l’abonnement contient les colonnes à supprimer, même si vous désactivez la réplication des modifications de schéma.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Si vous ne voulez pas répliquer des modifications de schéma pour une publication, désactivez la réplication des modifications de schéma dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
+ Si vous ne souhaitez pas répliquer les modifications de schéma pour une publication, désactivez la réplication des modifications de schéma dans la boîte de dialogue Propriétés de la **publication- \<Publication> ** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md).  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>Pour désactiver la réplication des modifications de schéma  
   
-1.  Dans la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , affectez à la propriété **Répliquer les modifications de schéma** la valeur **False**.  
+1.  Dans la **page Options d’abonnement** de la boîte de dialogue Propriétés de la **publication- \<Publication> ** , affectez la valeur **false**à la propriété **répliquer les modifications de schéma** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -69,27 +68,27 @@ ms.locfileid: "73882246"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>Pour créer une publication transactionnelle ou d'instantané qui ne réplique pas les modifications du schéma  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), en spécifiant la valeur **0** pour ** \@replicate_ddl**. Pour plus d’informations, voir [Create a Publication](create-a-publication.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), en spécifiant la valeur **0** pour ** \@ replicate_ddl**. Pour plus d’informations, voir [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>Pour créer une publication de fusion qui ne réplique pas les modifications du schéma  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), en spécifiant la valeur **0** pour ** \@replicate_ddl**. Pour plus d’informations, voir [Create a Publication](create-a-publication.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), en spécifiant la valeur **0** pour ** \@ replicate_ddl**. Pour plus d’informations, voir [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>Pour désactiver temporairement la réplication des modifications du schéma pour une publication transactionnelle ou d'instantané  
   
-1.  Pour une publication avec réplication des modifications de schéma, exécutez [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en affectant la ** \@** valeur **replicate_ddl** à la propriété et la valeur **0** à ** \@la valeur**.  
+1.  Pour une publication avec réplication des modifications de schéma, exécutez [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en affectant la valeur **replicate_ddl** à la ** \@ propriété** et la valeur **0** à la ** \@ valeur**.  
   
 2.  Exécutez la commande DDL sur l'objet publié.  
   
-3.  Facultatif Réactivez la réplication des modifications de schéma en exécutant [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en affectant la ** \@** valeur **replicate_ddl** à la propriété et la valeur **1** à ** \@la valeur**.  
+3.  Facultatif Réactivez la réplication des modifications de schéma en exécutant [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en affectant la valeur **replicate_ddl** à la ** \@ propriété** et la valeur **1** à la ** \@ valeur**.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>Pour désactiver temporairement la réplication des modifications du schéma pour une publication de fusion  
   
-1.  Pour une publication avec réplication des modifications de schéma, exécutez [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en affectant la ** \@** valeur **replicate_ddl** à la propriété et la valeur **0** à ** \@la valeur**.  
+1.  Pour une publication avec réplication des modifications de schéma, exécutez [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en affectant la valeur **replicate_ddl** à la ** \@ propriété** et la valeur **0** à la ** \@ valeur**.  
   
 2.  Exécutez la commande DDL sur l'objet publié.  
   
-3.  Facultatif Réactivez la réplication des modifications de schéma en exécutant [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en affectant la ** \@** valeur **replicate_ddl** à la propriété et la valeur **1** à ** \@la valeur**.  
+3.  Facultatif Réactivez la réplication des modifications de schéma en exécutant [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en affectant la valeur **replicate_ddl** à la ** \@ propriété** et la valeur **1** à la ** \@ valeur**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modifier le schéma dans les bases de données de publication](make-schema-changes-on-publication-databases.md)   

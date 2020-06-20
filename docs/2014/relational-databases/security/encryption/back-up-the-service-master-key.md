@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: c6e67b2eacfd428bc296596699ff65939789d1e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b79212040df67c22ae7e34cd380a1a1f1bd10773
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060325"
 ---
 # <a name="back-up-the-service-master-key"></a>Sauvegarder la clé principale du service
   Cette rubrique explique comment sauvegarder la clé principale du service dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La clé principale du service représente la racine de la hiérarchie de chiffrement. Elle doit être sauvegardée et stockée en lieu sûr, en dehors de votre lieu de travail. La création de cette sauvegarde doit être l'une des premières actions administratives effectuées sur le serveur.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c9cb078b7af60fc5e060bcb144fc9cbaee8ecf7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875143"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956683"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurer la base de données MASTER (Transact-SQL)
   Cette rubrique explique comment restaurer la base de données **master** à partir d'une sauvegarde complète d'une base de données.  
@@ -39,11 +38,11 @@ ms.locfileid: "62875143"
   
 3.  Redémarrez l'instance du serveur et poursuivez les autres étapes de récupération telles que la restauration d'autres bases de données, l'attachement de bases de données et la correction des incompatibilités au niveau utilisateur.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans l'exemple suivant, la base de données `master` est restaurée sur l'instance du serveur par défaut. L'exemple suppose que l'instance du serveur s'exécute déjà en mode mono-utilisateur. L’exemple démarre `sqlcmd` et exécute une instruction `RESTORE DATABASE` qui restaure une sauvegarde complète de la base de données de `master` à partir d’une unité de disque : `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]
->  Dans le cas d’une instance nommée, la commande **sqlcmd** doit spécifier l’option **-S** _\<NomOrdinateur>_ \\ *\<NomInstance>* .  
+>  Pour une instance nommée, la commande **sqlcmd** doit spécifier l’option **-S** _\<ComputerName>_ \\ *\<InstanceName>* .  
   
 ```  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62875143"
 2> GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](complete-database-restores-simple-recovery-model.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](complete-database-restores-full-recovery-model.md)   
  [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   

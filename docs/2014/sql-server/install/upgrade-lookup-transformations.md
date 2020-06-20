@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74430ab1bed232b8d510a8c28a8a690d88d1f6ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041649"
 ---
 # <a name="upgrade-lookup-transformations"></a>Mettre à niveau des transformations de recherche
   Lorsque vous effectuez une mise à niveau de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], pensez à modifier les packages pour tirer parti des nouvelles fonctionnalités de la transformation de recherche. Cette transformation prend en charge les types de mise en cache et les options de sortie des données disponibles dans [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]. Pour plus d’informations sur la mise en cache et les sorties de données supplémentaires, consultez [Lookup transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  

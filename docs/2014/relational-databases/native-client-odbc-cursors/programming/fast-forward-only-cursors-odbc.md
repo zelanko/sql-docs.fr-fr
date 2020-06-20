@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 812419f7ebf9501ab2409876c4cc5c0a775492b9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9d3e94cf4983fb6ee05beff3a495ef6ccbd5c54b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020785"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Curseurs avant uniquement rapides (ODBC)
   En cas de connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge les optimisations de performances pour les curseurs avant uniquement et en lecture seule. Les curseurs avant uniquement rapides sont implémentés en interne par le pilote et le serveur d'une manière très semblable aux jeux de résultats par défaut. Les curseurs avant uniquement rapides présentent d'autres caractéristiques, au-delà de leurs performances élevées :  

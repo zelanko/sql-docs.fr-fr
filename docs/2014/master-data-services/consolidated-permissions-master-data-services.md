@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b40598eaa81ce0a1d890ef8ec37a12fada0fa458
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054108"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971899"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Autorisations consolidées (services de données de référence)
   Les autorisations consolidées s'appliquent aux valeurs d'attribut pour tous les membres consolidés d'une entité.  
@@ -36,7 +35,7 @@ ms.locfileid: "66054108"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|Les membres consolidés sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
-|**Mise à jour**|Les membres consolidés sont affichés et l'utilisateur peut les ajouter, les supprimer et les modifier.|  
+|**Update**|Les membres consolidés sont affichés et l'utilisateur peut les ajouter, les supprimer et les modifier.|  
 |**Deny**|Les membres consolidés pour l'entité ne sont pas affichés.|  
   
 ## <a name="attribute-permissions"></a>Autorisations d'attribut  
@@ -45,7 +44,7 @@ ms.locfileid: "66054108"
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|L'attribut est affiché, mais l'utilisateur ne peut pas modifier les valeurs d'attribut.|  
-|**Mise à jour**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
+|**Update**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
 |**Deny**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
 ## <a name="see-also"></a>Voir aussi  

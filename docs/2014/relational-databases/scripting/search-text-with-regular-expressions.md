@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060318"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
   Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Rechercher et remplacer**de**.  
@@ -106,7 +105,7 @@ ms.locfileid: "82718677"
 |Marqueur sans espace|:Mn|Représente des marqueurs sans espace.|  
 |Marque d'association|:Mc|Représente des marques d'association.|  
 |Marque de délimitation|:Me|Représente des marques de délimitation.|  
-|Symbole mathématique|:Sm|Représente les symboles +, =, ~, &#124;, \< et >.|  
+|Symbole mathématique|:Sm|Correspond à +, =, ~, &#124;, \<, and > .|  
 |Symbole monétaire|:Sc|Représente le symbole $ et autres symboles monétaires.|  
 |Symbole modificatif|:Sk|Représente des symboles modificateurs tels que l'accent circonflexe, l'accent grave et le trait supérieur.|  
 |Autre symbole|:So|Représente d'autres symboles tels que les signes du copyright, du paragraphe et du degré.|  

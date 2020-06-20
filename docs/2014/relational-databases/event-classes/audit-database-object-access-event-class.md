@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62a6b3a1f92723d43fde32060c6d4ccbbfc14a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0549e6b4980dd0e0e0e569b9dd95cf404b216c29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62699008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053334"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access (classe d'événements)
   La classe d'événements **Audit Database Object Access** se produit lors de l'accès à des objets de base de données tels que des schémas.  

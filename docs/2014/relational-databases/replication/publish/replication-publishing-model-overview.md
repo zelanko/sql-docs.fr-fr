@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c5e1eb0a35081cd9392178412db990308efcd0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ebad816c90130ff430edd5ffed18e6832a29fa6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176729"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060401"
 ---
 # <a name="replication-publishing-model-overview"></a>Vue d’ensemble du modèle de publication de réplication
   La réplication utilise une métaphore de l'industrie de l'édition pour représenter les composants d'une topologie de réplication ; elle comprend un serveur de publication, un serveur de distribution, des abonnés, des publications, des articles et des abonnements. La réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut s’envisager comme un magazine :

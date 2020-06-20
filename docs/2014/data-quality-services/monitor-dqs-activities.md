@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eceb0d8df8b929a22393c1471e7833954b787a02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4fe8f68c87c1d1ce83ccc1dc8b12f0cc80956e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937490"
 ---
 # <a name="monitor-dqs-activities"></a>Surveiller les activités DQS
   Cette rubrique décrit comment surveiller de manière centralisée les activités suivantes dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) : découverte des connaissances, gestion des domaines, stratégie de correspondance, nettoyage des données, correspondance de données et nettoyage SSIS.

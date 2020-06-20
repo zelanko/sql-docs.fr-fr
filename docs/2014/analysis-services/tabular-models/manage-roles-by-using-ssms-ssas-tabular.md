@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d8efab57dd195993ab9ab12c0cb9b3f167bd796
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938840"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gérer les rôles à l'aide de SSMS (SSAS Tabulaire)
   Vous pouvez créer, modifier et gérer les rôles pour un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -50,20 +49,20 @@ ms.locfileid: "66067034"
   
     |Autorisation|Description|  
     |----------------|-----------------|  
-    |**Contrôle total (Administrateur)**|Les membres peuvent apporter des modifications au schéma de modèle et peuvent afficher toutes les données.|  
-    |**Traiter la base de données**|Les membres peuvent exécuter des processus et traiter toutes les opérations. Impossible de modifier le schéma de modèle et d'afficher les données.|  
-    |**En lecture**|Les membres sont autorisés à afficher des données (selon les filtres de lignes) mais ne peuvent pas apporter de modifications au schéma de modèle.|  
+    |**Contrôle total (administrateur)**|Les membres peuvent apporter des modifications au schéma de modèle et peuvent afficher toutes les données.|  
+    |**Base de données de processus**|Les membres peuvent exécuter des processus et traiter toutes les opérations. Impossible de modifier le schéma de modèle et d'afficher les données.|  
+    |**Lire**|Les membres sont autorisés à afficher des données (selon les filtres de lignes) mais ne peuvent pas apporter de modifications au schéma de modèle.|  
   
 5.  Dans la boîte de dialogue **Créer un rôle** , dans la fenêtre Sélectionner une page, cliquez sur **Appartenance**.  
   
 6.  Dans la fenêtre de paramètres d'appartenance, cliquez sur **Ajouter**, puis dans la boîte de dialogue **Sélectionner les utilisateurs ou les groupes** , ajoutez les utilisateurs ou groupes Windows que vous souhaitez ajouter comme membres.  
   
-7.  Si le rôle que vous créez dispose d'autorisations de lecture, vous pouvez ajouter des filtres de lignes à une table à l'aide d'une formule DAX. Pour ajouter des filtres de lignes, dans la boîte de dialogue **Propriétés du rôle- \<roleName>** , dans **Sélectionner une page**, cliquez sur **filtres de lignes**.  
+7.  Si le rôle que vous créez dispose d'autorisations de lecture, vous pouvez ajouter des filtres de lignes à une table à l'aide d'une formule DAX. Pour ajouter des filtres de lignes, dans la boîte de dialogue **Propriétés du rôle- \<rolename> ** , dans **Sélectionner une page**, cliquez sur **filtres de lignes**.  
   
-8.  Dans la fenêtre filtres de lignes, sélectionnez une table, cliquez sur le champ **filtre Dax** , puis, dans le champ **filtre dax \<-TableName>** , tapez une formule Dax.  
+8.  Dans la fenêtre filtres de lignes, sélectionnez une table, cliquez sur le champ **filtre Dax** , puis dans le champ **filtre Dax- \<tablename> ** , tapez une formule Dax.  
   
     > [!NOTE]  
-    >  Le champ filtre DAX \<-TableName> ne contient pas d’éditeur de requête de saisie semi-automatique ni de fonction d’insertion de fonction. Pour utiliser la saisie semi-automatique lorsque vous écrivez une formule DAX, vous devez utiliser un éditeur de formules DAX dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  Le champ filtre DAX- \<tablename> ne contient pas d’éditeur de requête de saisie semi-automatique ni de fonction d’insertion de fonction. Pour utiliser la saisie semi-automatique lorsque vous écrivez une formule DAX, vous devez utiliser un éditeur de formules DAX dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Cliquez sur **OK** pour enregistrer le rôle.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66067034"
   
 -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez la base de données model tabulaire qui contient le rôle que vous souhaitez modifier, développez **Rôles**, cliquez avec le bouton droit sur le rôle, puis cliquez sur **Propriétés**.  
   
-     Dans la boîte de dialogue **Propriétés** \<du rôle>, vous pouvez modifier les autorisations, ajouter ou supprimer des membres, et ajouter/modifier des filtres de lignes.  
+     Dans la boîte de dialogue **Propriétés du rôle** \<rolename> , vous pouvez modifier les autorisations, ajouter ou supprimer des membres, et ajouter/modifier des filtres de lignes.  
   
 ###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>Pour supprimer un rôle  
   

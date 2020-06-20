@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddd2342f766edd30af99f6e01d47c4086360ff61
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900316"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939311"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Trier des données pour les transformations de fusion et de jointure de fusion
   Dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], les transformations de fusion et de jointure de fusion nécessitent des données triées pour leurs entrées. Les données d'entrée doivent être triés physiquement et les options de tri doivent être définies sur les sorties et les colonnes de sortie dans la source ou dans la transformation amont. Si les options de tri indiquent que les données sont triées alors qu'elles ne le sont pas en réalité, les résultats de l'opération de fusion ou de jointure de fusion sont imprévisibles.  
@@ -71,7 +70,7 @@ ms.locfileid: "62900316"
   
 5.  Cliquez sur l'onglet **Propriétés d'entrée et de sortie** .  
   
-6.  Cliquez sur ** \<nom du composant> sortie**, puis `IsSorted` affectez `True`à la propriété la valeur.  
+6.  Cliquez sur ** \<component name> sortie**, puis affectez à la propriété la valeur `IsSorted` `True` .  
   
     > [!NOTE]  
     >  Si vous définissez manuellement la propriété `IsSorted` de la sortie à `True` et que les données ne sont pas triées, il se peut que des données soient manquantes ou que des comparaisons de données incorrectes figurent dans la transformation de fusion ou de jointure de fusion en aval lors de l'exécution du package.  

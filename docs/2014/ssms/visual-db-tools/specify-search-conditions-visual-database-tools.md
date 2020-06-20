@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfc9107b47db312778502191560ce7920c96a37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63163956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000838"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>Spécifier des conditions de recherche (Visual Database Tools)
   Vous pouvez spécifier les lignes de données figurant dans votre requête en spécifiant des conditions de recherche. Par exemple, si vous formulez une requête sur une table `employee` , vous pouvez spécifier que vous ne souhaitez rechercher que les employés travaillant dans une région donnée.  

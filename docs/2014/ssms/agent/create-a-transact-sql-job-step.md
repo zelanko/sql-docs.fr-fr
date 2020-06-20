@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 488e07e86ba5a7febcb0675611136a1e0d792007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b83ee944d2ca5c10ff1b77f3e6e6da6054b5c99a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041469"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
-  Cette rubrique explique comment créer une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étape de travail de l’agent qui [!INCLUDE[tsql](../../includes/tsql-md.md)] exécute des [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] scripts dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]à [!INCLUDE[tsql](../../includes/tsql-md.md)]l’aide de, de ou de SQL Server Management Objects.  
+  Cette rubrique explique comment créer une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étape de travail de l’agent qui exécute [!INCLUDE[tsql](../../includes/tsql-md.md)] des scripts dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de, de ou de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL Server Management Objects.  
   
  Ces scripts d'étape de travail peuvent appeler des procédures stockées et des procédures stockées étendues. Une même étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] peut contenir plusieurs traitements et commandes GO incorporées. Pour plus d'informations sur la création d'un travail, consultez [Création de travaux](create-jobs.md).  
   

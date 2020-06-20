@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29432a9ed953acae6f2d99ef8f9d5ace7f210793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043467"
 ---
 # <a name="best-practices-for-replication-administration"></a>Méthodes conseillées pour l'administration de la réplication
   Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les bonnes pratiques présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de réplication](frequently-asked-questions-for-replication-administrators.md).  

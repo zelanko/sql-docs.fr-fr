@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13306f74ab0d49fddd271878a2af2337c2299861
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067258"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Boîte de dialogue Classement (Visual Database Tools)
   Cette boîte de dialogue permet de spécifier une séquence de classement pour la colonne. La séquence de classement est utilisée pour les opérations qui comparent les valeurs de la colonne à une autre colonne ou par rapport à des valeurs constantes. Elle affecte également le comportement de certaines fonctions de chaîne, telles que SUBSTRING et CHARINDEX. Pour une liste complète des effets du paramètre de classement d'une colonne, consultez la documentation sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

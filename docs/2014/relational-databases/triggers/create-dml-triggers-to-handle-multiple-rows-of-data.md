@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e29e7e8d02c2857322b3488bc209648630ed44b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042965"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Créer de déclencheurs DML pour gérer plusieurs lignes de données
   Lors de l'écriture du code d'un déclencheur DML, tenez compte du fait que l'instruction qui active le déclencheur peut être une instruction unique concernant plusieurs lignes de données au lieu d'une seule. Ce comportement est courant pour les déclencheurs UPDATE et DELETE qui concernent souvent plusieurs lignes. Il est moins fréquent dans le cas des déclencheurs INSERT car l'instruction INSERT de base n'ajoute qu'une seule ligne. Toutefois, comme un déclencheur INSERT peut être activé par une instruction SELECT INSERT INTO (*nom_table*), l’insertion de nombreuses lignes peut aboutir à un appel de déclencheur unique.  

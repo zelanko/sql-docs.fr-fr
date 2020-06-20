@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b7a5ea06fb2b720e635f5d8310cefa425aa1646
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6960118e13f0843640b18056bda655726cbbbd29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021006"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Sources de données ODBC SQL Server Native Client
   Un nom de source de données (DSN) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifie une source de données ODBC qui contient toutes les informations nécessaires à une application ODBC pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur spécifique. Il existe deux moyens de définir un nom de source de données ODBC :  

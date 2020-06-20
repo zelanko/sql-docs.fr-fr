@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d634f393b18124e6ae0db753def2c31860f91a74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019642"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   Définit le nombre total de colonnes trouvées dans le fichier utilisateur pour une utilisation avec une copie en bloc vers ou depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) peut être utilisé à la place de bcp_columns et [bcp_colfmt](bcp-colfmt.md).  
@@ -52,7 +51,7 @@ nColumns
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction ne peut être appelée qu’une fois que [bcp_init](bcp-init.md) a été appelé avec un nom de fichier valide.  
   
  Vous devez appeler cette fonction uniquement si vous envisagez d'utiliser un format de fichier utilisateur qui diffère du format par défaut. Pour plus d’informations sur une description du format de fichier utilisateur par défaut, consultez **bcp_init**.  

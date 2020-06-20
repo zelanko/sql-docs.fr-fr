@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921610"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configurer les journaux SSIS (boîte de dialogue)
   Utilisez la boîte de dialogue **Configurer les journaux SSIS** pour définir les options de journalisation d’un package.  
@@ -45,7 +44,7 @@ ms.locfileid: "66060596"
  Utilisez le volet **Conteneurs** de la boîte de dialogue **Configurer les journaux SSIS** pour activer l’enregistrement du fichier journal du package et de ses conteneurs.  
   
 ### <a name="options"></a>Options  
- **Conteneurs**  
+ **Containers**  
  Activez les cases à cocher dans la vue hiérarchique pour activer l'enregistrement du fichier journal du package et de ses conteneurs :  
   
 -   Si la case à cocher est désactivée, l'enregistrement du container dans le fichier journal n'est pas activé. Activez-la pour permettre l'enregistrement.  
@@ -73,7 +72,7 @@ ms.locfileid: "66060596"
  Le champ de description est modifiable. Cliquez sur cette option, puis modifiez la description par défaut du journal.  
   
  **Configuration**  
- Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez \<sur **nouvelle connexion...**> pour créer un gestionnaire de connexions. En fonction du type de module fournisseur d'informations, vous pouvez configurer un gestionnaire de connexions OLE DB ou un gestionnaire de connexions de fichiers. Le module fournisseur d’informations du journal des événements [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ne nécessite aucune connexion.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions. En fonction du type de module fournisseur d'informations, vous pouvez configurer un gestionnaire de connexions OLE DB ou un gestionnaire de connexions de fichiers. Le module fournisseur d’informations du journal des événements [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ne nécessite aucune connexion.  
   
  Rubriques connexes : [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md) , [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adf45ee211d61c38bad4c3d86d746866d0a15177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484125"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937470"
 ---
 # <a name="managing-a-domain"></a>Gestion d'un domaine
   Cette rubrique décrit l'utilisation des domaines dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine contient une représentation sémantique des données dans un champ spécifique dans la source de données qui doit être analysée. Un domaine fait partie de la base de connaissances que vous créez pour une source de données, et la connaissance que vous accumulez en analysant un exemple de source de données, ou lors de l'importation de données, est ajoutée aux domaines définis dans la base de connaissances. La connaissance de ces domaines est utilisée ultérieurement pour effectuer le nettoyage et la correspondance dans un projet de qualité des données. Les domaines sont au cœur de toutes les activités dans Data Quality Services.  

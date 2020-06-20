@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: baec99e63c70befde0cfce76e42dd6202ebc0bad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930640"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Surveiller la sauvegarde managée de SQL Server vers Azure
   La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] possède des mesures intégrées permettant d'identifier les problèmes et les erreurs pendant les processus de sauvegarde et les corrige lorsque cela est possible.  Toutefois, dans certaines situations, l'intervention de l'utilisateur est requise. Cette rubrique décrit les outils que vous pouvez utiliser pour déterminer l'état d'intégrité général des sauvegardes, et identifier les erreurs qui doivent être corrigées.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f6bc24d0224e31f008be0ffaf77266446c15527
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aec23d32216a0c9dcdd4189c662f9da4cd5ddf57
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481107"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937380"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Utiliser les relations de valeur dans un domaine composite
   Cette rubrique décrit comment afficher les combinaisons de valeurs trouvées pour le domaine composite pendant le processus de découverte des connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Cette page affiche le nombre d'occurrences des combinaisons de valeur. La gestion de valeur n'est pas prise en charge pour les domaines composites, vous ne pouvez donc pas exécuter d'opérations sur ces valeurs.  

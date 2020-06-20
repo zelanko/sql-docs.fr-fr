@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1941fb85a576835739f1cd975ff93ff336f42065
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042043"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Vue d’ensemble du Conseiller de mise à niveau
   Cette section fournit une vue d'ensemble du processus de mise à niveau, ainsi que des informations qui vous aideront à comprendre et à utiliser l'Assistant Analyse du Conseiller de mise à niveau et la visionneuse de rapports du Conseiller de mise à niveau.  
@@ -30,7 +29,7 @@ ms.locfileid: "66093541"
 |[Vue d'ensemble du processus de mise à niveau](../../../2014/sql-server/install/upgrade-process-overview.md)|Décrit le processus recommandé pour effectuer une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Vue d'ensemble du Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-overview.md)|Fournit une vue d'ensemble du nouvel outil [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], nommé Conseiller de mise à niveau.|  
 |[Exécution du conseiller de mise à niveau &#40;de l’interface utilisateur&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|Décrit comment lancer et exécuter l'Assistant Analyse du Conseiller de mise à niveau et la visionneuse de rapports du Conseiller de mise à niveau.|  
-|[Utilisation de rapports](../../../2014/sql-server/install/using-reports.md)|Décrit comment afficher et analyser les rapports générés par la visionneuse de rapports du Conseiller de mise à niveau.|  
+|[Utilisation des rapports](../../../2014/sql-server/install/using-reports.md)|Décrit comment afficher et analyser les rapports générés par la visionneuse de rapports du Conseiller de mise à niveau.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives au conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   

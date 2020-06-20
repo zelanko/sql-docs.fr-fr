@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e04c7af85592d71d70abf8ea5f61518690599342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067060"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938880"
 ---
 # <a name="impersonation-ssas-tabular"></a>Emprunt d'identité (SSAS Tabulaire)
   Cette rubrique explique aux créateurs de modèles tabulaires comment les informations d'identification d'ouverture de session sont utilisées par Analysis Services lors de la connexion à une source de données pour importer et traiter (actualiser) des données.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067060"
   
 -   [Configuration de l'emprunt d'identité](#bkmk_conf_imp_info)  
   
-##  <a name="benefits"></a><a name="bkmk_how_imper"></a>Avantageuse  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a> Avantages  
  L'*emprunt d'identité* est la capacité d'une application serveur, telle qu'Analysis Services, d'assumer l'identité d'une application cliente. Analysis Services s'exécute en utilisant un compte de service ; toutefois, lorsque le serveur établit une connexion à une source de données, il utilise l'emprunt d'identité afin d'effectuer les vérifications d'accès pour l'importation et le traitement des données.  
   
  Les informations d'identification utilisées pour l'emprunt d'identité sont différentes des informations d'identification de l'utilisateur actuellement connecté. Les informations d'identification de l'utilisateur connecté sont utilisées pour des opérations côté client spécifiques lors de la création d'un modèle.  
@@ -67,8 +66,8 @@ ms.locfileid: "66067060"
   
 |Option|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
-|**Nom d’utilisateur et mot de passe Windows spécifiques** <sup>2</sup>|ImpersonateWindowsUserAccount|Cette option spécifie que le modèle utilise un compte d'utilisateur Windows pour importer ou traiter des données à partir de la source de données. Le domaine et le nom du compte d’utilisateur utilisent le format suivant :**\<nom de \\ domaine><nom\>du compte d’utilisateur**. Lors de la création d'un modèle à l'aide de l'Assistant Importation de table, c'est l'option par défaut.|  
-|**Compte Service Account**|ImpersonateServiceAccount|Cette option spécifie que le modèle utilise les informations d'identification de sécurité associées à l'instance du service Analysis Services qui gère le modèle.|  
+|**Nom d’utilisateur et mot de passe Windows spécifiques** <sup>2</sup>|ImpersonateWindowsUserAccount|Cette option spécifie que le modèle utilise un compte d'utilisateur Windows pour importer ou traiter des données à partir de la source de données. Le domaine et le nom du compte d’utilisateur utilisent le format suivant :** \<Domain name> \\<nom \> du compte d’utilisateur**. Lors de la création d'un modèle à l'aide de l'Assistant Importation de table, c'est l'option par défaut.|  
+|**Compte de service**|ImpersonateServiceAccount|Cette option spécifie que le modèle utilise les informations d'identification de sécurité associées à l'instance du service Analysis Services qui gère le modèle.|  
   
  <sup>1</sup> ImpersonationMode spécifie la valeur de l' [élément DataSourceImpersonationInfo &#40;propriété ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) sur la source de données.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66067060"
 ##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>Configuration de l’emprunt d’identité  
  L'emplacement et le contexte d'un modèle détermineront la façon dont les informations d'emprunt d'identité sont configurées. Pour les modèles en cours de création dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous pouvez configurer les informations d'emprunt d'identité sur la page **Informations d'emprunt d'identité** dans l'Assistant Importation de table ou en modifiant une connexion à la source de données dans la boîte de dialogue **Connexions existantes** . Pour consulter les connexions existantes, dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Connexions existantes**.  
   
- Pour les modèles déployés sur un serveur Analysis Services, les informations d’emprunt d’identité peuvent être configurées en cliquant sur les points de suspension (...) de la propriété informations d’emprunt d’identité de source [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de **données** dans la boîte de dialogue Propriétés de la **base** de données de.  
+ Pour les modèles déployés sur un serveur Analysis Services, les informations d’emprunt d’identité peuvent être configurées en cliquant sur les points de suspension (...) de la propriété **informations d’emprunt d’identité de source de données** dans la boîte de dialogue Propriétés de la **base** de données de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery &#40;&#41;tabulaire SSAS](directquery-mode-ssas-tabular.md)   

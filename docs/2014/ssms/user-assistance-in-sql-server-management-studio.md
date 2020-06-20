@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b1bd7492ada156584b05ebaf2a8afc6dd294f49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067292"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistance utilisateur de SQL Server Management Studio
   Une assistance utilisateur est disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] via le menu ? (Aide) et la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le menu ? (Aide) de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre des accès différents aux informations concernant [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il permet également d'avoir accès à la communauté [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et aux ressources de MSDN en ligne qui n'étaient pas auparavant disponibles à partir de l'environnement d'aide. En outre, l'environnement d'aide est à présent configurable. Il peut être lancé dans l'environnement [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou dans une fenêtre externe associée.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4042827c3f4b96344845fea72d479a8de343d133
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4d01d64bd6fe320fcb482fb49a0aff8432800c47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020298"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Conversions du type de données datetime (ODBC)
   Les conversions suivantes sont déjà définies par ODBC ou constituent une extension cohérente d'ODBC. Les conversions fournies par chaque fournisseur sont déterminées par la communauté servie par le fournisseur, et en conséquence il existe souvent des incohérences entre les fournisseurs. Les valeurs entre crochets ([ et ]) sont facultatives.  

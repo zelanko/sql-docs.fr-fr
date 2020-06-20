@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11884b2bb52c2c38fcae708346afa54151502ffc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964069"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Éditeur de transformation de script (Page Gestionnaire de connexions)
   La page **Gestionnaire de connexions** de **l’Éditeur de transformation de script** permet de spécifier les connexions que doit utiliser le script.  
@@ -34,7 +33,7 @@ ms.locfileid: "66056200"
  Tapez un nom unique descriptif pour la connexion.  
   
  **Gestionnaire de connexions**  
- Sélectionnez dans la liste des gestionnaires de connexions disponibles ou sélectionnez ** \<nouvelle connexion>** pour ouvrir la boîte de dialogue **Ajouter un gestionnaire de connexions SSIS** .  
+ Sélectionnez dans la liste des gestionnaires de connexions disponibles ou sélectionnez **\<New connection>** cette option pour ouvrir la boîte de dialogue **Ajouter un gestionnaire de connexions SSIS** .  
   
  **Description**  
  Tapez une description pour la connexion.  
@@ -42,7 +41,7 @@ ms.locfileid: "66056200"
  **Ajouter**  
  Ajoute une connexion à la liste **Gestionnaires de connexions** .  
   
- **Remove**  
+ **Supprimer**  
  Supprime la connexion sélectionnée de la liste **Gestionnaires de connexions** .  
   
 ## <a name="see-also"></a>Voir aussi  
