@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9e36569-616d-4e47-9140-0978a9bfe923
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c72949fd8257332a36af52ab287ed326eed5274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937320"
 ---
 # <a name="add-solutions-to-source-control"></a>Ajouter des solutions au contrôle de code source
   Lorsque vous ajoutez une solution au contrôle de code source, vous souhaitez la plupart du temps ajouter l'ensemble de la solution avec tous les projets qu'elle comporte. Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ajouter une solution au contrôle de code source.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9725997a5e5f8e40a10ecc6b845068432c4393c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62649691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067390"
 ---
 # <a name="external-tools"></a>Outils externes
   Utilisez cette boîte de dialogue pour ajouter des outils externes, tels que le Gestionnaire de configuration SQL Server ou le Bloc-notes, au menu **Outils** . L'ajout d'outils externes vous permet de lancer facilement d'autres applications tout en travaillant dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez spécifier des arguments et un répertoire de travail lors du lancement de l'outil. En outre, les sorties de certains outils peuvent être affichés dans la fenêtre de sortie. La boîte de dialogue **Outils externes** est accessible via le menu **Outils** .  
@@ -70,7 +69,7 @@ ms.locfileid: "62649691"
   
 2.  Dans la zone **Titre** , tapez **Gestionnaire de configuration SQL Server**.  
   
-3.  Dans la zone **commande** , tapez le chemin d’accès [!INCLUDE[msCoName](../../includes/msconame-md.md)] à l’exécutable de la console de gestion, par exemple`C:\WINNT\system32\mmc.exe`  
+3.  Dans la zone **commande** , tapez le chemin d’accès à l’exécutable de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] console de gestion, par exemple`C:\WINNT\system32\mmc.exe`  
   
 4.  Dans la zone **arguments** , tapez le chemin d’accès au fichier. msc, par exemple`"C:\WINNT\system32\SQLServerManager.msc"`  
   

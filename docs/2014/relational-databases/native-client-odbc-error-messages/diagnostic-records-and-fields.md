@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d7d839fb55aff82c9d4f2ca12a316fa7401a502
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4fe52b211eb6d5a0e4d875264609d036702b2b0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020065"
 ---
 # <a name="diagnostic-records-and-fields"></a>Enregistrements et champs de diagnostic
   Les enregistrements de diagnostic sont associés aux handles d'environnement, de connexion, d'instruction ou de descripteur ODBC. Lorsqu'une fonction ODBC déclenche un code de retour autre que SQL_SUCCESS ou SQL_INVALID_HANDLE, le handle appelé par la fonction est associé à des enregistrements de diagnostic qui contiennent des messages informationnels ou d'erreur. Ces enregistrements sont conservés jusqu'à ce qu'une autre fonction soit appelée à l'aide de ce handle, après quoi les enregistrements sont ignorés. Le nombre d'enregistrements de diagnostic pouvant être associés à un handle à un instant donné n'est pas limité.  

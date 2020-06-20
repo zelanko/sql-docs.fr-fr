@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 6a802cfadfa48c7dbba7479ca169daedf70fe8b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baeeffd49ac89ce85cf64932fbfd4982d7243887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060264"
 ---
 # <a name="service-master-key"></a>clé principale de service
   La clé principale du service représente la racine de la hiérarchie de chiffrement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Elle est générée automatiquement la première fois qu'il est nécessaire de chiffrer une autre clé. Par défaut, la clé principale du service est chiffrée à l'aide de l'API de protection des données (DPAPI) Windows et de la clé de la machine locale. La clé principale du service ne peut être ouverte que par le compte de service Windows sous lequel elle a été créée ou par un principal ayant accès au nom du compte de service et à son mot de passe.  

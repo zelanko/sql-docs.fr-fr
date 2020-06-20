@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c05dc72e99d5b897412bdcf8afdd85370dd06b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937225"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Groupes de disponibilité Always On (SQL Server)
   La fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est une solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données. Introduite dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] optimise la disponibilité d'un ensemble de bases de données utilisateur pour l'entreprise. Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent ensemble. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires en lecture-écriture et un à huit ensembles de bases de données secondaires correspondantes. Éventuellement, les bases de données secondaires peuvent être rendues disponibles pour l'accès en lecture seule et/ou certaines opérations de sauvegarde.  
@@ -29,7 +28,7 @@ ms.locfileid: "75229009"
  Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Les basculements ne sont pas dus à des problèmes de base de données, tels qu'une base de données devenant suspecte en raison de la perte d'un fichier de données, de la suppression d'une base de données ou de l'altération d'un journal des transactions.  
   
   
-##  <a name="benefits"></a><a name="Benefits"></a>Avantageuse  
+##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournissent un riche ensemble d'options qui améliorent la disponibilité des bases de données et l'utilisation des ressources. Les composants clés sont les suivants :  
   
 -   Prend en charge jusqu'à neuf réplicas de disponibilité. Un *réplica de disponibilité* est une instanciation d'un groupe de disponibilité hébergé par une instance spécifique de SQL Server qui conserve une copie locale de chaque base de données de disponibilité appartenant au groupe de disponibilité. Chaque groupe de disponibilité prend en charge un réplica principal et jusqu'à huit réplicas secondaires. Pour plus d’informations, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
@@ -118,7 +117,7 @@ ms.locfileid: "75229009"
   
 -   [À propos de Change Tracking ; SQL Server ;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
--   [Bases de données autonomes](../../../relational-databases/databases/contained-databases.md)  
+-   [Bases de données à relation contenant-contenu](../../../relational-databases/databases/contained-databases.md)  
   
 -   [Chiffrement de base de données](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "75229009"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Pour plus d’informations sur les restrictions et les limitations relatives [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]à l’utilisation d’autres fonctionnalités avec, consultez [Always on des groupes de disponibilité : interopérabilité ; SQL Server ;](always-on-availability-groups-interoperability-sql-server.md).  
+>  Pour plus d’informations sur les restrictions et les limitations relatives à l’utilisation d’autres fonctionnalités avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez [Always on des groupes de disponibilité : interopérabilité ; SQL Server ;](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
@@ -155,9 +154,9 @@ ms.locfileid: "75229009"
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Vidéos**  
+-   **Vidéos :**  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution (Présentation de la solution haute disponibilité de nouvelle génération)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 1 : Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (vidéo de présentation de la solution haute disponibilité de la génération suivante)  
   
      [Microsoft SQL Server nom de code « Denali » Always On série, partie 2 : génération d’une solution haute disponibilité stratégique à l’aide d’AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

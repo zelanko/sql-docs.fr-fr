@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e0a99559312704459c41514d53711cfbea4353e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a76df1a72b93d09c5c1c199cb0246dbb51c9cbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63057239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061642"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Leçon 1 : Créer et appliquer une stratégie Désactivé par défaut
   À l'aide des stratégies de la Gestion basée sur des stratégies, vous pouvez administrer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un ou plusieurs objets d'instance, une ou plusieurs instances de serveur, une ou plusieurs bases de données, de même qu'un ou plusieurs objets de base de données. En tant qu'administrateur de base de données, vous souhaitez vous assurer que la Messagerie de base de données n'est pas activée sur certains serveurs. Dans cette leçon, vous allez créer une condition et une stratégie qui définissent cette option de serveur. Vous allez tester le serveur pour vérifier s'il est conforme à la stratégie. Ensuite, vous utiliserez la stratégie pour reconfigurer le serveur afin de le rendre conforme.  

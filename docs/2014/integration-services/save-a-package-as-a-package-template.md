@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84eb956d8a973cf1186eb8f7454c5a8dd8f0709d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056341"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964242"
 ---
 # <a name="save-a-package-as-a-package-template"></a>Enregistrer un package en tant que modèle de package
   Cette rubrique indique comment désigner et utiliser des packages personnalisés comme modèles lorsque que vous créez de nouveaux packages Integration Services dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Par défaut, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise un modèle de package qui crée un package vide lorsque vous ajoutez un nouveau package à un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Vous ne pouvez pas remplacer ce modèle par défaut, mais vous pouvez en ajouter de nouveaux.  
@@ -41,11 +40,11 @@ ms.locfileid: "66056341"
   
 2.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, pointez sur **Ajouter**, puis cliquez sur **Nouvel élément**.  
   
-3.  Dans la boîte de dialogue **ajouter\<un nouvel élément-nom du projet>** , cliquez sur le package que vous souhaitez utiliser comme modèle.  
+3.  Dans la boîte de dialogue **ajouter \<project name> un nouvel élément-** , cliquez sur le package que vous souhaitez utiliser comme modèle.  
   
      La liste de modèles inclut le modèle de package par défaut nommé Nouveau package SSIS. L'icône de package identifie les modèles pouvant être utilisés comme modèles de packages.  
   
-4.  Cliquez sur **Ajouter**.  
+4.  Cliquez sur **Add**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer des packages dans SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   

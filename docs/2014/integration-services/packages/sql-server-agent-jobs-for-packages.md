@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 312469e8355fb5720f1a1ce13a58a59f759da4ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767171"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964799"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Travaux de l'Agent SQL Server pour les packages
   Automatisez et planifiez l’exécution des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez planifier les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et sont stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -56,7 +55,7 @@ ms.locfileid: "62767171"
   
  Pour visionner une vidéo qui montre comment utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour exécuter un package, consultez la page [Procédure : automatiser l’exécution du package SSIS à l’aide de l’Agent SQL Server (vidéo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), dans MSDN Library.  
   
-##  <a name="troubleshooting"></a><a name="trouble"></a>Dépannage  
+##  <a name="troubleshooting"></a><a name="trouble"></a> Dépannage  
  Une étape de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut ne pas démarrer un package même si le package est exécuté correctement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et à partir de la ligne de commande. Ce problème est connu et plusieurs solutions sont recommandées. Pour plus d'informations, consultez les ressources ci-dessous.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Article de la Base de connaissances intitulé [Un package SSIS n’est pas exécuté quand vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760)  

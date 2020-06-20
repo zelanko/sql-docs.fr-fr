@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f21a845b6db79390a31c4b26197547a041e76de
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 87af61145c4e09c2713c96e5a451fe30c4d7300c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930070"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Options (résultats de la requête-SQL Server-page général)
   Utilisez cette page pour déterminer le comportement par défaut du volet Résultats de la requête. Pour afficher ces paramètres, dans le menu **Outils**, cliquez sur **Options**, développez le dossier **Résultats de la requête**, sélectionnez **SQL Server**, puis cliquez sur **Général**. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes actuelles, cliquez sur **Options de requête** dans le menu **Requête** ou, dans une fenêtre de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cliquez avec le bouton droit et sélectionnez **Options de requête**.  

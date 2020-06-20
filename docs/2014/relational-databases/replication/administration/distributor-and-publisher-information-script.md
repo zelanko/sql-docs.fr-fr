@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060829"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script d'information du serveur de distribution et du serveur de publication
   Le script utilise les tables système et les procédures stockées de réplication pour répondre aux questions les plus courantes sur les objets posées sur le serveur de distribution et sur le serveur de publication. Le script peut être utilisé « tel quel » et peut également servir de base pour des scripts personnalisés. Le script peut nécessiter deux modifications afin qu'il fonctionne dans votre environnement :  
   
 -   Modifiez la ligne `use AdventureWorks2012` afin d'utiliser le nom de votre base de données de publication.  
   
--   Supprimez les commentaires (`--`) de la ligne `exec sp_helparticle @publication='<PublicationName>'` et remplacez \<PublicationName> par le nom d’une publication.  
+-   Supprimez les commentaires ( `--` ) de la ligne `exec sp_helparticle @publication='<PublicationName>'` et remplacez \<PublicationName> par le nom d’une publication.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

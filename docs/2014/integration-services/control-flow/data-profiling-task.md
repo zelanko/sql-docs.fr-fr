@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919240"
 ---
 # <a name="data-profiling-task"></a>Tâche de profilage des données
   La tâche de profilage des données calcule différents profils qui vous aident à vous familiariser avec une source de données et à identifier les problèmes à résoudre au niveau des données.  
@@ -82,7 +81,7 @@ ms.locfileid: "62831881"
 |FunctionalDependencyProfile|Colonnes de types `integer`, `char` et `datetime`|  
 |InclusionProfile|Colonnes de types `integer`, `char` et `datetime`|  
   
- \*Dans le tableau précédent des types de données valides `integer`, `char`les `datetime`types, `numeric` , et incluent les types de données spécifiques suivants :  
+ \*Dans le tableau précédent des types de données valides, les `integer` types,, `char` `datetime` et `numeric` incluent les types de données spécifiques suivants :  
   
  Les types d'entiers sont `bit`, `tinyint`, `smallint`, `int` et `bigint`.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831881"
   
  Les types numériques incluent les types `integer` (sauf `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` et `numeric`.  
   
- \*\*`image`les `text`types `XML`, `udt`,, `variant` et ne sont pas pris en charge pour les profils autres que le profil de ratio de colonne null.  
+ \*\*`image` `text` les types,,, `XML` `udt` et `variant` ne sont pas pris en charge pour les profils autres que le profil de ratio de colonne null.  
   
 ### <a name="valid-tables-and-columns"></a>Tables et colonnes valides  
  Si la table ou colonne est vide, la tâche de profilage des données entreprend les actions suivantes :  

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1894b074491af1962d2180337288e188d41b2951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055065"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriétés des colonnes de table (SQL Server Management Studio)
   Ces propriétés apparaissent dans le volet en bas du Concepteur de tables. Sauf indication contraire, vous pouvez modifier ces propriétés dans la fenêtre Propriétés lorsque la colonne est sélectionnée. Les **Propriétés des colonnes** peuvent être affichées par catégories ou par ordre alphabétique. Un grand nombre de propriétés apparaissent uniquement ou peuvent uniquement être modifiées pour certains types de données.  
@@ -122,7 +121,7 @@ ms.locfileid: "68211796"
  **Pas pour la réplication**  
  Indique si les valeurs d'identité d'origine sont préservées pendant la réplication. Pour plus d'informations sur la réplication, consultez CREATE TABLE. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
- **Répliquée**  
+ **Répliquées**  
  Indique si cette colonne est répliquée dans un autre emplacement.  
   
  **RowGuid**  

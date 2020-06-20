@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937160"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
   Un groupe de disponibilité AlwaysOn est une collection prédéfinie de bases de données relationnelles SQL Server qui basculent ensemble lorsque les conditions déclenchent un basculement dans l'une des bases de données, redirigeant les requêtes vers une base de données mise en miroir sur une autre instance dans le même groupe de disponibilité. Si vous utilisez des groupes de disponibilité pour votre solution haute disponibilité, vous pouvez utiliser une base de données de ce groupe comme source de données dans une solution Analysis Services tabulaire ou multidimensionnelle. Toutes les opérations d'Analysis Services s'exécutent comme prévu lorsque vous utilisez une base de données de disponibilité : le traitement ou l'importation des données, l'interrogation directe des données relationnelles (à l'aide du stockage ROLAP ou du mode DirectQuery) et l'écriture différée.  
@@ -55,7 +54,7 @@ ms.locfileid: "68889226"
   
     -   Dans la liste déroulante **Secondaire accessible en lecture** , sélectionnez **Intention de lecture uniquement**.  
   
-    -   Dans la liste déroulante **Connexions en rôle principal** , sélectionnez **Autoriser toutes les connexions**. Il s’agit de la valeur par défaut.  
+    -   Dans la liste déroulante **Connexions en rôle principal** , sélectionnez **Autoriser toutes les connexions**. Il s'agit de la valeur par défaut.  
   
     -   Éventuellement, dans la liste déroulante **Mode de disponibilité** , sélectionnez **Validation synchrone**. Cette étape n'est pas obligatoire, mais elle permet de garantir qu'il existe une parité des données entre le réplica primaire et le réplica secondaire.  
   
@@ -217,7 +216,7 @@ ms.locfileid: "68889226"
  Pour cela, créez une source de données supplémentaire dans un modèle Analysis Services pour prendre en charge la connexion en lecture-écriture. Lors de la création de la source de données supplémentaire, utilisez le nom d’écouteur et la base de données que vous avez spécifiés dans la connexion en lecture seule, mais au lieu de modifier **Intention de l’application**, conservez la valeur par défaut qui prend en charge les connexions READWRITE. Vous pouvez à présent ajouter de nouvelles tables de faits ou de dimension à votre vue de source de données, basées sur la source de données en lecture-écriture, puis activer l'écriture différée sur les nouvelles tables.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Écouteurs de groupe de disponibilité, connectivité client et &#40;de basculement d’application SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Secondaires actifs : réplicas secondaires accessibles en lecture &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Stratégies AlwaysOn pour les problèmes opérationnels avec groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Créer une source de données &#40;SSAS multidimensionnel&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   

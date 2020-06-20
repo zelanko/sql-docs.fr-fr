@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d529a8ed50a885aa74969fc0cbb3668fc1e5587b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041423"
 ---
 # <a name="working-with-upgrade-advisor"></a>Utilisation du Conseiller de mise à niveau
   Pour garantir la réussite de la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le Conseiller de mise à niveau fournit une console centrale pour identifier les problèmes à résoudre dans les installations avant de procéder à la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
