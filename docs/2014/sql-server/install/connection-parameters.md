@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca5d6ed8f1e8a92d22bd32e39c8afe946a0fcfee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27eb69dfd2c41710a47861e0992486267f692a3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095980"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036929"
 ---
 # <a name="connection-parameters"></a>Paramètres de connexion
-  Pour analyser certains types de serveurs, tels que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vous devez sélectionner une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est sélectionnée automatiquement. Vous pouvez modifier cette sélection, mais vous ne pouvez choisir qu'une instance à la fois pour l'analyse par le Conseiller de mise à niveau. Si vous avez inclus un type de serveur qui requiert une authentification, vous devez entrer le mode et les informations d'identification.  
+  Pour analyser certains types de serveurs, tels que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , vous devez sélectionner une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est sélectionnée automatiquement. Vous pouvez modifier cette sélection, mais vous ne pouvez choisir qu'une instance à la fois pour l'analyse par le Conseiller de mise à niveau. Si vous avez inclus un type de serveur qui requiert une authentification, vous devez entrer le mode et les informations d'identification.  
   
 ## <a name="options"></a>Options  
  **Nom du serveur**  

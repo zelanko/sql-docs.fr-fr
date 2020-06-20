@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2890a61850526f7506713b3f900d67b8d41d0bfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012138"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Autres problèmes de mise à niveau du moteur de base de données
   Les problèmes de mise à niveau suivants ne peuvent pas être détectés par la version actuelle du Conseiller de mise à niveau. Passez en revue les problèmes répertoriés ci-dessous pour évaluer leur impact potentiel sur vos systèmes.  
@@ -49,7 +48,7 @@ ms.locfileid: "66093700"
   
 -   syssegments  
   
- L’utilisation du protocole VIA pour se connecter à [!INCLUDE[ssDE](../../includes/ssde-md.md)] l’est déconseillée.  
+ L’utilisation du protocole VIA pour se connecter à l' [!INCLUDE[ssDE](../../includes/ssde-md.md)] est déconseillée.  
   
 ## <a name="new-data-types"></a>Nouveaux types de données  
  Les éléments suivants sont des types système réservés. Renommez les types définis par l'utilisateur en conflit avant ou après la mise à niveau.  

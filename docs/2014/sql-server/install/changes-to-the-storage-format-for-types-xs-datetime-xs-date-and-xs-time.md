@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aacaaf8fc69f4b18154e5a4df9a3662fb9ae0650
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037162"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Modifications du format de stockage pour les types xs:dateTime, xs:date et xs:time
   La règle XMLDATETIME détermine si vos bases de données contiennent ou non des données XML typées qui deviendront non valides après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "66096605"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- Le format de stockage [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans pour les types xs : DateTime, XS : date et XS : Time a été modifié pour prendre en charge des valeurs avec ou sans informations de fuseau horaire et pour permettre la préservation du fuseau horaire.  
+ Le format de stockage dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour les types xs : DateTime, XS : date et XS : Time a été modifié pour prendre en charge des valeurs avec ou sans informations de fuseau horaire et pour permettre la préservation du fuseau horaire.  
   
  Si une collection de schémas XML fait référence à l'un de ces types, les index XML sur toutes les colonnes associées à la collection seront désactivés après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous serez en mesure de les interroger en utilisant SELECT et/ou XQUERIES, mais l'index XML ne sera pas utilisé. Si une année négative est rencontrée, il en résultera une erreur d'exécution.  
   

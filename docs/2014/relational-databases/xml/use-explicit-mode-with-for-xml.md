@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059401"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utiliser le mode EXPLICIT avec FOR XML
   Comme indiqué dans la rubrique traitant de la [Construction de code XML à l’aide de FOR XML](../xml/for-xml-sql-server.md), les modes RAW et AUTO ne permettent pas de contrôler de façon précise la forme du document XML généré à partir du résultat d’une requête. Toutefois, le mode EXPLICIT offre la plus grande souplesse pour générer le document XML à partir du résultat d'une requête.  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  Voici la description des parties du format :  
   
  *ElementName*  
- Identificateur générique obtenu de l'élément. Par exemple, si **Customers** est spécifié en tant que *ElementName*, l’élément \<Customers> est généré.  
+ Identificateur générique obtenu de l'élément. Par exemple, si **Customers** est spécifié comme *ElementName*, l' \<Customers> élément est généré.  
   
  *TagNumber*  
  Valeur de balise unique affectée à un élément. Cette valeur, associée aux deux colonnes de métadonnées **Tag** et **Parent**, détermine l’imbrication des éléments dans le document XML obtenu.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 055482a8cf64527f58ed983b449121a99960f566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970529"
 ---
 # <a name="cursors"></a>Curseurs
   Les opérations réalisées dans une base de données relationnelle s'exécutent sur un ensemble complet de lignes. Par exemple, l'ensemble de lignes retourné par une instruction SELECT contient toutes les lignes satisfaisant aux conditions de la clause WHERE de l'instruction. Cet ensemble complet de lignes retournées par l'instruction est appelé ensemble de résultats. Les applications, en particulier les applications interactives en ligne, peuvent ne pas toujours fonctionner efficacement si l'ensemble de résultats est traité comme une unité. Ces applications ont besoin d'un mécanisme leur permettant de travailler avec une seule ligne ou avec un petit bloc de lignes à la fois. Les curseurs sont une extension des ensembles de résultats et fournissent ce mécanisme.  
@@ -61,7 +60,7 @@ ms.locfileid: "62918690"
   
  Les modèles de curseur d'API de base de données considèrent un curseur avant uniquement comme un type distinct de curseur, contrairement à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en compte les curseurs avant uniquement et de défilement en tant qu’options pouvant être appliquées aux curseurs statiques, de jeu de clés et dynamiques. [!INCLUDE[tsql](../includes/tsql-md.md)] Les curseurs prennent en charge les curseurs avant uniquement, statiques, de jeu de clés et dynamiques. Les modèles de curseurs d'API de bases de données supposent que les curseurs statiques, de jeux de clés et dynamiques permettent toujours le défilement. Lorsqu'un attribut ou une propriété de curseur d'API de bases de données est défini comme étant de type avant uniquement, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implémente ce curseur en tant que curseur dynamique avant uniquement.  
   
- Statique  
+ statique  
  Le jeu de résultats complet d’un curseur statique est créé dans **tempdb** à l’ouverture du curseur. Un curseur statique affiche toujours l'ensemble de résultats tel qu'il était au moment où le curseur a été ouvert. Les curseurs statiques détectent peu ou pas de modifications, mais consomment relativement peu de ressources pendant le défilement.  
   
  Le curseur ne reflète pas les modifications de la base de données qui concernent soit l'appartenance de l'ensemble de résultats, soit les modifications apportées aux valeurs des colonnes des lignes constituant l'ensemble de résultats. Après son ouverture, un curseur statique n'affiche pas les nouvelles lignes insérées dans la base de données, même si celles-ci correspondent aux conditions de recherche de l'instruction SELECT du curseur. Si certaines lignes constituant l'ensemble de résultats sont mises à jour par d'autres utilisateurs, les nouvelles valeurs des données ne sont pas affichées dans le curseur statique. Le curseur statique affiche les lignes supprimées de la base de données après l'ouverture du curseur. Aucune opération UPDATE, INSERT ou DELETE n'est reflétée dans un curseur statique (à moins qu'il ne soit fermé, puis rouvert), ni aucune modification effectuée à l'aide de la même connexion ayant permis l'ouverture du curseur.  

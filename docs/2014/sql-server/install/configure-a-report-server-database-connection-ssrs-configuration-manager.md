@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8224b3d38d3a4fdcaf4eaa70e9a87a87d2e2258c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036967"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
   Chaque instance de serveur de rapports requiert une connexion à la base de données de serveur de rapports qui stocke les rapports, les modèles de rapport, les sources de données partagées, les ressources et les métadonnées gérées par le serveur. La connexion initiale peut être créée lors de l'installation d'un serveur de rapports si vous installez la configuration par défaut. Dans la plupart des cas, vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer la connexion une fois l'installation terminée. Vous pouvez modifier la connexion à tout moment afin de changer de type de compte ou de redéfinir les informations d'identification. Pour obtenir des instructions détaillées sur la création de la base de données et la configuration de la connexion, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "71952636"
 ### <a name="storing-database-connection-information"></a>Stockage des informations de connexion à la base de données  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke et chiffre les informations de connexion dans les paramètres RSreportserver.config suivants. Vous devez recourir à l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou à l'utilitaire rsconfig.exe pour créer des valeurs chiffrées pour ces paramètres.  
   
- Certaines valeurs ne sont pas définies pour tous les types de connexion. Si vous configurez la connexion à l’aide des valeurs par défaut (c’est-à-dire, en utilisant les comptes de service pour `LogonUser` établir la connexion `LogonDomain` ), <> `LogonCred` , <> et <> seront vides, comme suit :  
+ Certaines valeurs ne sont pas définies pour tous les types de connexion. Si vous configurez la connexion à l’aide des valeurs par défaut (c’est-à-dire, en utilisant les comptes de service pour établir la connexion), <`LogonUser`>, <`LogonDomain`> et <> `LogonCred` seront vides, comme suit :  
   
 ```  
 <Dsn></Dsn>  

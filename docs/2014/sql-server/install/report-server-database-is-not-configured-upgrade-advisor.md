@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bb5dd5968930319532a29ff7c3909c36af99b3a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8800951a2edfa3a71643ba3af65bae2b7cfdc29f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011839"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>La base de données du serveur de rapports n'est pas configurée (Conseiller de mise à niveau)
   La mise à niveau est bloquée en raison d'une configuration incomplète du serveur de rapports. La base de données du serveur de rapports n'est pas configurée.  
@@ -30,7 +29,7 @@ ms.locfileid: "71952107"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- Le programme d'installation peut uniquement mettre à niveau une instance du serveur de rapports entièrement configurée. Pour continuer, vous devez soit configurer la base de données du serveur de rapports, soit utiliser le **panneau de configuration** Microsoft Windows pour supprimer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la fonctionnalité de serveur de rapports de l’installation. Après avoir supprimé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez mettre à niveau d'autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le programme d'installation peut uniquement mettre à niveau une instance du serveur de rapports entièrement configurée. Pour continuer, vous devez soit configurer la base de données du serveur de rapports, soit utiliser le **panneau de configuration** Microsoft Windows pour supprimer la fonctionnalité de serveur de rapports de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Après avoir supprimé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez mettre à niveau d'autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="corrective-action"></a>Action corrective  
  Si vous n'avez pas configuré la base de données du serveur de rapports, celui-ci n'est pas opérationnel et doit être supprimé avant la mise à niveau.  

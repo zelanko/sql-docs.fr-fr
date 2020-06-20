@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e48c8eb11d62686da74643e891e854da30497366
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63066257"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011719"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools)
   Vous pouvez travailler dans le Concepteur de requêtes et de vues en vous servant du clavier ou de la souris. Pour connaître les méthodes spécifiques, consultez les tableaux suivants.  
