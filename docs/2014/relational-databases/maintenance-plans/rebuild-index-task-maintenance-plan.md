@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc9d7c85a72c34cee1ef7af8cb4b4f25f918a3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024016"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tâche Reconstruire l'index (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Reconstruire l’index** pour recréer les index des tables de la base de données en définissant un nouveau facteur de remplissage. Le facteur de remplissage détermine la quantité d'espace disponible sur chaque page de l'index pour permettre l'extension ultérieure de l'index. Au fur et à mesure que des données sont ajoutées à la table, l'espace libre se remplit parce que le facteur de remplissage n'est pas conservé. Réorganiser les pages d'index et les données permet de recouvrer de l'espace libre.  
@@ -56,10 +55,10 @@ ms.locfileid: "82706423"
     > [!NOTE]  
     >  Les plans de maintenance sont exécutés uniquement sur des bases de données définies au niveau de compatibilité 80 ou plus. Les bases de données définies au niveau de compatibilité 70 ou moins ne sont pas affichées.  
   
- **Dessin**  
+ **Object**  
  Limite la grille de **Sélection** à l’affichage des tables et/ou des vues.  
   
- **Sélection**  
+ **d’un certificat SSTP**  
  Spécifie les tables ou les index faisant l'objet de cette tâche. Non disponible quand **Tables et vues** est sélectionné dans la zone Objet.  
   
  **Réorganiser les pages avec la quantité d'espace disponible par défaut**  

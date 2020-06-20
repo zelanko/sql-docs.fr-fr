@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c58cea8755a7f1d859c1730d79567797547ccaf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024136"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de maintenance (Propriétés du sous-plan)
   Utilisez la boîte de dialogue **Plan de maintenance (Propriétés du sous-plan)** pour spécifier un nom, une description et une planification de sous-plan de maintenance de plan. Cliquez sur **Propriétés du sous-plan** sous l’onglet **Conception** du plan de maintenance ou double-cliquez sur un sous-plan dans la grille du concepteur pour afficher cette boîte de dialogue.  
