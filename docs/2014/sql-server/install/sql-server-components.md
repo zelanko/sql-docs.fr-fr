@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 809705e50e9337a63bf33c2883a1e5d43197be09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036283"
 ---
 # <a name="sql-server-components"></a>Composants SQL Server
-  Vous pouvez exécuter l’Assistant analyse du conseiller de mise à niveau sur un ordinateur local [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]distant [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]sur lequel [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ,, ou est installé. La première étape de l'analyse de pré-mise à niveau consiste à identifier l'ordinateur et les composants à analyser.  
+  Vous pouvez exécuter l’Assistant analyse du conseiller de mise à niveau sur un ordinateur local ou distant sur lequel [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ,, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou est [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installé. La première étape de l'analyse de pré-mise à niveau consiste à identifier l'ordinateur et les composants à analyser.  
   
 ## <a name="options"></a>Options  
- **Nom de l’ordinateur**  
+ **Nom de l'ordinateur**  
  Spécifie le nom de l'ordinateur à analyser. Le conseiller de mise à niveau remplit la zone **nom du serveur** avec le nom de l’ordinateur local. Vous pouvez également utiliser "." et "localhost" pour vous connecter à l'ordinateur local.  
   
  Pour analyser un autre ordinateur, appliquez les instructions suivantes :  

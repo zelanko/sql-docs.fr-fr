@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953196"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
   Importez un fichier d’application de couche Données (DAC), fichier portant l’extension .bacpac, pour créer une copie de la base de données d’origine, avec ses données, sur une nouvelle instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou vers [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les opérations d'exportation-importation peuvent être combinées pour migrer une DAC ou une base de données entre différentes instances, ou pour créer une sauvegarde logique, telles qu'une copie sur site d'une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -124,7 +123,7 @@ ms.locfileid: "75232230"
   
 -   **Nom de la nouvelle base de données** : fournissez un nom pour la base de données importée.  
   
--   **Édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** -spécifiez [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou Web. Pour plus d'informations sur les éditions de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez le site Web [SQL Database](https://www.windowsazure.com/home/tour/database/).  
+-   **Édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** -Spécifiez [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Pour plus d'informations sur les éditions de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez le site Web [SQL Database](https://www.windowsazure.com/home/tour/database/).  
   
 -   **Taille maximale de la base de données (Go)** : utilisez le menu déroulant pour spécifier la taille maximale de votre base de données.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "75232230"
 ###  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez cette page pour passer en revue la source spécifiée et les paramètres cibles de l'opération. Pour terminer l'opération d'importation en utilisant les paramètres spécifiés, cliquez sur **Terminer**. Pour annuler l'opération d'importation et quitter l'Assistant, cliquez sur **Annuler**.  
   
-###  <a name="progress-page"></a><a name="Progress"></a>Page progression  
+###  <a name="progress-page"></a><a name="Progress"></a> Page Progression  
  Cette page affiche une barre de progression indiquant l'état de l'opération. Pour afficher l'état détaillé, cliquez sur l'option **Afficher les détails** .  
   
  Pour continuer, cliquez sur **Suivant**.  
@@ -150,5 +149,5 @@ ms.locfileid: "75232230"
   
 ## <a name="see-also"></a>Voir aussi  
  [Applications de la couche données](data-tier-applications.md)   
- [Exporter une application de la couche Données](export-a-data-tier-application.md)  
+ [Exporter une application de la couche données](export-a-data-tier-application.md)  
   

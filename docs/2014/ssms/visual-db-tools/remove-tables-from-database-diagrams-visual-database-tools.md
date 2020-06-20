@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 521843d02f601b22dc8f8ff8f7dffa03af5d5084
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63180737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064880"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Supprimer des tables de diagrammes de base de données (Visual Database Tools)
   Vous pouvez supprimer une table de votre diagramme de base de données. Cette opération ne modifie pas la base de données. La table, ainsi que ses relations avec les autres tables, continuent à exister dans la base de données.  

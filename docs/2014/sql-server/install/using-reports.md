@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f52afcfdaa7de33d83d64a049f9a350f0463b4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062344"
 ---
 # <a name="using-reports"></a>Utilisation de rapports
   Un rapport distinct est généré pour chaque composant et, si nécessaire, pour chaque instance, que l'Assistant Analyse du Conseiller de mise à niveau analyse sur un serveur. Le rapport contient des détails sur les problèmes connus qui affectent une mise à niveau. Il fournit également des liens vers des informations et des actions suggérées pour traiter les problèmes identifiés.  
@@ -77,7 +76,7 @@ ms.locfileid: "66091228"
  Vous pouvez développer un problème pour afficher des informations supplémentaires, un lien vers des informations détaillées à propos de la résolution du problème et un lien pour afficher les détails du problème. Lorsque vous cliquez sur le lien pour obtenir des précisions concernant le problème, une rubrique d'aide s'affiche avec des informations sur le problème et des instructions pour le résoudre. Une fois que vous avez corrigé un problème ou géré vos éléments d’action, vous pouvez marquer les problèmes comme terminés en activant la case à cocher **ce problème a été résolu** . Si vous souhaitez supprimer les problèmes résolus de la liste des problèmes de mise à niveau, cliquez sur **Actualiser**. Le problème ne s’affiche plus tant que vous n’avez pas exécuté l’Assistant analyse du conseiller de mise à niveau sur le même composant, ou appliqué le filtre **problèmes résolus** à partir de l’option **Filtrer par** .  
   
 ## <a name="report-files"></a>Fichiers de rapport  
- L’Assistant analyse du conseiller de mise à niveau crée des\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapports dans le répertoire Mes documents Upgrade Advisor\110\Reports et crée un sous-répertoire pour chaque serveur que vous analysez. Les fichiers de rapport sont des fichiers XML qui respectent une convention d'affectation de noms spécifique. Lorsque vous lancez la visionneuse de rapports du Conseiller de mise à niveau, les fichiers de rapport dans le répertoire par défaut sont affichés. Lorsque vous copiez des fichiers de rapport dans ce dossier, ceux-ci doivent respecter la convention d'affectation de noms sinon la visionneuse de rapports ne les affiche pas automatiquement.  
+ L’Assistant analyse du conseiller de mise à niveau crée des rapports dans le répertoire Mes documents \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports et crée un sous-répertoire pour chaque serveur que vous analysez. Les fichiers de rapport sont des fichiers XML qui respectent une convention d'affectation de noms spécifique. Lorsque vous lancez la visionneuse de rapports du Conseiller de mise à niveau, les fichiers de rapport dans le répertoire par défaut sont affichés. Lorsque vous copiez des fichiers de rapport dans ce dossier, ceux-ci doivent respecter la convention d'affectation de noms sinon la visionneuse de rapports ne les affiche pas automatiquement.  
   
  Si vous souhaitez partager les informations avec d'autres personnes, vous pouvez leur envoyer le rapport XML. Ou, si vous souhaitez utiliser une autre application, vous pouvez exporter le rapport dans un fichier de valeurs séparées par des virgules (CSV) qui vous permettra de créer une feuille de calcul, un fichier texte ou un message électronique.  
   

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a2d4b96d837edc1fa0fcb2ce2c9d48449eb59e7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb4b520eb8825e1a9d3bd5743700c2073f679c0f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999095"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Champs de descripteur de paramètre table
   La prise en charge des paramètres table inclut de nouveaux champs spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les descripteurs de paramètre d'application (APD) ODBC et les descripteurs de paramètre d'implémentation (IPD).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 |Nom|Emplacement|Type|Description|  
 |----------|--------------|----------|-----------------|  

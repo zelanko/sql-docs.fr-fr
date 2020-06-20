@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049900"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
   Les sections de cette rubrique font référence aux différentes propriétés d'index disponibles au moyen des boîtes de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -93,7 +92,7 @@ ms.locfileid: "63161907"
  Indique si la colonne utilisée dans la clé d'index autorise le stockage de valeurs NULL dans la colonne de la table ou de la vue.  
   
  **Ajouter**  
- Ajoute une colonne à la clé d'index. Sélectionnez des colonnes de table dans la boîte de dialogue **Sélectionnez les colonnes dans** *\<nom de la table>* qui s’affiche quand vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
+ Ajoute une colonne à la clé d'index. Sélectionnez les colonnes de la table dans la boîte de dialogue **Sélectionner les colonnes à partir de** *\<table name>* qui s’affiche lorsque vous cliquez sur **Ajouter**. Pour un index spatial, lorsque vous sélectionnez une colonne, ce bouton est estompé.  
   
  **Remove**  
  Supprime la colonne sélectionnée de la clé d'index.  
@@ -134,7 +133,7 @@ ms.locfileid: "63161907"
 ##  <a name="storage-page-options"></a><a name="Storage"></a> Options (page Stockage)  
  Utilisez cette page pour consulter ou modifier les propriétés de groupe de fichiers ou de schéma de partition pour l'index sélectionné. Affiche uniquement les options relatives au type d'index.  
   
- **Fichiers**  
+ **Groupe de fichiers**  
  Stocke l'index dans le groupe de fichiers spécifié. La liste répertorie uniquement les groupes de fichiers standard (row). Le groupe de fichiers PRIMARY de la base de données est sélectionné par défaut dans la liste. Pour plus d'informations, consultez [Database Files and Filegroups](../databases/database-files-and-filegroups.md).  
   
  **Groupe de fichiers Filestream**  
@@ -180,7 +179,7 @@ ms.locfileid: "63161907"
 ### <a name="bounding-box"></a>Cadre englobant  
  Le *cadre englobant* est le périmètre de la grille de niveau supérieur d’un plan géométrique. Les paramètres du cadre englobant existent uniquement dans le pavage de la grille géométrique. Ces paramètres sont indisponibles si le **Schéma de pavage** est une **Grille géographique**.  
   
- Le panneau affiche les **coordonnées*`X-min`*(*`Y-min`*,)** et ***`X-max`*(*`Y-max`*,)** de la zone englobante. Il n'y a pas de valeurs de coordonnées par défaut. Par conséquent, lorsque vous créez un index spatial sur une colonne de type `geometry`, vous devez spécifier les valeurs des coordonnées.  
+ Le panneau affiche les coordonnées **( *`X-min`* , *`Y-min`* )** et **( *`X-max`* , *`Y-max`* )** de la zone englobante. Il n'y a pas de valeurs de coordonnées par défaut. Par conséquent, lorsque vous créez un index spatial sur une colonne de type `geometry`, vous devez spécifier les valeurs des coordonnées.  
   
  `X-min`  
  Coordonnée X de l'angle inférieur gauche du cadre englobant.  
@@ -236,7 +235,7 @@ ms.locfileid: "63161907"
  Utilisez cette page pour entrer le prédicat de filtre d'un index filtré. Pour plus d'informations, consultez [Create Filtered Indexes](create-filtered-indexes.md).  
   
  **Expression de filtre**  
- Définit quelles lignes de données inclure dans l'index filtré. Par exemple, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Définit quelles lignes de données inclure dans l'index filtré. Par exemple : `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les options d’index](set-index-options.md)   

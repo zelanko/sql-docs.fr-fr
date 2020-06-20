@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4525df0-a186-44e5-bba6-5d8123a0f965
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 470b3edf0435099b2a9fd17b14ac299299274a71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbefa22294623cb5539f8c2146478e5c23c462ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63181245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049939"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par SQL Server
   Cette section traite des nouveautés et des mises à jour en matière de syntaxe et de fonctionnalités prenant en charge les tables optimisées en mémoire.  

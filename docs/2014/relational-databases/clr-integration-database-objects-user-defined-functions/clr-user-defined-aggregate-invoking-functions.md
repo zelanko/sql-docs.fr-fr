@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954671"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Appel de fonctions d'agrégation CLR définies par l'utilisateur
   Dans les instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous pouvez appeler les agrégats CLR (Common Language Runtime) définis par l'utilisateur et soumis à toutes les règles qui s'appliquent aux fonctions d'agrégation système.  
@@ -34,9 +33,9 @@ ms.locfileid: "62919605"
   
 -   Les agrégats définis par l'utilisateur doivent être appelés à l'aide d'un nom en deux parties, sous la forme *nom_schéma.nom_udagg*.  
   
--   Le type d’argument de l’agrégat défini par l’utilisateur doit correspondre ou être implicitement convertible en *INPUT_TYPE* de l’agrégat, comme défini dans `CREATE AGGREGATE` l’instruction.  
+-   Le type d’argument de l’agrégat défini par l’utilisateur doit correspondre ou être implicitement convertible en *INPUT_TYPE* de l’agrégat, comme défini dans l' `CREATE AGGREGATE` instruction.  
   
--   Le type de retour de l’agrégat défini par l’utilisateur doit *return_type* correspondre à la `CREATE AGGREGATE` return_type dans l’instruction.  
+-   Le type de retour de l’agrégat défini par l’utilisateur doit correspondre à la *return_type* dans l' `CREATE AGGREGATE` instruction.  
   
 ## <a name="example-1"></a>Exemple 1  
  Voici un exemple de fonction d'agrégation définie par l'utilisateur qui concatène un jeu de valeurs de chaîne extraites d'une colonne de table :  

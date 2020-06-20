@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c9c597c672a1889827f3994c1df9ea65ec4c54a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049540"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
   La boîte de dialogue **Propriétés de l'article** est accessible depuis l'Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication** . Elle permet d'afficher et de définir les propriétés de tous les types d'articles. Certaines propriétés peuvent être définies uniquement lors de la création de la publication, et d'autres uniquement si la publication n'a pas d'abonnements actifs. Les propriétés qui ne peuvent pas être définies s'affichent en lecture seule.  
@@ -45,7 +44,7 @@ ms.locfileid: "62721781"
  Détermine si les types de données définis par l'utilisateur doivent être convertis en types de données de base lors de la création d'objets au niveau de l'Abonné. Les types de données définis par l'utilisateur incluent les types CLR introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Définissez la valeur **True** si vous répliquez ces types de données vers plusieurs versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]afin qu'ils soient traités correctement au niveau de l'Abonné.  
   
  **Créer des schémas sur l'Abonné**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit des schémas qui sont définis en utilisant l'instruction CREATE SCHEMA. Un schéma est le propriétaire d’un objet ; il est utilisé dans un nom composé, tel que \<Base_de_données>.\<Schéma>.\<Objet>. Si la base de données contient des objets appartenant à des schémas autres que DBO, la réplication peut créer ces schémas au niveau de l'Abonné pour pouvoir créer des objets publiés.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit des schémas qui sont définis en utilisant l'instruction CREATE SCHEMA. Un schéma est le propriétaire d’un objet ; Il est utilisé dans un nom en plusieurs parties, tel que \<Database> . \<Schema> . \<Object> . Si vous avez des objets dans la base de données appartenant à des schémas autres que DBO, la réplication peut créer ces schémas sur l’abonné, afin que les objets publiés puissent être créés.  
   
  Si vous répliquez les données vers des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62721781"
   
  Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- **Réplication**  
+ **Réplique**  
  Cette option s'applique uniquement aux procédures stockées. Elle permet d'indiquer si vous voulez répliquer la définition de la procédure stockée (instruction CREATE PROCEDURE) ou son exécution. Si vous répliquez l'exécution de la procédure, la définition de la procédure est répliquée vers l'Abonné lors de l'initialisation de l'abonnement. Lorsque la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante au niveau de l'Abonné. Ceci peut améliorer les performances de manière significative lorsque des opérations de traitement par lot volumineuses sont exécutées. Pour plus d’informations, consultez [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Options des publications de fusion  
@@ -102,7 +101,7 @@ ms.locfileid: "62721781"
   
  Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
- **Options de la partition**  
+ **Options de partition**  
  Définit le type des partitions que crée un filtre paramétrable. Pour plus d'informations, consultez la section « Définition des options de partition » de [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Niveau de suivi**  
@@ -124,7 +123,7 @@ ms.locfileid: "62721781"
  Si vous sélectionnez le résolveur par défaut, les conflits sont résolus en fonction de la priorité affectée à chaque abonné ou de la première modification écrite sur le serveur de publication, selon le type d'abonnement utilisé. Pour plus d’informations, consulter [Détecter et résoudre des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Utiliser un résolveur personnalisé (inscrit sur le serveur de distribution)**  
- Si vous décidez d'utiliser un résolveur d'article (fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou que vous avez écrit), vous devez sélectionner un résolveur dans la zone de liste. Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Si vous décidez d'utiliser un résolveur d'article (fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou que vous avez écrit), vous devez sélectionner un résolveur dans la zone de liste. Pour plus d’informations, consultez [détection et résolution avancées des conflits de réplication de fusion](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Si le résolveur nécessite une entrée, définissez-la dans la zone de texte **Entrez les informations requises par le résolveur** . Pour plus d'informations sur l'entrée nécessaire aux résolveurs personnalisés [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consultez [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   

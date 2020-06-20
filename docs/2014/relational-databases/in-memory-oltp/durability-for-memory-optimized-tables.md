@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d48d671b23d7b7b17557e7829d6f2522c375acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050220"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fournit la durabilité complète pour les tables optimisées en mémoire. Lorsqu'une transaction qui a modifié une table optimisée en mémoire est validée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (comme pour les tables sur disque), garantit que les modifications sont permanentes (perdureront au redémarrage d'une base de données), à condition que le stockage sous-jacent soit disponible. Il existe deux composantes clés de durabilité : l'enregistrement des transactions et la conservation des modifications de données dans un stockage sur disque.
@@ -52,7 +51,7 @@ ms.locfileid: "78175946"
 
  Opération MERGE l’opération fusionne une ou plusieurs paires de fichiers de données et Delta et crée une paire de fichiers de données et Delta.
 
- Pendant la récupération après [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incident, lorsque est redémarré ou que la base de données est remise en ligne, les données optimisées en mémoire sont alimentées à l’aide des paires de fichiers de données et Delta. Le fichier delta filtre les lignes supprimées lors de la lecture des lignes à partir du fichier de données correspondant. Dans la mesure où chaque paire de fichier de données et de fichier delta est indépendante, ces fichiers sont chargés en parallèle pour réduire le temps de chargement en mémoire des données. Une fois que les données ont été chargées en mémoire, le moteur OLTP en mémoire applique les enregistrements du journal des transactions non encore couverts par les fichiers de point de contrôle afin que les données optimisées en mémoire soient complètes.
+ Pendant la récupération après incident [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , lorsque est redémarré ou que la base de données est remise en ligne, les données optimisées en mémoire sont alimentées à l’aide des paires de fichiers de données et Delta. Le fichier delta filtre les lignes supprimées lors de la lecture des lignes à partir du fichier de données correspondant. Dans la mesure où chaque paire de fichier de données et de fichier delta est indépendante, ces fichiers sont chargés en parallèle pour réduire le temps de chargement en mémoire des données. Une fois que les données ont été chargées en mémoire, le moteur OLTP en mémoire applique les enregistrements du journal des transactions non encore couverts par les fichiers de point de contrôle afin que les données optimisées en mémoire soient complètes.
 
  Pendant l’opération de restauration, les fichiers de point de contrôle de l’OLTP en mémoire sont créés à partir de la sauvegarde de la base de données, puis une ou plusieurs sauvegardes du journal des transactions sont appliquées. Comme pour la récupération sur incident, le moteur OLTP en mémoire charge les données en mémoire en parallèle pour minimiser l'impact sur le temps de récupération.
 

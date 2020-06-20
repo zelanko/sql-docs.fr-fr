@@ -38,13 +38,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbf9af4b5af3043c6ca8fa2cba01ebe43019fb41
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68418876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952739"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
   Cette rubrique explique comment activer et configurer la messagerie de base de données à l'aide de l'Assistant Configuration de la messagerie de base de données, et créer un script de configuration de la messagerie de base de données à l'aide de modèles.  
@@ -122,14 +121,14 @@ ms.locfileid: "68418876"
  **Adresse de messagerie**  
  Tapez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut envoyer des e-mails à partir de l’adresse SqlAgent@Adventure-Works.com.  
   
- **Nom complet**  
+ **Nom d’affichage**  
  Tapez le nom à afficher sur les messages électroniques envoyés à partir de ce compte. Le nom affiché est facultatif. C'est le nom qui sera affiché dans les messages envoyés à partir de ce compte. Par exemple, un compte de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut afficher le nom « Messagerie automatisée de SQL Server Agent » sur les messages électroniques.  
   
  **Répondre au courrier**  
  Tapez l'adresse de messagerie à utiliser pour les réponses aux messages électroniques envoyés à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est danw@Adventure-Works.com.  
   
  **Nom du serveur**  
- Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, ce format est semblable à `smtp.` *<YOUR_COMPANY>* `.com`. Pour plus d'informations, contactez l'administrateur de messagerie.  
+ Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, ce format est semblable à `smtp.` *<YOUR_COMPANY>* `.com` . Pour plus d'informations, contactez l'administrateur de messagerie.  
   
  **Numéro de port**  
  Tapez le numéro de port du serveur SMTP de ce compte. La plupart des serveurs SMTP utilisent le port 25.  
@@ -170,13 +169,13 @@ ms.locfileid: "68418876"
  Permet d'afficher ou de modifier la description du compte. La description est facultative.  
   
  **Adresse de messagerie**  
- Affichez ou modifiez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte pour Microsoft SQL Server agent peut envoyer des messages électroniques à **SqlAgent@Adventure-Works.com**partir de l’adresse.  
+ Affichez ou modifiez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte pour Microsoft SQL Server agent peut envoyer des messages électroniques à partir de l’adresse **SqlAgent@Adventure-Works.com** .  
   
- **Nom complet**  
+ **Nom d’affichage**  
  Affichez ou modifiez le nom qui apparaîtra sur le courrier électronique envoyé à partir de ce compte. Le nom affiché est facultatif. C'est le nom qui sera affiché dans les messages envoyés à partir de ce compte. Par exemple, un compte du service SQL Server Agent peut afficher le nom **SQL Server Agent Automated Mailer** sur les messages électroniques.  
   
  **Répondre au courrier**  
- Affichez ou modifiez l'adresse de messagerie qui sera utilisée pour répondre au courrier électronique envoyé à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses à un compte pour SQL Server Agent peuvent être envoyées à l’administrateur **danw@Adventure-Works.com**de base de données,.  
+ Affichez ou modifiez l'adresse de messagerie qui sera utilisée pour répondre au courrier électronique envoyé à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses à un compte pour SQL Server Agent peuvent être envoyées à l’administrateur de base de données, **danw@Adventure-Works.com** .  
   
  **Nom du serveur**  
  Affichez ou modifiez le nom du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.<votre_société>.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
@@ -224,7 +223,7 @@ ms.locfileid: "68418876"
  **Ajouter**  
  Ajoutez un compte au profil.  
   
- **Remove**  
+ **Supprimer**  
  Supprimez le compte sélectionné de la liste.  
   
  **Monter**  
@@ -255,7 +254,7 @@ ms.locfileid: "68418876"
  **Ajouter**  
  Ajoutez un compte au profil.  
   
- **Remove**  
+ **Supprimer**  
  Supprimez le compte sélectionné de la liste.  
   
  **Monter**  
@@ -396,7 +395,7 @@ ms.locfileid: "68418876"
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a>Page Envoyer un message électronique de test  
  Utilisez la page **Envoyer un message électronique de test à partir de**_<nom_instance>_ pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
   
- **Profil de Database Mail**  
+ **Profil de messagerie de base de données**  
  Sélectionnez un profil de messagerie de base de données dans la liste. Ce champ est obligatoire. Si aucun profil ne s'affiche, soit il n'en existe pas, soit vous n'avez pas d'autorisation sur ces profils. Utilisez l' **Assistant Configuration de la messagerie de base de données** pour créer et configurer des profils. Si aucun profil n'est répertorié, utilisez l'Assistant Configuration de la messagerie de base de données pour créer un profil pour votre propre usage.  
   
  **To**  
@@ -413,7 +412,7 @@ ms.locfileid: "68418876"
  **Message envoyé**  
  **mailitem_id** du message électronique de test.  
   
- **Résoudre les problèmes**  
+ **Résolution des problèmes**  
  Cliquez sur cette option pour ouvrir la rubrique de la documentation en ligne [Dépannage de la messagerie de base de données](https://msdn.microsoft.com/library/ms188663.aspx).  
   
 
