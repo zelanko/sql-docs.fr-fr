@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5801916d34e45b5d70c9953d8dff0becbf6207cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931610"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2014 (programme d'installation)
   L'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau d'édition entre les différentes éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur les chemins de mise à niveau d’édition pris en charge, consultez [Mises à niveau de version et d’édition prises en charge](supported-version-and-edition-upgrades.md). Avant d'initialiser la mise à niveau d'édition d'une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez les rubriques suivantes :  
   
--   [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+-   [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 -   [Éditions et composants de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)  
   
@@ -29,7 +28,7 @@ ms.locfileid: "62774573"
 -   [Configuration matérielle et logicielle requise pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **dans un environnement en cluster : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** L’exécution de la mise à niveau de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] édition sur l’un des nœuds du cluster est suffisante. Le nœud peut être actif ou passif et le moteur ne met pas les ressources hors ligne pendant la mise à niveau de l'édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
+>  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement en cluster :** l’exécution de la mise à niveau de l’édition sur l’un des nœuds du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster est suffisante. Le nœud peut être actif ou passif et le moteur ne met pas les ressources hors ligne pendant la mise à niveau de l'édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  

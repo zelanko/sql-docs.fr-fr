@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 30c509284657b7458e6cf9d2257859a71f6ffd5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53d07c8697c6303bc371f442745e2d1864682e40
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002122"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>Méthode ResumeService (classe SqlService)
   Tente de placer le service dans l'état de reprise.  
@@ -38,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlService](sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur uint32 égale à 0 si la demande `ResumeService` a été acceptée, égale à 1 si la demande n'est pas prise en charge ou égale à un autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

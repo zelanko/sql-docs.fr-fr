@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967339"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codage et débogage du composant Script
   Dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)], le composant Script propose deux modes : le mode Création des métadonnées et le mode Création du code. Lorsque vous ouvrez l’**Éditeur de transformation de script**, le composant entre en mode Création des métadonnées, dans lequel vous configurez des métadonnées et définissez les propriétés du composant. Après avoir défini les propriétés du composant Script et avoir configuré l'entrée et les sorties en mode Création des métadonnées, vous pouvez basculer vers le mode Création du code pour écrire votre script personnalisé. Pour plus d’informations sur le mode Création des métadonnées et le mode Création de code, consultez [Configuration du composant Script dans l’Éditeur de composant Script](configuring-the-script-component-in-the-script-component-editor.md).
@@ -59,9 +58,9 @@ ms.locfileid: "78176224"
 
     -   Une classe de collection `Connections` qui contient des références aux connexions sélectionnées dans la page Gestionnaire de connexions de l'Éditeur de transformation de script.
 
-    -   Classe `Variables` de collection qui contient des références aux variables entrées dans les `ReadOnlyVariable` propriétés `ReadWriteVariables` et de la page **script** de l **'éditeur de transformation de script**.
+    -   `Variables`Classe de collection qui contient des références aux variables entrées dans les `ReadOnlyVariable` Propriétés et de `ReadWriteVariables` la page **script** de l **'éditeur de transformation de script**.
 
--   L' `BufferWrapper` élément de projet contient une classe qui hérite <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> de pour chaque entrée et sortie configurée dans la page **entrées et sorties** de l **'éditeur de transformation de script**. Chacune de ces classes contient des propriétés d'accesseur typées qui correspondent aux colonnes d'entrée et de sortie configurées, ainsi que des tampons de flux de données qui contiennent les colonnes.
+-   L' `BufferWrapper` élément de projet contient une classe qui hérite de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> pour chaque entrée et sortie configurée dans la page **entrées et sorties** de l **'éditeur de transformation de script**. Chacune de ces classes contient des propriétés d'accesseur typées qui correspondent aux colonnes d'entrée et de sortie configurées, ainsi que des tampons de flux de données qui contiennent les colonnes.
 
  Pour plus d’informations sur la manière d’utiliser ces objets, méthodes et propriétés, consultez [Présentation du modèle objet du composant Script](understanding-the-script-component-object-model.md). Pour plus d’informations sur l’utilisation des méthodes et des propriétés de ces classes dans un type de composant Script particulier, consultez la section [Autres exemples de composants Script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Les rubriques d'exemples contiennent également des exemples de code complets.
 
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |Variables|Utilisez les propriétés d'accesseur typées et nommées de la classe de collection `Variables` incluse dans l'élément de projet `ComponentWrapper`, exposées via la propriété `Variables` de la classe `ScriptMain`.<br /><br /> La méthode `PreExecute` ne peut accéder qu'à des variables en lecture seule. La méthode `PostExecute` peut accéder à des variables en lecture seule et en lecture/écriture.|
 |Connexions|Utilisez les propriétés d'accesseur typées et nommées de la classe de collection `Connections` incluse dans l'élément de projet `ComponentWrapper`, exposées via la propriété `Connections` de la classe `ScriptMain`.|
-|Événements|Déclenchez des événements à <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> l’aide de `ScriptMain` la propriété de la classe et des méthodes **>Fire\<X** de l' <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|
+|Événements|Déclenchez des événements à l’aide de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> propriété de la `ScriptMain` classe et des méthodes **Fire \<X> ** de l' <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|
 |Journalisation|Effectuez la journalisation à l'aide de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> de la classe `ScriptMain`.|
 
 ## <a name="debugging-the-script-component"></a>Débogage du composant Script
@@ -184,7 +183,7 @@ public class ScriptMain : UserComponent
 
  Vous pouvez également surveiller l'exécution du composant Script en utilisant les méthodes suivantes :
 
--   Interrompez l’exécution et affichez un message modal `MessageBox.Show` en utilisant la méthode de l’espace de noms **System. Windows. Forms** . (Supprimez ce code une fois que vous avez terminé le processus de débogage.)
+-   Interrompez l’exécution et affichez un message modal en utilisant la `MessageBox.Show` méthode de l’espace de noms **System. Windows. Forms** . (Supprimez ce code une fois que vous avez terminé le processus de débogage.)
 
 -   Déclenchez des événements pour les messages d'information, les avertissements et les erreurs. Les méthodes FireInformation, FireWarning et FireError affichent la description des événements dans la fenêtre **Sortie** de Visual Studio. Toutefois, les méthodes FireProgress, Console.Write et Console.WriteLine n’affichent aucune information dans la fenêtre **Sortie**. Les messages de l’événement FireProgress apparaissent sous l’onglet **Progression** du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Pour plus d’informations, consultez [Déclenchement d’événements dans le composant Script](../../data-flow/transformations/script-component.md).
 
@@ -197,7 +196,7 @@ public class ScriptMain : UserComponent
 
  [Fonctionnement du modèle d’objet de composant script](understanding-the-script-component-object-model.md) Explique comment utiliser les objets, les méthodes et les propriétés disponibles dans le composant script.
 
- [Référencement d’autres assemblys dans des solutions de script](../referencing-other-assemblies-in-scripting-solutions.md) Explique comment référencer des objets de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] la bibliothèque de classes dans le composant script.
+ [Référencement d’autres assemblys dans des solutions de script](../referencing-other-assemblies-in-scripting-solutions.md) Explique comment référencer des objets de la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bibliothèque de classes dans le composant script.
 
  [Simulation d’une sortie d’erreur pour le composant script](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md) Explique comment simuler une sortie d’erreur pour les lignes qui génèrent des erreurs lors du traitement par le composant script.
 

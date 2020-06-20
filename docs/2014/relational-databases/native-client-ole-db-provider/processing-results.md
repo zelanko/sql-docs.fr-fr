@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6ce44134cac69b1d869c1e4ef86d77a49c23d385
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b9e5bf00b4d2e554536c9f2ba1a328390b93a8a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056019"
 ---
 # <a name="processing-results"></a>Traitement des résultats
   Si un objet d'ensemble de ligne est produit par l'exécution d'une commande ou la génération d'un objet d'ensemble de ligne directement à partir du fournisseur, le consommateur doit extraire et accéder aux données dans l'ensemble de lignes.  

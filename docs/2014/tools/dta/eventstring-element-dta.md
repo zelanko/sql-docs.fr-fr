@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fe8a7c8ad24c472eb41448f1303ad240a5232c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048431"
 ---
 # <a name="eventstring-element-dta"></a>EventString, élément (Assistant Paramétrage de base de données)
   Spécifie une charge de travail de script [!INCLUDE[tsql](../../includes/tsql-md.md)] directement dans le fichier d'entrée XML.  
@@ -46,7 +45,7 @@ ms.locfileid: "68211118"
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |**Type de données et longueur**|`string`, la longueur est illimitée.|  
-|**Valeur par défaut**|Aucune.|  
+|**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Obligatoire une fois si aucun autre type de charge de travail n'est spécifié. Vous devez spécifier un élément enfant `EventString`, `File` ou `Database` pour le parent `Workload`, mais un seul type peut être utilisé. Par exemple, si vous spécifiez une charge de travail avec l'élément `EventString`, vous ne pouvez pas spécifier une charge de travail avec l'élément `File` dans le même fichier d'entrée XML.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -54,7 +53,7 @@ ms.locfileid: "68211118"
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|[Workload, élément &#40;Assistant Paramétrage de base de données&#41;](workload-element-dta.md)|  
-|**Éléments enfants**|Aucune.|  
+|**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez [Exemple de fichier d’entrée XML avec une charge de travail Inline &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  

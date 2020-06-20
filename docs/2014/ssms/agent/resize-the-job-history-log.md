@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34c78589a853c2b73167dbad555ab9da3e0d9fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995058"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-  Cette rubrique explique comment définir des limites de taille [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les journaux d’historique [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] des travaux [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de l’agent dans à l’aide de.  
+  Cette rubrique explique comment définir des limites de taille pour les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journaux d’historique des travaux de l’agent dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   **Avant de commencer :**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62650885"
   
 #### <a name="to-resize-the-job-history-log-based-on-time"></a>Pour redimensionner le journal d'historique des travaux en fonction du temps  
   
-1.  Dans **Object Explorer**l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Explorateur d’objets, connectez-vous à une instance du, puis développez cette instance.  
+1.  Dans l' **Explorateur d’objets**, connectez-vous à une instance du, puis [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] développez cette instance.  
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent**, puis cliquez sur **Propriétés**.  
   

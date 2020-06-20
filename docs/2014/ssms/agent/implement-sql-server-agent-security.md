@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b70449ace66d4e33a547eca1c0b19eafabde5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001997"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implémenter la sécurité de l'Agent SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent permet à l’administrateur de la base de données d’exécuter chaque étape de travail dans un contexte de sécurité qui a uniquement les autorisations requises pour effectuer cette étape, ce qui est déterminé par un proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour définir des autorisations pour une étape de travail particulière, créez un proxy possédant les autorisations requises, puis assignez ce proxy à l'étape de travail. Un proxy peut être spécifié pour plusieurs étapes de travail. Pour les étapes de travail qui requièrent les mêmes autorisations, vous utilisez le même proxy.  
@@ -42,7 +41,7 @@ ms.locfileid: "63137518"
   
  Les membres du rôle serveur fixe **sysadmin** sont habilités à créer, à modifier et à supprimer des comptes proxy. Les membres du rôle **sysadmin** sont habilités à créer des étapes de travail qui ne spécifient pas un proxy, mais s’exécutent plutôt comme le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, qui est le compte utilisé pour démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-## <a name="guidelines"></a>Consignes  
+## <a name="guidelines"></a>Recommandations  
  Pour améliorer la sécurité de votre implémentation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, suivez les instructions suivantes :  
   
 -   Créez des comptes utilisateur dédiés spécifiquement pour les proxys et utilisez uniquement ces comptes utilisateur proxy pour exécuter les étapes de travail.  

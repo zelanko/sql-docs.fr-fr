@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3c02ce70ace777c171aa981ae6e2f53d235aaa4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662183"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029458"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate (classe d'événements)
   La classe d'événements Missing Join Predicate indique qu'une requête en cours d'exécution n'a pas de prédicat de jointure. Ceci peut rendre la requête longue à exécuter. Pour plus d’informations sur les prédicats de jointure, consultez [Prédicats &#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates).  

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059621"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951724"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Déployer des packages à l’aide de l’utilitaire de déploiement
   Après avoir créé un utilitaire de déploiement pour installer les packages d’un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un ordinateur différent de celui sur lequel cet utilitaire a été créé, vous devez d’abord copier le dossier de déploiement vers l’ordinateur de destination.  
   
  Le chemin du dossier de déploiement est spécifié dans la propriété DeploymentOutputPath du projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour lequel vous avez créé l’utilitaire de déploiement. Le chemin d’accès par défaut est bin\Deployment, lié au projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Créer un utilitaire de déploiement](../../2014/integration-services/create-a-deployment-utility.md).  
   
- Vous utilisez l'Assistant Installation de package pour installer les packages. Pour lancer l'Assistant, double-cliquez sur l'utilitaire de déploiement après avoir copié le dossier de déploiement sur le serveur. Le fichier est nommé \<nom_projet>.SSISDeploymentManifest et se trouve dans le dossier de déploiement sur l’ordinateur de destination.  
+ Vous utilisez l'Assistant Installation de package pour installer les packages. Pour lancer l'Assistant, double-cliquez sur l'utilitaire de déploiement après avoir copié le dossier de déploiement sur le serveur. Ce fichier est nommé \<project name> . SSISDeploymentManifest et se trouvent dans le dossier de déploiement sur l’ordinateur de destination.  
   
 > [!NOTE]  
 >  En fonction de la version du package que vous déployez, une erreur risque de se produire si différentes version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont installées côte à côte. Cette erreur vient du fait que l'extension de nom de fichier .SSISDeploymentManifest est la même pour toutes les versions d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si vous double-cliquez sur le fichier, cela entraîne l’appel du programme d’installation (dtsinstall.exe) correspondant à la version installée en dernier d’ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], laquelle risque d’être différente de la version du fichier de l’utilitaire de déploiement. Pour contourner ce problème, exécutez la version appropriée de dtsinstall.exe à partir de la ligne de commande, puis indiquez le chemin d'accès du fichier de l'utilitaire de déploiement.  
@@ -50,7 +49,7 @@ ms.locfileid: "66059621"
   
 1.  Ouvrez le dossier de déploiement sur l'ordinateur cible.  
   
-2.  Double-cliquez sur le fichier manifeste, \<nom_projet>.SSISDeploymentManifest, pour démarrer l’Assistant Installation de package.  
+2.  Double-cliquez sur le fichier manifeste, \<project name> . SSISDeploymentManifest pour démarrer l’Assistant Installation de package.  
   
 3.  Dans la page **Déployer les packages SSIS** , sélectionnez l’option **Déploiement sur SQL Server** .  
   

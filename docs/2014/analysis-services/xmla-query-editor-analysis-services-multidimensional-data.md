@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2625fa00aa871bf628e0152f6310dba3864f592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065311"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938080"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>Éditeur de requête XMLA (Analysis Services - Données multidimensionnelles)
   Utilisez l'Éditeur de requête XMLA pour créer et exécuter des instructions et des scripts écrits en langage XMLA.  
@@ -43,7 +42,7 @@ ms.locfileid: "66065311"
 |Terme|Définition|  
 |----------|----------------|  
 |**Connexion**|Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Connect**|Déconnecte l'Éditeur de requête XMLA d'une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Déconnecter**|Déconnecte l'Éditeur de requête XMLA d'une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Modifier la connexion**|Ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] différente.|  
 |**Nouvelle requête avec la connexion actuelle**|Ouvre une nouvelle fenêtre d'Éditeur de requête XMLA, avec les informations de connexion issues de la fenêtre active.|  
 |**Bases de données disponibles**|Se connecte à une base de données différente [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur la même instance.|  
@@ -56,7 +55,7 @@ ms.locfileid: "66065311"
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Fenêtre d'éditeur de requête**|Tapez les instructions et les scripts XMLA à exécuter par l'Éditeur de requête XMLA.<br /><br /> Le menu contextuel de l'éditeur de requête contient les options suivantes :<br /><br /> **Couper**: copie la sélection actuelle dans le presse-papiers et supprime la sélection de la fenêtre de l’éditeur de requête.<br />**Copier**: Copie la sélection actuelle dans le Presse-papiers.<br />**Coller**: colle le contenu du presse-papiers dans la sélection actuelle.<br />**Se connecter**: ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Déconnecter**: déconnecte l’éditeur de requête actuel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’une instance.<br />Déconnecter **toutes les requêtes**: déconnecte tous les éditeurs de requête ouverts.<br />**Modifier la connexion**: ouvre la boîte de dialogue **se connecter au serveur** pour établir une connexion à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] une autre instance.<br />**Ouvrir le serveur dans l’Explorateur d’objets**: ouvre l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance à laquelle l’éditeur de requête actuel est connecté dans l' **Explorateur d’objets**.<br />**Execute**: exécute le code sélectionné, ou si aucun code n’est sélectionné, exécute l’ensemble du code dans l’éditeur de requête actuel.<br />**Fenêtre Propriétés**: affiche la fenêtre **Propriétés** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour la fenêtre de requête actuelle.<br />**Options de requête**: affiche la boîte de dialogue **options de requête** .|  
+|**Fenêtre d'éditeur de requête**|Tapez les instructions et les scripts XMLA à exécuter par l'Éditeur de requête XMLA.<br /><br /> Le menu contextuel de l'éditeur de requête contient les options suivantes :<br /><br /> **Couper**: copie la sélection actuelle dans le presse-papiers et supprime la sélection de la fenêtre de l’éditeur de requête.<br />**Copier**: Copie la sélection actuelle dans le Presse-papiers.<br />**Coller**: colle le contenu du presse-papiers dans la sélection actuelle.<br />**Se connecter**: ouvre la boîte de dialogue **Se connecter au serveur** pour établir une connexion à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Déconnecter**: déconnecte l’éditeur de requête actuel d’une [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.<br />Déconnecter **toutes les requêtes**: déconnecte tous les éditeurs de requête ouverts.<br />**Modifier la connexion**: ouvre la boîte de dialogue **se connecter au serveur** pour établir une connexion à une autre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.<br />**Ouvrir le serveur dans l’Explorateur d’objets**: ouvre l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance à laquelle l’éditeur de requête actuel est connecté dans l' **Explorateur d’objets**.<br />**Execute**: exécute le code sélectionné, ou si aucun code n’est sélectionné, exécute l’ensemble du code dans l’éditeur de requête actuel.<br />**Fenêtre Propriétés**: affiche la fenêtre **Propriétés** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour la fenêtre de requête actuelle.<br />**Options de requête**: affiche la boîte de dialogue **options de requête** .|  
 |**Fenêtre de résultats**|Affiche les résultats d'une instruction ou d'un script XMLA sous forme de texte.|  
 |**Fenêtre des messages**|Affiche des informations sur l'exécution d'une instruction ou d'un script XMLA. Cette fenêtre, par exemple, contient les erreurs détectées lors de l'exécution ou le nombre de cellules extraites après l'exécution.|  
   

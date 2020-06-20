@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3017f74b12eb18624f8a34e8a1289da18b70c93a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0f7ed275eb9b6558a77160c3c7fb2fc233c199cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048213"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>Récupérer des informations du jeu de résultats (ODBC)
     
@@ -30,7 +29,7 @@ ms.locfileid: "82712695"
   
     -   Appelez [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) pour obtenir des informations sur la colonne de résultats.  
   
-     Ou  
+     ou  
   
     -   Appelez [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) pour obtenir des informations de descripteur spécifiques sur la colonne de résultats.  
   

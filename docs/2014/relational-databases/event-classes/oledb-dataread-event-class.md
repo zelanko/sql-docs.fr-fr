@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7911e64ca0e272b95f1c88b705ab9aca9ea75483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029166"
 ---
 # <a name="oledb-dataread-event-class"></a>Classe d'événements OLEDB DataRead
   La classe d'événements OLEDB DataRead se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB dans le cadre de requêtes distribuées ou de procédures stockées distantes. Incluez cette classe d'événements au sein des traces qui surveillent les moments où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue un appel de type demande de données à l'attention du fournisseur OLE DB.  
@@ -36,7 +35,7 @@ ms.locfileid: "62960800"
 |nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|`bigint`|Durée nécessaire pour exécuter l'événement d'appel OLE DB.|13|Non|  
 |EndTime|`datetime`|Heure de fin de l'événement.|15|Oui|  
-|Error|`int`|Numéro d'erreur d'un événement donné. Il s'agit souvent du numéro d'erreur stocké dans l'affichage catalogue sys.messages.|31|Oui|  
+|Erreur|`int`|Numéro d'erreur d'un événement donné. Il s'agit souvent du numéro d'erreur stocké dans l'affichage catalogue sys.messages.|31|Oui|  
 |EventClass|`int`|Type d’événement = 121.|27|Non|  
 |EventSequence|`int`|Séquence de la classe d'événements OLE DB dans le lot.|51|Non|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 0=Démarrage<br /><br /> 1=Terminée|21|Non|  

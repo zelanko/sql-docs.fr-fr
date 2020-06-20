@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8207e899c98d788ea0cbd618231597b22a6c0793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063461"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Générer des scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit deux mécanismes pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez créer des scripts pour plusieurs objets à l’aide de l' **Assistant générer et publier des scripts.** Vous pouvez également générer un script pour des objets individuels ou plusieurs objets à l'aide du menu **Script en tant que** dans l' **Explorateur d'objets**.  
@@ -42,7 +41,7 @@ ms.locfileid: "82703902"
   
 3.  Développez la catégorie de l'objet. Par exemple, développez le nœud **Tables** ou **Vues** .  
   
-4.  Cliquez avec le bouton droit sur l’objet et pointez sur **Générer un script de \<type d’objet> en tant que**. Par exemple, pointez sur **Générer un script de la table en tant que**.  
+4.  Cliquez avec le bouton droit sur l’objet, pointez sur **script \<object type> sous la forme**, par exemple, pointez sur générer un script de la **table en tant que**.  
   
 5.  Pointez sur le type de script, tel que **Create to** ou **Alter to**.  
   
@@ -57,11 +56,11 @@ ms.locfileid: "82703902"
   
 2.  Développez **Bases de données**, puis développez la base de données contenant les objets pour lequel un script doit être généré.  
   
-3.  Cliquez avec le bouton droit sur le premier objet pour lequel générer un script, pointez sur **Générer un script de \<type d’objet> en tant que** puis, dans les sélections **Enregistrer sous**, choisissez **Nouvelle fenêtre d’éditeur de requête** comme destination de sortie.  
+3.  Cliquez avec le bouton droit sur le premier objet pour lequel vous souhaitez créer un script, pointez sur générer un **script \<object type> en tant que**et, dans les sélections **Enregistrer sous** , choisissez **nouvelle fenêtre** de l’éditeur de requête comme destination de sortie.  
   
 4.  Accédez au deuxième objet pour lequel vous voulez générer un script.  
   
-5.  Cliquez avec le bouton droit sur l’objet, pointez sur **Générer un script de \<type d’objet> en tant que** puis, dans les sélections **Enregistrer sous**, choisissez **Presse-papiers** comme destination de sortie.  
+5.  Cliquez avec le bouton droit sur l’objet, pointez sur générer un **script \<object type> en tant que**et dans les sélections **Enregistrer sous** , choisissez **presse-papiers** comme destination de sortie.  
   
 6.  Dans la fenêtre de l'Éditeur de requête ouverte pour le premier objet, collez le script pour le deuxième objet du presse-papiers.  
   
@@ -82,6 +81,6 @@ ms.locfileid: "82703902"
   
 6.  Appuyez sur Crtl + clic gauche sur le deuxième objet pour lequel vous voulez générer un script.  
   
-7.  Cliquez avec le bouton droit sur l’un des objets sélectionnés et sélectionnez **Générer un script de \<type d’objet> en tant que**.  
+7.  Cliquez avec le bouton droit sur l’un des objets sélectionnés, puis sélectionnez **script \<object type> sous**.  
   
   

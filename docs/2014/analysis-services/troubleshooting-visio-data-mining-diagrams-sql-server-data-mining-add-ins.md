@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f787b4d3bfae12d65897e807f43b76b9b8a7520
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065723"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938250"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Dépannage des diagrammes d'exploration de données Visio (Compléments d'exploration de données SQL Server)
   Cette rubrique contient des informations supplémentaires que vous pouvez utiliser pour dépanner des diagrammes d'exploration de données Visio.  

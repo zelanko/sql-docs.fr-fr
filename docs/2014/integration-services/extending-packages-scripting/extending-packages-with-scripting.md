@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176180"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967239"
 ---
 # <a name="extending-packages-with-scripting"></a>Extension de packages avec des scripts
   Si vous constatez que les composants intégrés [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne satisfont pas vos besoins, vous pouvez étendre la puissance d'[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en codant vos propres extensions. Vous disposez de deux options distinctes pour étendre vos packages : vous pouvez écrire du code dans les puissants wrappers fournis par la tâche de script et le composant Script, ou vous pouvez entièrement créer des extensions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] personnalisées, dérivées des classes de base fournies par le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
@@ -39,13 +38,13 @@ ms.locfileid: "78176180"
 
  [Extension du workflow de données à l’aide du composant script](data-flow-script-component/extending-the-data-flow-with-the-script-component.md) Explique comment créer des sources de données, des transformations et des destinations de workflow personnalisées à l’aide du composant script. Un composant de flux de données est généralement appelé une fois pour chaque ligne de données traitée.
 
-## <a name="reference"></a>Informations de référence
- [Integration Services de référence des erreurs et des messages](../integration-services-error-and-message-reference.md) Répertorie les codes d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erreur prédéfinis avec leur nom symbolique et leur description.
+## <a name="reference"></a>Référence
+ [Integration Services de référence des erreurs et des messages](../integration-services-error-and-message-reference.md) Répertorie les [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] codes d’erreur prédéfinis avec leur nom symbolique et leur description.
 
 ## <a name="related-sections"></a>Sections connexes
  [Extension de packages avec des objets personnalisés](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) Explique comment créer des tâches personnalisées de programme, des composants de workflow de données et d’autres objets de package à utiliser dans plusieurs packages.
 
- [Génération de packages par programmation](../building-packages-programmatically/building-packages-programmatically.md) Décrit comment créer, configurer, exécuter, charger, enregistrer et gérer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] des packages par programme.
+ [Génération de packages par programmation](../building-packages-programmatically/building-packages-programmatically.md) Décrit comment créer, configurer, exécuter, charger, enregistrer et gérer des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages par programme.
 
 ![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les téléchargements, articles, exemples et vidéos les plus récents de [!INCLUDE[msCoName](../../includes/msconame-md.md)], ainsi que les solutions retenues par la communauté informatique, consultez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visiter la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.
 

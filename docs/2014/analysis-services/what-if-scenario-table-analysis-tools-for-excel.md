@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4df5a5c5-1983-4009-a7c5-cd340649fd2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b642d60da57192bc0c6bf842a16b0d12d529d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed1fe8447064bf224ea3f0e0a576d4e73fb07203
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175548"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938110"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Scénario (Outils d'analyse de table pour Excel)
   ![Bouton Scénarios des Outils d'analyse de table](media/tat-whatif.gif "Bouton Scénarios des Outils d'analyse de table")
@@ -48,7 +47,7 @@ ms.locfileid: "78175548"
 
 8.  Si vous sélectionnez la **table entière**, l’outil affiche un message d’État dans la boîte de dialogue et ajoute deux nouvelles colonnes à la table de données d’origine. Cliquez sur **Fermer** pour afficher toutes les résultats dans la feuille de calcul.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
  Cet outil utilise l'algorithme MLR (Microsoft Logistic Regression), qui prend en charge la prédiction de valeurs numériques ou discrètes. Cependant, nous suggérons les meilleures pratiques suivantes pour maximiser les résultats :
 
 -   Sélectionnez les colonnes contenant des informations utiles à l'analyse.

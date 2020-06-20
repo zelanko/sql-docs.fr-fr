@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967009"
 ---
 # <a name="date-and-time-formats"></a>Formats de date et d'heure
   L'analyse rapide propose un ensemble de routines simples et rapides d'analyse des données. L'analyse rapide prend en charge les formats suivants de types de données de date et d'heure.  
@@ -120,12 +119,12 @@ ms.locfileid: "66059644"
   
  L'analyse rapide génère en sortie des chaînes sous la forme DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET. Les valeurs de date/heure aux formats tronqués sont complétées. Le tableau suivant répertorie les valeurs ajoutées pour les parties des date et heure manquantes.  
   
-|Partie de date/heure|Remplissage|  
+|Partie de date/heure|Espacement|  
 |---------------------|-------------|  
 |Secondes|Ajout de 00.|  
 |Minutes|Ajouter 00:00.|  
 |Heure|Ajout de 00:00:00.|  
-|jour|Ajout de 01 pour le jour du mois.|  
+|Jour|Ajout de 01 pour le jour du mois.|  
 |Month|Ajout de 01 pour le mois de l'année.|  
   
  Pour plus d’informations, consultez [Types de données Integration Services](data-flow/integration-services-data-types.md).  

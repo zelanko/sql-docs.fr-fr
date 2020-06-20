@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d503ffad6c8d723bb0d933120a37e9b680a37cd7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d141c1951066af14e25cb4dd36459f5e87051001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056075"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Définit les propriétés de paramètre pour chaque paramètre par ordinal ou définit des propriétés de paramètre en bloc en spécifiant un tableau de structures SSPARAMPROPS.  
@@ -45,7 +44,7 @@ SSPARAMPROPS rgParamProperties[]);
 ## <a name="return-code-values"></a>Codet de retour  
  La `ISSCommandWithParameters::SetParameterProperties` méthode retourne les mêmes codes d’erreur que la méthode core OLE DB **ICommandProperties :: SetProperties** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La définition des propriétés de paramètre avec cette méthode est autorisée pour chaque paramètre par ordinal, ou à l’aide d’un `ISSCommandWithParameters::SetParameterProperties` appel unique une fois que le SSPARAMPROPS a été généré à partir du tableau de propriétés.  
   
  La méthode **SetParameterInfo** doit être appelée avant d’appeler la `ISSCommandWithParameters::SetParameterProperties` méthode. Le fait d'appeler `SetParameterProperties(0, NULL)` efface toutes les propriétés de paramètre spécifiées, tandis que l'appel de `SetParameterInfo(0,NULL,NULL)` efface toutes les informations sur les paramètres y compris toutes les propriétés qui peuvent être associées à un paramètre.  

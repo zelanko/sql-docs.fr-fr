@@ -1,5 +1,6 @@
 ---
 title: Liaison de paramètres | Microsoft Docs
+description: Découvrez comment lier chaque marqueur de paramètre dans une instruction SQL à une variable dans l’application avant que l’instruction puisse s’exécuter.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e179d2abc6ef786f94b6d7938f0e21938c5a59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c2076acbe29cefbbee12c716d3c555054c5808a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304625"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967562"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Utilisation de paramètres d’instruction - Liaison de paramètres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,9 +58,9 @@ ms.locfileid: "81304625"
   
 -   spécifier les paramètres dans un ordre différent dans l'application de l'ordre spécifié quand la procédure stockée a été créée.  
   
- Les paramètres nommés sont pris en charge uniquement [!INCLUDE[tsql](../../includes/tsql-md.md)] lors de l’utilisation de l’instruction **Execute** ou de la séquence d’échappement ODBC Call pour exécuter une procédure stockée.  
+ Les paramètres nommés sont pris en charge uniquement lors de l’utilisation de l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction **Execute** ou de la séquence d’échappement ODBC Call pour exécuter une procédure stockée.  
   
- Si **SQL_DESC_NAME** est définie pour un paramètre de procédure stockée, tous les paramètres de procédure stockée dans la requête doivent également définir **SQL_DESC_NAME**.  Si des littéraux sont utilisés dans les appels de procédure stockée, où les paramètres ont **SQL_DESC_NAME** défini, les littéraux doivent utiliser le format *'Name*=*value*', où *Name* est le nom du paramètre @p1de procédure stockée (par exemple,). Pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si **SQL_DESC_NAME** est définie pour un paramètre de procédure stockée, tous les paramètres de procédure stockée dans la requête doivent également définir **SQL_DESC_NAME**.  Si des littéraux sont utilisés dans les appels de procédure stockée, où les paramètres ont **SQL_DESC_NAME** défini, les littéraux doivent utiliser le format *'Name* = *value*', où *Name* est le nom du paramètre de procédure stockée (par exemple, @p1 ). Pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de paramètres d'instruction](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

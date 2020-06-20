@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289307"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931440"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Écouteurs de groupe de disponibilité, connectivité client et basculement d’application (SQL Server)
   Cette rubrique contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../includes/sshadr-md.md)] et de fonctionnalité de basculement d'application.  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- Dans cet exemple de chaîne de connexion, le client tente de se connecter à un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l'écouteur du groupe de disponibilité écoute sur le port 1433).  La propriété de la chaîne `ApplicationIntent` de connexion a `ReadOnly`la valeur, ce qui en fait une *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
+ Dans cet exemple de chaîne de connexion, le client tente de se connecter à un écouteur de groupe de disponibilité nommé `AGListener` sur le port 1433 (vous pouvez aussi omettre le port si l'écouteur du groupe de disponibilité écoute sur le port 1433).  La propriété de la chaîne de connexion a la `ApplicationIntent` valeur `ReadOnly` , ce qui en fait une *chaîne de connexion d’intention de lecture*.  Sans ce paramètre, le serveur n'aurait pas essayé un routage en lecture seule de la connexion.  
   
  La base de données primaire du groupe de disponibilité traite la demande de routage en lecture seule entrante et tente de localiser un réplica en ligne et en lecture seule joint au réplica principal et configuré pour le routage en lecture seule.  Le client reçoit les informations de connexion depuis le serveur de réplica principal et se connecte au réplica en lecture seule identifié.  
   
@@ -139,7 +138,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Autrement, lors d'une migration depuis une mise en miroir de bases de données vers [!INCLUDE[ssHADR](../includes/sshadr-md.md)], les applications peuvent spécifier la chaîne de connexion de mise en miroir de bases de données dans la mesure où il existe un seul réplica secondaire et qu'il n'autorise pas les connexions utilisateur. Pour plus d’informations, consultez [Utilisation des chaînes de connexion de mise en miroir de bases de données avec des groupes de disponibilité](#DbmConnectionString), plus loin dans cette section.  
   
-###  <a name="using-database-mirroring-connection-strings-with-availability-groups"></a><a name="DbmConnectionString"></a> Utilisation des chaînes de connexion de mise en miroir de bases de données avec des groupes de disponibilité  
+###  <a name="using-database-mirroring-connection-strings-with-availability-groups"></a><a name="DbmConnectionString"></a>Utilisation de chaînes de connexion de mise en miroir de bases de données avec des groupes de disponibilité  
  Si un groupe de disponibilité possède uniquement un réplica secondaire et n'est pas configuré pour autoriser l'accès en lecture au réplica secondaire, les clients peuvent se connecter au réplica principal à l'aide d'une chaîne de connexion de mise en miroir de bases de données. Cette approche peut être utile lors de la migration d'une application existante depuis la mise en miroir de bases de données vers un groupe de disponibilité, tant que vous limitez le groupe de disponibilité à deux réplicas de disponibilité (un réplica principal et un réplica secondaire). Si vous ajoutez des réplicas secondaires supplémentaires, vous devrez créer un écouteur de groupe de disponibilité pour le groupe de disponibilité et mettre à jour vos applications pour utiliser le nom DNS de l'écouteur du groupe de disponibilité.  
   
  Lors de l'utilisation de chaînes de connexion de mise en miroir de bases de données, le client peut soit utiliser [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La chaîne de connexion fournie par un client doit fournir au minimum le nom d'une instance de serveur, le *nom du partenaire initial*, pour identifier l'instance de serveur qui héberge initialement le réplica de disponibilité auquel vous envisagez de vous connecter. Éventuellement, la chaîne de connexion peut également fournir le nom d'une autre instance de serveur, le *nom du partenaire de basculement*, pour identifier l'instance de serveur qui héberge initialement le réplica secondaire comme nom de partenaire de basculement.  

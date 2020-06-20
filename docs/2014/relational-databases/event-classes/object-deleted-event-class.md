@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90bcc20e16d775e6497958fc1adc58269fb24296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029376"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted (classe d'événements)
   La classe d'événements Object:Deleted indique qu'un objet a été supprimé, par exemple avec les instructions DROP INDEX et DROP TABLE. Cette classe d'événements permet de déterminer si des objets sont supprimés, par exemple par des applications ODBC qui créent fréquemment des procédures stockées temporaires.  
