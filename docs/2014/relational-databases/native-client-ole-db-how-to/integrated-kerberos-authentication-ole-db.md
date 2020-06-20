@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 275306c40caeb9308401f73c2071458ee8b26a36
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c20a4e4951b518f034332c1851ac238d7103dcaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998675"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Authentification Kerberos intégrée (OLE DB)
   Cet exemple montre comment obtenir une authentification mutuelle Kerberos en utilisant OLE DB dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  

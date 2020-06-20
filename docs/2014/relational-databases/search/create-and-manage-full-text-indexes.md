@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603b5e6b929259dc8b1408c0c2a1afab383446e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011547"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055516"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
   Les informations contenues dans les index de recherche en texte intégral sont utilisées par le Moteur d'indexation et de recherche en texte intégral pour compiler des requêtes de texte intégral qui permettent de rechercher rapidement certains mots ou combinaisons de mots dans une table. Un index de recherche en texte intégral stocke les informations se rapportant aux mots significatifs et à leur emplacement dans une ou plusieurs colonnes d'une table de base de données. Un index de recherche en texte intégral est un type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le processus de création d'un index de texte intégral diffère du processus de création des autres types d'index. Au lieu de construire une structure d'arbre B (B-tree) en fonction d'une valeur stockée dans une ligne particulière, le Moteur d'indexation et de recherche en texte intégral crée une structure d'index inversée, empilée, compressée et basée sur des jetons individuels provenant du texte indexé.  La taille d’un index de recherche en texte intégral est limitée uniquement par les ressources mémoire dont dispose l’ordinateur sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.  
@@ -86,7 +85,7 @@ ms.locfileid: "66011547"
   
  La colonne **ColId** contient une valeur qui correspond à une colonne particulière indexée en texte intégral.  
   
- La `DocId` colonne contient des valeurs pour un entier sur huit octets qui correspond à une valeur de clé de texte intégral particulière dans une table indexée de texte intégral. Ce mappage est nécessaire lorsque la clé de texte intégral n'est pas un type de données integer. Dans ce cas, les mappages entre les valeurs de clé de `DocId` texte intégral et les valeurs sont conservés dans une table distincte appelée table de mappage des ID de l’ensemble de clés. Pour lancer une requête à propos de ces mappages, utilisez la procédure stockée système [sp_fulltext_keymapping](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Pour satisfaire à un critère de recherche, les valeurs DocId de la table précitée doivent être jointes avec la table de mappage DocId pour extraire des lignes de la table de base qui est interrogée. Lorsque la valeur de clé de texte intégral de la table de base est un type de données Integer, la valeur sert directement de DocId et aucun mappage n'est nécessaire. Par conséquent, l'utilisation de valeurs de clé de texte intégral Integer peut contribuer à optimiser des requêtes de texte intégral.  
+ La `DocId` colonne contient des valeurs pour un entier sur huit octets qui correspond à une valeur de clé de texte intégral particulière dans une table indexée de texte intégral. Ce mappage est nécessaire lorsque la clé de texte intégral n'est pas un type de données integer. Dans ce cas, les mappages entre les valeurs de clé de texte intégral et `DocId` les valeurs sont conservés dans une table distincte appelée table de mappage des ID de l’ensemble de clés. Pour lancer une requête à propos de ces mappages, utilisez la procédure stockée système [sp_fulltext_keymapping](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Pour satisfaire à un critère de recherche, les valeurs DocId de la table précitée doivent être jointes avec la table de mappage DocId pour extraire des lignes de la table de base qui est interrogée. Lorsque la valeur de clé de texte intégral de la table de base est un type de données Integer, la valeur sert directement de DocId et aucun mappage n'est nécessaire. Par conséquent, l'utilisation de valeurs de clé de texte intégral Integer peut contribuer à optimiser des requêtes de texte intégral.  
   
  La colonne **Occurrence** contient une valeur entière. Pour chaque valeur DocId, il existe une liste de valeurs d'occurrences qui correspondent aux décalages de mots relatifs du mot clé spécifique contenu dans DocId. Les valeurs d'occurrences servent à déterminer les correspondances d'expressions ou de proximité, par exemple lorsque des expressions ont des valeurs d'occurrences adjacentes numériquement. Elles servent également à calculer les scores de pertinence ; par exemple, le nombre d'occurrences d'un mot clé dans DocId peut être utilisé pour l'établissement d'un score.  
   

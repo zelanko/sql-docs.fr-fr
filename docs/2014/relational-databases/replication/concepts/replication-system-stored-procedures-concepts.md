@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50536e5b6816c84dff26c9c9f99c46d02272b7de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064662"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Concepts liés aux procédures stockées système de réplication
   Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'accès par programme à toutes les fonctionnalités d'une topologie de réplication configurables par l'utilisateur est opéré par les procédures stockées système. Bien que les procédures stockées puissent être exécutées individuellement à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de l'utilitaire en ligne de commande sqlcmd, il peut être judicieux d'écrire des fichiers de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui peuvent être exécutés pour effectuer une séquence logique de tâches de réplication.  
@@ -127,7 +126,7 @@ GO
  Une fois qu'un script de réplication a été créé, il est possible d'utiliser l'une des méthodes suivantes pour l'exécuter.  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Création d'un fichier de requête SQL dans SQL Server Management Studio  
- Il est possible de créer un fichier de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication sous la forme d’un fichier de requête SQL dans un projet [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Après l'écriture du script, une connexion à la base de données peut être établie pour ce fichier de requête, et le script peut être exécuté. Pour plus d’informations sur la création [!INCLUDE[tsql](../../../includes/tsql-md.md)] de scripts à [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]l’aide de, consultez [éditeurs de requêtes et de texte &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
+ Il est possible de créer un fichier de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication sous la forme d’un fichier de requête SQL dans un projet [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Après l'écriture du script, une connexion à la base de données peut être établie pour ce fichier de requête, et le script peut être exécuté. Pour plus d’informations sur la création de [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , consultez [éditeurs de requêtes et de texte &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
   
  Pour utiliser un script qui inclut des variables de script, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] doit s’exécuter en mode **sqlcmd**. En mode **sqlcmd**, l’éditeur de requête accepte une syntaxe supplémentaire spécifique à **sqlcmd**, par exemple `:setvar`, qui est utilisée pour fournir une valeur à une variable. Pour plus d’informations sur le mode **sqlcmd**, consultez [Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](../../scripting/edit-sqlcmd-scripts-with-query-editor.md). Dans le script suivant, la syntaxe `:setvar` est utilisée afin de fournir une valeur pour la variable `$(DistPubServer)`.  
   

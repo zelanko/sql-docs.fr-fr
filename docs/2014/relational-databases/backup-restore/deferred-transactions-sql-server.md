@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 188a0409fbad3f12283adacafbfcb5f176650b72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876213"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958649"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transactions différées (SQL Server)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, une transaction endommagée est différée si les données requises par la restauration (annulation) sont hors connexion durant le démarrage de la base de données. Une *transaction différée* est une transaction qui n’est pas validée lorsque la phase de restauration par progression s’achève et dont la restauration ne peut pas être annulée en raison d’une erreur. Si la transaction ne peut pas être annulée, elle est différée.  
@@ -84,11 +83,11 @@ ms.locfileid: "62876213"
   
          Pour plus d’informations sur le mode urgence, consultez [États d’une base de données](../databases/database-states.md).  
   
-    -   Ensuite, réparez la base de données à l’aide de l’option DBCC REPAIR_ALLOW_DATA_LOSS dans l’une des instructions DBCC suivantes : [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)ou [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
+    -   Ensuite, réparez la base de données à l’aide de l’option DBCC REPAIR_ALLOW_DATA_LOSS dans l’une des instructions DBCC suivantes : [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql) ou [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
   
          Lorsque la commande DBCC rencontre la page erronée, elle la désalloue et répare les éventuelles erreurs associées. Cette approche permet de remettre en ligne la base de données dans un état physique cohérent. Il se peut néanmoins que d'autres données soient perdues ; c'est pourquoi cette approche ne doit être adoptée qu'en dernier recours.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Supprimer des groupes de fichiers obsolètes &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](file-restores-full-recovery-model.md)   

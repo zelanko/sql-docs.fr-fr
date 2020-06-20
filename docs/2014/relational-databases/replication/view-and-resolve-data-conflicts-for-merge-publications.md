@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77aa9ece0073149c017f6eca35a756b22751a74b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063672"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>afficher et résoudre les conflits de données pour les publications de fusion (SQL Server Management Studio)
   Les conflits de réplication de fusion sont résolus en fonction de l'outil de résolution spécifié pour chaque article. Par défaut, les conflits sont résolus sans que l'utilisateur doive intervenir. Mais il est possible de les afficher et de modifier le résultat de la résolution dans la Visionneuse des conflits de réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  Les données de conflit sont disponibles dans la Visionneuse des conflits de réplication pendant la durée définie comme période de rétention des conflits (par défaut 14 jours). Pour définir la période de rétention des conflits :  
   
--   Spécifiez une valeur de rétention pour le **@conflict_retention** paramètre de [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
+-   Spécifiez une valeur de rétention pour le **@conflict_retention** paramètre de [Sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
--   Spécifiez une valeur de **conflict_retention** pour **@property** le paramètre et une valeur de rétention pour le **@value** paramètre de [sp_changemergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql).  
+-   Spécifiez une valeur de **conflict_retention** pour le **@property** paramètre et une valeur de rétention pour le **@value** paramètre de [SP_CHANGEMERGEPUBLICATION &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql).  
   
  Par défaut, les informations sur les conflits sont stockées dans les emplacements suivants :  
   
@@ -44,7 +43,7 @@ ms.locfileid: "63255426"
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>Pour afficher et résoudre les conflits des publications de fusion  
   
-1.  Connectez-vous au serveur de publication (ou à l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]abonné, le cas échéant) dans, puis développez le nœud du serveur.  
+1.  Connectez-vous au serveur de publication (ou à l’abonné, le cas échéant) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , puis développez le nœud du serveur.  
   
 2.  Développez le dossier **Réplication** , puis développez le dossier **Publications locales** .  
   

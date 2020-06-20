@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac6fb800d435be9d8a906cfd17f84ba60db7b90f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63048624"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007872"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Propriétés de Report Server (onglet Avancé)
   Ce service est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si des propriétés personnalisées sont définies, elles apparaissent dans cet onglet, avec les valeurs correspondantes.  

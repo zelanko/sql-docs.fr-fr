@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a0cc475-e6ee-430c-975c-73716d81d563
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd6afc441b66225bdf1696020916f701b6041db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d1861531dd32660dfb36fd9adcdd36601acef7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028840"
 ---
 # <a name="scanstarted-event-class"></a>Scan:Started (classe d'événements)
   La classe d'événements Scan:Started se produit lors du démarrage d'une analyse de table ou d'index.  

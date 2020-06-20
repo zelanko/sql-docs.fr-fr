@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7686f6ee0a5cbce01fb69d36d645ff9787276ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024928"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Leçon 6 : Migrer une base de données d’une machine source locale vers une machine de destination dans Azure
   Cette leçon part du principe que vous disposez déjà d’un autre SQL Server, qui peut résider sur un autre ordinateur local ou sur une machine virtuelle dans Azure. Pour plus d’informations sur la création d’une machine virtuelle SQL Server dans Azure, consultez [configuration d’une machine virtuelle SQL Server sur Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Après avoir configuré une machine virtuelle SQL Server dans Azure, assurez-vous que vous pouvez vous connecter à une instance de SQL Server de cette machine virtuelle via SQL Server Management Studio sur un autre ordinateur.  
@@ -136,9 +135,9 @@ ms.locfileid: "75231795"
   
 5.  Dans la boîte de dialogue **attacher des bases de données** , pour spécifier la base de données à attacher, cliquez sur **Ajouter**. Dans la boîte de dialogue **Rechercher les fichiers de base de données** :  
   
-     Pour emplacement du fichier de données de la `https://teststorageaccnt.blob.core.windows.net/testcontainer/`base de données, tapez :.  
+     Pour emplacement du fichier de données de la base de données, tapez : `https://teststorageaccnt.blob.core.windows.net/testcontainer/` .  
   
-     Pour nom de fichier, tapez `TestDB1Data.mdf`:.  
+     Pour nom de fichier, tapez : `TestDB1Data.mdf` .  
   
 6.  Cliquez sur **OK**.  
   

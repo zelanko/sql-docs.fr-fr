@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc74d7b1bba2a0163ac9edefb5d465c54ef6296c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958849"
 ---
 # <a name="copy-only-backups-sql-server"></a>Sauvegardes de type copie seule (SQL Server)
   Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Normalement, une sauvegarde modifie la base de données et affecte la restauration des sauvegardes ultérieures. Parfois, cependant, il est utile d'effectuer une sauvegarde à une fin précise sans affecter les procédures globales de sauvegarde et de restauration de la base de données. Pour cela, on peut recourir à une sauvegarde de copie uniquement.  
@@ -34,7 +33,7 @@ ms.locfileid: "72798007"
   
 -   Sauvegardes de fichier journal de copie uniquement (en mode de récupération complète et en mode de récupération utilisant les journaux de transactions uniquement)  
   
-     Une sauvegarde du journal de type copie seule préserve le point d'archive du journal existant et, donc, n'a pas d'incidence sur l'ordre des sauvegardes régulières des journaux. Les sauvegardes de journaux de type copie seule sont généralement superflues. En revanche, vous pouvez créer une nouvelle sauvegarde de routine des journaux (à l'aide de WITH NORECOVERY) et utiliser cette sauvegarde conjointement avec toute sauvegarde des journaux précédente nécessaire à la séquence de restauration. Toutefois, une sauvegarde de fichier journal de copie uniquement peut parfois être utile pour effectuer une restauration en ligne. Pour obtenir un exemple, consultez [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;Mode de récupération complète&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
+     Une sauvegarde du journal de type copie seule préserve le point d'archive du journal existant et, donc, n'a pas d'incidence sur l'ordre des sauvegardes régulières des journaux. Les sauvegardes de journaux de type copie seule sont généralement superflues. En revanche, vous pouvez créer une nouvelle sauvegarde de routine des journaux (à l'aide de WITH NORECOVERY) et utiliser cette sauvegarde conjointement avec toute sauvegarde des journaux précédente nécessaire à la séquence de restauration. Toutefois, une sauvegarde de fichier journal de copie uniquement peut parfois être utile pour effectuer une restauration en ligne. Pour obtenir un exemple, consultez [Exemple : Restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
   
      Le journal des transactions n'est jamais tronqué après une sauvegarde de type copie seule.  
   
@@ -52,14 +51,14 @@ ms.locfileid: "72798007"
   
 -   Pour une sauvegarde complète de type copie uniquement :  
   
-     SAUVEGARDER la base de \<données*>* *database_name* à backup_device... AVEC COPY_ONLY...  
+     SAUVEGARDER la base de données *database_name* sur \<backup_device*> *... AVEC COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY n'a aucun effet lorsqu'il est spécifié avec l'option DIFFERENTIAL.  
   
 -   Pour une sauvegarde de fichier journal de type copie uniquement  
   
-     *Database_name* du journal de *\<* sauvegarde*>* sur backup_device... AVEC COPY_ONLY...  
+     SAUVEGARDER les *database_name* du journal sur *\<*backup_device*>* ... AVEC COPY_ONLY...  
   
 ###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilisation de PowerShell  
   
@@ -81,8 +80,8 @@ Utilisez l'applet de commande `Backup-SqlDatabase` avec le paramètre `-CopyOnly
   
 -   [Fournisseur SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Modes de récupération &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [Copier les bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md)   
+ [Copier des bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

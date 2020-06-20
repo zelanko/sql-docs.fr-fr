@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed0d210668b64ff6f6fcc8c94a713743e2f9bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951055"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Éditeur de tâche MSMQ (page Envoyer)
   Utilisez la page **Envoyer** de la boîte de dialogue **Éditeur de tâche MSMQ** pour configurer une tâche MSMQ afin d’envoyer des messages depuis un package [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d14d27cdc20c0f090c7a030efe05cfce4842f437
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026079"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Surveillance des performances des procédures stockées compilées en mode natif
   Cette rubrique explique comment surveiller les performances des procédures stockées compilées en mode natif.  
@@ -29,7 +28,7 @@ ms.locfileid: "63161956"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Pour plus d’informations sur `sp_statement_completed` l’événement étendu, consultez [Comment récupérer l’instruction qui a provoqué un événement](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Pour plus d’informations sur l' `sp_statement_completed` événement étendu, consultez [Comment récupérer l’instruction qui a provoqué un événement](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Utilisation des vues de gestion des données  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la collecte de statistiques d'exécution des procédures stockées compilées en mode natif, au niveau de la procédure et au niveau de la requête. Le collecte des statistiques d'exécution n'est pas activée par défaut en raison de l'impact sur les performances.  

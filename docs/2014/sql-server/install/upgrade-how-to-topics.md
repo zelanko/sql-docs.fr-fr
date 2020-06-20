@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff43cf072f73fca56fefaeedc39a9691e6de50ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041713"
 ---
 # <a name="upgrade-how-to-topics"></a>Rubriques de procédures relatives à la mise en niveau
   Les rubriques de cette section expliquent comment mettre à niveau une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -31,7 +30,7 @@ ms.locfileid: "66091482"
   
 ## <a name="see-also"></a>Voir aussi  
  [Réduire le temps d’arrêt pour les bases de données mises en miroir lors de la mise à niveau d’instances de serveur](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)   
- [Mises à niveau de version et d’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Compatibilité descendante](../../../2014/getting-started/backward-compatibility.md)  
   
   

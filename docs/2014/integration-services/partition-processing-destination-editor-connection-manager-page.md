@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2efbff93fb7cc831038a7e26fe4ada44d81325
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964749"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Éditeur de destination de traitement de partition (page Gestionnaire de connexions)
   La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination de traitement de partition** vous permet de spécifier une connexion à un projet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "66056707"
  **Gestionnaire de connexions**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
   
  **Liste des partitions disponibles**  
@@ -45,7 +44,7 @@ ms.locfileid: "66056707"
 |Value|Description|  
 |-----------|-----------------|  
 |Ajouter (incrémentiel)|Permet d'effectuer un traitement incrémentiel de la partition.|  
-|Complète|Permet d'effectuer un traitement complet de la partition.|  
+|Full|Permet d'effectuer un traitement complet de la partition.|  
 |Données seulement|Permet d'effectuer un traitement de mise à jour de la partition.|  
   
 ## <a name="see-also"></a>Voir aussi  

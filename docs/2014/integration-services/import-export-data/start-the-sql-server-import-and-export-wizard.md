@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965579"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Exécuter l'Assistant Importation et Exportation SQL Server
   L'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue la méthode la plus simple pour copier des données entre des sources de données et pour construire des packages de base. Pour plus d’informations sur l’Assistant, consultez [SQL Server Assistant importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
@@ -33,15 +32,15 @@ ms.locfileid: "62768031"
   
      -ou-  
   
-     Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **packages SSIS** , puis cliquez sur **Assistant SSISImport et exportation**.  
+     Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , cliquez avec le bouton droit sur le dossier **packages SSIS** , puis cliquez sur **Assistant SSISImport et exportation**.  
   
      -ou-  
   
-     Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans le menu **projet** , cliquez sur **Assistant SSISImport et exportation**.  
+     Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , dans le menu **projet** , cliquez sur **Assistant SSISImport et exportation**.  
   
      -ou-  
   
-     Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous [!INCLUDE[ssDE](../../includes/ssde-md.md)] au type de serveur, développez bases de données, cliquez avec le bouton droit sur une base de données, pointez sur **tâches**, puis cliquez sur **importer des données** ou **exporter des données**.  
+     Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)] type de serveur, développez bases de données, cliquez avec le bouton droit sur une base de données, pointez sur **tâches**, puis cliquez sur **importer des données** ou **exporter des données**.  
   
      -ou-  
   
@@ -69,10 +68,10 @@ ms.locfileid: "62768031"
   
     -   Indiquez s'il faut créer une base de données et définir ses propriétés. Les propriétés suivantes ne peuvent pas être configurées et l'Assistant utilise les valeurs par défaut spécifiées :  
   
-        |Propriété|Valeur|  
+        |Propriété|Value|  
         |--------------|-----------|  
         |Classement|Latin1_General_CS_AS_KS_WS|  
-        |mode de récupération|Complète|  
+        |mode de récupération|Full|  
         |Utiliser l'indexation de texte intégral|True|  
   
     -   Indiquez s'il faut copier des données à partir de tables ou de vues, ou copier des résultats de requête.  

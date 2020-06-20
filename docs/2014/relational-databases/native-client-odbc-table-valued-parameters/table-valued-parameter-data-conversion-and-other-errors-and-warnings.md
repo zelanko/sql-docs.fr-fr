@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a82c6f5e76693ac03ddfd0c442249d7935927848
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45b9ba7f91b54548e096bbe47da6e01ba562f59d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999071"
 ---
 # <a name="table-valued-parameter-data-conversion-and-other-errors-and-warnings"></a>Conversion des données des paramètres table et autres erreurs et avertissements
   Les valeurs de colonne de paramètre table peuvent être converties du type de données client en type de données serveur de la même manière que toute autre valeur de colonne ou de paramètre. Toutefois, dans la mesure où un paramètre table peut contenir plusieurs colonnes et plusieurs lignes, il est important de pouvoir identifier la valeur réelle sur laquelle l'erreur s'est produite.  

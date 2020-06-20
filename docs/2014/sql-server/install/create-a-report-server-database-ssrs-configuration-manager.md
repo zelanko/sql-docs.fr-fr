@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d899d0585eda7c9cd2b12147732b23c01872128b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042819"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Le **mode natif** utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deux bases de données relationnelles pour stocker les métadonnées et les objets du serveur de rapports. Une base de données est utilisée pour le stockage principal et l'autre pour le stockage des données temporaires. Les bases de données sont créées ensemble et liées par le nom. Avec une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données sont nommées `reportserver` et `reportservertempdb`. Les deux bases de données sont collectivement appelées « base de données de serveur de rapports » ou « catalogue du serveur de rapports ».  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Le **mode natif** utilise deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données relationnelles pour stocker les métadonnées et les objets du serveur de rapports. Une base de données est utilisée pour le stockage principal et l'autre pour le stockage des données temporaires. Les bases de données sont créées ensemble et liées par le nom. Avec une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données sont nommées `reportserver` et `reportservertempdb`. Les deux bases de données sont collectivement appelées « base de données de serveur de rapports » ou « catalogue du serveur de rapports ».  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Le **mode SharePoint** comprend une troisième base de données qui est utilisée pour les métadonnées d’alerte de données. Les trois bases de données sont créées pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par ailleurs, les noms de bases de données incluent par défaut un GUID qui représente l'application de service. Voici des exemples de noms des trois bases de données en mode SharePoint :  
   

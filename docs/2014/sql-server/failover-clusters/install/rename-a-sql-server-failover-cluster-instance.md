@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062601"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
   Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fait partie d'un cluster de basculement, le processus permettant de renommer un serveur virtuel diffère du processus permettant de renommer une instance autonome. Pour plus d’informations, consultez [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -63,17 +62,17 @@ ms.locfileid: "63126003"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Éléments supplémentaires à prendre en considération après une opération Renommer  
  Après avoir renommé le nom réseau d'un cluster de basculement, nous devons vérifier et suivre les instructions suivantes pour que tous les scénarios dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]soient opérationnels.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Une fois que vous avez modifié le nom [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] réseau d’une instance de cluster de basculement à l’aide de l’outil Administrateur de cluster Windows, l’opération de mise à niveau ou de désinstallation ultérieure peut échouer. Pour résoudre ce problème, mettez à jour l’entrée de Registre **ClusterName** en suivant les instructions de lahttps://go.microsoft.com/fwlink/?LinkId=244002)section résolution de [ce](https://go.microsoft.com/fwlink/?LinkId=244002) (.  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :** Après avoir modifié le nom réseau d’une [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] instance de cluster de basculement à l’aide de l’outil Administrateur de cluster Windows, l’opération de mise à niveau ou de désinstallation ultérieure peut échouer. Pour résoudre ce problème, mettez à jour l’entrée de Registre **ClusterName** en suivant les instructions de la section résolution de [ce](https://go.microsoft.com/fwlink/?LinkId=244002) ( https://go.microsoft.com/fwlink/?LinkId=244002) .  
   
- **Service de l’agent : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** Vérifiez et effectuez les actions supplémentaires ci- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dessous pour le service agent :  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service agent :** Vérifiez et effectuez les actions supplémentaires ci-dessous pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service de l’agent :  
   
 -   Corrigez les paramètres de registre si l'Agent SQL est configuré pour le transfert d'événements. Pour plus d’informations, consultez [Désigner un serveur de transfert d’événements &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
 -   Corrigez les noms d'instance du serveur maître (MSX) et des serveurs cibles (TSX) lorsque le nom réseau du cluster/des ordinateurs est modifié. Pour plus d'informations, voir les rubriques suivantes :  
   
-    -   [Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Annuler l’inscription de plusieurs serveurs cibles dans un serveur maître](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [Créer un environnement multi-serveur](../../../ssms/agent/create-a-multiserver-environment.md)  
+    -   [Créer un environnement multiserveur](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   Reconfigurez la copie des journaux de transaction afin que le nom de serveur mis à jour soit utilisé dans les journaux de sauvegarde et de restauration. Pour plus d'informations, voir les rubriques suivantes :  
   

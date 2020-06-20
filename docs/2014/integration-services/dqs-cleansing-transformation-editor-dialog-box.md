@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059419"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966905"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Éditeur de transformation de nettoyage DQS (boîte de dialogue)
   Utilisez la boîte de dialogue de **l’Éditeur de transformation de nettoyage DQS** pour corriger les données à l’aide de DQS (Data Quality Services). Pour plus d’informations, consultez [Concepts Data Quality Services](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -47,14 +46,14 @@ ms.locfileid: "66059419"
  **Gestionnaire de connexions Data Quality Services**  
  Sélectionnez un gestionnaire de connexions DQS existant dans la liste, ou créez une connexion en cliquant sur **Nouveau**.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions du nettoyage DQS** . Consultez [Définir les options dans la boîte de dialogue Gestionnaire de connexions du nettoyage DQS](#manager)  
   
  **Base de connaissances Data Quality Services**  
  Sélectionnez une base de connaissances DQS existante pour la source de données connectée. Pour plus d’informations sur la base de connaissances DQS, consultez [Bases de connaissances et domaines DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Chiffrer la connexion**  
- spécifiez s’il faut chiffrer la connexion, afin de chiffrer le transfert de données entre [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]le serveur DQS et.  
+ spécifiez s’il faut chiffrer la connexion, afin de chiffrer le transfert de données entre le serveur DQS et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  **Champs disponibles**  
  Répertorie les champs disponibles pour la base de connaissances sélectionnée. Il existe deux types de champs : domaines uniques, et domaines composés qui contiennent au moins deux domaines uniques.  
@@ -68,7 +67,7 @@ ms.locfileid: "66059419"
   
  Les valeurs suivantes sont valides :  
   
--   **Composant défaillant**, qui indique que la transformation a échoué et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Il s'agit de la valeur par défaut.  
+-   **Composant défaillant**, qui indique que la transformation a échoué et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Il s’agit de la valeur par défaut.  
   
 -   **Réacheminer la ligne**, qui indique que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services et qu’elles sont redirigées vers la sortie d’erreur.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66059419"
  **Colonne d'entrée**  
  Répertorie une colonne d’entrée sélectionnée dans la zone **Colonnes d’entrée disponibles** .  
   
- **Domain**  
+ **Domaine**  
  Sélectionnez un domaine pour la mapper à la colonne d'entrée.  
   
  **Alias source**  
@@ -104,7 +103,7 @@ ms.locfileid: "66059419"
  **Confiance**  
  Indique s'il faut inclure le niveau de confiance pour les données corrigées. Le niveau de confiance indique le degré de certitude de DQS pour la correction ou la suggestion. Pour plus d’informations sur les niveaux de confiance, consultez [Nettoyage de données](../../2014/data-quality-services/data-cleansing.md).  
   
- **Raison**  
+ **Motif**  
  Indique s'il faut inclure la raison de la correction des données.  
   
  **Données ajoutées**  
@@ -126,7 +125,7 @@ ms.locfileid: "66059419"
   
 2.  Cliquez avec le bouton droit dans la zone des connexions, cliquez sur **Nouvelle connexion**, puis cliquez sur **DQS**.  
   
-3.  Cliquez sur **Ajouter**.  
+3.  Cliquez sur **Add**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Appliquer des règles de qualité des données à la source de données](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  

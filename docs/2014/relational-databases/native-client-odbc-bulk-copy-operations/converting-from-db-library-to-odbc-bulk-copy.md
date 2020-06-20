@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29a8ee59db4cade8cc3ddf649b54d4c2c47e87ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021316"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
   La conversion d’un programme de copie en bloc DB-Library vers ODBC est simple, car les fonctions de copie en bloc prises en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client sont similaires aux fonctions de copie en bloc de DB-Library, avec les exceptions suivantes :  
@@ -43,7 +42,7 @@ ms.locfileid: "82702091"
     |-------------------------|--------------------------------|-------------------------|  
     |Valeurs NULL fournies|0|-1 (SQL_NULL_DATA)|  
     |Données de variables fournies|-1|-10 (SQL_VARLEN_DATA)|  
-    |Caractère de longueur nulle ou chaîne binaire|N/A|0|  
+    |Caractère de longueur nulle ou chaîne binaire|N/D|0|  
   
      Dans DB-Library, une valeur *varlen* de-1 indique que les données de longueur variable sont fournies, ce qui, dans le *cbData* ODBC, est interprété comme signifiant que seules les valeurs NULL sont fournies. Modifiez les spécifications *VARLEN* DB-Library de-1 en SQL_VARLEN_DATA et toutes les spécifications *varlen* de 0 à SQL_NULL_DATA.  
   

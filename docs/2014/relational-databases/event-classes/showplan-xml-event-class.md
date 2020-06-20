@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93f00d2bfdcee43d22f54544d1aecfb4ceb9e394
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62691874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028555"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML (classe d'événements)
   La classe d’événements Showplan XML intervient quand [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une instruction SQL. Incluez la classe d'événements Showplan XML pour identifier les opérateurs Showplan. Cette classe d'événements stocke chaque événement sous la forme d'un document XML bien défini.  

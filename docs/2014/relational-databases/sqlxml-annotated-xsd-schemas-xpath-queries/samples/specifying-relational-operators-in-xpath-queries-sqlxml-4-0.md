@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cb2026f0e6720f98f2a2af96da6058e1ce06ba61
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cdf3fa4dfd62016c7f260369f9ebcbdf52863ac5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002852"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs de relation dans les requêtes XPath (SQLXML 4.0)
   Les exemples suivants montrent comment les opérateurs de relation sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +27,13 @@ ms.locfileid: "82717748"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-specify-relational-operator"></a>R. Spécifier un opérateur relationnel  
- Cette requête XPath retourne les éléments enfants de l’élément ** \< customer>** où la valeur de l’attribut **CustomerID** est « 1 » et où tout élément ** \< Order>** enfant contient un élément ** \< OrderDetail>** enfant avec un attribut **OrderQty** avec une valeur supérieure à 3 :  
+ Cette requête XPath retourne les éléments enfants de l' **\<Customer>** élément où la valeur de l’attribut **CustomerID** est « 1 » et où tous les **\<Order>** éléments enfants contiennent un **\<OrderDetail>** enfant avec un attribut **OrderQty** avec une valeur supérieure à 3 :  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Le prédicat spécifié dans les crochets filtre les éléments du ** \<>du client** . Seuls les éléments du ** \< client>** qui possèdent au moins un élément à faible ** \<>** de petit-enfant avec une valeur d’attribut OrderQty supérieure à 3 sont retournés.  
+ Le prédicat spécifié dans les crochets filtre les **\<Customer>** éléments. Seuls les **\<Customer>** éléments ayant au moins un **\<OrderDetail>** petit-enfant avec une valeur d’attribut OrderQty supérieure à 3 sont retournés.  
   
  L'axe `child` est la valeur par défaut. Par conséquent, la requête peut être spécifiée sous la forme :  
   
@@ -79,7 +78,7 @@ ms.locfileid: "82717748"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Spécifier l'opérateur relationnel dans la requête XPath et utiliser une fonction booléenne pour comparer le résultat  
- Cette requête retourne toutes les ** \< commandes>** éléments enfants du nœud de contexte qui ont une valeur d’attribut **SalesPersonID** inférieure à 270 :  
+ Cette requête retourne tous les **\<Order>** éléments enfants du nœud de contexte qui ont une valeur d’attribut **SalesPersonID** inférieure à 270 :  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

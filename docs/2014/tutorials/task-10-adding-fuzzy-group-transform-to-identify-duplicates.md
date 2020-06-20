@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7091c4dbb8244476357afba18e973535def8baa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064813"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Tâche 10 : Ajout d’une transformation de regroupement probable pour identifier des doublons
   Dans cette tâche, vous allez ajouter une transformation de regroupement probable au flux de données. La transformation de regroupement probable aide à identifier les doublons dans les données sources. Pour plus d’informations, consultez [transformation de regroupement approximatif](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) .  

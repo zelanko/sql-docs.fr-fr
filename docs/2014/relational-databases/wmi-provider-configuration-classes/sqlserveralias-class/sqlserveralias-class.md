@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46994409cc6a5119c9144eb7a3a4b9a8a9a22c44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223549"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002445"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
   La [classe SqlServerAlias](sqlserveralias-class.md) représente un alias de connexion au serveur.  
   
  Un alias de connexion au serveur est requis lorsque les deux conditions suivantes sont remplies :  
   
--   Le client se connecte à une instance [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de sur un transport réseau qui n’est pas le transport réseau par défaut.  
+-   Le client se connecte à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un transport réseau qui n’est pas le transport réseau par défaut.  
   
 -   l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle le client est connecté écoute sur un autre canal nommé.  
   
- **Remarque :** La [classe SqlServerAlias](sqlserveralias-class.md) hérite de `Put` la méthode de la classe Provider. Toutefois, elle ne retourne pas de résultats comme indiqué par la méthode `Provider::Put`. Pour plus d'informations, consultez la documentation relative à WMI.  
+ **Remarque :** La [classe SqlServerAlias](sqlserveralias-class.md) hérite `Put` de la méthode de la classe Provider. Toutefois, elle ne retourne pas de résultats comme indiqué par la méthode `Provider::Put`. Pour plus d'informations, consultez la documentation relative à WMI.  
   
 ## <a name="see-also"></a>Voir aussi  
  [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  

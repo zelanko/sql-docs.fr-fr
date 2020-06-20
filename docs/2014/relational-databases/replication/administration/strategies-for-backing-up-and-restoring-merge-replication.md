@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d91ae9fc1bbb404e63abaa2b5037164460d01a25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063811"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Stratégies de sauvegarde et de restauration de la réplication de fusion
   Pour la réplication de fusion, effectuez régulièrement des sauvegardes des bases de données suivantes :  
@@ -56,7 +55,7 @@ ms.locfileid: "62688902"
 > [!IMPORTANT]  
 >  La synchronisation d'une base de données de publication avec une base de données d'abonnement peut aboutir à des tables publiées restaurées à un point dans le temps plus récent que celui d'autres tables non publiées restaurées à partir de la sauvegarde.  
   
- Si vous synchronisez avec un abonné qui exécute une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l’abonnement ne peut pas être anonyme. il doit s’agir d’un abonnement client ou d’un abonnement serveur (appelés abonnements locaux et abonnements globaux dans les versions précédentes).  
+ Si vous procédez à une synchronisation avec un abonné qui exécute une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , l’abonnement ne peut pas être anonyme ; il doit s’agir d’un abonnement client ou d’un abonnement serveur (appelés abonnements locaux et abonnements globaux dans les versions précédentes).  
   
  Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -88,8 +87,8 @@ ms.locfileid: "62688902"
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Sauvegarde et restauration d'une base de données de réédition  
  Une base de données de réédition désigne une base de données qui s'abonne à des données auprès d'un éditeur et qui, à son tour, diffuse ces données à d'autres bases de données d'abonnement. Lorsque vous restaurez une base de données de réédition, suivez les recommandations données dans les sections « Sauvegarde et restauration d'une base de données de publication » et « Sauvegarde et restauration d'une base de données d'abonnement » de cette rubrique.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sauvegarder et restaurer des bases de données SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Sauvegarde et restauration des bases de données SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](back-up-and-restore-replicated-databases.md)  
   
   
