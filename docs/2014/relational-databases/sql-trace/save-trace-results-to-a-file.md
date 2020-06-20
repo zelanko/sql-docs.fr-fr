@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644fc812bbb4863c336ff2f53f5b2d67ee0a4d5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996425"
 ---
 # <a name="save-trace-results-to-a-file"></a>Enregistrer les résultats de trace dans un fichier
   Vous pouvez enregistrer les résultats d'une trace dans un fichier. Un fichier de trace est un fichier dans lequel sont écrits les résultats d'une trace. Un fichier de trace peut se situer dans un répertoire local (tel que C:\\*nom_dossier*\\*nom_fichier.trc*) ou un répertoire réseau (tel que \\\nom_ordinateur\nom_partage\nom_fichier.trc).  
@@ -34,7 +33,7 @@ ms.locfileid: "63136454"
   
 -   Exécuter une optimisation de requête  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enregistre les résultats de trace dans un fichier quand un chemin d’accès et un nom **@tracefile** de fichier sont spécifiés pour l’argument de la procédure stockée **sp_trace_create**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enregistre les résultats de trace dans un fichier quand un chemin d’accès et un nom de fichier sont spécifiés pour l' **@tracefile** argument de la procédure stockée **sp_trace_create**.  
   
 > [!NOTE]  
 >  Si un chemin est spécifié pour la procédure stockée **sp_trace_create** pour l’enregistrement du fichier de trace, le répertoire doit être accessible au serveur. Sachez également que si un répertoire local est spécifié pour **sp_trace_create**, il s’agit d’un répertoire local sur le serveur.  

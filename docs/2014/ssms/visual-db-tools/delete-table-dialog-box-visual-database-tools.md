@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68c8b655dbec3380ddad64199735d1c5b052c30f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066156"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Boîte de dialogue Supprimer une table (Visual Database Tools)
   Cette boîte de dialogue permet de spécifier la table dans laquelle des enregistrements sont à supprimer. Elle apparaît si plusieurs tables sont affichées dans le volet Schéma lorsque vous remplacez le type d'une requête par une requête DELETE.  

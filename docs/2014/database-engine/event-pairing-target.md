@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1a6beb1c6996e6e12f16c4555fd9dfcab97617d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933044"
 ---
 # <a name="event-pairing-target"></a>Cible d'appariement d'événements
   La cible d'appariement d'événements correspond à deux événements qui utilisent une ou plusieurs colonnes de données qui sont présentes dans chaque événement. De nombreux événements se présentent sous forme de paires, tels que les acquisitions et les libérations de verrous. Une fois qu'une séquence d'événement a été couplée, les deux événements sont ignorés. Ignorer des jeux correspondants permet de détecter facilement les acquisitions de verrous qui n'ont pas été libérées.  
@@ -43,7 +42,7 @@ ms.locfileid: "66064847"
   
  Toutes les données associées à un événement sont capturées et stockées pour un appariement futur. De plus, les données ajoutées par les actions sont également collectées. Les données d'événement collectées sont stockées en mémoire et ont donc une limite finie. Cette limite est basée sur la capacité et l'activité du système. Plutôt que prendre la quantité maximale de mémoire à utiliser comme paramètre, la quantité de mémoire utilisée sera basée sur les ressources système disponibles. Lorsque celles-ci ne sont pas disponibles, les événements non couplés qui ont été conservés seront supprimés. Si un événement n'a pas été couplé et est supprimé, l'événement correspondant apparaîtra comme un événement non couplé.  
   
- La cible d'appariement applique en série des événements non couplés à un format XML. Ce format n'est conforme à aucun schéma. Le format contient uniquement deux types d'éléments. L' ** \<élément>non couplé** est la racine, suivi de un. événement>élément pour chaque événement non couplé qui fait actuellement l’objet d’un suivi. ** \<** L' ** \<élément>d’événement** contient un attribut qui contient le nom de l’événement non couplé.  
+ La cible d'appariement applique en série des événements non couplés à un format XML. Ce format n'est conforme à aucun schéma. Le format contient uniquement deux types d'éléments. L' **\<unpaired>** élément est la racine, suivi de un. **\<event>** élément pour chaque événement non couplé qui fait actuellement l’objet d’un suivi. L' **\<event>** élément contient un attribut qui contient le nom de l’événement non couplé.  
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
  Pour ajouter la paire cible correspondante à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  

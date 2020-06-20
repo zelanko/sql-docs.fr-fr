@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59eafff14c6a0cc7752817a31648b64bd5edc907
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ce439e81cf87e97b4afe6e25a201e1ab0cb2a458
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059471"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Élément &lt;xsd:redefine&gt;
-  L’élément W3C XSD **redefine** assure la prise en charge de la redéfinition des composants de schéma. Toutefois, la prise en charge de cette directive est potentiellement coûteuse pour les performances et requiert également que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalide toutes les instances du `xml` type de données associées au schéma redéfini. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML qui incluent l’élément **\<xsd:redefine>** sont rejetés par le serveur.  
+  L’élément W3C XSD **redefine** assure la prise en charge de la redéfinition des composants de schéma. Toutefois, la prise en charge de cette directive est potentiellement coûteuse pour les performances et requiert également que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalide toutes les instances du `xml` type de données associées au schéma redéfini. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML qui incluent l' **\<xsd:redefine>** élément sont rejetés par le serveur.  
   
  Au lieu d'utiliser cet élément, vous pouvez mettre à jour un schéma ou ses composants en procédant comme suit :  
   

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49f1b0832fb82425874b656715091f793b79dfd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004485"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>synchroniser un abonnement à l'aide du Gestionnaire de synchronisation Windows (Windows Synchronization Manager)
   Le Gestionnaire de synchronisation[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ne peut être utilisé que pour synchroniser des abonnements à des publications Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est exécuté sur le même ordinateur que le Gestionnaire de synchronisation (il peut également servir à synchroniser des fichiers hors connexion et des pages Web). Pour utiliser le Gestionnaire de synchronisation :  
   
-1.  Activez la synchronisation des abonnements par extraction avec le Gestionnaire de synchronisation Windows dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement>**. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md).  
+1.  Activez la synchronisation des abonnements par extraction à l’aide du gestionnaire de synchronisation Windows dans la boîte de dialogue Propriétés de l' **abonnement- \<Subscriber> : \<SubscriptionDatabase> ** . Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md).  
   
 2.  Accédez au Gestionnaire de synchronisation par le menu **Démarrer** de Windows.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62745758"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Pour activer la synchronisation des abonnements par extraction de données (pull) avec le Gestionnaire de synchronisation Windows  
   
-1.  Dans la page **Général** de la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement>**, sélectionnez la valeur **Activer** pour l’option **Utiliser le Gestionnaire de synchronisation Windows**.  
+1.  Sur la page **général** de la boîte de dialogue Propriétés de l' **abonnement- \<Subscriber> \<SubscriptionDatabase> :** , sélectionnez la valeur **activer** pour l’option utiliser le **Gestionnaire de synchronisation Windows** .  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62745758"
   
     -   Cliquez sur **Démarrer**, pointez sur **Programmes** ou **Tous les programmes**, puis sur **Accessoires**et cliquez sur **Synchroniser**.  
   
-    -   Cliquez sur **Démarrer**, puis sur **exécuter.** Dans la boîte de dialogue **exécuter** , `mobsync.exe` tapez dans le champ **ouvrir** , puis cliquez sur **OK**.  
+    -   Cliquez sur **Démarrer**, puis sur **exécuter.** Dans la boîte de dialogue **exécuter** , tapez `mobsync.exe` dans le champ **ouvrir** , puis cliquez sur **OK**.  
   
 2.  Dans la boîte de dialogue **Éléments à synchroniser** , sélectionnez les abonnements à synchroniser. Les abonnements sont listés sous les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62745758"
   
     -   **Informations sur le serveur Web** (pour les abonnements de fusion sur les abonnés exécutant SQL Server 2005 ou supérieur)  
   
-    -   **Autres**  
+    -   **Autre**  
   
      Il est recommandé d'utiliser l'authentification Windows pour toutes les connexions. Pour plus d'informations sur les autorisations requises par l'Agent de distribution et l'Agent de fusion, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4eaeb50da9e4b71a08ec78614ae62ea33e3dc0d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066001"
 ---
 # <a name="initialize-a-subscription-manually"></a>Initialiser manuellement un abonnement
   Cette rubrique explique comment initialiser manuellement un abonnement dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'instantané initial est normalement utilisé pour initialiser un abonnement, mais les abonnements aux publications peuvent être initialisés sans utiliser d'instantané, à condition que le schéma et les données initiales soient déjà présents sur l'Abonné.  
@@ -48,7 +47,7 @@ ms.locfileid: "62721661"
   
 1.  Assurez-vous que le schéma et les données existent dans la base de données d'abonnement. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). **@publication**Spécifiez **@subscriber**,, le nom de la base de données sur l’abonné contenant les **@destination_db**données publiées pour, la valeur **@subscription_type** **pull** pour et la valeur **Replication support only** pour **@sync_type**. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](create-a-pull-subscription.md).  
+2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez **@publication** , **@subscriber** , le nom de la base de données sur l’abonné contenant les données publiées pour **@destination_db** , la valeur **pull** pour **@subscription_type** et la valeur **Replication support only** pour **@sync_type** . Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](create-a-pull-subscription.md).  
   
 3.  Sur l'Abonné, exécutez [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Pour les abonnements avec mise à jour, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62721661"
   
 1.  Assurez-vous que le schéma et les données existent dans la base de données d'abonnement. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez le nom de la base de données sur l’abonné contenant les **@destination_db**données publiées pour, la valeur **@subscription_type** **Push** pour et la valeur de **réplication prise en charge uniquement** pour **@sync_type**. Pour les abonnements avec mise à jour, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Spécifiez le nom de la base de données sur l’abonné contenant les données publiées pour **@destination_db** , la valeur **Push** pour **@subscription_type** et la valeur de **réplication prise en charge uniquement** pour **@sync_type** . Pour les abonnements avec mise à jour, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Pour plus d’informations, consultez [Créer un abonnement par émission (push)](create-a-push-subscription.md).  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62721661"
   
 1.  Assurez-vous que le schéma et les données existent dans la base de données d'abonnement. Pour cela, vous pouvez restaurer une sauvegarde de la base de données de publication sur l'Abonné.  
   
-2.  Sur le serveur de publication, exécutez [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). **@publication**Spécifiez **@subscriber**, **@subscriber_db**, et la valeur **pull** pour **@subscription_type**. L'abonnement par extraction est inscrit.  
+2.  Sur le serveur de publication, exécutez [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Spécifiez **@publication** ,, **@subscriber** **@subscriber_db** et la valeur **pull** pour **@subscription_type** . L'abonnement par extraction est inscrit.  
   
 3.  Exécutez [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)sur l'Abonné, sur la base de données contenant les données publiées. Spécifiez la valeur **none** pour **@sync_type**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62721661"
   
 1.  Assurez-vous que le schéma et les données existent dans la base de données d'abonnement. Pour cela, vous pouvez restaurer une sauvegarde de la base de données de publication sur l'Abonné.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Spécifiez le nom de la base de données sur l’abonné contenant les **@subscriber_db**données publiées pour, la valeur **@subscription_type** **Push** pour et la valeur **None** pour **@sync_type**.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Spécifiez le nom de la base de données sur l’abonné contenant les données publiées pour **@subscriber_db** , la valeur **Push** pour **@subscription_type** et la valeur **None** pour **@sync_type** .  
   
 3.  Sur la base de données de publication du serveur de publication, exécutez [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Pour plus d’informations, consultez [Créer un abonnement par émission (push)](create-a-push-subscription.md).  
   

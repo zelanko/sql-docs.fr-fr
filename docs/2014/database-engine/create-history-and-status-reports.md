@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcc6da18ebe6c1930888bb0d2bd36610a19e7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807503"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934500"
 ---
 # <a name="create-history-and-status-reports"></a>Créer des rapports d'état et historiques
   Vous pouvez créer un rapport sur l'historique ou l'état en cours de fichiers dans la solution actuellement chargée. Vous pouvez également afficher un aperçu du rapport, puis l'envoyer vers une imprimante, un fichier ou le Presse-Papiers. Ces rapports ne sont pas générés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. mais par [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  
@@ -29,7 +28,7 @@ ms.locfileid: "62807503"
   
 2.  Dans le menu **fichier** , pointez sur **contrôle de code source**, puis cliquez sur **historique**.  
   
-3.  Dans la boîte **de dialogue historique du** \<fichier ou du projet>, cliquez sur **rapport**.  
+3.  Dans la boîte **de dialogue historique de** \<File or Project> , cliquez sur **rapport**.  
   
 4.  Dans la boîte de dialogue **rapport d’historique** , sélectionnez les options appropriées, puis cliquez sur **OK**.  
   

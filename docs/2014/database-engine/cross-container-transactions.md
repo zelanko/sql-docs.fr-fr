@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934480"
 ---
 # <a name="cross-container-transactions"></a>Transactions entre conteneurs
   Les transactions entre conteneurs sont des transactions utilisateur implicites ou explicites qui incluent des appels aux procédures stockées compilées en mode natif ou des opérations sur des tables mémoire optimisées.  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Sémantique d'isolation d'opérations individuelles  
  Une transaction sérialisable T est exécutée avec l'isolation complète. C'est comme si chaque autre transaction avait été soit validée avant le démarrage de T, soit démarrée après la validation de T. Cela devient plus complexe lorsque plusieurs opérations dans une transaction présentent des niveaux d'isolation différents.  
   
- La sémantique générale des niveaux d’isolation des transactions dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ainsi que les implications sur le verrouillage, sont expliquées dans [définir le niveau d’isolation des transactions &#40;&#41;Transact-SQL ](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ La sémantique générale des niveaux d’isolation des transactions dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ainsi que les implications sur le verrouillage, sont expliquées dans [définir le niveau d’isolation des transactions &#40;&#41;Transact-SQL ](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Pour les transactions entre conteneurs dans lesquelles les opérations peuvent avoir différents niveaux d'isolation, vous devez comprendre la sémantique de l'isolation des opérations de lecture individuelles. Les opérations d'écriture sont toujours isolées. Les écritures effectuées dans des transactions distinctes n'ont aucun impact les unes sur les autres.  
   
@@ -135,7 +134,7 @@ commit
   
  Le côté sur disque d'une transaction T atteint un certain niveau d'isolation X si au moins une des conditions suivantes est remplie :  
   
--   Il commence par X. Autrement dit, la valeur par défaut de la session était X, `SET TRANSACTION ISOLATION LEVEL`soit parce que vous avez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécuté, soit il s’agit de la valeur par défaut.  
+-   Il commence par X. Autrement dit, la valeur par défaut de la session était X, soit parce que vous avez exécuté `SET TRANSACTION ISOLATION LEVEL` , soit il s’agit de la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] valeur par défaut.  
   
 -   Pendant la transaction, le niveau d'isolation est remplacé par X à l'aide de `SET TRANSACTION ISOLATION LEVEL`.  
   

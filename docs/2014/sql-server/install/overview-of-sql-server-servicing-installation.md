@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56123fc1b254cc876339dde816648f2b1f79b90d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093589"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012076"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Vue d'ensemble de l'installation de maintenance de SQL Server
   Vous pouvez appliquer une mise à jour à n'importe quel composant [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installé sur votre ordinateur à une mise à jour de maintenance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Si le niveau de version d'un composant [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existant est ultérieur à celui de la mise à jour, le programme d'installation exclut ce composant de la mise à jour. Pour plus d’informations sur l’application d’une mise à jour de maintenance, consultez [installer les mises à jour de maintenance de SQL Server 2014](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
@@ -24,7 +23,7 @@ ms.locfileid: "66093589"
   
 -   Toutes les fonctionnalités appartenant à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être mises à jour en même temps. Par exemple, lorsque vous mettez à jour le [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez également mettre à jour les composants [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'ils sont installés sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les fonctionnalités partagées, telles que les outils d'administration, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], doivent toujours être mises à jour vers le correctif logiciel le plus récent. Si un composant ou une instance n'est pas sélectionné dans l'arborescence de fonctionnalités, le composant ou l'instance ne sera pas mis à jour.  
   
--   Par défaut, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] les fichiers journaux de mise à jour sont enregistrés dans\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% Program\\Files% \120\Setup Bootstrap\Log.  
+-   Par défaut, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] les fichiers journaux de mise à jour sont enregistrés dans% Program Files% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\ .  
   
 -   Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut à présent intégrer une mise à jour avec le média d'origine pour exécuter simultanément le média d'origine et la mise à jour. Pour plus d’informations, consultez [What’s New in SQL Server installation](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md).  
   
@@ -49,27 +48,27 @@ ms.locfileid: "66093589"
 ### <a name="prepare-for-a-sscurrent-update-installation"></a>Préparer l'installation des mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Il est vivement conseillé d'effectuer les opérations suivantes avant d'installer les mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
   
--   **Sauvegardez vos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données système** -avant d' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installer les mises à jour, `master`sauvegardez `msdb`les bases `model` de données, et. L'installation d'une mise à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] modifie ces bases de données et les rend incompatibles avec les versions antérieures de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La sauvegarde de ces bases de données est nécessaire si vous décidez de réinstaller [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sans ces mises à jour.  
+-   **Sauvegardez vos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données système** -avant d’installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] les mises à jour, sauvegardez les `master` `msdb` `model` bases de données, et. L'installation d'une mise à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] modifie ces bases de données et les rend incompatibles avec les versions antérieures de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La sauvegarde de ces bases de données est nécessaire si vous décidez de réinstaller [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sans ces mises à jour.  
   
      Il est également prudent de sauvegarder vos bases de données utilisateur.  
   
     > [!IMPORTANT]  
     >  Lorsque vous appliquez des mises à jour à des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui participent à une topologie de réplication, vous devez sauvegarder vos bases de données répliquées en même temps que vos bases de données système avant d'appliquer les mises à jour.  
   
--   **Sauvegarder vos bases [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de données, votre fichier de configuration et votre référentiel** : avant de mettre à jour une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]instance de, vous devez sauvegarder les éléments suivants :  
+-   **Sauvegarder vos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de données, votre fichier de configuration et votre référentiel** : avant de mettre à jour une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous devez sauvegarder les éléments suivants :  
   
-    -   Bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par défaut, ceux-ci sont installés dans\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]C:\Program Files \MSAS12. \<InstanceId> \OLAP\Data\\. Pour l’installation de wow, le chemin d’accès par défaut est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]C:\programfiles (x86) \ \MSAS12. \<InstanceId> \OLAP\Data\\.  
+    -   Bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par défaut, ceux-ci sont installés dans C:\Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSAS12. \<InstanceID> \OLAP\Data \\ . Pour l’installation de WOW, le chemin d’accès par défaut est C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSAS12. \<InstanceID> \OLAP\Data \\ .  
   
-    -   Paramètre de configuration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans le fichier de configuration msmdsrv.ini. Par défaut, il se trouve dans le dossier C:\Program\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Files \MSAS12. \<InstanceId> répertoire \olap\config\.  
+    -   Paramètre de configuration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans le fichier de configuration msmdsrv.ini. Par défaut, il se trouve dans le dossier C:\Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSAS12. \<InstanceID> Répertoire \OLAP\Config\.  
   
     -   (Facultatif) Base de données qui contient le référentiel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cette étape est requise uniquement si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a été configuré pour fonctionner avec la bibliothèque DSO (Decision Support Objects).  
   
     > [!NOTE]  
     >  Si vous ne sauvegardez pas vos bases de données, votre fichier de configuration et votre base de données de référentiel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il ne vous sera pas possible de rétrograder une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mise à jour vers la version antérieure.  
   
--   **Vérifiez que les bases de données système disposent d’un espace libre suffisant** . si l’option de croissance automatique n' `master` est `msdb` pas sélectionnée pour les bases de données système et, ces bases de données doivent avoir au moins 500 Ko d’espace libre. Pour vérifier que les bases de données disposent d'un espace suffisant, exécutez la procédure stockée système `sp_spaceused` sur les bases de données `master` et `msdb`. Si l'espace non alloué dans l'une ou l'autre base de données est inférieur à 500 Ko, augmentez la taille de la base de données.  
+-   **Vérifiez que les bases de données système disposent d’un espace libre suffisant** . si l’option de croissance automatique n’est pas sélectionnée pour les `master` `msdb` bases de données système et, ces bases de données doivent avoir au moins 500 Ko d’espace libre. Pour vérifier que les bases de données disposent d'un espace suffisant, exécutez la procédure stockée système `sp_spaceused` sur les bases de données `master` et `msdb`. Si l'espace non alloué dans l'une ou l'autre base de données est inférieur à 500 Ko, augmentez la taille de la base de données.  
   
--   **Arrêter les services et les applications** : pour éviter un éventuel redémarrage du système, arrêtez toutes les applications et tous les services qui se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connectent aux instances de qui sont en cours [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de mise à niveau avant d’installer les mises à jour. Ceux-ci comprennent notamment [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le Service moteur de base de données, SQL Server agent ou SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+-   **Arrêter les services et les applications** : pour éviter un éventuel redémarrage du système, arrêtez toutes les applications et tous les services qui se connectent aux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont en cours de mise à niveau avant d’installer les [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mises à jour. Ceux-ci comprennent notamment [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le Service moteur de base de données, SQL Server agent ou SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
     > [!NOTE]  
     >  Vous ne pouvez pas arrêter les services dans un environnement de cluster de basculement. Pour plus d'informations, consultez la section relative à l'installation sur un cluster de basculement plus loin dans cette rubrique.  
@@ -87,9 +86,9 @@ ms.locfileid: "66093589"
 #### <a name="starting-a-sscurrent-update"></a>Démarrage d'une mise à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Pour installer une mise à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , exécutez le fichier de package à extraction automatique.  
   
- Package de mise à jour cumulative ( \<Cu) : SQLServer2014>-KBXXXXXX-*PPP*. exe  
+ Package de mise à jour cumulative (CU) : \<SQLServer2014> -KBXXXXXX-*PPP*. exe  
   
- Package Service Pack (PCU) : \<SQLServer2014>\<SPX>-KBxxxxxx-PPP-LLL. exe  
+ Package Service Pack (PCU) : \<SQLServer2014> \<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x indique le numéro de Service Pack  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66093589"
   
  Pour appliquer des mises à jour à des composants [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui font partie d'un cluster de basculement, consultez la section relative à l'installation d'un cluster de basculement. Pour plus d’informations sur l’exécution d’une installation de mise à jour en mode sans assistance, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
-####  <a name="product-updates-in-sscurrent-installation"></a><a name="Slipstream"></a>Mises à jour du produit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans l’installation  
+####  <a name="product-updates-in-sscurrent-installation"></a><a name="Slipstream"></a>Mises à jour du produit dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’installation  
  La Mise à jour de produit est une fonctionnalité du programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Elle intègre les dernières mises à jour du produit avec l'installation principale du produit de sorte que le produit principal et ses mises à jour applicables sont installés en même temps. La fonctionnalité de mise à jour du produit peut rechercher les mises à jour applicables dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, Windows Server Update Services (WSUS), un dossier local ou un partage réseau.  Une fois que le programme d'installation a détecté les versions les plus récentes des mises à jour applicables, il les télécharge et les intègre dans le processus d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours. La fonctionnalité de mise à jour du produit peut extraire une mise à jour, un Service Pack, ou un Service Pack et la mise à jour cumulative. La fonctionnalité de mise à jour de produit est une extension de la fonctionnalité Slipstream qui était disponible dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
   
 ## <a name="updating-a-prepared-image-of-ssnoversion"></a>Mise à jour d'une image préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

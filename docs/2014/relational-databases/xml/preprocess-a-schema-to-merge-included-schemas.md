@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b788c94a1f27cced3e57b8f7941eb92edd61a2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9caf64a88652323e710385f177852ee8e2b25146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702562"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065521"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Prétraiter un schéma pour fusionner des schémas inclus
   L’élément W3C XSD **include** assure la prise en charge de la modularité des schémas, selon laquelle un schéma XML peut être partitionné en plusieurs fichiers physiques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML incluant cet élément seront rejetés par le serveur.  
   
- En guise de solution, les schémas XML comportant la directive \<xsd:include> peuvent être prétraités de façon à copier et à fusionner le contenu de tous les schémas inclus en un seul et unique schéma à télécharger vers le serveur. Vous pouvez utiliser le code C# suivant pour le prétraitement. Les commentaires dans la première partie du code fournissent des informations sur son utilisation.  
+ En guise de solution, les schémas XML qui incluent la \<xsd:include> directive peuvent être prétraités pour copier et fusionner le contenu de tous les schémas inclus dans un seul schéma pour le téléchargement sur le serveur. Vous pouvez utiliser le code C# suivant pour le prétraitement. Les commentaires dans la première partie du code fournissent des informations sur son utilisation.  
   
 ```  
 // XSD Schema Include Normalizer  

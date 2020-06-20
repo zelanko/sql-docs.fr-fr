@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e26b3d124d01d2163eade48656de44ca03784bb1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952032"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058955"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurer la clé de chiffrement (SSRS en mode natif)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise une clé de chiffrement pour sécuriser les données sensibles stockées dans la base de données du serveur de rapports. Pour garantir un accès ininterrompu aux données chiffrées, il importe que vous créiez une sauvegarde de la clé de chiffrement au cas où vous devriez la restaurer ultérieurement en raison de modifications dans le compte de service ou dans le cadre d'une migration planifiée. Cette rubrique est une vue d'ensemble de l'utilisation du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour restaurer des clés.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif.  
   
  Pour restaurer la clé, vous devez avoir enregistré préalablement une copie de sauvegarde de la clé sur un fichier protégé par mot de passe. Pendant la restauration de la clé, le serveur de rapports remplace la clé existante par la clé trouvée dans le fichier protégé par mot de passe. La clé qui est à l'intérieur du fichier doit être identique à celle utilisée pour chiffrer et déchiffrer les données.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "71952032"
  Si vous restaurez une clé non valide différente de celle utilisée pour chiffrer les données, il est impossible de déchiffrer les données actuellement stockées dans la base de données du serveur de rapports. Si vous restaurez une clé non valide, vous devez restaurer immédiatement une copie de sauvegarde de la clé correcte, si elle est disponible. Si vous ne disposez pas de la copie de sauvegarde de la clé utilisée pour chiffrer les données, vous devez supprimer toutes les données chiffrées. À cette fin, cliquez sur le bouton **Supprimer** de la page [Clés de chiffrement](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) . Après avoir supprimé le contenu chiffré, vous devez mettre à jour tous les abonnements manuellement et spécifier à nouveau toutes les informations d'identification stockées définies pour les rapports et les abonnements pilotés par les données sur le serveur de rapports.  
   
 ## <a name="restore-encryption-key-dialog"></a>Boîte de dialogue Restaurer la clé de chiffrement  
- Pour plus d’informations sur l’emplacement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la Configuration Manager, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour plus d’informations sur l’emplacement de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consultez [Gestionnaire de configuration de Reporting Services &#40;Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  Pour ouvrir la boîte de dialogue Restaurer la clé de chiffrement, cliquez sur **Clés de chiffrement** dans le volet de navigation du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis cliquez sur **Restaurer**. La boîte de dialogue apparaît également lorsque vous mettez à jour le compte de service à l'aide de la page Compte de service du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations sur  
   

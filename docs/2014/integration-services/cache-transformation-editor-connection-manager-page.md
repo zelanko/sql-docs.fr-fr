@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc44af33e79f1c419a13444cca021da59f4917ba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924568"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Éditeur de transformation du cache (Page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de transformation du cache** pour sélectionner un gestionnaire de connexions du cache existant ou en créer un.  
@@ -30,7 +29,7 @@ ms.locfileid: "66061070"
  **Gestionnaire de connexions du cache**  
  Sélectionnez un gestionnaire de connexions du cache existant en utilisant la liste, ou créez une connexion en utilisant le bouton **Nouvelle** .  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une connexion à l'aide de la boîte de dialogue Éditeur du gestionnaire de connexions du cache.  
   
  **Modifier**  

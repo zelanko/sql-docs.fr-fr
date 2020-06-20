@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924970"
 ---
 # <a name="building-packages-programmatically"></a>Génération de packages par programme
   Si vous devez créer des packages de manière dynamique, ou gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l'extérieur de l'environnement de développement, vous pouvez manipuler les packages par programme. Cette méthode vous offre une gamme continue d'options :
@@ -63,7 +62,7 @@ ms.locfileid: "78176554"
  [Enregistrement d’un package par programme](../building-packages-programmatically/saving-a-package-programmatically.md) Décrit comment enregistrer un package par programme.
 
 ## <a name="reference"></a>Informations de référence
- [Integration Services de référence des erreurs et des messages](../integration-services-error-and-message-reference.md) Répertorie les codes d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erreur prédéfinis avec leur nom symbolique et leur description.
+ [Integration Services de référence des erreurs et des messages](../integration-services-error-and-message-reference.md) Répertorie les [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] codes d’erreur prédéfinis avec leur nom symbolique et leur description.
 
 ## <a name="related-sections"></a>Sections connexes
  [Extension de packages avec des scripts](../extending-packages-scripting/extending-packages-with-scripting.md) Explique comment étendre le processus de contrôle à l’aide de la tâche de script, et comment étendre le workflow de données à l’aide du composant script.

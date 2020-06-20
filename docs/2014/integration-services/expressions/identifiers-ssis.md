@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9b0bd0a971f94c4eeba91dd4b009d57ccb47c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969353"
 ---
 # <a name="identifiers-ssis"></a>Identificateurs (SSIS)
   Dans les expressions, les identificateurs sont des colonnes et des variables disponibles pour l'opération. Les expressions peuvent utiliser des identificateurs standard et qualifiés.  
@@ -112,9 +111,9 @@ ms.locfileid: "62898857"
 > [!IMPORTANT]  
 >  Vous devez placer la combinaison de l'espace de noms et du nom de la variable qualifiée entre crochets pour que l'évaluateur d'expression puisse reconnaître la variable.  
   
- Si la valeur de **Count** dans l’espace de noms **utilisateur** est 10 et que la valeur de **Count** dans **MyNamespace** est 2, l’expression `true` prend la valeur, car l’évaluateur d’expression reconnaît deux variables différentes.  
+ Si la valeur de **Count** dans l’espace de noms **utilisateur** est 10 et que la valeur de **Count** dans **MyNamespace** est 2, l’expression prend la valeur `true` , car l’évaluateur d’expression reconnaît deux variables différentes.  
   
- Si les noms de variable ne sont pas uniques, aucune erreur ne se produit. Par contre, l'évaluateur d'expression utilise une seule instance de la variable pour évaluer l'expression et renvoie un résultat incorrect. Par exemple, l’expression suivante a été conçue pour comparer les valeurs (10 et 2) de deux variables **Count** distinctes `false` , mais l’expression prend la valeur car l’évaluateur d’expression utilise deux fois la même instance de la variable **Count** .  
+ Si les noms de variable ne sont pas uniques, aucune erreur ne se produit. Par contre, l'évaluateur d'expression utilise une seule instance de la variable pour évaluer l'expression et renvoie un résultat incorrect. Par exemple, l’expression suivante a été conçue pour comparer les valeurs (10 et 2) de deux variables **Count** distinctes, mais l’expression prend la valeur `false` car l’évaluateur d’expression utilise deux fois la même instance de la variable **Count** .  
   
 ```  
 @Count > @Count  

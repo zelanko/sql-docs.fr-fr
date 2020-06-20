@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18afc2a57f4e86417f4228baa459117f1dc7f7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808676"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934590"
 ---
 # <a name="connect-to-server-reporting-services"></a>Se connecter au serveur (Reporting Services)
   Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ## <a name="options"></a>Options  
  **Type de serveur**  
- Lors de l’inscription d’un serveur à partir de l' **Explorateur d’objets**, sélectionnez le [!INCLUDE[ssDE](../includes/ssde-md.md)]type de serveur auquel vous souhaitez vous connecter :, Analysis Services, Reporting Services ou Integration Services. Le reste de la boîte de dialogue affiche uniquement les options s'appliquant au type de serveur sélectionné. Lors de l’inscription d’un serveur à partir de **serveurs inscrits**, la zone **type de serveur** est en lecture seule et correspond au type de serveur affiché dans le composant **serveurs inscrits** . Pour inscrire un autre type de serveur, sélectionnez [!INCLUDE[ssDE](../includes/ssde-md.md)], Analysis Services, Reporting Services ou Integration Services dans la barre d’outils **serveurs inscrits** avant de commencer à inscrire un nouveau serveur.  
+ Lors de l’inscription d’un serveur à partir de l' **Explorateur d’objets**, sélectionnez le type de serveur auquel vous souhaitez vous connecter : [!INCLUDE[ssDE](../includes/ssde-md.md)] , Analysis Services, Reporting Services ou Integration Services. Le reste de la boîte de dialogue affiche uniquement les options s'appliquant au type de serveur sélectionné. Lors de l’inscription d’un serveur à partir de **serveurs inscrits**, la zone **type de serveur** est en lecture seule et correspond au type de serveur affiché dans le composant **serveurs inscrits** . Pour inscrire un autre type de serveur, sélectionnez [!INCLUDE[ssDE](../includes/ssde-md.md)] , Analysis Services, Reporting Services ou Integration Services dans la barre d’outils **serveurs inscrits** avant de commencer à inscrire un nouveau serveur.  
   
  **Nom du serveur**  
  Le mode serveur de l'instance du serveur de rapports à laquelle vous vous connectez détermine la valeur que vous devez entrer.  
   
- Pour un serveur de rapports qui fonctionne en mode natif, spécifiez l'instance du serveur de rapports avec laquelle établir la connexion. Si vous utilisez l'instance par défaut, le nom du serveur est généralement celui de l'ordinateur. Si vous avez installé une instance nommée, ajoutez le nom de l’instance au nom du serveur au \<format suivant \\ : NomServeur\>><nom_instance. Reporting Services utilise la barre oblique inverse pour délimiter le nom de l'instance.  
+ Pour un serveur de rapports qui fonctionne en mode natif, spécifiez l'instance du serveur de rapports avec laquelle établir la connexion. Si vous utilisez l'instance par défaut, le nom du serveur est généralement celui de l'ordinateur. Si vous avez installé une instance nommée, ajoutez le nom de l’instance au nom du serveur au format suivant : \<servername> \\<InstanceName \> . Reporting Services utilise la barre oblique inverse pour délimiter le nom de l'instance.  
   
  Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, vous devez spécifier un site SharePoint. Vous pouvez spécifier n'importe quel site d'une collection de sites intégrée à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. L'URL que vous fournissez doit inclure le préfixe HTTP ou HTTPS. Vous devez avoir l'autorisation d'accéder au site SharePoint pour vous y connecter à partir de Management Studio. Le niveau d'autorisation qui vous est assigné détermine les éléments que vous pouvez consulter et gérer. Pour plus d’informations, consultez [Se connecter à un serveur de rapports dans Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   

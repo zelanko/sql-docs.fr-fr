@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e6e28e6d1bb923fb226e7df7964853685f23178b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050381"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modification des tables à mémoire optimisée
   L'exécution d'opérations ALTER sur les tables mémoire optimisées n'est pas prise en charge. Cela comprend les opérations telles que la modification du nombre de compartiments, l'ajout ou la suppression d'un index et l'ajout ou la suppression d'une colonne. Cette rubrique fournit des instructions pour mettre à jour des tables mémoire optimisées.  
@@ -223,7 +222,7 @@ Write-Host ""
   
  Le script PowerShell suivant exécute les modifications de schéma qui ont fait l'objet d'un script dans l'exemple précédent. Ce script accepte comme argument une table et exécute les scripts de modification de schéma qui ont été générés pour cette table et les procédures stockées associées.  
   
- Utilisation : execute_schema_change. ps1 *SERVER_NAME * * db_name `schema_name` table_name*  
+ Utilisation : execute_schema_change.ps1 *SERVER_NAME * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  

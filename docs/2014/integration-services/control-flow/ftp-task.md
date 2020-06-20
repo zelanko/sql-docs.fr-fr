@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dda1608ae8a7dd59052763aafc8e4313618777c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918787"
 ---
 # <a name="ftp-task"></a>Tâche FTP
   La tâche FTP télécharge des fichiers de données et gère des répertoires sur les serveurs. Par exemple, un package peut télécharger des fichiers de données à partir d’un serveur distant ou d’un emplacement Internet dans le cadre d’un flux de travail de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez utiliser la tâche FTP aux fins suivantes :  
@@ -78,6 +77,6 @@ ms.locfileid: "62831524"
  [Éditeur de tâche FTP &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)   
  [Éditeur de tâche FTP &#40;page transfert de fichiers&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Tâches Integration Services](integration-services-tasks.md)   
- [Flux de contrôle](control-flow.md)  
+ [Workflow de contrôle](control-flow.md)  
   
   
