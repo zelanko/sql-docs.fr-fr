@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019437"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Retourne le nom de type de SQL pour un jeton de type BCP spécifié.  
@@ -52,12 +51,12 @@ fIsMaxType
 ## <a name="returns"></a>Retours  
  Chaîne contenant le nom de type SQL qui correspond au type BCP. Si un type BCP non valide est spécifié, une chaîne vide est retournée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les jetons de type de BCP sont définis dans le fichier d'en-tête sqlncli.h et la bibliothèque sqlncli11.lib.  
   
  Le tableau suivant spécifie les types BCP possibles, s'ils sont ou pas de type max et la sortie attendue.  
   
-|Nom du type BCP|MaxType|Sortie|  
+|Nom du type BCP|MaxType|Output|  
 |-------------------|-------------|------------|  
 |`SQLDECIMAL`|Vous pouvez soit utiliser|**decimal**|  
 |`SQLNUMERIC`|Vous pouvez soit utiliser|**numeric**|  
@@ -69,15 +68,15 @@ fIsMaxType
 |`SQLDATETIME`|Vous pouvez soit utiliser|**datetime**|  
 |`SQLBITN`|Vous pouvez soit utiliser|**bit-null**|  
 |`SQLBIT`|Vous pouvez soit utiliser|**bit**|  
-|`SQLBIGCHAR`|No|**char**|  
-|`SQLCHARACTER`|No|**char**|  
-|`SQLBIGVARCHAR`|No|**varchar**|  
-|`SQLVARCHAR`|No|**varchar**|  
+|`SQLBIGCHAR`|Non|**char**|  
+|`SQLCHARACTER`|Non|**char**|  
+|`SQLBIGVARCHAR`|Non|**varchar**|  
+|`SQLVARCHAR`|Non|**varchar**|  
 |`SQLTEXT`|Vous pouvez soit utiliser|**text**|  
-|`SQLBIGBINARY`|No|**binary**|  
-|`SQLBINARY`|No|**Binaire2**|  
-|`SQLBIGVARBINARY`|No|**Varbinary**|  
-|`SQLVARBINARY`|No|**Varbinary**|  
+|`SQLBIGBINARY`|Non|**binary**|  
+|`SQLBINARY`|Non|**Binaire**|  
+|`SQLBIGVARBINARY`|Non|**Varbinary**|  
+|`SQLVARBINARY`|Non|**Varbinary**|  
 |`SQLIMAGE`|Vous pouvez soit utiliser|**Image**|  
 |`SQLINTN`|Vous pouvez soit utiliser|**int-null**|  
 |`SQLDATETIMN`|Vous pouvez soit utiliser|**datetime-null**|  
@@ -92,22 +91,22 @@ fIsMaxType
 |`SQLMONEY4`|Vous pouvez soit utiliser|**Smallmoney**|  
 |`SQLFLT4`|Vous pouvez soit utiliser|**Non**|  
 |`SQLUNIQUEID`|Vous pouvez soit utiliser|**uniqueidentifier**|  
-|`SQLNCHAR`|No|**NCHAR**|  
-|`SQLNVARCHAR`|No|**Nvarchar**|  
+|`SQLNCHAR`|Non|**NCHAR**|  
+|`SQLNVARCHAR`|Non|**Nvarchar**|  
 |`SQLNTEXT`|Vous pouvez soit utiliser|**Text**|  
 |`SQLVARIANT`|Vous pouvez soit utiliser|**sql_variant**|  
 |`SQLINT8`|Vous pouvez soit utiliser|**Comportant**|  
-|`SQLCHARACTER`|Yes|**varchar(max)**|  
-|`SQLBIGCHAR`|Yes|**varchar(max)**|  
-|`SQLBIGVARCHAR`|Yes|**varchar(max)**|  
-|`SQLVARCHAR`|Yes|**varchar(max)**|  
-|`SQLBINARY`|Yes|**varbinary(max)**|  
-|`SQLBIGBINARY`|Yes|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|Yes|**varbinary(max)**|  
-|`SQLVARBINARY`|Yes|**varbinary(max)**|  
-|`SQLNCHAR`|Yes|**nvarchar(max)**|  
-|`SQLNVARCHAR`|Yes|**nvarchar(max)**|  
-|`SQLXML`|Yes|**Langage**|  
+|`SQLCHARACTER`|Oui|**varchar(max)**|  
+|`SQLBIGCHAR`|Oui|**varchar(max)**|  
+|`SQLBIGVARCHAR`|Oui|**varchar(max)**|  
+|`SQLVARCHAR`|Oui|**varchar(max)**|  
+|`SQLBINARY`|Oui|**varbinary(max)**|  
+|`SQLBIGBINARY`|Oui|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|Oui|**varbinary(max)**|  
+|`SQLVARBINARY`|Oui|**varbinary(max)**|  
+|`SQLNCHAR`|Oui|**nvarchar(max)**|  
+|`SQLNVARCHAR`|Oui|**nvarchar(max)**|  
+|`SQLXML`|Oui|**Langage**|  
 |`SQLUDT`|Vous pouvez soit utiliser|**Assorti**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  

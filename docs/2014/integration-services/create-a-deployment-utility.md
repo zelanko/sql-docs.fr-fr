@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917359"
 ---
 # <a name="create-a-deployment-utility"></a>Créer un utilitaire de déploiement
   La première étape de déploiement des packages consiste à créer un utilitaire de déploiement pour un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . L'utilitaire de déploiement est un dossier qui contient les fichiers dont vous avez besoin pour déployer les packages dans un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un serveur différent. L'utilitaire de déploiement est créé sur l'ordinateur sur lequel le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est stocké.  
@@ -35,7 +34,7 @@ ms.locfileid: "66060229"
 |CreateDeploymentUtility|Une valeur qui spécifie si un utilitaire de déploiement de packages est créé lorsque le projet est généré. Cette propriété doit être définie à `True` pour créer un utilitaire de déploiement.|  
 |DeploymentOutputPath|L'emplacement, relatif au projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , de l'utilitaire de déploiement.|  
   
- Quand vous générez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], un fichier manifeste, \<nom_projet>.SSISDeploymentManifest.xml et des copies des packages du projet et des dépendances de package sont créés et ajoutés dans le dossier bin\Deployment au sein du projet ou à l’emplacement spécifié dans la propriété DeploymentOutputPath. Le fichier manifeste répertorie les packages, les configurations de package et tous les divers autres fichiers du projet.  
+ Quand vous générez un [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet, un fichier manifeste, \<project name>.SSISDeploymentManifest.xml, est créé et ajouté, ainsi que des copies des packages du projet et des dépendances du package, au dossier bin\Deployment dans le projet ou à l’emplacement spécifié dans la propriété DeploymentOutputPath. Le fichier manifeste répertorie les packages, les configurations de package et tous les divers autres fichiers du projet.  
   
  Le contenu du dossier de déploiement est actualisé chaque fois que vous générez le projet. Cela signifie que tout fichier enregistré dans ce dossier et qui n'est pas copié de nouveau dans le dossier par le processus de construction sera supprimé. Par exemple, les fichiers de configuration de package enregistrés dans les dossiers de déploiement seront supprimés.  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66060229"
   
 2.  Cliquez avec le bouton droit sur le projet et cliquez sur **Propriétés**.  
   
-3.  Dans la boîte de dialogue ** \<pages de propriétés> nom du projet** , cliquez sur **utilitaire de déploiement**.  
+3.  Dans la boîte de dialogue ** \<project name> pages de propriétés** , cliquez sur **utilitaire de déploiement**.  
   
-4.  Pour mettre à jour les configurations de package lors du déploiement **AllowConfigurationChanges** de packages `True`, affectez à AllowConfigurationChanges la valeur.  
+4.  Pour mettre à jour les configurations de package lors du déploiement de packages, affectez à **AllowConfigurationChanges** la valeur `True` .  
   
 5.  Définissez `CreateDeploymentUtility` sur `True`.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 999ae60465bd459abb1d4a68c35520b33c6410fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921518"
 ---
 # <a name="configure-ole-db-connection-manager"></a>Configurer le gestionnaire de connexions OLE DB
   La boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** vous permet d’ajouter une connexion à une source de données, qui peut être une nouvelle connexion ou la copie d’une connexion existante.  
@@ -33,7 +32,7 @@ ms.locfileid: "66060552"
  **Propriétés des connexions de données**  
  Permet d'afficher les propriétés et les valeurs relatives à la connexion de données OLE DB sélectionnée.  
   
- **Nouvelle**  
+ **Nouveau**  
  Créez une connexion de données OLE DB à l’aide de la boîte de dialogue **Gestionnaire de connexions** .  
   
  **Supprimer**  

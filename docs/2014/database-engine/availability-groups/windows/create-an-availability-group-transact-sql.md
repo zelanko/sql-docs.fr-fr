@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a494af168a8f5572bafe93f8fb47b22a954a19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936900"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Créer un groupe de disponibilité (Transact-SQL)
   Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour créer et configurer un groupe de disponibilité sur des instances de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] sur lesquelles la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est activée. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -46,7 +45,7 @@ ms.locfileid: "75228792"
 |Tâche|Instruction(s) Transact-SQL|Où effectuer la tâche**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[Créer un point de terminaison](/sql/t-sql/statements/create-endpoint-transact-sql) *EndpointName* ... POUR DATABASE_MIRRORING|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.|  
-|Créer un groupe de disponibilité|[CRÉER UN GROUPE DE DISPONIBILITÉ](/sql/t-sql/statements/create-availability-group-transact-sql)|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
+|Créer un groupe de disponibilité|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
 |Joindre le réplica secondaire au groupe de disponibilité|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *nom_groupe* JOIN|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
 |Préparer la base de données secondaire|[Sauvegarde](/sql/t-sql/statements/backup-transact-sql) et [restauration](/sql/t-sql/statements/restore-statements-transact-sql).|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide de RESTORE WITH NORECOVERY.|  
 |Démarrer la synchronisation des données en joignant chaque base de données secondaire au groupe de disponibilité|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *nom_base_de_données* SET HADR AVAILABILITY GROUP = *nom_groupe*|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
@@ -101,7 +100,7 @@ ms.locfileid: "75228792"
         GO  
         ```  
   
-    2.  L'exemple de code suivant crée une sauvegarde complète des bases de données *MyDb1* et *MyDb2*. Cet exemple de code utilise un partage de sauvegarde fictif \\ \\, *FileServer*\\*SQLbackups*.  
+    2.  L'exemple de code suivant crée une sauvegarde complète des bases de données *MyDb1* et *MyDb2*. Cet exemple de code utilise un partage de sauvegarde fictif, \\ \\ *FileServer* \\ *SQLbackups*.  
   
         ```sql
         -- Backup sample databases:  

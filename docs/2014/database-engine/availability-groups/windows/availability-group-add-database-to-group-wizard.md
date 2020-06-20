@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02cd05baa6da57de6f90099d788d582821492d55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937151"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)
   Utilisez l'Assistant Ajouter une base de données au groupe de disponibilité pour ajouter une ou plusieurs bases de données à un groupe de disponibilité AlwaysOn existant.  
@@ -32,7 +31,7 @@ ms.locfileid: "62815724"
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables et restrictions](#Prerequisites)  
+     [Conditions préalables requises et restrictions](#Prerequisites)  
   
      [Sécurité](#Security)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62815724"
   
 4.  Sur la page **Sélectionner les bases de données** , sélectionnez une ou plusieurs bases de données. Pour plus d’informations, consultez [page Sélectionner des bases de données &#40;assistant nouveau groupe de disponibilité-Assistant Ajout d’une base de données&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
-5.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l’une des options suivantes :  
+5.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  
   
     -   **Complète**  
   

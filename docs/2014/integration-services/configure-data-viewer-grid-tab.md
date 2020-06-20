@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ebdb6750c61373041653d7c65df01fa866b9b68
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921686"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configurer la Visionneuse de données (onglet Grille)
   Utilisez l'onglet **Grille** de la boîte de dialogue **Configurer la Visionneuse de données** pour spécifier les colonnes à afficher. Un graphique en grille affiche les enregistrements de données sous forme de lignes dans une grille. Le graphique représente le contenu d'une seule mémoire tampon.  

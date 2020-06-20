@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9be9e7ef7d1cffb5c70836cf7594b39e2a1fe754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040049"
 ---
 # <a name="start-sql-server-profiler"></a>Démarrer SQL Server Profiler
   Il existe différentes méthodes pour démarrer le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] afin de prendre en charge la collecte des sorties de trace dans divers scénarios. Vous pouvez démarrer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] à partir du menu **Démarrer** , du menu **Outils** dans l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou à partir de plusieurs autres emplacements dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

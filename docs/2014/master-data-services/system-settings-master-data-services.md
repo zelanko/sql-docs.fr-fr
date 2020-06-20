@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8c2ac713aaf490575447d9816cfc238b0399555
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971039"
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
   Vous pouvez configurer les paramètres système de l'ensemble des applications Web et services Web associés à une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -50,7 +49,7 @@ ms.locfileid: "79289247"
 |Paramètre du Gestionnaire de configuration|Paramètre système|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Délai d'attente de connexion de la base de données**|**DatabaseConnectionTimeOut**|Nombre de secondes accordées par la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] comme délai d'obtention d'une connexion. Si la connexion n'est pas obtenue dans cet intervalle, elle est annulée et une erreur est retournée. La valeur par défaut est **60** secondes (1 minute).|  
-|**Délai d'expiration des commandes de base de données**|**DatabaseCommandTimeOut**|Nombre de secondes accordées par la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] comme délai d'exécution d'une commande. Si la commande n'est pas exécutée dans cet intervalle, elle est annulée et une erreur est retournée. La valeur par défaut est **3 600** secondes (60 minutes).|  
+|**Délai d'expiration des commandes de base de données**|**DatabaseCommandTimeOut**|Nombre de secondes accordées par la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] comme délai d'exécution d'une commande. Si la commande n'est pas exécutée dans cet intervalle, elle est annulée et une erreur est retournée. La valeur par défaut est **3600** secondes (60 minutes).|  
 |**Délai d'attente du service Web**|**ServerTimeout,**|Nombre de secondes accordées par ASP.NET comme délai d'exécution d'une demande de page [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Si la demande ne se termine pas dans cet intervalle, elle est annulée et une erreur est retournée. La valeur par défaut est **120 000** secondes (2 000 minutes).|  
 |**Délai d'expiration client**|**ClientTimeOut**|Nombre de secondes d'inactivité avant que [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ne retourne à la page d'accueil. La valeur par défaut est **300** secondes (5 minutes).|  
 |**Nombre de lignes par lot**|**RowsPerBatch**|Nombre d'enregistrements à récupérer dans chaque lot par le service Web. La valeur par défaut est **50**.|  
@@ -121,7 +120,7 @@ ms.locfileid: "79289247"
   
 |Paramètre du Gestionnaire de configuration|Paramètre système|Description|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , fréquence à laquelle les autorisations d'accès définies sous l'onglet **Membres de hiérarchie** sont appliquées (en secondes). La valeur par défaut est **3 600** secondes (60 minutes).|  
+||**SecurityMemberProcessInterval**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , fréquence à laquelle les autorisations d'accès définies sous l'onglet **Membres de hiérarchie** sont appliquées (en secondes). La valeur par défaut est **3600** secondes (60 minutes).|  
   
  Pour plus d’informations, consultez [Appliquer immédiatement des autorisations de membre &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

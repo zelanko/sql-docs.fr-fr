@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebb2d9fc4e6c060aaee348297ab1732ffb2eb2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659577"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040287"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation, élément (Assistant Paramétrage de base de données)
   Contient des informations sur les index hypothétiques qui font partie d'une configuration spécifiée par l'utilisateur.  
@@ -53,7 +52,7 @@ ms.locfileid: "62659577"
 |**Éléments enfants**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](create-element-dta.md)<br /><br /> Élément `Drop`. Pour plus d'informations, consultez l'article [Database Engine Tuning Advisor XML schema](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément porte le nom **RecommendationTypecomplexType** dans le schéma XML de l’Assistant Paramétrage du moteur de base de données. Il est utilisé pour spécifier des index dans une configuration hypothétique. Ne confondez pas cet élément `Recommendation` avec les autres types d'éléments qui peuvent être utilisés pour spécifier le partitionnement (`RecommendationPType`) ou les vues (`RecommendationViewType`). Pour plus d’informations sur `Recommendation` ces autres types d’éléments, consultez la [Assistant Paramétrage du moteur de base de données schéma XML](https://go.microsoft.com/fwlink/?linkid=43100).  
+ Cet élément porte le nom **RecommendationTypecomplexType** dans le schéma XML de l’Assistant Paramétrage du moteur de base de données. Il est utilisé pour spécifier des index dans une configuration hypothétique. Ne confondez pas cet élément `Recommendation` avec les autres types d'éléments qui peuvent être utilisés pour spécifier le partitionnement (`RecommendationPType`) ou les vues (`RecommendationViewType`). Pour plus d’informations sur ces autres `Recommendation` types d’éléments, consultez la [Assistant Paramétrage du moteur de base de données schéma XML](https://go.microsoft.com/fwlink/?linkid=43100).  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

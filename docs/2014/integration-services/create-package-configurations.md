@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060167"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917326"
 ---
 # <a name="create-package-configurations"></a>Créer des configurations de package
   Vous pouvez créer des configurations de package à l'aide de la boîte de dialogue **Bibliothèque des configurations du package** et de l'Assistant Configuration de package. Pour accéder à ces outils, cliquez sur **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

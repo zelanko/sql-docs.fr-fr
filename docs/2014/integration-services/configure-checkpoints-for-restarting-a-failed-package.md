@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d743341d7d1d6cae23165c7c1e4b1ddb15779927
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921840"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurer des points de contrôle pour redémarrer un package ayant échoué
   Vous pouvez configurer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de sorte qu'ils redémarrent à partir d'un point d'arrêt au lieu de réexécuter l'ensemble du package. Pour ce faire, vous devez définir les propriétés des points de contrôle.  
@@ -34,7 +33,7 @@ ms.locfileid: "66060773"
   
 4.  Cliquez avec le bouton droit n’importe où dans l’arrière-plan de la surface de dessin du flux de contrôle, puis cliquez sur **Propriétés**.  
   
-5.  Affectez à `True`la propriété SaveCheckpoints la valeur.  
+5.  Affectez à la propriété SaveCheckpoints la valeur `True` .  
   
 6.  Tapez le nom du fichier point de contrôle dans la propriété CheckpointFileName.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66060773"
   
     -   Cliquez avec le bouton droit sur une tâche ou un conteneur, puis cliquez sur **Propriétés**.  
   
-    -   Affectez à `True` la propriété FailPackageOnFailure la valeur pour chaque tâche et conteneur sélectionnés.  
+    -   Affectez à la propriété FailPackageOnFailure la valeur `True` pour chaque tâche et conteneur sélectionnés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Redémarrer des packages à l'aide de points de contrôle](packages/restart-packages-by-using-checkpoints.md)  

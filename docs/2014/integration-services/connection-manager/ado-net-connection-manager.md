@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921229"
 ---
 # <a name="adonet-connection-manager"></a>Gestionnaire de connexions ADO.NET
-  Un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permet à un package d'accéder à des sources de données à l'aide d'un fournisseur .NET. Ce gestionnaire de connexions est généralement utilisé pour accéder à des sources [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de données telles que, ainsi qu’à des sources de données exposées via OLE DB et XML dans des tâches personnalisées écrites en code managé à l’aide d’un langage tel que C#.  
+  Un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permet à un package d'accéder à des sources de données à l'aide d'un fournisseur .NET. Ce gestionnaire de connexions est généralement utilisé pour accéder à des sources de données telles que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ainsi qu’à des sources de données exposées via OLE DB et XML dans des tâches personnalisées écrites en code managé à l’aide d’un langage tel que C#.  
   
- Lorsque vous ajoutez un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gestionnaire de connexions à un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crée un gestionnaire de connexions qui est résolu [!INCLUDE[vstecado](../../includes/vstecado-md.md)] en tant que connexion au moment de l’exécution, définit les propriétés du gestionnaire de connexions et `Connections` ajoute le gestionnaire de connexions à la collection sur le package.  
+ Lorsque vous ajoutez un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gestionnaire de connexions à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui est résolu en tant que [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connexion au moment de l’exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la `Connections` collection sur le package.  
   
  La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `ADO.NET`. La valeur de `ConnectionManagerType` est qualifiée de façon à inclure le nom du fournisseur .NET utilisé par le gestionnaire de connexions.  
   

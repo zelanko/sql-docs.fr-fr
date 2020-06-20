@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29ed5816a3a5fc0af6c5a4ac144557933e3e1a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 479a5c26ae8ed6322c030459c2432c49834b3683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006700"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gestion des informations d'entreprise en associant SSIS, MDS et DQS [Didacticiel]
   La gestion des informations dans une entreprise implique généralement l'intégration des données au sein de l'entreprise et avec l'extérieur, le nettoyage des données, leur correspondance pour supprimer tous les doublons, leur normalisation, leur enrichissement, rendre les données conformes aux exigences juridiques et de conformité, et enfin, le stockage des données dans un emplacement centralisé avec tous les paramètres de sécurité nécessaires.  
@@ -54,7 +53,7 @@ ms.locfileid: "81487718"
   
 2.  [Configurer MDS à l'aide du Gestionnaire de configuration Master Data Services](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     Utilisez le Gestionnaire de configuration pour créer et configurer une base de données Master Data Services. Après avoir créé la base de données MDS, créez une application Web pour MDS dans un site Web (par `http://localhost/MDS`exemple :) et associez la base de données MDS à l’application Web MDS. Notez que, pour créer une application Web MDS, vous devez installer IIS sur votre ordinateur. Pour plus d’informations sur les conditions préalables à la configuration de la base de données MDS et de l’application Web, consultez Configuration requise pour l' [application Web (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) et [base de données (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) .  
+     Utilisez le Gestionnaire de configuration pour créer et configurer une base de données Master Data Services. Après avoir créé la base de données MDS, créez une application Web pour MDS dans un site Web (par exemple : `http://localhost/MDS` ) et associez la base de données MDS à l’application Web MDS. Notez que, pour créer une application Web MDS, vous devez installer IIS sur votre ordinateur. Pour plus d’informations sur les conditions préalables à la configuration de la base de données MDS et de l’application Web, consultez Configuration requise pour l' [application Web (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) et [base de données (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) .  
   
 3.  [Installez et configurez DQS à l’aide du programme d’installation de Data Quality Server](https://msdn.microsoft.com/library/hh231682.aspx). Cliquez **sur Démarrer**, **sur tous les programmes**, sur **Microsoft SQL Server 2014**, sur **Data Quality Services**, puis sur **Data Quality Server installer**.  
   
@@ -64,11 +63,11 @@ ms.locfileid: "81487718"
   
 6.  Facultatif Créez un compte avec la place de [marché Azure](https://azuremarketplace.microsoft.com/marketplace/). L'une des tâches du didacticiel nécessite que vous ayez un compte sur la **Place de marché Azure** (anciennement **Data Market**). Vous pouvez ignorer cette tâche, si vous préférez, et passer à la tâche suivante.  
   
-7.  Téléchargez le fichier Suppliers. xls à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=50426).  
+7.  Téléchargez le fichier Suppliers.xls à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  DQS ne vous permet pas d’exporter les résultats de nettoyage ou de correspondance dans un fichier Excel si vous utilisez la **version 64 bits d’Excel**. Il s'agit d'un problème connu. Pour le contourner, procédez comme suit :  
   
-    1.  Exécutez **DQLInstaller. exe-Upgrade**. Si vous avez installé l'instance par défaut de SQL Server, le fichier DQSInstaller.exe est copié sous C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Double-cliquez sur le fichier DQSInstaller.exe.  
+    1.  Exécutez **DQLInstaller.exe-Upgrade**. Si vous avez installé l'instance par défaut de SQL Server, le fichier DQSInstaller.exe est copié sous C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Double-cliquez sur le fichier DQSInstaller.exe.  
   
     2.  Dans **Gestionnaire de configuration Master Data Services**, cliquez sur **Sélectionner une base de**données, sélectionnez base de données **MDS** existante, puis cliquez sur **mettre à niveau**.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 97061590525a7e644319d7c8ff407d4905e59418
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6c68ec986e2c6f4f53dfec7f188ba2a120532ae4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929300"
 ---
 # <a name="search-property-list-editor"></a>Éditeur de listes de propriétés de recherche
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des propriétés de recherche dans une liste de propriétés de recherche.  
@@ -43,7 +42,7 @@ ms.locfileid: "83000549"
  **Description de la propriété**  
  Éventuellement, spécifiez une description de la propriété. Il s'agit d'une chaîne comprenant 512 caractères maximum. Par exemple, une description peut contenir des informations relatives au jeu de propriétés de la propriété ou des informations à propos d'une propriété dont le nom n'est pas très explicite.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour ajouter une propriété de recherche à une liste de propriétés de recherche, vous devez spécifier l'identificateur global unique (GUID) du jeu de propriétés auquel la propriété appartient, ainsi que l'identificateur entier de la propriété. Une combinaison donnée de ces informations doit être unique dans une liste de propriétés de recherche donnée. Si vous essayez d'ajouter une combinaison existante, l'opération échoue et génère une erreur. Cela signifie que vous ne pouvez configurer qu'un seul nom pour une propriété donnée.  
   
  La description de la propriété est facultative.  

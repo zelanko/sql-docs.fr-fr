@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 793543cce582bd4e17cbf8d06f096056a2ecb89b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 294241eb586a70f4e0a826b1dce5d35879b3ee3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019507"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Utilisé pour rechercher la valeur de la propriété de format de colonne.  
@@ -75,7 +74,7 @@ pcbLen
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les valeurs de la propriété de format de colonne sont répertoriées dans la rubrique [bcp_setcolfmt](bcp-setcolfmt.md) . Ces valeurs sont définies en appelant la fonction **bcp_setcolfmt** . La fonction **bcp_getcolfmt** est utilisée pour rechercher la valeur de la propriété de format de colonne.  
   
  Des changements de comportement peuvent être observés lors de la connexion à un serveur [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (ou version ultérieure), par rapport aux versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures. Pour plus d’informations, consultez [Découverte des métadonnées](../native-client/features/metadata-discovery.md).  

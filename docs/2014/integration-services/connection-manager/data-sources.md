@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46d1f79079efd5b4816359cb97a14642f309cfbb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833841"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921018"
 ---
 # <a name="data-sources"></a>Sources de données
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]comprend un objet au moment du design que vous pouvez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans les packages : la source de données.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]comprend un objet au moment du design que vous pouvez utiliser dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] les packages : la source de données.  
   
  Un objet de source de données est une référence à une connexion et comprend au minimum une chaîne de connexion et un identificateur de source de données. Il peut également inclure des métadonnées supplémentaires comme une description, un nom, un nom d'utilisateur et un mot de passe.  
   

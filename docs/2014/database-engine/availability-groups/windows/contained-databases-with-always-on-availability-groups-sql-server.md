@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13dd6e87b6442b8c1b908ceb73d1e5c7f135308c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c8a0b41ee7224dad83fb41691a4898c15b7b38
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936912"
 ---
 # <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>Bases de données autonomes avec les groupes de disponibilité Always On (SQL Server)
   Cette rubrique contient des informations sur l'utilisation d'une base de données autonome avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -39,6 +38,6 @@ ms.locfileid: "62815329"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Bases de données à relation contenant-contenu](../../../relational-databases/databases/contained-databases.md)  
+ [Bases de données autonomes](../../../relational-databases/databases/contained-databases.md)  
   
   

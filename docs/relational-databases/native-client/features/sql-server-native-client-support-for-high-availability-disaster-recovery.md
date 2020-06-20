@@ -1,5 +1,6 @@
 ---
 title: Haute disponibilité, récupération
+description: En savoir plus sur la prise en charge de SQL Server Native Client pour groupes de disponibilité Always On, qui a été ajoutée dans SQL Server 2012.
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fb3d64842c1204706b9bb89f6f1a99bfb8ae6a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949334"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "81388430"
   
 -   La connexion à une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurée avec plus de 64 adresses IP provoque un échec de connexion.  
   
--   Le comportement d’une application qui utilise la propriété de connexion **MultiSubnetFailover** n’est pas affecté selon le type d' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentification : authentification, authentification Kerberos ou authentification Windows.  
+-   Le comportement d’une application qui utilise la propriété de connexion **MultiSubnetFailover** n’est pas affecté selon le type d’authentification : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentification, authentification Kerberos ou authentification Windows.  
   
 -   Vous pouvez augmenter la valeur de **loginTimeout** pour tenir compte du temps de basculement et réduire les nouvelles tentatives de connexion de l’application.  
   

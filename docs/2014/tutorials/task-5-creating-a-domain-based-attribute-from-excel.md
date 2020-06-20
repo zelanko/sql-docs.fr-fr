@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7287091ddd64ef9df1c63706a2f562feed4a5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999671"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tâche 5 : Création d’un attribut basé sur un domaine à partir d’Excel
   Dans cette tâche, vous convertissez l’attribut **State** de l’entité **Supplier** en tant qu' **attribut basé sur un domaine**. Une fois que vous avez configuré l’attribut d’État comme étant basé sur un domaine et que vous l’avez publié sur MDS, une nouvelle entité nommée **État** est créée sur le serveur MDS avec toutes les valeurs de la colonne et l’attribut **État** de l’entité **fournisseur** est rempli avec les valeurs de l’entité **État** . À présent, le modèle **fournisseurs** doit avoir deux entités : **fournisseur** et **État** où l’attribut **État** de l’entité **fournisseur** est un attribut basé sur un domaine qui dépend de l’entité **État** .  
   
-1.  Basculez vers la fenêtre **Excel** avec **les fournisseurs. xlsx nettoyés et correspondants** .  
+1.  Basculez vers la fenêtre **Excel** avec **nettoyage et mis en correspondance Suppliers.xlsx** ouvrir.  
   
 2.  Cliquez sur le bouton **Actualiser** du ruban pour accéder aux dernières mises à jour de MDS. Vous devez voir les deux autres enregistrements si vous avez effectué la **tâche facultative 4**.  
   

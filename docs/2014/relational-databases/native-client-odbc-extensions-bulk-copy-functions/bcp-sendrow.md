@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9278a388fa6beb52dc747d310bea4a2ce32c600e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c45e87fdd8e00e9456718c4c9c8160c22bac03a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019377"
 ---
 # <a name="bcp_sendrow"></a>bcp_sendrow
   Envoie une ligne de données à partir de variables de programme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,7 +45,7 @@ hdbc
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction **bcp_sendrow** génère une ligne à partir de variables de programme et l'envoie à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Avant d'appeler **bcp_sendrow**, vous devez effectuer des appels à [bcp_bind](bcp-bind.md) pour spécifier les variables de programme qui contiennent des données de ligne.  

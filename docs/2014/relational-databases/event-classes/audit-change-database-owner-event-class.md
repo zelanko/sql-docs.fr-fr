@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35ffa7a1a9a5f914d95c13d0ada205d2dc0db483
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f3a12c892a76277063827393b682809478ce46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62932420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053382"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Classe d'événements Audit Change Database Owner
   La classe d’événements **Audit Change Database Owner** se produit lorsque vous utilisez l’instruction ALTER AUTHORIZATION pour changer le propriétaire d’une base de données et que les autorisations requises à cet effet sont activées.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4ed1d29af328a162eafadb1ce7a160c262bdcba3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd85a523804232deff14f2e1da5485229f943dd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999659"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tâche 4 : Exportation des résultats de l’activité de mise en correspondance dans un fichier Excel
   Dans cette tâche, vous allez exporter les résultats de l'activité de mise en correspondance dans un fichier Excel.
@@ -26,7 +25,7 @@ ms.locfileid: "78177247"
 
 3.  Cliquez sur **Parcourir** et accédez au dossier dans lequel vous souhaitez stocker le fichier de sortie.
 
-4.  Tapez renommé **supplied et correspondant à Suppliers. xls** comme nom, puis cliquez sur **ouvrir**.
+4.  Tapez **nettoyer et faire correspondre Suppliers.xls** pour le nom et cliquez sur **ouvrir**.
 
 5.  Vérifiez que l' **enregistrement pivot** est sélectionné pour la **règle de survie**. Lorsque vous sélectionnez cette option, l'enregistrement pivot de chaque cluster est choisi pour la sortie d'un cluster. Les autres options de la règle de survivance sont les suivantes :
 
@@ -44,7 +43,7 @@ ms.locfileid: "78177247"
 
 8.  Cliquez sur **Terminer** pour terminer l’activité de correspondance.
 
-9. Ouvrez le fichier **supplied et comported Suppliers. xlsx** et vérifiez que vous ne voyez pas de doublons (RéfFournisseur).
+9. Ouvrez le fichier **nettoyé et mis en correspondance Suppliers.xlsx** et vérifiez que vous ne voyez pas de doublons (RéfFournisseur).
 
  À présent, les données des fournisseurs ont été nettoyées et mises en correspondance pour supprimer les doublons.
 

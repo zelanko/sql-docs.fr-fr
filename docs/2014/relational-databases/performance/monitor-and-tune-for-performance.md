@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96a7a7fcf6e4642ee9bd2d577e35dcbfb705fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066804"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Surveiller et régler les performances
   Le but de la surveillance des bases de données est d'évaluer le fonctionnement d'un serveur. Une surveillance efficace implique la prise d'instantanés périodiques des performances actuelles afin d'isoler les processus à l’origine des problèmes, ainsi que la collecte de données en continu pour suivre de près les tendances des performances.  
@@ -41,7 +40,7 @@ ms.locfileid: "63150714"
  L'évaluation continue des performances de la base de données vous permet de réduire les temps de réponse et accélère le débit, ce qui optimise les performances. Un trafic réseau efficace, des E/S disque et l'utilisation de l'UC sont essentiels pour maximiser les performances. Vous devez analyser soigneusement les besoins de l'application, comprendre la structure logique et physique des données, évaluer l'utilisation de la base de données et négocier les compromis entre des utilisations conflictuelles telles que le traitement transactionnel en ligne par rapport à l'aide à la décision.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Avantages de la surveillance des bases de données et du paramétrage des performances  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le système d'exploitation Microsoft Windows fournissent des utilitaires qui vous permettent de contrôler les conditions actuelles de la base de données et de suivre l'évolution des performances en fonction de l'évolution de ces conditions. Il existe un large éventail d’outils et de techniques qui peuvent être utilisés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour surveiller. Comprendre comment surveiller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut vous aider à :  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le système d'exploitation Microsoft Windows fournissent des utilitaires qui vous permettent de contrôler les conditions actuelles de la base de données et de suivre l'évolution des performances en fonction de l'évolution de ces conditions. Il existe un large éventail d’outils et de techniques qui peuvent être utilisés pour surveiller [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Comprendre comment surveiller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut vous aider à :  
   
 -   Déterminer si vous pouvez améliorer les performances. Par exemple, en surveillant les temps de réponse des requêtes les plus fréquentes, vous pouvez déterminer s'il faut modifier les requêtes ou les index des tables.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "63150714"
 |[Isoler les problèmes de performance](isolate-performance-problems.md)|Explique comment isoler les problèmes de performances de base de données.|  
 |[Identifier les goulots d'étranglement](identify-bottlenecks.md)|Explique comment surveiller et suivre les performances du serveur afin d'identifier les goulots d'étranglement.|  
 |[Analyse des performances et surveillance de l'activité du serveur](server-performance-and-activity-monitoring.md)|Explique comment utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les outils de surveillance de l'activité et des performances Windows.|  
-|[Afficher et enregistrer des plans d'exécution](display-and-save-execution-plans.md)|Explique comment afficher et enregistrer des plans d'exécution dans un fichier au format XML.|  
+|[Affichage et enregistrement des plans d’exécution](display-and-save-execution-plans.md)|Explique comment afficher et enregistrer des plans d'exécution dans un fichier au format XML.|  
 |[Analyse des performances à l’aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md)|Le magasin de requête capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation.|  
   
 ## <a name="see-also"></a>Voir aussi  

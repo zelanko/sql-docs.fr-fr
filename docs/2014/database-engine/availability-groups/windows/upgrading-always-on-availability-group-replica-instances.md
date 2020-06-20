@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46777707354b1379d50b6379e21aabd02ffb5097
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936316"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Mise à niveau et mise à jour des serveurs de groupes de disponibilité avec un temps mort minimal et perte de données
   Lorsque de la mise à jour ou de la mise à niveau d'instances de serveur de SQL Server 2012 vers un Service Pack ou une version plus récente, réduisez le temps mort d'un groupe de disponibilité à un seul basculement manuel en effectuant une mise à jour ou une mise à niveau séquentielle. En ce qui concerne la mise à niveau des versions de SQL Server, cette mise à niveau s'appelle une mise à niveau propagée. En ce qui concerne la mise à jour de la version actuelle de SQL Server avec les correctifs ou les Service Pack, cette mise à jour s'appelle une mise à jour propagée.  

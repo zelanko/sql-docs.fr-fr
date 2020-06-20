@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4176ee1dff35a0f9eaeaddf1b35155f76de526ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929470"
 ---
 # <a name="retrieve-files"></a>Récupérer des fichiers
   Une fois un projet sous contrôle de code source ouvert, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour récupérer des copies locales des fichiers projet dans le magasin du contrôle de code source et les placer dans le dossier local dans lequel réside le projet.  

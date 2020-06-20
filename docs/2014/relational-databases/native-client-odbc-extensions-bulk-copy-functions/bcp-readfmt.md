@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8ea8094778c8ccb204712536f01b13152c89c7a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55800012b84cf33908d9feddfdac63d85536e97d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019401"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
   Lit la définition du format du fichier de données à partir du fichier de format spécifié.  
@@ -52,7 +51,7 @@ szFormatFile
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Après avoir `bcp_readfmt` lu les valeurs de format, il effectue les appels appropriés à [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md). Vous n'avez nul besoin d'analyser un fichier de format et d'exécuter ces appels.  
   
  Pour rendre un fichier de format persistant, appelez [bcp_writefmt](bcp-writefmt.md). Les appels à `bcp_readfmt` peuvent référencer des formats enregistrés. Pour plus d'informations, consultez [bcp_init](bcp-init.md).  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1111b0d8f2903de9b690f269498a93d01c2afa0c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060681"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921656"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Configurer la Visionneuse de données (onglet Nuage de points)
   Utilisez l’onglet **Nuage de points (x,y)** de la boîte de dialogue **Configurer la Visionneuse de données** pour spécifier deux colonnes à tracer l’une par rapport à l’autre. Un graphique à nuage de points trace les valeurs des données provenant de deux colonnes numériques les unes par rapport aux autres. Chaque enregistrement de données devient un point sur le tracé. Le graphique représente le contenu d'une seule mémoire tampon.  

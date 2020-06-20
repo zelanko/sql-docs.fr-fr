@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49afe868a509f84160fc1ad154135e8e67f6900a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936390"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Interrompre une base de données de disponibilité (SQL Server)
   Vous pouvez interrompre une base de données de disponibilité dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Notez qu'une commande d'interruption doit être émise sur l'instance du serveur qui héberge la base de données à interrompre ou à reprendre.  
@@ -31,7 +30,7 @@ ms.locfileid: "72797961"
   
 |Base de données interrompue|Effet de la commande d'interruption|  
 |------------------------|-------------------------------|  
-|Base de données secondaire|Seule la base de données secondaire locale est interrompue et son état de synchronisation devient NOT SYNCHRONIZING. Les autres bases de données secondaires ne sont pas affectées. La base de données interrompue cesse de recevoir et d'appliquer des données (enregistrements de journal) et commence à se situer en retrait par rapport à la base de données principale. Les connexions existantes sur le réplica secondaire accessible en lecture restent utilisables. Les nouvelles connexions à la base de données suspendue sur le réplica secondaire accessible en lecture ne sont pas autorisées tant que le déplacement des données n'a pas repris.<br /><br /> La base de données primaire reste disponible. Si vous interrompez chaque base de données secondaire correspondante, la base de données principale est exposée.<br /><br /> ** \* Important \* \* ** Lorsqu’une base de données secondaire est suspendue, la file d’attente d’envoi de la base de données primaire correspondante accumule les enregistrements du journal des transactions non envoyés. Les connexions au réplica secondaire retournent des données qui étaient disponibles lorsque le déplacement des données a été suspendu.|  
+|Base de données secondaire|Seule la base de données secondaire locale est interrompue et son état de synchronisation devient NOT SYNCHRONIZING. Les autres bases de données secondaires ne sont pas affectées. La base de données interrompue cesse de recevoir et d'appliquer des données (enregistrements de journal) et commence à se situer en retrait par rapport à la base de données principale. Les connexions existantes sur le réplica secondaire accessible en lecture restent utilisables. Les nouvelles connexions à la base de données suspendue sur le réplica secondaire accessible en lecture ne sont pas autorisées tant que le déplacement des données n'a pas repris.<br /><br /> La base de données primaire reste disponible. Si vous interrompez chaque base de données secondaire correspondante, la base de données principale est exposée.<br /><br /> Important quand une base de données secondaire est suspendue, la file d’attente d’envoi de la base de données primaire correspondante accumule les enregistrements du journal des transactions non envoyés. ** \* \* \* \* ** Les connexions au réplica secondaire retournent des données qui étaient disponibles lorsque le déplacement des données a été suspendu.|  
 |Base de données principale|La base de données principale cesse le déplacement des données vers chaque base de données secondaire connectée. La base de données principale continue à s'exécuter, en mode exposé. La base de données principale reste à la disposition des clients, les connexions existantes sur un réplica secondaire accessible en lecture restent utilisables et de nouvelles connexions peuvent être établies.|  
   
 > [!NOTE]  
@@ -41,7 +40,7 @@ ms.locfileid: "72797961"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   
