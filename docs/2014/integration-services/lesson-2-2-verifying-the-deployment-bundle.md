@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c035446034c5f9f8dfdeeed6a9b6b4be2ea77d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966049"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>Étape 2 : Vérification de l’application de déploiement
   Dans la leçon 1, vous avez créé le projet Didacticiel de déploiement et ajouté au projet les packages et les fichiers annexes ; dans la tâche précédente, vous avez créé un utilitaire de déploiement pour le projet.  
@@ -50,7 +49,7 @@ ms.locfileid: "62891766"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  Vérifiez que la valeur de l' `AllowConfigurationChanges` attribut est **true** et que le code XML `Package` comprend un élément pour chacun des deux packages, `MiscellaneousFile` un élément pour chacun des quatre fichiers non-package et un `ConfigurationFile` élément pour chacun des deux fichiers de configuration XML.  
+4.  Vérifiez que la valeur de l' `AllowConfigurationChanges` attribut est **true** et que le code XML comprend un `Package` élément pour chacun des deux packages, un `MiscellaneousFile` élément pour chacun des quatre fichiers non-package et un `ConfigurationFile` élément pour chacun des deux fichiers de configuration XML.  
   
 5.  Quittez Internet Explorer ou l'éditeur de texte.  
   

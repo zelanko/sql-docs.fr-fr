@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063291"
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
   Les bases de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge le texte intégral par défaut. Cependant, pour utiliser l'index de recherche en texte intégral dans une table, vous devez configurer l'outil d'indexation de texte intégral dans les colonnes des tables auxquelles vous souhaitez accéder via le moteur de texte intégral.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011286"
   
     1.  Identifiez chaque colonne de texte que vous souhaitez inclure dans l'index de recherche en texte intégral.  
   
-    2.  Si une colonne donnée contient des documents stockés en tant que`varbinary(max)`données binaires (ou `image` données), vous devez spécifier une colonne de table ( *colonne de type*) qui identifie le type de chaque document dans la colonne indexée.  
+    2.  Si une colonne donnée contient des documents stockés en tant que données binaires ( `varbinary(max)` ou `image` données), vous devez spécifier une colonne de table ( *colonne de type*) qui identifie le type de chaque document dans la colonne indexée.  
   
     3.  Spécifiez la langue à utiliser par la recherche en texte intégral sur les documents contenus dans la colonne.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66011286"
   
  Lorsque vous affectez une table à un catalogue de texte intégral, prenez en considération les directives suivantes :  
   
--   Sélectionnez systématiquement le plus petit index unique disponible comme clé unique de texte intégral (Un index de 4 octets, basé sur des entiers, est optimal.) Cela réduit considérablement les ressources requises [!INCLUDE[msCoName](../../includes/msconame-md.md)] par le service de recherche dans le système de fichiers. Si la clé primaire est volumineuse (plus de 100 octets), pensez à choisir un autre index unique pour la table (ou créez-le) comme clé unique de texte intégral. Dans le cas contraire, si la taille de la clé unique de texte intégral dépasse la taille maximale autorisée (900 octets), le remplissage de texte intégral est impossible.  
+-   Sélectionnez systématiquement le plus petit index unique disponible comme clé unique de texte intégral (Un index de 4 octets, basé sur des entiers, est optimal.) Cela réduit considérablement les ressources requises par [!INCLUDE[msCoName](../../includes/msconame-md.md)] le service de recherche dans le système de fichiers. Si la clé primaire est volumineuse (plus de 100 octets), pensez à choisir un autre index unique pour la table (ou créez-le) comme clé unique de texte intégral. Dans le cas contraire, si la taille de la clé unique de texte intégral dépasse la taille maximale autorisée (900 octets), le remplissage de texte intégral est impossible.  
   
 -   Si vous indexez une table de plusieurs millions de lignes, affectez-la à un catalogue de texte intégral qui lui est propre.  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66011286"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Association d'une liste de mots vides à l'index de recherche en texte intégral  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit les listes de mots vides. Une *liste de mots vides* est une liste contenant des mots vides, également appelés mots parasites. Une liste de mots vides est associée à chaque index de recherche en texte intégral, et les mots contenus dans cette liste de mots vides s'appliquent aux requêtes de texte intégral sur cet index. Par défaut, la liste de mots vides système est associée à un nouvel index de recherche en texte intégral. Toutefois, vous pouvez créer et utiliser à la place votre propre liste de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Par exemple, l’instruction [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante crée une nouvelle STOPLIST de texte intégral nommée myStoplist3 en copiant à partir de la STOPLIST système :  
+ Par exemple, l’instruction [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) suivante [!INCLUDE[tsql](../../../includes/tsql-md.md)] crée une nouvelle STOPLIST de texte intégral nommée myStoplist3 en copiant à partir de la STOPLIST système :  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- L’instruction [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante modifie une STOPLIST nommée myStoplist en, en ajoutant le mot « fr », d’abord pour l’espagnol, puis pour le français :  
+ L’instruction [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) suivante [!INCLUDE[tsql](../../../includes/tsql-md.md)] modifie une STOPLIST nommée myStoplist en, en ajoutant le mot « fr », d’abord pour l’espagnol, puis pour le français :  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

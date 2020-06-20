@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054118"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965966"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimer la taille d'un index non-cluster
   Utilisez la procédure suivante pour estimer la quantité d'espace nécessaire au stockage d'un index non cluster :  
@@ -181,7 +180,7 @@ ms.locfileid: "66054118"
   
 5.  Calculez la taille de la ligne d'index :  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (pour la surcharge de l’en-tête de ligne d’une ligne d’index) + 6 (pour le pointeur de l’ID de la page enfant)  
+     ***Leaf_Row_Size***   =  ***Fixed_Leaf_Size***  +  ***Variable_Leaf_Size***  +  ***Leaf_Null_Bitmap*** + 1 (pour la surcharge d’en-tête de ligne d’une ligne d’index) + 6 (pour le pointeur d’ID de page enfant)  
   
 6.  Calculez le nombre de lignes d'index par page (8 096 octets libres par page) :  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054118"
   
 1.  Calculez le nombre de niveaux non-feuille contenus dans l'index :  
   
-     ***Niveaux non-feuille*** = 1 + Index_Rows_Per_Page de journal (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Niveaux non-feuille*** = 1 + Index_Rows_Per_Page de journal (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      Arrondissez cette valeur au nombre entier supérieur le plus proche. Cette valeur n'inclut pas le niveau feuille de l'index non cluster.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743490"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024965"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
@@ -35,7 +34,7 @@ ms.locfileid: "62743490"
 ##  <a name="security"></a><a name="Security"></a> Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Lors de [!INCLUDE[tsql](../../includes/tsql-md.md)] l’utilisation d' `ALTER ANY LINKED SERVER` instructions, requiert l’autorisation sur le serveur ou l’appartenance au rôle serveur fixe **setupadmin** . Lors de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] l' `CONTROL SERVER` utilisation de, l’autorisation ou l’appartenance au rôle serveur fixe **sysadmin** est nécessaire.  
+ Lors de l’utilisation d' [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, requiert `ALTER ANY LINKED SERVER` l’autorisation sur le serveur ou l’appartenance au rôle serveur fixe **setupadmin** . Lors de l’utilisation [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] `CONTROL SERVER` de, l’autorisation ou l’appartenance au rôle serveur fixe **sysadmin** est nécessaire.  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Comment créer un serveur lié  
  Vous pouvez utiliser l'une des options suivantes :  
@@ -102,7 +101,7 @@ ms.locfileid: "62743490"
      **Ajouter**  
      Ajoute une nouvelle connexion locale.  
   
-     **Remove**  
+     **Supprimer**  
      Supprime une connexion locale existante.  
   
      **Ne seront pas effectuées**  
@@ -152,7 +151,7 @@ ms.locfileid: "62743490"
   
      Si la valeur est 0, utilisez la valeur d’option **sp_configure** par défaut [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
   
-     **Délai de requête**  
+     **Délai d’expiration de la requête**  
      Valeur du délai d'expiration, en secondes, des requêtes par rapport à un serveur lié.  
   
      Si la valeur est 0, utilisez la valeur d’option **sp_configure** par défaut [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  

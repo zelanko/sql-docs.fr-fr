@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee19526ffa4d88948d2efa2313be212ca094522
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062646"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
   Pour installer ou mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez exécuter le programme d'installation sur chaque nœud du cluster de basculement. Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . N'exécutez pas le programme d'installation sur le nœud actif pour gérer les autres nœuds.  
@@ -278,7 +277,7 @@ ms.locfileid: "68893715"
     > [!IMPORTANT]  
     >  Utilisez le même ID d'instance pour tous les nœuds préparés pour le cluster de basculement  
   
-     **Répertoire racine** de l’instance-par défaut, le répertoire racine de l'\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\instance est C:\Program Files. Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur le bouton de sélection afin de rechercher un dossier d'installation.  
+     **Répertoire racine** de l’instance-par défaut, le répertoire racine de l’instance est C:\Program Files \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\ . Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur le bouton de sélection afin de rechercher un dossier d'installation.  
   
      **Instances installées** : la grille affiche les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui se trouvent sur l’ordinateur où le programme d’installation s’exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cliquez sur **Suivant** pour continuer.  
   
@@ -405,7 +404,7 @@ ms.locfileid: "68893715"
 19. Après l’installation, la page **terminé** fournit un lien vers le fichier journal Résumé pour l’installation et d’autres remarques importantes. Pour terminer le processus d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**. Avec cette procédure, tous les nœuds préparés pour le même cluster de basculement font partie du cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] terminé.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- **Configurer votre nouvelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation** : pour réduire la surface d’exposition attaquable d’un système [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations, consultez [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Configurer votre nouvelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation** : pour réduire la surface d’exposition attaquable d’un système, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations, consultez [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Pour plus d’informations sur l’emplacement des fichiers journaux, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

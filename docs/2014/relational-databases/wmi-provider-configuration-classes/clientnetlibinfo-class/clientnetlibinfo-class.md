@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a933163ffc46972577bbb34b282300351e56c55f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062795"
 ---
 # <a name="clientnetlibinfo-class"></a>Classe ClientNetLibInfo
   La [classe ClientNetLibInfo](clientnetlibinfo-class.md) représente des informations sur la bibliothèque réseau cliente.  
   
- Le fichier de bibliothèque réseau client permet à l’instance cliente de communiquer sur un réseau [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec une instance de à l’aide d’un protocole réseau spécifique.  
+ Le fichier de bibliothèque réseau client permet à l’instance cliente de communiquer sur un réseau avec une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide d’un protocole réseau spécifique.  
   
 ## <a name="see-also"></a>Voir aussi  
  [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  

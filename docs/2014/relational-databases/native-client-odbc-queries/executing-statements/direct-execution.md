@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de740430601e3b596a1d4d9717a8e23ef1e528cf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29153f3e4e9265e87feb0e23ba9ae97118691e95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710383"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018487"
 ---
 # <a name="direct-execution"></a>Exécution directe
   L'exécution directe est la méthode d'exécution d'une instruction la plus simple. Une application génère une chaîne de caractères contenant une [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction et l’envoie pour exécution à l’aide de la fonction **SQLExecDirect** . Lorsque l'instruction atteint le serveur, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la compile dans un plan d'exécution et exécute immédiatement ce plan.  

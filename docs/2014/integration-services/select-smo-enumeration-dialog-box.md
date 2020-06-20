@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b112669457f9e9f675e00466896e4da91abd53d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963673"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Boîte de dialogue Sélectionner l'énumération SMO
   Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spécifier l’objet SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à énumérer et pour sélectionner le type d’énumération.  

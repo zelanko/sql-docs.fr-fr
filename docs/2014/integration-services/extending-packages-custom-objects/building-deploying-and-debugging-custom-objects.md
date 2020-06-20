@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176379"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966619"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
   Après avoir écrit le code d'un objet personnalisé pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez générer l'assembly, le déployer, l'intégrer dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour le rendre disponible dans les packages, le tester et le déboguer.
@@ -70,7 +69,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```
 
 ##  <a name="deploying-the-assembly"></a><a name="deploying"></a> Déploiement de l’assembly
- Le [!INCLUDE[ssIS](../../includes/ssis-md.md)] concepteur localise les objets personnalisés pouvant être utilisés dans les packages en énumérant les fichiers trouvés dans une série de dossiers créés lors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de l’installation de. Lorsque les paramètres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’installation par défaut sont utilisés, cet ensemble de dossiers se trouve sous **C:\Program Files\Microsoft SQL Server\120\DTS**. Toutefois, si vous créez un programme d’installation pour votre objet personnalisé, vous devez vérifier la valeur de la HKEY_LOCAL_MACHINE clé de Registre **\SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath** pour vérifier l’emplacement de ce dossier.
+ Le [!INCLUDE[ssIS](../../includes/ssis-md.md)] Concepteur localise les objets personnalisés pouvant être utilisés dans les packages en énumérant les fichiers trouvés dans une série de dossiers créés lors de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installation de. Lorsque les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paramètres d’installation par défaut sont utilisés, cet ensemble de dossiers se trouve sous **C:\Program Files\Microsoft SQL Server\120\DTS**. Toutefois, si vous créez un programme d’installation pour votre objet personnalisé, vous devez vérifier la valeur de la HKEY_LOCAL_MACHINE clé de Registre **\SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath** pour vérifier l’emplacement de ce dossier.
 
  Vous pouvez placer l'assembly dans le dossier de deux manières :
 
@@ -115,7 +114,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> Test et débogage du code
  L’approche la plus simple pour déboguer les méthodes d’exécution d’un objet personnalisé consiste à démarrer **dtexec.exe** à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] après avoir généré votre objet personnalisé et à exécuter un package qui utilise le composant.
 
- Si vous souhaitez déboguer les méthodes au moment du design du composant, telles `Validate` que la méthode, ouvrez un package qui utilise le composant dans une deuxième [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]instance de et attachez-le à son processus **devenv. exe** .
+ Si vous souhaitez déboguer les méthodes au moment du design du composant, telles que la `Validate` méthode, ouvrez un package qui utilise le composant dans une deuxième instance de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] et attachez-le à son processus de **devenv.exe** .
 
  Si vous souhaitez également déboguer les méthodes d’exécution du composant lorsqu’un package est ouvert et en cours d’exécution dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)], vous devez forcer une pause dans l’exécution du package afin de pouvoir également effectuer un attachement au processus **DtsDebugHost.exe**.
 
@@ -123,7 +122,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 1.  Signez et générez votre projet dans la configuration de débogage, déployez-le et installez-le dans le Global Assembly Cache comme indiqué dans cette rubrique.
 
-2.  Sous l’onglet **Déboguer** des **Propriétés du projet**, sélectionnez Démarrer le **programme externe** comme **action de démarrage**, puis localisez **dtexec. exe**, qui est installé par défaut dans C:\Program Files\Microsoft SQL Server\120\DTS\Binn.
+2.  Sous l’onglet **Déboguer** des **Propriétés du projet**, sélectionnez Démarrer le **programme externe** comme **action de démarrage**, puis recherchez **dtexec.exe**, qui est installé par défaut dans C:\Program Files\Microsoft SQL Server\120\DTS\Binn.
 
 3.  Dans la zone de texte **Options de ligne de commande**, sous **Options de démarrage**, entrez les arguments de ligne de commande requis pour exécuter un package qui utilise votre composant. Souvent, l'argument de ligne de commande sera consitué du commutateur /F[ILE] suivi du chemin d'accès et du nom du fichier .dtsx. Pour plus d'informations, consultez [Utilitaire dtexec](../packages/dtexec-utility.md).
 

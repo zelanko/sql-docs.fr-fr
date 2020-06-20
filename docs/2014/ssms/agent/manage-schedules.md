@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f54f2a3520a0d34290cb81b411a5ce41a59d7c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062181"
 ---
 # <a name="manage-schedules"></a>Gérer les planifications
-  Vous permet d’afficher et de modifier les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propriétés des planifications de travaux de l’agent.  
+  Vous permet d’afficher et de modifier les propriétés des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] planifications de travaux de l’agent.  
   
 ## <a name="options"></a>Options  
  **Planifications disponibles**  
@@ -38,7 +37,7 @@ ms.locfileid: "63255073"
  **Travaux planifiés**  
  Répertorie les numéros des travaux associés à la planification. Cliquez sur un numéro pour afficher les propriétés du travail correspondant.  
   
- **Nouvelle**  
+ **Nouveau**  
  Cliquez sur ce bouton pour créer une nouvelle planification.  
   
  **Supprimer**  

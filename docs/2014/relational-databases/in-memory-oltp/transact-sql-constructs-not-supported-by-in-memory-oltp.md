@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 95b657064f36045dfd0d916c24097b81c0e44867
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2b5df47d05730b8f6ec6a82045686d462ace1682
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025555"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
   Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne prennent pas en charge la surface d'exposition [!INCLUDE[tsql](../../includes/tsql-md.md)] complète qui est prise en charge par les tables sur disque et les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétées. Lorsque vous tentez d'utiliser une des fonctionnalités non prises en charge, le serveur retourne une erreur.  
@@ -39,32 +38,32 @@ ms.locfileid: "82718854"
 |----------|----------|----------------|  
 |Option|AUTO_CLOSE|L'option de base de données AUTO_CLOSE=ON n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
 |Option|ATTACH_REBUILD_LOG|L'option de base de données CREATE ATTACH_REBUILD_LOG n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
-|Caractéristique|DATABASE SNAPSHOT|La création d'instantanés de base de données n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
-|Caractéristique|Réplication à l'aide de sync_method 'database snapshot' ou 'database snapshot character'|La réplication à l'aide de sync_method 'database snapshot' ou 'database snapshot character' n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
-|Caractéristique|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB ignore les tables optimisées en mémoire dans la base de données.<br /><br /> DBCC CHECKTABLE échoue pour les tables optimisées en mémoire.|  
+|Fonctionnalité|DATABASE SNAPSHOT|La création d'instantanés de base de données n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
+|Fonctionnalité|Réplication à l'aide de sync_method 'database snapshot' ou 'database snapshot character'|La réplication à l'aide de sync_method 'database snapshot' ou 'database snapshot character' n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
+|Fonctionnalité|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB ignore les tables optimisées en mémoire dans la base de données.<br /><br /> DBCC CHECKTABLE échoue pour les tables optimisées en mémoire.|  
   
 ## <a name="memory-optimized-tables"></a>Tables optimisées en mémoire  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique une table mémoire optimisée, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
 |Type|Nom|Résolution|  
 |----------|----------|----------------|  
-|Caractéristique|ACTIVÉ|Les tables optimisées en mémoire ne peuvent pas être placées sur un groupe de fichiers ou un schéma de partition. Supprimez la clause ON de l'instruction `CREATE TABLE`.|  
+|Fonctionnalité|ACTIVÉ|Les tables optimisées en mémoire ne peuvent pas être placées sur un groupe de fichiers ou un schéma de partition. Supprimez la clause ON de l'instruction `CREATE TABLE`.|  
 |Type de données|*Nom du type de données*|Le type de données spécifié n'est pas pris en charge. Remplacez le type par un des types de données pris en charge. Pour plus d’informations, consultez [types de données pris en charge](supported-data-types-for-in-memory-oltp.md).|  
-|Caractéristique|Colonnes calculées|Les colonnes calculées ne sont pas prises en charge pour les tables mémoire optimisées. Supprimez les colonnes calculées de l'instruction `CREATE TABLE`.|  
-|Caractéristique|Réplication|La réplication n'est pas pris en charge avec les tables mémoire optimisées.|  
-|Caractéristique|FILESTREAM|Le stockage FILESTREAM n'est pas pris en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé `FILESTREAM` de la définition de colonne.|  
-|Caractéristique|SPARSE|Les colonnes de tables mémoire optimisées ne peuvent pas être définies comme SPARSE. Supprimez le mot clé `SPARSE` de la définition de colonne.|  
-|Caractéristique|ROWGUIDCOL|L'option ROWGUIDCOL n'est pas prise en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé `ROWGUIDCOL` de la définition de colonne.|  
-|Caractéristique|FOREIGN KEY|Les contraintes FOREIGN KEY ne sont pas prises en charge pour les tables mémoire optimisées. Supprime la contrainte de la définition de table.<br /><br /> Pour plus d’informations sur la façon de limiter l’absence de prise en charge des contraintes, consultez [migration de contraintes de vérification et de clé étrangère](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Fonctionnalité|Colonnes calculées|Les colonnes calculées ne sont pas prises en charge pour les tables mémoire optimisées. Supprimez les colonnes calculées de l'instruction `CREATE TABLE`.|  
+|Fonctionnalité|Réplication|La réplication n'est pas pris en charge avec les tables mémoire optimisées.|  
+|Fonctionnalité|FILESTREAM|Le stockage FILESTREAM n'est pas pris en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé `FILESTREAM` de la définition de colonne.|  
+|Fonctionnalité|SPARSE|Les colonnes de tables mémoire optimisées ne peuvent pas être définies comme SPARSE. Supprimez le mot clé `SPARSE` de la définition de colonne.|  
+|Fonctionnalité|ROWGUIDCOL|L'option ROWGUIDCOL n'est pas prise en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé `ROWGUIDCOL` de la définition de colonne.|  
+|Fonctionnalité|FOREIGN KEY|Les contraintes FOREIGN KEY ne sont pas prises en charge pour les tables mémoire optimisées. Supprime la contrainte de la définition de table.<br /><br /> Pour plus d’informations sur la façon de limiter l’absence de prise en charge des contraintes, consultez [migration de contraintes de vérification et de clé étrangère](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
 |Fonctionnalité|CHECK|Les contraintes CHECK ne sont pas prises en charge pour les tables mémoire optimisées. Supprime la contrainte de la définition de table.<br /><br /> Pour plus d’informations sur la façon de limiter l’absence de prise en charge des contraintes, consultez [migration de contraintes de vérification et de clé étrangère](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
-|Caractéristique|UNIQUE|Les contraintes UNIQUE ne sont pas prises en charge pour les tables mémoire optimisées. Supprime la contrainte de la définition de table.<br /><br /> Pour plus d’informations sur la façon de limiter l’absence de prise en charge des contraintes, consultez [migration de contraintes de vérification et de clé étrangère](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Fonctionnalité|UNIQUE|Les contraintes UNIQUE ne sont pas prises en charge pour les tables mémoire optimisées. Supprime la contrainte de la définition de table.<br /><br /> Pour plus d’informations sur la façon de limiter l’absence de prise en charge des contraintes, consultez [migration de contraintes de vérification et de clé étrangère](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
 |Fonctionnalité|COLUMNSTORE|Les index COLUMNSTORE ne sont pris en charge avec les tables mémoire optimisées. Spécifiez un index NONCLUSTERED ou NONCLUSTERED HASH à la place.|  
 |Fonctionnalité|index cluster|Spécifiez un index non cluster. Dans le cas d'un index de clé principale, veillez à spécifier `PRIMARY KEY NONCLUSTERED [HASH]`.|  
 |Fonctionnalité|page de codes autre que 1252|Les colonnes de tables mémoire optimisées avec les types de données `char` et `varchar` doivent utiliser la page de codes 1252. Utilisez n(var)char plutôt que (var)char, ou utilisez un classement avec la page de codes 1252 (par exemple, Latin1_General_BIN2). Pour plus d'informations, consultez [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
-|Caractéristique|Transactions dans DDL|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne peuvent pas être créées ou supprimées dans le contexte d'une transaction utilisateur. Ne commencez pas de transaction et veillez à ce que le paramètre de session IMPLICIT_TRANSACTIONS ait la valeur OFF avant d'exécuter l'instruction CREATE ou DROP.|  
-|Caractéristique|déclencheurs DDL|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne peuvent pas être créées ou supprimées s'il existe un déclencheur de serveur ou de base de données pour cette opération DDL. Supprimez les déclencheurs de serveur et base de données dans l'instruction CREATE/DROP TABLE et CREATE/DROP PROCEDURE.|  
-|Caractéristique|EVENT NOTIFICATION|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne peuvent pas être créées ou supprimées s'il existe une notification d'événement de serveur ou de base de données pour cette opération DDL. Supprimez les notifications d'événement de serveur et de base de données sur CREATE TABLE ou DROP TABLE et CREATE PROCEDURE ou DROP PROCEDURE.|  
-|Caractéristique|FileTable|Les tables mémoire optimisées ne peuvent pas être créées en tant que tables de fichiers. Supprimez l'argument `AS FileTable` de l'instruction `CREATE TABLE`.|  
+|Fonctionnalité|Transactions dans DDL|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne peuvent pas être créées ou supprimées dans le contexte d'une transaction utilisateur. Ne commencez pas de transaction et veillez à ce que le paramètre de session IMPLICIT_TRANSACTIONS ait la valeur OFF avant d'exécuter l'instruction CREATE ou DROP.|  
+|Fonctionnalité|déclencheurs DDL|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne peuvent pas être créées ou supprimées s'il existe un déclencheur de serveur ou de base de données pour cette opération DDL. Supprimez les déclencheurs de serveur et base de données dans l'instruction CREATE/DROP TABLE et CREATE/DROP PROCEDURE.|  
+|Fonctionnalité|EVENT NOTIFICATION|Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne peuvent pas être créées ou supprimées s'il existe une notification d'événement de serveur ou de base de données pour cette opération DDL. Supprimez les notifications d'événement de serveur et de base de données sur CREATE TABLE ou DROP TABLE et CREATE PROCEDURE ou DROP PROCEDURE.|  
+|Fonctionnalité|FileTable|Les tables mémoire optimisées ne peuvent pas être créées en tant que tables de fichiers. Supprimez l'argument `AS FileTable` de l'instruction `CREATE TABLE`.|  
 |Opération|Mettre à jour les colonnes clés primaires|Les colonnes clés primaires des tables mémoire optimisées et les types de table ne peuvent pas être mis à jour. Si la clé primaire doit être mise à jour, supprimez l'ancienne ligne et insérez la nouvelle ligne avec la clé primaire mise à jour.|  
 |Opération|CREATE INDEX|Les index sur les tables mémoire optimisées doivent être spécifiés inline avec l'instruction `CREATE TABLE`. Pour ajouter un index à une table mémoire optimisée, supprimez et recréez la table, notamment la spécification du nouvel index.|  
 |Opération|ALTER TABLE|La modification des tables mémoire optimisées n'est pas prise en charge. Supprimez et recréez la table en utilisant la définition de table mise à jour.|  
@@ -75,10 +74,10 @@ ms.locfileid: "82718854"
 |Opération|ALTER AUTHORIZATION|La modification du propriétaire d'une table mémoire optimisée ou d'une procédure stockée compilée en mode natif existante n'est pas prise en charge. Supprimez ou recréez la table ou la procédure pour modifier la propriété.|  
 |Opération|ALTER SCHEMA|La modification du schéma d'une table mémoire optimisée ou d'une procédure stockée compilée en mode natif existante n'est pas prise en charge. Supprimez ou recréez la table ou la procédure pour modifier le schéma.|  
 |Opération|DBCC CHECKTABLE|DBCC CHECKTABLE n'est pas pris en charge avec les tables mémoire optimisées.|  
-|Caractéristique|ANSI_PADDING OFF|L'option de session `ANSI_PADDING` doit être activée (ON) lorsque vous créez des tables mémoire optimisées ou des procédures stockées compilées en mode natif. Exécutez `SET ANSI_PADDING ON` avant d'exécuter l'instruction CREATE.|  
+|Fonctionnalité|ANSI_PADDING OFF|L'option de session `ANSI_PADDING` doit être activée (ON) lorsque vous créez des tables mémoire optimisées ou des procédures stockées compilées en mode natif. Exécutez `SET ANSI_PADDING ON` avant d'exécuter l'instruction CREATE.|  
 |Option|DATA_COMPRESSION|La compression des données n'est pas prise en charge pour les tables optimisées en mémoire. Supprimez l'option de la définition de table.|  
-|Caractéristique|DTC|Les tables optimisées en mémoire et les procédures stockées compilées en mode natif ne sont pas accessibles à partir de transactions distribuées. Utilisez plutôt des transactions SQL.|  
-|Caractéristique|MARS (Multiple Active Result Sets)|Multiple Active Result Sets (MARS) n'est pas pris en charge avec les tables mémoire optimisées. Cette erreur peut également indiquer l'utilisation d'un serveur lié. Un serveur lié peut utiliser MARS. Les serveurs liés ne sont pas pris en charge avec les tables mémoire optimisées. À la place, connectez-vous directement au serveur et à la base de données qui héberge les tables mémoire optimisées.|  
+|Fonctionnalité|DTC|Les tables optimisées en mémoire et les procédures stockées compilées en mode natif ne sont pas accessibles à partir de transactions distribuées. Utilisez plutôt des transactions SQL.|  
+|Fonctionnalité|MARS (Multiple Active Result Sets)|Multiple Active Result Sets (MARS) n'est pas pris en charge avec les tables mémoire optimisées. Cette erreur peut également indiquer l'utilisation d'un serveur lié. Un serveur lié peut utiliser MARS. Les serveurs liés ne sont pas pris en charge avec les tables mémoire optimisées. À la place, connectez-vous directement au serveur et à la base de données qui héberge les tables mémoire optimisées.|  
 |Opération|Tables optimisées en mémoire comme cibles de MERGE|Les tables mémoire optimisées ne peuvent pas être la cible d'une opération `MERGE`. Utilisez des instructions `INSERT`, `UPDATE` ou `DELETE` à la place.|  
   
 ## <a name="indexes-on-memory-optimized-tables"></a>Index sur des tables optimisées en mémoire  
@@ -86,11 +85,11 @@ ms.locfileid: "82718854"
   
 |Type|Nom|Résolution|  
 |----------|----------|----------------|  
-|Caractéristique|Index filtré|Les index filtrés ne sont pris en charge avec les tables optimisées en mémoire. Omettez la clause `WHERE` de la spécification d'index.|  
-|Caractéristique|UNIQUE|Les index uniques ne sont pas pris en charge pour les tables mémoire optimisées. Supprimez l'argument `UNIQUE` de la spécification d'index.|  
-|Caractéristique|Colonnes nullable|Toutes les colonnes d'une clé d'index sur une table mémoire optimisée doivent être spécifiés en tant que `NOT NULL`. Incluez la contrainte `NOT NULL` avec toutes les colonnes des clés d'index.|  
-|Caractéristique|classement non-bin2|Toutes les colonnes de caractères d'une clé d'index sur une table mémoire optimisée doivent être déclarés en tant que classement BIN2. Utilisez la clause `COLLATE` pour définir le classement dans la définition de colonne. Pour plus d'informations, consultez [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
-|Caractéristique|Colonnes incluses|La spécification de colonnes incluses n'est pas nécessaire pour les tables mémoire optimisées. Toutes les colonnes de la table mémoire optimisée sont incluses implicitement dans chaque index mémoire optimisé.|  
+|Fonctionnalité|Index filtré|Les index filtrés ne sont pris en charge avec les tables optimisées en mémoire. Omettez la clause `WHERE` de la spécification d'index.|  
+|Fonctionnalité|UNIQUE|Les index uniques ne sont pas pris en charge pour les tables mémoire optimisées. Supprimez l'argument `UNIQUE` de la spécification d'index.|  
+|Fonctionnalité|Colonnes nullable|Toutes les colonnes d'une clé d'index sur une table mémoire optimisée doivent être spécifiés en tant que `NOT NULL`. Incluez la contrainte `NOT NULL` avec toutes les colonnes des clés d'index.|  
+|Fonctionnalité|classement non-bin2|Toutes les colonnes de caractères d'une clé d'index sur une table mémoire optimisée doivent être déclarés en tant que classement BIN2. Utilisez la clause `COLLATE` pour définir le classement dans la définition de colonne. Pour plus d'informations, consultez [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
+|Fonctionnalité|Colonnes incluses|La spécification de colonnes incluses n'est pas nécessaire pour les tables mémoire optimisées. Toutes les colonnes de la table mémoire optimisée sont incluses implicitement dans chaque index mémoire optimisé.|  
 |Opération|ALTER INDEX|La modification des index sur les tables mémoire optimisées n'est pas prise en charge. À la place, supprimez et recréez la table en utilisant la spécification d'index mise à jour.|  
 |Opération|DROP INDEX|La suppression des index sur les tables mémoire optimisées n'est pas prise en charge. À la place, supprimez et recréez la table en utilisant les index souhaités.|  
 |Option d'index|*Option d'index*|L'option d'index indiquée n'est pas prise en charge avec des index sur les tables mémoire optimisées. Supprimez l'option de la spécification d'index.|  
@@ -105,38 +104,38 @@ ms.locfileid: "82718854"
 ## <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique des procédures stockées compilées en mode natif, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Caractéristique|Résolution|  
+|Type|Fonctionnalité|Résolution|  
 |----------|-------------|----------------|  
-|Caractéristique|Variables de table inline|Les types de table ne peuvent pas être déclarés inline avec des déclarations de variable. Les types de table doivent être déclarés explicitement à l'aide d'une instruction `CREATE TYPE`.|  
+|Fonctionnalité|Variables de table inline|Les types de table ne peuvent pas être déclarés inline avec des déclarations de variable. Les types de table doivent être déclarés explicitement à l'aide d'une instruction `CREATE TYPE`.|  
 |Fonctionnalité|Curseurs|Les curseurs ne sont pas pris en charge sur ou dans les procédures stockées compilées en mode natif.<br /><br /> -Lors de l’exécution de la procédure à partir du client, utilisez RPC plutôt que l’API de curseur. Avec ODBC, évitez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]`EXECUTE`, et spécifiez directement le nom de la procédure à la place.<br /><br /> -Lors de l’exécution de la procédure à partir d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot ou d’une autre procédure stockée, évitez d’utiliser un curseur avec la procédure stockée compilée en mode natif.<br /><br /> -Lors de la création d’une procédure stockée compilée en mode natif, plutôt que d’utiliser un curseur, utilisez une logique basée sur un ensemble ou une `WHILE` boucle.|  
 |Fonctionnalité|Valeurs par défaut non constantes des paramètres|Lors de l'utilisation des valeurs par défaut avec des paramètres sur les procédures stockées compilées en mode natif, les valeurs doivent être constantes. Supprimez les caractères génériques des déclarations de paramètre.|  
-|Caractéristique|EXTERNAL|Les procédures stockées CLR ne peuvent pas être compilées en mode natif. Supprimez la clause AS EXTERNAL ou l'option NATIVE_COMPILATION de l'instruction CREATE PROCEDURE.|  
-|Caractéristique|Procédures stockées numérotées|Les procédures stockées compilées en mode natif ne peuvent pas être numérotées. Supprimez le `;` *nombre* de l' `CREATE PROCEDURE` instruction.|  
-|Caractéristique|INSERTION de plusieurs lignes... Instructions VALUEs|Impossible d'insérer plusieurs lignes en utilisant la même instruction `INSERT` dans une procédure stockée compilée en mode natif. Créez des instructions `INSERT` pour chaque ligne.|  
-|Caractéristique|Expressions de table communes|Les expressions de table communes ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Réécrire la requête.|  
-|Caractéristique|sous-requête|Les sous-requêtes (requêtes imbriquées dans une autre requête) ne sont pas prises en charge. Réécrire la requête.|  
-|Caractéristique|COMPUTE|La clause `COMPUTE` n'est pas prise en charge. Supprimez-la de la requête.|  
+|Fonctionnalité|EXTERNAL|Les procédures stockées CLR ne peuvent pas être compilées en mode natif. Supprimez la clause AS EXTERNAL ou l'option NATIVE_COMPILATION de l'instruction CREATE PROCEDURE.|  
+|Fonctionnalité|Procédures stockées numérotées|Les procédures stockées compilées en mode natif ne peuvent pas être numérotées. Supprimez le `;` *nombre* de l' `CREATE PROCEDURE` instruction.|  
+|Fonctionnalité|INSERTION de plusieurs lignes... Instructions VALUEs|Impossible d'insérer plusieurs lignes en utilisant la même instruction `INSERT` dans une procédure stockée compilée en mode natif. Créez des instructions `INSERT` pour chaque ligne.|  
+|Fonctionnalité|Expressions de table communes|Les expressions de table communes ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Réécrire la requête.|  
+|Fonctionnalité|sous-requête|Les sous-requêtes (requêtes imbriquées dans une autre requête) ne sont pas prises en charge. Réécrire la requête.|  
+|Fonctionnalité|COMPUTE|La clause `COMPUTE` n'est pas prise en charge. Supprimez-la de la requête.|  
 |Fonctionnalité|SELECT INTO|La clause `INTO` n'est pas prise en charge avec l'instruction `SELECT`. Réécrivez la requête sous forme de `INSERT INTO` *table* `SELECT` .|  
-|Caractéristique|OUTPUT|La clause `OUTPUT` n'est pas prise en charge. Supprimez-la de la requête.|  
-|Caractéristique|liste de colonnes d'insertion incomplète|Dans les instructions `INSERT`, des valeurs doivent être spécifiées pour toutes les colonnes de la table.|  
+|Fonctionnalité|OUTPUT|La clause `OUTPUT` n'est pas prise en charge. Supprimez-la de la requête.|  
+|Fonctionnalité|liste de colonnes d'insertion incomplète|Dans les instructions `INSERT`, des valeurs doivent être spécifiées pour toutes les colonnes de la table.|  
 |Fonction|*Fonction*|La fonction intégrée n'est pas prise en charge dans les procédures stockées compilées en mode natif. Supprimez la fonction de la procédure stockée. Pour plus d’informations sur les fonctions intégrées prises en charge, consultez [procédures stockées compilées en mode natif](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Fonctionnalité|CASE|L'instruction `CASE` n'est pas prise en charge dans les requêtes à l'intérieur de procédures stockées compilées en mode natif. Créez des requêtes pour chaque cas. Pour plus d’informations, consultez [implémentation d’une instruction case](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).|  
-|Caractéristique|fonctions définies par l'utilisateur|Les fonctions définies par l'utilisateur ne peuvent pas être utilisées dans les procédures stockées compilées en mode natif. Supprimez la référence à la fonction de la définition de procédure.|  
-|Caractéristique|agrégats définis par l'utilisateur|Les fonctions d'agrégation définies par l'utilisateur ne peuvent pas être utilisées dans les procédures stockées compilées en mode natif. Supprimez la référence à la fonction dans la procédure.|  
-|Caractéristique|métadonnées de modes de navigation|Les procédures stockées compilées en mode natif ne prennent pas en charge les métadonnées de modes de navigation. Assurez-vous que l'option de session `NO_BROWSETABLE` est désactivée (OFF).|  
-|Caractéristique|DELETE avec la clause FROM|La clause `FROM` n'est pas prise en charge pour les instructions `DELETE` avec une table source dans les procédures stockées compilées en mode natif.<br /><br /> `DELETE` avec la clause `FROM` est prise en charge lorsqu'elle est utilisée pour indiquer de la table dans laquelle la suppression doit avoir lieu.|  
-|Caractéristique|UPDATE avec la clause FROM|La clause `FROM` n'est pas prise en charge pour les instructions `UPDATE` dans les procédures stockées compilées en mode natif.|  
-|Caractéristique|procédures temporaires|Les procédures stockées temporaires ne peuvent pas être compilées en mode natif. Créez une procédure stockée compilée en mode natif permanente ou une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétée.|  
+|Fonctionnalité|fonctions définies par l'utilisateur|Les fonctions définies par l'utilisateur ne peuvent pas être utilisées dans les procédures stockées compilées en mode natif. Supprimez la référence à la fonction de la définition de procédure.|  
+|Fonctionnalité|agrégats définis par l'utilisateur|Les fonctions d'agrégation définies par l'utilisateur ne peuvent pas être utilisées dans les procédures stockées compilées en mode natif. Supprimez la référence à la fonction dans la procédure.|  
+|Fonctionnalité|métadonnées de modes de navigation|Les procédures stockées compilées en mode natif ne prennent pas en charge les métadonnées de modes de navigation. Assurez-vous que l'option de session `NO_BROWSETABLE` est désactivée (OFF).|  
+|Fonctionnalité|DELETE avec la clause FROM|La clause `FROM` n'est pas prise en charge pour les instructions `DELETE` avec une table source dans les procédures stockées compilées en mode natif.<br /><br /> `DELETE` avec la clause `FROM` est prise en charge lorsqu'elle est utilisée pour indiquer de la table dans laquelle la suppression doit avoir lieu.|  
+|Fonctionnalité|UPDATE avec la clause FROM|La clause `FROM` n'est pas prise en charge pour les instructions `UPDATE` dans les procédures stockées compilées en mode natif.|  
+|Fonctionnalité|procédures temporaires|Les procédures stockées temporaires ne peuvent pas être compilées en mode natif. Créez une procédure stockée compilée en mode natif permanente ou une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétée.|  
 |Niveau d'isolation|READ UNCOMMITTED|Le niveau d'isolation READ UNCOMMITTED n'est pas pris en charge pour les procédures stockées compilées en mode natif. Utilisez un niveau d'isolation pris en charge, tel que SNAPSHOT.|  
 |Niveau d'isolation|READ COMMITTED|Le niveau d'isolation READ UNCOMMITTED n'est pas pris en charge pour les procédures stockées compilées en mode natif. Utilisez un niveau d'isolation pris en charge, tel que SNAPSHOT.|  
-|Caractéristique|tables temporaires|Les tables de tempdb ne peuvent pas être utilisées dans les procédures stockées compilées en mode natif. À la place, utilisez une variable de table ou une table mémoire optimisée avec DURABILITY=SCHEMA_ONLY.|  
-|Caractéristique|MARS|MARS (multiple Active Results Sets) n'est pas pris en charge avec les procédures stockées compilées en mode natif. Cette erreur peut également indiquer l'utilisation d'un serveur lié. Un serveur lié peut utiliser MARS. Les serveurs liés ne sont pas pris en charge avec les procédures stockées compilées en mode natif. À la place, connectez-vous directement au serveur et à la base de données qui héberge les procédures stockées compilées en mode natif.|  
-|Caractéristique|DTC|Les tables optimisées en mémoire et les procédures stockées compilées en mode natif ne sont pas accessibles à partir de transactions distribuées. Utilisez plutôt des transactions SQL.|  
-|Caractéristique|classement non-bin2|La comparaison, le tri et d'autres opérations sur les chaînes de caractères dans les procédures stockées compilées en mode natif exigent l'utilisation d'un classement BIN2. Utilisez la clause COLLATE ou des colonnes et des variables avec un classement approprié. Pour plus d'informations, consultez [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
-|Caractéristique|Troncation des chaînes de caractères avec un classement SC.|Les chaînes de caractères avec un classement `_SC` utilisent le codage UTF-16. La conversion d'une valeur n(var)char en valeur n(var)char plus courte implique la troncation. Cette opération n'est pas prise en charge pour les valeurs UTF-16 dans les procédures stockées compilées en mode natif. Évitez la troncation de chaînes UTF-16.|  
-|Caractéristique|EXECUTE WITH RECOMPILE|L'option `WITH RECOMPILE` n'est pas pris en charge avec les procédures stockées compilées en mode natif.|  
-|Caractéristique|LEN et SUBSTRING avec un argument dans un classement SC|Les chaînes de caractères avec un classement _SC utilisent le codage UTF-16. Les fonctions intégrées LEN et SUBSTRING, utilisées dans des procédures stockées compilées en mode natif, ne prennent pas en charge l'encodage UTF-16. Utilisez un autre classement ou évitez d'utiliser ces fonctions.|  
-|Caractéristique|Exécution à partir de la connexion administrateur dédiée.|Les procédures stockées compilées en mode natif ne peuvent pas être exécutées à partir de la connexion administrateur dédiée. Utilisez plutôt une connexion normale.|  
+|Fonctionnalité|tables temporaires|Les tables de tempdb ne peuvent pas être utilisées dans les procédures stockées compilées en mode natif. À la place, utilisez une variable de table ou une table mémoire optimisée avec DURABILITY=SCHEMA_ONLY.|  
+|Fonctionnalité|MARS|MARS (multiple Active Results Sets) n'est pas pris en charge avec les procédures stockées compilées en mode natif. Cette erreur peut également indiquer l'utilisation d'un serveur lié. Un serveur lié peut utiliser MARS. Les serveurs liés ne sont pas pris en charge avec les procédures stockées compilées en mode natif. À la place, connectez-vous directement au serveur et à la base de données qui héberge les procédures stockées compilées en mode natif.|  
+|Fonctionnalité|DTC|Les tables optimisées en mémoire et les procédures stockées compilées en mode natif ne sont pas accessibles à partir de transactions distribuées. Utilisez plutôt des transactions SQL.|  
+|Fonctionnalité|classement non-bin2|La comparaison, le tri et d'autres opérations sur les chaînes de caractères dans les procédures stockées compilées en mode natif exigent l'utilisation d'un classement BIN2. Utilisez la clause COLLATE ou des colonnes et des variables avec un classement approprié. Pour plus d'informations, consultez [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
+|Fonctionnalité|Troncation des chaînes de caractères avec un classement SC.|Les chaînes de caractères avec un classement `_SC` utilisent le codage UTF-16. La conversion d'une valeur n(var)char en valeur n(var)char plus courte implique la troncation. Cette opération n'est pas prise en charge pour les valeurs UTF-16 dans les procédures stockées compilées en mode natif. Évitez la troncation de chaînes UTF-16.|  
+|Fonctionnalité|EXECUTE WITH RECOMPILE|L'option `WITH RECOMPILE` n'est pas pris en charge avec les procédures stockées compilées en mode natif.|  
+|Fonctionnalité|LEN et SUBSTRING avec un argument dans un classement SC|Les chaînes de caractères avec un classement _SC utilisent le codage UTF-16. Les fonctions intégrées LEN et SUBSTRING, utilisées dans des procédures stockées compilées en mode natif, ne prennent pas en charge l'encodage UTF-16. Utilisez un autre classement ou évitez d'utiliser ces fonctions.|  
+|Fonctionnalité|Exécution à partir de la connexion administrateur dédiée.|Les procédures stockées compilées en mode natif ne peuvent pas être exécutées à partir de la connexion administrateur dédiée. Utilisez plutôt une connexion normale.|  
 |Opération|ALTER PROCEDURE|Les procédures stockées compilées en mode natif ne peuvent pas être modifiées. Pour modifier la définition de la procédure, supprimez et recréez la procédure stockée.|  
 |Opération|point d'enregistrement|Les procédures stockées compilées en mode natif ne peuvent pas être appelées à partir de transactions qui possèdent un point de sauvegarde actif. Supprimez le point de sauvegarde de la transaction.|  
 |Opération|ALTER AUTHORIZATION|La modification du propriétaire d'une table mémoire optimisée ou d'une procédure stockée compilée en mode natif existante n'est pas prise en charge. Supprimez ou recréez la table ou la procédure pour modifier la propriété.|  
@@ -146,7 +145,7 @@ ms.locfileid: "82718854"
 |Opérateur|OPENXML|Cet opérateur n'est pas pris en charge. Supprimez `OPENXML` de la procédure stockée compilée en mode natif.|  
 |Opérateur|CONTAINSTABLE|Cet opérateur n'est pas pris en charge. Supprimez `CONTAINSTABLE` de la procédure stockée compilée en mode natif.|  
 |Opérateur|FREETEXTTABLE|Cet opérateur n'est pas pris en charge. Supprimez `FREETEXTTABLE` de la procédure stockée compilée en mode natif.|  
-|Caractéristique|fonctions table|Les fonctions table ne peuvent pas être référencées à partir de procédures stockées compilées en mode natif. Une solution de contournement possible pour cette restriction consiste à ajouter la logique des fonctions tables au corps de la procédure.|  
+|Fonctionnalité|fonctions table|Les fonctions table ne peuvent pas être référencées à partir de procédures stockées compilées en mode natif. Une solution de contournement possible pour cette restriction consiste à ajouter la logique des fonctions tables au corps de la procédure.|  
 |Opérateur|CHANGETABLE|Cet opérateur n'est pas pris en charge. Supprimez `CHANGETABLE` de la procédure stockée compilée en mode natif.|  
 |Opérateur|GOTO|Cet opérateur n'est pas pris en charge. Utilisez d'autres constructions de procédure, telles que WHILE.|  
 |Opérateur|EXECUTE, INSERT EXEC|L'imbrication de procédures stockées compilées en mode natif n'est pas prise en charge. Les opérations nécessaires peuvent être spécifiées inline, dans le cadre de la définition de procédure stockée.|  
@@ -180,32 +179,32 @@ ms.locfileid: "82718854"
 |Fonction d'agrégation|*Fonction d’agrégation*|Cette clause n'est pas prise en charge. Pour plus d'informations sur les fonctions d'agrégation dans les procédures stockées compilées en mode natif, consultez [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Fonction de classement|*Fonction de classement*|Les fonctions de classement ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Supprimez-les de la définition de procédure.|  
 |Fonction|*Fonction*|Cette fonction n'est pas prise en charge. Supprimez-la de la procédure stockée compilée en mode natif.|  
-|.|*Gestion*|Cette instruction n'est pas prise en charge. Supprimez-la de la procédure stockée compilée en mode natif.|  
-|Caractéristique|MIN et MAX utilisé avec des chaînes binaires et de caractères|Les fonctions d'agrégation `MIN` et `MAX` ne peuvent pas être utilisées pour les valeurs de chaîne de caractère et binaire dans les procédures stockées compilées en mode natif.|  
-|Caractéristique|GROUP BY sans fonction d'agrégation|Dans les procédures stockées compilées en mode natif, lorsqu'une requête contient une clause `GROUP BY`, elle doit également utiliser une fonction d'agrégation dans la clause SELECT ou HAVING. Ajoutez une fonction d'agrégation à la requête.|  
-|Caractéristique|GROUP BY ALL|ALL ne peut pas être utilisé avec les clauses GROUP BY dans des procédures stockées compilées en mode natif. Supprimez ALL de la clause GROUP BY.|  
-|Caractéristique|GROUP BY ()|Le regroupement par une liste vide n'est pas pris en charge. Supprimez la clause GROUP BY, ou incluez des colonnes dans la liste de regroupement.|  
-|Caractéristique|ROLLUP|`ROLLUP` ne peut pas être utilisé avec les clauses `GROUP BY` dans des procédures stockées compilées en mode natif. Supprimez `ROLLUP` de la définition de la procédure.|  
-|Caractéristique|CUBE|`CUBE` ne peut pas être utilisé avec les clauses `GROUP BY` dans des procédures stockées compilées en mode natif. Supprimez `CUBE` de la définition de la procédure.|  
-|Caractéristique|GROUPING SETS|`GROUPING SETS` ne peut pas être utilisé avec les clauses `GROUP BY` dans des procédures stockées compilées en mode natif. Supprimez `GROUPING SETS` de la définition de la procédure.|  
-|Caractéristique|BEGIN TRANSACTION, COMMIT TRANSACTION et ROLLBACK TRANSACTION|Utilisez des blocs ATOMIC pour contrôler les transactions et la gestion des erreurs. Pour plus d’informations, consultez [Atomic Blocks](atomic-blocks-in-native-procedures.md).|  
-|Caractéristique|Déclarations de variables de table inline.|Les variables de table doivent référencer les types de tables mémoire optimisées définis. Vous devez créer un type de table mémoire optimisée et utiliser ce type pour la déclaration de variable, plutôt que spécifier le type inline.|  
-|Caractéristique|sp_recompile|La recompilation de procédures stockées compilées en mode natif n'est pas prise en charge. Supprimez et recréez la procédure.|  
-|Caractéristique|EXECUTE AS CALLER|La clause `EXECUTE AS` est obligatoire. Mais `EXECUTE AS CALLER` n'est pas prise en charge. Utilisez `EXECUTE AS OWNER` , `EXECUTE AS` *User*ou `EXECUTE AS SELF` .|  
-|Caractéristique|Tables sur disque|Les tables sur disque ne sont pas accessibles à partir de procédures stockées compilées en mode natif. Supprimez les références aux tables sur disque dans les procédures stockées compilées en mode natif. Sinon, migrez les tables sur disques vers des tables mémoire optimisées.|  
-|Caractéristique|Affichages|Les vues ne sont pas accessibles à partir de procédures stockées compilées en mode natif. Au lieu d'utiliser des vues, référencez les tables de base sous-jacentes.|  
-|Caractéristique|Fonctions table|Les fonctions table ne sont pas accessibles à partir de procédures stockées compilées en mode natif. Supprimez les références aux fonctions table dans les procédures stockées compilées en mode natif.|  
+|.|*.*|Cette instruction n'est pas prise en charge. Supprimez-la de la procédure stockée compilée en mode natif.|  
+|Fonctionnalité|MIN et MAX utilisé avec des chaînes binaires et de caractères|Les fonctions d'agrégation `MIN` et `MAX` ne peuvent pas être utilisées pour les valeurs de chaîne de caractère et binaire dans les procédures stockées compilées en mode natif.|  
+|Fonctionnalité|GROUP BY sans fonction d'agrégation|Dans les procédures stockées compilées en mode natif, lorsqu'une requête contient une clause `GROUP BY`, elle doit également utiliser une fonction d'agrégation dans la clause SELECT ou HAVING. Ajoutez une fonction d'agrégation à la requête.|  
+|Fonctionnalité|GROUP BY ALL|ALL ne peut pas être utilisé avec les clauses GROUP BY dans des procédures stockées compilées en mode natif. Supprimez ALL de la clause GROUP BY.|  
+|Fonctionnalité|GROUP BY ()|Le regroupement par une liste vide n'est pas pris en charge. Supprimez la clause GROUP BY, ou incluez des colonnes dans la liste de regroupement.|  
+|Fonctionnalité|ROLLUP|`ROLLUP` ne peut pas être utilisé avec les clauses `GROUP BY` dans des procédures stockées compilées en mode natif. Supprimez `ROLLUP` de la définition de la procédure.|  
+|Fonctionnalité|CUBE|`CUBE` ne peut pas être utilisé avec les clauses `GROUP BY` dans des procédures stockées compilées en mode natif. Supprimez `CUBE` de la définition de la procédure.|  
+|Fonctionnalité|GROUPING SETS|`GROUPING SETS` ne peut pas être utilisé avec les clauses `GROUP BY` dans des procédures stockées compilées en mode natif. Supprimez `GROUPING SETS` de la définition de la procédure.|  
+|Fonctionnalité|BEGIN TRANSACTION, COMMIT TRANSACTION et ROLLBACK TRANSACTION|Utilisez des blocs ATOMIC pour contrôler les transactions et la gestion des erreurs. Pour plus d’informations, consultez [Atomic Blocks](atomic-blocks-in-native-procedures.md).|  
+|Fonctionnalité|Déclarations de variables de table inline.|Les variables de table doivent référencer les types de tables mémoire optimisées définis. Vous devez créer un type de table mémoire optimisée et utiliser ce type pour la déclaration de variable, plutôt que spécifier le type inline.|  
+|Fonctionnalité|sp_recompile|La recompilation de procédures stockées compilées en mode natif n'est pas prise en charge. Supprimez et recréez la procédure.|  
+|Fonctionnalité|EXECUTE AS CALLER|La clause `EXECUTE AS` est obligatoire. Mais `EXECUTE AS CALLER` n'est pas prise en charge. Utilisez `EXECUTE AS OWNER` , `EXECUTE AS` *User*ou `EXECUTE AS SELF` .|  
+|Fonctionnalité|Tables sur disque|Les tables sur disque ne sont pas accessibles à partir de procédures stockées compilées en mode natif. Supprimez les références aux tables sur disque dans les procédures stockées compilées en mode natif. Sinon, migrez les tables sur disques vers des tables mémoire optimisées.|  
+|Fonctionnalité|Les vues|Les vues ne sont pas accessibles à partir de procédures stockées compilées en mode natif. Au lieu d'utiliser des vues, référencez les tables de base sous-jacentes.|  
+|Fonctionnalité|Fonctions table|Les fonctions table ne sont pas accessibles à partir de procédures stockées compilées en mode natif. Supprimez les références aux fonctions table dans les procédures stockées compilées en mode natif.|  
   
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transactions qui accèdent aux tables mémoire optimisées  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique des transactions qui accèdent aux tables mémoire optimisées, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
 |Type|Nom|Résolution|  
 |----------|----------|----------------|  
-|Caractéristique|point d'enregistrement|La création de points de sauvegarde dans des transactions qui accèdent aux tables mémoire optimisées n'est pas prise en charge.|  
-|Caractéristique|transaction liée|Les sessions liées ne peuvent pas participer dans des transactions qui accèdent aux tables mémoire optimisées. Ne liez pas la session avant d'exécuter la procédure.|  
-|Caractéristique|DTC|Les transactions qui accèdent aux tables mémoire optimisées ne peuvent pas être des transactions distribuées.|  
+|Fonctionnalité|point d'enregistrement|La création de points de sauvegarde dans des transactions qui accèdent aux tables mémoire optimisées n'est pas prise en charge.|  
+|Fonctionnalité|transaction liée|Les sessions liées ne peuvent pas participer dans des transactions qui accèdent aux tables mémoire optimisées. Ne liez pas la session avant d'exécuter la procédure.|  
+|Fonctionnalité|DTC|Les transactions qui accèdent aux tables mémoire optimisées ne peuvent pas être des transactions distribuées.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](migrating-to-in-memory-oltp.md)  
+ [Migration vers l’OLTP en mémoire](migrating-to-in-memory-oltp.md)  
   
   

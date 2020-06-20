@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058988"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966776"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Éditeur de tâche d'exécution SQL (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'exécution SQL** pour configurer la tâche d'exécution SQL et indiquer l'instruction SQL que la tâche exécuter.  
@@ -34,7 +33,7 @@ ms.locfileid: "66058988"
  Décrit la tâche d'exécution SQL. Pour réaliser des packages autodocumentés plus faciles à maintenir, fournissez une description de la tâche en rapport avec son objectif.  
   
  **Expiré**  
- Spécifiez le nombre maximal de secondes d’exécution de la tâche avant l’expiration du délai d’attente. La valeur 0 indique une durée infinie. La valeur par défaut est 0.  
+ Spécifiez le nombre maximal de secondes d’exécution de la tâche avant l’expiration du délai d’attente. La valeur 0 indique une durée infinie. La valeur par défaut est 0.  
   
 > [!NOTE]  
 >  Les procédures stockées ne sont par concernées par le délai d'expiration si elles émulent la fonctionnalité de veille en laissant le temps nécessaire à l'établissement des connexions et à la réalisation des transactions qui est supérieur au nombre de secondes spécifié par l'option **TimeOut**. Cependant, les procédures stockées qui exécutent des requêtes sont toujours soumises à la limitation de temps spécifiée dans **TimeOut**.  
@@ -57,7 +56,7 @@ ms.locfileid: "66058988"
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md), [Gestionnaire de connexions de SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
- Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \< **nouvelle connexion...**>.  
+ Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une nouvelle connexion, sélectionnez \<**New connection...**> .  
   
  **SQLSourceType**  
  Sélectionnez le type de source de l'instruction SQL qui exécute la tâche.  
@@ -101,13 +100,13 @@ ms.locfileid: "66058988"
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connexion de fichiers  
  **FileConnection**  
- Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
+ Sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour créer une variable.  
   
  **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   

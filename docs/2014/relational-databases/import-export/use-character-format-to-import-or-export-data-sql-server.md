@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88e16e3ea97b0a2348d3fd41ff7b980055c8c206
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026282"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère pour importer ou exporter des données (SQL Server)
   Le format caractère est recommandé pour l'exportation en bloc de données dans un fichier texte qui doit être utilisé dans un autre programme, ou pour l'importation en bloc de données à partir d'un fichier texte généré par un autre programme.  
@@ -47,7 +46,7 @@ ms.locfileid: "66011671"
 -   L’utilitaire **BCP** exporte `money` les valeurs en tant que fichiers de données au format caractère, avec quatre chiffres après la virgule décimale et sans symboles de groupement de chiffres tels que les séparateurs de virgule. Par exemple, une colonne `money` contenant la valeur 1 234 567,123456 est exportée en bloc dans un fichier en tant que chaîne de caractères 1234567,1235.  
   
 ## <a name="command-options-for-character-format"></a>Options de commande pour le format caractère  
- Vous pouvez importer des données au format caractère dans une table à l’aide de la commande **BCP**, Bulk Insert ou Insert... SELECT \* from OPENROWSET (BULK...). Pour une commande **BCP** ou une instruction BULK INSERT, vous pouvez spécifier le format de données sur la ligne de commande. Pour une instruction INSERT... SELECT * FROM OPENROWSET(BULK...), vous devez spécifier le format de données dans un fichier de format.  
+ Vous pouvez importer des données au format caractère dans une table à l’aide de la commande **BCP**, Bulk Insert ou Insert... SELECT \* FROM OPENROWSET (BULK...). Pour une commande **BCP** ou une instruction BULK INSERT, vous pouvez spécifier le format de données sur la ligne de commande. Pour une instruction INSERT... SELECT * FROM OPENROWSET(BULK...), vous devez spécifier le format de données dans un fichier de format.  
   
  Le format caractère est pris en charge par les options de ligne de commande suivantes :  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66011671"
 |**bcp**|**-c**|Fait en sorte que l’utilitaire **BCP** utilise des données de caractères. <sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Utilise le format caractère lors de l'importation en bloc des données.|  
   
- <sup>1</sup> pour charger les données de caractères (**-c**) dans un format compatible avec les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions antérieures des clients, utilisez le commutateur **-V** . Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> pour charger les données de caractères (**-c**) dans un format compatible avec les versions antérieures des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients, utilisez le commutateur **-V** . Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Pour plus d’informations, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

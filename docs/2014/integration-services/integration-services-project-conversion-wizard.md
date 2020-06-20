@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057977"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965416"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistant Conversion de projet Integration Services
   **L’Assistant Conversion de projet Integration Services** convertit un projet en modèle de déploiement de projet.  
@@ -65,7 +64,7 @@ ms.locfileid: "66057977"
   
  L’option suivante s’affiche dans la page quand vous sélectionnez **Système de fichiers** dans la liste déroulante **Source** . Sélectionnez cette option quand le package se trouve dans le système de fichiers.  
   
- **Répertoire**  
+ **Dossier**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
  Les options suivantes s’affichent dans la page quand vous sélectionnez **Magasin de packages SSIS** dans la liste déroulante **Source**. Pour plus d’informations sur le magasin de packages, consultez [Gestion de packages &#40;Service SSIS&#41;](service/package-management-ssis-service.md).  
@@ -73,7 +72,7 @@ ms.locfileid: "66057977"
  **Serveur**  
  Tapez le nom du serveur ou sélectionnez ce dernier.  
   
- **Répertoire**  
+ **Dossier**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
  Les options suivantes s’affichent dans la page quand vous sélectionnez **Microsoft SQL Server** dans la liste déroulante **Source** . Sélectionnez cette option quand le package se trouve dans Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -93,7 +92,7 @@ ms.locfileid: "66057977"
  **Mot de passe**  
  Tapez le mot de passe lorsque vous utilisez l'authentification SQL Server.  
   
- **Répertoire**  
+ **Dossier**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
 ##  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a>Définir les options sur la page Sélectionner les packages  
@@ -197,14 +196,14 @@ ms.locfileid: "66057977"
  **Nom du paramètre**  
  Indique le nom du paramètre.  
   
- **Étendue**  
+ **Portée**  
  Sélectionnez l'étendue du paramètre, package ou projet.  
   
 ##  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a>Définir les options sur la page Configurer les paramètres  
  **Nom**  
  Indique le nom du paramètre.  
   
- **Étendue**  
+ **Portée**  
  Indique l'étendue du paramètre.  
   
  **Valeur**  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 647fb88b6af501ad17dcf64738d72679f36e704e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79f1d849b2dec4eda67ec5b84b1783b12b1bf0fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046891"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>Propriété ConnectionString (classe SqlServerAlias)
   Obtient la chaîne de connexion qui est utilisée pour établir la connexion pour l'alias de connexion au serveur.  
@@ -37,11 +36,11 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlServerAlias](sqlserveralias-class.md) qui représente un alias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Chaîne qui spécifie la chaîne de connexion qui est utilisée pour établir la connexion pour l'alias de connexion au serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   

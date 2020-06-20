@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea1d9d70e8b470277af5641faaaa1767b4f1a6c0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a740856a041bb662e8605db9c2b2e06a78808fef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017378"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Utilisation d'ADO avec SQL Server Native Client
   Pour tirer parti des nouvelles fonctionnalités introduites dans, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] telles que mars (Multiple Active Result Sets), les notifications de requêtes, les types définis par l’utilisateur (UDT) ou le nouveau type de données **XML** , les applications existantes qui utilisent ActiveX Data Objects (ADO) doivent utiliser le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client comme fournisseur d’accès aux données.  

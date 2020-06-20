@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddbc29c1895ad57ad191604fec228109c8c7c55e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3e4c45cf608c78715abd7c5075d4cd7fb2e162a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018389"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Champs de descripteur pour les colonnes constituantes des paramètres table
   Les champs de descripteur de paramètre table décrits dans cette section sont manipulés à l’aide de [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) et de [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) avec le descripteur du descripteur de paramètre d’implémentation (IPD).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  SQL_DESC_AUTO_UNIQUE_VALUE est utilisé pour les paramètres table ainsi que pour d'autres fonctionnalités.  
   
 |Nom de l’attribut|Type|Description|  
@@ -41,7 +40,7 @@ ms.locfileid: "82698800"
   
  Ces attributs sont uniquement valides pour les colonnes de paramètres table. Ils sont ignorés pour les autres paramètres.  
   
- Si SQL_CA_SS_COL_HAS_DEFAULT_VALUE est défini pour une colonne de paramètre table, la valeur de SQL_DESC_DATA_PTR pour cette colonne doit être un pointeur Null. Sinon, SQLExecute ou SQLExecDirect retourne SQL_ERROR. Un enregistrement de diagnostic est généré avec SQLSTATE = 07S01 et le message « utilisation non valide du paramètre par défaut pour \< le paramètre p>, colonne \< c> », où \< p> est le paramètre ordinal et \< c> est le numéro de colonne.  
+ Si SQL_CA_SS_COL_HAS_DEFAULT_VALUE est défini pour une colonne de paramètre table, la valeur de SQL_DESC_DATA_PTR pour cette colonne doit être un pointeur Null. Sinon, SQLExecute ou SQLExecDirect retourne SQL_ERROR. Un enregistrement de diagnostic est généré avec SQLSTATE = 07S01 et le message « utilisation non valide du paramètre par défaut pour \<p> le paramètre, \<c> la colonne », où \<p> est le paramètre ordinal et \<c> est l’ordinal de colonne.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

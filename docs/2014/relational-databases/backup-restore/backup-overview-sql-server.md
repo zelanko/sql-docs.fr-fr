@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60fbd0341c4e29c6f98cc4d5fe5a2cfabc9b703f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959061"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Cette rubrique présente le composant de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sauvegarde de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est essentielle pour protéger vos données. Cette discussion couvre les types de sauvegardes et les restrictions liées aux sauvegardes. La rubrique présente également les unités et les supports de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -133,7 +132,7 @@ ms.locfileid: "70175982"
   
 -   Si vous tentez de créer ou de supprimer un fichier de base de données pendant qu'une opération de sauvegarde est en cours, la création ou la suppression échoue.  
   
- Si une opération de sauvegarde chevauche une opération de compactage ou de gestion des fichiers, un conflit se produit. Quelle que soit l’opération en conflit qui a commencé en premier, la deuxième opération attend que le verrou défini par la première opération expire. (Le délai d’attente est contrôlé par un paramètre de délai d’expiration de session.) Si le verrou est libéré au cours du délai d’attente, la deuxième opération continue. Si le verrou expire, la seconde opération échoue.  
+ Si une opération de sauvegarde chevauche une opération de compactage ou de gestion des fichiers, un conflit se produit. Quelle que soit l'opération effectuée la première, la seconde opération attend que le verrou défini par la première opération expire. (Le délai d'expiration est contrôlé par un paramètre d'expiration de la session). Si le verrou est libéré au cours du délai d'expiration, la seconde opération se poursuit. Si le verrou expire, la seconde opération échoue.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
  **Pour utiliser des unités et supports de sauvegarde**  
@@ -181,8 +180,8 @@ ms.locfileid: "70175982"
   
 -   [Tutoriel : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Sauvegarder et restaurer des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Sauvegarde et restauration des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Plans de maintenance](../maintenance-plans/maintenance-plans.md)   
  [Journal des transactions &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

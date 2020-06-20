@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 185b10d428217bad55d0b30720976562da84556e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: aa0c46afa3c91f9256f5789148bceaa2f73e3165
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047512"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Présentation des codes de mise à jour (SQLXML 4.0)
   Vous pouvez modifier (insérer, mettre à jour ou supprimer) une base de données dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’un document XML existant à l’aide d’un mise à jour ou de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] fonction OpenXml.  
@@ -40,10 +39,10 @@ ms.locfileid: "82703086"
 >  Cette documentation suppose une connaissance suffisante des modèles et de la prise en charge des schémas de mappage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Introduction aux schémas XSD Annotés &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour les applications héritées qui utilisent XDR, consultez [schémas XDR Annotés &#40;dépréciés dans SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Espace de noms requis dans le code de mise à jour  
- Les mots clés d’un mise à jour, tels que ** \< Sync>**, ** \< Before>** et ** \< after>**, existent dans l' `urn:schemas-microsoft-com:xml-updategram` espace de noms. Le préfixe d'espace de noms employé est arbitraire. Dans cette documentation, le préfixe `updg` dénote l'espace de noms `updategram`.  
+ Les mots clés dans un mise à jour, tels que **\<sync>** , **\<before>** et **\<after>** , existent dans l' `urn:schemas-microsoft-com:xml-updategram` espace de noms. Le préfixe d'espace de noms employé est arbitraire. Dans cette documentation, le préfixe `updg` dénote l'espace de noms `updategram`.  
   
 ## <a name="reviewing-syntax"></a>Vérification de la syntaxe  
- Un mise à jour est un modèle avec ** \< synchronisation>**, ** \< avant>** et après les blocs ** \<>** qui forment la syntaxe du mise à jour. Le code ci-dessous illustre cette syntaxe dans sa forme la plus simple :  
+ Un mise à jour est un modèle avec **\<sync>** des **\<before>** blocs, et **\<after>** qui forment la syntaxe du mise à jour. Le code ci-dessous illustre cette syntaxe dans sa forme la plus simple :  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -60,30 +59,30 @@ ms.locfileid: "82703086"
   
  Les définitions ci-dessous décrivent le rôle de chacun de ces blocs :  
   
- **\<avant>**  
+ **\<before>**  
  Identifie l'état existant (également appelé « état before ») de l'instance de l'enregistrement.  
   
- **\<après>**  
+ **\<after>**  
  Identifie le nouvel état qu'auront les données après modification.  
   
- **\<>de synchronisation**  
- Contient les blocs ** \< before>** et ** \< after>** . Un bloc de ** \<>de synchronisation** peut contenir plusieurs jeux de blocs ** \< before>** et ** \< after>** . S’il existe plus d’un ensemble de ** \<>** et ** \< après>** blocs, ces blocs (même s’ils sont vides) doivent être spécifiés en tant que paires. En outre, un mise à jour peut avoir plusieurs blocs de ** \<>de synchronisation** . Chaque bloc de ** \<>de synchronisation** est une unité de transaction (ce qui signifie que tous les éléments du bloc de ** \<>de synchronisation** sont effectués ou que rien n’est fait). Si vous spécifiez plusieurs blocs de ** \<>de synchronisation** dans un mise à jour, la défaillance d’un bloc de ** \<>de synchronisation** n’affecte pas les autres blocs de>de ** \< synchronisation** .  
+ **\<sync>**  
+ Contient les **\<before>** **\<after>** blocs et. Un **\<sync>** bloc peut contenir plusieurs jeux de **\<before>** **\<after>** blocs et. S’il y a plus d’un ensemble **\<before>** de **\<after>** blocs et, ces blocs (même s’ils sont vides) doivent être spécifiés en tant que paires. En outre, un mise à jour peut avoir plusieurs **\<sync>** blocs. Chaque **\<sync>** bloc est une unité de transaction (ce qui signifie que tous les éléments du **\<sync>** bloc sont exécutés ou que rien n’est fait). Si vous spécifiez plusieurs **\<sync>** blocs dans un mise à jour, la défaillance d’un **\<sync>** bloc n’affecte pas les autres **\<sync>** blocs.  
   
- Le fait qu’un mise à jour supprime, insère ou met à jour une instance d’enregistrement dépend du contenu des blocs ** \< before>** et ** \< after>** :  
+ Le fait qu’un mise à jour supprime, insère ou met à jour une instance d’enregistrement dépend du contenu des **\<before>** **\<after>** blocs et :  
   
--   Si une instance d’enregistrement apparaît uniquement dans le bloc ** \< before>** sans instance correspondante dans le bloc ** \< after>** , mise à jour effectue une opération de suppression.  
+-   Si une instance d’enregistrement apparaît uniquement dans le **\<before>** bloc sans instance correspondante dans le **\<after>** bloc, mise à jour effectue une opération de suppression.  
   
--   Si une instance d’enregistrement apparaît uniquement dans le bloc ** \< after>** sans instance correspondante dans le bloc ** \< Before>** , il s’agit d’une opération d’insertion.  
+-   Si une instance d’enregistrement apparaît uniquement dans le **\<after>** bloc sans instance correspondante dans le **\<before>** bloc, il s’agit d’une opération d’insertion.  
   
--   Si une instance d’enregistrement apparaît dans le bloc ** \< before>** et a une instance correspondante dans le bloc ** \< after>** , il s’agit d’une opération de mise à jour. Dans ce cas, mise à jour met à jour l’instance d’enregistrement avec les valeurs spécifiées dans le bloc ** \< after>** .  
+-   Si une instance d’enregistrement apparaît dans le **\<before>** bloc et a une instance correspondante dans le **\<after>** bloc, il s’agit d’une opération de mise à jour. Dans ce cas, mise à jour met à jour l’instance d’enregistrement avec les valeurs spécifiées dans le **\<after>** bloc.  
   
 ## <a name="specifying-a-mapping-schema-in-the-updategram"></a>Spécification d'un schéma de mappage dans le code de mise à jour  
- Dans un code de mise à jour, l'abstraction XML fournie par un schéma de mappage (les schémas XSD et XDR sont pris en charge) peut être implicite ou explicite (autrement dit, un code de mise à jour peut fonctionner avec ou sans schéma de mappage spécifié). Si vous ne spécifiez pas de schéma de mappage, le mise à jour suppose un mappage implicite (le mappage par défaut), où chaque élément dans le bloc ** \< before>** block ou ** \< after>** est mappé à une table et que l’attribut ou l’élément enfant de chaque élément est mappé à une colonne de la base de données. Si vous spécifiez explicitement un schéma de mappage, les éléments et les attributs dans le code de mise à jour doivent correspondre aux éléments et aux attributs dans le schéma de mappage.  
+ Dans un code de mise à jour, l'abstraction XML fournie par un schéma de mappage (les schémas XSD et XDR sont pris en charge) peut être implicite ou explicite (autrement dit, un code de mise à jour peut fonctionner avec ou sans schéma de mappage spécifié). Si vous ne spécifiez pas de schéma de mappage, le mise à jour suppose un mappage implicite (le mappage par défaut), où chaque élément du **\<before>** bloc ou bloc **\<after>** est mappé à une table et l’élément enfant ou l’attribut enfant de chaque élément est mappé à une colonne de la base de données. Si vous spécifiez explicitement un schéma de mappage, les éléments et les attributs dans le code de mise à jour doivent correspondre aux éléments et aux attributs dans le schéma de mappage.  
   
 ### <a name="implicit-default-mapping"></a>Mappage implicite (par défaut)  
  Dans la plupart des cas, un code de mise à jour qui effectue des mises à jour simples peut ne pas requérir de schéma de mappage. Dans ce cas, le code de mise à jour compte sur le schéma de mappage par défaut.  
   
- Le code de mise à jour ci-dessous illustre un mappage implicite. Dans cet exemple, le code de mise à jour insère un nouveau client dans la table Sales.Customer. Étant donné que ce mise à jour utilise le mappage implicite, l' \< élément Sales. customer> est mappé à la table Sales. Customer, et les attributs CustomerID et SalesPersonID sont mappés aux colonnes correspondantes de la table Sales. Customer.  
+ Le code de mise à jour ci-dessous illustre un mappage implicite. Dans cet exemple, le code de mise à jour insère un nouveau client dans la table Sales.Customer. Étant donné que ce mise à jour utilise le mappage implicite, l' \<Sales.Customer> élément est mappé à la table Sales. Customer, et les attributs CustomerID et SalesPersonID sont mappés aux colonnes correspondantes de la table Sales. Customer.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -108,9 +107,9 @@ ms.locfileid: "82703086"
  Avec le mappage par défaut (lorsque le schéma de mappage n'est pas spécifié dans le code de mise à jour), les éléments de code de mise à jour sont mappés à des tables et les éléments enfants (dans le cas du mappage centré sur les éléments) et les attributs (dans le cas du mappage centré sur les attributs) sont mappés à des colonnes.  
   
 ### <a name="element-centric-mapping"></a>Mappage centré sur les éléments  
- Dans un code de mise à jour centré sur les éléments, un élément contient des éléments enfants qui désignent les propriétés de l'élément. Pour bénéficier d'un exemple, reportez-vous au code de mise à jour ci-dessous. L’élément ** \< Person. contact>** contient les éléments ** \< FirstName>** et ** \< LastName>** enfants. Ces éléments enfants sont des propriétés de l’élément ** \< Person. contact>** .  
+ Dans un code de mise à jour centré sur les éléments, un élément contient des éléments enfants qui désignent les propriétés de l'élément. Pour bénéficier d'un exemple, reportez-vous au code de mise à jour ci-dessous. L' **\<Person.Contact>** élément contient les **\<FirstName>** **\<LastName>** éléments enfants et. Ces éléments enfants sont des propriétés de l' **\<Person.Contact>** élément.  
   
- Étant donné que ce mise à jour ne spécifie pas de schéma de mappage, mise à jour utilise le mappage implicite, où l’élément ** \< Person. contact>** est mappé à la table Person. contact et ses éléments enfants sont mappés aux colonnes FirstName et LastName.  
+ Étant donné que ce mise à jour ne spécifie pas de schéma de mappage, mise à jour utilise le mappage implicite, où l' **\<Person.Contact>** élément est mappé à la table Person. contact et ses éléments enfants sont mappés aux colonnes FirstName et LastName.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -126,7 +125,7 @@ ms.locfileid: "82703086"
 ```  
   
 ### <a name="attribute-centric-mapping"></a>mappage centré sur les attributs  
- Dans un mappage centré sur les attributs, les éléments ont des attributs. Le code de mise à jour ci-dessous utilise le mappage centré sur les attributs. Dans cet exemple, l’élément ** \< Person. contact>** se compose des attributs **FirstName** et **LastName** . Ces attributs sont les propriétés de l’élément ** \< Person. contact>** . Comme dans l’exemple précédent, ce mise à jour ne spécifie aucun schéma de mappage. il s’appuie donc sur un mappage implicite pour mapper l’élément ** \< Person. contact>** à la table Person. contact et aux attributs de l’élément sur les colonnes respectives de la table.  
+ Dans un mappage centré sur les attributs, les éléments ont des attributs. Le code de mise à jour ci-dessous utilise le mappage centré sur les attributs. Dans cet exemple, l' **\<Person.Contact>** élément se compose des attributs **FirstName** et **LastName** . Ces attributs sont les propriétés de l' **\<Person.Contact>** élément. Comme dans l’exemple précédent, ce mise à jour ne spécifie aucun schéma de mappage. il s’appuie donc sur le mappage implicite pour mapper l' **\<Person.Contact>** élément à la table Person. contact et les attributs de l’élément aux colonnes respectives dans la table.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -141,7 +140,7 @@ ms.locfileid: "82703086"
 ```  
   
 ### <a name="using-both-element-centric-and-attribute-centric-mapping"></a>Utilisation du mappage centré sur les éléments et du mappage centré sur les attributs  
- Vous pouvez spécifier une association du mappage centré sur les éléments et du mappage centré sur les attributs, comme l'illustre le code de mise à jour ci-dessous. Notez que l’élément ** \< Person. contact>** contient à la fois un attribut et un élément enfant. Également, ce code de mise à jour s'appuie sur un mappage implicite. Ainsi, l’attribut **FirstName** et l’élément enfant ** \< LastName>** sont mappés aux colonnes correspondantes de la table Person. contact.  
+ Vous pouvez spécifier une association du mappage centré sur les éléments et du mappage centré sur les attributs, comme l'illustre le code de mise à jour ci-dessous. Notez que l' **\<Person.Contact>** élément contient à la fois un attribut et un élément enfant. Également, ce code de mise à jour s'appuie sur un mappage implicite. Ainsi, l’attribut **FirstName** et l' **\<LastName>** élément enfant sont mappés aux colonnes correspondantes de la table Person. contact.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -162,7 +161,7 @@ ms.locfileid: "82703086"
   
  Pour encoder des caractères qui sont des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificateurs valides, mais qui ne sont pas des identificateurs XML valides, utilisez' __xHHHH \_ \_ 'comme valeur d’encodage, où HHHH représente le code UCS-2 hexadécimal à quatre chiffres du caractère dans l’ordre binaire le plus significatif. À l’aide de ce schéma d’encodage, un espace est remplacé par x0020 (le code hexadécimal à quatre chiffres pour un espace); ainsi, le nom de la table [Order Details] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est _x005B_Order_x0020_Details_x005D \_ en XML.  
   
- De même, vous devrez peut-être spécifier des noms d’éléments en trois parties, tels que \< [base de données]. [ propriétaire]. [table] >. Étant donné que les crochets ([et]) ne sont pas valides en XML, vous devez les spécifier comme \< _x005B_database_x005D \_ . _x005B_owner_x005D \_ . _x005B_table_x005D \_>, où _x005B \_ est l’encodage du crochet gauche ([) et _x005D \_ est l’encodage du crochet droit (]).  
+ De même, vous devrez peut-être spécifier des noms d’éléments en trois parties, tels que \<[database].[owner].[table]> . Étant donné que les crochets ([et]) ne sont pas valides en XML, vous devez spécifier ce \<_x005B_database_x005D\_._x005B_owner_x005D\_._x005B_table_x005D\_> qui correspond à, où _x005B \_ est l’encodage du crochet gauche ([) et _x005D \_ est l’encodage du crochet droit (]).  
   
 ## <a name="executing-updategrams"></a>Exécution de codes de mise à jour  
  Comme un code de mise à jour est un modèle, tous les mécanismes de traitement d'un modèle s'appliquent aux codes de mise à jour. Pour SQLXML 4.0, vous pouvez exécuter un code de mise à jour d'une des façons suivantes :  
