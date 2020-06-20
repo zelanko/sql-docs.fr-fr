@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 924e2b064980b2ea7068230610414262995da1a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008719"
 ---
 # <a name="list-job-category-information"></a>Répertorier les informations de catégorie de travaux
-  Comment répertorier les informations de catégorie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de travaux [!INCLUDE[tsql](../../includes/tsql-md.md)] dans à l’aide de ou SQL Server Management Objects.  
+  Comment répertorier les informations de catégorie de travaux dans à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
 
   
 ##  <a name="security"></a><a name="Security"></a> Sécurité  

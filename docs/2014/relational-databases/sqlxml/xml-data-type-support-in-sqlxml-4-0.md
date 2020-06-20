@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702812"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009292"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Prise en charge du type de données xml dans SQLXML 4.0
   À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les données typées XML à l’aide du `xml` type de données. Cette rubrique fournit des informations sur la façon dont SQLXML 4.0 reconnaît les instances du type de données `xml` et implémente leur prise en charge.  
@@ -34,7 +33,7 @@ ms.locfileid: "82702812"
   
 ## <a name="guidelines-and-limitations"></a>Instructions et limitations  
   
--   ** \< xsd : tout>** ne peut pas être mappé à une colonne contenant un `xml` type de données. La prise en charge de ce scénario en SQLXML est fournie via l'annotation `sql:overflow-field`. Une autre solution consiste à mapper un champ de type de données `xml` en tant qu'élément de `xsd:anyType`. Cette solution est illustrée dans l'exemple de mappage d'un élément XML à une colonne de type de données XML, référencé dans le tableau ci-dessus.  
+-   **\<xsd:any>** ne peut pas être mappé à une colonne contenant un `xml` type de données. La prise en charge de ce scénario en SQLXML est fournie via l'annotation `sql:overflow-field`. Une autre solution consiste à mapper un champ de type de données `xml` en tant qu'élément de `xsd:anyType`. Cette solution est illustrée dans l'exemple de mappage d'un élément XML à une colonne de type de données XML, référencé dans le tableau ci-dessus.  
   
 -   L'interrogation par une requête XPath du contenu de colonnes de type de données `xml` n'est pas prise en charge.  
   

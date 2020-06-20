@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964910"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Configuration de package
   **L’Assistant Configuration de package** vous permet de créer des configurations chargées de mettre à jour les propriétés d’un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ainsi que les objets qui s’y rattachent au moment de l’exécution. Cet Assistant s’exécute quand vous ajoutez une nouvelle configuration ou modifiez une configuration existante dans la boîte de dialogue **Bibliothèque des configurations du package** . Pour ouvrir la boîte de dialogue **Bibliothèque des configurations du package** , sélectionnez **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md).  
@@ -88,7 +87,7 @@ ms.locfileid: "66056934"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Entrée de Registre**|Tapez la clé de Registre qui contient les informations de configuration. Le format est \<clé de Registre>.<br /><br /> La clé de Registre doit déjà exister dans HKEY_CURRENT_USER et porter une valeur nommée Value. Cette valeur peut être de type DWORD ou une chaîne.<br /><br /> Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Clé de Registre\clé de Registre\\...> pour identifier la clé.|  
+|**Entrée de Registre**|Tapez la clé de Registre qui contient les informations de configuration. Le format est \<registry key>.<br /><br /> La clé de Registre doit déjà exister dans HKEY_CURRENT_USER et porter une valeur nommée Value. Cette valeur peut être de type DWORD ou une chaîne.<br /><br /> Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Registry key\registry key\\...> pour identifier la clé.|  
   
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
@@ -149,7 +148,7 @@ ms.locfileid: "66056934"
  **Nom de la configuration**  
  Tapez le nom de la configuration.  
   
- **PRÉVERSION**  
+ **Préversion**  
  Affiche les paramètres utilisés par l'Assistant pour créer la configuration.  
   
  **Terminer**  

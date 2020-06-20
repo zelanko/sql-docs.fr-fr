@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a20782e83422e6d8f7b6a550f23e57c6339b1a24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66068016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940200"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Suggérer les colonnes associées (Assistant Exploration de données)
   Utilisez la page **Suggérer les colonnes associées** pour afficher les recommandations de la fonction **Suggérer** , que vous avez sélectionnée dans la page précédente de l’Assistant. Les colonnes d’entrée seront présélectionnées en fonction de leur association avec la colonne **prédictible** sélectionnée. Si vous acceptez les modifications dans cette boîte de dialogue, les modifications seront transmises à la page **Spécifier les données d’apprentissage**.  

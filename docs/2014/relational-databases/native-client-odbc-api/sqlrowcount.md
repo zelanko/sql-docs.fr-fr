@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adc8dbc8083ec1de98951db618dabad8a145d7d6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 410023d960bad6dde1060a509cc1bf46f67d77cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021712"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Lorsque des tableaux de valeurs de paramètre sont liés pour l’exécution d’une instruction, `SQLRowCount` retourne SQL_ERROR si une ligne de valeurs de paramètre génère une condition d’erreur dans l’exécution de l’instruction. Aucune valeur n'est retournée via l'argument *RowCountPtr* de la fonction.  

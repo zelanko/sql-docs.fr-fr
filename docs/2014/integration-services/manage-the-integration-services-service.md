@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baa716eec75925c97f987656d11e39ba947918d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057788"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951359"
 ---
 # <a name="manage-the-integration-services-service"></a>Gérer le service Integration Services
     
@@ -28,7 +27,7 @@ ms.locfileid: "66057788"
  Lorsque vous installez le composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est également installé. Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est démarré et le type de démarrage du service est défini comme étant automatique. Toutefois, vous devez également installer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour utiliser le service afin de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stockés et en cours d'exécution.  
   
 > [!NOTE]  
->  Vous ne pouvez pas vous connecter à une [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] instance du service [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] à partir [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]de la version de. Autrement dit, dans la boîte de dialogue **Se connecter au serveur** , vous ne pouvez pas entrer le nom d'un serveur sur lequel seule la version [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécute. Toutefois, vous pouvez modifier le fichier de configuration pour le service et gérer ainsi les packages stockés dans une instance de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] à partir de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
+>  Vous ne pouvez pas vous connecter à une instance du [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service à partir de la [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] version de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] . Autrement dit, dans la boîte de dialogue **Se connecter au serveur** , vous ne pouvez pas entrer le nom d'un serveur sur lequel seule la version [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécute. Toutefois, vous pouvez modifier le fichier de configuration pour le service et gérer ainsi les packages stockés dans une instance de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] à partir de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  Vous ne pouvez installer qu'une seule instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un ordinateur. Le service n'est pas spécifique à une instance particulière du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Vous vous connectez au service en utilisant le nom de l'ordinateur sur lequel il s'exécute.  
   

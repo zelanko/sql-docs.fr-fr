@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e2b44b84df73df4e6e17b67a9f671eef9a790cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63312619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061163"
 ---
 # <a name="set-the-startup-options"></a>Définir les options de démarrage
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut être configuré de façon à ouvrir la zone de conception avec la configuration de votre choix au démarrage de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Configurer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour qu'il s'ouvre avec votre configuration préférée peut vous faire gagner du temps.  

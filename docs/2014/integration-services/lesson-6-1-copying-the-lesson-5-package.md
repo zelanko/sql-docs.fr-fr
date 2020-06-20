@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f7f6ca45483fcfeb4e403659399972d81cda54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890755"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951439"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Étape 1 : Copie du package de la leçon 5
   Dans cette tâche, vous allez créer une copie du package Lesson 5.dtsx que vous avez créé à la leçon 5. Vous pouvez également ajouter au projet le package final de la leçon 5 inclus avec le didacticiel, puis le copier à la place. Vous allez utiliser cette nouvelle copie tout au long de la leçon 6.  
@@ -38,7 +37,7 @@ ms.locfileid: "62890755"
   
 7.  Dans la fenêtre Propriétés, mettez la propriété Name à jour vers la leçon 6 (Lesson 6).  
   
-8.  Cliquez sur la zone de la propriété ID, cliquez sur la flèche déroulante, \<puis cliquez sur générer un nouvel ID>.  
+8.  Cliquez sur la zone de la propriété ID, puis sur la flèche déroulante et sur \<Generate New ID>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>Pour ajouter le package final de la leçon 5  
   

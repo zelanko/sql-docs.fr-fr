@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 537a3aaafcc2a0ad4ba2c59ae8d52f8e5ced5868
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad905027458e7594a46e3ab416aaa1f4f43cbc59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061239"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Prise en charge de FOR XML pour le type de données XML
   Si une requête FOR XML spécifie une colonne de type `xml` dans la clause SELECT, les valeurs de la colonne sont mappées comme éléments dans le code XML retourné, que vous spécifiiez ou non la directive ELEMENTS. Toute déclaration XML dans la colonne de type `xml` n'est pas sérialisée.  

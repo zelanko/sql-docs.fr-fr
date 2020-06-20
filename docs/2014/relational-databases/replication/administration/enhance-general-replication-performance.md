@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a85519a947e7d5d03f324b71984d2ffb40bcefe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043346"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
   Vous pouvez améliorer les performances globales de tous les types de réplication de votre application et de votre réseau à l'aide des indications décrites dans cette rubrique :  

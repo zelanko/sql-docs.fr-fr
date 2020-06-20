@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0f55065d3c62d87b51af83a411e2ba302fcf0528
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac4f773ac783515a0eaea1684d70866f159e1372
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937460"
 ---
 # <a name="open-a-knowledge-base"></a>Ouvrir une base de connaissances
   Cette rubrique explique comment ouvrir une base de connaissances existante dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) et la préparer pour la gestion de l'arborescence du domaine, la découverte des connaissances ou l'ajout d'une stratégie de correspondance.  
@@ -77,7 +76,7 @@ ms.locfileid: "65481290"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>État d’une base de connaissances  
  Le champ État indique l'étape d'une activité à laquelle la base de connaissances se trouve. Si vous ouvrez la base de connaissances, elle s'ouvre à cette étape.  
   
--   >vide : le champ État est vide pour une base de connaissances si la base de connaissances a été publiée en cliquant sur **publier** dans l’activité de gestion des domaines, puis sur **Oui-publier la base de connaissances et quitter**. ** \< **  
+-   **\<Empty>**: Le champ État est vide pour une base de connaissances si la base de connaissances a été publiée en cliquant sur **publier** dans l’activité de gestion des domaines, puis sur **Oui-publier la base de connaissances et quitter**.  
   
 -   **En cours**: le travail sur la base de connaissances a été enregistré en cliquant sur **publier** dans l’activité de gestion des domaines, puis sur **non-enregistrer le travail dans la base de connaissances et quitter**.  
   

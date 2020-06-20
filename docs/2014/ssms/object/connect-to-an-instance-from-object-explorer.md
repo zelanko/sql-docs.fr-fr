@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a25a9c376b7443bb23520c26be545c027da0bde6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277431"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067358"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Se connecter à une instance à partir de l’Explorateur d’objets
   Pour gérer des objets à l'aide de l'Explorateur d'objets, vous devez d'abord connecter l'Explorateur d'objets à l'instance qui contient les objets. Vous pouvez connecter l'Explorateur d'objets à plusieurs instances à la fois.  

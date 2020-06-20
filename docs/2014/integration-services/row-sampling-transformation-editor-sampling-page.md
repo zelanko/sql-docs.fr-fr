@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30163b4d65ac6a732efb3f7c67a018f433a42ac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4d3e00998aefefe228b0bf537fa34e25410695c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056447"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964529"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>Éditeur de transformation d'échantillonnage de ligne (page Échantillonnage)
   Utilisez la boîte de dialogue **Éditeur de transformation d'échantillonnage de ligne** pour échantillonner une partie d'une entrée à l'aide d'un nombre de lignes spécifié. Cette transformation divise l'entrée en deux sorties distinctes.  
@@ -44,6 +43,6 @@ ms.locfileid: "66056447"
   
 ## <a name="see-also"></a>Voir aussi  
  [Integration Services de référence des erreurs et des messages](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [transformation de l'échantillonnage du pourcentage](data-flow/transformations/percentage-sampling-transformation.md)  
+ [Transformation d’échantillonnage par pourcentage](data-flow/transformations/percentage-sampling-transformation.md)  
   
   

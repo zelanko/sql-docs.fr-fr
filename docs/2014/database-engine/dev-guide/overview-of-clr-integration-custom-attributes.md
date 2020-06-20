@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43db9f034a759e9c041f5cc6ab95baa5af4d7353
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933455"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Vue d'ensemble des attributs personnalisés de l'intégration du CLR
   Le CLR (Common Language Runtime) du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] autorise l'utilisation de mots clés descriptifs, appelés attributs. Ces attributs fournissent des informations supplémentaires sur de nombreux éléments, comme les méthodes et les classes. Ils sont enregistrés dans l'assembly avec les métadonnées de l'objet et peuvent être utilisés pour décrire votre code à d'autres outils de développement ou pour affecter le comportement au moment de l'exécution au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

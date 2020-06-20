@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 55e89850c3b3f19c30a4943f5d787407da7e3c88
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 721ebe6d235e1a8001403d4fb9bb993dba86dd13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929962"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Options (Éditeur de texte - Toutes les langues - Page Général)
   Cette boîte de dialogue vous permet de définir les options d'édition générales des cinq éditeurs de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour afficher ces options, sélectionnez **Options** dans le menu **Outils** . Sélectionnez le dossier **Éditeur de texte**, développez le dossier **Tous les langages**, puis cliquez sur **Général**.  

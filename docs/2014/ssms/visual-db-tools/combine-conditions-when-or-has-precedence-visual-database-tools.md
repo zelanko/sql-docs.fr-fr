@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91443fbb12714bd7d4e1048924b10207de2acb47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067204"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Associer des conditions avec priorité à l'opérateur OR (Visual Database Tools)
   Pour relier des conditions à l'aide de l'opérateur OR et leur accorder la priorité sur les conditions reliées à l'aide de l'opérateur AND, vous devez répéter la condition AND pour chaque condition OR.  

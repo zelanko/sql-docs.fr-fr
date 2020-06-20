@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4685dc65c860776143f25f4299a62427adfcb31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067660"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939890"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Se connecter à une base de données model tabulaire (SSAS)
   Après avoir généré un modèle tabulaire et l'avoir déployé sur un serveur Analysis Services en mode tabulaire, vous devez définir les autorisations qui le mettent à disposition des applications clientes. Cette rubrique explique comment accorder des autorisations et comment se connecter à une base de données à partir d'applications clientes.  
@@ -81,7 +80,7 @@ ms.locfileid: "66067660"
   
 2.  Sélectionnez **À partir d'Analysis Services**.  
   
-3.  Pour **Nom du serveur**, spécifiez le nom de l'instance Analysis Service qui héberge la base de données. Le nom du serveur est souvent le nom de l'ordinateur qui exécute le logiciel du serveur. Si le serveur a été installé en tant qu’instance nommée, vous devez spécifier le nom au format \<suivant : \\ NomServeur>\><nom_instance.  
+3.  Pour **Nom du serveur**, spécifiez le nom de l'instance Analysis Service qui héberge la base de données. Le nom du serveur est souvent le nom de l'ordinateur qui exécute le logiciel du serveur. Si le serveur a été installé en tant qu’instance nommée, vous devez spécifier le nom au format suivant : \<servername> \\<InstanceName \> .  
   
      L'instance de serveur doit être configurée pour un déploiement tabulaire autonome et doit avoir une règle de trafic entrant qui en autorise l'accès. Pour plus d’informations, consultez [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) et [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66067660"
   
  Lors de l'importation de données, cette erreur Microsoft Excel se produit lorsque vous essayez d'utiliser l'Assistant pour vous connecter à une base de données model tabulaire sur un serveur Analysis Services distant, alors que vous ne disposez pas d'autorisations suffisantes. Pour résoudre cette erreur, vous devez avoir des droits d'accès utilisateur sur la base de données. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un utilisateur l'accès aux données.  
   
- **Une erreur s’est produite lors d’une tentative d’établissement d’une connexion à la source de données externe. Échec de l’actualisation des connexions suivantes \<: nom du modèle> bac à sable**  
+ **Une erreur s’est produite lors d’une tentative d’établissement d’une connexion à la source de données externe. Échec de l’actualisation des connexions suivantes : \<model name> bac à sable (sandbox)**  
   
  Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce que vous n'avez pas d'autorisations suffisantes sur le serveur Analysis Services distant. Pour résoudre cette erreur, vous devez avoir des droits d'accès utilisateur sur la base de données. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un utilisateur l'accès aux données.  
   

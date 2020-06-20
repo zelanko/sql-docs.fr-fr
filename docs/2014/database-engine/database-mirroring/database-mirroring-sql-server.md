@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934290"
 ---
 # <a name="database-mirroring-sql-server"></a>Mise en miroir de bases de données (SQL Server)
     
@@ -211,7 +210,7 @@ ms.locfileid: "62807912"
 > [!NOTE]  
 >  Comme les bases de données mises en miroir sont indépendantes les unes des autres, elles ne peuvent pas basculer en tant que groupe.  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>Connexions client  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> Connexions clientes  
  La prise en charge des connexions clientes pour les sessions de mise en miroir de bases de données est proposée par le fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour en savoir plus, voir [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>Impact de la suspension d’une session sur le journal des transactions du principal  
@@ -233,7 +232,7 @@ ms.locfileid: "62807912"
   
 -   [Réplication](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>Dans cette section  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Dans cette section  
  [Conditions préalables, limitations et recommandations relatives à la mise en miroir de bases de données](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Décrit les conditions préalables et les recommandations relatives à la configuration de la mise en miroir de bases de données.  
   
@@ -270,13 +269,13 @@ ms.locfileid: "62807912"
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
 ### <a name="configuration-tasks"></a>Tâches de configuration  
- **Utilisation de SQL Server Management Studio**  
+ **Utilisation de SQL Server Management Studio**  
   
 -   [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
 -   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
- **Utilisation de Transact-SQL**  
+ **Avec Transact-SQL**  
   
 -   [Autoriser l’accès réseau à un point de terminaison de mise en miroir de bases de données à l’aide de l’authentification Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   
@@ -332,6 +331,6 @@ ms.locfileid: "62807912"
  [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Conditions préalables requises, restrictions et recommandations relatives à la mise en miroir de bases de données](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md)  
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md)  
   
   

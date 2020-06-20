@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b6b8c303f056686efb5ba13b2924c9697fbd6e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933562"
 ---
 # <a name="hello-world-sample"></a>Exemple Hello World
   L'exemple Hello World montre les opérations de base à effectuer pour créer, déployer et tester une procédure stockée simple et basée sur l'intégration du CLR (Common Language Runtime). Cet exemple montre également comment retourner des données via un enregistrement qui est construit dynamiquement par la procédure stockée et retourné à l'appelant.  

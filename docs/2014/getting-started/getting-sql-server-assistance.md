@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5acc2081212b0b732305949234e5f5d5ae73fa63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926860"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistance sur SQL Server
   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose trois principales sources d'informations sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -77,7 +76,7 @@ ms.locfileid: "82706936"
   
  Le tableau suivant décrit ces sources d'information et les personnes à qui elles sont destinées.  
   
-|Ressource|Public visé|  
+|Resource|Public visé|  
 |--------------|--------------|  
 |[Centre de développement SQL Server](https://msdn.microsoft.com/sqlserver/)|Les développeurs qui créent des bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], des systèmes de génération de rapports et des solutions de Business Intelligence, et qui font en sorte que leurs applications et leurs sites Web utilisent ces systèmes.|  
 |[XML Developer Center (en anglais)](https://go.microsoft.com/fwlink/?LinkId=42458)|Les créateurs de sites Web et les développeurs d'applications dont les sites et applications utilisent XML pour le stockage et la manipulation des données.|  
@@ -86,7 +85,7 @@ ms.locfileid: "82706936"
 ## <a name="additional-online-information"></a>Autres informations en ligne  
  Des informations supplémentaires sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont disponibles sur ces sites Web [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-|Ressource|Description|  
+|Resource|Description|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fournit des informations d'avant-vente sur l'évaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'outil de stockage de données et de Business Intelligence.|  
 |[Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?LinkId=42461)|Fournit un référentiel dans lequel il est possible de chercher des articles sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rédigés par le support [!INCLUDE[msCoName](../includes/msconame-md.md)].|    

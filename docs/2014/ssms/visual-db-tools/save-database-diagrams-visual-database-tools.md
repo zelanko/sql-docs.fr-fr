@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70cf3a1a0edb8cb38d59a2b79ef1891d3bdd0e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62710505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044223"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Enregistrer des diagrammes de base de données (Visual Database Tools)
   Lorsque vous enregistrez un diagramme de base de données, vous pouvez enregistrer toutes les modifications que vous y avez apportées, y compris les modifications effectuées dans les tables, les colonnes et les autres objets de base de données.  
   
 ### <a name="to-save-the-database-diagram"></a>Pour enregistrer le diagramme de base de données  
   
-1.  Dans le menu **fichier** , choisissez **Enregistrer <*`tablename`* **.  
+1.  Dans le menu **fichier** , choisissez **Enregistrer <*`tablename`* > **.  
   
 2.  S’il s’agit d’un nouveau schéma que vous n’avez encore jamais enregistré, la boîte de dialogue **Enregistrer sous** apparaît. Tapez le nom que vous voulez attribuer au schéma.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9345a02d446d8a4b7b82e9652444a08f68641f87
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f51f031bec05715e0345507278113f4f16179a77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022349"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
   En mode de validation manuelle, l'appel de **SQLFreeHandle** sur un descripteur d'instruction avec une transaction ouverte provoque une restauration des modifications en attente de la base de données. L'appel de **SQLFreeHandle** sur un descripteur d'instruction ferme toujours tous les curseurs ouverts et ignore les résultats en attente, libérant toutes les ressources associées au descripteur d'instruction.  

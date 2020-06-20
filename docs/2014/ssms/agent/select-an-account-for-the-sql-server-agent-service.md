@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c54dd8b57dc0b1e13b622110d3f4cf9f796610a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067624"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Sélectionner un compte pour le service SQL Server Agent
   Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dans le contexte duquel l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, ainsi que ses autorisations réseau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans le contexte d'un compte d'utilisateur spécifié. Pour sélectionner un compte pour le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez le Gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour choisir l'une des options suivantes :  
@@ -76,11 +75,11 @@ ms.locfileid: "68811082"
   
 |Type de compte de service|Serveur non-cluster|Serveur en cluster|Contrôleur de domaine (non-cluster)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Compte de domaine Windows (membre du groupe Administrateurs Windows)|Pris en charge|Pris en charge|Prise en charge|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Compte de domaine Windows (membre du groupe Administrateurs Windows)|Prise en charge|Prise en charge|Prise en charge|  
 |Compte de domaine Windows (non administratif)|Pris en charge<sup>1</sup>|Pris en charge<sup>1</sup>|Pris en charge<sup>1</sup>|  
 |Compte Service réseau (AUTORITE NT\NetworkService)|Pris en charge<sup>1, 3, 4</sup>|Non pris en charge|Non pris en charge|  
-|Compte d'utilisateur local (non administratif)|Pris en charge<sup>1</sup>|Non prise en charge|Non applicable|  
-|Compte système local (AUTORITE NT\System)|Pris en charge<sup>2</sup>|Non prise en charge|Pris en charge<sup>2</sup>|  
+|Compte d'utilisateur local (non administratif)|Pris en charge<sup>1</sup>|Non pris en charge|Non applicable|  
+|Compte système local (AUTORITE NT\System)|Pris en charge<sup>2</sup>|Non pris en charge|Pris en charge<sup>2</sup>|  
 |Compte Service local (AUTORITE NT\LocalService)|Non pris en charge|Non pris en charge|Non pris en charge|  
   
  <sup>1</sup> Voir la limitation 1 ci-dessous.  

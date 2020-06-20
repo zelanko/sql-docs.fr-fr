@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48790cae2251bdad7d958f1adee38235edb20abb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067461"
 ---
 # <a name="advanced-save-options"></a>Options d’enregistrement avancées
-  Utilisez cette boîte de dialogue pour sélectionner un schéma d'encodage linguistique et spécifier les caractères à insérer à la fin de chaque ligne. Pour accéder à la boîte de dialogue **options d’enregistrement avancées** , dans le menu **fichier** , cliquez sur **Enregistrer** \<le nom de la requête>**. SQL en tant que** pour ouvrir la boîte de dialogue **enregistrer le fichier sous** , cliquez sur la flèche vers le bas sur le bouton **Enregistrer** , puis cliquez sur **enregistrer avec l’encodage**.  
+  Utilisez cette boîte de dialogue pour sélectionner un schéma d'encodage linguistique et spécifier les caractères à insérer à la fin de chaque ligne. Pour accéder à la boîte de dialogue **Options d’enregistrement avancées**, dans le menu **Fichier**, cliquez sur **Enregistrer** \<query name> **.sql sous** pour ouvrir la boîte de dialogue **Enregistrer le fichier sous**, cliquez sur la flèche vers le bas sur le bouton **Enregistrer**, puis cliquez sur **Enregistrer avec codage**.  
   
 ## <a name="options"></a>Options  
  **Encodage**  
